@@ -7,3 +7,5 @@
 *.jpg binary
 # Preserve hashed Matplotlib SVG whitespace as emitted.
 artifacts/research_checks/2026-09-24_damage_pilot_r2/damage_pilot.svg -whitespace
+# Preserve the hashed original failed-build log, including pip whitespace.
+artifacts/research_checks/2026-09-24_v4_environment_preparation/wheel_build.log -whitespace

@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-24",
+  "state": "isolated_venv_created_build_blocked_by_windows_code_integrity",
+  "python": {
+    "version": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "E:\\automation_djh\\automation_repo\\artifacts\\local_checks\\gprmax_v4_env\\Scripts\\python.exe",
+    "prefix": "E:\\automation_djh\\automation_repo\\artifacts\\local_checks\\gprmax_v4_env",
+    "base_prefix": "C:\\Users\\ROG\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python"
+  },
+  "gprmax_installed": false,
+  "solver_executed": false,
+  "solver_imported": false,
+  "original_source_modified": false,
+  "source_copy_file_count": 2236,
+  "build_jobs": 2,
+  "build_exit_code": 1,
+  "build_command": "python -m pip wheel ./artifacts/local_checks/gprmax_v4_build/source --no-deps --wheel-dir artifacts/local_checks/gprmax_v4_build/wheels",
+  "failure": "ImportError loading Cython.Compiler.Code; Windows Code Integrity events 3077 and 3033 confirm signing/policy rejection of Code.cp312-win_amd64.pyd",
+  "event_local_time": "2026-09-24 20:01:21 Asia/Shanghai",
+  "security_policy_changed": false,
+  "supervisor_checks_passed": 6,
+  "supervisor_memory_semantics": "job committed memory, not RSS",
+  "solver_approval_gate_still_false": true,
+  "artifact_sha256": {
+    "supervisor_results.json": "a778b4d165167626d9c78193c67c2b511edbbb5974e773dfc8baac5ee69422f6",
+    "wheel_build.log": "94b310079b183ab9668b7ad9d4213027fcbc4c7fe2cbdbaff2defe2205c72a7c",
+    "source_manifest.json": "cfa69c762186af1d8843e78c32375080b5ebb73f47232b41444c29012a079305"
+  },
+  "next_external_dependency": "An administrator-approved Python/Cython native-extension environment or applicable signing-policy authorization; no control bypass attempted"
+}
