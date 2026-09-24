@@ -63,8 +63,18 @@
   },
   "attachment_status": {
     "path": "78210f81764e80000a4d2cd27c2a52c3.png",
-    "exists_at_check": false,
-    "image_read": false,
-    "geometry_basis": "user text only"
+    "exists_at_check": true,
+    "image_read": true,
+    "sha256": "faf0f1cc52fea4d6baaa675218a4ef88ea884bb1f45f9c43d562165c27a2eca5",
+    "geometry_basis": "user text plus visible attached diagram; no flight-direction arrow or polarization annotation",
+    "earlier_attempt": "same path was missing before user supplied visible attachment"
+  },
+  "image_supported_observations": {
+    "tx_rx_separation_label_mm": 1300,
+    "transceiver_label": "SFCW Radar Transceiver",
+    "antenna_label": "Lightweight Low-Frequency Air-Coupled Antennas",
+    "tx_and_rx_separately_labelled": true,
+    "polarization_confirmed": false,
+    "flight_direction_from_image_confirmed": false
   }
 }
