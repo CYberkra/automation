@@ -1,0 +1,11 @@
+#title: REVIEW ONLY - V4 calibration M00_boundary
+#domain_mode: TM
+#domain: 20 14 inf
+#dx_dy_dz: 0.025 0.025 0.025
+#time_window: 240e-9
+#omp_threads: 8
+#pml_cells: 12 12 0 12 12 0
+#pml_formulation: HORIPML
+#waveform: ricker 1 80e6 pulse80
+#hertzian_dipole: z 9.8 9.5 inf pulse80
+#rx: 10.2 9.5 inf measurement Ez

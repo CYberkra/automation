@@ -1,0 +1,255 @@
+{
+  "schema": "v4-calibration-packet/1",
+  "packet_id": "V4-CAL-01",
+  "status": "superseded_draft_pending_sfcw_redesign",
+  "approved_to_simulate": false,
+  "solver_imported": false,
+  "solver_executed": false,
+  "source_sha256": "0df7f1444bb4e3aef1da9d54cb368168001a1229e78d3f9caf32eb1c56db9764",
+  "run_count": 8,
+  "runs": [
+    {
+      "id": "M00_base",
+      "input": "M00_base.in",
+      "input_sha256": "ecf5cdb6edfbc51876544c683dfa694da1d746d9f451b376b1cd0703abbbd46a",
+      "case": "M00",
+      "variant": "base",
+      "dx_m": 0.025,
+      "domain_xy_m": [
+        16,
+        10
+      ],
+      "ground_y_m": null,
+      "source_xy_m": [
+        7.8,
+        7.5
+      ],
+      "receiver_xy_m": [
+        8.2,
+        7.5
+      ],
+      "pml_cells_active": 12,
+      "requested_time_ns": 240,
+      "active_xy_cells": 256000,
+      "cfl_dt_estimate_s": 5.89663584187421e-11,
+      "steps_upper_estimate": 4072,
+      "xy_cell_step_proxy": 1042432000,
+      "six_double_field_arrays_proxy_bytes": 24675936
+    },
+    {
+      "id": "M00_fine",
+      "input": "M00_fine.in",
+      "input_sha256": "8098770b566854848f8b3643713cbdf0f312fad246d3e602391628a026a78009",
+      "case": "M00",
+      "variant": "fine",
+      "dx_m": 0.0125,
+      "domain_xy_m": [
+        16,
+        10
+      ],
+      "ground_y_m": null,
+      "source_xy_m": [
+        7.8,
+        7.5
+      ],
+      "receiver_xy_m": [
+        8.2,
+        7.5
+      ],
+      "pml_cells_active": 24,
+      "requested_time_ns": 240,
+      "active_xy_cells": 1024000,
+      "cfl_dt_estimate_s": 2.948317920937105e-11,
+      "steps_upper_estimate": 8142,
+      "xy_cell_step_proxy": 8337408000,
+      "six_double_field_arrays_proxy_bytes": 98503776
+    },
+    {
+      "id": "M00_boundary",
+      "input": "M00_boundary.in",
+      "input_sha256": "1047d84e284ef8f473017ba1a9d5e6505466afec062ca7e29f29a6e71f01d8ff",
+      "case": "M00",
+      "variant": "boundary",
+      "dx_m": 0.025,
+      "domain_xy_m": [
+        20,
+        14
+      ],
+      "ground_y_m": null,
+      "source_xy_m": [
+        9.8,
+        9.5
+      ],
+      "receiver_xy_m": [
+        10.2,
+        9.5
+      ],
+      "pml_cells_active": 12,
+      "requested_time_ns": 240,
+      "active_xy_cells": 448000,
+      "cfl_dt_estimate_s": 5.89663584187421e-11,
+      "steps_upper_estimate": 4072,
+      "xy_cell_step_proxy": 1824256000,
+      "six_double_field_arrays_proxy_bytes": 43138656
+    },
+    {
+      "id": "M00_long",
+      "input": "M00_long.in",
+      "input_sha256": "57d7262b165855fc3a713f721379d805875d93a9abdcf49ebae5f429678033c0",
+      "case": "M00",
+      "variant": "long",
+      "dx_m": 0.025,
+      "domain_xy_m": [
+        16,
+        10
+      ],
+      "ground_y_m": null,
+      "source_xy_m": [
+        7.8,
+        7.5
+      ],
+      "receiver_xy_m": [
+        8.2,
+        7.5
+      ],
+      "pml_cells_active": 12,
+      "requested_time_ns": 480,
+      "active_xy_cells": 256000,
+      "cfl_dt_estimate_s": 5.89663584187421e-11,
+      "steps_upper_estimate": 8142,
+      "xy_cell_step_proxy": 2084352000,
+      "six_double_field_arrays_proxy_bytes": 24675936
+    },
+    {
+      "id": "M01_base",
+      "input": "M01_base.in",
+      "input_sha256": "80010a3f3cff9af4555330b3a8f2c0e7dd174b728039bd899bd99f634b2569f0",
+      "case": "M01",
+      "variant": "base",
+      "dx_m": 0.025,
+      "domain_xy_m": [
+        16,
+        10
+      ],
+      "ground_y_m": 7,
+      "source_xy_m": [
+        7.8,
+        7.5
+      ],
+      "receiver_xy_m": [
+        8.2,
+        7.5
+      ],
+      "pml_cells_active": 12,
+      "requested_time_ns": 240,
+      "active_xy_cells": 256000,
+      "cfl_dt_estimate_s": 5.89663584187421e-11,
+      "steps_upper_estimate": 4072,
+      "xy_cell_step_proxy": 1042432000,
+      "six_double_field_arrays_proxy_bytes": 24675936
+    },
+    {
+      "id": "M01_fine",
+      "input": "M01_fine.in",
+      "input_sha256": "5474131461617cf78d5ed3b96ce95a4cf86aaad5cc89bed289ba671566ea532f",
+      "case": "M01",
+      "variant": "fine",
+      "dx_m": 0.0125,
+      "domain_xy_m": [
+        16,
+        10
+      ],
+      "ground_y_m": 7,
+      "source_xy_m": [
+        7.8,
+        7.5
+      ],
+      "receiver_xy_m": [
+        8.2,
+        7.5
+      ],
+      "pml_cells_active": 24,
+      "requested_time_ns": 240,
+      "active_xy_cells": 1024000,
+      "cfl_dt_estimate_s": 2.948317920937105e-11,
+      "steps_upper_estimate": 8142,
+      "xy_cell_step_proxy": 8337408000,
+      "six_double_field_arrays_proxy_bytes": 98503776
+    },
+    {
+      "id": "M01_boundary",
+      "input": "M01_boundary.in",
+      "input_sha256": "fc9eea6322c4d2a0b00037c0fd11f374ec389fd0f3eaba814c90625092c8beb1",
+      "case": "M01",
+      "variant": "boundary",
+      "dx_m": 0.025,
+      "domain_xy_m": [
+        20,
+        14
+      ],
+      "ground_y_m": 9,
+      "source_xy_m": [
+        9.8,
+        9.5
+      ],
+      "receiver_xy_m": [
+        10.2,
+        9.5
+      ],
+      "pml_cells_active": 12,
+      "requested_time_ns": 240,
+      "active_xy_cells": 448000,
+      "cfl_dt_estimate_s": 5.89663584187421e-11,
+      "steps_upper_estimate": 4072,
+      "xy_cell_step_proxy": 1824256000,
+      "six_double_field_arrays_proxy_bytes": 43138656
+    },
+    {
+      "id": "M01_long",
+      "input": "M01_long.in",
+      "input_sha256": "b2c0c8da450c7467fb222bbc20e5553b525815d5c4242a87f34d6f64d4fffedd",
+      "case": "M01",
+      "variant": "long",
+      "dx_m": 0.025,
+      "domain_xy_m": [
+        16,
+        10
+      ],
+      "ground_y_m": 7,
+      "source_xy_m": [
+        7.8,
+        7.5
+      ],
+      "receiver_xy_m": [
+        8.2,
+        7.5
+      ],
+      "pml_cells_active": 12,
+      "requested_time_ns": 480,
+      "active_xy_cells": 256000,
+      "cfl_dt_estimate_s": 5.89663584187421e-11,
+      "steps_upper_estimate": 8142,
+      "xy_cell_step_proxy": 2084352000,
+      "six_double_field_arrays_proxy_bytes": 24675936
+    }
+  ],
+  "proposed_backend": "CPU, double, 8 OpenMP threads, sequential, no MPI",
+  "proposed_limits": {
+    "per_run_wall_minutes": 30,
+    "total_solver_wall_minutes": 120,
+    "process_tree_rss_GiB": 8,
+    "output_budget_GiB": 1,
+    "retries": 0,
+    "automatic_expansion": false
+  },
+  "limits_enforced": false,
+  "prerequisites": [
+    "explicit user agreement on packet and run IDs",
+    "separate Python 3.11-3.13 environment with verified V4 build",
+    "runtime/source identity and full dependency record",
+    "execution supervisor enforcing resource caps"
+  ],
+  "estimates_note": "CFL estimates and six-field storage proxies, not measured dt, runtime or total RAM",
+  "syntax_basis": "local V4 docs/source/input_hash_cmds.rst and examples_simple_2D.rst",
+  "source_timing": "built-in Ricker chi=sqrt(2)/80e6; current samples at (n+0.5)dt; no extra start delay"
+}

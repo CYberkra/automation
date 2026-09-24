@@ -1,0 +1,294 @@
+{
+  "schema": "v4-calibration-packet/1",
+  "packet_id": "V4-CAL-02-SFCW",
+  "status": "review_only_official_sfcw_not_runtime_validated",
+  "approved_to_simulate": false,
+  "solver_imported": false,
+  "solver_executed": false,
+  "source_sha256": "5c9857968aa2e1819db6852e94abd6b36964244685dd0c1656de7fb73eca409d",
+  "run_count": 8,
+  "runs": [
+    {
+      "id": "M00_base",
+      "input": "M00_base.in",
+      "input_sha256": "5d5188718b8dd67bea062d5477aa2e690ab935fb14077dba8810a832dbd8c337",
+      "case": "M00",
+      "variant": "base",
+      "dx_m": 0.025,
+      "domain_xy_m": [
+        16,
+        10
+      ],
+      "ground_y_m": null,
+      "source_xy_m": [
+        7.8,
+        7.5
+      ],
+      "receiver_xy_m": [
+        8.2,
+        7.5
+      ],
+      "pml_cells_active": 12,
+      "requested_time_ns": 240,
+      "active_xy_cells": 256000,
+      "cfl_dt_estimate_s": 5.89663584187421e-11,
+      "steps_upper_estimate": 4072,
+      "xy_cell_step_proxy": 1042432000,
+      "six_double_field_arrays_proxy_bytes": 24675936
+    },
+    {
+      "id": "M00_fine",
+      "input": "M00_fine.in",
+      "input_sha256": "5d30473a84b15b85a2731d029521a95ea6b39a0c63e11469ec0c7dcff0e53079",
+      "case": "M00",
+      "variant": "fine",
+      "dx_m": 0.0125,
+      "domain_xy_m": [
+        16,
+        10
+      ],
+      "ground_y_m": null,
+      "source_xy_m": [
+        7.8,
+        7.5
+      ],
+      "receiver_xy_m": [
+        8.2,
+        7.5
+      ],
+      "pml_cells_active": 24,
+      "requested_time_ns": 240,
+      "active_xy_cells": 1024000,
+      "cfl_dt_estimate_s": 2.948317920937105e-11,
+      "steps_upper_estimate": 8142,
+      "xy_cell_step_proxy": 8337408000,
+      "six_double_field_arrays_proxy_bytes": 98503776
+    },
+    {
+      "id": "M00_boundary",
+      "input": "M00_boundary.in",
+      "input_sha256": "6fc44ff692e59aad900fae7c7b798dc807c88a7b1097ab0e72ffbc5794bd4441",
+      "case": "M00",
+      "variant": "boundary",
+      "dx_m": 0.025,
+      "domain_xy_m": [
+        20,
+        14
+      ],
+      "ground_y_m": null,
+      "source_xy_m": [
+        9.8,
+        9.5
+      ],
+      "receiver_xy_m": [
+        10.2,
+        9.5
+      ],
+      "pml_cells_active": 12,
+      "requested_time_ns": 240,
+      "active_xy_cells": 448000,
+      "cfl_dt_estimate_s": 5.89663584187421e-11,
+      "steps_upper_estimate": 4072,
+      "xy_cell_step_proxy": 1824256000,
+      "six_double_field_arrays_proxy_bytes": 43138656
+    },
+    {
+      "id": "M00_long",
+      "input": "M00_long.in",
+      "input_sha256": "73e0795d2e613572ef3826d8b66238126d9a021405f55a356506644d7c8fd09e",
+      "case": "M00",
+      "variant": "long",
+      "dx_m": 0.025,
+      "domain_xy_m": [
+        16,
+        10
+      ],
+      "ground_y_m": null,
+      "source_xy_m": [
+        7.8,
+        7.5
+      ],
+      "receiver_xy_m": [
+        8.2,
+        7.5
+      ],
+      "pml_cells_active": 12,
+      "requested_time_ns": 480,
+      "active_xy_cells": 256000,
+      "cfl_dt_estimate_s": 5.89663584187421e-11,
+      "steps_upper_estimate": 8142,
+      "xy_cell_step_proxy": 2084352000,
+      "six_double_field_arrays_proxy_bytes": 24675936
+    },
+    {
+      "id": "M01_base",
+      "input": "M01_base.in",
+      "input_sha256": "106b78cc527d3feaed80f2e4fcfeb8b5bfcb769fc30db14fb3a5399db49ee91a",
+      "case": "M01",
+      "variant": "base",
+      "dx_m": 0.025,
+      "domain_xy_m": [
+        16,
+        10
+      ],
+      "ground_y_m": 7,
+      "source_xy_m": [
+        7.8,
+        7.5
+      ],
+      "receiver_xy_m": [
+        8.2,
+        7.5
+      ],
+      "pml_cells_active": 12,
+      "requested_time_ns": 240,
+      "active_xy_cells": 256000,
+      "cfl_dt_estimate_s": 5.89663584187421e-11,
+      "steps_upper_estimate": 4072,
+      "xy_cell_step_proxy": 1042432000,
+      "six_double_field_arrays_proxy_bytes": 24675936
+    },
+    {
+      "id": "M01_fine",
+      "input": "M01_fine.in",
+      "input_sha256": "84fd5c5bcd94081c9dc5a09f79faa715f13b3b72b92fb921a0cf9bb6fd88b375",
+      "case": "M01",
+      "variant": "fine",
+      "dx_m": 0.0125,
+      "domain_xy_m": [
+        16,
+        10
+      ],
+      "ground_y_m": 7,
+      "source_xy_m": [
+        7.8,
+        7.5
+      ],
+      "receiver_xy_m": [
+        8.2,
+        7.5
+      ],
+      "pml_cells_active": 24,
+      "requested_time_ns": 240,
+      "active_xy_cells": 1024000,
+      "cfl_dt_estimate_s": 2.948317920937105e-11,
+      "steps_upper_estimate": 8142,
+      "xy_cell_step_proxy": 8337408000,
+      "six_double_field_arrays_proxy_bytes": 98503776
+    },
+    {
+      "id": "M01_boundary",
+      "input": "M01_boundary.in",
+      "input_sha256": "547078ca99b1ec40827701b2ccfe3672fcde9f06c63b45de5f7eff2657ca101a",
+      "case": "M01",
+      "variant": "boundary",
+      "dx_m": 0.025,
+      "domain_xy_m": [
+        20,
+        14
+      ],
+      "ground_y_m": 9,
+      "source_xy_m": [
+        9.8,
+        9.5
+      ],
+      "receiver_xy_m": [
+        10.2,
+        9.5
+      ],
+      "pml_cells_active": 12,
+      "requested_time_ns": 240,
+      "active_xy_cells": 448000,
+      "cfl_dt_estimate_s": 5.89663584187421e-11,
+      "steps_upper_estimate": 4072,
+      "xy_cell_step_proxy": 1824256000,
+      "six_double_field_arrays_proxy_bytes": 43138656
+    },
+    {
+      "id": "M01_long",
+      "input": "M01_long.in",
+      "input_sha256": "c052dd12b489119ad61190229722a753b011fb593f49e2e4d60a1695b81cfa81",
+      "case": "M01",
+      "variant": "long",
+      "dx_m": 0.025,
+      "domain_xy_m": [
+        16,
+        10
+      ],
+      "ground_y_m": 7,
+      "source_xy_m": [
+        7.8,
+        7.5
+      ],
+      "receiver_xy_m": [
+        8.2,
+        7.5
+      ],
+      "pml_cells_active": 12,
+      "requested_time_ns": 480,
+      "active_xy_cells": 256000,
+      "cfl_dt_estimate_s": 5.89663584187421e-11,
+      "steps_upper_estimate": 8142,
+      "xy_cell_step_proxy": 2084352000,
+      "six_double_field_arrays_proxy_bytes": 24675936
+    }
+  ],
+  "proposed_backend": "CPU, double, 8 OpenMP threads, sequential, no MPI",
+  "proposed_limits": {
+    "per_run_wall_minutes": 30,
+    "total_solver_wall_minutes": 120,
+    "process_tree_rss_GiB": 8,
+    "output_budget_GiB": 1,
+    "retries": 0,
+    "automatic_expansion": false,
+    "total_official_postprocess_wall_minutes": 30
+  },
+  "limits_enforced": false,
+  "prerequisites": [
+    "explicit user agreement on packet and run IDs",
+    "separate Python 3.11-3.13 environment with verified V4 build",
+    "runtime/source identity and full dependency record",
+    "execution supervisor enforcing resource caps"
+  ],
+  "estimates_note": "CFL estimates and six-field storage proxies, not measured dt, runtime or total RAM",
+  "syntax_basis": "local V4 docs/source/input_hash_cmds.rst and examples_simple_2D.rst",
+  "source_timing": "built-in impulse, amplitude 1, start zero; actual source Yee-time metadata required",
+  "parent_packet": "V4-CAL-01 geometry only; Ricker excitation superseded",
+  "official_source_sha256": {
+    "gprMax/_version.py": "73a53d84e4c0cae48fbcdf533e638f9b0db8a23761cba57fc01b319bbb78ca84",
+    "gprMax/toolboxes/SFCW/README.rst": "87089fab65b7718713d8644c7a4c048e18bbbd4f9a90d295dd5477e7e8df442c",
+    "gprMax/toolboxes/SFCW/cli.py": "0e0596267967bee7afef6d743bb3f44d0a5bc0d20d3104490a1d0789f839b6c6",
+    "gprMax/toolboxes/SFCW/processing.py": "adad556f09140956f0ee19d3038430e06a9ae8be6a826dcad723096d99624a3b",
+    "gprMax/toolboxes/SFCW/examples/cylinder_sfcw_2D.in": "967478c7116fa5f165f33ebaeafe2a268e9efb6b2aa9050849b2d8ccef176715"
+  },
+  "sfcw": {
+    "implementation": "gprMax.toolboxes.SFCW",
+    "method": "direct",
+    "frequency_start_Hz": 20000000,
+    "frequency_stop_Hz": 170000000,
+    "frequency_step_Hz": 300000,
+    "frequency_count": 501,
+    "receiver": "name:measurement",
+    "component": "Ez",
+    "source_selection": "resolve actual unique source from official inspect output",
+    "window": "rectangular",
+    "zero_pad": 1,
+    "time_shift_s": 0,
+    "tail_taper": 0,
+    "source_floor_db": -100,
+    "source_floor_note": "official default; numerical guard, not physical accuracy certificate",
+    "independent_check": "official homodyne on M00_base only; no additional FDTD",
+    "primary_output": "complex frequency response with source/receiver spectra and validity mask",
+    "hardware_export_equivalence": false
+  },
+  "proposed_run_order": [
+    "M00_base",
+    "M01_base",
+    "M00_fine",
+    "M01_fine",
+    "M00_boundary",
+    "M01_boundary",
+    "M00_long",
+    "M01_long"
+  ]
+}

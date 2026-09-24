@@ -1,0 +1,13 @@
+#title: REVIEW ONLY - V4 calibration M01_base
+#domain_mode: TM
+#domain: 16 10 inf
+#dx_dy_dz: 0.025 0.025 0.025
+#time_window: 240e-9
+#omp_threads: 8
+#pml_cells: 12 12 0 12 12 0
+#pml_formulation: HORIPML
+#waveform: ricker 1 80e6 pulse80
+#hertzian_dipole: z 7.8 7.5 inf pulse80
+#rx: 8.2 7.5 inf measurement Ez
+#material: 9 0 1 0 ideal_halfspace
+#box: 0 0 0 16 7 inf ideal_halfspace
