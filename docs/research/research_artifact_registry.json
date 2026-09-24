@@ -509,6 +509,20 @@
       "directory": "artifacts/research_checks/2026-09-25_deep_zfine_live",
       "tracked": true,
       "solver_executed": true
+    },
+    {
+      "id": "background_mismatch",
+      "status": "completed_constructed_negative_controls",
+      "directory": "artifacts/research_checks/2026-09-25_background_mismatch",
+      "tracked": true,
+      "solver_executed": false
+    },
+    {
+      "id": "DEP_BG_ZFINE",
+      "status": "completed_target_pair_pending",
+      "directory": "artifacts/research_checks/2026-09-25_DEP_BG_ZFINE",
+      "tracked": true,
+      "solver_executed": true
     }
   ],
   "default_array_verification": {
@@ -529,6 +543,6 @@
     "verify actual instrument frequency vector and CSV processing;0.3MHz step confirmed; reserved field data excluded from development",
     "confirm target depth meaning and independently constrain site cover thickness/moisture/material parameters",
     "HSG ratio controls support coupling lag (r-1)/(2r) main dt; resolve intended source/coupling/output timing before heterogeneous local model. No active jobs; full20m memory unresolved.",
-    "ZFINE GPU batch running: resume exec session21056, verify live process/supervision before decisions. Archive and compare when both finish. Template mechanism tests complete, physical labels remain unavailable."
+    "DEP_BG_ZFINE completed and archived; DEP_20_ZFINE running in session21056. Revalidate handle, archive target on completion, compare with --zfine and replay. Background mismatch22 cases complete; physical labels unavailable."
   ]
 }
