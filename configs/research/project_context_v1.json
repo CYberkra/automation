@@ -5,6 +5,9 @@
     "radar_type": "SFCW",
     "frequency_min_hz": 20000000,
     "frequency_max_hz": 170000000,
+    "frequency_step_hz": 300000,
+    "surface_cover_candidate": "粉质粘土（用户表述：地表可以是）",
+    "typical_bedrock": "砂岩（用户表述：地下一般是砂岩/基岩）",
     "project": "浅层非显性滑坡",
     "depth_original_wording": "项目背景是20m浅的非显性滑坡",
     "use_gprmax_version": "4.0.0",
@@ -16,15 +19,28 @@
     "meaning": "approximately within 20 m below ground; a research target, not demonstrated radar penetration"
   },
   "unknown": {
-    "tone_count": null,
-    "frequency_step_hz": null,
-    "frequency_spacing_uniform": null,
+    "actual_exported_frequency_vector_verified": false,
+    "actual_device_tone_count_verified": null,
     "tone_dwell_s": null,
     "transmitted_spectrum_and_phase": null,
     "receiver_calibration_and_export_chain": null,
     "antenna_geometry_and_response": null,
     "representative_flight_height_m": null,
-    "field_material_complex_permittivity": null
+    "field_material_complex_permittivity": null,
+    "silty_clay_cover_thickness_m": null,
+    "moisture_and_saturation": null,
+    "sandstone_weathering_and_fracture_state": null
+  },
+  "derived_frequency_grid": {
+    "assumption": "uniform 0.3 MHz increments including both 20 and 170 MHz endpoints",
+    "formula_hz": "f[k] = 20000000 + 300000*k, k=0..500",
+    "interval_count": 500,
+    "tone_count": 501,
+    "bandwidth_hz": 150000000,
+    "periodic_reconstruction_window_s": 0.0000033333333333333333,
+    "window_formula": "1 / frequency_step_hz",
+    "not_an_fdtd_duration_or_penetration_guarantee": true,
+    "does_not_identify_existing_csv_processing": true
   },
   "existing_csv_sample_count_is_not_tone_count": true,
   "old_P1_profile": {

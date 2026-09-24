@@ -3,7 +3,7 @@
 ## 最新接续与用户决定（2026-09-24，优先于旧阶段描述）
 
 - 新会话先读 [START_HERE.md](START_HERE.md)、[持久决策](docs/research/decision_log.md)和[产物索引](docs/research/research_artifact_registry.json)，不要重做已完成的损伤阶梯首版。
-- 用户确认雷达为 SFCW 20–170 MHz，项目为约20m浅层非显性滑坡；地下0–20m是当前解释，频点数/步长仍未知。背景见 `configs/research/project_context_v1.json`。
+- 用户确认雷达为SFCW 20–170MHz、步长0.3MHz；均匀且含端点时推导501频点。项目为约20m浅层非显性滑坡，地下0–20m是当前解释。地表可以是粉质粘土，基岩一般为砂岩；具体电性/厚度未知。设备频率向量和旧CSV处理链仍未核验，背景见 `configs/research/project_context_v1.json`。
 - 使用用户提供的 gprMax V4.0.0。**用户明确要求仿真前先敲定方案**；执行记录 `configs/research/gprmax_v4_execution_gate.json` 当前为 false，不能从“继续研究”推断放行，含求解的官方示例/测试/benchmark亦同。
 - 本地 V4 实际根为 `E:\gprMax-v.4.0.0\gprMax-v.4.0.0`；旧名为gprmax的环境是V3.1.6/Python3.10，V4源码要求3.11–3.13，运行就绪尚未验证。
 - 用户授权主动归档和 Git 提交/同步；每单元记录证据、限制、失败、下一步并验证远端。凭据不进入仓库。
