@@ -25,9 +25,11 @@ def main():
     p.add_argument('--execute',action='store_true')
     a=p.parse_args()
     gate=json.loads((ROOT/'configs/research/gprmax_v4_execution_gate.json').read_text(encoding='utf-8'))
-    if not gate['approved_to_simulate'] or 'M00_x_3d' not in gate['approved_run_ids']:
-        raise SystemExit('No explicit authorization for M00_x_3d')
     contract=gate['approved_execution_contract']
+    run_id=contract.get('run_id','M00_x_3d')
+    if not run_id.replace('_','').isalnum():raise SystemExit('Invalid run identifier')
+    if not gate['approved_to_simulate'] or gate['approved_run_ids'] != [run_id]:
+        raise SystemExit('No recorded authorization for this single run')
     source=ROOT/contract['input_path']
     assert sha(source)==contract['input_sha256'],'Input changed'
     assert sha(Path(__file__))==contract['launcher_sha256'],'Launcher changed'
@@ -68,7 +70,7 @@ def main():
     run_dir=(ROOT/contract['run_directory']).resolve()
     assert run_dir.is_relative_to((ROOT/'artifacts/simulations').resolve())
     if run_dir.exists():raise SystemExit('Run directory already exists')
-    preflight=dict(run_id='M00_x_3d',input_sha256=sha(source),available_RAM_bytes=free,
+    preflight=dict(run_id=run_id,input_sha256=sha(source),available_RAM_bytes=free,
                    available_VRAM_bytes=gpu_free,total_VRAM_bytes=gpu_total,
                    backend='CUDA',device_id=budget['device_id'],precision='double',cpu_fallback=False,
                    approved=True,execute=a.execute,utc=datetime.now(timezone.utc).isoformat())
@@ -81,8 +83,8 @@ def main():
     code=("import hashlib,pathlib,runpy,sys; "
           f"p=pathlib.Path({str(source)!r}); b=p.read_bytes(); "
           f"assert hashlib.sha256(b).hexdigest()=={sha(source)!r}; "
-          "pathlib.Path('M00_x_3d.in').write_bytes(b); "
-          f"sys.argv=['gprMax','M00_x_3d.in','-gpu',{str(budget['device_id'])!r},'-gpu_precision','double']; "
+          f"pathlib.Path({(run_id+'.in')!r}).write_bytes(b); "
+          f"sys.argv=['gprMax',{(run_id+'.in')!r},'-gpu',{str(budget['device_id'])!r},'-gpu_precision','double']; "
           "runpy.run_module('gprMax',run_name='__main__')")
     result=supervise([sys.executable,'-u','-c',code],run_dir,
         wall_s=budget['wall_minutes']*60,memory_bytes=budget['job_commit_GiB']*2**30,

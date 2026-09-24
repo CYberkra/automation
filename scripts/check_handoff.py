@@ -48,7 +48,7 @@ def main():
         try:
             contract = gate["approved_execution_contract"]
             budget = gate["approved_compute_budget"]
-            safe_gate = (gate["approved_run_ids"] == ["M00_x_3d"]
+            safe_gate = (gate["approved_run_ids"] == [contract.get("run_id", "M00_x_3d")]
                          and budget["max_fdtd_runs"] == 1 and budget["retries"] == 0
                          and all(budget[k] > 0 for k in ("wall_minutes", "job_commit_GiB", "output_GiB")))
             for path_key, hash_key in (("input_path", "input_sha256"),

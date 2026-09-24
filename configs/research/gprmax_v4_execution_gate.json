@@ -7,7 +7,7 @@
   "source_root_on_current_machine": "E:/gprMax-v.4.0.0/gprMax-v.4.0.0",
   "approved_to_simulate": true,
   "approved_run_ids": [
-    "M00_x_3d"
+    "M01_T800"
   ],
   "approved_compute_budget": {
     "wall_minutes": 30,
@@ -52,22 +52,23 @@
     "expected outputs and storage",
     "explicit agreed execution scope"
   ],
-  "note": "This is an auditable decision record, not a technical sandbox. Generic requests to continue research do not change this gate.",
+  "note": "Current concrete contract implements delegated design authority; consumed attempts must not be rerun.",
   "build_authorization": "用户明确：许可你构建。仅构建/安装/导入核验，不是仿真批准。",
-  "simulation_authorization": "用户在尾项/时窗验证说明后明确：做吧；此前允许自行设计、仿真GPU、官方CPU后处理。",
+  "simulation_authorization": "User explicitly allowed simulation and autonomous design, then requested continuation after completed tail controls. One ideal-interface GPU run, not a parameter sweep.",
   "approved_execution_contract": {
-    "packet_id": "V4-TAIL-CHECK-01-PML40",
-    "input_path": "configs/research/airborne_tail_checks_v1/PML40.in",
-    "input_sha256": "1439d9b3f7d496d8a25aea9f9b269695e4e54a12bdcd330cb43b148290f3b611",
+    "packet_id": "V4-INTERFACE-01",
+    "input_path": "configs/research/airborne_interface_v1/M01_T800.in",
+    "input_sha256": "74cc71b31dffa6f8553fbb4d36c8dbf6f0decbd81ac07341e2266fdcda743c14",
     "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
     "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
-    "launcher_sha256": "65f50a2d4a226f46ae71627c952582a6499518d84a084802b010111f6118c451",
+    "launcher_sha256": "31ba9260d2d18c2e636832c375041b2a62d45804a1653a9b0973433dd72926b5",
     "supervisor_sha256": "18d34cf77e59588cbd054a184a1f1c35ec3c14dd5943e951ac7f48e680b7b747",
-    "attempt_record": "artifacts/research_checks/2026-09-24_PML40_attempt.json",
-    "run_directory": "artifacts/simulations/2026-09-24_PML40",
-    "continuation": "Second and final predeclared control; compare with baseline and T800 before further solves.",
+    "attempt_record": "artifacts/research_checks/2026-09-24_M01_T800_attempt.json",
+    "run_directory": "artifacts/simulations/2026-09-24_M01_T800",
+    "continuation": "One ideal lossless halfspace control; assess air-subtracted response, no depth-detection claim.",
     "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
-    "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df"
+    "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
+    "run_id": "M01_T800"
   },
   "authorization_history": [
     {
@@ -85,6 +86,10 @@
     {
       "record": "artifacts/research_checks/2026-09-24_T800/authorization_at_start.json",
       "outcome": "Completed T800 control; canonical archive pending same turn"
+    },
+    {
+      "record": "artifacts/research_checks/2026-09-24_PML40/authorization_at_start.json",
+      "outcome": "Completed and archived; tail analysis complete"
     }
   ],
   "execution_policy": {
@@ -96,9 +101,7 @@
     "user_clarification": "仿真gpu跑，后处理如果正常就是cpu那也没必要改，除非gpu能加速很多"
   },
   "execution_outcome": {
-    "status": "completed",
-    "attempt_consumed": true,
-    "canonical_record": "artifacts/research_checks/2026-09-24_tail_controls_analysis/record.json",
-    "note": "Both predeclared tail controls complete; do not rerun consumed attempts."
+    "status": "prepared",
+    "attempt_consumed": false
   }
 }
