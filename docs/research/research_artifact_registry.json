@@ -488,6 +488,13 @@
       "directory": "artifacts/research_checks/2026-09-25_deep_controls_analysis",
       "tracked": true,
       "solver_executed": false
+    },
+    {
+      "id": "deep_eligibility",
+      "status": "completed_eligibility_guard_and_static_budget",
+      "directory": "artifacts/research_checks/2026-09-25_deep_eligibility",
+      "tracked": true,
+      "solver_executed": false
     }
   ],
   "default_array_verification": {
@@ -508,6 +515,6 @@
     "verify actual instrument frequency vector and CSV processing;0.3MHz step confirmed; reserved field data excluded from development",
     "confirm target depth meaning and independently constrain site cover thickness/moisture/material parameters",
     "HSG ratio controls support coupling lag (r-1)/(2r) main dt; resolve intended source/coupling/output timing before heterogeneous local model. No active jobs; full20m memory unresolved.",
-    "Deep phase unresolved despite domain stability. Wire grid sensitivity into evaluation eligibility; conduct explicitly limited cross-grid mechanism tests and estimate viable full-band phase accuracy resources. No active jobs."
+    "Eligibility guarded: deep phase unresolved. Next prepare dy12.5mm/dz6.25mm paired controls; budget is not execution or convergence evidence. Mechanism studies must keep physical labels unavailable. No active jobs."
   ]
 }

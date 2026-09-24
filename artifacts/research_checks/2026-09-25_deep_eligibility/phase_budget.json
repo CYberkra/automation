@@ -1,0 +1,107 @@
+{
+  "rows": [
+    {
+      "dy_m": 0.025,
+      "dz_m": 0.025,
+      "cells": 2560000,
+      "dt_s": 5.896635841874211e-11,
+      "main_field_ID_GiB": 0.3437627702951431,
+      "geometry_aligned": true,
+      "axial_lossless_170MHz_phase_error_deg": -84.59748451299849,
+      "wall_s_work_scaled_from_FINE_target": 15.273375,
+      "main_arrays_below_13GiB_screen": true
+    },
+    {
+      "dy_m": 0.0125,
+      "dz_m": 0.0125,
+      "cells": 10240000,
+      "dt_s": 2.9483179209371056e-11,
+      "main_field_ID_GiB": 1.3741709142923355,
+      "geometry_aligned": true,
+      "axial_lossless_170MHz_phase_error_deg": -20.993175346018067,
+      "wall_s_work_scaled_from_FINE_target": 122.187,
+      "main_arrays_below_13GiB_screen": true
+    },
+    {
+      "dy_m": 0.00625,
+      "dz_m": 0.00625,
+      "cells": 40960000,
+      "dt_s": 1.4741589604685528e-11,
+      "main_field_ID_GiB": 5.49492372572422,
+      "geometry_aligned": true,
+      "axial_lossless_170MHz_phase_error_deg": -5.238660906949084,
+      "wall_s_work_scaled_from_FINE_target": 977.496,
+      "main_arrays_below_13GiB_screen": true
+    },
+    {
+      "dy_m": 0.005,
+      "dz_m": 0.005,
+      "cells": 64000000,
+      "dt_s": 1.1793271683748419e-11,
+      "main_field_ID_GiB": 8.585268393158913,
+      "geometry_aligned": true,
+      "axial_lossless_170MHz_phase_error_deg": -3.3520053585479084,
+      "wall_s_work_scaled_from_FINE_target": 1909.1718750000007,
+      "main_arrays_below_13GiB_screen": true
+    },
+    {
+      "dy_m": 0.003125,
+      "dz_m": 0.003125,
+      "cells": 163840000,
+      "dt_s": 7.370794802342764e-12,
+      "main_field_ID_GiB": 21.97617544233799,
+      "geometry_aligned": true,
+      "axial_lossless_170MHz_phase_error_deg": -1.3090651542570166,
+      "wall_s_work_scaled_from_FINE_target": 7819.968,
+      "main_arrays_below_13GiB_screen": false
+    },
+    {
+      "dy_m": 0.0125,
+      "dz_m": 0.00625,
+      "cells": 20480000,
+      "dt_s": 1.8646799792906984e-11,
+      "main_field_ID_GiB": 2.747998371720314,
+      "geometry_aligned": true,
+      "axial_lossless_170MHz_phase_error_deg": -5.0430595684990625,
+      "wall_s_work_scaled_from_FINE_target": 386.38922046299376,
+      "main_arrays_below_13GiB_screen": true
+    },
+    {
+      "dy_m": 0.0125,
+      "dz_m": 0.005,
+      "cells": 25600000,
+      "dt_s": 1.5485324365385792e-11,
+      "main_field_ID_GiB": 3.4349121004343033,
+      "geometry_aligned": true,
+      "axial_lossless_170MHz_phase_error_deg": -3.200948588483211,
+      "wall_s_work_scaled_from_FINE_target": 581.5927928038708,
+      "main_arrays_below_13GiB_screen": true
+    },
+    {
+      "dy_m": 0.0125,
+      "dz_m": 0.003125,
+      "cells": 40960000,
+      "dt_s": 1.0112647039820337e-11,
+      "main_field_ID_GiB": 5.495653286576271,
+      "geometry_aligned": true,
+      "axial_lossless_170MHz_phase_error_deg": -1.2371810287583693,
+      "wall_s_work_scaled_from_FINE_target": 1424.9330383509255,
+      "main_arrays_below_13GiB_screen": true
+    }
+  ],
+  "checks": {
+    "all_geometries_exact": true,
+    "previous_phase_prediction_reproduced": true
+  },
+  "solver_invoked": false,
+  "execution_authorized_by_this_file": false,
+  "limitations": [
+    "Memory is main six double field/six uint32 ID arrays with two invariant-axis Yee nodes only; excludes PML, coefficients, CUDA context and host construction.",
+    "Runtime is cell-step scaling from one measured run, not benchmark or guaranteed ETA.",
+    "Axial lossless phase excludes target scattering, oblique propagation and conduction; anisotropic mesh still has lateral dispersion.",
+    "13GiB is only a preliminary main-array screen, not a physical or runtime acceptance threshold.",
+    "No user phase tolerance invented. Full20-170MHz remains in scope."
+  ],
+  "decision": "Assess directional depth refinement as an affordable diagnostic; do not assert full convergence from axial prediction.",
+  "script_sha256": "c47f3223547158e99a6b595f798727964a1b8e288f3730f231a4b6e45c1400a4"
+}

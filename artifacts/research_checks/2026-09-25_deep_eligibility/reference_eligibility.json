@@ -1,0 +1,47 @@
+{
+  "reference_id": "depth20_paired_contrast_v1",
+  "reference_kind": "paired_contrast",
+  "reference_state": "numerically_unresolved",
+  "scope": "contrast",
+  "physical_or_constructed_definition": "2D TMx hypothetical wet block minus identical background, 20m center depth. Common Hann-band real synthesis, no alignment or gain.",
+  "mask_id": "fixed_440_600ns",
+  "mask_sha256": "d6b2c72dadc04fa6dc0c68eec5b1d05caf4c0a81d086ebc06599ee6d0f7590c4",
+  "reference_sha256": "315a912a32f9b9e03cc2598f2ea6f5991ab78dd326928f5c939c63532d04224e",
+  "axis_units": [
+    "s",
+    "single modeled receiver"
+  ],
+  "amplitude_units": "(V/m)/A; Hann band synthesis",
+  "frozen_before_candidates": true,
+  "common_protected_objects": [
+    "cover/rock interfaces remain protected, not pure clutter"
+  ],
+  "numerical_credibility": {
+    "fullband_grid_relative_L2": 0.6666471444222444,
+    "fixed_window_real_waveform_relative_L2": 0.2826937830262627
+  },
+  "uncertainty_kind": "Observed grid sensitivity, NOT a rigorous error bound or a measured noise distribution",
+  "contract_probe": {
+    "baseline": {
+      "available": false,
+      "absolute_preservation_eligible": false,
+      "reason": "reference_state_or_scope:numerically_unresolved:paired_contrast:contrast",
+      "metrics": null
+    },
+    "FINE_200": {
+      "available": false,
+      "absolute_preservation_eligible": false,
+      "reason": "reference_state_or_scope:numerically_unresolved:paired_contrast:contrast",
+      "metrics": null
+    }
+  },
+  "probe_note": "Identity-input eligibility probes only; no processing candidates have been evaluated. Even exact self-match must not produce physical preservation labels.",
+  "physical_label_eligible": false,
+  "training_eligible": false,
+  "unique_label": null,
+  "gain_quality_label": null,
+  "gain_note": "No independent unattenuated target response; depth ratios are not a compensation ground truth.",
+  "next_use": "Explicit mechanism diagnostics may compare results on both grids, but must not promote either to physical truth.",
+  "source_evidence_sha256": "e3db26543a40e2ca1bda4f4fbc1f68fcef4f2b8c1609c6524382339afa0c43a7",
+  "solver_invoked": false
+}
