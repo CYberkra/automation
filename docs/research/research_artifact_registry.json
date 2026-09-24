@@ -418,6 +418,41 @@
       "directory": "artifacts/research_checks/2026-09-25_yz_fine_analysis",
       "tracked": true,
       "solver_executed": false
+    },
+    {
+      "id": "DEP_BG",
+      "status": "completed_initial_depth_screen",
+      "directory": "artifacts/research_checks/2026-09-25_DEP_BG",
+      "tracked": true,
+      "solver_executed": true
+    },
+    {
+      "id": "DEP_05",
+      "status": "completed_initial_depth_screen",
+      "directory": "artifacts/research_checks/2026-09-25_DEP_05",
+      "tracked": true,
+      "solver_executed": true
+    },
+    {
+      "id": "DEP_10",
+      "status": "completed_initial_depth_screen",
+      "directory": "artifacts/research_checks/2026-09-25_DEP_10",
+      "tracked": true,
+      "solver_executed": true
+    },
+    {
+      "id": "DEP_20",
+      "status": "completed_initial_depth_screen",
+      "directory": "artifacts/research_checks/2026-09-25_DEP_20",
+      "tracked": true,
+      "solver_executed": true
+    },
+    {
+      "id": "yz_depth_analysis",
+      "status": "completed_initial_depth_screen",
+      "directory": "artifacts/research_checks/2026-09-25_yz_depth_analysis",
+      "tracked": true,
+      "solver_executed": false
     }
   ],
   "default_array_verification": {
@@ -438,6 +473,6 @@
     "verify actual instrument frequency vector and CSV processing;0.3MHz step confirmed; reserved field data excluded from development",
     "confirm target depth meaning and independently constrain site cover thickness/moisture/material parameters",
     "HSG ratio controls support coupling lag (r-1)/(2r) main dt; resolve intended source/coupling/output timing before heterogeneous local model. No active jobs; full20m memory unresolved.",
-    "Two-level YZ refinement complete. Next localized hypothetical wet-zone paired/background depth study with late-time window/boundary budget and target-difference grid validation; retain 3D and field validation; no active jobs."
+    "Depth screen complete. Next 20m paired fine-grid and expanded-domain controls on target differences, then controlled clutter/background-mismatch and gain preservation evaluation; no active jobs."
   ]
 }

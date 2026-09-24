@@ -1,0 +1,55 @@
+{
+  "checks": {
+    "DEP_BG_metadata_finite_source": true,
+    "DEP_05_metadata_finite_source": true,
+    "DEP_10_metadata_finite_source": true,
+    "DEP_20_metadata_finite_source": true
+  },
+  "rows": {
+    "DEP_05": {
+      "center_depth_m": 5,
+      "vertical_lossless_center_time_ns": 220.15230283078034,
+      "gated_envelope_peak_time_ns": 216.064453125,
+      "gated_envelope_peak": 0.08501092306795821,
+      "spectral_RMS": 0.10237059806599245,
+      "difference_to_background_norm_dB": -59.140920281146464,
+      "tail_window_difference_over_target_norm": 6.884264936381944e-08,
+      "raw_difference_pre100ns_peak_over_full_peak": 0.0,
+      "spectral_RMS_relative_5m_dB": 0.0
+    },
+    "DEP_10": {
+      "center_depth_m": 10,
+      "vertical_lossless_center_time_ns": 320.22153139022595,
+      "gated_envelope_peak_time_ns": 316.162109375,
+      "gated_envelope_peak": 0.04124367129388793,
+      "spectral_RMS": 0.04962171405944377,
+      "difference_to_background_norm_dB": -65.43098985494515,
+      "tail_window_difference_over_target_norm": 1.9980360426695903e-07,
+      "raw_difference_pre100ns_peak_over_full_peak": 0.0,
+      "spectral_RMS_relative_5m_dB": -6.290069573798682
+    },
+    "DEP_20": {
+      "center_depth_m": 20,
+      "vertical_lossless_center_time_ns": 520.3599885091172,
+      "gated_envelope_peak_time_ns": 516.7643229166667,
+      "gated_envelope_peak": 0.009900226983643389,
+      "spectral_RMS": 0.011915359414459419,
+      "difference_to_background_norm_dB": -77.82228215298248,
+      "tail_window_difference_over_target_norm": 0.00027253734499874035,
+      "raw_difference_pre100ns_peak_over_full_peak": 0.0,
+      "spectral_RMS_relative_5m_dB": -18.68136187183602
+    }
+  },
+  "spectrum_units": "(V/m)/A",
+  "envelope": "Hann weighted positive-band complex baseband envelope; IFFT zero-padding only interpolates. No physical noise floor, gain, or per-depth normalization.",
+  "source_frequency_count": 501,
+  "inputs": {
+    "artifacts\\research_checks\\2026-09-25_DEP_BG\\DEP_BG.h5": "b5f1eb2312916623ed5314048cfa9fd0afe295001efd9c0c4c2e73749b51a1ed",
+    "artifacts\\research_checks\\2026-09-25_DEP_05\\DEP_05.h5": "7ee2ee7b53eb442c47937ba3cc8744449de743a595365d1c2db8ff46be1fc317",
+    "artifacts\\research_checks\\2026-09-25_DEP_10\\DEP_10.h5": "acc82c96ea5924ebb2d1e547618288d727fb84cfdcd4c6fc3605c2cb0067c230",
+    "artifacts\\research_checks\\2026-09-25_DEP_20\\DEP_20.h5": "87dccd3ec782c0c3ee5f0dfaa1235b91193c19ce543646da56ac41d400968f16"
+  },
+  "solver_invoked": false,
+  "detectability_claim": false,
+  "grid_and_boundary_validation_pending": true
+}
