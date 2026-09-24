@@ -1,0 +1,55 @@
+{
+  "checks": {
+    "AIR_metadata_finite_source": true,
+    "ROCK_metadata_finite_source": true,
+    "COVER_metadata_finite_source": true
+  },
+  "comparisons": {
+    "ROCK_200": {
+      "max_relative_complex_error": 0.018321425450467155,
+      "median_relative_complex_error": 0.003483167975009721,
+      "max_abs_amplitude_error_dB": 0.04876679172295478,
+      "max_abs_phase_error_deg": 1.0023484523927337
+    },
+    "COVER_200": {
+      "max_relative_complex_error": 0.02211845338761945,
+      "median_relative_complex_error": 0.0037480333846789575,
+      "max_abs_amplitude_error_dB": 0.09658718518770223,
+      "max_abs_phase_error_deg": 1.1605426315852017
+    },
+    "ROCK_400": {
+      "max_relative_complex_error": 0.01832142531458693,
+      "median_relative_complex_error": 0.00348314930691425,
+      "max_abs_amplitude_error_dB": 0.0487667668037781,
+      "max_abs_phase_error_deg": 1.0023484953639814
+    },
+    "COVER_400": {
+      "max_relative_complex_error": 0.022118448218387786,
+      "median_relative_complex_error": 0.003748057051764507,
+      "max_abs_amplitude_error_dB": 0.09658716312827735,
+      "max_abs_phase_error_deg": 1.1605430013851976
+    }
+  },
+  "taper_200_vs_400": {
+    "ROCK": {
+      "max_relative_complex_error": 6.532806687909476e-06,
+      "median_relative_complex_error": 2.7520285750973243e-08,
+      "max_abs_amplitude_error_dB": 5.011622947007627e-05,
+      "max_abs_phase_error_deg": 0.0003511901864023243
+    },
+    "COVER": {
+      "max_relative_complex_error": 5.996262338078509e-06,
+      "median_relative_complex_error": 2.6161271878015505e-08,
+      "max_abs_amplitude_error_dB": 4.749816103984273e-05,
+      "max_abs_phase_error_deg": 0.00032022777696895187
+    }
+  },
+  "inputs": {
+    "artifacts\\research_checks\\2026-09-25_YZ_AIR\\YZ_AIR.h5": "bc84198dd50db9c2afa87b1d93eda164d62e374a442e2a5fc4775e8a85a0edd0",
+    "artifacts\\research_checks\\2026-09-25_YZ_ROCK\\YZ_ROCK.h5": "20c0d199277b9604f121e5a6d6580c6bb8b2a391f19feb8aaee7abcb47c4c885",
+    "artifacts\\research_checks\\2026-09-25_YZ_COVER\\YZ_COVER.h5": "d73ee851245b044edabe7f51e8f21f4373e6f367b163a650fa033a9bb4b44ae1",
+    "artifacts\\research_checks\\2026-09-25_yz_layers_reference\\spectra.npz": "42f144f7b1601724d100b5a00028c997469479b3177abe1f8c37fb7a70b9c578"
+  },
+  "physical_acceptance_threshold": null,
+  "solver_invoked": false
+}

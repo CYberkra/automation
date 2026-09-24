@@ -1,0 +1,83 @@
+
+=== Electromagnetic modelling software based on the Finite-Difference Time-Domain (FDTD) method 
+
+    www.gprmax.com   __  __
+     __ _ _ __  _ __|  \/  | __ ___  __
+    / _` | '_ \| '__| |\/| |/ _` \ \/ /
+   | (_| | |_) | |  | |  | | (_| |>  <
+    \__, | .__/|_|  |_|  |_|\__,_/_/\_\\
+    |___/|_|
+                     v4.0.0 (Caol Ila)
+
+ Copyright (C) 2015-2026: The University of Edinburgh, United Kingdom
+
+ gprMax is free software: you can redistribute it and/or modify it under the
+  terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+ gprMax is distributed in the hope that it will be useful, but WITHOUT ANY
+  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+  A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ You should have received a copy of the GNU General Public License along with
+  gprMax.  If not, see www.gnu.org/licenses.
+
+LAPTOP-83GRKUNE | unknown unknown | unknown x unknown (16 cores, 32 cores with Hyper-Threading) | 63.2 GiB | Windows 11 (64-bit)
+|--->OpenMP: 16 threads
+|--->CUDA:
+     |--->Device 0: NVIDIA GeForce RTX 4090 Laptop GPU | 16.0 GiB
+Constants/variables used/available for Python scripting: {c: 299792458.0, current_model_run: 1, e0: 8.8541878188e-12, inputfile: E:\automation_djh\automation_repo\artifacts\simulations\2026-09-25_YZ_ROCK\YZ_ROCK.in, m0: 1.25663706127e-06, number_model_runs: 1, z0: 376.7303134118051}
+
+Model title: YZ_ROCK hypothetical lossy planar model
+Spatial discretisation: 0.025 x 0.025 x 0.025m
+Requested domain mode: TM
+Domain size: 0.025 x 24 x 44m (1 x 960 x 1760 = 1.6896e+06 cells)
+Mode: 2D TMx
+Time step (at CFL limit): 5.89664e-11 secs
+Time window: 8e-07 secs (13569 iterations)
+Simulation will use 8 OpenMP threads
+PML thickness: x0=0, y0=40, z0=40, xmax=0, ymax=40, zmax=40
+Waveform impulse of type impulse with maximum amplitude scaling 1, frequency 1Hz created.
+Hertzian dipole with polarity x at 0m, 11.35m, 39m, using waveform impulse created.
+Receiver at 0m, 12.65m, 39m with output component(s) Ex created.
+Material rock with eps_r=9, sigma=0.001 S/m; mu_r=1, sigma*=0 Ohm/m created.
+PML formulation set to HORIPML
+global PML configuration CFS parameters: alpha (scaling: constant, scaling direction: forward, min: 0, max: 0), kappa (scaling: constant, scaling direction: forward, min: 1, max: 1), sigma (scaling: quartic, scaling direction: forward, min: 0, max: 0.21235349838321013) created.
+Box from 0m, 0m, 0m, to 0.025m, 24m, 24m of material(s) rock created, dielectric smoothing is on.
+
+--- Model 1/1, input file: YZ_ROCK.in -----------------------------------------
+
+
+Memory required (estimated): ~910.6 MB [main_grid] + ~65.0 MB overhead = 975.6 MB
+
+PML boundaries [main_grid]: {formulation: HORIPML, order: 1, thickness (cells): x0: 0, y0: 40, z0: 40, xmax: 0, ymax: 40, zmax: 40}
+
+Building PML boundaries [main_grid]:   0%|               | 0/4 [00:00<?, ?it/s]Building PML boundaries [main_grid]: 100%|®Ä®Ä®Ä®Ä®Ä| 4/4 [00:00<00:00, 1254.93it/s]
+Building Yee cells [main_grid]:   0%|                    | 0/2 [00:00<?, ?it/s]Building Yee cells [main_grid]: 100%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä| 2/2 [00:00<00:00, 18.48it/s]Building Yee cells [main_grid]: 100%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä| 2/2 [00:00<00:00, 18.48it/s]
+
+Materials [main_grid]:
+    |                                      |                     |       | sigma  |      | sigma*  | Dielectric 
+ ID | Name                                 | Type                | eps_r | [S/m]  | mu_r | [Ohm/m] | smoothable 
+----+--------------------------------------+---------------------+-------+--------+------+---------+------------
+  0 | pec                                  | builtin             | 1     | inf    | 1    | 0       | False      
+  1 | pmc                                  | builtin             | 1     | 0      | 1    | inf     | False      
+  2 | free_space                           | builtin             | 1     | 0      | 1    | 0       | True       
+  3 | rock                                 |                     | 9     | 0.001  | 1    | 0       | True       
+  4 | free_space+free_space+rock+rock      | dielectric-smoothed | 5     | 0.0005 | 1    | 0       | True       
+  5 | Hmag_free_space+free_space+rock+rock | dielectric-smoothed | 5     | 0.0005 | 1    | 0       | True       
+
+Numerical dispersion analysis [main_grid] not carried out as impulse waveform used.
+Output directory: E:\automation_djh\automation_repo\artifacts\simulations\2026-09-25_YZ_ROCK
+
+
+
+
+Model 1/1 solving on LAPTOP-83GRKUNE with CUDA backend using Device 0: NVIDIA GeForce RTX 4090 Laptop GPU
+|--->:   0%|                                         | 0/13569 [00:00<?, ?it/s]|--->:   1%|®á                              | 91/13569 [00:00<00:16, 836.05it/s]|--->:   1%|®Ö                             | 175/13569 [00:00<00:36, 370.82it/s]|--->:   3%|®Å                             | 407/13569 [00:00<00:14, 883.07it/s]|--->:   5%|®Ä®Ö                           | 647/13569 [00:00<00:09, 1297.50it/s]|--->:   6%|®Ä®Ç                           | 877/13569 [00:00<00:08, 1577.54it/s]|--->:   8%|®Ä®Ä®Ü                         | 1143/13569 [00:00<00:06, 1878.26it/s]|--->:  10%|®Ä®Ä®Ç                         | 1383/13569 [00:00<00:06, 2004.24it/s]|--->:  12%|®Ä®Ä®Ä®Ö                        | 1646/13569 [00:01<00:05, 2178.85it/s]|--->:  14%|®Ä®Ä®Ä®Å                        | 1902/13569 [00:01<00:05, 2278.41it/s]|--->:  16%|®Ä®Ä®Ä®Ä®Ö                       | 2147/13569 [00:01<00:04, 2326.93it/s]|--->:  18%|®Ä®Ä®Ä®Ä®Å                       | 2393/13569 [00:01<00:04, 2366.11it/s]|--->:  19%|®Ä®Ä®Ä®Ä®Ä®Ö                      | 2638/13569 [00:01<00:04, 2390.81it/s]|--->:  21%|®Ä®Ä®Ä®Ä®Ä®Å                      | 2884/13569 [00:01<00:04, 2401.34it/s]|--->:  23%|®Ä®Ä®Ä®Ä®Ä®Ä®Ö                     | 3128/13569 [00:01<00:04, 2396.16it/s]|--->:  25%|®Ä®Ä®Ä®Ä®Ä®Ä®Å                     | 3380/13569 [00:01<00:04, 2413.47it/s]|--->:  27%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ñ                    | 3638/13569 [00:01<00:04, 2458.18it/s]|--->:  29%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä                    | 3885/13569 [00:01<00:03, 2429.51it/s]|--->:  30%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ñ                   | 4129/13569 [00:02<00:03, 2395.66it/s]|--->:  32%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä                   | 4386/13569 [00:02<00:03, 2405.08it/s]|--->:  34%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ñ                  | 4634/13569 [00:02<00:03, 2426.48it/s]|--->:  36%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®á                 | 4907/13569 [00:02<00:03, 2465.49it/s]|--->:  38%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®É                 | 5161/13569 [00:02<00:03, 2448.59it/s]|--->:  40%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®á                | 5424/13569 [00:02<00:03, 2434.41it/s]|--->:  42%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®É                | 5692/13569 [00:02<00:03, 2418.06it/s]|--->:  44%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ü               | 5963/13569 [00:02<00:03, 2490.74it/s]|--->:  46%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ç               | 6213/13569 [00:02<00:02, 2470.93it/s]|--->:  48%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ü              | 6465/13569 [00:03<00:02, 2427.86it/s]|--->:  50%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ç              | 6717/13569 [00:03<00:02, 2394.73it/s]|--->:  51%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ü             | 6957/13569 [00:03<00:02, 2377.43it/s]|--->:  53%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Å             | 7251/13569 [00:03<00:02, 2522.25it/s]|--->:  55%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ö            | 7504/13569 [00:03<00:02, 2467.79it/s]|--->:  57%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä            | 7772/13569 [00:03<00:02, 2507.29it/s]|--->:  59%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ñ           | 8024/13569 [00:03<00:02, 2481.46it/s]|--->:  61%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä           | 8273/13569 [00:03<00:02, 2441.85it/s]|--->:  63%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ñ          | 8529/13569 [00:03<00:02, 2454.21it/s]|--->:  65%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä          | 8781/13569 [00:03<00:02, 2393.95it/s]|--->:  67%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®É         | 9063/13569 [00:04<00:01, 2365.21it/s]|--->:  69%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ü        | 9369/13569 [00:04<00:01, 2530.95it/s]|--->:  71%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ç        | 9624/13569 [00:04<00:01, 2487.17it/s]|--->:  73%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ö       | 9877/13569 [00:04<00:01, 2415.13it/s]|--->:  75%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®á      | 10156/13569 [00:04<00:01, 2498.32it/s]|--->:  77%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®É      | 10407/13569 [00:04<00:01, 2459.18it/s]|--->:  79%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®á     | 10654/13569 [00:04<00:01, 2439.67it/s]|--->:  81%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®É     | 10924/13569 [00:04<00:01, 2491.63it/s]|--->:  82%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®á    | 11174/13569 [00:04<00:00, 2463.73it/s]|--->:  84%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®É    | 11421/13569 [00:05<00:00, 2426.04it/s]|--->:  86%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®á   | 11671/13569 [00:05<00:00, 2425.09it/s]|--->:  88%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ç   | 11941/13569 [00:05<00:00, 2502.86it/s]|--->:  90%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ü  | 12196/13569 [00:05<00:00, 2464.15it/s]|--->:  92%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ç  | 12443/13569 [00:05<00:00, 2458.82it/s]|--->:  94%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ü | 12703/13569 [00:05<00:00, 2436.09it/s]|--->:  96%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ç | 12960/13569 [00:05<00:00, 2448.53it/s]|--->:  98%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ü| 13234/13569 [00:05<00:00, 2486.09it/s]|--->:  99%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ç| 13483/13569 [00:05<00:00, 2452.80it/s]|--->: 100%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä| 13569/13569 [00:05<00:00, 2299.57it/s]
+
+Written output file: YZ_ROCK.h5
+
+Memory used (estimated): ~407.5 MB host + ~1.6 GB device
+Time taken: 5.9294 seconds
+
+=== Simulation completed in 14.4591 seconds ====================================
+

@@ -1,0 +1,18 @@
+{
+  "reason": "completed",
+  "exit_code": 0,
+  "wall_s": 15.297000000020489,
+  "peak_job_commit_bytes": 2664181760,
+  "observed_output_bytes": 140778,
+  "memory_cap_bytes": 6442450944,
+  "wall_cap_s": 900,
+  "output_cap_bytes": 1073741824,
+  "memory_semantics": "Windows job committed memory, not RSS",
+  "output_semantics": "polled file bytes; overshoot possible",
+  "command": [
+    "E:\\automation_djh\\automation_repo\\artifacts\\local_checks\\gprmax_v4_gpu_env\\Scripts\\python.exe",
+    "-u",
+    "-c",
+    "import hashlib,pathlib,runpy,sys; p=pathlib.Path('E:\\\\automation_djh\\\\automation_repo\\\\configs\\\\research\\\\yz_layers_v1\\\\YZ_COVER.in'); b=p.read_bytes(); assert hashlib.sha256(b).hexdigest()=='e521a3217efc7818f0a23288d4c18059bda26cdae155a1d346976223a36059e5'; pathlib.Path('YZ_COVER.in').write_bytes(b); sys.argv=['gprMax','YZ_COVER.in','-gpu','0','-gpu_precision','double']; runpy.run_module('gprMax',run_name='__main__')"
+  ]
+}

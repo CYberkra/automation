@@ -369,6 +369,34 @@
       "directory": "artifacts/research_checks/2026-09-25_yz2d_analysis",
       "tracked": true,
       "solver_executed": false
+    },
+    {
+      "id": "YZ_ROCK",
+      "status": "completed_initial_layer_validation",
+      "directory": "artifacts/research_checks/2026-09-25_YZ_ROCK",
+      "tracked": true,
+      "solver_executed": true
+    },
+    {
+      "id": "YZ_COVER",
+      "status": "completed_initial_layer_validation",
+      "directory": "artifacts/research_checks/2026-09-25_YZ_COVER",
+      "tracked": true,
+      "solver_executed": true
+    },
+    {
+      "id": "yz_layers_reference",
+      "status": "completed_initial_layer_validation",
+      "directory": "artifacts/research_checks/2026-09-25_yz_layers_reference",
+      "tracked": true,
+      "solver_executed": false
+    },
+    {
+      "id": "yz_layers_analysis",
+      "status": "completed_initial_layer_validation",
+      "directory": "artifacts/research_checks/2026-09-25_yz_layers_analysis",
+      "tracked": true,
+      "solver_executed": false
     }
   ],
   "default_array_verification": {
@@ -389,6 +417,6 @@
     "verify actual instrument frequency vector and CSV processing;0.3MHz step confirmed; reserved field data excluded from development",
     "confirm target depth meaning and independently constrain site cover thickness/moisture/material parameters",
     "HSG ratio controls support coupling lag (r-1)/(2r) main dt; resolve intended source/coupling/output timing before heterogeneous local model. No active jobs; full20m memory unresolved.",
-    "2D air/PEC CUDA calibration complete. Next independent 2D layered line-source reference and lossy cover/sandstone design; retain 3D validation. No active jobs."
+    "2D lossy planar pair and independent reference complete. Next same-grid air/cover refinement, then paired localized target/depth study; no active jobs."
   ]
 }
