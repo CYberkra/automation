@@ -2,6 +2,8 @@
 
 ## 2026-09-24 V4 核对、设备信息与跨会话归档
 
+- 研究提交 `251986e` 已推送至GitHub main，并从远端独立克隆验证：86个跟踪文件字节一致、27处接续链接有效、136项构造数组检查通过。[验证记录](../../artifacts/research_checks/2026-09-24_remote_handoff_verification.json)。仍是同一物理电脑、已有Python3.12/NumPy2.3.5环境，不夸大为跨设备验证。
+
 - 用户明确要求主动归档和 Git 管理；新建 [START_HERE](../../START_HERE.md)、[决策记录](decision_log.md)及[产物索引](research_artifact_registry.json)，已有损伤工作不再列为未开始。
 - 用户给定 gprMax V4.0.0，并要求任何仿真先与其敲定；[执行记录](../../configs/research/gprmax_v4_execution_gate.json)未批准。此次无求解器调用、无安装/升级。
 - [V4 报告](2026-09-24_gprmax_v4_review.md)覆盖官方相关章节及本地源码；19文件指纹、10个官方页面缓存哈希留档。旧 gprmax 环境静态元数据为3.1.6/Python3.10；V4要求3.11–3.13，尚无已验证V4运行环境。

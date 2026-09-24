@@ -1,0 +1,69 @@
+{
+  "schema": "remote-clone-handoff-verification/1",
+  "verified_utc": "2026-09-24T11:03:44.576097+00:00",
+  "tested_commit": "251986ee9a362c466a77124d5256fad7541eeff6",
+  "clone_source": "https://github.com/CYberkra/automation.git",
+  "branch": "main",
+  "isolated_checkout": true,
+  "different_physical_machine": false,
+  "fresh_environment": false,
+  "runtime": "bundled Python 3.12.14 / NumPy 2.3.5",
+  "tracked_file_count": 86,
+  "byte_mismatches": [],
+  "entry_local_links_checked": 27,
+  "entry_link_failures": 0,
+  "r2_source_and_artifact_hashes_match": true,
+  "credential_pattern_scan": "no_matches_in_tracked_files",
+  "solver_executed": false,
+  "field_data_used": false,
+  "source_and_private_caches_required": false,
+  "verification": {
+    "schema": "workspace-verification/1",
+    "utc": "20260924T110258Z",
+    "python": "3.12.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.3.5",
+    "total_checks_passed": 136,
+    "evidence_level": "constructed_array_checks_only",
+    "field_data_used": false,
+    "fdtd_executed": false,
+    "training_executed": false,
+    "runs": [
+      {
+        "script": "scripts/check_processing_algebra.py",
+        "checks_passed": 10,
+        "script_sha256": "abb9f9d4b94437b2ec073ab0675ee8b386b559dce086e0426cd07cdb8723d323",
+        "result_file": "check_processing_algebra.json",
+        "result_sha256": "61380edc7d8fc8e74e62b794f4e359c9481772c7aded6db0e5e58f59cf2a76a9"
+      },
+      {
+        "script": "scripts/check_operator_contract.py",
+        "checks_passed": 23,
+        "script_sha256": "56801fd3333fb814aa546aa77b0e29d8d4a4334107ee2e5ca67376b5d0ea44a2",
+        "result_file": "check_operator_contract.json",
+        "result_sha256": "2977278a49b5f7a9dfca184c1237b033b9cdb6dd9fc72404c987c47b46489392"
+      },
+      {
+        "script": "scripts/check_manual_weight_tradeoff.py",
+        "checks_passed": 5,
+        "script_sha256": "d5e081b5fcd8d03437f44dd036106db0bcf165c20496b563ccd34fbdcfc82800",
+        "result_file": "check_manual_weight_tradeoff.json",
+        "result_sha256": "3b19f726884b4853207b55772abf6e810d76901a6d27ec5d3bf527ec71054e3a"
+      },
+      {
+        "script": "scripts/check_evaluation_labels.py",
+        "checks_passed": 26,
+        "script_sha256": "af901f568b5b6ae4c148dcc96d98e4dcb0f59a18a3d6959ab47cb4e738e99fc8",
+        "result_file": "check_evaluation_labels.json",
+        "result_sha256": "5ca2bf284a4752ad309783e8992f6c9e61215cf39c39422321a2493b2d47eaf8"
+      },
+      {
+        "script": "scripts/study_damage_pilot.py",
+        "checks_passed": 72,
+        "script_sha256": "e75508050356886f34ec1c1c68f3edfd5f05c27547266f54e289bf7ef5e9976f",
+        "result_file": "damage_pilot/results.json",
+        "result_sha256": "335d2e2aa1ae14a643b8aff7ef13c892223af297d1bca210233eb57fa3a8e47f"
+      }
+    ]
+  }
+}

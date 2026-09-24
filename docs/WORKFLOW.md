@@ -24,6 +24,8 @@ py -3.10 -m venv .venv
 
 核心依赖仍按requirements.txt固定NumPy2.2.6。新增损伤例另在Python3.12.14/NumPy2.3.5和Python3.10.21/NumPy1.26.4验证。可选绘图依赖见requirements-figures.txt。**gprMax V4源码要求Python3.11–3.13，须另建环境，上述数组环境不是求解器安装步骤。**
 
+最新[远端接续验证](../artifacts/research_checks/2026-09-24_remote_handoff_verification.json)：提交251986e从GitHub重新克隆后，86个跟踪文件字节一致、27处接续链接有效、136项通过。使用本机已有Python3.12.14/NumPy2.3.5，没有重新安装依赖，不等于另一台电脑已验证。交接结构检查可用 `python scripts/check_handoff.py`。
+
 2026-09-24 已在独立本地克隆、全新虚拟环境中通过全部 64 项，55 个已跟踪文件与原目录逐字节一致，见[版本接续验证记录](../artifacts/research_checks/2026-09-24_repository_portability.json)。该检查仍在原 Windows 电脑执行，不能替代目标电脑验证。此次 pip 访问索引发生 TLS 中断，后改由 curl 获取官方 PyPI 元数据和安装包，匹配官方 SHA-256 后本地安装；未关闭证书验证。不要把这种网络错误解释成 NumPy 版本不存在。
 
 新结果写入忽略的 `artifacts/local_checks/<UTC时间>-<随机后缀>/`，包含各组 JSON、环境、脚本及结果哈希。历史 `artifacts/research_checks/` 不被覆盖。失败时命令返回非零值，不输出成功汇总；请保留失败输出用于定位。
