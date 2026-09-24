@@ -1,0 +1,18 @@
+{
+  "user_authorization": "用户在尾项/时窗验证说明后明确：做吧；此前允许自行设计、仿真GPU、官方CPU后处理。",
+  "cases": {
+    "T800": "Only requested time window 400 to 800 ns",
+    "PML40": "Only PML cells 20 to 40; outer domain unchanged, hence inner PML interface moves inward by 1 m"
+  },
+  "backend": "CUDA",
+  "precision": "double",
+  "sequential_runs": 2,
+  "per_run_wall_minutes": 30,
+  "job_commit_GiB": 32,
+  "no_automatic_retries": true,
+  "reference": "artifacts/research_checks/2026-09-24_M00_x_3d_gpu_r1/M00_x_3d.h5",
+  "inputs_sha256": {
+    "PML40.in": "1439d9b3f7d496d8a25aea9f9b269695e4e54a12bdcd330cb43b148290f3b611",
+    "T800.in": "93c24365d3e9cd94b3e1575521dd9a5dfb516ffd36355d71f050d347c1d9ff45"
+  }
+}
