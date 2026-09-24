@@ -1,0 +1,114 @@
+{
+  "input": "artifacts\\simulations\\2026-09-24_T800\\M00_x_3d.h5",
+  "input_sha256": "e92430f619ef648f3a120f6404a2f6bc81de7ed8a4c9556f1c632f44f568a29b",
+  "root_attrs": {
+    "Iterations": 8310,
+    "ReceiverLayout": "ca1337f42d6e5500ace40b37c8746920bd16b2bc8dc0e13a42a7caad5e7152c2",
+    "ReceiverOrder": "construction",
+    "ReceiverOrderSchemaVersion": 1,
+    "ReceiverTimingSchemaVersion": 1,
+    "SourceExcitationSchemaVersion": 1,
+    "Title": "REVIEW ONLY airborne 3D M00_x_3d",
+    "dt": 9.629166007732353e-11,
+    "dx_dy_dz": [
+      0.05,
+      0.05,
+      0.05
+    ],
+    "gprMax": "4.0.0",
+    "neigenmodeports": 0,
+    "nports": 0,
+    "nrx": 1,
+    "nsrc": 1,
+    "nx_ny_nz": [
+      480,
+      480,
+      480
+    ],
+    "rxsteps": [
+      0,
+      0,
+      0
+    ],
+    "srcsteps": [
+      0,
+      0,
+      0
+    ]
+  },
+  "receiver_path": "/rxs/rx1",
+  "receiver_attrs": {
+    "BuildIndex": 0,
+    "GridPosition": [
+      240,
+      252,
+      380
+    ],
+    "Name": "measurement",
+    "NameKind": "user",
+    "Position": [
+      12.0,
+      12.600000000000001,
+      19.0
+    ]
+  },
+  "receiver_dataset_attrs": {
+    "Quantity": "Ex",
+    "SampleInterval": 9.629166007732353e-11,
+    "TimeSampleOffset": 0.0
+  },
+  "source_path": "/srcs/src1",
+  "source_attrs": {
+    "GridPosition": [
+      240,
+      226,
+      380
+    ],
+    "ID": "HertzianDipole(240,226,380)",
+    "Polarisation": "x",
+    "Position": [
+      12.0,
+      11.3,
+      19.0
+    ],
+    "Type": "HertzianDipole"
+  },
+  "excitation_attrs": {
+    "DrivingQuantity": "electric_current",
+    "Polarisation": "x",
+    "SampleInterval": 9.629166007732353e-11,
+    "SchemaVersion": 1,
+    "SourceStartTime": 0.0,
+    "SourceStopTime": 8e-07,
+    "SourceType": "HertzianDipole",
+    "SpatialScale": 0.05,
+    "SpatialScaleQuantity": "dipole_length",
+    "SpatialScaleUnits": "m",
+    "TimeSampleOffset": 4.814583003866176e-11,
+    "Units": "A",
+    "UpdateLattice": "electric_half_step",
+    "WaveformAmplitude": 1.0,
+    "WaveformEvaluationTimeOffset": 4.814583003866176e-11,
+    "WaveformFrequency": 1.0,
+    "WaveformID": "impulse",
+    "WaveformType": "impulse"
+  },
+  "checks": {
+    "version": true,
+    "receiver_position": true,
+    "source_position": true,
+    "receiver_float64": true,
+    "receiver_finite_nonzero": true,
+    "source_finite_impulse": true,
+    "sample_count": true,
+    "source_half_step": true,
+    "source_interval": true,
+    "dipole_length": true
+  },
+  "passed": true,
+  "max_abs_Ex_V_m": 11.99086101527609,
+  "peak_sample_time_ns": 4.5257080236342055,
+  "last_5pct_peak_relative_dB": -47.37692817191543,
+  "solver_called_by_audit": false,
+  "convergence_certified": false
+}

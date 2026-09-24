@@ -22,7 +22,7 @@ def main():
     p.add_argument('--output',type=Path,required=True)
     a=p.parse_args();a.output.mkdir(parents=True,exist_ok=False)
     frequency=np.linspace(20e6,170e6,501)
-    records={};spectra={};rows=[];band_rows=[];tails=[]
+    records={};spectra={};rows=[];band_rows=[];tails=[];raw_receivers={}
     for entry in a.case:
         label,path=entry.split('=',1);path=Path(path)
         source=load_source(path);rx=load_receiver(path,receiver_path='name:measurement',component='Ex')
@@ -31,7 +31,8 @@ def main():
                 raise ValueError('Expected V4 double output')
             if not np.array_equal(f.attrs['dx_dy_dz'],[.05,.05,.05]):raise ValueError('Unexpected grid')
             if not np.allclose(f['srcs/src1'].attrs['Position'],[12,11.3,19]) or not np.allclose(f['rxs/rx1'].attrs['Position'],[12,12.6,19]):raise ValueError('Unexpected geometry')
-        if not np.all(np.isfinite(rx.samples)) or np.count_nonzero(source.samples)!=1:raise ValueError('Invalid raw data')
+        if not np.all(np.isfinite(rx.samples)) or np.count_nonzero(source.samples)!=1 or source.samples[0]==0:raise ValueError('Invalid raw data')
+        raw_receivers[label]=rx
         theory=transverse_dipole(frequency,1.3,source.spatial_scale)
         static=-source.spatial_scale*np.sum(source.samples)*source.dt/(4*np.pi*epsilon_0*1.3**3)
         records[label]=dict(path=str(path),sha256=hashlib.sha256(path.read_bytes()).hexdigest(),samples=len(rx.samples),dt=rx.dt,static_prediction_V_m=float(static))
@@ -73,7 +74,15 @@ def main():
             if key in baseline:
                 difference=abs(h-baseline[key])/abs(theory)
                 comparisons.append(dict(case=label,condition=key,max_complex_difference_relative_to_theory=float(max(difference)),median_complex_difference_relative_to_theory=float(np.median(difference))))
-    result=dict(cases=records,late_diagnostics=tails,response_conditions=rows,matched_comparisons=comparisons,solver_invoked=False,official_sfcw_transform=True,convergence_certified=False,static_model_fitted_parameters=0,limitations=['PML40 changes both thickness and inner interface position; not a pure thickness convergence test.','Periodogram removes segment mean and uses Hann; spectral fraction is a diagnostic, not physical energy.','No grid/CFL refinement or geological late-arrival preservation test.'])
+    prefix_comparisons=[]
+    if 'baseline' in raw_receivers:
+        base=raw_receivers['baseline']
+        for label,rx in raw_receivers.items():
+            if label=='baseline':continue
+            if rx.dt!=base.dt or rx.time_offset!=base.time_offset:raise ValueError('Different sampling lattice')
+            n=min(len(base.samples),len(rx.samples));delta=rx.samples[:n]-base.samples[:n]
+            prefix_comparisons.append(dict(case=label,samples=n,exact_equal=bool(np.array_equal(rx.samples[:n],base.samples[:n])),max_absolute_difference_V_m=float(max(abs(delta))),max_difference_relative_to_baseline_peak=float(max(abs(delta))/max(abs(base.samples)))))
+    result=dict(cases=records,late_diagnostics=tails,response_conditions=rows,matched_comparisons=comparisons,raw_prefix_comparisons=prefix_comparisons,solver_invoked=False,official_sfcw_transform=True,convergence_certified=False,static_model_fitted_parameters=0,limitations=['PML40 changes both thickness and inner interface position; not a pure thickness convergence test.','Periodogram removes segment mean and uses Hann; spectral fraction is a diagnostic, not physical energy.','No grid/CFL refinement or geological late-arrival preservation test.'])
     (a.output/'results.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
     with (a.output/'frequency_results.csv').open('w',newline='',encoding='utf-8') as f:
         wr=csv.writer(f);wr.writerow(['case','condition','frequency_Hz','response_real','response_imag','relative_complex_error']);wr.writerows(band_rows)
