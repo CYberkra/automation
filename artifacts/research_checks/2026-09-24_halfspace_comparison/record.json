@@ -1,0 +1,18 @@
+{
+  "status": "completed_reference_checks_not_FDTD_convergence",
+  "files_sha256": {
+    "comparison.csv": "b82b39e606d91f56102b9ac97b87f08fe90f7fb4f9836a22ce1a7355ca3798f0",
+    "discretization_budget.json": "06c04438b7a23fd574eb612d08cc3cadf2674192137e87936796c4b54ee857c0",
+    "halfspace_comparison.png": "121ffd3ec2567a58e94cc97659e54fdce278bcea69fc09f4caa2d3a59e3864f5",
+    "reference_arrays.npz": "19f7adbb95cc314f1bdfe81b9cce57d7b8d8b3f708dc5f2c50b57ac1abfcc0fc",
+    "replay_check.json": "bbd9e8148a138f297697baa8f1653fc31aa510a3c497b12cfe1889d07e47683c",
+    "results.json": "0bba1fae34635047fa2af5ace4556cff1ccbaba30fed09a92cec18749a8c14d6",
+    "runtime_identity.json": "696333309aa97a9a3132dc19d394cd341a9934ccf22fbc6d7c5280444a3053d2"
+  },
+  "script_sha256": {
+    "halfspace_sommerfeld_reference.py": "b2562d0b3894951bca6524dffba2987865e86cf8d99559c6a06c37347475e8fa",
+    "compare_halfspace_reference.py": "ba44363ecb0f9f97be26bd70965f30dcd2fe42cb5b1e28a15e755ad2de7eb812",
+    "budget_interface_discretization.py": "807c234e6e3daeeab77e4581451861d01e2d3ac841300d7233200dfae40afcae"
+  },
+  "solver_policy": "No FDTD invoked; independent CPU frequency-domain reference, original GPU environment unchanged"
+}

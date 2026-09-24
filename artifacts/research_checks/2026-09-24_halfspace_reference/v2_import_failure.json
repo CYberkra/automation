@@ -1,0 +1,8 @@
+{
+  "empymod": "2.6.0",
+  "numba": "0.67.0",
+  "status": "import_failed_before_any_reference_computation",
+  "failed_module": "numba.core.runtime._nrt_python",
+  "error": "ImportError: DLL load failed; Windows application control policy blocked this file (message localized in tool output).",
+  "action": "Use official empymod1.10.6 non-Numba release with compatible pinned dependencies in the same isolated reference env; no security policy changes; gprMax env untouched."
+}

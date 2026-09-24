@@ -1,0 +1,38 @@
+{
+  "reference_package": "1.10.6",
+  "reference_type": "Full-wave spectral kernel with project branch-aware Gauss integration; exact zero conductivity, infinite planar interface",
+  "inputs": {
+    "path": "artifacts\\research_checks\\2026-09-24_fixedPML_analysis\\frequency_comparison.csv",
+    "sha256": "f0029e75ed330eccd9d346af92f1910d6931279d5763e7dc1401fb234a363110"
+  },
+  "checks": {
+    "finite_all_references": true,
+    "integration_changes_below_1e_minus5": true,
+    "fullspace_units_phase_below_1e_minus7": true,
+    "matched_material_exact_zero": true,
+    "conductive_limit_approaches_PEC": true
+  },
+  "integration_relative_changes": {
+    "128": 1.8593010623153692e-08,
+    "256": 1.5264588828766323e-08,
+    "umax3_vs2": 1.0776285743378452e-08
+  },
+  "fullspace_max_relative_error": 5.443978887484276e-10,
+  "PEC_conductivity_limit_errors": {
+    "1000000.0": 0.00019432225249360523,
+    "10000000000.0": 1.9447039396187404e-06
+  },
+  "fdtd_vs_reference": {
+    "max_relative_complex_error": 0.0961717046277707,
+    "median_relative_complex_error": 0.017977958397083483,
+    "max_abs_amplitude_error_dB": 0.22308200480972223,
+    "max_abs_phase_error_deg": 5.385942424070067
+  },
+  "phase_at_170MHz_deg": -5.385942424070067,
+  "max_phase_difference_from_prior_axial_budget_deg": 0.03160348690588677,
+  "reference_numerical_check_thresholds_only": true,
+  "fdtd_physical_accuracy_threshold": null,
+  "grid_convergence_certified": false,
+  "FDTD_solver_invoked": false,
+  "wall_s": 0.5854770999867469
+}

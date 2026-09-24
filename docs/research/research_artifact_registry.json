@@ -232,6 +232,24 @@
       "directory": "artifacts/research_checks/2026-09-24_fixedPML_sources",
       "tracked": true,
       "solver_executed": false
+    },
+    {
+      "id": "halfspace_reference",
+      "status": "complete_independent_reference_or_diagnostics",
+      "directory": "artifacts/research_checks/2026-09-24_halfspace_reference",
+      "tracked": true,
+      "solver_executed": false,
+      "FDTD_solver_executed": false,
+      "frequency_domain_reference_evaluated": true
+    },
+    {
+      "id": "halfspace_comparison",
+      "status": "complete_independent_reference_or_diagnostics",
+      "directory": "artifacts/research_checks/2026-09-24_halfspace_comparison",
+      "tracked": true,
+      "solver_executed": false,
+      "FDTD_solver_executed": false,
+      "frequency_domain_reference_evaluated": true
     }
   ],
   "default_array_verification": {
@@ -249,9 +267,9 @@
     "needs_network_or_plotting": false
   },
   "remaining_work": [
-    "verify actual instrument frequency vector and CSV processing;0.3MHz spacing already user-confirmed; reserved field data not for development",
-    "confirm precise target depth meaning and independently constrain site cover thickness/moisture/material parameters",
-    "validate dielectric-halfspace band response against an independent reference and address long-path numerical phase/grid accuracy within GPU resources",
-    "design representative20m domain/material/late-arrival assumptions only after calibration and resource budgeting; no automatic scan authorized by these completed attempts"
+    "verify actual instrument frequency vector and CSV processing;0.3MHz step confirmed; reserved field data excluded from development",
+    "confirm target depth meaning and independently constrain site cover thickness/moisture/material parameters",
+    "budget direction-specific dz4cm paired air/dielectric GPU refinement against completed full-wave reference; new dt requires new air reference; check physical PML thickness and coefficient consistency",
+    "design representative20m model/material/late-arrival assumptions only after calibration and resource budgeting; no parameter sweep currently launched"
   ]
 }
