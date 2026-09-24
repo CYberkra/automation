@@ -64,12 +64,20 @@ def supervise(command, directory, *, wall_s, memory_bytes, output_bytes, poll_s=
             status=nt.NtResumeProcess(W.HANDLE(int(proc._handle)))
             if status!=0: raise RuntimeError(f'NtResumeProcess failed: {status}')
             reason='running'
+            last_report=0.0
             while True:
                 usage=Extended()
                 if not k.QueryInformationJobObject(job,9,C.byref(usage),C.sizeof(usage),None):
                     raise C.WinError(C.get_last_error())
                 peak=max(peak,usage.peak_job_memory)
                 size=sum(p.stat().st_size for p in directory.rglob('*') if p.is_file())
+                now=time.monotonic()
+                if now-last_report>=10:
+                    (directory/'live_status.json').write_text(json.dumps({
+                        'root_pid':proc.pid,'wall_s':now-started,'wall_cap_s':wall_s,
+                        'peak_job_commit_bytes':peak,'observed_output_bytes':size,
+                        'state':'running','note':'Snapshot only; supervision.json is final.'},indent=2),encoding='utf-8')
+                    last_report=now
                 if size>output_bytes: reason='output_limit'; break
                 if time.monotonic()-started>wall_s: reason='wall_limit'; break
                 if proc.poll() is not None:

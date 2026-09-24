@@ -119,12 +119,21 @@
     },
     {
       "id": "M00_x_3d_r1",
-      "status": "running_under_30min_cap",
-      "directory": "artifacts/simulations/2026-09-24_M00_x_3d_r1",
-      "tracked": false,
+      "status": "intentionally_stopped_for_authorized_restart",
+      "directory": "artifacts/research_checks/2026-09-24_M00_x_3d_r1",
+      "tracked": true,
       "attempt_record": "artifacts/research_checks/2026-09-24_first_airborne_attempt.json",
       "solver_executed": true,
-      "extra_run_authorized": false
+      "extra_run_authorized": true,
+      "record": "artifacts/research_checks/2026-09-24_M00_x_3d_r1/record.json"
+    },
+    {
+      "id": "M00_x_3d_r2",
+      "status": "running_under_60min_cap",
+      "directory": "artifacts/simulations/2026-09-24_M00_x_3d_r2",
+      "tracked": false,
+      "attempt_record": "artifacts/research_checks/2026-09-24_airborne_attempt_r2.json",
+      "solver_executed": true
     }
   ],
   "default_array_verification": {
@@ -145,10 +154,8 @@
     "verify actual frequency vector and CSV processing; 0.3 MHz spacing is already user-confirmed",
     "confirm precise target depth meaning",
     "obtain full band-valid spectra and constrain cover thickness/moisture; targeted literature brief and hypothetical loss budgets completed",
-    "V4 isolated build/import verified; bind runtime identity to gated supervisor",
-    "resolve source pulse center/timing",
     "prepare M00/M01 reviewable simulation packet with compute limits",
     "design representative 20m domain/material/time-window assumptions",
-    "obtain agreement before solver execution"
+    "Complete authorized M00_x_3d r2 and official SFCW output audit; design follow-up from numerical evidence"
   ]
 }

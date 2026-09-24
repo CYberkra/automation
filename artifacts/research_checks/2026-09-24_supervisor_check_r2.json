@@ -1,0 +1,101 @@
+{
+  "solver_executed": false,
+  "checks": {
+    "normal": true,
+    "nonzero": true,
+    "timeout": true,
+    "descendant_terminated": true,
+    "memory_allocation_denied": true,
+    "output_stopped": true
+  },
+  "passed": true,
+  "supervisor_sha256": "18d34cf77e59588cbd054a184a1f1c35ec3c14dd5943e951ac7f48e680b7b747",
+  "test_sha256": "67cba20bca17766131c39acc2e9e3d9e10ab9f3605c2b662d0f8f11fae73ddbe",
+  "results": {
+    "normal": {
+      "reason": "completed",
+      "exit_code": 0,
+      "wall_s": 0.10999999986961484,
+      "peak_job_commit_bytes": 7847936,
+      "observed_output_bytes": 213,
+      "memory_cap_bytes": 134217728,
+      "wall_cap_s": 5,
+      "output_cap_bytes": 1048576,
+      "memory_semantics": "Windows job committed memory, not RSS",
+      "output_semantics": "polled file bytes; overshoot possible",
+      "command": [
+        "E:\\automation_djh\\automation_repo\\artifacts\\local_checks\\gprmax_v4_env\\Scripts\\python.exe",
+        "-c",
+        "print('ok')"
+      ]
+    },
+    "nonzero": {
+      "reason": "nonzero_exit",
+      "exit_code": 7,
+      "wall_s": 0.10899999993853271,
+      "peak_job_commit_bytes": 7868416,
+      "observed_output_bytes": 209,
+      "memory_cap_bytes": 134217728,
+      "wall_cap_s": 5,
+      "output_cap_bytes": 1048576,
+      "memory_semantics": "Windows job committed memory, not RSS",
+      "output_semantics": "polled file bytes; overshoot possible",
+      "command": [
+        "E:\\automation_djh\\automation_repo\\artifacts\\local_checks\\gprmax_v4_env\\Scripts\\python.exe",
+        "-c",
+        "raise SystemExit(7)"
+      ]
+    },
+    "wall_child": {
+      "reason": "wall_limit",
+      "exit_code": 124,
+      "wall_s": 1.0160000000614673,
+      "peak_job_commit_bytes": 16195584,
+      "observed_output_bytes": 216,
+      "memory_cap_bytes": 268435456,
+      "wall_cap_s": 1,
+      "output_cap_bytes": 1048576,
+      "memory_semantics": "Windows job committed memory, not RSS",
+      "output_semantics": "polled file bytes; overshoot possible",
+      "command": [
+        "E:\\automation_djh\\automation_repo\\artifacts\\local_checks\\gprmax_v4_env\\Scripts\\python.exe",
+        "-c",
+        "import subprocess,sys,time; p=subprocess.Popen([sys.executable,'-c','import time; time.sleep(60)']); print(p.pid,flush=True); time.sleep(60)"
+      ]
+    },
+    "memory": {
+      "reason": "nonzero_exit",
+      "exit_code": 86,
+      "wall_s": 0.10899999993853271,
+      "peak_job_commit_bytes": 276824064,
+      "observed_output_bytes": 208,
+      "memory_cap_bytes": 100663296,
+      "wall_cap_s": 5,
+      "output_cap_bytes": 1048576,
+      "memory_semantics": "Windows job committed memory, not RSS",
+      "output_semantics": "polled file bytes; overshoot possible",
+      "command": [
+        "E:\\automation_djh\\automation_repo\\artifacts\\local_checks\\gprmax_v4_env\\Scripts\\python.exe",
+        "-c",
+        "try:\n x=bytearray(256*2**20)\nexcept MemoryError:\n raise SystemExit(86)"
+      ]
+    },
+    "output": {
+      "reason": "output_limit",
+      "exit_code": 124,
+      "wall_s": 0.0940000000409782,
+      "peak_job_commit_bytes": 10661888,
+      "observed_output_bytes": 1048785,
+      "memory_cap_bytes": 134217728,
+      "wall_cap_s": 5,
+      "output_cap_bytes": 65536,
+      "memory_semantics": "Windows job committed memory, not RSS",
+      "output_semantics": "polled file bytes; overshoot possible",
+      "command": [
+        "E:\\automation_djh\\automation_repo\\artifacts\\local_checks\\gprmax_v4_env\\Scripts\\python.exe",
+        "-c",
+        "from pathlib import Path; import time; Path('payload.bin').write_bytes(b'x'*2**20); time.sleep(5)"
+      ]
+    }
+  }
+}
