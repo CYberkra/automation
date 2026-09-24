@@ -453,6 +453,41 @@
       "directory": "artifacts/research_checks/2026-09-25_yz_depth_analysis",
       "tracked": true,
       "solver_executed": false
+    },
+    {
+      "id": "DEP_BG_WIDE",
+      "status": "completed_deep_phase_numerically_unresolved",
+      "directory": "artifacts/research_checks/2026-09-25_DEP_BG_WIDE",
+      "tracked": true,
+      "solver_executed": true
+    },
+    {
+      "id": "DEP_20_WIDE",
+      "status": "completed_deep_phase_numerically_unresolved",
+      "directory": "artifacts/research_checks/2026-09-25_DEP_20_WIDE",
+      "tracked": true,
+      "solver_executed": true
+    },
+    {
+      "id": "DEP_BG_FINE",
+      "status": "completed_deep_phase_numerically_unresolved",
+      "directory": "artifacts/research_checks/2026-09-25_DEP_BG_FINE",
+      "tracked": true,
+      "solver_executed": true
+    },
+    {
+      "id": "DEP_20_FINE",
+      "status": "completed_deep_phase_numerically_unresolved",
+      "directory": "artifacts/research_checks/2026-09-25_DEP_20_FINE",
+      "tracked": true,
+      "solver_executed": true
+    },
+    {
+      "id": "deep_controls_analysis",
+      "status": "completed_deep_phase_numerically_unresolved",
+      "directory": "artifacts/research_checks/2026-09-25_deep_controls_analysis",
+      "tracked": true,
+      "solver_executed": false
     }
   ],
   "default_array_verification": {
@@ -473,6 +508,6 @@
     "verify actual instrument frequency vector and CSV processing;0.3MHz step confirmed; reserved field data excluded from development",
     "confirm target depth meaning and independently constrain site cover thickness/moisture/material parameters",
     "HSG ratio controls support coupling lag (r-1)/(2r) main dt; resolve intended source/coupling/output timing before heterogeneous local model. No active jobs; full20m memory unresolved.",
-    "Depth screen complete. Next 20m paired fine-grid and expanded-domain controls on target differences, then controlled clutter/background-mismatch and gain preservation evaluation; no active jobs."
+    "Deep phase unresolved despite domain stability. Wire grid sensitivity into evaluation eligibility; conduct explicitly limited cross-grid mechanism tests and estimate viable full-band phase accuracy resources. No active jobs."
   ]
 }

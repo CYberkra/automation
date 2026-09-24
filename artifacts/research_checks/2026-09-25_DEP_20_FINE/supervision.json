@@ -1,0 +1,18 @@
+{
+  "reason": "completed",
+  "exit_code": 0,
+  "wall_s": 122.18700000015087,
+  "peak_job_commit_bytes": 5429129216,
+  "observed_output_bytes": 451746,
+  "memory_cap_bytes": 8589934592,
+  "wall_cap_s": 900,
+  "output_cap_bytes": 1073741824,
+  "memory_semantics": "Windows job committed memory, not RSS",
+  "output_semantics": "polled file bytes; overshoot possible",
+  "command": [
+    "E:\\automation_djh\\automation_repo\\artifacts\\local_checks\\gprmax_v4_gpu_env\\Scripts\\python.exe",
+    "-u",
+    "-c",
+    "import hashlib,pathlib,runpy,sys; p=pathlib.Path('E:\\\\automation_djh\\\\automation_repo\\\\configs\\\\research\\\\deep_controls_v1\\\\DEP_20_FINE.in'); b=p.read_bytes(); assert hashlib.sha256(b).hexdigest()=='15f99fbe5fa5155a15d6ee83983256c70c43d83388e1579881840eed236375b7'; pathlib.Path('DEP_20_FINE.in').write_bytes(b); sys.argv=['gprMax','DEP_20_FINE.in','-gpu','0','-gpu_precision','double']; runpy.run_module('gprMax',run_name='__main__')"
+  ]
+}

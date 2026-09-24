@@ -2,12 +2,12 @@
   "schema": "gprmax-execution-decision/1",
   "updated_date": "2026-09-25",
   "authority": "explicit user instruction in current session",
-  "user_instruction": "然后你若需要gprmax仿真的话，和我敲定好再开始仿真。",
+  "user_instruction": "\u7136\u540e\u4f60\u82e5\u9700\u8981gprmax\u4eff\u771f\u7684\u8bdd\uff0c\u548c\u6211\u6572\u5b9a\u597d\u518d\u5f00\u59cb\u4eff\u771f\u3002",
   "target_solver": "gprMax 4.0.0",
   "source_root_on_current_machine": "E:/gprMax-v.4.0.0/gprMax-v.4.0.0",
   "approved_to_simulate": true,
   "approved_run_ids": [
-    "DEP_20_FINE"
+    "DEP_BG_FINE"
   ],
   "approved_compute_budget": {
     "wall_minutes": 15,
@@ -53,22 +53,22 @@
     "explicit agreed execution scope"
   ],
   "note": "Current concrete contract implements delegated design authority; consumed attempts must not be rerun.",
-  "build_authorization": "用户明确：许可你构建。仅构建/安装/导入核验，不是仿真批准。",
+  "build_authorization": "\u7528\u6237\u660e\u786e\uff1a\u8bb8\u53ef\u4f60\u6784\u5efa\u3002\u4ec5\u6784\u5efa/\u5b89\u88c5/\u5bfc\u5165\u6838\u9a8c\uff0c\u4e0d\u662f\u4eff\u771f\u6279\u51c6\u3002",
   "simulation_authorization": "User authorizes autonomous GPU research. Four depth20 target/background grid/domain controls, one attempt each.",
   "approved_execution_contract": {
     "packet_id": "DEEP-CONTROLS-01",
-    "input_path": "configs/research/deep_controls_v1/DEP_20_FINE.in",
-    "input_sha256": "15f99fbe5fa5155a15d6ee83983256c70c43d83388e1579881840eed236375b7",
+    "input_path": "configs/research/deep_controls_v1/DEP_BG_FINE.in",
+    "input_sha256": "9d4d17139938908976dcc2f9d443e70cc600d61a8ff09de57b53076a9bed0a13",
     "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
     "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
     "launcher_sha256": "d53cc7abcadf9c8838880725ebe15001ce517ce6cd9c110dce63a5971eaf121a",
     "supervisor_sha256": "18d34cf77e59588cbd054a184a1f1c35ec3c14dd5943e951ac7f48e680b7b747",
-    "attempt_record": "artifacts/research_checks/2026-09-25_DEP_20_FINE_attempt.json",
-    "run_directory": "artifacts/simulations/2026-09-25_DEP_20_FINE",
+    "attempt_record": "artifacts/research_checks/2026-09-25_DEP_BG_FINE_attempt.json",
+    "run_directory": "artifacts/simulations/2026-09-25_DEP_BG_FINE",
     "continuation": "Compare target differences with baseline; no retry, no detectability or universal convergence claim.",
     "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
     "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-    "run_id": "DEP_20_FINE"
+    "run_id": "DEP_BG_FINE"
   },
   "authorization_history": [
     {
@@ -114,12 +114,10 @@
     "user_authorized_gpu_configuration_and_runs": true,
     "runtime_readiness": "cuda_float64_kernel_verified",
     "postprocessing": "Prefer official CPU implementation; migrate only if substantial speedup is demonstrated",
-    "user_clarification": "仿真gpu跑，后处理如果正常就是cpu那也没必要改，除非gpu能加速很多"
+    "user_clarification": "\u4eff\u771fgpu\u8dd1\uff0c\u540e\u5904\u7406\u5982\u679c\u6b63\u5e38\u5c31\u662fcpu\u90a3\u4e5f\u6ca1\u5fc5\u8981\u6539\uff0c\u9664\u975egpu\u80fd\u52a0\u901f\u5f88\u591a"
   },
   "execution_outcome": {
-    "status": "completed",
-    "attempt_consumed": true,
-    "record": "artifacts/research_checks/2026-09-25_DEP_20_FINE/supervision.json",
-    "next": "Deep full-band phase numerically unresolved. Bound evaluation by grid sensitivity; no active job."
+    "status": "ready_not_started",
+    "attempt_consumed": false
   }
 }
