@@ -1,0 +1,455 @@
+{
+  "schema": "airborne-first-run-preparation/1",
+  "packet_id": "V4-AIR3D-DRAFT-01",
+  "approved_to_simulate": false,
+  "solver_executed": false,
+  "runtime_verified": false,
+  "source_sha256": "85053ab68e064ab8811c220677adfb3b960ec2057f5cd76433205b2b09256dcf",
+  "parent_budget_sha256": "67ac1846500a548e9c2590b0ae9fb834239431454687c4056d90bcd04b000bee",
+  "official_source_sha256": {
+    "gprMax/grid/fdtd_grid.py": "29e25a95b50962dac8abc6f0d820daab3351b5162844c7c86d379c8074fed3a5",
+    "gprMax/pml.py": "a6d51a1d7aae7a5d3301114d9de6e23a780fc0a6c09b97391c81d511340bea4e",
+    "build_config.py": "716259082a5d6e0f614bcba0e2d8762ff55afed787a295c647715284c783b3f4",
+    "setup.py": "e5575a1a9dc57e7eba83d58b28b2370aab8b86be3efc37025c321ee8187cbe18",
+    "pyproject.toml": "d3b06ad1c294f2b3a9d06db410077191d5c8635f117574aae0d3887ca177990f"
+  },
+  "pml_assumptions": "six full-face external slabs, one default CFS term, double, no internal PML",
+  "exclusions": [
+    "unknown transient build peak",
+    "allocator overhead beyond chosen allowance",
+    "dispersion",
+    "GPU duplicate buffers",
+    "full-volume output"
+  ],
+  "rows": [
+    {
+      "id": "calibration_dx0.1",
+      "role": "calibration",
+      "domain_xyz_m": [
+        24,
+        24,
+        24
+      ],
+      "ground_z_m": 4,
+      "tx_xyz_m": [
+        12.0,
+        11.3,
+        19
+      ],
+      "rx_xyz_m": [
+        12.0,
+        12.600000000000001,
+        19
+      ],
+      "grid_m": 0.1,
+      "pml_proposed_thickness_m": 1,
+      "pml_cells": 10,
+      "assumed_max_er": 9,
+      "requested_time_ns": 400,
+      "cells": 13824000,
+      "nodes": 13997521,
+      "core_array_bytes": 1311949512,
+      "core_array_GiB": 1.2218481972813606,
+      "cfl_dt_estimate_ps": 192.58332015464708,
+      "steps_estimate": 2079,
+      "cell_steps_per_solve": 28740096000,
+      "cells_per_wavelength_at_170MHz": 5.878283490196078,
+      "two_polarization_sequential_work": 57480192000,
+      "peak_memory_note": "one solve at a time; two polarizations double work, not this peak",
+      "pml_phi_bytes": 116605440,
+      "pml_coefficient_upper_bytes": 4032,
+      "enumerated_arrays_GiB": 1.3304492309689522,
+      "planning_allowance_GiB": 3.9956738464534283,
+      "allowance_note": "50% plus 2GiB contingency; chosen allowance, not proven peak bound"
+    },
+    {
+      "id": "calibration_dx0.05",
+      "role": "calibration",
+      "domain_xyz_m": [
+        24,
+        24,
+        24
+      ],
+      "ground_z_m": 4,
+      "tx_xyz_m": [
+        12.0,
+        11.3,
+        19
+      ],
+      "rx_xyz_m": [
+        12.0,
+        12.600000000000001,
+        19
+      ],
+      "grid_m": 0.05,
+      "pml_proposed_thickness_m": 1,
+      "pml_cells": 20,
+      "assumed_max_er": 9,
+      "requested_time_ns": 400,
+      "cells": 110592000,
+      "nodes": 111284641,
+      "core_array_bytes": 10445518152,
+      "core_array_GiB": 9.728146858513355,
+      "cfl_dt_estimate_ps": 96.29166007732354,
+      "steps_estimate": 4156,
+      "cell_steps_per_solve": 459620352000,
+      "cells_per_wavelength_at_170MHz": 11.756566980392156,
+      "two_polarization_sequential_work": 919240704000,
+      "peak_memory_note": "one solve at a time; two polarizations double work, not this peak",
+      "pml_phi_bytes": 908743680,
+      "pml_coefficient_upper_bytes": 7872,
+      "enumerated_arrays_GiB": 10.574487693607807,
+      "planning_allowance_GiB": 17.86173154041171,
+      "allowance_note": "50% plus 2GiB contingency; chosen allowance, not proven peak bound"
+    },
+    {
+      "id": "calibration_dx0.025",
+      "role": "calibration",
+      "domain_xyz_m": [
+        24,
+        24,
+        24
+      ],
+      "ground_z_m": 4,
+      "tx_xyz_m": [
+        12.0,
+        11.3,
+        19
+      ],
+      "rx_xyz_m": [
+        12.0,
+        12.600000000000001,
+        19
+      ],
+      "grid_m": 0.025,
+      "pml_proposed_thickness_m": 1,
+      "pml_cells": 40,
+      "assumed_max_er": 9,
+      "requested_time_ns": 400,
+      "cells": 884736000,
+      "nodes": 887503681,
+      "core_array_bytes": 83364457032,
+      "core_array_GiB": 77.63920075446367,
+      "cfl_dt_estimate_ps": 48.14583003866177,
+      "steps_estimate": 8310,
+      "cell_steps_per_solve": 7352156160000,
+      "cells_per_wavelength_at_170MHz": 23.513133960784312,
+      "two_polarization_sequential_work": 14704312320000,
+      "peak_memory_note": "one solve at a time; two polarizations double work, not this peak",
+      "pml_phi_bytes": 7173826560,
+      "pml_coefficient_upper_bytes": 15552,
+      "enumerated_arrays_GiB": 84.32036186009645,
+      "planning_allowance_GiB": 128.48054279014468,
+      "allowance_note": "50% plus 2GiB contingency; chosen allowance, not proven peak bound"
+    },
+    {
+      "id": "calibration_expanded_dx0.1",
+      "role": "calibration_expanded",
+      "domain_xyz_m": [
+        32,
+        32,
+        28
+      ],
+      "ground_z_m": 6,
+      "tx_xyz_m": [
+        16.0,
+        15.3,
+        21
+      ],
+      "rx_xyz_m": [
+        16.0,
+        16.6,
+        21
+      ],
+      "grid_m": 0.1,
+      "pml_proposed_thickness_m": 1,
+      "pml_cells": 10,
+      "assumed_max_er": 9,
+      "requested_time_ns": 400,
+      "cells": 28672000,
+      "nodes": 28954521,
+      "core_array_bytes": 2715509512,
+      "core_array_GiB": 2.5290153101086617,
+      "cfl_dt_estimate_ps": 192.58332015464708,
+      "steps_estimate": 2079,
+      "cell_steps_per_solve": 59609088000,
+      "cells_per_wavelength_at_170MHz": 5.878283490196078,
+      "two_polarization_sequential_work": 119218176000,
+      "peak_memory_note": "one solve at a time; two polarizations double work, not this peak",
+      "pml_phi_bytes": 189853440,
+      "pml_coefficient_upper_bytes": 4032,
+      "enumerated_arrays_GiB": 2.7058338597416878,
+      "planning_allowance_GiB": 6.058750789612532,
+      "allowance_note": "50% plus 2GiB contingency; chosen allowance, not proven peak bound"
+    },
+    {
+      "id": "calibration_expanded_dx0.05",
+      "role": "calibration_expanded",
+      "domain_xyz_m": [
+        32,
+        32,
+        28
+      ],
+      "ground_z_m": 6,
+      "tx_xyz_m": [
+        16.0,
+        15.3,
+        21
+      ],
+      "rx_xyz_m": [
+        16.0,
+        16.6,
+        21
+      ],
+      "grid_m": 0.05,
+      "pml_proposed_thickness_m": 1,
+      "pml_cells": 20,
+      "assumed_max_er": 9,
+      "requested_time_ns": 400,
+      "cells": 229376000,
+      "nodes": 230504241,
+      "core_array_bytes": 21642577352,
+      "core_array_GiB": 20.156220860779285,
+      "cfl_dt_estimate_ps": 96.29166007732354,
+      "steps_estimate": 4156,
+      "cell_steps_per_solve": 953286656000,
+      "cells_per_wavelength_at_170MHz": 11.756566980392156,
+      "two_polarization_sequential_work": 1906573312000,
+      "peak_memory_note": "one solve at a time; two polarizations double work, not this peak",
+      "pml_phi_bytes": 1480250880,
+      "pml_coefficient_upper_bytes": 7872,
+      "enumerated_arrays_GiB": 21.53481925278902,
+      "planning_allowance_GiB": 34.30222887918353,
+      "allowance_note": "50% plus 2GiB contingency; chosen allowance, not proven peak bound"
+    },
+    {
+      "id": "calibration_expanded_dx0.025",
+      "role": "calibration_expanded",
+      "domain_xyz_m": [
+        32,
+        32,
+        28
+      ],
+      "ground_z_m": 6,
+      "tx_xyz_m": [
+        16.0,
+        15.3,
+        21
+      ],
+      "rx_xyz_m": [
+        16.0,
+        16.6,
+        21
+      ],
+      "grid_m": 0.025,
+      "pml_proposed_thickness_m": 1,
+      "pml_cells": 40,
+      "assumed_max_er": 9,
+      "requested_time_ns": 400,
+      "cells": 1835008000,
+      "nodes": 1839517281,
+      "core_array_bytes": 172815420232,
+      "core_array_GiB": 160.9469021037221,
+      "cfl_dt_estimate_ps": 48.14583003866177,
+      "steps_estimate": 8310,
+      "cell_steps_per_solve": 15248916480000,
+      "cells_per_wavelength_at_170MHz": 23.513133960784312,
+      "two_polarization_sequential_work": 30497832960000,
+      "peak_memory_note": "one solve at a time; two polarizations double work, not this peak",
+      "pml_phi_bytes": 11688053760,
+      "pml_coefficient_upper_bytes": 15552,
+      "enumerated_arrays_GiB": 171.8322649076581,
+      "planning_allowance_GiB": 259.74839736148715,
+      "allowance_note": "50% plus 2GiB contingency; chosen allowance, not proven peak bound"
+    },
+    {
+      "id": "depth20_candidate_dx0.1",
+      "role": "depth20_candidate",
+      "domain_xyz_m": [
+        40,
+        40,
+        50
+      ],
+      "ground_z_m": 25,
+      "tx_xyz_m": [
+        20.0,
+        19.3,
+        40
+      ],
+      "rx_xyz_m": [
+        20.0,
+        20.6,
+        40
+      ],
+      "grid_m": 0.1,
+      "pml_proposed_thickness_m": 1,
+      "pml_cells": 10,
+      "assumed_max_er": 16,
+      "requested_time_ns": 1000,
+      "cells": 80000000,
+      "nodes": 80561301,
+      "core_array_bytes": 7560413672,
+      "core_array_GiB": 7.041183926165104,
+      "cfl_dt_estimate_ps": 192.58332015464708,
+      "steps_estimate": 5194,
+      "cell_steps_per_solve": 415520000000,
+      "cells_per_wavelength_at_170MHz": 4.408712617647059,
+      "two_polarization_sequential_work": 831040000000,
+      "peak_memory_note": "one solve at a time; two polarizations double work, not this peak",
+      "pml_phi_bytes": 377193600,
+      "pml_coefficient_upper_bytes": 4032,
+      "enumerated_arrays_GiB": 7.392476595938206,
+      "planning_allowance_GiB": 13.088714893907309,
+      "allowance_note": "50% plus 2GiB contingency; chosen allowance, not proven peak bound"
+    },
+    {
+      "id": "depth20_candidate_dx0.05",
+      "role": "depth20_candidate",
+      "domain_xyz_m": [
+        40,
+        40,
+        50
+      ],
+      "ground_z_m": 25,
+      "tx_xyz_m": [
+        20.0,
+        19.3,
+        40
+      ],
+      "rx_xyz_m": [
+        20.0,
+        20.6,
+        40
+      ],
+      "grid_m": 0.05,
+      "pml_proposed_thickness_m": 1,
+      "pml_cells": 20,
+      "assumed_max_er": 16,
+      "requested_time_ns": 1000,
+      "cells": 640000000,
+      "nodes": 642242601,
+      "core_array_bytes": 60321467272,
+      "core_array_GiB": 56.178744204342365,
+      "cfl_dt_estimate_ps": 96.29166007732354,
+      "steps_estimate": 10387,
+      "cell_steps_per_solve": 6647680000000,
+      "cells_per_wavelength_at_170MHz": 8.817425235294118,
+      "two_polarization_sequential_work": 13295360000000,
+      "peak_memory_note": "one solve at a time; two polarizations double work, not this peak",
+      "pml_phi_bytes": 2942291200,
+      "pml_coefficient_upper_bytes": 7872,
+      "enumerated_arrays_GiB": 58.91897375136614,
+      "planning_allowance_GiB": 90.37846062704921,
+      "allowance_note": "50% plus 2GiB contingency; chosen allowance, not proven peak bound"
+    },
+    {
+      "id": "depth20_candidate_dx0.025",
+      "role": "depth20_candidate",
+      "domain_xyz_m": [
+        40,
+        40,
+        50
+      ],
+      "ground_z_m": 25,
+      "tx_xyz_m": [
+        20.0,
+        19.3,
+        40
+      ],
+      "rx_xyz_m": [
+        20.0,
+        20.6,
+        40
+      ],
+      "grid_m": 0.025,
+      "pml_proposed_thickness_m": 1,
+      "pml_cells": 40,
+      "assumed_max_er": 16,
+      "requested_time_ns": 1000,
+      "cells": 5120000000,
+      "nodes": 5128965201,
+      "core_array_bytes": 481925494472,
+      "core_array_GiB": 448.8280922845006,
+      "cfl_dt_estimate_ps": 48.14583003866177,
+      "steps_estimate": 20772,
+      "cell_steps_per_solve": 106352640000000,
+      "cells_per_wavelength_at_170MHz": 17.634850470588237,
+      "two_polarization_sequential_work": 212705280000000,
+      "peak_memory_note": "one solve at a time; two polarizations double work, not this peak",
+      "pml_phi_bytes": 23237798400,
+      "pml_coefficient_upper_bytes": 15552,
+      "enumerated_arrays_GiB": 470.4699930027127,
+      "planning_allowance_GiB": 707.7049895040691,
+      "allowance_note": "50% plus 2GiB contingency; chosen allowance, not proven peak bound"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "M00_x_3d",
+      "path": "M00_x_3d.in",
+      "sha256": "7c0b46316ff843e22e0eff46dfd70a318775d2df4594f103321ca712d3a5a419",
+      "status": "review_only_not_parser_validated"
+    },
+    {
+      "id": "M00_y_3d",
+      "path": "M00_y_3d.in",
+      "sha256": "fbf768b3778bcf4223d5ce55d618fa0b05b41a65383e680c4cda5d7f766384fe",
+      "status": "review_only_not_parser_validated"
+    },
+    {
+      "id": "M01_x_3d",
+      "path": "M01_x_3d.in",
+      "sha256": "981a0a69072b5aed5ba999a5024856e3c977445be0c8a6f7c68bc1712e7049f9",
+      "status": "review_only_not_parser_validated"
+    },
+    {
+      "id": "M01_y_3d",
+      "path": "M01_y_3d.in",
+      "sha256": "a1a1a0feb7406ab3c00f3c760f6b05754cbedcc7e05790dd4a70d8614cf278d1",
+      "status": "review_only_not_parser_validated"
+    }
+  ],
+  "proposed_initial_run_ids": [
+    "M00_x_3d"
+  ],
+  "later_unapproved_run_ids": [
+    "M01_x_3d",
+    "M00_y_3d",
+    "M01_y_3d"
+  ],
+  "proposed_initial_limits": {
+    "threads": 8,
+    "backend": "CPU",
+    "precision": "double",
+    "wall_minutes": 30,
+    "process_tree_rss_GiB": 24,
+    "minimum_available_RAM_GiB": 32,
+    "output_GiB": 1,
+    "retries": 0
+  },
+  "limits_enforced": false,
+  "stop_rules": [
+    "wall/RSS/output cap",
+    "nonzero exit",
+    "missing required source/receiver metadata",
+    "nonfinite or all-zero response",
+    "wrong version/precision/geometry"
+  ],
+  "continue_rule": "no automatic progression to later IDs; inspect first result and agree scope",
+  "environment_readonly_findings": {
+    "python_candidate": "bundled Python 3.12.14",
+    "VS_BuildTools": "2022",
+    "MSVC_directory_version": "14.44.35207",
+    "gprMax_V4_installed_in_isolated_env": false,
+    "compiler_invocation_tested": false
+  },
+  "unresolved": [
+    "isolated V4 build and import identity",
+    "runtime resource supervisor",
+    "actual Yee source/receiver positions",
+    "grid convergence beyond this base"
+  ],
+  "validation": {
+    "cubic_PML_formula_two_sizes": true
+  }
+}
