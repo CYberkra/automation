@@ -1,0 +1,120 @@
+{
+  "rows": {
+    "FINE": {
+      "200": {
+        "total": {
+          "max_relative_complex_error": 0.000868640288435572,
+          "median_relative_complex_error": 0.00010936966447590619,
+          "max_abs_amplitude_error_dB": 0.007241346957025081,
+          "max_abs_phase_error_deg": 0.03977009733002964
+        },
+        "analytic_air_subtracted": {
+          "max_relative_complex_error": 0.007039598926432847,
+          "median_relative_complex_error": 0.0008426925462142594,
+          "max_abs_amplitude_error_dB": 0.032350784911914995,
+          "max_abs_phase_error_deg": 0.34742833318154737
+        },
+        "total_relative_L2": 0.0003288801755236845,
+        "error_relative_to_layer_L2": 0.0026156708574692814
+      },
+      "400": {
+        "total": {
+          "max_relative_complex_error": 0.0008686402414460682,
+          "median_relative_complex_error": 0.00010936961070169069,
+          "max_abs_amplitude_error_dB": 0.007241346317050612,
+          "max_abs_phase_error_deg": 0.03977009823320451
+        },
+        "analytic_air_subtracted": {
+          "max_relative_complex_error": 0.00703959813866007,
+          "median_relative_complex_error": 0.0008426956042738479,
+          "max_abs_amplitude_error_dB": 0.03235077500421467,
+          "max_abs_phase_error_deg": 0.3474282550164182
+        },
+        "total_relative_L2": 0.0003288801747159786,
+        "error_relative_to_layer_L2": 0.002615670851045383
+      },
+      "tail_relative_to_layer_L2": 6.341413263840443e-08
+    },
+    "ZFINE": {
+      "200": {
+        "total": {
+          "max_relative_complex_error": 0.0004275144891589256,
+          "median_relative_complex_error": 6.82364140360666e-05,
+          "max_abs_amplitude_error_dB": 0.0017423424430081517,
+          "max_abs_phase_error_deg": 0.02348931045069345
+        },
+        "analytic_air_subtracted": {
+          "max_relative_complex_error": 0.00350424970045758,
+          "median_relative_complex_error": 0.000525510416728547,
+          "max_abs_amplitude_error_dB": 0.027406862488259263,
+          "max_abs_phase_error_deg": 0.140792563144407
+        },
+        "total_relative_L2": 0.00017872682315795007,
+        "error_relative_to_layer_L2": 0.0014214616069147938
+      },
+      "400": {
+        "total": {
+          "max_relative_complex_error": 0.00042751461195942957,
+          "median_relative_complex_error": 6.823566419279863e-05,
+          "max_abs_amplitude_error_dB": 0.0017423419963788391,
+          "max_abs_phase_error_deg": 0.02348930461498683
+        },
+        "analytic_air_subtracted": {
+          "max_relative_complex_error": 0.003504248972072418,
+          "median_relative_complex_error": 0.0005255109123219876,
+          "max_abs_amplitude_error_dB": 0.02740685540998187,
+          "max_abs_phase_error_deg": 0.14079256862511622
+        },
+        "total_relative_L2": 0.0001787268223171802,
+        "error_relative_to_layer_L2": 0.0014214616002279287
+      },
+      "tail_relative_to_layer_L2": 6.330250401399319e-08
+    },
+    "YFINE": {
+      "200": {
+        "total": {
+          "max_relative_complex_error": 0.0002172614030726666,
+          "median_relative_complex_error": 2.732516852030802e-05,
+          "max_abs_amplitude_error_dB": 0.0018078878432146648,
+          "max_abs_phase_error_deg": 0.009915642263012895
+        },
+        "analytic_air_subtracted": {
+          "max_relative_complex_error": 0.0017642042996974675,
+          "median_relative_complex_error": 0.00021086497411585908,
+          "max_abs_amplitude_error_dB": 0.008002147227029403,
+          "max_abs_phase_error_deg": 0.0872332585905378
+        },
+        "total_relative_L2": 8.216866692651127e-05,
+        "error_relative_to_layer_L2": 0.0006535090998858261
+      },
+      "400": {
+        "total": {
+          "max_relative_complex_error": 0.00021726144453225365,
+          "median_relative_complex_error": 2.7325335041089348e-05,
+          "max_abs_amplitude_error_dB": 0.0018078884175199155,
+          "max_abs_phase_error_deg": 0.009915639309356857
+        },
+        "analytic_air_subtracted": {
+          "max_relative_complex_error": 0.00176420378600659,
+          "median_relative_complex_error": 0.00021086442788375483,
+          "max_abs_amplitude_error_dB": 0.008002146416552726,
+          "max_abs_phase_error_deg": 0.08723323364764593
+        },
+        "total_relative_L2": 8.216866540454208e-05,
+        "error_relative_to_layer_L2": 0.0006535090877812033
+      },
+      "tail_relative_to_layer_L2": 6.332593090816505e-08
+    }
+  },
+  "solver_invoked": false,
+  "target_validated": false,
+  "physical_acceptance_threshold": null,
+  "caveat": "Analytic-air-subtracted diagnostic includes numerical direct-wave error; total errors can be hidden by strong direct wave. Does not validate 20m target differences.",
+  "inputs": {
+    "artifacts\\research_checks\\2026-09-25_yz_layers_reference\\spectra.npz": "42f144f7b1601724d100b5a00028c997469479b3177abe1f8c37fb7a70b9c578",
+    "E:\\automation_djh\\automation_repo\\scripts\\check_deep_background_reference.py": "1155c9dfe25b1dd5c74eb46a09395fb043f65a093c8dfa7f3f74cdd9095050be",
+    "artifacts\\research_checks\\2026-09-25_DEP_BG_FINE\\DEP_BG_FINE.h5": "1abc9b83e901cf6c205875554ae0510d0d97c4a1248aa984b4e64b9b5617336a",
+    "artifacts\\research_checks\\2026-09-25_DEP_BG_ZFINE\\DEP_BG_ZFINE.h5": "8144371f77f55663f4c3e12585c0c431a229230d68bb2932e2f28b90d55d5663",
+    "artifacts\\research_checks\\2026-09-25_DEP_BG_YFINE\\DEP_BG_YFINE.h5": "75a2fc392aae33ebe1429296fd5ab5be0bba3924d44239e0b7b5eaaeee690e51"
+  }
+}
