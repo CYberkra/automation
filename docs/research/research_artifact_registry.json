@@ -341,6 +341,13 @@
       "directory": "artifacts/research_checks/2026-09-25_hsg_clock",
       "tracked": true,
       "solver_executed": false
+    },
+    {
+      "id": "dimension_strategy",
+      "status": "static_assessment_complete",
+      "directory": "artifacts/research_checks/2026-09-25_dimension_strategy",
+      "tracked": true,
+      "solver_executed": false
     }
   ],
   "default_array_verification": {
@@ -360,6 +367,7 @@
   "remaining_work": [
     "verify actual instrument frequency vector and CSV processing;0.3MHz step confirmed; reserved field data excluded from development",
     "confirm target depth meaning and independently constrain site cover thickness/moisture/material parameters",
-    "HSG ratio controls support coupling lag (r-1)/(2r) main dt; resolve intended source/coupling/output timing before heterogeneous local model. No active jobs; full20m memory unresolved."
+    "HSG ratio controls support coupling lag (r-1)/(2r) main dt; resolve intended source/coupling/output timing before heterogeneous local model. No active jobs; full20m memory unresolved.",
+    "Prepare YZ/TMx CUDA air/layer controls with official SFCW and 2D line-source validation; retain 3D checks of finite targets and transverse-baseline flight geometry."
   ]
 }
