@@ -94,11 +94,5 @@
     "runtime_readiness": "cuda_float64_kernel_verified",
     "postprocessing": "Prefer official CPU implementation; migrate only if substantial speedup is demonstrated",
     "user_clarification": "仿真gpu跑，后处理如果正常就是cpu那也没必要改，除非gpu能加速很多"
-  },
-  "execution_outcome": {
-    "status": "completed",
-    "attempt_consumed": true,
-    "canonical_record": "artifacts/research_checks/2026-09-24_tail_controls_analysis/record.json",
-    "note": "Both predeclared tail controls complete; do not rerun consumed attempts."
   }
 }

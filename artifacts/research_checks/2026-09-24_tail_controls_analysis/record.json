@@ -1,0 +1,23 @@
+{
+  "status": "complete_two_cuda_controls_and_official_postprocessing",
+  "fdtd_controls": [
+    "T800",
+    "PML40"
+  ],
+  "processing_conditions": 22,
+  "source_sha256": "4123ca8a68b7c02e720e925f385f4ce880823b987f9f91ded03b3938f03c0c38",
+  "files_sha256": {
+    "air_reference_candidate.h5": "03c1ee10e6c38fc078c5b695b4cf59e0661eefdb8947c4e66dbaad8331e2c7c9",
+    "candidate_recipe.json": "5a2a32b490f90f632c933ff9f488ec8731891ec0cec16a9ae98c8239af4abe9f",
+    "controls.png": "70b08185258e0cdff7f53a56e6c9cbe60dafc1b4bbf043278386b7f67281f63c",
+    "frequency_results.csv": "1b8239f1656b8b9f44cf3ef579c1f59bd65555027dd125c892ab45a76ec7f7e6",
+    "results.json": "4b93467c5196637927c7cb02ffd8f31f34e4a0c9403c1bb76d9c1a80cfc5c78d",
+    "replay_check.json": "9a30779c83c12a8c8860e1ee710f8ed074e8b0d1b8970a8345cf6ead73888e94"
+  },
+  "checks": {
+    "T800_common_prefix_bitwise_identical": true,
+    "all_official_spectra_finite_and_source_valid": true,
+    "both_raw_audits_passed": true
+  },
+  "export_script_sha256": "23c6f9ce7baacc7ce61aa9043b32663c011501dd8eef274e4e7ed3f4dac865a1"
+}

@@ -162,6 +162,20 @@
       "record": "artifacts/research_checks/2026-09-24_T800/record.json",
       "tracked": true,
       "solver_executed": true
+    },
+    {
+      "id": "PML40_tail_control",
+      "status": "completed",
+      "directory": "artifacts/research_checks/2026-09-24_PML40",
+      "tracked": true,
+      "solver_executed": true
+    },
+    {
+      "id": "tail_controls_analysis",
+      "status": "complete_two_cuda_controls_and_official_postprocessing",
+      "directory": "artifacts/research_checks/2026-09-24_tail_controls_analysis",
+      "tracked": true,
+      "solver_executed": false
     }
   ],
   "default_array_verification": {
@@ -184,6 +198,6 @@
     "obtain full band-valid spectra and constrain cover thickness/moisture; targeted literature brief and hypothetical loss budgets completed",
     "prepare M00/M01 reviewable simulation packet with compute limits",
     "design representative 20m domain/material/time-window assumptions",
-    "Validate impulse-tail/window sensitivity before treating M00 as calibrated or expanding geological models"
+    "Air tail/window/PML controls completed; transfer processing to geological scenarios only after late-arrival and mesh validation"
   ]
 }

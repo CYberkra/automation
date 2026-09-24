@@ -1,0 +1,32 @@
+{
+  "status": "cuda_complete_raw_audit_passed",
+  "input_label": "PML40",
+  "supervision": {
+    "reason": "completed",
+    "exit_code": 0,
+    "wall_s": 312.1400000001304,
+    "peak_job_commit_bytes": 24226840576,
+    "observed_output_bytes": 255253,
+    "memory_cap_bytes": 34359738368,
+    "wall_cap_s": 1800,
+    "output_cap_bytes": 1073741824,
+    "memory_semantics": "Windows job committed memory, not RSS",
+    "output_semantics": "polled file bytes; overshoot possible",
+    "command": [
+      "E:\\automation_djh\\automation_repo\\artifacts\\local_checks\\gprmax_v4_gpu_env\\Scripts\\python.exe",
+      "-u",
+      "-c",
+      "import hashlib,pathlib,runpy,sys; p=pathlib.Path('E:\\\\automation_djh\\\\automation_repo\\\\configs\\\\research\\\\airborne_tail_checks_v1\\\\PML40.in'); b=p.read_bytes(); assert hashlib.sha256(b).hexdigest()=='1439d9b3f7d496d8a25aea9f9b269695e4e54a12bdcd330cb43b148290f3b611'; pathlib.Path('M00_x_3d.in').write_bytes(b); sys.argv=['gprMax','M00_x_3d.in','-gpu','0','-gpu_precision','double']; runpy.run_module('gprMax',run_name='__main__')"
+    ]
+  },
+  "files_sha256": {
+    "authorization_at_start.json": "56e640ab4a3af875db1aa2e992256ff031e4605cd6af4d4aeb6bd57a01ae1ba8",
+    "live_status.json": "91adb8d2ef168e05e5fee3254d7ca78b967f53b6d6c330ce4622432be8947264",
+    "M00_x_3d.h5": "1fa8c3dfa88b4416b4de6d260e64a539a7d03f85d31b50ea6dd13a0e5b1d942b",
+    "M00_x_3d.in": "1439d9b3f7d496d8a25aea9f9b269695e4e54a12bdcd330cb43b148290f3b611",
+    "raw_audit.json": "84c34e43cca0826f5a193bda4f688f88b283b95e8d5ac1e36db1ca0f412b6b55",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.log": "2205e5a0723056fd4011bb5cd1a16b7e1180636cbaec7f351682b585602bf3eb",
+    "supervision.json": "7ca20e265bf8f8224f690682e4bd6913aec84322db875a8e2066fc4a7b29baf5"
+  }
+}
