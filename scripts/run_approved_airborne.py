@@ -1,0 +1,70 @@
+"""Launch the single explicitly approved 3D run through the Windows supervisor.
+
+Default is preflight only. --execute consumes a one-attempt record before launch.
+No retries or subsequent models are dispatched by this script.
+"""
+import argparse
+import hashlib
+import importlib.metadata
+import json
+from pathlib import Path
+import sys
+from datetime import datetime, timezone
+
+from bounded_windows_process import supervise
+
+ROOT=Path(__file__).resolve().parents[1]
+
+
+def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def main():
+    p=argparse.ArgumentParser(description=__doc__)
+    p.add_argument('--execute',action='store_true')
+    a=p.parse_args()
+    gate=json.loads((ROOT/'configs/research/gprmax_v4_execution_gate.json').read_text(encoding='utf-8'))
+    if not gate['approved_to_simulate'] or 'M00_x_3d' not in gate['approved_run_ids']:
+        raise SystemExit('No explicit authorization for M00_x_3d')
+    contract=gate['approved_execution_contract']
+    source=ROOT/contract['input_path']
+    assert sha(source)==contract['input_sha256'],'Input changed'
+    assert sha(Path(__file__))==contract['launcher_sha256'],'Launcher changed'
+    assert sha(ROOT/'scripts/bounded_windows_process.py')==contract['supervisor_sha256'],'Supervisor changed'
+    identity=json.loads((ROOT/contract['runtime_identity_path']).read_text(encoding='utf-8'))
+    assert sha(ROOT/contract['runtime_identity_path'])==contract['runtime_identity_sha256']
+    assert Path(sys.executable).resolve()==Path(identity['executable']).resolve(),'Wrong Python'
+    assert importlib.metadata.version('gprMax')=='4.0.0','Wrong distribution'
+    for item in identity['compiled_modules_imported'].values():
+        assert sha(Path(item['path']))==item['sha256'],'Native module changed'
+    import psutil
+    free=psutil.virtual_memory().available
+    budget=gate['approved_compute_budget']
+    assert free>=budget['minimum_available_RAM_GiB']*2**30,'Insufficient available RAM'
+    attempt=ROOT/contract['attempt_record']
+    if attempt.exists():raise SystemExit('Attempt already consumed; no automatic retry')
+    run_dir=(ROOT/contract['run_directory']).resolve()
+    assert run_dir.is_relative_to((ROOT/'artifacts/simulations').resolve())
+    if run_dir.exists():raise SystemExit('Run directory already exists')
+    preflight=dict(run_id='M00_x_3d',input_sha256=sha(source),available_RAM_bytes=free,
+                   approved=True,execute=a.execute,utc=datetime.now(timezone.utc).isoformat())
+    print(json.dumps(preflight),flush=True)
+    if not a.execute:return
+    attempt.parent.mkdir(parents=True,exist_ok=True)
+    with attempt.open('x',encoding='utf-8') as f:json.dump(preflight,f,indent=2)
+    # Input is copied into the fresh supervised directory, so all official outputs
+    # remain there. No shell interpretation, solver code edits, or private API.
+    code=("import hashlib,pathlib,runpy,sys; "
+          f"p=pathlib.Path({str(source)!r}); b=p.read_bytes(); "
+          f"assert hashlib.sha256(b).hexdigest()=={sha(source)!r}; "
+          "pathlib.Path('M00_x_3d.in').write_bytes(b); "
+          "sys.argv=['gprMax','M00_x_3d.in','-cpu_precision','double']; "
+          "runpy.run_module('gprMax',run_name='__main__')")
+    result=supervise([sys.executable,'-u','-c',code],run_dir,
+        wall_s=budget['wall_minutes']*60,memory_bytes=budget['job_commit_GiB']*2**30,
+        output_bytes=budget['output_GiB']*2**30,poll_s=.25)
+    print(json.dumps(result),flush=True)
+    if result['reason']!='completed':raise SystemExit(1)
+
+
+if __name__=='__main__':main()
