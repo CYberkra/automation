@@ -1,0 +1,651 @@
+{
+  "solver_invoked": false,
+  "method": "Unmodified official hsg_1/hsg_2 AST executed against symbolic precursor times; interpolation weights taken from official linear time blend. Initial zero-history transient is not a physical negative-time field.",
+  "source_sha256": "c8467b96318e5c789c27baaf2f9fdae368b4b9351ef478b7f73062135a836b9c",
+  "results": [
+    {
+      "ratio": 1,
+      "lag_in_fine_steps": 0.0,
+      "lag_in_coarse_steps": 0.0,
+      "saved_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trace": [
+        {
+          "coarse_iteration": 0,
+          "update": "H",
+          "fine_E_index": 0,
+          "needed_E_time": 0,
+          "precursor_time": 0,
+          "lag": 0
+        },
+        {
+          "coarse_iteration": 0,
+          "update": "E",
+          "fine_output_index": 1,
+          "needed_H_time": 0.5,
+          "precursor_time": 0.5,
+          "lag": 0.0
+        },
+        {
+          "coarse_iteration": 1,
+          "update": "H",
+          "fine_E_index": 1,
+          "needed_E_time": 1,
+          "precursor_time": 1,
+          "lag": 0
+        },
+        {
+          "coarse_iteration": 1,
+          "update": "E",
+          "fine_output_index": 2,
+          "needed_H_time": 1.5,
+          "precursor_time": 1.5,
+          "lag": 0.0
+        },
+        {
+          "coarse_iteration": 2,
+          "update": "H",
+          "fine_E_index": 2,
+          "needed_E_time": 2,
+          "precursor_time": 2,
+          "lag": 0
+        },
+        {
+          "coarse_iteration": 2,
+          "update": "E",
+          "fine_output_index": 3,
+          "needed_H_time": 2.5,
+          "precursor_time": 2.5,
+          "lag": 0.0
+        },
+        {
+          "coarse_iteration": 3,
+          "update": "H",
+          "fine_E_index": 3,
+          "needed_E_time": 3,
+          "precursor_time": 3,
+          "lag": 0
+        },
+        {
+          "coarse_iteration": 3,
+          "update": "E",
+          "fine_output_index": 4,
+          "needed_H_time": 3.5,
+          "precursor_time": 3.5,
+          "lag": 0.0
+        }
+      ]
+    },
+    {
+      "ratio": 3,
+      "lag_in_fine_steps": 1.0,
+      "lag_in_coarse_steps": 0.3333333333333333,
+      "saved_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "trace": [
+        {
+          "coarse_iteration": 0,
+          "update": "H",
+          "fine_E_index": 0,
+          "needed_E_time": 0,
+          "precursor_time": -1,
+          "lag": 1
+        },
+        {
+          "coarse_iteration": 0,
+          "update": "E",
+          "fine_output_index": 1,
+          "needed_H_time": 0.5,
+          "precursor_time": -0.5,
+          "lag": 1.0
+        },
+        {
+          "coarse_iteration": 0,
+          "update": "H",
+          "fine_E_index": 1,
+          "needed_E_time": 1,
+          "precursor_time": 0,
+          "lag": 1
+        },
+        {
+          "coarse_iteration": 0,
+          "update": "E",
+          "fine_output_index": 2,
+          "needed_H_time": 1.5,
+          "precursor_time": 0.5,
+          "lag": 1.0
+        },
+        {
+          "coarse_iteration": 0,
+          "update": "H",
+          "fine_E_index": 2,
+          "needed_E_time": 2,
+          "precursor_time": 1,
+          "lag": 1
+        },
+        {
+          "coarse_iteration": 0,
+          "update": "E",
+          "fine_output_index": 3,
+          "needed_H_time": 2.5,
+          "precursor_time": 1.5,
+          "lag": 1.0
+        },
+        {
+          "coarse_iteration": 1,
+          "update": "H",
+          "fine_E_index": 3,
+          "needed_E_time": 3,
+          "precursor_time": 2,
+          "lag": 1
+        },
+        {
+          "coarse_iteration": 1,
+          "update": "E",
+          "fine_output_index": 4,
+          "needed_H_time": 3.5,
+          "precursor_time": 2.5,
+          "lag": 1.0
+        },
+        {
+          "coarse_iteration": 1,
+          "update": "H",
+          "fine_E_index": 4,
+          "needed_E_time": 4,
+          "precursor_time": 3,
+          "lag": 1
+        },
+        {
+          "coarse_iteration": 1,
+          "update": "E",
+          "fine_output_index": 5,
+          "needed_H_time": 4.5,
+          "precursor_time": 3.5,
+          "lag": 1.0
+        },
+        {
+          "coarse_iteration": 1,
+          "update": "H",
+          "fine_E_index": 5,
+          "needed_E_time": 5,
+          "precursor_time": 4,
+          "lag": 1
+        },
+        {
+          "coarse_iteration": 1,
+          "update": "E",
+          "fine_output_index": 6,
+          "needed_H_time": 5.5,
+          "precursor_time": 4.5,
+          "lag": 1.0
+        },
+        {
+          "coarse_iteration": 2,
+          "update": "H",
+          "fine_E_index": 6,
+          "needed_E_time": 6,
+          "precursor_time": 5,
+          "lag": 1
+        },
+        {
+          "coarse_iteration": 2,
+          "update": "E",
+          "fine_output_index": 7,
+          "needed_H_time": 6.5,
+          "precursor_time": 5.5,
+          "lag": 1.0
+        },
+        {
+          "coarse_iteration": 2,
+          "update": "H",
+          "fine_E_index": 7,
+          "needed_E_time": 7,
+          "precursor_time": 6,
+          "lag": 1
+        },
+        {
+          "coarse_iteration": 2,
+          "update": "E",
+          "fine_output_index": 8,
+          "needed_H_time": 7.5,
+          "precursor_time": 6.5,
+          "lag": 1.0
+        },
+        {
+          "coarse_iteration": 2,
+          "update": "H",
+          "fine_E_index": 8,
+          "needed_E_time": 8,
+          "precursor_time": 7,
+          "lag": 1
+        },
+        {
+          "coarse_iteration": 2,
+          "update": "E",
+          "fine_output_index": 9,
+          "needed_H_time": 8.5,
+          "precursor_time": 7.5,
+          "lag": 1.0
+        },
+        {
+          "coarse_iteration": 3,
+          "update": "H",
+          "fine_E_index": 9,
+          "needed_E_time": 9,
+          "precursor_time": 8,
+          "lag": 1
+        },
+        {
+          "coarse_iteration": 3,
+          "update": "E",
+          "fine_output_index": 10,
+          "needed_H_time": 9.5,
+          "precursor_time": 8.5,
+          "lag": 1.0
+        },
+        {
+          "coarse_iteration": 3,
+          "update": "H",
+          "fine_E_index": 10,
+          "needed_E_time": 10,
+          "precursor_time": 9,
+          "lag": 1
+        },
+        {
+          "coarse_iteration": 3,
+          "update": "E",
+          "fine_output_index": 11,
+          "needed_H_time": 10.5,
+          "precursor_time": 9.5,
+          "lag": 1.0
+        },
+        {
+          "coarse_iteration": 3,
+          "update": "H",
+          "fine_E_index": 11,
+          "needed_E_time": 11,
+          "precursor_time": 10,
+          "lag": 1
+        },
+        {
+          "coarse_iteration": 3,
+          "update": "E",
+          "fine_output_index": 12,
+          "needed_H_time": 11.5,
+          "precursor_time": 10.5,
+          "lag": 1.0
+        }
+      ]
+    },
+    {
+      "ratio": 5,
+      "lag_in_fine_steps": 2.0,
+      "lag_in_coarse_steps": 0.4,
+      "saved_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "trace": [
+        {
+          "coarse_iteration": 0,
+          "update": "H",
+          "fine_E_index": 0,
+          "needed_E_time": 0,
+          "precursor_time": -2,
+          "lag": 2
+        },
+        {
+          "coarse_iteration": 0,
+          "update": "E",
+          "fine_output_index": 1,
+          "needed_H_time": 0.5,
+          "precursor_time": -1.5,
+          "lag": 2.0
+        },
+        {
+          "coarse_iteration": 0,
+          "update": "H",
+          "fine_E_index": 1,
+          "needed_E_time": 1,
+          "precursor_time": -1,
+          "lag": 2
+        },
+        {
+          "coarse_iteration": 0,
+          "update": "E",
+          "fine_output_index": 2,
+          "needed_H_time": 1.5,
+          "precursor_time": -0.5,
+          "lag": 2.0
+        },
+        {
+          "coarse_iteration": 0,
+          "update": "H",
+          "fine_E_index": 2,
+          "needed_E_time": 2,
+          "precursor_time": 0,
+          "lag": 2
+        },
+        {
+          "coarse_iteration": 0,
+          "update": "E",
+          "fine_output_index": 3,
+          "needed_H_time": 2.5,
+          "precursor_time": 0.5,
+          "lag": 2.0
+        },
+        {
+          "coarse_iteration": 0,
+          "update": "H",
+          "fine_E_index": 3,
+          "needed_E_time": 3,
+          "precursor_time": 1,
+          "lag": 2
+        },
+        {
+          "coarse_iteration": 0,
+          "update": "E",
+          "fine_output_index": 4,
+          "needed_H_time": 3.5,
+          "precursor_time": 1.5,
+          "lag": 2.0
+        },
+        {
+          "coarse_iteration": 0,
+          "update": "H",
+          "fine_E_index": 4,
+          "needed_E_time": 4,
+          "precursor_time": 2,
+          "lag": 2
+        },
+        {
+          "coarse_iteration": 0,
+          "update": "E",
+          "fine_output_index": 5,
+          "needed_H_time": 4.5,
+          "precursor_time": 2.5,
+          "lag": 2.0
+        },
+        {
+          "coarse_iteration": 1,
+          "update": "H",
+          "fine_E_index": 5,
+          "needed_E_time": 5,
+          "precursor_time": 3,
+          "lag": 2
+        },
+        {
+          "coarse_iteration": 1,
+          "update": "E",
+          "fine_output_index": 6,
+          "needed_H_time": 5.5,
+          "precursor_time": 3.5,
+          "lag": 2.0
+        },
+        {
+          "coarse_iteration": 1,
+          "update": "H",
+          "fine_E_index": 6,
+          "needed_E_time": 6,
+          "precursor_time": 4,
+          "lag": 2
+        },
+        {
+          "coarse_iteration": 1,
+          "update": "E",
+          "fine_output_index": 7,
+          "needed_H_time": 6.5,
+          "precursor_time": 4.5,
+          "lag": 2.0
+        },
+        {
+          "coarse_iteration": 1,
+          "update": "H",
+          "fine_E_index": 7,
+          "needed_E_time": 7,
+          "precursor_time": 5,
+          "lag": 2
+        },
+        {
+          "coarse_iteration": 1,
+          "update": "E",
+          "fine_output_index": 8,
+          "needed_H_time": 7.5,
+          "precursor_time": 5.5,
+          "lag": 2.0
+        },
+        {
+          "coarse_iteration": 1,
+          "update": "H",
+          "fine_E_index": 8,
+          "needed_E_time": 8,
+          "precursor_time": 6,
+          "lag": 2
+        },
+        {
+          "coarse_iteration": 1,
+          "update": "E",
+          "fine_output_index": 9,
+          "needed_H_time": 8.5,
+          "precursor_time": 6.5,
+          "lag": 2.0
+        },
+        {
+          "coarse_iteration": 1,
+          "update": "H",
+          "fine_E_index": 9,
+          "needed_E_time": 9,
+          "precursor_time": 7,
+          "lag": 2
+        },
+        {
+          "coarse_iteration": 1,
+          "update": "E",
+          "fine_output_index": 10,
+          "needed_H_time": 9.5,
+          "precursor_time": 7.5,
+          "lag": 2.0
+        },
+        {
+          "coarse_iteration": 2,
+          "update": "H",
+          "fine_E_index": 10,
+          "needed_E_time": 10,
+          "precursor_time": 8,
+          "lag": 2
+        },
+        {
+          "coarse_iteration": 2,
+          "update": "E",
+          "fine_output_index": 11,
+          "needed_H_time": 10.5,
+          "precursor_time": 8.5,
+          "lag": 2.0
+        },
+        {
+          "coarse_iteration": 2,
+          "update": "H",
+          "fine_E_index": 11,
+          "needed_E_time": 11,
+          "precursor_time": 9,
+          "lag": 2
+        },
+        {
+          "coarse_iteration": 2,
+          "update": "E",
+          "fine_output_index": 12,
+          "needed_H_time": 11.5,
+          "precursor_time": 9.5,
+          "lag": 2.0
+        },
+        {
+          "coarse_iteration": 2,
+          "update": "H",
+          "fine_E_index": 12,
+          "needed_E_time": 12,
+          "precursor_time": 10,
+          "lag": 2
+        },
+        {
+          "coarse_iteration": 2,
+          "update": "E",
+          "fine_output_index": 13,
+          "needed_H_time": 12.5,
+          "precursor_time": 10.5,
+          "lag": 2.0
+        },
+        {
+          "coarse_iteration": 2,
+          "update": "H",
+          "fine_E_index": 13,
+          "needed_E_time": 13,
+          "precursor_time": 11,
+          "lag": 2
+        },
+        {
+          "coarse_iteration": 2,
+          "update": "E",
+          "fine_output_index": 14,
+          "needed_H_time": 13.5,
+          "precursor_time": 11.5,
+          "lag": 2.0
+        },
+        {
+          "coarse_iteration": 2,
+          "update": "H",
+          "fine_E_index": 14,
+          "needed_E_time": 14,
+          "precursor_time": 12,
+          "lag": 2
+        },
+        {
+          "coarse_iteration": 2,
+          "update": "E",
+          "fine_output_index": 15,
+          "needed_H_time": 14.5,
+          "precursor_time": 12.5,
+          "lag": 2.0
+        },
+        {
+          "coarse_iteration": 3,
+          "update": "H",
+          "fine_E_index": 15,
+          "needed_E_time": 15,
+          "precursor_time": 13,
+          "lag": 2
+        },
+        {
+          "coarse_iteration": 3,
+          "update": "E",
+          "fine_output_index": 16,
+          "needed_H_time": 15.5,
+          "precursor_time": 13.5,
+          "lag": 2.0
+        },
+        {
+          "coarse_iteration": 3,
+          "update": "H",
+          "fine_E_index": 16,
+          "needed_E_time": 16,
+          "precursor_time": 14,
+          "lag": 2
+        },
+        {
+          "coarse_iteration": 3,
+          "update": "E",
+          "fine_output_index": 17,
+          "needed_H_time": 16.5,
+          "precursor_time": 14.5,
+          "lag": 2.0
+        },
+        {
+          "coarse_iteration": 3,
+          "update": "H",
+          "fine_E_index": 17,
+          "needed_E_time": 17,
+          "precursor_time": 15,
+          "lag": 2
+        },
+        {
+          "coarse_iteration": 3,
+          "update": "E",
+          "fine_output_index": 18,
+          "needed_H_time": 17.5,
+          "precursor_time": 15.5,
+          "lag": 2.0
+        },
+        {
+          "coarse_iteration": 3,
+          "update": "H",
+          "fine_E_index": 18,
+          "needed_E_time": 18,
+          "precursor_time": 16,
+          "lag": 2
+        },
+        {
+          "coarse_iteration": 3,
+          "update": "E",
+          "fine_output_index": 19,
+          "needed_H_time": 18.5,
+          "precursor_time": 16.5,
+          "lag": 2.0
+        },
+        {
+          "coarse_iteration": 3,
+          "update": "H",
+          "fine_E_index": 19,
+          "needed_E_time": 19,
+          "precursor_time": 17,
+          "lag": 2
+        },
+        {
+          "coarse_iteration": 3,
+          "update": "E",
+          "fine_output_index": 20,
+          "needed_H_time": 19.5,
+          "precursor_time": 17.5,
+          "lag": 2.0
+        }
+      ]
+    }
+  ],
+  "checks_passed": true,
+  "limitation": "Clock-label consistency only, not a Maxwell solution or proof that applying a timestamp correction fixes coupling physics."
+}
