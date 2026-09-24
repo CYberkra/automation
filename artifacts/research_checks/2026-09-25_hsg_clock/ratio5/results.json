@@ -1,0 +1,97 @@
+{
+  "checks": {
+    "reference_measurement_finite_double_timing_position": true,
+    "reference_inside_finite_double_timing_position": true,
+    "hsg_measurement_finite_double_timing_position": true,
+    "hsg_inside_finite_double_timing_position": true,
+    "native_DFT_matches_official_direct_on_equal_dt": true,
+    "same_source_history": true
+  },
+  "metadata": {
+    "reference_measurement": {
+      "path": "/rxs/rx1/Ex",
+      "dt_s": 9.629166007732353e-11,
+      "time_offset_s": 0.0,
+      "samples": 2079,
+      "transformed_samples": 2078
+    },
+    "reference_inside": {
+      "path": "/rxs/rx2/Ex",
+      "dt_s": 9.629166007732353e-11,
+      "time_offset_s": 0.0,
+      "samples": 2079,
+      "transformed_samples": 2078
+    },
+    "hsg_measurement": {
+      "path": "/rxs/rx1/Ex",
+      "dt_s": 9.629166007732353e-11,
+      "time_offset_s": 0.0,
+      "samples": 2079,
+      "transformed_samples": 2078
+    },
+    "hsg_inside": {
+      "path": "/subgrids/fine/rxs/rx1/Ex",
+      "dt_s": 1.9258332015464704e-11,
+      "time_offset_s": 0.0,
+      "samples": 10395,
+      "transformed_samples": 10386
+    }
+  },
+  "comparisons": {
+    "measurement": {
+      "hsg_vs_reference": {
+        "max_relative_complex_error": 0.0045152605947645,
+        "median_relative_complex_error": 0.0015397772675993454,
+        "max_abs_amplitude_error_dB": 0.03869893705509338,
+        "max_abs_phase_error_deg": 0.038285590848136736
+      },
+      "reference_vs_infinite_air": {
+        "max_relative_complex_error": 0.0794843954399748,
+        "median_relative_complex_error": 0.0013656923283745048,
+        "max_abs_amplitude_error_dB": 0.6607086009014127,
+        "max_abs_phase_error_deg": 3.360788040065744
+      },
+      "hsg_vs_infinite_air": {
+        "max_relative_complex_error": 0.0798938820926549,
+        "median_relative_complex_error": 0.003476030164093769,
+        "max_abs_amplitude_error_dB": 0.6640151422217587,
+        "max_abs_phase_error_deg": 3.3658911813688706
+      }
+    },
+    "inside": {
+      "hsg_vs_reference": {
+        "max_relative_complex_error": 0.041073480392147546,
+        "median_relative_complex_error": 0.022255484702982005,
+        "max_abs_amplitude_error_dB": 0.06234881504281893,
+        "max_abs_phase_error_deg": 2.3258727909160615
+      },
+      "reference_vs_infinite_air": {
+        "max_relative_complex_error": 0.08616302062683232,
+        "median_relative_complex_error": 0.00984698344856202,
+        "max_abs_amplitude_error_dB": 0.7178612405581509,
+        "max_abs_phase_error_deg": 3.005257352827001
+      },
+      "hsg_vs_infinite_air": {
+        "max_relative_complex_error": 0.08714191924565882,
+        "median_relative_complex_error": 0.03144758079846587,
+        "max_abs_amplitude_error_dB": 0.7243540042565915,
+        "max_abs_phase_error_deg": 3.290634192722506
+      }
+    }
+  },
+  "raw_outer_difference_peak_over_reference_peak": 0.28610960203177255,
+  "inputs": {
+    "reference": {
+      "path": "artifacts\\research_checks\\2026-09-25_HSG_reference\\HSG_reference.h5",
+      "sha256": "b24a4316a7bb9eaa06dc27990cf069bd76d37107a6c6f8e24050290857c1fa7a"
+    },
+    "hsg": {
+      "path": "artifacts\\research_checks\\2026-09-25_HSG_ratio5\\HSG_ratio5.h5",
+      "sha256": "93f1f27ea1dbb77c513a6a33c8427d487f173e612cb6021142c46042ffc8c6a7"
+    }
+  },
+  "inner_transform": "Official engineering_dft and apply_tail_taper on each native dt, source division; project diagnostic adapter because direct_frequency_response rejects mixed dt. No resampling or phase fitting.",
+  "physical_acceptance_threshold": null,
+  "geological_run_approved_by_this_result": false,
+  "solver_invoked": false
+}

@@ -1,6 +1,6 @@
 {
   "schema": "research-artifact-registry/1",
-  "updated_date": "2026-09-24",
+  "updated_date": "2026-09-25",
   "entrypoint": "START_HERE.md",
   "current_protocol": "docs/research/2026-09-24_evaluation_and_labels_v0.2.md",
   "solver_execution_gate": "configs/research/gprmax_v4_execution_gate.json",
@@ -320,6 +320,27 @@
       "directory": "artifacts/research_checks/2026-09-25_hsg_smoke_analysis_r2",
       "tracked": true,
       "solver_executed": false
+    },
+    {
+      "id": "HSG_ratio1",
+      "status": "completed_clock_lag_hypothesis_supported",
+      "directory": "artifacts/research_checks/2026-09-25_HSG_ratio1",
+      "tracked": true,
+      "solver_executed": true
+    },
+    {
+      "id": "HSG_ratio5",
+      "status": "completed_clock_lag_hypothesis_supported",
+      "directory": "artifacts/research_checks/2026-09-25_HSG_ratio5",
+      "tracked": true,
+      "solver_executed": true
+    },
+    {
+      "id": "hsg_clock",
+      "status": "completed_clock_lag_hypothesis_supported",
+      "directory": "artifacts/research_checks/2026-09-25_hsg_clock",
+      "tracked": true,
+      "solver_executed": false
     }
   ],
   "default_array_verification": {
@@ -339,6 +360,6 @@
   "remaining_work": [
     "verify actual instrument frequency vector and CSV processing;0.3MHz step confirmed; reserved field data excluded from development",
     "confirm target depth meaning and independently constrain site cover thickness/moisture/material parameters",
-    "Investigate internal HSG phase discrepancy near one fine timestep; CUDA smoke pair complete, no geology runs before interpretation. Full20m memory remains unresolved."
+    "HSG ratio controls support coupling lag (r-1)/(2r) main dt; resolve intended source/coupling/output timing before heterogeneous local model. No active jobs; full20m memory unresolved."
   ]
 }

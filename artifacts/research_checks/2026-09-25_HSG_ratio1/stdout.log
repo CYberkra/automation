@@ -1,0 +1,93 @@
+
+=== Electromagnetic modelling software based on the Finite-Difference Time-Domain (FDTD) method 
+
+    www.gprmax.com   __  __
+     __ _ _ __  _ __|  \/  | __ ___  __
+    / _` | '_ \| '__| |\/| |/ _` \ \/ /
+   | (_| | |_) | |  | |  | | (_| |>  <
+    \__, | .__/|_|  |_|  |_|\__,_/_/\_\\
+    |___/|_|
+                     v4.0.0 (Caol Ila)
+
+ Copyright (C) 2015-2026: The University of Edinburgh, United Kingdom
+
+ gprMax is free software: you can redistribute it and/or modify it under the
+  terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+ gprMax is distributed in the hope that it will be useful, but WITHOUT ANY
+  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+  A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ You should have received a copy of the GNU General Public License along with
+  gprMax.  If not, see www.gnu.org/licenses.
+
+LAPTOP-83GRKUNE | unknown unknown | unknown x unknown (16 cores, 32 cores with Hyper-Threading) | 63.2 GiB | Windows 11 (64-bit)
+|--->OpenMP: 16 threads
+|--->CUDA:
+     |--->Device 0: NVIDIA GeForce RTX 4090 Laptop GPU | 16.0 GiB
+Model title: HSG_ratio1
+Spatial discretisation: 0.05 x 0.05 x 0.05m
+Domain size: 6 x 6 x 6m (120 x 120 x 120 = 1.728e+06 cells)
+Mode: 3D
+Time step (at CFL limit): 9.62917e-11 secs
+Time window: 2e-07 secs (2079 iterations)
+Simulation will use 8 OpenMP threads
+PML thickness: x0=10, y0=10, z0=10, xmax=10, ymax=10, zmax=10
+Waveform impulse of type impulse with maximum amplitude scaling 1, frequency 1Hz created.
+Hertzian dipole with polarity x at 3m, 2.35m, 3m, using waveform impulse created.
+Receiver at 3m, 3.65m, 3m with output component(s) Ex created.
+[fine] Receiver at 3m, 3m, 3m with output component(s) Ex created.
+
+--- Model 1/1, input file: HSG_ratio1 -----------------------------------------
+
+
+
+[fine] Mode: equal-resolution embedded region (direct transfer; no subgrid PML, filtering, or interpolation)
+[fine] Ratio: 1:1
+[fine] Spatial discretisation: 0.05 x 0.05 x 0.05m
+[fine] Extent (working region): 2.5m, 2.7m, 2.5m to 3.5m, 3.3000000000000003m, 3.5m ((20 x 12 x 20 = 4800 cells)
+[fine] Time step: 9.62917e-11 secs
+Memory required (estimated): ~211.7 MB [main_grid] + ~2.6 MB [fine] + ~65.0 MB overhead = 279.3 MB
+
+PML boundaries [main_grid]: {formulation: HORIPML, order: 1, thickness (cells): 10}
+
+Building PML boundaries [main_grid]:   0%|               | 0/6 [00:00<?, ?it/s]Building PML boundaries [main_grid]: 100%|®Ä®Ä®Ä®Ä®Ä| 6/6 [00:00<00:00, 3866.91it/s]
+Building Yee cells [main_grid]:   0%|                    | 0/2 [00:00<?, ?it/s]Building Yee cells [main_grid]: 100%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä| 2/2 [00:00<00:00, 21.43it/s]
+
+Materials [main_grid]:
+    |            |         |       | sigma |      | sigma*  | Dielectric 
+ ID | Name       | Type    | eps_r | [S/m] | mu_r | [Ohm/m] | smoothable 
+----+------------+---------+-------+-------+------+---------+------------
+  0 | pec        | builtin | 1     | inf   | 1    | 0       | False      
+  1 | pmc        | builtin | 1     | 0     | 1    | inf     | False      
+  2 | free_space | builtin | 1     | 0     | 1    | 0       | True       
+
+Numerical dispersion analysis [main_grid] not carried out as impulse waveform used.
+PML boundaries [fine]: switched off
+
+Building Yee cells [fine]:   0%|                         | 0/2 [00:00<?, ?it/s]Building Yee cells [fine]: 100%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä| 2/2 [00:00<00:00, 1925.76it/s]
+
+Materials [fine]:
+    |            |         |       | sigma |      | sigma*  | Dielectric 
+ ID | Name       | Type    | eps_r | [S/m] | mu_r | [Ohm/m] | smoothable 
+----+------------+---------+-------+-------+------+---------+------------
+  0 | pec        | builtin | 1     | inf   | 1    | 0       | False      
+  1 | pmc        | builtin | 1     | 0     | 1    | inf     | False      
+  2 | free_space | builtin | 1     | 0     | 1    | 0       | True       
+
+Numerical dispersion analysis [fine] not carried out as no waveform detected.
+Output directory: E:\automation_djh\automation_repo\artifacts\simulations\2026-09-25_HSG_ratio1
+
+
+
+
+Model 1/1 solving on LAPTOP-83GRKUNE with CUDA backend using Device 0: NVIDIA GeForce RTX 4090 Laptop GPU
+|--->:   0%|                                          | 0/2079 [00:00<?, ?it/s]|--->:   3%|®Å                               | 61/2079 [00:00<00:03, 607.61it/s]|--->:   6%|®Ä®Ç                             | 124/2079 [00:00<00:03, 617.65it/s]|--->:   9%|®Ä®Ä®Ç                            | 186/2079 [00:00<00:03, 616.90it/s]|--->:  12%|®Ä®Ä®Ä®Ç                           | 252/2079 [00:00<00:02, 632.82it/s]|--->:  15%|®Ä®Ä®Ä®Ä®É                          | 317/2079 [00:00<00:02, 637.47it/s]|--->:  19%|®Ä®Ä®Ä®Ä®Ä®É                         | 385/2079 [00:00<00:02, 650.12it/s]|--->:  22%|®Ä®Ä®Ä®Ä®Ä®Ä®É                        | 451/2079 [00:00<00:02, 642.07it/s]|--->:  25%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ç                       | 521/2079 [00:00<00:02, 659.77it/s]|--->:  28%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ç                      | 590/2079 [00:00<00:02, 668.08it/s]|--->:  32%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ç                     | 657/2079 [00:01<00:02, 667.05it/s]|--->:  35%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ç                    | 726/2079 [00:01<00:02, 673.80it/s]|--->:  38%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ç                   | 794/2079 [00:01<00:01, 669.53it/s]|--->:  41%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ç                  | 861/2079 [00:01<00:01, 669.18it/s]|--->:  45%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ç                 | 928/2079 [00:01<00:01, 659.63it/s]|--->:  48%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ç                | 995/2079 [00:01<00:01, 662.46it/s]|--->:  51%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ü              | 1065/2079 [00:01<00:01, 672.23it/s]|--->:  55%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ü             | 1134/2079 [00:01<00:01, 675.01it/s]|--->:  58%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ü            | 1203/2079 [00:01<00:01, 678.44it/s]|--->:  61%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ü           | 1272/2079 [00:01<00:01, 681.06it/s]|--->:  65%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ü          | 1341/2079 [00:02<00:01, 683.05it/s]|--->:  68%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ü         | 1410/2079 [00:02<00:01, 667.36it/s]|--->:  71%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ü        | 1479/2079 [00:02<00:00, 672.24it/s]|--->:  74%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ü       | 1547/2079 [00:02<00:00, 671.59it/s]|--->:  78%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ü      | 1616/2079 [00:02<00:00, 672.70it/s]|--->:  81%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ü     | 1684/2079 [00:02<00:00, 670.82it/s]|--->:  84%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ü    | 1753/2079 [00:02<00:00, 673.50it/s]|--->:  88%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ü   | 1825/2079 [00:02<00:00, 684.73it/s]|--->:  91%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ü  | 1895/2079 [00:02<00:00, 688.84it/s]|--->:  94%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ü | 1964/2079 [00:02<00:00, 685.34it/s]|--->:  98%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ü| 2033/2079 [00:03<00:00, 679.78it/s]|--->: 100%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä| 2079/2079 [00:03<00:00, 667.96it/s]
+
+Written output file: HSG_ratio1.h5
+
+Memory used (estimated): ~314.2 MB host + ~1.5 GB device
+Time taken: 3.1153 seconds
+
+=== Simulation completed in 10.4661 seconds ====================================
+

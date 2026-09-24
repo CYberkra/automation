@@ -8,8 +8,10 @@ from gprMax.toolboxes.SFCW.processing import load_source,load_receiver,direct_fr
 from audit_official_sfcw import transverse_dipole
 from analyze_vertical_refinement import metrics
 
-p=argparse.ArgumentParser();p.add_argument('--output',type=Path,required=True);a=p.parse_args();a.output.mkdir(exist_ok=False)
+p=argparse.ArgumentParser();p.add_argument('--output',type=Path,required=True);p.add_argument('--hsg-path',type=Path);p.add_argument('--ratio',type=int,default=3);a=p.parse_args();a.output.mkdir(exist_ok=False)
 paths={k:Path('artifacts/research_checks/2026-09-25_'+n)/(n+'.h5') for k,n in [('reference','HSG_reference'),('hsg','HSG_air')]}
+if a.hsg_path:paths['hsg']=a.hsg_path
+assert a.ratio in (1,3,5)
 freq=np.linspace(20e6,170e6,501);sources={k:load_source(v) for k,v in paths.items()};responses={};checks={};meta={};raw={}
 assert sources['reference'].dt==sources['hsg'].dt and np.array_equal(sources['reference'].samples,sources['hsg'].samples)
 for k,path in paths.items():
@@ -20,7 +22,7 @@ for k,path in paths.items():
    assert np.allclose(f[rx.path].parent.attrs['Position'],[3,3.65 if name=='measurement' else 3,3],rtol=0,atol=1e-12)
   assert np.all(np.isfinite(rx.samples)) and np.any(rx.samples!=0) and rx.time_offset==0
   assert source.time_offset==source.dt/2 and source.spatial_scale==.05
-  expected=source.dt/3 if k=='hsg' and name=='inside' else source.dt
+  expected=source.dt/a.ratio if k=='hsg' and name=='inside' else source.dt
   assert np.isclose(rx.dt,expected,rtol=1e-14,atol=0)
   n=min(len(rx.samples),int(np.floor(200e-9/rx.dt))+1);fraction=(round(100e-9/rx.dt)-.25)/n
   receiver=replace(rx,samples=rx.samples[:n]);srcspec=engineering_dft(source.samples,source.dt,freq,time_offset=source.time_offset)

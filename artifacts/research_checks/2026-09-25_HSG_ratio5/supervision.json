@@ -1,0 +1,18 @@
+{
+  "reason": "completed",
+  "exit_code": 0,
+  "wall_s": 36.125,
+  "peak_job_commit_bytes": 2961784832,
+  "observed_output_bytes": 149005,
+  "memory_cap_bytes": 6442450944,
+  "wall_cap_s": 600,
+  "output_cap_bytes": 1073741824,
+  "memory_semantics": "Windows job committed memory, not RSS",
+  "output_semantics": "polled file bytes; overshoot possible",
+  "command": [
+    "E:\\automation_djh\\automation_repo\\artifacts\\local_checks\\gprmax_v4_gpu_env\\Scripts\\python.exe",
+    "-u",
+    "-c",
+    "import hashlib,pathlib,runpy,sys; p=pathlib.Path('E:\\\\automation_djh\\\\automation_repo\\\\configs\\\\research\\\\hsg_clock_v1\\\\HSG_ratio5.py'); b=p.read_bytes(); assert hashlib.sha256(b).hexdigest()=='889e93059b99cc9967e6fba1dddfaba7acb7f846b20360092d179d9e791c8793'; pathlib.Path('HSG_ratio5.py').write_bytes(b); sys.argv=['HSG_ratio5.py']; runpy.run_path('HSG_ratio5.py',run_name='__main__')"
+  ]
+}
