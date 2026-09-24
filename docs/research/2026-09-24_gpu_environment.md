@@ -3,7 +3,7 @@
 ## Material Passport
 
 - 用户要求：安装配置环境，后续使用GPU运行。
-- 状态：PyCUDA安装、真实CUDA双精度核函数、V4导入与pip依赖检查已通过；首个CUDA M00校准正在运行。
+- 状态：PyCUDA安装、真实CUDA双精度核函数、V4导入与pip依赖检查已通过；首个CUDA M00校准已正常完成。
 - 位置：`artifacts/local_checks/gprmax_v4_gpu_env/Scripts/python.exe`。
 - 后端策略：FDTD必须CUDA，缺少GPU/编译器/显存则失败，不自动回退CPU。
 - 审计：`artifacts/research_checks/2026-09-24_gpu_setup/`，包含失败与成功日志、版本、身份、哈希。
@@ -30,6 +30,12 @@ PyCUDA由[PyPI官方2026.1源码发行包](https://pypi.org/project/pycuda/2026.
 4. `scripts/run_airborne_gpu.cmd`初始化编译器并调用当前批准的启动器；默认仅前检，带`--execute`才求解。已使用的attempt禁止重复运行；另一次必须创建并留档新运行契约。
 
 本次CUDA M00预算为30分钟、32GiB主机Job提交内存、1GiB输出、8线程建模准备、至少12GiB空闲显存。显存阈值是启动前检查，**不是硬性显存配额**。观察时GPU总使用约10GiB、利用率98%；这些是整卡瞬时指标，完整遥测随结果归档。
+
+## 首个GPU结果
+
+4156步全部完成，退出码0，监督器总耗时262.719秒（约4分23秒）。主机Job提交峰值20.883GiB；运行中38次整卡遥测的显存使用最高10259MiB、利用率最高99%，采样从启动后开始，不能视为精确进程峰值。原始HDF5已通过10项元数据/数值基本检查：V4、坐标、float64、有限非零、单样点源、长度与时刻、偶极长度均符合契约。
+
+完整证据位于`artifacts/research_checks/2026-09-24_M00_x_3d_gpu_r1/`。启动入口复查已正确拒绝重复attempt。官方SFCW仍未执行，等待用户对GPU要求是否包含后处理的澄清；原始记录末5%相对峰值为−41.414dB，后续必须分析有限时窗与静电尾项，不能直接当作合格频域校准。
 
 ## 尚不能声称的事项
 

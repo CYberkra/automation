@@ -1,0 +1,27 @@
+{
+  "status": "cuda_fdtd_complete_raw_audit_passed_sfcw_scope_pending",
+  "wall_s": 262.71899999980815,
+  "peak_host_job_commit_bytes": 22423420928,
+  "gpu_telemetry_scope": "Device-wide sampled every 5s after startup; not exact per-process peak",
+  "observed_peak_device_used_MiB": 10259.0,
+  "observed_peak_device_utilization_pct": 99.0,
+  "raw_audit_passed": true,
+  "official_sfcw_executed": false,
+  "pending_clarification": "User requires GPU; official SFCW currently CPU implementation. Asked whether requirement includes postprocessing.",
+  "files_sha256": {
+    "authorization_at_start.json": "def49cc21f62f1d19ee3bb1d37deb42e4413423fc7720e0da8cd321d44fb831b",
+    "gpu_device_telemetry.csv": "9609a67ff0ab171d5b669c6bf95da7c2ac32c9fa6a0d6154cfab8faba20f3528",
+    "live_status.json": "8c8929fd86c5a4a48ae1d56eb1e45ec272fc36565cdbb34f18c1a355e3311af3",
+    "M00_x_3d.h5": "2d156fd25342d565a5d923b23941c6f94324f532c45c151d23ae00548a2b4d87",
+    "M00_x_3d.in": "7c0b46316ff843e22e0eff46dfd70a318775d2df4594f103321ca712d3a5a419",
+    "raw_audit.json": "f813a137e136f9b2c0987355f66ab0cefa672a96c630ca8fc12f8091c5503d3f",
+    "stderr.log": "b0b5721f46e94c024e22615e10eec965b2698de628794d190f89c844b76197b6",
+    "stdout.log": "8060716f7dcf9497742a32c3205d6650b769e18040fb099401f062b641ad62d4",
+    "supervision.json": "93d1e06b84906bbc14a769a1fca82de6fb10f7f22c4d4fbd6b18b6586f981927"
+  },
+  "source_sha256": {
+    "scripts/run_approved_airborne.py": "65f50a2d4a226f46ae71627c952582a6499518d84a084802b010111f6118c451",
+    "scripts/bounded_windows_process.py": "18d34cf77e59588cbd054a184a1f1c35ec3c14dd5943e951ac7f48e680b7b747",
+    "scripts/audit_airborne_output.py": "c50a237f55afd0e6f505ce344e0904d6b5cedc4b5aa9ef8c02426c245d6b48b6"
+  }
+}
