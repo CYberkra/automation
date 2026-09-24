@@ -1,0 +1,600 @@
+{
+  "schema": "evaluation-label-checks/0.2",
+  "evidence_level": "constructed_arrays_only",
+  "field_data_used": false,
+  "fdtd_executed": false,
+  "training_executed": false,
+  "numpy_version": "2.2.6",
+  "fixture_only_nrmse_limit": 0.1,
+  "physical_acceptance_thresholds_frozen": false,
+  "source_sha256": {
+    "check_evaluation_labels.py": "af901f568b5b6ae4c148dcc96d98e4dcb0f59a18a3d6959ab47cb4e738e99fc8",
+    "research_evaluation_contract.py": "34a114637d4f225397fffd406982f9af6d070559bd06e01b3c1354f994a6cfc6",
+    "research_operator_contract.py": "ea2cca7c00ea56ebb454503be6e526c67739466c15d0379935ef4e01c5d8a770"
+  },
+  "checks": [
+    {
+      "id": "E01_identity",
+      "passed": true
+    },
+    {
+      "id": "E02_zero_is_not_perfect",
+      "passed": true
+    },
+    {
+      "id": "E03_polarity_loss",
+      "passed": true
+    },
+    {
+      "id": "E04_shift_not_aligned_away",
+      "passed": true
+    },
+    {
+      "id": "E05_scale_invariant_shape_not_fidelity",
+      "passed": true,
+      "nrmse": 0.99,
+      "amplitude_factor": 0.01,
+      "amplitude_error": 0.99,
+      "shape_residual": 0.0,
+      "signed_cosine": 1.0
+    },
+    {
+      "id": "E06_mse_can_reward_uniform_shrinkage",
+      "passed": true,
+      "raw_nrmse": 1.0,
+      "half_nrmse": 0.7071067811865475,
+      "half_amplitude_factor": 0.5
+    },
+    {
+      "id": "E07_weak_event_not_hidden_by_global_error",
+      "passed": true,
+      "global_nrmse": 0.009999500037496875,
+      "weak_event_nrmse": 1.0
+    },
+    {
+      "id": "E08_zero_reference_masked",
+      "passed": true
+    },
+    {
+      "id": "E09_zero_baseline_uses_absolute_energy",
+      "passed": true
+    },
+    {
+      "id": "E10_uncertain_event_not_given_clean_label",
+      "passed": true
+    },
+    {
+      "id": "E11_known_complete_reference_can_evaluate_mixture",
+      "passed": true
+    },
+    {
+      "id": "E12_contrast_cannot_certify_common_layer",
+      "passed": true,
+      "contrast_nrmse": 0.0,
+      "deleted_common_layer_nrmse": 1.0
+    },
+    {
+      "id": "E13_gain_negative_control",
+      "passed": true,
+      "energy_growth": 16.0
+    },
+    {
+      "id": "E14_gain_target_must_be_declared",
+      "passed": true,
+      "known_attenuation_recovery_error": 0.0,
+      "unattenuated_overgain_error": 1.5198420997897462
+    },
+    {
+      "id": "L01_constraints_reject_delete_all",
+      "passed": true
+    },
+    {
+      "id": "L02_ties_not_forced_to_id",
+      "passed": true
+    },
+    {
+      "id": "L03_tradeoff_not_called_equivalence",
+      "passed": true
+    },
+    {
+      "id": "L04_interval_crossing_constraint_abstains",
+      "passed": true
+    },
+    {
+      "id": "L05_unfrozen_threshold_cannot_certify_winner",
+      "passed": true
+    },
+    {
+      "id": "L06_missing_reference_not_zero_loss",
+      "passed": true
+    },
+    {
+      "id": "L07_no_safe_action_is_not_automatic_identity_label",
+      "passed": true
+    },
+    {
+      "id": "L08_failure_kept_separate",
+      "passed": true
+    },
+    {
+      "id": "L09_pareto_preference",
+      "passed": true
+    },
+    {
+      "id": "L10_nominal_order_not_robust_order",
+      "passed": true
+    },
+    {
+      "id": "L11_operator_effects_generate_set_label",
+      "passed": true
+    },
+    {
+      "id": "L12_amplitude_guard_stops_mse_shrinkage_reward",
+      "passed": true
+    }
+  ],
+  "examples": {
+    "background_known_components": {
+      "status": "multiple_admissible",
+      "candidate_records": [
+        {
+          "id": "B0_G1_BG",
+          "feasibility": "feasible",
+          "constraints": {
+            "D": "pass"
+          },
+          "metrics": {
+            "D": {
+              "value": 0.0,
+              "lower": 0.0,
+              "upper": 0.0
+            },
+            "R": {
+              "value": 1.0,
+              "lower": 1.0,
+              "upper": 1.0
+            }
+          },
+          "failure_reason": null
+        },
+        {
+          "id": "B1_G1_BG",
+          "feasibility": "feasible",
+          "constraints": {
+            "D": "pass"
+          },
+          "metrics": {
+            "D": {
+              "value": 0.0,
+              "lower": 0.0,
+              "upper": 0.0
+            },
+            "R": {
+              "value": 0.5625,
+              "lower": 0.5625,
+              "upper": 0.5625
+            }
+          },
+          "failure_reason": null
+        },
+        {
+          "id": "B2_G1_BG",
+          "feasibility": "feasible",
+          "constraints": {
+            "D": "pass"
+          },
+          "metrics": {
+            "D": {
+              "value": 0.0,
+              "lower": 0.0,
+              "upper": 0.0
+            },
+            "R": {
+              "value": 0.25,
+              "lower": 0.25,
+              "upper": 0.25
+            }
+          },
+          "failure_reason": null
+        },
+        {
+          "id": "B3_G1_BG",
+          "feasibility": "feasible",
+          "constraints": {
+            "D": "pass"
+          },
+          "metrics": {
+            "D": {
+              "value": 0.0,
+              "lower": 0.0,
+              "upper": 0.0
+            },
+            "R": {
+              "value": 0.0,
+              "lower": 0.0,
+              "upper": 0.0
+            }
+          },
+          "failure_reason": null
+        },
+        {
+          "id": "B4_G1_BG",
+          "feasibility": "feasible",
+          "constraints": {
+            "D": "pass"
+          },
+          "metrics": {
+            "D": {
+              "value": 0.0,
+              "lower": 0.0,
+              "upper": 0.0
+            },
+            "R": {
+              "value": 0.0,
+              "lower": 0.0,
+              "upper": 0.0
+            }
+          },
+          "failure_reason": null
+        },
+        {
+          "id": "B5_G1_BG",
+          "feasibility": "infeasible",
+          "constraints": {
+            "D": "fail"
+          },
+          "metrics": {
+            "D": {
+              "value": 0.9999999999999997,
+              "lower": 0.9999999999999997,
+              "upper": 0.9999999999999997
+            },
+            "R": {
+              "value": 0.0,
+              "lower": 0.0,
+              "upper": 0.0
+            }
+          },
+          "failure_reason": null
+        },
+        {
+          "id": "B6_G1_BG",
+          "feasibility": "infeasible",
+          "constraints": {
+            "D": "fail"
+          },
+          "metrics": {
+            "D": {
+              "value": 0.9999999999999997,
+              "lower": 0.9999999999999997,
+              "upper": 0.9999999999999997
+            },
+            "R": {
+              "value": 0.0,
+              "lower": 0.0,
+              "upper": 0.0
+            }
+          },
+          "failure_reason": null
+        }
+      ],
+      "nondominated_supported_set": [
+        "B3_G1_BG",
+        "B4_G1_BG"
+      ],
+      "robust_preference_pairs": [
+        {
+          "better": "B1_G1_BG",
+          "worse": "B0_G1_BG"
+        },
+        {
+          "better": "B2_G1_BG",
+          "worse": "B0_G1_BG"
+        },
+        {
+          "better": "B2_G1_BG",
+          "worse": "B1_G1_BG"
+        },
+        {
+          "better": "B3_G1_BG",
+          "worse": "B0_G1_BG"
+        },
+        {
+          "better": "B3_G1_BG",
+          "worse": "B1_G1_BG"
+        },
+        {
+          "better": "B3_G1_BG",
+          "worse": "B2_G1_BG"
+        },
+        {
+          "better": "B4_G1_BG",
+          "worse": "B0_G1_BG"
+        },
+        {
+          "better": "B4_G1_BG",
+          "worse": "B1_G1_BG"
+        },
+        {
+          "better": "B4_G1_BG",
+          "worse": "B2_G1_BG"
+        }
+      ],
+      "unique_label": null,
+      "all_candidates_accounted_for": true,
+      "objectives": [
+        "D",
+        "R"
+      ],
+      "constraints": {
+        "D": 0.1
+      },
+      "missing_metrics_are_not_zero": true,
+      "incomparable_is_not_equivalent": true
+    },
+    "uncertain_constraint": {
+      "status": "partial_only",
+      "candidate_records": [
+        {
+          "id": "known",
+          "feasibility": "feasible",
+          "constraints": {
+            "D": "pass"
+          },
+          "metrics": {
+            "D": {
+              "value": 0.01,
+              "lower": 0.01,
+              "upper": 0.01
+            },
+            "R": {
+              "value": 0.5,
+              "lower": 0.5,
+              "upper": 0.5
+            }
+          },
+          "failure_reason": null
+        },
+        {
+          "id": "uncertain",
+          "feasibility": "undetermined",
+          "constraints": {
+            "D": "undetermined"
+          },
+          "metrics": {
+            "D": {
+              "value": 0.09,
+              "lower": 0.07,
+              "upper": 0.12
+            },
+            "R": {
+              "value": 0.1,
+              "lower": 0.1,
+              "upper": 0.1
+            }
+          },
+          "failure_reason": null
+        }
+      ],
+      "nondominated_supported_set": [
+        "known"
+      ],
+      "robust_preference_pairs": [],
+      "unique_label": null,
+      "all_candidates_accounted_for": false,
+      "objectives": [
+        "D",
+        "R"
+      ],
+      "constraints": {
+        "D": 0.1
+      },
+      "missing_metrics_are_not_zero": true,
+      "incomparable_is_not_equivalent": true
+    },
+    "no_frozen_gate": {
+      "status": "partial_only",
+      "candidate_records": [
+        {
+          "id": "a",
+          "feasibility": "undetermined",
+          "constraints": {
+            "D": "undetermined"
+          },
+          "metrics": {
+            "D": {
+              "value": 0.0,
+              "lower": 0.0,
+              "upper": 0.0
+            },
+            "R": {
+              "value": 0.0,
+              "lower": 0.0,
+              "upper": 0.0
+            }
+          },
+          "failure_reason": null
+        }
+      ],
+      "nondominated_supported_set": [],
+      "robust_preference_pairs": [],
+      "unique_label": null,
+      "all_candidates_accounted_for": false,
+      "objectives": [
+        "D",
+        "R"
+      ],
+      "constraints": {
+        "D": null
+      },
+      "missing_metrics_are_not_zero": true,
+      "incomparable_is_not_equivalent": true
+    },
+    "tradeoff": {
+      "status": "multiple_admissible",
+      "candidate_records": [
+        {
+          "id": "a",
+          "feasibility": "feasible",
+          "constraints": {
+            "D": "pass"
+          },
+          "metrics": {
+            "D": {
+              "value": 0.01,
+              "lower": 0.01,
+              "upper": 0.01
+            },
+            "R": {
+              "value": 0.5,
+              "lower": 0.5,
+              "upper": 0.5
+            }
+          },
+          "failure_reason": null
+        },
+        {
+          "id": "b",
+          "feasibility": "feasible",
+          "constraints": {
+            "D": "pass"
+          },
+          "metrics": {
+            "D": {
+              "value": 0.05,
+              "lower": 0.05,
+              "upper": 0.05
+            },
+            "R": {
+              "value": 0.1,
+              "lower": 0.1,
+              "upper": 0.1
+            }
+          },
+          "failure_reason": null
+        }
+      ],
+      "nondominated_supported_set": [
+        "a",
+        "b"
+      ],
+      "robust_preference_pairs": [],
+      "unique_label": null,
+      "all_candidates_accounted_for": true,
+      "objectives": [
+        "D",
+        "R"
+      ],
+      "constraints": {
+        "D": 0.1
+      },
+      "missing_metrics_are_not_zero": true,
+      "incomparable_is_not_equivalent": true
+    },
+    "contrast_only": {
+      "available": true,
+      "absolute_preservation_eligible": false,
+      "reason": "contrast_diagnostic_only",
+      "metrics": {
+        "nrmse": 0.0,
+        "amplitude_factor": 1.0,
+        "amplitude_error": 0.0,
+        "shape_residual": 0.0,
+        "signed_cosine": 1.0
+      }
+    },
+    "unknown_event_states": {
+      "mixed": {
+        "available": false,
+        "absolute_preservation_eligible": false,
+        "reason": "reference_state_or_scope:mixed:isolated_event:event",
+        "metrics": null
+      },
+      "ambiguous": {
+        "available": false,
+        "absolute_preservation_eligible": false,
+        "reason": "reference_state_or_scope:ambiguous:isolated_event:event",
+        "metrics": null
+      },
+      "numerically_unresolved": {
+        "available": false,
+        "absolute_preservation_eligible": false,
+        "reason": "reference_state_or_scope:numerically_unresolved:isolated_event:event",
+        "metrics": null
+      }
+    },
+    "amplitude_guard": {
+      "status": "unique_admissible",
+      "candidate_records": [
+        {
+          "id": "raw",
+          "feasibility": "feasible",
+          "constraints": {
+            "D": "pass",
+            "A": "pass"
+          },
+          "metrics": {
+            "D": {
+              "value": 1.0,
+              "lower": 1.0,
+              "upper": 1.0
+            },
+            "R": {
+              "value": 1.0,
+              "lower": 1.0,
+              "upper": 1.0
+            },
+            "A": {
+              "value": 0.0,
+              "lower": 0.0,
+              "upper": 0.0
+            }
+          },
+          "failure_reason": null
+        },
+        {
+          "id": "half",
+          "feasibility": "infeasible",
+          "constraints": {
+            "D": "pass",
+            "A": "fail"
+          },
+          "metrics": {
+            "D": {
+              "value": 0.7071067811865475,
+              "lower": 0.7071067811865475,
+              "upper": 0.7071067811865475
+            },
+            "R": {
+              "value": 0.25,
+              "lower": 0.25,
+              "upper": 0.25
+            },
+            "A": {
+              "value": 0.5,
+              "lower": 0.5,
+              "upper": 0.5
+            }
+          },
+          "failure_reason": null
+        }
+      ],
+      "nondominated_supported_set": [
+        "raw"
+      ],
+      "robust_preference_pairs": [],
+      "unique_label": "raw",
+      "all_candidates_accounted_for": true,
+      "objectives": [
+        "D",
+        "R"
+      ],
+      "constraints": {
+        "D": 2.0,
+        "A": 0.1
+      },
+      "missing_metrics_are_not_zero": true,
+      "incomparable_is_not_equivalent": true
+    }
+  }
+}

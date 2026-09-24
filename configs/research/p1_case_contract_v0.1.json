@@ -1,0 +1,63 @@
+{
+  "schema": "gpr-research-case-contract/0.1",
+  "status": "reviewable_proposal_not_solver_input",
+  "execution_enabled": false,
+  "field_data_used": false,
+  "profile_id": "PULSE80-TM-v0.1",
+  "claim_scope": "ideal_2d_pulse_mechanism_only_not_device_sfcw",
+  "shared": {
+    "coordinates": {"varying_axes": ["x", "y"], "invariant_axis": "z", "depth_mapping": "depth_m = 7.0 - y_m"},
+    "domain_m": {"x": [0, 16], "y": [0, 10]},
+    "nominal_grid_m": {"dx": 0.025, "dy": 0.025, "dz": null},
+    "invariant_axis_implementation": "resolve_against_pinned_solver_version_before_input_generation",
+    "boundary": {"kind": "PML", "nominal_thickness_cells": 12, "accepted_by_convergence": false, "continuation": "layers continue through PML; M03 becomes flat before lateral PML"},
+    "requested_time_window_s": 2.4e-7,
+    "time_step": "read actual solver dt; do not derive from invariant-axis cell convention without version check",
+    "source": {
+      "kind": "ideal_z_polarized_electric_current_line_in_2d_TM",
+      "waveform": "I(t)=I0*(1-2*pi^2*fc^2*(t-tc)^2)*exp(-pi^2*fc^2*(t-tc)^2), t>=0",
+      "peak_frequency_hz": 80000000,
+      "peak_current_A": 1.0,
+      "pulse_center_s": 3.75e-8,
+      "normalization": "continuous line-current definition; verify mesh-invariance in M00",
+      "stored_samples_required": true,
+      "stored_time_offset_required": true
+    },
+    "numerical_band_guard_hz": 240000000,
+    "band_guard_status": "provisional; verify actual sampled-source spectrum and convergence",
+    "acquisition": {"midpoint_x_m": [6, 8, 10], "tx_rx_horizontal_separation_m": 0.4, "height_above_flat_surface_m": 0.5, "tx_x": "midpoint-0.2", "rx_x": "midpoint+0.2", "tx_y_m": 7.5, "rx_y_m": 7.5},
+    "receiver": {"observable": "Ez", "unit": "V/m", "output_domain": "time_real", "port_S21": false},
+    "materials": {
+      "air": {"epsilon_r": 1, "sigma_S_per_m": 0, "mu_r": 1},
+      "cover_ideal": {"epsilon_r": 9, "sigma_S_per_m": 0, "mu_r": 1},
+      "lower_ideal": {"epsilon_r": 16, "sigma_S_per_m": 0, "mu_r": 1},
+      "local_ideal": {"epsilon_r": 4, "sigma_S_per_m": 0, "mu_r": 1}
+    },
+    "material_evidence": "deliberately lossless mechanism assumptions; no measured soil or bedrock attribution",
+    "upstream_processing": {"background": "none", "gain": "none", "ifft": "none", "clipping": "none"},
+    "solver_version": null,
+    "original_output_dtype": null,
+    "numeric_acceptance_tolerances": null
+  },
+  "cases": [
+    {"id": "M00", "geometry": "all air", "reference": "source history and independent travel-time/mesh/boundary checks", "purpose": "observable, timing, source normalization", "full_clean_label": false},
+    {"id": "M01", "geometry": "air above y=7; cover_ideal below", "reference_case": "M00", "difference_meaning": "entire half-space introduction, not isolated surface reflection", "purpose": "direct, surface and ground-response coexistence", "full_clean_label": false},
+    {"id": "M02", "geometry": "M01 plus lower_ideal below y=5 (depth 2m)", "reference_case": "M01", "difference_meaning": "response of introduced lower-interface contrast including associated interactions", "purpose": "flat layer preservation", "full_clean_label": false},
+    {"id": "M03", "geometry": "M02 with interface depth d(x)=2+0.125*(1+cos(pi*(x-8)/4)) for abs(x-8)<=4, otherwise d=2; y=7-d", "reference_case": "M01", "geometry_ablation_reference": "M02", "purpose": "curved layer and staircasing sensitivity", "full_clean_label": false},
+    {"id": "M04", "geometry": "M02 plus ellipse in x-depth plane centered (8,1.2)m with radii (0.4,0.25)m, local_ideal, invariant along z", "reference_case": "M02", "shared_layer_reference_pair": ["M02", "M01"], "purpose": "local scatterer and common layer preservation", "full_clean_label": false}
+  ],
+  "numerical_variants": [
+    {"id": "base", "change": "none"},
+    {"id": "refine", "change": "halve dx and dy, preserve physical geometry/source definition and nominal physical PML thickness, document snapped Yee coordinates"},
+    {"id": "boundary", "change": "extend each varying-axis domain side by 2m, translate all geometry and acquisition consistently, preserve local relative geometry and grid; retain matching material continuation"}
+  ],
+  "run_count_proposal": 45,
+  "run_count_excludes": ["additional source normalization or convergence failures", "3d checks", "material loss variants", "Bscan pilot", "training"],
+  "pre_execution_open_items": [
+    "execution authorization",
+    "solver build, source implementation, invariant-axis geometry and output sampling",
+    "precision and resource audit",
+    "case-specific error tolerances and reference event window policy",
+    "domain/PML sufficiency including earliest air paths"
+  ]
+}

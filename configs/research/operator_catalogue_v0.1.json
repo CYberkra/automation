@@ -1,0 +1,210 @@
+{
+  "schema": "research-operator-catalogue/0.1",
+  "operator_version": "research-operators/0.1",
+  "status": "array_contract_checked_not_physics_validated",
+  "fdtd_execution_enabled": false,
+  "training_enabled": false,
+  "domain": "time_real",
+  "axes": [
+    "sample",
+    "trace"
+  ],
+  "input_window": "entire_predeclared_window",
+  "gain_coordinate": "u=i/(n_samples-1)",
+  "gap_rtol": 1e-08,
+  "numerical_rank_floor": "max(n_samples,n_traces)*float64_eps",
+  "candidate_count": 27,
+  "legal_count_is_input_dependent": true,
+  "local_mean_control_in_catalogue": false,
+  "configurations": [
+    {
+      "id": "B0_G1_BG",
+      "background": "identity",
+      "parameter": null,
+      "end_gain": 1,
+      "order": "BG"
+    },
+    {
+      "id": "B0_G2_BG",
+      "background": "identity",
+      "parameter": null,
+      "end_gain": 2,
+      "order": "BG"
+    },
+    {
+      "id": "B0_G4_BG",
+      "background": "identity",
+      "parameter": null,
+      "end_gain": 4,
+      "order": "BG"
+    },
+    {
+      "id": "B1_G1_BG",
+      "background": "mean",
+      "parameter": 0.25,
+      "end_gain": 1,
+      "order": "BG"
+    },
+    {
+      "id": "B1_G2_BG",
+      "background": "mean",
+      "parameter": 0.25,
+      "end_gain": 2,
+      "order": "BG"
+    },
+    {
+      "id": "B1_G4_BG",
+      "background": "mean",
+      "parameter": 0.25,
+      "end_gain": 4,
+      "order": "BG"
+    },
+    {
+      "id": "B2_G1_BG",
+      "background": "mean",
+      "parameter": 0.5,
+      "end_gain": 1,
+      "order": "BG"
+    },
+    {
+      "id": "B2_G2_BG",
+      "background": "mean",
+      "parameter": 0.5,
+      "end_gain": 2,
+      "order": "BG"
+    },
+    {
+      "id": "B2_G4_BG",
+      "background": "mean",
+      "parameter": 0.5,
+      "end_gain": 4,
+      "order": "BG"
+    },
+    {
+      "id": "B3_G1_BG",
+      "background": "mean",
+      "parameter": 1.0,
+      "end_gain": 1,
+      "order": "BG"
+    },
+    {
+      "id": "B3_G2_BG",
+      "background": "mean",
+      "parameter": 1.0,
+      "end_gain": 2,
+      "order": "BG"
+    },
+    {
+      "id": "B3_G4_BG",
+      "background": "mean",
+      "parameter": 1.0,
+      "end_gain": 4,
+      "order": "BG"
+    },
+    {
+      "id": "B4_G1_BG",
+      "background": "svd",
+      "parameter": 1,
+      "end_gain": 1,
+      "order": "BG"
+    },
+    {
+      "id": "B4_G2_BG",
+      "background": "svd",
+      "parameter": 1,
+      "end_gain": 2,
+      "order": "BG"
+    },
+    {
+      "id": "B4_G2_GB",
+      "background": "svd",
+      "parameter": 1,
+      "end_gain": 2,
+      "order": "GB"
+    },
+    {
+      "id": "B4_G4_BG",
+      "background": "svd",
+      "parameter": 1,
+      "end_gain": 4,
+      "order": "BG"
+    },
+    {
+      "id": "B4_G4_GB",
+      "background": "svd",
+      "parameter": 1,
+      "end_gain": 4,
+      "order": "GB"
+    },
+    {
+      "id": "B5_G1_BG",
+      "background": "svd",
+      "parameter": 2,
+      "end_gain": 1,
+      "order": "BG"
+    },
+    {
+      "id": "B5_G2_BG",
+      "background": "svd",
+      "parameter": 2,
+      "end_gain": 2,
+      "order": "BG"
+    },
+    {
+      "id": "B5_G2_GB",
+      "background": "svd",
+      "parameter": 2,
+      "end_gain": 2,
+      "order": "GB"
+    },
+    {
+      "id": "B5_G4_BG",
+      "background": "svd",
+      "parameter": 2,
+      "end_gain": 4,
+      "order": "BG"
+    },
+    {
+      "id": "B5_G4_GB",
+      "background": "svd",
+      "parameter": 2,
+      "end_gain": 4,
+      "order": "GB"
+    },
+    {
+      "id": "B6_G1_BG",
+      "background": "svd",
+      "parameter": 3,
+      "end_gain": 1,
+      "order": "BG"
+    },
+    {
+      "id": "B6_G2_BG",
+      "background": "svd",
+      "parameter": 3,
+      "end_gain": 2,
+      "order": "BG"
+    },
+    {
+      "id": "B6_G2_GB",
+      "background": "svd",
+      "parameter": 3,
+      "end_gain": 2,
+      "order": "GB"
+    },
+    {
+      "id": "B6_G4_BG",
+      "background": "svd",
+      "parameter": 3,
+      "end_gain": 4,
+      "order": "BG"
+    },
+    {
+      "id": "B6_G4_GB",
+      "background": "svd",
+      "parameter": 3,
+      "end_gain": 4,
+      "order": "GB"
+    }
+  ]
+}

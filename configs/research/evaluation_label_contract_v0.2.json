@@ -1,0 +1,59 @@
+{
+  "schema": "uavgpr-evaluation-label-contract/0.2",
+  "status": "metric_and_label_definitions_fixed_for_research_physical_limits_not_calibrated",
+  "fdtd_execution_enabled": false,
+  "training_enabled": false,
+  "field_data_allowed": false,
+  "scalar_weighted_reward": null,
+  "domain": "time_real",
+  "axes": ["sample", "trace"],
+  "reference_kinds": ["complete_clean", "isolated_event", "paired_contrast", "negative_control"],
+  "reference_states": ["isolated", "mixed", "ambiguous", "absent", "numerically_unresolved"],
+  "protected_response_roles": ["ideal_layer_interface", "weak_interface_response", "curved_or_discontinuous_response", "local_dielectric_contrast_response"],
+  "not_semantic_labels": ["landslide_present", "slip_surface", "bedrock_truth_from_borehole_interpolation"],
+  "reference_required_fields": ["reference_id", "reference_kind", "reference_state", "scope", "physical_or_constructed_definition", "mask_id", "mask_sha256", "reference_sha256", "axis_units", "amplitude_units", "frozen_before_candidates", "common_protected_objects", "numerical_credibility", "uncertainty_kind"],
+  "background_metrics": {
+    "protected_nrmse": "norm(M*(Z-S))/norm(M*S)",
+    "amplitude_factor_diagnostic": "dot(M*Z,M*S)/dot(M*S,M*S)",
+    "protected_amplitude_error": "abs(amplitude_factor-1)",
+    "shape_residual_diagnostic": "norm(M*(Z-amplitude_factor*S))/norm(M*S)",
+    "signed_cosine_diagnostic": "dot(M*Z,M*S)/(norm(M*Z)*norm(M*S))",
+    "clutter_energy_ratio": "mean(Z[clutter_only_mask]^2)/mean(X[clutter_only_mask]^2)",
+    "negative_energy_absolute": "mean(Z[absent_target_mask]^2)"
+  },
+  "gain_metrics": {
+    "requires_compensation_target": true,
+    "known_control": "X=a*S0+C+N, a>0, background reference a*S0, final reference S0",
+    "compensation_nrmse": "norm(M*(Y-S0))/norm(M*S0)",
+    "negative_energy_ratio": "mean(Y[negative_mask]^2)/mean(Z[negative_mask]^2)",
+    "negative_energy_absolute": "mean(Y[negative_mask]^2)",
+    "no_target_defined": "risk_diagnostics_only_no_gain_quality_label",
+    "gain_curve_label": "generative_metadata_or_oracle_diagnostic_not_mandatory_optimal_action"
+  },
+  "aggregation": {
+    "retained": "all_event_metrics_and_availability",
+    "protected_constraints": "every_required_event_must_pass",
+    "summary": ["macro_mean_over_eligible_events", "maximum_event_error", "counts_by_family_and_reference_state"],
+    "statistical_unit": "geological_mother_model",
+    "forbidden": ["energy_weighted_average_as_only_protection_gate", "crop_level_random_split", "output_selected_ROI", "per_output_rescaling_or_alignment"]
+  },
+  "physical_limits": {
+    "event_nrmse_max": null,
+    "event_amplitude_error_max": null,
+    "negative_energy_max": null,
+    "reference_contamination_max": null,
+    "minimum_meaningful_improvement": null,
+    "uncertainty_envelope": null,
+    "null_behavior": "undetermined_feasibility_no_unique_configuration_label"
+  },
+  "label_fields": ["sample_id", "mother_model_id", "split", "evaluation_context_id", "reference_ids", "catalogue_version", "input_sha256", "configuration_id", "execution_status", "metrics", "metric_validity", "metric_missing_reasons", "feasibility", "constraint_results", "robust_preference_pairs", "nondominated_supported_set", "label_status", "unique_label"],
+  "feasibility_values": ["feasible", "infeasible", "undetermined", "unavailable"],
+  "label_status_values": ["unique_admissible", "multiple_admissible", "partial_only", "no_admissible_candidate"],
+  "dominance": "All objective upper bounds of A <= corresponding lower bounds of B, with at least one strict inequality; both pass all required constraints",
+  "missing_value": null,
+  "incomparable_is_not_equivalent": true,
+  "identity_is_candidate_not_default_ground_truth": true,
+  "split_policy": "Assign mother model before traces, crops, noise, gain or reference variants; all descendants in same group",
+  "evaluator_only_fields": ["clean_reference", "reference_state", "ROI_from_reference", "material_truth", "noise_realisation", "simulation_target_presence", "test_candidate_scores"],
+  "implementation_scope": "metric functions and interval-based label logic on declared records; no automatic physical reference construction, uncertainty estimation, batch metadata validation or model training"
+}

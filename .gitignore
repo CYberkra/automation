@@ -1,0 +1,38 @@
+# Original field/borehole material and derived private audit caches stay local.
+/探地雷达背景资料/
+/artifacts/initial_audit/
+
+# Public paper/data caches are recoverable using the tracked source ledgers.
+/artifacts/research_sources/
+# Fresh verification outputs; historical research_checks evidence stays tracked.
+/artifacts/local_checks/
+/artifacts/simulations/
+/artifacts/training/
+
+# This repository does not install or migrate the user's scheduler.
+/configs/research_automation.json
+/scripts/dispatch_research_cycle.ps1
+
+# Local environments, caches, IDE state, and credentials.
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+node_modules/
+.idea/
+.vscode/
+.codegraph/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+credentials.json
+Thumbs.db
+.DS_Store
+~$*

@@ -1,0 +1,113 @@
+{
+  "schema": "research-source-ledger/1",
+  "date": "2026-09-24",
+  "cycle": "02",
+  "trigger_utc": "2026-09-24T01:58:30.047Z",
+  "private_field_data_used": false,
+  "fdtd_run": false,
+  "training_run": false,
+  "material_inversion_run": false,
+  "new_full_papers_read": 0,
+  "entries": [
+    {
+      "id": "R11",
+      "title": "Dielectric Spectroscopy and Application of Mixing Models Describing Dielectric Dispersion in Clay Minerals and Clayey Soils",
+      "year": 2020,
+      "doi": "10.3390/s20226678",
+      "url": "https://nora.nerc.ac.uk/id/eprint/529217/1/N529217JA.pdf",
+      "reading_level": "related_sections",
+      "read_pdf_pages": [5, 6, 8, 14],
+      "locators": ["2.1-2.3", "equation 8", "4.1", "5 conclusions"],
+      "visual_checked_pdf_pages": [8],
+      "local_file": "artifacts/research_sources/2026-09-24_cycle02/R11_GonzalezTeruel2020.pdf",
+      "sha256": "8271d8793f21681fa74aca3b5f702642f9b87d9f51958f49ce0782382f8227db",
+      "limitations": ["Not full-paper reading this cycle", "Water-phase conductivity is not bulk conductivity", "Not reproduced"]
+    },
+    {
+      "id": "R12",
+      "title": "Measurement of the broadband complex permittivity of soils in the frequency domain with a low-cost Vector Network Analyzer and an Open-Ended coaxial probe",
+      "year": 2022,
+      "doi": "10.1016/j.compag.2022.106847",
+      "url": "https://nora.nerc.ac.uk/532422/1/N532422JA.pdf",
+      "reading_level": "abstract_and_related_sections",
+      "read_pdf_pages": [3, 6, 7, 9, 10],
+      "locators": ["abstract", "2.1.1", "3.1.2", "4 conclusions"],
+      "local_file": "artifacts/research_sources/2026-09-24_cycle02/R12_GonzalezTeruel2022.pdf",
+      "sha256": "fb732234a11da970321f56743f7c7429987d68b6127cbe1b4e9f82332d7897db",
+      "limitations": ["Not full-paper reading this cycle", "50-700 MHz applies to tested probe, VNA and calibration combination", "No soil inversion reproduced"]
+    },
+    {
+      "id": "R13",
+      "title": "Broadband Dielectric Analysis of Clays: Impact of Cation Exchange Capacity, Water Content, and Porosity",
+      "year": 2026,
+      "published_on": "2026-03-06",
+      "doi": "10.1029/2025JB031945",
+      "url": "https://publikationen.bibliothek.kit.edu/1000191439/177575548",
+      "journal_url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2025JB031945",
+      "reading_level": "abstract_and_related_sections_of_journal_version",
+      "read_pdf_pages": [7, 8, 14, 15, 27, 28, 29],
+      "locators": ["2.4 equations 1-3", "3.3-3.5", "5.6", "6", "Data Availability Statement"],
+      "local_file": "artifacts/research_sources/2026-09-24_cycle02/R13_Schmidt2026.pdf",
+      "sha256": "fcbe891fc67a22dafc6410a1d58fce35db20d394bff7044fad965d95eca19330",
+      "limitations": ["Not full-paper reading this cycle", "Saturated clay specimens do not represent project soil or bedrock", "Parameter nonuniqueness remains", "Not reproduced"]
+    },
+    {
+      "id": "R13-D",
+      "title": "Schmidt et al. public dataset",
+      "record_version": "1.0",
+      "doi": "10.5281/zenodo.15473270",
+      "url": "https://zenodo.org/records/15473270",
+      "reading_level": "metadata_and_all_15_s2p_numeric_format_audit",
+      "local_file": "artifacts/research_sources/2026-09-24_cycle02/R13_dataset_metadata.json",
+      "sha256": "b34140d18ddeec263a2636bccddfb85e968cd27c10731985da490c49e33d4643",
+      "archive": "artifacts/research_sources/2026-09-24_cycle02/R13_VNA_Spectra.zip",
+      "archive_sha256": "d61b0f2ff5a3c75918be5b69a5d61c99e1cf9d1b85538509ccce7e182b9f708a",
+      "author_md5_verified": true,
+      "limitations": ["No material inversion", "Page start frequency disagrees with files and journal text", "Finite data and frequency coverage do not certify measurement accuracy"]
+    },
+    {
+      "id": "R14",
+      "title": "gprMax Stepped-Frequency Continuous-Wave GPR",
+      "url": "https://docs.gprmax.com/en/latest/inc_SFCW.html",
+      "reading_level": "related_sections",
+      "locators": ["discrete convolution", "source and receiver time offsets", "finite-record check", "frequency and time-window validity"],
+      "local_file": "artifacts/research_sources/2026-09-24_cycle02/R14_gprmax_sfcw.html",
+      "sha256": "950478c2466ff6afc6d6eaf3fc62c39bc99b1fd12168dedff8cb947d969a52f8",
+      "limitations": ["Latest documentation snapshot; installed solver not verified"]
+    },
+    {
+      "id": "R15",
+      "title": "gprMax Sources and ports",
+      "url": "https://docs.gprmax.com/en/latest/sources_ports.html",
+      "reading_level": "related_sections",
+      "locators": ["source vs port", "raw fields, units and time axes"],
+      "local_file": "artifacts/research_sources/2026-09-24_cycle02/R15_gprmax_sources.html",
+      "sha256": "4e9e5d3878b9e823d19ad311032183fcafc094d9e066083736cab4633c7b9cf0",
+      "limitations": ["Latest documentation snapshot; installed solver not verified"]
+    },
+    {
+      "id": "R16",
+      "title": "gprMax Model Building",
+      "url": "https://docs.gprmax.com/en/latest/input_hash_cmds.html",
+      "reading_level": "related_sections",
+      "locators": ["hertzian_dipole normalization", "2D line-source interpretation"],
+      "local_file": "artifacts/research_sources/2026-09-24_cycle02/R16_gprmax_commands.html",
+      "sha256": "d7067a67e2cc7edbf552087138317a955198817d7af4df956d4764c60bd526c2",
+      "limitations": ["Latest documentation snapshot; installed solver not verified"]
+    }
+  ],
+  "artifact_hashes": {
+    "docs/research/2026-09-24_cycle02_materials_and_source.md": "bca612a2ad72275947450b76ee9c02f48f81f3955b29268fb84e43c3211ed774",
+    "docs/research/2026-09-24_cycle02_pilot_reference_contract.md": "ef73c6abd452a750e584c8d19f7a927cc2ce0983b535258d0bd6ce28375a05f2",
+    "configs/research/p1_case_contract_v0.1.json": "c3b00aed6a27cc0bfd17ee552d06a57bb898478007cf08e859ac724697fad443",
+    "scripts/audit_public_clay_spectra.py": "609591e3c569fe1ab30d627706473557bd6b75dadf657218ebacba6349094091",
+    "artifacts/research_checks/2026-09-24_cycle02_public_spectra_audit.json": "f64a565aa5e93862ea40df9d40e3f6f111d6d64ed16a504f0ae35e289c976260",
+    "artifacts/research_checks/2026-09-24_cycle02_contract_examples.json": "c7900bcd87e819085f8a153d3ebda41b0a2d7b3d58c6c18e515ca6b008c0392c"
+  },
+  "remaining_gaps": [
+    "site-representative low-frequency rock and soil complex spectra",
+    "fixture inversion details for public S2P",
+    "hardware source and export contract",
+    "actual solver version, precision and event tolerances"
+  ]
+}

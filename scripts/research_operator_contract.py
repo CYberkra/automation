@@ -1,0 +1,132 @@
+"""Dense-array research prototype, not a validated GPR processing library.
+
+Only fixed shared gain, partial row-mean subtraction, and leading-SVD removal.
+No field reader, FDTD execution, learning, ROI selection, or physical inversion.
+"""
+
+import numpy as np
+
+
+VERSION = "research-operators/0.1"
+GAP_RTOL = 1e-8  # Proposed numerical guard, not a physical acceptance threshold.
+
+
+class ConfigUnavailable(ValueError):
+    """A valid catalogue entry cannot be applied to this particular input."""
+
+
+def catalogue():
+    backgrounds = [("identity", None), ("mean", 0.25), ("mean", 0.5),
+                   ("mean", 1.0), ("svd", 1), ("svd", 2), ("svd", 3)]
+    rows = []
+    for index, (kind, parameter) in enumerate(backgrounds):
+        for end_gain in (1, 2, 4):
+            for order in (["BG", "GB"] if kind == "svd" and end_gain > 1 else ["BG"]):
+                rows.append({"id": f"B{index}_G{end_gain}_{order}", "background": kind,
+                             "parameter": parameter, "end_gain": end_gain, "order": order})
+    return rows
+
+
+def _background(x, kind, parameter, gap_rtol):
+    if kind == "identity":
+        return x.copy(), {"kind": kind}
+    if kind == "mean":
+        # Scale before averaging to avoid overflow from summing finite values.
+        scale = float(np.max(np.abs(x)))
+        mean = np.zeros((x.shape[0], 1)) if scale == 0 else (x / scale).mean(axis=1, keepdims=True) * scale
+        return x - parameter * mean, {"kind": kind, "lambda": parameter}
+    k = int(parameter)
+    if k >= min(x.shape):
+        raise ConfigUnavailable("svd_rank_must_be_less_than_minimum_dimension")
+    scale = float(np.max(np.abs(x)))
+    if scale == 0:
+        return x.copy(), {"kind": kind, "k": k, "status": "zero_input", "effective_k": 0}
+    u, singular, vt = np.linalg.svd(x / scale, full_matrices=False)
+    relative = singular / singular[0]
+    rank_floor = max(x.shape) * np.finfo(np.float64).eps
+    numerical_rank = int(np.count_nonzero(relative > rank_floor))
+    effective_k = min(k, numerical_rank)
+    gap = float(relative[k - 1] - relative[k])
+    # Ties entirely below the numerical rank floor carry no resolved component.
+    if k < numerical_rank and gap <= gap_rtol:
+        raise ConfigUnavailable("svd_cutoff_gap_unresolved")
+    removed = (u[:, :effective_k] * singular[:effective_k]) @ vt[:effective_k, :]
+    return (x / scale - removed) * scale, {
+        "kind": kind, "k": k, "effective_k": effective_k,
+        "relative_singular_values": relative.tolist(), "cutoff_gap_relative_to_s1": gap,
+        "gap_rtol": gap_rtol, "numerical_rank_floor": rank_floor,
+        "status": "rank_redundant" if k > numerical_rank else "ok",
+    }
+
+
+def apply_configuration(x, config_id, *, mask=None, domain="time_real", gap_rtol=GAP_RTOL):
+    """Return Y and actual step arrays. BG pre_gain differs from GB audit_before_gain.
+
+    Axes are [sample, trace]. The caller defines the entire input window in advance.
+    Invalid masked cells are preserved only for the all-identity configuration.
+    Other configurations require a dense, fully valid window; no imputation occurs.
+    """
+    a = np.asarray(x)
+    if domain != "time_real" or a.ndim != 2 or min(a.shape) < 2:
+        raise ValueError("require_time_real_2d_sample_trace_with_each_dimension_at_least_2")
+    if a.dtype.kind != "f" or not np.isfinite(a).all():
+        raise ValueError("require_finite_real_floating_input")
+    if not np.isfinite(gap_rtol) or not 0 < gap_rtol < 1:
+        raise ValueError("invalid_gap_guard")
+    matches = [c for c in catalogue() if c["id"] == config_id]
+    if not matches:
+        raise ValueError("unknown_configuration")
+    config = matches[0]
+    if mask is not None:
+        mask = np.asarray(mask)
+        if mask.dtype.kind != "b" or mask.shape != a.shape:
+            raise ValueError("mask_must_be_boolean_and_match_shape")
+        if not mask.all() and (config["background"] != "identity" or config["end_gain"] != 1):
+            raise ConfigUnavailable("nonidentity_requires_dense_valid_window")
+    a = a.astype(np.float64, copy=True)
+    curve = np.power(float(config["end_gain"]), np.arange(a.shape[0]) / (a.shape[0] - 1))[:, None]
+    steps = []
+    current = a.copy()
+    pre_gain = None
+    with np.errstate(over="raise", invalid="raise", divide="raise"):
+        try:
+            for op in config["order"]:
+                before = current.copy()
+                if op == "B":
+                    current, diagnostics = _background(current, config["background"], config["parameter"], gap_rtol)
+                else:
+                    current = curve * current
+                    diagnostics = {"kind": "fixed_shared_gain", "end_gain": config["end_gain"], "axis": 0}
+                if not np.isfinite(current).all():
+                    raise ConfigUnavailable("nonfinite_output")
+                steps.append({"operator": op, "input": before, "output": current.copy(),
+                              "diagnostics": diagnostics})
+                if op == "B" and config["order"] == "BG":
+                    pre_gain = current.copy()
+        except (FloatingPointError, np.linalg.LinAlgError) as exc:
+            raise ConfigUnavailable("numeric_failure") from exc
+    return {"version": VERSION, "config": config, "output": current,
+            "pre_gain": pre_gain, "audit_before_gain": current / curve,
+            "gain_curve": curve[:, 0].copy(), "steps": steps,
+            "mask": None if mask is None else mask.copy(), "input_dtype": str(np.asarray(x).dtype),
+            "compute_dtype": "float64", "domain": domain, "axes": ["sample", "trace"]}
+
+
+def local_mean_control(x, width, strength=1.0):
+    """Independent spatially adaptive reference, outside the 27-entry catalogue.
+
+    Truncated and count-normalized edges; no implicit global mean subtraction.
+    Mechanism helper only. Public API/mask/provenance support is not implemented.
+    """
+    a = np.array(x, dtype=np.float64, copy=True)
+    if a.ndim != 2 or not np.isfinite(a).all():
+        raise ValueError("invalid_control_array")
+    if isinstance(width, bool) or not isinstance(width, int) or width < 3 or width % 2 == 0 or width > a.shape[1]:
+        raise ValueError("require_odd_integer_window_between_3_and_trace_count")
+    if not np.isfinite(strength) or not 0 <= strength <= 1:
+        raise ValueError("invalid_strength")
+    result = a.copy()
+    half = width // 2
+    for j in range(a.shape[1]):
+        result[:, j] -= strength * a[:, max(0, j - half):min(a.shape[1], j + half + 1)].mean(axis=1)
+    return result

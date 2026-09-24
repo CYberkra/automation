@@ -1,0 +1,199 @@
+{
+  "schema": "literature-reading-ledger/1",
+  "date": "2026-09-23",
+  "purpose": "Evidence scope for the accompanying review; retrieval does not imply reading or replication",
+  "body_read_count": 8,
+  "field_data_access_this_round": false,
+  "simulation_executed": false,
+  "training_executed": false,
+  "notes": [
+    "Eight papers: main text read, not every bibliography item or every figure pixel.",
+    "Downloaded L03 and challenged L06 are excluded: not used as core read evidence.",
+    "SGC remains incomplete. Prior cross-domain sources retain their prior reading status.",
+    "Temporary retrieval caches are not distributed; hashes refer to retrieved public source bytes, not the generated review.",
+    "R01 and R02 are supporting references carried forward from the prior research document, not counted among newly read bodies."
+  ],
+  "entries": [
+    {
+      "id": "P01",
+      "source_url": "https://haihan-sun.github.io/files/GPR7.pdf",
+      "retrieval_url": "https://haihan-sun.github.io/files/GPR7.pdf",
+      "doi": "10.1109/TGRS.2022.3176029",
+      "read_status": "body_read",
+      "read_scope": "Author PDF; body pp. 1-13; references not individually traced",
+      "retrieval_status": "retrieved",
+      "retrieved_content_sha256": "b690a0a1a46c400e9e2b2f4ea80ecc5b4eae21296a755970785e495fbbe3ea4f",
+      "retrieved_bytes": 26156895,
+      "source_pages": 14,
+      "reproduced": false
+    },
+    {
+      "id": "P02",
+      "source_url": "https://dr.ntu.edu.sg/server/api/core/bitstreams/5f42b223-5d6b-466a-81fb-1a8b00a7eec3/content",
+      "retrieval_url": "https://dr.ntu.edu.sg/server/api/core/bitstreams/5f42b223-5d6b-466a-81fb-1a8b00a7eec3/content",
+      "doi": "10.1109/JSTARS.2024.3486535",
+      "read_status": "body_read",
+      "read_scope": "Published PDF; body pp. 1-12; III-IV, equations 9-13; not all image-table cells transcribed",
+      "retrieval_status": "retrieved",
+      "retrieved_content_sha256": "67b905c68652b4aa5f3d5648b19bb01b26bf4c9fa1cc384522f960047094aa95",
+      "retrieved_bytes": 6740597,
+      "source_pages": 14,
+      "reproduced": false
+    },
+    {
+      "id": "P03",
+      "source_url": "https://d197for5662m48.cloudfront.net/documents/publicationstatus/223976/preprint_pdf/155d87f3ca78647ac559a006b6573224.pdf",
+      "retrieval_url": "https://d197for5662m48.cloudfront.net/documents/publicationstatus/223976/preprint_pdf/155d87f3ca78647ac559a006b6573224.pdf",
+      "doi": "10.1016/j.ndteint.2025.103366",
+      "read_status": "full_text_unavailable",
+      "read_scope": "Journal abstract and previous-round preprint excerpts only; full retrieval failed in this round",
+      "retrieval_status": "SSLError",
+      "retrieved_content_sha256": null,
+      "retrieved_bytes": null,
+      "source_pages": null,
+      "reproduced": false
+    },
+    {
+      "id": "P04",
+      "source_url": "https://www.mdpi.com/1424-8220/23/11/5078",
+      "retrieval_url": "https://r.jina.ai/https://www.mdpi.com/1424-8220/23/11/5078",
+      "doi": "10.3390/s23115078",
+      "read_status": "body_read",
+      "read_scope": "Publisher full HTML sections 1-4; equations 10-11 and parameter selection",
+      "retrieval_status": "retrieved",
+      "retrieved_content_sha256": "5a10d8aeedf2a4d59776087403c3ef81e2fdeee3079fd2ecf1d4987a111155c8",
+      "retrieved_bytes": 79660,
+      "source_pages": 0,
+      "reproduced": false
+    },
+    {
+      "id": "P05",
+      "source_url": "https://www.frontiersin.org/journals/earth-science/articles/10.3389/feart.2023.1340484/full",
+      "retrieval_url": "https://r.jina.ai/https://www.frontiersin.org/journals/earth-science/articles/10.3389/feart.2023.1340484/full",
+      "doi": "10.3389/feart.2023.1340484",
+      "read_status": "body_read",
+      "read_scope": "Publisher full HTML sections 1-4; modeling, dataset and inversion",
+      "retrieval_status": "retrieved",
+      "retrieved_content_sha256": "bf4e686a97ddd914548b007815200e4728cdda5bf739aa0034e7c40d6bb6758f",
+      "retrieved_bytes": 74078,
+      "source_pages": 0,
+      "reproduced": false
+    },
+    {
+      "id": "A01",
+      "source_url": "https://arxiv.org/html/2410.22939v1",
+      "doi": null,
+      "version": "arXiv v1",
+      "read_status": "body_read",
+      "read_scope": "Main sections 1-5 and Appendix C; Appendix A/B not fully read",
+      "retrieval_status": "web_tool_read",
+      "retrieved_content_sha256": null,
+      "reproduced": false
+    },
+    {
+      "id": "L01",
+      "source_url": "https://www.swdzgcdz.com/cn/article/pdf/preview/10.16030/j.heg.202401058.pdf",
+      "retrieval_url": "https://www.swdzgcdz.com/cn/article/pdf/preview/10.16030/j.heg.202401058.pdf",
+      "doi": "10.16030/j.heg.202401058",
+      "read_status": "body_read",
+      "read_scope": "Published article pp. 173-182; post-failure reconstruction and mechanisms",
+      "retrieval_status": "retrieved",
+      "retrieved_content_sha256": "4abae3c9425ca504657846ec4472b2cf56fd6909daa76977fb8c0cb2f638b312",
+      "retrieved_bytes": 7120695,
+      "source_pages": 12,
+      "reproduced": false
+    },
+    {
+      "id": "L02",
+      "source_url": "https://www.mdpi.com/2504-446X/10/5/331",
+      "retrieval_url": "https://r.jina.ai/https://www.mdpi.com/2504-446X/10/5/331",
+      "doi": "10.3390/drones10050331",
+      "read_status": "body_read",
+      "read_scope": "Publisher full HTML sections 1-5; acquisition, processing and interpretation",
+      "retrieval_status": "retrieved",
+      "retrieved_content_sha256": "dad3d8ed322538460f08bdcf1aabb2db4e717a7c59cdaba910c43e397ea1f623",
+      "retrieved_bytes": 129019,
+      "source_pages": 0,
+      "reproduced": false
+    },
+    {
+      "id": "L04",
+      "source_url": "https://meetingorganizer.copernicus.org/EGU26/EGU26-16505.html",
+      "retrieval_url": "https://r.jina.ai/https://meetingorganizer.copernicus.org/EGU26/EGU26-16505.html",
+      "doi": "10.5194/egusphere-egu26-16505",
+      "read_status": "abstract_read",
+      "read_scope": "Complete conference abstract; no full paper verified",
+      "retrieval_status": "retrieved",
+      "retrieved_content_sha256": "78fd913381d9887d039038161dc867429534bdf773d3d8520597a8cab89b2cf0",
+      "retrieved_bytes": 2859,
+      "source_pages": 0,
+      "reproduced": false
+    },
+    {
+      "id": "L05",
+      "source_url": "https://homepage.univie.ac.at/thomas.glade/Publications/SassEtAl2007.pdf",
+      "retrieval_url": "https://homepage.univie.ac.at/thomas.glade/Publications/SassEtAl2007.pdf",
+      "doi": "10.1016/j.geomorph.2006.12.019",
+      "read_status": "body_read",
+      "read_scope": "Published article pp. 89-101, particularly 3.3, 4.2 and 5",
+      "retrieval_status": "retrieved",
+      "retrieved_content_sha256": "4840bfc83b5c43d6be94bfabbc094149075595267edd104c57808f2eafed4279",
+      "retrieved_bytes": 6877489,
+      "source_pages": 15,
+      "reproduced": false
+    },
+    {
+      "id": "D01",
+      "source_url": "https://www.caghp.org.cn/cdntencentalisuanzhecombaidufile?i=/202509/20250901023137lhithIq4cit0De6326.docx",
+      "retrieval_url": "https://www.caghp.org.cn/cdntencentalisuanzhecombaidufile?i=/202509/20250901023137lhithIq4cit0De6326.docx",
+      "doi": null,
+      "read_status": "selected_clauses_read",
+      "read_scope": "2025 consultation draft; 3.1.1, 4.3-4.4, 6.2.4-6.3, 9.2.1; Appendix F caption, not graphical analysis",
+      "retrieval_status": "retrieved",
+      "retrieved_content_sha256": "dcf8d16213fee26583b50a32b2c98eb407804514a1fba0f923d8901cbaac7077",
+      "retrieved_bytes": 2657757,
+      "source_pages": 0,
+      "reproduced": false
+    },
+    {
+      "id": "D02",
+      "source_url": "https://www.caghp.org.cn/cdntencentalisuanzhecombaidufile?i=/202509/20250901023220qtVdSIPGnINzpW0975.docx",
+      "retrieval_url": "https://www.caghp.org.cn/cdntencentalisuanzhecombaidufile?i=/202509/20250901023220qtVdSIPGnINzpW0975.docx",
+      "doi": null,
+      "read_status": "selected_clauses_read",
+      "read_scope": "2025 consultation draft; chapter 3, chapter 6 and relevant geological-structure passages",
+      "retrieval_status": "retrieved",
+      "retrieved_content_sha256": "6826c869c6181dcac04fb62362f079ab700d1ec94ab59384ece64fec67dfe560",
+      "retrieved_bytes": 262445,
+      "source_pages": 0,
+      "reproduced": false
+    }
+  ],
+  "generated_outputs": {
+    "2026-09-23_landslide_literature_review.md": {
+      "sha256": "48208087e0b4098061716a38dd4e2f17065b3bec805bdb74eb23e7cefcae8fbb",
+      "bytes": 33549
+    },
+    "2026-09-23_landslide_literature_review.docx": {
+      "sha256": "fc95ba851375ec12d552b6bb47936a3b614b6ca07b3f2f37d61cc6c2adf56505",
+      "bytes": 34007
+    },
+    "2026-09-23_landslide_literature_review.pdf": {
+      "sha256": "a96d319edd50e7e90b3fa54ffad5ec55cf6e075fd681f190dd25ab58c872a087",
+      "bytes": 776312
+    }
+  },
+  "document_rendering": {
+    "docx_js_version": "9.7.1",
+    "renderer": "scripts/render_literature_review.cjs",
+    "pdf_export": "Microsoft Word ExportAsFixedFormat",
+    "pdf_pages": 14,
+    "checks": [
+      "OOXML well formed",
+      "local links resolve",
+      "PDF text extraction and formula presence",
+      "representative page visual inspection"
+    ],
+    "scope": "Document validation only; no physics or model performance tests"
+  }
+}

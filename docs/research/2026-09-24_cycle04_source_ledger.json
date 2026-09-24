@@ -1,0 +1,122 @@
+{
+  "schema": "uavgpr-research-source-ledger/1",
+  "date": "2026-09-24",
+  "cycle": "04",
+  "new_full_papers_read": 0,
+  "sources": [
+    {
+      "id": "R22",
+      "title": "SDR - half-baked or well done?",
+      "url": "https://arxiv.org/abs/1811.02508",
+      "version": "arXiv v1, 2018-11-06",
+      "reading_scope": "PDF pp.1-3: Introduction, sections 2.1-2.4 and visible section 3 examples; not a full-paper reading claim",
+      "locators": [
+        "section 2.1 candidate-dependent modification of reference",
+        "section 2.2 equal-power orthogonal signal/noise and uniform downscaling",
+        "section 2.3 equations 3-5, alpha and scale invariance",
+        "section 2.4 global projection limitations"
+      ],
+      "adopted": "Distinguish waveform/amplitude errors from scale-invariant shape diagnostics; use adversarial examples",
+      "not_adopted": "No speech separation model, learned waveform reconstruction, or direct SI-SDR reward",
+      "files": [
+        {
+          "path": "artifacts/research_sources/2026-09-24_cycle04/R22.pdf",
+          "bytes": 578741,
+          "sha256": "4fbb43e20c0ac0f52e06c27e2bdc9ed8f6d7b179182d9799c7e3d7ec97513b26"
+        },
+        {
+          "path": "artifacts/research_sources/2026-09-24_cycle04/R22_pages.json",
+          "bytes": 28416,
+          "sha256": "6bac5fed867083f451af6b357be7dbfdec23d9bead2b353e5438987763d28bcb"
+        }
+      ]
+    },
+    {
+      "id": "R23",
+      "title": "On Over-fitting in Model Selection and Subsequent Selection Bias in Performance Evaluation",
+      "url": "https://www.jmlr.org/papers/volume11/cawley10a/cawley10a.pdf",
+      "version": "JMLR 11 (2010), 2079-2107",
+      "reading_scope": "PDF pp.1-2 (printed pp.2079-2080), abstract and introduction only; experiments and proofs not reviewed",
+      "locators": [
+        "abstract: model-selection overfitting",
+        "p2080: compare learning and model-selection procedures together; nested evaluation"
+      ],
+      "adopted": "Thresholds, candidates and model selection belong in development, outside final test evaluation",
+      "not_adopted": "No claimed universal GPR thresholds or sample size; mother-model grouping is our experimental design",
+      "files": [
+        {
+          "path": "artifacts/research_sources/2026-09-24_cycle04/R23.pdf",
+          "bytes": 759286,
+          "sha256": "db01ac8fabef3064a0297bfcf64fb9791bf35c4d03be7a51f5862260adfca206"
+        },
+        {
+          "path": "artifacts/research_sources/2026-09-24_cycle04/R23_pages.json",
+          "bytes": 85733,
+          "sha256": "cdc07d3c0624b48d3f6bf45fcfbc1b48b9354c90d6befc6c74c15c9bd11af51b"
+        }
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "docs/research/2026-09-24_evaluation_and_labels_v0.2.md",
+      "bytes": 18085,
+      "sha256": "13de5e407305ba9f8d9c9ffabf1abc98aef98dccfb0509763509f9c325882d92"
+    },
+    {
+      "path": "configs/research/evaluation_label_contract_v0.2.json",
+      "bytes": 4284,
+      "sha256": "8cc28b5b38e211c0a0cb3c12f544f284190befef73a37a28f6e7aeb04c937ffe"
+    },
+    {
+      "path": "scripts/research_evaluation_contract.py",
+      "bytes": 7686,
+      "sha256": "34a114637d4f225397fffd406982f9af6d070559bd06e01b3c1354f994a6cfc6"
+    },
+    {
+      "path": "scripts/check_evaluation_labels.py",
+      "bytes": 10662,
+      "sha256": "af901f568b5b6ae4c148dcc96d98e4dcb0f59a18a3d6959ab47cb4e738e99fc8"
+    },
+    {
+      "path": "artifacts/research_checks/2026-09-24_cycle04_evaluation_labels_r2.json",
+      "bytes": 14872,
+      "sha256": "9e68e233a513675ceb75c2c9e6968ba58df392c2b1fc8500894b3dee2e461918"
+    }
+  ],
+  "inherited_project_definitions": [
+    "docs/research/2026-09-23_v1_evaluation_protocol.md",
+    "docs/research/2026-09-24_cycle02_pilot_reference_contract.md",
+    "docs/research/2026-09-24_cycle03_operator_contract.md"
+  ],
+  "claim_evidence_map": [
+    {
+      "claim": "Use signed, unaligned, unrescaled error and explicit amplitude diagnosis",
+      "basis": "R22 plus own orthogonal-projection derivation and E01-E07 checks"
+    },
+    {
+      "claim": "Event-level constraints prevent hiding weak losses in a global average",
+      "basis": "Own design and constructed E07; not a universal GPR standard"
+    },
+    {
+      "claim": "Paired contrast alone cannot certify common-layer preservation",
+      "basis": "Own derivation and E12; previous matched-counterfactual contract"
+    },
+    {
+      "claim": "Robust Pareto/partial labels and missing-value behavior",
+      "basis": "Explicit project definition; L01-L12 mechanism checks, not claimed literature consensus"
+    },
+    {
+      "claim": "Physical acceptance thresholds remain uncalibrated",
+      "basis": "No FDTD run or physical pilot; all formal limits remain null"
+    }
+  ],
+  "access_notes": [
+    "PMC gCNR page returned a browser challenge; no new full-text reading claim and gCNR is not a primary label metric.",
+    "Constraint-handling search results were not used as primary evidence; no Deb method reproduction claimed.",
+    "First check artifact records 25 checks; r2 adds an amplitude-constraint case and records 26, retaining the initial file as history."
+  ],
+  "field_data_used": false,
+  "fdtd_executed": false,
+  "training_executed": false
+}

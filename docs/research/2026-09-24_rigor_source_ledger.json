@@ -1,0 +1,174 @@
+{
+  "schema": "research-source-ledger/1",
+  "date": "2026-09-24",
+  "scope": "structure, low-frequency materials, reference validity, algebra, initial experiment design",
+  "field_data_used": false,
+  "fdtd_run": false,
+  "training_run": false,
+  "entries": [
+    {
+      "id": "R01",
+      "title": "Effective modeling of ground penetrating radar in fractured media using analytic solutions for propagation, thin-bed interaction and dipolar scattering",
+      "authors": [
+        "Alexis Shakas",
+        "Niklas Linde"
+      ],
+      "year": 2015,
+      "doi": "10.1016/j.jappgeo.2015.03.018",
+      "url": "https://arxiv.org/pdf/1701.01353v1",
+      "version": "author manuscript deposited 2017; article 2015",
+      "reading_level": "related_sections",
+      "read_pdf_pages": [
+        8,
+        9,
+        10,
+        15,
+        16,
+        17,
+        27,
+        28
+      ],
+      "visual_checked_pages": [
+        9
+      ],
+      "locators": [
+        "2.3 equations 2-4",
+        "2.4",
+        "3.4",
+        "4.1",
+        "discussion tail",
+        "6 conclusions"
+      ],
+      "limitations": [
+        "Not a full-paper reading this cycle",
+        "Not reproduced",
+        "Homogeneous host and fracture assumptions do not validate the UAV landslide processing chain"
+      ],
+      "local_file": "artifacts/research_sources/2026-09-24/R01_Shakas2015.pdf",
+      "sha256": "588e22049bea43888467e903f5d69a90a84e9ea21a1305b9e3c06dcffa2b2395",
+      "retrieved_on": "2026-09-24",
+      "reproduced": false
+    },
+    {
+      "id": "R02",
+      "title": "Modelling Arbitrary Complex Dielectric Properties -- an automated implementation for gprMax",
+      "authors": [
+        "Sylwia Majchrowska",
+        "Iraklis Giannakis",
+        "Craig Warren",
+        "Antonios Giannopoulos"
+      ],
+      "year": 2021,
+      "doi": "10.1109/IWAGPR50767.2021.9843152",
+      "url": "https://arxiv.org/pdf/2109.01928v1",
+      "version": "arXiv v1 conference author manuscript",
+      "reading_level": "full_main_text",
+      "read_pdf_pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "locators": [
+        "II equations 1-7",
+        "III fitting procedure",
+        "IV",
+        "V"
+      ],
+      "limitations": [
+        "No code reproduction",
+        "Fitting a spectrum does not validate its material provenance",
+        "Historical extension commands not verified against an installed solver"
+      ],
+      "local_file": "artifacts/research_sources/2026-09-24/R02_DebyeFit2021.pdf",
+      "sha256": "c8f9d0551116887fdefbe78dec9c7d1debdf216c111fada8f7332e0e4b83ddb6",
+      "retrieved_on": "2026-09-24",
+      "reproduced": false
+    },
+    {
+      "id": "R03",
+      "title": "Soil dielectric permittivity modelling for 50 MHz instrumentation",
+      "authors": [
+        "Gaston Matias Mendoza Veirana",
+        "Jeroen Verhegge",
+        "Wim Cornelis",
+        "Philippe De Smedt"
+      ],
+      "year": 2023,
+      "doi": "10.1016/j.geoderma.2023.116624",
+      "url": "https://biblio.ugent.be/publication/01H84K3QBPA0MQA84SS1M43591/file/01H84K3X4E0NBCPN6HCD6RK39D.pdf",
+      "version": "published open-access PDF from author institution",
+      "reading_level": "abstract_and_related_sections",
+      "read_pdf_pages": [
+        2,
+        7,
+        10,
+        15,
+        16
+      ],
+      "locators": [
+        "2.1",
+        "3.1-3.2",
+        "3.5-3.7",
+        "5 limitations",
+        "6 conclusions"
+      ],
+      "limitations": [
+        "Other pages located but not fully read",
+        "50 MHz evidence does not alone define full-band complex permittivity",
+        "Reported 6.43 to 1.56 RMSE is about 75.7 percent reduction or 4.12 times old/new, not 412 percent reduction"
+      ],
+      "local_file": "artifacts/research_sources/2026-09-24/R03_Soil50MHz2023.pdf",
+      "sha256": "0c0c4e3c008618de295830e8a51e8207ccd77408048fb83ce04349a0b40bcf50",
+      "retrieved_on": "2026-09-24",
+      "reproduced": false
+    },
+    {
+      "id": "R04",
+      "title": "gprMax Model Building",
+      "url": "https://docs.gprmax.com/en/latest/input_hash_cmds.html",
+      "version": "latest documentation snapshot; not installed solver certification",
+      "reading_level": "related_sections",
+      "locators": [
+        "soil_peplinski",
+        "material basic parameters"
+      ],
+      "retrieved_on": "2026-09-24",
+      "local_file": "artifacts/research_sources/2026-09-24/R04_official.html",
+      "sha256": "d7067a67e2cc7edbf552087138317a955198817d7af4df956d4764c60bd526c2"
+    },
+    {
+      "id": "R05",
+      "title": "gprMax electromagnetic modelling guidance",
+      "url": "https://docs.gprmax.com/en/latest/gprmodelling.html",
+      "version": "latest documentation snapshot; not installed solver certification",
+      "reading_level": "related_sections",
+      "locators": [
+        "spatial discretization",
+        "absorbing boundary conditions",
+        "2D invariance"
+      ],
+      "retrieved_on": "2026-09-24",
+      "local_file": "artifacts/research_sources/2026-09-24/R05_official.html",
+      "sha256": "9c67272d16767023c0242a9fd8307256953b59816e7fb84abc7f5c5e71b2a4e9"
+    }
+  ],
+  "reused_evidence_ledger": "docs/research/2026-09-23_literature_reading_ledger.json",
+  "reused_ids": [
+    "L01",
+    "L02",
+    "L05",
+    "P05"
+  ],
+  "missing_evidence": [
+    "Peplinski original full paper not read this cycle; stated range checked in official docs",
+    "Complete low-frequency complex soil/rock spectra and hardware export contract still unresolved"
+  ],
+  "artifact_hashes": {
+    "docs/research/2026-09-24_structure_and_chain_rigor.md": "40bd3f5d1fd79577ddb6765e53d81a0f57029c81f2f97a77c309dee2e4663140",
+    "docs/research/2026-09-24_initial_experiment_plan.md": "6ca08a2f44ead9d8ebf91604b96bdaeb56b8faab0d1d21aa5631c30ba65707b2",
+    "scripts/check_processing_algebra.py": "abb9f9d4b94437b2ec073ab0675ee8b386b559dce086e0426cd07cdb8723d323",
+    "artifacts/research_checks/2026-09-24_processing_algebra.json": "d5e744013cb3833da1e883c778b327c68aa9b6b7ef9839f4d4f45cda98e3129d"
+  }
+}

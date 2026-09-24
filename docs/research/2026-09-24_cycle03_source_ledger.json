@@ -1,0 +1,183 @@
+{
+  "schema": "uavgpr-research-source-ledger/1",
+  "date": "2026-09-24",
+  "cycle": "03",
+  "status": "research_and_constructed_array_checks_only",
+  "field_data_used": false,
+  "fdtd_executed": false,
+  "training_executed": false,
+  "new_full_papers_read": 0,
+  "sources": [
+    {
+      "id": "R17",
+      "title": "CRAP Part II: Clutter Removal with Continuous Acquisitions Under Phase Noise",
+      "primary_url": "https://arxiv.org/abs/2402.11939",
+      "version": "arXiv v1, 2024-02-19",
+      "read_scope": "PDF pages 2-4, sections II, III-A/B/C, IV-A/B/C/D as displayed; no full-paper reading claim",
+      "locators": [
+        "III-A equations 4-6: acquisition and projection",
+        "III-B equation 7: smoothed update",
+        "III-C equations 8-9 and author heuristic caveat",
+        "IV-A: initially target-free acquisition, rank cap and target contamination"
+      ],
+      "adopted": "Distinguish clutter reference acquisition, statistical threshold assumptions and semantic target protection. No SCRAP implementation.",
+      "limitations": "27.4 GHz OFDM/CSI and repeated acquisitions differ from our signed-real single-line B-scan",
+      "files": [
+        {
+          "path": "artifacts/research_sources/2026-09-24_cycle03/R17_SCRAP.pdf",
+          "bytes": 1012009,
+          "sha256": "e332ffb0d4b96115c62643343550185fcdfc6f6f36e1731e5a1355b86f29d304"
+        },
+        {
+          "path": "artifacts/research_sources/2026-09-24_cycle03/R17_SCRAP_pages.json",
+          "bytes": 30580,
+          "sha256": "2d51469b862a8411127377d439caf863418bbfdf0c7168930212a2bd52771165"
+        }
+      ]
+    },
+    {
+      "id": "R18",
+      "title": "The Optimal Hard Threshold for Singular Values is 4/sqrt(3)",
+      "primary_url": "https://arxiv.org/abs/1305.5870",
+      "version": "arXiv v3, 2014-06-04",
+      "read_scope": "PDF pages 1-2 only: abstract, section I, equations 1-3; proofs not reviewed",
+      "locators": [
+        "p1: low-rank signal in iid zero-mean noise",
+        "p1 eq2: retain large singular values",
+        "p2 eq3: aspect-ratio-dependent threshold"
+      ],
+      "adopted": "Do not transfer a matrix-denoising optimum into a claim about removal of geological clutter",
+      "limitations": "Denoising is deferred; thresholds not implemented or reversed into background labels",
+      "files": [
+        {
+          "path": "artifacts/research_sources/2026-09-24_cycle03/R18_optimal_SV_threshold.pdf",
+          "bytes": 1692179,
+          "sha256": "efdf529e9df7c910ae7e3a02dcaa420a8cf0463ae5559ef1d432a0fa43d32f4f"
+        },
+        {
+          "path": "artifacts/research_sources/2026-09-24_cycle03/R18_optimal_SV_threshold_pages.json",
+          "bytes": 70373,
+          "sha256": "02162361ad553a01e5d569c33dd6322921377d391e7913409fb9a3f22211fd84"
+        }
+      ]
+    },
+    {
+      "id": "R19",
+      "title": "readgssi background removal implementation",
+      "primary_url": "https://github.com/iannesbitt/readgssi",
+      "version": "commit 36a26df1bcce8ccbcf60bc6326e41a7200689132",
+      "read_scope": "filtering.py lines 11-40 bgr; README examples 2B and 2C; other filters not audited",
+      "locators": [
+        "bgr: global mean removal occurs before optional local mean",
+        "uniform_filter1d mode=constant cval=0 axis=1",
+        "window validity, adjustment to odd width"
+      ],
+      "adopted": "Record implicit compound operations and boundary rules; define our local normalized-edge variant separately",
+      "limitations": "Author code inspected but neither installed nor executed; no bitwise reproduction claim",
+      "files": [
+        {
+          "path": "artifacts/research_sources/2026-09-24_cycle03/R19_filtering.py",
+          "bytes": 5577,
+          "sha256": "c5fd102b7046fa345328a99b5ce6906c69bc08cb9245f87dd5be2a969e738c1d"
+        },
+        {
+          "path": "artifacts/research_sources/2026-09-24_cycle03/R19_README.md",
+          "bytes": 25814,
+          "sha256": "156fc294bc3cfc5b2bb6526f07ec959945b9cdeb60be8aaf9dfe5fb3ed9b2ce8"
+        },
+        {
+          "path": "artifacts/research_sources/2026-09-24_cycle03/readgssi_commit.json",
+          "bytes": 192,
+          "sha256": "cf4a6fce16e86ff242e2904e20a74eae3b1a52a316c397e707434a20935f3a0f"
+        }
+      ]
+    },
+    {
+      "id": "R20",
+      "previous_id": "P04",
+      "title": "GPR Clutter Removal Based on Weighted Nuclear Norm Minimization for Nonparallel Cases",
+      "primary_url": "https://www.mdpi.com/1424-8220/23/11/5078",
+      "doi": "10.3390/s23115078",
+      "retrieval": "Prior publisher-body extraction through r.jina.ai, reread and copied locally this cycle",
+      "read_scope": "Re-read sections 2.1-2.2, equations 10-11, 3.1.1 parameter discussion and 3.2 opening; not counted as an additional full reading",
+      "locators": [
+        "section 2: low-rank clutter and sparse target definition including layered interfaces",
+        "section 3: simulation reference is raw minus target-free",
+        "section 3.2: parameters selected by maximizing IF"
+      ],
+      "adopted": "Audit task-label mismatch and distinguish per-case optimized reference from deployable automatic selection",
+      "limitations": "No WNNM/RPCA implementation; typeset equations and author executable implementation not revalidated",
+      "files": [
+        {
+          "path": "artifacts/research_sources/2026-09-24_cycle03/R20_WNNM_publisher_extract.txt",
+          "bytes": 80212,
+          "sha256": "024956ed00bf7e17d350513c3bd0a88f0bf757c7f340776c447b2ecc8b3bd9b6"
+        }
+      ],
+      "newline_provenance": {
+        "raw_crlf_count": 552,
+        "lf_normalized_sha256": "5a10d8aeedf2a4d59776087403c3ef81e2fdeee3079fd2ecf1d4987a111155c8",
+        "matches_prior_ledger_retrieved_content_sha256": true,
+        "explanation": "Prior text retrieval used LF; Windows cached file contains CRLF. Current raw bytes and LF-normalized hashes are both retained."
+      }
+    },
+    {
+      "id": "R21",
+      "title": "NumPy 2.2 numpy.linalg.svd documentation",
+      "primary_url": "https://numpy.org/doc/2.2/reference/generated/numpy.linalg.svd.html",
+      "version": "Versioned 2.2 documentation; runtime NumPy 2.2.6",
+      "read_scope": "Parameters, Returns, Raises, Notes and reconstruction examples",
+      "locators": [
+        "full_matrices=False reconstruction",
+        "descending singular values",
+        "LinAlgError on failure to converge",
+        "LAPACK gesdd in Notes"
+      ],
+      "adopted": "Reduced SVD reconstruction and exception contract",
+      "limitations": "Does not endorse our cutoff gap, physical interpretation, or candidate quality",
+      "files": [
+        {
+          "path": "artifacts/research_sources/2026-09-24_cycle03/R21_numpy22_svd.html",
+          "bytes": 51601,
+          "sha256": "722e7b2540df11392a3d043da74378f9ea2e2463940d5d4e96118145304d226f"
+        }
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "docs/research/2026-09-24_cycle03_operator_contract.md",
+      "sha256": "1d2aeb568ad998e32b36248788a86924ed048e973761adad10d9261452658f07"
+    },
+    {
+      "path": "docs/research/2026-09-24_cycle03_traditional_baselines.md",
+      "sha256": "92890d9bdcd027cb51d615fc02794b1fecba57d93ab4e4cce40c568e3da3eb86"
+    },
+    {
+      "path": "scripts/research_operator_contract.py",
+      "sha256": "ea2cca7c00ea56ebb454503be6e526c67739466c15d0379935ef4e01c5d8a770"
+    },
+    {
+      "path": "scripts/check_operator_contract.py",
+      "sha256": "56801fd3333fb814aa546aa77b0e29d8d4a4334107ee2e5ca67376b5d0ea44a2"
+    },
+    {
+      "path": "configs/research/operator_catalogue_v0.1.json",
+      "sha256": "59c2bc3d321c1cc6e8d320d8d4f7d822f82c7170a5ce6895d03c866d8eaf8add"
+    },
+    {
+      "path": "artifacts/research_checks/2026-09-24_cycle03_operator_checks.json",
+      "sha256": "abb6e486c97d94ba4f32dd6f208ac5616658531af74e13aebb8bdedeb4bdecc2"
+    }
+  ],
+  "access_notes": [
+    "MDPI direct browser open and arXiv HTML open failed; used existing publisher text and arXiv PDF respectively.",
+    "WNNM current cached text matches prior recorded content after CRLF-to-LF normalization.",
+    "Search results not read in detail are not used as method evidence. SMAC abstract and SATzilla PDF landing were opened but add no new claim in this cycle."
+  ],
+  "next_open_items": [
+    "Pre-register evaluation availability, protection constraints, ties and candidate quality labels",
+    "Implement and compare the proposed spectrum rule before any performance claims",
+    "Extend full runtime provenance only when formal batch input is introduced"
+  ]
+}

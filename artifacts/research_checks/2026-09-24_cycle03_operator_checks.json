@@ -1,0 +1,146 @@
+{
+  "schema": "operator-contract-checks/0.1",
+  "operator_version": "research-operators/0.1",
+  "seed": 2026092403,
+  "numpy_version": "2.2.6",
+  "evidence_level": "deterministic_array_contract_and_counterexamples_only",
+  "field_data_used": false,
+  "physical_simulation": false,
+  "training_run": false,
+  "file_sha256": {
+    "check_operator_contract.py": "56801fd3333fb814aa546aa77b0e29d8d4a4334107ee2e5ca67376b5d0ea44a2",
+    "research_operator_contract.py": "ea2cca7c00ea56ebb454503be6e526c67739466c15d0379935ef4e01c5d8a770"
+  },
+  "checks": [
+    {
+      "id": "O01_catalogue",
+      "passed": true,
+      "entries": 27,
+      "background_then_gain": 21,
+      "gain_then_background": 6
+    },
+    {
+      "id": "O02_all_configurations_preserve_input_axes_finiteness",
+      "passed": true
+    },
+    {
+      "id": "O03_identity_exact",
+      "passed": true
+    },
+    {
+      "id": "O04_partial_mean_damages_real_layer",
+      "passed": true,
+      "protected_layer_amplitude_ratio": 0.75,
+      "signed_nrmse": 0.25
+    },
+    {
+      "id": "O05_gain_shared_axis_and_endpoints",
+      "passed": true
+    },
+    {
+      "id": "O06_all_partial_means_commute_with_shared_gain",
+      "passed": true,
+      "maximum_absolute_difference": 8.881784197001252e-16
+    },
+    {
+      "id": "O07_reverse_order_has_no_actual_pre_gain_background_result",
+      "passed": true
+    },
+    {
+      "id": "O08_cutoff_tie_rejected_but_complete_cluster_allowed",
+      "passed": true
+    },
+    {
+      "id": "O09_near_tie_guard_and_sensitivity",
+      "passed": true,
+      "default_gap_rtol": 1e-08,
+      "deliberately_relaxed_guard": 1e-12,
+      "note": "guard changes availability; no physical tolerance established"
+    },
+    {
+      "id": "O10_numerical_nullspace_does_not_create_arbitrary_labels",
+      "passed": true
+    },
+    {
+      "id": "O11_zero_input_is_valid_but_not_informative",
+      "passed": true
+    },
+    {
+      "id": "O12_mask_preserved_or_explicitly_rejected",
+      "passed": true
+    },
+    {
+      "id": "O13_bad_input_rejected",
+      "passed": true
+    },
+    {
+      "id": "O14_rank_dimension_not_silently_clamped",
+      "passed": true
+    },
+    {
+      "id": "O15_gain_overflow_not_clipped",
+      "passed": true
+    },
+    {
+      "id": "O16_scale_and_trace_permutation_equivariance",
+      "passed": true,
+      "maximum_absolute_difference": 1.1013412404281553e-13
+    },
+    {
+      "id": "O17_local_mean_edges_normalized",
+      "passed": true,
+      "note": "also deletes a laterally constant protected layer"
+    },
+    {
+      "id": "O18_local_mean_creates_flanking_residuals",
+      "passed": true,
+      "centre": 0.8,
+      "four_neighbour_residuals": -0.2,
+      "note": "not new physical reflectors"
+    },
+    {
+      "id": "R01_isolated_allows_defined_event_error",
+      "passed": true,
+      "state": "isolated",
+      "waveform_nrmse": 1.0,
+      "roi_defined_before_processing": true,
+      "evidence": "known additive arrays, temporally disjoint support"
+    },
+    {
+      "id": "R02_mixed_no_pure_event_label",
+      "passed": true,
+      "state": "mixed",
+      "waveform_nrmse": null,
+      "eligible": false,
+      "reason": "common-support contributions; retain total-output diagnostic only"
+    },
+    {
+      "id": "R03_ambiguous_identical_observation_different_targets",
+      "passed": true,
+      "state": "ambiguous",
+      "waveform_nrmse": null,
+      "eligible": false,
+      "reason": "algebraic non-identifiability, not a geological simulation"
+    },
+    {
+      "id": "R04_absent_uses_energy_not_zero_reference_nrmse",
+      "passed": true,
+      "state": "absent",
+      "waveform_nrmse": null,
+      "residual_energy_before": 0.0008,
+      "residual_energy_after": 0.0128,
+      "energy_ratio": 16.0,
+      "reason": "predeclared target-free control; fixed last-sample window"
+    },
+    {
+      "id": "R05_unresolved_is_not_absence",
+      "passed": true,
+      "state": "numerically_unresolved",
+      "waveform_nrmse": null,
+      "eligible": false,
+      "reference_amplitude": 0.01,
+      "constructed_discrepancy": 0.02,
+      "reason": "constructed credibility failure; no solver convergence experiment"
+    }
+  ]
+}
