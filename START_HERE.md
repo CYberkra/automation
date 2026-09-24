@@ -4,9 +4,9 @@
 
 ## 当前状态（优先于下方历史记录）
 
-**当前没有GPU或分析任务运行。** 垂向6.25mm目标/背景两组均完成，共864.203秒；会话21056已终止，attempt已消耗。相邻网格最大相位变化64.84°→16.27°，固定窗实波形差28.27%→7.13%，支持垂向细化有效，但全频带物理真值仍未认证。[最新结果](docs/research/2026-09-25_deep_zfine_results.md)。下一步评估更细垂向及横向控制的必要性与成本，并以三套波形推进机制敏感性联合评价；物理/训练标签仍禁用。
+**横向细化GPU批次正在运行。** DEP_BG_YFINE背景组本次核验PID60216活跃；成功后自动进入DEP_20_YFINE。会话68122，[句柄检查点](artifacts/research_checks/2026-09-25_deep_yfine_live/active_handle.json)。两组粗估约36分钟，每组墙钟上限30分钟，失败即停，不重启旧attempt。完成后归档并运行 `scripts/analyze_deep_controls.py --yfine --output <新目录>`。此批用dy=dz6.25mm检验横向/CFL影响，原ZFINE会话21056已终止。
 
-已完成[28项处理机制](docs/research/2026-09-25_fdtd_template_mechanisms.md)和[22项背景不匹配负控](docs/research/2026-09-25_background_mismatch_results.md)：目标差分保留、无目标伪响应、共同层界保护必须分别检查，不将模板矩阵冒充真实航线B扫。
+三网格CPU复核已完成42项处理机制与33项不匹配负控；旧默认和新结果复算一致。[最新报告](docs/research/2026-09-25_three_grid_mechanisms.md)。原[垂向细化](docs/research/2026-09-25_deep_zfine_results.md)方向有效，但20m全频带物理真值仍未认证；禁止物理/训练标签，不将模板当真实航线B扫。
 
 ## 历史研究记录（其中“当前/下一步”仅表示当时状态）
 

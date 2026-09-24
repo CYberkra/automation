@@ -537,6 +537,27 @@
       "directory": "artifacts/research_checks/2026-09-25_deep_zfine_analysis",
       "tracked": true,
       "solver_executed": false
+    },
+    {
+      "id": "three_grid_mechanisms",
+      "status": "completed_constructed_mechanism_only",
+      "directory": "artifacts/research_checks/2026-09-25_three_grid_mechanisms",
+      "tracked": true,
+      "solver_executed": false
+    },
+    {
+      "id": "three_grid_mismatch",
+      "status": "completed_constructed_mechanism_only",
+      "directory": "artifacts/research_checks/2026-09-25_three_grid_mismatch",
+      "tracked": true,
+      "solver_executed": false
+    },
+    {
+      "id": "deep_yfine_live",
+      "status": "running_snapshot_verify_handle",
+      "directory": "artifacts/research_checks/2026-09-25_deep_yfine_live",
+      "tracked": true,
+      "solver_executed": true
     }
   ],
   "default_array_verification": {
@@ -557,6 +578,6 @@
     "verify actual instrument frequency vector and CSV processing;0.3MHz step confirmed; reserved field data excluded from development",
     "confirm target depth meaning and independently constrain site cover thickness/moisture/material parameters",
     "HSG ratio controls support coupling lag (r-1)/(2r) main dt; resolve intended source/coupling/output timing before heterogeneous local model. No active jobs; full20m memory unresolved.",
-    "ZFINE pair/analysis complete, session21056 terminal. Reference still unresolved. Evaluate further directional/lateral controls and carry grid sensitivity into joint preservation/negative-control/protected-layer mechanism evaluation; no active jobs."
+    "YFINE batch running session68122, background success auto-dispatches target. Verify handle, archive/analyze --yfine after completion; no new batch before results. Three-grid constructed mechanisms complete; physical labels unresolved."
   ]
 }

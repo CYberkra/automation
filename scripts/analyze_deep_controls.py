@@ -7,12 +7,13 @@ import numpy as np
 from gprMax.toolboxes.SFCW.processing import load_source,load_receiver,direct_frequency_response
 from analyze_vertical_refinement import metrics
 
-p=argparse.ArgumentParser();p.add_argument('--output',type=Path,required=True);p.add_argument('--zfine',action='store_true');a=p.parse_args();a.output.mkdir(parents=True,exist_ok=False)
+p=argparse.ArgumentParser();p.add_argument('--output',type=Path,required=True);p.add_argument('--zfine',action='store_true');p.add_argument('--yfine',action='store_true');a=p.parse_args();a.zfine=a.zfine or a.yfine;a.output.mkdir(parents=True,exist_ok=False)
 prior=Path('artifacts/research_checks/2026-09-25_yz_depth_analysis/arrays.npz')
 with np.load(prior) as archive:arrays={'frequency_Hz':archive['frequency_Hz'],'baseline':archive['DEP_20_difference']}
 f=arrays['frequency_Hz'];checks={};inputs={str(prior):hashlib.sha256(prior.read_bytes()).hexdigest()};tail={}
 models=[('WIDE',[1,1920,2480],[24.65,51]),('FINE',[1,2560,4000],[16.65,45])]
 if a.zfine:models.append(('ZFINE',[1,2560,8000],[16.65,45]))
+if a.yfine:models.append(('YFINE',[1,5120,8000],[16.65,45]))
 for mode,shape,position in models:
  responses={};sources={}
  for kind in ('BG','20'):
@@ -42,12 +43,16 @@ result={'checks':checks,'comparisons_to_original_2p5cm':rows,'tail_window_relati
 if a.zfine:
  result['zfine_vs_uniform_fine']=metrics(arrays['ZFINE_200'],arrays['FINE_200'])
  result['zfine_vs_uniform_fine']['relative_L2_difference']=float(np.linalg.norm(arrays['ZFINE_200']-arrays['FINE_200'])/np.linalg.norm(arrays['FINE_200']))
+if a.yfine:
+ result['yfine_vs_zfine']=metrics(arrays['YFINE_200'],arrays['ZFINE_200'])
+ result['yfine_vs_zfine']['relative_L2_difference']=float(np.linalg.norm(arrays['YFINE_200']-arrays['ZFINE_200'])/np.linalg.norm(arrays['ZFINE_200']))
 (a.output/'results.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8');np.savez_compressed(a.output/'arrays.npz',**arrays)
 import matplotlib;matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 fig,ax=plt.subplots(1,2,figsize=(10,4),layout='constrained')
 curves=[('baseline','Original 2.5cm'),('WIDE_200','Larger domain 2.5cm'),('FINE_200','Original domain 1.25cm')]
 if a.zfine:curves.append(('ZFINE_200','dy 1.25cm / dz 0.625cm'))
+if a.yfine:curves.append(('YFINE_200','dy = dz 0.625cm'))
 for k,label in curves:
  ax[0].plot(f/1e6,abs(arrays[k]),label=label);ax[1].plot(t*1e9,arrays[k+'_envelope'],label=label)
 ax[0].set(xlabel='Frequency [MHz]',ylabel='Target difference [(V/m)/A]');ax[1].set(xlabel='Time [ns]',ylabel='Hann envelope [(V/m)/A]',xlim=(480,570))
