@@ -1,28 +1,30 @@
 {
-  "recorded_utc": "2026-09-24T17:20:49.305934+00:00",
+  "recorded_utc": "2026-09-24T17:29:23.019105+00:00",
   "exec_session_id": 21056,
   "batch_order": [
     "DEP_BG_ZFINE",
     "DEP_20_ZFINE"
   ],
-  "observed_current_case": "DEP_20_ZFINE",
-  "observed_root_pid": 48112,
+  "observed_current_case": null,
+  "observed_root_pid": null,
   "observed_status": {
-    "root_pid": 48112,
-    "wall_s": 60.20399999991059,
-    "wall_cap_s": 900,
-    "peak_job_commit_bytes": 8714301440,
-    "observed_output_bytes": 43991,
-    "state": "running",
-    "note": "Snapshot only; supervision.json is final."
+    "reason": "completed",
+    "exit_code": 0,
+    "session_terminal": true
   },
   "rule": "Historical checkpoint, not current liveness evidence. First poll exec session 21056 or inspect current process plus supervision.json. Never restart an attempt because a poll timed out. Batch automatically advances to target on background success; failure stops it.",
-  "next_after_completion": "Archive both raw directories plus frozen gates and file hashes, run analyze_deep_controls.py --zfine --output NEW_DIRECTORY, replay and update status.",
+  "next_after_completion": "Both archived; analysis and replay complete at artifacts/research_checks/2026-09-25_deep_zfine_analysis. No active job.",
   "completed_cases": {
     "DEP_BG_ZFINE": {
       "wall_s": 427.703,
       "archive": "artifacts/research_checks/2026-09-25_DEP_BG_ZFINE",
       "exit_code": 0
+    },
+    "DEP_20_ZFINE": {
+      "wall_s": 436.5,
+      "archive": "artifacts/research_checks/2026-09-25_DEP_20_ZFINE",
+      "exit_code": 0
     }
-  }
+  },
+  "status": "completed"
 }

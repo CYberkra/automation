@@ -4,9 +4,9 @@
 
 ## 当前状态（优先于下方历史记录）
 
-**20m垂向细化目标组正在GPU上运行。** 同批背景组已完成427.703秒并归档；会话21056，目标PID48112（只作本次检查快照，接续时重新核验）。[运行句柄](artifacts/research_checks/2026-09-25_deep_zfine_live/active_handle.json)。不重启已消耗attempt。完成后归档目标，运行 `scripts/analyze_deep_controls.py --zfine --output <新目录>` 并复算。
+**当前没有GPU或分析任务运行。** 垂向6.25mm目标/背景两组均完成，共864.203秒；会话21056已终止，attempt已消耗。相邻网格最大相位变化64.84°→16.27°，固定窗实波形差28.27%→7.13%，支持垂向细化有效，但全频带物理真值仍未认证。[最新结果](docs/research/2026-09-25_deep_zfine_results.md)。下一步评估更细垂向及横向控制的必要性与成本，并以三套波形推进机制敏感性联合评价；物理/训练标签仍禁用。
 
-CPU背景不匹配22项已完成：配对差分可以完美保留，同时无目标输出仍有晚到伪响应；因此保真、负控和共同层界保护缺一不可。[最新机制证据](docs/research/2026-09-25_background_mismatch_results.md)。物理深部全带参考仍未认证，禁止训练/最佳算法标签。
+已完成[28项处理机制](docs/research/2026-09-25_fdtd_template_mechanisms.md)和[22项背景不匹配负控](docs/research/2026-09-25_background_mismatch_results.md)：目标差分保留、无目标伪响应、共同层界保护必须分别检查，不将模板矩阵冒充真实航线B扫。
 
 ## 历史研究记录（其中“当前/下一步”仅表示当时状态）
 

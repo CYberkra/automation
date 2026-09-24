@@ -505,7 +505,7 @@
     },
     {
       "id": "deep_zfine_live",
-      "status": "running_snapshot_verify_handle",
+      "status": "completed_historical_handle",
       "directory": "artifacts/research_checks/2026-09-25_deep_zfine_live",
       "tracked": true,
       "solver_executed": true
@@ -519,10 +519,24 @@
     },
     {
       "id": "DEP_BG_ZFINE",
-      "status": "completed_target_pair_pending",
+      "status": "completed_directional_pair",
       "directory": "artifacts/research_checks/2026-09-25_DEP_BG_ZFINE",
       "tracked": true,
       "solver_executed": true
+    },
+    {
+      "id": "DEP_20_ZFINE",
+      "status": "completed_directional_improvement_reference_unresolved",
+      "directory": "artifacts/research_checks/2026-09-25_DEP_20_ZFINE",
+      "tracked": true,
+      "solver_executed": true
+    },
+    {
+      "id": "deep_zfine_analysis",
+      "status": "completed_directional_improvement_reference_unresolved",
+      "directory": "artifacts/research_checks/2026-09-25_deep_zfine_analysis",
+      "tracked": true,
+      "solver_executed": false
     }
   ],
   "default_array_verification": {
@@ -543,6 +557,6 @@
     "verify actual instrument frequency vector and CSV processing;0.3MHz step confirmed; reserved field data excluded from development",
     "confirm target depth meaning and independently constrain site cover thickness/moisture/material parameters",
     "HSG ratio controls support coupling lag (r-1)/(2r) main dt; resolve intended source/coupling/output timing before heterogeneous local model. No active jobs; full20m memory unresolved.",
-    "DEP_BG_ZFINE completed and archived; DEP_20_ZFINE running in session21056. Revalidate handle, archive target on completion, compare with --zfine and replay. Background mismatch22 cases complete; physical labels unavailable."
+    "ZFINE pair/analysis complete, session21056 terminal. Reference still unresolved. Evaluate further directional/lateral controls and carry grid sensitivity into joint preservation/negative-control/protected-layer mechanism evaluation; no active jobs."
   ]
 }
