@@ -34,6 +34,8 @@ def worker(raw, output):
         '--source-floor-db','-100','--output',output/'official_direct.h5'])
     command('sfcw_audit', [ROOT/'scripts/audit_official_sfcw.py',output/'official_direct.h5',
         '--raw-audit',output/'raw_audit.json','--output-dir',output/'diagnostics'])
+    command('tail_sensitivity', [ROOT/'scripts/study_official_sfcw_tail.py',raw,
+        '--raw-audit',output/'raw_audit.json','--output-dir',output/'tail_sensitivity'])
 
 
 def main():
