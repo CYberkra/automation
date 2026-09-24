@@ -4,6 +4,8 @@
 
 ## 新电脑开始
 
+**先读 [START_HERE.md](../START_HERE.md)。** 当前设备为SFCW 20–170MHz，项目暂按地下约20m以内理解；gprMax V4仿真须先与用户敲定，当前未批准。该入口列出已完成工作与剩余事项，优先于历史交接。
+
 需要 Git 和 Python 3.10；当前核验环境为 Python 3.10.9、NumPy 2.2.6。先确保新电脑的 GitHub 账号有该私有仓库访问权限，使用它自己的登录凭据。
 
 在 PowerShell 中运行：
@@ -18,7 +20,9 @@ py -3.10 -m venv .venv
 
 直接调用虚拟环境的 Python，无需修改 PowerShell 执行策略。若系统没有 `py` 启动器，用已安装的 Python 3.10 路径执行 `-m venv .venv`。Linux/macOS 对应为 `python3.10 -m venv .venv`，后续解释器路径为 `.venv/bin/python`；跨系统数值结果仍需在目标机器实际验证。
 
-当前预期为 **64 项通过**：代数 10、算子及参考状态 23、加权评分反例 5、评价与标签 26。加权评分反例只保留为负面案例，用户已撤回“人为权重先行”的临时表述。检查不读取实测资料、不联网、不运行 gprMax 或训练；通过仅说明这些构造数组检查在该环境成立。
+当前预期为 **136 项通过**：代数10、算子及参考23、加权评分反例5、评价与标签26、损伤试验72。损伤试验默认不绘图，只依赖NumPy；不读取实测、不联网、不运行gprMax或训练。加权评分仅为反例，用户已撤回“人为权重先行”的临时表述。通过仅证明构造数组行为。
+
+核心依赖仍按requirements.txt固定NumPy2.2.6。新增损伤例另在Python3.12.14/NumPy2.3.5和Python3.10.21/NumPy1.26.4验证。可选绘图依赖见requirements-figures.txt。**gprMax V4源码要求Python3.11–3.13，须另建环境，上述数组环境不是求解器安装步骤。**
 
 2026-09-24 已在独立本地克隆、全新虚拟环境中通过全部 64 项，55 个已跟踪文件与原目录逐字节一致，见[版本接续验证记录](../artifacts/research_checks/2026-09-24_repository_portability.json)。该检查仍在原 Windows 电脑执行，不能替代目标电脑验证。此次 pip 访问索引发生 TLS 中断，后改由 curl 获取官方 PyPI 元数据和安装包，匹配官方 SHA-256 后本地安装；未关闭证书验证。不要把这种网络错误解释成 NumPy 版本不存在。
 
@@ -26,12 +30,12 @@ py -3.10 -m venv .venv
 
 然后按顺序阅读：
 
-1. 根目录 [AGENTS.md](../AGENTS.md)：范围、权限和实测资料留用约定。
+1. 根目录 [START_HERE.md](../START_HERE.md)：最新状态、用户决定和避免重复工作的入口。
 2. [最新研究进度](research/continuous_research_status.md)：从最上面的最新记录开始。
 3. [评价与标签 v0.2](research/2026-09-24_evaluation_and_labels_v0.2.md)及[机器契约](../configs/research/evaluation_label_contract_v0.2.json)。
-4. [本次研究交接](research/2026-09-24_cycle05_handoff.md)：下一步待做的损伤阶梯和参考不确定性研究。
+4. [损伤试验](research/2026-09-24_damage_pilot_findings.md)与[V4报告](research/2026-09-24_gprmax_v4_review.md)。旧cycle05中的损伤阶梯和D误差包络已完成首版。
 
-新的代理会话可以直接收到：**“请先读 AGENTS.md、docs/WORKFLOW.md 和最新 continuous_research_status.md，按其中下一步继续。当前先做评价和标签，不启动正演或训练。”** 本地对话历史不随 Git 迁移，因此决定和未完成事项必须写进文档。
+新会话可直接使用START_HERE.md内的接续文本。本地对话历史不随Git迁移，决定、失败原因及下一步必须落档；历史报告中的旧待办不自动代表当前状态。
 
 ## 日常同步
 
@@ -49,7 +53,7 @@ git log --oneline --decorate -5
 git pull --ff-only
 ```
 
-不要覆盖另一台电脑尚未提交的改动。若两台电脑可能同时工作，从更新后的 `main` 建立各自短分支，例如 `git switch -c research/reference-calibration`；完成后合并并保留历史。`pull --ff-only` 遇到分叉会停止，此时先比较两边改动、解决冲突并重跑相关检查，不使用强制推送或 `reset --hard` 跳过问题。
+不要覆盖另一台电脑尚未提交的改动。若两台电脑可能同时工作，从更新后的 `main` 建立各自短分支，例如 `git switch -c codex/reference-calibration`；完成后合并并保留历史。`pull --ff-only` 遇到分叉会停止，此时先比较两边改动、解决冲突并重跑相关检查，不使用强制推送或 `reset --hard` 跳过问题。
 
 每个完整研究单元完成后，更新最新进度，运行与改动相关的检查，显式暂存本次文件，检查 `git diff --cached --stat` 和 `git diff --cached`，再提交与推送。提交信息例：`docs(research): record reference uncertainty assumptions`、`test(evaluation): add weak-event damage controls`。首次推送新分支使用 `git push -u origin <分支名>`，已建立上游后使用 `git push`。Git 提交保存在当前电脑；只有推送成功，其他电脑才能取得它。推送失败要明确记录，不报告“已同步”。
 
@@ -67,7 +71,7 @@ git pull --ff-only
 | `.venv/`、`__pycache__/`、`artifacts/local_checks/` | 本机重建 |
 | 旧备用调度配置及脚本 | 忽略，不能用克隆操作迁移调度 |
 
-纯研究和 64 项检查不需要原始资料。确需后期使用时，由用户通过合适渠道另行迁移到同名目录，核对历史清单和实际存在性，仍遵守开发与后期验证分离。历史资料审计不应作为新电脑初始化命令自动执行。
+纯研究和136项检查不需要原始资料。确需后期使用时，由用户通过合适渠道另行迁移到同名目录，核对历史清单和实际存在性，仍遵守开发与后期验证分离。历史资料审计不应作为新电脑初始化命令自动执行。
 
 `requirements-audit.txt` 只记录旧资料审计的可选依赖，不代表当前授权重读测线。综述源文档是 Markdown，现有 Word/PDF 已入库；`render_literature_review.cjs` 依赖 Node 和外部 `docx` 包，不属于核心验证入口，尚未提供锁定的渲染环境。
 

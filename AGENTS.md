@@ -1,5 +1,14 @@
 # UAV-GPR SFCW 自动处理研究
 
+## 最新接续与用户决定（2026-09-24，优先于旧阶段描述）
+
+- 新会话先读 [START_HERE.md](START_HERE.md)、[持久决策](docs/research/decision_log.md)和[产物索引](docs/research/research_artifact_registry.json)，不要重做已完成的损伤阶梯首版。
+- 用户确认雷达为 SFCW 20–170 MHz，项目为约20m浅层非显性滑坡；地下0–20m是当前解释，频点数/步长仍未知。背景见 `configs/research/project_context_v1.json`。
+- 使用用户提供的 gprMax V4.0.0。**用户明确要求仿真前先敲定方案**；执行记录 `configs/research/gprmax_v4_execution_gate.json` 当前为 false，不能从“继续研究”推断放行，含求解的官方示例/测试/benchmark亦同。
+- 本地 V4 实际根为 `E:\gprMax-v.4.0.0\gprMax-v.4.0.0`；旧名为gprmax的环境是V3.1.6/Python3.10，V4源码要求3.11–3.13，运行就绪尚未验证。
+- 用户授权主动归档和 Git 提交/同步；每单元记录证据、限制、失败、下一步并验证远端。凭据不进入仓库。
+- 默认纯数组验证已扩至136项；历史64项及曾经的cycle05待办保留为历史事实。
+
 ## 项目目标与当前阶段
 
 - 用户最新决定：依托现有非显性滑坡项目，先研究场景特化的 B-scan 自动处理，泛用性延期。当前首版仍只做背景与相干杂波抑制、增益与衰减补偿，以保留项目相关地下结构并降低人工选算法、调参数、排顺序的成本为目标。
@@ -52,8 +61,8 @@
 - 开始工作检查 `git status`、远端及当前分支；工作区干净时用 `git pull --ff-only` 同步。多人/多机并行使用独立分支；不强推、不清除别人的未提交改动、不重写共享历史。提交只包含当前工作及明确纳入的研究基线。
 - `.gitignore` 排除原始测线/钻孔资料、派生资料审计缓存、公开论文缓存、环境和本机调度文件。不得用 `git add -f` 绕过排除上传这些内容。论文 URL、阅读范围和哈希保留在研究台账；用户自行管理定时任务，不重新配置或迁移调度。
 - `.gitattributes` 禁止 Git 自动转换换行，保持科学证据按字节计算的哈希。历史输出不覆盖；代码更新后追加新证据，不把旧结果的哈希改成新代码哈希。
-- `python scripts/verify_workspace.py` 可在纯克隆中复跑当前四组共 64 项数组检查，只依赖 `requirements.txt`。新结果写入忽略的 `artifacts/local_checks/`。这不是正演、训练或实测验证；初始化新电脑不要自动运行原始资料审计脚本。
-- 第五次续研已下载、阅读两份公开来源的相关部分，损伤阶梯和不确定性传播尚未实现；下一步见 [评价校准交接](docs/research/2026-09-24_cycle05_handoff.md)。
+- `python scripts/verify_workspace.py` 可在纯克隆中复跑当前五组共136项数组检查，只依赖NumPy（核心固定版本见 `requirements.txt`）。新结果写入忽略的 `artifacts/local_checks/`。这不是正演、训练或实测验证；初始化新电脑不要自动运行原始资料审计脚本。
+- 第五次续研交接是历史记录；损伤阶梯与 D 的参考误差包络已完成首版，见[结果](docs/research/2026-09-24_damage_pilot_findings.md)，当前下一步以 START_HERE 为准。
 
 ## 目录与入口
 

@@ -1,0 +1,15 @@
+{
+  "schema": "research-artifact-registry/1",
+  "updated_date": "2026-09-24",
+  "entrypoint": "START_HERE.md",
+  "current_protocol": "docs/research/2026-09-24_evaluation_and_labels_v0.2.md",
+  "solver_execution_gate": "configs/research/gprmax_v4_execution_gate.json",
+  "runs": [
+    {"id": "damage_pilot_initial", "status": "complete_numeric_historical", "directory": "artifacts/research_checks/2026-09-24_damage_pilot", "tracked": true, "checks_passed": 72, "python": "3.12.14", "numpy": "2.3.5", "canonical_for_handoff": false, "note": "Pre-plotting-fix source hash retained; current r2 is the final reproducible delivery."},
+    {"id": "damage_pilot_plot_failed", "status": "failed_during_optional_plot", "directory": "artifacts/local_checks/2026-09-24_damage_pilot_plot_failed", "tracked": false, "canonical_for_handoff": false, "reason": "Rounded 0.08 minus floating endpoint produced a negative machine-size error-bar length. Numeric tables were written; results.json and figure were not completed.", "resolution": "Draw absolute interval endpoints; complete rerun saved as r2.", "do_not_repeat": true},
+    {"id": "damage_pilot_r2", "status": "complete_numeric_and_figures", "directory": "artifacts/research_checks/2026-09-24_damage_pilot_r2", "tracked": true, "canonical_for_handoff": true, "checks_passed": 72, "python": "3.10.21", "numpy": "1.26.4", "matplotlib": "3.10.9", "damage_rows": 63, "weak_event_rows": 12, "candidate_rows": 42, "report": "docs/research/2026-09-24_damage_pilot_findings.md", "delivery_check": "artifacts/research_checks/2026-09-24_damage_pilot_delivery.json"},
+    {"id": "gprmax_v4_source_audit", "status": "static_read_only_complete", "record": "artifacts/research_checks/2026-09-24_gprmax_v4_source_audit.json", "selected_local_files": 19, "official_pages_cached_locally": 10, "cache_in_git": false, "solver_imported_or_executed": false, "runtime_ready": false, "report": "docs/research/2026-09-24_gprmax_v4_review.md"}
+  ],
+  "default_array_verification": {"command": "python scripts/verify_workspace.py", "expected_checks": 136, "composition": [10, 23, 5, 26, 72], "uses_field_data": false, "calls_solver": false, "needs_network_or_plotting": false},
+  "remaining_work": ["confirm target depth meaning and SFCW tone count/spacing", "prepare separate Python 3.11-3.13 V4 environment plan and identity check", "resolve source pulse center/timing", "prepare M00/M01 reviewable simulation packet with compute limits", "design representative 20m domain/material/time-window assumptions", "obtain agreement before solver execution"]
+}

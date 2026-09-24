@@ -1,0 +1,36 @@
+{
+  "schema": "research-project-context/1",
+  "updated_date": "2026-09-24",
+  "user_confirmed": {
+    "radar_type": "SFCW",
+    "frequency_min_hz": 20000000,
+    "frequency_max_hz": 170000000,
+    "project": "浅层非显性滑坡",
+    "depth_original_wording": "项目背景是20m浅的非显性滑坡",
+    "use_gprmax_version": "4.0.0",
+    "simulation_requires_prior_agreement": true,
+    "archive_and_git_sync_proactively": true
+  },
+  "interpretation_pending_confirmation": {
+    "target_depth_range_m": [0, 20],
+    "meaning": "approximately within 20 m below ground; a research target, not demonstrated radar penetration"
+  },
+  "unknown": {
+    "tone_count": null,
+    "frequency_step_hz": null,
+    "frequency_spacing_uniform": null,
+    "tone_dwell_s": null,
+    "transmitted_spectrum_and_phase": null,
+    "receiver_calibration_and_export_chain": null,
+    "antenna_geometry_and_response": null,
+    "representative_flight_height_m": null,
+    "field_material_complex_permittivity": null
+  },
+  "existing_csv_sample_count_is_not_tone_count": true,
+  "old_P1_profile": {
+    "id": "PULSE80-TM-v0.1",
+    "role": "historical small ideal pulse mechanism proposal",
+    "represents_full_20m_project": false,
+    "approved_to_execute": false
+  }
+}

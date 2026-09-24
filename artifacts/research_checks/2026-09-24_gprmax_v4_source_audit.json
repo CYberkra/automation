@@ -1,0 +1,243 @@
+{
+  "schema": "gprmax-v4-source-audit/1",
+  "audited_utc": "2026-09-24T10:52:35.553981+00:00",
+  "source_root_on_audit_machine": "E:\\gprMax-v.4.0.0\\gprMax-v.4.0.0",
+  "declared_version": "4.0.0",
+  "source_git_metadata_present": false,
+  "upstream_commit": null,
+  "official_archive_byte_equivalence_verified": false,
+  "selected_evidence_fingerprint_sha256": "b13b1af77f38a43f2e076f074ef1a7f81a8a4c13605f12ce70bc452d71d6d74f",
+  "selected_files": [
+    {
+      "path": "gprMax/_version.py",
+      "bytes": 878,
+      "sha256": "73a53d84e4c0cae48fbcdf533e638f9b0db8a23761cba57fc01b319bbb78ca84",
+      "reading_scope": "version declaration"
+    },
+    {
+      "path": "setup.py",
+      "bytes": 12254,
+      "sha256": "e5575a1a9dc57e7eba83d58b28b2370aab8b86be3efc37025c321ee8187cbe18",
+      "reading_scope": "Python bounds and dependency metadata; not executed"
+    },
+    {
+      "path": "gprMax/__init__.py",
+      "bytes": 4296,
+      "sha256": "7e78489b2f15bc006c9bb7d18e17bb8e09e8b91cf4f3a483e8339ee9713cefb9",
+      "reading_scope": "public run/Scene/study exports"
+    },
+    {
+      "path": "gprMax/gprMax.py",
+      "bytes": 17350,
+      "sha256": "669e5ca57d98ed93c8a15eb6f4788b6bb33d99a9f8da45836368d3aaa78aa9ca",
+      "reading_scope": "run signature/defaults and CLI options"
+    },
+    {
+      "path": "gprMax/waveforms.py",
+      "bytes": 5994,
+      "sha256": "ca79340903a25bd370d6149ff23b985c73ccb7b754fd73c8e70cc7b292ec9bcc",
+      "reading_scope": "Waveform coefficients, Ricker and impulse evaluation"
+    },
+    {
+      "path": "gprMax/sources.py",
+      "bytes": 301025,
+      "sha256": "f110fac160e7257d303586a9371b4ace718358f2ebe335e3ad700a3a5edf14fc",
+      "reading_scope": "HertzianDipole waveform sampling and electric update only"
+    },
+    {
+      "path": "gprMax/fields_outputs.py",
+      "bytes": 28702,
+      "sha256": "7aca799e424ce4162d2547a3763424f762be690c9870f948f6b7f522a27f10bd",
+      "reading_scope": "source excitation and receiver timing/identity writers only"
+    },
+    {
+      "path": "gprMax/grid/fdtd_grid.py",
+      "bytes": 99046,
+      "sha256": "29e25a95b50962dac8abc6f0d820daab3351b5162844c7c86d379c8074fed3a5",
+      "reading_scope": "calculate_dt and reduced-domain declarations only"
+    },
+    {
+      "path": "README.rst",
+      "bytes": 42651,
+      "sha256": "dbf5b195822530d52b179923592ff8eb1ebb917c441147748f4eb510dbf4e137",
+      "reading_scope": "installation, repository layout and Python requirements"
+    },
+    {
+      "path": "docs/source/migration_v3_v4.rst",
+      "bytes": 22656,
+      "sha256": "201f6520f280b77b79a006d35df1c05ab5ed232a80f0442aad2a5b43f33ec539",
+      "reading_scope": "migration sections 1-6 and checklist"
+    },
+    {
+      "path": "docs/source/input_hash_cmds.rst",
+      "bytes": 211384,
+      "sha256": "0ecfe002996a4092cba367f8051037dd231723c11438347a3aa8d694c8bf5d2d",
+      "reading_scope": "domain/domain_mode, spatial/time steps, waveform, dipole, receiver commands"
+    },
+    {
+      "path": "docs/source/output.rst",
+      "bytes": 96127,
+      "sha256": "76ff3317e185842948051617b8402f06e1ba3861954411d66008c58790fd8b15",
+      "reading_scope": "root metadata, receiver identity, fields and source timing sections"
+    },
+    {
+      "path": "docs/source/sources_ports.rst",
+      "bytes": 14205,
+      "sha256": "83555692caa1cee2b84da973fd936ab5a85abf82455181670932d75a578b47a1",
+      "reading_scope": "source families and fields/ports/time axes"
+    },
+    {
+      "path": "docs/source/studies.rst",
+      "bytes": 29030,
+      "sha256": "edc91158199cf436378e35bb11248ba202444bfb936d2d7e7360effdd565a687",
+      "reading_scope": "families, compatibility, restart and outputs"
+    },
+    {
+      "path": "docs/source/accelerators.rst",
+      "bytes": 20164,
+      "sha256": "56387c1f1ed73244620fdc3291039c1a15d36991b822817d15b6101f5e8b6248",
+      "reading_scope": "optional runtimes, solver precision and feature restrictions"
+    },
+    {
+      "path": "docs/source/features.rst",
+      "bytes": 34854,
+      "sha256": "6a35d4a17a681e6fc7a6dd3b615245d62e8be131665da728f391e330a71f1cd3",
+      "reading_scope": "2D, source/study, material and subgrid sections"
+    },
+    {
+      "path": "gprMax/toolboxes/SFCW/README.rst",
+      "bytes": 10563,
+      "sha256": "87089fab65b7718713d8644c7a4c048e18bbbd4f9a90d295dd5477e7e8df442c",
+      "reading_scope": "full toolbox README, including finite-record validity"
+    },
+    {
+      "path": "examples/gpr/basic/cylinder_Ascan_2D.in",
+      "bytes": 466,
+      "sha256": "e73a702769a79194ca1358caa0d36702bbb00e49723cbabf7911f2ac50c4c56c",
+      "reading_scope": "full small official syntax example; not executed"
+    },
+    {
+      "path": "examples/gpr/basic/cylinder_Bscan_2D_study.csv",
+      "bytes": 4770,
+      "sha256": "374857c527fd8b5246c8c5ff7053d8cffe40d2c5f97ea8fac9a084db17ae2484",
+      "reading_scope": "acquisition header and example rows; not executed"
+    }
+  ],
+  "official_docs": [
+    {
+      "id": "index",
+      "url": "https://docs.gprmax.com/en/latest/",
+      "reading_scope": "navigation and displayed 4.0.0 label",
+      "resolved_url": "https://docs.gprmax.com/en/latest/",
+      "content_type": "text/html; charset=utf-8",
+      "status": "cached",
+      "bytes": 52024,
+      "sha256": "20c97195dc8ea88e9f926b21e035772f7824c4ab57fea3ce41dbe3d0e68aa99c",
+      "cache_filename": "index.html"
+    },
+    {
+      "id": "migration",
+      "url": "https://docs.gprmax.com/en/latest/migration_v3_v4.html",
+      "reading_scope": "migration guide",
+      "resolved_url": "https://docs.gprmax.com/en/latest/migration_v3_v4.html",
+      "content_type": "text/html; charset=utf-8",
+      "status": "cached",
+      "bytes": 53704,
+      "sha256": "cff1ca034273b489510b10f744125d23174913b4e1e9590924a77761f96173af",
+      "cache_filename": "migration.html"
+    },
+    {
+      "id": "installation",
+      "url": "https://docs.gprmax.com/en/latest/inc_README.html",
+      "reading_scope": "installation and environment requirements",
+      "resolved_url": "https://docs.gprmax.com/en/latest/inc_README.html",
+      "content_type": "text/html; charset=utf-8",
+      "status": "cached",
+      "bytes": 89154,
+      "sha256": "2db43cfa5bb7cb8ac0bb61d663a5fe2b0b1305e0aea2cdd884c32ebb997561bb",
+      "cache_filename": "installation.html"
+    },
+    {
+      "id": "input",
+      "url": "https://docs.gprmax.com/en/latest/input_hash_cmds.html",
+      "reading_scope": "selected domain, source, receiver and time commands",
+      "resolved_url": "https://docs.gprmax.com/en/latest/input_hash_cmds.html",
+      "content_type": "text/html; charset=utf-8",
+      "status": "cached",
+      "bytes": 415151,
+      "sha256": "d7067a67e2cc7edbf552087138317a955198817d7af4df956d4764c60bd526c2",
+      "cache_filename": "input.html"
+    },
+    {
+      "id": "output",
+      "url": "https://docs.gprmax.com/en/latest/output.html",
+      "reading_scope": "selected identity/timing/source metadata sections",
+      "resolved_url": "https://docs.gprmax.com/en/latest/output.html",
+      "content_type": "text/html; charset=utf-8",
+      "status": "cached",
+      "bytes": 181959,
+      "sha256": "f662b5e7fc8f8c34b8e115482690b392fba5c909a62263e65031e8d37a2bb6c4",
+      "cache_filename": "output.html"
+    },
+    {
+      "id": "sources_ports",
+      "url": "https://docs.gprmax.com/en/latest/sources_ports.html",
+      "reading_scope": "source families, physical quantities and timing",
+      "resolved_url": "https://docs.gprmax.com/en/latest/sources_ports.html",
+      "content_type": "text/html; charset=utf-8",
+      "status": "cached",
+      "bytes": 35712,
+      "sha256": "4e9e5d3878b9e823d19ad311032183fcafc094d9e066083736cab4633c7b9cf0",
+      "cache_filename": "sources_ports.html"
+    },
+    {
+      "id": "studies",
+      "url": "https://docs.gprmax.com/en/latest/studies.html",
+      "reading_scope": "study families and reuse restrictions",
+      "resolved_url": "https://docs.gprmax.com/en/latest/studies.html",
+      "content_type": "text/html; charset=utf-8",
+      "status": "cached",
+      "bytes": 99028,
+      "sha256": "32875b050bf68485d9555a49caf5e9a7c769d15f8ed2f012e472c9ed67fc9749",
+      "cache_filename": "studies.html"
+    },
+    {
+      "id": "sfcw",
+      "url": "https://docs.gprmax.com/en/latest/inc_SFCW.html",
+      "reading_scope": "SFCW synthesis and finite-record limitations",
+      "resolved_url": "https://docs.gprmax.com/en/latest/inc_SFCW.html",
+      "content_type": "text/html; charset=utf-8",
+      "status": "cached",
+      "bytes": 26940,
+      "sha256": "950478c2466ff6afc6d6eaf3fc62c39bc99b1fd12168dedff8cb947d969a52f8",
+      "cache_filename": "sfcw.html"
+    },
+    {
+      "id": "accelerators",
+      "url": "https://docs.gprmax.com/en/latest/accelerators.html",
+      "reading_scope": "precision and backend restrictions",
+      "resolved_url": "https://docs.gprmax.com/en/latest/accelerators.html",
+      "content_type": "text/html; charset=utf-8",
+      "status": "cached",
+      "bytes": 47551,
+      "sha256": "71e40f92d4b37306c1564eee3dc0a073c4959b9262394427c9f29705ec9e7fd3",
+      "cache_filename": "accelerators.html"
+    },
+    {
+      "id": "modelling",
+      "url": "https://docs.gprmax.com/en/latest/gprmodelling.html",
+      "reading_scope": "grid, coordinates and boundary guidance",
+      "resolved_url": "https://docs.gprmax.com/en/latest/gprmodelling.html",
+      "content_type": "text/html; charset=utf-8",
+      "status": "cached",
+      "bytes": 38430,
+      "sha256": "9c67272d16767023c0242a9fd8307256953b59816e7fb84abc7f5c5e71b2a4e9",
+      "cache_filename": "modelling.html"
+    }
+  ],
+  "latest_is_mutable": true,
+  "source_imported": false,
+  "solver_invoked": false,
+  "official_tests_executed": false,
+  "installed_v4_runtime_verified": false
+}

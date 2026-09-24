@@ -19,6 +19,7 @@ CHECKS = (
     "check_operator_contract.py",
     "check_manual_weight_tradeoff.py",
     "check_evaluation_labels.py",
+    "study_damage_pilot.py",
 )
 
 
@@ -33,11 +34,14 @@ def main():
     rows = []
     for name in CHECKS:
         script = ROOT / "scripts" / name
-        destination = output / f"{script.stem}.json"
+        is_pilot = name == "study_damage_pilot.py"
+        destination = output / "damage_pilot" / "results.json" if is_pilot else output / f"{script.stem}.json"
+        output_args = ["--output-dir", str(destination.parent)] if is_pilot else ["--output", str(destination)]
         # Ignore PYTHONOPTIMIZE/PYTHONPATH: one historical check uses assertions.
         result = subprocess.run(
-            [sys.executable, "-E", str(script), "--output", str(destination)],
+            [sys.executable, "-E", str(script), *output_args],
             cwd=ROOT, capture_output=True, text=True, encoding="utf-8",
+            timeout=120,
         )
         if result.returncode:
             print(result.stdout, end="")
@@ -54,7 +58,7 @@ def main():
                 raise RuntimeError(f"Invalid check count: {name}")
         rows.append({"script": f"scripts/{name}", "checks_passed": count,
                      "script_sha256": hashlib.sha256(script.read_bytes()).hexdigest(),
-                     "result_file": destination.name,
+                     "result_file": destination.relative_to(output).as_posix(),
                      "result_sha256": hashlib.sha256(destination.read_bytes()).hexdigest()})
         print(f"PASS {name}: {count}")
     report = {"schema": "workspace-verification/1", "utc": stamp,

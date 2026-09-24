@@ -1,6 +1,8 @@
 # UAV-GPR SFCW 自动处理研究
 
-仓库：<https://github.com/CYberkra/automation>。换电脑时先按[版本管理与跨电脑接续](docs/WORKFLOW.md)克隆、安装依赖并运行检查，再读[最新进度](docs/research/continuous_research_status.md)。当前研究接续点是[评价校准准备](docs/research/2026-09-24_cycle05_handoff.md)。
+仓库：<https://github.com/CYberkra/automation>。**换电脑或新会话先读 [START_HERE.md](START_HERE.md)**，再按[接续说明](docs/WORKFLOW.md)准备环境。当前已完成构造数据损伤试验与[V4 资料核对](docs/research/2026-09-24_gprmax_v4_review.md)；旧 cycle05 的损伤研究已完成首版，不要重做。
+
+设备：**SFCW 20–170 MHz**。项目：浅层非显性滑坡，深度暂按地下约20m以内理解。用户要求任何 gprMax 仿真先与其敲定；当前未批准运行。事实、假设与未知见[项目背景](configs/research/project_context_v1.json)，执行边界见[记录](configs/research/gprmax_v4_execution_gate.json)。
 
 最小验证仅需 Python 3.10 与 `requirements.txt` 中的 NumPy：
 
@@ -9,7 +11,7 @@ python -m pip install -r requirements.txt
 python scripts/verify_workspace.py
 ```
 
-当前预期通过 64 项构造数组检查；不需要实测资料、gprMax 或训练环境。新结果写入 `artifacts/local_checks/`。原始资料、派生审计缓存和公开论文缓存不随 Git 上传，因此下文部分历史资料链接仅在保留这些缓存的电脑可用。
+当前预期通过 **136 项**构造数组检查（历史64＋损伤72）；不需要实测资料、gprMax、绘图库或训练环境。新结果写入 `artifacts/local_checks/`。原始资料、派生审计缓存和公开论文缓存不随 Git 上传，历史资料链接可能只在本机有效。V4 求解器需另用 Python3.11–3.13 环境，不能直接套用上述数组环境。
 
 当前目标：依托现有非显性滑坡项目，先做场景特化的 B-scan 自动处理，自动选择背景抑制与增益的算法、参数和必要顺序，保留项目相关地下结构并减少人工调参。泛用性研究延期，首版不建设通用/特化双模式。
 
@@ -25,6 +27,7 @@ python scripts/verify_workspace.py
 
 用户已确定：**首版只研究“背景与相干杂波抑制”和“增益与衰减补偿”**，从简单方法逐步扩展。基线/仪器校正、频带滤波、航空/空间几何校正、去噪、子波整形/反卷积和成像延期，其余分类不纳入项目范围。
 
+- [构造数据首轮实验：损伤、参考误差与候选能力](docs/research/2026-09-24_damage_pilot_findings.md) · [运行前计划](docs/research/2026-09-24_damage_pilot_plan.md) · [72 项检查与完整数据](artifacts/research_checks/2026-09-24_damage_pilot_r2/results.json)
 - [项目工作约定](AGENTS.md)
 - [当前评价与标签协议 v0.2](docs/research/2026-09-24_evaluation_and_labels_v0.2.md) · [机器契约](configs/research/evaluation_label_contract_v0.2.json) · [26 项检查结果](artifacts/research_checks/2026-09-24_cycle04_evaluation_labels_r2.json)
 - [27 个配置的算子契约与参考反例（第三次续研）](docs/research/2026-09-24_cycle03_operator_contract.md) · [JSON 清单](configs/research/operator_catalogue_v0.1.json)
