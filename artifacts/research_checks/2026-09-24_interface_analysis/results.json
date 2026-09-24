@@ -1,0 +1,73 @@
+{
+  "inputs": {
+    "ground": {
+      "path": "artifacts\\research_checks\\2026-09-24_M01_T800\\M01_T800.h5",
+      "sha256": "2d10d62b21a82166d729673c4faf7adf2cb63614b8b4803bc37d2168c326cd02"
+    },
+    "air": {
+      "path": "artifacts\\research_checks\\2026-09-24_T800\\M00_x_3d.h5",
+      "sha256": "e92430f619ef648f3a120f6404a2f6bc81de7ed8a4c9556f1c632f44f568a29b"
+    }
+  },
+  "samples": 8309,
+  "dt": 9.629166007732353e-11,
+  "geometric_surface_path_ns": 100.16313838149179,
+  "conditions": [
+    {
+      "taper_ns": 0,
+      "taper_samples": 0,
+      "fraction": 0,
+      "linearity_relative_max": 5.855596266563284e-13,
+      "max_abs_response": 0.10584112499759649
+    },
+    {
+      "taper_ns": 200,
+      "taper_samples": 2077,
+      "fraction": 0.2499398242869178,
+      "linearity_relative_max": 6.379883996556398e-13,
+      "max_abs_response": 0.08671617820557236
+    },
+    {
+      "taper_ns": 400,
+      "taper_samples": 4154,
+      "fraction": 0.4999097364303767,
+      "linearity_relative_max": 6.339392945194554e-13,
+      "max_abs_response": 0.08671617849270422
+    }
+  ],
+  "raw_difference_windows": [
+    {
+      "start_ns": 0,
+      "stop_ns": 80,
+      "peak_abs_V_m": 0.048199943536705425,
+      "peak_time_ns": 77.03332806185881,
+      "rms_V_m": 0.007789375806128767
+    },
+    {
+      "start_ns": 80,
+      "stop_ns": 140,
+      "peak_abs_V_m": 0.3159677234262953,
+      "peak_time_ns": 126.5272413416031,
+      "rms_V_m": 0.07173205239658195
+    },
+    {
+      "start_ns": 140,
+      "stop_ns": 400,
+      "peak_abs_V_m": 0.3359462975392944,
+      "peak_time_ns": 174.48048806011022,
+      "rms_V_m": 0.0966710408116838
+    },
+    {
+      "start_ns": 400,
+      "stop_ns": 800,
+      "peak_abs_V_m": 0.12025108148401928,
+      "peak_time_ns": 708.6103265090238,
+      "rms_V_m": 0.045006638395768864
+    }
+  ],
+  "taper200_vs400_max_difference_normalized_by_peak": 1.4592848840269511e-05,
+  "solver_invoked": false,
+  "official_sfcw": true,
+  "convergence_certified": false,
+  "site_materials_measured": false
+}

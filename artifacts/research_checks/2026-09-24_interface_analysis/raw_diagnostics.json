@@ -1,0 +1,6 @@
+{
+  "first_nonzero_difference_ns": 59.98970422817255,
+  "peak_before_70ns": 6.188084766822755e-11,
+  "demeaned_hann_periodogram_peak_MHz": 5167.563428978097,
+  "method": "Use complete paired_raw.npz difference; subtract mean, multiply np.hanning(N), abs(rfft)**2; argmax on rfftfreq. This is a diagnostic, not a physical energy or causality certification."
+}

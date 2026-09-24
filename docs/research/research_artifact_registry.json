@@ -176,6 +176,20 @@
       "directory": "artifacts/research_checks/2026-09-24_tail_controls_analysis",
       "tracked": true,
       "solver_executed": false
+    },
+    {
+      "id": "M01_T800",
+      "status": "completed_diagnostic_not_convergence",
+      "directory": "artifacts/research_checks/2026-09-24_M01_T800",
+      "tracked": true,
+      "solver_executed": true
+    },
+    {
+      "id": "interface_analysis",
+      "status": "completed_diagnostic_not_convergence",
+      "directory": "artifacts/research_checks/2026-09-24_interface_analysis",
+      "tracked": true,
+      "solver_executed": false
     }
   ],
   "default_array_verification": {
@@ -198,6 +212,7 @@
     "obtain full band-valid spectra and constrain cover thickness/moisture; targeted literature brief and hypothetical loss budgets completed",
     "prepare M00/M01 reviewable simulation packet with compute limits",
     "design representative 20m domain/material/time-window assumptions",
-    "Air tail/window/PML controls completed; transfer processing to geological scenarios only after late-arrival and mesh validation"
+    "Air tail/window/PML controls completed; transfer processing to geological scenarios only after late-arrival and mesh validation",
+    "Ideal-interface single trace completed; early out-of-band raw precursor unresolved. Validate independent interface reference and domain/grid sensitivity before geology or training."
   ]
 }
