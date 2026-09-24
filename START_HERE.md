@@ -4,9 +4,9 @@
 
 **最新覆盖决定：用户要求“安装配置环境，我们一切都要gpu跑的”。独立GPU环境已完成，CUDA double M00已成功跑完4156步（262.719秒），原始输出10项核查通过。后续FDTD必须明确使用CUDA且禁止CPU回退。CPU r1/r2均为主动停止的历史试跑，无完整结果；下文CPU阶段文字不能作为当前状态或重启依据。**
 
-[GPU环境与复建说明](docs/research/2026-09-24_gpu_environment.md)，[执行与验收设计](docs/research/2026-09-24_M00_execution_and_validation.md)。官方SFCW工具自身使用CPU；已向用户澄清GPU要求是否也包括这一步，不能把官方后处理标成CUDA。
+[GPU环境与复建说明](docs/research/2026-09-24_gpu_environment.md)，[执行与验收设计](docs/research/2026-09-24_M00_execution_and_validation.md)。用户已澄清：FDTD必须GPU，后处理保留官方CPU实现，只有明显加速收益才考虑迁移；无需再询问此范围。
 
-完整原始结果、日志、显存遥测、输入与哈希：[GPU校准记录](artifacts/research_checks/2026-09-24_M00_x_3d_gpu_r1/record.json)。此attempt已消耗，禁止重复执行；继续应使用已有HDF5。官方SFCW与尾项敏感性脚本已准备，因GPU范围待澄清尚未执行。末5%峰值相对全记录峰值−41.41dB，不能仅凭运行成功宣称收敛或20m可探测。
+完整原始结果、日志、显存遥测、输入与哈希：[GPU校准记录](artifacts/research_checks/2026-09-24_M00_x_3d_gpu_r1/record.json)。此attempt已消耗，禁止重复执行。官方SFCW与12组尾项敏感性处理现已完成，端到端约5.08秒，20项结构核查通过。[后处理结论](docs/research/2026-09-24_M00_sfcw_results.md)：未渐消频谱偏差明显，尾项处理影响大；当前还不能宣称物理校准合格、收敛或20m可探测。下一步先验证有限窗/尾项及边界影响，不重复安装环境或重跑已完成算例。
 
 ## 已确认的项目事实
 

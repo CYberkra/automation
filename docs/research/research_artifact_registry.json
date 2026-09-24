@@ -138,13 +138,22 @@
     },
     {
       "id": "M00_x_3d_gpu_r1",
-      "status": "cuda_fdtd_complete_raw_audit_passed_sfcw_scope_pending",
+      "status": "cuda_fdtd_complete_raw_audit_passed",
       "directory": "artifacts/research_checks/2026-09-24_M00_x_3d_gpu_r1",
       "tracked": true,
       "attempt_record": "artifacts/research_checks/2026-09-24_airborne_gpu_attempt_r1.json",
       "solver_executed": true,
       "cpu_fallback": false,
-      "record": "artifacts/research_checks/2026-09-24_M00_x_3d_gpu_r1/record.json"
+      "record": "artifacts/research_checks/2026-09-24_M00_x_3d_gpu_r1/record.json",
+      "postprocessing_record": "artifacts/research_checks/2026-09-24_M00_gpu_official_postprocess_r1/record.json"
+    },
+    {
+      "id": "M00_gpu_official_postprocess_r1",
+      "status": "official_cpu_postprocessing_complete_with_physical_validation_limitations",
+      "directory": "artifacts/research_checks/2026-09-24_M00_gpu_official_postprocess_r1",
+      "record": "artifacts/research_checks/2026-09-24_M00_gpu_official_postprocess_r1/record.json",
+      "tracked": true,
+      "solver_executed": false
     }
   ],
   "default_array_verification": {
@@ -167,6 +176,6 @@
     "obtain full band-valid spectra and constrain cover thickness/moisture; targeted literature brief and hypothetical loss budgets completed",
     "prepare M00/M01 reviewable simulation packet with compute limits",
     "design representative 20m domain/material/time-window assumptions",
-    "Complete authorized M00_x_3d r2 and official SFCW output audit; design follow-up from numerical evidence"
+    "Validate impulse-tail/window sensitivity before treating M00 as calibrated or expanding geological models"
   ]
 }

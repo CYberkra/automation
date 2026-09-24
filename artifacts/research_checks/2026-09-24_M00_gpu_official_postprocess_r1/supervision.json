@@ -1,0 +1,20 @@
+{
+  "reason": "completed",
+  "exit_code": 0,
+  "wall_s": 5.077999999979511,
+  "peak_job_commit_bytes": 1686077440,
+  "observed_output_bytes": 1914780,
+  "memory_cap_bytes": 4294967296,
+  "wall_cap_s": 600,
+  "output_cap_bytes": 1073741824,
+  "memory_semantics": "Windows job committed memory, not RSS",
+  "output_semantics": "polled file bytes; overshoot possible",
+  "command": [
+    "E:\\automation_djh\\automation_repo\\artifacts\\local_checks\\gprmax_v4_gpu_env\\Scripts\\python.exe",
+    "E:\\automation_djh\\automation_repo\\scripts\\postprocess_official_airborne.py",
+    "E:\\automation_djh\\automation_repo\\artifacts\\research_checks\\2026-09-24_M00_x_3d_gpu_r1",
+    "--output-directory",
+    "E:\\automation_djh\\automation_repo\\artifacts\\local_checks\\2026-09-24_M00_gpu_official_postprocess_r1",
+    "--worker"
+  ]
+}

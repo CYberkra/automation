@@ -83,7 +83,9 @@
     "required_solver_backend": "cuda",
     "allow_cpu_solver_fallback": false,
     "user_authorized_gpu_configuration_and_runs": true,
-    "runtime_readiness": "cuda_float64_kernel_verified"
+    "runtime_readiness": "cuda_float64_kernel_verified",
+    "postprocessing": "Prefer official CPU implementation; migrate only if substantial speedup is demonstrated",
+    "user_clarification": "仿真gpu跑，后处理如果正常就是cpu那也没必要改，除非gpu能加速很多"
   },
   "execution_outcome": {
     "status": "completed",

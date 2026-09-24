@@ -1,0 +1,87 @@
+[
+  {
+    "label": "raw_audit",
+    "command": [
+      "E:\\automation_djh\\automation_repo\\artifacts\\local_checks\\gprmax_v4_gpu_env\\Scripts\\python.exe",
+      "E:\\automation_djh\\automation_repo\\scripts\\audit_airborne_output.py",
+      "E:\\automation_djh\\automation_repo\\artifacts\\research_checks\\2026-09-24_M00_x_3d_gpu_r1\\M00_x_3d.h5",
+      "--output",
+      "E:\\automation_djh\\automation_repo\\artifacts\\local_checks\\2026-09-24_M00_gpu_official_postprocess_r1\\raw_audit.json"
+    ],
+    "returncode": 0
+  },
+  {
+    "label": "official_inspect",
+    "command": [
+      "E:\\automation_djh\\automation_repo\\artifacts\\local_checks\\gprmax_v4_gpu_env\\Scripts\\python.exe",
+      "-m",
+      "gprMax.toolboxes.SFCW",
+      "inspect",
+      "E:\\automation_djh\\automation_repo\\artifacts\\research_checks\\2026-09-24_M00_x_3d_gpu_r1\\M00_x_3d.h5"
+    ],
+    "returncode": 0
+  },
+  {
+    "label": "official_direct",
+    "command": [
+      "E:\\automation_djh\\automation_repo\\artifacts\\local_checks\\gprmax_v4_gpu_env\\Scripts\\python.exe",
+      "-m",
+      "gprMax.toolboxes.SFCW",
+      "process",
+      "E:\\automation_djh\\automation_repo\\artifacts\\research_checks\\2026-09-24_M00_x_3d_gpu_r1\\M00_x_3d.h5",
+      "--source",
+      "/srcs/src1",
+      "--receiver",
+      "name:measurement",
+      "--component",
+      "Ex",
+      "--f-start",
+      "20e6",
+      "--f-stop",
+      "170e6",
+      "--steps",
+      "501",
+      "--method",
+      "direct",
+      "--window",
+      "rectangular",
+      "--zero-pad",
+      "1",
+      "--time-shift",
+      "0",
+      "--tail-taper",
+      "0",
+      "--source-floor-db",
+      "-100",
+      "--output",
+      "E:\\automation_djh\\automation_repo\\artifacts\\local_checks\\2026-09-24_M00_gpu_official_postprocess_r1\\official_direct.h5"
+    ],
+    "returncode": 0
+  },
+  {
+    "label": "sfcw_audit",
+    "command": [
+      "E:\\automation_djh\\automation_repo\\artifacts\\local_checks\\gprmax_v4_gpu_env\\Scripts\\python.exe",
+      "E:\\automation_djh\\automation_repo\\scripts\\audit_official_sfcw.py",
+      "E:\\automation_djh\\automation_repo\\artifacts\\local_checks\\2026-09-24_M00_gpu_official_postprocess_r1\\official_direct.h5",
+      "--raw-audit",
+      "E:\\automation_djh\\automation_repo\\artifacts\\local_checks\\2026-09-24_M00_gpu_official_postprocess_r1\\raw_audit.json",
+      "--output-dir",
+      "E:\\automation_djh\\automation_repo\\artifacts\\local_checks\\2026-09-24_M00_gpu_official_postprocess_r1\\diagnostics"
+    ],
+    "returncode": 0
+  },
+  {
+    "label": "tail_sensitivity",
+    "command": [
+      "E:\\automation_djh\\automation_repo\\artifacts\\local_checks\\gprmax_v4_gpu_env\\Scripts\\python.exe",
+      "E:\\automation_djh\\automation_repo\\scripts\\study_official_sfcw_tail.py",
+      "E:\\automation_djh\\automation_repo\\artifacts\\research_checks\\2026-09-24_M00_x_3d_gpu_r1\\M00_x_3d.h5",
+      "--raw-audit",
+      "E:\\automation_djh\\automation_repo\\artifacts\\local_checks\\2026-09-24_M00_gpu_official_postprocess_r1\\raw_audit.json",
+      "--output-dir",
+      "E:\\automation_djh\\automation_repo\\artifacts\\local_checks\\2026-09-24_M00_gpu_official_postprocess_r1\\tail_sensitivity"
+    ],
+    "returncode": 0
+  }
+]
