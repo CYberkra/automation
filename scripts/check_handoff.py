@@ -60,6 +60,11 @@ def main():
                 if hashlib.sha256((ROOT/"scripts"/filename).read_bytes()).hexdigest() != contract[key]:
                     gate_errors.append(filename)
             safe_gate = safe_gate and not gate_errors
+            if gate.get('execution_policy',{}).get('required_solver_backend')=='cuda':
+                safe_gate = safe_gate and budget['backend']=='CUDA' and gate['execution_policy']['allow_cpu_solver_fallback'] is False
+                if hashlib.sha256((ROOT/contract['cuda_identity_path']).read_bytes()).hexdigest()!=contract['cuda_identity_sha256']:
+                    gate_errors.append('cuda_identity_path')
+                safe_gate = safe_gate and not gate_errors
         except (KeyError, OSError, TypeError) as exc:
             safe_gate = False
             gate_errors.append(type(exc).__name__)

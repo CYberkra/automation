@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "E:\automation_djh\automation_repo\scripts\inspect_cuda_runtime.py", line 55, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "E:\automation_djh\automation_repo\scripts\inspect_cuda_runtime.py", line 27, in main
+    module=SourceModule('''__global__ void check_double(double *x) {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\automation_djh\automation_repo\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\pycuda\compiler.py", line 348, in __init__
+    cubin = compile(
+            ^^^^^^^^
+  File "E:\automation_djh\automation_repo\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\pycuda\compiler.py", line 295, in compile
+    return compile_plain(source, options, keep, nvcc, cache_dir, target)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\automation_djh\automation_repo\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\pycuda\compiler.py", line 150, in compile_plain
+    raise CompileError(
+pycuda.driver.CompileError: nvcc compilation of C:\Users\ROG\AppData\Local\Temp\tmpegmj4ts6\kernel.cu failed
+[command: nvcc --cubin -arch sm_89 -m64 -IE:\automation_djh\automation_repo\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\pycuda\cuda kernel.cu]
+[stdout:
+nvcc fatal   : Cannot find compiler 'cl.exe' in PATH
+
+]
