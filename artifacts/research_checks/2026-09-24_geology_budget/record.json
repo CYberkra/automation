@@ -1,0 +1,21 @@
+{
+  "status": "static_budget_completed_no_FDTD",
+  "replay_bitwise_equal": true,
+  "files_sha256": {
+    "budget.json": "e3e0848a742f7e06606c7f4d4ea004b12f72f677a3cb372125ce1062b21d0a9f"
+  },
+  "official_sources": [
+    {
+      "url": "https://docs.gprmax.com/en/latest/accelerators.html",
+      "read_scope": "Solver precision and MPI overview; HSG CUDA supported, refining subgrid forces double"
+    },
+    {
+      "url": "https://docs.gprmax.com/en/latest/input_api.html",
+      "read_scope": "run arguments; stale-looking CPU-only subgrid sentence conflicts with accelerator page; no example executed"
+    }
+  ],
+  "local_source_sha256": {
+    "subgrids/cuda_precursor_nodes.py": "cb1f9ee905044c259908950bfb111781ae6a583ae8925a01ef46fcbf2381727b",
+    "subgrids/grid.py": "02cef0aea6011d5015c68701806589c491526fecfe0765d94f92193e980ba198"
+  }
+}

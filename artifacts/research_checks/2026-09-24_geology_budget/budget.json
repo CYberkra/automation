@@ -1,0 +1,680 @@
+{
+  "status": "hypothetical_budget_not_execution_contract",
+  "solver_invoked": false,
+  "field_data_used": false,
+  "materials": [
+    {
+      "material": "cover",
+      "er": 16,
+      "sigma_S_m": 0.01,
+      "frequency_Hz": 20000000.0,
+      "alpha_Np_m": 0.45450950381743727,
+      "phase_wavelength_m": 3.6168717087705535,
+      "ten_cells_max_spacing_m": 0.3616871708770554,
+      "absorption_dB_per_m_one_way": 3.947819389609959
+    },
+    {
+      "material": "cover",
+      "er": 16,
+      "sigma_S_m": 0.01,
+      "frequency_Hz": 80000000.0,
+      "alpha_Np_m": 0.46976194984251185,
+      "phase_wavelength_m": 0.9345617044152817,
+      "ten_cells_max_spacing_m": 0.09345617044152818,
+      "absorption_dB_per_m_one_way": 4.0803004524943
+    },
+    {
+      "material": "cover",
+      "er": 16,
+      "sigma_S_m": 0.01,
+      "frequency_Hz": 170000000.0,
+      "alpha_Np_m": 0.47065630952010895,
+      "phase_wavelength_m": 0.4406310477455101,
+      "ten_cells_max_spacing_m": 0.04406310477455101,
+      "absorption_dB_per_m_one_way": 4.088068761950645
+    },
+    {
+      "material": "sandstone",
+      "er": 9,
+      "sigma_S_m": 0.001,
+      "frequency_Hz": 20000000.0,
+      "alpha_Np_m": 0.06271045657581391,
+      "phase_wavelength_m": 4.990339571078598,
+      "ten_cells_max_spacing_m": 0.4990339571078598,
+      "absorption_dB_per_m_one_way": 0.5446961049701894
+    },
+    {
+      "material": "sandstone",
+      "er": 9,
+      "sigma_S_m": 0.001,
+      "frequency_Hz": 80000000.0,
+      "alpha_Np_m": 0.06278349516203723,
+      "phase_wavelength_m": 1.2490379492730943,
+      "ten_cells_max_spacing_m": 0.12490379492730944,
+      "absorption_dB_per_m_one_way": 0.5453305100694454
+    },
+    {
+      "material": "sandstone",
+      "er": 9,
+      "sigma_S_m": 0.001,
+      "frequency_Hz": 170000000.0,
+      "alpha_Np_m": 0.06278730237523639,
+      "phase_wavelength_m": 0.5878182077049692,
+      "ten_cells_max_spacing_m": 0.058781820770496915,
+      "absorption_dB_per_m_one_way": 0.5453635791031219
+    },
+    {
+      "material": "wet_patch",
+      "er": 20,
+      "sigma_S_m": 0.02,
+      "frequency_Hz": 20000000.0,
+      "alpha_Np_m": 0.7780413374806807,
+      "phase_wavelength_m": 3.0957281180617575,
+      "ten_cells_max_spacing_m": 0.30957281180617574,
+      "absorption_dB_per_m_one_way": 6.757981191209706
+    },
+    {
+      "material": "wet_patch",
+      "er": 20,
+      "sigma_S_m": 0.02,
+      "frequency_Hz": 80000000.0,
+      "alpha_Np_m": 0.8371925869760145,
+      "phase_wavelength_m": 0.8327708654036862,
+      "ten_cells_max_spacing_m": 0.08327708654036861,
+      "absorption_dB_per_m_one_way": 7.271762416279825
+    },
+    {
+      "material": "wet_patch",
+      "er": 20,
+      "sigma_S_m": 0.02,
+      "frequency_Hz": 170000000.0,
+      "alpha_Np_m": 0.8412230561834232,
+      "phase_wavelength_m": 0.393778845769351,
+      "ten_cells_max_spacing_m": 0.0393778845769351,
+      "absorption_dB_per_m_one_way": 7.306770627004997
+    }
+  ],
+  "loss_20m": [
+    {
+      "cover_sigma_S_m": 0.001,
+      "frequency_Hz": 20000000.0,
+      "cover_3m_two_way_dB": 2.453211816078578,
+      "rock_17m_two_way_dB": 18.519667568986435,
+      "total_absorption_dB": 20.972879385065013
+    },
+    {
+      "cover_sigma_S_m": 0.001,
+      "frequency_Hz": 80000000.0,
+      "cover_3m_two_way_dB": 2.454117953366008,
+      "rock_17m_two_way_dB": 18.541237342361143,
+      "total_absorption_dB": 20.99535529572715
+    },
+    {
+      "cover_sigma_S_m": 0.001,
+      "frequency_Hz": 170000000.0,
+      "cover_3m_two_way_dB": 2.454165048704776,
+      "rock_17m_two_way_dB": 18.542361689506144,
+      "total_absorption_dB": 20.99652673821092
+    },
+    {
+      "cover_sigma_S_m": 0.01,
+      "frequency_Hz": 20000000.0,
+      "cover_3m_two_way_dB": 23.686916337659753,
+      "rock_17m_two_way_dB": 18.519667568986435,
+      "total_absorption_dB": 42.20658390664619
+    },
+    {
+      "cover_sigma_S_m": 0.01,
+      "frequency_Hz": 80000000.0,
+      "cover_3m_two_way_dB": 24.481802714965802,
+      "rock_17m_two_way_dB": 18.541237342361143,
+      "total_absorption_dB": 43.023040057326945
+    },
+    {
+      "cover_sigma_S_m": 0.01,
+      "frequency_Hz": 170000000.0,
+      "cover_3m_two_way_dB": 24.528412571703864,
+      "rock_17m_two_way_dB": 18.542361689506144,
+      "total_absorption_dB": 43.070774261210005
+    },
+    {
+      "cover_sigma_S_m": 0.05,
+      "frequency_Hz": 20000000.0,
+      "cover_3m_two_way_dB": 86.97158931796604,
+      "rock_17m_two_way_dB": 18.519667568986435,
+      "total_absorption_dB": 105.49125688695247
+    },
+    {
+      "cover_sigma_S_m": 0.05,
+      "frequency_Hz": 80000000.0,
+      "cover_3m_two_way_dB": 116.42057636651737,
+      "rock_17m_two_way_dB": 18.541237342361143,
+      "total_absorption_dB": 134.9618137088785
+    },
+    {
+      "cover_sigma_S_m": 0.05,
+      "frequency_Hz": 170000000.0,
+      "cover_3m_two_way_dB": 121.10944399013765,
+      "rock_17m_two_way_dB": 18.542361689506144,
+      "total_absorption_dB": 139.6518056796438
+    }
+  ],
+  "dense_grids": [
+    {
+      "domain_m": [
+        24,
+        24,
+        44
+      ],
+      "grid_m": [
+        0.05,
+        0.05,
+        0.04
+      ],
+      "cells": 253440000,
+      "PML_cells": [
+        20,
+        20,
+        25
+      ],
+      "precision": "double",
+      "GPU_main_arrays_GiB": 18.72404507547617,
+      "host_main_arrays_GiB": 23.9168017283082,
+      "baseline_1p3m_exact_on_y_grid": true,
+      "minimum_cells_per_phase_wavelength_170MHz": {
+        "cover": 8.812620954910201,
+        "sandstone": 11.756364154099384,
+        "wet_patch": 7.87557691538702
+      },
+      "below_13GiB_main_array_budget": false,
+      "all_materials_at_least10_cells": false,
+      "passes_initial_dense_screen": false
+    },
+    {
+      "domain_m": [
+        24,
+        24,
+        44
+      ],
+      "grid_m": [
+        0.05,
+        0.05,
+        0.04
+      ],
+      "cells": 253440000,
+      "PML_cells": [
+        20,
+        20,
+        25
+      ],
+      "precision": "single",
+      "GPU_main_arrays_GiB": 12.208834931254387,
+      "host_main_arrays_GiB": 17.401591584086418,
+      "baseline_1p3m_exact_on_y_grid": true,
+      "minimum_cells_per_phase_wavelength_170MHz": {
+        "cover": 8.812620954910201,
+        "sandstone": 11.756364154099384,
+        "wet_patch": 7.87557691538702
+      },
+      "below_13GiB_main_array_budget": true,
+      "all_materials_at_least10_cells": false,
+      "passes_initial_dense_screen": false
+    },
+    {
+      "domain_m": [
+        24,
+        24,
+        44
+      ],
+      "grid_m": [
+        0.04,
+        0.04,
+        0.04
+      ],
+      "cells": 396000000,
+      "PML_cells": [
+        25,
+        25,
+        25
+      ],
+      "precision": "double",
+      "GPU_main_arrays_GiB": 29.223635114729404,
+      "host_main_arrays_GiB": 37.33731738477945,
+      "baseline_1p3m_exact_on_y_grid": false,
+      "minimum_cells_per_phase_wavelength_170MHz": {
+        "cover": 11.015776193637752,
+        "sandstone": 14.695455192624229,
+        "wet_patch": 9.844471144233776
+      },
+      "below_13GiB_main_array_budget": false,
+      "all_materials_at_least10_cells": false,
+      "passes_initial_dense_screen": false
+    },
+    {
+      "domain_m": [
+        24,
+        24,
+        44
+      ],
+      "grid_m": [
+        0.04,
+        0.04,
+        0.04
+      ],
+      "cells": 396000000,
+      "PML_cells": [
+        25,
+        25,
+        25
+      ],
+      "precision": "single",
+      "GPU_main_arrays_GiB": 19.056263610720634,
+      "host_main_arrays_GiB": 27.169945880770683,
+      "baseline_1p3m_exact_on_y_grid": false,
+      "minimum_cells_per_phase_wavelength_170MHz": {
+        "cover": 11.015776193637752,
+        "sandstone": 14.695455192624229,
+        "wet_patch": 9.844471144233776
+      },
+      "below_13GiB_main_array_budget": false,
+      "all_materials_at_least10_cells": false,
+      "passes_initial_dense_screen": false
+    },
+    {
+      "domain_m": [
+        24,
+        24,
+        44
+      ],
+      "grid_m": [
+        0.04,
+        0.025,
+        0.04
+      ],
+      "cells": 633600000,
+      "PML_cells": [
+        25,
+        40,
+        25
+      ],
+      "precision": "double",
+      "GPU_main_arrays_GiB": 46.71860180050135,
+      "host_main_arrays_GiB": 59.700493432581425,
+      "baseline_1p3m_exact_on_y_grid": true,
+      "minimum_cells_per_phase_wavelength_170MHz": {
+        "cover": 11.015776193637752,
+        "sandstone": 14.695455192624229,
+        "wet_patch": 9.844471144233776
+      },
+      "below_13GiB_main_array_budget": false,
+      "all_materials_at_least10_cells": false,
+      "passes_initial_dense_screen": false
+    },
+    {
+      "domain_m": [
+        24,
+        24,
+        44
+      ],
+      "grid_m": [
+        0.04,
+        0.025,
+        0.04
+      ],
+      "cells": 633600000,
+      "PML_cells": [
+        25,
+        40,
+        25
+      ],
+      "precision": "single",
+      "GPU_main_arrays_GiB": 30.465977534651756,
+      "host_main_arrays_GiB": 43.447869166731834,
+      "baseline_1p3m_exact_on_y_grid": true,
+      "minimum_cells_per_phase_wavelength_170MHz": {
+        "cover": 11.015776193637752,
+        "sandstone": 14.695455192624229,
+        "wet_patch": 9.844471144233776
+      },
+      "below_13GiB_main_array_budget": false,
+      "all_materials_at_least10_cells": false,
+      "passes_initial_dense_screen": false
+    },
+    {
+      "domain_m": [
+        24,
+        24,
+        44
+      ],
+      "grid_m": [
+        0.025,
+        0.025,
+        0.025
+      ],
+      "cells": 1622016000,
+      "PML_cells": [
+        40,
+        40,
+        40
+      ],
+      "precision": "double",
+      "GPU_main_arrays_GiB": 119.44424993544817,
+      "host_main_arrays_GiB": 152.67789251357317,
+      "baseline_1p3m_exact_on_y_grid": true,
+      "minimum_cells_per_phase_wavelength_170MHz": {
+        "cover": 17.625241909820403,
+        "sandstone": 23.512728308198767,
+        "wet_patch": 15.75115383077404
+      },
+      "below_13GiB_main_array_budget": false,
+      "all_materials_at_least10_cells": true,
+      "passes_initial_dense_screen": false
+    },
+    {
+      "domain_m": [
+        24,
+        24,
+        44
+      ],
+      "grid_m": [
+        0.025,
+        0.025,
+        0.025
+      ],
+      "cells": 1622016000,
+      "PML_cells": [
+        40,
+        40,
+        40
+      ],
+      "precision": "single",
+      "GPU_main_arrays_GiB": 77.89767269790173,
+      "host_main_arrays_GiB": 111.13131527602673,
+      "baseline_1p3m_exact_on_y_grid": true,
+      "minimum_cells_per_phase_wavelength_170MHz": {
+        "cover": 17.625241909820403,
+        "sandstone": 23.512728308198767,
+        "wet_patch": 15.75115383077404
+      },
+      "below_13GiB_main_array_budget": false,
+      "all_materials_at_least10_cells": true,
+      "passes_initial_dense_screen": false
+    },
+    {
+      "domain_m": [
+        24,
+        24,
+        48
+      ],
+      "grid_m": [
+        0.05,
+        0.05,
+        0.04
+      ],
+      "cells": 276480000,
+      "PML_cells": [
+        20,
+        20,
+        25
+      ],
+      "precision": "double",
+      "GPU_main_arrays_GiB": 20.392865605652332,
+      "host_main_arrays_GiB": 26.057691045105457,
+      "baseline_1p3m_exact_on_y_grid": true,
+      "minimum_cells_per_phase_wavelength_170MHz": {
+        "cover": 8.812620954910201,
+        "sandstone": 11.756364154099384,
+        "wet_patch": 7.87557691538702
+      },
+      "below_13GiB_main_array_budget": false,
+      "all_materials_at_least10_cells": false,
+      "passes_initial_dense_screen": false
+    },
+    {
+      "domain_m": [
+        24,
+        24,
+        48
+      ],
+      "grid_m": [
+        0.05,
+        0.05,
+        0.04
+      ],
+      "cells": 276480000,
+      "PML_cells": [
+        20,
+        20,
+        25
+      ],
+      "precision": "single",
+      "GPU_main_arrays_GiB": 13.301811262965202,
+      "host_main_arrays_GiB": 18.966636702418327,
+      "baseline_1p3m_exact_on_y_grid": true,
+      "minimum_cells_per_phase_wavelength_170MHz": {
+        "cover": 8.812620954910201,
+        "sandstone": 11.756364154099384,
+        "wet_patch": 7.87557691538702
+      },
+      "below_13GiB_main_array_budget": false,
+      "all_materials_at_least10_cells": false,
+      "passes_initial_dense_screen": false
+    },
+    {
+      "domain_m": [
+        24,
+        24,
+        48
+      ],
+      "grid_m": [
+        0.04,
+        0.04,
+        0.04
+      ],
+      "cells": 432000000,
+      "PML_cells": [
+        25,
+        25,
+        25
+      ],
+      "precision": "double",
+      "GPU_main_arrays_GiB": 31.828218765556812,
+      "host_main_arrays_GiB": 40.67950851470232,
+      "baseline_1p3m_exact_on_y_grid": false,
+      "minimum_cells_per_phase_wavelength_170MHz": {
+        "cover": 11.015776193637752,
+        "sandstone": 14.695455192624229,
+        "wet_patch": 9.844471144233776
+      },
+      "below_13GiB_main_array_budget": false,
+      "all_materials_at_least10_cells": false,
+      "passes_initial_dense_screen": false
+    },
+    {
+      "domain_m": [
+        24,
+        24,
+        48
+      ],
+      "grid_m": [
+        0.04,
+        0.04,
+        0.04
+      ],
+      "cells": 432000000,
+      "PML_cells": [
+        25,
+        25,
+        25
+      ],
+      "precision": "single",
+      "GPU_main_arrays_GiB": 20.76222901046276,
+      "host_main_arrays_GiB": 29.61351875960827,
+      "baseline_1p3m_exact_on_y_grid": false,
+      "minimum_cells_per_phase_wavelength_170MHz": {
+        "cover": 11.015776193637752,
+        "sandstone": 14.695455192624229,
+        "wet_patch": 9.844471144233776
+      },
+      "below_13GiB_main_array_budget": false,
+      "all_materials_at_least10_cells": false,
+      "passes_initial_dense_screen": false
+    },
+    {
+      "domain_m": [
+        24,
+        24,
+        48
+      ],
+      "grid_m": [
+        0.04,
+        0.025,
+        0.04
+      ],
+      "cells": 691200000,
+      "PML_cells": [
+        25,
+        40,
+        25
+      ],
+      "precision": "double",
+      "GPU_main_arrays_GiB": 50.88239825516939,
+      "host_main_arrays_GiB": 65.0444618538022,
+      "baseline_1p3m_exact_on_y_grid": true,
+      "minimum_cells_per_phase_wavelength_170MHz": {
+        "cover": 11.015776193637752,
+        "sandstone": 14.695455192624229,
+        "wet_patch": 9.844471144233776
+      },
+      "below_13GiB_main_array_budget": false,
+      "all_materials_at_least10_cells": false,
+      "passes_initial_dense_screen": false
+    },
+    {
+      "domain_m": [
+        24,
+        24,
+        48
+      ],
+      "grid_m": [
+        0.04,
+        0.025,
+        0.04
+      ],
+      "cells": 691200000,
+      "PML_cells": [
+        25,
+        40,
+        25
+      ],
+      "precision": "single",
+      "GPU_main_arrays_GiB": 33.19335047900677,
+      "host_main_arrays_GiB": 47.35541407763958,
+      "baseline_1p3m_exact_on_y_grid": true,
+      "minimum_cells_per_phase_wavelength_170MHz": {
+        "cover": 11.015776193637752,
+        "sandstone": 14.695455192624229,
+        "wet_patch": 9.844471144233776
+      },
+      "below_13GiB_main_array_budget": false,
+      "all_materials_at_least10_cells": false,
+      "passes_initial_dense_screen": false
+    },
+    {
+      "domain_m": [
+        24,
+        24,
+        48
+      ],
+      "grid_m": [
+        0.025,
+        0.025,
+        0.025
+      ],
+      "cells": 1769472000,
+      "PML_cells": [
+        40,
+        40,
+        40
+      ],
+      "precision": "double",
+      "GPU_main_arrays_GiB": 130.09451872855425,
+      "host_main_arrays_GiB": 166.34940154105425,
+      "baseline_1p3m_exact_on_y_grid": true,
+      "minimum_cells_per_phase_wavelength_170MHz": {
+        "cover": 17.625241909820403,
+        "sandstone": 23.512728308198767,
+        "wet_patch": 15.75115383077404
+      },
+      "below_13GiB_main_array_budget": false,
+      "all_materials_at_least10_cells": true,
+      "passes_initial_dense_screen": false
+    },
+    {
+      "domain_m": [
+        24,
+        24,
+        48
+      ],
+      "grid_m": [
+        0.025,
+        0.025,
+        0.025
+      ],
+      "cells": 1769472000,
+      "PML_cells": [
+        40,
+        40,
+        40
+      ],
+      "precision": "single",
+      "GPU_main_arrays_GiB": 84.87419132888317,
+      "host_main_arrays_GiB": 121.12907414138317,
+      "baseline_1p3m_exact_on_y_grid": true,
+      "minimum_cells_per_phase_wavelength_170MHz": {
+        "cover": 17.625241909820403,
+        "sandstone": 23.512728308198767,
+        "wet_patch": 15.75115383077404
+      },
+      "below_13GiB_main_array_budget": false,
+      "all_materials_at_least10_cells": true,
+      "passes_initial_dense_screen": false
+    }
+  ],
+  "geometry": "Flat domain24x24x44: groundz24, sourcez39, target20m depth z4; 1m PML leaves3m bottom clearance. 48m vertical extent is a slope-envelope resource scenario only, not a frozen slope mesh.",
+  "slope_relief_24m_at10deg_m": 4.231847537003159,
+  "lossless_vertical_arrival_ns": {
+    "ground": 100.0692285594456,
+    "cover_base": 180.1246114070021,
+    "depth20": 520.3599885091172
+  },
+  "absorption_exclusions": [
+    "interface transmission/reflection",
+    "spreading",
+    "antenna coupling",
+    "scattering",
+    "noise/dynamic range",
+    "dielectric relaxation"
+  ],
+  "memory_exclusions": [
+    "runtime/context",
+    "small coefficient/source/receiver arrays",
+    "construction temporaries",
+    "dispersive auxiliary fields",
+    "snapshots"
+  ],
+  "notes": [
+    "10 cells per phase wavelength is a screening heuristic, not accuracy certification.",
+    "Single precision keeps uint32 material IDs; GPU bytes do not halve.",
+    "Material values and10deg slope are hypotheses, not site estimates.",
+    "Arrival estimates ignore loss/dispersion/obliquity; old400ns taper would attenuate a20m return and must be redesigned."
+  ],
+  "checks": {
+    "prior_dz4_memory_reproduced": true,
+    "zero_loss_limit": true,
+    "positive_absorption": true,
+    "no_dense_candidate_passes": true
+  },
+  "script_sha256": "47d70d42b5a29834e5090b3c913f0cb7756adaa5f63002358d6636b941436f70",
+  "propagation_script_sha256": "1a03dc8f3a6e638deeb28cebf4a3558c1c3138480a4bacb13115709cafc80138"
+}

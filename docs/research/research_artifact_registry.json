@@ -278,6 +278,13 @@
       "directory": "artifacts/research_checks/2026-09-24_dz4_analysis",
       "tracked": true,
       "solver_executed": false
+    },
+    {
+      "id": "geology_budget",
+      "status": "static_budget_complete",
+      "directory": "artifacts/research_checks/2026-09-24_geology_budget",
+      "tracked": true,
+      "solver_executed": false
     }
   ],
   "default_array_verification": {
@@ -297,6 +304,6 @@
   "remaining_work": [
     "verify actual instrument frequency vector and CSV processing;0.3MHz step confirmed; reserved field data excluded from development",
     "confirm target depth meaning and independently constrain site cover thickness/moisture/material parameters",
-    "Budget lossy clay-cover/sandstone model and20m domain before terrain execution; higher permittivity requires new mesh/resource and attenuation review. See geology_preview; no new execution contract."
+    "Audit official CUDA HSG placement/material/PML and full memory budget before bounded GPU validation; dense20m budget completed, no fitting or field data."
   ]
 }
