@@ -102,6 +102,10 @@
     {
       "record": "artifacts/research_checks/2026-09-24_M01_fixedPML/authorization_at_start.json",
       "outcome": "Completed and archived"
+    },
+    {
+      "record": "artifacts/research_checks/2026-09-24_AIR_dz4/authorization_at_start.json",
+      "outcome": "Completed dz4 paired air reference; 10 raw checks pass"
     }
   ],
   "execution_policy": {
@@ -113,9 +117,9 @@
     "user_clarification": "仿真gpu跑，后处理如果正常就是cpu那也没必要改，除非gpu能加速很多"
   },
   "execution_outcome": {
-    "status": "running",
+    "status": "completed",
     "attempt_consumed": true,
-    "run_id": "M01_dz4",
-    "final_status_path": "artifacts/simulations/2026-09-24_M01_dz4/supervision.json"
+    "canonical_record": "artifacts/research_checks/2026-09-24_M01_dz4/record.json",
+    "note": "Both dz4 cases complete, analysis replay exact. No further solve launched. Directional refinement improves errors; not full grid convergence."
   }
 }

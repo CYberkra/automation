@@ -250,6 +250,34 @@
       "solver_executed": false,
       "FDTD_solver_executed": false,
       "frequency_domain_reference_evaluated": true
+    },
+    {
+      "id": "dz4_design",
+      "status": "completed_directional_refinement",
+      "directory": "artifacts/research_checks/2026-09-24_dz4_design",
+      "tracked": true,
+      "solver_executed": false
+    },
+    {
+      "id": "AIR_dz4",
+      "status": "completed_directional_refinement",
+      "directory": "artifacts/research_checks/2026-09-24_AIR_dz4",
+      "tracked": true,
+      "solver_executed": true
+    },
+    {
+      "id": "M01_dz4",
+      "status": "completed_directional_refinement",
+      "directory": "artifacts/research_checks/2026-09-24_M01_dz4",
+      "tracked": true,
+      "solver_executed": true
+    },
+    {
+      "id": "dz4_analysis",
+      "status": "completed_directional_refinement",
+      "directory": "artifacts/research_checks/2026-09-24_dz4_analysis",
+      "tracked": true,
+      "solver_executed": false
     }
   ],
   "default_array_verification": {
@@ -269,7 +297,6 @@
   "remaining_work": [
     "verify actual instrument frequency vector and CSV processing;0.3MHz step confirmed; reserved field data excluded from development",
     "confirm target depth meaning and independently constrain site cover thickness/moisture/material parameters",
-    "budget direction-specific dz4cm paired air/dielectric GPU refinement against completed full-wave reference; new dt requires new air reference; check physical PML thickness and coefficient consistency",
-    "design representative20m model/material/late-arrival assumptions only after calibration and resource budgeting; no parameter sweep currently launched"
+    "Budget lossy clay-cover/sandstone model and20m domain before terrain execution; higher permittivity requires new mesh/resource and attenuation review. See geology_preview; no new execution contract."
   ]
 }

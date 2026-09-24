@@ -2,11 +2,13 @@
 
 更新：2026-09-24。实际项目仓库为 `E:/automation_djh/automation_repo`，远端 `CYberkra/automation`。以本页当前状态为准；历史报告中的旧“下一步”不代表待办。
 
-**当前正在执行垂向4cm配对验证：AIR_dz4空气组已完成（669.859秒，10项原始检查通过），M01_dz4介质组正在运行。** [设计与资源预算](docs/research/2026-09-24_dz4_design.md)。两次顺序GPU求解、每次30分钟/36GiB主机提交内存上限，无CPU回退、无自动重试。运行状态看各自artifacts/simulations目录的supervision.json（最终）或live_status.json（快照），不要重启已消耗attempt。
+**当前无FDTD或分析任务运行。垂向4cm空气/介质配对校验已完成。** 两组GPU共21分9秒，各10项原始检查通过，后处理复算一致。相对独立半空间参考，最大幅度差从0.22308降至0.14037dB，相位差从5.38594降至2.89392°，最大复数相对差从9.6172%降至5.2599%。方向性细化改善明确，仍非完整三维网格收敛认证。[完整结果](docs/research/2026-09-24_dz4_results.md)。
 
-完成后使用官方SFCW与已存独立半空间参考比较幅度/相位误差，归档后再决定后续模型。旧5cm结果为0.22308dB、5.38594°；本轮预测不是结果。尚未启动真实地质模型。
+**下一步：预算有损粉质粘土覆盖层—砂岩模型。** [地质讨论初稿](docs/research/2026-09-24_geology_preview.md)的电性、10°坡面及3m覆盖层都是假设，未作为实测值或启动新地质求解。先核算高介电材料网格、20m地下域/晚到时窗、损耗和显存，不自动加第三组网格或扩大扫参。
 
 ## 已完成的仿真与参考链
+
+- [垂向4cm配对](docs/research/2026-09-24_dz4_results.md)：资源预算、两次GPU求解、独立参考对比和复算完成；无需重复。
 
 - [GPU环境](docs/research/2026-09-24_gpu_environment.md)：V4.0.0独立CUDA double环境与复建说明。FDTD必须GPU，禁止CPU回退；官方后处理和独立频域积分可用CPU。当前求解器Python为`artifacts/local_checks/gprmax_v4_gpu_env/Scripts/python.exe`。
 - [全空气与官方SFCW](docs/research/2026-09-24_M00_sfcw_results.md)、[尾窗/PML对照](docs/research/2026-09-24_tail_control_results.md)：有限窗静电残留机制及渐消敏感性已检查。渐消参数不能直接移植到20m晚到模型。
@@ -14,7 +16,7 @@
 - [固定PML干预](docs/research/2026-09-24_fixedPML_results.md)：0–80ns差分从0.0482V/m变为逐样本零，支持PML自动参数差异机制；既定渐消后带内新旧最大变化约0.00037%。这一项已完成。
 - [独立半空间参考](docs/research/2026-09-24_halfspace_reference_results.md)：empymod1.10.6官方全波内核加本项目分段积分；只做校验，不替代官方SFCW。2.6导入失败和默认积分失败保留。
 
-所有已运行attempt均已消耗，不重复执行。原CPU r1/r2是主动停止的历史试跑，无完整结果；历史“正在运行”文字不可用来重启它们。[当前执行记录](configs/research/gprmax_v4_execution_gate.json)保持最后固定PML算例已完成。
+所有已运行attempt均已消耗，不重复执行。原CPU r1/r2是主动停止的历史试跑，无完整结果；历史“正在运行”文字不可用来重启它们。[当前执行记录](configs/research/gprmax_v4_execution_gate.json)保持最后M01_dz4算例已完成；AIR_dz4与M01_dz4的attempt均已消耗。
 
 ## 已确认的项目事实
 
@@ -49,14 +51,14 @@
 ## 新地点的最短接续步骤
 
 1. 获取最新main，检查git status，保留已有未提交改动。本机长期遗留设备图片`78210f81764e80000a4d2cd27c2a52c3.png`缺失；交接检查仅因此失败，不自动恢复或提交其删除。
-2. 先读本页与最新半空间参考报告；需要背景再查[V4阅读](docs/research/2026-09-24_gprmax_v4_review.md)、[粉质粘土—砂岩简报](docs/research/2026-09-24_cover_sandstone_brief.md)、[损伤研究](docs/research/2026-09-24_damage_pilot_findings.md)。保留实测数据不用于当前开发。
+2. 先读本页与最新dz4配对结果报告；需要背景再查[V4阅读](docs/research/2026-09-24_gprmax_v4_review.md)、[粉质粘土—砂岩简报](docs/research/2026-09-24_cover_sandstone_brief.md)、[损伤研究](docs/research/2026-09-24_damage_pilot_findings.md)。保留实测数据不用于当前开发。
 3. `python scripts/verify_workspace.py`为既有136项数组检查，不调用FDTD/实测/网络。无相关改动或疑点不重复跑。`python scripts/check_handoff.py`检查文件、链接、证据和当前执行契约；缺失图片须如实报告。
 4. 环境不随Git上传。GPU环境按上述说明复建；独立参考环境按最新报告及锁定依赖复建。不要把本机成功当成新机器核验，也不要调用可能启动FDTD的示例作导入检查。
 5. 每个研究单元保留设计、数据、代码、日志、来源/hash、失败与限制，更新本页/进度/运行索引，再显式暂存、提交、推送。跨地点并行用codex/前缀分支，不强推或重写共享历史。
 
 早期[远端克隆验证](artifacts/research_checks/2026-09-24_remote_handoff_verification.json)对应提交251986e，只证明当时86文件与136项数组检查，不是当前全部产物的新机认证。
 
-可交给新会话的任务：先读START_HERE.md和最新半空间参考报告；不要重做已完成的空气、尾项、PEC或固定PML对照。优先核算dz=4cm方向性细化配对的GPU资源、参数一致性和误差预测，形成明确执行包后按用户已授权自主设计/GPU仿真范围推进，保留独立参考与失败记录。不要读取保留实测数据调参。
+可交给新会话的任务：先读START_HERE.md及dz4结果、地质初稿；已完成数值机制和方向性细化，不重跑旧算例。下一步有损分层模型的材料/损耗/网格与20m域资源预算，之后才落盘新的GPU执行契约。用户已授权自主设计/GPU仿真，保留测线不参与开发；当前无任务运行。
 
 ## 记录索引
 

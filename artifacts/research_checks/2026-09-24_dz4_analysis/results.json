@@ -1,0 +1,72 @@
+{
+  "grid_z_m": 0.04,
+  "dt_s": 8.836328744901541e-11,
+  "full_samples": 9055,
+  "transformed_samples": 9054,
+  "inputs": {
+    "air": {
+      "path": "artifacts\\research_checks\\2026-09-24_AIR_dz4\\AIR_dz4.h5",
+      "sha256": "31da52925db5ce61d64f0a67931709893f01c3402dfce59b772b951e1ca4d0db"
+    },
+    "medium": {
+      "path": "artifacts\\research_checks\\2026-09-24_M01_dz4\\M01_dz4.h5",
+      "sha256": "577f2e6469d144b3b3d2ac9d6221bf6a8cdf2a276837138fa8dd49b7c83e713e"
+    },
+    "reference": {
+      "path": "artifacts\\research_checks\\2026-09-24_halfspace_comparison\\comparison.csv",
+      "sha256": "b82b39e606d91f56102b9ac97b87f08fe90f7fb4f9836a22ce1a7355ca3798f0"
+    }
+  },
+  "baseline_5cm": {
+    "max_relative_complex_error": 0.0961717046277707,
+    "median_relative_complex_error": 0.017977958397083483,
+    "max_abs_amplitude_error_dB": 0.22308200480972223,
+    "max_abs_phase_error_deg": 5.385942424070067
+  },
+  "refined": {
+    "max_relative_complex_error": 0.05259889565854417,
+    "median_relative_complex_error": 0.01002569760465071,
+    "max_abs_amplitude_error_dB": 0.14036515717846498,
+    "max_abs_phase_error_deg": 2.8939207158661415
+  },
+  "conditions": [
+    {
+      "taper_ns": 0,
+      "max_relative_complex_error": 1.4827208404667036,
+      "median_relative_complex_error": 0.3095620687063291,
+      "max_abs_amplitude_error_dB": 24.153275301110405,
+      "max_abs_phase_error_deg": 144.87536880580635
+    },
+    {
+      "taper_ns": 200,
+      "max_relative_complex_error": 0.05259894848879104,
+      "median_relative_complex_error": 0.010025495657181326,
+      "max_abs_amplitude_error_dB": 0.14036538519505512,
+      "max_abs_phase_error_deg": 2.8939234812368313
+    },
+    {
+      "taper_ns": 400,
+      "max_relative_complex_error": 0.05259889565854417,
+      "median_relative_complex_error": 0.01002569760465071,
+      "max_abs_amplitude_error_dB": 0.14036515717846498,
+      "max_abs_phase_error_deg": 2.8939207158661415
+    }
+  ],
+  "reduction_percent": {
+    "max_relative_complex_error": 45.30730648674014,
+    "median_relative_complex_error": 44.23339189461495,
+    "max_abs_amplitude_error_dB": 37.07912151041075,
+    "max_abs_phase_error_deg": 46.26900014873806
+  },
+  "early_0_80ns_peak_V_m": 0.0,
+  "early_exact_zero": true,
+  "taper_200_vs400_max_relative_change": 0.00012203610469459233,
+  "phase_170MHz_deg": -2.8939207158661415,
+  "amplitude_170MHz_dB": -0.14036515717846498,
+  "max_phase_prediction_residual_deg": 0.022146107308317564,
+  "max_amplitude_prediction_residual_dB": 0.0028989465997056874,
+  "grid_convergence_certified": false,
+  "physical_accuracy_threshold": null,
+  "solver_invoked": false,
+  "limitation": "One vertical refinement with dt and PML sampling changes; lateral mesh unchanged; no fitted correction."
+}
