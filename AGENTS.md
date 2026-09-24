@@ -1,5 +1,7 @@
 # UAV-GPR SFCW 自动处理研究
 
+> 当前状态以 START_HERE.md 为准。下述早期“未批准/未验证/未启动”描述已被用户后续GPU仿真和自主设计授权及实际完成记录取代，不作为当前执行状态。
+
 ## 最新接续与用户决定（2026-09-24，优先于旧阶段描述）
 
 - 新会话先读 [START_HERE.md](START_HERE.md)、[持久决策](docs/research/decision_log.md)和[产物索引](docs/research/research_artifact_registry.json)，不要重做已完成的损伤阶梯首版。

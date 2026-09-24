@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "all_501_complex_values_bitwise_equal": true,
+  "metric_dicts_equal": true,
+  "script_sha256": "fd5567563de2708071aea8cac1badaf161d3c642c751028448851f05b79cdfd6",
+  "command": "GPU-env python scripts/analyze_vertical_refinement.py --air artifacts/research_checks/2026-09-24_T800/M00_x_3d.h5 --medium artifacts/research_checks/2026-09-24_M01_fixedPML/M01_fixedPML.h5 --grid-z 0.05 --output <freshdir>"
+}
