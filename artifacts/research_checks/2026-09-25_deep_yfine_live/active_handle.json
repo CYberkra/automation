@@ -1,21 +1,24 @@
 {
-  "recorded_utc": "2026-09-24T17:41:21.721436+00:00",
+  "recorded_utc": "2026-09-24T17:49:49.264861+00:00",
   "exec_session_id": 68122,
   "batch_order": [
     "DEP_BG_YFINE",
     "DEP_20_YFINE"
   ],
-  "observed_current_case": "DEP_BG_YFINE",
-  "observed_root_pid": 60216,
+  "observed_current_case": "DEP_20_YFINE",
+  "observed_root_pid": 56788,
   "observed_status": {
-    "root_pid": 60216,
-    "wall_s": 622.155999999959,
+    "root_pid": 56788,
+    "wall_s": 50.17200000002049,
     "wall_cap_s": 1800,
-    "peak_job_commit_bytes": 15273549824,
-    "observed_output_bytes": 503471,
+    "peak_job_commit_bytes": 15273091072,
+    "observed_output_bytes": 32889,
     "state": "running",
     "note": "Snapshot only; supervision.json is final."
   },
   "rule": "Snapshot only: poll existing session68122 or verify current process and supervision.json. Failure stops batch; do not restart consumed attempts. Background success automatically dispatches target.",
-  "next_after_completion": "Archive each raw run and frozen gate, hash files; run analyze_deep_controls.py --yfine --output NEW_DIRECTORY, replay, report lateral/CFL difference separately from vertical refinement."
+  "next_after_completion": "Archive each raw run and frozen gate, hash files; run analyze_deep_controls.py --yfine --output NEW_DIRECTORY, replay, report lateral/CFL difference separately from vertical refinement.",
+  "completed_cases": [
+    "DEP_BG_YFINE"
+  ]
 }

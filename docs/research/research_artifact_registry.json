@@ -565,6 +565,13 @@
       "directory": "artifacts/research_checks/2026-09-25_joint_roles",
       "tracked": true,
       "solver_executed": false
+    },
+    {
+      "id": "DEP_BG_YFINE",
+      "status": "completed_background_target_pending",
+      "directory": "artifacts/research_checks/2026-09-25_DEP_BG_YFINE",
+      "tracked": true,
+      "solver_executed": true
     }
   ],
   "default_array_verification": {
@@ -585,6 +592,6 @@
     "verify actual instrument frequency vector and CSV processing;0.3MHz step confirmed; reserved field data excluded from development",
     "confirm target depth meaning and independently constrain site cover thickness/moisture/material parameters",
     "HSG ratio controls support coupling lag (r-1)/(2r) main dt; resolve intended source/coupling/output timing before heterogeneous local model. This is a historical 3D subtask; current live 2D batch is listed separately.",
-    "YFINE batch running session68122, background success auto-dispatches target. Verify handle, archive/analyze --yfine after completion; no new batch before results. Three-grid constructed mechanisms complete; physical labels unresolved."
+    "YFINE batch running session68122, background completed and archived; target running PID56788 snapshot. Verify handle, archive/analyze --yfine after completion; no new batch before results. Three-grid constructed mechanisms complete; physical labels unresolved."
   ]
 }

@@ -1,0 +1,16 @@
+#title: DEP_BG_YFINE hypothetical lossy planar model
+#domain_mode: TM
+#domain: inf 32 50
+#dx_dy_dz: 0.0125 0.00625 0.00625
+#time_window: 1200e-9
+#omp_threads: 8
+#pml_cells: 0 160 160 0 160 160
+#pml_formulation: HORIPML
+#waveform: impulse 1 1 impulse
+#hertzian_dipole: x inf 15.35 45 impulse
+#rx: inf 16.65 45 measurement Ex
+#pml_cfs: constant forward 0 0 constant forward 1 1 quartic forward 0 0.21235349838321013
+#material: 9 0.001 1 0 rock
+#box: inf 0 0 inf 32 30 rock
+#material: 16 0.01 1 0 cover
+#box: inf 0 27 inf 32 30 cover
