@@ -397,6 +397,27 @@
       "directory": "artifacts/research_checks/2026-09-25_yz_layers_analysis",
       "tracked": true,
       "solver_executed": false
+    },
+    {
+      "id": "YZ_AIR_FINE",
+      "status": "completed_two_level_refinement",
+      "directory": "artifacts/research_checks/2026-09-25_YZ_AIR_FINE",
+      "tracked": true,
+      "solver_executed": true
+    },
+    {
+      "id": "YZ_COVER_FINE",
+      "status": "completed_two_level_refinement",
+      "directory": "artifacts/research_checks/2026-09-25_YZ_COVER_FINE",
+      "tracked": true,
+      "solver_executed": true
+    },
+    {
+      "id": "yz_fine_analysis",
+      "status": "completed_two_level_refinement",
+      "directory": "artifacts/research_checks/2026-09-25_yz_fine_analysis",
+      "tracked": true,
+      "solver_executed": false
     }
   ],
   "default_array_verification": {
@@ -417,6 +438,6 @@
     "verify actual instrument frequency vector and CSV processing;0.3MHz step confirmed; reserved field data excluded from development",
     "confirm target depth meaning and independently constrain site cover thickness/moisture/material parameters",
     "HSG ratio controls support coupling lag (r-1)/(2r) main dt; resolve intended source/coupling/output timing before heterogeneous local model. No active jobs; full20m memory unresolved.",
-    "2D lossy planar pair and independent reference complete. Next same-grid air/cover refinement, then paired localized target/depth study; no active jobs."
+    "Two-level YZ refinement complete. Next localized hypothetical wet-zone paired/background depth study with late-time window/boundary budget and target-difference grid validation; retain 3D and field validation; no active jobs."
   ]
 }

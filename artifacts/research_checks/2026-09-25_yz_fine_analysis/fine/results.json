@@ -1,0 +1,35 @@
+{
+  "checks": {
+    "AIR_metadata_finite_source": true,
+    "COVER_metadata_finite_source": true
+  },
+  "comparisons": {
+    "COVER_200": {
+      "max_relative_complex_error": 0.005579890850770127,
+      "median_relative_complex_error": 0.0009332929864030301,
+      "max_abs_amplitude_error_dB": 0.023201550601575912,
+      "max_abs_phase_error_deg": 0.29267046349725817
+    },
+    "COVER_400": {
+      "max_relative_complex_error": 0.005579888377277547,
+      "median_relative_complex_error": 0.0009333217744899001,
+      "max_abs_amplitude_error_dB": 0.02320156095113358,
+      "max_abs_phase_error_deg": 0.2926704628043587
+    }
+  },
+  "taper_200_vs_400": {
+    "COVER": {
+      "max_relative_complex_error": 5.997853546489319e-06,
+      "median_relative_complex_error": 2.709690117869672e-08,
+      "max_abs_amplitude_error_dB": 4.7515344781002564e-05,
+      "max_abs_phase_error_deg": 0.00032041178682341625
+    }
+  },
+  "inputs": {
+    "artifacts\\research_checks\\2026-09-25_YZ_AIR_FINE\\YZ_AIR_FINE.h5": "cde07887ba663e44ca1eeb9e191ba2b9d39bf121735a4c112b380ce4bb6de074",
+    "artifacts\\research_checks\\2026-09-25_YZ_COVER_FINE\\YZ_COVER_FINE.h5": "4d2c08bdf4b0e43df7c34523f1447948456e9904bcb4d9f030facdf31c430752",
+    "artifacts\\research_checks\\2026-09-25_yz_layers_reference\\spectra.npz": "42f144f7b1601724d100b5a00028c997469479b3177abe1f8c37fb7a70b9c578"
+  },
+  "physical_acceptance_threshold": null,
+  "solver_invoked": false
+}
