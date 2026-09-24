@@ -1,0 +1,48 @@
+{
+  "schema": "focused-research-source-ledger/1",
+  "date": "2026-09-24",
+  "mode": "targeted brief, not systematic review",
+  "queries": [
+    "silty clay complex permittivity 20 200 MHz dielectric spectroscopy soil conductivity",
+    "sandstone dielectric spectroscopy 10 200 MHz water saturation complex permittivity",
+    "silty clay loam Wagner dielectric 2011 frequency temperature",
+    "Coaxial method 5 Hz sandstone dielectric",
+    "Ultra-broad-band electrical spectroscopy soils sediments ggx242"
+  ],
+  "sources": [
+    {
+      "id": "CS-01",
+      "title": "Coaxial method to investigate broadband dielectric properties of rocks over the 5 Hz to 3 GHz frequency range",
+      "year": 2025,
+      "doi": "10.1016/j.jrmge.2025.04.024",
+      "url": "https://doi.org/10.1016/j.jrmge.2025.04.024",
+      "cross_record": "https://publica.fraunhofer.de/entities/publication/28fdab0d-4e79-45ef-a8db-89bd91c9f976",
+      "evidence": "primary laboratory study; publisher indexed text plus institutional indexed abstract",
+      "read_scope": "returned indexed sections 4.1, 5.1, 5.3 and table 2 text; no figure inspection or full PDF",
+      "adopt": "band-relevant sandstone moisture and measurement limitations; not site parameter values",
+      "limitations": "Direct opens failed or returned access challenge; complete authors, supplementary spectra, COI not audited. No local source hash available."
+    },
+    {
+      "id": "CS-02",
+      "title": "Ultra-broad-band electrical spectroscopy of soils and sediments—a combined permittivity and conductivity model",
+      "authors": "M. Loewer, T. Günther, J. Igel, S. Kruschwitz, T. Martin, N. Wagner",
+      "year": 2017,
+      "doi": "10.1093/gji/ggx242",
+      "url": "https://academic.oup.com/gji/article/210/3/1360/3861100",
+      "evidence": "primary laboratory study; publisher PDF indexed abstract/title page",
+      "read_scope": "abstract only; no whole-paper or figure verification",
+      "adopt": "joint conductivity/permittivity accounting; no numerical materials adopted",
+      "limitations": "Direct publisher/DOI retrieval failed; institutional PDF returned challenge. No local source hash."
+    }
+  ],
+  "reused": ["R11-R13 and R13-D from 2026-09-24_cycle02_source_ledger.json; public clay data audit not repeated"],
+  "screened_not_adopted": [
+    {"doi": "10.1109/TGRS.2011.2108303", "reason": "silty clay loam promising but primary text not obtained this round; not used as quantitative evidence"},
+    {"doi": "10.1016/j.infrared.2024.105610", "reason": "THz and prepared sandstone powder; band/sample mismatch"},
+    {"title": "The dielectric constant of sandstones, 60 kHz to 4 MHz", "reason": "outside target band; not adopted for numerical extrapolation"}
+  ],
+  "no_source_files_cached_this_round": true,
+  "no_claim_of_exhaustive_search": true,
+  "site_material_values_extracted": false,
+  "solver_executed": false
+}

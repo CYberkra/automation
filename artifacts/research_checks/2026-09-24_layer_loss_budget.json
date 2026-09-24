@@ -1,0 +1,339 @@
+{
+  "schema": "analytic-layer-budget/1",
+  "date": "2026-09-24",
+  "status": "hypothetical sensitivity only; not fitted or measured material properties",
+  "solver_executed": false,
+  "field_data_used": false,
+  "model": "normal ray, nonmagnetic homogeneous layers, constant er/sigma; absorption only",
+  "excluded": [
+    "interface coefficients",
+    "geometric spreading",
+    "antenna coupling",
+    "scattering",
+    "dispersion relaxation spectrum",
+    "noise and receiver dynamic range"
+  ],
+  "source_sha256": "1a03dc8f3a6e638deeb28cebf4a3558c1c3138480a4bacb13115709cafc80138",
+  "checks": {
+    "lossless_alpha_zero": true,
+    "lossless_beta": true,
+    "low_loss_limit": true,
+    "positive_loss_all_scenarios": true
+  },
+  "rows": [
+    {
+      "cover_m": 1.0,
+      "cover_er": 16,
+      "cover_sigma_S_m": 0.001,
+      "rock_er": 9,
+      "rock_sigma_S_m": 0.001,
+      "f_MHz": 20,
+      "cover_two_way_absorption_dB": 0.8177372720261926,
+      "rock_two_way_absorption_dB": 20.6984519888672,
+      "total_two_way_absorption_dB": 21.51618926089339
+    },
+    {
+      "cover_m": 1.0,
+      "cover_er": 16,
+      "cover_sigma_S_m": 0.001,
+      "rock_er": 9,
+      "rock_sigma_S_m": 0.001,
+      "f_MHz": 80,
+      "cover_two_way_absorption_dB": 0.8180393177886693,
+      "rock_two_way_absorption_dB": 20.722559382638927,
+      "total_two_way_absorption_dB": 21.540598700427598
+    },
+    {
+      "cover_m": 1.0,
+      "cover_er": 16,
+      "cover_sigma_S_m": 0.001,
+      "rock_er": 9,
+      "rock_sigma_S_m": 0.001,
+      "f_MHz": 170,
+      "cover_two_way_absorption_dB": 0.8180550162349253,
+      "rock_two_way_absorption_dB": 20.723816005918632,
+      "total_two_way_absorption_dB": 21.541871022153558
+    },
+    {
+      "cover_m": 1.0,
+      "cover_er": 16,
+      "cover_sigma_S_m": 0.01,
+      "rock_er": 9,
+      "rock_sigma_S_m": 0.001,
+      "f_MHz": 20,
+      "cover_two_way_absorption_dB": 7.895638779219918,
+      "rock_two_way_absorption_dB": 20.6984519888672,
+      "total_two_way_absorption_dB": 28.594090768087117
+    },
+    {
+      "cover_m": 1.0,
+      "cover_er": 16,
+      "cover_sigma_S_m": 0.01,
+      "rock_er": 9,
+      "rock_sigma_S_m": 0.001,
+      "f_MHz": 80,
+      "cover_two_way_absorption_dB": 8.1606009049886,
+      "rock_two_way_absorption_dB": 20.722559382638927,
+      "total_two_way_absorption_dB": 28.883160287627526
+    },
+    {
+      "cover_m": 1.0,
+      "cover_er": 16,
+      "cover_sigma_S_m": 0.01,
+      "rock_er": 9,
+      "rock_sigma_S_m": 0.001,
+      "f_MHz": 170,
+      "cover_two_way_absorption_dB": 8.17613752390129,
+      "rock_two_way_absorption_dB": 20.723816005918632,
+      "total_two_way_absorption_dB": 28.89995352981992
+    },
+    {
+      "cover_m": 1.0,
+      "cover_er": 16,
+      "cover_sigma_S_m": 0.05,
+      "rock_er": 9,
+      "rock_sigma_S_m": 0.001,
+      "f_MHz": 20,
+      "cover_two_way_absorption_dB": 28.990529772655343,
+      "rock_two_way_absorption_dB": 20.6984519888672,
+      "total_two_way_absorption_dB": 49.68898176152254
+    },
+    {
+      "cover_m": 1.0,
+      "cover_er": 16,
+      "cover_sigma_S_m": 0.05,
+      "rock_er": 9,
+      "rock_sigma_S_m": 0.001,
+      "f_MHz": 80,
+      "cover_two_way_absorption_dB": 38.80685878883912,
+      "rock_two_way_absorption_dB": 20.722559382638927,
+      "total_two_way_absorption_dB": 59.52941817147805
+    },
+    {
+      "cover_m": 1.0,
+      "cover_er": 16,
+      "cover_sigma_S_m": 0.05,
+      "rock_er": 9,
+      "rock_sigma_S_m": 0.001,
+      "f_MHz": 170,
+      "cover_two_way_absorption_dB": 40.369814663379216,
+      "rock_two_way_absorption_dB": 20.723816005918632,
+      "total_two_way_absorption_dB": 61.09363066929785
+    },
+    {
+      "cover_m": 3.0,
+      "cover_er": 16,
+      "cover_sigma_S_m": 0.001,
+      "rock_er": 9,
+      "rock_sigma_S_m": 0.001,
+      "f_MHz": 20,
+      "cover_two_way_absorption_dB": 2.453211816078578,
+      "rock_two_way_absorption_dB": 18.519667568986435,
+      "total_two_way_absorption_dB": 20.972879385065013
+    },
+    {
+      "cover_m": 3.0,
+      "cover_er": 16,
+      "cover_sigma_S_m": 0.001,
+      "rock_er": 9,
+      "rock_sigma_S_m": 0.001,
+      "f_MHz": 80,
+      "cover_two_way_absorption_dB": 2.454117953366008,
+      "rock_two_way_absorption_dB": 18.541237342361143,
+      "total_two_way_absorption_dB": 20.99535529572715
+    },
+    {
+      "cover_m": 3.0,
+      "cover_er": 16,
+      "cover_sigma_S_m": 0.001,
+      "rock_er": 9,
+      "rock_sigma_S_m": 0.001,
+      "f_MHz": 170,
+      "cover_two_way_absorption_dB": 2.454165048704776,
+      "rock_two_way_absorption_dB": 18.542361689506144,
+      "total_two_way_absorption_dB": 20.99652673821092
+    },
+    {
+      "cover_m": 3.0,
+      "cover_er": 16,
+      "cover_sigma_S_m": 0.01,
+      "rock_er": 9,
+      "rock_sigma_S_m": 0.001,
+      "f_MHz": 20,
+      "cover_two_way_absorption_dB": 23.686916337659753,
+      "rock_two_way_absorption_dB": 18.519667568986435,
+      "total_two_way_absorption_dB": 42.20658390664619
+    },
+    {
+      "cover_m": 3.0,
+      "cover_er": 16,
+      "cover_sigma_S_m": 0.01,
+      "rock_er": 9,
+      "rock_sigma_S_m": 0.001,
+      "f_MHz": 80,
+      "cover_two_way_absorption_dB": 24.481802714965802,
+      "rock_two_way_absorption_dB": 18.541237342361143,
+      "total_two_way_absorption_dB": 43.023040057326945
+    },
+    {
+      "cover_m": 3.0,
+      "cover_er": 16,
+      "cover_sigma_S_m": 0.01,
+      "rock_er": 9,
+      "rock_sigma_S_m": 0.001,
+      "f_MHz": 170,
+      "cover_two_way_absorption_dB": 24.528412571703864,
+      "rock_two_way_absorption_dB": 18.542361689506144,
+      "total_two_way_absorption_dB": 43.070774261210005
+    },
+    {
+      "cover_m": 3.0,
+      "cover_er": 16,
+      "cover_sigma_S_m": 0.05,
+      "rock_er": 9,
+      "rock_sigma_S_m": 0.001,
+      "f_MHz": 20,
+      "cover_two_way_absorption_dB": 86.97158931796604,
+      "rock_two_way_absorption_dB": 18.519667568986435,
+      "total_two_way_absorption_dB": 105.49125688695247
+    },
+    {
+      "cover_m": 3.0,
+      "cover_er": 16,
+      "cover_sigma_S_m": 0.05,
+      "rock_er": 9,
+      "rock_sigma_S_m": 0.001,
+      "f_MHz": 80,
+      "cover_two_way_absorption_dB": 116.42057636651737,
+      "rock_two_way_absorption_dB": 18.541237342361143,
+      "total_two_way_absorption_dB": 134.9618137088785
+    },
+    {
+      "cover_m": 3.0,
+      "cover_er": 16,
+      "cover_sigma_S_m": 0.05,
+      "rock_er": 9,
+      "rock_sigma_S_m": 0.001,
+      "f_MHz": 170,
+      "cover_two_way_absorption_dB": 121.10944399013765,
+      "rock_two_way_absorption_dB": 18.542361689506144,
+      "total_two_way_absorption_dB": 139.6518056796438
+    },
+    {
+      "cover_m": 5.0,
+      "cover_er": 16,
+      "cover_sigma_S_m": 0.001,
+      "rock_er": 9,
+      "rock_sigma_S_m": 0.001,
+      "f_MHz": 20,
+      "cover_two_way_absorption_dB": 4.088686360130963,
+      "rock_two_way_absorption_dB": 16.340883149105682,
+      "total_two_way_absorption_dB": 20.429569509236646
+    },
+    {
+      "cover_m": 5.0,
+      "cover_er": 16,
+      "cover_sigma_S_m": 0.001,
+      "rock_er": 9,
+      "rock_sigma_S_m": 0.001,
+      "f_MHz": 80,
+      "cover_two_way_absorption_dB": 4.090196588943346,
+      "rock_two_way_absorption_dB": 16.359915302083362,
+      "total_two_way_absorption_dB": 20.450111891026708
+    },
+    {
+      "cover_m": 5.0,
+      "cover_er": 16,
+      "cover_sigma_S_m": 0.001,
+      "rock_er": 9,
+      "rock_sigma_S_m": 0.001,
+      "f_MHz": 170,
+      "cover_two_way_absorption_dB": 4.090275081174626,
+      "rock_two_way_absorption_dB": 16.36090737309366,
+      "total_two_way_absorption_dB": 20.451182454268285
+    },
+    {
+      "cover_m": 5.0,
+      "cover_er": 16,
+      "cover_sigma_S_m": 0.01,
+      "rock_er": 9,
+      "rock_sigma_S_m": 0.001,
+      "f_MHz": 20,
+      "cover_two_way_absorption_dB": 39.47819389609959,
+      "rock_two_way_absorption_dB": 16.340883149105682,
+      "total_two_way_absorption_dB": 55.819077045205276
+    },
+    {
+      "cover_m": 5.0,
+      "cover_er": 16,
+      "cover_sigma_S_m": 0.01,
+      "rock_er": 9,
+      "rock_sigma_S_m": 0.001,
+      "f_MHz": 80,
+      "cover_two_way_absorption_dB": 40.803004524943006,
+      "rock_two_way_absorption_dB": 16.359915302083362,
+      "total_two_way_absorption_dB": 57.16291982702637
+    },
+    {
+      "cover_m": 5.0,
+      "cover_er": 16,
+      "cover_sigma_S_m": 0.01,
+      "rock_er": 9,
+      "rock_sigma_S_m": 0.001,
+      "f_MHz": 170,
+      "cover_two_way_absorption_dB": 40.88068761950644,
+      "rock_two_way_absorption_dB": 16.36090737309366,
+      "total_two_way_absorption_dB": 57.2415949926001
+    },
+    {
+      "cover_m": 5.0,
+      "cover_er": 16,
+      "cover_sigma_S_m": 0.05,
+      "rock_er": 9,
+      "rock_sigma_S_m": 0.001,
+      "f_MHz": 20,
+      "cover_two_way_absorption_dB": 144.95264886327672,
+      "rock_two_way_absorption_dB": 16.340883149105682,
+      "total_two_way_absorption_dB": 161.2935320123824
+    },
+    {
+      "cover_m": 5.0,
+      "cover_er": 16,
+      "cover_sigma_S_m": 0.05,
+      "rock_er": 9,
+      "rock_sigma_S_m": 0.001,
+      "f_MHz": 80,
+      "cover_two_way_absorption_dB": 194.0342939441956,
+      "rock_two_way_absorption_dB": 16.359915302083362,
+      "total_two_way_absorption_dB": 210.39420924627896
+    },
+    {
+      "cover_m": 5.0,
+      "cover_er": 16,
+      "cover_sigma_S_m": 0.05,
+      "rock_er": 9,
+      "rock_sigma_S_m": 0.001,
+      "f_MHz": 170,
+      "cover_two_way_absorption_dB": 201.8490733168961,
+      "rock_two_way_absorption_dB": 16.36090737309366,
+      "total_two_way_absorption_dB": 218.20998068998975
+    }
+  ],
+  "lossless_20m_two_way_ns": {
+    "4": 266.8512761585216,
+    "9": 400.2769142377824,
+    "16": 533.7025523170432
+  },
+  "ideal_resolution_scale_m": {
+    "4": 0.49965409666666666,
+    "9": 0.3331027311111111,
+    "16": 0.24982704833333333
+  },
+  "ricker80_infinite_continuous_spectrum_relative_peak_dB": {
+    "20": -15.939378117432524,
+    "80": 0.0,
+    "170": -17.44197338336918
+  },
+  "resolution_note": "v/(2B) scale only; actual window, effective bandwidth and loss alter resolution",
+  "ricker_note": "ideal infinite continuous waveform only; finite sampled V4 source needs separate verification"
+}
