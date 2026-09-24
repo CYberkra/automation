@@ -1,0 +1,137 @@
+{
+  "solver_invoked": false,
+  "large_grid_allocated": false,
+  "installed_sources_match": true,
+  "source_sha256": {
+    "subgrids/grid.py": "02cef0aea6011d5015c68701806589c491526fecfe0765d94f92193e980ba198",
+    "subgrids/user_objects.py": "b4e0c791325ac908caa6ebca98d878352e6b3a61d6398de3a335376aa84df97c",
+    "subgrids/cuda_subgrid_hsg.py": "249340c99a02b7ef21a6635f466912dd0fb430dea987c2db0b14f9fd3df151ba",
+    "subgrids/cuda_subgrid_updates.py": "c8467b96318e5c789c27baaf2f9fdae368b4b9351ef478b7f73062135a836b9c",
+    "subgrids/cuda_precursor_nodes.py": "cb1f9ee905044c259908950bfb111781ae6a583ae8925a01ef46fcbf2381727b"
+  },
+  "rows": [
+    {
+      "label": "deep20m",
+      "main_spacing_m": 0.1,
+      "ratio": 3,
+      "fine_spacing_m": 0.03333333333333333,
+      "working_extent_m": [
+        20,
+        20,
+        22
+      ],
+      "pad_cells_per_face": 18,
+      "total_subgrid_cells_xyz": [
+        636,
+        636,
+        696
+      ],
+      "main_arrays_GiB": 1.8863377645611763,
+      "subgrid_fields_ID_only_GiB": 18.96462542563677,
+      "combined_lower_bound_GiB": 20.850963190197945,
+      "unrefined_rock_cells_per_wavelength": 5.878182077049692,
+      "fine_wet_cells_per_wavelength": 11.813365373080531,
+      "excluded": [
+        "subgrid PML histories",
+        "precursor device histories and interpolation/filter buffers",
+        "coefficient tables",
+        "CUDA context/compiler overhead"
+      ],
+      "placement_validated": false
+    },
+    {
+      "label": "wide_deep",
+      "main_spacing_m": 0.1,
+      "ratio": 3,
+      "fine_spacing_m": 0.03333333333333333,
+      "working_extent_m": [
+        22,
+        22,
+        22
+      ],
+      "pad_cells_per_face": 18,
+      "total_subgrid_cells_xyz": [
+        696,
+        696,
+        696
+      ],
+      "main_arrays_GiB": 1.8863377645611763,
+      "subgrid_fields_ID_only_GiB": 22.705494292080402,
+      "combined_lower_bound_GiB": 24.59183205664158,
+      "unrefined_rock_cells_per_wavelength": 5.878182077049692,
+      "fine_wet_cells_per_wavelength": 11.813365373080531,
+      "excluded": [
+        "subgrid PML histories",
+        "precursor device histories and interpolation/filter buffers",
+        "coefficient tables",
+        "CUDA context/compiler overhead"
+      ],
+      "placement_validated": false
+    },
+    {
+      "label": "cover_only_coarse_rock",
+      "main_spacing_m": 0.1,
+      "ratio": 3,
+      "fine_spacing_m": 0.03333333333333333,
+      "working_extent_m": [
+        20,
+        20,
+        3
+      ],
+      "pad_cells_per_face": 18,
+      "total_subgrid_cells_xyz": [
+        636,
+        636,
+        126
+      ],
+      "main_arrays_GiB": 1.8863377645611763,
+      "subgrid_fields_ID_only_GiB": 3.4555343315005302,
+      "combined_lower_bound_GiB": 5.3418720960617065,
+      "unrefined_rock_cells_per_wavelength": 5.878182077049692,
+      "fine_wet_cells_per_wavelength": 11.813365373080531,
+      "excluded": [
+        "subgrid PML histories",
+        "precursor device histories and interpolation/filter buffers",
+        "coefficient tables",
+        "CUDA context/compiler overhead"
+      ],
+      "placement_validated": false
+    },
+    {
+      "label": "cover_only_resolved_rock",
+      "main_spacing_m": 0.05,
+      "ratio": 3,
+      "fine_spacing_m": 0.016666666666666666,
+      "working_extent_m": [
+        20,
+        20,
+        3
+      ],
+      "pad_cells_per_face": 18,
+      "total_subgrid_cells_xyz": [
+        1236,
+        1236,
+        216
+      ],
+      "main_arrays_GiB": 14.9838323071599,
+      "subgrid_fields_ID_only_GiB": 22.2654644921422,
+      "combined_lower_bound_GiB": 37.2492967993021,
+      "unrefined_rock_cells_per_wavelength": 11.756364154099384,
+      "fine_wet_cells_per_wavelength": 23.626730746161062,
+      "excluded": [
+        "subgrid PML histories",
+        "precursor device histories and interpolation/filter buffers",
+        "coefficient tables",
+        "CUDA context/compiler overhead"
+      ],
+      "placement_validated": false
+    }
+  ],
+  "checks": {
+    "default_padding18": true,
+    "deep_candidate_exceeds16GiB_before_extra_arrays": true,
+    "cover_only_coarse_rock_fails_sampling_screen": true
+  },
+  "scope": "Necessary storage bounds, not a complete HSG memory estimate or proof against all configurations. No placement/material-coupling accuracy certification.",
+  "next": "Do not run oversized full-depth candidates. Need a smaller explicitly scoped mechanism model or verified symmetry/equivalent-source reduction or larger GPU before full-depth production."
+}
