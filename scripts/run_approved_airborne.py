@@ -20,6 +20,21 @@ ROOT=Path(__file__).resolve().parents[1]
 def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def solver_code(source, run_id, device_id):
+    """Copy a hash-locked text input or reviewed standalone official API model."""
+    suffix=source.suffix
+    if suffix not in ('.in','.py'):raise ValueError('Unsupported input type')
+    name=run_id+suffix
+    prefix=("import hashlib,pathlib,runpy,sys; "
+            f"p=pathlib.Path({str(source)!r}); b=p.read_bytes(); "
+            f"assert hashlib.sha256(b).hexdigest()=={sha(source)!r}; "
+            f"pathlib.Path({name!r}).write_bytes(b); ")
+    if suffix=='.py':
+        return prefix+f"sys.argv=[{name!r}]; runpy.run_path({name!r},run_name='__main__')"
+    return prefix+(f"sys.argv=['gprMax',{name!r},'-gpu',{str(device_id)!r},'-gpu_precision','double']; "
+                   "runpy.run_module('gprMax',run_name='__main__')")
+
+
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--execute',action='store_true')
@@ -80,12 +95,7 @@ def main():
     with attempt.open('x',encoding='utf-8') as f:json.dump(preflight,f,indent=2)
     # Input is copied into the fresh supervised directory, so all official outputs
     # remain there. No shell interpretation, solver code edits, or private API.
-    code=("import hashlib,pathlib,runpy,sys; "
-          f"p=pathlib.Path({str(source)!r}); b=p.read_bytes(); "
-          f"assert hashlib.sha256(b).hexdigest()=={sha(source)!r}; "
-          f"pathlib.Path({(run_id+'.in')!r}).write_bytes(b); "
-          f"sys.argv=['gprMax',{(run_id+'.in')!r},'-gpu',{str(budget['device_id'])!r},'-gpu_precision','double']; "
-          "runpy.run_module('gprMax',run_name='__main__')")
+    code=solver_code(source,run_id,budget['device_id'])
     result=supervise([sys.executable,'-u','-c',code],run_dir,
         wall_s=budget['wall_minutes']*60,memory_bytes=budget['job_commit_GiB']*2**30,
         output_bytes=budget['output_GiB']*2**30,poll_s=.25)

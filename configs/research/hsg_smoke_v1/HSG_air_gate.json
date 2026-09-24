@@ -7,7 +7,7 @@
   "source_root_on_current_machine": "E:/gprMax-v.4.0.0/gprMax-v.4.0.0",
   "approved_to_simulate": true,
   "approved_run_ids": [
-    "HSG_reference"
+    "HSG_air"
   ],
   "approved_compute_budget": {
     "wall_minutes": 10,
@@ -57,18 +57,18 @@
   "simulation_authorization": "Explicit user 做吧 for small homogeneous CUDA HSG control pair, one attempt each, no retry.",
   "approved_execution_contract": {
     "packet_id": "V4-HSG-SMOKE-01",
-    "input_path": "configs/research/hsg_smoke_v1/HSG_reference.py",
-    "input_sha256": "9907a7993b310c97c4754cf24134ca2db41b2bd837e1b5084b53e24b8408de30",
+    "input_path": "configs/research/hsg_smoke_v1/HSG_air.py",
+    "input_sha256": "0078a57fb758cd663ee01abc7dd3c87ddcccd56f8953a501eecdf6425593e30b",
     "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
     "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
     "launcher_sha256": "d53cc7abcadf9c8838880725ebe15001ce517ce6cd9c110dce63a5971eaf121a",
     "supervisor_sha256": "18d34cf77e59588cbd054a184a1f1c35ec3c14dd5943e951ac7f48e680b7b747",
-    "attempt_record": "artifacts/research_checks/2026-09-25_HSG_reference_attempt.json",
-    "run_directory": "artifacts/simulations/2026-09-25_HSG_reference",
+    "attempt_record": "artifacts/research_checks/2026-09-25_HSG_air_attempt.json",
+    "run_directory": "artifacts/simulations/2026-09-25_HSG_air",
     "continuation": "Reference then homogeneous HSG; archive outputs and compare. No geological run or automatic retry.",
     "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
     "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-    "run_id": "HSG_reference"
+    "run_id": "HSG_air"
   },
   "authorization_history": [
     {
