@@ -2,7 +2,7 @@
 
 更新：2026-09-24。实际项目仓库为 `E:/automation_djh/automation_repo`，远端 `CYberkra/automation`。以本页当前状态为准；历史报告中的旧“下一步”不代表待办。
 
-**当前正在执行垂向4cm配对验证：AIR_dz4空气组已启动，随后仅在成功后启动M01_dz4介质组。** [设计与资源预算](docs/research/2026-09-24_dz4_design.md)。两次顺序GPU求解、每次30分钟/36GiB主机提交内存上限，无CPU回退、无自动重试。运行状态看各自artifacts/simulations目录的supervision.json（最终）或live_status.json（快照），不要重启已消耗attempt。
+**当前正在执行垂向4cm配对验证：AIR_dz4空气组已完成（669.859秒，10项原始检查通过），M01_dz4介质组正在运行。** [设计与资源预算](docs/research/2026-09-24_dz4_design.md)。两次顺序GPU求解、每次30分钟/36GiB主机提交内存上限，无CPU回退、无自动重试。运行状态看各自artifacts/simulations目录的supervision.json（最终）或live_status.json（快照），不要重启已消耗attempt。
 
 完成后使用官方SFCW与已存独立半空间参考比较幅度/相位误差，归档后再决定后续模型。旧5cm结果为0.22308dB、5.38594°；本轮预测不是结果。尚未启动真实地质模型。
 

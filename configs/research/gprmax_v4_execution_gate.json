@@ -7,7 +7,7 @@
   "source_root_on_current_machine": "E:/gprMax-v.4.0.0/gprMax-v.4.0.0",
   "approved_to_simulate": true,
   "approved_run_ids": [
-    "AIR_dz4"
+    "M01_dz4"
   ],
   "approved_compute_budget": {
     "wall_minutes": 30,
@@ -57,18 +57,18 @@
   "simulation_authorization": "User authorized autonomous design and GPU simulation; latest explicit continue next step authorizes bounded dz4 air/dielectric pair. Sequential, one attempt each, no retry.",
   "approved_execution_contract": {
     "packet_id": "V4-DZ4-PAIR-01",
-    "input_path": "configs/research/airborne_dz4_v1/AIR_dz4.in",
-    "input_sha256": "475ef7f1f0f63a854e7099d97f3967cb32a9feb0557bd8c55a8ed174c75db45f",
+    "input_path": "configs/research/airborne_dz4_v1/M01_dz4.in",
+    "input_sha256": "02c2faaae2577bac889dc1d4fe74ba4c4315b2f4801a660d3a0a9bdce9d2b4ba",
     "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
     "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
     "launcher_sha256": "31ba9260d2d18c2e636832c375041b2a62d45804a1653a9b0973433dd72926b5",
     "supervisor_sha256": "18d34cf77e59588cbd054a184a1f1c35ec3c14dd5943e951ac7f48e680b7b747",
-    "attempt_record": "artifacts/research_checks/2026-09-24_AIR_dz4_attempt.json",
-    "run_directory": "artifacts/simulations/2026-09-24_AIR_dz4",
+    "attempt_record": "artifacts/research_checks/2026-09-24_M01_dz4_attempt.json",
+    "run_directory": "artifacts/simulations/2026-09-24_M01_dz4",
     "continuation": "AIR then M01, each separately preflighted. Stop on failure, no retries. Official SFCW and saved independent halfspace reference comparison.",
     "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
     "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-    "run_id": "AIR_dz4"
+    "run_id": "M01_dz4"
   },
   "authorization_history": [
     {
@@ -115,7 +115,7 @@
   "execution_outcome": {
     "status": "running",
     "attempt_consumed": true,
-    "run_id": "AIR_dz4",
-    "final_status_path": "artifacts/simulations/2026-09-24_AIR_dz4/supervision.json"
+    "run_id": "M01_dz4",
+    "final_status_path": "artifacts/simulations/2026-09-24_M01_dz4/supervision.json"
   }
 }

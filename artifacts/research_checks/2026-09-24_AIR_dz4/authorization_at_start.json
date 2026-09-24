@@ -1,0 +1,119 @@
+{
+  "schema": "gprmax-execution-decision/1",
+  "updated_date": "2026-09-24",
+  "authority": "explicit user instruction in current session",
+  "user_instruction": "然后你若需要gprmax仿真的话，和我敲定好再开始仿真。",
+  "target_solver": "gprMax 4.0.0",
+  "source_root_on_current_machine": "E:/gprMax-v.4.0.0/gprMax-v.4.0.0",
+  "approved_to_simulate": true,
+  "approved_run_ids": [
+    "AIR_dz4"
+  ],
+  "approved_compute_budget": {
+    "wall_minutes": 30,
+    "job_commit_GiB": 36,
+    "minimum_available_RAM_GiB": 36,
+    "output_GiB": 1,
+    "threads": 8,
+    "backend": "CUDA",
+    "precision": "double",
+    "retries": 0,
+    "max_fdtd_runs": 1,
+    "official_postprocess_wall_minutes": 10,
+    "device_id": 0,
+    "minimum_available_VRAM_GiB": 13,
+    "VRAM_limit_semantics": "Preflight availability threshold; not a hard device-memory quota"
+  },
+  "source_version_is_not_runtime_verification": true,
+  "permitted_preparation": [
+    "read official docs and local source",
+    "archive provenance",
+    "design and write reviewable inputs",
+    "static source/input checks",
+    "constructed-array analysis",
+    "Git commit and sync",
+    "build/install isolated V4 from source copy and import-only runtime verification"
+  ],
+  "requires_agreement_before_execution": [
+    "FDTD solver run",
+    "official examples/tests that invoke a solve",
+    "CPU/GPU benchmark solve",
+    "study or parameter sweep",
+    "automatic retry or expanded simulation batch outside agreed scope"
+  ],
+  "discussion_packet_required": [
+    "physical question and allowed claim",
+    "exact version/build and input hashes",
+    "cases and run count",
+    "source waveform and timing",
+    "geometry/grid/PML/time window",
+    "CPU/GPU/precision/resources and stopping rules",
+    "reference and evaluation plan",
+    "expected outputs and storage",
+    "explicit agreed execution scope"
+  ],
+  "note": "Current concrete contract implements delegated design authority; consumed attempts must not be rerun.",
+  "build_authorization": "用户明确：许可你构建。仅构建/安装/导入核验，不是仿真批准。",
+  "simulation_authorization": "User authorized autonomous design and GPU simulation; latest explicit continue next step authorizes bounded dz4 air/dielectric pair. Sequential, one attempt each, no retry.",
+  "approved_execution_contract": {
+    "packet_id": "V4-DZ4-PAIR-01",
+    "input_path": "configs/research/airborne_dz4_v1/AIR_dz4.in",
+    "input_sha256": "475ef7f1f0f63a854e7099d97f3967cb32a9feb0557bd8c55a8ed174c75db45f",
+    "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
+    "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
+    "launcher_sha256": "31ba9260d2d18c2e636832c375041b2a62d45804a1653a9b0973433dd72926b5",
+    "supervisor_sha256": "18d34cf77e59588cbd054a184a1f1c35ec3c14dd5943e951ac7f48e680b7b747",
+    "attempt_record": "artifacts/research_checks/2026-09-24_AIR_dz4_attempt.json",
+    "run_directory": "artifacts/simulations/2026-09-24_AIR_dz4",
+    "continuation": "AIR then M01, each separately preflighted. Stop on failure, no retries. Official SFCW and saved independent halfspace reference comparison.",
+    "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
+    "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
+    "run_id": "AIR_dz4"
+  },
+  "authorization_history": [
+    {
+      "record": "artifacts/research_checks/2026-09-24_M00_x_3d_r1/authorization_at_start.json",
+      "outcome": "Stopped by user-approved redesign; no complete HDF5"
+    },
+    {
+      "record": "artifacts/research_checks/2026-09-24_M00_x_3d_r2/authorization_at_start.json",
+      "outcome": "CPU attempt stopped for explicit GPU-only requirement"
+    },
+    {
+      "record": "artifacts/research_checks/2026-09-24_M00_x_3d_gpu_r1/authorization_at_start.json",
+      "outcome": "Completed original GPU calibration"
+    },
+    {
+      "record": "artifacts/research_checks/2026-09-24_T800/authorization_at_start.json",
+      "outcome": "Completed T800 control; canonical archive pending same turn"
+    },
+    {
+      "record": "artifacts/research_checks/2026-09-24_PML40/authorization_at_start.json",
+      "outcome": "Completed and archived; tail analysis complete"
+    },
+    {
+      "record": "artifacts/research_checks/2026-09-24_M01_T800/authorization_at_start.json",
+      "outcome": "Completed; raw checks pass; physical validation unresolved"
+    },
+    {
+      "record": "artifacts/research_checks/2026-09-24_PEC_T800/authorization_at_start.json",
+      "outcome": "Completed; PEC comparison and PML hypothesis archived"
+    },
+    {
+      "record": "artifacts/research_checks/2026-09-24_M01_fixedPML/authorization_at_start.json",
+      "outcome": "Completed and archived"
+    }
+  ],
+  "execution_policy": {
+    "required_solver_backend": "cuda",
+    "allow_cpu_solver_fallback": false,
+    "user_authorized_gpu_configuration_and_runs": true,
+    "runtime_readiness": "cuda_float64_kernel_verified",
+    "postprocessing": "Prefer official CPU implementation; migrate only if substantial speedup is demonstrated",
+    "user_clarification": "仿真gpu跑，后处理如果正常就是cpu那也没必要改，除非gpu能加速很多"
+  },
+  "execution_outcome": {
+    "status": "ready_not_started",
+    "attempt_consumed": false
+  }
+}
