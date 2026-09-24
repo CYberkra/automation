@@ -80,6 +80,16 @@
       "solver_executed": false,
       "runtime_ready": false,
       "superseded_note": "Keep frozen manifest/input hashes as historical proposal; current user geometry overrides it. Do not execute."
+    },
+    {
+      "id": "airborne_3d_static_budget",
+      "status": "complete_static_estimate_not_solver_run",
+      "record": "artifacts/research_checks/2026-09-24_airborne_3d_budget.json",
+      "report": "docs/research/2026-09-24_airborne_3d_budget.md",
+      "script": "scripts/budget_airborne_3d.py",
+      "rows": 9,
+      "solver_executed": false,
+      "runtime_measured": false
     }
   ],
   "default_array_verification": {
