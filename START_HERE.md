@@ -4,7 +4,7 @@
 
 ## 当前状态（优先于下方历史记录）
 
-**横向细化GPU批次正在运行。** DEP_BG_YFINE背景组已成功完成并归档（1078.484秒）；DEP_20_YFINE目标组已自动启动，本次核验PID56788。会话68122，[句柄检查点](artifacts/research_checks/2026-09-25_deep_yfine_live/active_handle.json)。两组粗估约36分钟，每组墙钟上限30分钟，失败即停，不重启旧attempt。完成后归档并运行 `scripts/analyze_deep_controls.py --yfine --output <新目录>`。此批用dy=dz6.25mm检验横向/CFL影响，原ZFINE会话21056已终止。
+**YFINE两组已完成，无本批求解任务运行。** GPU共36分7秒；相对ZFINE，目标全带复数变化0.2103%、最大相位变化0.203°，耗时约2.49倍。原始输出已归档，分析复算一致。[结果及下一步](docs/research/2026-09-25_deep_yfine_results.md)。当前平层场景优先保留横向12.5mm，下一步预算垂向3.125mm配对；尚未构建或启动。旧会话68122与21056均已结束，不重启attempt。
 
 三网格CPU复核已完成42项处理机制与33项不匹配负控；旧默认和新结果复算一致。[最新报告](docs/research/2026-09-25_three_grid_mechanisms.md)。原[垂向细化](docs/research/2026-09-25_deep_zfine_results.md)方向有效，但20m全频带物理真值仍未认证；禁止物理/训练标签，不将模板当真实航线B扫。
 
@@ -79,7 +79,7 @@
 
 早期[远端克隆验证](artifacts/research_checks/2026-09-24_remote_handoff_verification.json)对应提交251986e，只证明当时86文件与136项数组检查，不是当前全部产物的新机认证。
 
-可交给新会话的任务：先核验会话68122或当前进程及supervision.json；不要依据快照或旧报告重启。YFINE背景已完成并归档，批次已自动进入目标组。两组终态完成后，按检查点指引归档原始输出、输入与hash，再运行 `scripts/analyze_deep_controls.py --yfine --output <新目录>` 并复算。比较YFINE/ZFINE的横向及CFL变化，再决定精度/资源折中；当前尚不批准物理真值或训练标签。继续保留实测数据，不新增仿真批次直到这一对结果分析完成。
+可交给新会话的任务：先读本页及YFINE结果。两组已归档并复算，不重复运行旧attempt。下一步依据实测资源预算dy12.5mm、dz3.125mm配对，冻结输入与上限后才启动新批次；同时保留共同层界/目标/无目标负控的处理评价。物理真值与训练标签仍关闭，保留实测数据不参与开发。
 
 ## 记录索引
 

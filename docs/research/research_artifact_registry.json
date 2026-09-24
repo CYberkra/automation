@@ -554,7 +554,7 @@
     },
     {
       "id": "deep_yfine_live",
-      "status": "running_snapshot_verify_handle",
+      "status": "completed_historical_handle",
       "directory": "artifacts/research_checks/2026-09-25_deep_yfine_live",
       "tracked": true,
       "solver_executed": true
@@ -568,7 +568,7 @@
     },
     {
       "id": "DEP_BG_YFINE",
-      "status": "completed_background_target_pending",
+      "status": "completed_paired_control",
       "directory": "artifacts/research_checks/2026-09-25_DEP_BG_YFINE",
       "tracked": true,
       "solver_executed": true
@@ -577,6 +577,20 @@
       "id": "deep_background_reference",
       "status": "completed_independent_background_only",
       "directory": "artifacts/research_checks/2026-09-25_deep_background_reference",
+      "tracked": true,
+      "solver_executed": false
+    },
+    {
+      "id": "DEP_20_YFINE",
+      "status": "completed_lateral_control_reference_unresolved",
+      "directory": "artifacts/research_checks/2026-09-25_DEP_20_YFINE",
+      "tracked": true,
+      "solver_executed": true
+    },
+    {
+      "id": "deep_yfine_analysis",
+      "status": "completed_lateral_control_reference_unresolved",
+      "directory": "artifacts/research_checks/2026-09-25_deep_yfine_analysis",
       "tracked": true,
       "solver_executed": false
     }
@@ -599,6 +613,6 @@
     "verify actual instrument frequency vector and CSV processing;0.3MHz step confirmed; reserved field data excluded from development",
     "confirm target depth meaning and independently constrain site cover thickness/moisture/material parameters",
     "HSG ratio controls support coupling lag (r-1)/(2r) main dt; resolve intended source/coupling/output timing before heterogeneous local model. This is a historical 3D subtask; current live 2D batch is listed separately.",
-    "YFINE batch running session68122, background completed and archived; target running PID56788 snapshot. Verify handle, archive/analyze --yfine after completion; no new batch before results. Three-grid constructed mechanisms complete; physical labels unresolved."
+    "YFINE pair completed and replayed: lateral refinement changes target complex L2 0.2103%, max phase0.203deg at2.49x runtime. Next budget dy12.5/dz3.125mm control; no active solver and no physical/training labels."
   ]
 }
