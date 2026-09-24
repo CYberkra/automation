@@ -1,0 +1,85 @@
+{
+  "checks": {
+    "AIR_grid_dtype_position_source_timing_finite": true,
+    "PEC_grid_dtype_position_source_timing_finite": true
+  },
+  "metadata": {
+    "AIR": {
+      "dt": 5.896635841874211e-11,
+      "samples": 13569,
+      "source_units": "A",
+      "source_quantity": "electric_current",
+      "source_spatial_scale": 0.025,
+      "sha256": "bc84198dd50db9c2afa87b1d93eda164d62e374a442e2a5fc4775e8a85a0edd0"
+    },
+    "PEC": {
+      "dt": 5.896635841874211e-11,
+      "samples": 13569,
+      "source_units": "A",
+      "source_quantity": "electric_current",
+      "source_spatial_scale": 0.025,
+      "sha256": "064ef0b9d7c78f71aeba407b7c3af3d395e6db3f16ee6953a4cd40761cde0d27"
+    }
+  },
+  "taper_ns": {
+    "0": {
+      "air": {
+        "max_relative_complex_error": 0.044406034021113226,
+        "median_relative_complex_error": 0.019056641094057428,
+        "max_abs_amplitude_error_dB": 0.3789541414766888,
+        "max_abs_phase_error_deg": 2.4594129019847792
+      },
+      "reflection": {
+        "max_relative_complex_error": 0.15345908782015102,
+        "median_relative_complex_error": 0.07078019983894636,
+        "max_abs_amplitude_error_dB": 1.356688329337591,
+        "max_abs_phase_error_deg": 8.505469577401124
+      }
+    },
+    "200": {
+      "air": {
+        "max_relative_complex_error": 0.0007601900525493375,
+        "median_relative_complex_error": 0.00015470323946884364,
+        "max_abs_amplitude_error_dB": 0.003729606117572907,
+        "max_abs_phase_error_deg": 0.03593079690217813
+      },
+      "reflection": {
+        "max_relative_complex_error": 0.01756960143225276,
+        "median_relative_complex_error": 0.0030635785160811166,
+        "max_abs_amplitude_error_dB": 0.0036406874938957655,
+        "max_abs_phase_error_deg": 1.006179425474244
+      }
+    },
+    "400": {
+      "air": {
+        "max_relative_complex_error": 0.0007601898057992178,
+        "median_relative_complex_error": 0.00015470573360319806,
+        "max_abs_amplitude_error_dB": 0.0037296051450960137,
+        "max_abs_phase_error_deg": 0.03593078416687444
+      },
+      "reflection": {
+        "max_relative_complex_error": 0.017569602408327622,
+        "median_relative_complex_error": 0.0030635674387600557,
+        "max_abs_amplitude_error_dB": 0.003640698551365149,
+        "max_abs_phase_error_deg": 1.006179479023725
+      }
+    }
+  },
+  "taper_200_vs_400": {
+    "air": {
+      "max_relative_complex_error": 1.0056314115242586e-06,
+      "median_relative_complex_error": 4.2044689385354005e-09,
+      "max_abs_amplitude_error_dB": 8.260571015294663e-06,
+      "max_abs_phase_error_deg": 5.209755374550189e-05
+    },
+    "reflection": {
+      "max_relative_complex_error": 4.75268279913015e-06,
+      "median_relative_complex_error": 2.058818979743955e-08,
+      "max_abs_amplitude_error_dB": 3.681304198170519e-05,
+      "max_abs_phase_error_deg": 0.00025695199244364343
+    }
+  },
+  "physical_acceptance_threshold": null,
+  "solver_invoked": false,
+  "reference": "Engineering convention: -omega*mu0/4 * Hankel2(0,k*r); PEC reflected image has opposite sign. No fitted factor or delay."
+}

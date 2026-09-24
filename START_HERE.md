@@ -14,6 +14,8 @@
 
 **二维/三维分工已评估（最新）。** 二维用于批量初筛，少量三维验证真实几何。YZ二维可保留15m高度与Y向1.3m基线，但失去沿航线变化；XZ二维可做沿航线剖面，但不能保留横向基线。下一步优先准备YZ/TMx空气—平层校验，保持GPU与官方SFCW；HSG内部源时钟继续作为三维专项，当前无新增求解。[依据、预算与限制](docs/research/2026-09-25_dimension_strategy.md)。
 
+**二维CUDA校准完成（最新）。** 保留15m高度和1.3m横向基线，空气/PEC两组共25.343秒；解析参考下空气最大幅度差0.00373dB、反射相位差1.00618°，色散近似预测1.01410°，复算一致。下一步独立二维分层参考与有损覆盖层—砂岩设计，当前无运行任务。[结果](docs/research/2026-09-25_yz2d_results.md)。
+
 ## 已完成的仿真与参考链
 
 - [垂向4cm配对](docs/research/2026-09-24_dz4_results.md)：资源预算、两次GPU求解、独立参考对比和复算完成；无需重复。
@@ -24,7 +26,7 @@
 - [固定PML干预](docs/research/2026-09-24_fixedPML_results.md)：0–80ns差分从0.0482V/m变为逐样本零，支持PML自动参数差异机制；既定渐消后带内新旧最大变化约0.00037%。这一项已完成。
 - [独立半空间参考](docs/research/2026-09-24_halfspace_reference_results.md)：empymod1.10.6官方全波内核加本项目分段积分；只做校验，不替代官方SFCW。2.6导入失败和默认积分失败保留。
 
-所有已运行attempt均已消耗，不重复执行。原CPU r1/r2是主动停止的历史试跑，无完整结果；历史“正在运行”文字不可用来重启它们。[当前执行记录](configs/research/gprmax_v4_execution_gate.json)保持最后HSG_ratio5算例已完成；历史及本次所有attempt均已消耗。
+所有已运行attempt均已消耗，不重复执行。原CPU r1/r2是主动停止的历史试跑，无完整结果；历史“正在运行”文字不可用来重启它们。[当前执行记录](configs/research/gprmax_v4_execution_gate.json)保持最后YZ_PEC算例已完成；历史及本次所有attempt均已消耗。
 
 ## 已确认的项目事实
 

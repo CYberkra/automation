@@ -1,0 +1,78 @@
+
+=== Electromagnetic modelling software based on the Finite-Difference Time-Domain (FDTD) method 
+
+    www.gprmax.com   __  __
+     __ _ _ __  _ __|  \/  | __ ___  __
+    / _` | '_ \| '__| |\/| |/ _` \ \/ /
+   | (_| | |_) | |  | |  | | (_| |>  <
+    \__, | .__/|_|  |_|  |_|\__,_/_/\_\\
+    |___/|_|
+                     v4.0.0 (Caol Ila)
+
+ Copyright (C) 2015-2026: The University of Edinburgh, United Kingdom
+
+ gprMax is free software: you can redistribute it and/or modify it under the
+  terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+ gprMax is distributed in the hope that it will be useful, but WITHOUT ANY
+  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+  A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ You should have received a copy of the GNU General Public License along with
+  gprMax.  If not, see www.gnu.org/licenses.
+
+LAPTOP-83GRKUNE | unknown unknown | unknown x unknown (16 cores, 32 cores with Hyper-Threading) | 63.2 GiB | Windows 11 (64-bit)
+|--->OpenMP: 16 threads
+|--->CUDA:
+     |--->Device 0: NVIDIA GeForce RTX 4090 Laptop GPU | 16.0 GiB
+Constants/variables used/available for Python scripting: {c: 299792458.0, current_model_run: 1, e0: 8.8541878188e-12, inputfile: E:\automation_djh\automation_repo\artifacts\simulations\2026-09-25_YZ_AIR\YZ_AIR.in, m0: 1.25663706127e-06, number_model_runs: 1, z0: 376.7303134118051}
+
+Model title: YZ_AIR YZ TMx line-source calibration
+Spatial discretisation: 0.025 x 0.025 x 0.025m
+Requested domain mode: TM
+Domain size: 0.025 x 24 x 44m (1 x 960 x 1760 = 1.6896e+06 cells)
+Mode: 2D TMx
+Time step (at CFL limit): 5.89664e-11 secs
+Time window: 8e-07 secs (13569 iterations)
+Simulation will use 8 OpenMP threads
+PML thickness: x0=0, y0=40, z0=40, xmax=0, ymax=40, zmax=40
+Waveform impulse of type impulse with maximum amplitude scaling 1, frequency 1Hz created.
+Hertzian dipole with polarity x at 0m, 11.35m, 39m, using waveform impulse created.
+Receiver at 0m, 12.65m, 39m with output component(s) Ex created.
+PML formulation set to HORIPML
+global PML configuration CFS parameters: alpha (scaling: constant, scaling direction: forward, min: 0, max: 0), kappa (scaling: constant, scaling direction: forward, min: 1, max: 1), sigma (scaling: quartic, scaling direction: forward, min: 0, max: 0.21235349838321013) created.
+
+--- Model 1/1, input file: YZ_AIR.in ------------------------------------------
+
+
+Memory required (estimated): ~910.6 MB [main_grid] + ~65.0 MB overhead = 975.6 MB
+
+PML boundaries [main_grid]: {formulation: HORIPML, order: 1, thickness (cells): x0: 0, y0: 40, z0: 40, xmax: 0, ymax: 40, zmax: 40}
+
+Building PML boundaries [main_grid]:   0%|               | 0/4 [00:00<?, ?it/s]Building PML boundaries [main_grid]: 100%|®Ä®Ä®Ä®Ä®Ä®Ä| 4/4 [00:00<00:00, 910.77it/s]
+Building Yee cells [main_grid]:   0%|                    | 0/2 [00:00<?, ?it/s]Building Yee cells [main_grid]: 100%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä| 2/2 [00:00<00:00, 17.24it/s]Building Yee cells [main_grid]: 100%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä| 2/2 [00:00<00:00, 17.24it/s]
+
+Materials [main_grid]:
+    |            |         |       | sigma |      | sigma*  | Dielectric 
+ ID | Name       | Type    | eps_r | [S/m] | mu_r | [Ohm/m] | smoothable 
+----+------------+---------+-------+-------+------+---------+------------
+  0 | pec        | builtin | 1     | inf   | 1    | 0       | False      
+  1 | pmc        | builtin | 1     | 0     | 1    | inf     | False      
+  2 | free_space | builtin | 1     | 0     | 1    | 0       | True       
+
+Numerical dispersion analysis [main_grid] not carried out as impulse waveform used.
+Output directory: E:\automation_djh\automation_repo\artifacts\simulations\2026-09-25_YZ_AIR
+
+
+
+
+Model 1/1 solving on LAPTOP-83GRKUNE with CUDA backend using Device 0: NVIDIA GeForce RTX 4090 Laptop GPU
+|--->:   0%|                                         | 0/13569 [00:00<?, ?it/s]|--->:   1%|®á                             | 101/13569 [00:00<00:14, 902.52it/s]|--->:   1%|®Ö                             | 192/13569 [00:00<00:39, 338.82it/s]|--->:   3%|®Ç                             | 350/13569 [00:00<00:21, 624.08it/s]|--->:   4%|®Ä                             | 507/13569 [00:00<00:15, 853.00it/s]|--->:   5%|®Ä®Ñ                           | 718/13569 [00:00<00:11, 1154.68it/s]|--->:   7%|®Ä®Å                           | 902/13569 [00:00<00:09, 1301.86it/s]|--->:   8%|®Ä®Ä®á                         | 1085/13569 [00:01<00:08, 1440.42it/s]|--->:  10%|®Ä®Ä®É                         | 1296/13569 [00:01<00:07, 1608.52it/s]|--->:  11%|®Ä®Ä®Ä                         | 1487/13569 [00:01<00:07, 1683.42it/s]|--->:  13%|®Ä®Ä®Ä®Ñ                        | 1715/13569 [00:01<00:06, 1795.07it/s]|--->:  14%|®Ä®Ä®Ä®Å                        | 1916/13569 [00:01<00:06, 1840.28it/s]|--->:  16%|®Ä®Ä®Ä®Ä®Ö                       | 2135/13569 [00:01<00:05, 1910.66it/s]|--->:  17%|®Ä®Ä®Ä®Ä®Ç                       | 2357/13569 [00:01<00:05, 1971.11it/s]|--->:  19%|®Ä®Ä®Ä®Ä®Ä®Ü                      | 2574/13569 [00:01<00:05, 2016.16it/s]|--->:  21%|®Ä®Ä®Ä®Ä®Ä®Ç                      | 2812/13569 [00:01<00:05, 2115.62it/s]|--->:  22%|®Ä®Ä®Ä®Ä®Ä®Ä®Ü                     | 3035/13569 [00:01<00:04, 2147.06it/s]|--->:  24%|®Ä®Ä®Ä®Ä®Ä®Ä®É                     | 3260/13569 [00:02<00:04, 2156.72it/s]|--->:  26%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®á                    | 3477/13569 [00:02<00:04, 2156.74it/s]|--->:  27%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®É                    | 3725/13569 [00:02<00:04, 2241.14it/s]|--->:  29%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®á                   | 3974/13569 [00:02<00:04, 2241.28it/s]|--->:  31%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®É                   | 4234/13569 [00:02<00:03, 2342.97it/s]|--->:  33%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ü                  | 4497/13569 [00:02<00:03, 2384.69it/s]|--->:  35%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ç                  | 4736/13569 [00:02<00:03, 2366.95it/s]|--->:  37%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ü                 | 5009/13569 [00:02<00:03, 2416.00it/s]|--->:  39%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ç                 | 5266/13569 [00:02<00:03, 2395.61it/s]|--->:  41%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ö                | 5527/13569 [00:03<00:03, 2423.97it/s]|--->:  43%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Å                | 5779/13569 [00:03<00:03, 2435.17it/s]|--->:  44%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ö               | 6025/13569 [00:03<00:03, 2440.25it/s]|--->:  46%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Å               | 6271/13569 [00:03<00:03, 2431.26it/s]|--->:  48%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ö              | 6518/13569 [00:03<00:02, 2431.44it/s]|--->:  50%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Å              | 6778/13569 [00:03<00:02, 2421.15it/s]|--->:  52%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ñ             | 7031/13569 [00:03<00:02, 2405.07it/s]|--->:  54%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä             | 7272/13569 [00:03<00:02, 2392.12it/s]|--->:  55%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ñ            | 7530/13569 [00:03<00:02, 2445.70it/s]|--->:  57%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä            | 7777/13569 [00:03<00:02, 2439.76it/s]|--->:  59%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ñ           | 8022/13569 [00:04<00:02, 2430.52it/s]|--->:  61%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä           | 8267/13569 [00:04<00:02, 2434.22it/s]|--->:  63%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ñ          | 8535/13569 [00:04<00:02, 2461.07it/s]|--->:  65%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä          | 8782/13569 [00:04<00:01, 2456.66it/s]|--->:  67%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®É         | 9028/13569 [00:04<00:01, 2444.74it/s]|--->:  68%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®á        | 9273/13569 [00:04<00:01, 2436.18it/s]|--->:  70%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®É        | 9531/13569 [00:04<00:01, 2428.47it/s]|--->:  72%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®á       | 9798/13569 [00:04<00:01, 2446.90it/s]|--->:  74%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Å       | 10043/13569 [00:04<00:01, 2408.93it/s]|--->:  76%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ñ      | 10306/13569 [00:04<00:01, 2430.54it/s]|--->:  78%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä      | 10562/13569 [00:05<00:01, 2467.89it/s]|--->:  80%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ñ     | 10809/13569 [00:05<00:01, 2431.61it/s]|--->:  81%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä     | 11058/13569 [00:05<00:01, 2431.78it/s]|--->:  83%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ö    | 11305/13569 [00:05<00:00, 2436.11it/s]|--->:  85%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Å    | 11551/13569 [00:05<00:00, 2440.41it/s]|--->:  87%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ö   | 11802/13569 [00:05<00:00, 2447.95it/s]|--->:  89%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Å   | 12047/13569 [00:05<00:00, 2422.86it/s]|--->:  91%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ö  | 12306/13569 [00:05<00:00, 2436.37it/s]|--->:  92%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Å  | 12550/13569 [00:05<00:00, 2376.98it/s]|--->:  95%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ñ | 12825/13569 [00:06<00:00, 2482.52it/s]|--->:  96%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä | 13074/13569 [00:06<00:00, 2434.07it/s]|--->:  98%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ñ| 13322/13569 [00:06<00:00, 2392.55it/s]|--->: 100%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä| 13569/13569 [00:06<00:00, 2148.51it/s]
+
+Written output file: YZ_AIR.h5
+
+Memory used (estimated): ~407.5 MB host + ~1.6 GB device
+Time taken: 6.3464 seconds
+
+=== Simulation completed in 14.8537 seconds ====================================
+

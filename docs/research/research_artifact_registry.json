@@ -348,6 +348,27 @@
       "directory": "artifacts/research_checks/2026-09-25_dimension_strategy",
       "tracked": true,
       "solver_executed": false
+    },
+    {
+      "id": "YZ_AIR",
+      "status": "completed_2d_calibration",
+      "directory": "artifacts/research_checks/2026-09-25_YZ_AIR",
+      "tracked": true,
+      "solver_executed": true
+    },
+    {
+      "id": "YZ_PEC",
+      "status": "completed_2d_calibration",
+      "directory": "artifacts/research_checks/2026-09-25_YZ_PEC",
+      "tracked": true,
+      "solver_executed": true
+    },
+    {
+      "id": "yz2d_analysis",
+      "status": "completed_2d_calibration",
+      "directory": "artifacts/research_checks/2026-09-25_yz2d_analysis",
+      "tracked": true,
+      "solver_executed": false
     }
   ],
   "default_array_verification": {
@@ -368,6 +389,6 @@
     "verify actual instrument frequency vector and CSV processing;0.3MHz step confirmed; reserved field data excluded from development",
     "confirm target depth meaning and independently constrain site cover thickness/moisture/material parameters",
     "HSG ratio controls support coupling lag (r-1)/(2r) main dt; resolve intended source/coupling/output timing before heterogeneous local model. No active jobs; full20m memory unresolved.",
-    "Prepare YZ/TMx CUDA air/layer controls with official SFCW and 2D line-source validation; retain 3D checks of finite targets and transverse-baseline flight geometry."
+    "2D air/PEC CUDA calibration complete. Next independent 2D layered line-source reference and lossy cover/sandstone design; retain 3D validation. No active jobs."
   ]
 }
