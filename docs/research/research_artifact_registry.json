@@ -495,6 +495,20 @@
       "directory": "artifacts/research_checks/2026-09-25_deep_eligibility",
       "tracked": true,
       "solver_executed": false
+    },
+    {
+      "id": "fdtd_template_mechanisms",
+      "status": "completed_constructed_mechanism_only",
+      "directory": "artifacts/research_checks/2026-09-25_fdtd_template_mechanisms",
+      "tracked": true,
+      "solver_executed": false
+    },
+    {
+      "id": "deep_zfine_live",
+      "status": "running_snapshot_verify_handle",
+      "directory": "artifacts/research_checks/2026-09-25_deep_zfine_live",
+      "tracked": true,
+      "solver_executed": true
     }
   ],
   "default_array_verification": {
@@ -515,6 +529,6 @@
     "verify actual instrument frequency vector and CSV processing;0.3MHz step confirmed; reserved field data excluded from development",
     "confirm target depth meaning and independently constrain site cover thickness/moisture/material parameters",
     "HSG ratio controls support coupling lag (r-1)/(2r) main dt; resolve intended source/coupling/output timing before heterogeneous local model. No active jobs; full20m memory unresolved.",
-    "Eligibility guarded: deep phase unresolved. Next prepare dy12.5mm/dz6.25mm paired controls; budget is not execution or convergence evidence. Mechanism studies must keep physical labels unavailable. No active jobs."
+    "ZFINE GPU batch running: resume exec session21056, verify live process/supervision before decisions. Archive and compare when both finish. Template mechanism tests complete, physical labels remain unavailable."
   ]
 }

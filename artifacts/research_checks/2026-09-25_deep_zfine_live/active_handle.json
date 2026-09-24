@@ -1,0 +1,21 @@
+{
+  "recorded_utc": "2026-09-24T17:16:21.081886+00:00",
+  "exec_session_id": 21056,
+  "batch_order": [
+    "DEP_BG_ZFINE",
+    "DEP_20_ZFINE"
+  ],
+  "observed_current_case": "DEP_BG_ZFINE",
+  "observed_root_pid": 12844,
+  "observed_status": {
+    "root_pid": 12844,
+    "wall_s": 230.78100000019185,
+    "wall_cap_s": 900,
+    "peak_job_commit_bytes": 8713101312,
+    "observed_output_bytes": 187012,
+    "state": "running",
+    "note": "Snapshot only; supervision.json is final."
+  },
+  "rule": "Historical checkpoint, not current liveness evidence. First poll exec session 21056 or inspect current process plus supervision.json. Never restart an attempt because a poll timed out. Batch automatically advances to target on background success; failure stops it.",
+  "next_after_completion": "Archive both raw directories plus frozen gates and file hashes, run analyze_deep_controls.py --zfine --output NEW_DIRECTORY, replay and update status."
+}

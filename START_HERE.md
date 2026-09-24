@@ -26,6 +26,8 @@
 
 **深部参考资格与精度预算已落盘（最新）。** 实波形固定窗粗细差28.27%，仍不得生成物理/训练标签；已有评价函数对未收敛参考的自匹配也返回不可用。候选横向12.5mm/垂向6.25mm主要数组约2.75GiB、单次粗估386秒，下一步准备该方向性目标/背景验证；尚未执行。当前无任务。[档案与限制](docs/research/2026-09-25_deep_eligibility.md)。
 
+**当前有GPU任务运行（最新状态，覆盖旧“无任务”文字）。** 垂向6.25mm目标/背景批次已启动，exec会话21056；本次检查背景组Python PID12844仍存在，成功后自动进入目标组，不重启已消耗attempt。先读[句柄检查点](artifacts/research_checks/2026-09-25_deep_zfine_live/active_handle.json)，再核验实时进程/监督终态。分析器已支持--zfine，默认旧结果复算一致。CPU模板机制28行已完成：共同目标可被均值/SVD完全删除，不能以能量降低替代保真。[机制报告](docs/research/2026-09-25_fdtd_template_mechanisms.md)。
+
 ## 已完成的仿真与参考链
 
 - [垂向4cm配对](docs/research/2026-09-24_dz4_results.md)：资源预算、两次GPU求解、独立参考对比和复算完成；无需重复。
@@ -36,7 +38,7 @@
 - [固定PML干预](docs/research/2026-09-24_fixedPML_results.md)：0–80ns差分从0.0482V/m变为逐样本零，支持PML自动参数差异机制；既定渐消后带内新旧最大变化约0.00037%。这一项已完成。
 - [独立半空间参考](docs/research/2026-09-24_halfspace_reference_results.md)：empymod1.10.6官方全波内核加本项目分段积分；只做校验，不替代官方SFCW。2.6导入失败和默认积分失败保留。
 
-所有已运行attempt均已消耗，不重复执行。原CPU r1/r2是主动停止的历史试跑，无完整结果；历史“正在运行”文字不可用来重启它们。[当前执行记录](configs/research/gprmax_v4_execution_gate.json)保持最后DEP_20_FINE算例已完成；历史及本次所有attempt均已消耗。
+所有已运行attempt均已消耗，不重复执行。原CPU r1/r2是主动停止的历史试跑，无完整结果；历史“正在运行”文字不可用来重启它们。[当前执行记录](configs/research/gprmax_v4_execution_gate.json)记录当前ZFINE批次；历史DEP_20_FINE已完成；历史及本次所有attempt均已消耗。
 
 ## 已确认的项目事实
 
