@@ -1,0 +1,16 @@
+{
+  "sigma_max_air": 0.21235349838321013,
+  "literal": "0.21235349838321013",
+  "z0": 376.7303134118051,
+  "checks": {
+    "alpha_E": true,
+    "alpha_H": true,
+    "kappa_E": true,
+    "kappa_H": true,
+    "sigma_E": true,
+    "sigma_H": true
+  },
+  "solver_invoked": false,
+  "scope": "21-sample scratch CFS profiles only, temporary constants/dtype namespace; does not instantiate SimulationConfig or FDTDGrid",
+  "reuse_air_reason": "Air er=mr=1 on all six faces and dx=dy=dz=.05; fixed numeric literal exactly equals automatic sigma and all six E/H profile arrays. Same dt, geometry, PML order, and thickness. Existing T800 is the matched air reference without another FDTD run."
+}
