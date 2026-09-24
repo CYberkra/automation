@@ -1,0 +1,120 @@
+{
+  "inputs": {
+    "fixed": {
+      "path": "artifacts\\research_checks\\2026-09-24_M01_fixedPML\\M01_fixedPML.h5",
+      "sha256": "66eb1aeed2646c349f99d1d68497df41d9ff5398990062541df1ddf8e7e64227"
+    },
+    "auto": {
+      "path": "artifacts\\research_checks\\2026-09-24_M01_T800\\M01_T800.h5",
+      "sha256": "2d10d62b21a82166d729673c4faf7adf2cb63614b8b4803bc37d2168c326cd02"
+    },
+    "air": {
+      "path": "artifacts\\research_checks\\2026-09-24_T800\\M00_x_3d.h5",
+      "sha256": "e92430f619ef648f3a120f6404a2f6bc81de7ed8a4c9556f1c632f44f568a29b"
+    }
+  },
+  "windows": [
+    {
+      "start_ns": 0,
+      "stop_ns": 80,
+      "fixed": {
+        "peak_abs_V_m": 0.0,
+        "rms_V_m": 0.0
+      },
+      "auto": {
+        "peak_abs_V_m": 0.048199943536705425,
+        "rms_V_m": 0.007789375806128767
+      },
+      "fixed_over_auto_peak": 0.0,
+      "reduction_dB": null,
+      "fixed_exact_zero": true
+    },
+    {
+      "start_ns": 80,
+      "stop_ns": 100,
+      "fixed": {
+        "peak_abs_V_m": 0.084492371684767,
+        "rms_V_m": 0.011387099583756652
+      },
+      "auto": {
+        "peak_abs_V_m": 0.08462206549062438,
+        "rms_V_m": 0.020329080230345742
+      },
+      "fixed_over_auto_peak": 0.9984673760312345,
+      "reduction_dB": 0.01332241438494797,
+      "fixed_exact_zero": false
+    },
+    {
+      "start_ns": 100,
+      "stop_ns": 140,
+      "fixed": {
+        "peak_abs_V_m": 0.3553079525559244,
+        "rms_V_m": 0.08704691504489703
+      },
+      "auto": {
+        "peak_abs_V_m": 0.3159677234262953,
+        "rms_V_m": 0.08670234555591982
+      },
+      "fixed_over_auto_peak": 1.124507113267871,
+      "reduction_dB": -1.0192441397320655,
+      "fixed_exact_zero": false
+    },
+    {
+      "start_ns": 140,
+      "stop_ns": 400,
+      "fixed": {
+        "peak_abs_V_m": 0.33495642238324946,
+        "rms_V_m": 0.09513218417270483
+      },
+      "auto": {
+        "peak_abs_V_m": 0.3359462975392944,
+        "rms_V_m": 0.0966710408116838
+      },
+      "fixed_over_auto_peak": 0.9970534720480759,
+      "reduction_dB": 0.02563099640100587,
+      "fixed_exact_zero": false
+    },
+    {
+      "start_ns": 400,
+      "stop_ns": 800,
+      "fixed": {
+        "peak_abs_V_m": 0.1145796705165869,
+        "rms_V_m": 0.043941739727389524
+      },
+      "auto": {
+        "peak_abs_V_m": 0.12025108148401928,
+        "rms_V_m": 0.045006638395768864
+      },
+      "fixed_over_auto_peak": 0.9528369233985968,
+      "reduction_dB": 0.4196284369379615,
+      "fixed_exact_zero": false
+    }
+  ],
+  "spectral_comparisons": [
+    {
+      "taper_ns": 0,
+      "max_difference_over_auto_peak": 0.03226464083282577,
+      "max_pointwise_relative_difference": 1.237530769403701,
+      "median_pointwise_relative_difference": 0.06653816237311297
+    },
+    {
+      "taper_ns": 200,
+      "max_difference_over_auto_peak": 3.4844709662736558e-06,
+      "max_pointwise_relative_difference": 3.718548046316799e-06,
+      "median_pointwise_relative_difference": 3.0665588533759976e-06
+    },
+    {
+      "taper_ns": 400,
+      "max_difference_over_auto_peak": 3.475552217737696e-06,
+      "max_pointwise_relative_difference": 3.7057674611902806e-06,
+      "median_pointwise_relative_difference": 3.069752099487536e-06
+    }
+  ],
+  "solver_invoked": false,
+  "convergence_certified": false,
+  "causal_intervention": "Explicit sigma on all six faces, not side-only. Identical air reference and source histories; unchanged physical materials and grid.",
+  "bandlimited_peak_ns": {
+    "fixed": 100.63206919494345,
+    "auto": 100.63206919494345
+  }
+}

@@ -211,6 +211,27 @@
       "directory": "artifacts/research_checks/2026-09-24_PEC_sources",
       "tracked": true,
       "solver_executed": false
+    },
+    {
+      "id": "M01_fixedPML",
+      "status": "completed_fixed_PML_intervention",
+      "directory": "artifacts/research_checks/2026-09-24_M01_fixedPML",
+      "tracked": true,
+      "solver_executed": true
+    },
+    {
+      "id": "fixedPML_analysis",
+      "status": "completed_fixed_PML_intervention",
+      "directory": "artifacts/research_checks/2026-09-24_fixedPML_analysis",
+      "tracked": true,
+      "solver_executed": false
+    },
+    {
+      "id": "fixedPML_sources",
+      "status": "completed_fixed_PML_intervention",
+      "directory": "artifacts/research_checks/2026-09-24_fixedPML_sources",
+      "tracked": true,
+      "solver_executed": false
     }
   ],
   "default_array_verification": {
@@ -228,13 +249,9 @@
     "needs_network_or_plotting": false
   },
   "remaining_work": [
-    "verify actual frequency vector and CSV processing; 0.3 MHz spacing is already user-confirmed",
-    "confirm precise target depth meaning",
-    "obtain full band-valid spectra and constrain cover thickness/moisture; targeted literature brief and hypothetical loss budgets completed",
-    "prepare M00/M01 reviewable simulation packet with compute limits",
-    "design representative 20m domain/material/time-window assumptions",
-    "Air tail/window/PML controls completed; transfer processing to geological scenarios only after late-arrival and mesh validation",
-    "Ideal-interface single trace completed; early out-of-band raw precursor unresolved. Validate independent interface reference and domain/grid sensitivity before geology or training.",
-    "PEC image comparison complete; fixed-PML air/dielectric paired control should isolate automatic side-PML material averaging before grid/domain expansion."
+    "verify actual instrument frequency vector and CSV processing;0.3MHz spacing already user-confirmed; reserved field data not for development",
+    "confirm precise target depth meaning and independently constrain site cover thickness/moisture/material parameters",
+    "validate dielectric-halfspace band response against an independent reference and address long-path numerical phase/grid accuracy within GPU resources",
+    "design representative20m domain/material/late-arrival assumptions only after calibration and resource budgeting; no automatic scan authorized by these completed attempts"
   ]
 }

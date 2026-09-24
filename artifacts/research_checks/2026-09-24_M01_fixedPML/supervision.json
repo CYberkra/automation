@@ -1,0 +1,18 @@
+{
+  "reason": "completed",
+  "exit_code": 0,
+  "wall_s": 473.6720000000205,
+  "peak_job_commit_bytes": 22430621696,
+  "observed_output_bytes": 440925,
+  "memory_cap_bytes": 34359738368,
+  "wall_cap_s": 1800,
+  "output_cap_bytes": 1073741824,
+  "memory_semantics": "Windows job committed memory, not RSS",
+  "output_semantics": "polled file bytes; overshoot possible",
+  "command": [
+    "E:\\automation_djh\\automation_repo\\artifacts\\local_checks\\gprmax_v4_gpu_env\\Scripts\\python.exe",
+    "-u",
+    "-c",
+    "import hashlib,pathlib,runpy,sys; p=pathlib.Path('E:\\\\automation_djh\\\\automation_repo\\\\configs\\\\research\\\\airborne_fixedPML_v1\\\\M01_fixedPML.in'); b=p.read_bytes(); assert hashlib.sha256(b).hexdigest()=='ccb6008edc3e38db1471fe833e57fc5bcb614efb0850d9a49afd2449d7a21e6a'; pathlib.Path('M01_fixedPML.in').write_bytes(b); sys.argv=['gprMax','M01_fixedPML.in','-gpu','0','-gpu_precision','double']; runpy.run_module('gprMax',run_name='__main__')"
+  ]
+}
