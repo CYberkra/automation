@@ -5,10 +5,8 @@
   "user_instruction": "然后你若需要gprmax仿真的话，和我敲定好再开始仿真。",
   "target_solver": "gprMax 4.0.0",
   "source_root_on_current_machine": "E:/gprMax-v.4.0.0/gprMax-v.4.0.0",
-  "approved_to_simulate": true,
-  "approved_run_ids": [
-    "M00_x_3d"
-  ],
+  "approved_to_simulate": false,
+  "approved_run_ids": [],
   "approved_compute_budget": {
     "wall_minutes": 60,
     "job_commit_GiB": 24,
@@ -51,7 +49,7 @@
   ],
   "note": "This is an auditable decision record, not a technical sandbox. Generic requests to continue research do not change this gate.",
   "build_authorization": "用户明确：许可你构建。仅构建/安装/导入核验，不是仿真批准。",
-  "simulation_authorization": "用户先允许仿真，随后明确：允许，你自行设计。已批准停止短试并将同模型重启上限设为60分钟；后续设计可主动推进并留档。",
+  "simulation_authorization": "用户明确：安装配置环境，我们一切都要gpu跑的。先前自行设计与允许仿真授权持续；CPU执行包已撤销，GPU运行契约待环境验证后绑定，无需重复申请常规安装/校准许可。",
   "approved_execution_contract": {
     "packet_id": "V4-AIR3D-DRAFT-01",
     "input_path": "configs/research/airborne_first_run_v1/M00_x_3d.in",
@@ -68,6 +66,16 @@
     {
       "record": "artifacts/research_checks/2026-09-24_M00_x_3d_r1/authorization_at_start.json",
       "outcome": "Stopped by user-approved redesign; no complete HDF5"
+    },
+    {
+      "record": "artifacts/research_checks/2026-09-24_M00_x_3d_r2/authorization_at_start.json",
+      "outcome": "CPU attempt stopped for explicit GPU-only requirement"
     }
-  ]
+  ],
+  "execution_policy": {
+    "required_solver_backend": "cuda",
+    "allow_cpu_solver_fallback": false,
+    "user_authorized_gpu_configuration_and_runs": true,
+    "runtime_readiness": "pending"
+  }
 }

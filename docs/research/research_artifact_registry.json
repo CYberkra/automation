@@ -129,11 +129,12 @@
     },
     {
       "id": "M00_x_3d_r2",
-      "status": "running_under_60min_cap",
-      "directory": "artifacts/simulations/2026-09-24_M00_x_3d_r2",
-      "tracked": false,
+      "status": "intentionally_stopped_for_user_required_gpu",
+      "directory": "artifacts/research_checks/2026-09-24_M00_x_3d_r2",
+      "tracked": true,
       "attempt_record": "artifacts/research_checks/2026-09-24_airborne_attempt_r2.json",
-      "solver_executed": true
+      "solver_executed": true,
+      "record": "artifacts/research_checks/2026-09-24_M00_x_3d_r2/record.json"
     }
   ],
   "default_array_verification": {

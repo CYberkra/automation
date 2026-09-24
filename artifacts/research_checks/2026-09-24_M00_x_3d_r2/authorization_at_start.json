@@ -1,0 +1,73 @@
+{
+  "schema": "gprmax-execution-decision/1",
+  "updated_date": "2026-09-24",
+  "authority": "explicit user instruction in current session",
+  "user_instruction": "然后你若需要gprmax仿真的话，和我敲定好再开始仿真。",
+  "target_solver": "gprMax 4.0.0",
+  "source_root_on_current_machine": "E:/gprMax-v.4.0.0/gprMax-v.4.0.0",
+  "approved_to_simulate": true,
+  "approved_run_ids": [
+    "M00_x_3d"
+  ],
+  "approved_compute_budget": {
+    "wall_minutes": 60,
+    "job_commit_GiB": 24,
+    "minimum_available_RAM_GiB": 32,
+    "output_GiB": 1,
+    "threads": 8,
+    "backend": "CPU",
+    "precision": "double",
+    "retries": 0,
+    "max_fdtd_runs": 1,
+    "official_postprocess_wall_minutes": 10
+  },
+  "source_version_is_not_runtime_verification": true,
+  "permitted_preparation": [
+    "read official docs and local source",
+    "archive provenance",
+    "design and write reviewable inputs",
+    "static source/input checks",
+    "constructed-array analysis",
+    "Git commit and sync",
+    "build/install isolated V4 from source copy and import-only runtime verification"
+  ],
+  "requires_agreement_before_execution": [
+    "FDTD solver run",
+    "official examples/tests that invoke a solve",
+    "CPU/GPU benchmark solve",
+    "study or parameter sweep",
+    "automatic retry or expanded simulation batch outside agreed scope"
+  ],
+  "discussion_packet_required": [
+    "physical question and allowed claim",
+    "exact version/build and input hashes",
+    "cases and run count",
+    "source waveform and timing",
+    "geometry/grid/PML/time window",
+    "CPU/GPU/precision/resources and stopping rules",
+    "reference and evaluation plan",
+    "expected outputs and storage",
+    "explicit agreed execution scope"
+  ],
+  "note": "This is an auditable decision record, not a technical sandbox. Generic requests to continue research do not change this gate.",
+  "build_authorization": "用户明确：许可你构建。仅构建/安装/导入核验，不是仿真批准。",
+  "simulation_authorization": "用户先允许仿真，随后明确：允许，你自行设计。已批准停止短试并将同模型重启上限设为60分钟；后续设计可主动推进并留档。",
+  "approved_execution_contract": {
+    "packet_id": "V4-AIR3D-DRAFT-01",
+    "input_path": "configs/research/airborne_first_run_v1/M00_x_3d.in",
+    "input_sha256": "7c0b46316ff843e22e0eff46dfd70a318775d2df4594f103321ca712d3a5a419",
+    "runtime_identity_path": "artifacts/research_checks/2026-09-24_v4_build_r2/runtime_identity_r2.json",
+    "runtime_identity_sha256": "855ddde23f5fba2a1cc22993f5ce48e983cc51d2634e3f69a48c6689214fd1b0",
+    "launcher_sha256": "9c66c1032fe845ebea723912d0e7f7d79acb420483b96cebc45a9e88d0a3023a",
+    "supervisor_sha256": "18d34cf77e59588cbd054a184a1f1c35ec3c14dd5943e951ac7f48e680b7b747",
+    "attempt_record": "artifacts/research_checks/2026-09-24_airborne_attempt_r2.json",
+    "run_directory": "artifacts/simulations/2026-09-24_M00_x_3d_r2",
+    "continuation": "Complete this run and official postprocessing first; further design follows user delegation with recorded resource decisions."
+  },
+  "authorization_history": [
+    {
+      "record": "artifacts/research_checks/2026-09-24_M00_x_3d_r1/authorization_at_start.json",
+      "outcome": "Stopped by user-approved redesign; no complete HDF5"
+    }
+  ]
+}
