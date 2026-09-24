@@ -1,0 +1,31 @@
+{
+  "checks": {
+    "PEC_image_relative": 1.9426502909637628e-13,
+    "matched_air_relative": 1.7817294193028565e-10,
+    "zero_thickness_relative": 7.531530001608923e-16,
+    "same_medium_thickness_relative": 0.0,
+    "bare_order_128_relative": 1.2401271719050668e-13,
+    "bare_order_512_relative": 6.463212207085264e-13,
+    "bare_cutoff_50_relative": 1.6823825914999206e-14,
+    "covered_order_128_relative": 1.0796494228132278e-13,
+    "covered_order_512_relative": 5.758022594866228e-13,
+    "covered_cutoff_50_relative": 1.4110797167938688e-14
+  },
+  "threshold": "1e-8 numerical identity/convergence checks, not FDTD acceptance",
+  "materials_hypothetical": true,
+  "cover": {
+    "er": 16,
+    "sigma_S_m": 0.01,
+    "thickness_m": 3
+  },
+  "rock": {
+    "er": 9,
+    "sigma_S_m": 0.001
+  },
+  "source_height_m": 15,
+  "receiver_height_m": 15,
+  "baseline_m": 1.3,
+  "solver_invoked": false,
+  "units": "(V/m)/A",
+  "script_sha256": "86b8a5ca34ffa57da23847e54e946e9b6c5385fb16be236b3a062c158f40074d"
+}
