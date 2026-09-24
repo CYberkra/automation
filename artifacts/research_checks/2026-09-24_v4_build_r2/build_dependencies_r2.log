@@ -1,0 +1,38 @@
+Collecting Cython
+  Downloading cython-3.3.0.tar.gz (3.7 MB)
+     ---------------------------------------- 3.7/3.7 MB 1.0 MB/s eta 0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting setuptools
+  Using cached setuptools-84.0.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting wheel
+  Using cached wheel-0.48.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting numpy
+  Using cached numpy-2.5.3-cp312-cp312-win_amd64.whl.metadata (6.6 kB)
+Collecting jinja2
+  Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting packaging>=24.0 (from wheel)
+  Using cached packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting MarkupSafe>=2.0 (from jinja2)
+  Using cached markupsafe-3.0.3-cp312-cp312-win_amd64.whl.metadata (2.8 kB)
+Using cached setuptools-84.0.0-py3-none-any.whl (818 kB)
+Using cached wheel-0.48.0-py3-none-any.whl (33 kB)
+Using cached numpy-2.5.3-cp312-cp312-win_amd64.whl (12.6 MB)
+Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+Using cached markupsafe-3.0.3-cp312-cp312-win_amd64.whl (15 kB)
+Using cached packaging-26.3-py3-none-any.whl (129 kB)
+Building wheels for collected packages: Cython
+  Building wheel for Cython (pyproject.toml): started
+  Building wheel for Cython (pyproject.toml): finished with status 'done'
+  Created wheel for Cython: filename=cython-3.3.0-py3-none-any.whl size=1349206 sha256=3c3097121d5408f471d51cc1248a345db6356acd43d7b1887e979e448478c71d
+  Stored in directory: c:\users\rog\appdata\local\pip\cache\wheels\cd\bb\cb\45b2601bb97e7f5647b421fcb1a6e12f1d3bbc8b51cb4234b0
+Successfully built Cython
+Installing collected packages: setuptools, packaging, numpy, MarkupSafe, Cython, wheel, jinja2
+Successfully installed Cython-3.3.0 MarkupSafe-3.0.3 jinja2-3.1.6 numpy-2.5.3 packaging-26.3 setuptools-84.0.0 wheel-0.48.0
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.1
+[notice] To update, run: E:\automation_djh\automation_repo\artifacts\local_checks\gprmax_v4_env\Scripts\python.exe -m pip install --upgrade pip

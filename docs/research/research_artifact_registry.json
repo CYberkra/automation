@@ -108,6 +108,14 @@
       "solver_executed": false,
       "runtime_ready": false,
       "non_solver_checks_passed": 6
+    },
+    {
+      "id": "v4_build_r2",
+      "status": "built_installed_import_verified_no_solve",
+      "record": "artifacts/research_checks/2026-09-24_v4_build_r2/record.json",
+      "report": "docs/research/2026-09-24_v4_build_success.md",
+      "runtime_import_ready": true,
+      "solver_executed": false
     }
   ],
   "default_array_verification": {
@@ -128,7 +136,7 @@
     "verify actual frequency vector and CSV processing; 0.3 MHz spacing is already user-confirmed",
     "confirm precise target depth meaning",
     "obtain full band-valid spectra and constrain cover thickness/moisture; targeted literature brief and hypothetical loss budgets completed",
-    "prepare separate Python 3.11-3.13 V4 environment plan and identity check",
+    "V4 isolated build/import verified; bind runtime identity to gated supervisor",
     "resolve source pulse center/timing",
     "prepare M00/M01 reviewable simulation packet with compute limits",
     "design representative 20m domain/material/time-window assumptions",

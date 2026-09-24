@@ -9,8 +9,33 @@
   "approved_run_ids": [],
   "approved_compute_budget": null,
   "source_version_is_not_runtime_verification": true,
-  "permitted_preparation": ["read official docs and local source", "archive provenance", "design and write reviewable inputs", "static source/input checks", "constructed-array analysis", "Git commit and sync"],
-  "requires_agreement_before_execution": ["FDTD solver run", "official examples/tests that invoke a solve", "CPU/GPU benchmark solve", "study or parameter sweep", "automatic retry or expanded simulation batch outside agreed scope"],
-  "discussion_packet_required": ["physical question and allowed claim", "exact version/build and input hashes", "cases and run count", "source waveform and timing", "geometry/grid/PML/time window", "CPU/GPU/precision/resources and stopping rules", "reference and evaluation plan", "expected outputs and storage", "explicit agreed execution scope"],
-  "note": "This is an auditable decision record, not a technical sandbox. Generic requests to continue research do not change this gate."
+  "permitted_preparation": [
+    "read official docs and local source",
+    "archive provenance",
+    "design and write reviewable inputs",
+    "static source/input checks",
+    "constructed-array analysis",
+    "Git commit and sync",
+    "build/install isolated V4 from source copy and import-only runtime verification"
+  ],
+  "requires_agreement_before_execution": [
+    "FDTD solver run",
+    "official examples/tests that invoke a solve",
+    "CPU/GPU benchmark solve",
+    "study or parameter sweep",
+    "automatic retry or expanded simulation batch outside agreed scope"
+  ],
+  "discussion_packet_required": [
+    "physical question and allowed claim",
+    "exact version/build and input hashes",
+    "cases and run count",
+    "source waveform and timing",
+    "geometry/grid/PML/time window",
+    "CPU/GPU/precision/resources and stopping rules",
+    "reference and evaluation plan",
+    "expected outputs and storage",
+    "explicit agreed execution scope"
+  ],
+  "note": "This is an auditable decision record, not a technical sandbox. Generic requests to continue research do not change this gate.",
+  "build_authorization": "用户明确：许可你构建。仅构建/安装/导入核验，不是仿真批准。"
 }

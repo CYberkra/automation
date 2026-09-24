@@ -1,0 +1,45 @@
+{
+  "schema": "v4-build-attempt/2",
+  "date": "2026-09-24",
+  "user_authorization": "许可你构建",
+  "state": "built_installed_and_import_verified",
+  "gprmax_version": "4.0.0",
+  "source_original_files_rechecked_unchanged": 2236,
+  "source_manifest": "artifacts/research_checks/2026-09-24_v4_environment_preparation/source_manifest.json",
+  "isolated_env": "artifacts/local_checks/gprmax_v4_env",
+  "cython_install": "NO_CYTHON_COMPILE=true; pip install --no-binary=Cython Cython setuptools wheel numpy jinja2",
+  "cython_version": "3.3.0",
+  "cython_compiler_kind": "official uncompiled Python implementation; Code.py import verified",
+  "cython_official_install_docs": "https://docs.cython.org/en/latest/src/quickstart/install.html",
+  "v4_build": "GPRMAX_BUILD_JOBS=2; pip wheel <source copy> --no-build-isolation --no-deps --wheel-dir <local wheels>",
+  "build_exit_code": 0,
+  "install_exit_code": 0,
+  "pip_check": "No broken requirements found.",
+  "wheel": {
+    "path": "artifacts/local_checks/gprmax_v4_build/wheels/gprmax-4.0.0-cp312-cp312-win_amd64.whl",
+    "sha256": "ca10b53674e211cd6f85efdc7a428023ae8ce435b34817cbb639630fa2394ebd",
+    "size_bytes": 12632417,
+    "tracked_in_git": false
+  },
+  "dependency_versions": "configs/research/gprmax_v4_win_py312_dependencies.txt",
+  "security_policy_changed": false,
+  "failed_initial_build_preserved": true,
+  "initial_import_attempt": "No output for several minutes; exact matching inspection process was stopped. Cause unresolved; no new Code Integrity event found for isolated env during checked window.",
+  "successful_import_attempt": "Repeated import-only inspection with faulthandler 45s exit timeout; returned zero before timeout, 4 native imports and official SFCW parser passed",
+  "model_parsed": false,
+  "solver_executed": false,
+  "solver_execution_approved": false,
+  "limitations": [
+    "No FDTD/geometry-only run; numerical correctness and runtime cost unverified",
+    "No exact wheel bit-reproducibility claim",
+    "Import stall cause not determined",
+    "Fresh dependency installation may encounter different platform policy on another machine"
+  ],
+  "artifact_sha256": {
+    "build_dependencies_r2.log": "1c70701fc05dc07b36acba48669411de5f8e6f6d1dc492a9f9cb436d4a4ddc2e",
+    "wheel_build_r2.log": "71c2fc0baeb855bfd37b272b31d0f1d2c62c79b985beb5f2405c9cb736cf67d4",
+    "install_r2.log": "9ab42063892399acaf2e382060995b56b382a870188b580362d961e946a43942",
+    "import_diagnostic_r2.log": "a12910237d88ce190e79a4786c5fb4805864b39d6a8118b8c48fd435f29015c7",
+    "runtime_identity_r2.json": "855ddde23f5fba2a1cc22993f5ce48e983cc51d2634e3f69a48c6689214fd1b0"
+  }
+}

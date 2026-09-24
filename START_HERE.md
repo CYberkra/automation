@@ -38,7 +38,7 @@
 
 ## 当前模型讨论
 
-用户明确优先官方SFCW集成流程，并要求先讨论仿真各参数。此前提案为[官方SFCW校准包](docs/research/2026-09-24_v4_official_sfcw_packet.md)，8个impulse输入已静态生成，但高度/间距不符最新设备信息，现已搁置；未安装/验证V4环境，未解析或求解。旧Ricker草案已搁置；后续不要执行旧包。先与用户讨论模型参数，再补齐环境、资源监督和具体执行授权。
+用户明确优先官方SFCW集成流程，并要求先讨论仿真各参数。此前提案为[官方SFCW校准包](docs/research/2026-09-24_v4_official_sfcw_packet.md)，8个impulse输入已静态生成，但高度/间距不符最新设备信息，现已搁置；当时未安装/验证V4环境，未解析或求解。旧Ricker草案已搁置；后续不要执行旧包。先与用户讨论模型参数，再补齐环境、资源监督和具体执行授权。
 
 ## 三维静态预算已完成
 
@@ -46,15 +46,17 @@
 
 ## 首跑准备进展
 
-[PML预算与首跑范围](docs/research/2026-09-24_airborne_first_run_preparation.md)：基础三维校准核心加PML约10.57GiB，按明确预留规则约17.86GiB；不保证实际峰值。4个输入仅供审查，首跑只建议M00_x_3d一次，不自动接续。已找到MSVC Build Tools，V4独立构建/导入与资源监督器仍待完成，尚不请求启动。
+[PML预算与首跑范围](docs/research/2026-09-24_airborne_first_run_preparation.md)：基础三维校准核心加PML约10.57GiB，按明确预留规则约17.86GiB；不保证实际峰值。4个输入仅供审查，首跑只建议M00_x_3d一次，不自动接续。已有MSVC Build Tools；独立构建/导入现已完成，Job监督程序6项检查通过，批准绑定仍待完成，尚不请求启动。
 
-## 环境准备的当前阻断
+## V4环境现已构建完成
 
-[环境与执行限制记录](docs/research/2026-09-24_v4_environment_preparation.md)：已建独立Python3.12环境并尝试从副本构建V4，Windows Code Integrity拒绝Cython原生扩展（3077/3033），未产出V4安装。未修改策略。Job监督程序的6项普通子进程检查通过；其内存上限为提交内存，不是RSS。需先获得允许该依赖的环境，再完成V4导入和批准绑定，不重复盲试同一构建。
+用户明确许可构建后，采用官方非编译Cython方式，V4 wheel编译、独立安装、pip依赖检查、4个关键原生模块及官方SFCW参数解析检查均通过。[构建与复建记录](docs/research/2026-09-24_v4_build_success.md)。当前Python位于`artifacts/local_checks/gprmax_v4_env/Scripts/python.exe`，版本3.12.14/gprMax4.0.0；环境本身不随Git上传。
+
+前次Cython签名阻断与首次导入停顿已保留，系统安全策略没有改变。Job监督器6项检查通过；内存是提交上限而非RSS。未运行FDTD；不把构建许可解释为仿真许可。下一步连接批准记录、输入/环境哈希与监督器。
 
 ## 下一项工作
 
-准备 **V4 环境与最小 M00/M01 执行包**，同时形成面向20–170MHz、0.3MHz步长、约20m目标的粉质粘土覆盖层/砂岩基岩场景草案。频率步长已明确，不重复询问；设备频率向量、源波形时刻、材料电性/厚度、数值误差与资源预算仍需核实。先完成可审查输入与计算量估计，再让用户敲定，之后才启动所批准的仿真。
+完成 **三维首跑批准绑定与元数据验收**，同时形成面向20–170MHz、0.3MHz步长、约20m目标的粉质粘土覆盖层/砂岩基岩场景草案。频率步长已明确，不重复询问；设备频率向量、源波形时刻、材料电性/厚度、数值误差与资源预算仍需核实。先完成可审查输入与计算量估计，再让用户敲定，之后才启动所批准的仿真。
 
 具体边界：[机器可读执行记录](configs/research/gprmax_v4_execution_gate.json)；项目事实/假设/未知：[背景记录](configs/research/project_context_v1.json)。不要自动调用官方示例或可能包含正演的测试套件来验证环境。
 
@@ -63,7 +65,7 @@
 1. 获取最新 `main`，看 `git status --short --branch`，先处理已有未提交改动，不覆盖它们。
 2. 阅读本文件、[V4 报告](docs/research/2026-09-24_gprmax_v4_review.md)、[损伤结论](docs/research/2026-09-24_damage_pilot_findings.md)。需要完整追踪再读[最新进度](docs/research/continuous_research_status.md)与[Git/环境指南](docs/WORKFLOW.md)。
 3. 纯数组验证：`python scripts/verify_workspace.py`。当前预期 **136 项**（历史64＋损伤72），不需要 gprMax、不读取实测、不联网、不绘图。复核一次即可；没有变化或新疑点不要重复跑。
-4. 依赖：核心 `requirements.txt`；可选图表另见 `requirements-figures.txt`。求解器 V4 需独立的 3.11–3.13 环境，当前尚未建设/验证。
+4. 依赖：核心 `requirements.txt`；可选图表另见 `requirements-figures.txt`。求解器V4已在独立Python3.12环境完成本机构建和导入验证；新电脑按上述构建记录重建，不照抄本机通过状态。
 5. 每个研究单元：保留计划、代码、数据、结论、来源/哈希、失败说明；更新本入口/进度与运行索引，显式暂存、检查、提交、推送并核验远端。不同电脑并行时用 `codex/` 前缀短分支；不用强推或重写共享历史。
 
 接续已实际验证：[远端克隆验证记录](artifacts/research_checks/2026-09-24_remote_handoff_verification.json)。从GitHub重新克隆研究提交 `251986e`，86个跟踪文件字节一致、27处接续链接有效、136项数组检查通过。使用本机已有Python3.12/NumPy2.3.5，未声称是另一台物理电脑或全新依赖环境。`python scripts/check_handoff.py` 可检查入口链接、当前证据哈希与本次未批准仿真状态。
