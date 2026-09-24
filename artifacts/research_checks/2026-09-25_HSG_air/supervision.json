@@ -1,0 +1,18 @@
+{
+  "reason": "completed",
+  "exit_code": 0,
+  "wall_s": 28.109999999869615,
+  "peak_job_commit_bytes": 2624552960,
+  "observed_output_bytes": 129162,
+  "memory_cap_bytes": 4294967296,
+  "wall_cap_s": 600,
+  "output_cap_bytes": 1073741824,
+  "memory_semantics": "Windows job committed memory, not RSS",
+  "output_semantics": "polled file bytes; overshoot possible",
+  "command": [
+    "E:\\automation_djh\\automation_repo\\artifacts\\local_checks\\gprmax_v4_gpu_env\\Scripts\\python.exe",
+    "-u",
+    "-c",
+    "import hashlib,pathlib,runpy,sys; p=pathlib.Path('E:\\\\automation_djh\\\\automation_repo\\\\configs\\\\research\\\\hsg_smoke_v1\\\\HSG_air.py'); b=p.read_bytes(); assert hashlib.sha256(b).hexdigest()=='0078a57fb758cd663ee01abc7dd3c87ddcccd56f8953a501eecdf6425593e30b'; pathlib.Path('HSG_air.py').write_bytes(b); sys.argv=['HSG_air.py']; runpy.run_path('HSG_air.py',run_name='__main__')"
+  ]
+}

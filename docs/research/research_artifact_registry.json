@@ -292,6 +292,34 @@
       "directory": "artifacts/research_checks/2026-09-24_hsg_budget",
       "tracked": true,
       "solver_executed": false
+    },
+    {
+      "id": "HSG_reference",
+      "status": "completed_with_internal_phase_unresolved",
+      "directory": "artifacts/research_checks/2026-09-25_HSG_reference",
+      "tracked": true,
+      "solver_executed": true
+    },
+    {
+      "id": "HSG_air",
+      "status": "completed_with_internal_phase_unresolved",
+      "directory": "artifacts/research_checks/2026-09-25_HSG_air",
+      "tracked": true,
+      "solver_executed": true
+    },
+    {
+      "id": "hsg_smoke_analysis",
+      "status": "analysis_failed_path_api",
+      "directory": "artifacts/research_checks/2026-09-25_hsg_smoke_analysis",
+      "tracked": true,
+      "solver_executed": false
+    },
+    {
+      "id": "hsg_smoke_analysis_r2",
+      "status": "completed_with_internal_phase_unresolved",
+      "directory": "artifacts/research_checks/2026-09-25_hsg_smoke_analysis_r2",
+      "tracked": true,
+      "solver_executed": false
     }
   ],
   "default_array_verification": {
@@ -311,6 +339,6 @@
   "remaining_work": [
     "verify actual instrument frequency vector and CSV processing;0.3MHz step confirmed; reserved field data excluded from development",
     "confirm target depth meaning and independently constrain site cover thickness/moisture/material parameters",
-    "Bounded small CUDA homogeneous HSG control before local shallow mechanism candidate; full20m HSG lower bound exceeds16GiB. Do not repeat static budget or imply runtime validation."
+    "Investigate internal HSG phase discrepancy near one fine timestep; CUDA smoke pair complete, no geology runs before interpretation. Full20m memory remains unresolved."
   ]
 }

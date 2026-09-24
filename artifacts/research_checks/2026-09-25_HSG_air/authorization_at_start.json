@@ -106,14 +106,6 @@
     {
       "record": "artifacts/research_checks/2026-09-24_AIR_dz4/authorization_at_start.json",
       "outcome": "Completed dz4 paired air reference; 10 raw checks pass"
-    },
-    {
-      "record": "artifacts/research_checks/2026-09-24_M01_dz4/authorization_at_start.json",
-      "outcome": "Completed"
-    },
-    {
-      "record": "artifacts/research_checks/2026-09-25_HSG_reference/authorization_at_start.json",
-      "outcome": "Completed"
     }
   ],
   "execution_policy": {
@@ -125,9 +117,7 @@
     "user_clarification": "仿真gpu跑，后处理如果正常就是cpu那也没必要改，除非gpu能加速很多"
   },
   "execution_outcome": {
-    "status": "completed",
-    "attempt_consumed": true,
-    "canonical_record": "artifacts/research_checks/2026-09-25_HSG_air/record.json",
-    "note": "Two CUDA cases complete; internal receiver phase discrepancy unresolved. No geology run dispatched."
+    "status": "ready_not_started",
+    "attempt_consumed": false
   }
 }
