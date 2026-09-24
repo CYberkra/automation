@@ -15,7 +15,9 @@
     "archive_and_git_sync_proactively": true,
     "representative_flight_height_m_approx": 15,
     "tx_rx_separation_m": 1.3,
-    "antenna_geometry_original_wording": "雷达工作时约天上15m，收发天线间距1.3m。"
+    "antenna_geometry_original_wording": "雷达工作时约天上15m，收发天线间距1.3m。",
+    "tx_rx_baseline_orientation": "cross-track: left/right relative to flight direction",
+    "baseline_orientation_original_wording": "对于飞行方向左右排列"
   },
   "interpretation_pending_confirmation": {
     "target_depth_range_m": [
@@ -36,10 +38,10 @@
     "silty_clay_cover_thickness_m": null,
     "moisture_and_saturation": null,
     "sandstone_weathering_and_fracture_state": null,
-    "tx_rx_baseline_orientation": null,
     "tx_rx_elevation_difference_m": null,
     "antenna_polarization_and_boresight": null,
-    "flight_height_variation_m": null
+    "flight_height_variation_m": null,
+    "transmitter_left_or_right": null
   },
   "derived_frequency_grid": {
     "assumption": "uniform 0.3 MHz increments including both 20 and 170 MHz endpoints",
@@ -58,5 +60,11 @@
     "role": "historical small ideal pulse mechanism proposal",
     "represents_full_20m_project": false,
     "approved_to_execute": false
+  },
+  "attachment_status": {
+    "path": "78210f81764e80000a4d2cd27c2a52c3.png",
+    "exists_at_check": false,
+    "image_read": false,
+    "geometry_basis": "user text only"
   }
 }
