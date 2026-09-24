@@ -12,11 +12,18 @@
     "depth_original_wording": "项目背景是20m浅的非显性滑坡",
     "use_gprmax_version": "4.0.0",
     "simulation_requires_prior_agreement": true,
-    "archive_and_git_sync_proactively": true
+    "archive_and_git_sync_proactively": true,
+    "representative_flight_height_m_approx": 15,
+    "tx_rx_separation_m": 1.3,
+    "antenna_geometry_original_wording": "雷达工作时约天上15m，收发天线间距1.3m。"
   },
   "interpretation_pending_confirmation": {
-    "target_depth_range_m": [0, 20],
-    "meaning": "approximately within 20 m below ground; a research target, not demonstrated radar penetration"
+    "target_depth_range_m": [
+      0,
+      20
+    ],
+    "meaning": "approximately within 20 m below ground; a research target, not demonstrated radar penetration",
+    "height_reference": "Approximately 15 m above local ground, interpreted from user wording; not absolute elevation"
   },
   "unknown": {
     "actual_exported_frequency_vector_verified": false,
@@ -25,11 +32,14 @@
     "transmitted_spectrum_and_phase": null,
     "receiver_calibration_and_export_chain": null,
     "antenna_geometry_and_response": null,
-    "representative_flight_height_m": null,
     "field_material_complex_permittivity": null,
     "silty_clay_cover_thickness_m": null,
     "moisture_and_saturation": null,
-    "sandstone_weathering_and_fracture_state": null
+    "sandstone_weathering_and_fracture_state": null,
+    "tx_rx_baseline_orientation": null,
+    "tx_rx_elevation_difference_m": null,
+    "antenna_polarization_and_boresight": null,
+    "flight_height_variation_m": null
   },
   "derived_frequency_grid": {
     "assumption": "uniform 0.3 MHz increments including both 20 and 170 MHz endpoints",
@@ -37,7 +47,7 @@
     "interval_count": 500,
     "tone_count": 501,
     "bandwidth_hz": 150000000,
-    "periodic_reconstruction_window_s": 0.0000033333333333333333,
+    "periodic_reconstruction_window_s": 3.3333333333333333e-06,
     "window_formula": "1 / frequency_step_hz",
     "not_an_fdtd_duration_or_penetration_guarantee": true,
     "does_not_identify_existing_csv_processing": true
