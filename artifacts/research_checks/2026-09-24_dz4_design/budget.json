@@ -1,0 +1,47 @@
+{
+  "solver_invoked": false,
+  "rows": [
+    {
+      "dz_m": 0.05,
+      "cells": 110592000,
+      "dt_s": 9.629166007732353e-11,
+      "steps_estimate": 8310,
+      "PML_history_bytes": 908743680,
+      "GPU_main_arrays_bytes": 8921237832,
+      "host_main_arrays_bytes": 11354261832,
+      "GPU_main_arrays_GiB": 8.30855018645525,
+      "host_main_arrays_GiB": 10.5744803622365
+    },
+    {
+      "dz_m": 0.04,
+      "cells": 138240000,
+      "dt_s": 8.836328744901541e-11,
+      "steps_estimate": 9055,
+      "PML_history_bytes": 1133925120,
+      "GPU_main_arrays_bytes": 11145378312,
+      "host_main_arrays_bytes": 14186658312,
+      "GPU_main_arrays_GiB": 10.379942424595356,
+      "host_main_arrays_GiB": 13.212355144321918
+    }
+  ],
+  "available_RAM_bytes": 51390615552,
+  "source_sha256": {
+    "grid/fdtd_grid.py": "29e25a95b50962dac8abc6f0d820daab3351b5162844c7c86d379c8074fed3a5",
+    "grid/cuda_grid.py": "813d1562ff42012ca95dfaa242cf2f02a4e27e3bc10a48526cd98d04c5f82d85",
+    "pml.py": "a6d51a1d7aae7a5d3301114d9de6e23a780fc0a6c09b97391c81d511340bea4e"
+  },
+  "exclusions": [
+    "small source/receiver/material/PML coefficient arrays",
+    "CUDA context/compiler overhead",
+    "host build temporaries and driver allocations"
+  ],
+  "empirical_host_peak_GiB": 20.89014434814453,
+  "scaled_host_peak_GiB": 26.112680435180664,
+  "limits": {
+    "job_commit_GiB": 36,
+    "minimum_available_RAM_GiB": 36,
+    "minimum_available_VRAM_GiB": 13,
+    "wall_minutes_each": 30
+  },
+  "PML": "Fixed sigma_max=0.21235349838321013 on every face in both models; same continuous quartic profile and 1m thickness as prior fixed-PML. Vertical samples change20->25; dt changes; not bitwise cross-grid coefficient equivalence."
+}
