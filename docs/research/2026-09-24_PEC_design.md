@@ -12,3 +12,5 @@
 方法来源：[Michigan EECS530 Image Theory](https://www.eecs.umich.edu/courses/eecs530/lec%206.pdf)；[Cornell完整电流元场](https://courses.cit.cornell.edu/ece303/Lectures/lecture28.pdf)。官方SFCW沿用实际源历史/时间偏移和direct方法。
 
 预声明分析：保持官方800ns截取及0/200/400ns尾渐消，PEC与空气配对相减，比较501点复数响应与解析反射；报告最大/中位复数相对误差、幅度dB、相位deg，无事后物理合格阈值。保留原始提前响应及频谱诊断。不能用总场误差掩盖弱反射误差；不能用PEC结论替代介质半空间结论。不扩大为网格/PML扫描。执行、分析、日志、hash、接续说明均归档。
+
+实际全文核对补充：Michigan PDF本次读取返回502，仅检索摘要可用；改用[Purdue ECE604 Lecture32](https://engineering.purdue.edu/wcchew/ece604s20/Lecture%20Notes/Lect32.pdf)第316页（PDF第4页）明确给出水平Hertzian电流元在PEC上方的反向镜像。没有把摘要访问记成全文阅读。

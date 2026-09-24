@@ -1,0 +1,64 @@
+{
+  "inputs": {
+    "PEC": {
+      "path": "artifacts\\research_checks\\2026-09-24_PEC_T800\\PEC_T800.h5",
+      "sha256": "37b4d403cc9c162c201eaef4cae59f03b88ae44c2d2f695dcb7974c5d058fa82"
+    },
+    "air": {
+      "path": "artifacts\\research_checks\\2026-09-24_T800\\M00_x_3d.h5",
+      "sha256": "e92430f619ef648f3a120f6404a2f6bc81de7ed8a4c9556f1c632f44f568a29b"
+    },
+    "dielectric": {
+      "path": "artifacts\\research_checks\\2026-09-24_M01_T800\\M01_T800.h5",
+      "sha256": "2d10d62b21a82166d729673c4faf7adf2cb63614b8b4803bc37d2168c326cd02"
+    }
+  },
+  "reference": "Negative transverse current element at mirror position z=-11m; r=hypot(30,1.3)m; no fitted parameters",
+  "conditions": [
+    {
+      "taper_ns": 0,
+      "max_relative_complex_error": 1.0768281343132655,
+      "median_relative_complex_error": 0.2280336582204334,
+      "max_absolute_amplitude_error_dB": 27.82885220485433,
+      "max_absolute_phase_error_deg": 89.03992812688055
+    },
+    {
+      "taper_ns": 200,
+      "max_relative_complex_error": 0.0939538767928932,
+      "median_relative_complex_error": 0.016324599599403536,
+      "max_absolute_amplitude_error_dB": 0.0035520156162302426,
+      "max_absolute_phase_error_deg": 5.386193522720932
+    },
+    {
+      "taper_ns": 400,
+      "max_relative_complex_error": 0.09395385075110115,
+      "median_relative_complex_error": 0.016324661244916848,
+      "max_absolute_amplitude_error_dB": 0.003552009277008874,
+      "max_absolute_phase_error_deg": 5.3861920268819725
+    }
+  ],
+  "bandlimited_hann_zero_pad8_envelope_peak_ns": {
+    "PEC": 100.63206919494345,
+    "PEC theory": 99.8003992015968,
+    "dielectric": 100.63206919494345
+  },
+  "raw_diagnostics": [
+    {
+      "case": "PEC",
+      "peak_before80ns_V_m": 0.0,
+      "dominant_MHz": 5167.563428978097
+    },
+    {
+      "case": "dielectric",
+      "peak_before80ns_V_m": 0.048199943536705425,
+      "dominant_MHz": 5167.563428978097
+    }
+  ],
+  "physical_accuracy_threshold": null,
+  "convergence_certified": false,
+  "solver_invoked": false,
+  "notes": [
+    "PEC validates only this reference geometry, not a dielectric halfspace.",
+    "Bandlimited sidelobes are not causality violations; zero padding adds no physical resolution."
+  ]
+}

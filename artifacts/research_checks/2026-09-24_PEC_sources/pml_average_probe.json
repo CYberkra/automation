@@ -1,0 +1,37 @@
+{
+  "air": {
+    "average_er": 1.0,
+    "average_mr": 1.0,
+    "sigma_max_relative_to_air": 1.0
+  },
+  "PEC": {
+    "average_er": 1.0,
+    "average_mr": 1.0,
+    "sigma_max_relative_to_air": 1.0
+  },
+  "dielectric": {
+    "average_er": 2.3333333333333335,
+    "average_mr": 1.0,
+    "sigma_max_relative_to_air": 0.6546536707079771
+  },
+  "side_boundary_geometric_paths_ns": {
+    "ymin_inner_outer": [
+      73.05053684839528,
+      79.72181875235833
+    ],
+    "ymax_inner_outer": [
+      73.71766503879161,
+      80.38894694275466
+    ],
+    "x_inner_outer": [
+      73.5121082356289,
+      80.17273918743297
+    ]
+  },
+  "interpretation": "Source-derived mechanism candidate: changing lower 4m from air to er9 changes average er on full-height side PML, hence automatically selected sigma_max even in air portion. PEC nominal er remains1. Geometric side returns bracket observed77ns precursor. Not a causal isolation experiment; no solver invoked.",
+  "source_sha256": {
+    "grid/fdtd_grid.py": "29e25a95b50962dac8abc6f0d820daab3351b5162844c7c86d379c8074fed3a5",
+    "pml.py": "a6d51a1d7aae7a5d3301114d9de6e23a780fc0a6c09b97391c81d511340bea4e",
+    "cython/pml_build.pyx": "c44e94c54df85f00f18453428927ed292be633107643e1f80586c301cac3e217"
+  }
+}

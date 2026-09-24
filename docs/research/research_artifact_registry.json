@@ -190,6 +190,27 @@
       "directory": "artifacts/research_checks/2026-09-24_interface_analysis",
       "tracked": true,
       "solver_executed": false
+    },
+    {
+      "id": "PEC_T800",
+      "status": "completed_reference_or_static_diagnostic",
+      "directory": "artifacts/research_checks/2026-09-24_PEC_T800",
+      "tracked": true,
+      "solver_executed": true
+    },
+    {
+      "id": "PEC_analysis",
+      "status": "completed_reference_or_static_diagnostic",
+      "directory": "artifacts/research_checks/2026-09-24_PEC_analysis",
+      "tracked": true,
+      "solver_executed": false
+    },
+    {
+      "id": "PEC_sources",
+      "status": "completed_reference_or_static_diagnostic",
+      "directory": "artifacts/research_checks/2026-09-24_PEC_sources",
+      "tracked": true,
+      "solver_executed": false
     }
   ],
   "default_array_verification": {
@@ -213,6 +234,7 @@
     "prepare M00/M01 reviewable simulation packet with compute limits",
     "design representative 20m domain/material/time-window assumptions",
     "Air tail/window/PML controls completed; transfer processing to geological scenarios only after late-arrival and mesh validation",
-    "Ideal-interface single trace completed; early out-of-band raw precursor unresolved. Validate independent interface reference and domain/grid sensitivity before geology or training."
+    "Ideal-interface single trace completed; early out-of-band raw precursor unresolved. Validate independent interface reference and domain/grid sensitivity before geology or training.",
+    "PEC image comparison complete; fixed-PML air/dielectric paired control should isolate automatic side-PML material averaging before grid/domain expansion."
   ]
 }
