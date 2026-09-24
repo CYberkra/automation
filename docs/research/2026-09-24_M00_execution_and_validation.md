@@ -14,6 +14,8 @@
 
 输入与运行环境、监督器哈希绑定在[执行gate](../../configs/research/gprmax_v4_execution_gate.json)。独占attempt防止无意重复求解。第一轮30分钟预算不足以完成预计约45分钟求解，按用户授权在1054/4156步停止并保存原始日志；第二轮仅延长上限到60分钟，物理输入没有改变。
 
+![实际输入的几何关系；虚线地面仅为以后模型的参考](../../artifacts/research_checks/2026-09-24_M00_layout/layout.png)
+
 ## 官方SFCW验收设计（结果产生前写定）
 
 遵循[官方SFCW文档](https://docs.gprmax.com/en/latest/inc_SFCW.html)，使用内置单样点impulse及保存的源历史。`direct`对20–170MHz的501个频点求响应，保留实际源/接收采样时刻；采用rectangular窗、zero-pad=1、time-shift=0、tail-taper=0、source-floor=-100dB。这个谱门槛是除法有效性保护，不是物理精度保证。
