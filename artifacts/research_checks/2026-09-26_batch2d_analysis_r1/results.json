@@ -1,0 +1,2441 @@
+{
+  "batch": "batch2d_v1",
+  "cases": {
+    "B2D-C1m-BG": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 1.0,
+      "difference": {
+        "computed": false,
+        "note": "family BG is the differencing reference itself (spec §6-P7)",
+        "reference_role": "bg"
+      },
+      "exceptions": null,
+      "family": "C1",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C1m",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/research_checks/2026-09-26_B2D-C1m-BG/B2D-C1m-BG.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "ddd2890a8b68f25c5925c06513fd3fdff8ef1fd2b4602857016527a1e2e0c38f",
+        "transformed_samples": 20351
+      },
+      "role": "bg",
+      "run_id": "B2D-C1m-BG",
+      "scan_axis": {
+        "cover_thickness_m": 1.0,
+        "depth_m": null,
+        "eps_r": null,
+        "sigma_s_m": null,
+        "thickness_m": null,
+        "width_m": null
+      },
+      "seed": 10470832476229531205,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2917842944,
+        "reason": "completed",
+        "wall_s": 30.125
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "variant_tag": "base"
+    },
+    "B2D-C1m-D10m-NC": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 1.0,
+      "difference": {
+        "bg_run_id": "B2D-C1m-BG",
+        "computed": true,
+        "envelope_peak_time_ns": null,
+        "grid_tier": "BASE",
+        "in_band_energy_ratio_DIFF_over_BG": 0.0,
+        "in_band_energy_ratio_DIFF_over_BG_dB": null,
+        "normalized_mag_dB_at_selected_MHz": null,
+        "note": "paired difference is identically zero on both tail windows and in time (expected for the null-contrast control); peak/phase/dB metrics not applicable, reported as null",
+        "robustness_400ns_relative_L2_vs_200ns": null,
+        "robustness_400ns_spectral_peak_frequency_MHz": null,
+        "source_samples_identical_to_family_bg": true,
+        "spectral_peak_frequency_MHz": null,
+        "spectral_peak_phase_deg": null,
+        "time_diff_peak_V_m": 0.0,
+        "zero_difference": true
+      },
+      "exceptions": null,
+      "family": "C1",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C1m",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/research_checks/2026-09-26_B2D-C1m-D10m-NC/B2D-C1m-D10m-NC.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "37593dd1b0480b202d24088d6eeab46b20032d154a98981a9f01eddb4d04f880",
+        "transformed_samples": 20351
+      },
+      "role": "nc",
+      "run_id": "B2D-C1m-D10m-NC",
+      "scan_axis": {
+        "cover_thickness_m": 1.0,
+        "depth_m": 10.0,
+        "eps_r": 9.0,
+        "sigma_s_m": 0.001,
+        "thickness_m": 0.5,
+        "width_m": 4.0
+      },
+      "seed": 9470890812659993573,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2915782656,
+        "reason": "completed",
+        "wall_s": 29.859999999869615
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "variant_tag": "base"
+    },
+    "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 1.0,
+      "difference": {
+        "bg_run_id": "B2D-C1m-BG",
+        "computed": true,
+        "envelope_peak_time_ns": 320.0104271385134,
+        "grid_tier": "BASE",
+        "in_band_energy_ratio_DIFF_over_BG": 7.522928910775171e-06,
+        "in_band_energy_ratio_DIFF_over_BG_dB": -51.23613042102644,
+        "normalized_mag_dB_at_selected_MHz": {
+          "110": -2.9053703577121315,
+          "140": -7.775124645926685,
+          "170": 0.0,
+          "20": -15.601833318551655,
+          "50": -11.353338891331237,
+          "80": -8.71972741131922
+        },
+        "note": "time_diff_peak_V_m carries the pair-internal excitation scale; no absolute detectability claim",
+        "robustness_400ns_relative_L2_vs_200ns": 1.701032188149696e-06,
+        "robustness_400ns_spectral_peak_frequency_MHz": 170.0,
+        "source_samples_identical_to_family_bg": true,
+        "spectral_peak_frequency_MHz": 170.0,
+        "spectral_peak_phase_deg": -92.47604542310673,
+        "time_diff_peak_V_m": 0.010271894231848933
+      },
+      "exceptions": null,
+      "family": "C1",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C1m",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/research_checks/2026-09-26_B2D-C1m-D10m-W4m-T0.5m-E20-S0.02/B2D-C1m-D10m-W4m-T0.5m-E20-S0.02.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "1bc62ea2b8dca6129e08b50b5e033c828f9ea81e5387ffd6a521b62902dc586e",
+        "transformed_samples": 20351
+      },
+      "role": "target",
+      "run_id": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+      "scan_axis": {
+        "cover_thickness_m": 1.0,
+        "depth_m": 10.0,
+        "eps_r": 20.0,
+        "sigma_s_m": 0.02,
+        "thickness_m": 0.5,
+        "width_m": 4.0
+      },
+      "seed": 12887432899970989500,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2917560320,
+        "reason": "completed",
+        "wall_s": 30.125
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "variant_tag": "base"
+    },
+    "B2D-C1m-D2m-W4m-T0.5m-E20-S0.02": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 1.0,
+      "difference": {
+        "bg_run_id": "B2D-C1m-BG",
+        "computed": true,
+        "envelope_peak_time_ns": 144.2317126922432,
+        "grid_tier": "BASE",
+        "in_band_energy_ratio_DIFF_over_BG": 7.479575188794756e-05,
+        "in_band_energy_ratio_DIFF_over_BG_dB": -41.26123067697229,
+        "normalized_mag_dB_at_selected_MHz": {
+          "110": -1.912487988369544,
+          "140": -6.950627303071273,
+          "170": -0.0001647393002161129,
+          "20": -15.290454587506058,
+          "50": -10.586898046630644,
+          "80": -7.785894706189796
+        },
+        "note": "time_diff_peak_V_m carries the pair-internal excitation scale; no absolute detectability claim",
+        "robustness_400ns_relative_L2_vs_200ns": 2.0993465163314034e-08,
+        "robustness_400ns_spectral_peak_frequency_MHz": 158.6,
+        "source_samples_identical_to_family_bg": true,
+        "spectral_peak_frequency_MHz": 158.6,
+        "spectral_peak_phase_deg": -115.356771748558,
+        "time_diff_peak_V_m": 0.05426879014881081
+      },
+      "exceptions": null,
+      "family": "C1",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C1m",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/research_checks/2026-09-26_B2D-C1m-D2m-W4m-T0.5m-E20-S0.02/B2D-C1m-D2m-W4m-T0.5m-E20-S0.02.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "2b80afff56bd1c9b54755151863c52772b4e1ed071e3e487c9b695c7a25328b6",
+        "transformed_samples": 20351
+      },
+      "role": "target",
+      "run_id": "B2D-C1m-D2m-W4m-T0.5m-E20-S0.02",
+      "scan_axis": {
+        "cover_thickness_m": 1.0,
+        "depth_m": 2.0,
+        "eps_r": 20.0,
+        "sigma_s_m": 0.02,
+        "thickness_m": 0.5,
+        "width_m": 4.0
+      },
+      "seed": 9409890396748496433,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2918010880,
+        "reason": "completed",
+        "wall_s": 29.875
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "variant_tag": "base"
+    },
+    "B2D-C1m-D5m-W4m-T0.5m-E20-S0.02": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 1.0,
+      "difference": {
+        "bg_run_id": "B2D-C1m-BG",
+        "computed": true,
+        "envelope_peak_time_ns": 205.02602822196633,
+        "grid_tier": "BASE",
+        "in_band_energy_ratio_DIFF_over_BG": 3.188037626649901e-05,
+        "in_band_energy_ratio_DIFF_over_BG_dB": -44.96476561507421,
+        "normalized_mag_dB_at_selected_MHz": {
+          "110": -3.0255186538399803,
+          "140": -7.9308505096122115,
+          "170": 0.0,
+          "20": -15.999568542275643,
+          "50": -11.436771166419984,
+          "80": -8.811630352656918
+        },
+        "note": "time_diff_peak_V_m carries the pair-internal excitation scale; no absolute detectability claim",
+        "robustness_400ns_relative_L2_vs_200ns": 1.55327438349015e-08,
+        "robustness_400ns_spectral_peak_frequency_MHz": 170.0,
+        "source_samples_identical_to_family_bg": true,
+        "spectral_peak_frequency_MHz": 170.0,
+        "spectral_peak_phase_deg": -71.0570944049677,
+        "time_diff_peak_V_m": 0.025766722297033695
+      },
+      "exceptions": null,
+      "family": "C1",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C1m",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/research_checks/2026-09-26_B2D-C1m-D5m-W4m-T0.5m-E20-S0.02/B2D-C1m-D5m-W4m-T0.5m-E20-S0.02.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "6236e5a87a616538e3527593c87090f734269abd5c686e04105f8032ce25b86d",
+        "transformed_samples": 20351
+      },
+      "role": "target",
+      "run_id": "B2D-C1m-D5m-W4m-T0.5m-E20-S0.02",
+      "scan_axis": {
+        "cover_thickness_m": 1.0,
+        "depth_m": 5.0,
+        "eps_r": 20.0,
+        "sigma_s_m": 0.02,
+        "thickness_m": 0.5,
+        "width_m": 4.0
+      },
+      "seed": 6218134716698157456,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2917179392,
+        "reason": "completed",
+        "wall_s": 29.858999999938533
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "variant_tag": "base"
+    },
+    "B2D-C3m-BG": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 3.0,
+      "difference": {
+        "computed": false,
+        "note": "family BG is the differencing reference itself (spec §6-P7)",
+        "reference_role": "bg"
+      },
+      "exceptions": null,
+      "family": "C3",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C3m",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/research_checks/2026-09-26_B2D-C3m-BG/B2D-C3m-BG.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "a261e9958b90e82ad11a23464e797e5d7c98ad0a9cf2262c41cfd5b623b236c6",
+        "transformed_samples": 20351
+      },
+      "role": "bg",
+      "run_id": "B2D-C3m-BG",
+      "scan_axis": {
+        "cover_thickness_m": 3.0,
+        "depth_m": null,
+        "eps_r": null,
+        "sigma_s_m": null,
+        "thickness_m": null,
+        "width_m": null
+      },
+      "seed": 17736219586241821525,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2915713024,
+        "reason": "completed",
+        "wall_s": 532.155999999959
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "variant_tag": "base"
+    },
+    "B2D-C3m-D10m-NC": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 3.0,
+      "difference": {
+        "bg_run_id": "B2D-C3m-BG",
+        "computed": true,
+        "envelope_peak_time_ns": null,
+        "grid_tier": "BASE",
+        "in_band_energy_ratio_DIFF_over_BG": 0.0,
+        "in_band_energy_ratio_DIFF_over_BG_dB": null,
+        "normalized_mag_dB_at_selected_MHz": null,
+        "note": "paired difference is identically zero on both tail windows and in time (expected for the null-contrast control); peak/phase/dB metrics not applicable, reported as null",
+        "robustness_400ns_relative_L2_vs_200ns": null,
+        "robustness_400ns_spectral_peak_frequency_MHz": null,
+        "source_samples_identical_to_family_bg": true,
+        "spectral_peak_frequency_MHz": null,
+        "spectral_peak_phase_deg": null,
+        "time_diff_peak_V_m": 0.0,
+        "zero_difference": true
+      },
+      "exceptions": null,
+      "family": "C3",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C3m",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-NC/B2D-C3m-D10m-NC.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "400404d5612347f2d2b3a409853a26967f8a85dbb6e1b5ac7665a4946b93d004",
+        "transformed_samples": 20351
+      },
+      "role": "nc",
+      "run_id": "B2D-C3m-D10m-NC",
+      "scan_axis": {
+        "cover_thickness_m": 3.0,
+        "depth_m": 10.0,
+        "eps_r": 9.0,
+        "sigma_s_m": 0.001,
+        "thickness_m": 0.5,
+        "width_m": 4.0
+      },
+      "seed": 4629069219089098163,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2917556224,
+        "reason": "completed",
+        "wall_s": 30.125
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "variant_tag": "base"
+    },
+    "B2D-C3m-D10m-OFF": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 3.0,
+      "difference": {
+        "bg_run_id": "B2D-C3m-BG",
+        "computed": true,
+        "envelope_peak_time_ns": 319.3617971959073,
+        "grid_tier": "BASE",
+        "in_band_energy_ratio_DIFF_over_BG": 3.0406928886248514e-08,
+        "in_band_energy_ratio_DIFF_over_BG_dB": -75.17027441582566,
+        "normalized_mag_dB_at_selected_MHz": {
+          "110": -4.324378255015159,
+          "140": -11.406846245993647,
+          "170": -1.9184005406680693,
+          "20": -3.390777049441075,
+          "50": -1.2674724168896407,
+          "80": -2.733656915769205
+        },
+        "note": "time_diff_peak_V_m carries the pair-internal excitation scale; no absolute detectability claim",
+        "robustness_400ns_relative_L2_vs_200ns": 5.925945150114272e-07,
+        "robustness_400ns_spectral_peak_frequency_MHz": 36.8,
+        "source_samples_identical_to_family_bg": true,
+        "spectral_peak_frequency_MHz": 36.8,
+        "spectral_peak_phase_deg": 131.23193353650043,
+        "time_diff_peak_V_m": 0.0003401965444052024
+      },
+      "exceptions": [
+        "side_pml_margin_below_13m"
+      ],
+      "family": "C3",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C3m",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-OFF/B2D-C3m-D10m-OFF.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "3ad5155bc47f77a5a56c330c6564c4c30891d24acc10b9cb64d0628c3eecde80",
+        "transformed_samples": 20351
+      },
+      "role": "off",
+      "run_id": "B2D-C3m-D10m-OFF",
+      "scan_axis": {
+        "cover_thickness_m": 3.0,
+        "depth_m": 10.0,
+        "eps_r": 20.0,
+        "sigma_s_m": 0.02,
+        "thickness_m": 0.5,
+        "width_m": 4.0
+      },
+      "seed": 14855999481960444077,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2915692544,
+        "reason": "completed",
+        "wall_s": 29.858999999938533
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "variant_tag": "base"
+    },
+    "B2D-C3m-D10m-W1m-T0.5m-E20-S0.02": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 3.0,
+      "difference": {
+        "bg_run_id": "B2D-C3m-BG",
+        "computed": true,
+        "envelope_peak_time_ns": 335.6954784778988,
+        "grid_tier": "BASE",
+        "in_band_energy_ratio_DIFF_over_BG": 2.063928687363525e-08,
+        "in_band_energy_ratio_DIFF_over_BG_dB": -76.85305312480656,
+        "normalized_mag_dB_at_selected_MHz": {
+          "110": -4.106260044696938,
+          "140": -14.659433639722419,
+          "170": 0.0,
+          "20": -13.743667305930245,
+          "50": -12.019446710562498,
+          "80": -10.810566882160575
+        },
+        "note": "time_diff_peak_V_m carries the pair-internal excitation scale; no absolute detectability claim",
+        "robustness_400ns_relative_L2_vs_200ns": 1.701811014759973e-07,
+        "robustness_400ns_spectral_peak_frequency_MHz": 170.0,
+        "source_samples_identical_to_family_bg": true,
+        "spectral_peak_frequency_MHz": 170.0,
+        "spectral_peak_phase_deg": 171.84266920375694,
+        "time_diff_peak_V_m": 0.00047385284475964795
+      },
+      "exceptions": null,
+      "family": "C3",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C3m",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W1m-T0.5m-E20-S0.02/B2D-C3m-D10m-W1m-T0.5m-E20-S0.02.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "201a4be95a49e4f71a2a8a8e19803a54ba645aaf4a12d0ec30be66f951659dd9",
+        "transformed_samples": 20351
+      },
+      "role": "target",
+      "run_id": "B2D-C3m-D10m-W1m-T0.5m-E20-S0.02",
+      "scan_axis": {
+        "cover_thickness_m": 3.0,
+        "depth_m": 10.0,
+        "eps_r": 20.0,
+        "sigma_s_m": 0.02,
+        "thickness_m": 0.5,
+        "width_m": 1.0
+      },
+      "seed": 10354968956417525634,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2916335616,
+        "reason": "completed",
+        "wall_s": 29.875
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "variant_tag": "base"
+    },
+    "B2D-C3m-D10m-W2m-T0.5m-E20-S0.02": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 3.0,
+      "difference": {
+        "bg_run_id": "B2D-C3m-BG",
+        "computed": true,
+        "envelope_peak_time_ns": 331.7447324638431,
+        "grid_tier": "BASE",
+        "in_band_energy_ratio_DIFF_over_BG": 7.430583938942992e-08,
+        "in_band_energy_ratio_DIFF_over_BG_dB": -71.28977055486301,
+        "normalized_mag_dB_at_selected_MHz": {
+          "110": -3.165120110617839,
+          "140": -8.420605646172394,
+          "170": 0.0,
+          "20": -14.405686973608917,
+          "50": -10.418481779934561,
+          "80": -9.63054244663429
+        },
+        "note": "time_diff_peak_V_m carries the pair-internal excitation scale; no absolute detectability claim",
+        "robustness_400ns_relative_L2_vs_200ns": 1.8325854503181554e-07,
+        "robustness_400ns_spectral_peak_frequency_MHz": 170.0,
+        "source_samples_identical_to_family_bg": true,
+        "spectral_peak_frequency_MHz": 170.0,
+        "spectral_peak_phase_deg": 169.39404774502918,
+        "time_diff_peak_V_m": 0.0008986666847867752
+      },
+      "exceptions": null,
+      "family": "C3",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C3m",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W2m-T0.5m-E20-S0.02/B2D-C3m-D10m-W2m-T0.5m-E20-S0.02.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "fe3e5f3d1903fa3304e550b8d5058f3528d20e648b8dddd46b17a3498a2e46e4",
+        "transformed_samples": 20351
+      },
+      "role": "target",
+      "run_id": "B2D-C3m-D10m-W2m-T0.5m-E20-S0.02",
+      "scan_axis": {
+        "cover_thickness_m": 3.0,
+        "depth_m": 10.0,
+        "eps_r": 20.0,
+        "sigma_s_m": 0.02,
+        "thickness_m": 0.5,
+        "width_m": 2.0
+      },
+      "seed": 9988355447125158837,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2917273600,
+        "reason": "completed",
+        "wall_s": 30.125
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "variant_tag": "base"
+    },
+    "B2D-C3m-D10m-W4m-T0.25m-E20-S0.02": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 3.0,
+      "difference": {
+        "bg_run_id": "B2D-C3m-BG",
+        "computed": true,
+        "envelope_peak_time_ns": 331.68576610542436,
+        "grid_tier": "BASE",
+        "in_band_energy_ratio_DIFF_over_BG": 2.314087836392468e-07,
+        "in_band_energy_ratio_DIFF_over_BG_dB": -66.35620160450573,
+        "normalized_mag_dB_at_selected_MHz": {
+          "110": -5.619044997536449,
+          "140": -11.196187510123794,
+          "170": 0.0,
+          "20": -16.79232523975398,
+          "50": -6.898272219922703,
+          "80": -3.4678223626122207
+        },
+        "note": "time_diff_peak_V_m carries the pair-internal excitation scale; no absolute detectability claim",
+        "robustness_400ns_relative_L2_vs_200ns": 1.2247899455292543e-07,
+        "robustness_400ns_spectral_peak_frequency_MHz": 170.0,
+        "source_samples_identical_to_family_bg": true,
+        "spectral_peak_frequency_MHz": 170.0,
+        "spectral_peak_phase_deg": 37.19839564259646,
+        "time_diff_peak_V_m": 0.0021348646943355476
+      },
+      "exceptions": null,
+      "family": "C3",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C3m",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.25m-E20-S0.02/B2D-C3m-D10m-W4m-T0.25m-E20-S0.02.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "92435adc015222ede1ec3971660cfc55d5cd36bbb5a44c10add36c8fedc3ea16",
+        "transformed_samples": 20351
+      },
+      "role": "target",
+      "run_id": "B2D-C3m-D10m-W4m-T0.25m-E20-S0.02",
+      "scan_axis": {
+        "cover_thickness_m": 3.0,
+        "depth_m": 10.0,
+        "eps_r": 20.0,
+        "sigma_s_m": 0.02,
+        "thickness_m": 0.25,
+        "width_m": 4.0
+      },
+      "seed": 3735194510930880449,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2917724160,
+        "reason": "completed",
+        "wall_s": 29.875
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "variant_tag": "base"
+    },
+    "B2D-C3m-D10m-W4m-T0.5m-E12-S0.005": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 3.0,
+      "difference": {
+        "bg_run_id": "B2D-C3m-BG",
+        "computed": true,
+        "envelope_peak_time_ns": 329.9757417112808,
+        "grid_tier": "BASE",
+        "in_band_energy_ratio_DIFF_over_BG": 4.972339721308896e-08,
+        "in_band_energy_ratio_DIFF_over_BG_dB": -73.03439207051788,
+        "normalized_mag_dB_at_selected_MHz": {
+          "110": -3.7143463295883667,
+          "140": -0.2136174011923952,
+          "170": -14.75791213006817,
+          "20": -15.434589705989445,
+          "50": -7.444971717061439,
+          "80": -15.597227882064624
+        },
+        "note": "time_diff_peak_V_m carries the pair-internal excitation scale; no absolute detectability claim",
+        "robustness_400ns_relative_L2_vs_200ns": 9.134696802736132e-08,
+        "robustness_400ns_spectral_peak_frequency_MHz": 133.7,
+        "source_samples_identical_to_family_bg": true,
+        "spectral_peak_frequency_MHz": 133.7,
+        "spectral_peak_phase_deg": -19.50653112984141,
+        "time_diff_peak_V_m": 0.000882342623020449
+      },
+      "exceptions": null,
+      "family": "C3",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C3m",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E12-S0.005/B2D-C3m-D10m-W4m-T0.5m-E12-S0.005.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "12e288125d3edb9148438069b4e3859cf53706c1501035cb4b32107304c47395",
+        "transformed_samples": 20351
+      },
+      "role": "target",
+      "run_id": "B2D-C3m-D10m-W4m-T0.5m-E12-S0.005",
+      "scan_axis": {
+        "cover_thickness_m": 3.0,
+        "depth_m": 10.0,
+        "eps_r": 12.0,
+        "sigma_s_m": 0.005,
+        "thickness_m": 0.5,
+        "width_m": 4.0
+      },
+      "seed": 7654536774410106203,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2915852288,
+        "reason": "completed",
+        "wall_s": 29.875
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "variant_tag": "base"
+    },
+    "B2D-C3m-D10m-W4m-T0.5m-E20-S0.005": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 3.0,
+      "difference": {
+        "bg_run_id": "B2D-C3m-BG",
+        "computed": true,
+        "envelope_peak_time_ns": 335.6954784778988,
+        "grid_tier": "BASE",
+        "in_band_energy_ratio_DIFF_over_BG": 3.8268347934505973e-07,
+        "in_band_energy_ratio_DIFF_over_BG_dB": -64.17160286100942,
+        "normalized_mag_dB_at_selected_MHz": {
+          "110": -3.6179056099938958,
+          "140": -12.957110319331806,
+          "170": -0.013100239620235229,
+          "20": -18.640414260915232,
+          "50": -11.754870989988667,
+          "80": -10.862819766998431
+        },
+        "note": "time_diff_peak_V_m carries the pair-internal excitation scale; no absolute detectability claim",
+        "robustness_400ns_relative_L2_vs_200ns": 1.5490920265750942e-07,
+        "robustness_400ns_spectral_peak_frequency_MHz": 169.7,
+        "source_samples_identical_to_family_bg": true,
+        "spectral_peak_frequency_MHz": 169.7,
+        "spectral_peak_phase_deg": -165.2600521556645,
+        "time_diff_peak_V_m": 0.0021403850972809835
+      },
+      "exceptions": null,
+      "family": "C3",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C3m",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.005/B2D-C3m-D10m-W4m-T0.5m-E20-S0.005.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "11b1b9dbaef48ca727b0c2fa0a2ae359b1ed88cb0f9f55d83c15d1879adf561f",
+        "transformed_samples": 20351
+      },
+      "role": "target",
+      "run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.005",
+      "scan_axis": {
+        "cover_thickness_m": 3.0,
+        "depth_m": 10.0,
+        "eps_r": 20.0,
+        "sigma_s_m": 0.005,
+        "thickness_m": 0.5,
+        "width_m": 4.0
+      },
+      "seed": 2675926815027539177,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2917875712,
+        "reason": "completed",
+        "wall_s": 30.125
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "variant_tag": "base"
+    },
+    "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 3.0,
+      "difference": {
+        "bg_run_id": "B2D-C3m-BG",
+        "computed": true,
+        "envelope_peak_time_ns": 331.8626651806806,
+        "grid_tier": "BASE",
+        "in_band_energy_ratio_DIFF_over_BG": 2.8635252336237045e-07,
+        "in_band_energy_ratio_DIFF_over_BG_dB": -65.43098985494515,
+        "normalized_mag_dB_at_selected_MHz": {
+          "110": -3.527518510266472,
+          "140": -8.086444445871365,
+          "170": -0.005361990710659926,
+          "20": -14.490772796828042,
+          "50": -10.798035970348492,
+          "80": -9.228244780161575
+        },
+        "note": "time_diff_peak_V_m carries the pair-internal excitation scale; no absolute detectability claim",
+        "robustness_400ns_relative_L2_vs_200ns": 1.9980360426695903e-07,
+        "robustness_400ns_spectral_peak_frequency_MHz": 169.7,
+        "source_samples_identical_to_family_bg": true,
+        "spectral_peak_frequency_MHz": 169.7,
+        "spectral_peak_phase_deg": -168.55590877592797,
+        "time_diff_peak_V_m": 0.0015834600107709207
+      },
+      "exceptions": null,
+      "family": "C3",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C3m",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "f30d7feb6a23525aa97ad8d26423b6cf10e50b788f8c77e296acc6f3fc14638e",
+        "transformed_samples": 20351
+      },
+      "role": "target",
+      "run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "scan_axis": {
+        "cover_thickness_m": 3.0,
+        "depth_m": 10.0,
+        "eps_r": 20.0,
+        "sigma_s_m": 0.02,
+        "thickness_m": 0.5,
+        "width_m": 4.0
+      },
+      "seed": 3012232042114264208,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2916569088,
+        "reason": "completed",
+        "wall_s": 30.125
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "variant_tag": "base"
+    },
+    "B2D-C3m-D10m-W4m-T0.5m-E20-S0.05": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 3.0,
+      "difference": {
+        "bg_run_id": "B2D-C3m-BG",
+        "computed": true,
+        "envelope_peak_time_ns": 318.59523453646364,
+        "grid_tier": "BASE",
+        "in_band_energy_ratio_DIFF_over_BG": 3.1493307602392536e-07,
+        "in_band_energy_ratio_DIFF_over_BG_dB": -65.01781724945178,
+        "normalized_mag_dB_at_selected_MHz": {
+          "110": -2.659478773841986,
+          "140": -3.0156617620878508,
+          "170": -0.0017799954959372278,
+          "20": -9.901658525109832,
+          "50": -7.611297978369578,
+          "80": -5.42123000226948
+        },
+        "note": "time_diff_peak_V_m carries the pair-internal excitation scale; no absolute detectability claim",
+        "robustness_400ns_relative_L2_vs_200ns": 5.146412125592136e-07,
+        "robustness_400ns_spectral_peak_frequency_MHz": 169.7,
+        "source_samples_identical_to_family_bg": true,
+        "spectral_peak_frequency_MHz": 169.7,
+        "spectral_peak_phase_deg": -176.04374251577053,
+        "time_diff_peak_V_m": 0.0016425988744472875
+      },
+      "exceptions": null,
+      "family": "C3",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C3m",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.05/B2D-C3m-D10m-W4m-T0.5m-E20-S0.05.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "ce52c3ac9a7bfd446d8eaaf305ef410f06a88052bc5350a75711790bd49c5e3c",
+        "transformed_samples": 20351
+      },
+      "role": "target",
+      "run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.05",
+      "scan_axis": {
+        "cover_thickness_m": 3.0,
+        "depth_m": 10.0,
+        "eps_r": 20.0,
+        "sigma_s_m": 0.05,
+        "thickness_m": 0.5,
+        "width_m": 4.0
+      },
+      "seed": 12389141982045339661,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2915225600,
+        "reason": "completed",
+        "wall_s": 29.858999999938533
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "variant_tag": "base"
+    },
+    "B2D-C3m-D10m-W4m-T0.5m-E28-S0.05": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 3.0,
+      "difference": {
+        "bg_run_id": "B2D-C3m-BG",
+        "computed": true,
+        "envelope_peak_time_ns": 319.18489812065104,
+        "grid_tier": "BASE",
+        "in_band_energy_ratio_DIFF_over_BG": 4.809910142057482e-07,
+        "in_band_energy_ratio_DIFF_over_BG_dB": -63.17863036967773,
+        "normalized_mag_dB_at_selected_MHz": {
+          "110": -4.505121808339759,
+          "140": -0.1822033258365655,
+          "170": -1.601147736248108,
+          "20": -11.240328015933246,
+          "50": -9.82510078177544,
+          "80": -4.168943463294902
+        },
+        "note": "time_diff_peak_V_m carries the pair-internal excitation scale; no absolute detectability claim",
+        "robustness_400ns_relative_L2_vs_200ns": 4.191565359052e-07,
+        "robustness_400ns_spectral_peak_frequency_MHz": 147.2,
+        "source_samples_identical_to_family_bg": true,
+        "spectral_peak_frequency_MHz": 147.2,
+        "spectral_peak_phase_deg": -119.57063757590703,
+        "time_diff_peak_V_m": 0.002137474420187857
+      },
+      "exceptions": null,
+      "family": "C3",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C3m",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E28-S0.05/B2D-C3m-D10m-W4m-T0.5m-E28-S0.05.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "3d97bb3e660453071bcc69489639997a82a736fb958bba594df0c56b19305695",
+        "transformed_samples": 20351
+      },
+      "role": "target",
+      "run_id": "B2D-C3m-D10m-W4m-T0.5m-E28-S0.05",
+      "scan_axis": {
+        "cover_thickness_m": 3.0,
+        "depth_m": 10.0,
+        "eps_r": 28.0,
+        "sigma_s_m": 0.05,
+        "thickness_m": 0.5,
+        "width_m": 4.0
+      },
+      "seed": 13284803048877813875,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2916827136,
+        "reason": "completed",
+        "wall_s": 29.875
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "variant_tag": "base"
+    },
+    "B2D-C3m-D10m-W4m-T1m-E20-S0.02": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 3.0,
+      "difference": {
+        "bg_run_id": "B2D-C3m-BG",
+        "computed": true,
+        "envelope_peak_time_ns": 314.5265558055704,
+        "grid_tier": "BASE",
+        "in_band_energy_ratio_DIFF_over_BG": 2.4986913266274587e-07,
+        "in_band_energy_ratio_DIFF_over_BG_dB": -66.0228739070118,
+        "normalized_mag_dB_at_selected_MHz": {
+          "110": -3.504595055161814,
+          "140": -2.60791130793681,
+          "170": -1.9892682659248822,
+          "20": -12.390969695365392,
+          "50": -7.615635050973735,
+          "80": -5.20393906450606
+        },
+        "note": "time_diff_peak_V_m carries the pair-internal excitation scale; no absolute detectability claim",
+        "robustness_400ns_relative_L2_vs_200ns": 4.293503510374168e-07,
+        "robustness_400ns_spectral_peak_frequency_MHz": 152.6,
+        "source_samples_identical_to_family_bg": true,
+        "spectral_peak_frequency_MHz": 152.6,
+        "spectral_peak_phase_deg": -97.89185852966318,
+        "time_diff_peak_V_m": 0.0015932608831974449
+      },
+      "exceptions": null,
+      "family": "C3",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C3m",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T1m-E20-S0.02/B2D-C3m-D10m-W4m-T1m-E20-S0.02.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "aebfb5df16e37ee6f2ad1e20ab7c4fac1a0461d97fcf881947e3bbf2880e92ec",
+        "transformed_samples": 20351
+      },
+      "role": "target",
+      "run_id": "B2D-C3m-D10m-W4m-T1m-E20-S0.02",
+      "scan_axis": {
+        "cover_thickness_m": 3.0,
+        "depth_m": 10.0,
+        "eps_r": 20.0,
+        "sigma_s_m": 0.02,
+        "thickness_m": 1.0,
+        "width_m": 4.0
+      },
+      "seed": 14167111125186138094,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2917208064,
+        "reason": "completed",
+        "wall_s": 30.125
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "variant_tag": "base"
+    },
+    "B2D-C3m-D20m-W4m-T0.5m-E20-S0.02": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 3.0,
+      "difference": {
+        "bg_run_id": "B2D-C3m-BG",
+        "computed": true,
+        "envelope_peak_time_ns": 536.9476597610657,
+        "grid_tier": "BASE",
+        "in_band_energy_ratio_DIFF_over_BG": 1.651093944888008e-08,
+        "in_band_energy_ratio_DIFF_over_BG_dB": -77.82228215298248,
+        "normalized_mag_dB_at_selected_MHz": {
+          "110": -3.4687932466577838,
+          "140": -7.9762132179008844,
+          "170": -0.005881071613443934,
+          "20": -14.312272202509861,
+          "50": -10.671557305704717,
+          "80": -9.092774070017215
+        },
+        "note": "time_diff_peak_V_m carries the pair-internal excitation scale; no absolute detectability claim",
+        "robustness_400ns_relative_L2_vs_200ns": 0.00027253734499874035,
+        "robustness_400ns_spectral_peak_frequency_MHz": 169.7,
+        "source_samples_identical_to_family_bg": true,
+        "spectral_peak_frequency_MHz": 169.7,
+        "spectral_peak_phase_deg": 173.08020795935644,
+        "time_diff_peak_V_m": 0.0003525705127565004
+      },
+      "exceptions": null,
+      "family": "C3",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C3m",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/research_checks/2026-09-26_B2D-C3m-D20m-W4m-T0.5m-E20-S0.02/B2D-C3m-D20m-W4m-T0.5m-E20-S0.02.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "9a4057ffc91d23a147ceaed2d5d5653b9a074dd22cb5dc02091835d6bcac6395",
+        "transformed_samples": 20351
+      },
+      "role": "target",
+      "run_id": "B2D-C3m-D20m-W4m-T0.5m-E20-S0.02",
+      "scan_axis": {
+        "cover_thickness_m": 3.0,
+        "depth_m": 20.0,
+        "eps_r": 20.0,
+        "sigma_s_m": 0.02,
+        "thickness_m": 0.5,
+        "width_m": 4.0
+      },
+      "seed": 1666341897114341285,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2916110336,
+        "reason": "completed",
+        "wall_s": 29.875
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "variant_tag": "base"
+    },
+    "B2D-C3m-D5m-W4m-T0.5m-E20-S0.02": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 3.0,
+      "difference": {
+        "bg_run_id": "B2D-C3m-BG",
+        "computed": true,
+        "envelope_peak_time_ns": 218.64725701669576,
+        "grid_tier": "BASE",
+        "in_band_energy_ratio_DIFF_over_BG": 1.2187313192682688e-06,
+        "in_band_energy_ratio_DIFF_over_BG_dB": -59.140920281146464,
+        "normalized_mag_dB_at_selected_MHz": {
+          "110": -3.586084565506761,
+          "140": -8.226866906329025,
+          "170": -0.0014910969238917653,
+          "20": -14.663062348060517,
+          "50": -10.883663769913687,
+          "80": -9.371375930964124
+        },
+        "note": "time_diff_peak_V_m carries the pair-internal excitation scale; no absolute detectability claim",
+        "robustness_400ns_relative_L2_vs_200ns": 6.884264936381944e-08,
+        "robustness_400ns_spectral_peak_frequency_MHz": 169.7,
+        "source_samples_identical_to_family_bg": true,
+        "spectral_peak_frequency_MHz": 169.7,
+        "spectral_peak_phase_deg": -159.84030038299562,
+        "time_diff_peak_V_m": 0.003906906729946535
+      },
+      "exceptions": null,
+      "family": "C3",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C3m",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/research_checks/2026-09-26_B2D-C3m-D5m-W4m-T0.5m-E20-S0.02/B2D-C3m-D5m-W4m-T0.5m-E20-S0.02.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "37de1c1e0266b317f56f38cf67b6054e31eb421b1cb07a1fc82d4a74e13d3e5e",
+        "transformed_samples": 20351
+      },
+      "role": "target",
+      "run_id": "B2D-C3m-D5m-W4m-T0.5m-E20-S0.02",
+      "scan_axis": {
+        "cover_thickness_m": 3.0,
+        "depth_m": 5.0,
+        "eps_r": 20.0,
+        "sigma_s_m": 0.02,
+        "thickness_m": 0.5,
+        "width_m": 4.0
+      },
+      "seed": 14777695749329400481,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2917384192,
+        "reason": "completed",
+        "wall_s": 59.218000000109896
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "variant_tag": "base"
+    },
+    "B2D-C5m-BG": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 5.0,
+      "difference": {
+        "computed": false,
+        "note": "family BG is the differencing reference itself (spec §6-P7)",
+        "reference_role": "bg"
+      },
+      "exceptions": null,
+      "family": "C5",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C5m",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/research_checks/2026-09-26_B2D-C5m-BG/B2D-C5m-BG.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "0e55f5e247fadd7936c4b3a20633b98e0b62a1cd33445143ccfcc0f9bf76f93e",
+        "transformed_samples": 20351
+      },
+      "role": "bg",
+      "run_id": "B2D-C5m-BG",
+      "scan_axis": {
+        "cover_thickness_m": 5.0,
+        "depth_m": null,
+        "eps_r": null,
+        "sigma_s_m": null,
+        "thickness_m": null,
+        "width_m": null
+      },
+      "seed": 1548763718624788989,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2916687872,
+        "reason": "completed",
+        "wall_s": 29.875
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "variant_tag": "base"
+    },
+    "B2D-C5m-D10m-NC": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 5.0,
+      "difference": {
+        "bg_run_id": "B2D-C5m-BG",
+        "computed": true,
+        "envelope_peak_time_ns": null,
+        "grid_tier": "BASE",
+        "in_band_energy_ratio_DIFF_over_BG": 0.0,
+        "in_band_energy_ratio_DIFF_over_BG_dB": null,
+        "normalized_mag_dB_at_selected_MHz": null,
+        "note": "paired difference is identically zero on both tail windows and in time (expected for the null-contrast control); peak/phase/dB metrics not applicable, reported as null",
+        "robustness_400ns_relative_L2_vs_200ns": null,
+        "robustness_400ns_spectral_peak_frequency_MHz": null,
+        "source_samples_identical_to_family_bg": true,
+        "spectral_peak_frequency_MHz": null,
+        "spectral_peak_phase_deg": null,
+        "time_diff_peak_V_m": 0.0,
+        "zero_difference": true
+      },
+      "exceptions": null,
+      "family": "C5",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C5m",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/research_checks/2026-09-26_B2D-C5m-D10m-NC/B2D-C5m-D10m-NC.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "b2d85d04f69d7d23d92f2207b90a32c67ea9c86aef8f86d045e55e01ebf33f4c",
+        "transformed_samples": 20351
+      },
+      "role": "nc",
+      "run_id": "B2D-C5m-D10m-NC",
+      "scan_axis": {
+        "cover_thickness_m": 5.0,
+        "depth_m": 10.0,
+        "eps_r": 9.0,
+        "sigma_s_m": 0.001,
+        "thickness_m": 0.5,
+        "width_m": 4.0
+      },
+      "seed": 1597065692920798074,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2915479552,
+        "reason": "completed",
+        "wall_s": 29.875
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "variant_tag": "base"
+    },
+    "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 5.0,
+      "difference": {
+        "bg_run_id": "B2D-C5m-BG",
+        "computed": true,
+        "envelope_peak_time_ns": 346.7221875022036,
+        "grid_tier": "BASE",
+        "in_band_energy_ratio_DIFF_over_BG": 1.0869843969359355e-08,
+        "in_band_energy_ratio_DIFF_over_BG_dB": -79.63776689927744,
+        "normalized_mag_dB_at_selected_MHz": {
+          "110": -3.7342957904034675,
+          "140": -8.094212091637745,
+          "170": -0.12256518323842536,
+          "20": -13.505112578124068,
+          "50": -10.56576068614368,
+          "80": -9.068518339615657
+        },
+        "note": "time_diff_peak_V_m carries the pair-internal excitation scale; no absolute detectability claim",
+        "robustness_400ns_relative_L2_vs_200ns": 7.888721000249735e-07,
+        "robustness_400ns_spectral_peak_frequency_MHz": 168.2,
+        "source_samples_identical_to_family_bg": true,
+        "spectral_peak_frequency_MHz": 168.2,
+        "spectral_peak_phase_deg": -94.70872245216192,
+        "time_diff_peak_V_m": 0.0002815157883855335
+      },
+      "exceptions": null,
+      "family": "C5",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C5m",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/research_checks/2026-09-26_B2D-C5m-D10m-W4m-T0.5m-E20-S0.02/B2D-C5m-D10m-W4m-T0.5m-E20-S0.02.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "0871d7c5466c3422607e49d7560e72bd895d38435b8b73ffb12748f2f58d7250",
+        "transformed_samples": 20351
+      },
+      "role": "target",
+      "run_id": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02",
+      "scan_axis": {
+        "cover_thickness_m": 5.0,
+        "depth_m": 10.0,
+        "eps_r": 20.0,
+        "sigma_s_m": 0.02,
+        "thickness_m": 0.5,
+        "width_m": 4.0
+      },
+      "seed": 6952488130553516166,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2917650432,
+        "reason": "completed",
+        "wall_s": 30.125
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "variant_tag": "base"
+    },
+    "B2D-C5m-D20m-W4m-T0.5m-E20-S0.02": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 5.0,
+      "difference": {
+        "bg_run_id": "B2D-C5m-BG",
+        "computed": true,
+        "envelope_peak_time_ns": 546.1464116743895,
+        "grid_tier": "BASE",
+        "in_band_energy_ratio_DIFF_over_BG": 6.245832594764899e-10,
+        "in_band_energy_ratio_DIFF_over_BG_dB": -92.04409660218558,
+        "normalized_mag_dB_at_selected_MHz": {
+          "110": -3.472093219400554,
+          "140": -7.939728575601533,
+          "170": -0.05433353126773351,
+          "20": -13.497279481981508,
+          "50": -10.47257714740102,
+          "80": -8.847591545508285
+        },
+        "note": "time_diff_peak_V_m carries the pair-internal excitation scale; no absolute detectability claim",
+        "robustness_400ns_relative_L2_vs_200ns": 0.00010513263098660892,
+        "robustness_400ns_spectral_peak_frequency_MHz": 169.1,
+        "source_samples_identical_to_family_bg": true,
+        "spectral_peak_frequency_MHz": 169.1,
+        "spectral_peak_phase_deg": -178.13842371506843,
+        "time_diff_peak_V_m": 5.665375656249694e-05
+      },
+      "exceptions": null,
+      "family": "C5",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C5m",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/research_checks/2026-09-26_B2D-C5m-D20m-W4m-T0.5m-E20-S0.02/B2D-C5m-D20m-W4m-T0.5m-E20-S0.02.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "586a09bae93b7eb07c0ffea8e7609c57c90e19e747dfdfd08698870274f1d9fe",
+        "transformed_samples": 20351
+      },
+      "role": "target",
+      "run_id": "B2D-C5m-D20m-W4m-T0.5m-E20-S0.02",
+      "scan_axis": {
+        "cover_thickness_m": 5.0,
+        "depth_m": 20.0,
+        "eps_r": 20.0,
+        "sigma_s_m": 0.02,
+        "thickness_m": 0.5,
+        "width_m": 4.0
+      },
+      "seed": 3286875568784178422,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2917261312,
+        "reason": "completed",
+        "wall_s": 29.858999999938533
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "variant_tag": "base"
+    },
+    "B2D-C8m-BG": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 8.0,
+      "difference": {
+        "computed": false,
+        "note": "family BG is the differencing reference itself (spec §6-P7)",
+        "reference_role": "bg"
+      },
+      "exceptions": null,
+      "family": "C8",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C8m",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/research_checks/2026-09-26_B2D-C8m-BG/B2D-C8m-BG.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "2a5488e09abe6d4f15a3eec351ab4eaf1d489537ebfe43db98f336cc48ac5d8c",
+        "transformed_samples": 20351
+      },
+      "role": "bg",
+      "run_id": "B2D-C8m-BG",
+      "scan_axis": {
+        "cover_thickness_m": 8.0,
+        "depth_m": null,
+        "eps_r": null,
+        "sigma_s_m": null,
+        "thickness_m": null,
+        "width_m": null
+      },
+      "seed": 1514693946617039709,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2915868672,
+        "reason": "completed",
+        "wall_s": 30.109999999869615
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "variant_tag": "base"
+    },
+    "B2D-C8m-D10m-NC": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 8.0,
+      "difference": {
+        "bg_run_id": "B2D-C8m-BG",
+        "computed": true,
+        "envelope_peak_time_ns": null,
+        "grid_tier": "BASE",
+        "in_band_energy_ratio_DIFF_over_BG": 0.0,
+        "in_band_energy_ratio_DIFF_over_BG_dB": null,
+        "normalized_mag_dB_at_selected_MHz": null,
+        "note": "paired difference is identically zero on both tail windows and in time (expected for the null-contrast control); peak/phase/dB metrics not applicable, reported as null",
+        "robustness_400ns_relative_L2_vs_200ns": null,
+        "robustness_400ns_spectral_peak_frequency_MHz": null,
+        "source_samples_identical_to_family_bg": true,
+        "spectral_peak_frequency_MHz": null,
+        "spectral_peak_phase_deg": null,
+        "time_diff_peak_V_m": 0.0,
+        "zero_difference": true
+      },
+      "exceptions": null,
+      "family": "C8",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C8m",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/research_checks/2026-09-26_B2D-C8m-D10m-NC/B2D-C8m-D10m-NC.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "12e147cd67b6ee3012a79d5ddbd7d7d86f808e6fed7f88ab221ee9911fd712fb",
+        "transformed_samples": 20351
+      },
+      "role": "nc",
+      "run_id": "B2D-C8m-D10m-NC",
+      "scan_axis": {
+        "cover_thickness_m": 8.0,
+        "depth_m": 10.0,
+        "eps_r": 9.0,
+        "sigma_s_m": 0.001,
+        "thickness_m": 0.5,
+        "width_m": 4.0
+      },
+      "seed": 4962703654320512011,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2917658624,
+        "reason": "completed",
+        "wall_s": 30.125
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "variant_tag": "base"
+    },
+    "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 8.0,
+      "difference": {
+        "bg_run_id": "B2D-C8m-BG",
+        "computed": true,
+        "envelope_peak_time_ns": 368.8345719092319,
+        "grid_tier": "BASE",
+        "in_band_energy_ratio_DIFF_over_BG": 8.026249736550938e-11,
+        "in_band_energy_ratio_DIFF_over_BG_dB": -100.95487331330483,
+        "normalized_mag_dB_at_selected_MHz": {
+          "110": -3.2426350546166023,
+          "140": -7.964809188098135,
+          "170": -0.0057651203008478626,
+          "20": -12.628437846348993,
+          "50": -10.118419656642835,
+          "80": -8.701433371874826
+        },
+        "note": "time_diff_peak_V_m carries the pair-internal excitation scale; no absolute detectability claim",
+        "robustness_400ns_relative_L2_vs_200ns": 6.756961389762839e-06,
+        "robustness_400ns_spectral_peak_frequency_MHz": 169.4,
+        "source_samples_identical_to_family_bg": true,
+        "spectral_peak_frequency_MHz": 169.4,
+        "spectral_peak_phase_deg": -37.72960672323476,
+        "time_diff_peak_V_m": 1.979538836316408e-05
+      },
+      "exceptions": null,
+      "family": "C8",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C8m",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/research_checks/2026-09-26_B2D-C8m-D10m-W4m-T0.5m-E20-S0.02/B2D-C8m-D10m-W4m-T0.5m-E20-S0.02.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "5c4e74b72064073e9a94203edd7edceda4d5f6652ea16208b9e844aa719fa6ee",
+        "transformed_samples": 20351
+      },
+      "role": "target",
+      "run_id": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+      "scan_axis": {
+        "cover_thickness_m": 8.0,
+        "depth_m": 10.0,
+        "eps_r": 20.0,
+        "sigma_s_m": 0.02,
+        "thickness_m": 0.5,
+        "width_m": 4.0
+      },
+      "seed": 3568317358127234568,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2917654528,
+        "reason": "completed",
+        "wall_s": 29.875
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "variant_tag": "base"
+    },
+    "B2D-C8m-D10m-W4m-T0.5m-E28-S0.05": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 8.0,
+      "difference": {
+        "bg_run_id": "B2D-C8m-BG",
+        "computed": true,
+        "envelope_peak_time_ns": 354.9774776808275,
+        "grid_tier": "BASE",
+        "in_band_energy_ratio_DIFF_over_BG": 1.3575229363982578e-10,
+        "in_band_energy_ratio_DIFF_over_BG_dB": -98.67252823936502,
+        "normalized_mag_dB_at_selected_MHz": {
+          "110": -4.399289537236154,
+          "140": -0.11701326543834126,
+          "170": -1.7879292824935036,
+          "20": -9.47740051307151,
+          "50": -9.315127429857847,
+          "80": -3.725064256117599
+        },
+        "note": "time_diff_peak_V_m carries the pair-internal excitation scale; no absolute detectability claim",
+        "robustness_400ns_relative_L2_vs_200ns": 1.377691190936324e-05,
+        "robustness_400ns_spectral_peak_frequency_MHz": 142.7,
+        "source_samples_identical_to_family_bg": true,
+        "spectral_peak_frequency_MHz": 142.7,
+        "spectral_peak_phase_deg": 102.72837012524698,
+        "time_diff_peak_V_m": 2.747311789619289e-05
+      },
+      "exceptions": null,
+      "family": "C8",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C8m",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/research_checks/2026-09-26_B2D-C8m-D10m-W4m-T0.5m-E28-S0.05/B2D-C8m-D10m-W4m-T0.5m-E28-S0.05.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "1086d1a0ad9b3558bd1dd945e01a8eadc0e6db30a78969232425777101910cd8",
+        "transformed_samples": 20351
+      },
+      "role": "target",
+      "run_id": "B2D-C8m-D10m-W4m-T0.5m-E28-S0.05",
+      "scan_axis": {
+        "cover_thickness_m": 8.0,
+        "depth_m": 10.0,
+        "eps_r": 28.0,
+        "sigma_s_m": 0.05,
+        "thickness_m": 0.5,
+        "width_m": 4.0
+      },
+      "seed": 18218180623682912596,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2914930688,
+        "reason": "completed",
+        "wall_s": 29.875
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "variant_tag": "base"
+    },
+    "B2D-C8m-D20m-W4m-T0.25m-E20-S0.02": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 8.0,
+      "difference": {
+        "bg_run_id": "B2D-C8m-BG",
+        "computed": true,
+        "envelope_peak_time_ns": 563.1287228989871,
+        "grid_tier": "BASE",
+        "in_band_energy_ratio_DIFF_over_BG": 3.8167380710479025e-12,
+        "in_band_energy_ratio_DIFF_over_BG_dB": -114.1830764309039,
+        "normalized_mag_dB_at_selected_MHz": {
+          "110": -5.283056761715276,
+          "140": -11.053756023231262,
+          "170": 0.0,
+          "20": -14.776023616329404,
+          "50": -6.247348942698584,
+          "80": -2.9534448551028394
+        },
+        "note": "time_diff_peak_V_m carries the pair-internal excitation scale; no absolute detectability claim",
+        "robustness_400ns_relative_L2_vs_200ns": 2.3427055872375738e-05,
+        "robustness_400ns_spectral_peak_frequency_MHz": 170.0,
+        "source_samples_identical_to_family_bg": true,
+        "spectral_peak_frequency_MHz": 170.0,
+        "spectral_peak_phase_deg": 85.5311092706554,
+        "time_diff_peak_V_m": 5.993649965674308e-06
+      },
+      "exceptions": null,
+      "family": "C8",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C8m",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/research_checks/2026-09-26_B2D-C8m-D20m-W4m-T0.25m-E20-S0.02/B2D-C8m-D20m-W4m-T0.25m-E20-S0.02.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "0af9d01130e5cb05e5297a752f7a095ee0beab2c4ce8b3ff7d1066ab68d1d742",
+        "transformed_samples": 20351
+      },
+      "role": "target",
+      "run_id": "B2D-C8m-D20m-W4m-T0.25m-E20-S0.02",
+      "scan_axis": {
+        "cover_thickness_m": 8.0,
+        "depth_m": 20.0,
+        "eps_r": 20.0,
+        "sigma_s_m": 0.02,
+        "thickness_m": 0.25,
+        "width_m": 4.0
+      },
+      "seed": 3033614471288975475,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2915946496,
+        "reason": "completed",
+        "wall_s": 29.860000000102445
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "variant_tag": "base"
+    },
+    "B2D-C8m-D20m-W4m-T0.5m-E20-S0.02": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 8.0,
+      "difference": {
+        "bg_run_id": "B2D-C8m-BG",
+        "computed": true,
+        "envelope_peak_time_ns": 567.5511997803928,
+        "grid_tier": "BASE",
+        "in_band_energy_ratio_DIFF_over_BG": 4.598276710920589e-12,
+        "in_band_energy_ratio_DIFF_over_BG_dB": -113.37404897701373,
+        "normalized_mag_dB_at_selected_MHz": {
+          "110": -3.177045870323294,
+          "140": -7.806332081191832,
+          "170": -0.013763769975431703,
+          "20": -12.361035146406785,
+          "50": -10.016374958828182,
+          "80": -8.51645930238322
+        },
+        "note": "time_diff_peak_V_m carries the pair-internal excitation scale; no absolute detectability claim",
+        "robustness_400ns_relative_L2_vs_200ns": 2.6934128483765893e-05,
+        "robustness_400ns_spectral_peak_frequency_MHz": 169.7,
+        "source_samples_identical_to_family_bg": true,
+        "spectral_peak_frequency_MHz": 169.7,
+        "spectral_peak_phase_deg": -94.82691264426478,
+        "time_diff_peak_V_m": 4.730632239713373e-06
+      },
+      "exceptions": null,
+      "family": "C8",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C8m",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/research_checks/2026-09-26_B2D-C8m-D20m-W4m-T0.5m-E20-S0.02/B2D-C8m-D20m-W4m-T0.5m-E20-S0.02.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "be9276f67cb114d3a178cce1ab8959a9e486a2923f0a2b95a10507e49a70736e",
+        "transformed_samples": 20351
+      },
+      "role": "target",
+      "run_id": "B2D-C8m-D20m-W4m-T0.5m-E20-S0.02",
+      "scan_axis": {
+        "cover_thickness_m": 8.0,
+        "depth_m": 20.0,
+        "eps_r": 20.0,
+        "sigma_s_m": 0.02,
+        "thickness_m": 0.5,
+        "width_m": 4.0
+      },
+      "seed": 12496397141236383439,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2915303424,
+        "reason": "completed",
+        "wall_s": 30.109000000171363
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "variant_tag": "base"
+    }
+  },
+  "frequency_Hz": "linspace(20e6,170e6,501)",
+  "grid_tier": "BASE",
+  "hard_limits": {
+    "absolute_accuracy_claimed": false,
+    "clean_truth_generated": false,
+    "conclusions_scope": "mechanism and operator-evaluation evidence for the batch2d_v1 BASE scenario families only (spec §6-P2/P6); not field performance, not 3D, not absolute accuracy, no maximum-depth claim",
+    "cross_family_differencing": false,
+    "family_bg_required": true,
+    "fdtd_solver_invoked": false,
+    "grid_convergence_certified": false,
+    "grid_tier": "BASE",
+    "grid_tiers_merged": false,
+    "in_band_energy_ratio_is": "diagnostic energy ratio on the 501-point analysis grid; not detectability, not SNR, not a physical threshold",
+    "negative_controls_merged_into_targets": false,
+    "physical_acceptance_threshold": null,
+    "physical_label_eligible": false,
+    "reference_state": "numerically_unresolved",
+    "training_eligible": false,
+    "training_labels_generated": false
+  },
+  "inputs": {
+    "artifacts/research_checks/2026-09-26_B2D-C1m-BG/B2D-C1m-BG.h5": "ddd2890a8b68f25c5925c06513fd3fdff8ef1fd2b4602857016527a1e2e0c38f",
+    "artifacts/research_checks/2026-09-26_B2D-C1m-D10m-NC/B2D-C1m-D10m-NC.h5": "37593dd1b0480b202d24088d6eeab46b20032d154a98981a9f01eddb4d04f880",
+    "artifacts/research_checks/2026-09-26_B2D-C1m-D10m-W4m-T0.5m-E20-S0.02/B2D-C1m-D10m-W4m-T0.5m-E20-S0.02.h5": "1bc62ea2b8dca6129e08b50b5e033c828f9ea81e5387ffd6a521b62902dc586e",
+    "artifacts/research_checks/2026-09-26_B2D-C1m-D2m-W4m-T0.5m-E20-S0.02/B2D-C1m-D2m-W4m-T0.5m-E20-S0.02.h5": "2b80afff56bd1c9b54755151863c52772b4e1ed071e3e487c9b695c7a25328b6",
+    "artifacts/research_checks/2026-09-26_B2D-C1m-D5m-W4m-T0.5m-E20-S0.02/B2D-C1m-D5m-W4m-T0.5m-E20-S0.02.h5": "6236e5a87a616538e3527593c87090f734269abd5c686e04105f8032ce25b86d",
+    "artifacts/research_checks/2026-09-26_B2D-C3m-BG/B2D-C3m-BG.h5": "a261e9958b90e82ad11a23464e797e5d7c98ad0a9cf2262c41cfd5b623b236c6",
+    "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-NC/B2D-C3m-D10m-NC.h5": "400404d5612347f2d2b3a409853a26967f8a85dbb6e1b5ac7665a4946b93d004",
+    "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-OFF/B2D-C3m-D10m-OFF.h5": "3ad5155bc47f77a5a56c330c6564c4c30891d24acc10b9cb64d0628c3eecde80",
+    "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W1m-T0.5m-E20-S0.02/B2D-C3m-D10m-W1m-T0.5m-E20-S0.02.h5": "201a4be95a49e4f71a2a8a8e19803a54ba645aaf4a12d0ec30be66f951659dd9",
+    "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W2m-T0.5m-E20-S0.02/B2D-C3m-D10m-W2m-T0.5m-E20-S0.02.h5": "fe3e5f3d1903fa3304e550b8d5058f3528d20e648b8dddd46b17a3498a2e46e4",
+    "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.25m-E20-S0.02/B2D-C3m-D10m-W4m-T0.25m-E20-S0.02.h5": "92435adc015222ede1ec3971660cfc55d5cd36bbb5a44c10add36c8fedc3ea16",
+    "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E12-S0.005/B2D-C3m-D10m-W4m-T0.5m-E12-S0.005.h5": "12e288125d3edb9148438069b4e3859cf53706c1501035cb4b32107304c47395",
+    "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.005/B2D-C3m-D10m-W4m-T0.5m-E20-S0.005.h5": "11b1b9dbaef48ca727b0c2fa0a2ae359b1ed88cb0f9f55d83c15d1879adf561f",
+    "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02.h5": "f30d7feb6a23525aa97ad8d26423b6cf10e50b788f8c77e296acc6f3fc14638e",
+    "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.05/B2D-C3m-D10m-W4m-T0.5m-E20-S0.05.h5": "ce52c3ac9a7bfd446d8eaaf305ef410f06a88052bc5350a75711790bd49c5e3c",
+    "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E28-S0.05/B2D-C3m-D10m-W4m-T0.5m-E28-S0.05.h5": "3d97bb3e660453071bcc69489639997a82a736fb958bba594df0c56b19305695",
+    "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T1m-E20-S0.02/B2D-C3m-D10m-W4m-T1m-E20-S0.02.h5": "aebfb5df16e37ee6f2ad1e20ab7c4fac1a0461d97fcf881947e3bbf2880e92ec",
+    "artifacts/research_checks/2026-09-26_B2D-C3m-D20m-W4m-T0.5m-E20-S0.02/B2D-C3m-D20m-W4m-T0.5m-E20-S0.02.h5": "9a4057ffc91d23a147ceaed2d5d5653b9a074dd22cb5dc02091835d6bcac6395",
+    "artifacts/research_checks/2026-09-26_B2D-C3m-D5m-W4m-T0.5m-E20-S0.02/B2D-C3m-D5m-W4m-T0.5m-E20-S0.02.h5": "37de1c1e0266b317f56f38cf67b6054e31eb421b1cb07a1fc82d4a74e13d3e5e",
+    "artifacts/research_checks/2026-09-26_B2D-C5m-BG/B2D-C5m-BG.h5": "0e55f5e247fadd7936c4b3a20633b98e0b62a1cd33445143ccfcc0f9bf76f93e",
+    "artifacts/research_checks/2026-09-26_B2D-C5m-D10m-NC/B2D-C5m-D10m-NC.h5": "b2d85d04f69d7d23d92f2207b90a32c67ea9c86aef8f86d045e55e01ebf33f4c",
+    "artifacts/research_checks/2026-09-26_B2D-C5m-D10m-W4m-T0.5m-E20-S0.02/B2D-C5m-D10m-W4m-T0.5m-E20-S0.02.h5": "0871d7c5466c3422607e49d7560e72bd895d38435b8b73ffb12748f2f58d7250",
+    "artifacts/research_checks/2026-09-26_B2D-C5m-D20m-W4m-T0.5m-E20-S0.02/B2D-C5m-D20m-W4m-T0.5m-E20-S0.02.h5": "586a09bae93b7eb07c0ffea8e7609c57c90e19e747dfdfd08698870274f1d9fe",
+    "artifacts/research_checks/2026-09-26_B2D-C8m-BG/B2D-C8m-BG.h5": "2a5488e09abe6d4f15a3eec351ab4eaf1d489537ebfe43db98f336cc48ac5d8c",
+    "artifacts/research_checks/2026-09-26_B2D-C8m-D10m-NC/B2D-C8m-D10m-NC.h5": "12e147cd67b6ee3012a79d5ddbd7d7d86f808e6fed7f88ab221ee9911fd712fb",
+    "artifacts/research_checks/2026-09-26_B2D-C8m-D10m-W4m-T0.5m-E20-S0.02/B2D-C8m-D10m-W4m-T0.5m-E20-S0.02.h5": "5c4e74b72064073e9a94203edd7edceda4d5f6652ea16208b9e844aa719fa6ee",
+    "artifacts/research_checks/2026-09-26_B2D-C8m-D10m-W4m-T0.5m-E28-S0.05/B2D-C8m-D10m-W4m-T0.5m-E28-S0.05.h5": "1086d1a0ad9b3558bd1dd945e01a8eadc0e6db30a78969232425777101910cd8",
+    "artifacts/research_checks/2026-09-26_B2D-C8m-D20m-W4m-T0.25m-E20-S0.02/B2D-C8m-D20m-W4m-T0.25m-E20-S0.02.h5": "0af9d01130e5cb05e5297a752f7a095ee0beab2c4ce8b3ff7d1066ab68d1d742",
+    "artifacts/research_checks/2026-09-26_B2D-C8m-D20m-W4m-T0.5m-E20-S0.02/B2D-C8m-D20m-W4m-T0.5m-E20-S0.02.h5": "be9276f67cb114d3a178cce1ab8959a9e486a2923f0a2b95a10507e49a70736e",
+    "configs/research/batch2d_v1/cases.json": "7145d2c735b702591d1cd5b12395b6db42be8c61edac0a3a7cf256aeb917174e",
+    "configs/research/batch2d_v1/groups.json": "a51c00dd36048c2269cd854fc3f758fb36973c54585b7e474f1210eb6524b8df"
+  },
+  "n_cases_analyzed": 29,
+  "n_cases_contract": 29,
+  "negative_controls": {
+    "nc": [
+      {
+        "computed": true,
+        "envelope_peak_time_ns": null,
+        "expectation": "预期近零，偏离指示几何/平滑残差",
+        "family": "C1",
+        "grid_tier": "BASE",
+        "group_id": "B2D-C1m",
+        "in_band_energy_ratio_DIFF_over_BG": 0.0,
+        "in_band_energy_ratio_DIFF_over_BG_dB": null,
+        "run_id": "B2D-C1m-D10m-NC",
+        "spectral_peak_frequency_MHz": null
+      },
+      {
+        "computed": true,
+        "envelope_peak_time_ns": null,
+        "expectation": "预期近零，偏离指示几何/平滑残差",
+        "family": "C3",
+        "grid_tier": "BASE",
+        "group_id": "B2D-C3m",
+        "in_band_energy_ratio_DIFF_over_BG": 0.0,
+        "in_band_energy_ratio_DIFF_over_BG_dB": null,
+        "run_id": "B2D-C3m-D10m-NC",
+        "spectral_peak_frequency_MHz": null
+      },
+      {
+        "computed": true,
+        "envelope_peak_time_ns": null,
+        "expectation": "预期近零，偏离指示几何/平滑残差",
+        "family": "C5",
+        "grid_tier": "BASE",
+        "group_id": "B2D-C5m",
+        "in_band_energy_ratio_DIFF_over_BG": 0.0,
+        "in_band_energy_ratio_DIFF_over_BG_dB": null,
+        "run_id": "B2D-C5m-D10m-NC",
+        "spectral_peak_frequency_MHz": null
+      },
+      {
+        "computed": true,
+        "envelope_peak_time_ns": null,
+        "expectation": "预期近零，偏离指示几何/平滑残差",
+        "family": "C8",
+        "grid_tier": "BASE",
+        "group_id": "B2D-C8m",
+        "in_band_energy_ratio_DIFF_over_BG": 0.0,
+        "in_band_energy_ratio_DIFF_over_BG_dB": null,
+        "run_id": "B2D-C8m-D10m-NC",
+        "spectral_peak_frequency_MHz": null
+      }
+    ],
+    "note": "negative controls are single-listed and never merged into the target rows",
+    "off": [
+      {
+        "computed": true,
+        "envelope_peak_time_ns": 319.3617971959073,
+        "family": "C3",
+        "grid_tier": "BASE",
+        "group_id": "B2D-C3m",
+        "in_band_energy_ratio_DIFF_over_BG": 3.0406928886248514e-08,
+        "in_band_energy_ratio_DIFF_over_BG_dB": -75.17027441582566,
+        "run_id": "B2D-C3m-D10m-OFF",
+        "side_pml_margin_exception": {
+          "exceptions": [
+            "side_pml_margin_below_13m"
+          ],
+          "freeze_disposition": [
+            "Spec 1.4 already singles out the OFF case (8 m < 13 m). Freeze options: (a) keep with this note; (b) reduce offset; (c) cancel OFF (BG and NC controls must stay)."
+          ],
+          "note": "OFF keeps a target contrast but sits 5 m off the Tx-Rx baseline; it is a negative control for false positives, not evidence of detectability. Its lateral PML margin is below the family 13 m reference, so it is single-listed (spec §1.4/§1.5).",
+          "static_check": {
+            "side_pml_margin_m": 8.0,
+            "target_fully_in_sandstone": true
+          }
+        },
+        "spectral_peak_frequency_MHz": 36.8
+      }
+    ]
+  },
+  "pairing_policy": {
+    "cross_family_differencing": false,
+    "family_bg": {
+      "C1": "B2D-C1m-BG",
+      "C3": "B2D-C3m-BG",
+      "C5": "B2D-C5m-BG",
+      "C8": "B2D-C8m-BG"
+    },
+    "rule": "every non-BG case is differenced against the same-family same-grid BG only"
+  },
+  "segment": "base",
+  "spec": "docs/research/2026-09-26_batch_2d_spec_v1.md §1.6, §4.1-§4.2, §6-P2/P6/P7",
+  "stratified_by_family": {
+    "C1": {
+      "bg_run_id": "B2D-C1m-BG",
+      "cover_thickness_m": 1.0,
+      "differencing_family_status": "analyzed",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C1m",
+      "mother_model_hash": "c68b349aa31b991591c96cbf9737b0aa39be5ba949812adcabb7f47f054fca7d",
+      "n_cases": 5,
+      "n_cases_analyzed": 5,
+      "n_differences_computed": 4,
+      "reporting": "family rows only; no cross-family average, no cross-family differencing (spec §6-P2/P7)",
+      "roles": {
+        "bg": [
+          "B2D-C1m-BG"
+        ],
+        "nc": [
+          "B2D-C1m-D10m-NC"
+        ],
+        "off": [],
+        "target": [
+          "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+          "B2D-C1m-D2m-W4m-T0.5m-E20-S0.02",
+          "B2D-C1m-D5m-W4m-T0.5m-E20-S0.02"
+        ]
+      }
+    },
+    "C3": {
+      "bg_run_id": "B2D-C3m-BG",
+      "cover_thickness_m": 3.0,
+      "differencing_family_status": "analyzed",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C3m",
+      "mother_model_hash": "92f9f5f917fd9136e1f012bc6870c7369bfbf1b0cb9b27a045151489a8fdcc4f",
+      "n_cases": 14,
+      "n_cases_analyzed": 14,
+      "n_differences_computed": 13,
+      "reporting": "family rows only; no cross-family average, no cross-family differencing (spec §6-P2/P7)",
+      "roles": {
+        "bg": [
+          "B2D-C3m-BG"
+        ],
+        "nc": [
+          "B2D-C3m-D10m-NC"
+        ],
+        "off": [
+          "B2D-C3m-D10m-OFF"
+        ],
+        "target": [
+          "B2D-C3m-D10m-W1m-T0.5m-E20-S0.02",
+          "B2D-C3m-D10m-W2m-T0.5m-E20-S0.02",
+          "B2D-C3m-D10m-W4m-T0.25m-E20-S0.02",
+          "B2D-C3m-D10m-W4m-T0.5m-E12-S0.005",
+          "B2D-C3m-D10m-W4m-T0.5m-E20-S0.005",
+          "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+          "B2D-C3m-D10m-W4m-T0.5m-E20-S0.05",
+          "B2D-C3m-D10m-W4m-T0.5m-E28-S0.05",
+          "B2D-C3m-D10m-W4m-T1m-E20-S0.02",
+          "B2D-C3m-D20m-W4m-T0.5m-E20-S0.02",
+          "B2D-C3m-D5m-W4m-T0.5m-E20-S0.02"
+        ]
+      }
+    },
+    "C5": {
+      "bg_run_id": "B2D-C5m-BG",
+      "cover_thickness_m": 5.0,
+      "differencing_family_status": "analyzed",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C5m",
+      "mother_model_hash": "7d4732856d32fde982ddd6432b4c272f29de34051716f8d5e476cbd76e59f531",
+      "n_cases": 4,
+      "n_cases_analyzed": 4,
+      "n_differences_computed": 3,
+      "reporting": "family rows only; no cross-family average, no cross-family differencing (spec §6-P2/P7)",
+      "roles": {
+        "bg": [
+          "B2D-C5m-BG"
+        ],
+        "nc": [
+          "B2D-C5m-D10m-NC"
+        ],
+        "off": [],
+        "target": [
+          "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02",
+          "B2D-C5m-D20m-W4m-T0.5m-E20-S0.02"
+        ]
+      }
+    },
+    "C8": {
+      "bg_run_id": "B2D-C8m-BG",
+      "cover_thickness_m": 8.0,
+      "differencing_family_status": "analyzed",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C8m",
+      "mother_model_hash": "0e3c8d367c78cfc15c0a98e2ff28e901301ccc0437f22f6d5376d8209e10d161",
+      "n_cases": 6,
+      "n_cases_analyzed": 6,
+      "n_differences_computed": 5,
+      "reporting": "family rows only; no cross-family average, no cross-family differencing (spec §6-P2/P7)",
+      "roles": {
+        "bg": [
+          "B2D-C8m-BG"
+        ],
+        "nc": [
+          "B2D-C8m-D10m-NC"
+        ],
+        "off": [],
+        "target": [
+          "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+          "B2D-C8m-D10m-W4m-T0.5m-E28-S0.05",
+          "B2D-C8m-D20m-W4m-T0.25m-E20-S0.02",
+          "B2D-C8m-D20m-W4m-T0.5m-E20-S0.02"
+        ]
+      }
+    }
+  },
+  "tail_windows_ns": {
+    "main": 200,
+    "robustness": 400
+  },
+  "time_window_ns": 1200,
+  "unavailable_cases": []
+}
