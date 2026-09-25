@@ -1,0 +1,1067 @@
+{
+  "batch_id": "batch2d_v1",
+  "segment": "fine2",
+  "grid_tier": "FINE2",
+  "spec": "docs/research/2026-09-26_batch_2d_spec_v1.md",
+  "input_template": {
+    "bg": "configs/research/deep_zfine2_v1/DEP_BG_ZFINE2.in",
+    "target": "configs/research/deep_zfine2_v1/DEP_20_ZFINE2.in",
+    "coarse_geometry_source": "configs/research/batch2d_v1/",
+    "rule": "only the #title line and #box coordinates differ from the template; material names follow the coarse case (rock/cover/target, BG carries no target material); geometry is physically identical to the coarse case, only the grid is refined"
+  },
+  "grid": {
+    "dy_m": 0.0125,
+    "dz_m": 0.003125,
+    "ny": 2560,
+    "nz": 16000,
+    "cells": 40960000,
+    "pml_cells": [
+      0,
+      80,
+      320,
+      0,
+      80,
+      320
+    ],
+    "pml_physical_thickness_m": 1.0,
+    "dt_s": 1.0112647039820335e-11,
+    "time_window_s": 1.2e-06,
+    "time_steps": 118663,
+    "main_fields_ID_GiB": 5.495653286576271
+  },
+  "wall_clock": {
+    "method": "spec 3.1: wall_s = ref_wall_s * (cells/cells_ref) * (dt_ref/dt)",
+    "reference": "YFINE target measured 1088.781 s, cells 40,960,000, dy=dz=6.25 mm; ZFINE2 (same grid as this tier) measured 1438.6 s / 1334.8 s",
+    "wall_s_per_case_method_3_1": 1587.15740875539,
+    "wall_s_per_case_planning_envelope_3_2": 1380.0,
+    "note": "1380 s/case is the spec 1.6 fine2 planning figure (about 23 min/run); spec 3.1 work scaling gives a larger value; measured ZFINE2 runs were 1438.6 s and 1334.8 s; the spec 6-P5 hard stop is 40 min/case. Estimates only, not an ETA.",
+    "total_wall_s_method_3_1": 12697.25927004312,
+    "total_wall_s_envelope_3_2": 11040.0
+  },
+  "n_cases": 8,
+  "n_exceptions": 0,
+  "exceptions_summary": [],
+  "cases": [
+    {
+      "case_id": "B2D-C1m-BG-F2",
+      "run_id": "B2D-C1m-BG-F2",
+      "file": "B2D-C1m-BG-F2.in",
+      "input_sha256": "d1a45755d1ef0c88186a831bd7d815f56c23f1adaf03fff9e84758163a79bd61",
+      "batch_id": "batch2d_v1",
+      "segment": "fine2",
+      "grid_tier": "FINE2",
+      "family": "C1",
+      "cover_thickness_m": 1.0,
+      "role": "bg",
+      "mother_model_id": "B2D-C1m-BG",
+      "group_id": "B2D-C1m",
+      "seed": 8293549530763068606,
+      "variant_tag": "fine2",
+      "scan_axis": {
+        "cover_thickness_m": 1.0,
+        "depth_m": null,
+        "width_m": null,
+        "thickness_m": null,
+        "eps_r": null,
+        "sigma_s_m": null
+      },
+      "materials": {
+        "rock": [
+          9.0,
+          0.001
+        ],
+        "cover": [
+          16.0,
+          0.01
+        ],
+        "target": null
+      },
+      "geometry": {
+        "domain_m": [
+          null,
+          32.0,
+          50.0
+        ],
+        "dy_dz_m": [
+          0.0125,
+          0.003125
+        ],
+        "pml_cells": [
+          0,
+          80,
+          320,
+          0,
+          80,
+          320
+        ],
+        "pml_physical_thickness_m": 1.0,
+        "surface_z_m": 30.0,
+        "cover_bottom_z_m": 29.0,
+        "cover_box_m": [
+          0.0,
+          29.0,
+          32.0,
+          30.0
+        ],
+        "target_box_m": null,
+        "target_box_cells": null,
+        "tx_m": [
+          15.35,
+          45.0
+        ],
+        "rx_m": [
+          16.65,
+          45.0
+        ],
+        "component": "Ex"
+      },
+      "cells": 40960000,
+      "dt_s": 1.0112647039820335e-11,
+      "time_steps": 118663,
+      "main_fields_ID_GiB": 5.495653286576271,
+      "wall_s_estimate_method_3_1": 1587.15740875539,
+      "wall_s_planning_envelope_3_2": 1380.0,
+      "static_check": {
+        "grid_aligned": true,
+        "grid_aligned_basis": {
+          "dy_m": 0.0125,
+          "dz_m": 0.003125,
+          "domain_y_cells": 2560,
+          "domain_z_cells": 16000,
+          "rock_box_cells": [
+            0,
+            0,
+            2560,
+            9600
+          ],
+          "cover_box_cells": [
+            0,
+            9280,
+            2560,
+            9600
+          ],
+          "target_box_cells": null,
+          "tx_cells": [
+            1228,
+            14400
+          ],
+          "rx_cells": [
+            1332,
+            14400
+          ],
+          "pml_y_physical_m": 1.0,
+          "pml_z_physical_m": 1.0,
+          "all_integer_cells": true
+        },
+        "target": null
+      },
+      "exceptions": null
+    },
+    {
+      "case_id": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2",
+      "run_id": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2",
+      "file": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2.in",
+      "input_sha256": "16b46db5dc7ad5f4d5f0c64e2ffe550aaba738406a5be040bf73d342cd85f3d7",
+      "batch_id": "batch2d_v1",
+      "segment": "fine2",
+      "grid_tier": "FINE2",
+      "family": "C1",
+      "cover_thickness_m": 1.0,
+      "role": "target",
+      "mother_model_id": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+      "group_id": "B2D-C1m",
+      "seed": 6275352817341463172,
+      "variant_tag": "fine2",
+      "scan_axis": {
+        "cover_thickness_m": 1.0,
+        "depth_m": 10.0,
+        "width_m": 4.0,
+        "thickness_m": 0.5,
+        "eps_r": 20.0,
+        "sigma_s_m": 0.02
+      },
+      "materials": {
+        "rock": [
+          9.0,
+          0.001
+        ],
+        "cover": [
+          16.0,
+          0.01
+        ],
+        "target": [
+          20.0,
+          0.02
+        ]
+      },
+      "geometry": {
+        "domain_m": [
+          null,
+          32.0,
+          50.0
+        ],
+        "dy_dz_m": [
+          0.0125,
+          0.003125
+        ],
+        "pml_cells": [
+          0,
+          80,
+          320,
+          0,
+          80,
+          320
+        ],
+        "pml_physical_thickness_m": 1.0,
+        "surface_z_m": 30.0,
+        "cover_bottom_z_m": 29.0,
+        "cover_box_m": [
+          0.0,
+          29.0,
+          32.0,
+          30.0
+        ],
+        "target_box_m": [
+          14.0,
+          19.75,
+          18.0,
+          20.25
+        ],
+        "target_box_cells": [
+          1120,
+          6320,
+          1440,
+          6480
+        ],
+        "tx_m": [
+          15.35,
+          45.0
+        ],
+        "rx_m": [
+          16.65,
+          45.0
+        ],
+        "component": "Ex"
+      },
+      "cells": 40960000,
+      "dt_s": 1.0112647039820335e-11,
+      "time_steps": 118663,
+      "main_fields_ID_GiB": 5.495653286576271,
+      "wall_s_estimate_method_3_1": 1587.15740875539,
+      "wall_s_planning_envelope_3_2": 1380.0,
+      "static_check": {
+        "grid_aligned": true,
+        "grid_aligned_basis": {
+          "dy_m": 0.0125,
+          "dz_m": 0.003125,
+          "domain_y_cells": 2560,
+          "domain_z_cells": 16000,
+          "rock_box_cells": [
+            0,
+            0,
+            2560,
+            9600
+          ],
+          "cover_box_cells": [
+            0,
+            9280,
+            2560,
+            9600
+          ],
+          "target_box_cells": [
+            1120,
+            6320,
+            1440,
+            6480
+          ],
+          "tx_cells": [
+            1228,
+            14400
+          ],
+          "rx_cells": [
+            1332,
+            14400
+          ],
+          "pml_y_physical_m": 1.0,
+          "pml_z_physical_m": 1.0,
+          "all_integer_cells": true
+        },
+        "cover_bottom_m": 29.0,
+        "target_top_m": 20.25,
+        "target_bottom_m": 19.75,
+        "clearance_below_cover_m": 8.75,
+        "bottom_pml_margin_m": 18.75,
+        "side_pml_margin_m": 13.0,
+        "top_pml_margin_m": 28.75,
+        "target_fully_in_sandstone": true
+      },
+      "exceptions": null
+    },
+    {
+      "case_id": "B2D-C3m-BG-F2",
+      "run_id": "B2D-C3m-BG-F2",
+      "file": "B2D-C3m-BG-F2.in",
+      "input_sha256": "24eaaa6c6d111a7220591d3a5f0c020e1eba288acd64776ee3591c793d39926a",
+      "batch_id": "batch2d_v1",
+      "segment": "fine2",
+      "grid_tier": "FINE2",
+      "family": "C3",
+      "cover_thickness_m": 3.0,
+      "role": "bg",
+      "mother_model_id": "B2D-C3m-BG",
+      "group_id": "B2D-C3m",
+      "seed": 27168532650590811,
+      "variant_tag": "fine2",
+      "scan_axis": {
+        "cover_thickness_m": 3.0,
+        "depth_m": null,
+        "width_m": null,
+        "thickness_m": null,
+        "eps_r": null,
+        "sigma_s_m": null
+      },
+      "materials": {
+        "rock": [
+          9.0,
+          0.001
+        ],
+        "cover": [
+          16.0,
+          0.01
+        ],
+        "target": null
+      },
+      "geometry": {
+        "domain_m": [
+          null,
+          32.0,
+          50.0
+        ],
+        "dy_dz_m": [
+          0.0125,
+          0.003125
+        ],
+        "pml_cells": [
+          0,
+          80,
+          320,
+          0,
+          80,
+          320
+        ],
+        "pml_physical_thickness_m": 1.0,
+        "surface_z_m": 30.0,
+        "cover_bottom_z_m": 27.0,
+        "cover_box_m": [
+          0.0,
+          27.0,
+          32.0,
+          30.0
+        ],
+        "target_box_m": null,
+        "target_box_cells": null,
+        "tx_m": [
+          15.35,
+          45.0
+        ],
+        "rx_m": [
+          16.65,
+          45.0
+        ],
+        "component": "Ex"
+      },
+      "cells": 40960000,
+      "dt_s": 1.0112647039820335e-11,
+      "time_steps": 118663,
+      "main_fields_ID_GiB": 5.495653286576271,
+      "wall_s_estimate_method_3_1": 1587.15740875539,
+      "wall_s_planning_envelope_3_2": 1380.0,
+      "static_check": {
+        "grid_aligned": true,
+        "grid_aligned_basis": {
+          "dy_m": 0.0125,
+          "dz_m": 0.003125,
+          "domain_y_cells": 2560,
+          "domain_z_cells": 16000,
+          "rock_box_cells": [
+            0,
+            0,
+            2560,
+            9600
+          ],
+          "cover_box_cells": [
+            0,
+            8640,
+            2560,
+            9600
+          ],
+          "target_box_cells": null,
+          "tx_cells": [
+            1228,
+            14400
+          ],
+          "rx_cells": [
+            1332,
+            14400
+          ],
+          "pml_y_physical_m": 1.0,
+          "pml_z_physical_m": 1.0,
+          "all_integer_cells": true
+        },
+        "target": null
+      },
+      "exceptions": null
+    },
+    {
+      "case_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2",
+      "run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2",
+      "file": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2.in",
+      "input_sha256": "d62074a0050d0774213ac8ea7e49b71d94145db5a86f4620ac9cb7859a537ba0",
+      "batch_id": "batch2d_v1",
+      "segment": "fine2",
+      "grid_tier": "FINE2",
+      "family": "C3",
+      "cover_thickness_m": 3.0,
+      "role": "target",
+      "mother_model_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "group_id": "B2D-C3m",
+      "seed": 7025257844516869628,
+      "variant_tag": "fine2",
+      "scan_axis": {
+        "cover_thickness_m": 3.0,
+        "depth_m": 10.0,
+        "width_m": 4.0,
+        "thickness_m": 0.5,
+        "eps_r": 20.0,
+        "sigma_s_m": 0.02
+      },
+      "materials": {
+        "rock": [
+          9.0,
+          0.001
+        ],
+        "cover": [
+          16.0,
+          0.01
+        ],
+        "target": [
+          20.0,
+          0.02
+        ]
+      },
+      "geometry": {
+        "domain_m": [
+          null,
+          32.0,
+          50.0
+        ],
+        "dy_dz_m": [
+          0.0125,
+          0.003125
+        ],
+        "pml_cells": [
+          0,
+          80,
+          320,
+          0,
+          80,
+          320
+        ],
+        "pml_physical_thickness_m": 1.0,
+        "surface_z_m": 30.0,
+        "cover_bottom_z_m": 27.0,
+        "cover_box_m": [
+          0.0,
+          27.0,
+          32.0,
+          30.0
+        ],
+        "target_box_m": [
+          14.0,
+          19.75,
+          18.0,
+          20.25
+        ],
+        "target_box_cells": [
+          1120,
+          6320,
+          1440,
+          6480
+        ],
+        "tx_m": [
+          15.35,
+          45.0
+        ],
+        "rx_m": [
+          16.65,
+          45.0
+        ],
+        "component": "Ex"
+      },
+      "cells": 40960000,
+      "dt_s": 1.0112647039820335e-11,
+      "time_steps": 118663,
+      "main_fields_ID_GiB": 5.495653286576271,
+      "wall_s_estimate_method_3_1": 1587.15740875539,
+      "wall_s_planning_envelope_3_2": 1380.0,
+      "static_check": {
+        "grid_aligned": true,
+        "grid_aligned_basis": {
+          "dy_m": 0.0125,
+          "dz_m": 0.003125,
+          "domain_y_cells": 2560,
+          "domain_z_cells": 16000,
+          "rock_box_cells": [
+            0,
+            0,
+            2560,
+            9600
+          ],
+          "cover_box_cells": [
+            0,
+            8640,
+            2560,
+            9600
+          ],
+          "target_box_cells": [
+            1120,
+            6320,
+            1440,
+            6480
+          ],
+          "tx_cells": [
+            1228,
+            14400
+          ],
+          "rx_cells": [
+            1332,
+            14400
+          ],
+          "pml_y_physical_m": 1.0,
+          "pml_z_physical_m": 1.0,
+          "all_integer_cells": true
+        },
+        "cover_bottom_m": 27.0,
+        "target_top_m": 20.25,
+        "target_bottom_m": 19.75,
+        "clearance_below_cover_m": 6.75,
+        "bottom_pml_margin_m": 18.75,
+        "side_pml_margin_m": 13.0,
+        "top_pml_margin_m": 28.75,
+        "target_fully_in_sandstone": true
+      },
+      "exceptions": null
+    },
+    {
+      "case_id": "B2D-C5m-BG-F2",
+      "run_id": "B2D-C5m-BG-F2",
+      "file": "B2D-C5m-BG-F2.in",
+      "input_sha256": "86a75de5a387cdb813935647feb786ee96708ddec194749e1f52c2d0d1b3f2d1",
+      "batch_id": "batch2d_v1",
+      "segment": "fine2",
+      "grid_tier": "FINE2",
+      "family": "C5",
+      "cover_thickness_m": 5.0,
+      "role": "bg",
+      "mother_model_id": "B2D-C5m-BG",
+      "group_id": "B2D-C5m",
+      "seed": 15486061568300129054,
+      "variant_tag": "fine2",
+      "scan_axis": {
+        "cover_thickness_m": 5.0,
+        "depth_m": null,
+        "width_m": null,
+        "thickness_m": null,
+        "eps_r": null,
+        "sigma_s_m": null
+      },
+      "materials": {
+        "rock": [
+          9.0,
+          0.001
+        ],
+        "cover": [
+          16.0,
+          0.01
+        ],
+        "target": null
+      },
+      "geometry": {
+        "domain_m": [
+          null,
+          32.0,
+          50.0
+        ],
+        "dy_dz_m": [
+          0.0125,
+          0.003125
+        ],
+        "pml_cells": [
+          0,
+          80,
+          320,
+          0,
+          80,
+          320
+        ],
+        "pml_physical_thickness_m": 1.0,
+        "surface_z_m": 30.0,
+        "cover_bottom_z_m": 25.0,
+        "cover_box_m": [
+          0.0,
+          25.0,
+          32.0,
+          30.0
+        ],
+        "target_box_m": null,
+        "target_box_cells": null,
+        "tx_m": [
+          15.35,
+          45.0
+        ],
+        "rx_m": [
+          16.65,
+          45.0
+        ],
+        "component": "Ex"
+      },
+      "cells": 40960000,
+      "dt_s": 1.0112647039820335e-11,
+      "time_steps": 118663,
+      "main_fields_ID_GiB": 5.495653286576271,
+      "wall_s_estimate_method_3_1": 1587.15740875539,
+      "wall_s_planning_envelope_3_2": 1380.0,
+      "static_check": {
+        "grid_aligned": true,
+        "grid_aligned_basis": {
+          "dy_m": 0.0125,
+          "dz_m": 0.003125,
+          "domain_y_cells": 2560,
+          "domain_z_cells": 16000,
+          "rock_box_cells": [
+            0,
+            0,
+            2560,
+            9600
+          ],
+          "cover_box_cells": [
+            0,
+            8000,
+            2560,
+            9600
+          ],
+          "target_box_cells": null,
+          "tx_cells": [
+            1228,
+            14400
+          ],
+          "rx_cells": [
+            1332,
+            14400
+          ],
+          "pml_y_physical_m": 1.0,
+          "pml_z_physical_m": 1.0,
+          "all_integer_cells": true
+        },
+        "target": null
+      },
+      "exceptions": null
+    },
+    {
+      "case_id": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2",
+      "run_id": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2",
+      "file": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2.in",
+      "input_sha256": "7c16ea6b7f06b504a49f7e6a71c8a1c770a5045ac8614c2554eb6662441a188f",
+      "batch_id": "batch2d_v1",
+      "segment": "fine2",
+      "grid_tier": "FINE2",
+      "family": "C5",
+      "cover_thickness_m": 5.0,
+      "role": "target",
+      "mother_model_id": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02",
+      "group_id": "B2D-C5m",
+      "seed": 4680175095696294446,
+      "variant_tag": "fine2",
+      "scan_axis": {
+        "cover_thickness_m": 5.0,
+        "depth_m": 10.0,
+        "width_m": 4.0,
+        "thickness_m": 0.5,
+        "eps_r": 20.0,
+        "sigma_s_m": 0.02
+      },
+      "materials": {
+        "rock": [
+          9.0,
+          0.001
+        ],
+        "cover": [
+          16.0,
+          0.01
+        ],
+        "target": [
+          20.0,
+          0.02
+        ]
+      },
+      "geometry": {
+        "domain_m": [
+          null,
+          32.0,
+          50.0
+        ],
+        "dy_dz_m": [
+          0.0125,
+          0.003125
+        ],
+        "pml_cells": [
+          0,
+          80,
+          320,
+          0,
+          80,
+          320
+        ],
+        "pml_physical_thickness_m": 1.0,
+        "surface_z_m": 30.0,
+        "cover_bottom_z_m": 25.0,
+        "cover_box_m": [
+          0.0,
+          25.0,
+          32.0,
+          30.0
+        ],
+        "target_box_m": [
+          14.0,
+          19.75,
+          18.0,
+          20.25
+        ],
+        "target_box_cells": [
+          1120,
+          6320,
+          1440,
+          6480
+        ],
+        "tx_m": [
+          15.35,
+          45.0
+        ],
+        "rx_m": [
+          16.65,
+          45.0
+        ],
+        "component": "Ex"
+      },
+      "cells": 40960000,
+      "dt_s": 1.0112647039820335e-11,
+      "time_steps": 118663,
+      "main_fields_ID_GiB": 5.495653286576271,
+      "wall_s_estimate_method_3_1": 1587.15740875539,
+      "wall_s_planning_envelope_3_2": 1380.0,
+      "static_check": {
+        "grid_aligned": true,
+        "grid_aligned_basis": {
+          "dy_m": 0.0125,
+          "dz_m": 0.003125,
+          "domain_y_cells": 2560,
+          "domain_z_cells": 16000,
+          "rock_box_cells": [
+            0,
+            0,
+            2560,
+            9600
+          ],
+          "cover_box_cells": [
+            0,
+            8000,
+            2560,
+            9600
+          ],
+          "target_box_cells": [
+            1120,
+            6320,
+            1440,
+            6480
+          ],
+          "tx_cells": [
+            1228,
+            14400
+          ],
+          "rx_cells": [
+            1332,
+            14400
+          ],
+          "pml_y_physical_m": 1.0,
+          "pml_z_physical_m": 1.0,
+          "all_integer_cells": true
+        },
+        "cover_bottom_m": 25.0,
+        "target_top_m": 20.25,
+        "target_bottom_m": 19.75,
+        "clearance_below_cover_m": 4.75,
+        "bottom_pml_margin_m": 18.75,
+        "side_pml_margin_m": 13.0,
+        "top_pml_margin_m": 28.75,
+        "target_fully_in_sandstone": true
+      },
+      "exceptions": null
+    },
+    {
+      "case_id": "B2D-C8m-BG-F2",
+      "run_id": "B2D-C8m-BG-F2",
+      "file": "B2D-C8m-BG-F2.in",
+      "input_sha256": "a38d94eef893a50d3ca18736f049eef26949c9cb73997cf9505989d54294abb1",
+      "batch_id": "batch2d_v1",
+      "segment": "fine2",
+      "grid_tier": "FINE2",
+      "family": "C8",
+      "cover_thickness_m": 8.0,
+      "role": "bg",
+      "mother_model_id": "B2D-C8m-BG",
+      "group_id": "B2D-C8m",
+      "seed": 15766473389893256449,
+      "variant_tag": "fine2",
+      "scan_axis": {
+        "cover_thickness_m": 8.0,
+        "depth_m": null,
+        "width_m": null,
+        "thickness_m": null,
+        "eps_r": null,
+        "sigma_s_m": null
+      },
+      "materials": {
+        "rock": [
+          9.0,
+          0.001
+        ],
+        "cover": [
+          16.0,
+          0.01
+        ],
+        "target": null
+      },
+      "geometry": {
+        "domain_m": [
+          null,
+          32.0,
+          50.0
+        ],
+        "dy_dz_m": [
+          0.0125,
+          0.003125
+        ],
+        "pml_cells": [
+          0,
+          80,
+          320,
+          0,
+          80,
+          320
+        ],
+        "pml_physical_thickness_m": 1.0,
+        "surface_z_m": 30.0,
+        "cover_bottom_z_m": 22.0,
+        "cover_box_m": [
+          0.0,
+          22.0,
+          32.0,
+          30.0
+        ],
+        "target_box_m": null,
+        "target_box_cells": null,
+        "tx_m": [
+          15.35,
+          45.0
+        ],
+        "rx_m": [
+          16.65,
+          45.0
+        ],
+        "component": "Ex"
+      },
+      "cells": 40960000,
+      "dt_s": 1.0112647039820335e-11,
+      "time_steps": 118663,
+      "main_fields_ID_GiB": 5.495653286576271,
+      "wall_s_estimate_method_3_1": 1587.15740875539,
+      "wall_s_planning_envelope_3_2": 1380.0,
+      "static_check": {
+        "grid_aligned": true,
+        "grid_aligned_basis": {
+          "dy_m": 0.0125,
+          "dz_m": 0.003125,
+          "domain_y_cells": 2560,
+          "domain_z_cells": 16000,
+          "rock_box_cells": [
+            0,
+            0,
+            2560,
+            9600
+          ],
+          "cover_box_cells": [
+            0,
+            7040,
+            2560,
+            9600
+          ],
+          "target_box_cells": null,
+          "tx_cells": [
+            1228,
+            14400
+          ],
+          "rx_cells": [
+            1332,
+            14400
+          ],
+          "pml_y_physical_m": 1.0,
+          "pml_z_physical_m": 1.0,
+          "all_integer_cells": true
+        },
+        "target": null
+      },
+      "exceptions": null
+    },
+    {
+      "case_id": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2",
+      "run_id": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2",
+      "file": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2.in",
+      "input_sha256": "5569ae71f5a42608da1aa6856490612be8b9103eafabb122e97dc3f94eb122a8",
+      "batch_id": "batch2d_v1",
+      "segment": "fine2",
+      "grid_tier": "FINE2",
+      "family": "C8",
+      "cover_thickness_m": 8.0,
+      "role": "target",
+      "mother_model_id": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+      "group_id": "B2D-C8m",
+      "seed": 8164928406305433380,
+      "variant_tag": "fine2",
+      "scan_axis": {
+        "cover_thickness_m": 8.0,
+        "depth_m": 10.0,
+        "width_m": 4.0,
+        "thickness_m": 0.5,
+        "eps_r": 20.0,
+        "sigma_s_m": 0.02
+      },
+      "materials": {
+        "rock": [
+          9.0,
+          0.001
+        ],
+        "cover": [
+          16.0,
+          0.01
+        ],
+        "target": [
+          20.0,
+          0.02
+        ]
+      },
+      "geometry": {
+        "domain_m": [
+          null,
+          32.0,
+          50.0
+        ],
+        "dy_dz_m": [
+          0.0125,
+          0.003125
+        ],
+        "pml_cells": [
+          0,
+          80,
+          320,
+          0,
+          80,
+          320
+        ],
+        "pml_physical_thickness_m": 1.0,
+        "surface_z_m": 30.0,
+        "cover_bottom_z_m": 22.0,
+        "cover_box_m": [
+          0.0,
+          22.0,
+          32.0,
+          30.0
+        ],
+        "target_box_m": [
+          14.0,
+          19.75,
+          18.0,
+          20.25
+        ],
+        "target_box_cells": [
+          1120,
+          6320,
+          1440,
+          6480
+        ],
+        "tx_m": [
+          15.35,
+          45.0
+        ],
+        "rx_m": [
+          16.65,
+          45.0
+        ],
+        "component": "Ex"
+      },
+      "cells": 40960000,
+      "dt_s": 1.0112647039820335e-11,
+      "time_steps": 118663,
+      "main_fields_ID_GiB": 5.495653286576271,
+      "wall_s_estimate_method_3_1": 1587.15740875539,
+      "wall_s_planning_envelope_3_2": 1380.0,
+      "static_check": {
+        "grid_aligned": true,
+        "grid_aligned_basis": {
+          "dy_m": 0.0125,
+          "dz_m": 0.003125,
+          "domain_y_cells": 2560,
+          "domain_z_cells": 16000,
+          "rock_box_cells": [
+            0,
+            0,
+            2560,
+            9600
+          ],
+          "cover_box_cells": [
+            0,
+            7040,
+            2560,
+            9600
+          ],
+          "target_box_cells": [
+            1120,
+            6320,
+            1440,
+            6480
+          ],
+          "tx_cells": [
+            1228,
+            14400
+          ],
+          "rx_cells": [
+            1332,
+            14400
+          ],
+          "pml_y_physical_m": 1.0,
+          "pml_z_physical_m": 1.0,
+          "all_integer_cells": true
+        },
+        "cover_bottom_m": 22.0,
+        "target_top_m": 20.25,
+        "target_bottom_m": 19.75,
+        "clearance_below_cover_m": 1.75,
+        "bottom_pml_margin_m": 18.75,
+        "side_pml_margin_m": 13.0,
+        "top_pml_margin_m": 28.75,
+        "target_fully_in_sandstone": true
+      },
+      "exceptions": null
+    }
+  ],
+  "removed_cases": []
+}

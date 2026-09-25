@@ -5,30 +5,39 @@
   "user_instruction": "整夜运行授权：证据到位时可主动解除旧约束（含新仿真批次），每次解除须写明依据留痕（2026-09-26 会话）",
   "target_solver": "gprMax 4.0.0",
   "source_root_on_current_machine": "E:/gprMax-v.4.0.0/gprMax-v.4.0.0",
-  "batch_id": "batch2d_v1_consumed",
-  "approved_to_simulate": false,
-  "approved_run_ids": [],
+  "batch_id": "batch2d_v1_fine2",
+  "approved_to_simulate": true,
+  "approved_run_ids": [
+    "B2D-C3m-BG-F2",
+    "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2",
+    "B2D-C1m-BG-F2",
+    "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2",
+    "B2D-C5m-BG-F2",
+    "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2",
+    "B2D-C8m-BG-F2",
+    "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2"
+  ],
   "approved_compute_budget": {
-    "wall_minutes": 20,
-    "job_commit_GiB": 4,
+    "wall_minutes": 40,
+    "job_commit_GiB": 20,
     "minimum_available_RAM_GiB": 24,
     "output_GiB": 1,
     "threads": 8,
     "backend": "CUDA",
     "precision": "double",
     "retries": 0,
-    "max_fdtd_runs": 29,
+    "max_fdtd_runs": 8,
     "official_postprocess_wall_minutes": 10,
     "device_id": 0,
     "minimum_available_VRAM_GiB": 8,
     "VRAM_limit_semantics": "Preflight availability threshold; not a hard device-memory quota"
   },
   "scope_expansion_basis": [
-    "batch spec v1 (commit 4921bf4): docs/research/2026-09-26_batch_2d_spec_v1.md; coarse tier 29 cases + groups + seeds frozen in configs/research/batch2d_v1 (commit fe0a89e)",
-    "ZFINE2 evidence (f896188): 2D grid convergence chain 66.66% -> 17.25% -> 4.12% L2 (2nd order); reference_state numerically_unresolved maintained",
-    "dep3d_gold_v1 results (2d49bc9): 3D dz-refinement spectrum shape corr 0.9951; 2D/3D same-spacing shape corr 0.935/0.958 (0.967/0.979 after far-field transform); coarse 2D vs ZFINE2 ref shape corr 0.982/0.999 - 2D coarse tier adequate for batch screening per spec P10 precondition",
-    "user all-night authorization 2026-09-26: proactive scope expansion allowed with documented basis per unit",
-    "P5 amendment: per-case wall 10 min -> 20 min. dep3d_gold_v1 measured walls 910.6-920.2 s (2026-09-26, 8 runs): solve 2.3-582 s + fixed ~900 s post-solve job drain (supervisor waits for job empty; root python exits promptly; lingering member unidentified OS-level process, under investigation). 10 min would wall-kill healthy runs; 20 min covers worst observed 15.3 min drain + 2.5 min solve envelope with margin. Job commit 4 GiB unchanged (dep3d 2D peaks 2.3-2.5 GiB incl. compile; batch2d main fields 0.34 GiB)"
+    "batch spec v1 P2 (commit 4921bf4): docs/research/2026-09-26_batch_2d_spec_v1.md requires a fine2-tier recheck subset (4 cover families x BG/anchor target at D10m-W4m-T0.5m-E20-S0.02) on the ZFINE2 grid to confirm coarse-tier direction findings before any larger batch",
+    "batch2d_v1 coarse results (commit 6c8ef4d): 29/29 completed; NC zero-difference, depth monotonicity, envelope-peak delay and electrical-tier directions all physically plausible; provides the direction findings this fine2 tier must reproduce",
+    "ZFINE2 measured performance on the identical grid (f896188): solve walls 1438.6 s / 1334.8 s, peak job commit 15.28 GB; fine2 cases share grid/dt/steps so per-case envelope ~25 min solve + margin fits the spec P5 fine2 hard stop of 40 min; job commit 15.28 GB < 20 GiB cap",
+    "input package verified 2026-09-26: all 8 .in byte-diff vs ZFINE2 templates limited to title/cover-box/target-material+box; seeds recomputed per spec 4.1 (sha256 batch2d_v1|<group>|<case>|fine2); mother_model_hash carried from coarse groups.json; static grid-alignment and PML margins asserted by generator and independently recomputed; generator replay byte-identical",
+    "user all-night authorization 2026-09-26: proactive scope expansion allowed with documented basis per unit"
   ],
   "permitted_preparation": [
     "read official docs and local source",
@@ -45,439 +54,124 @@
   ],
   "approved_execution_contracts": [
     {
-      "packet_id": "BATCH2D-V1",
-      "input_path": "configs/research/batch2d_v1/B2D-C3m-BG.in",
-      "input_sha256": "d7a5a461f05054b8395c363f63ab21552b37519aa159f468cd9b77630fa3a15f",
+      "packet_id": "BATCH2D-V1-FINE2",
+      "input_path": "configs/research/batch2d_v1_fine2/B2D-C3m-BG-F2.in",
+      "input_sha256": "24eaaa6c6d111a7220591d3a5f0c020e1eba288acd64776ee3591c793d39926a",
       "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
       "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
-      "launcher_sha256": "9776ec23c5e57d32b3a85abcfbf78d0c988eddfcaf58f518d294c98052b454ae",
+      "launcher_sha256": "ae823072743c972c68b2150796d191035ffe7e65feca604726c239e42a6904e8",
       "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C3m-BG_attempt.json",
-      "run_directory": "artifacts/simulations/2026-09-26_B2D-C3m-BG",
+      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-F2_attempt.json",
+      "run_directory": "artifacts/simulations/2026-09-26_B2D-C3m-BG-F2",
       "continuation": "Serial in frozen order; any failure aborts batch, later attempts untouched. No retries.",
       "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
       "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-      "run_id": "B2D-C3m-BG"
+      "run_id": "B2D-C3m-BG-F2"
     },
     {
-      "packet_id": "BATCH2D-V1",
-      "input_path": "configs/research/batch2d_v1/B2D-C3m-D5m-W4m-T0.5m-E20-S0.02.in",
-      "input_sha256": "326b0210de99445a50e94fc01529e8bcde508fd76a22d8c4cdcca0f0cedc4782",
+      "packet_id": "BATCH2D-V1-FINE2",
+      "input_path": "configs/research/batch2d_v1_fine2/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2.in",
+      "input_sha256": "d62074a0050d0774213ac8ea7e49b71d94145db5a86f4620ac9cb7859a537ba0",
       "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
       "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
-      "launcher_sha256": "9776ec23c5e57d32b3a85abcfbf78d0c988eddfcaf58f518d294c98052b454ae",
+      "launcher_sha256": "ae823072743c972c68b2150796d191035ffe7e65feca604726c239e42a6904e8",
       "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C3m-D5m-W4m-T0.5m-E20-S0.02_attempt.json",
-      "run_directory": "artifacts/simulations/2026-09-26_B2D-C3m-D5m-W4m-T0.5m-E20-S0.02",
+      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2_attempt.json",
+      "run_directory": "artifacts/simulations/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2",
       "continuation": "Serial in frozen order; any failure aborts batch, later attempts untouched. No retries.",
       "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
       "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-      "run_id": "B2D-C3m-D5m-W4m-T0.5m-E20-S0.02"
+      "run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
     },
     {
-      "packet_id": "BATCH2D-V1",
-      "input_path": "configs/research/batch2d_v1/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02.in",
-      "input_sha256": "c5911e79a17db7d1bf0a6dfd42284a5cf5c753aebe666053b3198a82095f583b",
+      "packet_id": "BATCH2D-V1-FINE2",
+      "input_path": "configs/research/batch2d_v1_fine2/B2D-C1m-BG-F2.in",
+      "input_sha256": "d1a45755d1ef0c88186a831bd7d815f56c23f1adaf03fff9e84758163a79bd61",
       "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
       "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
-      "launcher_sha256": "9776ec23c5e57d32b3a85abcfbf78d0c988eddfcaf58f518d294c98052b454ae",
+      "launcher_sha256": "ae823072743c972c68b2150796d191035ffe7e65feca604726c239e42a6904e8",
       "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02_attempt.json",
-      "run_directory": "artifacts/simulations/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C1m-BG-F2_attempt.json",
+      "run_directory": "artifacts/simulations/2026-09-26_B2D-C1m-BG-F2",
       "continuation": "Serial in frozen order; any failure aborts batch, later attempts untouched. No retries.",
       "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
       "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-      "run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02"
+      "run_id": "B2D-C1m-BG-F2"
     },
     {
-      "packet_id": "BATCH2D-V1",
-      "input_path": "configs/research/batch2d_v1/B2D-C3m-D20m-W4m-T0.5m-E20-S0.02.in",
-      "input_sha256": "c43a2f7ab99ed04dd4894b921a5e2c46a192c660b73264ec346cf52889c0034e",
+      "packet_id": "BATCH2D-V1-FINE2",
+      "input_path": "configs/research/batch2d_v1_fine2/B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2.in",
+      "input_sha256": "16b46db5dc7ad5f4d5f0c64e2ffe550aaba738406a5be040bf73d342cd85f3d7",
       "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
       "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
-      "launcher_sha256": "9776ec23c5e57d32b3a85abcfbf78d0c988eddfcaf58f518d294c98052b454ae",
+      "launcher_sha256": "ae823072743c972c68b2150796d191035ffe7e65feca604726c239e42a6904e8",
       "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C3m-D20m-W4m-T0.5m-E20-S0.02_attempt.json",
-      "run_directory": "artifacts/simulations/2026-09-26_B2D-C3m-D20m-W4m-T0.5m-E20-S0.02",
+      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2_attempt.json",
+      "run_directory": "artifacts/simulations/2026-09-26_B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2",
       "continuation": "Serial in frozen order; any failure aborts batch, later attempts untouched. No retries.",
       "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
       "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-      "run_id": "B2D-C3m-D20m-W4m-T0.5m-E20-S0.02"
+      "run_id": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2"
     },
     {
-      "packet_id": "BATCH2D-V1",
-      "input_path": "configs/research/batch2d_v1/B2D-C3m-D10m-W1m-T0.5m-E20-S0.02.in",
-      "input_sha256": "cfbecd1ea906e389c2d976a8fe4c9d9f9f97db464269f4048b0a002ce8f3d263",
+      "packet_id": "BATCH2D-V1-FINE2",
+      "input_path": "configs/research/batch2d_v1_fine2/B2D-C5m-BG-F2.in",
+      "input_sha256": "86a75de5a387cdb813935647feb786ee96708ddec194749e1f52c2d0d1b3f2d1",
       "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
       "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
-      "launcher_sha256": "9776ec23c5e57d32b3a85abcfbf78d0c988eddfcaf58f518d294c98052b454ae",
+      "launcher_sha256": "ae823072743c972c68b2150796d191035ffe7e65feca604726c239e42a6904e8",
       "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W1m-T0.5m-E20-S0.02_attempt.json",
-      "run_directory": "artifacts/simulations/2026-09-26_B2D-C3m-D10m-W1m-T0.5m-E20-S0.02",
+      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C5m-BG-F2_attempt.json",
+      "run_directory": "artifacts/simulations/2026-09-26_B2D-C5m-BG-F2",
       "continuation": "Serial in frozen order; any failure aborts batch, later attempts untouched. No retries.",
       "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
       "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-      "run_id": "B2D-C3m-D10m-W1m-T0.5m-E20-S0.02"
+      "run_id": "B2D-C5m-BG-F2"
     },
     {
-      "packet_id": "BATCH2D-V1",
-      "input_path": "configs/research/batch2d_v1/B2D-C3m-D10m-W2m-T0.5m-E20-S0.02.in",
-      "input_sha256": "c5c89244f15dc4c7ac0852a8cebc126036cd7a24c980c128fc4f841a74048066",
+      "packet_id": "BATCH2D-V1-FINE2",
+      "input_path": "configs/research/batch2d_v1_fine2/B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2.in",
+      "input_sha256": "7c16ea6b7f06b504a49f7e6a71c8a1c770a5045ac8614c2554eb6662441a188f",
       "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
       "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
-      "launcher_sha256": "9776ec23c5e57d32b3a85abcfbf78d0c988eddfcaf58f518d294c98052b454ae",
+      "launcher_sha256": "ae823072743c972c68b2150796d191035ffe7e65feca604726c239e42a6904e8",
       "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W2m-T0.5m-E20-S0.02_attempt.json",
-      "run_directory": "artifacts/simulations/2026-09-26_B2D-C3m-D10m-W2m-T0.5m-E20-S0.02",
+      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2_attempt.json",
+      "run_directory": "artifacts/simulations/2026-09-26_B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2",
       "continuation": "Serial in frozen order; any failure aborts batch, later attempts untouched. No retries.",
       "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
       "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-      "run_id": "B2D-C3m-D10m-W2m-T0.5m-E20-S0.02"
+      "run_id": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2"
     },
     {
-      "packet_id": "BATCH2D-V1",
-      "input_path": "configs/research/batch2d_v1/B2D-C3m-D10m-W4m-T0.25m-E20-S0.02.in",
-      "input_sha256": "0548376bd924fde9e50d53b5b6e637b9770c39bc66aa59b8738d4f751e1c2b94",
+      "packet_id": "BATCH2D-V1-FINE2",
+      "input_path": "configs/research/batch2d_v1_fine2/B2D-C8m-BG-F2.in",
+      "input_sha256": "a38d94eef893a50d3ca18736f049eef26949c9cb73997cf9505989d54294abb1",
       "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
       "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
-      "launcher_sha256": "9776ec23c5e57d32b3a85abcfbf78d0c988eddfcaf58f518d294c98052b454ae",
+      "launcher_sha256": "ae823072743c972c68b2150796d191035ffe7e65feca604726c239e42a6904e8",
       "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.25m-E20-S0.02_attempt.json",
-      "run_directory": "artifacts/simulations/2026-09-26_B2D-C3m-D10m-W4m-T0.25m-E20-S0.02",
+      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C8m-BG-F2_attempt.json",
+      "run_directory": "artifacts/simulations/2026-09-26_B2D-C8m-BG-F2",
       "continuation": "Serial in frozen order; any failure aborts batch, later attempts untouched. No retries.",
       "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
       "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-      "run_id": "B2D-C3m-D10m-W4m-T0.25m-E20-S0.02"
+      "run_id": "B2D-C8m-BG-F2"
     },
     {
-      "packet_id": "BATCH2D-V1",
-      "input_path": "configs/research/batch2d_v1/B2D-C3m-D10m-W4m-T1m-E20-S0.02.in",
-      "input_sha256": "3a5f516343eb1e35151572cd27567f4afb2dcf5d1d98ae8c3c88278f35524297",
+      "packet_id": "BATCH2D-V1-FINE2",
+      "input_path": "configs/research/batch2d_v1_fine2/B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2.in",
+      "input_sha256": "5569ae71f5a42608da1aa6856490612be8b9103eafabb122e97dc3f94eb122a8",
       "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
       "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
-      "launcher_sha256": "9776ec23c5e57d32b3a85abcfbf78d0c988eddfcaf58f518d294c98052b454ae",
+      "launcher_sha256": "ae823072743c972c68b2150796d191035ffe7e65feca604726c239e42a6904e8",
       "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T1m-E20-S0.02_attempt.json",
-      "run_directory": "artifacts/simulations/2026-09-26_B2D-C3m-D10m-W4m-T1m-E20-S0.02",
+      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2_attempt.json",
+      "run_directory": "artifacts/simulations/2026-09-26_B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2",
       "continuation": "Serial in frozen order; any failure aborts batch, later attempts untouched. No retries.",
       "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
       "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-      "run_id": "B2D-C3m-D10m-W4m-T1m-E20-S0.02"
-    },
-    {
-      "packet_id": "BATCH2D-V1",
-      "input_path": "configs/research/batch2d_v1/B2D-C3m-D10m-W4m-T0.5m-E12-S0.005.in",
-      "input_sha256": "4c7b9af8490fed4bcf502897c7e57e5f647713f49dee6d1855ba77a329c12407",
-      "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
-      "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
-      "launcher_sha256": "9776ec23c5e57d32b3a85abcfbf78d0c988eddfcaf58f518d294c98052b454ae",
-      "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E12-S0.005_attempt.json",
-      "run_directory": "artifacts/simulations/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E12-S0.005",
-      "continuation": "Serial in frozen order; any failure aborts batch, later attempts untouched. No retries.",
-      "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
-      "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-      "run_id": "B2D-C3m-D10m-W4m-T0.5m-E12-S0.005"
-    },
-    {
-      "packet_id": "BATCH2D-V1",
-      "input_path": "configs/research/batch2d_v1/B2D-C3m-D10m-W4m-T0.5m-E28-S0.05.in",
-      "input_sha256": "2b304f18d4264e0475dcfab0c5414c4bcd99dfc1a56cacec13afbc2d8301c117",
-      "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
-      "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
-      "launcher_sha256": "9776ec23c5e57d32b3a85abcfbf78d0c988eddfcaf58f518d294c98052b454ae",
-      "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E28-S0.05_attempt.json",
-      "run_directory": "artifacts/simulations/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E28-S0.05",
-      "continuation": "Serial in frozen order; any failure aborts batch, later attempts untouched. No retries.",
-      "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
-      "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-      "run_id": "B2D-C3m-D10m-W4m-T0.5m-E28-S0.05"
-    },
-    {
-      "packet_id": "BATCH2D-V1",
-      "input_path": "configs/research/batch2d_v1/B2D-C3m-D10m-W4m-T0.5m-E20-S0.005.in",
-      "input_sha256": "c0b851eb4c2ed7577f2196523ba3de5a5e6215f3b624f715bc3b87445b2d8eee",
-      "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
-      "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
-      "launcher_sha256": "9776ec23c5e57d32b3a85abcfbf78d0c988eddfcaf58f518d294c98052b454ae",
-      "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.005_attempt.json",
-      "run_directory": "artifacts/simulations/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.005",
-      "continuation": "Serial in frozen order; any failure aborts batch, later attempts untouched. No retries.",
-      "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
-      "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-      "run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.005"
-    },
-    {
-      "packet_id": "BATCH2D-V1",
-      "input_path": "configs/research/batch2d_v1/B2D-C3m-D10m-W4m-T0.5m-E20-S0.05.in",
-      "input_sha256": "3d2c75bed25a5491da66e4ab5e947b8c66aaf045cc05604bd8e8afe0947be492",
-      "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
-      "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
-      "launcher_sha256": "9776ec23c5e57d32b3a85abcfbf78d0c988eddfcaf58f518d294c98052b454ae",
-      "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.05_attempt.json",
-      "run_directory": "artifacts/simulations/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.05",
-      "continuation": "Serial in frozen order; any failure aborts batch, later attempts untouched. No retries.",
-      "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
-      "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-      "run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.05"
-    },
-    {
-      "packet_id": "BATCH2D-V1",
-      "input_path": "configs/research/batch2d_v1/B2D-C3m-D10m-NC.in",
-      "input_sha256": "a3ca307485cfb31792aa4213bdf5fbfac11e6492dc3ad64d7c5b231df9060994",
-      "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
-      "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
-      "launcher_sha256": "9776ec23c5e57d32b3a85abcfbf78d0c988eddfcaf58f518d294c98052b454ae",
-      "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-NC_attempt.json",
-      "run_directory": "artifacts/simulations/2026-09-26_B2D-C3m-D10m-NC",
-      "continuation": "Serial in frozen order; any failure aborts batch, later attempts untouched. No retries.",
-      "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
-      "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-      "run_id": "B2D-C3m-D10m-NC"
-    },
-    {
-      "packet_id": "BATCH2D-V1",
-      "input_path": "configs/research/batch2d_v1/B2D-C3m-D10m-OFF.in",
-      "input_sha256": "dfbe2b35e630414c2eb20897b543117ef2cf8b4a471c1a44c30df595fb37c372",
-      "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
-      "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
-      "launcher_sha256": "9776ec23c5e57d32b3a85abcfbf78d0c988eddfcaf58f518d294c98052b454ae",
-      "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-OFF_attempt.json",
-      "run_directory": "artifacts/simulations/2026-09-26_B2D-C3m-D10m-OFF",
-      "continuation": "Serial in frozen order; any failure aborts batch, later attempts untouched. No retries.",
-      "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
-      "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-      "run_id": "B2D-C3m-D10m-OFF"
-    },
-    {
-      "packet_id": "BATCH2D-V1",
-      "input_path": "configs/research/batch2d_v1/B2D-C1m-BG.in",
-      "input_sha256": "d420c3b93326b3a0ee2d7fa2b083bfd05e189710bea362b9b8ef8033170cce28",
-      "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
-      "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
-      "launcher_sha256": "9776ec23c5e57d32b3a85abcfbf78d0c988eddfcaf58f518d294c98052b454ae",
-      "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C1m-BG_attempt.json",
-      "run_directory": "artifacts/simulations/2026-09-26_B2D-C1m-BG",
-      "continuation": "Serial in frozen order; any failure aborts batch, later attempts untouched. No retries.",
-      "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
-      "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-      "run_id": "B2D-C1m-BG"
-    },
-    {
-      "packet_id": "BATCH2D-V1",
-      "input_path": "configs/research/batch2d_v1/B2D-C1m-D2m-W4m-T0.5m-E20-S0.02.in",
-      "input_sha256": "62cd1fa82e408f30ce4e5fed3a1fa34f8c1abdca03634bd027956a3dd374826f",
-      "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
-      "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
-      "launcher_sha256": "9776ec23c5e57d32b3a85abcfbf78d0c988eddfcaf58f518d294c98052b454ae",
-      "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C1m-D2m-W4m-T0.5m-E20-S0.02_attempt.json",
-      "run_directory": "artifacts/simulations/2026-09-26_B2D-C1m-D2m-W4m-T0.5m-E20-S0.02",
-      "continuation": "Serial in frozen order; any failure aborts batch, later attempts untouched. No retries.",
-      "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
-      "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-      "run_id": "B2D-C1m-D2m-W4m-T0.5m-E20-S0.02"
-    },
-    {
-      "packet_id": "BATCH2D-V1",
-      "input_path": "configs/research/batch2d_v1/B2D-C1m-D5m-W4m-T0.5m-E20-S0.02.in",
-      "input_sha256": "b6b2cb1b16803342c5f2f9604ad0af94b13ef366e36a1c30c0c2dabf5aa93dd1",
-      "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
-      "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
-      "launcher_sha256": "9776ec23c5e57d32b3a85abcfbf78d0c988eddfcaf58f518d294c98052b454ae",
-      "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C1m-D5m-W4m-T0.5m-E20-S0.02_attempt.json",
-      "run_directory": "artifacts/simulations/2026-09-26_B2D-C1m-D5m-W4m-T0.5m-E20-S0.02",
-      "continuation": "Serial in frozen order; any failure aborts batch, later attempts untouched. No retries.",
-      "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
-      "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-      "run_id": "B2D-C1m-D5m-W4m-T0.5m-E20-S0.02"
-    },
-    {
-      "packet_id": "BATCH2D-V1",
-      "input_path": "configs/research/batch2d_v1/B2D-C1m-D10m-W4m-T0.5m-E20-S0.02.in",
-      "input_sha256": "fb37e613e91fd2e30ee21ec585b51552f2a7a7e87324bfe8976f57aaf60a0c1f",
-      "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
-      "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
-      "launcher_sha256": "9776ec23c5e57d32b3a85abcfbf78d0c988eddfcaf58f518d294c98052b454ae",
-      "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C1m-D10m-W4m-T0.5m-E20-S0.02_attempt.json",
-      "run_directory": "artifacts/simulations/2026-09-26_B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
-      "continuation": "Serial in frozen order; any failure aborts batch, later attempts untouched. No retries.",
-      "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
-      "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-      "run_id": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02"
-    },
-    {
-      "packet_id": "BATCH2D-V1",
-      "input_path": "configs/research/batch2d_v1/B2D-C1m-D10m-NC.in",
-      "input_sha256": "b84837bf9779d8118827ace3fdbd29f2611993eb5a57d65868d20ee78ef0336f",
-      "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
-      "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
-      "launcher_sha256": "9776ec23c5e57d32b3a85abcfbf78d0c988eddfcaf58f518d294c98052b454ae",
-      "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C1m-D10m-NC_attempt.json",
-      "run_directory": "artifacts/simulations/2026-09-26_B2D-C1m-D10m-NC",
-      "continuation": "Serial in frozen order; any failure aborts batch, later attempts untouched. No retries.",
-      "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
-      "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-      "run_id": "B2D-C1m-D10m-NC"
-    },
-    {
-      "packet_id": "BATCH2D-V1",
-      "input_path": "configs/research/batch2d_v1/B2D-C5m-BG.in",
-      "input_sha256": "0b7af92238cddda48b0e9c13748649be6b4ddcb79a9e63cdb372f659e09890eb",
-      "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
-      "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
-      "launcher_sha256": "9776ec23c5e57d32b3a85abcfbf78d0c988eddfcaf58f518d294c98052b454ae",
-      "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C5m-BG_attempt.json",
-      "run_directory": "artifacts/simulations/2026-09-26_B2D-C5m-BG",
-      "continuation": "Serial in frozen order; any failure aborts batch, later attempts untouched. No retries.",
-      "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
-      "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-      "run_id": "B2D-C5m-BG"
-    },
-    {
-      "packet_id": "BATCH2D-V1",
-      "input_path": "configs/research/batch2d_v1/B2D-C5m-D10m-W4m-T0.5m-E20-S0.02.in",
-      "input_sha256": "3619f71005d9387305ef41d071341c442bd89654580f5213fe2a26038e9ecd66",
-      "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
-      "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
-      "launcher_sha256": "9776ec23c5e57d32b3a85abcfbf78d0c988eddfcaf58f518d294c98052b454ae",
-      "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C5m-D10m-W4m-T0.5m-E20-S0.02_attempt.json",
-      "run_directory": "artifacts/simulations/2026-09-26_B2D-C5m-D10m-W4m-T0.5m-E20-S0.02",
-      "continuation": "Serial in frozen order; any failure aborts batch, later attempts untouched. No retries.",
-      "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
-      "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-      "run_id": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02"
-    },
-    {
-      "packet_id": "BATCH2D-V1",
-      "input_path": "configs/research/batch2d_v1/B2D-C5m-D20m-W4m-T0.5m-E20-S0.02.in",
-      "input_sha256": "815d42cabeff67d47bb8ed0327ac74f2e758f21c261849bf3211c95a0ed86bf0",
-      "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
-      "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
-      "launcher_sha256": "9776ec23c5e57d32b3a85abcfbf78d0c988eddfcaf58f518d294c98052b454ae",
-      "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C5m-D20m-W4m-T0.5m-E20-S0.02_attempt.json",
-      "run_directory": "artifacts/simulations/2026-09-26_B2D-C5m-D20m-W4m-T0.5m-E20-S0.02",
-      "continuation": "Serial in frozen order; any failure aborts batch, later attempts untouched. No retries.",
-      "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
-      "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-      "run_id": "B2D-C5m-D20m-W4m-T0.5m-E20-S0.02"
-    },
-    {
-      "packet_id": "BATCH2D-V1",
-      "input_path": "configs/research/batch2d_v1/B2D-C5m-D10m-NC.in",
-      "input_sha256": "c901ae409d94079a157fca0ebc2de959bb640d5ab178f218d088bcf0c95bce18",
-      "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
-      "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
-      "launcher_sha256": "9776ec23c5e57d32b3a85abcfbf78d0c988eddfcaf58f518d294c98052b454ae",
-      "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C5m-D10m-NC_attempt.json",
-      "run_directory": "artifacts/simulations/2026-09-26_B2D-C5m-D10m-NC",
-      "continuation": "Serial in frozen order; any failure aborts batch, later attempts untouched. No retries.",
-      "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
-      "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-      "run_id": "B2D-C5m-D10m-NC"
-    },
-    {
-      "packet_id": "BATCH2D-V1",
-      "input_path": "configs/research/batch2d_v1/B2D-C8m-BG.in",
-      "input_sha256": "46f38ed8a2901cd40e456adb54da84b15dc0c0141732f7cd8274fa6746694810",
-      "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
-      "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
-      "launcher_sha256": "9776ec23c5e57d32b3a85abcfbf78d0c988eddfcaf58f518d294c98052b454ae",
-      "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C8m-BG_attempt.json",
-      "run_directory": "artifacts/simulations/2026-09-26_B2D-C8m-BG",
-      "continuation": "Serial in frozen order; any failure aborts batch, later attempts untouched. No retries.",
-      "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
-      "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-      "run_id": "B2D-C8m-BG"
-    },
-    {
-      "packet_id": "BATCH2D-V1",
-      "input_path": "configs/research/batch2d_v1/B2D-C8m-D10m-W4m-T0.5m-E20-S0.02.in",
-      "input_sha256": "447ad1f5f18c8d3034c57cdce18827f4c3bb2a02de5f28321c20ad11843bc4c6",
-      "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
-      "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
-      "launcher_sha256": "9776ec23c5e57d32b3a85abcfbf78d0c988eddfcaf58f518d294c98052b454ae",
-      "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C8m-D10m-W4m-T0.5m-E20-S0.02_attempt.json",
-      "run_directory": "artifacts/simulations/2026-09-26_B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
-      "continuation": "Serial in frozen order; any failure aborts batch, later attempts untouched. No retries.",
-      "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
-      "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-      "run_id": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02"
-    },
-    {
-      "packet_id": "BATCH2D-V1",
-      "input_path": "configs/research/batch2d_v1/B2D-C8m-D20m-W4m-T0.5m-E20-S0.02.in",
-      "input_sha256": "18ce3b59eb7b7c14335fe89ebb9dd2b76870377473a70601cd4b6d61efb6621d",
-      "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
-      "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
-      "launcher_sha256": "9776ec23c5e57d32b3a85abcfbf78d0c988eddfcaf58f518d294c98052b454ae",
-      "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C8m-D20m-W4m-T0.5m-E20-S0.02_attempt.json",
-      "run_directory": "artifacts/simulations/2026-09-26_B2D-C8m-D20m-W4m-T0.5m-E20-S0.02",
-      "continuation": "Serial in frozen order; any failure aborts batch, later attempts untouched. No retries.",
-      "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
-      "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-      "run_id": "B2D-C8m-D20m-W4m-T0.5m-E20-S0.02"
-    },
-    {
-      "packet_id": "BATCH2D-V1",
-      "input_path": "configs/research/batch2d_v1/B2D-C8m-D20m-W4m-T0.25m-E20-S0.02.in",
-      "input_sha256": "c9059e71effea548ab8d0002ecdd3c5bf388d9f592a4030a028cea1569e1b12f",
-      "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
-      "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
-      "launcher_sha256": "9776ec23c5e57d32b3a85abcfbf78d0c988eddfcaf58f518d294c98052b454ae",
-      "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C8m-D20m-W4m-T0.25m-E20-S0.02_attempt.json",
-      "run_directory": "artifacts/simulations/2026-09-26_B2D-C8m-D20m-W4m-T0.25m-E20-S0.02",
-      "continuation": "Serial in frozen order; any failure aborts batch, later attempts untouched. No retries.",
-      "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
-      "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-      "run_id": "B2D-C8m-D20m-W4m-T0.25m-E20-S0.02"
-    },
-    {
-      "packet_id": "BATCH2D-V1",
-      "input_path": "configs/research/batch2d_v1/B2D-C8m-D10m-W4m-T0.5m-E28-S0.05.in",
-      "input_sha256": "c5e695b37e188549b67207d3b7cfd73c7bf5bb9b0e7c909043ba527d55ba1520",
-      "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
-      "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
-      "launcher_sha256": "9776ec23c5e57d32b3a85abcfbf78d0c988eddfcaf58f518d294c98052b454ae",
-      "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C8m-D10m-W4m-T0.5m-E28-S0.05_attempt.json",
-      "run_directory": "artifacts/simulations/2026-09-26_B2D-C8m-D10m-W4m-T0.5m-E28-S0.05",
-      "continuation": "Serial in frozen order; any failure aborts batch, later attempts untouched. No retries.",
-      "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
-      "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-      "run_id": "B2D-C8m-D10m-W4m-T0.5m-E28-S0.05"
-    },
-    {
-      "packet_id": "BATCH2D-V1",
-      "input_path": "configs/research/batch2d_v1/B2D-C8m-D10m-NC.in",
-      "input_sha256": "505c3a961704643bc717108d8334ea7411e957e3c766fcb10748280040c5c967",
-      "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
-      "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
-      "launcher_sha256": "9776ec23c5e57d32b3a85abcfbf78d0c988eddfcaf58f518d294c98052b454ae",
-      "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-      "attempt_record": "artifacts/research_checks/2026-09-26_B2D-C8m-D10m-NC_attempt.json",
-      "run_directory": "artifacts/simulations/2026-09-26_B2D-C8m-D10m-NC",
-      "continuation": "Serial in frozen order; any failure aborts batch, later attempts untouched. No retries.",
-      "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
-      "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-      "run_id": "B2D-C8m-D10m-NC"
+      "run_id": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2"
     }
   ],
   "execution_policy": {
@@ -488,158 +182,7 @@
     "postprocessing": "Prefer official CPU implementation"
   },
   "execution_outcome": {
-    "status": "completed",
-    "attempts_consumed": 29,
-    "runs": {
-      "B2D-C3m-BG": {
-        "exit_code": 0,
-        "wall_s": 532.156,
-        "peak_job_commit_bytes": 2915713024
-      },
-      "B2D-C3m-D5m-W4m-T0.5m-E20-S0.02": {
-        "exit_code": 0,
-        "wall_s": 59.218,
-        "peak_job_commit_bytes": 2917384192
-      },
-      "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02": {
-        "exit_code": 0,
-        "wall_s": 30.125,
-        "peak_job_commit_bytes": 2916569088
-      },
-      "B2D-C3m-D20m-W4m-T0.5m-E20-S0.02": {
-        "exit_code": 0,
-        "wall_s": 29.875,
-        "peak_job_commit_bytes": 2916110336
-      },
-      "B2D-C3m-D10m-W1m-T0.5m-E20-S0.02": {
-        "exit_code": 0,
-        "wall_s": 29.875,
-        "peak_job_commit_bytes": 2916335616
-      },
-      "B2D-C3m-D10m-W2m-T0.5m-E20-S0.02": {
-        "exit_code": 0,
-        "wall_s": 30.125,
-        "peak_job_commit_bytes": 2917273600
-      },
-      "B2D-C3m-D10m-W4m-T0.25m-E20-S0.02": {
-        "exit_code": 0,
-        "wall_s": 29.875,
-        "peak_job_commit_bytes": 2917724160
-      },
-      "B2D-C3m-D10m-W4m-T1m-E20-S0.02": {
-        "exit_code": 0,
-        "wall_s": 30.125,
-        "peak_job_commit_bytes": 2917208064
-      },
-      "B2D-C3m-D10m-W4m-T0.5m-E12-S0.005": {
-        "exit_code": 0,
-        "wall_s": 29.875,
-        "peak_job_commit_bytes": 2915852288
-      },
-      "B2D-C3m-D10m-W4m-T0.5m-E28-S0.05": {
-        "exit_code": 0,
-        "wall_s": 29.875,
-        "peak_job_commit_bytes": 2916827136
-      },
-      "B2D-C3m-D10m-W4m-T0.5m-E20-S0.005": {
-        "exit_code": 0,
-        "wall_s": 30.125,
-        "peak_job_commit_bytes": 2917875712
-      },
-      "B2D-C3m-D10m-W4m-T0.5m-E20-S0.05": {
-        "exit_code": 0,
-        "wall_s": 29.859,
-        "peak_job_commit_bytes": 2915225600
-      },
-      "B2D-C3m-D10m-NC": {
-        "exit_code": 0,
-        "wall_s": 30.125,
-        "peak_job_commit_bytes": 2917556224
-      },
-      "B2D-C3m-D10m-OFF": {
-        "exit_code": 0,
-        "wall_s": 29.859,
-        "peak_job_commit_bytes": 2915692544
-      },
-      "B2D-C1m-BG": {
-        "exit_code": 0,
-        "wall_s": 30.125,
-        "peak_job_commit_bytes": 2917842944
-      },
-      "B2D-C1m-D2m-W4m-T0.5m-E20-S0.02": {
-        "exit_code": 0,
-        "wall_s": 29.875,
-        "peak_job_commit_bytes": 2918010880
-      },
-      "B2D-C1m-D5m-W4m-T0.5m-E20-S0.02": {
-        "exit_code": 0,
-        "wall_s": 29.859,
-        "peak_job_commit_bytes": 2917179392
-      },
-      "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02": {
-        "exit_code": 0,
-        "wall_s": 30.125,
-        "peak_job_commit_bytes": 2917560320
-      },
-      "B2D-C1m-D10m-NC": {
-        "exit_code": 0,
-        "wall_s": 29.86,
-        "peak_job_commit_bytes": 2915782656
-      },
-      "B2D-C5m-BG": {
-        "exit_code": 0,
-        "wall_s": 29.875,
-        "peak_job_commit_bytes": 2916687872
-      },
-      "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02": {
-        "exit_code": 0,
-        "wall_s": 30.125,
-        "peak_job_commit_bytes": 2917650432
-      },
-      "B2D-C5m-D20m-W4m-T0.5m-E20-S0.02": {
-        "exit_code": 0,
-        "wall_s": 29.859,
-        "peak_job_commit_bytes": 2917261312
-      },
-      "B2D-C5m-D10m-NC": {
-        "exit_code": 0,
-        "wall_s": 29.875,
-        "peak_job_commit_bytes": 2915479552
-      },
-      "B2D-C8m-BG": {
-        "exit_code": 0,
-        "wall_s": 30.11,
-        "peak_job_commit_bytes": 2915868672
-      },
-      "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02": {
-        "exit_code": 0,
-        "wall_s": 29.875,
-        "peak_job_commit_bytes": 2917654528
-      },
-      "B2D-C8m-D20m-W4m-T0.5m-E20-S0.02": {
-        "exit_code": 0,
-        "wall_s": 30.109,
-        "peak_job_commit_bytes": 2915303424
-      },
-      "B2D-C8m-D20m-W4m-T0.25m-E20-S0.02": {
-        "exit_code": 0,
-        "wall_s": 29.86,
-        "peak_job_commit_bytes": 2915946496
-      },
-      "B2D-C8m-D10m-W4m-T0.5m-E28-S0.05": {
-        "exit_code": 0,
-        "wall_s": 29.875,
-        "peak_job_commit_bytes": 2914930688
-      },
-      "B2D-C8m-D10m-NC": {
-        "exit_code": 0,
-        "wall_s": 30.125,
-        "peak_job_commit_bytes": 2917658624
-      }
-    },
-    "acceptance": "all 29 supervision.json reason=completed exit 0; all h5 Ex (20352,) finite; peak commit 2.83-2.92 GiB < 4 GiB cap; archives at artifacts/research_checks/2026-09-26_<RUN>/ with record.json sha256 manifests",
-    "operational_intervention": "post-solve job drain (vctip.exe, MSVC telemetry, identified during first case) was cleared by an external watcher that killed only orphaned vctip.exe processes while runs showed waiting_descendants; 29 events logged at artifacts/research_checks/2026-09-26_batch2d_v1_vctip_intervention_log.jsonl; supervision completion semantics (root exit zero and job empty) satisfied unmodified; solver, inputs, h5 outputs untouched",
-    "wall_time_note": "per-run walls 29.9-59.2 s after intervention (first case 532.2 s before watcher started); spec P5 planning envelope 152 s/case not exceeded"
+    "status": "ready_not_started"
   },
-  "note": "batch2d_v1: 29 coarse-tier 2D cases (4 cover families x depth/electrical scan + BG/NC/OFF controls), serial, fail-abort. Spec: docs/research/2026-09-26_batch_2d_spec_v1.md. Physical/training labels remain disabled."
+  "note": "batch2d_v1_fine2: 8 FINE2-tier 2D cases (4 cover families x BG + anchor D10m-W4m-T0.5m-E20-S0.02) on the ZFINE2 grid dy12.5/dz3.125mm, serial, fail-abort. Purpose: spec P2 direction-consistency recheck of the coarse-tier findings at the converged grid. C3 pair first (direct comparability with ZFINE2 chain), then C1/C5/C8. vctip drain watcher (artifacts/local_checks/vctip_drain_watcher.py) must run alongside; interventions logged. Physical/training labels remain disabled."
 }
