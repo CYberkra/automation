@@ -1,945 +1,960 @@
 {
-  "schema": "research-artifact-registry/1",
-  "updated_date": "2026-09-26",
-  "entrypoint": "START_HERE.md",
-  "current_protocol": "docs/research/2026-09-24_evaluation_and_labels_v0.2.md",
-  "solver_execution_gate": "configs/research/gprmax_v4_execution_gate.json",
-  "runs": [
-    {
-      "id": "batch2d_v1_fine2",
-      "status": "complete_8of8_exit0",
-      "directory": "artifacts/research_checks/2026-09-26_batch2d_fine2_analysis_r1",
-      "directory_note": "Analysis recomputed in analysis_r1 and analysis_r2 with byte-identical results.json (sha256 prefix dd2ba3328a6f24b1); per-case run directories artifacts/simulations/2026-09-26_<case>-F2 hold the raw h5, inputs, stdout/stderr, supervision.json and live_status.json.",
-      "run_directories_prefix": "artifacts/simulations/2026-09-26_B2D-*-F2",
-      "tracked": true,
-      "solver_executed": true,
-      "training_executed": false,
-      "report": "docs/research/2026-09-26_batch2d_v1_fine2_results.md",
-      "spec": "docs/research/2026-09-26_batch_2d_spec_v1.md",
-      "contract": "configs/research/gprmax_v4_execution_gate.json",
-      "input_contract": "configs/research/batch2d_v1_fine2/",
-      "analysis_script": "scripts/analyze_batch2d_fine2.py",
-      "attempts": "one each, consumed, gate closed",
-      "analysis_recompute": "results.json byte-identical across analysis_r1/analysis_r2",
-      "gate": "batch2d_v1_fine2",
-      "grid_m": [
-        0.0125,
-        0.003125
-      ],
-      "key_numbers": {
-        "n_cases": 8,
-        "attempts_consumed": 8,
-        "wall_clock_s_range": [
-          1318.437,
-          1323.031
-        ],
-        "job_peak_commit_bytes_range": [
-          15246221312,
-          15248601088
-        ],
-        "p2_difference_spectrum_shape_correlation_range": [
-          0.9981254455630282,
-          0.999548930464859
-        ],
-        "p2_per_frequency_sign_agreement_range": [
-          0.8802395209580839,
-          0.93812375249501
-        ],
-        "p2_envelope_peak_fine2_earlier_ns_range": [
-          15.67053018661818,
-          19.11901197816502
-        ],
-        "in_band_energy_ratio_by_family": {
-          "C1": 7.872880397772246e-06,
-          "C3": 3.092143334046171e-07,
-          "C5": 1.2121864557034453e-08,
-          "C8": 9.369628603300173e-11
-        },
-        "reproduction_vs_DEP_BG_ZFINE2": {
-          "samples": 118665,
-          "max_abs_difference": 0.0,
-          "relative_L2_difference": 0.0
-        },
-        "vctip_interventions": 0,
-        "report": "docs/research/2026-09-26_batch2d_v1_fine2_results.md",
-        "analysis_dirs": [
-          "artifacts/research_checks/2026-09-26_batch2d_fine2_analysis_r1",
-          "artifacts/research_checks/2026-09-26_batch2d_fine2_analysis_r2"
-        ],
-        "analysis_results_sha256_prefix": "dd2ba3328a6f24b1"
-      },
-      "limitations": [
-        "direction consistency is not an accuracy certification: it must not be extrapolated as coarse- or fine-tier accuracy, as grid convergence (grid_convergence_certified=false) or as physical sufficiency",
-        "cross-tier amplitude ratios are direction indicators only: they mix grid dispersion, source discretisation and taper sample count, so they are not accuracy or grid-error measures",
-        "FINE2 tier (dy12.5/dz3.125 mm, ZFINE2 same grid); direction-consistency recheck only, no absolute amplitude or phase conclusion",
-        "serial fail-abort, retries=0, CUDA double, no CPU fallback; wall 40 min/case, Job 20 GiB",
-        "archived C3 ZFINE2 evidence is D20 depth, not interchangeable with this batch D10 anchor depth",
-        "vctip watcher ran alongside the batch with zero interventions (8/8 supervision records waited_for_descendants=false): a factual record only, not new evidence about vctip behaviour and not a basis for downgrading 3D budgets",
-        "bitwise zero difference against archived DEP_BG_ZFINE2 is run-to-run reproducibility on one grid tier; not convergence and not an accuracy statement",
-        "C8 in-band energy ratio 9.369628603300173e-11 stays in the numerical-resolution concern region; no detectability claim either way; no NC/OFF negative controls in the fine tier",
-        "8 attempts, one each, consumed and not reusable; conclusions limited to the four fine2 family anchor scenarios and the analysed FINE2 grid",
-        "physical and training labels remain disabled; reference_state stays numerically_unresolved"
-      ]
-    },
-    {
-      "id": "p10_3d_validation_subset_decision",
-      "status": "decision_recorded_not_executed",
-      "tracked": true,
-      "solver_executed": false,
-      "training_executed": false,
-      "report": "docs/research/2026-09-26_3d_validation_subset_decision.md",
-      "contract": "none_frozen_for_3d_yet",
-      "key_numbers": {
-        "preferred_3d_runs": 2
-      },
-      "decisions": {
-        "no_3d_in_batch2d_v1": true,
-        "preferred_object": "C3 anchor A0 pair B2D-C3m-D10m-W4m-T0.5m-E20-S0.02, 5 cm isotropic, 2 runs",
-        "timing": "after batch2d_v1_fine2 completion and direction-consistency recheck",
-        "not_added": "C3-D20m class (dep3d_gold already measured its 3D counterpart); NC and OFF negative controls not listed for 3D; no 3D at the 25 mm coarse grid",
-        "pending": "P-A C8 anchor and P-B C5 anchor depend on the fine2 recheck; P-C electrical/conductivity tiers also depend on the A0 3D result"
-      },
-      "budget_basis": "dep3d_gold_v1 measured only: 910.6-920.2 s/run wall, Job peak commit 7.98 GiB (5 cm) / 13.95 GiB (dz 2.5 cm); magnitude reference, not an ETA commitment",
-      "limitations": [
-        "decision document only, not an execution authorization; a separate frozen contract and user agreement are required before any 3D run",
-        "vctip drain intervention effect on 3D wall clock is unmeasured; 3D budgets must not be downgraded from 2D measurements",
-        "3D validation does not upgrade reference_state (numerically_unresolved) and produces no physical threshold, training label, clean truth, detectability or maximum-depth conclusion",
-        "3D grid convergence not certified; dimension/lateral-domain/target-y confounds not excluded; differences between comparison pairs must not be subtracted as an additive decomposition"
-      ]
-    },
-    {
-      "id": "batch2d_v1_base",
-      "status": "complete_29of29_exit0",
-      "directory": "artifacts/research_checks/2026-09-26_batch2d_analysis_r1",
-      "run_directories_prefix": "artifacts/research_checks/2026-09-26_B2D-*",
-      "tracked": true,
-      "solver_executed": true,
-      "training_executed": false,
-      "report": "docs/research/2026-09-26_batch2d_v1_results.md",
-      "contract": "configs/research/batch2d_v1/cases.json",
-      "spec": "docs/research/2026-09-26_batch_2d_spec_v1.md",
-      "gate": "batch2d_v1",
-      "grid_m": 0.025,
-      "attempts": "one each, consumed, gate closed",
-      "analysis_recompute": "results.json byte-identical across analysis_r1/analysis_r2",
-      "vctip_intervention_log": "artifacts/research_checks/2026-09-26_batch2d_v1_vctip_intervention_log.jsonl",
-      "key_numbers": {
-        "n_cases_contract": 29,
-        "total_wall_clock_s": 1400.62,
-        "job_peak_commit_bytes_range": [
-          2914930688,
-          2918010880
-        ],
-        "negative_controls_zero_difference": 4,
-        "c3_anchor_in_band_energy_ratio": 2.8635252336237045e-07,
-        "c3_anchor_envelope_peak_ns": 331.8626651806806
-      },
-      "limitations": [
-        "BASE tier physical sufficiency not certified; coarse conclusions require fine2 direction consistency (spec P2)",
-        "in_band_energy_ratio is a diagnostic energy ratio on the 501-point analysis grid; not detectability, not SNR, not a physical threshold",
-        "reference_state numerically_unresolved; grid_convergence_certified false; physical_label_eligible false; training_eligible false; no clean truth",
-        "no cross-family differencing, no cross-tier merging, negative controls not merged into target rows",
-        "C8 lowest ratios (down to 3.8167380710479025e-12) are near the numerical-resolution concern region; no detectability claim made either way",
-        "OFF case side PML margin 8.0 m < 13 m exception listed separately and not used with target rows",
-        "vctip handling is an operational intervention only: supervisor completion semantics unchanged; solver process, inputs and output h5 untouched"
-      ]
-    },
-    {
-      "id": "dep3d_gold_v1",
-      "status": "complete_8of8_exit0",
-      "directory": "artifacts/research_checks/2026-09-26_dep3d_gold_analysis_r1",
-      "run_directories": [
-        "artifacts/research_checks/2026-09-26_B2D5CM_BG",
-        "artifacts/research_checks/2026-09-26_B2D5CM_TGT",
-        "artifacts/research_checks/2026-09-26_B2DANISO_BG",
-        "artifacts/research_checks/2026-09-26_B2DANISO_TGT",
-        "artifacts/research_checks/2026-09-26_DEP3D_5CM_BG",
-        "artifacts/research_checks/2026-09-26_DEP3D_5CM_TGT",
-        "artifacts/research_checks/2026-09-26_DEP3D_ANISO_BG",
-        "artifacts/research_checks/2026-09-26_DEP3D_ANISO_TGT"
-      ],
-      "tracked": true,
-      "solver_executed": true,
-      "training_executed": false,
-      "report": "docs/research/2026-09-26_dep3d_gold_results.md",
-      "design": "docs/research/2026-09-26_dep3d_gold_design.md",
-      "contract": "configs/research/dep3d_gold_v1/",
-      "runs": [
-        "B2D5CM_BG",
-        "B2D5CM_TGT",
-        "B2DANISO_BG",
-        "B2DANISO_TGT",
-        "DEP3D_5CM_BG",
-        "DEP3D_5CM_TGT",
-        "DEP3D_ANISO_BG",
-        "DEP3D_ANISO_TGT"
-      ],
-      "attempts": "one each, consumed, gate closed",
-      "analysis_recompute": "results.json byte-identical across analysis_r1/analysis_r2",
-      "key_numbers": {
-        "dz_refinement_spectrum_shape_correlation": 0.9951,
-        "cross_dimension_spectrum_shape_correlation_5cm": 0.935,
-        "cross_dimension_spectrum_shape_correlation_aniso": 0.958,
-        "exploratory_far_field_transform_correlation_5cm": 0.967,
-        "exploratory_far_field_transform_correlation_aniso": 0.979,
-        "wall_clock_s_range": [
-          910.562,
-          920.218
-        ],
-        "job_peak_commit_bytes_range": [
-          2322751488,
-          14979588096
-        ]
-      },
-      "limitations": [
-        "grid_convergence_certified false; 5 cm at 170 MHz only reaches the official starting criterion, ANISO refines z only",
-        "no cross-dimension absolute amplitude comparison; phase reported only as a linear fit of the phase difference vs frequency and not transferable across dimensions",
-        "dimension difference, lateral domain width and target y position confounds not excluded",
-        "physical_acceptance_threshold null; no training labels, no clean truth; conclusions limited to the dep3d_gold_v1 scenario family and the grids analysed, not extrapolated to field data",
-        "post-solve residency root cause identified as vctip.exe telemetry orphan under the same environment; for this batch it is an inference, not a direct observation of the 8 cases"
-      ]
-    },
-    {
-      "id": "DEP_BG_ZFINE2",
-      "status": "completed_vertical_refinement_pair",
-      "directory": "artifacts/research_checks/2026-09-25_DEP_BG_ZFINE2",
-      "tracked": true,
-      "solver_executed": true,
-      "training_executed": false
-    },
-    {
-      "id": "DEP_20_ZFINE2",
-      "status": "completed_vertical_refinement_pair_reference_unresolved",
-      "directory": "artifacts/research_checks/2026-09-25_DEP_20_ZFINE2",
-      "tracked": true,
-      "solver_executed": true,
-      "training_executed": false
-    },
-    {
-      "id": "deep_zfine2_analysis",
-      "status": "completed_vertical_refinement_pair_reference_unresolved",
-      "directory": "artifacts/research_checks/2026-09-25_deep_zfine2_analysis_r1",
-      "tracked": true,
-      "solver_executed": false,
-      "training_executed": false,
-      "report": "docs/research/2026-09-25_deep_zfine2_results.md",
-      "design": "docs/research/2026-09-25_deep_zfine2_design.md",
-      "contract": "configs/research/deep_zfine2_v1/",
-      "analysis_recompute": "results.json and arrays identical across analysis_r1/analysis_r2",
-      "key_numbers": {
-        "adjacent_band_relative_L2_change_percent": [
-          66.6647,
-          17.2452,
-          4.1216
-        ],
-        "adjacent_max_phase_change_deg": [
-          64.8431,
-          16.2741,
-          3.8847
-        ],
-        "adjacent_ratio_vertical_second_order": [
-          4.18,
-          4.19
-        ],
-        "wall_clock_s": [
-          1438.6,
-          1334.8
-        ],
-        "job_peak_commit_GB": 15.28,
-        "cells": 40960000
-      },
-      "limitations": [
-        "reference_state stays numerically_unresolved; physical_label_eligible false, training_eligible false, physical threshold null",
-        "no Richardson extrapolation; adjacent difference is not the error against the exact solution",
-        "one attempt each, consumed; conclusions limited to the 2D YZ/TMx flat-layer research-assumption model with fixed tail/diagnostic windows"
-      ]
-    },
-    {
-      "id": "dim23_pair_v1",
-      "status": "complete_4of4_exit0",
-      "directory": "artifacts/research_checks/2026-09-25_dim23_pair",
-      "tracked": true,
-      "canonical_for_handoff": true,
-      "report": "docs/research/2026-09-25_dim23_pair_results.md",
-      "runs": [
-        "DIM23_2D_BG",
-        "DIM23_2D_TGT",
-        "DIM23_3D_BG",
-        "DIM23_3D_TGT"
-      ],
-      "solver": "gprMax 4.0.0 CUDA double, local RTX 3060 Laptop, junction-aliased env D:/gprmax_v4_gpu_env",
-      "grid_m": 0.05,
-      "cells": {
-        "2D": [
-          1,
-          200,
-          780
-        ],
-        "3D": [
-          200,
-          200,
-          780
-        ]
-      },
-      "time_window_s": 8e-07,
-      "attempts": "one each, consumed, gate closed",
-      "analysis_recompute": "results.json byte-identical across analysis_r1/analysis_r2",
-      "key_numbers": {
-        "envelope_peak_time_difference_ns": -9.748235313792577,
-        "waveform_max_normalized_correlation": 0.7156980104595475,
-        "normalized_spectrum_shape_correlation": 0.9017860208459169,
-        "exploratory_3d_to_2d_shape_correlation": 0.9541514018288215
-      },
-      "limitations": [
-        "5cm 3D grid not convergence-certified",
-        "no cross-dimension absolute amplitude comparison",
-        "conclusions limited to this geometry/band/material family"
-      ],
-      "python": "3.12.0",
-      "numpy": "2.5.3"
-    },
-    {
-      "id": "damage_pilot_initial",
-      "status": "complete_numeric_historical",
-      "directory": "artifacts/research_checks/2026-09-24_damage_pilot",
-      "tracked": true,
-      "checks_passed": 72,
-      "python": "3.12.14",
-      "numpy": "2.3.5",
-      "canonical_for_handoff": false,
-      "note": "Pre-plotting-fix source hash retained; current r2 is the final reproducible delivery."
-    },
-    {
-      "id": "damage_pilot_plot_failed",
-      "status": "failed_during_optional_plot",
-      "directory": "artifacts/local_checks/2026-09-24_damage_pilot_plot_failed",
-      "tracked": false,
-      "canonical_for_handoff": false,
-      "reason": "Rounded 0.08 minus floating endpoint produced a negative machine-size error-bar length. Numeric tables were written; results.json and figure were not completed.",
-      "resolution": "Draw absolute interval endpoints; complete rerun saved as r2.",
-      "do_not_repeat": true
-    },
-    {
-      "id": "damage_pilot_r2",
-      "status": "complete_numeric_and_figures",
-      "directory": "artifacts/research_checks/2026-09-24_damage_pilot_r2",
-      "tracked": true,
-      "canonical_for_handoff": true,
-      "checks_passed": 72,
-      "python": "3.10.21",
-      "numpy": "1.26.4",
-      "matplotlib": "3.10.9",
-      "damage_rows": 63,
-      "weak_event_rows": 12,
-      "candidate_rows": 42,
-      "report": "docs/research/2026-09-24_damage_pilot_findings.md",
-      "delivery_check": "artifacts/research_checks/2026-09-24_damage_pilot_delivery.json",
-      "source_commit": "251986ee9a362c466a77124d5256fad7541eeff6"
-    },
-    {
-      "id": "gprmax_v4_source_audit",
-      "status": "static_read_only_complete",
-      "record": "artifacts/research_checks/2026-09-24_gprmax_v4_source_audit.json",
-      "selected_local_files": 19,
-      "official_pages_cached_locally": 10,
-      "cache_in_git": false,
-      "solver_imported_or_executed": false,
-      "runtime_ready": false,
-      "report": "docs/research/2026-09-24_gprmax_v4_review.md"
-    },
-    {
-      "id": "cover_sandstone_analytic_budget",
-      "status": "complete_analytic_only",
-      "record": "artifacts/research_checks/2026-09-24_layer_loss_budget.json",
-      "report": "docs/research/2026-09-24_cover_sandstone_brief.md",
-      "source_ledger": "docs/research/2026-09-24_cover_sandstone_sources.json",
-      "script": "scripts/study_layer_loss_budget.py",
-      "checks_passed": 4,
-      "rows": 27,
-      "solver_executed": false,
-      "site_parameters_adopted": false
-    },
-    {
-      "id": "v4_calibration_ricker_draft",
-      "status": "superseded_draft_pending_sfcw_redesign",
-      "record": "configs/research/v4_calibration_packet_v1/manifest.json",
-      "report": "docs/research/2026-09-24_v4_calibration_packet.md",
-      "solver_executed": false
-    },
-    {
-      "id": "v4_official_sfcw_packet",
-      "status": "superseded_geometry_height15m_baseline1p3m",
-      "record": "configs/research/v4_official_sfcw_packet_v2/manifest.json",
-      "report": "docs/research/2026-09-24_v4_official_sfcw_packet.md",
-      "solver_executed": false,
-      "runtime_ready": false,
-      "superseded_note": "Keep frozen manifest/input hashes as historical proposal; current user geometry overrides it. Do not execute."
-    },
-    {
-      "id": "airborne_3d_static_budget",
-      "status": "complete_static_estimate_not_solver_run",
-      "record": "artifacts/research_checks/2026-09-24_airborne_3d_budget.json",
-      "report": "docs/research/2026-09-24_airborne_3d_budget.md",
-      "script": "scripts/budget_airborne_3d.py",
-      "rows": 9,
-      "solver_executed": false,
-      "runtime_measured": false
-    },
-    {
-      "id": "airborne_first_run_preparation",
-      "status": "static_only_environment_and_supervisor_pending",
-      "record": "configs/research/airborne_first_run_v1/manifest.json",
-      "report": "docs/research/2026-09-24_airborne_first_run_preparation.md",
-      "script": "scripts/prepare_airborne_first_run.py",
-      "solver_executed": false,
-      "approved_run_ids": []
-    },
-    {
-      "id": "v4_environment_and_supervisor",
-      "status": "build_blocked_supervisor_checks_passed",
-      "record": "artifacts/research_checks/2026-09-24_v4_environment_preparation/record.json",
-      "report": "docs/research/2026-09-24_v4_environment_preparation.md",
-      "solver_executed": false,
-      "runtime_ready": false,
-      "non_solver_checks_passed": 6
-    },
-    {
-      "id": "v4_build_r2",
-      "status": "built_installed_import_verified_no_solve",
-      "record": "artifacts/research_checks/2026-09-24_v4_build_r2/record.json",
-      "report": "docs/research/2026-09-24_v4_build_success.md",
-      "runtime_import_ready": true,
-      "solver_executed": false
-    },
-    {
-      "id": "M00_x_3d_r1",
-      "status": "intentionally_stopped_for_authorized_restart",
-      "directory": "artifacts/research_checks/2026-09-24_M00_x_3d_r1",
-      "tracked": true,
-      "attempt_record": "artifacts/research_checks/2026-09-24_first_airborne_attempt.json",
-      "solver_executed": true,
-      "extra_run_authorized": true,
-      "record": "artifacts/research_checks/2026-09-24_M00_x_3d_r1/record.json"
-    },
-    {
-      "id": "M00_x_3d_r2",
-      "status": "intentionally_stopped_for_user_required_gpu",
-      "directory": "artifacts/research_checks/2026-09-24_M00_x_3d_r2",
-      "tracked": true,
-      "attempt_record": "artifacts/research_checks/2026-09-24_airborne_attempt_r2.json",
-      "solver_executed": true,
-      "record": "artifacts/research_checks/2026-09-24_M00_x_3d_r2/record.json"
-    },
-    {
-      "id": "M00_x_3d_gpu_r1",
-      "status": "cuda_fdtd_complete_raw_audit_passed",
-      "directory": "artifacts/research_checks/2026-09-24_M00_x_3d_gpu_r1",
-      "tracked": true,
-      "attempt_record": "artifacts/research_checks/2026-09-24_airborne_gpu_attempt_r1.json",
-      "solver_executed": true,
-      "cpu_fallback": false,
-      "record": "artifacts/research_checks/2026-09-24_M00_x_3d_gpu_r1/record.json",
-      "postprocessing_record": "artifacts/research_checks/2026-09-24_M00_gpu_official_postprocess_r1/record.json"
-    },
-    {
-      "id": "M00_gpu_official_postprocess_r1",
-      "status": "official_cpu_postprocessing_complete_with_physical_validation_limitations",
-      "directory": "artifacts/research_checks/2026-09-24_M00_gpu_official_postprocess_r1",
-      "record": "artifacts/research_checks/2026-09-24_M00_gpu_official_postprocess_r1/record.json",
-      "tracked": true,
-      "solver_executed": false
-    },
-    {
-      "id": "T800_tail_control",
-      "status": "completed",
-      "directory": "artifacts/research_checks/2026-09-24_T800",
-      "record": "artifacts/research_checks/2026-09-24_T800/record.json",
-      "tracked": true,
-      "solver_executed": true
-    },
-    {
-      "id": "PML40_tail_control",
-      "status": "completed",
-      "directory": "artifacts/research_checks/2026-09-24_PML40",
-      "tracked": true,
-      "solver_executed": true
-    },
-    {
-      "id": "tail_controls_analysis",
-      "status": "complete_two_cuda_controls_and_official_postprocessing",
-      "directory": "artifacts/research_checks/2026-09-24_tail_controls_analysis",
-      "tracked": true,
-      "solver_executed": false
-    },
-    {
-      "id": "M01_T800",
-      "status": "completed_diagnostic_not_convergence",
-      "directory": "artifacts/research_checks/2026-09-24_M01_T800",
-      "tracked": true,
-      "solver_executed": true
-    },
-    {
-      "id": "interface_analysis",
-      "status": "completed_diagnostic_not_convergence",
-      "directory": "artifacts/research_checks/2026-09-24_interface_analysis",
-      "tracked": true,
-      "solver_executed": false
-    },
-    {
-      "id": "PEC_T800",
-      "status": "completed_reference_or_static_diagnostic",
-      "directory": "artifacts/research_checks/2026-09-24_PEC_T800",
-      "tracked": true,
-      "solver_executed": true
-    },
-    {
-      "id": "PEC_analysis",
-      "status": "completed_reference_or_static_diagnostic",
-      "directory": "artifacts/research_checks/2026-09-24_PEC_analysis",
-      "tracked": true,
-      "solver_executed": false
-    },
-    {
-      "id": "PEC_sources",
-      "status": "completed_reference_or_static_diagnostic",
-      "directory": "artifacts/research_checks/2026-09-24_PEC_sources",
-      "tracked": true,
-      "solver_executed": false
-    },
-    {
-      "id": "M01_fixedPML",
-      "status": "completed_fixed_PML_intervention",
-      "directory": "artifacts/research_checks/2026-09-24_M01_fixedPML",
-      "tracked": true,
-      "solver_executed": true
-    },
-    {
-      "id": "fixedPML_analysis",
-      "status": "completed_fixed_PML_intervention",
-      "directory": "artifacts/research_checks/2026-09-24_fixedPML_analysis",
-      "tracked": true,
-      "solver_executed": false
-    },
-    {
-      "id": "fixedPML_sources",
-      "status": "completed_fixed_PML_intervention",
-      "directory": "artifacts/research_checks/2026-09-24_fixedPML_sources",
-      "tracked": true,
-      "solver_executed": false
-    },
-    {
-      "id": "halfspace_reference",
-      "status": "complete_independent_reference_or_diagnostics",
-      "directory": "artifacts/research_checks/2026-09-24_halfspace_reference",
-      "tracked": true,
-      "solver_executed": false,
-      "FDTD_solver_executed": false,
-      "frequency_domain_reference_evaluated": true
-    },
-    {
-      "id": "halfspace_comparison",
-      "status": "complete_independent_reference_or_diagnostics",
-      "directory": "artifacts/research_checks/2026-09-24_halfspace_comparison",
-      "tracked": true,
-      "solver_executed": false,
-      "FDTD_solver_executed": false,
-      "frequency_domain_reference_evaluated": true
-    },
-    {
-      "id": "dz4_design",
-      "status": "completed_directional_refinement",
-      "directory": "artifacts/research_checks/2026-09-24_dz4_design",
-      "tracked": true,
-      "solver_executed": false
-    },
-    {
-      "id": "AIR_dz4",
-      "status": "completed_directional_refinement",
-      "directory": "artifacts/research_checks/2026-09-24_AIR_dz4",
-      "tracked": true,
-      "solver_executed": true
-    },
-    {
-      "id": "M01_dz4",
-      "status": "completed_directional_refinement",
-      "directory": "artifacts/research_checks/2026-09-24_M01_dz4",
-      "tracked": true,
-      "solver_executed": true
-    },
-    {
-      "id": "dz4_analysis",
-      "status": "completed_directional_refinement",
-      "directory": "artifacts/research_checks/2026-09-24_dz4_analysis",
-      "tracked": true,
-      "solver_executed": false
-    },
-    {
-      "id": "geology_budget",
-      "status": "static_budget_complete",
-      "directory": "artifacts/research_checks/2026-09-24_geology_budget",
-      "tracked": true,
-      "solver_executed": false
-    },
-    {
-      "id": "hsg_budget",
-      "status": "static_audit_complete",
-      "directory": "artifacts/research_checks/2026-09-24_hsg_budget",
-      "tracked": true,
-      "solver_executed": false
-    },
-    {
-      "id": "HSG_reference",
-      "status": "completed_with_internal_phase_unresolved",
-      "directory": "artifacts/research_checks/2026-09-25_HSG_reference",
-      "tracked": true,
-      "solver_executed": true
-    },
-    {
-      "id": "HSG_air",
-      "status": "completed_with_internal_phase_unresolved",
-      "directory": "artifacts/research_checks/2026-09-25_HSG_air",
-      "tracked": true,
-      "solver_executed": true
-    },
-    {
-      "id": "hsg_smoke_analysis",
-      "status": "analysis_failed_path_api",
-      "directory": "artifacts/research_checks/2026-09-25_hsg_smoke_analysis",
-      "tracked": true,
-      "solver_executed": false
-    },
-    {
-      "id": "hsg_smoke_analysis_r2",
-      "status": "completed_with_internal_phase_unresolved",
-      "directory": "artifacts/research_checks/2026-09-25_hsg_smoke_analysis_r2",
-      "tracked": true,
-      "solver_executed": false
-    },
-    {
-      "id": "HSG_ratio1",
-      "status": "completed_clock_lag_hypothesis_supported",
-      "directory": "artifacts/research_checks/2026-09-25_HSG_ratio1",
-      "tracked": true,
-      "solver_executed": true
-    },
-    {
-      "id": "HSG_ratio5",
-      "status": "completed_clock_lag_hypothesis_supported",
-      "directory": "artifacts/research_checks/2026-09-25_HSG_ratio5",
-      "tracked": true,
-      "solver_executed": true
-    },
-    {
-      "id": "hsg_clock",
-      "status": "completed_clock_lag_hypothesis_supported",
-      "directory": "artifacts/research_checks/2026-09-25_hsg_clock",
-      "tracked": true,
-      "solver_executed": false
-    },
-    {
-      "id": "dimension_strategy",
-      "status": "static_assessment_complete",
-      "directory": "artifacts/research_checks/2026-09-25_dimension_strategy",
-      "tracked": true,
-      "solver_executed": false
-    },
-    {
-      "id": "YZ_AIR",
-      "status": "completed_2d_calibration",
-      "directory": "artifacts/research_checks/2026-09-25_YZ_AIR",
-      "tracked": true,
-      "solver_executed": true
-    },
-    {
-      "id": "YZ_PEC",
-      "status": "completed_2d_calibration",
-      "directory": "artifacts/research_checks/2026-09-25_YZ_PEC",
-      "tracked": true,
-      "solver_executed": true
-    },
-    {
-      "id": "yz2d_analysis",
-      "status": "completed_2d_calibration",
-      "directory": "artifacts/research_checks/2026-09-25_yz2d_analysis",
-      "tracked": true,
-      "solver_executed": false
-    },
-    {
-      "id": "YZ_ROCK",
-      "status": "completed_initial_layer_validation",
-      "directory": "artifacts/research_checks/2026-09-25_YZ_ROCK",
-      "tracked": true,
-      "solver_executed": true
-    },
-    {
-      "id": "YZ_COVER",
-      "status": "completed_initial_layer_validation",
-      "directory": "artifacts/research_checks/2026-09-25_YZ_COVER",
-      "tracked": true,
-      "solver_executed": true
-    },
-    {
-      "id": "yz_layers_reference",
-      "status": "completed_initial_layer_validation",
-      "directory": "artifacts/research_checks/2026-09-25_yz_layers_reference",
-      "tracked": true,
-      "solver_executed": false
-    },
-    {
-      "id": "yz_layers_analysis",
-      "status": "completed_initial_layer_validation",
-      "directory": "artifacts/research_checks/2026-09-25_yz_layers_analysis",
-      "tracked": true,
-      "solver_executed": false
-    },
-    {
-      "id": "YZ_AIR_FINE",
-      "status": "completed_two_level_refinement",
-      "directory": "artifacts/research_checks/2026-09-25_YZ_AIR_FINE",
-      "tracked": true,
-      "solver_executed": true
-    },
-    {
-      "id": "YZ_COVER_FINE",
-      "status": "completed_two_level_refinement",
-      "directory": "artifacts/research_checks/2026-09-25_YZ_COVER_FINE",
-      "tracked": true,
-      "solver_executed": true
-    },
-    {
-      "id": "yz_fine_analysis",
-      "status": "completed_two_level_refinement",
-      "directory": "artifacts/research_checks/2026-09-25_yz_fine_analysis",
-      "tracked": true,
-      "solver_executed": false
-    },
-    {
-      "id": "DEP_BG",
-      "status": "completed_initial_depth_screen",
-      "directory": "artifacts/research_checks/2026-09-25_DEP_BG",
-      "tracked": true,
-      "solver_executed": true
-    },
-    {
-      "id": "DEP_05",
-      "status": "completed_initial_depth_screen",
-      "directory": "artifacts/research_checks/2026-09-25_DEP_05",
-      "tracked": true,
-      "solver_executed": true
-    },
-    {
-      "id": "DEP_10",
-      "status": "completed_initial_depth_screen",
-      "directory": "artifacts/research_checks/2026-09-25_DEP_10",
-      "tracked": true,
-      "solver_executed": true
-    },
-    {
-      "id": "DEP_20",
-      "status": "completed_initial_depth_screen",
-      "directory": "artifacts/research_checks/2026-09-25_DEP_20",
-      "tracked": true,
-      "solver_executed": true
-    },
-    {
-      "id": "yz_depth_analysis",
-      "status": "completed_initial_depth_screen",
-      "directory": "artifacts/research_checks/2026-09-25_yz_depth_analysis",
-      "tracked": true,
-      "solver_executed": false
-    },
-    {
-      "id": "DEP_BG_WIDE",
-      "status": "completed_deep_phase_numerically_unresolved",
-      "directory": "artifacts/research_checks/2026-09-25_DEP_BG_WIDE",
-      "tracked": true,
-      "solver_executed": true
-    },
-    {
-      "id": "DEP_20_WIDE",
-      "status": "completed_deep_phase_numerically_unresolved",
-      "directory": "artifacts/research_checks/2026-09-25_DEP_20_WIDE",
-      "tracked": true,
-      "solver_executed": true
-    },
-    {
-      "id": "DEP_BG_FINE",
-      "status": "completed_deep_phase_numerically_unresolved",
-      "directory": "artifacts/research_checks/2026-09-25_DEP_BG_FINE",
-      "tracked": true,
-      "solver_executed": true
-    },
-    {
-      "id": "DEP_20_FINE",
-      "status": "completed_deep_phase_numerically_unresolved",
-      "directory": "artifacts/research_checks/2026-09-25_DEP_20_FINE",
-      "tracked": true,
-      "solver_executed": true
-    },
-    {
-      "id": "deep_controls_analysis",
-      "status": "completed_deep_phase_numerically_unresolved",
-      "directory": "artifacts/research_checks/2026-09-25_deep_controls_analysis",
-      "tracked": true,
-      "solver_executed": false
-    },
-    {
-      "id": "deep_eligibility",
-      "status": "completed_eligibility_guard_and_static_budget",
-      "directory": "artifacts/research_checks/2026-09-25_deep_eligibility",
-      "tracked": true,
-      "solver_executed": false
-    },
-    {
-      "id": "fdtd_template_mechanisms",
-      "status": "completed_constructed_mechanism_only",
-      "directory": "artifacts/research_checks/2026-09-25_fdtd_template_mechanisms",
-      "tracked": true,
-      "solver_executed": false
-    },
-    {
-      "id": "deep_zfine_live",
-      "status": "completed_historical_handle",
-      "directory": "artifacts/research_checks/2026-09-25_deep_zfine_live",
-      "tracked": true,
-      "solver_executed": true
-    },
-    {
-      "id": "background_mismatch",
-      "status": "completed_constructed_negative_controls",
-      "directory": "artifacts/research_checks/2026-09-25_background_mismatch",
-      "tracked": true,
-      "solver_executed": false
-    },
-    {
-      "id": "DEP_BG_ZFINE",
-      "status": "completed_directional_pair",
-      "directory": "artifacts/research_checks/2026-09-25_DEP_BG_ZFINE",
-      "tracked": true,
-      "solver_executed": true
-    },
-    {
-      "id": "DEP_20_ZFINE",
-      "status": "completed_directional_improvement_reference_unresolved",
-      "directory": "artifacts/research_checks/2026-09-25_DEP_20_ZFINE",
-      "tracked": true,
-      "solver_executed": true
-    },
-    {
-      "id": "deep_zfine_analysis",
-      "status": "completed_directional_improvement_reference_unresolved",
-      "directory": "artifacts/research_checks/2026-09-25_deep_zfine_analysis",
-      "tracked": true,
-      "solver_executed": false
-    },
-    {
-      "id": "three_grid_mechanisms",
-      "status": "completed_constructed_mechanism_only",
-      "directory": "artifacts/research_checks/2026-09-25_three_grid_mechanisms",
-      "tracked": true,
-      "solver_executed": false
-    },
-    {
-      "id": "three_grid_mismatch",
-      "status": "completed_constructed_mechanism_only",
-      "directory": "artifacts/research_checks/2026-09-25_three_grid_mismatch",
-      "tracked": true,
-      "solver_executed": false
-    },
-    {
-      "id": "deep_yfine_live",
-      "status": "completed_historical_handle",
-      "directory": "artifacts/research_checks/2026-09-25_deep_yfine_live",
-      "tracked": true,
-      "solver_executed": true
-    },
-    {
-      "id": "joint_roles",
-      "status": "completed_constructed_roles_only",
-      "directory": "artifacts/research_checks/2026-09-25_joint_roles",
-      "tracked": true,
-      "solver_executed": false
-    },
-    {
-      "id": "DEP_BG_YFINE",
-      "status": "completed_paired_control",
-      "directory": "artifacts/research_checks/2026-09-25_DEP_BG_YFINE",
-      "tracked": true,
-      "solver_executed": true
-    },
-    {
-      "id": "deep_background_reference",
-      "status": "completed_independent_background_only",
-      "directory": "artifacts/research_checks/2026-09-25_deep_background_reference",
-      "tracked": true,
-      "solver_executed": false
-    },
-    {
-      "id": "DEP_20_YFINE",
-      "status": "completed_lateral_control_reference_unresolved",
-      "directory": "artifacts/research_checks/2026-09-25_DEP_20_YFINE",
-      "tracked": true,
-      "solver_executed": true
-    },
-    {
-      "id": "deep_yfine_analysis",
-      "status": "completed_lateral_control_reference_unresolved",
-      "directory": "artifacts/research_checks/2026-09-25_deep_yfine_analysis",
-      "tracked": true,
-      "solver_executed": false
-    },
-    {
-      "id": "review_fixes_9303298",
-      "status": "verified_array_and_process_regressions_only",
-      "directory": "artifacts/research_checks/2026-09-25_review_fixes",
-      "tracked": true,
-      "solver_executed": false,
-      "training_executed": false
-    },
-    {
-      "id": "error_budget_certificates",
-      "status": "completed_constructed_array_certificates_only",
-      "directory": "artifacts/research_checks/2026-09-25_error_budget",
-      "tracked": true,
-      "solver_executed": false,
-      "training_executed": false,
-      "report": "docs/research/2026-09-25_error_budget.md",
-      "contract": "configs/research/error_budget_contract_v0.1.json",
-      "key_numbers": {
-        "damage_pilot_cosines_restored": 51,
-        "damage_pilot_cosines_still_missing": 40,
-        "three_grid_fdtd_cosines_missing": 84,
-        "max_certified_budget": 1.1683018084039848e-11
-      }
-    }
-  ],
-  "default_array_verification": {
-    "command": "python scripts/verify_workspace.py",
-    "expected_checks": 182,
-    "composition": [
-      10,
-      23,
-      5,
-      26,
-      72,
-      21,
-      20,
-      5
+ "schema": "research-artifact-registry/1",
+ "updated_date": "2026-09-26",
+ "entrypoint": "START_HERE.md",
+ "current_protocol": "docs/research/2026-09-24_evaluation_and_labels_v0.2.md",
+ "solver_execution_gate": "configs/research/gprmax_v4_execution_gate.json",
+ "runs": [
+  {
+   "id": "batch2d_v1_fine2",
+   "status": "complete_8of8_exit0",
+   "directory": "artifacts/research_checks/2026-09-26_batch2d_fine2_analysis_r1",
+   "directory_note": "Analysis recomputed in analysis_r1 and analysis_r2 with byte-identical results.json (sha256 prefix dd2ba3328a6f24b1); per-case run directories artifacts/simulations/2026-09-26_<case>-F2 hold the raw h5, inputs, stdout/stderr, supervision.json and live_status.json.",
+   "run_directories_prefix": "artifacts/simulations/2026-09-26_B2D-*-F2",
+   "tracked": true,
+   "solver_executed": true,
+   "training_executed": false,
+   "report": "docs/research/2026-09-26_batch2d_v1_fine2_results.md",
+   "spec": "docs/research/2026-09-26_batch_2d_spec_v1.md",
+   "contract": "configs/research/gprmax_v4_execution_gate.json",
+   "input_contract": "configs/research/batch2d_v1_fine2/",
+   "analysis_script": "scripts/analyze_batch2d_fine2.py",
+   "attempts": "one each, consumed, gate closed",
+   "analysis_recompute": "results.json byte-identical across analysis_r1/analysis_r2",
+   "gate": "batch2d_v1_fine2",
+   "grid_m": [
+    0.0125,
+    0.003125
+   ],
+   "key_numbers": {
+    "n_cases": 8,
+    "attempts_consumed": 8,
+    "wall_clock_s_range": [
+     1318.437,
+     1323.031
     ],
-    "uses_field_data": false,
-    "calls_solver": false,
-    "needs_network_or_plotting": false
+    "job_peak_commit_bytes_range": [
+     15246221312,
+     15248601088
+    ],
+    "p2_difference_spectrum_shape_correlation_range": [
+     0.9981254455630282,
+     0.999548930464859
+    ],
+    "p2_per_frequency_sign_agreement_range": [
+     0.8802395209580839,
+     0.93812375249501
+    ],
+    "p2_envelope_peak_fine2_earlier_ns_range": [
+     15.67053018661818,
+     19.11901197816502
+    ],
+    "in_band_energy_ratio_by_family": {
+     "C1": 7.872880397772246e-06,
+     "C3": 3.092143334046171e-07,
+     "C5": 1.2121864557034453e-08,
+     "C8": 9.369628603300173e-11
+    },
+    "reproduction_vs_DEP_BG_ZFINE2": {
+     "samples": 118665,
+     "max_abs_difference": 0.0,
+     "relative_L2_difference": 0.0
+    },
+    "vctip_interventions": 0,
+    "report": "docs/research/2026-09-26_batch2d_v1_fine2_results.md",
+    "analysis_dirs": [
+     "artifacts/research_checks/2026-09-26_batch2d_fine2_analysis_r1",
+     "artifacts/research_checks/2026-09-26_batch2d_fine2_analysis_r2"
+    ],
+    "analysis_results_sha256_prefix": "dd2ba3328a6f24b1"
+   },
+   "limitations": [
+    "direction consistency is not an accuracy certification: it must not be extrapolated as coarse- or fine-tier accuracy, as grid convergence (grid_convergence_certified=false) or as physical sufficiency",
+    "cross-tier amplitude ratios are direction indicators only: they mix grid dispersion, source discretisation and taper sample count, so they are not accuracy or grid-error measures",
+    "FINE2 tier (dy12.5/dz3.125 mm, ZFINE2 same grid); direction-consistency recheck only, no absolute amplitude or phase conclusion",
+    "serial fail-abort, retries=0, CUDA double, no CPU fallback; wall 40 min/case, Job 20 GiB",
+    "archived C3 ZFINE2 evidence is D20 depth, not interchangeable with this batch D10 anchor depth",
+    "vctip watcher ran alongside the batch with zero interventions (8/8 supervision records waited_for_descendants=false): a factual record only, not new evidence about vctip behaviour and not a basis for downgrading 3D budgets",
+    "bitwise zero difference against archived DEP_BG_ZFINE2 is run-to-run reproducibility on one grid tier; not convergence and not an accuracy statement",
+    "C8 in-band energy ratio 9.369628603300173e-11 stays in the numerical-resolution concern region; no detectability claim either way; no NC/OFF negative controls in the fine tier",
+    "8 attempts, one each, consumed and not reusable; conclusions limited to the four fine2 family anchor scenarios and the analysed FINE2 grid",
+    "physical and training labels remain disabled; reference_state stays numerically_unresolved"
+   ]
   },
-  "remaining_work": [
-    "verify actual instrument frequency vector and CSV processing;0.3MHz step confirmed; reserved field data excluded from development",
-    "confirm target depth meaning and independently constrain site cover thickness/moisture/material parameters",
-    "HSG ratio controls support coupling lag (r-1)/(2r) main dt; resolve intended source/coupling/output timing before heterogeneous local model. This is a historical 3D subtask; current live 2D batch is listed separately.",
-    "merge the coarse/fine stratified mechanism conclusions into the operator-contract evaluation input material (spec P2): the two tiers are direction-consistent and nothing is downgraded to pending-recheck; retained as mechanism/operator-evaluation evidence only, with no physical or training labels, no 3D or field extrapolation and no grid-convergence announcement.",
-    "batch2d_v1 mechanism conclusions (in-band energy ratio decreases with cover thickness, envelope-peak delay increases with cover thickness, electrical-contrast direction raises the differential response) are direction-consistent across the BASE and FINE2 tiers, so no mechanism is downgraded to pending-recheck (spec P2); they remain mechanism/operator-evaluation evidence, and neither tier physical sufficiency nor grid convergence is certified.",
-    "P10 3D validation subset: the fine2 direction recheck is complete, so advance along the decision dependency chain - draft and freeze a separate 3D contract for the preferred object C3 anchor A0 pair (2 runs, 5 cm isotropic, budget from dep3d measured 910.6-920.2 s/run and 7.98 GiB), with user agreement required before execution; P-A (C8 anchor) and P-B (C5 anchor) can now be assessed against the fine2 recheck result; P-C (electrical/conductivity tiers) still depends on the A0 3D result. No 3D inside batch2d_v1.",
-    "vctip.exe telemetry orphan causes about 900 s post-solve residency; the drain intervention is operational only and its effect on 3D wall clock is unmeasured, so 3D budgets must not be downgraded from 2D measurements. The fine2 batch recorded zero interventions (8/8 waited_for_descendants=false), a factual record that is neither evidence about vctip behaviour nor licence to downgrade 3D budgets.",
-    "reference_state stays numerically_unresolved: no physical acceptance threshold, no training labels, no clean truth. Vertical refinement is done (ZFINE2 adjacent L2 66.6647% -> 17.2452% -> 4.1216%) and must not be re-planned as pending work."
+  {
+   "id": "p10_3d_validation_subset_decision",
+   "status": "decision_recorded_not_executed",
+   "tracked": true,
+   "solver_executed": false,
+   "training_executed": false,
+   "report": "docs/research/2026-09-26_3d_validation_subset_decision.md",
+   "contract": "none_frozen_for_3d_yet",
+   "key_numbers": {
+    "preferred_3d_runs": 2
+   },
+   "decisions": {
+    "no_3d_in_batch2d_v1": true,
+    "preferred_object": "C3 anchor A0 pair B2D-C3m-D10m-W4m-T0.5m-E20-S0.02, 5 cm isotropic, 2 runs",
+    "timing": "after batch2d_v1_fine2 completion and direction-consistency recheck",
+    "not_added": "C3-D20m class (dep3d_gold already measured its 3D counterpart); NC and OFF negative controls not listed for 3D; no 3D at the 25 mm coarse grid",
+    "pending": "P-A C8 anchor and P-B C5 anchor depend on the fine2 recheck; P-C electrical/conductivity tiers also depend on the A0 3D result"
+   },
+   "budget_basis": "dep3d_gold_v1 measured only: 910.6-920.2 s/run wall, Job peak commit 7.98 GiB (5 cm) / 13.95 GiB (dz 2.5 cm); magnitude reference, not an ETA commitment",
+   "limitations": [
+    "decision document only, not an execution authorization; a separate frozen contract and user agreement are required before any 3D run",
+    "vctip drain intervention effect on 3D wall clock is unmeasured; 3D budgets must not be downgraded from 2D measurements",
+    "3D validation does not upgrade reference_state (numerically_unresolved) and produces no physical threshold, training label, clean truth, detectability or maximum-depth conclusion",
+    "3D grid convergence not certified; dimension/lateral-domain/target-y confounds not excluded; differences between comparison pairs must not be subtracted as an additive decomposition"
+   ]
+  },
+  {
+   "id": "batch2d_v1_base",
+   "status": "complete_29of29_exit0",
+   "directory": "artifacts/research_checks/2026-09-26_batch2d_analysis_r1",
+   "run_directories_prefix": "artifacts/research_checks/2026-09-26_B2D-*",
+   "tracked": true,
+   "solver_executed": true,
+   "training_executed": false,
+   "report": "docs/research/2026-09-26_batch2d_v1_results.md",
+   "contract": "configs/research/batch2d_v1/cases.json",
+   "spec": "docs/research/2026-09-26_batch_2d_spec_v1.md",
+   "gate": "batch2d_v1",
+   "grid_m": 0.025,
+   "attempts": "one each, consumed, gate closed",
+   "analysis_recompute": "results.json byte-identical across analysis_r1/analysis_r2",
+   "vctip_intervention_log": "artifacts/research_checks/2026-09-26_batch2d_v1_vctip_intervention_log.jsonl",
+   "key_numbers": {
+    "n_cases_contract": 29,
+    "total_wall_clock_s": 1400.62,
+    "job_peak_commit_bytes_range": [
+     2914930688,
+     2918010880
+    ],
+    "negative_controls_zero_difference": 4,
+    "c3_anchor_in_band_energy_ratio": 2.8635252336237045e-07,
+    "c3_anchor_envelope_peak_ns": 331.8626651806806
+   },
+   "limitations": [
+    "BASE tier physical sufficiency not certified; coarse conclusions require fine2 direction consistency (spec P2)",
+    "in_band_energy_ratio is a diagnostic energy ratio on the 501-point analysis grid; not detectability, not SNR, not a physical threshold",
+    "reference_state numerically_unresolved; grid_convergence_certified false; physical_label_eligible false; training_eligible false; no clean truth",
+    "no cross-family differencing, no cross-tier merging, negative controls not merged into target rows",
+    "C8 lowest ratios (down to 3.8167380710479025e-12) are near the numerical-resolution concern region; no detectability claim made either way",
+    "OFF case side PML margin 8.0 m < 13 m exception listed separately and not used with target rows",
+    "vctip handling is an operational intervention only: supervisor completion semantics unchanged; solver process, inputs and output h5 untouched"
+   ]
+  },
+  {
+   "id": "dep3d_gold_v1",
+   "status": "complete_8of8_exit0",
+   "directory": "artifacts/research_checks/2026-09-26_dep3d_gold_analysis_r1",
+   "run_directories": [
+    "artifacts/research_checks/2026-09-26_B2D5CM_BG",
+    "artifacts/research_checks/2026-09-26_B2D5CM_TGT",
+    "artifacts/research_checks/2026-09-26_B2DANISO_BG",
+    "artifacts/research_checks/2026-09-26_B2DANISO_TGT",
+    "artifacts/research_checks/2026-09-26_DEP3D_5CM_BG",
+    "artifacts/research_checks/2026-09-26_DEP3D_5CM_TGT",
+    "artifacts/research_checks/2026-09-26_DEP3D_ANISO_BG",
+    "artifacts/research_checks/2026-09-26_DEP3D_ANISO_TGT"
+   ],
+   "tracked": true,
+   "solver_executed": true,
+   "training_executed": false,
+   "report": "docs/research/2026-09-26_dep3d_gold_results.md",
+   "design": "docs/research/2026-09-26_dep3d_gold_design.md",
+   "contract": "configs/research/dep3d_gold_v1/",
+   "runs": [
+    "B2D5CM_BG",
+    "B2D5CM_TGT",
+    "B2DANISO_BG",
+    "B2DANISO_TGT",
+    "DEP3D_5CM_BG",
+    "DEP3D_5CM_TGT",
+    "DEP3D_ANISO_BG",
+    "DEP3D_ANISO_TGT"
+   ],
+   "attempts": "one each, consumed, gate closed",
+   "analysis_recompute": "results.json byte-identical across analysis_r1/analysis_r2",
+   "key_numbers": {
+    "dz_refinement_spectrum_shape_correlation": 0.9951,
+    "cross_dimension_spectrum_shape_correlation_5cm": 0.935,
+    "cross_dimension_spectrum_shape_correlation_aniso": 0.958,
+    "exploratory_far_field_transform_correlation_5cm": 0.967,
+    "exploratory_far_field_transform_correlation_aniso": 0.979,
+    "wall_clock_s_range": [
+     910.562,
+     920.218
+    ],
+    "job_peak_commit_bytes_range": [
+     2322751488,
+     14979588096
+    ]
+   },
+   "limitations": [
+    "grid_convergence_certified false; 5 cm at 170 MHz only reaches the official starting criterion, ANISO refines z only",
+    "no cross-dimension absolute amplitude comparison; phase reported only as a linear fit of the phase difference vs frequency and not transferable across dimensions",
+    "dimension difference, lateral domain width and target y position confounds not excluded",
+    "physical_acceptance_threshold null; no training labels, no clean truth; conclusions limited to the dep3d_gold_v1 scenario family and the grids analysed, not extrapolated to field data",
+    "post-solve residency root cause identified as vctip.exe telemetry orphan under the same environment; for this batch it is an inference, not a direct observation of the 8 cases"
+   ]
+  },
+  {
+   "id": "DEP_BG_ZFINE2",
+   "status": "completed_vertical_refinement_pair",
+   "directory": "artifacts/research_checks/2026-09-25_DEP_BG_ZFINE2",
+   "tracked": true,
+   "solver_executed": true,
+   "training_executed": false
+  },
+  {
+   "id": "DEP_20_ZFINE2",
+   "status": "completed_vertical_refinement_pair_reference_unresolved",
+   "directory": "artifacts/research_checks/2026-09-25_DEP_20_ZFINE2",
+   "tracked": true,
+   "solver_executed": true,
+   "training_executed": false
+  },
+  {
+   "id": "deep_zfine2_analysis",
+   "status": "completed_vertical_refinement_pair_reference_unresolved",
+   "directory": "artifacts/research_checks/2026-09-25_deep_zfine2_analysis_r1",
+   "tracked": true,
+   "solver_executed": false,
+   "training_executed": false,
+   "report": "docs/research/2026-09-25_deep_zfine2_results.md",
+   "design": "docs/research/2026-09-25_deep_zfine2_design.md",
+   "contract": "configs/research/deep_zfine2_v1/",
+   "analysis_recompute": "results.json and arrays identical across analysis_r1/analysis_r2",
+   "key_numbers": {
+    "adjacent_band_relative_L2_change_percent": [
+     66.6647,
+     17.2452,
+     4.1216
+    ],
+    "adjacent_max_phase_change_deg": [
+     64.8431,
+     16.2741,
+     3.8847
+    ],
+    "adjacent_ratio_vertical_second_order": [
+     4.18,
+     4.19
+    ],
+    "wall_clock_s": [
+     1438.6,
+     1334.8
+    ],
+    "job_peak_commit_GB": 15.28,
+    "cells": 40960000
+   },
+   "limitations": [
+    "reference_state stays numerically_unresolved; physical_label_eligible false, training_eligible false, physical threshold null",
+    "no Richardson extrapolation; adjacent difference is not the error against the exact solution",
+    "one attempt each, consumed; conclusions limited to the 2D YZ/TMx flat-layer research-assumption model with fixed tail/diagnostic windows"
+   ]
+  },
+  {
+   "id": "dim23_pair_v1",
+   "status": "complete_4of4_exit0",
+   "directory": "artifacts/research_checks/2026-09-25_dim23_pair",
+   "tracked": true,
+   "canonical_for_handoff": true,
+   "report": "docs/research/2026-09-25_dim23_pair_results.md",
+   "runs": [
+    "DIM23_2D_BG",
+    "DIM23_2D_TGT",
+    "DIM23_3D_BG",
+    "DIM23_3D_TGT"
+   ],
+   "solver": "gprMax 4.0.0 CUDA double, local RTX 3060 Laptop, junction-aliased env D:/gprmax_v4_gpu_env",
+   "grid_m": 0.05,
+   "cells": {
+    "2D": [
+     1,
+     200,
+     780
+    ],
+    "3D": [
+     200,
+     200,
+     780
+    ]
+   },
+   "time_window_s": 8e-07,
+   "attempts": "one each, consumed, gate closed",
+   "analysis_recompute": "results.json byte-identical across analysis_r1/analysis_r2",
+   "key_numbers": {
+    "envelope_peak_time_difference_ns": -9.748235313792577,
+    "waveform_max_normalized_correlation": 0.7156980104595475,
+    "normalized_spectrum_shape_correlation": 0.9017860208459169,
+    "exploratory_3d_to_2d_shape_correlation": 0.9541514018288215
+   },
+   "limitations": [
+    "5cm 3D grid not convergence-certified",
+    "no cross-dimension absolute amplitude comparison",
+    "conclusions limited to this geometry/band/material family"
+   ],
+   "python": "3.12.0",
+   "numpy": "2.5.3"
+  },
+  {
+   "id": "damage_pilot_initial",
+   "status": "complete_numeric_historical",
+   "directory": "artifacts/research_checks/2026-09-24_damage_pilot",
+   "tracked": true,
+   "checks_passed": 72,
+   "python": "3.12.14",
+   "numpy": "2.3.5",
+   "canonical_for_handoff": false,
+   "note": "Pre-plotting-fix source hash retained; current r2 is the final reproducible delivery."
+  },
+  {
+   "id": "damage_pilot_plot_failed",
+   "status": "failed_during_optional_plot",
+   "directory": "artifacts/local_checks/2026-09-24_damage_pilot_plot_failed",
+   "tracked": false,
+   "canonical_for_handoff": false,
+   "reason": "Rounded 0.08 minus floating endpoint produced a negative machine-size error-bar length. Numeric tables were written; results.json and figure were not completed.",
+   "resolution": "Draw absolute interval endpoints; complete rerun saved as r2.",
+   "do_not_repeat": true
+  },
+  {
+   "id": "damage_pilot_r2",
+   "status": "complete_numeric_and_figures",
+   "directory": "artifacts/research_checks/2026-09-24_damage_pilot_r2",
+   "tracked": true,
+   "canonical_for_handoff": true,
+   "checks_passed": 72,
+   "python": "3.10.21",
+   "numpy": "1.26.4",
+   "matplotlib": "3.10.9",
+   "damage_rows": 63,
+   "weak_event_rows": 12,
+   "candidate_rows": 42,
+   "report": "docs/research/2026-09-24_damage_pilot_findings.md",
+   "delivery_check": "artifacts/research_checks/2026-09-24_damage_pilot_delivery.json",
+   "source_commit": "251986ee9a362c466a77124d5256fad7541eeff6"
+  },
+  {
+   "id": "gprmax_v4_source_audit",
+   "status": "static_read_only_complete",
+   "record": "artifacts/research_checks/2026-09-24_gprmax_v4_source_audit.json",
+   "selected_local_files": 19,
+   "official_pages_cached_locally": 10,
+   "cache_in_git": false,
+   "solver_imported_or_executed": false,
+   "runtime_ready": false,
+   "report": "docs/research/2026-09-24_gprmax_v4_review.md"
+  },
+  {
+   "id": "cover_sandstone_analytic_budget",
+   "status": "complete_analytic_only",
+   "record": "artifacts/research_checks/2026-09-24_layer_loss_budget.json",
+   "report": "docs/research/2026-09-24_cover_sandstone_brief.md",
+   "source_ledger": "docs/research/2026-09-24_cover_sandstone_sources.json",
+   "script": "scripts/study_layer_loss_budget.py",
+   "checks_passed": 4,
+   "rows": 27,
+   "solver_executed": false,
+   "site_parameters_adopted": false
+  },
+  {
+   "id": "v4_calibration_ricker_draft",
+   "status": "superseded_draft_pending_sfcw_redesign",
+   "record": "configs/research/v4_calibration_packet_v1/manifest.json",
+   "report": "docs/research/2026-09-24_v4_calibration_packet.md",
+   "solver_executed": false
+  },
+  {
+   "id": "v4_official_sfcw_packet",
+   "status": "superseded_geometry_height15m_baseline1p3m",
+   "record": "configs/research/v4_official_sfcw_packet_v2/manifest.json",
+   "report": "docs/research/2026-09-24_v4_official_sfcw_packet.md",
+   "solver_executed": false,
+   "runtime_ready": false,
+   "superseded_note": "Keep frozen manifest/input hashes as historical proposal; current user geometry overrides it. Do not execute."
+  },
+  {
+   "id": "airborne_3d_static_budget",
+   "status": "complete_static_estimate_not_solver_run",
+   "record": "artifacts/research_checks/2026-09-24_airborne_3d_budget.json",
+   "report": "docs/research/2026-09-24_airborne_3d_budget.md",
+   "script": "scripts/budget_airborne_3d.py",
+   "rows": 9,
+   "solver_executed": false,
+   "runtime_measured": false
+  },
+  {
+   "id": "airborne_first_run_preparation",
+   "status": "static_only_environment_and_supervisor_pending",
+   "record": "configs/research/airborne_first_run_v1/manifest.json",
+   "report": "docs/research/2026-09-24_airborne_first_run_preparation.md",
+   "script": "scripts/prepare_airborne_first_run.py",
+   "solver_executed": false,
+   "approved_run_ids": []
+  },
+  {
+   "id": "v4_environment_and_supervisor",
+   "status": "build_blocked_supervisor_checks_passed",
+   "record": "artifacts/research_checks/2026-09-24_v4_environment_preparation/record.json",
+   "report": "docs/research/2026-09-24_v4_environment_preparation.md",
+   "solver_executed": false,
+   "runtime_ready": false,
+   "non_solver_checks_passed": 6
+  },
+  {
+   "id": "v4_build_r2",
+   "status": "built_installed_import_verified_no_solve",
+   "record": "artifacts/research_checks/2026-09-24_v4_build_r2/record.json",
+   "report": "docs/research/2026-09-24_v4_build_success.md",
+   "runtime_import_ready": true,
+   "solver_executed": false
+  },
+  {
+   "id": "M00_x_3d_r1",
+   "status": "intentionally_stopped_for_authorized_restart",
+   "directory": "artifacts/research_checks/2026-09-24_M00_x_3d_r1",
+   "tracked": true,
+   "attempt_record": "artifacts/research_checks/2026-09-24_first_airborne_attempt.json",
+   "solver_executed": true,
+   "extra_run_authorized": true,
+   "record": "artifacts/research_checks/2026-09-24_M00_x_3d_r1/record.json"
+  },
+  {
+   "id": "M00_x_3d_r2",
+   "status": "intentionally_stopped_for_user_required_gpu",
+   "directory": "artifacts/research_checks/2026-09-24_M00_x_3d_r2",
+   "tracked": true,
+   "attempt_record": "artifacts/research_checks/2026-09-24_airborne_attempt_r2.json",
+   "solver_executed": true,
+   "record": "artifacts/research_checks/2026-09-24_M00_x_3d_r2/record.json"
+  },
+  {
+   "id": "M00_x_3d_gpu_r1",
+   "status": "cuda_fdtd_complete_raw_audit_passed",
+   "directory": "artifacts/research_checks/2026-09-24_M00_x_3d_gpu_r1",
+   "tracked": true,
+   "attempt_record": "artifacts/research_checks/2026-09-24_airborne_gpu_attempt_r1.json",
+   "solver_executed": true,
+   "cpu_fallback": false,
+   "record": "artifacts/research_checks/2026-09-24_M00_x_3d_gpu_r1/record.json",
+   "postprocessing_record": "artifacts/research_checks/2026-09-24_M00_gpu_official_postprocess_r1/record.json"
+  },
+  {
+   "id": "M00_gpu_official_postprocess_r1",
+   "status": "official_cpu_postprocessing_complete_with_physical_validation_limitations",
+   "directory": "artifacts/research_checks/2026-09-24_M00_gpu_official_postprocess_r1",
+   "record": "artifacts/research_checks/2026-09-24_M00_gpu_official_postprocess_r1/record.json",
+   "tracked": true,
+   "solver_executed": false
+  },
+  {
+   "id": "T800_tail_control",
+   "status": "completed",
+   "directory": "artifacts/research_checks/2026-09-24_T800",
+   "record": "artifacts/research_checks/2026-09-24_T800/record.json",
+   "tracked": true,
+   "solver_executed": true
+  },
+  {
+   "id": "PML40_tail_control",
+   "status": "completed",
+   "directory": "artifacts/research_checks/2026-09-24_PML40",
+   "tracked": true,
+   "solver_executed": true
+  },
+  {
+   "id": "tail_controls_analysis",
+   "status": "complete_two_cuda_controls_and_official_postprocessing",
+   "directory": "artifacts/research_checks/2026-09-24_tail_controls_analysis",
+   "tracked": true,
+   "solver_executed": false
+  },
+  {
+   "id": "M01_T800",
+   "status": "completed_diagnostic_not_convergence",
+   "directory": "artifacts/research_checks/2026-09-24_M01_T800",
+   "tracked": true,
+   "solver_executed": true
+  },
+  {
+   "id": "interface_analysis",
+   "status": "completed_diagnostic_not_convergence",
+   "directory": "artifacts/research_checks/2026-09-24_interface_analysis",
+   "tracked": true,
+   "solver_executed": false
+  },
+  {
+   "id": "PEC_T800",
+   "status": "completed_reference_or_static_diagnostic",
+   "directory": "artifacts/research_checks/2026-09-24_PEC_T800",
+   "tracked": true,
+   "solver_executed": true
+  },
+  {
+   "id": "PEC_analysis",
+   "status": "completed_reference_or_static_diagnostic",
+   "directory": "artifacts/research_checks/2026-09-24_PEC_analysis",
+   "tracked": true,
+   "solver_executed": false
+  },
+  {
+   "id": "PEC_sources",
+   "status": "completed_reference_or_static_diagnostic",
+   "directory": "artifacts/research_checks/2026-09-24_PEC_sources",
+   "tracked": true,
+   "solver_executed": false
+  },
+  {
+   "id": "M01_fixedPML",
+   "status": "completed_fixed_PML_intervention",
+   "directory": "artifacts/research_checks/2026-09-24_M01_fixedPML",
+   "tracked": true,
+   "solver_executed": true
+  },
+  {
+   "id": "fixedPML_analysis",
+   "status": "completed_fixed_PML_intervention",
+   "directory": "artifacts/research_checks/2026-09-24_fixedPML_analysis",
+   "tracked": true,
+   "solver_executed": false
+  },
+  {
+   "id": "fixedPML_sources",
+   "status": "completed_fixed_PML_intervention",
+   "directory": "artifacts/research_checks/2026-09-24_fixedPML_sources",
+   "tracked": true,
+   "solver_executed": false
+  },
+  {
+   "id": "halfspace_reference",
+   "status": "complete_independent_reference_or_diagnostics",
+   "directory": "artifacts/research_checks/2026-09-24_halfspace_reference",
+   "tracked": true,
+   "solver_executed": false,
+   "FDTD_solver_executed": false,
+   "frequency_domain_reference_evaluated": true
+  },
+  {
+   "id": "halfspace_comparison",
+   "status": "complete_independent_reference_or_diagnostics",
+   "directory": "artifacts/research_checks/2026-09-24_halfspace_comparison",
+   "tracked": true,
+   "solver_executed": false,
+   "FDTD_solver_executed": false,
+   "frequency_domain_reference_evaluated": true
+  },
+  {
+   "id": "dz4_design",
+   "status": "completed_directional_refinement",
+   "directory": "artifacts/research_checks/2026-09-24_dz4_design",
+   "tracked": true,
+   "solver_executed": false
+  },
+  {
+   "id": "AIR_dz4",
+   "status": "completed_directional_refinement",
+   "directory": "artifacts/research_checks/2026-09-24_AIR_dz4",
+   "tracked": true,
+   "solver_executed": true
+  },
+  {
+   "id": "M01_dz4",
+   "status": "completed_directional_refinement",
+   "directory": "artifacts/research_checks/2026-09-24_M01_dz4",
+   "tracked": true,
+   "solver_executed": true
+  },
+  {
+   "id": "dz4_analysis",
+   "status": "completed_directional_refinement",
+   "directory": "artifacts/research_checks/2026-09-24_dz4_analysis",
+   "tracked": true,
+   "solver_executed": false
+  },
+  {
+   "id": "geology_budget",
+   "status": "static_budget_complete",
+   "directory": "artifacts/research_checks/2026-09-24_geology_budget",
+   "tracked": true,
+   "solver_executed": false
+  },
+  {
+   "id": "hsg_budget",
+   "status": "static_audit_complete",
+   "directory": "artifacts/research_checks/2026-09-24_hsg_budget",
+   "tracked": true,
+   "solver_executed": false
+  },
+  {
+   "id": "HSG_reference",
+   "status": "completed_with_internal_phase_unresolved",
+   "directory": "artifacts/research_checks/2026-09-25_HSG_reference",
+   "tracked": true,
+   "solver_executed": true
+  },
+  {
+   "id": "HSG_air",
+   "status": "completed_with_internal_phase_unresolved",
+   "directory": "artifacts/research_checks/2026-09-25_HSG_air",
+   "tracked": true,
+   "solver_executed": true
+  },
+  {
+   "id": "hsg_smoke_analysis",
+   "status": "analysis_failed_path_api",
+   "directory": "artifacts/research_checks/2026-09-25_hsg_smoke_analysis",
+   "tracked": true,
+   "solver_executed": false
+  },
+  {
+   "id": "hsg_smoke_analysis_r2",
+   "status": "completed_with_internal_phase_unresolved",
+   "directory": "artifacts/research_checks/2026-09-25_hsg_smoke_analysis_r2",
+   "tracked": true,
+   "solver_executed": false
+  },
+  {
+   "id": "HSG_ratio1",
+   "status": "completed_clock_lag_hypothesis_supported",
+   "directory": "artifacts/research_checks/2026-09-25_HSG_ratio1",
+   "tracked": true,
+   "solver_executed": true
+  },
+  {
+   "id": "HSG_ratio5",
+   "status": "completed_clock_lag_hypothesis_supported",
+   "directory": "artifacts/research_checks/2026-09-25_HSG_ratio5",
+   "tracked": true,
+   "solver_executed": true
+  },
+  {
+   "id": "hsg_clock",
+   "status": "completed_clock_lag_hypothesis_supported",
+   "directory": "artifacts/research_checks/2026-09-25_hsg_clock",
+   "tracked": true,
+   "solver_executed": false
+  },
+  {
+   "id": "dimension_strategy",
+   "status": "static_assessment_complete",
+   "directory": "artifacts/research_checks/2026-09-25_dimension_strategy",
+   "tracked": true,
+   "solver_executed": false
+  },
+  {
+   "id": "YZ_AIR",
+   "status": "completed_2d_calibration",
+   "directory": "artifacts/research_checks/2026-09-25_YZ_AIR",
+   "tracked": true,
+   "solver_executed": true
+  },
+  {
+   "id": "YZ_PEC",
+   "status": "completed_2d_calibration",
+   "directory": "artifacts/research_checks/2026-09-25_YZ_PEC",
+   "tracked": true,
+   "solver_executed": true
+  },
+  {
+   "id": "yz2d_analysis",
+   "status": "completed_2d_calibration",
+   "directory": "artifacts/research_checks/2026-09-25_yz2d_analysis",
+   "tracked": true,
+   "solver_executed": false
+  },
+  {
+   "id": "YZ_ROCK",
+   "status": "completed_initial_layer_validation",
+   "directory": "artifacts/research_checks/2026-09-25_YZ_ROCK",
+   "tracked": true,
+   "solver_executed": true
+  },
+  {
+   "id": "YZ_COVER",
+   "status": "completed_initial_layer_validation",
+   "directory": "artifacts/research_checks/2026-09-25_YZ_COVER",
+   "tracked": true,
+   "solver_executed": true
+  },
+  {
+   "id": "yz_layers_reference",
+   "status": "completed_initial_layer_validation",
+   "directory": "artifacts/research_checks/2026-09-25_yz_layers_reference",
+   "tracked": true,
+   "solver_executed": false
+  },
+  {
+   "id": "yz_layers_analysis",
+   "status": "completed_initial_layer_validation",
+   "directory": "artifacts/research_checks/2026-09-25_yz_layers_analysis",
+   "tracked": true,
+   "solver_executed": false
+  },
+  {
+   "id": "YZ_AIR_FINE",
+   "status": "completed_two_level_refinement",
+   "directory": "artifacts/research_checks/2026-09-25_YZ_AIR_FINE",
+   "tracked": true,
+   "solver_executed": true
+  },
+  {
+   "id": "YZ_COVER_FINE",
+   "status": "completed_two_level_refinement",
+   "directory": "artifacts/research_checks/2026-09-25_YZ_COVER_FINE",
+   "tracked": true,
+   "solver_executed": true
+  },
+  {
+   "id": "yz_fine_analysis",
+   "status": "completed_two_level_refinement",
+   "directory": "artifacts/research_checks/2026-09-25_yz_fine_analysis",
+   "tracked": true,
+   "solver_executed": false
+  },
+  {
+   "id": "DEP_BG",
+   "status": "completed_initial_depth_screen",
+   "directory": "artifacts/research_checks/2026-09-25_DEP_BG",
+   "tracked": true,
+   "solver_executed": true
+  },
+  {
+   "id": "DEP_05",
+   "status": "completed_initial_depth_screen",
+   "directory": "artifacts/research_checks/2026-09-25_DEP_05",
+   "tracked": true,
+   "solver_executed": true
+  },
+  {
+   "id": "DEP_10",
+   "status": "completed_initial_depth_screen",
+   "directory": "artifacts/research_checks/2026-09-25_DEP_10",
+   "tracked": true,
+   "solver_executed": true
+  },
+  {
+   "id": "DEP_20",
+   "status": "completed_initial_depth_screen",
+   "directory": "artifacts/research_checks/2026-09-25_DEP_20",
+   "tracked": true,
+   "solver_executed": true
+  },
+  {
+   "id": "yz_depth_analysis",
+   "status": "completed_initial_depth_screen",
+   "directory": "artifacts/research_checks/2026-09-25_yz_depth_analysis",
+   "tracked": true,
+   "solver_executed": false
+  },
+  {
+   "id": "DEP_BG_WIDE",
+   "status": "completed_deep_phase_numerically_unresolved",
+   "directory": "artifacts/research_checks/2026-09-25_DEP_BG_WIDE",
+   "tracked": true,
+   "solver_executed": true
+  },
+  {
+   "id": "DEP_20_WIDE",
+   "status": "completed_deep_phase_numerically_unresolved",
+   "directory": "artifacts/research_checks/2026-09-25_DEP_20_WIDE",
+   "tracked": true,
+   "solver_executed": true
+  },
+  {
+   "id": "DEP_BG_FINE",
+   "status": "completed_deep_phase_numerically_unresolved",
+   "directory": "artifacts/research_checks/2026-09-25_DEP_BG_FINE",
+   "tracked": true,
+   "solver_executed": true
+  },
+  {
+   "id": "DEP_20_FINE",
+   "status": "completed_deep_phase_numerically_unresolved",
+   "directory": "artifacts/research_checks/2026-09-25_DEP_20_FINE",
+   "tracked": true,
+   "solver_executed": true
+  },
+  {
+   "id": "deep_controls_analysis",
+   "status": "completed_deep_phase_numerically_unresolved",
+   "directory": "artifacts/research_checks/2026-09-25_deep_controls_analysis",
+   "tracked": true,
+   "solver_executed": false
+  },
+  {
+   "id": "deep_eligibility",
+   "status": "completed_eligibility_guard_and_static_budget",
+   "directory": "artifacts/research_checks/2026-09-25_deep_eligibility",
+   "tracked": true,
+   "solver_executed": false
+  },
+  {
+   "id": "fdtd_template_mechanisms",
+   "status": "completed_constructed_mechanism_only",
+   "directory": "artifacts/research_checks/2026-09-25_fdtd_template_mechanisms",
+   "tracked": true,
+   "solver_executed": false
+  },
+  {
+   "id": "deep_zfine_live",
+   "status": "completed_historical_handle",
+   "directory": "artifacts/research_checks/2026-09-25_deep_zfine_live",
+   "tracked": true,
+   "solver_executed": true
+  },
+  {
+   "id": "background_mismatch",
+   "status": "completed_constructed_negative_controls",
+   "directory": "artifacts/research_checks/2026-09-25_background_mismatch",
+   "tracked": true,
+   "solver_executed": false
+  },
+  {
+   "id": "DEP_BG_ZFINE",
+   "status": "completed_directional_pair",
+   "directory": "artifacts/research_checks/2026-09-25_DEP_BG_ZFINE",
+   "tracked": true,
+   "solver_executed": true
+  },
+  {
+   "id": "DEP_20_ZFINE",
+   "status": "completed_directional_improvement_reference_unresolved",
+   "directory": "artifacts/research_checks/2026-09-25_DEP_20_ZFINE",
+   "tracked": true,
+   "solver_executed": true
+  },
+  {
+   "id": "deep_zfine_analysis",
+   "status": "completed_directional_improvement_reference_unresolved",
+   "directory": "artifacts/research_checks/2026-09-25_deep_zfine_analysis",
+   "tracked": true,
+   "solver_executed": false
+  },
+  {
+   "id": "three_grid_mechanisms",
+   "status": "completed_constructed_mechanism_only",
+   "directory": "artifacts/research_checks/2026-09-25_three_grid_mechanisms",
+   "tracked": true,
+   "solver_executed": false
+  },
+  {
+   "id": "three_grid_mismatch",
+   "status": "completed_constructed_mechanism_only",
+   "directory": "artifacts/research_checks/2026-09-25_three_grid_mismatch",
+   "tracked": true,
+   "solver_executed": false
+  },
+  {
+   "id": "deep_yfine_live",
+   "status": "completed_historical_handle",
+   "directory": "artifacts/research_checks/2026-09-25_deep_yfine_live",
+   "tracked": true,
+   "solver_executed": true
+  },
+  {
+   "id": "joint_roles",
+   "status": "completed_constructed_roles_only",
+   "directory": "artifacts/research_checks/2026-09-25_joint_roles",
+   "tracked": true,
+   "solver_executed": false
+  },
+  {
+   "id": "DEP_BG_YFINE",
+   "status": "completed_paired_control",
+   "directory": "artifacts/research_checks/2026-09-25_DEP_BG_YFINE",
+   "tracked": true,
+   "solver_executed": true
+  },
+  {
+   "id": "deep_background_reference",
+   "status": "completed_independent_background_only",
+   "directory": "artifacts/research_checks/2026-09-25_deep_background_reference",
+   "tracked": true,
+   "solver_executed": false
+  },
+  {
+   "id": "DEP_20_YFINE",
+   "status": "completed_lateral_control_reference_unresolved",
+   "directory": "artifacts/research_checks/2026-09-25_DEP_20_YFINE",
+   "tracked": true,
+   "solver_executed": true
+  },
+  {
+   "id": "deep_yfine_analysis",
+   "status": "completed_lateral_control_reference_unresolved",
+   "directory": "artifacts/research_checks/2026-09-25_deep_yfine_analysis",
+   "tracked": true,
+   "solver_executed": false
+  },
+  {
+   "id": "review_fixes_9303298",
+   "status": "verified_array_and_process_regressions_only",
+   "directory": "artifacts/research_checks/2026-09-25_review_fixes",
+   "tracked": true,
+   "solver_executed": false,
+   "training_executed": false
+  },
+  {
+   "id": "error_budget_certificates",
+   "status": "completed_constructed_array_certificates_only",
+   "directory": "artifacts/research_checks/2026-09-25_error_budget",
+   "tracked": true,
+   "solver_executed": false,
+   "training_executed": false,
+   "report": "docs/research/2026-09-25_error_budget.md",
+   "contract": "configs/research/error_budget_contract_v0.1.json",
+   "key_numbers": {
+    "damage_pilot_cosines_restored": 51,
+    "damage_pilot_cosines_still_missing": 40,
+    "three_grid_fdtd_cosines_missing": 84,
+    "max_certified_budget": 1.1683018084039848e-11
+   }
+  },
+  {
+   "id": "operator_evaluation_sim_evidence_v0_1",
+   "status": "completed_document_only",
+   "directory": null,
+   "tracked": true,
+   "solver_executed": false,
+   "training_executed": false,
+   "report": "docs/research/2026-09-26_operator_evaluation_sim_evidence_v0.1.md",
+   "key_numbers": {
+    "evidence_items": 9,
+    "gaps_listed": 8,
+    "not_list_items": 10,
+    "operator_contracts_constrained": 27
+   }
+  }
+ ],
+ "default_array_verification": {
+  "command": "python scripts/verify_workspace.py",
+  "expected_checks": 182,
+  "composition": [
+   10,
+   23,
+   5,
+   26,
+   72,
+   21,
+   20,
+   5
   ],
-  "direction_diagnostic_addendum": "configs/research/direction_diagnostic_contract_v0.1.json",
-  "error_budget_contract": "configs/research/error_budget_contract_v0.1.json"
+  "uses_field_data": false,
+  "calls_solver": false,
+  "needs_network_or_plotting": false
+ },
+ "remaining_work": [
+  "verify actual instrument frequency vector and CSV processing;0.3MHz step confirmed; reserved field data excluded from development",
+  "confirm target depth meaning and independently constrain site cover thickness/moisture/material parameters",
+  "HSG ratio controls support coupling lag (r-1)/(2r) main dt; resolve intended source/coupling/output timing before heterogeneous local model. This is a historical 3D subtask; current live 2D batch is listed separately.",
+  "merge the coarse/fine stratified mechanism conclusions into the operator-contract evaluation input material (spec P2): the two tiers are direction-consistent and nothing is downgraded to pending-recheck; retained as mechanism/operator-evaluation evidence only, with no physical or training labels, no 3D or field extrapolation and no grid-convergence announcement.",
+  "batch2d_v1 mechanism conclusions (in-band energy ratio decreases with cover thickness, envelope-peak delay increases with cover thickness, electrical-contrast direction raises the differential response) are direction-consistent across the BASE and FINE2 tiers, so no mechanism is downgraded to pending-recheck (spec P2); they remain mechanism/operator-evaluation evidence, and neither tier physical sufficiency nor grid convergence is certified.",
+  "P10 3D validation subset: the fine2 direction recheck is complete, so advance along the decision dependency chain - draft and freeze a separate 3D contract for the preferred object C3 anchor A0 pair (2 runs, 5 cm isotropic, budget from dep3d measured 910.6-920.2 s/run and 7.98 GiB), with user agreement required before execution; P-A (C8 anchor) and P-B (C5 anchor) can now be assessed against the fine2 recheck result; P-C (electrical/conductivity tiers) still depends on the A0 3D result. No 3D inside batch2d_v1.",
+  "vctip.exe telemetry orphan causes about 900 s post-solve residency; the drain intervention is operational only and its effect on 3D wall clock is unmeasured, so 3D budgets must not be downgraded from 2D measurements. The fine2 batch recorded zero interventions (8/8 waited_for_descendants=false), a factual record that is neither evidence about vctip behaviour nor licence to downgrade 3D budgets.",
+  "reference_state stays numerically_unresolved: no physical acceptance threshold, no training labels, no clean truth. Vertical refinement is done (ZFINE2 adjacent L2 66.6647% -> 17.2452% -> 4.1216%) and must not be re-planned as pending work."
+ ],
+ "direction_diagnostic_addendum": "configs/research/direction_diagnostic_contract_v0.1.json",
+ "error_budget_contract": "configs/research/error_budget_contract_v0.1.json"
 }
