@@ -1,8 +1,33 @@
 # 接续入口：无需聊天上下文
 
-更新：2026-09-25。当前接续工作区为 `D:/自动处理`；另一台电脑历史工作区为 `E:/automation_djh/automation_repo`，远端 `CYberkra/automation`。以本页当前状态为准；历史报告中的旧“下一步”不代表待办。
+更新：2026-09-26。当前接续工作区为 `E:/automation_djh/automation_repo`（本机）；另一台电脑的历史工作区为 `D:/自动处理`，远端 `CYberkra/automation`。以本页当前状态为准；历史报告中的旧“下一步”不代表待办，本夜（2026-09-26）已作废的旧下一步见“当前状态”段末的作废声明。
 
 ## 当前状态（优先于下方历史记录）
+
+**2026-09-26（最新，本机 `E:/automation_djh/automation_repo`）：粗档批量已完成，细档 `batch2d_v1_fine2` 正在执行，P10 三维校核子集决策已落盘。**
+
+|单元|状态|报告/证据|
+|---|---|---|
+|ZFINE2 垂向细化配对|完成（2/2，各 1 次 attempt）|[结果](docs/research/2026-09-25_deep_zfine2_results.md)；`artifacts/research_checks/2026-09-25_DEP_BG_ZFINE2/`、`2026-09-25_DEP_20_ZFINE2/`、`2026-09-25_deep_zfine2_analysis_r1`|
+|dep3d_gold_v1|完成（8/8）|[设计](docs/research/2026-09-26_dep3d_gold_design.md)、[结果](docs/research/2026-09-26_dep3d_gold_results.md)|
+|batch2d_v1 粗档 BASE|完成（29/29，全批约 23.4 min）|[规格书](docs/research/2026-09-26_batch_2d_spec_v1.md)、[结果](docs/research/2026-09-26_batch2d_v1_results.md)|
+|batch2d_v1_fine2 细档|**执行中**（8 例串行，未取数、无结果）|gate `configs/research/gprmax_v4_execution_gate.json`；输入 `configs/research/batch2d_v1_fine2/`；分析脚本 `scripts/analyze_batch2d_fine2.py`|
+|P10 三维校核子集|决策落盘，**本批零 3D**，未执行|[决策](docs/research/2026-09-26_3d_validation_subset_decision.md)|
+
+**2026-09-26 batch2d_v1_fine2 正在执行（执行期间严禁取数）。** FINE2 档（dy12.5/dz3.125 mm，与 ZFINE2 同格）8 例 = 四族锚点配对（C3 族先跑，再 C1/C5/C8），串行、失败即中止；gate `batch2d_v1_fine2`：墙钟 40 min/例、Job 20 GiB、CUDA double、retries=0、无 CPU 回退。用途是规格书 §6-P2/P3 的粗档机制方向一致性复核。分析脚本 `scripts/analyze_batch2d_fine2.py` 已就绪（占位运行优雅跳过，真实分析在批次完成后执行）。执行期间不得读写 `artifacts/simulations/2026-09-26_*-F2/`；本页不记录任何 fine2 结果，全部数字待批次完成、归档并 r1/r2 复算后另行登记。
+
+**2026-09-26 batch2d_v1 粗档完成（29/29）。** 粗档 BASE（dy=dz=25 mm）29 例全部 exit 0，每例 1 次 attempt、无重试、无 CPU 回退；全批合计墙钟 1400.62 s（约 23.4 min），Job 峰值提交内存 2,914,930,688–2,918,010,880 B（约 2.72 GiB），未触及 20 min/例与 4 GiB 上限。四族零对比负控 NC 的配对差分逐样本恒零（`zero_difference=true`）；带内能量比随深度单调递减（C1/C3 三档严格单调、C5/C8 两档同向）、包络峰到时随深度递增；带内能量比是 501 频点诊断网格上的诊断性能量比，**不是可探测性、不是 SNR、不是物理阈值**。分析 r1/r2 字节一致。粗档物理充分性未认证，结论须细档方向一致方可保留（规格书 §6-P2）。求解后约 900 s 滞留的根因在同环境下鉴定为 `vctip.exe`（MSVC 编译器遥测孤儿进程）；处置属**操作层干预**：外部哨兵仅在“监督器处于 `waiting_descendants` 阶段且 vctip 已成孤儿”两条件同时满足时清除该进程，29 次事件逐条留痕于 `artifacts/research_checks/2026-09-26_batch2d_v1_vctip_intervention_log.jsonl`，不改监督器完成语义、不触碰求解器进程/输入/输出 h5。`reference_state` 保持 `numerically_unresolved`，无物理/训练标签、无 clean 真值。[结果](docs/research/2026-09-26_batch2d_v1_results.md)
+
+**2026-09-26 dep3d_gold_v1 完成（8/8）。** 4 个 2D 同格距对照 + 2 组 3D 配对，各 1 次 attempt、exit 0、CUDA double、无重试、无 CPU 回退；墙钟 910.6–920.2 s，Job 峰值提交内存约 2.32–14.98 GB（<20 GiB 上限）。关键比较值（分析脚本对归档 h5 的复算，r1/r2 字节一致）：3D 纯 dz 细化（5 cm→2.5 cm）谱形状相关 **0.9951**；2D/3D 同格距归一化谱形状相关 **0.935**（B2D5CM vs DEP3D_5CM）/ **0.958**（B2DANISO vs DEP3D_ANISO）；远场 3D→2D 变换后 **0.967 / 0.979**（探索性证据单列，不作结论依据）。限制：3D 网格收敛未认证、不跨维比较绝对幅值、相位只以线性拟合形式量报告且不跨维迁移、维度/侧向域宽/目标 y 位置三类混淆因素未排除；无物理阈值、无训练标签、无 clean 真值，结论限定于 dep3d_gold_v1 场景族与所分析网格。[设计](docs/research/2026-09-26_dep3d_gold_design.md)、[结果](docs/research/2026-09-26_dep3d_gold_results.md)
+
+**2026-09-26 P10 三维校核子集决策已落盘（未执行，本批零 3D）。** 本批（含 fine2）不含任何 3D；首选 3D 校核对象为 **C3 族锚点 A0 配对**（`B2D-C3m-D10m-W4m-T0.5m-E20-S0.02`，5 cm 各向同性档，2 次运行），时机排在 fine2 完成且方向一致性复核落盘之后，契约另行冻结并经用户敲定；C3-D20m 类不新增（dep3d_gold 已实测其 3D 对应物），NC/OFF 负控不列入；C8 锚点（P-A）、C5 锚点（P-B）待 fine2 复核后定，电性/电导档（P-C）还依赖 A0 3D 结果。预算只引 dep3d 实测（910.6–920.2 s/run、7.98 GiB / 13.95 GiB），不是 ETA 承诺；vctip 处置对 3D 墙钟无实测记录，不下调 3D 预算。[决策](docs/research/2026-09-26_3d_validation_subset_decision.md)
+
+**ZFINE2 垂向细化配对已完成。** `DEP_BG_ZFINE2`/`DEP_20_ZFINE2` 各 1 次 attempt、exit 0（墙钟 1438.6 s / 1334.8 s，Job 峰值 15.28 GB，网格 1×2560×16000 = 40,960,000 单元）。2D 网格收敛链全带相对 L2 变化 **66.6647% → 17.2452% → 4.1216%**，最大相位变化 64.8431° → 16.2741° → 3.8847°；最近两步仅细化垂向，比值约 4.18 / 4.19，是垂向二阶行为的直接指示。未做 Richardson 外推，相邻差不等于相对精确解误差；分析 r1/r2 字节一致。`reference_state` 保持 `numerically_unresolved`，`physical_label_eligible=false`、`training_eligible=false`，物理阈值仍为 null。[结果](docs/research/2026-09-25_deep_zfine2_results.md)
+
+**下一步（按序，取代本页所有旧下一步）：** ① fine2 验收（8 例 exit/墙钟/Job/attempt 记录核对，无重试、无 CPU 回退）→ ② 原始输出归档（h5 完整性、输入哈希比对）→ ③ `scripts/analyze_batch2d_fine2.py` 分析 r1/r2（`results.json` 字节一致）→ ④ 跨档方向一致性结论（粗档 vs 细档，按规格书 §6-P2；方向不一致的机制结论降级为“待复核”）→ ⑤ batch2d_v1 细档结果报告落盘 → ⑥ 按 P10 依赖链起草 3D 校核契约（首选 C3 族 A0 配对；契约另冻结、经用户敲定后执行）。
+
+**旧下一步作废声明：** 本页 2026-09-25 及更早段落中的“下一步”（含“继续准备垂向细化资源方案”、“下一步建立算子误差预算并继续准备垂向细化资源方案”、“预算 dy12.5mm、dz3.125mm 配对”等）已由上一步列表取代，不再作为待办——垂向细化已由 ZFINE2 完成、算子误差预算已由 2026-09-25 单元完成。历史结果本身保留，不改写。
+
 
 **2026-09-25 算子误差预算证书完成（纯数组，最新）。** 新契约 `configs/research/error_budget_contract_v0.1.json` 与实现 `scripts/research_error_budget.py`：方向诊断预算只用精确构造、`math.fsum` 精确重算加计数舍入 slack、Wedin/Davis–Kahan sin Θ 标准摄动界，禁止 eps×常数。损伤试验 91 个余弦评价恢复 51 个（40 个因输出范数≤预算合规缺失，全均值/SVD 类为主）；三网格 84 个 FDTD 模板余弦保持缺失，原因细化为 `fdtd_numerically_unresolved`。回归 157→182 项全绿。预算只认证数值可辨识性，物理/训练标签仍关闭。[报告](docs/research/2026-09-25_error_budget.md)，证据 `artifacts/research_checks/2026-09-25_error_budget/`。下一步：继续准备垂向细化资源方案；FDTD 来源方向诊断在参考收敛前保持关闭。
 
@@ -10,7 +35,7 @@
 
 **本机已接续并完成三项审查修复。** 比较脚本另存且拒绝覆盖；监督器等待进程组清空；余弦诊断缺少数值误差预算时标为缺失。157项数组、10项监督器检查通过，42行共同层/目标保真结论保持。见[修复及评价增补](docs/research/2026-09-25_direction_diagnostic_update.md)与[验证记录](artifacts/research_checks/2026-09-25_review_fixes/record.json)。下一步建立算子误差预算并继续准备垂向细化资源方案；没有新正演或训练。
 
-当前无待执行仿真契约；YFINE已消耗契约保留为历史，不因修复代码而改写原授权快照。用户自主GPU研究授权保留，本机V4/CUDA环境需独立核验。旧路径、PID、会话号与硬件耗时属于原机器。
+**执行契约状态（2026-09-26，本句取代原有的“当前无待执行仿真契约”）**：当前唯一在执行的是 `batch2d_v1_fine2`（`configs/research/gprmax_v4_execution_gate.json` 中 `approved_to_simulate=true`，8 例串行、失败即中止）；`dep3d_gold_v1` 与 `batch2d_v1` 粗档契约已消耗并关闭。YFINE/ZFINE2 等更早契约保留为历史，不因后续代码修复而改写原授权快照。用户自主 GPU 研究授权保留；本机 V4/CUDA 环境已按上述两个批次的 CUDA double 执行核验。旧路径、PID、会话号与硬件耗时属于原机器。
 
 **2026-09-25 2D/3D 配对调研完成（未执行）。** 仓库从未做过 2D/3D 配对数值对比；本机实测 RTX 3060 Laptop（约6GiB显存）/15.8GiB 内存/Python3.10，无 V4 环境与源码，当前跑不了求解，但 ≤5,000万单元的小 3D 配对经估算可行。见[调研与设计草案](docs/research/2026-09-25_2d3d_paired_plan.md)：路径 A/B/C 待用户选择；契约未冻结，gate 仍为 false。算子误差预算（纯数组）不依赖环境，可立即推进。
 
@@ -89,7 +114,7 @@
 
 早期[远端克隆验证](artifacts/research_checks/2026-09-24_remote_handoff_verification.json)对应提交251986e，只证明当时86文件与136项数组检查，不是当前全部产物的新机认证。
 
-可交给新会话的任务：先读本页及YFINE结果。两组已归档并复算，不重复运行旧attempt。下一步依据实测资源预算dy12.5mm、dz3.125mm配对，冻结输入与上限后才启动新批次；同时保留共同层界/目标/无目标负控的处理评价。物理真值与训练标签仍关闭，保留实测数据不参与开发。
+可交给新会话的任务：先读本页“当前状态”段的 2026-09-26 内容。**旧句中的“下一步依据实测资源预算 dy12.5mm、dz3.125mm 配对”已作废**——该配对即 ZFINE2，已完成；当前待办是 fine2 验收 → 归档 → 分析 r1/r2 → 方向一致性结论 → 结果报告 → 3D 校核契约起草。正在执行的 fine2 不重复启动，已消耗 attempt 不复用；同时保留共同层界/目标/无目标负控的处理评价。物理真值与训练标签仍关闭，保留实测数据不参与开发。
 
 ## 记录索引
 

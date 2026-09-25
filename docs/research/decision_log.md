@@ -1,3 +1,34 @@
+## 2026-09-26 batch2d_v1_fine2 细档段已启动，正在执行（最新）
+
+- **决定**：按规格书 §6-P2/P3 冻结并执行细档段 `batch2d_v1_fine2`：FINE2 档（dy12.5/dz3.125 mm，ZFINE2 同格）8 例 = 四族锚点配对（族 BG + 锚点目标 `D10m-W4m-T0.5m-E20-S0.02`，C3 族先跑，再 C1/C5/C8），串行、失败即中止，`retries=0`、CUDA double、无 CPU 回退；墙钟 40 min/例、Job 20 GiB。用途：粗档机制结论的方向一致性复核；只判方向一致，不生成绝对幅度/相位结论。
+- **依据**：[批量规格书](2026-09-26_batch_2d_spec_v1.md) §6-P2/P3；输入包与 gate 冻结提交 `66543b9`（`configs/research/batch2d_v1_fine2/` 8 份 `.in` 与 ZFINE2 模板的字节差异仅限 title/覆盖层 box/目标材料+box，种子按规格书 §4.1 重算，生成器重放字节一致）；成本依据 ZFINE2 实测墙钟 1438.6 s / 1334.8 s、Job 峰值 15.28 GB（提交 `f896188`）；分析脚本提交 `84924f8`（`scripts/analyze_batch2d_fine2.py`，占位运行优雅跳过，真实分析待批次完成）。
+- **限制**：状态为执行中，未取数、无结果，本文不登记任何 fine2 数值；执行期间不读写 `artifacts/simulations/2026-09-26_*-F2/`。8 次 attempt 各限一次、按冻结顺序串行启动，失败即中止且后续 attempt 不再使用，不复用、不重试。C3 族已归档的 ZFINE2 证据是 D20 深度，与本批 D10 锚点深度不同，不可互换、不替代本批细档锚点。vctip 排空监视器须随批运行并留痕。物理/训练标签仍禁用，`reference_state` 保持 `numerically_unresolved`。
+
+## 2026-09-26 P10 三维校核子集决策（决策落盘，未执行）
+
+- **决定**：本批（含 fine2）不含任何 3D；首选 3D 校核对象为 C3 族锚点 A0 配对（`B2D-C3m-D10m-W4m-T0.5m-E20-S0.02`，5 cm 各向同性档，2 次运行），时机排在 fine2 完成且方向一致性复核落盘之后，3D 批次契约另行冻结并经用户敲定。C3-D20m 类不新增（dep3d_gold 已实测其 3D 对应物），NC/OFF 负控不列入 3D，不在 25 mm 粗档做 3D；C8 锚点（P-A）、C5 锚点（P-B）待 fine2 复核后定，电性/电导档（P-C）还依赖 A0 3D 结果。
+- **依据**：[P10 决策文档](2026-09-26_3d_validation_subset_decision.md)（提交 `aea4c45`），引用 [dep3d_gold 结果](2026-09-26_dep3d_gold_results.md)（提交 `af6be47`）与 [batch2d 粗档结果](2026-09-26_batch2d_v1_results.md)（提交 `6c8ef4d`）；预算只引 dep3d 实测 910.6–920.2 s/run、Job 峰值 7.98 GiB（5 cm）/ 13.95 GiB（dz 2.5 cm）。
+- **限制**：本文不是执行授权，不改变规格书 §6-P10 范围；预算为量级参考不是 ETA 承诺。vctip 处置对 3D 墙钟无实测记录，不得据此下调 3D 预算。3D 校核不升级任何参考资格（`reference_state` 保持 `numerically_unresolved`）、不产生物理阈值/训练标签/clean 真值/可探测性或最大探测深度结论；3D 网格收敛未认证；维度/侧向域宽/目标 y 位置三类混淆因素未排除，不同比较对的差值不得相减当作可加分解。
+
+## 2026-09-26 batch2d_v1 粗档完成与 vctip 处置
+
+- **决定**：粗档 BASE（dy=dz=25 mm）29 例按冻结契约一次跑完，每例 1 次 attempt、无重试、无 CPU 回退；墙钟硬上限经 gate `scope_expansion_basis` 由 10 min 有依据地修正为 20 min（dep3d 实测墙钟 910.6–920.2 s 表明求解后 Job 滞留约 900 s，10 min 会误杀健康运行）。带内能量比只作诊断性能量比，不作可探测性/SNR/物理阈值。
+- **依据**：[规格书](2026-09-26_batch_2d_spec_v1.md)与冻结契约 `configs/research/batch2d_v1/cases.json`（提交 `fe0a89e`）；执行 `97003b5`、分析 `23a1eb7`、[报告](2026-09-26_batch2d_v1_results.md) `6c8ef4d`；证据 `artifacts/research_checks/2026-09-26_batch2d_analysis_r1` 与 `_r2`（`results.json` 字节一致）、29 个 run 目录 `supervision.json`。实测：29/29 exit 0，全批合计墙钟 1400.62 s（约 23.4 min），Job 峰值提交内存 2,914,930,688–2,918,010,880 B（约 2.72 GiB）；四族零对比负控 NC 配对差分逐样本恒零；带内能量比随深度单调递减（C1/C3 三档严格单调、C5/C8 两档同向）、包络峰到时随深度递增。
+- **vctip 处置决定**：升级为主动处置——外部哨兵仅在“监督器处于 `waiting_descendants` 阶段”且“vctip 已成孤儿（父编译链已退出）”两个条件同时满足时清除该进程，其余不做干预；29 次事件逐条留痕于 `artifacts/research_checks/2026-09-26_batch2d_v1_vctip_intervention_log.jsonl`。
+- **限制**：处置性质是**操作层干预**：不改监督器完成语义（root exit 0 + Job 清空后判定 completed）、不触碰求解器进程、输入文件与输出 h5，不参与任何求解计算，只影响求解完成后的空转滞留。粗档物理充分性未认证，结论须细档方向一致方可保留（不一致则降级为“待复核”）。`reference_state=numerically_unresolved`、`grid_convergence_certified=false`、`physical_label_eligible=false`、`training_eligible=false`、`training_labels_generated=false`、`clean_truth_generated=false`；不跨族差分、不跨档合并、负控不并入目标行；C8 族最低量级（3.8167380710479025e-12）接近数值分辨关注区，不据此声明可探测性或不可探测性；OFF 档侧向 PML 余量 8.0 m < 13 m 例外单列。29 次 attempt 各一次，已消耗不可复用。
+
+## 2026-09-26 dep3d_gold_v1 完成（8/8）
+
+- **决定**：8 例（4 个 2D 同格距对照 + 2 组 3D 配对）各 1 次 attempt 串行执行，CUDA double、无重试、无 CPU 回退（20 GiB Job / 40 min 墙钟上限均未触及）；只报网格与维度之间的差，不给阈值承诺、不宣布网格收敛通过。
+- **依据**：[设计书](2026-09-26_dep3d_gold_design.md)、[结果](2026-09-26_dep3d_gold_results.md)（执行提交 `2d49bc9`、报告提交 `af6be47`）；证据 `artifacts/research_checks/2026-09-26_dep3d_gold_analysis_r1` 与 `_r2`（`results.json` 字节一致）及 8 个 run 目录 `supervision.json`。实测：8/8 exit 0，墙钟 910.6–920.2 s，Job 峰值提交内存约 2.32–14.98 GB；3D 纯 dz 细化（5 cm→2.5 cm）谱形状相关 0.9951；2D/3D 同格距归一化谱形状相关 0.935（B2D5CM vs DEP3D_5CM）/ 0.958（B2DANISO vs DEP3D_ANISO）；远场 3D→2D 变换后 0.967 / 0.979（探索性单列，`far_field_transform_is_conclusion_basis=false`）。
+- **限制**：`grid_convergence_certified=false`（5 cm 在 170 MHz 仅达官方起步准则，ANISO 只细化 z 向）；`cross_dimension_absolute_amplitude_compared=false`，相位只以“相位差对频率线性拟合”的形式量报告、不跨维迁移；维度差异/侧向域宽/目标 y 位置三类混淆因素未排除。`physical_acceptance_threshold=null`、`training_labels_generated=false`、`clean_truth_generated=false`；结论限定于 dep3d_gold_v1 场景族与所分析网格，不外推实测；材料参数为研究假设。8 次 attempt 各一次，已消耗不可复用。
+
+## 2026-09-26 ZFINE2 垂向细化配对完成
+
+- **决定**：保持 dy12.5 mm 不变，dz 由 6.25 mm 降至 3.125 mm，只运行 `DEP_BG_ZFINE2` 与 `DEP_20_ZFINE2` 各 1 次 attempt（CUDA double、无重试、无 CPU 回退）；不做任意精度无限加密，进一步加密须由本次结果明确论证需求。
+- **依据**：[设计书](2026-09-25_deep_zfine2_design.md)、[结果](2026-09-25_deep_zfine2_results.md)（提交 `f896188`）；证据 `artifacts/research_checks/2026-09-25_DEP_BG_ZFINE2/`、`2026-09-25_DEP_20_ZFINE2/`（墙钟 1438.6 s / 1334.8 s、Job 峰值 15.28 GB、网格 1×2560×16000 = 40,960,000 单元）与 `2026-09-25_deep_zfine2_analysis_r1` / `_r2`（`results.json` 与数组字节一致）。收敛链（TGT−BG，全带复数）：相对 L2 变化 66.6647% → 17.2452% → 4.1216%，最大相位变化 64.8431° → 16.2741° → 3.8847°；最近两步仅细化垂向，比值 17.2452/4.1216≈4.18、16.2741/3.8847≈4.19。
+- **限制**：`reference_state` 保持 `numerically_unresolved`，`physical_label_eligible=false`、`training_eligible=false`，物理阈值仍为 null；相邻差不等于相对精确解误差，未做 Richardson 外推，二阶趋势只是实测相邻差的比值；结论限于二维 YZ/TMx 平层研究假设模型与固定尾窗/诊断窗设定，不构成实测 B-scan 或泛化证据。2 次 attempt 各一次，已消耗不可复用。
+
 ## 2026-09-25 算子误差预算证书与方向诊断恢复（最新）
 
 用户授权自主推进纯数组研究单元：为 `direction_error_bound` 建立可计算依据。新契约 `configs/research/error_budget_contract_v0.1.json` 与实现 `scripts/research_error_budget.py`：预算组成 e_in/e_op/e_svd/e_diff/e_ref 及传播规则已固定；证书只用精确构造、`math.fsum` 精确重算加计数舍入 slack、Wedin/Davis–Kahan sin Θ 标准摄动界，禁止 eps×常数；界失效即缺失。损伤试验（构造数组）91 个余弦评价恢复 51 个、40 个因输出范数≤预算合规缺失；三网格 84 个 FDTD 模板余弦保持缺失，原因细化为 `fdtd_numerically_unresolved`（另存证明，不改归档）。回归 157→182 项全绿。预算只认证数值可辨识性，不认证物理精度；物理/训练标签仍关闭。[报告](2026-09-25_error_budget.md)，证据 `artifacts/research_checks/2026-09-25_error_budget/`。

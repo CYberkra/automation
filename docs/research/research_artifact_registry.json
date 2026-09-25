@@ -1,10 +1,211 @@
 {
   "schema": "research-artifact-registry/1",
-  "updated_date": "2026-09-25",
+  "updated_date": "2026-09-26",
   "entrypoint": "START_HERE.md",
   "current_protocol": "docs/research/2026-09-24_evaluation_and_labels_v0.2.md",
   "solver_execution_gate": "configs/research/gprmax_v4_execution_gate.json",
   "runs": [
+    {
+      "id": "batch2d_v1_fine2",
+      "status": "in_progress_executing_no_results_registered",
+      "directory": "artifacts/simulations/2026-09-26_*_F2",
+      "directory_note": "Per-case run directories artifacts/simulations/2026-09-26_<case>-F2; not read while the batch is executing, no outputs registered yet.",
+      "tracked": false,
+      "solver_executed": true,
+      "training_executed": false,
+      "report": null,
+      "contract": "configs/research/gprmax_v4_execution_gate.json",
+      "input_contract": "configs/research/batch2d_v1_fine2/",
+      "analysis_script": "scripts/analyze_batch2d_fine2.py",
+      "gate": "batch2d_v1_fine2",
+      "grid_m": [
+        0.0125,
+        0.003125
+      ],
+      "key_numbers": {
+        "n_cases": 8
+      },
+      "limitations": [
+        "executing: no outputs read and no results registered; do not read artifacts/simulations/2026-09-26_*_F2 during execution",
+        "FINE2 tier (dy12.5/dz3.125 mm, ZFINE2 same grid); direction-consistency recheck only, no absolute amplitude or phase conclusion",
+        "serial fail-abort, retries=0, CUDA double, no CPU fallback; wall 40 min/case, Job 20 GiB",
+        "archived C3 ZFINE2 evidence is D20 depth, not interchangeable with this batch D10 anchor depth",
+        "physical and training labels remain disabled; reference_state stays numerically_unresolved"
+      ]
+    },
+    {
+      "id": "p10_3d_validation_subset_decision",
+      "status": "decision_recorded_not_executed",
+      "tracked": true,
+      "solver_executed": false,
+      "training_executed": false,
+      "report": "docs/research/2026-09-26_3d_validation_subset_decision.md",
+      "contract": "none_frozen_for_3d_yet",
+      "key_numbers": {
+        "preferred_3d_runs": 2
+      },
+      "decisions": {
+        "no_3d_in_batch2d_v1": true,
+        "preferred_object": "C3 anchor A0 pair B2D-C3m-D10m-W4m-T0.5m-E20-S0.02, 5 cm isotropic, 2 runs",
+        "timing": "after batch2d_v1_fine2 completion and direction-consistency recheck",
+        "not_added": "C3-D20m class (dep3d_gold already measured its 3D counterpart); NC and OFF negative controls not listed for 3D; no 3D at the 25 mm coarse grid",
+        "pending": "P-A C8 anchor and P-B C5 anchor depend on the fine2 recheck; P-C electrical/conductivity tiers also depend on the A0 3D result"
+      },
+      "budget_basis": "dep3d_gold_v1 measured only: 910.6-920.2 s/run wall, Job peak commit 7.98 GiB (5 cm) / 13.95 GiB (dz 2.5 cm); magnitude reference, not an ETA commitment",
+      "limitations": [
+        "decision document only, not an execution authorization; a separate frozen contract and user agreement are required before any 3D run",
+        "vctip drain intervention effect on 3D wall clock is unmeasured; 3D budgets must not be downgraded from 2D measurements",
+        "3D validation does not upgrade reference_state (numerically_unresolved) and produces no physical threshold, training label, clean truth, detectability or maximum-depth conclusion",
+        "3D grid convergence not certified; dimension/lateral-domain/target-y confounds not excluded; differences between comparison pairs must not be subtracted as an additive decomposition"
+      ]
+    },
+    {
+      "id": "batch2d_v1_base",
+      "status": "complete_29of29_exit0",
+      "directory": "artifacts/research_checks/2026-09-26_batch2d_analysis_r1",
+      "run_directories_prefix": "artifacts/research_checks/2026-09-26_B2D-*",
+      "tracked": true,
+      "solver_executed": true,
+      "training_executed": false,
+      "report": "docs/research/2026-09-26_batch2d_v1_results.md",
+      "contract": "configs/research/batch2d_v1/cases.json",
+      "spec": "docs/research/2026-09-26_batch_2d_spec_v1.md",
+      "gate": "batch2d_v1",
+      "grid_m": 0.025,
+      "attempts": "one each, consumed, gate closed",
+      "analysis_recompute": "results.json byte-identical across analysis_r1/analysis_r2",
+      "vctip_intervention_log": "artifacts/research_checks/2026-09-26_batch2d_v1_vctip_intervention_log.jsonl",
+      "key_numbers": {
+        "n_cases_contract": 29,
+        "total_wall_clock_s": 1400.62,
+        "job_peak_commit_bytes_range": [
+          2914930688,
+          2918010880
+        ],
+        "negative_controls_zero_difference": 4,
+        "c3_anchor_in_band_energy_ratio": 2.8635252336237045e-07,
+        "c3_anchor_envelope_peak_ns": 331.8626651806806
+      },
+      "limitations": [
+        "BASE tier physical sufficiency not certified; coarse conclusions require fine2 direction consistency (spec P2)",
+        "in_band_energy_ratio is a diagnostic energy ratio on the 501-point analysis grid; not detectability, not SNR, not a physical threshold",
+        "reference_state numerically_unresolved; grid_convergence_certified false; physical_label_eligible false; training_eligible false; no clean truth",
+        "no cross-family differencing, no cross-tier merging, negative controls not merged into target rows",
+        "C8 lowest ratios (down to 3.8167380710479025e-12) are near the numerical-resolution concern region; no detectability claim made either way",
+        "OFF case side PML margin 8.0 m < 13 m exception listed separately and not used with target rows",
+        "vctip handling is an operational intervention only: supervisor completion semantics unchanged; solver process, inputs and output h5 untouched"
+      ]
+    },
+    {
+      "id": "dep3d_gold_v1",
+      "status": "complete_8of8_exit0",
+      "directory": "artifacts/research_checks/2026-09-26_dep3d_gold_analysis_r1",
+      "run_directories": [
+        "artifacts/research_checks/2026-09-26_B2D5CM_BG",
+        "artifacts/research_checks/2026-09-26_B2D5CM_TGT",
+        "artifacts/research_checks/2026-09-26_B2DANISO_BG",
+        "artifacts/research_checks/2026-09-26_B2DANISO_TGT",
+        "artifacts/research_checks/2026-09-26_DEP3D_5CM_BG",
+        "artifacts/research_checks/2026-09-26_DEP3D_5CM_TGT",
+        "artifacts/research_checks/2026-09-26_DEP3D_ANISO_BG",
+        "artifacts/research_checks/2026-09-26_DEP3D_ANISO_TGT"
+      ],
+      "tracked": true,
+      "solver_executed": true,
+      "training_executed": false,
+      "report": "docs/research/2026-09-26_dep3d_gold_results.md",
+      "design": "docs/research/2026-09-26_dep3d_gold_design.md",
+      "contract": "configs/research/dep3d_gold_v1/",
+      "runs": [
+        "B2D5CM_BG",
+        "B2D5CM_TGT",
+        "B2DANISO_BG",
+        "B2DANISO_TGT",
+        "DEP3D_5CM_BG",
+        "DEP3D_5CM_TGT",
+        "DEP3D_ANISO_BG",
+        "DEP3D_ANISO_TGT"
+      ],
+      "attempts": "one each, consumed, gate closed",
+      "analysis_recompute": "results.json byte-identical across analysis_r1/analysis_r2",
+      "key_numbers": {
+        "dz_refinement_spectrum_shape_correlation": 0.9951,
+        "cross_dimension_spectrum_shape_correlation_5cm": 0.935,
+        "cross_dimension_spectrum_shape_correlation_aniso": 0.958,
+        "exploratory_far_field_transform_correlation_5cm": 0.967,
+        "exploratory_far_field_transform_correlation_aniso": 0.979,
+        "wall_clock_s_range": [
+          910.562,
+          920.218
+        ],
+        "job_peak_commit_bytes_range": [
+          2322751488,
+          14979588096
+        ]
+      },
+      "limitations": [
+        "grid_convergence_certified false; 5 cm at 170 MHz only reaches the official starting criterion, ANISO refines z only",
+        "no cross-dimension absolute amplitude comparison; phase reported only as a linear fit of the phase difference vs frequency and not transferable across dimensions",
+        "dimension difference, lateral domain width and target y position confounds not excluded",
+        "physical_acceptance_threshold null; no training labels, no clean truth; conclusions limited to the dep3d_gold_v1 scenario family and the grids analysed, not extrapolated to field data",
+        "post-solve residency root cause identified as vctip.exe telemetry orphan under the same environment; for this batch it is an inference, not a direct observation of the 8 cases"
+      ]
+    },
+    {
+      "id": "DEP_BG_ZFINE2",
+      "status": "completed_vertical_refinement_pair",
+      "directory": "artifacts/research_checks/2026-09-25_DEP_BG_ZFINE2",
+      "tracked": true,
+      "solver_executed": true,
+      "training_executed": false
+    },
+    {
+      "id": "DEP_20_ZFINE2",
+      "status": "completed_vertical_refinement_pair_reference_unresolved",
+      "directory": "artifacts/research_checks/2026-09-25_DEP_20_ZFINE2",
+      "tracked": true,
+      "solver_executed": true,
+      "training_executed": false
+    },
+    {
+      "id": "deep_zfine2_analysis",
+      "status": "completed_vertical_refinement_pair_reference_unresolved",
+      "directory": "artifacts/research_checks/2026-09-25_deep_zfine2_analysis_r1",
+      "tracked": true,
+      "solver_executed": false,
+      "training_executed": false,
+      "report": "docs/research/2026-09-25_deep_zfine2_results.md",
+      "design": "docs/research/2026-09-25_deep_zfine2_design.md",
+      "contract": "configs/research/deep_zfine2_v1/",
+      "analysis_recompute": "results.json and arrays identical across analysis_r1/analysis_r2",
+      "key_numbers": {
+        "adjacent_band_relative_L2_change_percent": [
+          66.6647,
+          17.2452,
+          4.1216
+        ],
+        "adjacent_max_phase_change_deg": [
+          64.8431,
+          16.2741,
+          3.8847
+        ],
+        "adjacent_ratio_vertical_second_order": [
+          4.18,
+          4.19
+        ],
+        "wall_clock_s": [
+          1438.6,
+          1334.8
+        ],
+        "job_peak_commit_GB": 15.28,
+        "cells": 40960000
+      },
+      "limitations": [
+        "reference_state stays numerically_unresolved; physical_label_eligible false, training_eligible false, physical threshold null",
+        "no Richardson extrapolation; adjacent difference is not the error against the exact solution",
+        "one attempt each, consumed; conclusions limited to the 2D YZ/TMx flat-layer research-assumption model with fixed tail/diagnostic windows"
+      ]
+    },
     {
       "id": "dim23_pair_v1",
       "status": "complete_4of4_exit0",
@@ -685,7 +886,11 @@
     "verify actual instrument frequency vector and CSV processing;0.3MHz step confirmed; reserved field data excluded from development",
     "confirm target depth meaning and independently constrain site cover thickness/moisture/material parameters",
     "HSG ratio controls support coupling lag (r-1)/(2r) main dt; resolve intended source/coupling/output timing before heterogeneous local model. This is a historical 3D subtask; current live 2D batch is listed separately.",
-    "YFINE pair completed and replayed: lateral refinement changes target complex L2 0.2103%, max phase0.203deg at2.49x runtime. Next budget dy12.5/dz3.125mm control; no active solver and no physical/training labels."
+    "batch2d_v1_fine2 (FINE2 tier, 8 serial cases = 4 family anchor pairs; gate batch2d_v1_fine2, wall 40min/Job 20GiB, retries=0) is executing: accept exit/wall/Job/attempt records, archive raw h5 with input hash checks, run scripts/analyze_batch2d_fine2.py r1/r2 with byte-identical results.json, then write the cross-tier direction-consistency conclusion per spec P2 and the fine2 results report. No fine2 number may be registered before that.",
+    "batch2d_v1 BASE conclusions stay provisional: depth monotonicity, envelope-peak delay and electrical-tier directions hold only pending fine2 direction consistency; downgrade any inconsistent mechanism to pending-recheck (spec P2). Coarse-tier physical sufficiency is not certified.",
+    "P10 3D validation subset: after the fine2 direction recheck, draft and freeze a separate 3D contract for the preferred object C3 anchor A0 pair (2 runs, 5 cm isotropic, budget from dep3d measured 910.6-920.2 s/run and 7.98 GiB); user agreement required before execution. Pending P-A (C8 anchor) and P-B (C5 anchor) depend on the fine2 recheck; P-C (electrical/conductivity tiers) also depends on the A0 3D result. No 3D inside batch2d_v1.",
+    "vctip.exe telemetry orphan causes about 900 s post-solve residency; the drain intervention is operational only and its effect on 3D wall clock is unmeasured, so 3D budgets must not be downgraded from 2D measurements.",
+    "reference_state stays numerically_unresolved: no physical acceptance threshold, no training labels, no clean truth. Vertical refinement is done (ZFINE2 adjacent L2 66.6647% -> 17.2452% -> 4.1216%) and must not be re-planned as pending work."
   ],
   "direction_diagnostic_addendum": "configs/research/direction_diagnostic_contract_v0.1.json",
   "error_budget_contract": "configs/research/error_budget_contract_v0.1.json"
