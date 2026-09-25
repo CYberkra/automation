@@ -1,0 +1,37 @@
+{
+  "batch_id": "batch2d_v1",
+  "segment": "base",
+  "grid_tier": "BASE",
+  "convention": {
+    "group_id": "family-level mother-model grouping key B2D-C{h}m (spec 1.0 family key + 4.2: same-family derivations share a group); family BG, targets and negative controls of one family share this group_id",
+    "mother_model_hash": "sha256 of canonical JSON of the family shared skeleton (domain/grid/PML/time window/source/rx/cover thickness/rock+cover materials); per-case hash is input_sha256 in cases.json",
+    "seed": "int.from_bytes(sha256('<batch_id>|<group_id>|<case_id>|<variant_tag>')[:8],'big') per spec 4.1",
+    "variant_tag": "base"
+  },
+  "groups": [
+    {
+      "group_id": "B2D-C1m",
+      "family": "C1",
+      "cover_thickness_m": 1.0,
+      "mother_model_hash": "c68b349aa31b991591c96cbf9737b0aa39be5ba949812adcabb7f47f054fca7d"
+    },
+    {
+      "group_id": "B2D-C3m",
+      "family": "C3",
+      "cover_thickness_m": 3.0,
+      "mother_model_hash": "92f9f5f917fd9136e1f012bc6870c7369bfbf1b0cb9b27a045151489a8fdcc4f"
+    },
+    {
+      "group_id": "B2D-C5m",
+      "family": "C5",
+      "cover_thickness_m": 5.0,
+      "mother_model_hash": "7d4732856d32fde982ddd6432b4c272f29de34051716f8d5e476cbd76e59f531"
+    },
+    {
+      "group_id": "B2D-C8m",
+      "family": "C8",
+      "cover_thickness_m": 8.0,
+      "mother_model_hash": "0e3c8d367c78cfc15c0a98e2ff28e901301ccc0437f22f6d5376d8209e10d161"
+    }
+  ]
+}
