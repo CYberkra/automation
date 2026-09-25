@@ -646,18 +646,36 @@
       "tracked": true,
       "solver_executed": false,
       "training_executed": false
+    },
+    {
+      "id": "error_budget_certificates",
+      "status": "completed_constructed_array_certificates_only",
+      "directory": "artifacts/research_checks/2026-09-25_error_budget",
+      "tracked": true,
+      "solver_executed": false,
+      "training_executed": false,
+      "report": "docs/research/2026-09-25_error_budget.md",
+      "contract": "configs/research/error_budget_contract_v0.1.json",
+      "key_numbers": {
+        "damage_pilot_cosines_restored": 51,
+        "damage_pilot_cosines_still_missing": 40,
+        "three_grid_fdtd_cosines_missing": 84,
+        "max_certified_budget": 1.1683018084039848e-11
+      }
     }
   ],
   "default_array_verification": {
     "command": "python scripts/verify_workspace.py",
-    "expected_checks": 157,
+    "expected_checks": 182,
     "composition": [
       10,
       23,
       5,
       26,
       72,
-      21
+      21,
+      20,
+      5
     ],
     "uses_field_data": false,
     "calls_solver": false,
@@ -669,5 +687,6 @@
     "HSG ratio controls support coupling lag (r-1)/(2r) main dt; resolve intended source/coupling/output timing before heterogeneous local model. This is a historical 3D subtask; current live 2D batch is listed separately.",
     "YFINE pair completed and replayed: lateral refinement changes target complex L2 0.2103%, max phase0.203deg at2.49x runtime. Next budget dy12.5/dz3.125mm control; no active solver and no physical/training labels."
   ],
-  "direction_diagnostic_addendum": "configs/research/direction_diagnostic_contract_v0.1.json"
+  "direction_diagnostic_addendum": "configs/research/direction_diagnostic_contract_v0.1.json",
+  "error_budget_contract": "configs/research/error_budget_contract_v0.1.json"
 }

@@ -6,7 +6,7 @@
 
 - 用户已授权自主修复、验证后合并并继续研究。审查修复及评价增补见 [方向诊断与修复记录](docs/research/2026-09-25_direction_diagnostic_update.md)。常规 Git 更新只做与修改相关的必要检查，不重复整套克隆/环境重建。
 - 评价仍沿用 v0.2；附加 [方向诊断契约](configs/research/direction_diagnostic_contract_v0.1.json)。`direction_error_bound` 未声明或输出不足以区分零时，余弦缺失并给原因；D/A/H 保留。不能用任意 eps 常数代替 SVD/FDTD 误差预算。
-- 当前纯数组回归为 157 项（原 136 + 方向诊断 21），Windows 监督器另有 10 项 CPU 检查。历史证据按其源码提交核验，不用当前源码哈希覆盖旧记录。
+- 当前纯数组回归为 182 项（原 136 + 方向诊断 21 + 误差预算证书 20 + 恢复应用 5），Windows 监督器另有 10 项 CPU 检查。历史证据按其源码提交核验，不用当前源码哈希覆盖旧记录。
 - YFINE 已完成；待执行 gate 已关闭，旧契约保留为 `last_completed_execution_contract`。自主 GPU 研究授权保留，新批次须重新冻结具体契约，不重跑已消耗 attempt。当前电脑的 V4/CUDA 环境尚未核验。
 
 ## 最新接续与用户决定（2026-09-24，优先于旧阶段描述）
@@ -70,7 +70,7 @@
 - 开始工作检查 `git status`、远端及当前分支；工作区干净时用 `git pull --ff-only` 同步。多人/多机并行使用独立分支；不强推、不清除别人的未提交改动、不重写共享历史。提交只包含当前工作及明确纳入的研究基线。
 - `.gitignore` 排除原始测线/钻孔资料、派生资料审计缓存、公开论文缓存、环境和本机调度文件。不得用 `git add -f` 绕过排除上传这些内容。论文 URL、阅读范围和哈希保留在研究台账；用户自行管理定时任务，不重新配置或迁移调度。
 - `.gitattributes` 禁止 Git 自动转换换行，保持科学证据按字节计算的哈希。历史输出不覆盖；代码更新后追加新证据，不把旧结果的哈希改成新代码哈希。
-- `python scripts/verify_workspace.py` 可在纯克隆中复跑当前六组共157项数组检查，只依赖NumPy（核心固定版本见 `requirements.txt`）。新结果写入忽略的 `artifacts/local_checks/`。这不是正演、训练或实测验证；初始化新电脑不要自动运行原始资料审计脚本。
+- `python scripts/verify_workspace.py` 可在纯克隆中复跑当前八组共182项数组检查，只依赖NumPy（核心固定版本见 `requirements.txt`）。新结果写入忽略的 `artifacts/local_checks/`。这不是正演、训练或实测验证；初始化新电脑不要自动运行原始资料审计脚本。
 - 第五次续研交接是历史记录；损伤阶梯与 D 的参考误差包络已完成首版，见[结果](docs/research/2026-09-24_damage_pilot_findings.md)，当前下一步以 START_HERE 为准。
 
 ## 目录与入口
@@ -82,6 +82,7 @@
 - `scripts/check_processing_algebra.py` 与 `artifacts/research_checks/`：确定性数组反例和结果，不是正式处理库或性能实验。
 - `scripts/research_operator_contract.py`、`scripts/check_operator_contract.py` 与 `configs/research/operator_catalogue_v0.1.json`：27 项配置研究实现及反例；只接构造的稠密浮点数组，带无效掩码的输入仅允许全 identity，未接入实测或求解器。
 - `scripts/research_evaluation_contract.py`、`scripts/check_evaluation_labels.py`：带符号指标与区间约束/偏序标签研究实现；参考来源、ROI 与数值可信度由调用者独立声明，不自动从波形推断。不能将数组夹具阈值当物理验收标准。
+- `scripts/research_error_budget.py`、`scripts/check_error_budget.py`、`scripts/study_error_budget_restoration.py` 与 `configs/research/error_budget_contract_v0.1.json`：算子链输出误差预算证书（精确构造/fsum 精确重算/Wedin–Davis–Kahan 摄动界/三角不等式），用于在有依据时恢复方向诊断余弦；FDTD 来源一律缺失（`fdtd_numerically_unresolved`）。预算只认证数值可辨识性，不是物理阈值或训练标签。
 - `configs/research_automation.json`：已禁用的备用调度记录；用户管理实际任务，不再维护备用触发器。
 - 未来需要时再建立 `src/`、`tests/`、`experiments/`；不要宣称这些模块已经存在。
 

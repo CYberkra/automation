@@ -1,0 +1,51 @@
+{
+  "schema": "error-budget-contract/0.1",
+  "extends": "configs/research/direction_diagnostic_contract_v0.1.json",
+  "status": "numerical_identifiability_certificates_only",
+  "purpose": "Provide computed certificates for the caller-declared direction_error_bound: an L2 absolute error budget of the processed output inside a fixed evaluation window, in input amplitude units",
+  "composition": {
+    "e_in": "Input formation error. Zero only for an exact-construction certificate (the truth array and the input array are the same constructed object). FDTD outputs are numerically unresolved and must not receive a budget.",
+    "e_op": "Operator arithmetic error. Per-element bounds derived from counted IEEE roundings (unit roundoff u = eps/2): each floating add/subtract/multiply/divide contributes at most half an ulp of its result; math.fsum is correctly rounded and contributes at most half an ulp of the sum. Measured |float64 - fsum-path recomputation| plus the counted slacks is the certificate.",
+    "e_svd": "Subspace perturbation part for leading-SVD removal. Per kept singular triplet: residual r_i = max(||X v_i - sigma_i u_i||, ||X^T u_i - sigma_i v_i||) computed on an fsum path, spectral gap gap_i to the nearest neighbouring singular value, sinTheta_i <= sqrt(2) r_i / gap_i (Wedin / Davis-Kahan sin-Theta theorem, standard matrix perturbation theory of the Golub & Van Loan type), component output perturbation b_i = r_i + 2*sqrt(2)*sigma_i*sinTheta_i. If any gap_i <= 0 or sinTheta_i >= 1 the bound is vacuous and the budget for that row is missing with reason svd_subspace_bound_vacuous.",
+    "e_diff": "Differential cancellation: e_diff <= e_1 + e_2 (triangle inequality). The amplification factor (||a||+||b||)/||a-b|| is reported as a risk diagnostic only.",
+    "e_ref": "Reference error is a separate caller responsibility and is never folded into the output budget."
+  },
+  "allowed_evidence": [
+    "exact_construction: constructed arrays where truth and input are the same object; e_in = 0",
+    "exact_recomputation: math.fsum correctly-rounded path plus counted half-ulp slacks",
+    "standard_perturbation_bound: Wedin/Davis-Kahan sin-Theta and Weyl eigenvalue bounds, applied to computed residuals and gaps",
+    "triangle_inequality: differential budget e_1 + e_2",
+    "caller_declared_input_budget: an explicit nonneg input bound supplied with its own evidence"
+  ],
+  "forbidden_evidence": [
+    "machine epsilon times an arbitrary constant",
+    "empirical factors or values that merely look small",
+    "two-grid FDTD differences presented as an FDTD error bound"
+  ],
+  "propagation": {
+    "linear_operator": "||A e|| <= sigma_max(A) ||e||",
+    "sigma_max": {
+      "identity": 1,
+      "row_mean_subtraction_lambda_in_[0,1]": 1,
+      "svd_component_removal": "1 as an orthogonal-projection removal; nonzero input error through an SVD step is not certified and yields missing budget",
+      "fixed_shared_gain": "end_gain",
+      "difference": "sum of the two operand budgets"
+    },
+    "chain_rule": "e_total <= sigma_max(O2) * e_in1 + e_arith2 applied step by step; per-element arithmetic bounds are carried per step, earlier-step bounds are carried as conservative full-array L2 scalars"
+  },
+  "missing_reasons": [
+    "fdtd_numerically_unresolved",
+    "unknown_input_provenance",
+    "operator_unavailable:<config_unavailable_reason>",
+    "svd_subspace_bound_vacuous",
+    "svd_input_error_not_certified"
+  ],
+  "scope_limits": [
+    "The budget certifies numerical identifiability of the output direction only; it certifies no physical accuracy.",
+    "Not a GPR detection threshold, not a training label, not an industry acceptance standard.",
+    "FDTD-sourced arrays keep missing budgets until independently resolved."
+  ],
+  "physical_thresholds_changed": false,
+  "training_enabled": false,
+  "field_data_allowed": false
+}

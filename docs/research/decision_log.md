@@ -1,4 +1,8 @@
-## 2026-09-25 2D/3D 配对批次完成；本机 V4 环境重建（最新）
+## 2026-09-25 算子误差预算证书与方向诊断恢复（最新）
+
+用户授权自主推进纯数组研究单元：为 `direction_error_bound` 建立可计算依据。新契约 `configs/research/error_budget_contract_v0.1.json` 与实现 `scripts/research_error_budget.py`：预算组成 e_in/e_op/e_svd/e_diff/e_ref 及传播规则已固定；证书只用精确构造、`math.fsum` 精确重算加计数舍入 slack、Wedin/Davis–Kahan sin Θ 标准摄动界，禁止 eps×常数；界失效即缺失。损伤试验（构造数组）91 个余弦评价恢复 51 个、40 个因输出范数≤预算合规缺失；三网格 84 个 FDTD 模板余弦保持缺失，原因细化为 `fdtd_numerically_unresolved`（另存证明，不改归档）。回归 157→182 项全绿。预算只认证数值可辨识性，不认证物理精度；物理/训练标签仍关闭。[报告](2026-09-25_error_budget.md)，证据 `artifacts/research_checks/2026-09-25_error_budget/`。
+
+## 2026-09-25 2D/3D 配对批次完成；本机 V4 环境重建
 
 用户选择路径 A：本机重建环境→冻结契约→本机跑完整配对。环境当日重建并核验（Python 3.12 + gprMax 4.0.0 + pycuda 2026.1 + CUDA 11.8，CUDA double kernel 通过）；中文路径导致 nvcc/cl 运行时编译失败，用 junction `D:\gprmax_v4_gpu_env`、`C:\cuda118` 解决，运行目录保持中文路径。dim23_pair_v1 四算例（YZ 链同族场景，5cm 同格距，3D 3,120 万单元）各 1 次 attempt 全部 exit 0，gate 已关闭。结论限本几何/频段/材料族：2D/3D 差分到时差 9.75ns、波形相关 0.716、归一化谱形相关 0.902（远场 3D→2D 变换后 0.954）、3D 谱显著高频化；未跨维度比绝对幅度；不声称 5cm 3D 收敛。[结果](2026-09-25_dim23_pair_results.md)，证据 `artifacts/research_checks/2026-09-25_dim23_pair/`。
 

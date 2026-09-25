@@ -4,6 +4,8 @@
 
 ## 当前状态（优先于下方历史记录）
 
+**2026-09-25 算子误差预算证书完成（纯数组，最新）。** 新契约 `configs/research/error_budget_contract_v0.1.json` 与实现 `scripts/research_error_budget.py`：方向诊断预算只用精确构造、`math.fsum` 精确重算加计数舍入 slack、Wedin/Davis–Kahan sin Θ 标准摄动界，禁止 eps×常数。损伤试验 91 个余弦评价恢复 51 个（40 个因输出范数≤预算合规缺失，全均值/SVD 类为主）；三网格 84 个 FDTD 模板余弦保持缺失，原因细化为 `fdtd_numerically_unresolved`。回归 157→182 项全绿。预算只认证数值可辨识性，物理/训练标签仍关闭。[报告](docs/research/2026-09-25_error_budget.md)，证据 `artifacts/research_checks/2026-09-25_error_budget/`。下一步：继续准备垂向细化资源方案；FDTD 来源方向诊断在参考收敛前保持关闭。
+
 **2026-09-25 2D/3D 配对批次 dim23_pair_v1 已完成（路径 A）。** 本机 V4/CUDA 环境当日重建并核验（Python 3.12 + gprMax 4.0.0 + pycuda 2026.1，RTX 3060 Laptop，CUDA double kernel 通过）；中文路径导致的 nvcc/cl 编译失败用 junction `D:\gprmax_v4_gpu_env`、`C:\cuda118` 解决。4 算例（2D_BG/2D_TGT/3D_BG/3D_TGT，5cm 同格距，3D 3,120 万单元）各 1 次 attempt 全部 exit 0，3D 每次约 8 分钟墙钟。配对差分：到时差 9.75ns，波形相关 0.716，归一化谱形状相关 0.902（远场 3D→2D 变换后 0.954），3D 差分谱显著高频化；未做跨维度绝对幅度对比。分析复算字节一致。gate 已关闭，attempt 已消耗。[结果](docs/research/2026-09-25_dim23_pair_results.md)，证据 `artifacts/research_checks/2026-09-25_dim23_pair/`。
 
 **本机已接续并完成三项审查修复。** 比较脚本另存且拒绝覆盖；监督器等待进程组清空；余弦诊断缺少数值误差预算时标为缺失。157项数组、10项监督器检查通过，42行共同层/目标保真结论保持。见[修复及评价增补](docs/research/2026-09-25_direction_diagnostic_update.md)与[验证记录](artifacts/research_checks/2026-09-25_review_fixes/record.json)。下一步建立算子误差预算并继续准备垂向细化资源方案；没有新正演或训练。
@@ -81,7 +83,7 @@
 
 1. 获取最新main，检查git status，保留已有未提交改动。原电脑曾有设备图片缺失的本地状态；本次接续图片存在且交接检查通过，不把旧缺失记录当当前状态。
 2. 先读本页当前状态、[YFINE设计](docs/research/2026-09-25_deep_yfine_design.md)与[ZFINE结果](docs/research/2026-09-25_deep_zfine_results.md)；需要背景再查[V4阅读](docs/research/2026-09-24_gprmax_v4_review.md)、[粉质粘土—砂岩简报](docs/research/2026-09-24_cover_sandstone_brief.md)、[损伤研究](docs/research/2026-09-24_damage_pilot_findings.md)。保留实测数据不用于当前开发。
-3. `python scripts/verify_workspace.py`为157项数组检查，不调用FDTD/实测/网络。无相关改动或疑点不重复跑。`python scripts/check_handoff.py`检查文件、链接、历史来源提交和当前执行契约。
+3. `python scripts/verify_workspace.py`为182项数组检查（八组：10/23/5/26/72/21/20/5），不调用FDTD/实测/网络。无相关改动或疑点不重复跑。`python scripts/check_handoff.py`检查文件、链接、历史来源提交和当前执行契约。
 4. 环境不随Git上传。GPU环境按上述说明复建；独立参考环境按最新报告及锁定依赖复建。不要把本机成功当成新机器核验，也不要调用可能启动FDTD的示例作导入检查。
 5. 每个研究单元保留设计、数据、代码、日志、来源/hash、失败与限制，更新本页/进度/运行索引，再显式暂存、提交、推送。跨地点并行用codex/前缀分支，不强推或重写共享历史。
 

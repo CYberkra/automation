@@ -21,6 +21,8 @@ CHECKS = (
     "check_evaluation_labels.py",
     "study_damage_pilot.py",
     "check_direction_diagnostics.py",
+    "check_error_budget.py",
+    "study_error_budget_restoration.py",
 )
 
 
