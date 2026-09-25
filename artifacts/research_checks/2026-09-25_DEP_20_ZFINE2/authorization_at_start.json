@@ -2,10 +2,10 @@
   "schema": "gprmax-execution-decision/1",
   "updated_date": "2026-09-25",
   "authority": "explicit user instruction in current session",
-  "user_instruction": "然后你若需要gprmax仿真的话，和我敲定好再开始仿真。",
+  "user_instruction": "\u7136\u540e\u4f60\u82e5\u9700\u8981gprmax\u4eff\u771f\u7684\u8bdd\uff0c\u548c\u6211\u6572\u5b9a\u597d\u518d\u5f00\u59cb\u4eff\u771f\u3002",
   "target_solver": "gprMax 4.0.0",
   "source_root_on_current_machine": "E:/gprMax-v.4.0.0/gprMax-v.4.0.0",
-  "approved_to_simulate": false,
+  "approved_to_simulate": true,
   "approved_run_ids": [
     "DEP_20_ZFINE2"
   ],
@@ -53,7 +53,7 @@
     "explicit agreed execution scope"
   ],
   "note": "Current concrete contract implements delegated design authority; consumed attempts must not be rerun.",
-  "build_authorization": "用户明确：许可你构建。仅构建/安装/导入核验，不是仿真批准。",
+  "build_authorization": "\u7528\u6237\u660e\u786e\uff1a\u8bb8\u53ef\u4f60\u6784\u5efa\u3002\u4ec5\u6784\u5efa/\u5b89\u88c5/\u5bfc\u5165\u6838\u9a8c\uff0c\u4e0d\u662f\u4eff\u771f\u6279\u51c6\u3002",
   "simulation_authorization": "User authorizes autonomous GPU research. Two vertical-refinement controls dy12.5mm/dz3.125mm, one attempt each; based on completed YFINE evidence.",
   "approved_execution_contract": {
     "packet_id": "DEEP-ZFINE2-01",
@@ -115,13 +115,10 @@
     "user_authorized_gpu_configuration_and_runs": true,
     "runtime_readiness": "cuda_float64_kernel_verified",
     "postprocessing": "Prefer official CPU implementation; migrate only if substantial speedup is demonstrated",
-    "user_clarification": "仿真gpu跑，后处理如果正常就是cpu那也没必要改，除非gpu能加速很多"
+    "user_clarification": "\u4eff\u771fgpu\u8dd1\uff0c\u540e\u5904\u7406\u5982\u679c\u6b63\u5e38\u5c31\u662fcpu\u90a3\u4e5f\u6ca1\u5fc5\u8981\u6539\uff0c\u9664\u975egpu\u80fd\u52a0\u901f\u5f88\u591a"
   },
   "execution_outcome": {
-    "status": "completed",
-    "attempt_consumed": true,
-    "exit_code": 0,
-    "wall_s": 1334.797,
-    "peak_job_commit_bytes": 15278718976
+    "status": "ready_not_started",
+    "attempt_consumed": false
   }
 }

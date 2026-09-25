@@ -1,0 +1,92 @@
+{
+  "checks": {
+    "DEP_BG_WIDE_metadata_source_finite": true,
+    "DEP_20_WIDE_metadata_source_finite": true,
+    "DEP_BG_FINE_metadata_source_finite": true,
+    "DEP_20_FINE_metadata_source_finite": true,
+    "DEP_BG_ZFINE_metadata_source_finite": true,
+    "DEP_20_ZFINE_metadata_source_finite": true,
+    "DEP_BG_ZFINE2_metadata_source_finite": true,
+    "DEP_20_ZFINE2_metadata_source_finite": true
+  },
+  "comparisons_to_original_2p5cm": {
+    "WIDE": {
+      "max_relative_complex_error": 2.747277286124277e-08,
+      "median_relative_complex_error": 6.4926152439136816e-09,
+      "max_abs_amplitude_error_dB": 2.230929896071744e-07,
+      "max_abs_phase_error_deg": 1.5301249345728746e-06,
+      "all_relative_L2_difference": 9.409541889878897e-09,
+      "20_70MHz_relative_L2_difference": 3.0518300849795766e-09,
+      "70_120MHz_relative_L2_difference": 6.965963957749375e-09,
+      "120_170MHz_relative_L2_difference": 1.1273852858786925e-08,
+      "spectral_RMS_ratio_dB": 2.2277950989105057e-09
+    },
+    "FINE": {
+      "max_relative_complex_error": 1.1118414503638625,
+      "median_relative_complex_error": 0.19758692923281596,
+      "max_abs_amplitude_error_dB": 0.5939765708188575,
+      "max_abs_phase_error_deg": 64.84310390310839,
+      "all_relative_L2_difference": 0.6666471444222444,
+      "20_70MHz_relative_L2_difference": 0.027407639031403138,
+      "70_120MHz_relative_L2_difference": 0.25832272246199894,
+      "120_170MHz_relative_L2_difference": 0.8734063195345502,
+      "spectral_RMS_ratio_dB": 0.3011875494166609
+    },
+    "ZFINE": {
+      "max_relative_complex_error": 1.3594272068587983,
+      "median_relative_complex_error": 0.2477828362843556,
+      "max_abs_amplitude_error_dB": 0.7338758433734289,
+      "max_abs_phase_error_deg": 81.11717704932974,
+      "all_relative_L2_difference": 0.8217590864280251,
+      "20_70MHz_relative_L2_difference": 0.03438191880150929,
+      "70_120MHz_relative_L2_difference": 0.32401066416963475,
+      "120_170MHz_relative_L2_difference": 1.0755111899545062,
+      "spectral_RMS_ratio_dB": 0.37557716243202566
+    },
+    "ZFINE2": {
+      "max_relative_complex_error": 1.4152668637704695,
+      "median_relative_complex_error": 0.25979715702985473,
+      "max_abs_amplitude_error_dB": 0.7675947910813441,
+      "max_abs_phase_error_deg": 85.00184994482008,
+      "all_relative_L2_difference": 0.8575139038811058,
+      "20_70MHz_relative_L2_difference": 0.03605071332278471,
+      "70_120MHz_relative_L2_difference": 0.3397269594761959,
+      "120_170MHz_relative_L2_difference": 1.1219798057386026,
+      "spectral_RMS_ratio_dB": 0.3937245924783156
+    }
+  },
+  "tail_window_relative_L2": {
+    "WIDE": 0.00027253734694276455,
+    "FINE": 0.00026164352567651126,
+    "ZFINE": 0.00025865834610798986,
+    "ZFINE2": 0.00025797565180303816
+  },
+  "inputs": {
+    "artifacts\\research_checks\\2026-09-25_yz_depth_analysis\\arrays.npz": "71dace9c1b99120f6bcd17cc8f0052eef2a391de6bd6b3a5e3b4cd5c7a57656e",
+    "artifacts\\research_checks\\2026-09-25_DEP_BG_WIDE\\DEP_BG_WIDE.h5": "2e79b86950497bcf719c5a52f049ad8d4d711168bec6a272cf2c908b6ebabdc0",
+    "artifacts\\research_checks\\2026-09-25_DEP_20_WIDE\\DEP_20_WIDE.h5": "8ac3b2d281775632edaac6a7b78a9a2f1f12f458858d9a2836a8ec3797382d45",
+    "artifacts\\research_checks\\2026-09-25_DEP_BG_FINE\\DEP_BG_FINE.h5": "1abc9b83e901cf6c205875554ae0510d0d97c4a1248aa984b4e64b9b5617336a",
+    "artifacts\\research_checks\\2026-09-25_DEP_20_FINE\\DEP_20_FINE.h5": "7de449634c97c99252408f86c23814716319e2287146efba4201bc18677d6ce5",
+    "artifacts\\research_checks\\2026-09-25_DEP_BG_ZFINE\\DEP_BG_ZFINE.h5": "8144371f77f55663f4c3e12585c0c431a229230d68bb2932e2f28b90d55d5663",
+    "artifacts\\research_checks\\2026-09-25_DEP_20_ZFINE\\DEP_20_ZFINE.h5": "29d66ea89b930ff833f5f71c55ed06a48bea8560dc0be5dc6b911b08753bb73b",
+    "artifacts\\research_checks\\2026-09-25_DEP_BG_ZFINE2\\DEP_BG_ZFINE2.h5": "8f0b1749eb3ede483e24f72d077bc306538b36a69a6c629a25532aedc7b9e12a",
+    "artifacts\\research_checks\\2026-09-25_DEP_20_ZFINE2\\DEP_20_ZFINE2.h5": "ba1b3498411d50534760efc3b0a7a261856d685bccbc4609ddf9fb485def08e8"
+  },
+  "solver_invoked": false,
+  "physical_acceptance_threshold": null,
+  "interpretation": "Differences relative to original grid/domain, not absolute errors versus exact target solution.",
+  "zfine_vs_uniform_fine": {
+    "max_relative_complex_error": 0.28583281089584733,
+    "median_relative_complex_error": 0.04963013986950755,
+    "max_abs_amplitude_error_dB": 0.14246570863732877,
+    "max_abs_phase_error_deg": 16.274073146221347,
+    "relative_L2_difference": 0.17245211820065065
+  },
+  "zfine2_vs_zfine": {
+    "max_relative_complex_error": 0.06803033411224897,
+    "median_relative_complex_error": 0.011846847529729008,
+    "max_abs_amplitude_error_dB": 0.034660294952566895,
+    "max_abs_phase_error_deg": 3.884672895490334,
+    "relative_L2_difference": 0.041215837532699855
+  }
+}
