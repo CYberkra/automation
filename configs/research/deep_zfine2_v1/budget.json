@@ -1,0 +1,13 @@
+{
+  "cells": 40960000,
+  "dt_s": 1.0112647039820337e-11,
+  "main_fields_ID_GiB": 5.495653286576271,
+  "wall_s_scaled_from_YFINE_target": 1587.1574087553904,
+  "pair_wall_s_estimate": 3174.314817510781,
+  "wall_minutes_cap_per_case": 40,
+  "job_commit_GiB_cap_per_case": 20,
+  "reference_YFINE_job_peak_bytes": 15273091072,
+  "reference_YFINE_sampled_GPU_MiB": 7313,
+  "limitations": "Work scaling, not guaranteed runtime. Main arrays exclude PML/context. Job committed memory is not GPU VRAM. Same cells as YFINE but different boundary geometry.",
+  "geometry_aligned": true
+}

@@ -7,7 +7,7 @@
   "source_root_on_current_machine": "E:/gprMax-v.4.0.0/gprMax-v.4.0.0",
   "approved_to_simulate": true,
   "approved_run_ids": [
-    "DEP_BG_ZFINE2"
+    "DEP_20_ZFINE2"
   ],
   "approved_compute_budget": {
     "wall_minutes": 40,
@@ -57,19 +57,19 @@
   "simulation_authorization": "User authorizes autonomous GPU research. Two vertical-refinement controls dy12.5mm/dz3.125mm, one attempt each; based on completed YFINE evidence.",
   "approved_execution_contract": {
     "packet_id": "DEEP-ZFINE2-01",
-    "input_path": "configs/research/deep_zfine2_v1/DEP_BG_ZFINE2.in",
-    "input_sha256": "1d21c51cb2bdccaa66527fd3ca1a7270cb090303d0bd0ca6fb60bf319ae2f259",
+    "input_path": "configs/research/deep_zfine2_v1/DEP_20_ZFINE2.in",
+    "input_sha256": "06d528f2aad2b22adfaf19abd59ddff86885e43211f517c6fd2154372fd05e11",
     "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
     "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
     "launcher_sha256": "27ad869684c97df921eb06c7915a8f772ee0d0e0da31e05d8aaf580fcc5e4515",
     "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
     "refreeze_note": "2026-09-25: launcher/supervisor hashes re-frozen to post-review versions (commit 3bbb3f5): supervisor now waits for job descendants before reporting completion, launcher refuses consumed contracts. Old hashes d53cc7ab/18d34cf7 superseded by reviewed fixes.",
-    "attempt_record": "artifacts/research_checks/2026-09-25_DEP_BG_ZFINE2_attempt.json",
-    "run_directory": "artifacts/simulations/2026-09-25_DEP_BG_ZFINE2",
+    "attempt_record": "artifacts/research_checks/2026-09-25_DEP_20_ZFINE2_attempt.json",
+    "run_directory": "artifacts/simulations/2026-09-25_DEP_20_ZFINE2",
     "continuation": "Compare fixed-dy ZFINE2/ZFINE; archive and assess before any new cases. No retries.",
     "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
     "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-    "run_id": "DEP_BG_ZFINE2"
+    "run_id": "DEP_20_ZFINE2"
   },
   "authorization_history": [
     {
