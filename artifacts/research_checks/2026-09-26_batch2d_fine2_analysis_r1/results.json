@@ -1,0 +1,1025 @@
+{
+  "batch": "batch2d_v1",
+  "cases": {
+    "B2D-C1m-BG-F2": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 1.0,
+      "difference": {
+        "computed": false,
+        "note": "family BG is the differencing reference itself (spec §6-P7)",
+        "reference_role": "bg"
+      },
+      "exceptions": null,
+      "family": "C1",
+      "grid_tier": "FINE2",
+      "group_id": "B2D-C1m",
+      "h5": {
+        "all_finite": true,
+        "contract_time_steps": 118663,
+        "dt_s": 1.0112647039820337e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.0125,
+          0.0125,
+          0.003125
+        ],
+        "iterations": 118665,
+        "iterations_minus_contract_time_steps": 2,
+        "nx_ny_nz": [
+          1,
+          2560,
+          16000
+        ],
+        "path": "artifacts/simulations/2026-09-26_B2D-C1m-BG-F2/B2D-C1m-BG-F2.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "37bed0fb6b8846b8081bc36c544d0bdcbe29bfb7d60aa7278cd953be175ee876",
+        "time_steps_note": "the solver iteration count follows the ceil(window/dt)+1 convention seen on the BASE tier (20352) and on the archived DEP ZFINE2 reference (118665); the frozen contract field is a floor-based planning figure",
+        "transformed_samples": 118664
+      },
+      "mother_model_id": "B2D-C1m-BG",
+      "role": "bg",
+      "run_id": "B2D-C1m-BG-F2",
+      "scan_axis": {
+        "cover_thickness_m": 1.0
+      },
+      "seed": 8293549530763068606,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 15247847424,
+        "reason": "completed",
+        "wall_s": 1322.8279999999795
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666175082586127,
+        "400ns": 0.33332560844063913
+      },
+      "variant_tag": "fine2"
+    },
+    "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 1.0,
+      "difference": {
+        "bg_run_id": "B2D-C1m-BG-F2",
+        "computed": true,
+        "envelope_peak_time_ns": 302.7726523722209,
+        "grid_tier": "FINE2",
+        "in_band_energy_ratio_DIFF_over_BG": 7.872880397772246e-06,
+        "in_band_energy_ratio_DIFF_over_BG_dB": -51.03866346167797,
+        "normalized_mag_dB_at_selected_MHz": {
+          "110": -2.977289987828675,
+          "140": -8.154388661957423,
+          "170": -0.005967650605100121,
+          "20": -15.868865647367896,
+          "50": -11.585465087171105,
+          "80": -8.944602980735743
+        },
+        "note": "time_diff_peak_V_m carries the pair-internal excitation scale; no absolute detectability claim",
+        "robustness_400ns_relative_L2_vs_200ns": 1.732207520972558e-06,
+        "robustness_400ns_spectral_peak_frequency_MHz": 166.1,
+        "source_samples_identical_to_family_bg": true,
+        "spectral_peak_frequency_MHz": 166.1,
+        "spectral_peak_phase_deg": 14.72730898869369,
+        "time_diff_peak_V_m": 0.017109919357329417
+      },
+      "exceptions": null,
+      "family": "C1",
+      "grid_tier": "FINE2",
+      "group_id": "B2D-C1m",
+      "h5": {
+        "all_finite": true,
+        "contract_time_steps": 118663,
+        "dt_s": 1.0112647039820337e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.0125,
+          0.0125,
+          0.003125
+        ],
+        "iterations": 118665,
+        "iterations_minus_contract_time_steps": 2,
+        "nx_ny_nz": [
+          1,
+          2560,
+          16000
+        ],
+        "path": "artifacts/simulations/2026-09-26_B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2/B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "f0832d88ba967bf13368376b7fc5ccc02efaaa87f8670a158cae666c7d32a5cf",
+        "time_steps_note": "the solver iteration count follows the ceil(window/dt)+1 convention seen on the BASE tier (20352) and on the archived DEP ZFINE2 reference (118665); the frozen contract field is a floor-based planning figure",
+        "transformed_samples": 118664
+      },
+      "mother_model_id": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+      "role": "target",
+      "run_id": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2",
+      "scan_axis": {
+        "cover_thickness_m": 1.0,
+        "depth_m": 10.0,
+        "eps_r": 20.0,
+        "sigma_s_m": 0.02,
+        "thickness_m": 0.5,
+        "width_m": 4.0
+      },
+      "seed": 6275352817341463172,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 15248166912,
+        "reason": "completed",
+        "wall_s": 1319.969000000041
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666175082586127,
+        "400ns": 0.33332560844063913
+      },
+      "variant_tag": "fine2"
+    },
+    "B2D-C3m-BG-F2": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 3.0,
+      "difference": {
+        "computed": false,
+        "note": "family BG is the differencing reference itself (spec §6-P7)",
+        "reference_role": "bg"
+      },
+      "exceptions": null,
+      "family": "C3",
+      "grid_tier": "FINE2",
+      "group_id": "B2D-C3m",
+      "h5": {
+        "all_finite": true,
+        "contract_time_steps": 118663,
+        "dt_s": 1.0112647039820337e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.0125,
+          0.0125,
+          0.003125
+        ],
+        "iterations": 118665,
+        "iterations_minus_contract_time_steps": 2,
+        "nx_ny_nz": [
+          1,
+          2560,
+          16000
+        ],
+        "path": "artifacts/simulations/2026-09-26_B2D-C3m-BG-F2/B2D-C3m-BG-F2.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "97e576e9b4f825f5c308f0567009d5cdb45ed48a5e90ee44da397c8d145961a2",
+        "time_steps_note": "the solver iteration count follows the ceil(window/dt)+1 convention seen on the BASE tier (20352) and on the archived DEP ZFINE2 reference (118665); the frozen contract field is a floor-based planning figure",
+        "transformed_samples": 118664
+      },
+      "mother_model_id": "B2D-C3m-BG",
+      "role": "bg",
+      "run_id": "B2D-C3m-BG-F2",
+      "scan_axis": {
+        "cover_thickness_m": 3.0
+      },
+      "seed": 27168532650590811,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 15246868480,
+        "reason": "completed",
+        "wall_s": 1318.4370000001509
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666175082586127,
+        "400ns": 0.33332560844063913
+      },
+      "variant_tag": "fine2"
+    },
+    "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 3.0,
+      "difference": {
+        "bg_run_id": "B2D-C3m-BG-F2",
+        "computed": true,
+        "envelope_peak_time_ns": 316.1921349940624,
+        "grid_tier": "FINE2",
+        "in_band_energy_ratio_DIFF_over_BG": 3.092143334046171e-07,
+        "in_band_energy_ratio_DIFF_over_BG_dB": -65.09740382883551,
+        "normalized_mag_dB_at_selected_MHz": {
+          "110": -3.8959780572848146,
+          "140": -8.632751244468372,
+          "170": 0.0,
+          "20": -15.154705484971307,
+          "50": -11.406810011007178,
+          "80": -9.814346458007382
+        },
+        "note": "time_diff_peak_V_m carries the pair-internal excitation scale; no absolute detectability claim",
+        "robustness_400ns_relative_L2_vs_200ns": 1.9384491634163773e-07,
+        "robustness_400ns_spectral_peak_frequency_MHz": 170.0,
+        "source_samples_identical_to_family_bg": true,
+        "spectral_peak_frequency_MHz": 170.0,
+        "spectral_peak_phase_deg": -152.51184944803467,
+        "time_diff_peak_V_m": 0.003013782573079382
+      },
+      "exceptions": null,
+      "family": "C3",
+      "grid_tier": "FINE2",
+      "group_id": "B2D-C3m",
+      "h5": {
+        "all_finite": true,
+        "contract_time_steps": 118663,
+        "dt_s": 1.0112647039820337e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.0125,
+          0.0125,
+          0.003125
+        ],
+        "iterations": 118665,
+        "iterations_minus_contract_time_steps": 2,
+        "nx_ny_nz": [
+          1,
+          2560,
+          16000
+        ],
+        "path": "artifacts/simulations/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "dd6edf715eaff04e896ff76630fdf28e37319832d8261d502aef07744ed1c553",
+        "time_steps_note": "the solver iteration count follows the ceil(window/dt)+1 convention seen on the BASE tier (20352) and on the archived DEP ZFINE2 reference (118665); the frozen contract field is a floor-based planning figure",
+        "transformed_samples": 118664
+      },
+      "mother_model_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "role": "target",
+      "run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2",
+      "scan_axis": {
+        "cover_thickness_m": 3.0,
+        "depth_m": 10.0,
+        "eps_r": 20.0,
+        "sigma_s_m": 0.02,
+        "thickness_m": 0.5,
+        "width_m": 4.0
+      },
+      "seed": 7025257844516869628,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 15248379904,
+        "reason": "completed",
+        "wall_s": 1323.030999999959
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666175082586127,
+        "400ns": 0.33332560844063913
+      },
+      "variant_tag": "fine2"
+    },
+    "B2D-C5m-BG-F2": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 5.0,
+      "difference": {
+        "computed": false,
+        "note": "family BG is the differencing reference itself (spec §6-P7)",
+        "reference_role": "bg"
+      },
+      "exceptions": null,
+      "family": "C5",
+      "grid_tier": "FINE2",
+      "group_id": "B2D-C5m",
+      "h5": {
+        "all_finite": true,
+        "contract_time_steps": 118663,
+        "dt_s": 1.0112647039820337e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.0125,
+          0.0125,
+          0.003125
+        ],
+        "iterations": 118665,
+        "iterations_minus_contract_time_steps": 2,
+        "nx_ny_nz": [
+          1,
+          2560,
+          16000
+        ],
+        "path": "artifacts/simulations/2026-09-26_B2D-C5m-BG-F2/B2D-C5m-BG-F2.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "59579a7c949fdbc08663dc321bcfcc3b5e5cd698b8b7596b0c74173ac0d37399",
+        "time_steps_note": "the solver iteration count follows the ceil(window/dt)+1 convention seen on the BASE tier (20352) and on the archived DEP ZFINE2 reference (118665); the frozen contract field is a floor-based planning figure",
+        "transformed_samples": 118664
+      },
+      "mother_model_id": "B2D-C5m-BG",
+      "role": "bg",
+      "run_id": "B2D-C5m-BG-F2",
+      "scan_axis": {
+        "cover_thickness_m": 5.0
+      },
+      "seed": 15486061568300129054,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 15247958016,
+        "reason": "completed",
+        "wall_s": 1319.9060000001919
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666175082586127,
+        "400ns": 0.33332560844063913
+      },
+      "variant_tag": "fine2"
+    },
+    "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 5.0,
+      "difference": {
+        "bg_run_id": "B2D-C5m-BG-F2",
+        "computed": true,
+        "envelope_peak_time_ns": 329.61161761590404,
+        "grid_tier": "FINE2",
+        "in_band_energy_ratio_DIFF_over_BG": 1.2121864557034453e-08,
+        "in_band_energy_ratio_DIFF_over_BG_dB": -79.1643057286364,
+        "normalized_mag_dB_at_selected_MHz": {
+          "110": -4.234852073819506,
+          "140": -8.70613531786995,
+          "170": -0.05493184724362617,
+          "20": -14.388919700098114,
+          "50": -11.379154705194384,
+          "80": -9.824659611014216
+        },
+        "note": "time_diff_peak_V_m carries the pair-internal excitation scale; no absolute detectability claim",
+        "robustness_400ns_relative_L2_vs_200ns": 7.465816013689913e-07,
+        "robustness_400ns_spectral_peak_frequency_MHz": 168.8,
+        "source_samples_identical_to_family_bg": true,
+        "spectral_peak_frequency_MHz": 168.8,
+        "spectral_peak_phase_deg": -108.1181487775269,
+        "time_diff_peak_V_m": 0.0005400384798828206
+      },
+      "exceptions": null,
+      "family": "C5",
+      "grid_tier": "FINE2",
+      "group_id": "B2D-C5m",
+      "h5": {
+        "all_finite": true,
+        "contract_time_steps": 118663,
+        "dt_s": 1.0112647039820337e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.0125,
+          0.0125,
+          0.003125
+        ],
+        "iterations": 118665,
+        "iterations_minus_contract_time_steps": 2,
+        "nx_ny_nz": [
+          1,
+          2560,
+          16000
+        ],
+        "path": "artifacts/simulations/2026-09-26_B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2/B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "804ede731f70769a92121081723143bee8e1796aeeccf40098c6539351cf8086",
+        "time_steps_note": "the solver iteration count follows the ceil(window/dt)+1 convention seen on the BASE tier (20352) and on the archived DEP ZFINE2 reference (118665); the frozen contract field is a floor-based planning figure",
+        "transformed_samples": 118664
+      },
+      "mother_model_id": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02",
+      "role": "target",
+      "run_id": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2",
+      "scan_axis": {
+        "cover_thickness_m": 5.0,
+        "depth_m": 10.0,
+        "eps_r": 20.0,
+        "sigma_s_m": 0.02,
+        "thickness_m": 0.5,
+        "width_m": 4.0
+      },
+      "seed": 4680175095696294446,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 15248601088,
+        "reason": "completed",
+        "wall_s": 1322.4379999998491
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666175082586127,
+        "400ns": 0.33332560844063913
+      },
+      "variant_tag": "fine2"
+    },
+    "B2D-C8m-BG-F2": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 8.0,
+      "difference": {
+        "computed": false,
+        "note": "family BG is the differencing reference itself (spec §6-P7)",
+        "reference_role": "bg"
+      },
+      "exceptions": null,
+      "family": "C8",
+      "grid_tier": "FINE2",
+      "group_id": "B2D-C8m",
+      "h5": {
+        "all_finite": true,
+        "contract_time_steps": 118663,
+        "dt_s": 1.0112647039820337e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.0125,
+          0.0125,
+          0.003125
+        ],
+        "iterations": 118665,
+        "iterations_minus_contract_time_steps": 2,
+        "nx_ny_nz": [
+          1,
+          2560,
+          16000
+        ],
+        "path": "artifacts/simulations/2026-09-26_B2D-C8m-BG-F2/B2D-C8m-BG-F2.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "627a49f5188b3d88e9c47d15607cbcd422b891d1ca596457947f1d55898d44f6",
+        "time_steps_note": "the solver iteration count follows the ceil(window/dt)+1 convention seen on the BASE tier (20352) and on the archived DEP ZFINE2 reference (118665); the frozen contract field is a floor-based planning figure",
+        "transformed_samples": 118664
+      },
+      "mother_model_id": "B2D-C8m-BG",
+      "role": "bg",
+      "run_id": "B2D-C8m-BG-F2",
+      "scan_axis": {
+        "cover_thickness_m": 8.0
+      },
+      "seed": 15766473389893256449,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 15247507456,
+        "reason": "completed",
+        "wall_s": 1320.9689999998081
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666175082586127,
+        "400ns": 0.33332560844063913
+      },
+      "variant_tag": "fine2"
+    },
+    "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2": {
+      "analysis_status": "analyzed",
+      "cover_thickness_m": 8.0,
+      "difference": {
+        "bg_run_id": "B2D-C8m-BG-F2",
+        "computed": true,
+        "envelope_peak_time_ns": 349.7155599310669,
+        "grid_tier": "FINE2",
+        "in_band_energy_ratio_DIFF_over_BG": 9.369628603300173e-11,
+        "in_band_energy_ratio_DIFF_over_BG_dB": -100.2827762349152,
+        "normalized_mag_dB_at_selected_MHz": {
+          "110": -3.969562625848103,
+          "140": -8.73311174938947,
+          "170": 0.0,
+          "20": -13.892360516298329,
+          "50": -11.285559307823558,
+          "80": -9.763455718374582
+        },
+        "note": "time_diff_peak_V_m carries the pair-internal excitation scale; no absolute detectability claim",
+        "robustness_400ns_relative_L2_vs_200ns": 6.250148138400683e-06,
+        "robustness_400ns_spectral_peak_frequency_MHz": 170.0,
+        "source_samples_identical_to_family_bg": true,
+        "spectral_peak_frequency_MHz": 170.0,
+        "spectral_peak_phase_deg": -39.47401723904529,
+        "time_diff_peak_V_m": 4.1846506924514415e-05
+      },
+      "exceptions": null,
+      "family": "C8",
+      "grid_tier": "FINE2",
+      "group_id": "B2D-C8m",
+      "h5": {
+        "all_finite": true,
+        "contract_time_steps": 118663,
+        "dt_s": 1.0112647039820337e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.0125,
+          0.0125,
+          0.003125
+        ],
+        "iterations": 118665,
+        "iterations_minus_contract_time_steps": 2,
+        "nx_ny_nz": [
+          1,
+          2560,
+          16000
+        ],
+        "path": "artifacts/simulations/2026-09-26_B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2/B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "0e3a45d485a2b8adca2f71f7960706396acf62fbe84995e031bc425a7b8e026d",
+        "time_steps_note": "the solver iteration count follows the ceil(window/dt)+1 convention seen on the BASE tier (20352) and on the archived DEP ZFINE2 reference (118665); the frozen contract field is a floor-based planning figure",
+        "transformed_samples": 118664
+      },
+      "mother_model_id": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+      "role": "target",
+      "run_id": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2",
+      "scan_axis": {
+        "cover_thickness_m": 8.0,
+        "depth_m": 10.0,
+        "eps_r": 20.0,
+        "sigma_s_m": 0.02,
+        "thickness_m": 0.5,
+        "width_m": 4.0
+      },
+      "seed": 8164928406305433380,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 15246221312,
+        "reason": "completed",
+        "wall_s": 1319.2189999998081
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666175082586127,
+        "400ns": 0.33332560844063913
+      },
+      "variant_tag": "fine2"
+    }
+  },
+  "frequency_Hz": "linspace(20e6,170e6,501)",
+  "grid_tier": "FINE2",
+  "hard_limits": {
+    "absolute_accuracy_claimed": false,
+    "amplitude_ratio_direction_is": "cross-tier ratio reported as a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+    "clean_truth_generated": false,
+    "conclusions_scope": "mechanism and operator-evaluation evidence for the four batch2d_v1 fine2 scenario families only (spec §6-P2/P6); not field performance, not 3D, not absolute accuracy, no maximum-depth claim",
+    "cross_family_average": false,
+    "cross_family_differencing": false,
+    "cross_tier_differencing": false,
+    "direction_consistency_threshold": null,
+    "family_bg_required": true,
+    "fdtd_solver_invoked": false,
+    "grid_convergence_certified": false,
+    "grid_tier": "FINE2",
+    "grid_tiers_merged": false,
+    "in_band_energy_ratio_is": "diagnostic energy ratio on the 501-point analysis grid; not detectability, not SNR, not a physical threshold",
+    "physical_acceptance_threshold": null,
+    "physical_label_eligible": false,
+    "reference_state": "numerically_unresolved",
+    "reproduction_pair_is": "run-to-run reproducibility evidence on one grid tier, not a convergence result and not an accuracy statement",
+    "training_eligible": false,
+    "training_labels_generated": false
+  },
+  "inputs": {
+    "artifacts/research_checks/2026-09-26_batch2d_analysis_r1/arrays.npz": "18e48dbf5794543249d56e2b165720fe0819ba10f14ae26f1ccd6c43910b9bea",
+    "artifacts/research_checks/2026-09-26_batch2d_analysis_r1/results.json": "fd5dddf67be9ca972478c18a973cf9f2b797eeeae622add03d2bbb0da16e02ac",
+    "artifacts/simulations/2026-09-25_DEP_BG_ZFINE2/DEP_BG_ZFINE2.h5": "8f0b1749eb3ede483e24f72d077bc306538b36a69a6c629a25532aedc7b9e12a",
+    "artifacts/simulations/2026-09-25_DEP_BG_ZFINE2/DEP_BG_ZFINE2.in": "1d21c51cb2bdccaa66527fd3ca1a7270cb090303d0bd0ca6fb60bf319ae2f259",
+    "artifacts/simulations/2026-09-26_B2D-C1m-BG-F2/B2D-C1m-BG-F2.h5": "37bed0fb6b8846b8081bc36c544d0bdcbe29bfb7d60aa7278cd953be175ee876",
+    "artifacts/simulations/2026-09-26_B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2/B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2.h5": "f0832d88ba967bf13368376b7fc5ccc02efaaa87f8670a158cae666c7d32a5cf",
+    "artifacts/simulations/2026-09-26_B2D-C3m-BG-F2/B2D-C3m-BG-F2.h5": "97e576e9b4f825f5c308f0567009d5cdb45ed48a5e90ee44da397c8d145961a2",
+    "artifacts/simulations/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2.h5": "dd6edf715eaff04e896ff76630fdf28e37319832d8261d502aef07744ed1c553",
+    "artifacts/simulations/2026-09-26_B2D-C5m-BG-F2/B2D-C5m-BG-F2.h5": "59579a7c949fdbc08663dc321bcfcc3b5e5cd698b8b7596b0c74173ac0d37399",
+    "artifacts/simulations/2026-09-26_B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2/B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2.h5": "804ede731f70769a92121081723143bee8e1796aeeccf40098c6539351cf8086",
+    "artifacts/simulations/2026-09-26_B2D-C8m-BG-F2/B2D-C8m-BG-F2.h5": "627a49f5188b3d88e9c47d15607cbcd422b891d1ca596457947f1d55898d44f6",
+    "artifacts/simulations/2026-09-26_B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2/B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2.h5": "0e3a45d485a2b8adca2f71f7960706396acf62fbe84995e031bc425a7b8e026d",
+    "configs/research/batch2d_v1/cases.json": "7145d2c735b702591d1cd5b12395b6db42be8c61edac0a3a7cf256aeb917174e",
+    "configs/research/batch2d_v1_fine2/cases.json": "1efe6e29f44950f1eb52ecc781b1c6caf378903e00b302d9480189d20f7a49c3",
+    "configs/research/batch2d_v1_fine2/groups.json": "2a39f0f24d492a782af2a3728b8146c915739621c31fb74412fd778ae1cbb5fc"
+  },
+  "n_cases_analyzed": 8,
+  "n_cases_contract": 8,
+  "p2_direction_consistency": {
+    "C1": {
+      "amplitude_ratio_direction": {
+        "note": "reported as a direction only: a cross-tier ratio mixes grid dispersion, source discretisation and the taper sample count, so it is not an accuracy statement and not a grid-error estimate",
+        "spectral_L2_direction": "FINE2 larger",
+        "spectral_L2_ratio_FINE2_over_BASE": 1.0228315342276035,
+        "time_peak_abs_direction": "FINE2 larger",
+        "time_peak_abs_ratio_FINE2_over_BASE": 1.6657024470013109
+      },
+      "coarse_anchor_bg_run_id": "B2D-C1m-BG",
+      "coarse_anchor_run_id": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+      "coarse_grid_tier": "BASE",
+      "computed": true,
+      "cover_thickness_m": 1.0,
+      "difference_spectrum_shape_correlation": {
+        "main_200ns": 0.999548930464859,
+        "robustness_400ns": 0.9995489302578601
+      },
+      "envelope_peak_direction": {
+        "coarse_base_ns": 320.0104271385134,
+        "direction": "FINE2 envelope peak earlier",
+        "fine2_minus_base_ns": -17.237774766292546,
+        "fine2_ns": 302.7726523722209,
+        "native_dt_s": {
+          "coarse_base": 5.896635841874211e-11,
+          "fine2": 1.0112647039820337e-11
+        },
+        "note": "each tier is read on its own native time axis; the two dt differ, so the comparison is of the peak index time, not of a common grid"
+      },
+      "family": "C1",
+      "fine2_anchor_bg_run_id": "B2D-C1m-BG-F2",
+      "fine2_anchor_run_id": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2",
+      "fine2_grid_tier": "FINE2",
+      "group_id": "B2D-C1m",
+      "interpretation": "direction/agreement evidence only; not cross-tier averaging, not tier merging, not a convergence or absolute-accuracy conclusion",
+      "main_tail_ns": 200,
+      "n_frequency_points": 501,
+      "per_frequency_sign_agreement": {
+        "n_points_with_zero_imag": 0,
+        "n_points_with_zero_real": 0,
+        "per_frequency_sign_agreement_imag": 0.93812375249501,
+        "per_frequency_sign_agreement_real": 0.93812375249501
+      },
+      "robustness_tail_ns": 400,
+      "spectral_peak_frequency_MHz": {
+        "coarse_base": 170.0,
+        "fine2": 166.1
+      },
+      "threshold": "none declared: the numbers are reported as directions/agreement rates only; no pass threshold exists in this analysis or in the frozen contract (spec §6-P2)",
+      "zero_masking": "none: every requested frequency point is counted, including zero parts"
+    },
+    "C3": {
+      "amplitude_ratio_direction": {
+        "note": "reported as a direction only: a cross-tier ratio mixes grid dispersion, source discretisation and the taper sample count, so it is not an accuracy statement and not a grid-error estimate",
+        "spectral_L2_direction": "FINE2 larger",
+        "spectral_L2_ratio_FINE2_over_BASE": 1.039002729692549,
+        "time_peak_abs_direction": "FINE2 larger",
+        "time_peak_abs_ratio_FINE2_over_BASE": 1.903289349007366
+      },
+      "coarse_anchor_bg_run_id": "B2D-C3m-BG",
+      "coarse_anchor_run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "coarse_grid_tier": "BASE",
+      "computed": true,
+      "cover_thickness_m": 3.0,
+      "difference_spectrum_shape_correlation": {
+        "main_200ns": 0.9994178181733713,
+        "robustness_400ns": 0.9994178183239077
+      },
+      "envelope_peak_direction": {
+        "coarse_base_ns": 331.8626651806806,
+        "direction": "FINE2 envelope peak earlier",
+        "fine2_minus_base_ns": -15.67053018661818,
+        "fine2_ns": 316.1921349940624,
+        "native_dt_s": {
+          "coarse_base": 5.896635841874211e-11,
+          "fine2": 1.0112647039820337e-11
+        },
+        "note": "each tier is read on its own native time axis; the two dt differ, so the comparison is of the peak index time, not of a common grid"
+      },
+      "family": "C3",
+      "fine2_anchor_bg_run_id": "B2D-C3m-BG-F2",
+      "fine2_anchor_run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2",
+      "fine2_grid_tier": "FINE2",
+      "group_id": "B2D-C3m",
+      "interpretation": "direction/agreement evidence only; not cross-tier averaging, not tier merging, not a convergence or absolute-accuracy conclusion",
+      "main_tail_ns": 200,
+      "n_frequency_points": 501,
+      "per_frequency_sign_agreement": {
+        "n_points_with_zero_imag": 0,
+        "n_points_with_zero_real": 0,
+        "per_frequency_sign_agreement_imag": 0.9221556886227545,
+        "per_frequency_sign_agreement_real": 0.9221556886227545
+      },
+      "robustness_tail_ns": 400,
+      "spectral_peak_frequency_MHz": {
+        "coarse_base": 169.7,
+        "fine2": 170.0
+      },
+      "threshold": "none declared: the numbers are reported as directions/agreement rates only; no pass threshold exists in this analysis or in the frozen contract (spec §6-P2)",
+      "zero_masking": "none: every requested frequency point is counted, including zero parts"
+    },
+    "C5": {
+      "amplitude_ratio_direction": {
+        "note": "reported as a direction only: a cross-tier ratio mixes grid dispersion, source discretisation and the taper sample count, so it is not an accuracy statement and not a grid-error estimate",
+        "spectral_L2_direction": "FINE2 larger",
+        "spectral_L2_ratio_FINE2_over_BASE": 1.0558752689384794,
+        "time_peak_abs_direction": "FINE2 larger",
+        "time_peak_abs_ratio_FINE2_over_BASE": 1.918323952556588
+      },
+      "coarse_anchor_bg_run_id": "B2D-C5m-BG",
+      "coarse_anchor_run_id": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02",
+      "coarse_grid_tier": "BASE",
+      "computed": true,
+      "cover_thickness_m": 5.0,
+      "difference_spectrum_shape_correlation": {
+        "main_200ns": 0.9990272372038344,
+        "robustness_400ns": 0.9990272371914642
+      },
+      "envelope_peak_direction": {
+        "coarse_base_ns": 346.7221875022036,
+        "direction": "FINE2 envelope peak earlier",
+        "fine2_minus_base_ns": -17.110569886299572,
+        "fine2_ns": 329.61161761590404,
+        "native_dt_s": {
+          "coarse_base": 5.896635841874211e-11,
+          "fine2": 1.0112647039820337e-11
+        },
+        "note": "each tier is read on its own native time axis; the two dt differ, so the comparison is of the peak index time, not of a common grid"
+      },
+      "family": "C5",
+      "fine2_anchor_bg_run_id": "B2D-C5m-BG-F2",
+      "fine2_anchor_run_id": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2",
+      "fine2_grid_tier": "FINE2",
+      "group_id": "B2D-C5m",
+      "interpretation": "direction/agreement evidence only; not cross-tier averaging, not tier merging, not a convergence or absolute-accuracy conclusion",
+      "main_tail_ns": 200,
+      "n_frequency_points": 501,
+      "per_frequency_sign_agreement": {
+        "n_points_with_zero_imag": 0,
+        "n_points_with_zero_real": 0,
+        "per_frequency_sign_agreement_imag": 0.9261477045908184,
+        "per_frequency_sign_agreement_real": 0.8982035928143712
+      },
+      "robustness_tail_ns": 400,
+      "spectral_peak_frequency_MHz": {
+        "coarse_base": 168.2,
+        "fine2": 168.8
+      },
+      "threshold": "none declared: the numbers are reported as directions/agreement rates only; no pass threshold exists in this analysis or in the frozen contract (spec §6-P2)",
+      "zero_masking": "none: every requested frequency point is counted, including zero parts"
+    },
+    "C8": {
+      "amplitude_ratio_direction": {
+        "note": "reported as a direction only: a cross-tier ratio mixes grid dispersion, source discretisation and the taper sample count, so it is not an accuracy statement and not a grid-error estimate",
+        "spectral_L2_direction": "FINE2 larger",
+        "spectral_L2_ratio_FINE2_over_BASE": 1.0803007766438417,
+        "time_peak_abs_direction": "FINE2 larger",
+        "time_peak_abs_ratio_FINE2_over_BASE": 2.1139523083257004
+      },
+      "coarse_anchor_bg_run_id": "B2D-C8m-BG",
+      "coarse_anchor_run_id": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+      "coarse_grid_tier": "BASE",
+      "computed": true,
+      "cover_thickness_m": 8.0,
+      "difference_spectrum_shape_correlation": {
+        "main_200ns": 0.9981254455630282,
+        "robustness_400ns": 0.998125445771708
+      },
+      "envelope_peak_direction": {
+        "coarse_base_ns": 368.8345719092319,
+        "direction": "FINE2 envelope peak earlier",
+        "fine2_minus_base_ns": -19.11901197816502,
+        "fine2_ns": 349.7155599310669,
+        "native_dt_s": {
+          "coarse_base": 5.896635841874211e-11,
+          "fine2": 1.0112647039820337e-11
+        },
+        "note": "each tier is read on its own native time axis; the two dt differ, so the comparison is of the peak index time, not of a common grid"
+      },
+      "family": "C8",
+      "fine2_anchor_bg_run_id": "B2D-C8m-BG-F2",
+      "fine2_anchor_run_id": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2",
+      "fine2_grid_tier": "FINE2",
+      "group_id": "B2D-C8m",
+      "interpretation": "direction/agreement evidence only; not cross-tier averaging, not tier merging, not a convergence or absolute-accuracy conclusion",
+      "main_tail_ns": 200,
+      "n_frequency_points": 501,
+      "per_frequency_sign_agreement": {
+        "n_points_with_zero_imag": 0,
+        "n_points_with_zero_real": 0,
+        "per_frequency_sign_agreement_imag": 0.8862275449101796,
+        "per_frequency_sign_agreement_real": 0.8802395209580839
+      },
+      "robustness_tail_ns": 400,
+      "spectral_peak_frequency_MHz": {
+        "coarse_base": 169.4,
+        "fine2": 170.0
+      },
+      "threshold": "none declared: the numbers are reported as directions/agreement rates only; no pass threshold exists in this analysis or in the frozen contract (spec §6-P2)",
+      "zero_masking": "none: every requested frequency point is counted, including zero parts"
+    },
+    "reference_state": "numerically_unresolved",
+    "reporting": "rows are family x grid-tier-stratified: no cross-family average, no cross-family differencing, and the BASE and FINE2 results are never merged, subtracted as error, or used to certify grid convergence (spec §6-P1/P2, §7.8); each tier keeps its own native dt, its own tail window samples and its own grid_tier label",
+    "threshold": "none declared: the numbers are reported as directions/agreement rates only; no pass threshold exists in this analysis or in the frozen contract (spec §6-P2)"
+  },
+  "pairing_policy": {
+    "cross_family_differencing": false,
+    "cross_tier_differencing": false,
+    "family_bg": {
+      "C1": "B2D-C1m-BG-F2",
+      "C3": "B2D-C3m-BG-F2",
+      "C5": "B2D-C5m-BG-F2",
+      "C8": "B2D-C8m-BG-F2"
+    },
+    "rule": "every non-BG fine2 case is differenced against the same-family same-tier BG only"
+  },
+  "reproduction_dep_zfine2": {
+    "claim": "the two runs differ only in the #title line (same grid, same receiver, same materials and same source); any non-zero difference is therefore run-to-run reproducibility evidence for this grid tier, reported as measured",
+    "computed": true,
+    "fine2": {
+      "all_finite": true,
+      "dt_s": 1.0112647039820337e-11,
+      "dtype": "float64",
+      "grid_tier": "FINE2",
+      "iterations": 118665,
+      "path": "artifacts/simulations/2026-09-26_B2D-C3m-BG-F2/B2D-C3m-BG-F2.h5",
+      "samples": 118665,
+      "sha256": "97e576e9b4f825f5c308f0567009d5cdb45ed48a5e90ee44da397c8d145961a2"
+    },
+    "fine2_status": "analyzed",
+    "grid_tier": "FINE2",
+    "input_diff": {
+      "a": {
+        "lines": 16,
+        "path": "artifacts/simulations/2026-09-26_B2D-C3m-BG-F2/B2D-C3m-BG-F2.in",
+        "sha256": "24eaaa6c6d111a7220591d3a5f0c020e1eba288acd64776ee3591c793d39926a"
+      },
+      "b": {
+        "lines": 16,
+        "path": "artifacts/simulations/2026-09-25_DEP_BG_ZFINE2/DEP_BG_ZFINE2.in",
+        "sha256": "1d21c51cb2bdccaa66527fd3ca1a7270cb090303d0bd0ca6fb60bf319ae2f259"
+      },
+      "differing_line_indices_excluding_title": [],
+      "identical_except_title": true,
+      "title_line_index": [
+        0
+      ]
+    },
+    "note": "not a convergence result, not an accuracy statement; reference_state stays numerically_unresolved (spec §6-P2/P6)",
+    "pair": {
+      "fine2_run_id": "B2D-C3m-BG-F2",
+      "reference_dir": "artifacts/simulations/2026-09-25_DEP_BG_ZFINE2",
+      "reference_run_id": "DEP_BG_ZFINE2"
+    },
+    "reference": {
+      "all_finite": true,
+      "dt_s": 1.0112647039820337e-11,
+      "dtype": "float64",
+      "dx_dy_dz": [
+        0.0125,
+        0.0125,
+        0.003125
+      ],
+      "grid_tier": "FINE2",
+      "iterations": 118665,
+      "nx_ny_nz": [
+        1,
+        2560,
+        16000
+      ],
+      "path": "artifacts/simulations/2026-09-25_DEP_BG_ZFINE2/DEP_BG_ZFINE2.h5",
+      "receiver_component": "Ex",
+      "receiver_position_m": [
+        16.65,
+        45.0
+      ],
+      "samples": 118665,
+      "sha256": "8f0b1749eb3ede483e24f72d077bc306538b36a69a6c629a25532aedc7b9e12a",
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 15278399488,
+        "reason": "completed",
+        "wall_s": 1438.6410000000615
+      }
+    },
+    "waveform_comparison": {
+      "component": "Ex",
+      "computed": true,
+      "dt_identical": true,
+      "receiver": {
+        "correlation_coefficient": 0.9999999999999998,
+        "max_abs_difference": 0.0,
+        "reference_of_relative_L2": "the archived DEP_BG_ZFINE2 trace",
+        "relative_L2_difference": 0.0,
+        "samples_compared": 118665
+      },
+      "sample_count": {
+        "fine2": 118665,
+        "reference": 118665
+      },
+      "source": {
+        "correlation_coefficient": 1.0,
+        "max_abs_difference": 0.0,
+        "reference_of_relative_L2": "the archived DEP_BG_ZFINE2 trace",
+        "relative_L2_difference": 0.0,
+        "samples_compared": 118665
+      }
+    }
+  },
+  "segment": "fine2",
+  "spec": "docs/research/2026-09-26_batch_2d_spec_v1.md §1.6, §2.1, §4.1-§4.2, §6-P1/P2/P3/P6/P7",
+  "stratified_by_family": {
+    "C1": {
+      "bg_run_id": "B2D-C1m-BG-F2",
+      "cover_thickness_m": 1.0,
+      "differencing_family_status": "analyzed",
+      "grid_tier": "FINE2",
+      "group_id": "B2D-C1m",
+      "mother_model_hash": "c68b349aa31b991591c96cbf9737b0aa39be5ba949812adcabb7f47f054fca7d",
+      "n_cases": 2,
+      "n_cases_analyzed": 2,
+      "n_differences_computed": 1,
+      "p2_direction_row_computed": true,
+      "reporting": "family rows only; no cross-family average, no cross-family and no cross-tier differencing (spec §6-P2/P7)",
+      "roles": {
+        "bg": [
+          "B2D-C1m-BG-F2"
+        ],
+        "nc": [],
+        "off": [],
+        "target": [
+          "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2"
+        ]
+      }
+    },
+    "C3": {
+      "bg_run_id": "B2D-C3m-BG-F2",
+      "cover_thickness_m": 3.0,
+      "differencing_family_status": "analyzed",
+      "grid_tier": "FINE2",
+      "group_id": "B2D-C3m",
+      "mother_model_hash": "92f9f5f917fd9136e1f012bc6870c7369bfbf1b0cb9b27a045151489a8fdcc4f",
+      "n_cases": 2,
+      "n_cases_analyzed": 2,
+      "n_differences_computed": 1,
+      "p2_direction_row_computed": true,
+      "reporting": "family rows only; no cross-family average, no cross-family and no cross-tier differencing (spec §6-P2/P7)",
+      "roles": {
+        "bg": [
+          "B2D-C3m-BG-F2"
+        ],
+        "nc": [],
+        "off": [],
+        "target": [
+          "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+        ]
+      }
+    },
+    "C5": {
+      "bg_run_id": "B2D-C5m-BG-F2",
+      "cover_thickness_m": 5.0,
+      "differencing_family_status": "analyzed",
+      "grid_tier": "FINE2",
+      "group_id": "B2D-C5m",
+      "mother_model_hash": "7d4732856d32fde982ddd6432b4c272f29de34051716f8d5e476cbd76e59f531",
+      "n_cases": 2,
+      "n_cases_analyzed": 2,
+      "n_differences_computed": 1,
+      "p2_direction_row_computed": true,
+      "reporting": "family rows only; no cross-family average, no cross-family and no cross-tier differencing (spec §6-P2/P7)",
+      "roles": {
+        "bg": [
+          "B2D-C5m-BG-F2"
+        ],
+        "nc": [],
+        "off": [],
+        "target": [
+          "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2"
+        ]
+      }
+    },
+    "C8": {
+      "bg_run_id": "B2D-C8m-BG-F2",
+      "cover_thickness_m": 8.0,
+      "differencing_family_status": "analyzed",
+      "grid_tier": "FINE2",
+      "group_id": "B2D-C8m",
+      "mother_model_hash": "0e3c8d367c78cfc15c0a98e2ff28e901301ccc0437f22f6d5376d8209e10d161",
+      "n_cases": 2,
+      "n_cases_analyzed": 2,
+      "n_differences_computed": 1,
+      "p2_direction_row_computed": true,
+      "reporting": "family rows only; no cross-family average, no cross-family and no cross-tier differencing (spec §6-P2/P7)",
+      "roles": {
+        "bg": [
+          "B2D-C8m-BG-F2"
+        ],
+        "nc": [],
+        "off": [],
+        "target": [
+          "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2"
+        ]
+      }
+    }
+  },
+  "tail_windows_ns": {
+    "main": 200,
+    "robustness": 400
+  },
+  "time_window_ns": 1200,
+  "unavailable_cases": [],
+  "unavailable_coarse_anchors": []
+}
