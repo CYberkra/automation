@@ -1,0 +1,88 @@
+
+=== Electromagnetic modelling software based on the Finite-Difference Time-Domain (FDTD) method 
+
+    www.gprmax.com   __  __
+     __ _ _ __  _ __|  \/  | __ ___  __
+    / _` | '_ \| '__| |\/| |/ _` \ \/ /
+   | (_| | |_) | |  | |  | | (_| |>  <
+    \__, | .__/|_|  |_|  |_|\__,_/_/\_\\
+    |___/|_|
+                     v4.0.0 (Caol Ila)
+
+ Copyright (C) 2015-2026: The University of Edinburgh, United Kingdom
+
+ gprMax is free software: you can redistribute it and/or modify it under the
+  terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+ gprMax is distributed in the hope that it will be useful, but WITHOUT ANY
+  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+  A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ You should have received a copy of the GNU General Public License along with
+  gprMax.  If not, see www.gnu.org/licenses.
+
+LAPTOP-83GRKUNE | unknown unknown | unknown x unknown (16 cores, 32 cores with Hyper-Threading) | 63.2 GiB | Windows 11 (64-bit)
+|--->OpenMP: 16 threads
+|--->CUDA:
+     |--->Device 0: NVIDIA GeForce RTX 4090 Laptop GPU | 16.0 GiB
+Constants/variables used/available for Python scripting: {c: 299792458.0, current_model_run: 1, e0: 8.8541878188e-12, inputfile: E:\automation_djh\automation_repo\artifacts\simulations\2026-09-26_B2DANISO_BG\B2DANISO_BG.in, m0: 1.25663706127e-06, number_model_runs: 1, z0: 376.7303134118051}
+
+Model title: B2DANISO_BG DEP family 2D TMx control at dy=5cm dz=2.5cm, background
+Spatial discretisation: 0.05 x 0.05 x 0.025m
+Requested domain mode: TM
+Domain size: 0.05 x 32 x 50m (1 x 640 x 2000 = 1.28e+06 cells)
+Mode: 2D TMx
+Time step (at CFL limit): 7.45872e-11 secs
+Time window: 1.2e-06 secs (16090 iterations)
+Simulation will use 8 OpenMP threads
+PML thickness: x0=0, y0=20, z0=40, xmax=0, ymax=20, zmax=40
+Waveform impulse of type impulse with maximum amplitude scaling 1, frequency 1Hz created.
+Hertzian dipole with polarity x at 0m, 15.35m, 45m, using waveform impulse created.
+Receiver at 0m, 16.65m, 45m with output component(s) Ex created.
+Material rock with eps_r=9, sigma=0.001 S/m; mu_r=1, sigma*=0 Ohm/m created.
+Material cover with eps_r=16, sigma=0.01 S/m; mu_r=1, sigma*=0 Ohm/m created.
+PML formulation set to HORIPML
+global PML configuration CFS parameters: alpha (scaling: constant, scaling direction: forward, min: 0, max: 0), kappa (scaling: constant, scaling direction: forward, min: 1, max: 1), sigma (scaling: quartic, scaling direction: forward, min: 0, max: 0.21235349838321013) created.
+Box from 0m, 0m, 0m, to 0.05m, 32m, 30m of material(s) rock created, dielectric smoothing is on.
+Box from 0m, 0m, 27m, to 0.05m, 32m, 30m of material(s) cover created, dielectric smoothing is on.
+
+--- Model 1/1, input file: B2DANISO_BG.in -------------------------------------
+
+
+Memory required (estimated): ~587.5 MB [main_grid] + ~65.0 MB overhead = 652.5 MB
+
+PML boundaries [main_grid]: {formulation: HORIPML, order: 1, thickness (cells): x0: 0, y0: 20, z0: 40, xmax: 0, ymax: 20, zmax: 40}
+
+Building PML boundaries [main_grid]:   0%|               | 0/4 [00:00<?, ?it/s]Building PML boundaries [main_grid]: 100%|®Ä®Ä®Ä®Ä®Ä| 4/4 [00:00<00:00, 1286.60it/s]
+Building Yee cells [main_grid]:   0%|                    | 0/2 [00:00<?, ?it/s]Building Yee cells [main_grid]: 100%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä| 2/2 [00:00<00:00, 23.99it/s]
+
+Materials [main_grid]:
+    |                                        |                     |       | sigma  |      | sigma*  | Dielectric 
+ ID | Name                                   | Type                | eps_r | [S/m]  | mu_r | [Ohm/m] | smoothable 
+----+----------------------------------------+---------------------+-------+--------+------+---------+------------
+  0 | pec                                    | builtin             | 1     | inf    | 1    | 0       | False      
+  1 | pmc                                    | builtin             | 1     | 0      | 1    | inf     | False      
+  2 | free_space                             | builtin             | 1     | 0      | 1    | 0       | True       
+  3 | rock                                   |                     | 9     | 0.001  | 1    | 0       | True       
+  4 | cover                                  |                     | 16    | 0.01   | 1    | 0       | True       
+  5 | cover+cover+rock+rock                  | dielectric-smoothed | 12.5  | 0.0055 | 1    | 0       | True       
+  6 | cover+cover+free_space+free_space      | dielectric-smoothed | 8.5   | 0.005  | 1    | 0       | True       
+  7 | Hmag_cover+cover+rock+rock             | dielectric-smoothed | 12.5  | 0.0055 | 1    | 0       | True       
+  8 | Hmag_cover+cover+free_space+free_space | dielectric-smoothed | 8.5   | 0.005  | 1    | 0       | True       
+
+Numerical dispersion analysis [main_grid] not carried out as impulse waveform used.
+Output directory: E:\automation_djh\automation_repo\artifacts\simulations\2026-09-26_B2DANISO_BG
+
+
+
+
+Model 1/1 solving on LAPTOP-83GRKUNE with CUDA backend using Device 0: NVIDIA GeForce RTX 4090 Laptop GPU
+|--->:   0%|                                         | 0/16090 [00:00<?, ?it/s]|--->:   1%|®á                              | 93/16090 [00:00<00:19, 826.19it/s]|--->:   1%|®Ü                             | 176/16090 [00:00<00:46, 338.69it/s]|--->:   4%|®Ä                            | 616/16090 [00:00<00:11, 1330.27it/s]|--->:   6%|®Ä®Ç                          | 1016/16090 [00:00<00:07, 1996.03it/s]|--->:   9%|®Ä®Ä®Ö                         | 1420/16090 [00:00<00:05, 2502.41it/s]|--->:  11%|®Ä®Ä®Ä®á                        | 1824/16090 [00:00<00:04, 2865.32it/s]|--->:  14%|®Ä®Ä®Ä®Å                        | 2294/16090 [00:00<00:04, 3303.45it/s]|--->:  17%|®Ä®Ä®Ä®Ä®É                       | 2675/16090 [00:01<00:03, 3437.99it/s]|--->:  19%|®Ä®Ä®Ä®Ä®Ä®Ö                      | 3117/16090 [00:01<00:03, 3706.54it/s]|--->:  22%|®Ä®Ä®Ä®Ä®Ä®Ä                      | 3515/16090 [00:01<00:03, 3785.10it/s]|--->:  24%|®Ä®Ä®Ä®Ä®Ä®Ä®Ç                     | 3922/16090 [00:01<00:03, 3865.81it/s]|--->:  27%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ñ                    | 4326/16090 [00:01<00:03, 3898.72it/s]|--->:  30%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ü                   | 4755/16090 [00:01<00:02, 3941.77it/s]|--->:  32%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Å                   | 5155/16090 [00:01<00:02, 3816.77it/s]|--->:  35%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ç                  | 5619/16090 [00:01<00:02, 3996.80it/s]|--->:  37%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ö                 | 6023/16090 [00:01<00:02, 3977.48it/s]|--->:  40%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®á                | 6441/16090 [00:02<00:02, 3982.52it/s]|--->:  43%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Å                | 6843/16090 [00:02<00:02, 3972.39it/s]|--->:  45%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ñ               | 7242/16090 [00:02<00:02, 3922.08it/s]|--->:  47%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ü              | 7642/16090 [00:02<00:02, 3943.69it/s]|--->:  50%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä              | 8100/16090 [00:02<00:01, 4100.89it/s]|--->:  53%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ç             | 8511/16090 [00:02<00:01, 4056.62it/s]|--->:  55%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ñ            | 8918/16090 [00:02<00:01, 4036.87it/s]|--->:  58%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®á           | 9322/16090 [00:02<00:01, 4003.73it/s]|--->:  61%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Å           | 9741/16090 [00:02<00:01, 4058.24it/s]|--->:  63%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä          | 10148/16090 [00:02<00:01, 3942.44it/s]|--->:  66%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ç         | 10579/16090 [00:03<00:01, 4024.31it/s]|--->:  68%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ö        | 10983/16090 [00:03<00:01, 4017.99it/s]|--->:  71%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä        | 11389/16090 [00:03<00:01, 4029.77it/s]|--->:  74%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ç       | 11831/16090 [00:03<00:01, 4025.59it/s]|--->:  76%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ñ      | 12250/16090 [00:03<00:00, 4050.97it/s]|--->:  79%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ü     | 12690/16090 [00:03<00:00, 4050.90it/s]|--->:  81%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Å     | 13104/16090 [00:03<00:00, 3993.49it/s]|--->:  84%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®É    | 13526/16090 [00:03<00:00, 3991.38it/s]|--->:  87%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ö   | 13952/16090 [00:03<00:00, 4067.82it/s]|--->:  89%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä   | 14360/16090 [00:04<00:00, 4059.69it/s]|--->:  92%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ç  | 14767/16090 [00:04<00:00, 4006.04it/s]|--->:  94%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ö | 15182/16090 [00:04<00:00, 3955.05it/s]|--->:  97%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ü| 15644/16090 [00:04<00:00, 4071.81it/s]|--->: 100%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Å| 16052/16090 [00:04<00:00, 4059.21it/s]|--->: 100%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä| 16090/16090 [00:04<00:00, 3634.57it/s]
+
+Written output file: B2DANISO_BG.h5
+
+Memory used (estimated): ~335.9 MB host + ~1.6 GB device
+Time taken: 4.4439 seconds
+
+=== Simulation completed in 13.2596 seconds ====================================
+

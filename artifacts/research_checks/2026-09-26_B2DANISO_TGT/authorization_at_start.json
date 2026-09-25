@@ -5,9 +5,18 @@
   "user_instruction": "整夜运行授权：证据到位时可主动解除旧约束（含新仿真批次），每次解除须写明依据留痕（2026-09-26 会话）",
   "target_solver": "gprMax 4.0.0",
   "source_root_on_current_machine": "E:/gprMax-v.4.0.0/gprMax-v.4.0.0",
-  "batch_id": "dep3d_gold_v1_consumed",
-  "approved_to_simulate": false,
-  "approved_run_ids": [],
+  "batch_id": "dep3d_gold_v1",
+  "approved_to_simulate": true,
+  "approved_run_ids": [
+    "B2D5CM_BG",
+    "B2D5CM_TGT",
+    "B2DANISO_BG",
+    "B2DANISO_TGT",
+    "DEP3D_5CM_BG",
+    "DEP3D_5CM_TGT",
+    "DEP3D_ANISO_BG",
+    "DEP3D_ANISO_TGT"
+  ],
   "approved_compute_budget": {
     "wall_minutes": 40,
     "job_commit_GiB": 20,
@@ -172,20 +181,8 @@
     "postprocessing": "Prefer official CPU implementation"
   },
   "execution_outcome": {
-    "status": "completed",
-    "attempts_consumed": 8,
-    "runs": {
-      "B2D5CM_BG": {"exit_code": 0, "wall_s": 910.813, "peak_job_commit_bytes": 2324672512},
-      "B2D5CM_TGT": {"exit_code": 0, "wall_s": 910.562, "peak_job_commit_bytes": 2322751488},
-      "B2DANISO_BG": {"exit_code": 0, "wall_s": 910.843, "peak_job_commit_bytes": 2532499456},
-      "B2DANISO_TGT": {"exit_code": 0, "wall_s": 910.609, "peak_job_commit_bytes": 2530480128},
-      "DEP3D_5CM_BG": {"exit_code": 0, "wall_s": 916.078, "peak_job_commit_bytes": 8567218176},
-      "DEP3D_5CM_TGT": {"exit_code": 0, "wall_s": 916.156, "peak_job_commit_bytes": 8565354496},
-      "DEP3D_ANISO_BG": {"exit_code": 0, "wall_s": 920.218, "peak_job_commit_bytes": 14976286720},
-      "DEP3D_ANISO_TGT": {"exit_code": 0, "wall_s": 919.984, "peak_job_commit_bytes": 14979588096}
-    },
-    "acceptance": "all supervision.json reason=completed; all h5 Ex traces finite; peak commit below 20GiB job cap; archives at artifacts/research_checks/2026-09-26_<RUN>/ with record.json sha256 manifests",
-    "wall_time_note": "per-run wall ~911-920s is dominated by nvcc kernel compilation per distinct material/kernel configuration plus solve; the venv python launcher shim exits early so most of the solve appears as supervisor state waiting_descendants - supervised work, not idle hang"
+    "status": "ready_not_started",
+    "attempts_consumed": 0
   },
   "note": "dep3d_gold_v1: 4 2D same-grid controls + 4 3D gold runs, serial, fail-abort. Design: docs/research/2026-09-26_dep3d_gold_design.md. Physical/training labels remain disabled."
 }

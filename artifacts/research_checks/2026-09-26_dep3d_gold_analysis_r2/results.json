@@ -1,0 +1,310 @@
+{
+  "batch": "dep3d_gold_v1",
+  "frequency_Hz": "linspace(20e6,170e6,501)",
+  "time_window_ns": 1200,
+  "tail_windows_ns": {
+    "main": 200,
+    "robustness": 400
+  },
+  "diagnostic_window_ns": [
+    440.0,
+    600.0
+  ],
+  "per_pair": {
+    "B2D5CM": {
+      "dimension": "2D",
+      "grid": {
+        "nx_ny_nz": [
+          1,
+          640,
+          1000
+        ],
+        "dx_dy_dz": [
+          0.05,
+          0.05,
+          0.05
+        ]
+      },
+      "dt_s": 1.1793271683748422e-10,
+      "transformed_samples": 10176,
+      "tail_taper_fraction": {
+        "main_200": 0.16664209905660377,
+        "robust_400": 0.33330876572327045
+      },
+      "main_200ns": {
+        "time_diff_peak_V_m": 0.00025569839848493814,
+        "envelope_peak_time_ns": 539.8959776820028,
+        "spectral_peak_frequency_MHz": 162.8,
+        "spectral_peak_phase_deg": 158.3507326370706,
+        "normalized_mag_dB_at_selected_MHz": {
+          "20": -11.802152098713508,
+          "50": -8.353050219287603,
+          "80": -6.9029083535400755,
+          "110": -2.0485001538512018,
+          "140": -6.159690720175336,
+          "170": -0.23424938807922951
+        }
+      },
+      "robustness_400ns": {
+        "spectral_peak_frequency_MHz": 162.5,
+        "relative_L2_vs_main": 0.0002951343583109607
+      },
+      "diagnostic_window_440_600ns": {
+        "window_envelope_peak_time_ns": 539.8959776820028,
+        "window_envelope_peak_to_global_peak_ratio": 1.0,
+        "predicted_two_way_arrival_ns_note": "air 100.1 + cover 80.0 + rock 340.2 \u2248 520 ns (design \u00a79.3)"
+      },
+      "note": "time_diff_peak_V_m carries the pair-internal source normalization; not comparable across dimensions"
+    },
+    "B2DANISO": {
+      "dimension": "2D",
+      "grid": {
+        "nx_ny_nz": [
+          1,
+          640,
+          2000
+        ],
+        "dx_dy_dz": [
+          0.05,
+          0.05,
+          0.025
+        ]
+      },
+      "dt_s": 7.458719917162793e-11,
+      "transformed_samples": 16089,
+      "tail_taper_fraction": {
+        "main_200": 0.16662005096649884,
+        "robust_400": 0.3333177947666107
+      },
+      "main_200ns": {
+        "time_diff_peak_V_m": 0.0004494739561202721,
+        "envelope_peak_time_ns": 536.5057236415198,
+        "spectral_peak_frequency_MHz": 169.7,
+        "spectral_peak_phase_deg": 176.3573921685368,
+        "normalized_mag_dB_at_selected_MHz": {
+          "20": -14.3158578531931,
+          "50": -10.674648384818937,
+          "80": -9.09562626608724,
+          "110": -3.4754265581288184,
+          "140": -7.981605672800088,
+          "170": -0.003769277580339763
+        }
+      },
+      "robustness_400ns": {
+        "spectral_peak_frequency_MHz": 169.7,
+        "relative_L2_vs_main": 0.0002711408269876657
+      },
+      "diagnostic_window_440_600ns": {
+        "window_envelope_peak_time_ns": 536.5057236415198,
+        "window_envelope_peak_to_global_peak_ratio": 1.0,
+        "predicted_two_way_arrival_ns_note": "air 100.1 + cover 80.0 + rock 340.2 \u2248 520 ns (design \u00a79.3)"
+      },
+      "note": "time_diff_peak_V_m carries the pair-internal source normalization; not comparable across dimensions"
+    },
+    "DEP3D_5CM": {
+      "dimension": "3D",
+      "grid": {
+        "nx_ny_nz": [
+          160,
+          200,
+          1000
+        ],
+        "dx_dy_dz": [
+          0.05,
+          0.05,
+          0.05
+        ]
+      },
+      "dt_s": 9.629166007732353e-11,
+      "transformed_samples": 12463,
+      "tail_taper_fraction": {
+        "main_200": 0.1666332343737463,
+        "robust_400": 0.33328652812324483
+      },
+      "main_200ns": {
+        "time_diff_peak_V_m": 5.453057414003121e-07,
+        "envelope_peak_time_ns": 541.2554212946355,
+        "spectral_peak_frequency_MHz": 168.5,
+        "spectral_peak_phase_deg": -140.03051820814048,
+        "normalized_mag_dB_at_selected_MHz": {
+          "20": -29.00144650358502,
+          "50": -17.651176215852256,
+          "80": -14.249778537734885,
+          "110": -4.950417254868357,
+          "140": -8.700805610037758,
+          "170": -0.03966415614186918
+        }
+      },
+      "robustness_400ns": {
+        "spectral_peak_frequency_MHz": 168.5,
+        "relative_L2_vs_main": 0.0001289894047053451
+      },
+      "diagnostic_window_440_600ns": {
+        "window_envelope_peak_time_ns": 541.2554212946355,
+        "window_envelope_peak_to_global_peak_ratio": 1.0,
+        "predicted_two_way_arrival_ns_note": "air 100.1 + cover 80.0 + rock 340.2 \u2248 520 ns (design \u00a79.3)"
+      },
+      "note": "time_diff_peak_V_m carries the pair-internal source normalization; not comparable across dimensions"
+    },
+    "DEP3D_ANISO": {
+      "dimension": "3D",
+      "grid": {
+        "nx_ny_nz": [
+          160,
+          200,
+          2000
+        ],
+        "dx_dy_dz": [
+          0.05,
+          0.05,
+          0.025
+        ]
+      },
+      "dt_s": 6.808848581238543e-11,
+      "transformed_samples": 17625,
+      "tail_taper_fraction": {
+        "main_200": 0.1666241134751773,
+        "robust_400": 0.3333191489361702
+      },
+      "main_200ns": {
+        "time_diff_peak_V_m": 2.058312196989709e-06,
+        "envelope_peak_time_ns": 543.4822937544606,
+        "spectral_peak_frequency_MHz": 170.0,
+        "spectral_peak_phase_deg": -152.3595042854467,
+        "normalized_mag_dB_at_selected_MHz": {
+          "20": -31.749303129595297,
+          "50": -20.200650765390975,
+          "80": -16.666409712057465,
+          "110": -6.620598946459354,
+          "140": -10.425668053276587,
+          "170": 0.0
+        }
+      },
+      "robustness_400ns": {
+        "spectral_peak_frequency_MHz": 170.0,
+        "relative_L2_vs_main": 0.0001160755751351216
+      },
+      "diagnostic_window_440_600ns": {
+        "window_envelope_peak_time_ns": 543.4822937544606,
+        "window_envelope_peak_to_global_peak_ratio": 1.0,
+        "predicted_two_way_arrival_ns_note": "air 100.1 + cover 80.0 + rock 340.2 \u2248 520 ns (design \u00a79.3)"
+      },
+      "note": "time_diff_peak_V_m carries the pair-internal source normalization; not comparable across dimensions"
+    }
+  },
+  "convergence_3d_dz_refinement": {
+    "comparison": "DEP3D_ANISO (dz 2.5 cm) vs DEP3D_5CM (dz 5 cm), TGT-BG differences, 200 ns tail",
+    "envelope_peak_time_difference_ns": 160.75691500304208,
+    "spectral_peak_frequency_difference_MHz": 1.5,
+    "normalized_spectrum_shape_correlation": 0.995126992934695,
+    "waveform_max_normalized_correlation": 0.17990970910829587,
+    "waveform_optimal_lag_ns": 21.85820683755244,
+    "threshold_commitment": "none: differences and their direction are reported; no pre-declared convergence criterion (design \u00a79.2)"
+  },
+  "cross_dimension_same_spacing": {
+    "B2D5CM_vs_DEP3D_5CM": {
+      "pair": "B2D5CM_vs_DEP3D_5CM",
+      "envelope_peak_time_difference_ns": -71.01629070231797,
+      "spectral_peak_frequency_difference_MHz": -5.699999999999989,
+      "normalized_spectrum_shape_correlation": 0.934561246590572,
+      "normalized_mag_trend_difference_dB": {
+        "20": 17.19929440487151,
+        "50": 9.298125996564654,
+        "80": 7.34687018419481,
+        "110": 2.9019171010171556,
+        "140": 2.5411148898624223,
+        "170": -0.19458523193736033
+      },
+      "waveform_max_normalized_correlation": 0.7379444002386709,
+      "waveform_optimal_lag_ns": 0.9434617346998738,
+      "phase_difference_linear_fit": {
+        "slope_rad_per_Hz": 8.596477198822009e-10,
+        "equivalent_time_offset_ns": -0.13681718393692927,
+        "residual_std_deg": 5.508564411954464
+      },
+      "far_field_3d_to_2d_exploratory": {
+        "form": "D_2D_equiv(f) \u221d D_3D(f) / sqrt(i*2*pi*f); constants omitted, shape only",
+        "transformed_vs_2D_shape_correlation": 0.9671315289751267,
+        "transformed_normalized_mag_dB_at_selected_MHz": {
+          "20": -19.759726132494507,
+          "50": -12.388855931482121,
+          "80": -11.028658079923993,
+          "110": -3.1123237787202793,
+          "140": -7.910065639089812,
+          "170": -0.0921330421942824
+        }
+      }
+    },
+    "B2DANISO_vs_DEP3D_ANISO": {
+      "pair": "B2DANISO_vs_DEP3D_ANISO",
+      "envelope_peak_time_difference_ns": -53.72181530597214,
+      "spectral_peak_frequency_difference_MHz": -0.30000000000001137,
+      "normalized_spectrum_shape_correlation": 0.9581691148207545,
+      "normalized_mag_trend_difference_dB": {
+        "20": 17.433445276402196,
+        "50": 9.526002380572038,
+        "80": 7.570783445970225,
+        "110": 3.1451723883305354,
+        "140": 2.444062380476499,
+        "170": -0.003769277580339763
+      },
+      "waveform_max_normalized_correlation": 0.7322646455402236,
+      "waveform_optimal_lag_ns": 0.37293599585813964,
+      "phase_difference_linear_fit": {
+        "slope_rad_per_Hz": 2.9054440369338244e-10,
+        "equivalent_time_offset_ns": -0.04624157803548895,
+        "residual_std_deg": 5.45240813391066
+      },
+      "far_field_3d_to_2d_exploratory": {
+        "form": "D_2D_equiv(f) \u221d D_3D(f) / sqrt(i*2*pi*f); constants omitted, shape only",
+        "transformed_vs_2D_shape_correlation": 0.978605997180031,
+        "transformed_normalized_mag_dB_at_selected_MHz": {
+          "20": -22.45511387245237,
+          "50": -14.885861594968423,
+          "80": -13.392820368194162,
+          "110": -4.7300365842588645,
+          "140": -9.582459196276229,
+          "170": 0.0
+        }
+      }
+    },
+    "confounds": "even with aligned grid spacing, each cross-dimension pair mixes (i) the measured dimension effect (2D x-infinite target/line source/cylindrical spreading vs 3D 2 m finite target/point source/spherical spreading), (ii) lateral domain width (2D 32 m vs 3D 10 m) and (iii) target y position (2D y 14-18 vs 3D y 3-7; same relative position, different absolute distance to the lateral PML). These are not clean dimension factors; the two pair differences must not be subtracted from each other as if additive (design \u00a79.3)."
+  },
+  "vs_dep2d_zfine2_chain": {
+    "reference": "ZFINE2_200 (DEP 2D chain TGT-BG, 200 ns tail) from artifacts\\research_checks\\2026-09-25_deep_zfine2_analysis_r1\\arrays.npz",
+    "grid_alignment": "none (dy 12.5 mm / dz 3.125 mm vs 5 cm-class grids); spectra directly comparable on the 501-point grid",
+    "pairs": {
+      "B2D5CM": {
+        "relative_L2_difference": 1.13788727757095,
+        "normalized_spectrum_shape_correlation": 0.9822996875544819
+      },
+      "B2DANISO": {
+        "relative_L2_difference": 0.792663673342066,
+        "normalized_spectrum_shape_correlation": 0.9992921358166639
+      }
+    }
+  },
+  "hard_limits": {
+    "cross_dimension_absolute_amplitude_compared": false,
+    "phase_not_transferable_across_dimensions": true,
+    "phase_reported_only_as": "linear fit of the phase difference vs frequency; the equivalent time offset is a formal quantity, not a physical delay",
+    "physical_acceptance_threshold": null,
+    "training_labels_generated": false,
+    "clean_truth_generated": false,
+    "grid_convergence_certified": false,
+    "far_field_transform_is_conclusion_basis": false,
+    "conclusions_scope": "limited to the dep3d_gold_v1 scenario family and the grids analysed; not extrapolated to field data",
+    "solver_invoked": false
+  },
+  "inputs": {
+    "artifacts\\research_checks\\2026-09-26_B2D5CM_BG\\B2D5CM_BG.h5": "d7c20fb5309dab4befcb5bc986d5dbb8d97bb920a2ea96065918c0cbd667a0aa",
+    "artifacts\\research_checks\\2026-09-26_B2D5CM_TGT\\B2D5CM_TGT.h5": "95d220fe42f2c7ac1ce48021f451d1892ea0a523a41005f8df8093b9ae071ce1",
+    "artifacts\\research_checks\\2026-09-26_B2DANISO_BG\\B2DANISO_BG.h5": "b5a345e134fd1ee719746731f33ee2a3a6d7c3334e44cb6f3f9a7a6e0d1b3328",
+    "artifacts\\research_checks\\2026-09-26_B2DANISO_TGT\\B2DANISO_TGT.h5": "a9fe0937e15190b25f54abef05498f2435d0485bfa1485e804724fbdea63fdc9",
+    "artifacts\\research_checks\\2026-09-26_DEP3D_5CM_BG\\DEP3D_5CM_BG.h5": "16767b6cba87297b6e366697da7dee00f103326990f1ef44a7a96af0d9fa93bb",
+    "artifacts\\research_checks\\2026-09-26_DEP3D_5CM_TGT\\DEP3D_5CM_TGT.h5": "3f30b46b56136d998e505dd51a82de6ec065c0536bc6b57433683a25c3936925",
+    "artifacts\\research_checks\\2026-09-26_DEP3D_ANISO_BG\\DEP3D_ANISO_BG.h5": "914f0a4c2e70ba9617ac70c08567aba0b8166888f500b3ec599be555dee2ed70",
+    "artifacts\\research_checks\\2026-09-26_DEP3D_ANISO_TGT\\DEP3D_ANISO_TGT.h5": "3df750b4bf30c315abb7083184ab0ed2345fc80367e3e78433700311a5fb4096",
+    "artifacts\\research_checks\\2026-09-25_deep_zfine2_analysis_r1\\arrays.npz": "500487e0e0c6137b0b827dd8a0afb046a085c9a865a663d7e29a3ae8ecd0f9a6"
+  }
+}
