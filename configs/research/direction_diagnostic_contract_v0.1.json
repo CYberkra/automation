@@ -1,0 +1,17 @@
+{
+  "schema": "direction-diagnostic-contract/0.1",
+  "extends": "configs/research/evaluation_label_contract_v0.2.json",
+  "status": "numerical_diagnostic_availability_only",
+  "parameter": "direction_error_bound",
+  "definition": "Caller-declared L2 absolute error budget of the processed output in the fixed evaluation mask, in input amplitude units",
+  "default": null,
+  "missing_budget": "signed_cosine=null; direction_error_bound_not_declared",
+  "zero_output": "signed_cosine=null; zero_output",
+  "output_norm_not_above_budget": "signed_cosine=null; output_direction_numerically_unresolved",
+  "zero_budget": "Explicit exact-array assumption; never automatic for SVD/FDTD",
+  "retained_metrics": ["nrmse", "amplitude_factor", "amplitude_error", "shape_residual"],
+  "not_claimed": ["small angular error merely because output norm exceeds budget", "physical detection threshold", "SVD error bound inferred from machine epsilon alone", "FDTD uncertainty inferred from two-grid difference"],
+  "physical_thresholds_changed": false,
+  "training_enabled": false,
+  "field_data_allowed": false
+}

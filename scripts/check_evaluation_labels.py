@@ -22,7 +22,8 @@ def run():
     def metric(y, s, mask=None, **kwargs):
         mask = np.ones(s.shape, bool) if mask is None else mask
         return waveform_metrics(y, s, mask, reference_kind=kwargs.pop("reference_kind", "complete_clean"),
-                                state=kwargs.pop("state", "isolated"), **kwargs)
+                                state=kwargs.pop("state", "isolated"),
+                                direction_error_bound=kwargs.pop("direction_error_bound", 0.), **kwargs)
 
     def row(key, d=None, r=None, available=True):
         return {"id": key, "available": available,

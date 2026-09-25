@@ -40,7 +40,8 @@
       "weak_event_rows": 12,
       "candidate_rows": 42,
       "report": "docs/research/2026-09-24_damage_pilot_findings.md",
-      "delivery_check": "artifacts/research_checks/2026-09-24_damage_pilot_delivery.json"
+      "delivery_check": "artifacts/research_checks/2026-09-24_damage_pilot_delivery.json",
+      "source_commit": "251986ee9a362c466a77124d5256fad7541eeff6"
     },
     {
       "id": "gprmax_v4_source_audit",
@@ -593,17 +594,26 @@
       "directory": "artifacts/research_checks/2026-09-25_deep_yfine_analysis",
       "tracked": true,
       "solver_executed": false
+    },
+    {
+      "id": "review_fixes_9303298",
+      "status": "verified_array_and_process_regressions_only",
+      "directory": "artifacts/research_checks/2026-09-25_review_fixes",
+      "tracked": true,
+      "solver_executed": false,
+      "training_executed": false
     }
   ],
   "default_array_verification": {
     "command": "python scripts/verify_workspace.py",
-    "expected_checks": 136,
+    "expected_checks": 157,
     "composition": [
       10,
       23,
       5,
       26,
-      72
+      72,
+      21
     ],
     "uses_field_data": false,
     "calls_solver": false,
@@ -614,5 +624,6 @@
     "confirm target depth meaning and independently constrain site cover thickness/moisture/material parameters",
     "HSG ratio controls support coupling lag (r-1)/(2r) main dt; resolve intended source/coupling/output timing before heterogeneous local model. This is a historical 3D subtask; current live 2D batch is listed separately.",
     "YFINE pair completed and replayed: lateral refinement changes target complex L2 0.2103%, max phase0.203deg at2.49x runtime. Next budget dy12.5/dz3.125mm control; no active solver and no physical/training labels."
-  ]
+  ],
+  "direction_diagnostic_addendum": "configs/research/direction_diagnostic_contract_v0.1.json"
 }

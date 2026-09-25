@@ -2,6 +2,13 @@
 
 > 当前状态以 START_HERE.md 为准。下述早期“未批准/未验证/未启动”描述已被用户后续GPU仿真和自主设计授权及实际完成记录取代，不作为当前执行状态。
 
+## 2026-09-25 审查修复与本机接续
+
+- 用户已授权自主修复、验证后合并并继续研究。审查修复及评价增补见 [方向诊断与修复记录](docs/research/2026-09-25_direction_diagnostic_update.md)。常规 Git 更新只做与修改相关的必要检查，不重复整套克隆/环境重建。
+- 评价仍沿用 v0.2；附加 [方向诊断契约](configs/research/direction_diagnostic_contract_v0.1.json)。`direction_error_bound` 未声明或输出不足以区分零时，余弦缺失并给原因；D/A/H 保留。不能用任意 eps 常数代替 SVD/FDTD 误差预算。
+- 当前纯数组回归为 157 项（原 136 + 方向诊断 21），Windows 监督器另有 10 项 CPU 检查。历史证据按其源码提交核验，不用当前源码哈希覆盖旧记录。
+- YFINE 已完成；待执行 gate 已关闭，旧契约保留为 `last_completed_execution_contract`。自主 GPU 研究授权保留，新批次须重新冻结具体契约，不重跑已消耗 attempt。当前电脑的 V4/CUDA 环境尚未核验。
+
 ## 最新接续与用户决定（2026-09-24，优先于旧阶段描述）
 
 - 新会话先读 [START_HERE.md](START_HERE.md)、[持久决策](docs/research/decision_log.md)和[产物索引](docs/research/research_artifact_registry.json)，不要重做已完成的损伤阶梯首版。
@@ -63,7 +70,7 @@
 - 开始工作检查 `git status`、远端及当前分支；工作区干净时用 `git pull --ff-only` 同步。多人/多机并行使用独立分支；不强推、不清除别人的未提交改动、不重写共享历史。提交只包含当前工作及明确纳入的研究基线。
 - `.gitignore` 排除原始测线/钻孔资料、派生资料审计缓存、公开论文缓存、环境和本机调度文件。不得用 `git add -f` 绕过排除上传这些内容。论文 URL、阅读范围和哈希保留在研究台账；用户自行管理定时任务，不重新配置或迁移调度。
 - `.gitattributes` 禁止 Git 自动转换换行，保持科学证据按字节计算的哈希。历史输出不覆盖；代码更新后追加新证据，不把旧结果的哈希改成新代码哈希。
-- `python scripts/verify_workspace.py` 可在纯克隆中复跑当前五组共136项数组检查，只依赖NumPy（核心固定版本见 `requirements.txt`）。新结果写入忽略的 `artifacts/local_checks/`。这不是正演、训练或实测验证；初始化新电脑不要自动运行原始资料审计脚本。
+- `python scripts/verify_workspace.py` 可在纯克隆中复跑当前六组共157项数组检查，只依赖NumPy（核心固定版本见 `requirements.txt`）。新结果写入忽略的 `artifacts/local_checks/`。这不是正演、训练或实测验证；初始化新电脑不要自动运行原始资料审计脚本。
 - 第五次续研交接是历史记录；损伤阶梯与 D 的参考误差包络已完成首版，见[结果](docs/research/2026-09-24_damage_pilot_findings.md)，当前下一步以 START_HERE 为准。
 
 ## 目录与入口

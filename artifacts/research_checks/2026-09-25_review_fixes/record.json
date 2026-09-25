@@ -1,0 +1,71 @@
+{
+  "schema": "review-fix-evidence/1",
+  "date": "2026-09-25",
+  "reviewed_base": "9303298",
+  "resolved_findings": [
+    "archive_overwrite_on_import",
+    "root_exit_before_descendants",
+    "unresolved_output_direction"
+  ],
+  "array_checks_passed": 157,
+  "windows_supervisor_checks_passed": 10,
+  "comparison_scripts_checked": 2,
+  "joint_role_rows": 42,
+  "joint_role_missing_cosines": 84,
+  "max_abs_fidelity_metric_delta": 8.881784197001252e-16,
+  "launcher_checks_passed": true,
+  "disabled_gate_preflight": "explicit rejection, no traceback or solver",
+  "source_sha256": {
+    "scripts/bounded_windows_process.py": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
+    "scripts/check_windows_supervisor.py": "aaebd08c1ee2e61e95dec1eee9dd61362dcd336e3d17352096102bd804f6c914",
+    "scripts/compare_hsg_clock.py": "5e4f4f3e3c99db239e1d5aa93d350853bb27d9eaee72744dee5d768a3caa8b18",
+    "scripts/compare_yz_refinement.py": "ac9f287a3ebc20efcde11cee3377372a24cde8af46a0df6a8d02b1516003dc27",
+    "scripts/research_spectral_metrics.py": "425864b34da6766cfd0fd0f102fe4ab0dee93c5db25fe660991c45954510001b",
+    "scripts/research_evaluation_contract.py": "03c5b48a1df3b0ffb0fe7f2ca380857ee8d452937621a28837efe9d4b2917eb5",
+    "scripts/check_direction_diagnostics.py": "dfed2d34f71def65831ed5c3e0856348f40c846268c194fc46d1d8c1be14cb35",
+    "scripts/study_joint_roles.py": "f1ba5ce42c1825dc5dfd11768b510e2f5c24a9e4443ffbfe0ad54706c55728a0",
+    "scripts/run_approved_airborne.py": "27ad869684c97df921eb06c7915a8f772ee0d0e0da31e05d8aaf580fcc5e4515",
+    "scripts/check_api_launcher.py": "2c8f2fd5a86dc4c27ea0c223f16da613506a4fb831e87fa335451ca83b365e67",
+    "scripts/check_handoff.py": "bd22f108e5d9a475437df34b6f2fca261e776184861931aeb668841dbf3f1afb",
+    "scripts/verify_workspace.py": "3732fcda7719a2a5bc7e685958e7bd5ef9a1b3c81a33ca1f0c903e22edb22dd1"
+  },
+  "artifact_sha256": {
+    "comparison_checks.json": "941f154da793d68d18eb20ac7f4e04ade97cd9142c40b73a695b165bed77bd7d",
+    "joint_roles_results.json": "2b1313c498fc57821a96505b33fe0fa4de2cb17a08934f89c349704843214bb6",
+    "supervisor_checks.json": "f1468b3cd1c35d6f808bbbdba67f036c684905c61972c93e61e63e4340884127",
+    "array_checks/check_direction_diagnostics.json": "dcde354453d32f82e6c9cfbe40dc377c07228cfec113f6344460b511dbdcf747",
+    "array_checks/check_evaluation_labels.json": "5dc2f361b149bae8b4a21dae139b64b2daa2b43cc6d1740221a8152ea3170f45",
+    "array_checks/check_manual_weight_tradeoff.json": "49fa67ff526a4c8a0f99e7627490169a2aeb8cf68f28c23dc40423cd4c52cded",
+    "array_checks/check_operator_contract.json": "abb6e486c97d94ba4f32dd6f208ac5616658531af74e13aebb8bdedeb4bdecc2",
+    "array_checks/check_processing_algebra.json": "d5e744013cb3833da1e883c778b327c68aa9b6b7ef9839f4d4f45cda98e3129d",
+    "array_checks/summary.json": "ae3ded9ff4b611d9db5d3ced4ccd936bde4a0f2251236882396711a0f76a0c0a",
+    "array_checks/damage_pilot/candidates.csv": "073e8448629695ddf0a8bcb499a1764046f4735f8ae37372ef1d5d9662146350",
+    "array_checks/damage_pilot/candidate_arrays.npz": "ab8c24bf24eaa3aebfa152d51ed5faa883af767ccdb7833ff9e0369574ef2bb9",
+    "array_checks/damage_pilot/damage.csv": "25686d60e418b05eb89bc22e87f0268931e0e857ca79f5cfeb848337da7db746",
+    "array_checks/damage_pilot/gain.csv": "d0ab74e4e1f1de510948149376c228e6250300b9631948f376719140b45aec09",
+    "array_checks/damage_pilot/results.json": "2c71b5f59e65a04d61e85356a8dfa6236d07074ea2ba5cb2aed385639bbcf943",
+    "array_checks/damage_pilot/uncertainty_examples.csv": "e806499420d9041b3dae10ea55f0aaf51037460d5feeb403ebd8d2b7fd135cec",
+    "array_checks/damage_pilot/weak_events.csv": "27f725e2e56214de86addd849c7df485537a2d0094e351f401aff21546a93384"
+  },
+  "joint_role_arrays": {
+    "path": "artifacts/local_checks/review_fix_joint_roles_r1/arrays.npz",
+    "sha256": "8a56747999565fa472597a43b5095c30f8267da7e2430c1772427007092969f1",
+    "tracked": false,
+    "reason": "Reproducible duplicate arrays retained locally; numeric results archived."
+  },
+  "commands": [
+    "python scripts/verify_workspace.py --output-dir artifacts/local_checks/<new-directory>",
+    "python scripts/check_windows_supervisor.py --output artifacts/local_checks/<new-directory>",
+    "python scripts/study_joint_roles.py --output artifacts/local_checks/<new-directory>",
+    "python scripts/check_api_launcher.py",
+    "python scripts/check_handoff.py"
+  ],
+  "limitations": [
+    "Constructed arrays and CPU process lifecycle only; no new physical validation.",
+    "No declared output direction error budget: cosine unavailable, fidelity metrics retained.",
+    "Root exit zero plus empty job does not prove every child exited zero; application must propagate child failures."
+  ],
+  "fdtd_executed": false,
+  "training_executed": false,
+  "field_data_used": false
+}

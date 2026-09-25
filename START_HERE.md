@@ -1,8 +1,12 @@
 # 接续入口：无需聊天上下文
 
-更新：2026-09-25。实际项目仓库为 `E:/automation_djh/automation_repo`，远端 `CYberkra/automation`。以本页当前状态为准；历史报告中的旧“下一步”不代表待办。
+更新：2026-09-25。当前接续工作区为 `D:/自动处理`；另一台电脑历史工作区为 `E:/automation_djh/automation_repo`，远端 `CYberkra/automation`。以本页当前状态为准；历史报告中的旧“下一步”不代表待办。
 
 ## 当前状态（优先于下方历史记录）
+
+**本机已接续并完成三项审查修复。** 比较脚本另存且拒绝覆盖；监督器等待进程组清空；余弦诊断缺少数值误差预算时标为缺失。157项数组、10项监督器检查通过，42行共同层/目标保真结论保持。见[修复及评价增补](docs/research/2026-09-25_direction_diagnostic_update.md)与[验证记录](artifacts/research_checks/2026-09-25_review_fixes/record.json)。下一步建立算子误差预算并继续准备垂向细化资源方案；没有新正演或训练。
+
+当前无待执行仿真契约；YFINE已消耗契约保留为历史，不因修复代码而改写原授权快照。用户自主GPU研究授权保留，本机V4/CUDA环境需独立核验。旧路径、PID、会话号与硬件耗时属于原机器。
 
 **YFINE两组已完成，无本批求解任务运行。** GPU共36分7秒；相对ZFINE，目标全带复数变化0.2103%、最大相位变化0.203°，耗时约2.49倍。原始输出已归档，分析复算一致。[结果及下一步](docs/research/2026-09-25_deep_yfine_results.md)。当前平层场景优先保留横向12.5mm，下一步预算垂向3.125mm配对；尚未构建或启动。旧会话68122与21056均已结束，不重启attempt。
 
@@ -71,9 +75,9 @@
 
 ## 新地点的最短接续步骤
 
-1. 获取最新main，检查git status，保留已有未提交改动。本机长期遗留设备图片`78210f81764e80000a4d2cd27c2a52c3.png`缺失；交接检查仅因此失败，不自动恢复或提交其删除。
+1. 获取最新main，检查git status，保留已有未提交改动。原电脑曾有设备图片缺失的本地状态；本次接续图片存在且交接检查通过，不把旧缺失记录当当前状态。
 2. 先读本页当前状态、[YFINE设计](docs/research/2026-09-25_deep_yfine_design.md)与[ZFINE结果](docs/research/2026-09-25_deep_zfine_results.md)；需要背景再查[V4阅读](docs/research/2026-09-24_gprmax_v4_review.md)、[粉质粘土—砂岩简报](docs/research/2026-09-24_cover_sandstone_brief.md)、[损伤研究](docs/research/2026-09-24_damage_pilot_findings.md)。保留实测数据不用于当前开发。
-3. `python scripts/verify_workspace.py`为既有136项数组检查，不调用FDTD/实测/网络。无相关改动或疑点不重复跑。`python scripts/check_handoff.py`检查文件、链接、证据和当前执行契约；缺失图片须如实报告。
+3. `python scripts/verify_workspace.py`为157项数组检查，不调用FDTD/实测/网络。无相关改动或疑点不重复跑。`python scripts/check_handoff.py`检查文件、链接、历史来源提交和当前执行契约。
 4. 环境不随Git上传。GPU环境按上述说明复建；独立参考环境按最新报告及锁定依赖复建。不要把本机成功当成新机器核验，也不要调用可能启动FDTD的示例作导入检查。
 5. 每个研究单元保留设计、数据、代码、日志、来源/hash、失败与限制，更新本页/进度/运行索引，再显式暂存、提交、推送。跨地点并行用codex/前缀分支，不强推或重写共享历史。
 

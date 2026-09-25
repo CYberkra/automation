@@ -35,7 +35,8 @@ for role, low, high in [('interference', 0, 50), ('layer', 90, 240), ('target', 
 def contrast(y, truth, role):
     result = waveform_metrics(y, truth, saved[role+'_mask'], reference_kind='paired_contrast', state='isolated', scope='contrast')
     assert result['available'] and not result['absolute_preservation_eligible']
-    return result['metrics']
+    return {**result['metrics'], 'metric_reasons': result['metric_reasons'],
+            'direction_error_bound': result['direction_error_bound']}
 rows = []
 for config in [x for x in catalogue() if x['end_gain']==1]:
     cid = config['id']
@@ -64,7 +65,8 @@ for row in rows:
 result = dict(rows=rows, solver_invoked=False, training_eligible=False, unique_label=None,
     physical_target_reference_state='numerically_unresolved', constructed_only=True,
     checks=dict(identity_preserves_both_roles=True, full_mean_suppresses_direct_and_deletes_layer=True),
-    inputs={str(x): hashlib.sha256(x.read_bytes()).hexdigest() for x in (template, reference, Path(__file__), Path('docs/research/2026-09-25_joint_roles.md'))})
+    cosine_policy='No established SVD/output error budget: direction diagnostics are missing; NRMSE/amplitude losses retained.',
+    inputs={str(x): hashlib.sha256(x.read_bytes()).hexdigest() for x in (template, reference, Path(__file__), Path('scripts/research_evaluation_contract.py'), Path('scripts/research_operator_contract.py'), Path('docs/research/2026-09-25_joint_roles.md'))})
 (a.output/'results.json').write_text(json.dumps(result, indent=2)+'\n', encoding='utf-8')
 np.savez_compressed(a.output/'arrays.npz', **saved)
 print(json.dumps(dict(rows=len(rows), available=sum(r['available'] for r in rows), checks=result['checks'])))

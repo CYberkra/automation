@@ -36,10 +36,18 @@ def main():
     evidence = json.loads((result_dir/"results.json").read_text(encoding="utf-8"))
     bad_hashes = [name for name, expected in evidence["artifact_sha256"].items()
                   if hashlib.sha256((result_dir/name).read_bytes()).hexdigest() != expected]
+    # Historical evidence belongs to its recorded source revision, not today's code.
+    run_record = next(run for run in registry['runs'] if run['id'] == 'damage_pilot_r2')
+    source_commit = run_record['source_commit']
+    if not re.fullmatch(r'[0-9a-f]{40}', source_commit):
+        raise ValueError('Historical source commit must be a full SHA')
+    historical_sources_checked = 0
     for name, expected in evidence["source_sha256"].items():
-        source = ROOT/("docs/research" if name.endswith(".md") else "scripts")/name
-        if hashlib.sha256(source.read_bytes()).hexdigest() != expected:
-            bad_hashes.append(str(source.relative_to(ROOT)))
+        source = Path("docs/research" if name.endswith(".md") else "scripts")/name
+        content = subprocess.check_output(['git', 'show', f'{source_commit}:{source.as_posix()}'], cwd=ROOT)
+        historical_sources_checked += 1
+        if hashlib.sha256(content).hexdigest() != expected:
+            bad_hashes.append(f'{source_commit}:{source.as_posix()}')
     # A recorded user approval is valid; this checker must not silently demand
     # that every future run stay unapproved. Validate the exact bound contract.
     safe_gate = gate["approved_to_simulate"] is False and gate["approved_run_ids"] == []
@@ -69,6 +77,7 @@ def main():
             safe_gate = False
             gate_errors.append(type(exc).__name__)
     report = {"tracked_files": len(tracked), "entry_links_checked": links, "missing_links": missing_links,
+              "historical_source_commit": source_commit, "historical_sources_checked": historical_sources_checked,
               "missing_tracked_artifacts": missing_artifacts, "current_evidence_hash_mismatches": bad_hashes,
               "credential_pattern_files": secret_files, "missing_tracked_files": missing_tracked_files,
               "simulation_authorization_consistent": safe_gate, "authorization_errors": gate_errors,

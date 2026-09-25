@@ -1,0 +1,98 @@
+{
+  "schema": "direction-diagnostic-checks/1",
+  "checks": [
+    {
+      "id": "undeclared_budget_abstains",
+      "passed": true
+    },
+    {
+      "id": "missing_direction_does_not_drop_fidelity",
+      "passed": true
+    },
+    {
+      "id": "exact_fixture_identity",
+      "passed": true
+    },
+    {
+      "id": "exact_fixture_polarity",
+      "passed": true
+    },
+    {
+      "id": "zero_output_missing",
+      "passed": true
+    },
+    {
+      "id": "roundoff_sign_-1_missing",
+      "passed": true
+    },
+    {
+      "id": "roundoff_sign_-1_loss_retained",
+      "passed": true
+    },
+    {
+      "id": "roundoff_sign_1_missing",
+      "passed": true
+    },
+    {
+      "id": "roundoff_sign_1_loss_retained",
+      "passed": true
+    },
+    {
+      "id": "weak_resolved_output_not_zeroed",
+      "passed": true
+    },
+    {
+      "id": "unit_scale_invariant_1e-100",
+      "passed": true
+    },
+    {
+      "id": "unit_scale_invariant_1e-12",
+      "passed": true
+    },
+    {
+      "id": "unit_scale_invariant_1000000000000.0",
+      "passed": true
+    },
+    {
+      "id": "unit_scale_invariant_1e+100",
+      "passed": true
+    },
+    {
+      "id": "tiny_absolute_signal_resolved",
+      "passed": true
+    },
+    {
+      "id": "boundary_is_unresolved",
+      "passed": true
+    },
+    {
+      "id": "above_boundary_is_defined",
+      "passed": true
+    },
+    {
+      "id": "invalid_budget_-1.0",
+      "passed": true
+    },
+    {
+      "id": "invalid_budget_inf",
+      "passed": true
+    },
+    {
+      "id": "invalid_budget_nan",
+      "passed": true
+    },
+    {
+      "id": "budget_does_not_promote_physical_reference",
+      "passed": true
+    }
+  ],
+  "evidence_level": "constructed_array_error_budgets_only",
+  "numpy": "2.2.6",
+  "physical_thresholds_frozen": false,
+  "fdtd_executed": false,
+  "training_executed": false,
+  "source_sha256": {
+    "check_direction_diagnostics.py": "dfed2d34f71def65831ed5c3e0856348f40c846268c194fc46d1d8c1be14cb35",
+    "research_evaluation_contract.py": "03c5b48a1df3b0ffb0fe7f2ca380857ee8d452937621a28837efe9d4b2917eb5"
+  }
+}

@@ -1,7 +1,17 @@
 """Exercise reviewed API copy/execution and changed-input rejection; no solver."""
 import os,tempfile
 from pathlib import Path
-from run_approved_airborne import solver_code
+from run_approved_airborne import solver_code, pending_contract
+
+for gate in ({'approved_to_simulate': False},
+             {'approved_to_simulate': False, 'approved_execution_contract': {'run_id': 'consumed'}},
+             {'approved_to_simulate': True}):
+    try:
+        pending_contract(gate)
+    except SystemExit as exc:
+        assert 'No pending approved execution contract' in str(exc)
+    else:
+        raise AssertionError('Inactive/missing contract must be rejected before environment checks')
 
 with tempfile.TemporaryDirectory() as td:
     source=Path(td)/'input.py'
@@ -16,4 +26,4 @@ with tempfile.TemporaryDirectory() as td:
         except AssertionError:pass
         else:raise AssertionError('Changed model was not rejected')
     finally:os.chdir(cwd)
-print('API launcher execution/copy/hash checks passed; no solver invoked')
+print('API launcher inactive-gate/execution/copy/hash checks passed; no solver invoked')

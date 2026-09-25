@@ -18,18 +18,25 @@ def _window(estimate, reference, mask):
     return y[m].astype(float), s[m].astype(float)
 
 
-def waveform_metrics(estimate, reference, mask, *, reference_kind, state, scope="event"):
+def waveform_metrics(estimate, reference, mask, *, reference_kind, state, scope="event",
+                     direction_error_bound=None):
     """No per-output scaling/alignment. Missing evidence is null, not zero loss.
 
     complete_clean: constructed full retained response; mixed allowed only for whole response.
     isolated_event: independently established absolute event reference.
     paired_contrast: evaluates a response difference only; never grants absolute preservation.
+    direction_error_bound: caller-declared L2 output error budget within this mask,
+    in input amplitude units. None means not assessed: cosine is then missing.
+    A zero budget is an explicit exact-array assumption, not an automatic default.
     """
     kinds = {"complete_clean", "isolated_event", "paired_contrast"}
     states = {"isolated", "mixed", "ambiguous", "absent", "numerically_unresolved"}
     if reference_kind not in kinds or state not in states or scope not in {"event", "complete", "contrast"}:
         raise ValueError("unknown_reference_contract")
     y, s = _window(estimate, reference, mask)
+    if direction_error_bound is not None and (not np.isfinite(direction_error_bound)
+                                              or direction_error_bound < 0):
+        raise ValueError("finite_nonnegative_direction_error_bound_required")
     eligible = state == "isolated" or (reference_kind == "complete_clean" and state == "mixed" and scope == "complete")
     contrast = reference_kind == "paired_contrast" and scope == "contrast" and state in {"isolated", "mixed"}
     if reference_kind == "paired_contrast":
@@ -46,14 +53,24 @@ def waveform_metrics(estimate, reference, mask, *, reference_kind, state, scope=
     ss = float(sn @ sn)
     alpha = float((yn @ sn) / ss)
     yy = float(yn @ yn)
+    if yy == 0:
+        cosine_reason = "zero_output"
+    elif direction_error_bound is None:
+        cosine_reason = "direction_error_bound_not_declared"
+    elif direction_error_bound > 0 and np.sqrt(yy) <= direction_error_bound / scale:
+        cosine_reason = "output_direction_numerically_unresolved"
+    else:
+        cosine_reason = None
     values = {"nrmse": float(np.linalg.norm(yn - sn) / np.sqrt(ss)),
               "amplitude_factor": alpha, "amplitude_error": abs(alpha - 1),
               "shape_residual": float(np.linalg.norm(yn - alpha * sn) / np.sqrt(ss)),
-              "signed_cosine": None if yy == 0 else float((yn @ sn) / np.sqrt(yy * ss))}
+              "signed_cosine": None if cosine_reason else float((yn @ sn) / np.sqrt(yy * ss))}
     if not all(v is None or np.isfinite(v) for v in values.values()):
         raise ValueError("nonfinite_metric")
     return {"available": True, "absolute_preservation_eligible": eligible,
-            "reason": "contrast_diagnostic_only" if contrast else None, "metrics": values}
+            "reason": "contrast_diagnostic_only" if contrast else None, "metrics": values,
+            "metric_reasons": {"signed_cosine": cosine_reason},
+            "direction_error_bound": direction_error_bound}
 
 
 def energy_metrics(output, baseline, mask):

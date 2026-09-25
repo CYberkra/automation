@@ -20,6 +20,7 @@ CHECKS = (
     "check_manual_weight_tradeoff.py",
     "check_evaluation_labels.py",
     "study_damage_pilot.py",
+    "check_direction_diagnostics.py",
 )
 
 

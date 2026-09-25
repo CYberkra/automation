@@ -27,6 +27,14 @@ class Extended(C.Structure):
                 ('job_memory',C.c_size_t),('peak_process_memory',C.c_size_t),('peak_job_memory',C.c_size_t)]
 
 
+class Accounting(C.Structure):
+    # JOBOBJECT_BASIC_ACCOUNTING_INFORMATION (QueryInformationJobObject class 1).
+    _fields_ = [(name, C.c_longlong) for name in
+                ('user_time', 'kernel_time', 'period_user_time', 'period_kernel_time')]
+    _fields_ += [(name, W.DWORD) for name in
+                 ('page_faults', 'total_processes', 'active_processes', 'terminated_processes')]
+
+
 def supervise(command, directory, *, wall_s, memory_bytes, output_bytes, poll_s=.1):
     if os.name != 'nt':
         raise RuntimeError('This supervisor requires Windows')
@@ -48,6 +56,8 @@ def supervise(command, directory, *, wall_s, memory_bytes, output_bytes, poll_s=
     reason='not_started'
     peak=0
     size=0
+    accounting=Accounting()
+    waited_for_descendants=False
     try:
         limits=Extended()
         limits.basic.flags=0x2000|0x200  # KILL_ON_JOB_CLOSE | JOB_MEMORY
@@ -70,18 +80,28 @@ def supervise(command, directory, *, wall_s, memory_bytes, output_bytes, poll_s=
                 if not k.QueryInformationJobObject(job,9,C.byref(usage),C.sizeof(usage),None):
                     raise C.WinError(C.get_last_error())
                 peak=max(peak,usage.peak_job_memory)
+                if not k.QueryInformationJobObject(job,1,C.byref(accounting),C.sizeof(accounting),None):
+                    raise C.WinError(C.get_last_error())
                 size=sum(p.stat().st_size for p in directory.rglob('*') if p.is_file())
                 now=time.monotonic()
+                root_exit=proc.poll()
+                if root_exit is not None and accounting.active_processes:
+                    waited_for_descendants=True
                 if now-last_report>=10:
                     (directory/'live_status.json').write_text(json.dumps({
                         'root_pid':proc.pid,'wall_s':now-started,'wall_cap_s':wall_s,
                         'peak_job_commit_bytes':peak,'observed_output_bytes':size,
-                        'state':'running','note':'Snapshot only; supervision.json is final.'},indent=2),encoding='utf-8')
+                        'active_job_processes':accounting.active_processes,
+                        'state':'waiting_descendants' if root_exit is not None else 'running',
+                        'note':'Snapshot only; supervision.json is final.'},indent=2),encoding='utf-8')
                     last_report=now
                 if size>output_bytes: reason='output_limit'; break
                 if time.monotonic()-started>wall_s: reason='wall_limit'; break
-                if proc.poll() is not None:
-                    reason='completed' if proc.returncode==0 else 'nonzero_exit'
+                if root_exit is not None and root_exit != 0:
+                    reason='nonzero_exit'
+                    break
+                if root_exit == 0 and accounting.active_processes == 0:
+                    reason='job_limit_termination' if accounting.terminated_processes else 'completed'
                     break
                 time.sleep(poll_s)
             if reason!='completed':
@@ -95,12 +115,17 @@ def supervise(command, directory, *, wall_s, memory_bytes, output_bytes, poll_s=
             proc.wait(timeout=10)
         raise
     finally:
-        k.CloseHandle(job)  # also kills any child surviving its root process
+        k.CloseHandle(job)  # failure/exception cleanup; successful jobs are already empty
     result=dict(reason=reason,exit_code=proc.returncode,wall_s=time.monotonic()-started,
                 peak_job_commit_bytes=peak,observed_output_bytes=size,
                 memory_cap_bytes=memory_bytes,wall_cap_s=wall_s,output_cap_bytes=output_bytes,
                 memory_semantics='Windows job committed memory, not RSS',
                 output_semantics='polled file bytes; overshoot possible',
+                active_job_processes_at_stop=accounting.active_processes,
+                total_job_processes=accounting.total_processes,
+                waited_for_descendants=waited_for_descendants,
+                completion_semantics='root exit zero and job empty; application must propagate child failures',
+                child_exit_codes_collected=False,
                 command=command)
     (directory/'supervision.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
     return result

@@ -1,0 +1,20 @@
+{
+  "checks": [
+    {
+      "script": "compare_yz_refinement",
+      "import_preserves_history": true,
+      "replay_matches_history": true,
+      "existing_output_rejected": true,
+      "history_sha256": "db1951485285b616362afcbfe196538ae27fb569fadc1af0609ec90b6b6497f2"
+    },
+    {
+      "script": "compare_hsg_clock",
+      "import_preserves_history": true,
+      "replay_matches_history": true,
+      "existing_output_rejected": true,
+      "history_sha256": "231eb58b95b83dfbc75f91d0e29de3f6fd02cc3d9850e1b099ce6ea38c45713d"
+    }
+  ],
+  "passed": true,
+  "fdtd_executed": false
+}

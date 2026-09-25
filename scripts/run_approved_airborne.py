@@ -35,12 +35,19 @@ def solver_code(source, run_id, device_id):
                    "runpy.run_module('gprMax',run_name='__main__')")
 
 
+def pending_contract(gate):
+    contract = gate.get('approved_execution_contract')
+    if gate.get('approved_to_simulate') is not True or not isinstance(contract, dict):
+        raise SystemExit('No pending approved execution contract; previous attempts cannot be reused')
+    return contract
+
+
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--execute',action='store_true')
     a=p.parse_args()
     gate=json.loads((ROOT/'configs/research/gprmax_v4_execution_gate.json').read_text(encoding='utf-8'))
-    contract=gate['approved_execution_contract']
+    contract=pending_contract(gate)
     run_id=contract.get('run_id','M00_x_3d')
     if not run_id.replace('_','').isalnum():raise SystemExit('Invalid run identifier')
     if not gate['approved_to_simulate'] or gate['approved_run_ids'] != [run_id]:

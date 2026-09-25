@@ -2,7 +2,7 @@
 
 仓库：<https://github.com/CYberkra/automation>。**换电脑或新会话先读 [START_HERE.md](START_HERE.md)**，再按[接续说明](docs/WORKFLOW.md)准备环境。当前已完成构造数据损伤试验与[V4 资料核对](docs/research/2026-09-24_gprmax_v4_review.md)；旧 cycle05 的损伤研究已完成首版，不要重做。
 
-设备：**SFCW 20–170MHz，步长0.3MHz**，均匀且含端点时为501频点。地表覆盖层可以是粉质粘土，基岩一般为砂岩；具体电性与厚度待定。项目为浅层非显性滑坡，深度暂按地下约20m以内理解。任何gprMax仿真先与用户敲定，当前未批准。事实、假设与未知见[项目背景](configs/research/project_context_v1.json)，执行边界见[记录](configs/research/gprmax_v4_execution_gate.json)。
+设备：**SFCW 20–170MHz，步长0.3MHz**，均匀且含端点时为501频点。地表覆盖层可以是粉质粘土，基岩一般为砂岩；具体电性与厚度待定。项目为浅层非显性滑坡，深度暂按地下约20m以内理解。用户已授权自主GPU研究；YFINE已完成，当前无待执行批次，新批次先冻结具体方案与资源契约。事实、假设与未知见[项目背景](configs/research/project_context_v1.json)，执行边界见[记录](configs/research/gprmax_v4_execution_gate.json)。
 
 最小验证仅需 Python 3.10 与 `requirements.txt` 中的 NumPy：
 
@@ -11,7 +11,9 @@ python -m pip install -r requirements.txt
 python scripts/verify_workspace.py
 ```
 
-当前预期通过 **136 项**构造数组检查（历史64＋损伤72）；不需要实测资料、gprMax、绘图库或训练环境。新结果写入 `artifacts/local_checks/`。原始资料、派生审计缓存和公开论文缓存不随 Git 上传，历史资料链接可能只在本机有效。V4 求解器需另用 Python3.11–3.13 环境，不能直接套用上述数组环境。
+当前预期通过 **157 项**构造数组检查（历史64＋损伤72＋方向诊断21）；不需要实测资料、gprMax、绘图库或训练环境。新结果写入 `artifacts/local_checks/`。原始资料、派生审计缓存和公开论文缓存不随 Git 上传，历史资料链接可能只在本机有效。V4 求解器需另用 Python3.11–3.13 环境，不能直接套用上述数组环境。
+
+最新[审查修复与评价增补](docs/research/2026-09-25_direction_diagnostic_update.md)已保留历史结果并更新缺失规则。
 
 当前目标：依托现有非显性滑坡项目，先做场景特化的 B-scan 自动处理，自动选择背景抑制与增益的算法、参数和必要顺序，保留项目相关地下结构并减少人工调参。泛用性研究延期，首版不建设通用/特化双模式。
 

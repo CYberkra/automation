@@ -1,0 +1,174 @@
+{
+  "solver_executed": false,
+  "checks": {
+    "normal": true,
+    "nonzero": true,
+    "timeout": true,
+    "descendant_terminated": true,
+    "memory_allocation_denied": true,
+    "output_stopped": true,
+    "root_first_child_completed": true,
+    "completion_waits_for_empty_job": true,
+    "root_first_still_bounded": true,
+    "root_first_descendant_terminated": true
+  },
+  "passed": true,
+  "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
+  "test_sha256": "aaebd08c1ee2e61e95dec1eee9dd61362dcd336e3d17352096102bd804f6c914",
+  "results": {
+    "normal": {
+      "reason": "completed",
+      "exit_code": 0,
+      "wall_s": 0.10999999998603016,
+      "peak_job_commit_bytes": 5619712,
+      "observed_output_bytes": 243,
+      "memory_cap_bytes": 134217728,
+      "wall_cap_s": 5,
+      "output_cap_bytes": 1048576,
+      "memory_semantics": "Windows job committed memory, not RSS",
+      "output_semantics": "polled file bytes; overshoot possible",
+      "active_job_processes_at_stop": 0,
+      "total_job_processes": 2,
+      "waited_for_descendants": false,
+      "completion_semantics": "root exit zero and job empty; application must propagate child failures",
+      "child_exit_codes_collected": false,
+      "command": [
+        "E:\\python\\python.exe",
+        "-c",
+        "print('ok')"
+      ]
+    },
+    "nonzero": {
+      "reason": "nonzero_exit",
+      "exit_code": 7,
+      "wall_s": 0.125,
+      "peak_job_commit_bytes": 5595136,
+      "observed_output_bytes": 256,
+      "memory_cap_bytes": 134217728,
+      "wall_cap_s": 5,
+      "output_cap_bytes": 1048576,
+      "memory_semantics": "Windows job committed memory, not RSS",
+      "output_semantics": "polled file bytes; overshoot possible",
+      "active_job_processes_at_stop": 0,
+      "total_job_processes": 2,
+      "waited_for_descendants": false,
+      "completion_semantics": "root exit zero and job empty; application must propagate child failures",
+      "child_exit_codes_collected": false,
+      "command": [
+        "E:\\python\\python.exe",
+        "-c",
+        "raise SystemExit(7)"
+      ]
+    },
+    "wall_child": {
+      "reason": "wall_limit",
+      "exit_code": 124,
+      "wall_s": 1.109000000054948,
+      "peak_job_commit_bytes": 11288576,
+      "observed_output_bytes": 263,
+      "memory_cap_bytes": 268435456,
+      "wall_cap_s": 1,
+      "output_cap_bytes": 1048576,
+      "memory_semantics": "Windows job committed memory, not RSS",
+      "output_semantics": "polled file bytes; overshoot possible",
+      "active_job_processes_at_stop": 3,
+      "total_job_processes": 3,
+      "waited_for_descendants": false,
+      "completion_semantics": "root exit zero and job empty; application must propagate child failures",
+      "child_exit_codes_collected": false,
+      "command": [
+        "E:\\python\\python.exe",
+        "-c",
+        "import subprocess,sys,time; p=subprocess.Popen([sys.executable,'-c','import time; time.sleep(60)']); print(p.pid,flush=True); time.sleep(60)"
+      ]
+    },
+    "memory": {
+      "reason": "nonzero_exit",
+      "exit_code": 86,
+      "wall_s": 0.10899999993853271,
+      "peak_job_commit_bytes": 274616320,
+      "observed_output_bytes": 256,
+      "memory_cap_bytes": 100663296,
+      "wall_cap_s": 5,
+      "output_cap_bytes": 1048576,
+      "memory_semantics": "Windows job committed memory, not RSS",
+      "output_semantics": "polled file bytes; overshoot possible",
+      "active_job_processes_at_stop": 0,
+      "total_job_processes": 2,
+      "waited_for_descendants": false,
+      "completion_semantics": "root exit zero and job empty; application must propagate child failures",
+      "child_exit_codes_collected": false,
+      "command": [
+        "E:\\python\\python.exe",
+        "-c",
+        "try:\n x=bytearray(256*2**20)\nexcept MemoryError:\n raise SystemExit(86)"
+      ]
+    },
+    "output": {
+      "reason": "output_limit",
+      "exit_code": 124,
+      "wall_s": 0.2339999999385327,
+      "peak_job_commit_bytes": 8151040,
+      "observed_output_bytes": 1048815,
+      "memory_cap_bytes": 134217728,
+      "wall_cap_s": 5,
+      "output_cap_bytes": 65536,
+      "memory_semantics": "Windows job committed memory, not RSS",
+      "output_semantics": "polled file bytes; overshoot possible",
+      "active_job_processes_at_stop": 2,
+      "total_job_processes": 2,
+      "waited_for_descendants": false,
+      "completion_semantics": "root exit zero and job empty; application must propagate child failures",
+      "child_exit_codes_collected": false,
+      "command": [
+        "E:\\python\\python.exe",
+        "-c",
+        "from pathlib import Path; import time; Path('payload.bin').write_bytes(b'x'*2**20); time.sleep(5)"
+      ]
+    },
+    "root_first": {
+      "reason": "completed",
+      "exit_code": 0,
+      "wall_s": 0.6570000000065193,
+      "peak_job_commit_bytes": 7503872,
+      "observed_output_bytes": 259,
+      "memory_cap_bytes": 268435456,
+      "wall_cap_s": 5,
+      "output_cap_bytes": 1048576,
+      "memory_semantics": "Windows job committed memory, not RSS",
+      "output_semantics": "polled file bytes; overshoot possible",
+      "active_job_processes_at_stop": 0,
+      "total_job_processes": 3,
+      "waited_for_descendants": true,
+      "completion_semantics": "root exit zero and job empty; application must propagate child failures",
+      "child_exit_codes_collected": false,
+      "command": [
+        "E:\\python\\python.exe",
+        "-c",
+        "import subprocess,sys; subprocess.Popen([sys.executable,'-c',\"import time,pathlib; time.sleep(.4); pathlib.Path('child_done.txt').write_text('done')\"])"
+      ]
+    },
+    "root_first_timeout": {
+      "reason": "wall_limit",
+      "exit_code": 0,
+      "wall_s": 1.1099999999860302,
+      "peak_job_commit_bytes": 7360512,
+      "observed_output_bytes": 261,
+      "memory_cap_bytes": 268435456,
+      "wall_cap_s": 1,
+      "output_cap_bytes": 1048576,
+      "memory_semantics": "Windows job committed memory, not RSS",
+      "output_semantics": "polled file bytes; overshoot possible",
+      "active_job_processes_at_stop": 2,
+      "total_job_processes": 3,
+      "waited_for_descendants": true,
+      "completion_semantics": "root exit zero and job empty; application must propagate child failures",
+      "child_exit_codes_collected": false,
+      "command": [
+        "E:\\python\\python.exe",
+        "-c",
+        "import subprocess,sys; p=subprocess.Popen([sys.executable,'-c','import time; time.sleep(60)']); print(p.pid,flush=True)"
+      ]
+    }
+  }
+}
