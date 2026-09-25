@@ -5,18 +5,9 @@
   "user_instruction": "整夜运行授权：证据到位时可主动解除旧约束（含新仿真批次），每次解除须写明依据留痕（2026-09-26 会话）",
   "target_solver": "gprMax 4.0.0",
   "source_root_on_current_machine": "E:/gprMax-v.4.0.0/gprMax-v.4.0.0",
-  "batch_id": "batch2d_v1_fine2",
-  "approved_to_simulate": true,
-  "approved_run_ids": [
-    "B2D-C3m-BG-F2",
-    "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2",
-    "B2D-C1m-BG-F2",
-    "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2",
-    "B2D-C5m-BG-F2",
-    "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2",
-    "B2D-C8m-BG-F2",
-    "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2"
-  ],
+  "batch_id": "batch2d_v1_fine2_consumed",
+  "approved_to_simulate": false,
+  "approved_run_ids": [],
   "approved_compute_budget": {
     "wall_minutes": 40,
     "job_commit_GiB": 20,
@@ -182,7 +173,54 @@
     "postprocessing": "Prefer official CPU implementation"
   },
   "execution_outcome": {
-    "status": "ready_not_started"
+    "status": "completed",
+    "attempts_consumed": 8,
+    "runs": {
+      "B2D-C3m-BG-F2": {
+        "exit_code": 0,
+        "wall_s": 1318.437,
+        "peak_job_commit_bytes": 15246868480
+      },
+      "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2": {
+        "exit_code": 0,
+        "wall_s": 1323.031,
+        "peak_job_commit_bytes": 15248379904
+      },
+      "B2D-C1m-BG-F2": {
+        "exit_code": 0,
+        "wall_s": 1322.828,
+        "peak_job_commit_bytes": 15247847424
+      },
+      "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2": {
+        "exit_code": 0,
+        "wall_s": 1319.969,
+        "peak_job_commit_bytes": 15248166912
+      },
+      "B2D-C5m-BG-F2": {
+        "exit_code": 0,
+        "wall_s": 1319.906,
+        "peak_job_commit_bytes": 15247958016
+      },
+      "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2": {
+        "exit_code": 0,
+        "wall_s": 1322.438,
+        "peak_job_commit_bytes": 15248601088
+      },
+      "B2D-C8m-BG-F2": {
+        "exit_code": 0,
+        "wall_s": 1320.969,
+        "peak_job_commit_bytes": 15247507456
+      },
+      "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2": {
+        "exit_code": 0,
+        "wall_s": 1319.219,
+        "peak_job_commit_bytes": 15246221312
+      }
+    },
+    "acceptance": "all 8 supervision.json reason=completed exit 0; all h5 Ex (118665,) float64 finite; receiver position [16.65,45.0]; peak commit 15.25 GB < 20 GiB cap; walls 1318.4-1323.0 s < 40 min cap; archives at artifacts/research_checks/2026-09-26_<RUN>-F2/ with record.json sha256 manifests; analysis r1/r2 byte-identical (artifacts/research_checks/2026-09-26_batch2d_fine2_analysis_r1|_r2)",
+    "operational_intervention": "none required: the vctip drain watcher ran alongside the whole batch but recorded zero interventions; all 8 supervision records show waited_for_descendants=false because the ~1320 s solve outlasts the vctip orphan idle lifetime observed in the coarse tier (~900 s)",
+    "wall_time_note": "per-run walls 1318.4-1323.0 s, consistent with ZFINE2 measured 1438.6/1334.8 s minus compile cache reuse; total serial batch wall about 10569 s",
+    "analysis": "P2 direction re-check completed: difference spectrum shape correlation 0.99813-0.99955 per family; per-frequency sign agreement 88.0-93.8%; envelope peak direction consistent (FINE2 earlier by 15.7-19.1 ns, same direction all families); reproduction pair B2D-C3m-BG-F2 vs DEP_BG_ZFINE2 bitwise zero difference (118665 samples)"
   },
-  "note": "batch2d_v1_fine2: 8 FINE2-tier 2D cases (4 cover families x BG + anchor D10m-W4m-T0.5m-E20-S0.02) on the ZFINE2 grid dy12.5/dz3.125mm, serial, fail-abort. Purpose: spec P2 direction-consistency recheck of the coarse-tier findings at the converged grid. C3 pair first (direct comparability with ZFINE2 chain), then C1/C5/C8. vctip drain watcher (artifacts/local_checks/vctip_drain_watcher.py) must run alongside; interventions logged. Physical/training labels remain disabled."
+  "note": "batch2d_v1_fine2 consumed: 8 FINE2-tier 2D cases completed 2026-09-26, gate closed; contracts kept as last_completed_execution_contract. Physical/training labels remain disabled."
 }
