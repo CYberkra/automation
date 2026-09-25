@@ -1,0 +1,83 @@
+{
+  "batch": "dim23_pair_v1",
+  "per_dimension": {
+    "2D": {
+      "dt_s": 1.1793271683748422e-10,
+      "transformed_samples": 6784,
+      "taper_fraction": 0.24996314858490565,
+      "time_diff_peak_V_m": 0.0006620878864520563,
+      "envelope_peak_time_ns": 305.7995347595966,
+      "spectral_peak_frequency_MHz": 148.4,
+      "spectral_peak_phase_deg": 105.36034223594987,
+      "normalized_mag_dB_at_selected_MHz": {
+        "20": -19.410651807615626,
+        "50": -6.089315235102317,
+        "80": -9.190025990029287,
+        "110": -8.841216496644858,
+        "140": -0.823321419906954,
+        "170": -0.6953477398991776
+      }
+    },
+    "3D": {
+      "dt_s": 9.629166007732353e-11,
+      "transformed_samples": 8309,
+      "taper_fraction": 0.2499398242869178,
+      "time_diff_peak_V_m": 1.7222702705307902e-06,
+      "envelope_peak_time_ns": 315.5477700733892,
+      "spectral_peak_frequency_MHz": 170.0,
+      "spectral_peak_phase_deg": -40.87953060632886,
+      "normalized_mag_dB_at_selected_MHz": {
+        "20": -37.02816598405671,
+        "50": -16.007114209309613,
+        "80": -14.777865571265053,
+        "110": -12.924806440066277,
+        "140": -2.2902600451436665,
+        "170": 0.0
+      }
+    }
+  },
+  "cross_dimension_shape_only": {
+    "envelope_peak_time_difference_ns": -9.748235313792577,
+    "waveform_max_normalized_correlation": 0.7156980104595475,
+    "waveform_lag_ns": 0.7075963010249053,
+    "spectral_peak_frequency_difference_MHz": -21.599999999999994,
+    "phase_difference_linear_fit": {
+      "slope_rad_per_Hz": 9.285046116959324e-07,
+      "equivalent_time_offset_ns": -147.77609863502852,
+      "residual_std_deg": 707.9497532083128
+    },
+    "normalized_mag_trend_difference_dB": {
+      "20": 17.617514176441087,
+      "50": 9.917798974207296,
+      "80": 5.587839581235766,
+      "110": 4.083589943421419,
+      "140": 1.4669386252367125,
+      "170": -0.6953477398991776
+    },
+    "normalized_spectrum_shape_correlation": 0.9017860208459169
+  },
+  "exploratory_3d_to_2d_transform": {
+    "form": "D_2D_equiv(f) \u221d D_3D(f) / sqrt(i*2*pi*f); constants omitted, shape only",
+    "transformed_vs_2D_shape_correlation": 0.9541514018288215,
+    "transformed_normalized_mag_dB_at_selected_MHz": {
+      "20": -27.95366893043626,
+      "50": -10.912017242409533,
+      "80": -11.723968430924225,
+      "110": -11.253936281388262,
+      "140": -1.6667433916657823,
+      "170": -0.21969220352247548
+    }
+  },
+  "inputs": {
+    "artifacts\\simulations\\2026-09-25_DIM23_2D_BG\\DIM23_2D_BG.h5": "13a1469ddc1db899abdb03959d428fd6a8d0fed53610c2bddc7ef6bc6cf66bd1",
+    "artifacts\\simulations\\2026-09-25_DIM23_2D_TGT\\DIM23_2D_TGT.h5": "67d53abd6b3f4909bfbe07c148bea0dbf6486fd209aa55e46af7906b61a854db",
+    "artifacts\\simulations\\2026-09-25_DIM23_3D_BG\\DIM23_3D_BG.h5": "5fe3530a274ab1873ba20159860330371da436d13875f224202eb3ee7c78766a",
+    "artifacts\\simulations\\2026-09-25_DIM23_3D_TGT\\DIM23_3D_TGT.h5": "d2689a4a2b1ea714143251bafeadec9020bb063ed9486868bfcba46ab7709a31"
+  },
+  "frequency_Hz": "linspace(20e6,170e6,501)",
+  "taper_ns": 200,
+  "cross_dimension_absolute_amplitude_compared": false,
+  "grid_convergence_certified": false,
+  "physical_accuracy_threshold": null,
+  "solver_invoked": false
+}

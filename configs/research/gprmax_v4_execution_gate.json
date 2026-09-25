@@ -5,14 +5,9 @@
   "user_instruction": "然后你若需要gprmax仿真的话，和我敲定好再开始仿真。",
   "target_solver": "gprMax 4.0.0",
   "source_root_on_current_machine": "D:/gprMax-v.4.0.0",
-  "batch_id": "dim23_pair_v1",
-  "approved_to_simulate": true,
-  "approved_run_ids": [
-    "DIM23_2D_BG",
-    "DIM23_2D_TGT",
-    "DIM23_3D_BG",
-    "DIM23_3D_TGT"
-  ],
+  "batch_id": "dim23_pair_v1_consumed",
+  "approved_to_simulate": false,
+  "approved_run_ids": [],
   "approved_compute_budget": {
     "wall_minutes": 30,
     "job_commit_GiB": 10,
@@ -119,7 +114,7 @@
     "expected outputs and storage",
     "explicit agreed execution scope"
   ],
-  "note": "Batch dim23_pair_v1 frozen 2026-09-25 under user's path-A choice (local env rebuilt and verified; freeze small contract; run full 2D/3D paired batch locally). Four cases, one attempt each, execution order 2D_BG,2D_TGT,3D_BG,3D_TGT; 3D untouched if any 2D case fails. Budget locally revised (see approved_compute_budget.local_budget_revision). Env runs through ASCII junctions D:\\gprmax_v4_gpu_env and C:\\cuda118 because nvcc/cl.exe cannot parse non-ASCII/space-containing include paths.",
+  "note": "dim23_pair_v1 completed and closed 2026-09-25; see docs/research/2026-09-25_dim23_pair_results.md. No pending run contract; delegated GPU research authority remains. Freeze a new exact contract before another solve; never reuse consumed attempts.",
   "build_authorization": "用户明确：许可你构建。仅构建/安装/导入核验，不是仿真批准。",
   "simulation_authorization": "User authorizes autonomous GPU research and selected path A for dim23_pair_v1 in current session.",
   "authorization_history": [
@@ -158,6 +153,10 @@
     {
       "record": "artifacts/research_checks/2026-09-24_AIR_dz4/authorization_at_start.json",
       "outcome": "Completed dz4 paired air reference; 10 raw checks pass"
+    },
+    {
+      "record": "artifacts/research_checks/2026-09-25_dim23_pair/<run>/attempt_at_start.json",
+      "outcome": "dim23_pair_v1: 4/4 completed on local RTX 3060 Laptop; analysis recomputed byte-identical"
     }
   ],
   "execution_policy": {
@@ -169,8 +168,39 @@
     "user_clarification": "仿真gpu跑，后处理如果正常就是cpu那也没必要改，除非gpu能加速很多"
   },
   "execution_outcome": {
-    "status": "ready_not_started",
-    "attempts_consumed": 0
+    "status": "completed",
+    "batch": "dim23_pair_v1",
+    "runs": {
+      "DIM23_2D_BG": {
+        "status": "completed",
+        "attempt_consumed": true,
+        "exit_code": 0,
+        "wall_s": 125.28200000000652,
+        "peak_job_commit_bytes": 1642127360
+      },
+      "DIM23_2D_TGT": {
+        "status": "completed",
+        "attempt_consumed": true,
+        "exit_code": 0,
+        "wall_s": 147.2029999999795,
+        "peak_job_commit_bytes": 1642979328
+      },
+      "DIM23_3D_BG": {
+        "status": "completed",
+        "attempt_consumed": true,
+        "exit_code": 0,
+        "wall_s": 500.48400000005495,
+        "peak_job_commit_bytes": 7781068800
+      },
+      "DIM23_3D_TGT": {
+        "status": "completed",
+        "attempt_consumed": true,
+        "exit_code": 0,
+        "wall_s": 471.5470000000205,
+        "peak_job_commit_bytes": 7781392384
+      }
+    },
+    "note": "All four attempts consumed, exit 0, no retries. Gate closed; new batches require a newly frozen contract."
   },
   "last_completed_execution_contract": {
     "packet_id": "DEEP-YFINE-01",

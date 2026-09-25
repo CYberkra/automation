@@ -6,6 +6,50 @@
   "solver_execution_gate": "configs/research/gprmax_v4_execution_gate.json",
   "runs": [
     {
+      "id": "dim23_pair_v1",
+      "status": "complete_4of4_exit0",
+      "directory": "artifacts/research_checks/2026-09-25_dim23_pair",
+      "tracked": true,
+      "canonical_for_handoff": true,
+      "report": "docs/research/2026-09-25_dim23_pair_results.md",
+      "runs": [
+        "DIM23_2D_BG",
+        "DIM23_2D_TGT",
+        "DIM23_3D_BG",
+        "DIM23_3D_TGT"
+      ],
+      "solver": "gprMax 4.0.0 CUDA double, local RTX 3060 Laptop, junction-aliased env D:/gprmax_v4_gpu_env",
+      "grid_m": 0.05,
+      "cells": {
+        "2D": [
+          1,
+          200,
+          780
+        ],
+        "3D": [
+          200,
+          200,
+          780
+        ]
+      },
+      "time_window_s": 8e-07,
+      "attempts": "one each, consumed, gate closed",
+      "analysis_recompute": "results.json byte-identical across analysis_r1/analysis_r2",
+      "key_numbers": {
+        "envelope_peak_time_difference_ns": -9.748235313792577,
+        "waveform_max_normalized_correlation": 0.7156980104595475,
+        "normalized_spectrum_shape_correlation": 0.9017860208459169,
+        "exploratory_3d_to_2d_shape_correlation": 0.9541514018288215
+      },
+      "limitations": [
+        "5cm 3D grid not convergence-certified",
+        "no cross-dimension absolute amplitude comparison",
+        "conclusions limited to this geometry/band/material family"
+      ],
+      "python": "3.12.0",
+      "numpy": "2.5.3"
+    },
+    {
       "id": "damage_pilot_initial",
       "status": "complete_numeric_historical",
       "directory": "artifacts/research_checks/2026-09-24_damage_pilot",

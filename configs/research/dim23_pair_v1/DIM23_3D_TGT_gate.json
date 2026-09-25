@@ -5,7 +5,7 @@
   "user_instruction": "然后你若需要gprmax仿真的话，和我敲定好再开始仿真。",
   "target_solver": "gprMax 4.0.0",
   "source_root_on_current_machine": "D:/gprMax-v.4.0.0",
-  "approved_to_simulate": true,
+  "approved_to_simulate": false,
   "approved_run_ids": [
     "DIM23_3D_TGT"
   ],
@@ -78,7 +78,10 @@
     "user_clarification": "仿真gpu跑，后处理如果正常就是cpu那也没必要改，除非gpu能加速很多"
   },
   "execution_outcome": {
-    "status": "ready_not_started",
-    "attempt_consumed": false
+    "status": "completed",
+    "attempt_consumed": true,
+    "exit_code": 0,
+    "wall_s": 471.5470000000205,
+    "peak_job_commit_bytes": 7781392384
   }
 }

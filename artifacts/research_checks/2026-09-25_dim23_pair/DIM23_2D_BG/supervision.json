@@ -1,0 +1,23 @@
+{
+  "reason": "completed",
+  "exit_code": 0,
+  "wall_s": 125.28200000000652,
+  "peak_job_commit_bytes": 1642127360,
+  "observed_output_bytes": 84030,
+  "memory_cap_bytes": 10737418240,
+  "wall_cap_s": 1800,
+  "output_cap_bytes": 1073741824,
+  "memory_semantics": "Windows job committed memory, not RSS",
+  "output_semantics": "polled file bytes; overshoot possible",
+  "active_job_processes_at_stop": 0,
+  "total_job_processes": 988,
+  "waited_for_descendants": false,
+  "completion_semantics": "root exit zero and job empty; application must propagate child failures",
+  "child_exit_codes_collected": false,
+  "command": [
+    "D:\\gprmax_v4_gpu_env\\Scripts\\python.exe",
+    "-u",
+    "-c",
+    "import hashlib,pathlib,runpy,sys; p=pathlib.Path('D:\\\\\u81ea\u52a8\u5904\u7406\\\\configs\\\\research\\\\dim23_pair_v1\\\\DIM23_2D_BG.in'); b=p.read_bytes(); assert hashlib.sha256(b).hexdigest()=='652dc1a8ef0ed60130d1a28735ce9f7a46b3802e895973f502fe449d63c84625'; pathlib.Path('DIM23_2D_BG.in').write_bytes(b); sys.argv=['gprMax','DIM23_2D_BG.in','-gpu','0','-gpu_precision','double']; runpy.run_module('gprMax',run_name='__main__')"
+  ]
+}

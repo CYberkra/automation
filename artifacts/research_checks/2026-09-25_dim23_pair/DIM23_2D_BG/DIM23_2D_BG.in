@@ -1,0 +1,16 @@
+#title: DIM23_2D_BG paired 2D/3D background, TMx 2D at 5cm
+#domain_mode: TM
+#domain: inf 10 39
+#dx_dy_dz: 0.05 0.05 0.05
+#time_window: 800e-9
+#omp_threads: 8
+#pml_cells: 0 20 20 0 20 20
+#pml_formulation: HORIPML
+#waveform: impulse 1 1 impulse
+#hertzian_dipole: x inf 4.35 36 impulse
+#rx: inf 5.65 36 measurement Ex
+#pml_cfs: constant forward 0 0 constant forward 1 1 quartic forward 0 0.21235349838321013
+#material: 9 0.001 1 0 rock
+#box: inf 0 1 inf 10 21 rock
+#material: 16 0.01 1 0 cover
+#box: inf 0 18 inf 10 21 cover

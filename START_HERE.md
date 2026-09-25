@@ -4,6 +4,8 @@
 
 ## 当前状态（优先于下方历史记录）
 
+**2026-09-25 2D/3D 配对批次 dim23_pair_v1 已完成（路径 A）。** 本机 V4/CUDA 环境当日重建并核验（Python 3.12 + gprMax 4.0.0 + pycuda 2026.1，RTX 3060 Laptop，CUDA double kernel 通过）；中文路径导致的 nvcc/cl 编译失败用 junction `D:\gprmax_v4_gpu_env`、`C:\cuda118` 解决。4 算例（2D_BG/2D_TGT/3D_BG/3D_TGT，5cm 同格距，3D 3,120 万单元）各 1 次 attempt 全部 exit 0，3D 每次约 8 分钟墙钟。配对差分：到时差 9.75ns，波形相关 0.716，归一化谱形状相关 0.902（远场 3D→2D 变换后 0.954），3D 差分谱显著高频化；未做跨维度绝对幅度对比。分析复算字节一致。gate 已关闭，attempt 已消耗。[结果](docs/research/2026-09-25_dim23_pair_results.md)，证据 `artifacts/research_checks/2026-09-25_dim23_pair/`。
+
 **本机已接续并完成三项审查修复。** 比较脚本另存且拒绝覆盖；监督器等待进程组清空；余弦诊断缺少数值误差预算时标为缺失。157项数组、10项监督器检查通过，42行共同层/目标保真结论保持。见[修复及评价增补](docs/research/2026-09-25_direction_diagnostic_update.md)与[验证记录](artifacts/research_checks/2026-09-25_review_fixes/record.json)。下一步建立算子误差预算并继续准备垂向细化资源方案；没有新正演或训练。
 
 当前无待执行仿真契约；YFINE已消耗契约保留为历史，不因修复代码而改写原授权快照。用户自主GPU研究授权保留，本机V4/CUDA环境需独立核验。旧路径、PID、会话号与硬件耗时属于原机器。
