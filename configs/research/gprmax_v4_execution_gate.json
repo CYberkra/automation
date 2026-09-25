@@ -1,12 +1,22 @@
 {
   "schema": "gprmax-execution-decision/1",
-  "updated_date": "2026-09-25",
-  "authority": "explicit user instruction in current session",
-  "user_instruction": "然后你若需要gprmax仿真的话，和我敲定好再开始仿真。",
+  "updated_date": "2026-09-26",
+  "authority": "user-delegated autonomous scope expansion, documented basis required",
+  "user_instruction": "整夜运行授权：证据到位时可主动解除旧约束（含新仿真批次），每次解除须写明依据留痕（2026-09-26 会话）",
   "target_solver": "gprMax 4.0.0",
   "source_root_on_current_machine": "E:/gprMax-v.4.0.0/gprMax-v.4.0.0",
-  "approved_to_simulate": false,
-  "approved_run_ids": [],
+  "batch_id": "dep3d_gold_v1",
+  "approved_to_simulate": true,
+  "approved_run_ids": [
+    "B2D5CM_BG",
+    "B2D5CM_TGT",
+    "B2DANISO_BG",
+    "B2DANISO_TGT",
+    "DEP3D_5CM_BG",
+    "DEP3D_5CM_TGT",
+    "DEP3D_ANISO_BG",
+    "DEP3D_ANISO_TGT"
+  ],
   "approved_compute_budget": {
     "wall_minutes": 40,
     "job_commit_GiB": 20,
@@ -16,13 +26,18 @@
     "backend": "CUDA",
     "precision": "double",
     "retries": 0,
-    "max_fdtd_runs": 1,
+    "max_fdtd_runs": 8,
     "official_postprocess_wall_minutes": 10,
     "device_id": 0,
     "minimum_available_VRAM_GiB": 8,
-    "VRAM_limit_semantics": "Preflight availability threshold; not a hard device-memory quota"
+    "VRAM_limit_semantics": "Preflight availability threshold; not a hard device-memory quota",
+    "cell_cap_3d": 64000000
   },
-  "source_version_is_not_runtime_verification": true,
+  "scope_expansion_basis": [
+    "dim23_pair_results next-step: 3D grid convergence required before any quantitative amplitude claim",
+    "ZFINE2 evidence (f896188): adjacent-grid change 4.12% L2 / 3.88 deg, 2nd-order trend; 2D grid reference established",
+    "user goal item (3) 2026-09-26: build rigorously verified 3D gold model to quantify 2D/3D difference for batch decision"
+  ],
   "permitted_preparation": [
     "read official docs and local source",
     "archive provenance",
@@ -33,78 +48,129 @@
     "build/install isolated V4 from source copy and import-only runtime verification"
   ],
   "requires_agreement_before_execution": [
-    "FDTD solver run",
-    "official examples/tests that invoke a solve",
-    "CPU/GPU benchmark solve",
-    "study or parameter sweep",
+    "FDTD solver run outside frozen batch list",
     "automatic retry or expanded simulation batch outside agreed scope"
   ],
-  "discussion_packet_required": [
-    "physical question and allowed claim",
-    "exact version/build and input hashes",
-    "cases and run count",
-    "source waveform and timing",
-    "geometry/grid/PML/time window",
-    "CPU/GPU/precision/resources and stopping rules",
-    "reference and evaluation plan",
-    "expected outputs and storage",
-    "explicit agreed execution scope"
-  ],
-  "note": "Current concrete contract implements delegated design authority; consumed attempts must not be rerun.",
-  "build_authorization": "用户明确：许可你构建。仅构建/安装/导入核验，不是仿真批准。",
-  "simulation_authorization": "User authorizes autonomous GPU research. Two vertical-refinement controls dy12.5mm/dz3.125mm, one attempt each; based on completed YFINE evidence.",
-  "approved_execution_contract": {
-    "packet_id": "DEEP-ZFINE2-01",
-    "input_path": "configs/research/deep_zfine2_v1/DEP_20_ZFINE2.in",
-    "input_sha256": "06d528f2aad2b22adfaf19abd59ddff86885e43211f517c6fd2154372fd05e11",
-    "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
-    "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
-    "launcher_sha256": "27ad869684c97df921eb06c7915a8f772ee0d0e0da31e05d8aaf580fcc5e4515",
-    "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-    "refreeze_note": "2026-09-25: launcher/supervisor hashes re-frozen to post-review versions (commit 3bbb3f5): supervisor now waits for job descendants before reporting completion, launcher refuses consumed contracts. Old hashes d53cc7ab/18d34cf7 superseded by reviewed fixes.",
-    "attempt_record": "artifacts/research_checks/2026-09-25_DEP_20_ZFINE2_attempt.json",
-    "run_directory": "artifacts/simulations/2026-09-25_DEP_20_ZFINE2",
-    "continuation": "Compare fixed-dy ZFINE2/ZFINE; archive and assess before any new cases. No retries.",
-    "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
-    "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-    "run_id": "DEP_20_ZFINE2"
-  },
-  "authorization_history": [
+  "approved_execution_contracts": [
     {
-      "record": "artifacts/research_checks/2026-09-24_M00_x_3d_r1/authorization_at_start.json",
-      "outcome": "Stopped by user-approved redesign; no complete HDF5"
+      "packet_id": "DEP3D-GOLD-01",
+      "input_path": "configs/research/dep3d_gold_v1/B2D5CM_BG.in",
+      "input_sha256": "8927e3491c98dbb7269747b7cef9abc9afda728825f2e82ea61e7e62ca1b3c66",
+      "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
+      "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
+      "launcher_sha256": "44d263c4a418e5a64af35a4fee0926d2d05b652a85cb08da396360d73ef2acad",
+      "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
+      "attempt_record": "artifacts/research_checks/2026-09-26_B2D5CM_BG_attempt.json",
+      "run_directory": "artifacts/simulations/2026-09-26_B2D5CM_BG",
+      "continuation": "2D controls smoke first; 3D 5cm pair calibrates memory/time before aniso pair; any failure aborts batch. No retries.",
+      "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
+      "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
+      "run_id": "B2D5CM_BG"
     },
     {
-      "record": "artifacts/research_checks/2026-09-24_M00_x_3d_r2/authorization_at_start.json",
-      "outcome": "CPU attempt stopped for explicit GPU-only requirement"
+      "packet_id": "DEP3D-GOLD-01",
+      "input_path": "configs/research/dep3d_gold_v1/B2D5CM_TGT.in",
+      "input_sha256": "00f0044c606ec06909aea8d3424e17ddf04bf43be157d4e04157dbb89716c864",
+      "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
+      "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
+      "launcher_sha256": "44d263c4a418e5a64af35a4fee0926d2d05b652a85cb08da396360d73ef2acad",
+      "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
+      "attempt_record": "artifacts/research_checks/2026-09-26_B2D5CM_TGT_attempt.json",
+      "run_directory": "artifacts/simulations/2026-09-26_B2D5CM_TGT",
+      "continuation": "2D controls smoke first; 3D 5cm pair calibrates memory/time before aniso pair; any failure aborts batch. No retries.",
+      "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
+      "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
+      "run_id": "B2D5CM_TGT"
     },
     {
-      "record": "artifacts/research_checks/2026-09-24_M00_x_3d_gpu_r1/authorization_at_start.json",
-      "outcome": "Completed original GPU calibration"
+      "packet_id": "DEP3D-GOLD-01",
+      "input_path": "configs/research/dep3d_gold_v1/B2DANISO_BG.in",
+      "input_sha256": "688f2fd9ef4cc974c2678624d08bb2ba54edca9f7a95f616601433caba84189f",
+      "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
+      "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
+      "launcher_sha256": "44d263c4a418e5a64af35a4fee0926d2d05b652a85cb08da396360d73ef2acad",
+      "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
+      "attempt_record": "artifacts/research_checks/2026-09-26_B2DANISO_BG_attempt.json",
+      "run_directory": "artifacts/simulations/2026-09-26_B2DANISO_BG",
+      "continuation": "2D controls smoke first; 3D 5cm pair calibrates memory/time before aniso pair; any failure aborts batch. No retries.",
+      "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
+      "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
+      "run_id": "B2DANISO_BG"
     },
     {
-      "record": "artifacts/research_checks/2026-09-24_T800/authorization_at_start.json",
-      "outcome": "Completed T800 control; canonical archive pending same turn"
+      "packet_id": "DEP3D-GOLD-01",
+      "input_path": "configs/research/dep3d_gold_v1/B2DANISO_TGT.in",
+      "input_sha256": "88d72b27e23195a03826c573ca5f71a98142c49245f4c7068436ed537bf4101a",
+      "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
+      "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
+      "launcher_sha256": "44d263c4a418e5a64af35a4fee0926d2d05b652a85cb08da396360d73ef2acad",
+      "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
+      "attempt_record": "artifacts/research_checks/2026-09-26_B2DANISO_TGT_attempt.json",
+      "run_directory": "artifacts/simulations/2026-09-26_B2DANISO_TGT",
+      "continuation": "2D controls smoke first; 3D 5cm pair calibrates memory/time before aniso pair; any failure aborts batch. No retries.",
+      "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
+      "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
+      "run_id": "B2DANISO_TGT"
     },
     {
-      "record": "artifacts/research_checks/2026-09-24_PML40/authorization_at_start.json",
-      "outcome": "Completed and archived; tail analysis complete"
+      "packet_id": "DEP3D-GOLD-01",
+      "input_path": "configs/research/dep3d_gold_v1/DEP3D_5CM_BG.in",
+      "input_sha256": "8705969e425886cd01ee12dab8b9cab5d21a1bdf1cdab7c2b7fa2d4f96ee2343",
+      "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
+      "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
+      "launcher_sha256": "44d263c4a418e5a64af35a4fee0926d2d05b652a85cb08da396360d73ef2acad",
+      "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
+      "attempt_record": "artifacts/research_checks/2026-09-26_DEP3D_5CM_BG_attempt.json",
+      "run_directory": "artifacts/simulations/2026-09-26_DEP3D_5CM_BG",
+      "continuation": "2D controls smoke first; 3D 5cm pair calibrates memory/time before aniso pair; any failure aborts batch. No retries.",
+      "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
+      "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
+      "run_id": "DEP3D_5CM_BG"
     },
     {
-      "record": "artifacts/research_checks/2026-09-24_M01_T800/authorization_at_start.json",
-      "outcome": "Completed; raw checks pass; physical validation unresolved"
+      "packet_id": "DEP3D-GOLD-01",
+      "input_path": "configs/research/dep3d_gold_v1/DEP3D_5CM_TGT.in",
+      "input_sha256": "00d370d8590366269517a5b2090ba18a5b12ea91ddad7fe692d51326421ab848",
+      "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
+      "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
+      "launcher_sha256": "44d263c4a418e5a64af35a4fee0926d2d05b652a85cb08da396360d73ef2acad",
+      "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
+      "attempt_record": "artifacts/research_checks/2026-09-26_DEP3D_5CM_TGT_attempt.json",
+      "run_directory": "artifacts/simulations/2026-09-26_DEP3D_5CM_TGT",
+      "continuation": "2D controls smoke first; 3D 5cm pair calibrates memory/time before aniso pair; any failure aborts batch. No retries.",
+      "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
+      "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
+      "run_id": "DEP3D_5CM_TGT"
     },
     {
-      "record": "artifacts/research_checks/2026-09-24_PEC_T800/authorization_at_start.json",
-      "outcome": "Completed; PEC comparison and PML hypothesis archived"
+      "packet_id": "DEP3D-GOLD-01",
+      "input_path": "configs/research/dep3d_gold_v1/DEP3D_ANISO_BG.in",
+      "input_sha256": "a110b18d499ba43429220c779b15f38a3a33980d019055d853f30fe419acdbf4",
+      "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
+      "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
+      "launcher_sha256": "44d263c4a418e5a64af35a4fee0926d2d05b652a85cb08da396360d73ef2acad",
+      "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
+      "attempt_record": "artifacts/research_checks/2026-09-26_DEP3D_ANISO_BG_attempt.json",
+      "run_directory": "artifacts/simulations/2026-09-26_DEP3D_ANISO_BG",
+      "continuation": "2D controls smoke first; 3D 5cm pair calibrates memory/time before aniso pair; any failure aborts batch. No retries.",
+      "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
+      "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
+      "run_id": "DEP3D_ANISO_BG"
     },
     {
-      "record": "artifacts/research_checks/2026-09-24_M01_fixedPML/authorization_at_start.json",
-      "outcome": "Completed and archived"
-    },
-    {
-      "record": "artifacts/research_checks/2026-09-24_AIR_dz4/authorization_at_start.json",
-      "outcome": "Completed dz4 paired air reference; 10 raw checks pass"
+      "packet_id": "DEP3D-GOLD-01",
+      "input_path": "configs/research/dep3d_gold_v1/DEP3D_ANISO_TGT.in",
+      "input_sha256": "bb964fbd3a6b58ace714317adf367f2ead741edf7e935898656ea426c57d59e4",
+      "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
+      "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
+      "launcher_sha256": "44d263c4a418e5a64af35a4fee0926d2d05b652a85cb08da396360d73ef2acad",
+      "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
+      "attempt_record": "artifacts/research_checks/2026-09-26_DEP3D_ANISO_TGT_attempt.json",
+      "run_directory": "artifacts/simulations/2026-09-26_DEP3D_ANISO_TGT",
+      "continuation": "2D controls smoke first; 3D 5cm pair calibrates memory/time before aniso pair; any failure aborts batch. No retries.",
+      "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
+      "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
+      "run_id": "DEP3D_ANISO_TGT"
     }
   ],
   "execution_policy": {
@@ -112,22 +178,11 @@
     "allow_cpu_solver_fallback": false,
     "user_authorized_gpu_configuration_and_runs": true,
     "runtime_readiness": "cuda_float64_kernel_verified",
-    "postprocessing": "Prefer official CPU implementation; migrate only if substantial speedup is demonstrated",
-    "user_clarification": "仿真gpu跑，后处理如果正常就是cpu那也没必要改，除非gpu能加速很多"
+    "postprocessing": "Prefer official CPU implementation"
   },
   "execution_outcome": {
-    "status": "completed",
-    "attempt_consumed": true,
-    "DEP_BG_ZFINE2": {
-      "exit_code": 0,
-      "wall_s": 1438.641,
-      "peak_job_commit_bytes": 15278399488
-    },
-    "DEP_20_ZFINE2": {
-      "exit_code": 0,
-      "wall_s": 1334.797,
-      "peak_job_commit_bytes": 15278718976
-    }
+    "status": "ready_not_started",
+    "attempts_consumed": 0
   },
-  "batch_id": "deep_zfine2_v1_consumed"
+  "note": "dep3d_gold_v1: 4 2D same-grid controls + 4 3D gold runs, serial, fail-abort. Design: docs/research/2026-09-26_dep3d_gold_design.md. Physical/training labels remain disabled."
 }

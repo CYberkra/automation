@@ -1,0 +1,423 @@
+{
+  "batch": "dep3d_gold_v1",
+  "generated_by": "scripts/check_dep3d_gold_static.py",
+  "method": "docs/research/2026-09-26_dep3d_gold_design.md §7",
+  "notes": [
+    "cells = prod(domain/step)，PML 含在域内（gprMax _validate_pml_thickness 依据）。",
+    "dt = 1/(c*sqrt(sum 1/d_i^2))；2D TMx 只用 dy、dz；随后按 gprMax round_float(prec-1) 向下舍入。",
+    "time_steps = ceil(time_window/dt) + 1。该式取自 gprMax 源码 gprMax/user_objects/cmds_singleuse.py TimeWindow.build；本脚本以三条已跑过的求解器日志回归通过（dim23 3D 800ns->8310、dim23 2D 800ns->6785、DEP 2D ZFINE2 1200ns->118665）。设计书 2026-09-26 早期草稿所写的 12463/17625 未计入 round_float 后的 dt 差异，正确值为 12464/17626，已据源码与上述三条日志更正。",
+    "cell-steps/s = 792e6 为保守下界（dim23 3D 反算，RTX 3060 Laptop 实测；本机 RTX 4090 Laptop 按 1-2 倍估计）。",
+    "设备内存三档：131 B/单元（用户给定）、122 B/单元（dim23 3D 实测）、183 B/单元（DEP 2D 实测，维度不可比，悲观上界）。",
+    "Job 提交内存 = 设备内存 x 1.9-2.1（dim23 3D 7.25 GiB、DEP 2D 15.27 GiB 实测比）。",
+    "墙钟估计含 dim23 3D 实测 +158~173 s 的几何构建/编译/写盘开销；2D 对照未单独校准开销。",
+    "全部为自算估计，非承诺；实际值以执行时监督器记录为准。"
+  ],
+  "constants": {
+    "c_m_s": 299792458.0,
+    "time_window_s": 1.2e-06,
+    "bytes_per_cell_user": 131,
+    "bytes_per_cell_dim23_3d_measured": 122,
+    "bytes_per_cell_dep2d_measured_pessimistic": 183,
+    "cell_steps_per_s_conservative_lower_bound": 792000000.0,
+    "job_commit_over_device_ratio_range": [
+      1.9,
+      2.1
+    ],
+    "cell_cap_3d": 64000000,
+    "build_overhead_s_range": [
+      158.0,
+      173.0
+    ],
+    "resource_caps_per_case": {
+      "wall_minutes": 40,
+      "job_commit_GiB": 20,
+      "free_ram_GiB_preflight": 24,
+      "free_vram_GiB_preflight": 8,
+      "output_GiB": 1,
+      "retries": 0,
+      "fdtd_runs": 1,
+      "threads": 8,
+      "backend": "CUDA",
+      "precision": "double",
+      "device": 0,
+      "cpu_fallback": false
+    }
+  },
+  "totals": {
+    "cases": 8,
+    "total_cells": 195840000,
+    "total_wall_clock_upper_s": 5308.294141414141,
+    "execution_order": [
+      "DEP3D_5CM_BG",
+      "DEP3D_5CM_TGT",
+      "DEP3D_ANISO_BG",
+      "DEP3D_ANISO_TGT",
+      "B2D5CM_BG",
+      "B2D5CM_TGT",
+      "B2DANISO_BG",
+      "B2DANISO_TGT"
+    ]
+  },
+  "cases": [
+    {
+      "run_id": "DEP3D_5CM_BG",
+      "file": "DEP3D_5CM_BG.in",
+      "sha256": "8705969e425886cd01ee12dab8b9cab5d21a1bdf1cdab7c2b7fa2d4f96ee2343",
+      "dimension": "3D",
+      "domain_m": [
+        8.0,
+        10.0,
+        50.0
+      ],
+      "grid_spacing_m": [
+        0.05,
+        0.05,
+        0.05
+      ],
+      "n_cells_axis": [
+        160,
+        200,
+        1000
+      ],
+      "cells": 32000000,
+      "pml_cells": 13568000,
+      "pml_fraction_of_main_grid": 0.424,
+      "dt_s": 9.629166007732351e-11,
+      "dt_ps": 96.29166007732351,
+      "time_window_s": 1.2e-06,
+      "time_steps_analytic_raw": 12462.13845556701,
+      "time_steps": 12464,
+      "cell_steps": 398848000000,
+      "device_memory_GiB_at_131B_per_cell": 3.904104232788086,
+      "device_memory_GiB_at_122B_per_cell": 3.635883331298828,
+      "device_memory_GiB_at_183B_per_cell": 5.453824996948242,
+      "job_commit_GiB_estimate_range": [
+        7.417798042297363,
+        8.19861888885498
+      ],
+      "job_commit_GiB_pessimistic": 11.453032493591309,
+      "solve_s_at_792M_cellsteps_per_s": 503.5959595959596,
+      "solve_s_at_2x_rate": 251.7979797979798,
+      "wall_clock_s_estimate_range": [
+        661.5959595959596,
+        676.5959595959596
+      ],
+      "within_3d_cell_cap": true
+    },
+    {
+      "run_id": "DEP3D_5CM_TGT",
+      "file": "DEP3D_5CM_TGT.in",
+      "sha256": "00d370d8590366269517a5b2090ba18a5b12ea91ddad7fe692d51326421ab848",
+      "dimension": "3D",
+      "domain_m": [
+        8.0,
+        10.0,
+        50.0
+      ],
+      "grid_spacing_m": [
+        0.05,
+        0.05,
+        0.05
+      ],
+      "n_cells_axis": [
+        160,
+        200,
+        1000
+      ],
+      "cells": 32000000,
+      "pml_cells": 13568000,
+      "pml_fraction_of_main_grid": 0.424,
+      "dt_s": 9.629166007732351e-11,
+      "dt_ps": 96.29166007732351,
+      "time_window_s": 1.2e-06,
+      "time_steps_analytic_raw": 12462.13845556701,
+      "time_steps": 12464,
+      "cell_steps": 398848000000,
+      "device_memory_GiB_at_131B_per_cell": 3.904104232788086,
+      "device_memory_GiB_at_122B_per_cell": 3.635883331298828,
+      "device_memory_GiB_at_183B_per_cell": 5.453824996948242,
+      "job_commit_GiB_estimate_range": [
+        7.417798042297363,
+        8.19861888885498
+      ],
+      "job_commit_GiB_pessimistic": 11.453032493591309,
+      "solve_s_at_792M_cellsteps_per_s": 503.5959595959596,
+      "solve_s_at_2x_rate": 251.7979797979798,
+      "wall_clock_s_estimate_range": [
+        661.5959595959596,
+        676.5959595959596
+      ],
+      "within_3d_cell_cap": true
+    },
+    {
+      "run_id": "DEP3D_ANISO_BG",
+      "file": "DEP3D_ANISO_BG.in",
+      "sha256": "a110b18d499ba43429220c779b15f38a3a33980d019055d853f30fe419acdbf4",
+      "dimension": "3D",
+      "domain_m": [
+        8.0,
+        10.0,
+        50.0
+      ],
+      "grid_spacing_m": [
+        0.05,
+        0.05,
+        0.025
+      ],
+      "n_cells_axis": [
+        160,
+        200,
+        2000
+      ],
+      "cells": 64000000,
+      "pml_cells": 27136000,
+      "pml_fraction_of_main_grid": 0.424,
+      "dt_s": 6.808848581238542e-11,
+      "dt_ps": 68.08848581238541,
+      "time_window_s": 1.2e-06,
+      "time_steps_analytic_raw": 17624.12522003416,
+      "time_steps": 17626,
+      "cell_steps": 1128064000000,
+      "device_memory_GiB_at_131B_per_cell": 7.808208465576172,
+      "device_memory_GiB_at_122B_per_cell": 7.271766662597656,
+      "device_memory_GiB_at_183B_per_cell": 10.907649993896484,
+      "job_commit_GiB_estimate_range": [
+        14.835596084594727,
+        16.39723777770996
+      ],
+      "job_commit_GiB_pessimistic": 22.906064987182617,
+      "solve_s_at_792M_cellsteps_per_s": 1424.3232323232323,
+      "solve_s_at_2x_rate": 712.1616161616162,
+      "wall_clock_s_estimate_range": [
+        1582.3232323232323,
+        1597.3232323232323
+      ],
+      "within_3d_cell_cap": true
+    },
+    {
+      "run_id": "DEP3D_ANISO_TGT",
+      "file": "DEP3D_ANISO_TGT.in",
+      "sha256": "bb964fbd3a6b58ace714317adf367f2ead741edf7e935898656ea426c57d59e4",
+      "dimension": "3D",
+      "domain_m": [
+        8.0,
+        10.0,
+        50.0
+      ],
+      "grid_spacing_m": [
+        0.05,
+        0.05,
+        0.025
+      ],
+      "n_cells_axis": [
+        160,
+        200,
+        2000
+      ],
+      "cells": 64000000,
+      "pml_cells": 27136000,
+      "pml_fraction_of_main_grid": 0.424,
+      "dt_s": 6.808848581238542e-11,
+      "dt_ps": 68.08848581238541,
+      "time_window_s": 1.2e-06,
+      "time_steps_analytic_raw": 17624.12522003416,
+      "time_steps": 17626,
+      "cell_steps": 1128064000000,
+      "device_memory_GiB_at_131B_per_cell": 7.808208465576172,
+      "device_memory_GiB_at_122B_per_cell": 7.271766662597656,
+      "device_memory_GiB_at_183B_per_cell": 10.907649993896484,
+      "job_commit_GiB_estimate_range": [
+        14.835596084594727,
+        16.39723777770996
+      ],
+      "job_commit_GiB_pessimistic": 22.906064987182617,
+      "solve_s_at_792M_cellsteps_per_s": 1424.3232323232323,
+      "solve_s_at_2x_rate": 712.1616161616162,
+      "wall_clock_s_estimate_range": [
+        1582.3232323232323,
+        1597.3232323232323
+      ],
+      "within_3d_cell_cap": true
+    },
+    {
+      "run_id": "B2D5CM_BG",
+      "file": "B2D5CM_BG.in",
+      "sha256": "8927e3491c98dbb7269747b7cef9abc9afda728825f2e82ea61e7e62ca1b3c66",
+      "dimension": "2D TMx",
+      "domain_m": [
+        null,
+        32.0,
+        50.0
+      ],
+      "grid_spacing_m": [
+        0.05,
+        0.05,
+        0.05
+      ],
+      "n_cells_axis": [
+        1,
+        640,
+        1000
+      ],
+      "cells": 640000,
+      "pml_cells": 64000,
+      "pml_fraction_of_main_grid": 0.1,
+      "dt_s": 1.179327168374842e-10,
+      "dt_ps": 117.9327168374842,
+      "time_window_s": 1.2e-06,
+      "time_steps_analytic_raw": 10175.293440018395,
+      "time_steps": 10177,
+      "cell_steps": 6513280000,
+      "device_memory_GiB_at_131B_per_cell": 0.07808208465576172,
+      "device_memory_GiB_at_122B_per_cell": 0.07271766662597656,
+      "device_memory_GiB_at_183B_per_cell": 0.10907649993896484,
+      "job_commit_GiB_estimate_range": [
+        0.14835596084594727,
+        0.1639723777770996
+      ],
+      "job_commit_GiB_pessimistic": 0.22906064987182617,
+      "solve_s_at_792M_cellsteps_per_s": 8.223838383838384,
+      "solve_s_at_2x_rate": 4.111919191919192,
+      "wall_clock_s_estimate_range": [
+        166.22383838383837,
+        181.22383838383837
+      ],
+      "within_3d_cell_cap": null
+    },
+    {
+      "run_id": "B2D5CM_TGT",
+      "file": "B2D5CM_TGT.in",
+      "sha256": "00f0044c606ec06909aea8d3424e17ddf04bf43be157d4e04157dbb89716c864",
+      "dimension": "2D TMx",
+      "domain_m": [
+        null,
+        32.0,
+        50.0
+      ],
+      "grid_spacing_m": [
+        0.05,
+        0.05,
+        0.05
+      ],
+      "n_cells_axis": [
+        1,
+        640,
+        1000
+      ],
+      "cells": 640000,
+      "pml_cells": 64000,
+      "pml_fraction_of_main_grid": 0.1,
+      "dt_s": 1.179327168374842e-10,
+      "dt_ps": 117.9327168374842,
+      "time_window_s": 1.2e-06,
+      "time_steps_analytic_raw": 10175.293440018395,
+      "time_steps": 10177,
+      "cell_steps": 6513280000,
+      "device_memory_GiB_at_131B_per_cell": 0.07808208465576172,
+      "device_memory_GiB_at_122B_per_cell": 0.07271766662597656,
+      "device_memory_GiB_at_183B_per_cell": 0.10907649993896484,
+      "job_commit_GiB_estimate_range": [
+        0.14835596084594727,
+        0.1639723777770996
+      ],
+      "job_commit_GiB_pessimistic": 0.22906064987182617,
+      "solve_s_at_792M_cellsteps_per_s": 8.223838383838384,
+      "solve_s_at_2x_rate": 4.111919191919192,
+      "wall_clock_s_estimate_range": [
+        166.22383838383837,
+        181.22383838383837
+      ],
+      "within_3d_cell_cap": null
+    },
+    {
+      "run_id": "B2DANISO_BG",
+      "file": "B2DANISO_BG.in",
+      "sha256": "688f2fd9ef4cc974c2678624d08bb2ba54edca9f7a95f616601433caba84189f",
+      "dimension": "2D TMx",
+      "domain_m": [
+        null,
+        32.0,
+        50.0
+      ],
+      "grid_spacing_m": [
+        0.05,
+        0.05,
+        0.025
+      ],
+      "n_cells_axis": [
+        1,
+        640,
+        2000
+      ],
+      "cells": 1280000,
+      "pml_cells": 128000,
+      "pml_fraction_of_main_grid": 0.1,
+      "dt_s": 7.458719917162792e-11,
+      "dt_ps": 74.58719917162792,
+      "time_window_s": 1.2e-06,
+      "time_steps_analytic_raw": 16088.551565514013,
+      "time_steps": 16090,
+      "cell_steps": 20595200000,
+      "device_memory_GiB_at_131B_per_cell": 0.15616416931152344,
+      "device_memory_GiB_at_122B_per_cell": 0.14543533325195312,
+      "device_memory_GiB_at_183B_per_cell": 0.2181529998779297,
+      "job_commit_GiB_estimate_range": [
+        0.29671192169189453,
+        0.3279447555541992
+      ],
+      "job_commit_GiB_pessimistic": 0.45812129974365234,
+      "solve_s_at_792M_cellsteps_per_s": 26.004040404040403,
+      "solve_s_at_2x_rate": 13.002020202020201,
+      "wall_clock_s_estimate_range": [
+        184.0040404040404,
+        199.0040404040404
+      ],
+      "within_3d_cell_cap": null
+    },
+    {
+      "run_id": "B2DANISO_TGT",
+      "file": "B2DANISO_TGT.in",
+      "sha256": "88d72b27e23195a03826c573ca5f71a98142c49245f4c7068436ed537bf4101a",
+      "dimension": "2D TMx",
+      "domain_m": [
+        null,
+        32.0,
+        50.0
+      ],
+      "grid_spacing_m": [
+        0.05,
+        0.05,
+        0.025
+      ],
+      "n_cells_axis": [
+        1,
+        640,
+        2000
+      ],
+      "cells": 1280000,
+      "pml_cells": 128000,
+      "pml_fraction_of_main_grid": 0.1,
+      "dt_s": 7.458719917162792e-11,
+      "dt_ps": 74.58719917162792,
+      "time_window_s": 1.2e-06,
+      "time_steps_analytic_raw": 16088.551565514013,
+      "time_steps": 16090,
+      "cell_steps": 20595200000,
+      "device_memory_GiB_at_131B_per_cell": 0.15616416931152344,
+      "device_memory_GiB_at_122B_per_cell": 0.14543533325195312,
+      "device_memory_GiB_at_183B_per_cell": 0.2181529998779297,
+      "job_commit_GiB_estimate_range": [
+        0.29671192169189453,
+        0.3279447555541992
+      ],
+      "job_commit_GiB_pessimistic": 0.45812129974365234,
+      "solve_s_at_792M_cellsteps_per_s": 26.004040404040403,
+      "solve_s_at_2x_rate": 13.002020202020201,
+      "wall_clock_s_estimate_range": [
+        184.0040404040404,
+        199.0040404040404
+      ],
+      "within_3d_cell_cap": null
+    }
+  ]
+}
