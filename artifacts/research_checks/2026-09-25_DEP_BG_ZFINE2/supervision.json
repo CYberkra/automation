@@ -1,0 +1,23 @@
+{
+  "reason": "completed",
+  "exit_code": 0,
+  "wall_s": 1438.6410000000615,
+  "peak_job_commit_bytes": 15278399488,
+  "observed_output_bytes": 2144125,
+  "memory_cap_bytes": 21474836480,
+  "wall_cap_s": 2400,
+  "output_cap_bytes": 1073741824,
+  "memory_semantics": "Windows job committed memory, not RSS",
+  "output_semantics": "polled file bytes; overshoot possible",
+  "active_job_processes_at_stop": 0,
+  "total_job_processes": 173,
+  "waited_for_descendants": false,
+  "completion_semantics": "root exit zero and job empty; application must propagate child failures",
+  "child_exit_codes_collected": false,
+  "command": [
+    "E:\\automation_djh\\automation_repo\\artifacts\\local_checks\\gprmax_v4_gpu_env\\Scripts\\python.exe",
+    "-u",
+    "-c",
+    "import hashlib,pathlib,runpy,sys; p=pathlib.Path('E:\\\\automation_djh\\\\automation_repo\\\\configs\\\\research\\\\deep_zfine2_v1\\\\DEP_BG_ZFINE2.in'); b=p.read_bytes(); assert hashlib.sha256(b).hexdigest()=='1d21c51cb2bdccaa66527fd3ca1a7270cb090303d0bd0ca6fb60bf319ae2f259'; pathlib.Path('DEP_BG_ZFINE2.in').write_bytes(b); sys.argv=['gprMax','DEP_BG_ZFINE2.in','-gpu','0','-gpu_precision','double']; runpy.run_module('gprMax',run_name='__main__')"
+  ]
+}
