@@ -1,0 +1,109 @@
+{
+  "grid_m": 0.05,
+  "time_window_s": 8e-07,
+  "2d": {
+    "domain_m": [
+      "inf",
+      10,
+      39
+    ],
+    "cells": [
+      1,
+      200,
+      780
+    ],
+    "total_cells": 156000,
+    "dt_s": 1.1793271683748422e-10,
+    "steps": 6784,
+    "pml_cells": [
+      0,
+      20,
+      20,
+      0,
+      20,
+      20
+    ]
+  },
+  "3d": {
+    "domain_m": [
+      10,
+      10,
+      39
+    ],
+    "cells": [
+      200,
+      200,
+      780
+    ],
+    "total_cells": 31200000,
+    "dt_s": 9.629166007732353e-11,
+    "steps": 8309,
+    "pml_cells": [
+      20,
+      20,
+      20,
+      20,
+      20,
+      20
+    ]
+  },
+  "3d_cell_limit": 50000000,
+  "3d_within_limit": true,
+  "gpu_array_estimate_GiB_at_90B_per_cell": 2.6151537895202637,
+  "geometry": {
+    "bottom_pml_m": [
+      0,
+      1
+    ],
+    "subsurface_m": [
+      1,
+      21
+    ],
+    "cover_m": [
+      18,
+      21
+    ],
+    "surface_z_m": 21,
+    "air_m": [
+      21,
+      38
+    ],
+    "antenna_z_m": 36,
+    "antenna_height_above_surface_m": 15,
+    "top_pml_m": [
+      38,
+      39
+    ],
+    "tx_y_m": 4.35,
+    "rx_y_m": 5.65,
+    "baseline_m": 1.3,
+    "profile_x_m": 5,
+    "target_yz_m": {
+      "y": [
+        4,
+        6
+      ],
+      "z": [
+        10,
+        12
+      ]
+    },
+    "target_center_depth_below_surface_m": 10,
+    "target_x_extent_3d_m": [
+      4,
+      6
+    ],
+    "target_x_extent_2d": "infinite (TMx line source, measured difference)"
+  },
+  "wavelength_check": {
+    "note": "170MHz in cover eps16: lambda=0.44m -> 8.8 cells; in rock eps9: 0.59m -> 11.8 cells; not converged, limits recorded",
+    "cells_per_wavelength_170MHz_cover": 8.817425235294117,
+    "cells_per_wavelength_170MHz_rock": 11.756566980392154
+  },
+  "input_sha256": {
+    "DIM23_2D_BG.in": "652dc1a8ef0ed60130d1a28735ce9f7a46b3802e895973f502fe449d63c84625",
+    "DIM23_2D_TGT.in": "2cb8bb869c79f6617ed15ddd4b800ff7da1b1b42942bfbbabc3d607d548c189f",
+    "DIM23_3D_BG.in": "800a0f1cd70b824ac3f5cd6e7449d877ec3bb5f3c19ebe1cdf3ff1ba5249c206",
+    "DIM23_3D_TGT.in": "36b2417635a880a84f0b8cb3133f6be4fb2b8ca42f86144f5c355ade0bafc0de"
+  }
+}

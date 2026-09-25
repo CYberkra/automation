@@ -4,24 +4,93 @@
   "authority": "explicit user instruction in current session",
   "user_instruction": "然后你若需要gprmax仿真的话，和我敲定好再开始仿真。",
   "target_solver": "gprMax 4.0.0",
-  "source_root_on_current_machine": "E:/gprMax-v.4.0.0/gprMax-v.4.0.0",
-  "approved_to_simulate": false,
-  "approved_run_ids": [],
+  "source_root_on_current_machine": "D:/gprMax-v.4.0.0",
+  "batch_id": "dim23_pair_v1",
+  "approved_to_simulate": true,
+  "approved_run_ids": [
+    "DIM23_2D_BG",
+    "DIM23_2D_TGT",
+    "DIM23_3D_BG",
+    "DIM23_3D_TGT"
+  ],
   "approved_compute_budget": {
     "wall_minutes": 30,
-    "job_commit_GiB": 20,
-    "minimum_available_RAM_GiB": 24,
+    "job_commit_GiB": 10,
+    "minimum_available_RAM_GiB": 4,
     "output_GiB": 1,
     "threads": 8,
     "backend": "CUDA",
     "precision": "double",
     "retries": 0,
-    "max_fdtd_runs": 1,
+    "max_fdtd_runs": 4,
     "official_postprocess_wall_minutes": 10,
     "device_id": 0,
-    "minimum_available_VRAM_GiB": 8,
-    "VRAM_limit_semantics": "Preflight availability threshold; not a hard device-memory quota"
+    "minimum_available_VRAM_GiB": 3,
+    "VRAM_limit_semantics": "Preflight availability threshold; not a hard device-memory quota",
+    "local_budget_revision": "This machine has 15.8 GiB total RAM, so the old free-RAM>=24 GiB template is physically unreachable; revised to free>=4 GiB, job<=10 GiB, VRAM>=3 GiB, wall<=30 min per run. Recorded explicitly per user instruction."
   },
+  "approved_execution_contracts": [
+    {
+      "packet_id": "DIM23-PAIR-01",
+      "input_path": "configs/research/dim23_pair_v1/DIM23_2D_BG.in",
+      "input_sha256": "652dc1a8ef0ed60130d1a28735ce9f7a46b3802e895973f502fe449d63c84625",
+      "runtime_identity_path": "artifacts/research_checks/2026-09-25_local_gpu_setup/runtime_identity.json",
+      "runtime_identity_sha256": "d9bcb8899f4a68ffb218390bdd26dc34f3f1eac8919386e57e24ab345832ef92",
+      "launcher_sha256": "ef91eb05a69d8760c2bb55e0c0fa251ea11d8a1a6705733d2e42ae1b452f00a6",
+      "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
+      "attempt_record": "artifacts/research_checks/2026-09-25_DIM23_2D_BG_attempt.json",
+      "run_directory": "artifacts/simulations/2026-09-25_DIM23_2D_BG",
+      "continuation": "Paired TGT-BG difference analysis within each dimension only; no cross-dimension absolute amplitude comparison. No automatic retry.",
+      "cuda_identity_path": "artifacts/research_checks/2026-09-25_local_gpu_setup/cuda_identity.json",
+      "cuda_identity_sha256": "97e160b66e43e474c7c1a4344ed82cc3bb08f81399e7d9c572f6ec33cbfbb9a3",
+      "run_id": "DIM23_2D_BG"
+    },
+    {
+      "packet_id": "DIM23-PAIR-01",
+      "input_path": "configs/research/dim23_pair_v1/DIM23_2D_TGT.in",
+      "input_sha256": "2cb8bb869c79f6617ed15ddd4b800ff7da1b1b42942bfbbabc3d607d548c189f",
+      "runtime_identity_path": "artifacts/research_checks/2026-09-25_local_gpu_setup/runtime_identity.json",
+      "runtime_identity_sha256": "d9bcb8899f4a68ffb218390bdd26dc34f3f1eac8919386e57e24ab345832ef92",
+      "launcher_sha256": "ef91eb05a69d8760c2bb55e0c0fa251ea11d8a1a6705733d2e42ae1b452f00a6",
+      "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
+      "attempt_record": "artifacts/research_checks/2026-09-25_DIM23_2D_TGT_attempt.json",
+      "run_directory": "artifacts/simulations/2026-09-25_DIM23_2D_TGT",
+      "continuation": "Paired TGT-BG difference analysis within each dimension only; no cross-dimension absolute amplitude comparison. No automatic retry.",
+      "cuda_identity_path": "artifacts/research_checks/2026-09-25_local_gpu_setup/cuda_identity.json",
+      "cuda_identity_sha256": "97e160b66e43e474c7c1a4344ed82cc3bb08f81399e7d9c572f6ec33cbfbb9a3",
+      "run_id": "DIM23_2D_TGT"
+    },
+    {
+      "packet_id": "DIM23-PAIR-01",
+      "input_path": "configs/research/dim23_pair_v1/DIM23_3D_BG.in",
+      "input_sha256": "800a0f1cd70b824ac3f5cd6e7449d877ec3bb5f3c19ebe1cdf3ff1ba5249c206",
+      "runtime_identity_path": "artifacts/research_checks/2026-09-25_local_gpu_setup/runtime_identity.json",
+      "runtime_identity_sha256": "d9bcb8899f4a68ffb218390bdd26dc34f3f1eac8919386e57e24ab345832ef92",
+      "launcher_sha256": "ef91eb05a69d8760c2bb55e0c0fa251ea11d8a1a6705733d2e42ae1b452f00a6",
+      "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
+      "attempt_record": "artifacts/research_checks/2026-09-25_DIM23_3D_BG_attempt.json",
+      "run_directory": "artifacts/simulations/2026-09-25_DIM23_3D_BG",
+      "continuation": "Paired TGT-BG difference analysis within each dimension only; no cross-dimension absolute amplitude comparison. No automatic retry.",
+      "cuda_identity_path": "artifacts/research_checks/2026-09-25_local_gpu_setup/cuda_identity.json",
+      "cuda_identity_sha256": "97e160b66e43e474c7c1a4344ed82cc3bb08f81399e7d9c572f6ec33cbfbb9a3",
+      "run_id": "DIM23_3D_BG"
+    },
+    {
+      "packet_id": "DIM23-PAIR-01",
+      "input_path": "configs/research/dim23_pair_v1/DIM23_3D_TGT.in",
+      "input_sha256": "36b2417635a880a84f0b8cb3133f6be4fb2b8ca42f86144f5c355ade0bafc0de",
+      "runtime_identity_path": "artifacts/research_checks/2026-09-25_local_gpu_setup/runtime_identity.json",
+      "runtime_identity_sha256": "d9bcb8899f4a68ffb218390bdd26dc34f3f1eac8919386e57e24ab345832ef92",
+      "launcher_sha256": "ef91eb05a69d8760c2bb55e0c0fa251ea11d8a1a6705733d2e42ae1b452f00a6",
+      "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
+      "attempt_record": "artifacts/research_checks/2026-09-25_DIM23_3D_TGT_attempt.json",
+      "run_directory": "artifacts/simulations/2026-09-25_DIM23_3D_TGT",
+      "continuation": "Paired TGT-BG difference analysis within each dimension only; no cross-dimension absolute amplitude comparison. No automatic retry.",
+      "cuda_identity_path": "artifacts/research_checks/2026-09-25_local_gpu_setup/cuda_identity.json",
+      "cuda_identity_sha256": "97e160b66e43e474c7c1a4344ed82cc3bb08f81399e7d9c572f6ec33cbfbb9a3",
+      "run_id": "DIM23_3D_TGT"
+    }
+  ],
   "source_version_is_not_runtime_verification": true,
   "permitted_preparation": [
     "read official docs and local source",
@@ -50,9 +119,9 @@
     "expected outputs and storage",
     "explicit agreed execution scope"
   ],
-  "note": "YFINE attempts completed and archived. No pending run contract; delegated GPU research authority remains. Freeze a new exact input/runtime/supervisor contract before another solve; never reuse consumed attempts.",
+  "note": "Batch dim23_pair_v1 frozen 2026-09-25 under user's path-A choice (local env rebuilt and verified; freeze small contract; run full 2D/3D paired batch locally). Four cases, one attempt each, execution order 2D_BG,2D_TGT,3D_BG,3D_TGT; 3D untouched if any 2D case fails. Budget locally revised (see approved_compute_budget.local_budget_revision). Env runs through ASCII junctions D:\\gprmax_v4_gpu_env and C:\\cuda118 because nvcc/cl.exe cannot parse non-ASCII/space-containing include paths.",
   "build_authorization": "用户明确：许可你构建。仅构建/安装/导入核验，不是仿真批准。",
-  "simulation_authorization": "User authorizes autonomous GPU research. Two lateral-refinement controls dy=dz6.25mm, invariant dx12.5mm, one attempt each.",
+  "simulation_authorization": "User authorizes autonomous GPU research and selected path A for dim23_pair_v1 in current session.",
   "authorization_history": [
     {
       "record": "artifacts/research_checks/2026-09-24_M00_x_3d_r1/authorization_at_start.json",
@@ -100,12 +169,8 @@
     "user_clarification": "仿真gpu跑，后处理如果正常就是cpu那也没必要改，除非gpu能加速很多"
   },
   "execution_outcome": {
-    "status": "completed",
-    "attempt_consumed": true,
-    "case": "DEP_20_YFINE",
-    "exec_session_id": 68122,
-    "exit_code": 0,
-    "wall_s": 1088.781
+    "status": "ready_not_started",
+    "attempts_consumed": 0
   },
   "last_completed_execution_contract": {
     "packet_id": "DEEP-YFINE-01",

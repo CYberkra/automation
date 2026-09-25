@@ -1,0 +1,84 @@
+{
+  "schema": "gprmax-execution-decision/1",
+  "updated_date": "2026-09-25",
+  "authority": "explicit user instruction in current session",
+  "user_instruction": "然后你若需要gprmax仿真的话，和我敲定好再开始仿真。",
+  "target_solver": "gprMax 4.0.0",
+  "source_root_on_current_machine": "D:/gprMax-v.4.0.0",
+  "approved_to_simulate": true,
+  "approved_run_ids": [
+    "DIM23_3D_BG"
+  ],
+  "approved_compute_budget": {
+    "wall_minutes": 30,
+    "job_commit_GiB": 10,
+    "minimum_available_RAM_GiB": 4,
+    "output_GiB": 1,
+    "threads": 8,
+    "backend": "CUDA",
+    "precision": "double",
+    "retries": 0,
+    "max_fdtd_runs": 1,
+    "official_postprocess_wall_minutes": 10,
+    "device_id": 0,
+    "minimum_available_VRAM_GiB": 3,
+    "VRAM_limit_semantics": "Preflight availability threshold; not a hard device-memory quota"
+  },
+  "source_version_is_not_runtime_verification": true,
+  "permitted_preparation": [
+    "read official docs and local source",
+    "archive provenance",
+    "design and write reviewable inputs",
+    "static source/input checks",
+    "constructed-array analysis",
+    "Git commit and sync",
+    "build/install isolated V4 from source copy and import-only runtime verification"
+  ],
+  "requires_agreement_before_execution": [
+    "FDTD solver run",
+    "official examples/tests that invoke a solve",
+    "CPU/GPU benchmark solve",
+    "study or parameter sweep",
+    "automatic retry or expanded simulation batch outside agreed scope"
+  ],
+  "discussion_packet_required": [
+    "physical question and allowed claim",
+    "exact version/build and input hashes",
+    "cases and run count",
+    "source waveform and timing",
+    "geometry/grid/PML/time window",
+    "CPU/GPU/precision/resources and stopping rules",
+    "reference and evaluation plan",
+    "expected outputs and storage",
+    "explicit agreed execution scope"
+  ],
+  "note": "Batch dim23_pair_v1 case gate. Local budget revision: RAM 15.8 GiB total makes the old 24 GiB free-RAM template physically unreachable; revised to free>=4 GiB, job<=10 GiB, VRAM>=3 GiB. Recorded explicitly per user instruction.",
+  "simulation_authorization": "User selected path A in current session: rebuild local env, freeze small contract, run full 2D/3D paired batch dim23_pair_v1 locally. Four cases, one attempt each.",
+  "approved_execution_contract": {
+    "packet_id": "DIM23-PAIR-01",
+    "input_path": "configs/research/dim23_pair_v1/DIM23_3D_BG.in",
+    "input_sha256": "800a0f1cd70b824ac3f5cd6e7449d877ec3bb5f3c19ebe1cdf3ff1ba5249c206",
+    "runtime_identity_path": "artifacts/research_checks/2026-09-25_local_gpu_setup/runtime_identity.json",
+    "runtime_identity_sha256": "d9bcb8899f4a68ffb218390bdd26dc34f3f1eac8919386e57e24ab345832ef92",
+    "launcher_sha256": "ef91eb05a69d8760c2bb55e0c0fa251ea11d8a1a6705733d2e42ae1b452f00a6",
+    "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
+    "attempt_record": "artifacts/research_checks/2026-09-25_DIM23_3D_BG_attempt.json",
+    "run_directory": "artifacts/simulations/2026-09-25_DIM23_3D_BG",
+    "continuation": "Paired TGT-BG difference analysis within each dimension only; no cross-dimension absolute amplitude comparison. No automatic retry.",
+    "cuda_identity_path": "artifacts/research_checks/2026-09-25_local_gpu_setup/cuda_identity.json",
+    "cuda_identity_sha256": "97e160b66e43e474c7c1a4344ed82cc3bb08f81399e7d9c572f6ec33cbfbb9a3",
+    "run_id": "DIM23_3D_BG"
+  },
+  "execution_policy": {
+    "required_solver_backend": "cuda",
+    "allow_cpu_solver_fallback": false,
+    "user_authorized_gpu_configuration_and_runs": true,
+    "runtime_readiness": "cuda_float64_kernel_verified_local",
+    "postprocessing": "Prefer official CPU implementation; migrate only if substantial speedup is demonstrated",
+    "user_clarification": "仿真gpu跑，后处理如果正常就是cpu那也没必要改，除非gpu能加速很多"
+  },
+  "execution_outcome": {
+    "status": "ready_not_started",
+    "attempt_consumed": false
+  }
+}
