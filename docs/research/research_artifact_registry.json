@@ -7,29 +7,77 @@
   "runs": [
     {
       "id": "batch2d_v1_fine2",
-      "status": "in_progress_executing_no_results_registered",
-      "directory": "artifacts/simulations/2026-09-26_*_F2",
-      "directory_note": "Per-case run directories artifacts/simulations/2026-09-26_<case>-F2; not read while the batch is executing, no outputs registered yet.",
-      "tracked": false,
+      "status": "complete_8of8_exit0",
+      "directory": "artifacts/research_checks/2026-09-26_batch2d_fine2_analysis_r1",
+      "directory_note": "Analysis recomputed in analysis_r1 and analysis_r2 with byte-identical results.json (sha256 prefix dd2ba3328a6f24b1); per-case run directories artifacts/simulations/2026-09-26_<case>-F2 hold the raw h5, inputs, stdout/stderr, supervision.json and live_status.json.",
+      "run_directories_prefix": "artifacts/simulations/2026-09-26_B2D-*-F2",
+      "tracked": true,
       "solver_executed": true,
       "training_executed": false,
-      "report": null,
+      "report": "docs/research/2026-09-26_batch2d_v1_fine2_results.md",
+      "spec": "docs/research/2026-09-26_batch_2d_spec_v1.md",
       "contract": "configs/research/gprmax_v4_execution_gate.json",
       "input_contract": "configs/research/batch2d_v1_fine2/",
       "analysis_script": "scripts/analyze_batch2d_fine2.py",
+      "attempts": "one each, consumed, gate closed",
+      "analysis_recompute": "results.json byte-identical across analysis_r1/analysis_r2",
       "gate": "batch2d_v1_fine2",
       "grid_m": [
         0.0125,
         0.003125
       ],
       "key_numbers": {
-        "n_cases": 8
+        "n_cases": 8,
+        "attempts_consumed": 8,
+        "wall_clock_s_range": [
+          1318.437,
+          1323.031
+        ],
+        "job_peak_commit_bytes_range": [
+          15246221312,
+          15248601088
+        ],
+        "p2_difference_spectrum_shape_correlation_range": [
+          0.9981254455630282,
+          0.999548930464859
+        ],
+        "p2_per_frequency_sign_agreement_range": [
+          0.8802395209580839,
+          0.93812375249501
+        ],
+        "p2_envelope_peak_fine2_earlier_ns_range": [
+          15.67053018661818,
+          19.11901197816502
+        ],
+        "in_band_energy_ratio_by_family": {
+          "C1": 7.872880397772246e-06,
+          "C3": 3.092143334046171e-07,
+          "C5": 1.2121864557034453e-08,
+          "C8": 9.369628603300173e-11
+        },
+        "reproduction_vs_DEP_BG_ZFINE2": {
+          "samples": 118665,
+          "max_abs_difference": 0.0,
+          "relative_L2_difference": 0.0
+        },
+        "vctip_interventions": 0,
+        "report": "docs/research/2026-09-26_batch2d_v1_fine2_results.md",
+        "analysis_dirs": [
+          "artifacts/research_checks/2026-09-26_batch2d_fine2_analysis_r1",
+          "artifacts/research_checks/2026-09-26_batch2d_fine2_analysis_r2"
+        ],
+        "analysis_results_sha256_prefix": "dd2ba3328a6f24b1"
       },
       "limitations": [
-        "executing: no outputs read and no results registered; do not read artifacts/simulations/2026-09-26_*_F2 during execution",
+        "direction consistency is not an accuracy certification: it must not be extrapolated as coarse- or fine-tier accuracy, as grid convergence (grid_convergence_certified=false) or as physical sufficiency",
+        "cross-tier amplitude ratios are direction indicators only: they mix grid dispersion, source discretisation and taper sample count, so they are not accuracy or grid-error measures",
         "FINE2 tier (dy12.5/dz3.125 mm, ZFINE2 same grid); direction-consistency recheck only, no absolute amplitude or phase conclusion",
         "serial fail-abort, retries=0, CUDA double, no CPU fallback; wall 40 min/case, Job 20 GiB",
         "archived C3 ZFINE2 evidence is D20 depth, not interchangeable with this batch D10 anchor depth",
+        "vctip watcher ran alongside the batch with zero interventions (8/8 supervision records waited_for_descendants=false): a factual record only, not new evidence about vctip behaviour and not a basis for downgrading 3D budgets",
+        "bitwise zero difference against archived DEP_BG_ZFINE2 is run-to-run reproducibility on one grid tier; not convergence and not an accuracy statement",
+        "C8 in-band energy ratio 9.369628603300173e-11 stays in the numerical-resolution concern region; no detectability claim either way; no NC/OFF negative controls in the fine tier",
+        "8 attempts, one each, consumed and not reusable; conclusions limited to the four fine2 family anchor scenarios and the analysed FINE2 grid",
         "physical and training labels remain disabled; reference_state stays numerically_unresolved"
       ]
     },
@@ -886,10 +934,10 @@
     "verify actual instrument frequency vector and CSV processing;0.3MHz step confirmed; reserved field data excluded from development",
     "confirm target depth meaning and independently constrain site cover thickness/moisture/material parameters",
     "HSG ratio controls support coupling lag (r-1)/(2r) main dt; resolve intended source/coupling/output timing before heterogeneous local model. This is a historical 3D subtask; current live 2D batch is listed separately.",
-    "batch2d_v1_fine2 (FINE2 tier, 8 serial cases = 4 family anchor pairs; gate batch2d_v1_fine2, wall 40min/Job 20GiB, retries=0) is executing: accept exit/wall/Job/attempt records, archive raw h5 with input hash checks, run scripts/analyze_batch2d_fine2.py r1/r2 with byte-identical results.json, then write the cross-tier direction-consistency conclusion per spec P2 and the fine2 results report. No fine2 number may be registered before that.",
-    "batch2d_v1 BASE conclusions stay provisional: depth monotonicity, envelope-peak delay and electrical-tier directions hold only pending fine2 direction consistency; downgrade any inconsistent mechanism to pending-recheck (spec P2). Coarse-tier physical sufficiency is not certified.",
-    "P10 3D validation subset: after the fine2 direction recheck, draft and freeze a separate 3D contract for the preferred object C3 anchor A0 pair (2 runs, 5 cm isotropic, budget from dep3d measured 910.6-920.2 s/run and 7.98 GiB); user agreement required before execution. Pending P-A (C8 anchor) and P-B (C5 anchor) depend on the fine2 recheck; P-C (electrical/conductivity tiers) also depends on the A0 3D result. No 3D inside batch2d_v1.",
-    "vctip.exe telemetry orphan causes about 900 s post-solve residency; the drain intervention is operational only and its effect on 3D wall clock is unmeasured, so 3D budgets must not be downgraded from 2D measurements.",
+    "merge the coarse/fine stratified mechanism conclusions into the operator-contract evaluation input material (spec P2): the two tiers are direction-consistent and nothing is downgraded to pending-recheck; retained as mechanism/operator-evaluation evidence only, with no physical or training labels, no 3D or field extrapolation and no grid-convergence announcement.",
+    "batch2d_v1 mechanism conclusions (in-band energy ratio decreases with cover thickness, envelope-peak delay increases with cover thickness, electrical-contrast direction raises the differential response) are direction-consistent across the BASE and FINE2 tiers, so no mechanism is downgraded to pending-recheck (spec P2); they remain mechanism/operator-evaluation evidence, and neither tier physical sufficiency nor grid convergence is certified.",
+    "P10 3D validation subset: the fine2 direction recheck is complete, so advance along the decision dependency chain - draft and freeze a separate 3D contract for the preferred object C3 anchor A0 pair (2 runs, 5 cm isotropic, budget from dep3d measured 910.6-920.2 s/run and 7.98 GiB), with user agreement required before execution; P-A (C8 anchor) and P-B (C5 anchor) can now be assessed against the fine2 recheck result; P-C (electrical/conductivity tiers) still depends on the A0 3D result. No 3D inside batch2d_v1.",
+    "vctip.exe telemetry orphan causes about 900 s post-solve residency; the drain intervention is operational only and its effect on 3D wall clock is unmeasured, so 3D budgets must not be downgraded from 2D measurements. The fine2 batch recorded zero interventions (8/8 waited_for_descendants=false), a factual record that is neither evidence about vctip behaviour nor licence to downgrade 3D budgets.",
     "reference_state stays numerically_unresolved: no physical acceptance threshold, no training labels, no clean truth. Vertical refinement is done (ZFINE2 adjacent L2 66.6647% -> 17.2452% -> 4.1216%) and must not be re-planned as pending work."
   ],
   "direction_diagnostic_addendum": "configs/research/direction_diagnostic_contract_v0.1.json",
