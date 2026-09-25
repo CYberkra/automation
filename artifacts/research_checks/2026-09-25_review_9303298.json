@@ -1,0 +1,78 @@
+{
+  "schema": "review-evidence/1",
+  "reviewed_commit": "9303298",
+  "base_commit": "0fd784a",
+  "utc": "2026-09-25T04:26:30.933414+00:00",
+  "python": "3.10.9",
+  "numpy": "2.2.6",
+  "workspace_checks_passed": 136,
+  "handoff_check_passed": true,
+  "joint_roles_rows_replayed": 42,
+  "layer_reference_checks_passed": 10,
+  "layer_reference_arrays_exactly_equal": true,
+  "archived_input_hashes_checked": 55,
+  "input_hash_mismatches": [],
+  "cosine_roundoff": {
+    "case": {
+      "config": "B5_G1_BG",
+      "grid": "zfine",
+      "profile": "localized"
+    },
+    "archived_metrics": {
+      "nrmse": 0.9999999999999999,
+      "amplitude_factor": 2.582967749136693e-16,
+      "amplitude_error": 0.9999999999999998,
+      "shape_residual": 4.150417400938661e-16,
+      "signed_cosine": 0.5283735260532902
+    },
+    "replayed_metrics": {
+      "nrmse": 1.0000000000000002,
+      "amplitude_factor": -2.377196080706963e-16,
+      "amplitude_error": 1.0000000000000002,
+      "shape_residual": 4.137491075351365e-16,
+      "signed_cosine": -0.49817795425732847
+    },
+    "replayed_output_reference_norm_ratio": 4.771780967808638e-16
+  },
+  "supervisor_root_exit_reproduction": {
+    "supervision": {
+      "reason": "completed",
+      "exit_code": 0,
+      "wall_s": 0.125,
+      "peak_job_commit_bytes": 7516160,
+      "observed_output_bytes": 236,
+      "memory_cap_bytes": 536870912,
+      "wall_cap_s": 5,
+      "output_cap_bytes": 1048576,
+      "memory_semantics": "Windows job committed memory, not RSS",
+      "output_semantics": "polled file bytes; overshoot possible",
+      "command": [
+        "<current_python>",
+        "-c",
+        "import subprocess,sys; subprocess.Popen([sys.executable,'-c',\"import time,pathlib; time.sleep(2); pathlib.Path('child_done.txt').write_text('done')\"]); print('root done')"
+      ]
+    },
+    "child_completion_file_exists": false,
+    "scope": "CPU-only asynchronous child counterexample; archived synchronous FDTD failures not established"
+  },
+  "yfine_metrics": {
+    "relative_L2": 0.0021025187115867594,
+    "max_abs_phase_deg": 0.20303370095050435
+  },
+  "reviewed_file_sha256": {
+    "scripts/study_joint_roles.py": "611a83b4ac9a77d1a74458302ca5d92fd851ff9eb33f61fa2cc7cad216fa20c8",
+    "scripts/research_evaluation_contract.py": "34a114637d4f225397fffd406982f9af6d070559bd06e01b3c1354f994a6cfc6",
+    "scripts/bounded_windows_process.py": "18d34cf77e59588cbd054a184a1f1c35ec3c14dd5943e951ac7f48e680b7b747",
+    "scripts/compare_yz_refinement.py": "86d4497280ef00b3c68c0d764ea9858cbcd280f1da9775b6a23b576d2136bcaf",
+    "scripts/compare_hsg_clock.py": "e96e95fad06e08346d7995fab8ca9adf9904f09a22be101227f31496f081225d"
+  },
+  "fdtd_executed": false,
+  "training_executed": false,
+  "raw_field_data_used": false,
+  "source_code_modified": false,
+  "limits": [
+    "Focused review of 71 commits, not a claim of exhaustive review of all 790 tracked files.",
+    "No independent rerun of CUDA solver or complete official SFCW postprocessing environment.",
+    "Floating-point near-zero diagnostic mismatch does not overturn NRMSE/amplitude deletion conclusion."
+  ]
+}
