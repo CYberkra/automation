@@ -1,0 +1,23 @@
+{
+  "reason": "completed",
+  "exit_code": 0,
+  "wall_s": 29.875,
+  "peak_job_commit_bytes": 2916687872,
+  "observed_output_bytes": 200255,
+  "memory_cap_bytes": 4294967296,
+  "wall_cap_s": 1200,
+  "output_cap_bytes": 1073741824,
+  "memory_semantics": "Windows job committed memory, not RSS",
+  "output_semantics": "polled file bytes; overshoot possible",
+  "active_job_processes_at_stop": 0,
+  "total_job_processes": 65,
+  "waited_for_descendants": true,
+  "completion_semantics": "root exit zero and job empty; application must propagate child failures",
+  "child_exit_codes_collected": false,
+  "command": [
+    "E:\\automation_djh\\automation_repo\\artifacts\\local_checks\\gprmax_v4_gpu_env\\Scripts\\python.exe",
+    "-u",
+    "-c",
+    "import hashlib,pathlib,runpy,sys; p=pathlib.Path('E:\\\\automation_djh\\\\automation_repo\\\\configs\\\\research\\\\batch2d_v1\\\\B2D-C5m-BG.in'); b=p.read_bytes(); assert hashlib.sha256(b).hexdigest()=='0b7af92238cddda48b0e9c13748649be6b4ddcb79a9e63cdb372f659e09890eb'; pathlib.Path('B2D-C5m-BG.in').write_bytes(b); sys.argv=['gprMax','B2D-C5m-BG.in','-gpu','0','-gpu_precision','double']; runpy.run_module('gprMax',run_name='__main__')"
+  ]
+}

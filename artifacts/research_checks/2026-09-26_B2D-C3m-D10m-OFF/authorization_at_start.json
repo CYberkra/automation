@@ -5,9 +5,39 @@
   "user_instruction": "整夜运行授权：证据到位时可主动解除旧约束（含新仿真批次），每次解除须写明依据留痕（2026-09-26 会话）",
   "target_solver": "gprMax 4.0.0",
   "source_root_on_current_machine": "E:/gprMax-v.4.0.0/gprMax-v.4.0.0",
-  "batch_id": "batch2d_v1_consumed",
-  "approved_to_simulate": false,
-  "approved_run_ids": [],
+  "batch_id": "batch2d_v1",
+  "approved_to_simulate": true,
+  "approved_run_ids": [
+    "B2D-C3m-BG",
+    "B2D-C3m-D5m-W4m-T0.5m-E20-S0.02",
+    "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+    "B2D-C3m-D20m-W4m-T0.5m-E20-S0.02",
+    "B2D-C3m-D10m-W1m-T0.5m-E20-S0.02",
+    "B2D-C3m-D10m-W2m-T0.5m-E20-S0.02",
+    "B2D-C3m-D10m-W4m-T0.25m-E20-S0.02",
+    "B2D-C3m-D10m-W4m-T1m-E20-S0.02",
+    "B2D-C3m-D10m-W4m-T0.5m-E12-S0.005",
+    "B2D-C3m-D10m-W4m-T0.5m-E28-S0.05",
+    "B2D-C3m-D10m-W4m-T0.5m-E20-S0.005",
+    "B2D-C3m-D10m-W4m-T0.5m-E20-S0.05",
+    "B2D-C3m-D10m-NC",
+    "B2D-C3m-D10m-OFF",
+    "B2D-C1m-BG",
+    "B2D-C1m-D2m-W4m-T0.5m-E20-S0.02",
+    "B2D-C1m-D5m-W4m-T0.5m-E20-S0.02",
+    "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+    "B2D-C1m-D10m-NC",
+    "B2D-C5m-BG",
+    "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02",
+    "B2D-C5m-D20m-W4m-T0.5m-E20-S0.02",
+    "B2D-C5m-D10m-NC",
+    "B2D-C8m-BG",
+    "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+    "B2D-C8m-D20m-W4m-T0.5m-E20-S0.02",
+    "B2D-C8m-D20m-W4m-T0.25m-E20-S0.02",
+    "B2D-C8m-D10m-W4m-T0.5m-E28-S0.05",
+    "B2D-C8m-D10m-NC"
+  ],
   "approved_compute_budget": {
     "wall_minutes": 20,
     "job_commit_GiB": 4,
@@ -488,158 +518,8 @@
     "postprocessing": "Prefer official CPU implementation"
   },
   "execution_outcome": {
-    "status": "completed",
-    "attempts_consumed": 29,
-    "runs": {
-      "B2D-C3m-BG": {
-        "exit_code": 0,
-        "wall_s": 532.156,
-        "peak_job_commit_bytes": 2915713024
-      },
-      "B2D-C3m-D5m-W4m-T0.5m-E20-S0.02": {
-        "exit_code": 0,
-        "wall_s": 59.218,
-        "peak_job_commit_bytes": 2917384192
-      },
-      "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02": {
-        "exit_code": 0,
-        "wall_s": 30.125,
-        "peak_job_commit_bytes": 2916569088
-      },
-      "B2D-C3m-D20m-W4m-T0.5m-E20-S0.02": {
-        "exit_code": 0,
-        "wall_s": 29.875,
-        "peak_job_commit_bytes": 2916110336
-      },
-      "B2D-C3m-D10m-W1m-T0.5m-E20-S0.02": {
-        "exit_code": 0,
-        "wall_s": 29.875,
-        "peak_job_commit_bytes": 2916335616
-      },
-      "B2D-C3m-D10m-W2m-T0.5m-E20-S0.02": {
-        "exit_code": 0,
-        "wall_s": 30.125,
-        "peak_job_commit_bytes": 2917273600
-      },
-      "B2D-C3m-D10m-W4m-T0.25m-E20-S0.02": {
-        "exit_code": 0,
-        "wall_s": 29.875,
-        "peak_job_commit_bytes": 2917724160
-      },
-      "B2D-C3m-D10m-W4m-T1m-E20-S0.02": {
-        "exit_code": 0,
-        "wall_s": 30.125,
-        "peak_job_commit_bytes": 2917208064
-      },
-      "B2D-C3m-D10m-W4m-T0.5m-E12-S0.005": {
-        "exit_code": 0,
-        "wall_s": 29.875,
-        "peak_job_commit_bytes": 2915852288
-      },
-      "B2D-C3m-D10m-W4m-T0.5m-E28-S0.05": {
-        "exit_code": 0,
-        "wall_s": 29.875,
-        "peak_job_commit_bytes": 2916827136
-      },
-      "B2D-C3m-D10m-W4m-T0.5m-E20-S0.005": {
-        "exit_code": 0,
-        "wall_s": 30.125,
-        "peak_job_commit_bytes": 2917875712
-      },
-      "B2D-C3m-D10m-W4m-T0.5m-E20-S0.05": {
-        "exit_code": 0,
-        "wall_s": 29.859,
-        "peak_job_commit_bytes": 2915225600
-      },
-      "B2D-C3m-D10m-NC": {
-        "exit_code": 0,
-        "wall_s": 30.125,
-        "peak_job_commit_bytes": 2917556224
-      },
-      "B2D-C3m-D10m-OFF": {
-        "exit_code": 0,
-        "wall_s": 29.859,
-        "peak_job_commit_bytes": 2915692544
-      },
-      "B2D-C1m-BG": {
-        "exit_code": 0,
-        "wall_s": 30.125,
-        "peak_job_commit_bytes": 2917842944
-      },
-      "B2D-C1m-D2m-W4m-T0.5m-E20-S0.02": {
-        "exit_code": 0,
-        "wall_s": 29.875,
-        "peak_job_commit_bytes": 2918010880
-      },
-      "B2D-C1m-D5m-W4m-T0.5m-E20-S0.02": {
-        "exit_code": 0,
-        "wall_s": 29.859,
-        "peak_job_commit_bytes": 2917179392
-      },
-      "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02": {
-        "exit_code": 0,
-        "wall_s": 30.125,
-        "peak_job_commit_bytes": 2917560320
-      },
-      "B2D-C1m-D10m-NC": {
-        "exit_code": 0,
-        "wall_s": 29.86,
-        "peak_job_commit_bytes": 2915782656
-      },
-      "B2D-C5m-BG": {
-        "exit_code": 0,
-        "wall_s": 29.875,
-        "peak_job_commit_bytes": 2916687872
-      },
-      "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02": {
-        "exit_code": 0,
-        "wall_s": 30.125,
-        "peak_job_commit_bytes": 2917650432
-      },
-      "B2D-C5m-D20m-W4m-T0.5m-E20-S0.02": {
-        "exit_code": 0,
-        "wall_s": 29.859,
-        "peak_job_commit_bytes": 2917261312
-      },
-      "B2D-C5m-D10m-NC": {
-        "exit_code": 0,
-        "wall_s": 29.875,
-        "peak_job_commit_bytes": 2915479552
-      },
-      "B2D-C8m-BG": {
-        "exit_code": 0,
-        "wall_s": 30.11,
-        "peak_job_commit_bytes": 2915868672
-      },
-      "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02": {
-        "exit_code": 0,
-        "wall_s": 29.875,
-        "peak_job_commit_bytes": 2917654528
-      },
-      "B2D-C8m-D20m-W4m-T0.5m-E20-S0.02": {
-        "exit_code": 0,
-        "wall_s": 30.109,
-        "peak_job_commit_bytes": 2915303424
-      },
-      "B2D-C8m-D20m-W4m-T0.25m-E20-S0.02": {
-        "exit_code": 0,
-        "wall_s": 29.86,
-        "peak_job_commit_bytes": 2915946496
-      },
-      "B2D-C8m-D10m-W4m-T0.5m-E28-S0.05": {
-        "exit_code": 0,
-        "wall_s": 29.875,
-        "peak_job_commit_bytes": 2914930688
-      },
-      "B2D-C8m-D10m-NC": {
-        "exit_code": 0,
-        "wall_s": 30.125,
-        "peak_job_commit_bytes": 2917658624
-      }
-    },
-    "acceptance": "all 29 supervision.json reason=completed exit 0; all h5 Ex (20352,) finite; peak commit 2.83-2.92 GiB < 4 GiB cap; archives at artifacts/research_checks/2026-09-26_<RUN>/ with record.json sha256 manifests",
-    "operational_intervention": "post-solve job drain (vctip.exe, MSVC telemetry, identified during first case) was cleared by an external watcher that killed only orphaned vctip.exe processes while runs showed waiting_descendants; 29 events logged at artifacts/research_checks/2026-09-26_batch2d_v1_vctip_intervention_log.jsonl; supervision completion semantics (root exit zero and job empty) satisfied unmodified; solver, inputs, h5 outputs untouched",
-    "wall_time_note": "per-run walls 29.9-59.2 s after intervention (first case 532.2 s before watcher started); spec P5 planning envelope 152 s/case not exceeded"
+    "status": "ready_not_started",
+    "attempts_consumed": 0
   },
   "note": "batch2d_v1: 29 coarse-tier 2D cases (4 cover families x depth/electrical scan + BG/NC/OFF controls), serial, fail-abort. Spec: docs/research/2026-09-26_batch_2d_spec_v1.md. Physical/training labels remain disabled."
 }
