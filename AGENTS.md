@@ -150,6 +150,17 @@ python scripts/audit_materials.py
 - 图件使用物理坐标/单位、可比较色标；展示增强单列。输出包括参数/哈希/复现入口及失败案例。
 - Windows 路径按字面值处理；不在工作区打印密钥或访问令牌，不把原始实测/钻孔资料上传到外部服务。
 
+## 多 agent 协作协议（2026-09-26 用户批准，试活验收通过后立）
+
+分工：kimi（本会话）负责规划、契约/事件表/门禁数值（一律由入库脚本生成）、验收（独立复算+回归）与 git 提交推送；CodeBuddy CLI（`%APPDATA%/npm/codebuddy.cmd`，无头 `-p`，可用 `--model glm-5.3-flash` 等优惠模型）负责边界清晰、产出可完全验证的执行类草稿（文献整理、文档起草、可视化脚本、格式杂务）。
+
+调用纪律：
+- 每次委派先落**任务书**（输入全路径、唯一允许写的产出、格式要求、禁止事项），存 `docs/research/task_codebuddy_*.md` 备查；调用用 `--permission-mode acceptEdits --tools "Read,Glob,Grep,Write,Edit" --add-dir <workspace>`，不授 Bash、不授 `-y`。
+- CodeBuddy 产出一律视为**草稿**：入库前必须经 kimi 独立核验（数值须复算/脚本比对，整理类须逐条对照源数据），验收不过不入库、退回重派。
+- 禁止事项对委派同样生效：不碰 gate/契约/事件表 JSON、不跑求解器、不 git、不联网追加检索（除非任务书明示）、凭据不入库。
+- 提交信息注明 `codebuddy(<model>) 起草 + kimi 验收`；文档头标注草稿来源与验收状态（如既有 `task_codebuddy_pool_draft.md` 先例）。
+- 试活记录：2026-09-26 参考池清单草稿（glm-5.3-flash），kimi 脚本核验 50/50 条一致后入库。
+
 <!-- CODEGRAPH_START -->
 ## CodeGraph
 
