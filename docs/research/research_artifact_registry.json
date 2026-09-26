@@ -1508,15 +1508,17 @@
   },
   {
    "acceptance_script": "scripts/check_g4_mission_capability_acceptance.py",
-   "directory": "artifacts/research_checks/2026-09-26_g4_mission_capability_v2_r1",
-   "directory_note": "r2 isomorphic; results.json byte-identical across r1/r2 (sha256 c92929129718703fce7fa6f5b0922d48d22a6e075e9f130e37e51226103b21a0). 1579 capability rows + 324 pure nc_amplify negative-control rows. v2 supersedes the v1 export (2065 rows, sha256 37d9597ca0a6e6be758c9c6104b8224ba06e4c2e0d80a3d0f909ae03e6f5323c, kept in git history): v1's hardcoded level mapping admitted sample_shift -4/-16/-1 outside the frozen ladder_level_mapping; v2 derives the mapping from the frozen config (build_mission_levels), negative shifts excluded. Sign-symmetry of shift levels deferred to user at G4 step-5 lock (config v0.2 question).",
+   "directory": "artifacts/research_checks/2026-09-26_g4_mission_capability_v3_r1",
+   "directory_note": "r2 isomorphic; results.json byte-identical across r1/r2 (sha256 2091f4171c16341731f57bb94c8fead0a72e47a1d58389caa74926286bf8e6c8). 2065 capability rows + 324 pure nc_amplify negative-control rows. v3 gates on the sign-symmetric mission tolerance v0.2 (ee039fb1...) and supersedes v2 (1579 rows, c9292912..., literal positive-only grid) and v1 (2065 rows, 37d9597c..., hardcoded mapping): v0.2 makes the shift grid explicit signed [-16,-4,4,16] / [-1,1] per determination 2026-09-26 22:23; export scripts derive the level mapping from the frozen config (no hardcoding).",
    "freeze_script": "scripts/freeze_g4_mission_tolerance.py",
    "frozen_config": "configs/research/g4_mission_tolerance_v0.1.json",
    "id": "g4_mission_tolerance_v0_1",
    "key_numbers": {
     "capability_export_sha256_v1_superseded": "37d9597ca0a6e6be758c9c6104b8224ba06e4c2e0d80a3d0f909ae03e6f5323c",
     "capability_export_sha256_v2": "c92929129718703fce7fa6f5b0922d48d22a6e075e9f130e37e51226103b21a0",
-    "capability_rows": 1579,
+    "capability_export_sha256_v2_superseded": "c92929129718703fce7fa6f5b0922d48d22a6e075e9f130e37e51226103b21a0",
+    "capability_export_sha256_v3": "2091f4171c16341731f57bb94c8fead0a72e47a1d58389caa74926286bf8e6c8",
+    "capability_rows": 2065,
     "conservativeness": "a80-style: D_p80 upper bound + explicit systematic bias term (e.g. velocity +/-10% to depth), statistical and systematic terms separated",
     "family_scope": "per-cover-thickness-family tolerances; export dev families {c1,c3} only; test {c5,c8} frozen",
     "headline_mt_median_of_medians_D": {
@@ -1526,11 +1528,13 @@
      "svd_k1": "0.784-0.911 erases",
      "svd_k3": "0.953-0.959 erases most"
     },
-    "mission_config_sha256": "2d630c01cc95f3c13febbc19c4bf8f3b5a53b5fb82bbabcb2f68e7537ef78b28",
-    "mission_relevant_levels": "amplitude_scale {0.5,0.1}; polarity_flip all; sample_shift {4,16} (frozen grid as written; negative shifts outside frozen mapping, excluded in v2); trace_deletion {4,8}",
+    "mission_config_sha256": "ee039fb1fab3f1147e8a5fe53809bbb8ae9d6f51aafc2feee0fb90071a6c57ea",
+    "mission_config_sha256_v01_superseded": "2d630c01cc95f3c13febbc19c4bf8f3b5a53b5fb82bbabcb2f68e7537ef78b28",
+    "mission_relevant_levels": "amplitude_scale {0.5,0.1}; polarity_flip all; sample_shift {-16,-4,4,16} (sign-symmetric explicit grid, v0.2); trace_deletion {4,8}",
     "negative_control_rows": 324,
+    "sign_symmetry_evidence": "scripts/study_shift_sign_symmetry.py: 484/486 candidate x geometry x family x |shift| groups have |median(D+) - median(D-)| <= 0.01 (worst 0.012 < jitter epsilon ~0.03)",
     "user_approval": "2026-09-26 21:38 '同意' — four mission inputs at proposed defaults (Wang 2026 anchored)",
-    "weak_event_band": "amplitude_scale 0.9; sample_shift 1; trace_deletion 1 (protected, feeds tau calibration and step-4 undetermined-band checks)"
+    "weak_event_band": "amplitude_scale 0.9; sample_shift {-1,1}; trace_deletion 1 (protected, feeds tau calibration and step-4 undetermined-band checks)"
    },
    "limitations": [
     "G4 NOT relieved: thresholds stay null, candidates undetermined, no ranking/selection/training",
@@ -1539,31 +1543,34 @@
     "MT and CO layered separately; no merging or cross-pairing; families reported separately",
     "ladder-level mapping is frozen design (re-freeze to adjust), never derived from candidate performance",
     "amplitude-class metrics remain G1/G6-limited",
-    "v1 export superseded by v2 (hardcoded level mapping deviated from frozen grid on negative sample_shift); v1 retained in git history"
+    "v1 export superseded by v2 (hardcoded level mapping deviated from frozen grid on negative sample_shift); v1 retained in git history",
+    "v3 export gates on sign-symmetric v0.2 config (determination 2026-09-26 22:23); v1/v2 superseded, kept in git history"
    ],
    "plan": "docs/research/2026-09-26_g4_calibration_plan_v0.1.md",
    "report": "docs/research/2026-09-26_g4_mission_tolerance_v0.1.md",
    "runner_script": "scripts/run_g4_mission_capability.py",
    "solver_executed": false,
-   "status": "complete_inputs_frozen_capability_exported_v2_r1r2_byte_identical",
+   "status": "complete_inputs_frozen_capability_exported_v3_r1r2_byte_identical",
    "tracked": true,
    "training_executed": false
   },
   {
    "acceptance_script": "scripts/check_g4_sensitivity_fliprate_acceptance.py",
-   "directory": "artifacts/research_checks/2026-09-26_g4_sensitivity_fliprate_r1",
-   "directory_note": "r2 isomorphic; results.json byte-identical across r1/r2 (sha256 b30f787763aa353fd21ada0e51111b802adfa9f87bd4c1b5e004261e44a8eec9). 24 strata (21 D + 3 N_b), three perturbation axes: level grid / leave-one-event-out jackknife / reference-uncertainty value jitter (K=200, epsilon from budget shape class). Level mapping derived from the frozen tolerance config. Deterministic, CPU read-only.",
+   "directory": "artifacts/research_checks/2026-09-26_g4_sensitivity_fliprate_v2_r1",
+   "directory_note": "r2 isomorphic; results.json byte-identical across r1/r2 (sha256 f96d317a3e046dfcc9efb01da55d49f78ab09c6fdb562c37e4ce93c6480e558f). v2 gates on mission tolerance v0.2 (sign-symmetric shift grid): 24 strata (21 D + 3 N_b), shift strata level axis over the full signed grid (0.4-0.6% flip, weak band 0.0%). v1 (b30f7877..., positive-only grid) superseded, kept in git history. The 'frequent flip' boundary rule is frozen separately: configs/research/g4_fliprate_stability_rule_v0.1.json (zero-flip all-or-nothing, statistical certificate d >= 1.655*eps at 95% confidence; application reserved for G4 step 5).",
    "id": "g4_sensitivity_fliprate_v0_1",
    "key_numbers": {
     "companion_correction": "capability export v2 (c9292912...) supersedes v1 (37d9597c...): level mapping now derived from frozen config; negative sample_shift excluded",
     "flip_rate_ranges": "level_axis 0.2-3.1%; window_jackknife 0.1-9.0%; value_jitter 1.6-8.1% (diagnostic distributions, no cutoff fixed)",
+    "fliprate_export_sha256_v1_superseded": "b30f787763aa353fd21ada0e51111b802adfa9f87bd4c1b5e004261e44a8eec9",
+    "fliprate_export_sha256_v2": "f96d317a3e046dfcc9efb01da55d49f78ab09c6fdb562c37e4ce93c6480e558f",
     "gates": "mission tolerance 2d630c01..., event table b0ad1003..., reference budget 38cf98bab..., 34086 ladder records, identity anchor D=0",
     "jitter_epsilon": "sqrt(2*median deviation_from_unity) per stratum, 0.0300-0.0341 (budget shape class 0.99813-0.99955 correlation)",
     "jitter_replicates": 200,
     "n_strata": 24,
     "preregistration_mapping": "tau perturbation -> level_axis + value_axis; window +/-delta -> window_axis; frequent-flip cutoff reserved for step 5",
-    "strata_breakdown": "21 D-quantity (4 damage types x mission/weak classes x geometry x dev family) + 3 N_b nc_amplify",
-    "user_question_deferred": "sign-symmetry of negative sample_shift levels: config v0.2 re-freeze decision, user to settle before step-5 lock"
+    "stability_rule": "configs/research/g4_fliprate_stability_rule_v0.1.json (sha256 8ee61d0b7777f188d84fd754e3302ade9fe678ed0eae1b7f3f0ade4c451b65f6): determined ordering requires zero flips on all three axes; 0 flips in 200 replicates certifies p <= 0.0149, i.e. separation >= 1.655*eps (rule of three); frozen before any verdict application (anti-overfit)",
+    "strata_breakdown": "21 D-quantity (4 damage types x mission/weak classes x geometry x dev family) + 3 N_b nc_amplify"
    },
    "limitations": [
     "G4 NOT relieved: thresholds stay null, candidates undetermined, no ranking/selection/training",
@@ -1577,7 +1584,36 @@
    "report": "docs/research/2026-09-26_g4_step4_sensitivity_fliprate.md",
    "runner_script": "scripts/run_g4_sensitivity_fliprate.py",
    "solver_executed": false,
-   "status": "complete_24_strata_3_axes_r1r2_byte_identical",
+   "status": "complete_24_strata_3_axes_v2_r1r2_byte_identical_rule_frozen",
+   "tracked": true,
+   "training_executed": false
+  },
+  {
+   "directory_note": "Two open G4 step-4 questions settled per user 2026-09-26 22:23 delegation. (1) shift grid made explicit sign-symmetric via configs/research/g4_mission_tolerance_v0.2.json (sha256 ee039fb1..., derived programmatically from v0.1 with per-key drift assertions; evidence: intent in v0.1 freeze record, empirical symmetry 484/486 groups <= 0.01 median-D difference, bidirectional displacement physics). (2) flip-rate stability boundary frozen as configs/research/g4_fliprate_stability_rule_v0.1.json (sha256 8ee61d0b..., zero-flip all-or-nothing rule with rule-of-three certificate d >= 1.655*eps; frozen before application, Cawley-Talbot anti-overfit clause). Downstream: capability export v3 (2091f417...) and flip-rate v2 (f96d317a...) re-exported under the v0.2 gate, both r1/r2 byte-identical.",
+   "evidence_script": "scripts/study_shift_sign_symmetry.py",
+   "freeze_scripts": [
+    "scripts/freeze_g4_mission_tolerance_v02.py",
+    "scripts/freeze_g4_fliprate_stability_rule.py"
+   ],
+   "id": "g4_step4_determinations_v0_1",
+   "key_numbers": {
+    "capability_v3_sha256": "2091f4171c16341731f57bb94c8fead0a72e47a1d58389caa74926286bf8e6c8",
+    "fliprate_v2_sha256": "f96d317a3e046dfcc9efb01da55d49f78ab09c6fdb562c37e4ce93c6480e558f",
+    "mission_tolerance_v0_2_sha256": "ee039fb1fab3f1147e8a5fe53809bbb8ae9d6f51aafc2feee0fb90071a6c57ea",
+    "rule_certificate": "0 flips in 200 replicates -> p <= 0.0149 (95%) -> separation >= 1.655*eps",
+    "sign_symmetry": "484/486 groups |median(D+) - median(D-)| <= 0.01 (max 0.012 < eps ~0.03)",
+    "stability_rule_v0_1_sha256": "8ee61d0b7777f188d84fd754e3302ade9fe678ed0eae1b7f3f0ade4c451b65f6"
+   },
+   "limitations": [
+    "G4 NOT relieved: thresholds stay null, candidates undetermined, no ranking/selection/training",
+    "v0.2 is a specification fix (explicit signed grid); the four mission inputs of v0.1 are unchanged",
+    "stability rule frozen before any application; verdicts only at G4 step 5 on a frozen flip-rate analysis",
+    "simulation-domain only; constructed reference; amplitude class G1/G6-limited"
+   ],
+   "record": "docs/research/2026-09-26_g4_step4_determinations.md",
+   "report": "docs/research/2026-09-26_g4_step4_determinations.md",
+   "solver_executed": false,
+   "status": "complete_two_determinations_frozen_user_delegated",
    "tracked": true,
    "training_executed": false
   }

@@ -1,0 +1,107 @@
+{
+ "derivation_rules": [
+  "capability numbers come from damage-ladder records (constructed reference, not physical truth) on dev families {C1,C3} only",
+  "MT and CO geometries are layered separately and never merged or cross-paired",
+  "no ranking, no selection, no pass/fail thresholding in this export; undetermined determination uses the reference-uncertainty ruler (reference_uncertainty_budget_v0_1) at G4 step 4",
+  "numerical uncertainty (step 1 budget) and mission tolerance (this freeze) are accounted separately",
+  "all capability claims carry simulation-domain validity only; no field extrapolation (G6/G7 open)"
+ ],
+ "frozen_by": "kimi_autonomous_2026-09-26_22:23_user_delegated_determination",
+ "frozen_date": "2026-09-26",
+ "inputs": {
+  "damage_ladder_acceptance_evidence": "scripts/check_damage_ladder_acceptance.py",
+  "event_table": "configs/research/batch2d_v1_event_table_v0.1.json",
+  "g4_plan": "docs/research/2026-09-26_g4_calibration_plan_v0.1.md",
+  "previous_config": "configs/research/g4_mission_tolerance_v0.1.json",
+  "reference_budget": "artifacts/research_checks/2026-09-26_reference_uncertainty_budget_r1/results.json",
+  "s4_baseline_group": "configs/research/s4_baseline_group_v0.1.json",
+  "step4_fliprate": "artifacts/research_checks/2026-09-26_g4_sensitivity_fliprate_r1/results.json",
+  "wang2026_reading_note": "docs/research/2026-09-26_wang2026_uav_gpr_landslide_reading.md"
+ },
+ "inputs_sha256": {
+  "damage_ladder_acceptance_evidence": "9cf621726f177b7704a90d1772a57aa55db62060a847b122f96aad158f58771f",
+  "event_table": "b0ad100334132cb6e6a706af4f5d8fbbff7cced26b6e07613c50be77a607f56c",
+  "g4_plan": "7588dd12a5a385245d12b7756ee22c2dbdde2347ce8898248a578aad4f3a2820",
+  "previous_config": "2d630c01cc95f3c13febbc19c4bf8f3b5a53b5fb82bbabcb2f68e7537ef78b28",
+  "reference_budget": "38cf98bab723358dc8d75486ef6824057d42c32a9030b56f7101400fc87a8cc1",
+  "s4_baseline_group": "8676f37d6aee603b7f2481779ffe361d2878735316863da0bed0db82e16b5593",
+  "step4_fliprate": "b30f787763aa353fd21ada0e51111b802adfa9f87bd4c1b5e004261e44a8eec9",
+  "wang2026_reading_note": "4cd2603275fb688cbb90d124c1f64af680c96973371e29f425f10dcae53d2b3f"
+ },
+ "ladder_level_mapping": {
+  "mission_relevant": {
+   "amplitude_scale": [
+    0.5,
+    0.1
+   ],
+   "polarity_flip": [
+    "all"
+   ],
+   "sample_shift": [
+    -16,
+    -4,
+    4,
+    16
+   ],
+   "trace_deletion": [
+    4,
+    8
+   ]
+  },
+  "note": "operationalization of minimum_recognizable_damage onto the frozen damage-ladder level grid (damage ladder v0.1); adjustable only by re-freeze (versioned), never by candidate performance",
+  "rationale": "mission-relevant = perturbations at or above the Wang-2026 mission class (major interface response loss >=50%, polarity reversal, decimeter-class displacement, loss of lateral continuity across >=4 traces); weak band = the finest ladder steps, kept for sensitivity (G4 step 4) and R-rule tau calibration",
+  "sign_convention": "amplitude_scale factor = residual amplitude after damage (0.5 = 50% energy loss); sample_shift in samples; trace_deletion in traces; sample_shift levels are explicit signed sample counts (negative = delay, positive = advance); the frozen grid is sign-symmetric by determination 2026-09-26 22:23",
+  "weak_event_band": {
+   "amplitude_scale": [
+    0.9
+   ],
+   "role": "protected weak events: feed tau calibration and undetermined-band checks, never enter the capability headline",
+   "sample_shift": [
+    -1,
+    1
+   ],
+   "trace_deletion": [
+    1
+   ]
+  }
+ },
+ "mission_inputs": {
+  "conservativeness": {
+   "statement": "能力值 + 显式系统偏差项的保守表述（a80 式）：能力值取 80% 保守界限（D 的 p80 作为抹除上界），系统偏差项单列（如速度偏差 +/-10% 的到时-深度换算项），统计项与系统项不混合",
+   "template_anchor": "Wang 2026 probabilistic DP: 80% band = statistical interval + systematic velocity-bias term (their eq. 26-30)"
+  },
+  "false_call_cost": {
+   "negative_control_policy": "nc_zero / bg_absent / off_path 行独立评价，永不并入目标行",
+   "statement": "误报 = 鬼界面/水平振铃带被当成真实界面（Wang 2026 自列局限：离轴反射 ghost interfaces 误导解释与钻孔布设）；负控 N_b 对准鬼界/振铃带能量比"
+  },
+  "family_scope": {
+   "anchor": "Wang 2026 validates two geologically distinct sites separately, no pooling across sites",
+   "dev_test_split": "能力值导出仅限开发族 {C1,C3}；测试族 {C5,C8} 维持 S4 冻结，阈值锁定后一次性确认评价",
+   "statement": "容差分覆盖层厚度族给出（C1/C3/C5/C8 各自一族），不四族统一"
+  },
+  "minimum_recognizable_damage": {
+   "anchor": "Wang et al. 2026 field-validated mission class: bedrock/sliding interface at 10-20 m depth, borehole depth error <1 m absolute / <10% relative (best 0.05 m / 0.27%)",
+   "statement": "界面型电性对比异常（10 m 深、4 m 宽、epsilon_r=20 对围岩，锚点模型 B2D-C3m-D10m-W4m-T0.5m-E20-S0.02 及其深度变体 D5m/D20m）在冻结事件窗内的形状/极性保真"
+  }
+ },
+ "plan": "docs/research/2026-09-26_g4_calibration_plan_v0.1.md",
+ "pod_mapping": {
+  "a90_95_capability": "capability value + explicit systematic bias term (a80-style statement per conservativeness input)",
+  "defect_size_a": "ladder level (amplitude factor / shift samples / deleted traces)",
+  "detection_threshold_a_hat_th": "mission tolerance (damage upper limit) + minimum effective gain; derived ONLY from ladder data x these mission inputs",
+  "false_call_rate": "negative-control N_b constraint, reported alongside detection (never merged)",
+  "signal_response_a_hat": "evaluation metric per class (arrival-time / shape / amplitude, amplitude class G1/G6-limited)"
+ },
+ "relation_to_gates": "G4 NOT relieved by this freeze; physical_acceptance_threshold stays null; candidates stay undetermined; training_eligible=false",
+ "schema_version": "g4_mission_tolerance_v0.2",
+ "status": "frozen",
+ "user_approval": "user 2026-09-26 22:23 '这两个你好好调研研究确立一下呢？' — two open step-4 questions delegated for determination (shift-grid sign symmetry; flip-rate stability rule)",
+ "v02_rationale": {
+  "change_scope": "specification fix only: the level grid is made explicit and sign-symmetric; the four mission inputs of v0.1 are unchanged",
+  "determination": "user 2026-09-26 22:23 '这两个你好好调研研究确立一下呢？' — delegated investigation and settlement of the two open G4 step-4 questions",
+  "evidence_intent": "v0.1 freeze record states mission band 移位 ±4/±16 and weak band ±1 (commit message + decision_log); the v0.1 JSON listed magnitudes only",
+  "evidence_physics": "GPR landslide monitoring literature measures interface vertical displacement in both directions (bidirectional kinematics); at mission-tolerance magnitude the shift sign is a nuisance direction, not a distinct damage class",
+  "evidence_sign_symmetry": "empirical on damage-ladder r1 records: 484/486 candidate×geometry×family×|shift| comparisons have |median(D+) − median(D−)| ≤ 0.01; worst 0.012 < value-jitter epsilon ≈ 0.03; both signs already present in the ladder (no rerun needed)",
+  "supersedes": "configs/research/g4_mission_tolerance_v0.1.json (kept in git history; its positive-only grid was magnitude shorthand, not a sign exclusion — see commit d39065d message and decision_log stating 移位 ±4/±16)"
+ }
+}

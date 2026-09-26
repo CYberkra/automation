@@ -13,13 +13,13 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-R1 = ROOT / 'artifacts/research_checks/2026-09-26_g4_sensitivity_fliprate_r1/results.json'
-R2 = ROOT / 'artifacts/research_checks/2026-09-26_g4_sensitivity_fliprate_r2/results.json'
-MISSION = ROOT / 'configs/research/g4_mission_tolerance_v0.1.json'
+R1 = ROOT / 'artifacts/research_checks/2026-09-26_g4_sensitivity_fliprate_v2_r1/results.json'
+R2 = ROOT / 'artifacts/research_checks/2026-09-26_g4_sensitivity_fliprate_v2_r2/results.json'
+MISSION = ROOT / 'configs/research/g4_mission_tolerance_v0.2.json'
 EVENT_TABLE = ROOT / 'configs/research/batch2d_v1_event_table_v0.1.json'
 REF_BUDGET = ROOT / 'artifacts/research_checks/2026-09-26_reference_uncertainty_budget_r1/results.json'
 
-MISSION_SHA256 = '2d630c01cc95f3c13febbc19c4bf8f3b5a53b5fb82bbabcb2f68e7537ef78b28'
+MISSION_SHA256 = 'ee039fb1fab3f1147e8a5fe53809bbb8ae9d6f51aafc2feee0fb90071a6c57ea'
 EVENT_TABLE_SHA256 = 'b0ad100334132cb6e6a706af4f5d8fbbff7cced26b6e07613c50be77a607f56c'
 REF_BUDGET_SHA256 = '38cf98bab723358dc8d75486ef6824057d42c32a9030b56f7101400fc87a8cc1'
 
@@ -29,12 +29,13 @@ SINGLE_LEVEL_AXES = {
     # (damage_type, mission_class): levels frozen on the mission grid
     ('polarity_flip', 'mission_relevant'): 1,
     ('amplitude_scale', 'weak_event_band'): 1,
-    ('sample_shift', 'weak_event_band'): 1,
     ('trace_deletion', 'weak_event_band'): 1,
 }
 MULTI_LEVEL = {
+    # v0.2 sign-symmetric grid (determination 2026-09-26 22:23)
     ('amplitude_scale', 'mission_relevant'): {0.5, 0.1},
-    ('sample_shift', 'mission_relevant'): {4, 16},
+    ('sample_shift', 'mission_relevant'): {-16, -4, 4, 16},
+    ('sample_shift', 'weak_event_band'): {-1, 1},
     ('trace_deletion', 'mission_relevant'): {4, 8},
 }
 
@@ -52,7 +53,7 @@ assert d['event_table_sha256'] == EVENT_TABLE_SHA256 == \
     hashlib.sha256(EVENT_TABLE.read_bytes()).hexdigest(), 'event table gate mismatch'
 assert d['reference_budget_sha256'] == REF_BUDGET_SHA256 == \
     hashlib.sha256(REF_BUDGET.read_bytes()).hexdigest(), 'reference budget gate mismatch'
-print('gates (mission tolerance 2d630c01..., event table b0ad1003..., reference budget 38cf98ba...): ok')
+print('gates (mission tolerance v0.2 ee039fb1..., event table b0ad1003..., reference budget 38cf98ba...): ok')
 
 assert d['ladder_records_merged'] == 34086
 assert d['n_strata'] == len(d['strata']) == 24, d['n_strata']

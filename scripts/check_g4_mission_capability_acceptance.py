@@ -10,25 +10,25 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-R1 = ROOT / 'artifacts/research_checks/2026-09-26_g4_mission_capability_v2_r1/results.json'
-R2 = ROOT / 'artifacts/research_checks/2026-09-26_g4_mission_capability_v2_r2/results.json'
-MISSION = ROOT / 'configs/research/g4_mission_tolerance_v0.1.json'
+R1 = ROOT / 'artifacts/research_checks/2026-09-26_g4_mission_capability_v3_r1/results.json'
+R2 = ROOT / 'artifacts/research_checks/2026-09-26_g4_mission_capability_v3_r2/results.json'
+MISSION = ROOT / 'configs/research/g4_mission_tolerance_v0.2.json'
 EVENT_TABLE = ROOT / 'configs/research/batch2d_v1_event_table_v0.1.json'
 
-MISSION_SHA256 = '2d630c01cc95f3c13febbc19c4bf8f3b5a53b5fb82bbabcb2f68e7537ef78b28'
+MISSION_SHA256 = 'ee039fb1fab3f1147e8a5fe53809bbb8ae9d6f51aafc2feee0fb90071a6c57ea'
 EVENT_TABLE_SHA256 = 'b0ad100334132cb6e6a706af4f5d8fbbff7cced26b6e07613c50be77a607f56c'
-RESULTS_SHA256 = 'c92929129718703fce7fa6f5b0922d48d22a6e075e9f130e37e51226103b21a0'
+RESULTS_SHA256 = '2091f4171c16341731f57bb94c8fead0a72e47a1d58389caa74926286bf8e6c8'
 
-# level grid derived from the frozen mission tolerance config
-# (ladder_level_mapping; v2 supersedes the v1 export whose hardcoded mapping
-# also admitted sample_shift -4/-16/-1 outside the frozen grid)
+# level grid derived from the frozen mission tolerance config v0.2
+# (ladder_level_mapping; sign-symmetric explicit grid per determination
+# 2026-09-26 22:23; v3 export gates on v0.2 and supersedes v1/v2)
 MISSION_LEVELS = {
     ('amplitude_scale', 0.5), ('amplitude_scale', 0.1), ('polarity_flip', 1.0),
-    ('sample_shift', 4), ('sample_shift', 16),
+    ('sample_shift', -16), ('sample_shift', -4), ('sample_shift', 4), ('sample_shift', 16),
     ('trace_deletion', 4), ('trace_deletion', 8),
 }
 WEAK_LEVELS = {
-    ('amplitude_scale', 0.9), ('sample_shift', 1), ('trace_deletion', 1),
+    ('amplitude_scale', 0.9), ('sample_shift', -1), ('sample_shift', 1), ('trace_deletion', 1),
 }
 
 b1 = R1.read_bytes()
@@ -43,7 +43,7 @@ assert d['mission_tolerance_sha256'] == MISSION_SHA256 == \
     hashlib.sha256(MISSION.read_bytes()).hexdigest(), 'mission gate mismatch'
 assert d['event_table_sha256'] == EVENT_TABLE_SHA256 == \
     hashlib.sha256(EVENT_TABLE.read_bytes()).hexdigest(), 'event table gate mismatch'
-print('gates (mission tolerance 2d630c01..., event table b0ad1003...): ok')
+print('gates (mission tolerance v0.2 ee039fb1..., event table b0ad1003...): ok')
 
 assert d['ladder_records_merged'] == 34086
 assert d['identity_anchor']
@@ -59,7 +59,7 @@ for k in ('constructed_reference_not_physical_truth', 'no_ranking_no_selection_n
 print('discipline (threshold null / numerically_unresolved / constructed ref / no ranking): ok')
 
 cap = d['capability']
-assert d['n_capability_rows'] == len(cap) == 1579
+assert d['n_capability_rows'] == len(cap) == 2065
 assert sha == RESULTS_SHA256, 'unexpected capability v2 export hash'
 seen = set()
 for r in cap:
@@ -73,10 +73,15 @@ for r in cap:
               r['mission_class'], r['geometry'], r['family'])
     assert strata not in seen, f'duplicate stratum {strata}'
     seen.add(strata)
-print('capability rows: 1579, mission/weak classes per frozen mapping, strata unique: ok')
-assert not [r for r in cap if r['damage_type'] == 'sample_shift' and r['damage_level'] < 0], \
-    'negative sample_shift levels outside the frozen grid leaked back in'
-print('frozen-grid guard (no sample_shift negative levels): ok')
+print('capability rows: 2065, mission/weak classes per frozen mapping v0.2, strata unique: ok')
+# v0.2 grid is sign-symmetric: every shift magnitude must appear with both signs
+shift_levels = {(r['damage_type'], r['damage_level']) for r in cap}
+for mag in (4, 16):
+    for sgn in (-1, 1):
+        assert ('sample_shift', sgn * mag) in shift_levels, ('sample_shift', sgn * mag)
+for sgn in (-1, 1):
+    assert ('sample_shift', sgn * 1) in shift_levels, ('sample_shift', sgn * 1)
+print('frozen-grid guard (v0.2 sign-symmetric shift grid present): ok')
 
 nc = d['negative_control']
 assert d['n_negative_control_rows'] == len(nc) == 324
