@@ -137,10 +137,12 @@ def main():
                 'run_directory': str(ROOT / c['run_directory'])})
         if not a.execute:
             continue
-        chunk_dir.mkdir(parents=True)
-        job_path = chunk_dir / 'chunk_job.json'
+        jobs_dir = ROOT / 'artifacts/simulations/co_jobs'
+        jobs_dir.mkdir(parents=True, exist_ok=True)
+        job_path = jobs_dir / f'{chunk_id}.json'
         job_path.write_text(json.dumps(job, indent=1), encoding='utf-8')
         wall_s = 300 + 150 * len(job['cases'])
+        # supervise() requires the directory to NOT exist (it creates it and owns it)
         result = supervise([sys.executable, '-u',
                             str(ROOT / 'scripts/run_co_chunk_worker.py'), str(job_path)],
                            chunk_dir, wall_s=wall_s,
