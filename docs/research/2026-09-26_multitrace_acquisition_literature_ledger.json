@@ -1,0 +1,79 @@
+{
+ "schema": "literature-reading-ledger/1",
+ "date": "2026-09-26",
+ "purpose": "Acquisition-geometry evidence scan for the pending multitrace batch proposal (variable-offset gather vs common-offset B-scan); retrieval does not imply reading or replication",
+ "body_read_count": 2,
+ "field_data_access_this_round": false,
+ "simulation_executed": false,
+ "training_executed": false,
+ "notes": [
+  "Fast scan, not a systematic review; two papers read in main text, the rest abstract/snippet level.",
+  "No dataset downloaded or imported; the Roncoroni MO-GPR benchmark is only registered as a candidate external reference.",
+  "Companion note: docs/research/2026-09-26_multitrace_acquisition_literature.md"
+ ],
+ "entries": [
+  {
+   "id": "MT-S1",
+   "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11802766/",
+   "retrieval_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11802766/",
+   "doi": "10.1038/s41597-024-04300-1",
+   "read_status": "body_read",
+   "read_scope": "Publisher page main text (Background & Summary / Methods / Data Records / Technical Validation); supplementary material not read; 60 references not individually traced",
+   "retrieval_status": "retrieved",
+   "reproduced": false
+  },
+  {
+   "id": "MT-S2",
+   "source_url": "https://link.springer.com/content/pdf/10.1007/s41693-022-00086-z.pdf",
+   "retrieval_url": "https://link.springer.com/content/pdf/10.1007/s41693-022-00086-z.pdf",
+   "doi": "10.1007/s41693-022-00086-z",
+   "read_status": "body_read",
+   "read_scope": "Sections 1-4 (methods, derivation, simulation setup and comparison); later sections only via extracted fragments",
+   "retrieval_status": "retrieved",
+   "reproduced": false
+  },
+  {
+   "id": "MT-S3a",
+   "source_url": "https://ui.adsabs.harvard.edu/abs/2014JAG...106..154R/abstract",
+   "retrieval_url": "https://ui.adsabs.harvard.edu/abs/2014JAG...106..154R/abstract",
+   "doi": null,
+   "read_status": "abstract_only",
+   "read_scope": "ADS abstract only",
+   "retrieval_status": "retrieved",
+   "reproduced": false
+  },
+  {
+   "id": "MT-S3b",
+   "source_url": "https://core.ac.uk/download/pdf/333722781.pdf",
+   "retrieval_url": "https://core.ac.uk/download/pdf/333722781.pdf",
+   "doi": null,
+   "read_status": "snippet_only",
+   "read_scope": "Search-result snippets and formula region only; body not read",
+   "retrieval_status": "retrieved",
+   "reproduced": false
+  },
+  {
+   "id": "MT-S4",
+   "source_url": "https://docs.gprmax.com/en/latest/examples_simple_2D.html",
+   "retrieval_url": "https://docs.gprmax.com/en/latest/examples_simple_2D.html",
+   "doi": null,
+   "read_status": "snippet_only",
+   "read_scope": "Search-result snippet: moving antenna requires a newly built geometry per position; outputfiles_merge.py usage",
+   "retrieval_status": "retrieved",
+   "reproduced": false
+  },
+  {
+   "id": "MT-S5",
+   "source_url": null,
+   "retrieval_url": null,
+   "doi": "10.1016/j.sigpro.2016.04.011",
+   "read_status": "citation_registered_not_read",
+   "read_scope": "Registered via Roncoroni et al. 2025 reference 4; full text not retrieved",
+   "retrieval_status": "not_retrieved",
+   "reproduced": false
+  }
+ ],
+ "generated_outputs": [
+  "docs/research/2026-09-26_multitrace_acquisition_literature.md"
+ ]
+}
