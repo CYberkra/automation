@@ -1197,6 +1197,73 @@
    "runner_script": "scripts/run_approved_batch2d_co.py",
    "design": "docs/research/2026-09-26_common_offset_subset_proposal.md",
    "hard_limits": "physical_acceptance_threshold=null; reference_state=numerically_unresolved; stratified vs batch2d_v1_mt, cross-geometry pairing forbidden; no physical/training labels"
+  },
+  {
+   "id": "eval_batch2d_co_v0_1",
+   "status": "complete_162of1188_ran_1026_unavailable_no_co_case",
+   "directory": "artifacts/research_checks/2026-09-26_eval_batch2d_co_r1",
+   "directory_note": "Evaluation runner r1/r2; records byte-identical across runs after stripping per-record resource fields (stripped sha256 cfc295e77b345f2defbcecbc14f9e0eec30d8b2ed2595a28d118dc6f89a467ad); manifest identical except run_tag/total_wall_s. Arrays (240 pre_gain/ginv-audit .npy + gain curves, ~11 MB) in git-ignored artifacts/simulations/2026-09-26_eval_batch2d_co_arrays/ with sha256 in records. MT-vs-CO comparison at artifacts/research_checks/2026-09-26_eval_batch2d_co_analysis/mt_vs_co_comparison.json.",
+   "tracked": true,
+   "solver_executed": false,
+   "training_executed": false,
+   "report": "docs/research/2026-09-26_eval_batch2d_co_eval_v0.1.md",
+   "runner_script": "scripts/run_eval_batch2d_co.py",
+   "acceptance_script": "scripts/check_eval_batch2d_co_acceptance.py",
+   "comparison_script": "scripts/compare_mt_vs_co_metrics.py",
+   "design": "docs/research/2026-09-26_eval_runner_and_selector_design_v0.1.md",
+   "event_table": "configs/research/batch2d_v1_event_table_v0.1.json",
+   "key_numbers": {
+    "n_candidates": 27,
+    "event_rows": 44,
+    "n_records": 1188,
+    "ran": 162,
+    "unavailable": 1026,
+    "unavailable_reason": "no_common_offset_case_in_batch2d_v1_co (38 rows: C1/C5/C8 all, C3 other targets/NC/OFF)",
+    "numeric_failures": 0,
+    "feasibility_status": "partial_only",
+    "waveform_metrics_computed": 0,
+    "r_c_computed": 0,
+    "gain_records": 120,
+    "clipped_or_overflow": 0,
+    "identity_energy_ratio_all_1.0": true,
+    "gather_assembly": "11 single-trace h5 per case; per-trace layout asserted (rx y=12.65+k, src y=rx-1.30, 20352 finite); anchor t05 bit-for-bit vs archived mother h5 (2/2 mothers)",
+    "mt_vs_co_nb_ratio_range": [
+     0.92,
+     2.8
+    ],
+    "mt_vs_co_target_event_examples": {
+     "mean_lambda1.0": {
+      "mt": 0.0848,
+      "co": 0.1295,
+      "co_over_mt": 1.53
+     },
+     "svd_k1": {
+      "mt": 0.0798,
+      "co": 0.1193,
+      "co_over_mt": 1.5
+     },
+     "svd_k2": {
+      "mt": 0.0297,
+      "co": 0.0517,
+      "co_over_mt": 1.74
+     },
+     "svd_k3": {
+      "mt": 0.0148,
+      "co": 0.0194,
+      "co_over_mt": 1.31
+     }
+    },
+    "gather_semantics_version": "common_offset_bscan_v1"
+   },
+   "limitations": [
+    "G2 geometry-question answered at diagnostic level: operator diagnostics change materially with acquisition geometry (N_b CO/MT 0.92-2.80 across candidates); no ranking, no labels; N_b is an absolute residual diagnostic, not detectability/SNR/threshold",
+    "D/A/H/rho not computible (reference_state numerically_unresolved + paired_contrast); R_c never computed (no legitimate pure-clutter window)",
+    "trace axis is a true common-offset spatial profile (offset 1.30 m constant); results carry common_offset_bscan_v1 semantics and must not be merged or cross-paired with the MT variable-offset gather",
+    "C3 family only (2 mothers); 38 of 44 event rows unavailable; no NC/OFF common-offset data (negative controls limited to BG-NEG rows)",
+    "BASE tier only; FINE2 multitrace (G5) and 3D (G1, A0 awaiting user approval) untouched",
+    "no physical/training labels; training_eligible=false; grid convergence not certified; no cross-family/cross-tier metrics; negative controls not merged into target rows",
+    "input h5 archives and frozen event table read-only; runner never invokes a solver (fdtd_solver_invoked=false)"
+   ]
   }
  ],
  "default_array_verification": {

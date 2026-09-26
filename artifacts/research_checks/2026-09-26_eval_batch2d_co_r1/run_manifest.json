@@ -1,0 +1,206 @@
+{
+  "run_tag": "r1",
+  "runner": "scripts/run_eval_batch2d_co.py",
+  "event_table": "configs\\research\\batch2d_v1_event_table_v0.1.json",
+  "event_table_sha256": "b0ad100334132cb6e6a706af4f5d8fbbff7cced26b6e07613c50be77a607f56c",
+  "time_axis_convention_version": "ti_i_mul_dt_rxoffset0",
+  "grid_tier": "BASE",
+  "gather_semantics_version": "common_offset_bscan_v1",
+  "trace_axis_semantics": "common-offset b-scan: 11 independent single-trace runs, Rx y 12.65->22.65 m spacing 1.0 m, Tx = Rx-1.30 m (constant offset); trace axis IS a spatial profile axis",
+  "window_mapping": "frozen sample-axis window applied unshifted to all 11 traces; no per-trace alignment",
+  "candidates": {
+    "n": 27,
+    "version": "research-operators/0.1",
+    "operator_script_sha256": "ea2cca7c00ea56ebb454503be6e526c67739466c15d0379935ef4e01c5d8a770",
+    "eval_script_sha256": "bd947cf850e9eb2c2f1e1cdf335ec27625ed8963f18d7259589918155f361d85"
+  },
+  "co_cases": {
+    "BG": {
+      "mother_check": {
+        "mother_h5": "artifacts\\research_checks\\2026-09-26_B2D-C3m-BG\\B2D-C3m-BG.h5",
+        "mother_h5_sha256": "a261e9958b90e82ad11a23464e797e5d7c98ad0a9cf2262c41cfd5b623b236c6",
+        "anchor_trace": "t05",
+        "anchor_max_abs_difference": 0.0
+      },
+      "h5": {
+        "B2D-C3m-BG-CO11-t01": {
+          "path": "artifacts\\research_checks\\2026-09-26_B2D-C3m-BG-CO11-t01\\B2D-C3m-BG-CO11-t01.h5",
+          "sha256": "5be9962c4485a4d9ccbd6bb2a546cdc1b292cce0451080c72f805e06499f08ae"
+        },
+        "B2D-C3m-BG-CO11-t02": {
+          "path": "artifacts\\research_checks\\2026-09-26_B2D-C3m-BG-CO11-t02\\B2D-C3m-BG-CO11-t02.h5",
+          "sha256": "724f4955cb37207a3db889b20170bc182c317983fb8ac3a3656760389ca0d553"
+        },
+        "B2D-C3m-BG-CO11-t03": {
+          "path": "artifacts\\research_checks\\2026-09-26_B2D-C3m-BG-CO11-t03\\B2D-C3m-BG-CO11-t03.h5",
+          "sha256": "996962d4df8719952f9e9de8bba2a39632ac1fc7191996cfe5da317aa6c2704e"
+        },
+        "B2D-C3m-BG-CO11-t04": {
+          "path": "artifacts\\research_checks\\2026-09-26_B2D-C3m-BG-CO11-t04\\B2D-C3m-BG-CO11-t04.h5",
+          "sha256": "5dc659e4dfa68791b53898d94a4f0b0a61e4624ee4ec8830386bb73d63a7f4a3"
+        },
+        "B2D-C3m-BG-CO11-t05": {
+          "path": "artifacts\\research_checks\\2026-09-26_B2D-C3m-BG-CO11-t05\\B2D-C3m-BG-CO11-t05.h5",
+          "sha256": "a261e9958b90e82ad11a23464e797e5d7c98ad0a9cf2262c41cfd5b623b236c6"
+        },
+        "B2D-C3m-BG-CO11-t06": {
+          "path": "artifacts\\research_checks\\2026-09-26_B2D-C3m-BG-CO11-t06\\B2D-C3m-BG-CO11-t06.h5",
+          "sha256": "b1ced407e2cb7eb0ce600d18b5104cc9eaedf2beb1b78d4fc6d1229cbd2ab940"
+        },
+        "B2D-C3m-BG-CO11-t07": {
+          "path": "artifacts\\research_checks\\2026-09-26_B2D-C3m-BG-CO11-t07\\B2D-C3m-BG-CO11-t07.h5",
+          "sha256": "7ab6986b5fb81d6556575065ab6d79fa784043d75729ecd5ddaaf58c6873ac05"
+        },
+        "B2D-C3m-BG-CO11-t08": {
+          "path": "artifacts\\research_checks\\2026-09-26_B2D-C3m-BG-CO11-t08\\B2D-C3m-BG-CO11-t08.h5",
+          "sha256": "4af524af3967a7ede2f3b1b395d0a31a2d8af4cee4891e3c615492a302ee9b3c"
+        },
+        "B2D-C3m-BG-CO11-t09": {
+          "path": "artifacts\\research_checks\\2026-09-26_B2D-C3m-BG-CO11-t09\\B2D-C3m-BG-CO11-t09.h5",
+          "sha256": "bc6e3a32dc22c3fd8e809c961eb55564a2db66bf8b5397ef326701f4cd8161d4"
+        },
+        "B2D-C3m-BG-CO11-t10": {
+          "path": "artifacts\\research_checks\\2026-09-26_B2D-C3m-BG-CO11-t10\\B2D-C3m-BG-CO11-t10.h5",
+          "sha256": "879e4b2f28b75d1347c2e04674b3978e34b867750f3ad77e32c7f50247194709"
+        },
+        "B2D-C3m-BG-CO11-t11": {
+          "path": "artifacts\\research_checks\\2026-09-26_B2D-C3m-BG-CO11-t11\\B2D-C3m-BG-CO11-t11.h5",
+          "sha256": "87c5fbf016914d98a4b7d9740b3c39e8fb972bb9961b9f838a2204a860ad5a5d"
+        }
+      }
+    },
+    "TGT": {
+      "mother_check": {
+        "mother_h5": "artifacts\\research_checks\\2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02\\B2D-C3m-D10m-W4m-T0.5m-E20-S0.02.h5",
+        "mother_h5_sha256": "f30d7feb6a23525aa97ad8d26423b6cf10e50b788f8c77e296acc6f3fc14638e",
+        "anchor_trace": "t05",
+        "anchor_max_abs_difference": 0.0
+      },
+      "h5": {
+        "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01": {
+          "path": "artifacts\\research_checks\\2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01\\B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01.h5",
+          "sha256": "903633374bda85ab57ae0bb691bbd3d18e62678fca521c5f30613a3dff2822a0"
+        },
+        "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02": {
+          "path": "artifacts\\research_checks\\2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02\\B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02.h5",
+          "sha256": "f398cbcdbe162aa695cb931cf2a124eaca9b5da052a7687704a3e01df5387534"
+        },
+        "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03": {
+          "path": "artifacts\\research_checks\\2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03\\B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03.h5",
+          "sha256": "7901059fa7597e74840854a7833b5e0ba9134b07af4a968cad05778213ee9223"
+        },
+        "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04": {
+          "path": "artifacts\\research_checks\\2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04\\B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04.h5",
+          "sha256": "b0d94052f21d8ae6b9768beb7b03eff12674bc3293d4ef860046737d329c2ca0"
+        },
+        "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05": {
+          "path": "artifacts\\research_checks\\2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05\\B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05.h5",
+          "sha256": "f30d7feb6a23525aa97ad8d26423b6cf10e50b788f8c77e296acc6f3fc14638e"
+        },
+        "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06": {
+          "path": "artifacts\\research_checks\\2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06\\B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06.h5",
+          "sha256": "ae09b7945511d233daf9cef146a9a9d7acf7562c67c2e5925e0815ccebeff7e7"
+        },
+        "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07": {
+          "path": "artifacts\\research_checks\\2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07\\B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07.h5",
+          "sha256": "4ceb433346b28fd371ba24d3faaf5d011503a50650d5911a415107689943ec88"
+        },
+        "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08": {
+          "path": "artifacts\\research_checks\\2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08\\B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08.h5",
+          "sha256": "4dfc1676396cb4fb87e750fa7f9fd50983d4475ab0f53b55291147e8c129263c"
+        },
+        "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09": {
+          "path": "artifacts\\research_checks\\2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09\\B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09.h5",
+          "sha256": "0d9cc57fe6df22adc9888b96dc7c4454b53ca63682234f9ce7381ae2c2b38812"
+        },
+        "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10": {
+          "path": "artifacts\\research_checks\\2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10\\B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10.h5",
+          "sha256": "158fb0315af841ab1236d8b338c941857e9cf1ce2713d5bea78b4a26aaf4c9c7"
+        },
+        "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11": {
+          "path": "artifacts\\research_checks\\2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11\\B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11.h5",
+          "sha256": "7c78de18817732cebeaa1233527f4118354cd58a820b3b1a4512ddc50e3e64be"
+        }
+      }
+    }
+  },
+  "event_rows": 44,
+  "n_records": 1188,
+  "availability": {
+    "unavailable": 1026,
+    "ran": 162
+  },
+  "failure_reason_histogram": {
+    "no_common_offset_case_in_batch2d_v1_co": 1026
+  },
+  "gates": {
+    "event_table_frozen": true,
+    "min_shape_ge_2": true,
+    "single_trace_gate_blocked": false,
+    "blocked_candidate_count": 0,
+    "pre_gain_persisted": true,
+    "negative_controls_separate": true,
+    "gather_layout_verified": true,
+    "anchor_bit_for_bit": true
+  },
+  "runner_limits": {
+    "r_c_computed": false,
+    "isolated_event_granted": false,
+    "cross_family_metrics": false,
+    "gain_reference_absent": true,
+    "waveform_metrics_computed": false,
+    "waveform_metrics_reason": "reference_state numerically_unresolved + paired_contrast (design A.4)"
+  },
+  "feasibility": {
+    "status": "partial_only",
+    "note": "all limits null (G4 unresolved): every gate undetermined; no ranking, no unique label"
+  },
+  "negative_control_events": [
+    "EV-C1m-BG-NEG-D10m",
+    "EV-C1m-BG-NEG-D2m",
+    "EV-C1m-BG-NEG-D5m",
+    "EV-C1m-D10m-NC-W1",
+    "EV-C1m-D10m-NC-W2",
+    "EV-C3m-BG-NEG-D10m",
+    "EV-C3m-BG-NEG-D20m",
+    "EV-C3m-BG-NEG-D5m",
+    "EV-C3m-D10m-NC-W1",
+    "EV-C3m-D10m-NC-W2",
+    "EV-C3m-D10m-OFF-W1",
+    "EV-C5m-BG-NEG-D10m",
+    "EV-C5m-BG-NEG-D20m",
+    "EV-C5m-D10m-NC-W1",
+    "EV-C5m-D10m-NC-W2",
+    "EV-C8m-BG-NEG-D10m",
+    "EV-C8m-BG-NEG-D20m",
+    "EV-C8m-D10m-NC-W1",
+    "EV-C8m-D10m-NC-W2"
+  ],
+  "hard_limits": {
+    "absolute_accuracy_claimed": false,
+    "clean_truth_generated": false,
+    "conclusions_scope": "operator-evaluation evidence for the batch2d_v1_co common-offset subset (C3 family only) only; not field performance, not 3D, not absolute accuracy, no maximum-depth claim",
+    "cross_family_differencing": false,
+    "cross_tier_differencing": false,
+    "family_bg_required": true,
+    "fdtd_solver_invoked": false,
+    "grid_convergence_certified": false,
+    "grid_tier": "BASE",
+    "grid_tiers_merged": false,
+    "in_band_energy_ratio_is": "diagnostic energy ratio on the 501-point analysis grid; not detectability, not SNR, not a physical threshold",
+    "negative_controls_merged_into_targets": false,
+    "physical_acceptance_threshold": null,
+    "physical_label_eligible": false,
+    "reference_state": "numerically_unresolved",
+    "training_eligible": false,
+    "training_labels_generated": false,
+    "n_traces": 11,
+    "trace_axis_semantics": "common-offset b-scan: 11 independent single-trace runs, Rx y 12.65->22.65 m spacing 1.0 m, Tx = Rx-1.30 m (constant offset); trace axis IS a spatial profile axis",
+    "anchor_trace": "t05 (y16.65 m) bit-for-bit equal to archived single-trace mother (2/2 mothers)",
+    "nc_multitrace_control": "no NC/OFF mother simulated in batch2d_v1_co; all nc_zero/off_path rows unavailable; layered BG makes BG-NEG windows the only in-batch negative rows",
+    "gather_assembly": "11 separate single-trace h5 stacked to [20352, 11]; per-trace layout asserted (rx y, src y=rx-1.30, finite); anchor t05 asserted bit-for-bit vs archived mother h5"
+  },
+  "total_wall_s": 0.5252499999478459,
+  "stop_reason": null,
+  "arrays_dir": "artifacts\\simulations\\2026-09-26_eval_batch2d_co_arrays"
+}
