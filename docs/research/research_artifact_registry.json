@@ -1309,6 +1309,42 @@
     "4 families do not support generalization claims; dev/test split inert until G4",
     "no physical/training labels; training_eligible=false; BASE tier; G1/G5 open; runner never invokes a solver"
    ]
+  },
+  {
+   "id": "g4_calibration_plan_v0_1",
+   "status": "design_document_only_no_calibration_executed",
+   "directory_note": "Pure design/plan document; no thresholds produced, G4 remains open (physical_acceptance_threshold=null).",
+   "tracked": true,
+   "solver_executed": false,
+   "training_executed": false,
+   "report": "docs/research/2026-09-26_g4_calibration_plan_v0.1.md",
+   "proposal_of": "evaluation protocol v0.2 section 9 four-step + lock procedure, mapped onto archived artifacts",
+   "key_numbers": {
+    "steps": [
+     "1 reference calibration report (executable now, CPU read-only)",
+     "2 damage ladder on archived MT/CO gathers, dev groups only (executable now)",
+     "3 mission tolerance (BLOCKED: 4 user inputs required)",
+     "4 sensitivity flip-rate check (after 3)",
+     "5 versioned lock (after 3)"
+    ],
+    "user_inputs_required": [
+     "minimum damage to recognize (mission)",
+     "acceptable false-call level",
+     "capability statement conservativeness (a90/95-style?)",
+     "tolerance family scope"
+    ],
+    "epistemics": "ladder reference = damaged input itself (closed-form constructed), NOT physical clean truth; claims limited to operator behaviour under known perturbations",
+    "pod_mapping": "defect size a -> ladder level; signal a-hat -> metric; threshold -> mission tolerance; a90/95 -> capability + conservative bound; false call -> NC N_b constraint"
+   },
+   "limitations": [
+    "produces no threshold values; G4 not relieved; all candidates stay undetermined",
+    "constructed reference is not physical truth; no field detectability claims",
+    "step 3 blocked on user mission input; steps 4/5 blocked on step 3",
+    "amplitude-class metrics remain G1/G6-limited (Warren 2016 real-antenna requirement)",
+    "dev groups {C1,C3} per frozen S4 split; test groups frozen until tolerance lock",
+    "no labels, no ranking, no solver invocation; MT/CO layered separately"
+   ],
+   "record": "docs/research/2026-09-26_g4_calibration_plan_v0.1.md"
   }
  ],
  "default_array_verification": {
