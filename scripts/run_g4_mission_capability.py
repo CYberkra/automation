@@ -26,21 +26,25 @@ CHUNK_GLOB = 'artifacts/research_checks/2026-09-26_damage_ladder_r1_c{:02d}'
 N_CHUNKS = 8
 DEV_FAMILIES = ('c1', 'c3')
 
-MISSION_LEVELS = {
-    ('amplitude_scale', 0.5): 'mission_relevant',
-    ('amplitude_scale', 0.1): 'mission_relevant',
-    ('amplitude_scale', 0.9): 'weak_event_band',
-    ('polarity_flip', 1.0): 'mission_relevant',
-    ('sample_shift', 4): 'mission_relevant',
-    ('sample_shift', 16): 'mission_relevant',
-    ('sample_shift', -4): 'mission_relevant',
-    ('sample_shift', -16): 'mission_relevant',
-    ('sample_shift', 1): 'weak_event_band',
-    ('sample_shift', -1): 'weak_event_band',
-    ('trace_deletion', 4): 'mission_relevant',
-    ('trace_deletion', 8): 'mission_relevant',
-    ('trace_deletion', 1): 'weak_event_band',
-}
+
+def build_mission_levels(mission_json):
+    """Derive {(damage_type, level): band} from ladder_level_mapping.
+
+    Only list-valued keys inside each band are damage types; list elements are
+    levels kept with the type JSON gave them. polarity_flip has no numeric grid,
+    its 'all' entry maps to the float 1.0 used by the ladder records.
+    """
+    levels = {}
+    for band in ('mission_relevant', 'weak_event_band'):
+        block = mission_json['ladder_level_mapping'][band]
+        for damage_type, value in block.items():
+            if not isinstance(value, list):
+                continue
+            for level in value:
+                if level == 'all':
+                    level = 1.0
+                levels[(damage_type, level)] = band
+    return levels
 
 
 def sha256_file(path):
@@ -97,6 +101,9 @@ def main():
     anchor_ok = all(r['metrics']['waveform']['metrics']['nrmse'] == 0.0 for r in idents)
     assert anchor_ok, 'identity anchor D!=0 found'
 
+    mission = json.loads(MISSION.read_text(encoding='utf-8'))
+    mission_levels = build_mission_levels(mission)
+
     cap = {}
     nc = {}
     for r in recs:
@@ -109,7 +116,7 @@ def main():
         if r['row_type'] == 'event':
             dt_ = r['damage']['type']
             lvl = r['damage']['level']
-            cls = MISSION_LEVELS.get((dt_, lvl))
+            cls = mission_levels.get((dt_, lvl))
             if cls is None:
                 continue
             d = r['metrics']['waveform']['metrics']['nrmse']
@@ -151,7 +158,6 @@ def main():
             'note': 'N_b is a diagnostic residual ratio on amplified negative controls, not SNR/threshold',
         })
 
-    mission = json.loads(MISSION.read_text(encoding='utf-8'))
     result = {
         'schema': 'g4-mission-capability/1',
         'plan': 'docs/research/2026-09-26_g4_calibration_plan_v0.1.md',
