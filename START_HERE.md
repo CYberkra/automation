@@ -4,7 +4,7 @@
 
 ## 当前状态（优先于下方历史记录）
 
-**2026-09-26（最新，本机 `E:/automation_djh/automation_repo`）：粗档与细档批量均已完成；事件表 v0.1 已冻结（G3 解除）；多道批 batch2d_v1_mt 已执行完成（22/22，G2 数据形态层解除）；评价运行器多道首跑完成（27/27 候选可运行，G2 评价层解除，可行性维持 undetermined）；P10 三维校核子集决策已落盘、契约待冻结并经用户敲定；A0 3D 校核提案待用户敲定。**
+**2026-09-26（最新，本机 `E:/automation_djh/automation_repo`）：粗档与细档批量均已完成；事件表 v0.1 已冻结（G3 解除）；多道批 batch2d_v1_mt 已执行完成（22/22，G2 数据形态层解除）；评价运行器多道首跑完成（27/27 候选可运行，G2 评价层解除，可行性维持 undetermined）；常偏移配对子集 batch2d_v1_co 已执行完成（22/22，锚点 t05 逐位零差分，选项 3 单进程多例首次契约级试点）；加速选项实测：单进程多例 2.8× 吞吐成立、单精度有条件可用、单卡并发否决；A0 3D 校核提案待用户敲定。**
 
 |单元|状态|报告/证据|
 |---|---|---|
@@ -18,6 +18,7 @@
 |事件表提案 v0.1（G3 前置）|**已敲定并冻结**（2026-09-26，G3 解除）|[提案](docs/research/2026-09-26_event_table_proposal.md)；冻结产物 `configs/research/batch2d_v1_event_table_v0.1.json`（43 条，SHA-256 `b0ad1003…`）；registry 条目 `batch2d_v1_event_table_v0_1`；时间轴约定 `ti_i_mul_dt_rxoffset0` 已核验；G1/G2/G4/G5 维持|
 |评价运行器与选择器设计 v0.1|完成（纯设计文档）|[设计](docs/research/2026-09-26_eval_runner_and_selector_design_v0.1.md)；registry 条目 `eval_runner_and_selector_design_v0_1`；关键结论：单道输入下 27/27 候选全部被门禁挡下，G2 多道为总阻塞点|
 |多道场景族批次 batch2d_v1_mt|**已执行完成**（22/22 exit 0，2026-09-26，G2 数据形态层解除）|[结果](docs/research/2026-09-26_batch2d_v1_mt_results.md)；[提案](docs/research/2026-09-26_multitrace_batch_proposal.md)；22 例 × 33 道（mt01–33，y12.65–20.65，变偏移距），锚点 mt17 与已归档单道 22/22 逐位零差分，NC−BG 四族 33 道恒零；分析 r1/r2 字节一致（SHA-256 `501b960e…`）；证据 `artifacts/research_checks/2026-09-26_B2D-*-MT33/`；gate 已消耗并关闭|
+|常偏移配对子集 batch2d_v1_co|**已执行完成**（22/22 exit 0，2026-09-26，选项 3 单进程多例首次契约级试点）|[结果](docs/research/2026-09-26_batch2d_v1_co_results.md)；[提案](docs/research/2026-09-26_common_offset_subset_proposal.md)；2 C3 母模型 × 11 常偏移道（t01–11，Rx 12.65–22.65、偏移距恒 1.30 m），锚点 t05 输入与母模型逐字节相同、输出与归档单道 2/2 逐位零差分；差分能量 100% 在 250–450 ns（此前恒零），目标上方均值 2.35e-7 vs 外道 7.34e-8，镜像对称（模型关于 y16 对称+互易）已实证解释；分析 r1/r2 字节一致；证据 `artifacts/research_checks/2026-09-26_*-CO11-t*/`；gate 已消耗并关闭|
 |采集几何文献核查|完成（快速核查，决策参考）|[笔记](docs/research/2026-09-26_multitrace_acquisition_literature.md)、[台账](docs/research/2026-09-26_multitrace_acquisition_literature_ledger.json)；registry 条目 `multitrace_acquisition_literature_scan`|
 |G4 阈值校准方法文献核查|完成（快速核查，不解除 G4）|[笔记](docs/research/2026-09-26_g4_threshold_calibration_literature.md)、[台账](docs/research/2026-09-26_g4_threshold_calibration_literature_ledger.json)；registry 条目 `g4_threshold_calibration_literature_scan`|
 |选择器自适应收益文献核查|完成（快速核查，不训练）|[笔记](docs/research/2026-09-26_selector_adaptivity_literature.md)、[台账](docs/research/2026-09-26_selector_adaptivity_literature_ledger.json)；registry 条目 `selector_adaptivity_literature_scan`|
@@ -25,6 +26,8 @@
 |方向核查文献扫描（用户发起）|完成（5 问 50 条，快速核查，**未发现走偏**）|[报告](docs/research/2026-09-26_direction_check_litscan.md)、[台账](docs/research/2026-09-26_direction_check_litscan_ledger.json)；registry 条目 `direction_check_litscan`；G1/G2/G4 未解除；SFCW 衰减补偿先例（Liu 2018、Noon 1996）登记入 G4 参照池|
 
 |评价运行器多道首跑（eval_batch2d_mt v0.1）|**已完成**（27 候选全量执行，2026-09-26）|[报告](docs/research/2026-09-26_eval_batch2d_mt_eval_v0.1.md)；`scripts/run_eval_batch2d_mt.py`；变偏移距道集语义实现并逐记录携带（`variable_offset_csg_not_common_offset_bscan_v1`）；61 事件行 × 27 = 1647 记录（1458 ran / 189 无多道数据不可用 / 0 数值失败），r1/r2 剥离 resource 逐字节一致；可行性 `partial_only`（G4 未解除），N_b 为唯一可算指标；大数组 1.1 GB 在 git 忽略目录带哈希；registry 条目 `eval_batch2d_mt_v0_1`|
+
+**2026-09-26 batch2d_v1_co 常偏移子集执行完成（用户 17:49 批准"开始并执行"，22/22，选项 3 首试点）。** 按 [提案](docs/research/2026-09-26_common_offset_subset_proposal.md)（§2.4-B 落实稿）冻结并执行：2 C3 母模型 × 11 常偏移道（偏移距恒 1.30 m，Rx 12.65–22.65、Tx=Rx−1.30），共 22 次 FDTD（CUDA double、BASE 25 mm、1.2 μs），4 块单进程串行（6/6/6/5），各块墙钟 290.9 s、Job 峰值 3,010–3,011 MiB<4 GiB。验收四项全过：① 锚点 t05 输入与母模型逐字节相同（sha 断言）、输出与归档单道 **2/2 逐字节零差分**；② 11 道配对差分能量 100% 集中于 250–450 ns、**250 ns 前逐样本恒零**（扰动到达前两侧逐位一致，配对干净）；③ 目标上方 4 道带内诊断能量比均值 2.35e-7 vs 外道 7 道 7.34e-8；④ attempt/内存/墙钟全合规。镜像成对现象（t04=t06 等）经探针实证：模型整体关于 y=16 m 镜像对称（目标箱 y14–18 中心 16）+ 收发互易，BG 互相关 1.0000、能量 12 位相等，非数值巧合。分析 `scripts/analyze_batch2d_co.py` r1/r2 字节一致。首块曾因 supervise 目录语义（要求目录不存在）未运行即消耗 6 attempt，已重置留痕（`7dfa6ee`）。**与 MT33 批分层报告、不合并、不跨几何配对**；"算子结论是否随几何改变"属评价运行器/S4 范畴，本批只供输入。硬限制照录（threshold null、numerically_unresolved、无标签），G1/G3/G4/G5 维持。[结果](docs/research/2026-09-26_batch2d_v1_co_results.md)
 
 **2026-09-26 评价运行器多道首跑完成（27/27 候选可运行，S2+S3 出口）。** 实现 `scripts/run_eval_batch2d_mt.py`（只读输入、不调求解器）：变偏移距道集语义落为逐记录字段——33 道为单发多收 CSG 道集（非常偏移 B-scan），冻结事件窗原样施加全部 33 道、不做道间平移；三道门禁核验（事件表整文件 SHA 冻结、33 道过形态门、BG 序 pre-gain 必存 + GB 序只存 G⁻¹Y 审计）。规模：43 事件展开 61 事件行（覆盖层界面事件按族施加全部 22 个 MT 案例）× 27 候选 = 1647 记录，1458 ran、189 不可用（7 个粗档-only 母模型无多道数据，含 OFF）、0 数值失败。指标：`N_b` 负控残差唯一可算（identity 恒 1.0 sanity；负控窗能量比中位数 mean λ1.0→0.0953、svd k3→0.0163）；D/A/H/ρ 按门禁照录不可用原因；R_c 不计算；奇异谱平滑衰减（σ2/σ1≈0.23，无截断间隙，低秩背景为近似）；1080 条增益诊断零截幅零溢出；nc_zero 窗内 NC−BG 逐窗 0.0。可行性全 null 界限 ⇒ `partial_only`，不排名不选优。r1/r2 两遍剥离 resource 逐字节一致。**G2 至此全链解除（数据形态 + 评价执行）；G4 仍为可行性与排序总阻塞**；S4 基线（F/L/R/O）数据形态现已全部合法。无物理/训练标签，`reference_state` 不变。[报告](docs/research/2026-09-26_eval_batch2d_mt_eval_v0.1.md)
 
@@ -51,7 +54,7 @@
 
 **本机已接续并完成三项审查修复。** 比较脚本另存且拒绝覆盖；监督器等待进程组清空；余弦诊断缺少数值误差预算时标为缺失。157项数组、10项监督器检查通过，42行共同层/目标保真结论保持。见[修复及评价增补](docs/research/2026-09-25_direction_diagnostic_update.md)与[验证记录](artifacts/research_checks/2026-09-25_review_fixes/record.json)。下一步建立算子误差预算并继续准备垂向细化资源方案；没有新正演或训练。
 
-**执行契约状态（2026-09-26，本句取代此前所有“当前无待执行仿真契约”及“唯一在执行的是 batch2d_v1_fine2”表述）**：当前**无**待执行且无在执行契约。`batch2d_v1_mt` 已 22/22 完成、22 次 attempt 各 1 次已消耗，gate 关闭（`batch_id=batch2d_v1_mt`、`approved_to_simulate=false`、`execution_outcome.status=completed`，22 例 exit_code/wall_s/peak_job_commit_bytes 已逐例回填）；`batch2d_v1_fine2` 已 8/8 完成、gate 关闭；`dep3d_gold_v1` 与 `batch2d_v1` 粗档契约同样已消耗并关闭。P10 三维校核子集尚无冻结契约，须另行冻结并经用户敲定后方可执行。YFINE/ZFINE2 等更早契约保留为历史，不因后续代码修复而改写原授权快照。用户自主 GPU 研究授权保留；本机 V4/CUDA 环境已按上述三个批次的 CUDA double 执行核验（mt 批启动期两处环境修复见 [MT 结果](docs/research/2026-09-26_batch2d_v1_mt_results.md) vctip 节）。旧路径、PID、会话号与硬件耗时属于原机器。
+**执行契约状态（2026-09-26，本句取代此前所有“当前无待执行仿真契约”及“唯一在执行的是 batch2d_v1_fine2”表述）**：当前**无**待执行且无在执行契约。`batch2d_v1_co` 已 22/22 完成、22 次 attempt 各 1 次已消耗，gate 关闭（`batch_id=batch2d_v1_co_consumed`、`approved_to_simulate=false`、`execution_outcome.status=completed`，含锚点 2/2 逐位零差分与分块墙钟回填）；`batch2d_v1_mt` 已 22/22 完成、gate 关闭；`batch2d_v1_fine2` 已 8/8 完成、gate 关闭；`dep3d_gold_v1` 与 `batch2d_v1` 粗档契约同样已消耗并关闭。加速选项实测结论（[报告](docs/research/2026-09-26_speedup_probe_results.md)）：未来批次默认采用单进程多例启动（吞吐 ~2.8×）；FP32 仅可作独立新档、不得跨精度配对；单卡多进程并发已否决。A0 3D 校核提案仍待用户敲定。YFINE/ZFINE2 等更早契约保留为历史，不因后续代码修复而改写原授权快照。用户自主 GPU 研究授权保留；本机 V4/CUDA 环境已按上述三个批次的 CUDA double 执行核验（mt 批启动期两处环境修复见 [MT 结果](docs/research/2026-09-26_batch2d_v1_mt_results.md) vctip 节）。旧路径、PID、会话号与硬件耗时属于原机器。
 
 **2026-09-25 2D/3D 配对调研完成（未执行）。** 仓库从未做过 2D/3D 配对数值对比；本机实测 RTX 3060 Laptop（约6GiB显存）/15.8GiB 内存/Python3.10，无 V4 环境与源码，当前跑不了求解，但 ≤5,000万单元的小 3D 配对经估算可行。见[调研与设计草案](docs/research/2026-09-25_2d3d_paired_plan.md)：路径 A/B/C 待用户选择；契约未冻结，gate 仍为 false。算子误差预算（纯数组）不依赖环境，可立即推进。
 
