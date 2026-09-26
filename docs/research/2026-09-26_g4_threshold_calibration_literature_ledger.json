@@ -1,0 +1,140 @@
+{
+ "schema": "literature-reading-ledger/1",
+ "date": "2026-09-26",
+ "purpose": "Method-precedent scan for G4 (physical thresholds/tolerances still null): how task tolerances are formally set (NDT POD framework) and how gprMax references are calibrated (independent validation chain); retrieval does not imply reading or replication",
+ "body_read_count": 2,
+ "field_data_access_this_round": false,
+ "simulation_executed": false,
+ "training_executed": false,
+ "notes": [
+  "Fast scan, not a systematic review; two items read in full, four at abstract/snippet level, four citations registered without reading.",
+  "No dataset downloaded or imported; no threshold value is proposed anywhere in this round.",
+  "MDPI (NDE 4.0 review) and arXiv (SHM POD) fetches failed due to network resolution; registered as not_retrieved.",
+  "Companion note: docs/research/2026-09-26_g4_threshold_calibration_literature.md"
+ ],
+ "entries": [
+  {
+   "id": "G4-S1",
+   "source_url": "https://repository.uwl.ac.uk/id/eprint/5367/1/gprmax_new%282%29.pdf",
+   "retrieval_url": "https://repository.uwl.ac.uk/id/eprint/5367/1/gprmax_new%282%29.pdf",
+   "doi": "10.1016/j.cpc.2016.08.020",
+   "read_status": "body_read",
+   "read_scope": "Accepted-version full text (abstract through conclusion plus reference list); no supplementary material exists",
+   "retrieval_status": "retrieved",
+   "reproduced": false
+  },
+  {
+   "id": "G4-S2",
+   "source_url": "https://www.nde-ed.org/NDEEngineering/POD/introPOD.xhtml",
+   "retrieval_url": "https://www.nde-ed.org/NDEEngineering/POD/introPOD.xhtml",
+   "doi": null,
+   "read_status": "body_read",
+   "read_scope": "Full tutorial page (Outcome / Two Types / Uncertainty / a-hat vs a example / POD(a) / confidence interval / assumption checking); tutorial, not peer-reviewed paper",
+   "retrieval_status": "retrieved",
+   "reproduced": false
+  },
+  {
+   "id": "G4-S3",
+   "source_url": "https://kpt-bj.com/astm-e2862-23-standard-practice-for-probability-of-detection-analysis-for-hit-miss-data-1957228530.html",
+   "retrieval_url": "https://kpt-bj.com/astm-e2862-23-standard-practice-for-probability-of-detection-analysis-for-hit-miss-data-1957228530.html",
+   "doi": null,
+   "read_status": "snippet_only",
+   "read_scope": "Search-result snippet on ASTM E2862-23 hit/miss POD practice and a90/95 definition; MIL-HDBK-1823A cross-registered",
+   "retrieval_status": "retrieved",
+   "reproduced": false
+  },
+  {
+   "id": "G4-S4a",
+   "source_url": "https://www.ndt.net/search/docs.php?id=32190",
+   "retrieval_url": "https://www.ndt.net/search/docs.php?id=32190",
+   "doi": null,
+   "read_status": "snippet_only",
+   "read_scope": "Search-result snippet: MAPOD for ultrasonic inspection of adhesive joints, CIVA simulations over 0.01-5 mm flaw sizes",
+   "retrieval_status": "retrieved",
+   "reproduced": false
+  },
+  {
+   "id": "G4-S4b",
+   "source_url": "https://www.ndt.net/article/ecndt2023/presentation/ECNDT2023_PRESENTATION_272.pdf",
+   "retrieval_url": "https://www.ndt.net/article/ecndt2023/presentation/ECNDT2023_PRESENTATION_272.pdf",
+   "doi": null,
+   "read_status": "snippet_only",
+   "read_scope": "Search-result snippet: POD-by-simulation of industrial ultrasonic inspection; references Berens 1989 and MIL-HDBK-1823A",
+   "retrieval_status": "retrieved",
+   "reproduced": false
+  },
+  {
+   "id": "G4-S4c",
+   "source_url": "https://www.ndt.net/article/apcndt2013/papers/224.pdf",
+   "retrieval_url": "https://www.ndt.net/article/apcndt2013/papers/224.pdf",
+   "doi": null,
+   "read_status": "snippet_only",
+   "read_scope": "Search-result snippet: Bayesian combination of simulated (FE) data as prior with experimental updates for POD curves",
+   "retrieval_status": "retrieved",
+   "reproduced": false
+  },
+  {
+   "id": "G4-S5a",
+   "source_url": null,
+   "retrieval_url": null,
+   "doi": null,
+   "read_status": "citation_registered_not_read",
+   "read_scope": "Berens 1989, NDE reliability data analysis, ASM Handbook Vol. 17:689-701; registered via ECNDT 2023 snippet reference list",
+   "retrieval_status": "not_retrieved",
+   "reproduced": false
+  },
+  {
+   "id": "G4-S5b",
+   "source_url": null,
+   "retrieval_url": null,
+   "doi": null,
+   "read_status": "citation_registered_not_read",
+   "read_scope": "Lambot et al. 2004, IEEE TGRS 42(11):2555-2568; registered via Warren et al. 2016 reference 23",
+   "retrieval_status": "not_retrieved",
+   "reproduced": false
+  },
+  {
+   "id": "G4-S5c",
+   "source_url": null,
+   "retrieval_url": null,
+   "doi": null,
+   "read_status": "citation_registered_not_read",
+   "read_scope": "Tran et al. 2014, IEEE TGRS 52(9):5483-5497; registered via Warren et al. 2016 reference 13",
+   "retrieval_status": "not_retrieved",
+   "reproduced": false
+  },
+  {
+   "id": "G4-S5d",
+   "source_url": null,
+   "retrieval_url": null,
+   "doi": null,
+   "read_status": "citation_registered_not_read",
+   "read_scope": "MIL-HDBK-1823A (2009), Nondestructive Evaluation System Reliability Assessment; cross-registered via S2/S3/S4 snippets, full text not retrieved",
+   "retrieval_status": "not_retrieved",
+   "reproduced": false
+  },
+  {
+   "id": "G4-SX1",
+   "source_url": "https://www.mdpi.com/2813-477X/4/3/17",
+   "retrieval_url": "https://www.mdpi.com/2813-477X/4/3/17",
+   "doi": null,
+   "read_status": "not_read_fetch_failed",
+   "read_scope": "MDPI NDE 4.0 review; fetch failed (host resolution refused); snippet only from search results",
+   "retrieval_status": "not_retrieved",
+   "reproduced": false
+  },
+  {
+   "id": "G4-SX2",
+   "source_url": "https://arxiv.org/html/2609.28407v1",
+   "retrieval_url": "https://arxiv.org/html/2609.28407v1",
+   "doi": null,
+   "read_status": "not_read_fetch_failed",
+   "read_scope": "arXiv SHM POD statistical methods; fetch failed (host resolution refused); snippet only from search results",
+   "retrieval_status": "not_retrieved",
+   "reproduced": false
+  }
+ ],
+ "generated_outputs": [
+  "docs/research/2026-09-26_g4_threshold_calibration_literature.md"
+ ]
+}
