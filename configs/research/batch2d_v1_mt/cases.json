@@ -1,0 +1,3385 @@
+{
+ "batch_id": "batch2d_v1",
+ "segment": "mt",
+ "grid_tier": "BASE",
+ "spec": "docs/research/2026-09-26_multitrace_batch_proposal.md (user-approved 2026-09-26) + docs/research/2026-09-26_batch_2d_spec_v1.md",
+ "n_cases": 22,
+ "n_exceptions": 0,
+ "derivation": "mother_model_id identical to batch2d_v1 base cases; receiver-array derivative only",
+ "cases": [
+  {
+   "case_id": "B2D-C1m-BG",
+   "run_id": "B2D-C1m-BG-MT33",
+   "file": "B2D-C1m-BG-MT33.in",
+   "input_sha256": "a40da10fdafb8706e2a52298a4fe8efb65aa0377dfd0c4cc189743068186c51e",
+   "batch_id": "batch2d_v1",
+   "segment": "mt",
+   "grid_tier": "BASE",
+   "family": "C1",
+   "cover_thickness_m": 1.0,
+   "role": "bg",
+   "mother_model_id": "B2D-C1m-BG",
+   "group_id": "B2D-C1m",
+   "seed": 11565384053651749071,
+   "variant_tag": "multitrace_33rx_0p25m",
+   "scan_axis": {
+    "cover_thickness_m": 1.0,
+    "depth_m": null,
+    "width_m": null,
+    "thickness_m": null,
+    "eps_r": null,
+    "sigma_s_m": null
+   },
+   "materials": {
+    "rock": [
+     9.0,
+     0.001
+    ],
+    "cover": [
+     16.0,
+     0.01
+    ],
+    "target": null
+   },
+   "geometry": {
+    "domain_m": [
+     null,
+     32.0,
+     50.0
+    ],
+    "dy_dz_m": [
+     0.025,
+     0.025
+    ],
+    "pml_cells": [
+     0,
+     40,
+     40,
+     0,
+     40,
+     40
+    ],
+    "pml_physical_thickness_m": 1.0,
+    "surface_z_m": 30.0,
+    "cover_bottom_z_m": 29.0,
+    "cover_box_m": [
+     0.0,
+     29.0,
+     32.0,
+     30.0
+    ],
+    "target_box_m": null,
+    "target_box_cells": null,
+    "tx_m": [
+     15.35,
+     45.0
+    ],
+    "rx_m": [
+     16.65,
+     45.0
+    ],
+    "component": "Ex"
+   },
+   "cells": 2560000,
+   "dt_s": 5.896635841874211e-11,
+   "time_steps": 20352,
+   "main_fields_ID_GiB": 0.3437627702951431,
+   "wall_s_estimate_method_3_1": 17.012,
+   "wall_s_planning_envelope_3_2": 152.0,
+   "static_check": {
+    "grid_aligned": true,
+    "target": null
+   },
+   "exceptions": null,
+   "multitrace": {
+    "n_traces": 33,
+    "trace_spacing_m": 0.25,
+    "trace_span_m": 8.0,
+    "trace_axis_y_range_m": [
+     12.65,
+     20.65
+    ],
+    "trace_receiver_z_m": 45.0,
+    "anchor_trace_index": 16,
+    "anchor_trace_y_m": 16.65,
+    "trace_ids": [
+     "mt01",
+     "mt02",
+     "mt03",
+     "mt04",
+     "mt05",
+     "mt06",
+     "mt07",
+     "mt08",
+     "mt09",
+     "mt10",
+     "mt11",
+     "mt12",
+     "mt13",
+     "mt14",
+     "mt15",
+     "mt16",
+     "mt17",
+     "mt18",
+     "mt19",
+     "mt20",
+     "mt21",
+     "mt22",
+     "mt23",
+     "mt24",
+     "mt25",
+     "mt26",
+     "mt27",
+     "mt28",
+     "mt29",
+     "mt30",
+     "mt31",
+     "mt32",
+     "mt33"
+    ],
+    "trace_order": "construction",
+    "acquisition_geometry": "single-shot variable-offset receiver array along y (offset 2.70-5.30 m)",
+    "rx_output_components": [
+     "Ex"
+    ]
+   }
+  },
+  {
+   "case_id": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+   "run_id": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-MT33",
+   "file": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-MT33.in",
+   "input_sha256": "ecba3dba914361f34290914b08e23058fce335b6630f0d39d14e6c45d4b8501c",
+   "batch_id": "batch2d_v1",
+   "segment": "mt",
+   "grid_tier": "BASE",
+   "family": "C1",
+   "cover_thickness_m": 1.0,
+   "role": "target",
+   "mother_model_id": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+   "group_id": "B2D-C1m",
+   "seed": 1466432653479410070,
+   "variant_tag": "multitrace_33rx_0p25m",
+   "scan_axis": {
+    "cover_thickness_m": 1.0,
+    "depth_m": 10.0,
+    "width_m": 4.0,
+    "thickness_m": 0.5,
+    "eps_r": 20.0,
+    "sigma_s_m": 0.02
+   },
+   "materials": {
+    "rock": [
+     9.0,
+     0.001
+    ],
+    "cover": [
+     16.0,
+     0.01
+    ],
+    "target": [
+     20.0,
+     0.02
+    ]
+   },
+   "geometry": {
+    "domain_m": [
+     null,
+     32.0,
+     50.0
+    ],
+    "dy_dz_m": [
+     0.025,
+     0.025
+    ],
+    "pml_cells": [
+     0,
+     40,
+     40,
+     0,
+     40,
+     40
+    ],
+    "pml_physical_thickness_m": 1.0,
+    "surface_z_m": 30.0,
+    "cover_bottom_z_m": 29.0,
+    "cover_box_m": [
+     0.0,
+     29.0,
+     32.0,
+     30.0
+    ],
+    "target_box_m": [
+     14.0,
+     19.75,
+     18.0,
+     20.25
+    ],
+    "target_box_cells": [
+     560,
+     790,
+     720,
+     810
+    ],
+    "tx_m": [
+     15.35,
+     45.0
+    ],
+    "rx_m": [
+     16.65,
+     45.0
+    ],
+    "component": "Ex"
+   },
+   "cells": 2560000,
+   "dt_s": 5.896635841874211e-11,
+   "time_steps": 20352,
+   "main_fields_ID_GiB": 0.3437627702951431,
+   "wall_s_estimate_method_3_1": 17.012,
+   "wall_s_planning_envelope_3_2": 152.0,
+   "static_check": {
+    "grid_aligned": true,
+    "cover_bottom_m": 29.0,
+    "target_top_m": 20.25,
+    "target_bottom_m": 19.75,
+    "clearance_below_cover_m": 8.75,
+    "bottom_pml_margin_m": 18.75,
+    "side_pml_margin_m": 13.0,
+    "top_pml_margin_m": 28.75,
+    "target_fully_in_sandstone": true
+   },
+   "exceptions": null,
+   "multitrace": {
+    "n_traces": 33,
+    "trace_spacing_m": 0.25,
+    "trace_span_m": 8.0,
+    "trace_axis_y_range_m": [
+     12.65,
+     20.65
+    ],
+    "trace_receiver_z_m": 45.0,
+    "anchor_trace_index": 16,
+    "anchor_trace_y_m": 16.65,
+    "trace_ids": [
+     "mt01",
+     "mt02",
+     "mt03",
+     "mt04",
+     "mt05",
+     "mt06",
+     "mt07",
+     "mt08",
+     "mt09",
+     "mt10",
+     "mt11",
+     "mt12",
+     "mt13",
+     "mt14",
+     "mt15",
+     "mt16",
+     "mt17",
+     "mt18",
+     "mt19",
+     "mt20",
+     "mt21",
+     "mt22",
+     "mt23",
+     "mt24",
+     "mt25",
+     "mt26",
+     "mt27",
+     "mt28",
+     "mt29",
+     "mt30",
+     "mt31",
+     "mt32",
+     "mt33"
+    ],
+    "trace_order": "construction",
+    "acquisition_geometry": "single-shot variable-offset receiver array along y (offset 2.70-5.30 m)",
+    "rx_output_components": [
+     "Ex"
+    ]
+   }
+  },
+  {
+   "case_id": "B2D-C3m-BG",
+   "run_id": "B2D-C3m-BG-MT33",
+   "file": "B2D-C3m-BG-MT33.in",
+   "input_sha256": "0875cff870410c3bdcf18430c6316331205abc83ea5a8b85e1f7eac62b5e4041",
+   "batch_id": "batch2d_v1",
+   "segment": "mt",
+   "grid_tier": "BASE",
+   "family": "C3",
+   "cover_thickness_m": 3.0,
+   "role": "bg",
+   "mother_model_id": "B2D-C3m-BG",
+   "group_id": "B2D-C3m",
+   "seed": 2823210950056988922,
+   "variant_tag": "multitrace_33rx_0p25m",
+   "scan_axis": {
+    "cover_thickness_m": 3.0,
+    "depth_m": null,
+    "width_m": null,
+    "thickness_m": null,
+    "eps_r": null,
+    "sigma_s_m": null
+   },
+   "materials": {
+    "rock": [
+     9.0,
+     0.001
+    ],
+    "cover": [
+     16.0,
+     0.01
+    ],
+    "target": null
+   },
+   "geometry": {
+    "domain_m": [
+     null,
+     32.0,
+     50.0
+    ],
+    "dy_dz_m": [
+     0.025,
+     0.025
+    ],
+    "pml_cells": [
+     0,
+     40,
+     40,
+     0,
+     40,
+     40
+    ],
+    "pml_physical_thickness_m": 1.0,
+    "surface_z_m": 30.0,
+    "cover_bottom_z_m": 27.0,
+    "cover_box_m": [
+     0.0,
+     27.0,
+     32.0,
+     30.0
+    ],
+    "target_box_m": null,
+    "target_box_cells": null,
+    "tx_m": [
+     15.35,
+     45.0
+    ],
+    "rx_m": [
+     16.65,
+     45.0
+    ],
+    "component": "Ex"
+   },
+   "cells": 2560000,
+   "dt_s": 5.896635841874211e-11,
+   "time_steps": 20352,
+   "main_fields_ID_GiB": 0.3437627702951431,
+   "wall_s_estimate_method_3_1": 17.012,
+   "wall_s_planning_envelope_3_2": 152.0,
+   "static_check": {
+    "grid_aligned": true,
+    "target": null
+   },
+   "exceptions": null,
+   "multitrace": {
+    "n_traces": 33,
+    "trace_spacing_m": 0.25,
+    "trace_span_m": 8.0,
+    "trace_axis_y_range_m": [
+     12.65,
+     20.65
+    ],
+    "trace_receiver_z_m": 45.0,
+    "anchor_trace_index": 16,
+    "anchor_trace_y_m": 16.65,
+    "trace_ids": [
+     "mt01",
+     "mt02",
+     "mt03",
+     "mt04",
+     "mt05",
+     "mt06",
+     "mt07",
+     "mt08",
+     "mt09",
+     "mt10",
+     "mt11",
+     "mt12",
+     "mt13",
+     "mt14",
+     "mt15",
+     "mt16",
+     "mt17",
+     "mt18",
+     "mt19",
+     "mt20",
+     "mt21",
+     "mt22",
+     "mt23",
+     "mt24",
+     "mt25",
+     "mt26",
+     "mt27",
+     "mt28",
+     "mt29",
+     "mt30",
+     "mt31",
+     "mt32",
+     "mt33"
+    ],
+    "trace_order": "construction",
+    "acquisition_geometry": "single-shot variable-offset receiver array along y (offset 2.70-5.30 m)",
+    "rx_output_components": [
+     "Ex"
+    ]
+   }
+  },
+  {
+   "case_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+   "run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33",
+   "file": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33.in",
+   "input_sha256": "f5e632959f2261cd57e33ea5085a39ac95e7ff0ee0ded57d5605b93a5b730470",
+   "batch_id": "batch2d_v1",
+   "segment": "mt",
+   "grid_tier": "BASE",
+   "family": "C3",
+   "cover_thickness_m": 3.0,
+   "role": "target",
+   "mother_model_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+   "group_id": "B2D-C3m",
+   "seed": 8217711777281754503,
+   "variant_tag": "multitrace_33rx_0p25m",
+   "scan_axis": {
+    "cover_thickness_m": 3.0,
+    "depth_m": 10.0,
+    "width_m": 4.0,
+    "thickness_m": 0.5,
+    "eps_r": 20.0,
+    "sigma_s_m": 0.02
+   },
+   "materials": {
+    "rock": [
+     9.0,
+     0.001
+    ],
+    "cover": [
+     16.0,
+     0.01
+    ],
+    "target": [
+     20.0,
+     0.02
+    ]
+   },
+   "geometry": {
+    "domain_m": [
+     null,
+     32.0,
+     50.0
+    ],
+    "dy_dz_m": [
+     0.025,
+     0.025
+    ],
+    "pml_cells": [
+     0,
+     40,
+     40,
+     0,
+     40,
+     40
+    ],
+    "pml_physical_thickness_m": 1.0,
+    "surface_z_m": 30.0,
+    "cover_bottom_z_m": 27.0,
+    "cover_box_m": [
+     0.0,
+     27.0,
+     32.0,
+     30.0
+    ],
+    "target_box_m": [
+     14.0,
+     19.75,
+     18.0,
+     20.25
+    ],
+    "target_box_cells": [
+     560,
+     790,
+     720,
+     810
+    ],
+    "tx_m": [
+     15.35,
+     45.0
+    ],
+    "rx_m": [
+     16.65,
+     45.0
+    ],
+    "component": "Ex"
+   },
+   "cells": 2560000,
+   "dt_s": 5.896635841874211e-11,
+   "time_steps": 20352,
+   "main_fields_ID_GiB": 0.3437627702951431,
+   "wall_s_estimate_method_3_1": 17.012,
+   "wall_s_planning_envelope_3_2": 152.0,
+   "static_check": {
+    "grid_aligned": true,
+    "cover_bottom_m": 27.0,
+    "target_top_m": 20.25,
+    "target_bottom_m": 19.75,
+    "clearance_below_cover_m": 6.75,
+    "bottom_pml_margin_m": 18.75,
+    "side_pml_margin_m": 13.0,
+    "top_pml_margin_m": 28.75,
+    "target_fully_in_sandstone": true
+   },
+   "exceptions": null,
+   "multitrace": {
+    "n_traces": 33,
+    "trace_spacing_m": 0.25,
+    "trace_span_m": 8.0,
+    "trace_axis_y_range_m": [
+     12.65,
+     20.65
+    ],
+    "trace_receiver_z_m": 45.0,
+    "anchor_trace_index": 16,
+    "anchor_trace_y_m": 16.65,
+    "trace_ids": [
+     "mt01",
+     "mt02",
+     "mt03",
+     "mt04",
+     "mt05",
+     "mt06",
+     "mt07",
+     "mt08",
+     "mt09",
+     "mt10",
+     "mt11",
+     "mt12",
+     "mt13",
+     "mt14",
+     "mt15",
+     "mt16",
+     "mt17",
+     "mt18",
+     "mt19",
+     "mt20",
+     "mt21",
+     "mt22",
+     "mt23",
+     "mt24",
+     "mt25",
+     "mt26",
+     "mt27",
+     "mt28",
+     "mt29",
+     "mt30",
+     "mt31",
+     "mt32",
+     "mt33"
+    ],
+    "trace_order": "construction",
+    "acquisition_geometry": "single-shot variable-offset receiver array along y (offset 2.70-5.30 m)",
+    "rx_output_components": [
+     "Ex"
+    ]
+   }
+  },
+  {
+   "case_id": "B2D-C5m-BG",
+   "run_id": "B2D-C5m-BG-MT33",
+   "file": "B2D-C5m-BG-MT33.in",
+   "input_sha256": "b87dd00c4d15ed82ebcda37045a1d3cafcca9d735d6676a6fb618f63334b3c05",
+   "batch_id": "batch2d_v1",
+   "segment": "mt",
+   "grid_tier": "BASE",
+   "family": "C5",
+   "cover_thickness_m": 5.0,
+   "role": "bg",
+   "mother_model_id": "B2D-C5m-BG",
+   "group_id": "B2D-C5m",
+   "seed": 9727000170444458195,
+   "variant_tag": "multitrace_33rx_0p25m",
+   "scan_axis": {
+    "cover_thickness_m": 5.0,
+    "depth_m": null,
+    "width_m": null,
+    "thickness_m": null,
+    "eps_r": null,
+    "sigma_s_m": null
+   },
+   "materials": {
+    "rock": [
+     9.0,
+     0.001
+    ],
+    "cover": [
+     16.0,
+     0.01
+    ],
+    "target": null
+   },
+   "geometry": {
+    "domain_m": [
+     null,
+     32.0,
+     50.0
+    ],
+    "dy_dz_m": [
+     0.025,
+     0.025
+    ],
+    "pml_cells": [
+     0,
+     40,
+     40,
+     0,
+     40,
+     40
+    ],
+    "pml_physical_thickness_m": 1.0,
+    "surface_z_m": 30.0,
+    "cover_bottom_z_m": 25.0,
+    "cover_box_m": [
+     0.0,
+     25.0,
+     32.0,
+     30.0
+    ],
+    "target_box_m": null,
+    "target_box_cells": null,
+    "tx_m": [
+     15.35,
+     45.0
+    ],
+    "rx_m": [
+     16.65,
+     45.0
+    ],
+    "component": "Ex"
+   },
+   "cells": 2560000,
+   "dt_s": 5.896635841874211e-11,
+   "time_steps": 20352,
+   "main_fields_ID_GiB": 0.3437627702951431,
+   "wall_s_estimate_method_3_1": 17.012,
+   "wall_s_planning_envelope_3_2": 152.0,
+   "static_check": {
+    "grid_aligned": true,
+    "target": null
+   },
+   "exceptions": null,
+   "multitrace": {
+    "n_traces": 33,
+    "trace_spacing_m": 0.25,
+    "trace_span_m": 8.0,
+    "trace_axis_y_range_m": [
+     12.65,
+     20.65
+    ],
+    "trace_receiver_z_m": 45.0,
+    "anchor_trace_index": 16,
+    "anchor_trace_y_m": 16.65,
+    "trace_ids": [
+     "mt01",
+     "mt02",
+     "mt03",
+     "mt04",
+     "mt05",
+     "mt06",
+     "mt07",
+     "mt08",
+     "mt09",
+     "mt10",
+     "mt11",
+     "mt12",
+     "mt13",
+     "mt14",
+     "mt15",
+     "mt16",
+     "mt17",
+     "mt18",
+     "mt19",
+     "mt20",
+     "mt21",
+     "mt22",
+     "mt23",
+     "mt24",
+     "mt25",
+     "mt26",
+     "mt27",
+     "mt28",
+     "mt29",
+     "mt30",
+     "mt31",
+     "mt32",
+     "mt33"
+    ],
+    "trace_order": "construction",
+    "acquisition_geometry": "single-shot variable-offset receiver array along y (offset 2.70-5.30 m)",
+    "rx_output_components": [
+     "Ex"
+    ]
+   }
+  },
+  {
+   "case_id": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02",
+   "run_id": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-MT33",
+   "file": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-MT33.in",
+   "input_sha256": "14ff987cbe0be2347f3ae18366af9b621fbf25c9617442f30e4f45ffc3d8abee",
+   "batch_id": "batch2d_v1",
+   "segment": "mt",
+   "grid_tier": "BASE",
+   "family": "C5",
+   "cover_thickness_m": 5.0,
+   "role": "target",
+   "mother_model_id": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02",
+   "group_id": "B2D-C5m",
+   "seed": 8204447202718385771,
+   "variant_tag": "multitrace_33rx_0p25m",
+   "scan_axis": {
+    "cover_thickness_m": 5.0,
+    "depth_m": 10.0,
+    "width_m": 4.0,
+    "thickness_m": 0.5,
+    "eps_r": 20.0,
+    "sigma_s_m": 0.02
+   },
+   "materials": {
+    "rock": [
+     9.0,
+     0.001
+    ],
+    "cover": [
+     16.0,
+     0.01
+    ],
+    "target": [
+     20.0,
+     0.02
+    ]
+   },
+   "geometry": {
+    "domain_m": [
+     null,
+     32.0,
+     50.0
+    ],
+    "dy_dz_m": [
+     0.025,
+     0.025
+    ],
+    "pml_cells": [
+     0,
+     40,
+     40,
+     0,
+     40,
+     40
+    ],
+    "pml_physical_thickness_m": 1.0,
+    "surface_z_m": 30.0,
+    "cover_bottom_z_m": 25.0,
+    "cover_box_m": [
+     0.0,
+     25.0,
+     32.0,
+     30.0
+    ],
+    "target_box_m": [
+     14.0,
+     19.75,
+     18.0,
+     20.25
+    ],
+    "target_box_cells": [
+     560,
+     790,
+     720,
+     810
+    ],
+    "tx_m": [
+     15.35,
+     45.0
+    ],
+    "rx_m": [
+     16.65,
+     45.0
+    ],
+    "component": "Ex"
+   },
+   "cells": 2560000,
+   "dt_s": 5.896635841874211e-11,
+   "time_steps": 20352,
+   "main_fields_ID_GiB": 0.3437627702951431,
+   "wall_s_estimate_method_3_1": 17.012,
+   "wall_s_planning_envelope_3_2": 152.0,
+   "static_check": {
+    "grid_aligned": true,
+    "cover_bottom_m": 25.0,
+    "target_top_m": 20.25,
+    "target_bottom_m": 19.75,
+    "clearance_below_cover_m": 4.75,
+    "bottom_pml_margin_m": 18.75,
+    "side_pml_margin_m": 13.0,
+    "top_pml_margin_m": 28.75,
+    "target_fully_in_sandstone": true
+   },
+   "exceptions": null,
+   "multitrace": {
+    "n_traces": 33,
+    "trace_spacing_m": 0.25,
+    "trace_span_m": 8.0,
+    "trace_axis_y_range_m": [
+     12.65,
+     20.65
+    ],
+    "trace_receiver_z_m": 45.0,
+    "anchor_trace_index": 16,
+    "anchor_trace_y_m": 16.65,
+    "trace_ids": [
+     "mt01",
+     "mt02",
+     "mt03",
+     "mt04",
+     "mt05",
+     "mt06",
+     "mt07",
+     "mt08",
+     "mt09",
+     "mt10",
+     "mt11",
+     "mt12",
+     "mt13",
+     "mt14",
+     "mt15",
+     "mt16",
+     "mt17",
+     "mt18",
+     "mt19",
+     "mt20",
+     "mt21",
+     "mt22",
+     "mt23",
+     "mt24",
+     "mt25",
+     "mt26",
+     "mt27",
+     "mt28",
+     "mt29",
+     "mt30",
+     "mt31",
+     "mt32",
+     "mt33"
+    ],
+    "trace_order": "construction",
+    "acquisition_geometry": "single-shot variable-offset receiver array along y (offset 2.70-5.30 m)",
+    "rx_output_components": [
+     "Ex"
+    ]
+   }
+  },
+  {
+   "case_id": "B2D-C8m-BG",
+   "run_id": "B2D-C8m-BG-MT33",
+   "file": "B2D-C8m-BG-MT33.in",
+   "input_sha256": "37ab402a173e3f3cf5fabbd063bf798f40571647361a6b14d8733ec1c68bfbcc",
+   "batch_id": "batch2d_v1",
+   "segment": "mt",
+   "grid_tier": "BASE",
+   "family": "C8",
+   "cover_thickness_m": 8.0,
+   "role": "bg",
+   "mother_model_id": "B2D-C8m-BG",
+   "group_id": "B2D-C8m",
+   "seed": 6926832614529772881,
+   "variant_tag": "multitrace_33rx_0p25m",
+   "scan_axis": {
+    "cover_thickness_m": 8.0,
+    "depth_m": null,
+    "width_m": null,
+    "thickness_m": null,
+    "eps_r": null,
+    "sigma_s_m": null
+   },
+   "materials": {
+    "rock": [
+     9.0,
+     0.001
+    ],
+    "cover": [
+     16.0,
+     0.01
+    ],
+    "target": null
+   },
+   "geometry": {
+    "domain_m": [
+     null,
+     32.0,
+     50.0
+    ],
+    "dy_dz_m": [
+     0.025,
+     0.025
+    ],
+    "pml_cells": [
+     0,
+     40,
+     40,
+     0,
+     40,
+     40
+    ],
+    "pml_physical_thickness_m": 1.0,
+    "surface_z_m": 30.0,
+    "cover_bottom_z_m": 22.0,
+    "cover_box_m": [
+     0.0,
+     22.0,
+     32.0,
+     30.0
+    ],
+    "target_box_m": null,
+    "target_box_cells": null,
+    "tx_m": [
+     15.35,
+     45.0
+    ],
+    "rx_m": [
+     16.65,
+     45.0
+    ],
+    "component": "Ex"
+   },
+   "cells": 2560000,
+   "dt_s": 5.896635841874211e-11,
+   "time_steps": 20352,
+   "main_fields_ID_GiB": 0.3437627702951431,
+   "wall_s_estimate_method_3_1": 17.012,
+   "wall_s_planning_envelope_3_2": 152.0,
+   "static_check": {
+    "grid_aligned": true,
+    "target": null
+   },
+   "exceptions": null,
+   "multitrace": {
+    "n_traces": 33,
+    "trace_spacing_m": 0.25,
+    "trace_span_m": 8.0,
+    "trace_axis_y_range_m": [
+     12.65,
+     20.65
+    ],
+    "trace_receiver_z_m": 45.0,
+    "anchor_trace_index": 16,
+    "anchor_trace_y_m": 16.65,
+    "trace_ids": [
+     "mt01",
+     "mt02",
+     "mt03",
+     "mt04",
+     "mt05",
+     "mt06",
+     "mt07",
+     "mt08",
+     "mt09",
+     "mt10",
+     "mt11",
+     "mt12",
+     "mt13",
+     "mt14",
+     "mt15",
+     "mt16",
+     "mt17",
+     "mt18",
+     "mt19",
+     "mt20",
+     "mt21",
+     "mt22",
+     "mt23",
+     "mt24",
+     "mt25",
+     "mt26",
+     "mt27",
+     "mt28",
+     "mt29",
+     "mt30",
+     "mt31",
+     "mt32",
+     "mt33"
+    ],
+    "trace_order": "construction",
+    "acquisition_geometry": "single-shot variable-offset receiver array along y (offset 2.70-5.30 m)",
+    "rx_output_components": [
+     "Ex"
+    ]
+   }
+  },
+  {
+   "case_id": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+   "run_id": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-MT33",
+   "file": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-MT33.in",
+   "input_sha256": "28293439ce19841a027a34332e6744033adb63a433a4d11a8fc43ca18a3eee62",
+   "batch_id": "batch2d_v1",
+   "segment": "mt",
+   "grid_tier": "BASE",
+   "family": "C8",
+   "cover_thickness_m": 8.0,
+   "role": "target",
+   "mother_model_id": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+   "group_id": "B2D-C8m",
+   "seed": 5284815980547057618,
+   "variant_tag": "multitrace_33rx_0p25m",
+   "scan_axis": {
+    "cover_thickness_m": 8.0,
+    "depth_m": 10.0,
+    "width_m": 4.0,
+    "thickness_m": 0.5,
+    "eps_r": 20.0,
+    "sigma_s_m": 0.02
+   },
+   "materials": {
+    "rock": [
+     9.0,
+     0.001
+    ],
+    "cover": [
+     16.0,
+     0.01
+    ],
+    "target": [
+     20.0,
+     0.02
+    ]
+   },
+   "geometry": {
+    "domain_m": [
+     null,
+     32.0,
+     50.0
+    ],
+    "dy_dz_m": [
+     0.025,
+     0.025
+    ],
+    "pml_cells": [
+     0,
+     40,
+     40,
+     0,
+     40,
+     40
+    ],
+    "pml_physical_thickness_m": 1.0,
+    "surface_z_m": 30.0,
+    "cover_bottom_z_m": 22.0,
+    "cover_box_m": [
+     0.0,
+     22.0,
+     32.0,
+     30.0
+    ],
+    "target_box_m": [
+     14.0,
+     19.75,
+     18.0,
+     20.25
+    ],
+    "target_box_cells": [
+     560,
+     790,
+     720,
+     810
+    ],
+    "tx_m": [
+     15.35,
+     45.0
+    ],
+    "rx_m": [
+     16.65,
+     45.0
+    ],
+    "component": "Ex"
+   },
+   "cells": 2560000,
+   "dt_s": 5.896635841874211e-11,
+   "time_steps": 20352,
+   "main_fields_ID_GiB": 0.3437627702951431,
+   "wall_s_estimate_method_3_1": 17.012,
+   "wall_s_planning_envelope_3_2": 152.0,
+   "static_check": {
+    "grid_aligned": true,
+    "cover_bottom_m": 22.0,
+    "target_top_m": 20.25,
+    "target_bottom_m": 19.75,
+    "clearance_below_cover_m": 1.75,
+    "bottom_pml_margin_m": 18.75,
+    "side_pml_margin_m": 13.0,
+    "top_pml_margin_m": 28.75,
+    "target_fully_in_sandstone": true
+   },
+   "exceptions": null,
+   "multitrace": {
+    "n_traces": 33,
+    "trace_spacing_m": 0.25,
+    "trace_span_m": 8.0,
+    "trace_axis_y_range_m": [
+     12.65,
+     20.65
+    ],
+    "trace_receiver_z_m": 45.0,
+    "anchor_trace_index": 16,
+    "anchor_trace_y_m": 16.65,
+    "trace_ids": [
+     "mt01",
+     "mt02",
+     "mt03",
+     "mt04",
+     "mt05",
+     "mt06",
+     "mt07",
+     "mt08",
+     "mt09",
+     "mt10",
+     "mt11",
+     "mt12",
+     "mt13",
+     "mt14",
+     "mt15",
+     "mt16",
+     "mt17",
+     "mt18",
+     "mt19",
+     "mt20",
+     "mt21",
+     "mt22",
+     "mt23",
+     "mt24",
+     "mt25",
+     "mt26",
+     "mt27",
+     "mt28",
+     "mt29",
+     "mt30",
+     "mt31",
+     "mt32",
+     "mt33"
+    ],
+    "trace_order": "construction",
+    "acquisition_geometry": "single-shot variable-offset receiver array along y (offset 2.70-5.30 m)",
+    "rx_output_components": [
+     "Ex"
+    ]
+   }
+  },
+  {
+   "case_id": "B2D-C1m-D10m-NC",
+   "run_id": "B2D-C1m-D10m-NC-MT33",
+   "file": "B2D-C1m-D10m-NC-MT33.in",
+   "input_sha256": "3175f8958a8d6d39073b030c687d315f3fcd31b8facb8ab315198ee9db1b7b47",
+   "batch_id": "batch2d_v1",
+   "segment": "mt",
+   "grid_tier": "BASE",
+   "family": "C1",
+   "cover_thickness_m": 1.0,
+   "role": "nc",
+   "mother_model_id": "B2D-C1m-D10m-NC",
+   "group_id": "B2D-C1m",
+   "seed": 12131917190374022956,
+   "variant_tag": "multitrace_33rx_0p25m",
+   "scan_axis": {
+    "cover_thickness_m": 1.0,
+    "depth_m": 10.0,
+    "width_m": 4.0,
+    "thickness_m": 0.5,
+    "eps_r": 9.0,
+    "sigma_s_m": 0.001
+   },
+   "materials": {
+    "rock": [
+     9.0,
+     0.001
+    ],
+    "cover": [
+     16.0,
+     0.01
+    ],
+    "target": [
+     9.0,
+     0.001
+    ]
+   },
+   "geometry": {
+    "domain_m": [
+     null,
+     32.0,
+     50.0
+    ],
+    "dy_dz_m": [
+     0.025,
+     0.025
+    ],
+    "pml_cells": [
+     0,
+     40,
+     40,
+     0,
+     40,
+     40
+    ],
+    "pml_physical_thickness_m": 1.0,
+    "surface_z_m": 30.0,
+    "cover_bottom_z_m": 29.0,
+    "cover_box_m": [
+     0.0,
+     29.0,
+     32.0,
+     30.0
+    ],
+    "target_box_m": [
+     14.0,
+     19.75,
+     18.0,
+     20.25
+    ],
+    "target_box_cells": [
+     560,
+     790,
+     720,
+     810
+    ],
+    "tx_m": [
+     15.35,
+     45.0
+    ],
+    "rx_m": [
+     16.65,
+     45.0
+    ],
+    "component": "Ex"
+   },
+   "cells": 2560000,
+   "dt_s": 5.896635841874211e-11,
+   "time_steps": 20352,
+   "main_fields_ID_GiB": 0.3437627702951431,
+   "wall_s_estimate_method_3_1": 17.012,
+   "wall_s_planning_envelope_3_2": 152.0,
+   "static_check": {
+    "grid_aligned": true,
+    "cover_bottom_m": 29.0,
+    "target_top_m": 20.25,
+    "target_bottom_m": 19.75,
+    "clearance_below_cover_m": 8.75,
+    "bottom_pml_margin_m": 18.75,
+    "side_pml_margin_m": 13.0,
+    "top_pml_margin_m": 28.75,
+    "target_fully_in_sandstone": true
+   },
+   "exceptions": null,
+   "multitrace": {
+    "n_traces": 33,
+    "trace_spacing_m": 0.25,
+    "trace_span_m": 8.0,
+    "trace_axis_y_range_m": [
+     12.65,
+     20.65
+    ],
+    "trace_receiver_z_m": 45.0,
+    "anchor_trace_index": 16,
+    "anchor_trace_y_m": 16.65,
+    "trace_ids": [
+     "mt01",
+     "mt02",
+     "mt03",
+     "mt04",
+     "mt05",
+     "mt06",
+     "mt07",
+     "mt08",
+     "mt09",
+     "mt10",
+     "mt11",
+     "mt12",
+     "mt13",
+     "mt14",
+     "mt15",
+     "mt16",
+     "mt17",
+     "mt18",
+     "mt19",
+     "mt20",
+     "mt21",
+     "mt22",
+     "mt23",
+     "mt24",
+     "mt25",
+     "mt26",
+     "mt27",
+     "mt28",
+     "mt29",
+     "mt30",
+     "mt31",
+     "mt32",
+     "mt33"
+    ],
+    "trace_order": "construction",
+    "acquisition_geometry": "single-shot variable-offset receiver array along y (offset 2.70-5.30 m)",
+    "rx_output_components": [
+     "Ex"
+    ]
+   }
+  },
+  {
+   "case_id": "B2D-C3m-D10m-NC",
+   "run_id": "B2D-C3m-D10m-NC-MT33",
+   "file": "B2D-C3m-D10m-NC-MT33.in",
+   "input_sha256": "bc889a43d13fa344c98711ab530d055d9e49af7209247bfdd6988f5ce8afcbbf",
+   "batch_id": "batch2d_v1",
+   "segment": "mt",
+   "grid_tier": "BASE",
+   "family": "C3",
+   "cover_thickness_m": 3.0,
+   "role": "nc",
+   "mother_model_id": "B2D-C3m-D10m-NC",
+   "group_id": "B2D-C3m",
+   "seed": 9076773554197573818,
+   "variant_tag": "multitrace_33rx_0p25m",
+   "scan_axis": {
+    "cover_thickness_m": 3.0,
+    "depth_m": 10.0,
+    "width_m": 4.0,
+    "thickness_m": 0.5,
+    "eps_r": 9.0,
+    "sigma_s_m": 0.001
+   },
+   "materials": {
+    "rock": [
+     9.0,
+     0.001
+    ],
+    "cover": [
+     16.0,
+     0.01
+    ],
+    "target": [
+     9.0,
+     0.001
+    ]
+   },
+   "geometry": {
+    "domain_m": [
+     null,
+     32.0,
+     50.0
+    ],
+    "dy_dz_m": [
+     0.025,
+     0.025
+    ],
+    "pml_cells": [
+     0,
+     40,
+     40,
+     0,
+     40,
+     40
+    ],
+    "pml_physical_thickness_m": 1.0,
+    "surface_z_m": 30.0,
+    "cover_bottom_z_m": 27.0,
+    "cover_box_m": [
+     0.0,
+     27.0,
+     32.0,
+     30.0
+    ],
+    "target_box_m": [
+     14.0,
+     19.75,
+     18.0,
+     20.25
+    ],
+    "target_box_cells": [
+     560,
+     790,
+     720,
+     810
+    ],
+    "tx_m": [
+     15.35,
+     45.0
+    ],
+    "rx_m": [
+     16.65,
+     45.0
+    ],
+    "component": "Ex"
+   },
+   "cells": 2560000,
+   "dt_s": 5.896635841874211e-11,
+   "time_steps": 20352,
+   "main_fields_ID_GiB": 0.3437627702951431,
+   "wall_s_estimate_method_3_1": 17.012,
+   "wall_s_planning_envelope_3_2": 152.0,
+   "static_check": {
+    "grid_aligned": true,
+    "cover_bottom_m": 27.0,
+    "target_top_m": 20.25,
+    "target_bottom_m": 19.75,
+    "clearance_below_cover_m": 6.75,
+    "bottom_pml_margin_m": 18.75,
+    "side_pml_margin_m": 13.0,
+    "top_pml_margin_m": 28.75,
+    "target_fully_in_sandstone": true
+   },
+   "exceptions": null,
+   "multitrace": {
+    "n_traces": 33,
+    "trace_spacing_m": 0.25,
+    "trace_span_m": 8.0,
+    "trace_axis_y_range_m": [
+     12.65,
+     20.65
+    ],
+    "trace_receiver_z_m": 45.0,
+    "anchor_trace_index": 16,
+    "anchor_trace_y_m": 16.65,
+    "trace_ids": [
+     "mt01",
+     "mt02",
+     "mt03",
+     "mt04",
+     "mt05",
+     "mt06",
+     "mt07",
+     "mt08",
+     "mt09",
+     "mt10",
+     "mt11",
+     "mt12",
+     "mt13",
+     "mt14",
+     "mt15",
+     "mt16",
+     "mt17",
+     "mt18",
+     "mt19",
+     "mt20",
+     "mt21",
+     "mt22",
+     "mt23",
+     "mt24",
+     "mt25",
+     "mt26",
+     "mt27",
+     "mt28",
+     "mt29",
+     "mt30",
+     "mt31",
+     "mt32",
+     "mt33"
+    ],
+    "trace_order": "construction",
+    "acquisition_geometry": "single-shot variable-offset receiver array along y (offset 2.70-5.30 m)",
+    "rx_output_components": [
+     "Ex"
+    ]
+   }
+  },
+  {
+   "case_id": "B2D-C5m-D10m-NC",
+   "run_id": "B2D-C5m-D10m-NC-MT33",
+   "file": "B2D-C5m-D10m-NC-MT33.in",
+   "input_sha256": "7615742549a97721ef4c6b39adbb6d7c40d744b21b437d02d8b37a891b5cea37",
+   "batch_id": "batch2d_v1",
+   "segment": "mt",
+   "grid_tier": "BASE",
+   "family": "C5",
+   "cover_thickness_m": 5.0,
+   "role": "nc",
+   "mother_model_id": "B2D-C5m-D10m-NC",
+   "group_id": "B2D-C5m",
+   "seed": 14581542605576573110,
+   "variant_tag": "multitrace_33rx_0p25m",
+   "scan_axis": {
+    "cover_thickness_m": 5.0,
+    "depth_m": 10.0,
+    "width_m": 4.0,
+    "thickness_m": 0.5,
+    "eps_r": 9.0,
+    "sigma_s_m": 0.001
+   },
+   "materials": {
+    "rock": [
+     9.0,
+     0.001
+    ],
+    "cover": [
+     16.0,
+     0.01
+    ],
+    "target": [
+     9.0,
+     0.001
+    ]
+   },
+   "geometry": {
+    "domain_m": [
+     null,
+     32.0,
+     50.0
+    ],
+    "dy_dz_m": [
+     0.025,
+     0.025
+    ],
+    "pml_cells": [
+     0,
+     40,
+     40,
+     0,
+     40,
+     40
+    ],
+    "pml_physical_thickness_m": 1.0,
+    "surface_z_m": 30.0,
+    "cover_bottom_z_m": 25.0,
+    "cover_box_m": [
+     0.0,
+     25.0,
+     32.0,
+     30.0
+    ],
+    "target_box_m": [
+     14.0,
+     19.75,
+     18.0,
+     20.25
+    ],
+    "target_box_cells": [
+     560,
+     790,
+     720,
+     810
+    ],
+    "tx_m": [
+     15.35,
+     45.0
+    ],
+    "rx_m": [
+     16.65,
+     45.0
+    ],
+    "component": "Ex"
+   },
+   "cells": 2560000,
+   "dt_s": 5.896635841874211e-11,
+   "time_steps": 20352,
+   "main_fields_ID_GiB": 0.3437627702951431,
+   "wall_s_estimate_method_3_1": 17.012,
+   "wall_s_planning_envelope_3_2": 152.0,
+   "static_check": {
+    "grid_aligned": true,
+    "cover_bottom_m": 25.0,
+    "target_top_m": 20.25,
+    "target_bottom_m": 19.75,
+    "clearance_below_cover_m": 4.75,
+    "bottom_pml_margin_m": 18.75,
+    "side_pml_margin_m": 13.0,
+    "top_pml_margin_m": 28.75,
+    "target_fully_in_sandstone": true
+   },
+   "exceptions": null,
+   "multitrace": {
+    "n_traces": 33,
+    "trace_spacing_m": 0.25,
+    "trace_span_m": 8.0,
+    "trace_axis_y_range_m": [
+     12.65,
+     20.65
+    ],
+    "trace_receiver_z_m": 45.0,
+    "anchor_trace_index": 16,
+    "anchor_trace_y_m": 16.65,
+    "trace_ids": [
+     "mt01",
+     "mt02",
+     "mt03",
+     "mt04",
+     "mt05",
+     "mt06",
+     "mt07",
+     "mt08",
+     "mt09",
+     "mt10",
+     "mt11",
+     "mt12",
+     "mt13",
+     "mt14",
+     "mt15",
+     "mt16",
+     "mt17",
+     "mt18",
+     "mt19",
+     "mt20",
+     "mt21",
+     "mt22",
+     "mt23",
+     "mt24",
+     "mt25",
+     "mt26",
+     "mt27",
+     "mt28",
+     "mt29",
+     "mt30",
+     "mt31",
+     "mt32",
+     "mt33"
+    ],
+    "trace_order": "construction",
+    "acquisition_geometry": "single-shot variable-offset receiver array along y (offset 2.70-5.30 m)",
+    "rx_output_components": [
+     "Ex"
+    ]
+   }
+  },
+  {
+   "case_id": "B2D-C8m-D10m-NC",
+   "run_id": "B2D-C8m-D10m-NC-MT33",
+   "file": "B2D-C8m-D10m-NC-MT33.in",
+   "input_sha256": "8cf9517d56513ddb3b4321420e2363f02cd805a08c4ed73c29c6e9e1d7d9f830",
+   "batch_id": "batch2d_v1",
+   "segment": "mt",
+   "grid_tier": "BASE",
+   "family": "C8",
+   "cover_thickness_m": 8.0,
+   "role": "nc",
+   "mother_model_id": "B2D-C8m-D10m-NC",
+   "group_id": "B2D-C8m",
+   "seed": 11455997790811645989,
+   "variant_tag": "multitrace_33rx_0p25m",
+   "scan_axis": {
+    "cover_thickness_m": 8.0,
+    "depth_m": 10.0,
+    "width_m": 4.0,
+    "thickness_m": 0.5,
+    "eps_r": 9.0,
+    "sigma_s_m": 0.001
+   },
+   "materials": {
+    "rock": [
+     9.0,
+     0.001
+    ],
+    "cover": [
+     16.0,
+     0.01
+    ],
+    "target": [
+     9.0,
+     0.001
+    ]
+   },
+   "geometry": {
+    "domain_m": [
+     null,
+     32.0,
+     50.0
+    ],
+    "dy_dz_m": [
+     0.025,
+     0.025
+    ],
+    "pml_cells": [
+     0,
+     40,
+     40,
+     0,
+     40,
+     40
+    ],
+    "pml_physical_thickness_m": 1.0,
+    "surface_z_m": 30.0,
+    "cover_bottom_z_m": 22.0,
+    "cover_box_m": [
+     0.0,
+     22.0,
+     32.0,
+     30.0
+    ],
+    "target_box_m": [
+     14.0,
+     19.75,
+     18.0,
+     20.25
+    ],
+    "target_box_cells": [
+     560,
+     790,
+     720,
+     810
+    ],
+    "tx_m": [
+     15.35,
+     45.0
+    ],
+    "rx_m": [
+     16.65,
+     45.0
+    ],
+    "component": "Ex"
+   },
+   "cells": 2560000,
+   "dt_s": 5.896635841874211e-11,
+   "time_steps": 20352,
+   "main_fields_ID_GiB": 0.3437627702951431,
+   "wall_s_estimate_method_3_1": 17.012,
+   "wall_s_planning_envelope_3_2": 152.0,
+   "static_check": {
+    "grid_aligned": true,
+    "cover_bottom_m": 22.0,
+    "target_top_m": 20.25,
+    "target_bottom_m": 19.75,
+    "clearance_below_cover_m": 1.75,
+    "bottom_pml_margin_m": 18.75,
+    "side_pml_margin_m": 13.0,
+    "top_pml_margin_m": 28.75,
+    "target_fully_in_sandstone": true
+   },
+   "exceptions": null,
+   "multitrace": {
+    "n_traces": 33,
+    "trace_spacing_m": 0.25,
+    "trace_span_m": 8.0,
+    "trace_axis_y_range_m": [
+     12.65,
+     20.65
+    ],
+    "trace_receiver_z_m": 45.0,
+    "anchor_trace_index": 16,
+    "anchor_trace_y_m": 16.65,
+    "trace_ids": [
+     "mt01",
+     "mt02",
+     "mt03",
+     "mt04",
+     "mt05",
+     "mt06",
+     "mt07",
+     "mt08",
+     "mt09",
+     "mt10",
+     "mt11",
+     "mt12",
+     "mt13",
+     "mt14",
+     "mt15",
+     "mt16",
+     "mt17",
+     "mt18",
+     "mt19",
+     "mt20",
+     "mt21",
+     "mt22",
+     "mt23",
+     "mt24",
+     "mt25",
+     "mt26",
+     "mt27",
+     "mt28",
+     "mt29",
+     "mt30",
+     "mt31",
+     "mt32",
+     "mt33"
+    ],
+    "trace_order": "construction",
+    "acquisition_geometry": "single-shot variable-offset receiver array along y (offset 2.70-5.30 m)",
+    "rx_output_components": [
+     "Ex"
+    ]
+   }
+  },
+  {
+   "case_id": "B2D-C3m-D10m-W1m-T0.5m-E20-S0.02",
+   "run_id": "B2D-C3m-D10m-W1m-T0.5m-E20-S0.02-MT33",
+   "file": "B2D-C3m-D10m-W1m-T0.5m-E20-S0.02-MT33.in",
+   "input_sha256": "06138b53b43ee98526ece9f0a658d10d103bf3d6b1f49e123d8cbcda4c9a5a94",
+   "batch_id": "batch2d_v1",
+   "segment": "mt",
+   "grid_tier": "BASE",
+   "family": "C3",
+   "cover_thickness_m": 3.0,
+   "role": "target",
+   "mother_model_id": "B2D-C3m-D10m-W1m-T0.5m-E20-S0.02",
+   "group_id": "B2D-C3m",
+   "seed": 1564283450545387073,
+   "variant_tag": "multitrace_33rx_0p25m",
+   "scan_axis": {
+    "cover_thickness_m": 3.0,
+    "depth_m": 10.0,
+    "width_m": 1.0,
+    "thickness_m": 0.5,
+    "eps_r": 20.0,
+    "sigma_s_m": 0.02
+   },
+   "materials": {
+    "rock": [
+     9.0,
+     0.001
+    ],
+    "cover": [
+     16.0,
+     0.01
+    ],
+    "target": [
+     20.0,
+     0.02
+    ]
+   },
+   "geometry": {
+    "domain_m": [
+     null,
+     32.0,
+     50.0
+    ],
+    "dy_dz_m": [
+     0.025,
+     0.025
+    ],
+    "pml_cells": [
+     0,
+     40,
+     40,
+     0,
+     40,
+     40
+    ],
+    "pml_physical_thickness_m": 1.0,
+    "surface_z_m": 30.0,
+    "cover_bottom_z_m": 27.0,
+    "cover_box_m": [
+     0.0,
+     27.0,
+     32.0,
+     30.0
+    ],
+    "target_box_m": [
+     15.5,
+     19.75,
+     16.5,
+     20.25
+    ],
+    "target_box_cells": [
+     620,
+     790,
+     660,
+     810
+    ],
+    "tx_m": [
+     15.35,
+     45.0
+    ],
+    "rx_m": [
+     16.65,
+     45.0
+    ],
+    "component": "Ex"
+   },
+   "cells": 2560000,
+   "dt_s": 5.896635841874211e-11,
+   "time_steps": 20352,
+   "main_fields_ID_GiB": 0.3437627702951431,
+   "wall_s_estimate_method_3_1": 17.012,
+   "wall_s_planning_envelope_3_2": 152.0,
+   "static_check": {
+    "grid_aligned": true,
+    "cover_bottom_m": 27.0,
+    "target_top_m": 20.25,
+    "target_bottom_m": 19.75,
+    "clearance_below_cover_m": 6.75,
+    "bottom_pml_margin_m": 18.75,
+    "side_pml_margin_m": 14.5,
+    "top_pml_margin_m": 28.75,
+    "target_fully_in_sandstone": true
+   },
+   "exceptions": null,
+   "multitrace": {
+    "n_traces": 33,
+    "trace_spacing_m": 0.25,
+    "trace_span_m": 8.0,
+    "trace_axis_y_range_m": [
+     12.65,
+     20.65
+    ],
+    "trace_receiver_z_m": 45.0,
+    "anchor_trace_index": 16,
+    "anchor_trace_y_m": 16.65,
+    "trace_ids": [
+     "mt01",
+     "mt02",
+     "mt03",
+     "mt04",
+     "mt05",
+     "mt06",
+     "mt07",
+     "mt08",
+     "mt09",
+     "mt10",
+     "mt11",
+     "mt12",
+     "mt13",
+     "mt14",
+     "mt15",
+     "mt16",
+     "mt17",
+     "mt18",
+     "mt19",
+     "mt20",
+     "mt21",
+     "mt22",
+     "mt23",
+     "mt24",
+     "mt25",
+     "mt26",
+     "mt27",
+     "mt28",
+     "mt29",
+     "mt30",
+     "mt31",
+     "mt32",
+     "mt33"
+    ],
+    "trace_order": "construction",
+    "acquisition_geometry": "single-shot variable-offset receiver array along y (offset 2.70-5.30 m)",
+    "rx_output_components": [
+     "Ex"
+    ]
+   }
+  },
+  {
+   "case_id": "B2D-C3m-D10m-W2m-T0.5m-E20-S0.02",
+   "run_id": "B2D-C3m-D10m-W2m-T0.5m-E20-S0.02-MT33",
+   "file": "B2D-C3m-D10m-W2m-T0.5m-E20-S0.02-MT33.in",
+   "input_sha256": "f621ad841b33d55b336c2d71fdbcf76783f0db5b4f80381aa8b42fd5c859481c",
+   "batch_id": "batch2d_v1",
+   "segment": "mt",
+   "grid_tier": "BASE",
+   "family": "C3",
+   "cover_thickness_m": 3.0,
+   "role": "target",
+   "mother_model_id": "B2D-C3m-D10m-W2m-T0.5m-E20-S0.02",
+   "group_id": "B2D-C3m",
+   "seed": 16728724450854179606,
+   "variant_tag": "multitrace_33rx_0p25m",
+   "scan_axis": {
+    "cover_thickness_m": 3.0,
+    "depth_m": 10.0,
+    "width_m": 2.0,
+    "thickness_m": 0.5,
+    "eps_r": 20.0,
+    "sigma_s_m": 0.02
+   },
+   "materials": {
+    "rock": [
+     9.0,
+     0.001
+    ],
+    "cover": [
+     16.0,
+     0.01
+    ],
+    "target": [
+     20.0,
+     0.02
+    ]
+   },
+   "geometry": {
+    "domain_m": [
+     null,
+     32.0,
+     50.0
+    ],
+    "dy_dz_m": [
+     0.025,
+     0.025
+    ],
+    "pml_cells": [
+     0,
+     40,
+     40,
+     0,
+     40,
+     40
+    ],
+    "pml_physical_thickness_m": 1.0,
+    "surface_z_m": 30.0,
+    "cover_bottom_z_m": 27.0,
+    "cover_box_m": [
+     0.0,
+     27.0,
+     32.0,
+     30.0
+    ],
+    "target_box_m": [
+     15.0,
+     19.75,
+     17.0,
+     20.25
+    ],
+    "target_box_cells": [
+     600,
+     790,
+     680,
+     810
+    ],
+    "tx_m": [
+     15.35,
+     45.0
+    ],
+    "rx_m": [
+     16.65,
+     45.0
+    ],
+    "component": "Ex"
+   },
+   "cells": 2560000,
+   "dt_s": 5.896635841874211e-11,
+   "time_steps": 20352,
+   "main_fields_ID_GiB": 0.3437627702951431,
+   "wall_s_estimate_method_3_1": 17.012,
+   "wall_s_planning_envelope_3_2": 152.0,
+   "static_check": {
+    "grid_aligned": true,
+    "cover_bottom_m": 27.0,
+    "target_top_m": 20.25,
+    "target_bottom_m": 19.75,
+    "clearance_below_cover_m": 6.75,
+    "bottom_pml_margin_m": 18.75,
+    "side_pml_margin_m": 14.0,
+    "top_pml_margin_m": 28.75,
+    "target_fully_in_sandstone": true
+   },
+   "exceptions": null,
+   "multitrace": {
+    "n_traces": 33,
+    "trace_spacing_m": 0.25,
+    "trace_span_m": 8.0,
+    "trace_axis_y_range_m": [
+     12.65,
+     20.65
+    ],
+    "trace_receiver_z_m": 45.0,
+    "anchor_trace_index": 16,
+    "anchor_trace_y_m": 16.65,
+    "trace_ids": [
+     "mt01",
+     "mt02",
+     "mt03",
+     "mt04",
+     "mt05",
+     "mt06",
+     "mt07",
+     "mt08",
+     "mt09",
+     "mt10",
+     "mt11",
+     "mt12",
+     "mt13",
+     "mt14",
+     "mt15",
+     "mt16",
+     "mt17",
+     "mt18",
+     "mt19",
+     "mt20",
+     "mt21",
+     "mt22",
+     "mt23",
+     "mt24",
+     "mt25",
+     "mt26",
+     "mt27",
+     "mt28",
+     "mt29",
+     "mt30",
+     "mt31",
+     "mt32",
+     "mt33"
+    ],
+    "trace_order": "construction",
+    "acquisition_geometry": "single-shot variable-offset receiver array along y (offset 2.70-5.30 m)",
+    "rx_output_components": [
+     "Ex"
+    ]
+   }
+  },
+  {
+   "case_id": "B2D-C3m-D10m-W4m-T0.25m-E20-S0.02",
+   "run_id": "B2D-C3m-D10m-W4m-T0.25m-E20-S0.02-MT33",
+   "file": "B2D-C3m-D10m-W4m-T0.25m-E20-S0.02-MT33.in",
+   "input_sha256": "fedbe9d68246ef9154e19335288bfd7dd54654aabc86b19a072ac7e051fc9ee0",
+   "batch_id": "batch2d_v1",
+   "segment": "mt",
+   "grid_tier": "BASE",
+   "family": "C3",
+   "cover_thickness_m": 3.0,
+   "role": "target",
+   "mother_model_id": "B2D-C3m-D10m-W4m-T0.25m-E20-S0.02",
+   "group_id": "B2D-C3m",
+   "seed": 17012403490443706460,
+   "variant_tag": "multitrace_33rx_0p25m",
+   "scan_axis": {
+    "cover_thickness_m": 3.0,
+    "depth_m": 10.0,
+    "width_m": 4.0,
+    "thickness_m": 0.25,
+    "eps_r": 20.0,
+    "sigma_s_m": 0.02
+   },
+   "materials": {
+    "rock": [
+     9.0,
+     0.001
+    ],
+    "cover": [
+     16.0,
+     0.01
+    ],
+    "target": [
+     20.0,
+     0.02
+    ]
+   },
+   "geometry": {
+    "domain_m": [
+     null,
+     32.0,
+     50.0
+    ],
+    "dy_dz_m": [
+     0.025,
+     0.025
+    ],
+    "pml_cells": [
+     0,
+     40,
+     40,
+     0,
+     40,
+     40
+    ],
+    "pml_physical_thickness_m": 1.0,
+    "surface_z_m": 30.0,
+    "cover_bottom_z_m": 27.0,
+    "cover_box_m": [
+     0.0,
+     27.0,
+     32.0,
+     30.0
+    ],
+    "target_box_m": [
+     14.0,
+     19.875,
+     18.0,
+     20.125
+    ],
+    "target_box_cells": [
+     560,
+     795,
+     720,
+     805
+    ],
+    "tx_m": [
+     15.35,
+     45.0
+    ],
+    "rx_m": [
+     16.65,
+     45.0
+    ],
+    "component": "Ex"
+   },
+   "cells": 2560000,
+   "dt_s": 5.896635841874211e-11,
+   "time_steps": 20352,
+   "main_fields_ID_GiB": 0.3437627702951431,
+   "wall_s_estimate_method_3_1": 17.012,
+   "wall_s_planning_envelope_3_2": 152.0,
+   "static_check": {
+    "grid_aligned": true,
+    "cover_bottom_m": 27.0,
+    "target_top_m": 20.125,
+    "target_bottom_m": 19.875,
+    "clearance_below_cover_m": 6.875,
+    "bottom_pml_margin_m": 18.875,
+    "side_pml_margin_m": 13.0,
+    "top_pml_margin_m": 28.875,
+    "target_fully_in_sandstone": true
+   },
+   "exceptions": null,
+   "multitrace": {
+    "n_traces": 33,
+    "trace_spacing_m": 0.25,
+    "trace_span_m": 8.0,
+    "trace_axis_y_range_m": [
+     12.65,
+     20.65
+    ],
+    "trace_receiver_z_m": 45.0,
+    "anchor_trace_index": 16,
+    "anchor_trace_y_m": 16.65,
+    "trace_ids": [
+     "mt01",
+     "mt02",
+     "mt03",
+     "mt04",
+     "mt05",
+     "mt06",
+     "mt07",
+     "mt08",
+     "mt09",
+     "mt10",
+     "mt11",
+     "mt12",
+     "mt13",
+     "mt14",
+     "mt15",
+     "mt16",
+     "mt17",
+     "mt18",
+     "mt19",
+     "mt20",
+     "mt21",
+     "mt22",
+     "mt23",
+     "mt24",
+     "mt25",
+     "mt26",
+     "mt27",
+     "mt28",
+     "mt29",
+     "mt30",
+     "mt31",
+     "mt32",
+     "mt33"
+    ],
+    "trace_order": "construction",
+    "acquisition_geometry": "single-shot variable-offset receiver array along y (offset 2.70-5.30 m)",
+    "rx_output_components": [
+     "Ex"
+    ]
+   }
+  },
+  {
+   "case_id": "B2D-C3m-D10m-W4m-T1m-E20-S0.02",
+   "run_id": "B2D-C3m-D10m-W4m-T1m-E20-S0.02-MT33",
+   "file": "B2D-C3m-D10m-W4m-T1m-E20-S0.02-MT33.in",
+   "input_sha256": "1c928f12240a7faac8065e487aed22be5caeefa5aed91b2ef9cb0f14ebf55442",
+   "batch_id": "batch2d_v1",
+   "segment": "mt",
+   "grid_tier": "BASE",
+   "family": "C3",
+   "cover_thickness_m": 3.0,
+   "role": "target",
+   "mother_model_id": "B2D-C3m-D10m-W4m-T1m-E20-S0.02",
+   "group_id": "B2D-C3m",
+   "seed": 12969159989133840054,
+   "variant_tag": "multitrace_33rx_0p25m",
+   "scan_axis": {
+    "cover_thickness_m": 3.0,
+    "depth_m": 10.0,
+    "width_m": 4.0,
+    "thickness_m": 1.0,
+    "eps_r": 20.0,
+    "sigma_s_m": 0.02
+   },
+   "materials": {
+    "rock": [
+     9.0,
+     0.001
+    ],
+    "cover": [
+     16.0,
+     0.01
+    ],
+    "target": [
+     20.0,
+     0.02
+    ]
+   },
+   "geometry": {
+    "domain_m": [
+     null,
+     32.0,
+     50.0
+    ],
+    "dy_dz_m": [
+     0.025,
+     0.025
+    ],
+    "pml_cells": [
+     0,
+     40,
+     40,
+     0,
+     40,
+     40
+    ],
+    "pml_physical_thickness_m": 1.0,
+    "surface_z_m": 30.0,
+    "cover_bottom_z_m": 27.0,
+    "cover_box_m": [
+     0.0,
+     27.0,
+     32.0,
+     30.0
+    ],
+    "target_box_m": [
+     14.0,
+     19.5,
+     18.0,
+     20.5
+    ],
+    "target_box_cells": [
+     560,
+     780,
+     720,
+     820
+    ],
+    "tx_m": [
+     15.35,
+     45.0
+    ],
+    "rx_m": [
+     16.65,
+     45.0
+    ],
+    "component": "Ex"
+   },
+   "cells": 2560000,
+   "dt_s": 5.896635841874211e-11,
+   "time_steps": 20352,
+   "main_fields_ID_GiB": 0.3437627702951431,
+   "wall_s_estimate_method_3_1": 17.012,
+   "wall_s_planning_envelope_3_2": 152.0,
+   "static_check": {
+    "grid_aligned": true,
+    "cover_bottom_m": 27.0,
+    "target_top_m": 20.5,
+    "target_bottom_m": 19.5,
+    "clearance_below_cover_m": 6.5,
+    "bottom_pml_margin_m": 18.5,
+    "side_pml_margin_m": 13.0,
+    "top_pml_margin_m": 28.5,
+    "target_fully_in_sandstone": true
+   },
+   "exceptions": null,
+   "multitrace": {
+    "n_traces": 33,
+    "trace_spacing_m": 0.25,
+    "trace_span_m": 8.0,
+    "trace_axis_y_range_m": [
+     12.65,
+     20.65
+    ],
+    "trace_receiver_z_m": 45.0,
+    "anchor_trace_index": 16,
+    "anchor_trace_y_m": 16.65,
+    "trace_ids": [
+     "mt01",
+     "mt02",
+     "mt03",
+     "mt04",
+     "mt05",
+     "mt06",
+     "mt07",
+     "mt08",
+     "mt09",
+     "mt10",
+     "mt11",
+     "mt12",
+     "mt13",
+     "mt14",
+     "mt15",
+     "mt16",
+     "mt17",
+     "mt18",
+     "mt19",
+     "mt20",
+     "mt21",
+     "mt22",
+     "mt23",
+     "mt24",
+     "mt25",
+     "mt26",
+     "mt27",
+     "mt28",
+     "mt29",
+     "mt30",
+     "mt31",
+     "mt32",
+     "mt33"
+    ],
+    "trace_order": "construction",
+    "acquisition_geometry": "single-shot variable-offset receiver array along y (offset 2.70-5.30 m)",
+    "rx_output_components": [
+     "Ex"
+    ]
+   }
+  },
+  {
+   "case_id": "B2D-C3m-D10m-W4m-T0.5m-E12-S0.005",
+   "run_id": "B2D-C3m-D10m-W4m-T0.5m-E12-S0.005-MT33",
+   "file": "B2D-C3m-D10m-W4m-T0.5m-E12-S0.005-MT33.in",
+   "input_sha256": "5381998af12fe965c2f84a8aca5669f93dd84f580ec5936b831087e402e1eb6c",
+   "batch_id": "batch2d_v1",
+   "segment": "mt",
+   "grid_tier": "BASE",
+   "family": "C3",
+   "cover_thickness_m": 3.0,
+   "role": "target",
+   "mother_model_id": "B2D-C3m-D10m-W4m-T0.5m-E12-S0.005",
+   "group_id": "B2D-C3m",
+   "seed": 6992485975169095879,
+   "variant_tag": "multitrace_33rx_0p25m",
+   "scan_axis": {
+    "cover_thickness_m": 3.0,
+    "depth_m": 10.0,
+    "width_m": 4.0,
+    "thickness_m": 0.5,
+    "eps_r": 12.0,
+    "sigma_s_m": 0.005
+   },
+   "materials": {
+    "rock": [
+     9.0,
+     0.001
+    ],
+    "cover": [
+     16.0,
+     0.01
+    ],
+    "target": [
+     12.0,
+     0.005
+    ]
+   },
+   "geometry": {
+    "domain_m": [
+     null,
+     32.0,
+     50.0
+    ],
+    "dy_dz_m": [
+     0.025,
+     0.025
+    ],
+    "pml_cells": [
+     0,
+     40,
+     40,
+     0,
+     40,
+     40
+    ],
+    "pml_physical_thickness_m": 1.0,
+    "surface_z_m": 30.0,
+    "cover_bottom_z_m": 27.0,
+    "cover_box_m": [
+     0.0,
+     27.0,
+     32.0,
+     30.0
+    ],
+    "target_box_m": [
+     14.0,
+     19.75,
+     18.0,
+     20.25
+    ],
+    "target_box_cells": [
+     560,
+     790,
+     720,
+     810
+    ],
+    "tx_m": [
+     15.35,
+     45.0
+    ],
+    "rx_m": [
+     16.65,
+     45.0
+    ],
+    "component": "Ex"
+   },
+   "cells": 2560000,
+   "dt_s": 5.896635841874211e-11,
+   "time_steps": 20352,
+   "main_fields_ID_GiB": 0.3437627702951431,
+   "wall_s_estimate_method_3_1": 17.012,
+   "wall_s_planning_envelope_3_2": 152.0,
+   "static_check": {
+    "grid_aligned": true,
+    "cover_bottom_m": 27.0,
+    "target_top_m": 20.25,
+    "target_bottom_m": 19.75,
+    "clearance_below_cover_m": 6.75,
+    "bottom_pml_margin_m": 18.75,
+    "side_pml_margin_m": 13.0,
+    "top_pml_margin_m": 28.75,
+    "target_fully_in_sandstone": true
+   },
+   "exceptions": null,
+   "multitrace": {
+    "n_traces": 33,
+    "trace_spacing_m": 0.25,
+    "trace_span_m": 8.0,
+    "trace_axis_y_range_m": [
+     12.65,
+     20.65
+    ],
+    "trace_receiver_z_m": 45.0,
+    "anchor_trace_index": 16,
+    "anchor_trace_y_m": 16.65,
+    "trace_ids": [
+     "mt01",
+     "mt02",
+     "mt03",
+     "mt04",
+     "mt05",
+     "mt06",
+     "mt07",
+     "mt08",
+     "mt09",
+     "mt10",
+     "mt11",
+     "mt12",
+     "mt13",
+     "mt14",
+     "mt15",
+     "mt16",
+     "mt17",
+     "mt18",
+     "mt19",
+     "mt20",
+     "mt21",
+     "mt22",
+     "mt23",
+     "mt24",
+     "mt25",
+     "mt26",
+     "mt27",
+     "mt28",
+     "mt29",
+     "mt30",
+     "mt31",
+     "mt32",
+     "mt33"
+    ],
+    "trace_order": "construction",
+    "acquisition_geometry": "single-shot variable-offset receiver array along y (offset 2.70-5.30 m)",
+    "rx_output_components": [
+     "Ex"
+    ]
+   }
+  },
+  {
+   "case_id": "B2D-C3m-D10m-W4m-T0.5m-E28-S0.05",
+   "run_id": "B2D-C3m-D10m-W4m-T0.5m-E28-S0.05-MT33",
+   "file": "B2D-C3m-D10m-W4m-T0.5m-E28-S0.05-MT33.in",
+   "input_sha256": "5e61bc33c4249e340aebf1edde87040bfb35480c353e11ba288a93d0e2a37ea6",
+   "batch_id": "batch2d_v1",
+   "segment": "mt",
+   "grid_tier": "BASE",
+   "family": "C3",
+   "cover_thickness_m": 3.0,
+   "role": "target",
+   "mother_model_id": "B2D-C3m-D10m-W4m-T0.5m-E28-S0.05",
+   "group_id": "B2D-C3m",
+   "seed": 5830679258180448459,
+   "variant_tag": "multitrace_33rx_0p25m",
+   "scan_axis": {
+    "cover_thickness_m": 3.0,
+    "depth_m": 10.0,
+    "width_m": 4.0,
+    "thickness_m": 0.5,
+    "eps_r": 28.0,
+    "sigma_s_m": 0.05
+   },
+   "materials": {
+    "rock": [
+     9.0,
+     0.001
+    ],
+    "cover": [
+     16.0,
+     0.01
+    ],
+    "target": [
+     28.0,
+     0.05
+    ]
+   },
+   "geometry": {
+    "domain_m": [
+     null,
+     32.0,
+     50.0
+    ],
+    "dy_dz_m": [
+     0.025,
+     0.025
+    ],
+    "pml_cells": [
+     0,
+     40,
+     40,
+     0,
+     40,
+     40
+    ],
+    "pml_physical_thickness_m": 1.0,
+    "surface_z_m": 30.0,
+    "cover_bottom_z_m": 27.0,
+    "cover_box_m": [
+     0.0,
+     27.0,
+     32.0,
+     30.0
+    ],
+    "target_box_m": [
+     14.0,
+     19.75,
+     18.0,
+     20.25
+    ],
+    "target_box_cells": [
+     560,
+     790,
+     720,
+     810
+    ],
+    "tx_m": [
+     15.35,
+     45.0
+    ],
+    "rx_m": [
+     16.65,
+     45.0
+    ],
+    "component": "Ex"
+   },
+   "cells": 2560000,
+   "dt_s": 5.896635841874211e-11,
+   "time_steps": 20352,
+   "main_fields_ID_GiB": 0.3437627702951431,
+   "wall_s_estimate_method_3_1": 17.012,
+   "wall_s_planning_envelope_3_2": 152.0,
+   "static_check": {
+    "grid_aligned": true,
+    "cover_bottom_m": 27.0,
+    "target_top_m": 20.25,
+    "target_bottom_m": 19.75,
+    "clearance_below_cover_m": 6.75,
+    "bottom_pml_margin_m": 18.75,
+    "side_pml_margin_m": 13.0,
+    "top_pml_margin_m": 28.75,
+    "target_fully_in_sandstone": true
+   },
+   "exceptions": null,
+   "multitrace": {
+    "n_traces": 33,
+    "trace_spacing_m": 0.25,
+    "trace_span_m": 8.0,
+    "trace_axis_y_range_m": [
+     12.65,
+     20.65
+    ],
+    "trace_receiver_z_m": 45.0,
+    "anchor_trace_index": 16,
+    "anchor_trace_y_m": 16.65,
+    "trace_ids": [
+     "mt01",
+     "mt02",
+     "mt03",
+     "mt04",
+     "mt05",
+     "mt06",
+     "mt07",
+     "mt08",
+     "mt09",
+     "mt10",
+     "mt11",
+     "mt12",
+     "mt13",
+     "mt14",
+     "mt15",
+     "mt16",
+     "mt17",
+     "mt18",
+     "mt19",
+     "mt20",
+     "mt21",
+     "mt22",
+     "mt23",
+     "mt24",
+     "mt25",
+     "mt26",
+     "mt27",
+     "mt28",
+     "mt29",
+     "mt30",
+     "mt31",
+     "mt32",
+     "mt33"
+    ],
+    "trace_order": "construction",
+    "acquisition_geometry": "single-shot variable-offset receiver array along y (offset 2.70-5.30 m)",
+    "rx_output_components": [
+     "Ex"
+    ]
+   }
+  },
+  {
+   "case_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.005",
+   "run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.005-MT33",
+   "file": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.005-MT33.in",
+   "input_sha256": "fcd8730bd07355394cf5386db6878975efa083edcd41c26403375a75a44677f2",
+   "batch_id": "batch2d_v1",
+   "segment": "mt",
+   "grid_tier": "BASE",
+   "family": "C3",
+   "cover_thickness_m": 3.0,
+   "role": "target",
+   "mother_model_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.005",
+   "group_id": "B2D-C3m",
+   "seed": 3655686986752437349,
+   "variant_tag": "multitrace_33rx_0p25m",
+   "scan_axis": {
+    "cover_thickness_m": 3.0,
+    "depth_m": 10.0,
+    "width_m": 4.0,
+    "thickness_m": 0.5,
+    "eps_r": 20.0,
+    "sigma_s_m": 0.005
+   },
+   "materials": {
+    "rock": [
+     9.0,
+     0.001
+    ],
+    "cover": [
+     16.0,
+     0.01
+    ],
+    "target": [
+     20.0,
+     0.005
+    ]
+   },
+   "geometry": {
+    "domain_m": [
+     null,
+     32.0,
+     50.0
+    ],
+    "dy_dz_m": [
+     0.025,
+     0.025
+    ],
+    "pml_cells": [
+     0,
+     40,
+     40,
+     0,
+     40,
+     40
+    ],
+    "pml_physical_thickness_m": 1.0,
+    "surface_z_m": 30.0,
+    "cover_bottom_z_m": 27.0,
+    "cover_box_m": [
+     0.0,
+     27.0,
+     32.0,
+     30.0
+    ],
+    "target_box_m": [
+     14.0,
+     19.75,
+     18.0,
+     20.25
+    ],
+    "target_box_cells": [
+     560,
+     790,
+     720,
+     810
+    ],
+    "tx_m": [
+     15.35,
+     45.0
+    ],
+    "rx_m": [
+     16.65,
+     45.0
+    ],
+    "component": "Ex"
+   },
+   "cells": 2560000,
+   "dt_s": 5.896635841874211e-11,
+   "time_steps": 20352,
+   "main_fields_ID_GiB": 0.3437627702951431,
+   "wall_s_estimate_method_3_1": 17.012,
+   "wall_s_planning_envelope_3_2": 152.0,
+   "static_check": {
+    "grid_aligned": true,
+    "cover_bottom_m": 27.0,
+    "target_top_m": 20.25,
+    "target_bottom_m": 19.75,
+    "clearance_below_cover_m": 6.75,
+    "bottom_pml_margin_m": 18.75,
+    "side_pml_margin_m": 13.0,
+    "top_pml_margin_m": 28.75,
+    "target_fully_in_sandstone": true
+   },
+   "exceptions": null,
+   "multitrace": {
+    "n_traces": 33,
+    "trace_spacing_m": 0.25,
+    "trace_span_m": 8.0,
+    "trace_axis_y_range_m": [
+     12.65,
+     20.65
+    ],
+    "trace_receiver_z_m": 45.0,
+    "anchor_trace_index": 16,
+    "anchor_trace_y_m": 16.65,
+    "trace_ids": [
+     "mt01",
+     "mt02",
+     "mt03",
+     "mt04",
+     "mt05",
+     "mt06",
+     "mt07",
+     "mt08",
+     "mt09",
+     "mt10",
+     "mt11",
+     "mt12",
+     "mt13",
+     "mt14",
+     "mt15",
+     "mt16",
+     "mt17",
+     "mt18",
+     "mt19",
+     "mt20",
+     "mt21",
+     "mt22",
+     "mt23",
+     "mt24",
+     "mt25",
+     "mt26",
+     "mt27",
+     "mt28",
+     "mt29",
+     "mt30",
+     "mt31",
+     "mt32",
+     "mt33"
+    ],
+    "trace_order": "construction",
+    "acquisition_geometry": "single-shot variable-offset receiver array along y (offset 2.70-5.30 m)",
+    "rx_output_components": [
+     "Ex"
+    ]
+   }
+  },
+  {
+   "case_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.05",
+   "run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.05-MT33",
+   "file": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.05-MT33.in",
+   "input_sha256": "9bfb76a6f6bb08db88e71954cb3bc0864fdc8b607d5c170c8b4fbcda66e86dfc",
+   "batch_id": "batch2d_v1",
+   "segment": "mt",
+   "grid_tier": "BASE",
+   "family": "C3",
+   "cover_thickness_m": 3.0,
+   "role": "target",
+   "mother_model_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.05",
+   "group_id": "B2D-C3m",
+   "seed": 11486269991607974933,
+   "variant_tag": "multitrace_33rx_0p25m",
+   "scan_axis": {
+    "cover_thickness_m": 3.0,
+    "depth_m": 10.0,
+    "width_m": 4.0,
+    "thickness_m": 0.5,
+    "eps_r": 20.0,
+    "sigma_s_m": 0.05
+   },
+   "materials": {
+    "rock": [
+     9.0,
+     0.001
+    ],
+    "cover": [
+     16.0,
+     0.01
+    ],
+    "target": [
+     20.0,
+     0.05
+    ]
+   },
+   "geometry": {
+    "domain_m": [
+     null,
+     32.0,
+     50.0
+    ],
+    "dy_dz_m": [
+     0.025,
+     0.025
+    ],
+    "pml_cells": [
+     0,
+     40,
+     40,
+     0,
+     40,
+     40
+    ],
+    "pml_physical_thickness_m": 1.0,
+    "surface_z_m": 30.0,
+    "cover_bottom_z_m": 27.0,
+    "cover_box_m": [
+     0.0,
+     27.0,
+     32.0,
+     30.0
+    ],
+    "target_box_m": [
+     14.0,
+     19.75,
+     18.0,
+     20.25
+    ],
+    "target_box_cells": [
+     560,
+     790,
+     720,
+     810
+    ],
+    "tx_m": [
+     15.35,
+     45.0
+    ],
+    "rx_m": [
+     16.65,
+     45.0
+    ],
+    "component": "Ex"
+   },
+   "cells": 2560000,
+   "dt_s": 5.896635841874211e-11,
+   "time_steps": 20352,
+   "main_fields_ID_GiB": 0.3437627702951431,
+   "wall_s_estimate_method_3_1": 17.012,
+   "wall_s_planning_envelope_3_2": 152.0,
+   "static_check": {
+    "grid_aligned": true,
+    "cover_bottom_m": 27.0,
+    "target_top_m": 20.25,
+    "target_bottom_m": 19.75,
+    "clearance_below_cover_m": 6.75,
+    "bottom_pml_margin_m": 18.75,
+    "side_pml_margin_m": 13.0,
+    "top_pml_margin_m": 28.75,
+    "target_fully_in_sandstone": true
+   },
+   "exceptions": null,
+   "multitrace": {
+    "n_traces": 33,
+    "trace_spacing_m": 0.25,
+    "trace_span_m": 8.0,
+    "trace_axis_y_range_m": [
+     12.65,
+     20.65
+    ],
+    "trace_receiver_z_m": 45.0,
+    "anchor_trace_index": 16,
+    "anchor_trace_y_m": 16.65,
+    "trace_ids": [
+     "mt01",
+     "mt02",
+     "mt03",
+     "mt04",
+     "mt05",
+     "mt06",
+     "mt07",
+     "mt08",
+     "mt09",
+     "mt10",
+     "mt11",
+     "mt12",
+     "mt13",
+     "mt14",
+     "mt15",
+     "mt16",
+     "mt17",
+     "mt18",
+     "mt19",
+     "mt20",
+     "mt21",
+     "mt22",
+     "mt23",
+     "mt24",
+     "mt25",
+     "mt26",
+     "mt27",
+     "mt28",
+     "mt29",
+     "mt30",
+     "mt31",
+     "mt32",
+     "mt33"
+    ],
+    "trace_order": "construction",
+    "acquisition_geometry": "single-shot variable-offset receiver array along y (offset 2.70-5.30 m)",
+    "rx_output_components": [
+     "Ex"
+    ]
+   }
+  },
+  {
+   "case_id": "B2D-C3m-D20m-W4m-T0.5m-E20-S0.02",
+   "run_id": "B2D-C3m-D20m-W4m-T0.5m-E20-S0.02-MT33",
+   "file": "B2D-C3m-D20m-W4m-T0.5m-E20-S0.02-MT33.in",
+   "input_sha256": "fb5f0be2391a2a0ff8480bab3e527cb6f0dd386c3cc10e9fb4af6c9f9e8f1e73",
+   "batch_id": "batch2d_v1",
+   "segment": "mt",
+   "grid_tier": "BASE",
+   "family": "C3",
+   "cover_thickness_m": 3.0,
+   "role": "target",
+   "mother_model_id": "B2D-C3m-D20m-W4m-T0.5m-E20-S0.02",
+   "group_id": "B2D-C3m",
+   "seed": 9755577449678696617,
+   "variant_tag": "multitrace_33rx_0p25m",
+   "scan_axis": {
+    "cover_thickness_m": 3.0,
+    "depth_m": 20.0,
+    "width_m": 4.0,
+    "thickness_m": 0.5,
+    "eps_r": 20.0,
+    "sigma_s_m": 0.02
+   },
+   "materials": {
+    "rock": [
+     9.0,
+     0.001
+    ],
+    "cover": [
+     16.0,
+     0.01
+    ],
+    "target": [
+     20.0,
+     0.02
+    ]
+   },
+   "geometry": {
+    "domain_m": [
+     null,
+     32.0,
+     50.0
+    ],
+    "dy_dz_m": [
+     0.025,
+     0.025
+    ],
+    "pml_cells": [
+     0,
+     40,
+     40,
+     0,
+     40,
+     40
+    ],
+    "pml_physical_thickness_m": 1.0,
+    "surface_z_m": 30.0,
+    "cover_bottom_z_m": 27.0,
+    "cover_box_m": [
+     0.0,
+     27.0,
+     32.0,
+     30.0
+    ],
+    "target_box_m": [
+     14.0,
+     9.75,
+     18.0,
+     10.25
+    ],
+    "target_box_cells": [
+     560,
+     390,
+     720,
+     410
+    ],
+    "tx_m": [
+     15.35,
+     45.0
+    ],
+    "rx_m": [
+     16.65,
+     45.0
+    ],
+    "component": "Ex"
+   },
+   "cells": 2560000,
+   "dt_s": 5.896635841874211e-11,
+   "time_steps": 20352,
+   "main_fields_ID_GiB": 0.3437627702951431,
+   "wall_s_estimate_method_3_1": 17.012,
+   "wall_s_planning_envelope_3_2": 152.0,
+   "static_check": {
+    "grid_aligned": true,
+    "cover_bottom_m": 27.0,
+    "target_top_m": 10.25,
+    "target_bottom_m": 9.75,
+    "clearance_below_cover_m": 16.75,
+    "bottom_pml_margin_m": 8.75,
+    "side_pml_margin_m": 13.0,
+    "top_pml_margin_m": 38.75,
+    "target_fully_in_sandstone": true
+   },
+   "exceptions": null,
+   "multitrace": {
+    "n_traces": 33,
+    "trace_spacing_m": 0.25,
+    "trace_span_m": 8.0,
+    "trace_axis_y_range_m": [
+     12.65,
+     20.65
+    ],
+    "trace_receiver_z_m": 45.0,
+    "anchor_trace_index": 16,
+    "anchor_trace_y_m": 16.65,
+    "trace_ids": [
+     "mt01",
+     "mt02",
+     "mt03",
+     "mt04",
+     "mt05",
+     "mt06",
+     "mt07",
+     "mt08",
+     "mt09",
+     "mt10",
+     "mt11",
+     "mt12",
+     "mt13",
+     "mt14",
+     "mt15",
+     "mt16",
+     "mt17",
+     "mt18",
+     "mt19",
+     "mt20",
+     "mt21",
+     "mt22",
+     "mt23",
+     "mt24",
+     "mt25",
+     "mt26",
+     "mt27",
+     "mt28",
+     "mt29",
+     "mt30",
+     "mt31",
+     "mt32",
+     "mt33"
+    ],
+    "trace_order": "construction",
+    "acquisition_geometry": "single-shot variable-offset receiver array along y (offset 2.70-5.30 m)",
+    "rx_output_components": [
+     "Ex"
+    ]
+   }
+  },
+  {
+   "case_id": "B2D-C3m-D5m-W4m-T0.5m-E20-S0.02",
+   "run_id": "B2D-C3m-D5m-W4m-T0.5m-E20-S0.02-MT33",
+   "file": "B2D-C3m-D5m-W4m-T0.5m-E20-S0.02-MT33.in",
+   "input_sha256": "3fa87cf2febbd6a08098a0ec6d07af42fe23587cd92e924e989e559263271588",
+   "batch_id": "batch2d_v1",
+   "segment": "mt",
+   "grid_tier": "BASE",
+   "family": "C3",
+   "cover_thickness_m": 3.0,
+   "role": "target",
+   "mother_model_id": "B2D-C3m-D5m-W4m-T0.5m-E20-S0.02",
+   "group_id": "B2D-C3m",
+   "seed": 16710376912176731217,
+   "variant_tag": "multitrace_33rx_0p25m",
+   "scan_axis": {
+    "cover_thickness_m": 3.0,
+    "depth_m": 5.0,
+    "width_m": 4.0,
+    "thickness_m": 0.5,
+    "eps_r": 20.0,
+    "sigma_s_m": 0.02
+   },
+   "materials": {
+    "rock": [
+     9.0,
+     0.001
+    ],
+    "cover": [
+     16.0,
+     0.01
+    ],
+    "target": [
+     20.0,
+     0.02
+    ]
+   },
+   "geometry": {
+    "domain_m": [
+     null,
+     32.0,
+     50.0
+    ],
+    "dy_dz_m": [
+     0.025,
+     0.025
+    ],
+    "pml_cells": [
+     0,
+     40,
+     40,
+     0,
+     40,
+     40
+    ],
+    "pml_physical_thickness_m": 1.0,
+    "surface_z_m": 30.0,
+    "cover_bottom_z_m": 27.0,
+    "cover_box_m": [
+     0.0,
+     27.0,
+     32.0,
+     30.0
+    ],
+    "target_box_m": [
+     14.0,
+     24.75,
+     18.0,
+     25.25
+    ],
+    "target_box_cells": [
+     560,
+     990,
+     720,
+     1010
+    ],
+    "tx_m": [
+     15.35,
+     45.0
+    ],
+    "rx_m": [
+     16.65,
+     45.0
+    ],
+    "component": "Ex"
+   },
+   "cells": 2560000,
+   "dt_s": 5.896635841874211e-11,
+   "time_steps": 20352,
+   "main_fields_ID_GiB": 0.3437627702951431,
+   "wall_s_estimate_method_3_1": 17.012,
+   "wall_s_planning_envelope_3_2": 152.0,
+   "static_check": {
+    "grid_aligned": true,
+    "cover_bottom_m": 27.0,
+    "target_top_m": 25.25,
+    "target_bottom_m": 24.75,
+    "clearance_below_cover_m": 1.75,
+    "bottom_pml_margin_m": 23.75,
+    "side_pml_margin_m": 13.0,
+    "top_pml_margin_m": 23.75,
+    "target_fully_in_sandstone": true
+   },
+   "exceptions": null,
+   "multitrace": {
+    "n_traces": 33,
+    "trace_spacing_m": 0.25,
+    "trace_span_m": 8.0,
+    "trace_axis_y_range_m": [
+     12.65,
+     20.65
+    ],
+    "trace_receiver_z_m": 45.0,
+    "anchor_trace_index": 16,
+    "anchor_trace_y_m": 16.65,
+    "trace_ids": [
+     "mt01",
+     "mt02",
+     "mt03",
+     "mt04",
+     "mt05",
+     "mt06",
+     "mt07",
+     "mt08",
+     "mt09",
+     "mt10",
+     "mt11",
+     "mt12",
+     "mt13",
+     "mt14",
+     "mt15",
+     "mt16",
+     "mt17",
+     "mt18",
+     "mt19",
+     "mt20",
+     "mt21",
+     "mt22",
+     "mt23",
+     "mt24",
+     "mt25",
+     "mt26",
+     "mt27",
+     "mt28",
+     "mt29",
+     "mt30",
+     "mt31",
+     "mt32",
+     "mt33"
+    ],
+    "trace_order": "construction",
+    "acquisition_geometry": "single-shot variable-offset receiver array along y (offset 2.70-5.30 m)",
+    "rx_output_components": [
+     "Ex"
+    ]
+   }
+  }
+ ]
+}

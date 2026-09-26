@@ -1,0 +1,51 @@
+{
+ "schema": "batch2d_v1_mt_budget/1",
+ "date": "2026-09-26",
+ "formulas": "spec §3.1: cells=(32/dy)*(50/dz); dt=1/(c*sqrt(dy^-2+dz^-2)); main_fields_ID_GiB=72B*2*(ny+1)(nz+1)/2^30; wall=ref*(cells/cells_ref)*(dt_ref/dt)",
+ "grid": {
+  "dy_m": 0.025,
+  "dz_m": 0.025,
+  "cells": 2560000,
+  "dt_s": 5.896635841874211e-11,
+  "dt_formula_s": 5.896635841874211e-11,
+  "time_steps": 20352,
+  "time_window_ns": 1200
+ },
+ "single_case": {
+  "main_fields_ID_GiB": 0.3437627702951431,
+  "wall_scaled_from_YFINE_s": 17.010368677119963,
+  "measured_base_batch_mean_s": 48.3,
+  "measured_base_batch_range_s_excl_first": [
+   29.859,
+   59.218
+  ],
+  "planning_envelope_min": 2.5
+ },
+ "multitrace_increment": {
+  "output_per_case_bytes": 5372928,
+  "output_per_case_MiB": 5.1240234375,
+  "device_rx_array_bytes": 32237568,
+  "device_rx_array_MiB": 30.744140625,
+  "job_peak_increment_GiB": 0.034,
+  "wall_increment": "expected negligible (unmeasured); not used to relax budget"
+ },
+ "batch_totals": {
+  "n_cases": 22,
+  "planning_envelope_s": 3300,
+  "measured_mean_estimate_s": 1062.6,
+  "conservative_budget_min": 65
+ },
+ "hard_stops": {
+  "wall_minutes_per_case": 20,
+  "job_commit_GiB": 4,
+  "output_GiB": 2,
+  "retries": 0,
+  "max_fdtd_runs": 22
+ },
+ "known_limitations": [
+  "working scaling is not a guaranteed runtime",
+  "main-field array excludes PML, update coefficients, CUDA context and host temporaries",
+  "Job committed memory is not GPU VRAM",
+  "estimates are for ranking and cap-setting only, not ETA"
+ ]
+}

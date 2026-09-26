@@ -105,7 +105,8 @@
     "vctip drain intervention effect on 3D wall clock is unmeasured; 3D budgets must not be downgraded from 2D measurements",
     "3D validation does not upgrade reference_state (numerically_unresolved) and produces no physical threshold, training label, clean truth, detectability or maximum-depth conclusion",
     "3D grid convergence not certified; dimension/lateral-domain/target-y confounds not excluded; differences between comparison pairs must not be subtracted as an additive decomposition"
-   ]
+   ],
+   "record": "docs/research/2026-09-26_3d_validation_subset_decision.md"
   },
   {
    "id": "batch2d_v1_base",
@@ -915,7 +916,6 @@
   {
    "id": "operator_evaluation_sim_evidence_v0_1",
    "status": "completed_document_only",
-   "directory": null,
    "tracked": true,
    "solver_executed": false,
    "training_executed": false,
@@ -925,12 +925,12 @@
     "gaps_listed": 8,
     "not_list_items": 10,
     "operator_contracts_constrained": 27
-   }
+   },
+   "record": "docs/research/2026-09-26_operator_evaluation_sim_evidence_v0.1.md"
   },
   {
    "id": "a0_3d_validation_contract_proposal_v0_1",
    "status": "proposal_pending_user_agreement",
-   "directory": null,
    "tracked": true,
    "solver_executed": false,
    "training_executed": false,
@@ -940,12 +940,12 @@
     "grid_cells_per_run": 32000000,
     "wall_envelope_s_per_run_measured_dep3d": 916.0,
     "attempts_consumed": 0
-   }
+   },
+   "record": "docs/research/2026-09-26_a0_3d_validation_contract_proposal.md"
   },
   {
    "id": "batch2d_v1_event_table_proposal_v0_1",
    "status": "frozen_user_approved_2026-09-26",
-   "directory": null,
    "tracked": true,
    "solver_executed": false,
    "training_executed": false,
@@ -956,12 +956,12 @@
     "target_events": 20,
     "negative_control_windows": 19,
     "half_width_ns": 80.0
-   }
+   },
+   "record": "docs/research/2026-09-26_event_table_proposal.md"
   },
   {
    "id": "eval_runner_and_selector_design_v0_1",
    "status": "completed_document_only",
-   "directory": null,
    "tracked": true,
    "solver_executed": false,
    "training_executed": false,
@@ -971,12 +971,12 @@
     "baselines_blocked": 5,
     "not_list_items": 17,
     "roadmap_stages": 7
-   }
+   },
+   "record": "docs/research/2026-09-26_eval_runner_and_selector_design_v0.1.md"
   },
   {
    "id": "multitrace_batch_proposal_v0_1",
    "status": "proposal_pending_user_agreement",
-   "directory": null,
    "tracked": true,
    "solver_executed": false,
    "training_executed": false,
@@ -988,12 +988,12 @@
     "trace_span_m": 8.0,
     "wall_budget_min_total": 65,
     "attempts_consumed": 0
-   }
+   },
+   "record": "docs/research/2026-09-26_multitrace_batch_proposal.md"
   },
   {
    "id": "multitrace_acquisition_literature_scan",
    "status": "completed_literature_scan_document_only",
-   "directory": null,
    "tracked": true,
    "solver_executed": false,
    "training_executed": false,
@@ -1002,12 +1002,12 @@
     "body_read": 2,
     "abstract_or_snippet_level": 4,
     "citation_registered_not_read": 1
-   }
+   },
+   "record": "docs/research/2026-09-26_multitrace_acquisition_literature.md"
   },
   {
    "id": "g4_threshold_calibration_literature_scan",
    "status": "completed_literature_scan_document_only",
-   "directory": null,
    "tracked": true,
    "solver_executed": false,
    "training_executed": false,
@@ -1017,12 +1017,12 @@
     "abstract_or_snippet_level": 4,
     "citation_registered_not_read": 4,
     "fetch_failed": 2
-   }
+   },
+   "record": "docs/research/2026-09-26_g4_threshold_calibration_literature.md"
   },
   {
    "id": "selector_adaptivity_literature_scan",
    "status": "completed_literature_scan_document_only",
-   "directory": null,
    "tracked": true,
    "solver_executed": false,
    "training_executed": false,
@@ -1031,12 +1031,12 @@
     "body_read": 2,
     "abstract_or_snippet_level": 4,
     "citation_registered_not_read": 3
-   }
+   },
+   "record": "docs/research/2026-09-26_selector_adaptivity_literature.md"
   },
   {
    "id": "twod_threed_modeling_literature_scan",
    "status": "completed_literature_scan_document_only",
-   "directory": null,
    "tracked": true,
    "solver_executed": false,
    "training_executed": false,
@@ -1045,12 +1045,12 @@
     "body_read": 2,
     "abstract_or_snippet_level": 5,
     "citation_registered_not_read": 1
-   }
+   },
+   "record": "docs/research/2026-09-26_2d3d_modeling_literature.md"
   },
   {
    "id": "direction_check_litscan",
    "status": "completed_literature_scan_document_only",
-   "directory": null,
    "tracked": true,
    "solver_executed": false,
    "training_executed": false,
@@ -1060,12 +1060,12 @@
     "results_total": 50,
     "read_level": "abstract_snippet_only",
     "verdict": "no_drift_detected"
-   }
+   },
+   "record": "docs/research/2026-09-26_direction_check_litscan.md"
   },
   {
    "id": "batch2d_v1_event_table_v0_1",
    "status": "frozen",
-   "directory": null,
    "tracked": true,
    "solver_executed": false,
    "training_executed": false,
@@ -1080,7 +1080,8 @@
      "G4",
      "G5"
     ]
-   }
+   },
+   "record": "configs/research/batch2d_v1_event_table_v0.1.json"
   }
  ],
  "default_array_verification": {
