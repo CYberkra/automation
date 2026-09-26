@@ -1479,6 +1479,46 @@
     "field borehole accuracy must not be back-projected as our simulation acceptance line (2D vs 3D, E7 measured)",
     "their uniform-velocity model is an engineering approximation, not transferable to our window/spectral quantities"
    ]
+  },
+  {
+   "id": "g4_mission_tolerance_v0_1",
+   "status": "complete_inputs_frozen_capability_exported_r1r2_byte_identical",
+   "directory": "artifacts/research_checks/2026-09-26_g4_mission_capability_r1",
+   "directory_note": "r2 isomorphic; results.json byte-identical across r1/r2 (sha256 37d9597ca0a6e6be758c9c6104b8224ba06e4c2e0d80a3d0f909ae03e6f5323c). 2065 capability rows + 324 pure nc_amplify negative-control rows; deterministic read-only merge of the 16 damage-ladder chunks.",
+   "tracked": true,
+   "solver_executed": false,
+   "training_executed": false,
+   "report": "docs/research/2026-09-26_g4_mission_tolerance_v0.1.md",
+   "frozen_config": "configs/research/g4_mission_tolerance_v0.1.json",
+   "freeze_script": "scripts/freeze_g4_mission_tolerance.py",
+   "runner_script": "scripts/run_g4_mission_capability.py",
+   "acceptance_script": "scripts/check_g4_mission_capability_acceptance.py",
+   "plan": "docs/research/2026-09-26_g4_calibration_plan_v0.1.md",
+   "key_numbers": {
+    "user_approval": "2026-09-26 21:38 '同意' — four mission inputs at proposed defaults (Wang 2026 anchored)",
+    "mission_config_sha256": "2d630c01cc95f3c13febbc19c4bf8f3b5a53b5fb82bbabcb2f68e7537ef78b28",
+    "capability_rows": 2065,
+    "negative_control_rows": 324,
+    "mission_relevant_levels": "amplitude_scale {0.5,0.1}; polarity_flip all; sample_shift {+/-4,+/-16}; trace_deletion {4,8}",
+    "weak_event_band": "amplitude_scale 0.9; sample_shift +/-1; trace_deletion 1 (protected, feeds tau calibration)",
+    "headline_mt_median_of_medians_D": {
+     "identity": 0.0,
+     "mean_lambda0.25": "0.165-0.227 partial preservation",
+     "mean_lambda1.0": "0.66-0.906 erases",
+     "svd_k1": "0.784-0.911 erases",
+     "svd_k3": "0.953-0.959 erases most"
+    },
+    "conservativeness": "a80-style: D_p80 upper bound + explicit systematic bias term (e.g. velocity +/-10% to depth), statistical and systematic terms separated",
+    "family_scope": "per-cover-thickness-family tolerances; export dev families {c1,c3} only; test {c5,c8} frozen"
+   },
+   "limitations": [
+    "G4 NOT relieved: thresholds stay null, candidates undetermined, no ranking/selection/training",
+    "capability values rest on constructed reference (identity of damaged input), not physical truth; simulation-domain only",
+    "undetermined determination (operator difference vs reference uncertainty) is G4 step 4, not done here",
+    "MT and CO layered separately; no merging or cross-pairing; families reported separately",
+    "ladder-level mapping is frozen design (re-freeze to adjust), never derived from candidate performance",
+    "amplitude-class metrics remain G1/G6-limited"
+   ]
   }
  ],
  "default_array_verification": {
