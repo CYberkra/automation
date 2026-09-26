@@ -1,0 +1,109 @@
+{
+ "schema": "literature-reading-ledger/1",
+ "date": "2026-09-26",
+ "purpose": "Evidence-precedent scan for the selector design's 'adaptivity must demonstrably help' requirement: GPR adaptive parameter selection vs fixed baselines, and general algorithm-selection usefulness conditions; retrieval does not imply reading or replication",
+ "body_read_count": 2,
+ "field_data_access_this_round": false,
+ "simulation_executed": false,
+ "training_executed": false,
+ "notes": [
+  "Fast scan, not a systematic review; two papers read in main text, four at abstract/snippet level, three citations registered without reading.",
+  "No dataset downloaded or imported; no training performed; no threshold or expected-benefit value adopted for this repo.",
+  "Companion note: docs/research/2026-09-26_selector_adaptivity_literature.md"
+ ],
+ "entries": [
+  {
+   "id": "SEL-S1",
+   "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6749384/",
+   "retrieval_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6749384/",
+   "doi": null,
+   "read_status": "body_read",
+   "read_scope": "Publisher page main text (abstract through synthetic examples 1-2); later field-example and conclusion sections only via extracted fragments",
+   "retrieval_status": "retrieved",
+   "reproduced": false
+  },
+  {
+   "id": "SEL-S2",
+   "source_url": "https://lirias.kuleuven.be/retrieve/f285366b-15a6-4928-a9c4-b5a515886cf2/",
+   "retrieval_url": "https://lirias.kuleuven.be/retrieve/f285366b-15a6-4928-a9c4-b5a515886cf2/",
+   "doi": null,
+   "read_status": "body_read",
+   "read_scope": "Institutional-repository preprint main text (abstract through empirical-hardness-model Step 4); later steps, results figures and appendix only via extracted fragments; preprint, not checked against published EJOR version",
+   "retrieval_status": "retrieved",
+   "reproduced": false
+  },
+  {
+   "id": "SEL-S3a",
+   "source_url": "https://www.semanticscholar.org/paper/e65423d7b58066a2152ac11df7948fe61f02f5c3",
+   "retrieval_url": "https://www.semanticscholar.org/paper/e65423d7b58066a2152ac11df7948fe61f02f5c3",
+   "doi": null,
+   "read_status": "abstract_only",
+   "read_scope": "Semantic Scholar abstract snippet only (Chen & Fu 2017, adaptive PCA/SVD ground clutter reduction)",
+   "retrieval_status": "retrieved",
+   "reproduced": false
+  },
+  {
+   "id": "SEL-S3b",
+   "source_url": "https://www.mdpi.com/2072-4292/17/15/2697",
+   "retrieval_url": "https://www.mdpi.com/2072-4292/17/15/2697",
+   "doi": null,
+   "read_status": "snippet_only",
+   "read_scope": "Search-result snippet only (Hou et al. 2025 A-SVD); MDPI full text not retrievable in this environment",
+   "retrieval_status": "not_retrieved",
+   "reproduced": false
+  },
+  {
+   "id": "SEL-S3c",
+   "source_url": "https://arxiv.org/pdf/2405.11105v1",
+   "retrieval_url": "https://arxiv.org/pdf/2405.11105v1",
+   "doi": null,
+   "read_status": "snippet_only",
+   "read_scope": "Search-result snippet only (adaptive spatiotemporal clutter filtering, ultrasound): adaptive methods still need case-by-case predefined values",
+   "retrieval_status": "not_retrieved",
+   "reproduced": false
+  },
+  {
+   "id": "SEL-S3d",
+   "source_url": "https://www.apsipa.org/proceedings/2022/APSIPA%202022/ThPM2-7/1570834693.pdf",
+   "retrieval_url": "https://www.apsipa.org/proceedings/2022/APSIPA%202022/ThPM2-7/1570834693.pdf",
+   "doi": null,
+   "read_status": "snippet_only",
+   "read_scope": "Search-result snippet only (Cao et al. 2022, SURE-based adaptive threshold GPR denoising)",
+   "retrieval_status": "retrieved",
+   "reproduced": false
+  },
+  {
+   "id": "SEL-S4a",
+   "source_url": null,
+   "retrieval_url": null,
+   "doi": "10.1016/S0065-2458(08)60520-3",
+   "read_status": "citation_registered_not_read",
+   "read_scope": "Rice 1976, The algorithm selection problem, Adv. Comput. 15:65-118; cross-registered via multiple snippets and SEL-S2",
+   "retrieval_status": "not_retrieved",
+   "reproduced": false
+  },
+  {
+   "id": "SEL-S4b",
+   "source_url": null,
+   "retrieval_url": null,
+   "doi": null,
+   "read_status": "citation_registered_not_read",
+   "read_scope": "Smith-Miles 2009, ACM Computing Surveys 41(1):6:1-6:25, meta-learning for algorithm selection survey; registered via multiple snippets",
+   "retrieval_status": "not_retrieved",
+   "reproduced": false
+  },
+  {
+   "id": "SEL-S4c",
+   "source_url": null,
+   "retrieval_url": null,
+   "doi": null,
+   "read_status": "citation_registered_not_read",
+   "read_scope": "Xu et al. 2008, SATzilla, JAIR 32:565-606; registered via SEL-S2 main text mention",
+   "retrieval_status": "not_retrieved",
+   "reproduced": false
+  }
+ ],
+ "generated_outputs": [
+  "docs/research/2026-09-26_selector_adaptivity_literature.md"
+ ]
+}
