@@ -1137,6 +1137,53 @@
         "BASE tier only; grid convergence not certified; no 3D, no field extrapolation, no maximum-depth claim; material parameters are research assumptions",
         "22 attempts, one each, consumed and not reusable; physical and training labels remain disabled; reference_state stays numerically_unresolved; G1/G3(data-shape)/G4/G5 unchanged in status (G3 event-table freeze separate)"
       ]
+    },
+    {
+      "id": "eval_batch2d_mt_v0_1",
+      "status": "complete_1458of1647_ran_189_unavailable_no_mt_case",
+      "directory": "artifacts/research_checks/2026-09-26_eval_batch2d_mt_r1",
+      "directory_note": "Evaluation runner r1/r2; records byte-identical across runs after stripping per-record resource fields; manifest identical except run_tag/total_wall_s. Arrays (1080 pre_gain/ginv-audit .npy, 1.1 GB) in git-ignored artifacts/simulations/2026-09-26_eval_batch2d_mt_arrays/ with sha256 in records.",
+      "tracked": true,
+      "solver_executed": false,
+      "training_executed": false,
+      "report": "docs/research/2026-09-26_eval_batch2d_mt_eval_v0.1.md",
+      "runner_script": "scripts/run_eval_batch2d_mt.py",
+      "design": "docs/research/2026-09-26_eval_runner_and_selector_design_v0.1.md",
+      "event_table": "configs/research/batch2d_v1_event_table_v0.1.json",
+      "key_numbers": {
+        "n_candidates": 27,
+        "event_rows": 61,
+        "n_records": 1647,
+        "ran": 1458,
+        "unavailable": 189,
+        "unavailable_reason": "no_multitrace_case_in_batch2d_v1_mt (7 coarse-only mothers incl OFF)",
+        "numeric_failures": 0,
+        "feasibility_status": "partial_only",
+        "waveform_metrics_computed": 0,
+        "r_c_computed": 0,
+        "gain_records": 1080,
+        "clipped_or_overflow": 0,
+        "identity_energy_ratio_all_1.0": true,
+        "nc_window_minus_bg_max_abs": 0.0,
+        "negative_control_window_energy_ratio_median": {
+          "identity": 1.0,
+          "mean_lambda0.25": 0.6042,
+          "mean_lambda0.5": 0.3215,
+          "mean_lambda1.0": 0.0953,
+          "svd_k1": 0.0869,
+          "svd_k2": 0.032,
+          "svd_k3": 0.0163
+        },
+        "gather_semantics_version": "variable_offset_csg_not_common_offset_bscan_v1"
+      },
+      "limitations": [
+        "G2 unblocked at data-shape level only; evaluation layer: feasibility stays undetermined (G4 thresholds all null), no ranking, no unique label; N_b is an absolute residual diagnostic, not detectability/SNR/threshold",
+        "D/A/H/rho not computible (reference_state numerically_unresolved + paired_contrast); R_c never computed (no legitimate pure-clutter window)",
+        "trace axis is a variable-offset CSG gather, not a common-offset B-scan; mean/svd see a gather with unaligned direct wave (~147 samples end-to-end); all results carry that semantics and must not be extrapolated to common-offset field B-scans",
+        "BASE tier only; 7 coarse-only mothers (incl OFF) have no multitrace data -> 189 unavailable records; FINE2 multitrace (G5) and 3D (G1, A0 awaiting user approval) untouched",
+        "no physical/training labels; training_eligible=false; grid convergence not certified; no cross-family/cross-tier metrics; negative controls not merged into target rows",
+        "input h5 archives and frozen event table read-only; runner never invokes a solver (fdtd_solver_invoked=false)"
+      ]
     }
   ],
   "default_array_verification": {

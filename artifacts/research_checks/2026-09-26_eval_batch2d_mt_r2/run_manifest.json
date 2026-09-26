@@ -1,0 +1,183 @@
+{
+  "run_tag": "r2",
+  "runner": "scripts/run_eval_batch2d_mt.py",
+  "event_table": "configs\\research\\batch2d_v1_event_table_v0.1.json",
+  "event_table_sha256": "b0ad100334132cb6e6a706af4f5d8fbbff7cced26b6e07613c50be77a607f56c",
+  "time_axis_convention_version": "ti_i_mul_dt_rxoffset0",
+  "grid_tier": "BASE",
+  "gather_semantics_version": "variable_offset_csg_not_common_offset_bscan_v1",
+  "trace_axis_semantics": "variable-offset single-shot multi-receiver gather (Tx fixed y15.35, offset 2.70->1.30->5.30 m along trace index); NOT a common-offset B-scan",
+  "window_mapping": "frozen sample-axis window applied unshifted to all 33 traces; no per-trace alignment",
+  "candidates": {
+    "n": 27,
+    "version": "research-operators/0.1",
+    "operator_script_sha256": "ea2cca7c00ea56ebb454503be6e526c67739466c15d0379935ef4e01c5d8a770",
+    "eval_script_sha256": "f7dc8cafabbd7d758fd4dacf29253af0184bd3598fa2ecbc01098fd7016c5318"
+  },
+  "event_rows": 61,
+  "n_records": 1647,
+  "availability": {
+    "ran": 1458,
+    "unavailable": 189
+  },
+  "failure_reason_histogram": {
+    "no_multitrace_case_in_batch2d_v1_mt": 189
+  },
+  "gates": {
+    "event_table_frozen": true,
+    "min_shape_ge_2": true,
+    "single_trace_gate_blocked": false,
+    "blocked_candidate_count": 0,
+    "pre_gain_persisted": true,
+    "negative_controls_separate": true
+  },
+  "runner_limits": {
+    "r_c_computed": false,
+    "isolated_event_granted": false,
+    "cross_family_metrics": false,
+    "gain_reference_absent": true,
+    "waveform_metrics_computed": false,
+    "waveform_metrics_reason": "reference_state numerically_unresolved + paired_contrast (design A.4)"
+  },
+  "feasibility": {
+    "status": "partial_only",
+    "note": "all limits null (G4 unresolved): every gate undetermined; no ranking, no unique label"
+  },
+  "negative_control_events": [
+    "EV-C1m-BG-NEG-D10m",
+    "EV-C1m-BG-NEG-D2m",
+    "EV-C1m-BG-NEG-D5m",
+    "EV-C1m-D10m-NC-W1",
+    "EV-C1m-D10m-NC-W2",
+    "EV-C3m-BG-NEG-D10m",
+    "EV-C3m-BG-NEG-D20m",
+    "EV-C3m-BG-NEG-D5m",
+    "EV-C3m-D10m-NC-W1",
+    "EV-C3m-D10m-NC-W2",
+    "EV-C3m-D10m-OFF-W1",
+    "EV-C5m-BG-NEG-D10m",
+    "EV-C5m-BG-NEG-D20m",
+    "EV-C5m-D10m-NC-W1",
+    "EV-C5m-D10m-NC-W2",
+    "EV-C8m-BG-NEG-D10m",
+    "EV-C8m-BG-NEG-D20m",
+    "EV-C8m-D10m-NC-W1",
+    "EV-C8m-D10m-NC-W2"
+  ],
+  "hard_limits": {
+    "absolute_accuracy_claimed": false,
+    "clean_truth_generated": false,
+    "conclusions_scope": "operator-evaluation evidence for the batch2d_v1_mt BASE multitrace scenario families only; not field performance, not 3D, not absolute accuracy, no maximum-depth claim",
+    "cross_family_differencing": false,
+    "cross_tier_differencing": false,
+    "family_bg_required": true,
+    "fdtd_solver_invoked": false,
+    "grid_convergence_certified": false,
+    "grid_tier": "BASE",
+    "grid_tiers_merged": false,
+    "in_band_energy_ratio_is": "diagnostic energy ratio on the 501-point analysis grid; not detectability, not SNR, not a physical threshold",
+    "negative_controls_merged_into_targets": false,
+    "physical_acceptance_threshold": null,
+    "physical_label_eligible": false,
+    "reference_state": "numerically_unresolved",
+    "training_eligible": false,
+    "training_labels_generated": false,
+    "n_traces": 33,
+    "trace_axis_semantics": "variable-offset single-shot multi-receiver gather (Tx fixed y15.35, offset 2.70->1.30->5.30 m along trace index); NOT a common-offset B-scan",
+    "anchor_trace": "mt17 (y16.65 m, grid y666) bit-for-bit equal to archived single-trace mother (22/22)",
+    "nc_multitrace_control": "NC-BG paired difference identically zero on all 33 traces, all four families (4/4)"
+  },
+  "cases": {
+    "B2D-C1m-BG-MT33": {
+      "h5": "artifacts\\research_checks\\2026-09-26_B2D-C1m-BG-MT33\\B2D-C1m-BG-MT33.h5",
+      "h5_sha256": "45bf49a0d8994d9cfb5bb4a051931d73e32986fc29f22a7c2880bb80d2ac1901"
+    },
+    "B2D-C1m-D10m-NC-MT33": {
+      "h5": "artifacts\\research_checks\\2026-09-26_B2D-C1m-D10m-NC-MT33\\B2D-C1m-D10m-NC-MT33.h5",
+      "h5_sha256": "34ddd28b332f3ca47d5d62c1ab548174b11749c11d02bdee02db4c96f8db8b17"
+    },
+    "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-MT33": {
+      "h5": "artifacts\\research_checks\\2026-09-26_B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-MT33\\B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-MT33.h5",
+      "h5_sha256": "e248c3cf1ec17c11884c574d7fec1227d87d153af5b2ed39cf45f59ad46be85c"
+    },
+    "B2D-C3m-BG-MT33": {
+      "h5": "artifacts\\research_checks\\2026-09-26_B2D-C3m-BG-MT33\\B2D-C3m-BG-MT33.h5",
+      "h5_sha256": "36d9cc0bb44682e56936218dfd62047c696eecf9c2b0a33b6223e83347e50ef2"
+    },
+    "B2D-C3m-D10m-NC-MT33": {
+      "h5": "artifacts\\research_checks\\2026-09-26_B2D-C3m-D10m-NC-MT33\\B2D-C3m-D10m-NC-MT33.h5",
+      "h5_sha256": "ecbaa59990f7ae903869d823b600e82e0ba426152c2f4c183e9cfcc7d6123f97"
+    },
+    "B2D-C3m-D10m-W1m-T0.5m-E20-S0.02-MT33": {
+      "h5": "artifacts\\research_checks\\2026-09-26_B2D-C3m-D10m-W1m-T0.5m-E20-S0.02-MT33\\B2D-C3m-D10m-W1m-T0.5m-E20-S0.02-MT33.h5",
+      "h5_sha256": "c2bfee75e3da754c7f2daffff2186945b4bfe0ba2086cd1be1ff254ae6342920"
+    },
+    "B2D-C3m-D10m-W2m-T0.5m-E20-S0.02-MT33": {
+      "h5": "artifacts\\research_checks\\2026-09-26_B2D-C3m-D10m-W2m-T0.5m-E20-S0.02-MT33\\B2D-C3m-D10m-W2m-T0.5m-E20-S0.02-MT33.h5",
+      "h5_sha256": "91eaa7a7d9fba034a78ed90235256ff58b2c07fa96dc4cba363c5da0d2ceb528"
+    },
+    "B2D-C3m-D10m-W4m-T0.25m-E20-S0.02-MT33": {
+      "h5": "artifacts\\research_checks\\2026-09-26_B2D-C3m-D10m-W4m-T0.25m-E20-S0.02-MT33\\B2D-C3m-D10m-W4m-T0.25m-E20-S0.02-MT33.h5",
+      "h5_sha256": "f6250f00cf882cd8dbbd3629af65e8b3d18929ad976e85bf30eb77f94c4aefb5"
+    },
+    "B2D-C3m-D10m-W4m-T0.5m-E12-S0.005-MT33": {
+      "h5": "artifacts\\research_checks\\2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E12-S0.005-MT33\\B2D-C3m-D10m-W4m-T0.5m-E12-S0.005-MT33.h5",
+      "h5_sha256": "b27366ae9bfebb78864ddcf8a4142d4850cde459f79004c2afb91b6a3acc42b1"
+    },
+    "B2D-C3m-D10m-W4m-T0.5m-E20-S0.005-MT33": {
+      "h5": "artifacts\\research_checks\\2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.005-MT33\\B2D-C3m-D10m-W4m-T0.5m-E20-S0.005-MT33.h5",
+      "h5_sha256": "81e76a801b068558e9bfd48f583484842646fe55b2feed4ac7e716c7cca389e4"
+    },
+    "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33": {
+      "h5": "artifacts\\research_checks\\2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33\\B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33.h5",
+      "h5_sha256": "faf847e66293b215d3b22117b7935c9b0c9dc800a1cefd84e965e56aca7c4e21"
+    },
+    "B2D-C3m-D10m-W4m-T0.5m-E20-S0.05-MT33": {
+      "h5": "artifacts\\research_checks\\2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.05-MT33\\B2D-C3m-D10m-W4m-T0.5m-E20-S0.05-MT33.h5",
+      "h5_sha256": "11f5beb5b183537f1544493ef4d1d3b2e606e56fbdded04e3ec56bbb12e39113"
+    },
+    "B2D-C3m-D10m-W4m-T0.5m-E28-S0.05-MT33": {
+      "h5": "artifacts\\research_checks\\2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E28-S0.05-MT33\\B2D-C3m-D10m-W4m-T0.5m-E28-S0.05-MT33.h5",
+      "h5_sha256": "981f407fa51745fea84ae53eb2e0db540bfd69ce9a1b07a87db94ee03e1cd93f"
+    },
+    "B2D-C3m-D10m-W4m-T1m-E20-S0.02-MT33": {
+      "h5": "artifacts\\research_checks\\2026-09-26_B2D-C3m-D10m-W4m-T1m-E20-S0.02-MT33\\B2D-C3m-D10m-W4m-T1m-E20-S0.02-MT33.h5",
+      "h5_sha256": "10c175ea5fe06900247c3bd7cadc119bcc13d58725ec46077fee12d4b1f27f76"
+    },
+    "B2D-C3m-D20m-W4m-T0.5m-E20-S0.02-MT33": {
+      "h5": "artifacts\\research_checks\\2026-09-26_B2D-C3m-D20m-W4m-T0.5m-E20-S0.02-MT33\\B2D-C3m-D20m-W4m-T0.5m-E20-S0.02-MT33.h5",
+      "h5_sha256": "57e0266beef623b2325c3e16df444cf7f6311c3570c1499d6da1edc1156a458c"
+    },
+    "B2D-C3m-D5m-W4m-T0.5m-E20-S0.02-MT33": {
+      "h5": "artifacts\\research_checks\\2026-09-26_B2D-C3m-D5m-W4m-T0.5m-E20-S0.02-MT33\\B2D-C3m-D5m-W4m-T0.5m-E20-S0.02-MT33.h5",
+      "h5_sha256": "e35c89f281d529dd904c4d1525eafad3c6e6c9c4deb40b2bb3e90c633ce9b859"
+    },
+    "B2D-C5m-BG-MT33": {
+      "h5": "artifacts\\research_checks\\2026-09-26_B2D-C5m-BG-MT33\\B2D-C5m-BG-MT33.h5",
+      "h5_sha256": "c9820f1c6d2edff04efc79bed6a29b9ec50f9a83693b0d70f1aaf2f8a67de026"
+    },
+    "B2D-C5m-D10m-NC-MT33": {
+      "h5": "artifacts\\research_checks\\2026-09-26_B2D-C5m-D10m-NC-MT33\\B2D-C5m-D10m-NC-MT33.h5",
+      "h5_sha256": "192fe10a047eda841ae834bdf28d5418bd166047f128ba5f9d9cca3be9fa9dc4"
+    },
+    "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-MT33": {
+      "h5": "artifacts\\research_checks\\2026-09-26_B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-MT33\\B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-MT33.h5",
+      "h5_sha256": "02795fee9bb803c25803ce1839235874b7f4bc568af870d0a7d5f12bbe20cced"
+    },
+    "B2D-C8m-BG-MT33": {
+      "h5": "artifacts\\research_checks\\2026-09-26_B2D-C8m-BG-MT33\\B2D-C8m-BG-MT33.h5",
+      "h5_sha256": "a2f158199bf5fade8f3720bb06d2f415c4a47bacf338f04b41884c755c8d991b"
+    },
+    "B2D-C8m-D10m-NC-MT33": {
+      "h5": "artifacts\\research_checks\\2026-09-26_B2D-C8m-D10m-NC-MT33\\B2D-C8m-D10m-NC-MT33.h5",
+      "h5_sha256": "35c369aa7c8e35b91ff2670312f2d209aba72013877d59a5ee0a10077493f8c4"
+    },
+    "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-MT33": {
+      "h5": "artifacts\\research_checks\\2026-09-26_B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-MT33\\B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-MT33.h5",
+      "h5_sha256": "80f9f57db9d786dc8d70c6667843ffe75a51e9e99808337184810a5a50a09882"
+    }
+  },
+  "total_wall_s": 12.230593700194731,
+  "stop_reason": null,
+  "arrays_dir": "artifacts\\simulations\\2026-09-26_eval_batch2d_mt_arrays"
+}
