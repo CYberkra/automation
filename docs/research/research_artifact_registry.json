@@ -1440,6 +1440,45 @@
     "produces no threshold values; G4 not relieved; no ranking, no labels, no training",
     "reference_state stays numerically_unresolved; physical_acceptance_threshold=null; BASE tier"
    ]
+  },
+  {
+   "id": "wang2026_uav_gpr_landslide_reading",
+   "status": "complete_reading_note_design_reference_only",
+   "tracked": true,
+   "solver_executed": false,
+   "training_executed": false,
+   "record": "docs/research/2026-09-26_wang2026_uav_gpr_landslide_reading.md",
+   "report": "docs/research/2026-09-26_wang2026_uav_gpr_landslide_reading.md",
+   "source_pdf": "E:/automation_djh/Wang 等 - 2026 - Deep-Penetrating Uncrewed Aerial Vehicle-Based Ground-Penetrating Radar for Landslide Surveys A fra.pdf",
+   "citation": "W. Wang, T. Li, N. Yu, S. Gao, W. Zhang, C. Huang, L. Yuan, Deep-Penetrating UAV-Based GPR for Landslide Surveys, IEEE Geoscience and Remote Sensing Magazine, 2026, doi:10.1109/MGRS.2026.3702334",
+   "key_numbers": {
+    "system": "UAV SFCW GPR 20-170 MHz, 501 points, 300 kHz step, air-coupled antenna, DJI T60 (matches our simulated instrument vector)",
+    "penetration_m": 20,
+    "borehole_validation": "absolute errors 0.05-0.97 m, all relative errors <10% (best 0.27%)",
+    "velocity_assumed_m_per_ns": [
+     0.07,
+     0.09
+    ],
+    "velocity_bias_in_uncertainty_band": "+/-10%",
+    "power_sweep_dBm": [
+     20,
+     30,
+     36
+    ],
+    "flight_height_sweep_m": [
+     11,
+     16
+    ],
+    "uncertainty_statement": "MAP interface + 80% probabilistic band = statistical interval + systematic velocity-bias term",
+    "site_interfaces_depth_m": "Dayangping soil 3.7-16.3 m over sandstone; Xianfeng colluvium interface 10-20 m"
+   },
+   "relevance": "G4 step-3 mission input anchor: minimum recognizable damage (interface at 10-20 m, <1m/<10% validated), false-call cost (ghost interfaces), conservativeness template (a80-style band + explicit systematic bias), per-family (per-site) tolerances; their preprocessing (direct-wave removal/gain/bandpass) is the operator class our G4 calibrates",
+   "limitations": [
+    "reading note only; no gate relieved, no thresholds, no ranking",
+    "their imaging-chain metrics (SSIM/LCC/entropy) not comparable to our trace-level diagnostics",
+    "field borehole accuracy must not be back-projected as our simulation acceptance line (2D vs 3D, E7 measured)",
+    "their uniform-velocity model is an engineering approximation, not transferable to our window/spectral quantities"
+   ]
   }
  ],
  "default_array_verification": {
