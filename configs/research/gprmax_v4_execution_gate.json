@@ -6,8 +6,31 @@
  "target_solver": "gprMax 4.0.0",
  "source_root_on_current_machine": "E:/gprMax-v.4.0.0/gprMax-v.4.0.0",
  "batch_id": "batch2d_v1_co",
- "approved_to_simulate": false,
- "approved_run_ids": [],
+ "approved_to_simulate": true,
+ "approved_run_ids": [
+  "B2D-C3m-BG-CO11-t01",
+  "B2D-C3m-BG-CO11-t02",
+  "B2D-C3m-BG-CO11-t03",
+  "B2D-C3m-BG-CO11-t04",
+  "B2D-C3m-BG-CO11-t05",
+  "B2D-C3m-BG-CO11-t06",
+  "B2D-C3m-BG-CO11-t07",
+  "B2D-C3m-BG-CO11-t08",
+  "B2D-C3m-BG-CO11-t09",
+  "B2D-C3m-BG-CO11-t10",
+  "B2D-C3m-BG-CO11-t11",
+  "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01",
+  "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02",
+  "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03",
+  "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04",
+  "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05",
+  "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06",
+  "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07",
+  "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08",
+  "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09",
+  "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10",
+  "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11"
+ ],
  "approved_run_ids_pending_agreement": [
   "B2D-C3m-BG-CO11-t01",
   "B2D-C3m-BG-CO11-t02",
@@ -450,7 +473,7 @@
   "postprocessing": "Prefer official CPU implementation"
  },
  "execution_outcome": {
-  "status": "pending_user_agreement"
+  "status": "approved_awaiting_execution"
  },
  "last_completed_execution_contract": {
   "batch_id": "batch2d_v1_mt_consumed",
@@ -626,5 +649,10 @@
   },
   "note": "batch2d_v1_mt frozen 2026-09-26 (22 cases x 33 rx, BASE, single-shot variable-offset array, proposal user-approved). approved_to_simulate stays false until the user agrees to execute; G2 lifted in data-shape sense only; G1/G3/G4/G5 untouched; no physical/training labels."
  },
- "note": "batch2d_v1_co frozen 2026-09-26 (22 cases = 2 C3 mothers x 11 common-offset traces, BASE, double, chunked in-process execution). approved_to_simulate stays false until the user agrees to execute; results are stratified vs the MT33 batch and never cross-geometry paired; G1/G3/G4/G5 untouched; no physical/training labels."
+ "note": "batch2d_v1_co frozen 2026-09-26 (22 cases = 2 C3 mothers x 11 common-offset traces, BASE, double, chunked in-process execution). approved_to_simulate stays false until the user agrees to execute; results are stratified vs the MT33 batch and never cross-geometry paired; G1/G3/G4/G5 untouched; no physical/training labels.",
+ "user_agreement": {
+  "utc": "2026-09-26T17:49:00+08:00",
+  "instruction": "开始并执行，持续推进两轮。期间我也有事所以你自主决策",
+  "scope": "batch2d_v1_co 全部 22 例（4 块），含验收与归档"
+ }
 }
