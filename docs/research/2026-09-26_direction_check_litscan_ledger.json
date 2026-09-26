@@ -1,0 +1,76 @@
+{
+  "ledger_id": "direction_check_litscan_2026-09-26",
+  "date": "2026-09-26",
+  "purpose": "方向核查：项目是否偏离文献主流（用户发起的一轮学术研究）",
+  "method": "scholar_search 5 组查询各 10 条，共 50 条；abstract/snippet 级快速核查；未读正文；未解除任何门禁",
+  "raw_csv_dir": "artifacts/research_checks/2026-09-26_direction_check_litscan/",
+  "report": "docs/research/2026-09-26_direction_check_litscan.md",
+  "verdict": "no_drift_detected",
+  "questions": [
+    {
+      "id": "Q1",
+      "question": "UAV-GPR 用于滑坡的问题定位是否成立",
+      "csv": "q1_uav_gpr_landslide.csv",
+      "conclusion": "成立且为活跃前沿；领域终点常为偏移成像+基岩界面提取（Wang 2026），本项目成像延期属可辩护的范围裁量",
+      "key_refs": [
+        {"title": "Deep-Penetrating Uncrewed Aerial Vehicle-Based Ground-Penetrating Radar for Landslide Surveys", "authors": "W Wang, T Li, N Yu, S Gao, W Zhang et al.", "year": 2026, "venue": "IEEE JSTARS", "url": "https://ieeexplore.ieee.org/abstract/document/11589569/", "read_level": "abstract"},
+        {"title": "Review on the geophysical and UAV-based methods applied to landslides", "authors": "Y Hussain, R Schlögel, A Innocenti, O Hamza et al.", "year": 2022, "venue": "Remote Sensing", "citations": 108, "url": "https://www.mdpi.com/2072-4292/14/18/4564", "read_level": "abstract"},
+        {"title": "Integrated UAV-Borne GPR and LiDAR for Investigating Slope Deformation Processes: The Melizzano Case Study", "authors": "NA Famiglietti, B Massa, G Memmolo, G Testa et al.", "year": 2026, "venue": "Drones", "url": "https://www.mdpi.com/2504-446X/10/5/331", "read_level": "abstract"},
+        {"title": "Unmanned aerial geophysical remote sensing: A systematic review", "authors": "F Dadrass Javan, F Samadzadegan, A Toosi et al.", "year": 2024, "venue": "Remote Sensing", "citations": 60, "url": "https://www.mdpi.com/2072-4292/17/1/110", "read_level": "abstract"}
+      ]
+    },
+    {
+      "id": "Q2",
+      "question": "gprMax+网格收敛链+numerically_unresolved 口径是否过度保守",
+      "csv": "q2_gprmax_grid_convergence.csv",
+      "conclusion": "不过度；FDTD 数值色散欠分辨警告是文献标准口径，项目做法更严格、方向正确",
+      "key_refs": [
+        {"title": "Open-source FDTD solvers: The applicability of Elecode, gprMax and MEEP for simulations of lightning EM fields", "authors": "H Kohlmann, D Kuklin, F Rachidi, W Schulz", "year": 2025, "venue": "arXiv", "url": "https://arxiv.org/abs/2510.04262", "read_level": "abstract"},
+        {"title": "A review of practical numerical modelling methods for the advanced interpretation of GPR in near-surface environments", "authors": "NJ Cassidy", "year": 2007, "venue": "Near Surface Geophysics", "url": "https://www.earthdoc.org/content/journals/10.3997/1873-0604.2006014", "read_level": "abstract"},
+        {"title": "On finite-difference time-domain sub-gridding algorithms for efficient modelling of GPR", "authors": "JM Hartley", "year": 2020, "venue": "PhD thesis, Edinburgh", "url": "https://era.ed.ac.uk/server/api/core/bitstreams/29cce4e0-a4d1-4920-bcf8-a544ae348688/content", "read_level": "abstract"}
+      ]
+    },
+    {
+      "id": "Q3",
+      "question": "背景/相干杂波抑制是否为文献主流处理入口、v1 范围有无重大遗漏",
+      "csv": "q3_clutter_suppression.csv",
+      "conclusion": "是主流入口；均值/SVD 子空间类为综述基线层，学习类为另一主流支；v1 无重大遗漏类别",
+      "key_refs": [
+        {"title": "A review of clutter suppression techniques in ground penetrating radar: Mechanisms, methods, and challenges", "authors": "W Lei, Y Wang, J Zhong, Q Xu et al.", "year": 2025, "venue": "Journal of Electronics & Information Technology", "url": "https://www.sciengine.com/doi/10.11999/JEIT250524", "read_level": "abstract"},
+        {"title": "A comprehensive review of data processing and target recognition methods for GPR underground pipeline B-scan data", "authors": "C Liu, J Li, Z Liu, S Tao, M Li", "year": 2025, "venue": "Discover Applied Sciences", "url": "https://link.springer.com/article/10.1007/s42452-025-06791-y", "read_level": "abstract"},
+        {"title": "Clutter suppression in GPR B-scan images using robust autoencoder", "authors": "ZK Ni, S Ye, C Shi, C Li, G Fang", "year": 2020, "venue": "IEEE GRSL", "citations": 53, "url": "https://ieeexplore.ieee.org/abstract/document/9211492/", "read_level": "abstract"},
+        {"title": "Learning from clutter: an unsupervised learning-based clutter removal scheme for GPR B-scans", "authors": "Q Dai, YH Lee, HH Sun, J Qian et al.", "year": 2024, "venue": "IEEE JSTARS", "url": "https://ieeexplore.ieee.org/abstract/document/10735359/", "read_level": "abstract"}
+      ]
+    },
+    {
+      "id": "Q4",
+      "question": "'能量比只是诊断量不是可探测性'的评价口径是否与文献冲突",
+      "csv": "q4_detectability_metrics.csv",
+      "conclusion": "不冲突；文献可探测性用 SNR/检测量+实测配对校验，项目口径更保守、正确；G4 阻塞保留为正确决策",
+      "key_refs": [
+        {"title": "Robust adaptive detection of buried pipes using GPR", "authors": "Q Hoarau, G Ginolhac, AM Atto, JM Nicolas", "year": 2017, "venue": "Signal Processing", "citations": 76, "url": "https://www.sciencedirect.com/science/article/pii/S0165168416301529", "read_level": "abstract"},
+        {"title": "A realistic FDTD numerical modeling framework of GPR for landmine detection", "authors": "I Giannakis, A Giannopoulos et al.", "year": 2015, "venue": "IEEE JSTSP", "citations": 278, "url": "https://ieeexplore.ieee.org/abstract/document/7229259/", "read_level": "abstract"},
+        {"title": "Detectability of junctions of underground electrical cables with a GPR: EM simulation and experimental measurements", "authors": "X Liu, M Serhir, M Lambert", "year": 2018, "venue": "Construction and Building Materials", "url": "https://www.sciencedirect.com/science/article/pii/S0950061817320767", "read_level": "abstract"}
+      ]
+    },
+    {
+      "id": "Q5",
+      "question": "增益与衰减补偿在 SFCW 体制下是否有直接先例",
+      "csv": "q5_gain_compensation.csv",
+      "conclusion": "范围正确；存在步进频 SFCW 直接先例（Liu 2018; Noon 1996），登记入 G4 校准参照池（不解除 G4）",
+      "key_refs": [
+        {"title": "Method for compensating signal attenuation using stepped-frequency ground penetrating radar", "authors": "T Liu, Y Zhu, Y Su", "year": 2018, "venue": "Sensors", "url": "https://www.mdpi.com/1424-8220/18/5/1366", "read_level": "abstract"},
+        {"title": "Stepped-frequency radar design and signal processing enhances GPR performance", "authors": "DA Noon", "year": 1996, "venue": "PhD thesis, UQ", "citations": 132, "url": "https://espace.library.uq.edu.au/view/UQ:415747", "read_level": "abstract"},
+        {"title": "An overview of GPR signal processing techniques for road inspections", "authors": "A Benedetto, F Tosti, LB Ciampoli, F D'Amico", "year": 2017, "venue": "Signal Processing", "citations": 450, "url": "https://www.sciencedirect.com/science/article/pii/S0165168416300792", "read_level": "abstract"},
+        {"title": "Efficient deconvolution of ground-penetrating radar data", "authors": "C Schmelzbach, E Huber", "year": 2015, "venue": "IEEE TGRS", "citations": 53, "url": "https://ieeexplore.ieee.org/abstract/document/7097040/", "read_level": "abstract"}
+      ]
+    }
+  ],
+  "registered_for_later": [
+    {"ref": "Liu 2018 Sensors 步进频衰减补偿", "for": "G4 阈值校准/增益链参照池"},
+    {"ref": "Noon 1996 步进频处理增益", "for": "G4 阈值校准/增益链参照池"},
+    {"ref": "Wang 2026 IEEE JSTARS UAV-GPR 滑坡偏移成像", "for": "路线图讨论（成像阶段先例，当前不启动）"}
+  ],
+  "gates_untouched": ["G1", "G2", "G4"],
+  "limitations": "abstract/snippet 级快速核查，未读正文；检索覆盖有期刊偏向；未含非英语文献与专利/标准；不构成物理或可探测性结论"
+}
