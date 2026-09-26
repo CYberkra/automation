@@ -1,0 +1,2486 @@
+{
+ "batch_id": "batch2d_v1",
+ "event_table": "configs\\research\\batch2d_v1_event_table_v0.1.json",
+ "event_table_sha256": "b0ad100334132cb6e6a706af4f5d8fbbff7cced26b6e07613c50be77a607f56c",
+ "family_level_notes": {
+  "c8_resolution_attention": "FINE2 C8 anchor difference in-band energy ratio 9.37e-11: the family sits in the numerical-resolution attention zone; no detectability statement is made for C8 windows",
+  "fine2_family_direction": "all four families are direction-consistent across tiers (fine2 analysis 8/8); nothing is downgraded to pending-recheck"
+ },
+ "grid_tier_of_event_table": "BASE",
+ "hard_limits": {
+  "absolute_accuracy_claimed": false,
+  "clean_truth_generated": false,
+  "conclusions_scope": "reference-uncertainty magnitudes for the frozen batch2d_v1 event windows plus deep-scenario archived evidence; mechanism and calibration input only; not field performance, not absolute accuracy, no threshold values",
+  "cross_family_differencing": false,
+  "cross_tier_differencing": false,
+  "grid_convergence_certified": false,
+  "negative_controls_merged_into_targets": false,
+  "physical_acceptance_threshold": null,
+  "physical_label_eligible": false,
+  "reference_state": "numerically_unresolved",
+  "richardson_extrapolation_performed": false,
+  "solver_invoked": false,
+  "training_eligible": false,
+  "training_labels_generated": false
+ },
+ "judgment_rule_preregistered": {
+  "en": "an inter-operator metric difference at or below the reference uncertainty of its event window is recorded undetermined and must not enter ranking",
+  "operationalization": "same-metric comparison only: an operator difference expressed in a given metric is compared against the reference-uncertainty magnitude of that same metric class for the same family/window",
+  "same_ruler_as": "S4/B.4 stable-difference judgment (evaluation protocol v0.2 §7)",
+  "zh": "算子间指标差异 ≤ 对应窗参考不确定性 ⇒ 该差异记 undetermined，不得进入排序"
+ },
+ "n_event_windows": 43,
+ "per_event_window": [
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.0228315342276035,
+     "time_peak_abs_ratio_FINE2_over_BASE": 1.6657024470013109
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -17.237774766292546,
+     "provenance": {
+      "coarse": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C1m-COV",
+   "family": "c1",
+   "group_id": "B2D-C1m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C1m-BG",
+   "role": "cover_interface",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0004510695351409577,
+     "difference_spectrum_shape_correlation_main_200ns": 0.999548930464859,
+     "per_frequency_sign_agreement_imag": 0.93812375249501,
+     "per_frequency_sign_agreement_real": 0.93812375249501,
+     "provenance": {
+      "coarse": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 206.75435617529777,
+   "t_lo_ns": 46.75435617529777
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.039002729692549,
+     "time_peak_abs_ratio_FINE2_over_BASE": 1.903289349007366
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -15.67053018661818,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C3m-COV",
+   "family": "c3",
+   "group_id": "B2D-C3m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C3m-BG",
+   "role": "cover_interface",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0005821818266287249,
+     "difference_spectrum_shape_correlation_main_200ns": 0.9994178181733713,
+     "per_frequency_sign_agreement_imag": 0.9221556886227545,
+     "per_frequency_sign_agreement_real": 0.9221556886227545,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 260.12461140700213,
+   "t_lo_ns": 100.1246114070021
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.0558752689384794,
+     "time_peak_abs_ratio_FINE2_over_BASE": 1.918323952556588
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -17.110569886299572,
+     "provenance": {
+      "coarse": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C5m-COV",
+   "family": "c5",
+   "group_id": "B2D-C5m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C5m-BG",
+   "role": "cover_interface",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0009727627961656493,
+     "difference_spectrum_shape_correlation_main_200ns": 0.9990272372038344,
+     "per_frequency_sign_agreement_imag": 0.9261477045908184,
+     "per_frequency_sign_agreement_real": 0.8982035928143712,
+     "provenance": {
+      "coarse": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 313.4948666387064,
+   "t_lo_ns": 153.49486663870644
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.0803007766438417,
+     "time_peak_abs_ratio_FINE2_over_BASE": 2.1139523083257004
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -19.11901197816502,
+     "provenance": {
+      "coarse": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C8m-COV",
+   "family": "c8",
+   "group_id": "B2D-C8m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C8m-BG",
+   "role": "cover_interface",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0018745544369718203,
+     "difference_spectrum_shape_correlation_main_200ns": 0.9981254455630282,
+     "per_frequency_sign_agreement_imag": 0.8862275449101796,
+     "per_frequency_sign_agreement_real": 0.8802395209580839,
+     "provenance": {
+      "coarse": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 393.55024948626294,
+   "t_lo_ns": 233.55024948626294
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.0228315342276035,
+     "time_peak_abs_ratio_FINE2_over_BASE": 1.6657024470013109
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -17.237774766292546,
+     "provenance": {
+      "coarse": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C1m-D10m-W4m-T0.5m-E20-S0.02",
+   "family": "c1",
+   "group_id": "B2D-C1m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+   "role": "target",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0004510695351409577,
+     "difference_spectrum_shape_correlation_main_200ns": 0.999548930464859,
+     "per_frequency_sign_agreement_imag": 0.93812375249501,
+     "per_frequency_sign_agreement_real": 0.93812375249501,
+     "provenance": {
+      "coarse": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 386.87896758229994,
+   "t_lo_ns": 226.87896758229994
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.0228315342276035,
+     "time_peak_abs_ratio_FINE2_over_BASE": 1.6657024470013109
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -17.237774766292546,
+     "provenance": {
+      "coarse": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C1m-D2m-W4m-T0.5m-E20-S0.02",
+   "family": "c1",
+   "group_id": "B2D-C1m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C1m-D2m-W4m-T0.5m-E20-S0.02",
+   "role": "target",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0004510695351409577,
+     "difference_spectrum_shape_correlation_main_200ns": 0.999548930464859,
+     "per_frequency_sign_agreement_imag": 0.93812375249501,
+     "per_frequency_sign_agreement_real": 0.93812375249501,
+     "provenance": {
+      "coarse": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 226.7682018871869,
+   "t_lo_ns": 66.7682018871869
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.0228315342276035,
+     "time_peak_abs_ratio_FINE2_over_BASE": 1.6657024470013109
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -17.237774766292546,
+     "provenance": {
+      "coarse": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C1m-D5m-W4m-T0.5m-E20-S0.02",
+   "family": "c1",
+   "group_id": "B2D-C1m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C1m-D5m-W4m-T0.5m-E20-S0.02",
+   "role": "target",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0004510695351409577,
+     "difference_spectrum_shape_correlation_main_200ns": 0.999548930464859,
+     "per_frequency_sign_agreement_imag": 0.93812375249501,
+     "per_frequency_sign_agreement_real": 0.93812375249501,
+     "provenance": {
+      "coarse": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 286.8097390228543,
+   "t_lo_ns": 126.80973902285427
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.039002729692549,
+     "time_peak_abs_ratio_FINE2_over_BASE": 1.903289349007366
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -15.67053018661818,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C3m-D10m-W1m-T0.5m-E20-S0.02",
+   "family": "c3",
+   "group_id": "B2D-C3m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C3m-D10m-W1m-T0.5m-E20-S0.02",
+   "role": "target",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0005821818266287249,
+     "difference_spectrum_shape_correlation_main_200ns": 0.9994178181733713,
+     "per_frequency_sign_agreement_imag": 0.9221556886227545,
+     "per_frequency_sign_agreement_real": 0.9221556886227545,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 400.22153139022595,
+   "t_lo_ns": 240.22153139022595
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.039002729692549,
+     "time_peak_abs_ratio_FINE2_over_BASE": 1.903289349007366
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -15.67053018661818,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C3m-D10m-W2m-T0.5m-E20-S0.02",
+   "family": "c3",
+   "group_id": "B2D-C3m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C3m-D10m-W2m-T0.5m-E20-S0.02",
+   "role": "target",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0005821818266287249,
+     "difference_spectrum_shape_correlation_main_200ns": 0.9994178181733713,
+     "per_frequency_sign_agreement_imag": 0.9221556886227545,
+     "per_frequency_sign_agreement_real": 0.9221556886227545,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 400.22153139022595,
+   "t_lo_ns": 240.22153139022595
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.039002729692549,
+     "time_peak_abs_ratio_FINE2_over_BASE": 1.903289349007366
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -15.67053018661818,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C3m-D10m-W4m-T0.25m-E20-S0.02",
+   "family": "c3",
+   "group_id": "B2D-C3m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C3m-D10m-W4m-T0.25m-E20-S0.02",
+   "role": "target",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0005821818266287249,
+     "difference_spectrum_shape_correlation_main_200ns": 0.9994178181733713,
+     "per_frequency_sign_agreement_imag": 0.9221556886227545,
+     "per_frequency_sign_agreement_real": 0.9221556886227545,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 400.22153139022595,
+   "t_lo_ns": 240.22153139022595
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.039002729692549,
+     "time_peak_abs_ratio_FINE2_over_BASE": 1.903289349007366
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -15.67053018661818,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C3m-D10m-W4m-T0.5m-E12-S0.005",
+   "family": "c3",
+   "group_id": "B2D-C3m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C3m-D10m-W4m-T0.5m-E12-S0.005",
+   "role": "target",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0005821818266287249,
+     "difference_spectrum_shape_correlation_main_200ns": 0.9994178181733713,
+     "per_frequency_sign_agreement_imag": 0.9221556886227545,
+     "per_frequency_sign_agreement_real": 0.9221556886227545,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 400.22153139022595,
+   "t_lo_ns": 240.22153139022595
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.039002729692549,
+     "time_peak_abs_ratio_FINE2_over_BASE": 1.903289349007366
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -15.67053018661818,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C3m-D10m-W4m-T0.5m-E20-S0.005",
+   "family": "c3",
+   "group_id": "B2D-C3m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.005",
+   "role": "target",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0005821818266287249,
+     "difference_spectrum_shape_correlation_main_200ns": 0.9994178181733713,
+     "per_frequency_sign_agreement_imag": 0.9221556886227545,
+     "per_frequency_sign_agreement_real": 0.9221556886227545,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 400.22153139022595,
+   "t_lo_ns": 240.22153139022595
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.039002729692549,
+     "time_peak_abs_ratio_FINE2_over_BASE": 1.903289349007366
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -15.67053018661818,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C3m-D10m-W4m-T0.5m-E20-S0.02",
+   "family": "c3",
+   "group_id": "B2D-C3m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+   "role": "target",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0005821818266287249,
+     "difference_spectrum_shape_correlation_main_200ns": 0.9994178181733713,
+     "per_frequency_sign_agreement_imag": 0.9221556886227545,
+     "per_frequency_sign_agreement_real": 0.9221556886227545,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 400.22153139022595,
+   "t_lo_ns": 240.22153139022595
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.039002729692549,
+     "time_peak_abs_ratio_FINE2_over_BASE": 1.903289349007366
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -15.67053018661818,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C3m-D10m-W4m-T0.5m-E20-S0.05",
+   "family": "c3",
+   "group_id": "B2D-C3m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.05",
+   "role": "target",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0005821818266287249,
+     "difference_spectrum_shape_correlation_main_200ns": 0.9994178181733713,
+     "per_frequency_sign_agreement_imag": 0.9221556886227545,
+     "per_frequency_sign_agreement_real": 0.9221556886227545,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 400.22153139022595,
+   "t_lo_ns": 240.22153139022595
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.039002729692549,
+     "time_peak_abs_ratio_FINE2_over_BASE": 1.903289349007366
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -15.67053018661818,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C3m-D10m-W4m-T0.5m-E28-S0.05",
+   "family": "c3",
+   "group_id": "B2D-C3m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C3m-D10m-W4m-T0.5m-E28-S0.05",
+   "role": "target",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0005821818266287249,
+     "difference_spectrum_shape_correlation_main_200ns": 0.9994178181733713,
+     "per_frequency_sign_agreement_imag": 0.9221556886227545,
+     "per_frequency_sign_agreement_real": 0.9221556886227545,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 400.22153139022595,
+   "t_lo_ns": 240.22153139022595
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.039002729692549,
+     "time_peak_abs_ratio_FINE2_over_BASE": 1.903289349007366
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -15.67053018661818,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C3m-D10m-W4m-T1m-E20-S0.02",
+   "family": "c3",
+   "group_id": "B2D-C3m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C3m-D10m-W4m-T1m-E20-S0.02",
+   "role": "target",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0005821818266287249,
+     "difference_spectrum_shape_correlation_main_200ns": 0.9994178181733713,
+     "per_frequency_sign_agreement_imag": 0.9221556886227545,
+     "per_frequency_sign_agreement_real": 0.9221556886227545,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 400.22153139022595,
+   "t_lo_ns": 240.22153139022595
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.039002729692549,
+     "time_peak_abs_ratio_FINE2_over_BASE": 1.903289349007366
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -15.67053018661818,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C3m-D20m-W4m-T0.5m-E20-S0.02",
+   "family": "c3",
+   "group_id": "B2D-C3m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C3m-D20m-W4m-T0.5m-E20-S0.02",
+   "role": "target",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0005821818266287249,
+     "difference_spectrum_shape_correlation_main_200ns": 0.9994178181733713,
+     "per_frequency_sign_agreement_imag": 0.9221556886227545,
+     "per_frequency_sign_agreement_real": 0.9221556886227545,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 600.3599885091172,
+   "t_lo_ns": 440.3599885091172
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.039002729692549,
+     "time_peak_abs_ratio_FINE2_over_BASE": 1.903289349007366
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -15.67053018661818,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C3m-D5m-W4m-T0.5m-E20-S0.02",
+   "family": "c3",
+   "group_id": "B2D-C3m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C3m-D5m-W4m-T0.5m-E20-S0.02",
+   "role": "target",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0005821818266287249,
+     "difference_spectrum_shape_correlation_main_200ns": 0.9994178181733713,
+     "per_frequency_sign_agreement_imag": 0.9221556886227545,
+     "per_frequency_sign_agreement_real": 0.9221556886227545,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 300.15230283078034,
+   "t_lo_ns": 140.15230283078034
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.0558752689384794,
+     "time_peak_abs_ratio_FINE2_over_BASE": 1.918323952556588
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -17.110569886299572,
+     "provenance": {
+      "coarse": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C5m-D10m-W4m-T0.5m-E20-S0.02",
+   "family": "c5",
+   "group_id": "B2D-C5m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02",
+   "role": "target",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0009727627961656493,
+     "difference_spectrum_shape_correlation_main_200ns": 0.9990272372038344,
+     "per_frequency_sign_agreement_imag": 0.9261477045908184,
+     "per_frequency_sign_agreement_real": 0.8982035928143712,
+     "provenance": {
+      "coarse": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 413.564095198152,
+   "t_lo_ns": 253.56409519815202
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.0558752689384794,
+     "time_peak_abs_ratio_FINE2_over_BASE": 1.918323952556588
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -17.110569886299572,
+     "provenance": {
+      "coarse": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C5m-D20m-W4m-T0.5m-E20-S0.02",
+   "family": "c5",
+   "group_id": "B2D-C5m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C5m-D20m-W4m-T0.5m-E20-S0.02",
+   "role": "target",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0009727627961656493,
+     "difference_spectrum_shape_correlation_main_200ns": 0.9990272372038344,
+     "per_frequency_sign_agreement_imag": 0.9261477045908184,
+     "per_frequency_sign_agreement_real": 0.8982035928143712,
+     "provenance": {
+      "coarse": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 613.7025523170432,
+   "t_lo_ns": 453.7025523170432
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.0803007766438417,
+     "time_peak_abs_ratio_FINE2_over_BASE": 2.1139523083257004
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -19.11901197816502,
+     "provenance": {
+      "coarse": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C8m-D10m-W4m-T0.5m-E20-S0.02",
+   "family": "c8",
+   "group_id": "B2D-C8m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+   "role": "target",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0018745544369718203,
+     "difference_spectrum_shape_correlation_main_200ns": 0.9981254455630282,
+     "per_frequency_sign_agreement_imag": 0.8862275449101796,
+     "per_frequency_sign_agreement_real": 0.8802395209580839,
+     "provenance": {
+      "coarse": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 433.57794091004115,
+   "t_lo_ns": 273.57794091004115
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.0803007766438417,
+     "time_peak_abs_ratio_FINE2_over_BASE": 2.1139523083257004
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -19.11901197816502,
+     "provenance": {
+      "coarse": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C8m-D10m-W4m-T0.5m-E28-S0.05",
+   "family": "c8",
+   "group_id": "B2D-C8m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C8m-D10m-W4m-T0.5m-E28-S0.05",
+   "role": "target",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0018745544369718203,
+     "difference_spectrum_shape_correlation_main_200ns": 0.9981254455630282,
+     "per_frequency_sign_agreement_imag": 0.8862275449101796,
+     "per_frequency_sign_agreement_real": 0.8802395209580839,
+     "provenance": {
+      "coarse": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 433.57794091004115,
+   "t_lo_ns": 273.57794091004115
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.0803007766438417,
+     "time_peak_abs_ratio_FINE2_over_BASE": 2.1139523083257004
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -19.11901197816502,
+     "provenance": {
+      "coarse": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C8m-D20m-W4m-T0.25m-E20-S0.02",
+   "family": "c8",
+   "group_id": "B2D-C8m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C8m-D20m-W4m-T0.25m-E20-S0.02",
+   "role": "target",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0018745544369718203,
+     "difference_spectrum_shape_correlation_main_200ns": 0.9981254455630282,
+     "per_frequency_sign_agreement_imag": 0.8862275449101796,
+     "per_frequency_sign_agreement_real": 0.8802395209580839,
+     "provenance": {
+      "coarse": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 633.7163980289324,
+   "t_lo_ns": 473.7163980289324
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.0803007766438417,
+     "time_peak_abs_ratio_FINE2_over_BASE": 2.1139523083257004
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -19.11901197816502,
+     "provenance": {
+      "coarse": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C8m-D20m-W4m-T0.5m-E20-S0.02",
+   "family": "c8",
+   "group_id": "B2D-C8m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C8m-D20m-W4m-T0.5m-E20-S0.02",
+   "role": "target",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0018745544369718203,
+     "difference_spectrum_shape_correlation_main_200ns": 0.9981254455630282,
+     "per_frequency_sign_agreement_imag": 0.8862275449101796,
+     "per_frequency_sign_agreement_real": 0.8802395209580839,
+     "provenance": {
+      "coarse": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 633.7163980289324,
+   "t_lo_ns": 473.7163980289324
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.0228315342276035,
+     "time_peak_abs_ratio_FINE2_over_BASE": 1.6657024470013109
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -17.237774766292546,
+     "provenance": {
+      "coarse": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C1m-D10m-NC-W1",
+   "family": "c1",
+   "group_id": "B2D-C1m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C1m-D10m-NC",
+   "role": "nc_zero",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0004510695351409577,
+     "difference_spectrum_shape_correlation_main_200ns": 0.999548930464859,
+     "per_frequency_sign_agreement_imag": 0.93812375249501,
+     "per_frequency_sign_agreement_real": 0.93812375249501,
+     "provenance": {
+      "coarse": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 386.87896758229994,
+   "t_lo_ns": 226.87896758229994
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.0228315342276035,
+     "time_peak_abs_ratio_FINE2_over_BASE": 1.6657024470013109
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -17.237774766292546,
+     "provenance": {
+      "coarse": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C1m-D10m-NC-W2",
+   "family": "c1",
+   "group_id": "B2D-C1m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C1m-D10m-NC",
+   "role": "nc_zero",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0004510695351409577,
+     "difference_spectrum_shape_correlation_main_200ns": 0.999548930464859,
+     "per_frequency_sign_agreement_imag": 0.93812375249501,
+     "per_frequency_sign_agreement_real": 0.93812375249501,
+     "provenance": {
+      "coarse": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 1200.0,
+   "t_lo_ns": 0.0
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.039002729692549,
+     "time_peak_abs_ratio_FINE2_over_BASE": 1.903289349007366
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -15.67053018661818,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C3m-D10m-NC-W1",
+   "family": "c3",
+   "group_id": "B2D-C3m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C3m-D10m-NC",
+   "role": "nc_zero",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0005821818266287249,
+     "difference_spectrum_shape_correlation_main_200ns": 0.9994178181733713,
+     "per_frequency_sign_agreement_imag": 0.9221556886227545,
+     "per_frequency_sign_agreement_real": 0.9221556886227545,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 400.22153139022595,
+   "t_lo_ns": 240.22153139022595
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.039002729692549,
+     "time_peak_abs_ratio_FINE2_over_BASE": 1.903289349007366
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -15.67053018661818,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C3m-D10m-NC-W2",
+   "family": "c3",
+   "group_id": "B2D-C3m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C3m-D10m-NC",
+   "role": "nc_zero",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0005821818266287249,
+     "difference_spectrum_shape_correlation_main_200ns": 0.9994178181733713,
+     "per_frequency_sign_agreement_imag": 0.9221556886227545,
+     "per_frequency_sign_agreement_real": 0.9221556886227545,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 1200.0,
+   "t_lo_ns": 0.0
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.0558752689384794,
+     "time_peak_abs_ratio_FINE2_over_BASE": 1.918323952556588
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -17.110569886299572,
+     "provenance": {
+      "coarse": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C5m-D10m-NC-W1",
+   "family": "c5",
+   "group_id": "B2D-C5m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C5m-D10m-NC",
+   "role": "nc_zero",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0009727627961656493,
+     "difference_spectrum_shape_correlation_main_200ns": 0.9990272372038344,
+     "per_frequency_sign_agreement_imag": 0.9261477045908184,
+     "per_frequency_sign_agreement_real": 0.8982035928143712,
+     "provenance": {
+      "coarse": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 413.564095198152,
+   "t_lo_ns": 253.56409519815202
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.0558752689384794,
+     "time_peak_abs_ratio_FINE2_over_BASE": 1.918323952556588
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -17.110569886299572,
+     "provenance": {
+      "coarse": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C5m-D10m-NC-W2",
+   "family": "c5",
+   "group_id": "B2D-C5m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C5m-D10m-NC",
+   "role": "nc_zero",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0009727627961656493,
+     "difference_spectrum_shape_correlation_main_200ns": 0.9990272372038344,
+     "per_frequency_sign_agreement_imag": 0.9261477045908184,
+     "per_frequency_sign_agreement_real": 0.8982035928143712,
+     "provenance": {
+      "coarse": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 1200.0,
+   "t_lo_ns": 0.0
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.0803007766438417,
+     "time_peak_abs_ratio_FINE2_over_BASE": 2.1139523083257004
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -19.11901197816502,
+     "provenance": {
+      "coarse": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C8m-D10m-NC-W1",
+   "family": "c8",
+   "group_id": "B2D-C8m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C8m-D10m-NC",
+   "role": "nc_zero",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0018745544369718203,
+     "difference_spectrum_shape_correlation_main_200ns": 0.9981254455630282,
+     "per_frequency_sign_agreement_imag": 0.8862275449101796,
+     "per_frequency_sign_agreement_real": 0.8802395209580839,
+     "provenance": {
+      "coarse": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 433.57794091004115,
+   "t_lo_ns": 273.57794091004115
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.0803007766438417,
+     "time_peak_abs_ratio_FINE2_over_BASE": 2.1139523083257004
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -19.11901197816502,
+     "provenance": {
+      "coarse": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C8m-D10m-NC-W2",
+   "family": "c8",
+   "group_id": "B2D-C8m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C8m-D10m-NC",
+   "role": "nc_zero",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0018745544369718203,
+     "difference_spectrum_shape_correlation_main_200ns": 0.9981254455630282,
+     "per_frequency_sign_agreement_imag": 0.8862275449101796,
+     "per_frequency_sign_agreement_real": 0.8802395209580839,
+     "provenance": {
+      "coarse": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 1200.0,
+   "t_lo_ns": 0.0
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.039002729692549,
+     "time_peak_abs_ratio_FINE2_over_BASE": 1.903289349007366
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -15.67053018661818,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C3m-D10m-OFF-W1",
+   "family": "c3",
+   "group_id": "B2D-C3m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C3m-D10m-OFF",
+   "role": "off_path",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0005821818266287249,
+     "difference_spectrum_shape_correlation_main_200ns": 0.9994178181733713,
+     "per_frequency_sign_agreement_imag": 0.9221556886227545,
+     "per_frequency_sign_agreement_real": 0.9221556886227545,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 400.22153139022595,
+   "t_lo_ns": 240.22153139022595
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.0228315342276035,
+     "time_peak_abs_ratio_FINE2_over_BASE": 1.6657024470013109
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -17.237774766292546,
+     "provenance": {
+      "coarse": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C1m-BG-NEG-D2m",
+   "family": "c1",
+   "group_id": "B2D-C1m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C1m-BG",
+   "role": "bg_absent",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0004510695351409577,
+     "difference_spectrum_shape_correlation_main_200ns": 0.999548930464859,
+     "per_frequency_sign_agreement_imag": 0.93812375249501,
+     "per_frequency_sign_agreement_real": 0.93812375249501,
+     "provenance": {
+      "coarse": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 226.7682018871869,
+   "t_lo_ns": 66.7682018871869
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.0228315342276035,
+     "time_peak_abs_ratio_FINE2_over_BASE": 1.6657024470013109
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -17.237774766292546,
+     "provenance": {
+      "coarse": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C1m-BG-NEG-D5m",
+   "family": "c1",
+   "group_id": "B2D-C1m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C1m-BG",
+   "role": "bg_absent",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0004510695351409577,
+     "difference_spectrum_shape_correlation_main_200ns": 0.999548930464859,
+     "per_frequency_sign_agreement_imag": 0.93812375249501,
+     "per_frequency_sign_agreement_real": 0.93812375249501,
+     "provenance": {
+      "coarse": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 286.8097390228543,
+   "t_lo_ns": 126.80973902285427
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.0228315342276035,
+     "time_peak_abs_ratio_FINE2_over_BASE": 1.6657024470013109
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -17.237774766292546,
+     "provenance": {
+      "coarse": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C1m-BG-NEG-D10m",
+   "family": "c1",
+   "group_id": "B2D-C1m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C1m-BG",
+   "role": "bg_absent",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0004510695351409577,
+     "difference_spectrum_shape_correlation_main_200ns": 0.999548930464859,
+     "per_frequency_sign_agreement_imag": 0.93812375249501,
+     "per_frequency_sign_agreement_real": 0.93812375249501,
+     "provenance": {
+      "coarse": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 386.87896758229994,
+   "t_lo_ns": 226.87896758229994
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.039002729692549,
+     "time_peak_abs_ratio_FINE2_over_BASE": 1.903289349007366
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -15.67053018661818,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C3m-BG-NEG-D5m",
+   "family": "c3",
+   "group_id": "B2D-C3m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C3m-BG",
+   "role": "bg_absent",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0005821818266287249,
+     "difference_spectrum_shape_correlation_main_200ns": 0.9994178181733713,
+     "per_frequency_sign_agreement_imag": 0.9221556886227545,
+     "per_frequency_sign_agreement_real": 0.9221556886227545,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 300.15230283078034,
+   "t_lo_ns": 140.15230283078034
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.039002729692549,
+     "time_peak_abs_ratio_FINE2_over_BASE": 1.903289349007366
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -15.67053018661818,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C3m-BG-NEG-D10m",
+   "family": "c3",
+   "group_id": "B2D-C3m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C3m-BG",
+   "role": "bg_absent",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0005821818266287249,
+     "difference_spectrum_shape_correlation_main_200ns": 0.9994178181733713,
+     "per_frequency_sign_agreement_imag": 0.9221556886227545,
+     "per_frequency_sign_agreement_real": 0.9221556886227545,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 400.22153139022595,
+   "t_lo_ns": 240.22153139022595
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.039002729692549,
+     "time_peak_abs_ratio_FINE2_over_BASE": 1.903289349007366
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -15.67053018661818,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C3m-BG-NEG-D20m",
+   "family": "c3",
+   "group_id": "B2D-C3m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C3m-BG",
+   "role": "bg_absent",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0005821818266287249,
+     "difference_spectrum_shape_correlation_main_200ns": 0.9994178181733713,
+     "per_frequency_sign_agreement_imag": 0.9221556886227545,
+     "per_frequency_sign_agreement_real": 0.9221556886227545,
+     "provenance": {
+      "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 600.3599885091172,
+   "t_lo_ns": 440.3599885091172
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.0558752689384794,
+     "time_peak_abs_ratio_FINE2_over_BASE": 1.918323952556588
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -17.110569886299572,
+     "provenance": {
+      "coarse": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C5m-BG-NEG-D10m",
+   "family": "c5",
+   "group_id": "B2D-C5m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C5m-BG",
+   "role": "bg_absent",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0009727627961656493,
+     "difference_spectrum_shape_correlation_main_200ns": 0.9990272372038344,
+     "per_frequency_sign_agreement_imag": 0.9261477045908184,
+     "per_frequency_sign_agreement_real": 0.8982035928143712,
+     "provenance": {
+      "coarse": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 413.564095198152,
+   "t_lo_ns": 253.56409519815202
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.0558752689384794,
+     "time_peak_abs_ratio_FINE2_over_BASE": 1.918323952556588
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -17.110569886299572,
+     "provenance": {
+      "coarse": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C5m-BG-NEG-D20m",
+   "family": "c5",
+   "group_id": "B2D-C5m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C5m-BG",
+   "role": "bg_absent",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0009727627961656493,
+     "difference_spectrum_shape_correlation_main_200ns": 0.9990272372038344,
+     "per_frequency_sign_agreement_imag": 0.9261477045908184,
+     "per_frequency_sign_agreement_real": 0.8982035928143712,
+     "provenance": {
+      "coarse": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 613.7025523170432,
+   "t_lo_ns": 453.7025523170432
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.0803007766438417,
+     "time_peak_abs_ratio_FINE2_over_BASE": 2.1139523083257004
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -19.11901197816502,
+     "provenance": {
+      "coarse": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C8m-BG-NEG-D10m",
+   "family": "c8",
+   "group_id": "B2D-C8m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C8m-BG",
+   "role": "bg_absent",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0018745544369718203,
+     "difference_spectrum_shape_correlation_main_200ns": 0.9981254455630282,
+     "per_frequency_sign_agreement_imag": 0.8862275449101796,
+     "per_frequency_sign_agreement_real": 0.8802395209580839,
+     "provenance": {
+      "coarse": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 433.57794091004115,
+   "t_lo_ns": 273.57794091004115
+  },
+  {
+   "amplitude_class": {
+    "direct_evidence": {
+     "provenance": {
+      "coarse": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     },
+     "ratio_note": "cross-tier ratio is a direction indicator only; it mixes grid dispersion, source discretisation and taper sample count, so it is not an accuracy or grid-error measure",
+     "spectral_L2_ratio_FINE2_over_BASE": 1.0803007766438417,
+     "time_peak_abs_ratio_FINE2_over_BASE": 2.1139523083257004
+    },
+    "g1_g6_limited": true,
+    "g1_g6_note": "amplitude-class assertions are G1/G6-limited: quantitative amplitude claims require a real antenna model (Warren 2016, gprMax antenna modelling guidance); all amplitude magnitudes here are simulation-domain diagnostic quantities, not field amplitudes",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_amplitude_error_dB (adjacent-grid 0.035-0.142 dB; vs original grid up to 0.77 dB; deep scenario) and scenario_level.cross_dimension_E7 (normalized magnitude trend differences up to ~17.4 dB at low frequency; cross-dimension, confounded)"
+   },
+   "arrival_time_class": {
+    "direct_evidence": {
+     "comparison_axis_note": "each tier read on its own native time axis; the two dt differ, so the comparison is of peak index time, not of a common grid",
+     "direction": "FINE2 envelope peak earlier",
+     "grid_tier_shift_ns": -19.11901197816502,
+     "provenance": {
+      "coarse": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "systematic inter-tier envelope-peak shift of the family anchor pair; differences between operators below this magnitude for the same family are recorded undetermined",
+    "scenario_reference": "scenario_level.grid_chain_E6.chain_max_abs_phase_deg (phase-derived; formal time offset only) and scenario_level.cross_dimension_E7 (tens of ns; deep scenario)"
+   },
+   "event_id": "EV-C8m-BG-NEG-D20m",
+   "family": "c8",
+   "group_id": "B2D-C8m",
+   "half_width_ns": 80.0,
+   "mother_model_id": "B2D-C8m-BG",
+   "role": "bg_absent",
+   "shape_class": {
+    "direct_evidence": {
+     "deviation_from_unity": 0.0018745544369718203,
+     "difference_spectrum_shape_correlation_main_200ns": 0.9981254455630282,
+     "per_frequency_sign_agreement_imag": 0.8862275449101796,
+     "per_frequency_sign_agreement_real": 0.8802395209580839,
+     "provenance": {
+      "coarse": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+      "fine2": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2"
+     }
+    },
+    "magnitude_characterization": "BASE<->FINE2 difference-spectrum shape correlation 0.99813-0.99955 and per-frequency sign agreement 88.0%-93.8% across the four families",
+    "scenario_reference": "scenario_level.cross_dimension_E7.pairs (normalized_spectrum_shape_correlation 0.935-0.958 same-spacing 2D/3D; deep scenario)"
+   },
+   "t_hi_ns": 633.7163980289324,
+   "t_lo_ns": 473.7163980289324
+  }
+ ],
+ "per_family_direct_evidence": {
+  "c1": {
+   "anchor_pair": {
+    "coarse": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02",
+    "fine2": "B2D-C1m-D10m-W4m-T0.5m-E20-S0.02-F2"
+   },
+   "difference_spectrum_shape_correlation_deviation_from_unity": 0.0004510695351409577,
+   "difference_spectrum_shape_correlation_main_200ns": 0.999548930464859,
+   "envelope_peak_shift_ns": {
+    "coarse_base_ns": 320.0104271385134,
+    "direction": "FINE2 envelope peak earlier",
+    "fine2_minus_base_ns": -17.237774766292546,
+    "fine2_ns": 302.7726523722209
+   },
+   "grid_tiers_compared": [
+    "BASE",
+    "FINE2"
+   ],
+   "interpretation": "direction/agreement evidence only; not cross-tier averaging, not tier merging, not a convergence or absolute-accuracy conclusion",
+   "per_frequency_sign_agreement_imag": 0.93812375249501,
+   "per_frequency_sign_agreement_real": 0.93812375249501,
+   "spectral_L2_ratio_FINE2_over_BASE": 1.0228315342276035,
+   "spectral_peak_frequency_MHz": {
+    "coarse_base": 170.0,
+    "fine2": 166.1
+   },
+   "threshold": "none declared: the numbers are reported as directions/agreement rates only; no pass threshold exists in this analysis or in the frozen contract (spec §6-P2)",
+   "time_peak_abs_ratio_FINE2_over_BASE": 1.6657024470013109
+  },
+  "c3": {
+   "anchor_pair": {
+    "coarse": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+    "fine2": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+   },
+   "difference_spectrum_shape_correlation_deviation_from_unity": 0.0005821818266287249,
+   "difference_spectrum_shape_correlation_main_200ns": 0.9994178181733713,
+   "envelope_peak_shift_ns": {
+    "coarse_base_ns": 331.8626651806806,
+    "direction": "FINE2 envelope peak earlier",
+    "fine2_minus_base_ns": -15.67053018661818,
+    "fine2_ns": 316.1921349940624
+   },
+   "grid_tiers_compared": [
+    "BASE",
+    "FINE2"
+   ],
+   "interpretation": "direction/agreement evidence only; not cross-tier averaging, not tier merging, not a convergence or absolute-accuracy conclusion",
+   "per_frequency_sign_agreement_imag": 0.9221556886227545,
+   "per_frequency_sign_agreement_real": 0.9221556886227545,
+   "spectral_L2_ratio_FINE2_over_BASE": 1.039002729692549,
+   "spectral_peak_frequency_MHz": {
+    "coarse_base": 169.7,
+    "fine2": 170.0
+   },
+   "threshold": "none declared: the numbers are reported as directions/agreement rates only; no pass threshold exists in this analysis or in the frozen contract (spec §6-P2)",
+   "time_peak_abs_ratio_FINE2_over_BASE": 1.903289349007366
+  },
+  "c5": {
+   "anchor_pair": {
+    "coarse": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02",
+    "fine2": "B2D-C5m-D10m-W4m-T0.5m-E20-S0.02-F2"
+   },
+   "difference_spectrum_shape_correlation_deviation_from_unity": 0.0009727627961656493,
+   "difference_spectrum_shape_correlation_main_200ns": 0.9990272372038344,
+   "envelope_peak_shift_ns": {
+    "coarse_base_ns": 346.7221875022036,
+    "direction": "FINE2 envelope peak earlier",
+    "fine2_minus_base_ns": -17.110569886299572,
+    "fine2_ns": 329.61161761590404
+   },
+   "grid_tiers_compared": [
+    "BASE",
+    "FINE2"
+   ],
+   "interpretation": "direction/agreement evidence only; not cross-tier averaging, not tier merging, not a convergence or absolute-accuracy conclusion",
+   "per_frequency_sign_agreement_imag": 0.9261477045908184,
+   "per_frequency_sign_agreement_real": 0.8982035928143712,
+   "spectral_L2_ratio_FINE2_over_BASE": 1.0558752689384794,
+   "spectral_peak_frequency_MHz": {
+    "coarse_base": 168.2,
+    "fine2": 168.8
+   },
+   "threshold": "none declared: the numbers are reported as directions/agreement rates only; no pass threshold exists in this analysis or in the frozen contract (spec §6-P2)",
+   "time_peak_abs_ratio_FINE2_over_BASE": 1.918323952556588
+  },
+  "c8": {
+   "anchor_pair": {
+    "coarse": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02",
+    "fine2": "B2D-C8m-D10m-W4m-T0.5m-E20-S0.02-F2"
+   },
+   "difference_spectrum_shape_correlation_deviation_from_unity": 0.0018745544369718203,
+   "difference_spectrum_shape_correlation_main_200ns": 0.9981254455630282,
+   "envelope_peak_shift_ns": {
+    "coarse_base_ns": 368.8345719092319,
+    "direction": "FINE2 envelope peak earlier",
+    "fine2_minus_base_ns": -19.11901197816502,
+    "fine2_ns": 349.7155599310669
+   },
+   "grid_tiers_compared": [
+    "BASE",
+    "FINE2"
+   ],
+   "interpretation": "direction/agreement evidence only; not cross-tier averaging, not tier merging, not a convergence or absolute-accuracy conclusion",
+   "per_frequency_sign_agreement_imag": 0.8862275449101796,
+   "per_frequency_sign_agreement_real": 0.8802395209580839,
+   "spectral_L2_ratio_FINE2_over_BASE": 1.0803007766438417,
+   "spectral_peak_frequency_MHz": {
+    "coarse_base": 169.4,
+    "fine2": 170.0
+   },
+   "threshold": "none declared: the numbers are reported as directions/agreement rates only; no pass threshold exists in this analysis or in the frozen contract (spec §6-P2)",
+   "time_peak_abs_ratio_FINE2_over_BASE": 2.1139523083257004
+  }
+ },
+ "physical_acceptance_threshold": null,
+ "plan": "docs/research/2026-09-26_g4_calibration_plan_v0.1.md",
+ "plan_section": "G4 step 1 (§2 reference calibration report v0.1)",
+ "provenance": {
+  "artifacts\\research_checks\\2026-09-25_deep_zfine2_analysis_r1\\results.json": "6b8bd6d81073bf150bebaa13e6d088d50670c22d218e1ef880eed786eb5caf6d",
+  "artifacts\\research_checks\\2026-09-25_error_budget\\restoration_results.json": "21803f34ce7e28721bc72d0122198468656f7c5e27d50d8edd3ca47c18e0930e",
+  "artifacts\\research_checks\\2026-09-25_error_budget\\three_grid_attestation.json": "29bc011e1866d083354dd6c8c651d21bb2916dd0322c51e2bac2fcbdc1aacd6b",
+  "artifacts\\research_checks\\2026-09-26_batch2d_fine2_analysis_r1\\results.json": "dd2ba3328a6f24b1a353b93109a751e6d425fdb38db42cb3754ce17b5d0b23a9",
+  "artifacts\\research_checks\\2026-09-26_dep3d_gold_analysis_r1\\results.json": "dccfcf8278e6eed84e1a61b41d4f45827647ba620e009c4c2118056d0e552fd3"
+ },
+ "reference_state": "numerically_unresolved",
+ "reference_state_unchanged_by_this_budget": true,
+ "scenario_level_uncertainty": {
+  "applicability_note": "E6/E7 are deep-scenario (DEP/dep3d) family evidence; for batch2d_v1 c1-c8 windows they are cross-scenario reference magnitudes, not measurements on the window itself. The per-window direct evidence is the fine2 BASE<->FINE2 tier difference of the same family.",
+  "constructed_array_identifiability": {
+   "applicability": "synthetic constructed-array processing certificates only; the budget certifies numerical identifiability of array algebra, not physical accuracy; it does not bound FDTD trace uncertainty",
+   "attestation_note_carried_verbatim": "FDTD templates remain numerically unresolved; no budget is declared and no cosine is restored. This attestation modifies no archive.",
+   "attestation_reason": "fdtd_numerically_unresolved",
+   "attestation_source": "artifacts\\research_checks\\2026-09-25_error_budget\\three_grid_attestation.json",
+   "budget_max": 1.1683018084039848e-11,
+   "evidence_level": "constructed_array_certificates_only",
+   "limitations_carried_verbatim": [
+    "budgets certify numerical identifiability only, not physical accuracy",
+    "window budgets carry conservative full-array earlier-step terms",
+    "constructed arrays only; no FDTD or field-data statement"
+   ],
+   "restoration_source": "artifacts\\research_checks\\2026-09-25_error_budget\\restoration_results.json",
+   "statistics": {
+    "budget_max": 1.1683018084039848e-11,
+    "budget_min": 0.0,
+    "cosine_evaluations": 91,
+    "cosines_restored": 51,
+    "cosines_still_missing": 40,
+    "rows": 42
+   }
+  },
+  "cross_dimension_E7": {
+   "confounds_carried_verbatim": "even with aligned grid spacing, each cross-dimension pair mixes (i) the measured dimension effect (2D x-infinite target/line source/cylindrical spreading vs 3D 2 m finite target/point source/spherical spreading), (ii) lateral domain width (2D 32 m vs 3D 10 m) and (iii) target y position (2D y 14-18 vs 3D y 3-7; same relative position, different absolute distance to the lateral PML). These are not clean dimension factors; the two pair differences must not be subtracted from each other as if additive (design §9.3).",
+   "convergence_3d_dz_refinement": {
+    "comparison": "DEP3D_ANISO (dz 2.5 cm) vs DEP3D_5CM (dz 5 cm), TGT-BG differences, 200 ns tail",
+    "envelope_peak_time_difference_ns": 160.75691500304208,
+    "normalized_spectrum_shape_correlation": 0.995126992934695,
+    "threshold_commitment": "none: differences and their direction are reported; no pre-declared convergence criterion (design §9.2)",
+    "waveform_max_normalized_correlation": 0.17990970910829587
+   },
+   "family_scope": "dep3d_gold_v1 scenario family (deep scenario, 2D vs 3D same grid spacing)",
+   "hard_limits_carried": {
+    "clean_truth_generated": false,
+    "conclusions_scope": "limited to the dep3d_gold_v1 scenario family and the grids analysed; not extrapolated to field data",
+    "cross_dimension_absolute_amplitude_compared": false,
+    "far_field_transform_is_conclusion_basis": false,
+    "grid_convergence_certified": false,
+    "phase_not_transferable_across_dimensions": true,
+    "phase_reported_only_as": "linear fit of the phase difference vs frequency; the equivalent time offset is a formal quantity, not a physical delay",
+    "physical_acceptance_threshold": null,
+    "solver_invoked": false,
+    "training_labels_generated": false
+   },
+   "pairs": {
+    "B2D5CM_vs_DEP3D_5CM": {
+     "envelope_peak_time_difference_ns": -71.01629070231797,
+     "far_field_exploratory_shape_correlation": 0.9671315289751267,
+     "normalized_mag_trend_difference_dB": {
+      "110": 2.9019171010171556,
+      "140": 2.5411148898624223,
+      "170": -0.19458523193736033,
+      "20": 17.19929440487151,
+      "50": 9.298125996564654,
+      "80": 7.34687018419481
+     },
+     "normalized_spectrum_shape_correlation": 0.934561246590572,
+     "phase_difference_residual_std_deg": 5.508564411954464,
+     "spectral_peak_frequency_difference_MHz": -5.699999999999989,
+     "waveform_max_normalized_correlation": 0.7379444002386709,
+     "waveform_optimal_lag_ns": 0.9434617346998738
+    },
+    "B2DANISO_vs_DEP3D_ANISO": {
+     "envelope_peak_time_difference_ns": -53.72181530597214,
+     "far_field_exploratory_shape_correlation": 0.978605997180031,
+     "normalized_mag_trend_difference_dB": {
+      "110": 3.1451723883305354,
+      "140": 2.444062380476499,
+      "170": -0.003769277580339763,
+      "20": 17.433445276402196,
+      "50": 9.526002380572038,
+      "80": 7.570783445970225
+     },
+     "normalized_spectrum_shape_correlation": 0.9581691148207545,
+     "phase_difference_residual_std_deg": 5.45240813391066,
+     "spectral_peak_frequency_difference_MHz": -0.30000000000001137,
+     "waveform_max_normalized_correlation": 0.7322646455402236,
+     "waveform_optimal_lag_ns": 0.37293599585813964
+    }
+   },
+   "source": "artifacts\\research_checks\\2026-09-26_dep3d_gold_analysis_r1\\results.json",
+   "vs_dep2d_zfine2_chain": {
+    "grid_alignment": "none (dy 12.5 mm / dz 3.125 mm vs 5 cm-class grids); spectra directly comparable on the 501-point grid",
+    "pairs": {
+     "B2D5CM": {
+      "normalized_spectrum_shape_correlation": 0.9822996875544819,
+      "relative_L2_difference": 1.13788727757095
+     },
+     "B2DANISO": {
+      "normalized_spectrum_shape_correlation": 0.9992921358166639,
+      "relative_L2_difference": 0.792663673342066
+     }
+    },
+    "reference": "ZFINE2_200 (DEP 2D chain TGT-BG, 200 ns tail) from artifacts\\research_checks\\2026-09-25_deep_zfine2_analysis_r1\\arrays.npz"
+   }
+  },
+  "grid_chain_E6": {
+   "chain_full_band_relative_L2": {
+    "FINE_to_ZFINE": 0.17245211820065065,
+    "ZFINE_to_ZFINE2": 0.041215837532699855,
+    "original_2p5cm_to_FINE": 0.6666471444222444
+   },
+   "chain_max_abs_amplitude_error_dB": {
+    "FINE_to_ZFINE": 0.14246570863732877,
+    "ZFINE_to_ZFINE2": 0.034660294952566895,
+    "original_2p5cm_to_FINE": 0.5939765708188575
+   },
+   "chain_max_abs_phase_deg": {
+    "FINE_to_ZFINE": 16.274073146221347,
+    "ZFINE_to_ZFINE2": 3.884672895490334,
+    "original_2p5cm_to_FINE": 64.84310390310839
+   },
+   "family_scope": "deep DEP scenario family (DEP_BG/DEP_20 chain, 2D)",
+   "grid_convergence_certified": false,
+   "interpretation_carried_verbatim": "Differences relative to original grid/domain, not absolute errors versus exact target solution.",
+   "richardson_extrapolation_performed": false,
+   "source": "artifacts\\research_checks\\2026-09-25_deep_zfine2_analysis_r1\\results.json",
+   "tail_window_relative_L2_by_tier": {
+    "FINE": 0.00026164352567651126,
+    "WIDE": 0.00027253734694276455,
+    "ZFINE": 0.00025865834610798986,
+    "ZFINE2": 0.00025797565180303816
+   },
+   "vertical_second_order_ratios": {
+    "phase_FINE_to_ZFINE_over_ZFINE_to_ZFINE2": 4.18930334266077,
+    "relative_L2_FINE_to_ZFINE_over_ZFINE_to_ZFINE2": 4.184122621888502
+   }
+  }
+ },
+ "schema": "reference-uncertainty-budget/1"
+}

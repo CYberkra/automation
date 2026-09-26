@@ -1383,6 +1383,63 @@
     "gain arrays not persisted (scalar diagnostics only, documented in runner_limits)",
     "reference_state stays numerically_unresolved; training_eligible=false; BASE tier; G1/G5 open"
    ]
+  },
+  {
+   "id": "reference_uncertainty_budget_v0_1",
+   "status": "complete_43_windows_3_metric_classes_r1r2_byte_identical",
+   "directory": "artifacts/research_checks/2026-09-26_reference_uncertainty_budget_r1",
+   "directory_note": "r2 isomorphic; results.json byte-identical across r1/r2 (sha256 38cf98bab723358dc8d75486ef6824057d42c32a9030b56f7101400fc87a8cc1). Pure JSON aggregation from four archived analyses; no arrays, no timestamps, deterministic rebuild.",
+   "tracked": true,
+   "solver_executed": false,
+   "training_executed": false,
+   "report": "docs/research/2026-09-26_reference_calibration_report_v0.1.md",
+   "runner_script": "scripts/build_reference_uncertainty_budget.py",
+   "acceptance_script": "scripts/check_reference_uncertainty_budget_acceptance.py",
+   "plan": "docs/research/2026-09-26_g4_calibration_plan_v0.1.md",
+   "key_numbers": {
+    "n_event_windows": 43,
+    "metric_classes_per_window": [
+     "arrival_time",
+     "shape",
+     "amplitude"
+    ],
+    "event_table_gate": "b0ad100334132cb6e6a706af4f5d8fbbff7cced26b6e07613c50be77a607f56c",
+    "fine2_family_envelope_peak_shift_ns": {
+     "c1": -17.237774766292546,
+     "c3": -15.67053018661818,
+     "c5": -17.110569886299572,
+     "c8": -19.11901197816502
+    },
+    "fine2_family_shape_correlation_range": [
+     0.9981254455630282,
+     0.999548930464859
+    ],
+    "e6_chain_full_band_L2": [
+     0.6666471444222444,
+     0.17245211820065065,
+     0.041215837532699855
+    ],
+    "e6_chain_max_phase_deg": [
+     64.84310390310839,
+     16.274073146221347,
+     3.884672895490334
+    ],
+    "e7_cross_dimension_shape_correlation": [
+     0.934561246590572,
+     0.9581691148207545
+    ],
+    "constructed_array_budget_max": 1.1683018084039848e-11,
+    "judgment_rule": "operator metric difference <= window reference uncertainty => undetermined, no ranking (same ruler as S4/B.4)",
+    "reference_state_unchanged": "numerically_unresolved"
+   },
+   "limitations": [
+    "magnitudes are adjacent-difference/direction quantities, not errors vs an exact solution; no Richardson extrapolation, grid convergence not certified",
+    "E6/E7 are deep-scenario (DEP/dep3d) evidence: cross-scenario reference for the batch2d_v1 windows, not per-window measurements",
+    "amplitude class is G1/G6-limited (Warren 2016 real-antenna requirement); all amplitudes are simulation-domain diagnostics",
+    "constructed-array budget certifies numerical identifiability of array algebra only; it does not bound FDTD trace uncertainty",
+    "produces no threshold values; G4 not relieved; no ranking, no labels, no training",
+    "reference_state stays numerically_unresolved; physical_acceptance_threshold=null; BASE tier"
+   ]
   }
  ],
  "default_array_verification": {
