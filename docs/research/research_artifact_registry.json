@@ -944,7 +944,7 @@
   },
   {
    "id": "batch2d_v1_event_table_proposal_v0_1",
-   "status": "proposal_pending_user_agreement",
+   "status": "frozen_user_approved_2026-09-26",
    "directory": null,
    "tracked": true,
    "solver_executed": false,
@@ -1060,6 +1060,26 @@
     "results_total": 50,
     "read_level": "abstract_snippet_only",
     "verdict": "no_drift_detected"
+   }
+  },
+  {
+   "id": "batch2d_v1_event_table_v0_1",
+   "status": "frozen",
+   "directory": null,
+   "tracked": true,
+   "solver_executed": false,
+   "training_executed": false,
+   "report": "configs/research/batch2d_v1_event_table_v0.1.json",
+   "key_numbers": {
+    "entries": 43,
+    "overlap_pairs": 9,
+    "sha256": "b0ad100334132cb6e6a706af4f5d8fbbff7cced26b6e07613c50be77a607f56c",
+    "gate_untouched": [
+     "G1",
+     "G2",
+     "G4",
+     "G5"
+    ]
    }
   }
  ],

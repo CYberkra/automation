@@ -4,7 +4,7 @@
 
 ## 当前状态（优先于下方历史记录）
 
-**2026-09-26（最新，本机 `E:/automation_djh/automation_repo`）：粗档与细档批量均已完成，P10 三维校核子集决策已落盘、契约待冻结并经用户敲定。**
+**2026-09-26（最新，本机 `E:/automation_djh/automation_repo`）：粗档与细档批量均已完成；事件表 v0.1 已冻结（G3 解除）；P10 三维校核子集决策已落盘、契约待冻结并经用户敲定；多道批次提案待用户敲定。**
 
 |单元|状态|报告/证据|
 |---|---|---|
@@ -15,7 +15,7 @@
 |P10 三维校核子集|决策落盘，**本批零 3D**，未执行|[决策](docs/research/2026-09-26_3d_validation_subset_decision.md)|
 |算子评价仿真证据材料 v0.1|完成（纯整理文档）|[证据材料](docs/research/2026-09-26_operator_evaluation_sim_evidence_v0.1.md)；registry 条目 `operator_evaluation_sim_evidence_v0_1`|
 |A0 三维校核契约提案|已验收，**待用户敲定**（未执行）|[提案](docs/research/2026-09-26_a0_3d_validation_contract_proposal.md)；registry 条目 `a0_3d_validation_contract_proposal_v0_1`|
-|事件表提案 v0.1（G3 前置）|已验收，**待用户敲定**（未冻结）|[提案](docs/research/2026-09-26_event_table_proposal.md)；registry 条目 `batch2d_v1_event_table_proposal_v0_1`|
+|事件表提案 v0.1（G3 前置）|**已敲定并冻结**（2026-09-26，G3 解除）|[提案](docs/research/2026-09-26_event_table_proposal.md)；冻结产物 `configs/research/batch2d_v1_event_table_v0.1.json`（43 条，SHA-256 `b0ad1003…`）；registry 条目 `batch2d_v1_event_table_v0_1`；时间轴约定 `ti_i_mul_dt_rxoffset0` 已核验；G1/G2/G4/G5 维持|
 |评价运行器与选择器设计 v0.1|完成（纯设计文档）|[设计](docs/research/2026-09-26_eval_runner_and_selector_design_v0.1.md)；registry 条目 `eval_runner_and_selector_design_v0_1`；关键结论：单道输入下 27/27 候选全部被门禁挡下，G2 多道为总阻塞点|
 |多道场景族批次设计提案 v0.1（解除 G2）|已验收，**待用户敲定**（未执行）|[提案](docs/research/2026-09-26_multitrace_batch_proposal.md)；registry 条目 `multitrace_batch_proposal_v0_1`；22 例 33 道、预算 ≤65 min|
 |采集几何文献核查|完成（快速核查，决策参考）|[笔记](docs/research/2026-09-26_multitrace_acquisition_literature.md)、[台账](docs/research/2026-09-26_multitrace_acquisition_literature_ledger.json)；registry 条目 `multitrace_acquisition_literature_scan`|
@@ -34,7 +34,7 @@
 
 **ZFINE2 垂向细化配对已完成。** `DEP_BG_ZFINE2`/`DEP_20_ZFINE2` 各 1 次 attempt、exit 0（墙钟 1438.6 s / 1334.8 s，Job 峰值 15.28 GB，网格 1×2560×16000 = 40,960,000 单元）。2D 网格收敛链全带相对 L2 变化 **66.6647% → 17.2452% → 4.1216%**，最大相位变化 64.8431° → 16.2741° → 3.8847°；最近两步仅细化垂向，比值约 4.18 / 4.19，是垂向二阶行为的直接指示。未做 Richardson 外推，相邻差不等于相对精确解误差；分析 r1/r2 字节一致。`reference_state` 保持 `numerically_unresolved`，`physical_label_eligible=false`、`training_eligible=false`，物理阈值仍为 null。[结果](docs/research/2026-09-25_deep_zfine2_results.md)
 
-**下一步（按序，取代本页所有旧下一步）：** 已完成项（2026-09-26）：① fine2 验收（8/8 exit 0，墙钟/Job/attempt 记录核对，无重试、无 CPU 回退）[已完成]；② 原始输出归档（8 个 run 目录含 h5、输入、stdout/stderr、`supervision.json`，哈希登记于 `results.json` 的 `inputs`）[已完成]；③ `scripts/analyze_batch2d_fine2.py` 分析 r1/r2（`results.json` 字节一致）[已完成]；④ 跨档方向一致性结论（四族方向一致，无机制按规格书 §6-P2 降级）[已完成]；⑤ batch2d_v1 细档结果报告落盘 [已完成]。当前待办：① 将粗档/细档分层机制结论并入算子契约评价的输入材料 [已完成，见上表证据材料 v0.1]；② 按 P10 依赖链起草 3D 校核契约 [已完成提案并验收，**待用户敲定**]；③ 事件表提案 v0.1 [已完成提案并验收，**待用户敲定**]；④ 评价运行器与配置选择器原型设计 [已完成，见上表设计 v0.1；关键发现：单道输入下 27/27 候选全部被 `min(shape)>=2` 门禁挡下，G2 多道场景族为一切下游的总阻塞点]；⑤ G2 多道场景族批次设计 [已完成提案并验收，**待用户敲定**]。**当前全部待办均等待用户决定**：② A0 3D 校核、③ 事件表冻结、⑤ 多道批次三项提案均已备妥，用户敲定任一项后即可按各自冻结流程推进（首选 C3 族锚点 A0 配对 `B2D-C3m-D10m-W4m-T0.5m-E20-S0.02`，5 cm 各向同性档、2 次运行；契约另行冻结并**须用户敲定后方可执行**；P-A（C8 锚点）/P-B（C5 锚点）现已可依 fine2 复核结果评估，P-C（电性/电导档）仍依赖 A0 3D 结果）。
+**下一步（按序，取代本页所有旧下一步）：** 已完成项（2026-09-26）：① fine2 验收（8/8 exit 0，墙钟/Job/attempt 记录核对，无重试、无 CPU 回退）[已完成]；② 原始输出归档（8 个 run 目录含 h5、输入、stdout/stderr、`supervision.json`，哈希登记于 `results.json` 的 `inputs`）[已完成]；③ `scripts/analyze_batch2d_fine2.py` 分析 r1/r2（`results.json` 字节一致）[已完成]；④ 跨档方向一致性结论（四族方向一致，无机制按规格书 §6-P2 降级）[已完成]；⑤ batch2d_v1 细档结果报告落盘 [已完成]；⑥ 事件表 v0.1 冻结（用户 2026-09-26 敲定，G3 解除，`configs/research/batch2d_v1_event_table_v0.1.json`，43 条，SHA-256 `b0ad1003…`；时间轴约定 `ti_i_mul_dt_rxoffset0` 经归档 h5 + 官方工具箱核验）[已完成]。当前待办：① 将粗档/细档分层机制结论并入算子契约评价的输入材料 [已完成，见上表证据材料 v0.1]；② 按 P10 依赖链起草 3D 校核契约 [已完成提案并验收，**待用户敲定**]；③ 事件表提案 v0.1 [**已冻结**，见上表与 decision_log 置顶条目]；④ 评价运行器与配置选择器原型设计 [已完成，见上表设计 v0.1；关键发现：单道输入下 27/27 候选全部被 `min(shape)>=2` 门禁挡下，G2 多道场景族为一切下游的总阻塞点]；⑤ G2 多道场景族批次设计 [已完成提案并验收，**待用户敲定**]。**当前待办均等待用户决定**：A0 3D 校核与⑤ 多道批次两项提案均已备妥，用户敲定后即可按各自冻结流程推进（首选 C3 族锚点 A0 配对 `B2D-C3m-D10m-W4m-T0.5m-E20-S0.02`，5 cm 各向同性档、2 次运行；契约另行冻结并**须用户敲定后方可执行**；P-A（C8 锚点）/P-B（C5 锚点）现已可依 fine2 复核结果评估，P-C（电性/电导档）仍依赖 A0 3D 结果）。事件表冻结后，27 项候选的正式评价仍待评价运行器在已冻结事件表上执行（G2 解除前维持 `undetermined`）。
 
 **旧下一步作废声明：** 本页 2026-09-25 及更早段落中的“下一步”（含“继续准备垂向细化资源方案”、“下一步建立算子误差预算并继续准备垂向细化资源方案”、“预算 dy12.5mm、dz3.125mm 配对”等）已由上一步列表取代，不再作为待办——垂向细化已由 ZFINE2 完成、算子误差预算已由 2026-09-25 单元完成。历史结果本身保留，不改写。
 
