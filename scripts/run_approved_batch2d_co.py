@@ -29,6 +29,8 @@ def sha(path):
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--execute', action='store_true')
+    p.add_argument('--chunks', default=None,
+                   help='comma-separated chunk_ids to run (default: all chunks in frozen order)')
     a = p.parse_args()
     gate = json.loads((ROOT / 'configs/research/gprmax_v4_execution_gate.json').read_text(encoding='utf-8'))
     contracts = gate.get('approved_execution_contracts')
@@ -77,6 +79,11 @@ def main():
     contract_by_id = {c['run_id']: c for c in contracts}
     ordered_ids = [rid for ch in chunks for rid in ch['run_ids']]
     assert ordered_ids == gate['approved_run_ids'], 'chunks.json order must match approved_run_ids'
+    if a.chunks:
+        wanted = [s.strip() for s in a.chunks.split(',') if s.strip()]
+        known = {ch['chunk_id'] for ch in chunks}
+        assert all(w in known for w in wanted), f'unknown chunk id: {wanted}'
+        chunks = [ch for ch in chunks if ch['chunk_id'] in wanted]
 
     report = []
     for ch in chunks:
