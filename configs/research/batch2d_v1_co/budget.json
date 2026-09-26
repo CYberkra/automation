@@ -1,0 +1,59 @@
+{
+ "schema": "batch2d_v1_co_budget/1",
+ "date": "2026-09-26",
+ "formulas": "spec §3.1 (same as batch2d_v1_mt); execution via in-process multi-model chunks (speedup probe 2026-09-26: ~21 s/case in-process vs 45-58 s/case per-process; one-time ~30-35 s process cost per chunk)",
+ "grid": {
+  "dy_m": 0.025,
+  "dz_m": 0.025,
+  "cells": 2560000,
+  "dt_s": 5.896635841874211e-11,
+  "dt_formula_s": 5.896635841874211e-11,
+  "time_steps": 20352,
+  "time_window_ns": 1200
+ },
+ "single_case": {
+  "main_fields_ID_GiB": 0.3437627702951431,
+  "wall_scaled_from_YFINE_s": 17.010368677119963,
+  "measured_inprocess_probe_s": [
+   20.55,
+   21.27
+  ],
+  "planning_envelope_min": 2.5
+ },
+ "chunking": {
+  "chunk_size": 6,
+  "n_chunks": 4,
+  "chunk_case_counts": [
+   6,
+   6,
+   6,
+   4
+  ],
+  "chunk_wall_cap_s": [
+   1200,
+   1200,
+   1200,
+   900
+  ],
+  "measured_expectation_s": 161
+ },
+ "batch_totals": {
+  "n_cases": 22,
+  "planning_envelope_s": 3300,
+  "measured_estimate_s": 602,
+  "conservative_budget_min": 30
+ },
+ "hard_stops": {
+  "wall_minutes_per_chunk": 20,
+  "job_commit_GiB": 4,
+  "output_GiB": 2,
+  "retries": 0,
+  "max_fdtd_runs": 22
+ },
+ "known_limitations": [
+  "working scaling is not a guaranteed runtime",
+  "main-field array excludes PML, update coefficients, CUDA context and host temporaries",
+  "Job committed memory is not GPU VRAM",
+  "estimates are for ranking and cap-setting only, not ETA"
+ ]
+}
