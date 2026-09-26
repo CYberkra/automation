@@ -1264,6 +1264,51 @@
     "no physical/training labels; training_eligible=false; grid convergence not certified; no cross-family/cross-tier metrics; negative controls not merged into target rows",
     "input h5 archives and frozen event table read-only; runner never invokes a solver (fdtd_solver_invoked=false)"
    ]
+  },
+  {
+   "id": "s4_baseline_group_v0_1",
+   "status": "complete_spaces_frozen_L_R_ran_selection_undetermined_G4_O_unavailable",
+   "directory": "artifacts/research_checks/2026-09-26_s4_baseline_r1",
+   "directory_note": "Baseline runner r1/r2; records byte-identical after stripping per-record resource fields (stripped sha256 f6b9fafb63408da063e191d05008f3a95c51663fbcc8b9305cc066dc58751d6e); manifest identical except run_tag/total_wall_s. Arrays (2088 pre_gain/gain-curve .npy, ~1.4 GB) in git-ignored artifacts/simulations/2026-09-26_s4_baseline_arrays/ with sha256 in records.",
+   "tracked": true,
+   "solver_executed": false,
+   "training_executed": false,
+   "report": "docs/research/2026-09-26_s4_baseline_group_v0.1.md",
+   "proposal": "docs/research/2026-09-26_s4_baseline_group_proposal.md",
+   "frozen_contract": "configs/research/s4_baseline_group_v0.1.json",
+   "runner_script": "scripts/run_baseline_s4.py",
+   "freeze_script": "scripts/freeze_s4_baseline_group.py",
+   "key_numbers": {
+    "s4_contract_sha256": "8676f37d6aee603b7f2481779ffe361d2878735316863da0bed0db82e16b5593",
+    "event_rows": 105,
+    "L_records": 1665,
+    "L_ran": 1566,
+    "L_unavailable": 99,
+    "R_records": 225,
+    "R_ran": 180,
+    "gain_records": 1044,
+    "clipped_or_overflow": 0,
+    "R_selection": "svd_k1 on all 60 evaluable windows under all three threshold candidates (0.05/0.1/0.2); d1 median MT 0.755 / CO 0.723; thresholds do not differentiate on current windows",
+    "selection_status": "F config / R tau / L params all undetermined (G4); O unavailable_no_computable_reference_no_approximation",
+    "dev_groups": [
+     "B2D-C1m",
+     "B2D-C3m"
+    ],
+    "test_groups": [
+     "B2D-C5m",
+     "B2D-C8m"
+    ],
+    "feasibility": "partial_only"
+   },
+   "limitations": [
+    "G4 unresolved: no quality-based selection permitted; spaces/protocol/group-split frozen only",
+    "D/A/H/rho not computible; R_c never computed; N_b is absolute residual diagnostic, not detectability/SNR/threshold",
+    "L grid is development starting grid, not calibrated; R thresholds uncalibrated candidates; q=1 ablation only for R",
+    "O not computed and not approximated (no clean truth)",
+    "MT and CO layered separately, never merged or cross-paired; per-record gather_semantics.version carried",
+    "4 families do not support generalization claims; dev/test split inert until G4",
+    "no physical/training labels; training_eligible=false; BASE tier; G1/G5 open; runner never invokes a solver"
+   ]
   }
  ],
  "default_array_verification": {

@@ -1,0 +1,154 @@
+{
+  "run_tag": "r1",
+  "runner": "scripts/run_baseline_s4.py",
+  "s4_contract": "configs\\research\\s4_baseline_group_v0.1.json",
+  "s4_contract_sha256": "8676f37d6aee603b7f2481779ffe361d2878735316863da0bed0db82e16b5593",
+  "event_table": "configs\\research\\batch2d_v1_event_table_v0.1.json",
+  "event_table_sha256": "b0ad100334132cb6e6a706af4f5d8fbbff7cced26b6e07613c50be77a607f56c",
+  "time_axis_convention_version": "ti_i_mul_dt_rxoffset0",
+  "grid_tier": "BASE",
+  "selection_status": {
+    "F_config": "undetermined_G4",
+    "L_lambda_width_gain": "undetermined_G4",
+    "O": "unavailable_no_computable_reference_no_approximation",
+    "R_threshold_tau": "undetermined_G4",
+    "note": "G4 thresholds all null + reference_state numerically_unresolved: no quality-based selection is permitted; this freeze locks spaces, protocol and group split only"
+  },
+  "L_grid": {
+    "lambdas": [
+      0.25,
+      0.5,
+      1.0
+    ],
+    "widths": [
+      5,
+      11,
+      21
+    ],
+    "gains": [
+      1,
+      2,
+      4
+    ],
+    "legality_rule": "width <= n_traces else unavailable (no auto-shortening)",
+    "order": "local_mean_then_fixed_shared_gain (no GB variant)"
+  },
+  "R_rule": {
+    "gaps": "d_k=(sigma_k-sigma_{k+1})/sigma_1, k in {1,2,3}",
+    "threshold_candidates": [
+      0.05,
+      0.1,
+      0.2
+    ],
+    "threshold_status": "uncalibrated; mechanism diagnostics only; q=1 ablation",
+    "numerical_rejection": "ties below numerical rank floor -> identity"
+  },
+  "F_view": {
+    "computation": "none",
+    "reason": "F single-config selection undetermined (G4); dev-group projection only",
+    "eval_records": {
+      "mt": "artifacts/research_checks/2026-09-26_eval_batch2d_mt_r1",
+      "co": "artifacts/research_checks/2026-09-26_eval_batch2d_co_r1"
+    },
+    "dev_groups": [
+      "B2D-C1m",
+      "B2D-C3m"
+    ],
+    "test_groups": [
+      "B2D-C5m",
+      "B2D-C8m"
+    ],
+    "protocol": {
+      "candidate_set": "27-entry operator catalogue (scripts/research_operator_contract.py)",
+      "execution": "only_after_G4_resolution; dev group only; single confirmatory test-group evaluation",
+      "gates_order": [
+        "protective_constraints",
+        "protected_event_fidelity",
+        "frozen_utility_partial_order"
+      ],
+      "protected_events": [
+        "E12-S0.005",
+        "D20m",
+        "T0.25m",
+        "W1m",
+        "W2m"
+      ]
+    }
+  },
+  "O_status": "unavailable_no_computable_reference_no_approximation",
+  "event_rows": 105,
+  "n_L_records": 1665,
+  "n_R_records": 225,
+  "availability": {
+    "L": {
+      "ran": 1566,
+      "unavailable": 99
+    },
+    "R": {
+      "ran": 180,
+      "unavailable": 45
+    }
+  },
+  "failure_reason_histogram": {
+    "no_case_in_geometry": 45,
+    "width_exceeds_n_traces_no_auto_shortening": 54
+  },
+  "geometry_layering": "MT and CO records layered separately; never merged or cross-paired; per-record gather_semantics.version carried",
+  "gates": {
+    "s4_contract_frozen": true,
+    "event_table_frozen": true,
+    "contract_input_hashes_verified": true,
+    "mt_analysis_pass": true,
+    "co_analysis_pass": true,
+    "pre_gain_persisted": true,
+    "negative_controls_separate": true
+  },
+  "runner_limits": {
+    "r_c_computed": false,
+    "isolated_event_granted": false,
+    "cross_family_metrics": false,
+    "gain_reference_absent": true,
+    "waveform_metrics_computed": false,
+    "waveform_metrics_reason": "reference_state numerically_unresolved + paired_contrast (design A.4)",
+    "d_a_h_rho": "not_computable",
+    "thresholds_all_null": true
+  },
+  "feasibility": {
+    "status": {
+      "L": "partial_only",
+      "R": "partial_only"
+    },
+    "note": "all limits null (G4 unresolved): every gate undetermined; no ranking, no unique label"
+  },
+  "dev_groups": [
+    "B2D-C1m",
+    "B2D-C3m"
+  ],
+  "test_groups": [
+    "B2D-C5m",
+    "B2D-C8m"
+  ],
+  "hard_limits": {
+    "absolute_accuracy_claimed": false,
+    "clean_truth_generated": false,
+    "conclusions_scope": "S4 baseline mechanism diagnostics on frozen event windows (MT variable-offset gather + CO common-offset profile, C-families) only; not field performance, not 3D, no absolute accuracy",
+    "cross_family_differencing": false,
+    "cross_tier_differencing": false,
+    "fdtd_solver_invoked": false,
+    "grid_convergence_certified": false,
+    "grid_tier": "BASE",
+    "grid_tiers_merged": false,
+    "physical_acceptance_threshold": null,
+    "physical_label_eligible": false,
+    "reference_state": "numerically_unresolved",
+    "training_eligible": false,
+    "training_labels_generated": false,
+    "negative_controls_merged_into_targets": false,
+    "N_b_is": "absolute residual diagnostic; not detectability, not SNR, not a physical threshold",
+    "selection_made": false,
+    "selection_status": "F config / R tau / L params all undetermined (G4); O unavailable"
+  },
+  "total_wall_s": 10.124234500108287,
+  "stop_reason": null,
+  "arrays_dir": "artifacts\\simulations\\2026-09-26_s4_baseline_arrays"
+}

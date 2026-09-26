@@ -1,0 +1,128 @@
+{
+ "F_protocol": {
+  "candidate_set": "27-entry operator catalogue (scripts/research_operator_contract.py)",
+  "execution": "only_after_G4_resolution; dev group only; single confirmatory test-group evaluation",
+  "gates_order": [
+   "protective_constraints",
+   "protected_event_fidelity",
+   "frozen_utility_partial_order"
+  ],
+  "protected_events": [
+   "E12-S0.005",
+   "D20m",
+   "T0.25m",
+   "W1m",
+   "W2m"
+  ]
+ },
+ "L_grid": {
+  "end_gain_q": [
+   1,
+   2,
+   4
+  ],
+  "legality_rule": "width <= n_traces else unavailable_for_this_window (no auto-shortening)",
+  "operator": "local_mean_control (scripts/research_operator_contract.py :115)",
+  "order": "local_mean_then_fixed_shared_gain (BG-like; no GB variant)",
+  "parameter_status": "development starting grid, not calibrated optimum",
+  "strength_lambda": [
+   0.25,
+   0.5,
+   1.0
+  ],
+  "window_width_odd": [
+   5,
+   11,
+   21
+  ]
+ },
+ "R_rule": {
+  "gain": "q=1 ablation first; full-config q choice undetermined with tau",
+  "gaps": "d_k=(sigma_k-sigma_{k+1})/sigma_1 for k in {1,2,3}",
+  "input": "input window singular spectrum",
+  "numerical_rejection": "components tied below numerical rank floor are not resolved (same口径 as gap_rtol=1e-8)",
+  "selection": "k*=argmax d_k if max(d_k) >= tau else identity",
+  "threshold_candidates": [
+   0.05,
+   0.1,
+   0.2
+  ],
+  "threshold_status": "uncalibrated development candidates; tau choice undetermined (G4)"
+ },
+ "declarations": {
+  "clean_truth_generated": false,
+  "cross_family_differencing": false,
+  "cross_tier_differencing": false,
+  "fdtd_solver_invoked_by_baseline_runner": false,
+  "g1_note": "A0 3D contract still awaits user approval",
+  "gates_open": {
+   "G1": true,
+   "G4": true,
+   "G5": true
+  },
+  "grid_convergence_certified": false,
+  "grid_tier": "BASE",
+  "isolated_event_granted": false,
+  "negative_controls_merged_into_targets": false,
+  "physical_label_eligible": false,
+  "physical_thresholds_null": true,
+  "reference_state": "numerically_unresolved",
+  "tolerances_null": true,
+  "training_eligible": false,
+  "training_labels_generated": false
+ },
+ "evaluation": {
+  "arrays": "persist .npy to git-ignored dir with sha256; never inline large arrays into JSON",
+  "feasibility": "configuration_labels with all-null limits -> partial_only; no ranking, no unique label",
+  "gather_semantics": "per-record version carried; MT and CO layered separately, never merged or cross-paired",
+  "metrics": [
+   "N_b (energy_metrics)",
+   "gain risk diagnostics",
+   "svd spectrum diagnostics",
+   "resource"
+  ],
+  "not_computed": [
+   "D/A/H/rho (reference_state numerically_unresolved)",
+   "R_c (no legitimate pure-clutter window)"
+  ],
+  "same_functions_as": "scripts/research_evaluation_contract.py",
+  "windows": "same frozen event table, same unshifted mapping, same time-axis convention"
+ },
+ "frozen_by": "kimi_autonomous_2026-09-26_19:10_continue",
+ "frozen_date": "2026-09-26",
+ "groups": {
+  "dev": [
+   "B2D-C1m",
+   "B2D-C3m"
+  ],
+  "inert_until": "G4 resolution; any change requires re-freeze with trace",
+  "no_generalization_claim": "4 families total do not support any generalization claim",
+  "rationale": "dev covers the most protected-event classes with the minimum two families for the stability-difference judgment; test retains deep/absorption-pressure families (both contain D20m, C8 contains T0.25m)",
+  "split_unit": "group_id (mother-model family); all variants of a family in the same group",
+  "test": [
+   "B2D-C5m",
+   "B2D-C8m"
+  ]
+ },
+ "identity": {
+  "candidate_id": "B0_G1_BG",
+  "records_co": "artifacts/research_checks/2026-09-26_eval_batch2d_co_r1",
+  "records_mt": "artifacts/research_checks/2026-09-26_eval_batch2d_mt_r1"
+ },
+ "inputs": {
+  "configs/research/batch2d_v1_event_table_v0.1.json": "b0ad100334132cb6e6a706af4f5d8fbbff7cced26b6e07613c50be77a607f56c",
+  "docs/research/2026-09-26_s4_baseline_group_proposal.md": "f720b1dab1eb566e5fa92a05fa405aac67e41022973181f18b096baa8ffa7210",
+  "scripts/research_evaluation_contract.py": "03c5b48a1df3b0ffb0fe7f2ca380857ee8d452937621a28837efe9d4b2917eb5",
+  "scripts/research_operator_contract.py": "ea2cca7c00ea56ebb454503be6e526c67739466c15d0379935ef4e01c5d8a770"
+ },
+ "proposal": "docs/research/2026-09-26_s4_baseline_group_proposal.md",
+ "schema_version": "s4_baseline_group_v0.1",
+ "selection_status": {
+  "F_config": "undetermined_G4",
+  "L_lambda_width_gain": "undetermined_G4",
+  "O": "unavailable_no_computable_reference_no_approximation",
+  "R_threshold_tau": "undetermined_G4",
+  "note": "G4 thresholds all null + reference_state numerically_unresolved: no quality-based selection is permitted; this freeze locks spaces, protocol and group split only"
+ },
+ "status": "frozen"
+}
