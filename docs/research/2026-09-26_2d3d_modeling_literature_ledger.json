@@ -1,0 +1,100 @@
+{
+ "schema": "literature-reading-ledger/1",
+ "date": "2026-09-26",
+ "purpose": "External-reference scan for the P10 decision and the pending A0 3D-validation contract: structural sources of 2D-vs-3D modeling differences and precedents for '3D FDTD as judge of 2D validity'; retrieval does not imply reading or replication",
+ "body_read_count": 2,
+ "field_data_access_this_round": false,
+ "simulation_executed": false,
+ "training_executed": false,
+ "notes": [
+  "Fast scan, not a systematic review; two items read in full, five at abstract/snippet level (two of them fetch-failed), one citation registered without reading.",
+  "S1 (Cheng et al. 1995) is acoustic-elastic seismic scattering, not GPR; only structural direction is transferred, no numeric values.",
+  "No dataset downloaded or imported; no simulation executed; P10 decision and evidence material unchanged.",
+  "Companion note: docs/research/2026-09-26_2d3d_modeling_literature.md"
+ ],
+ "entries": [
+  {
+   "id": "23-S1",
+   "source_url": "http://dspace.mit.edu/bitstream/handle/1721.1/75257/1995.10%20Cheng_Schultz_Toksoz.pdf?sequence=1",
+   "retrieval_url": "http://dspace.mit.edu/bitstream/handle/1721.1/75257/1995.10%20Cheng_Schultz_Toksoz.pdf?sequence=1",
+   "doi": null,
+   "read_status": "body_read",
+   "read_scope": "Full text (abstract through conclusion and references); acoustic-elastic seismic domain, not GPR",
+   "retrieval_status": "retrieved",
+   "reproduced": false
+  },
+  {
+   "id": "23-S2",
+   "source_url": "https://etheses.whiterose.ac.uk/id/eprint/2443/1/DX203108.pdf",
+   "retrieval_url": "https://etheses.whiterose.ac.uk/id/eprint/2443/1/DX203108.pdf",
+   "doi": null,
+   "read_status": "body_read",
+   "read_scope": "Abstract, table of contents, list of figures, chapters 1-2 main text; chapters 4-7 only via ToC/figure list and search snippets (section 6.1 statement snippet-level)",
+   "retrieval_status": "retrieved",
+   "reproduced": false
+  },
+  {
+   "id": "23-S3a",
+   "source_url": "https://www.researchgate.net/publication/224440268_Effectiveness_of_2-D_and_25-D_FDTD_Ground-Penetrating_Radar_Modeling_for_Bridge-Deck_Deterioration_Evaluated_by_3-D_FDTD",
+   "retrieval_url": "https://www.researchgate.net/publication/224440268_Effectiveness_of_2-D_and_25-D_FDTD_Ground-Penetrating_Radar_Modeling_for_Bridge-Deck_Deterioration_Evaluated_by_3-D_FDTD",
+   "doi": null,
+   "read_status": "snippet_only",
+   "read_scope": "Search-result snippets and cross-confirming citation pages (IEEE TGRS 47(11):3656-3663, 2009); full text not retrieved",
+   "retrieval_status": "not_retrieved",
+   "reproduced": false
+  },
+  {
+   "id": "23-S3b",
+   "source_url": "https://juser.fz-juelich.de/record/1032276/files/Energie_Umwelt_643.pdf",
+   "retrieval_url": "https://juser.fz-juelich.de/record/1032276/files/Energie_Umwelt_643.pdf",
+   "doi": null,
+   "read_status": "snippet_only",
+   "read_scope": "Search-result snippet only (spherical 1/r vs cylindrical 1/sqrt(r) spreading, radiation pattern differences); fetch failed",
+   "retrieval_status": "not_retrieved",
+   "reproduced": false
+  },
+  {
+   "id": "23-S3c",
+   "source_url": "https://scholarworks.boisestate.edu/cgi/viewcontent.cgi?referer=&httpsredir=1&article=1044&context=cgiss_facpubs",
+   "retrieval_url": "https://scholarworks.boisestate.edu/cgi/viewcontent.cgi?referer=&httpsredir=1&article=1044&context=cgiss_facpubs",
+   "doi": null,
+   "read_status": "snippet_only",
+   "read_scope": "Search-result snippet only (Bradford 2010, out-of-plane polarization/heterogeneity deviations); fetch failed",
+   "retrieval_status": "not_retrieved",
+   "reproduced": false
+  },
+  {
+   "id": "23-S3d",
+   "source_url": "https://academic.oup.com/jge/article/5/2/129/5127498",
+   "retrieval_url": "https://academic.oup.com/jge/article/5/2/129/5127498",
+   "doi": null,
+   "read_status": "snippet_only",
+   "read_scope": "Search-result snippet only (Sena et al. 2008, source type in 2D FDTD modelling)",
+   "retrieval_status": "retrieved",
+   "reproduced": false
+  },
+  {
+   "id": "23-S3e",
+   "source_url": "https://utoronto.scholaris.ca/bitstreams/e198de4f-5579-4620-85e2-77a7dae1982f/download",
+   "retrieval_url": "https://utoronto.scholaris.ca/bitstreams/e198de4f-5579-4620-85e2-77a7dae1982f/download",
+   "doi": null,
+   "read_status": "snippet_only",
+   "read_scope": "Search-result snippet only (point source in 2D equals line source in 3D, differs from half-wave dipole)",
+   "retrieval_status": "retrieved",
+   "reproduced": false
+  },
+  {
+   "id": "23-S4",
+   "source_url": "https://pubs.geoscienceworld.org/seg/geophysics/article/83/6/H43/566055/Radius-estimation-of-subsurface-cylindrical",
+   "retrieval_url": null,
+   "doi": null,
+   "read_status": "citation_registered_not_read",
+   "read_scope": "Busch et al. 2012 (3D-to-2D conversion scheme approximation errors); registered via Geophysics 83(6) snippet; original not retrieved",
+   "retrieval_status": "not_retrieved",
+   "reproduced": false
+  }
+ ],
+ "generated_outputs": [
+  "docs/research/2026-09-26_2d3d_modeling_literature.md"
+ ]
+}
