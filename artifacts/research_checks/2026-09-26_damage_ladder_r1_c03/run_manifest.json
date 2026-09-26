@@ -1,0 +1,101 @@
+{
+  "run_tag": "r1",
+  "runner": "scripts/run_damage_ladder.py",
+  "chunk": 3,
+  "n_chunks": 8,
+  "event_table": "configs\\research\\batch2d_v1_event_table_v0.1.json",
+  "event_table_sha256": "b0ad100334132cb6e6a706af4f5d8fbbff7cced26b6e07613c50be77a607f56c",
+  "time_axis_convention_version": "ti_i_mul_dt_rxoffset0",
+  "grid_tier": "BASE",
+  "dev_families": [
+    "c1",
+    "c3"
+  ],
+  "n_rows": 44,
+  "n_work_items": 598,
+  "n_selected_work_items": 75,
+  "n_records": 4275,
+  "availability": {
+    "ran": 4144,
+    "unavailable": 131
+  },
+  "failure_reason_histogram": {
+    "width_exceeds_n_traces_after_damage": 126,
+    "svd_rank_must_be_less_than_minimum_dimension": 5
+  },
+  "damage_types": {
+    "amplitude_scale": [
+      0.9,
+      0.5,
+      0.1
+    ],
+    "polarity_flip": [
+      1.0
+    ],
+    "sample_shift": [
+      1,
+      -1,
+      4,
+      -4,
+      16,
+      -16
+    ],
+    "trace_deletion": [
+      1,
+      4,
+      8
+    ],
+    "nc_amplify": {
+      "levels": [
+        2,
+        4
+      ],
+      "rows": "negative_control only"
+    }
+  },
+  "damage_rectangle": "central half of window samples x central min(8, n_traces) traces",
+  "operator_set": "27-entry catalogue + S4 L grid (27) + R rule (3 tau); identity = B0_G1_BG anchor",
+  "gates": {
+    "event_table_frozen": true,
+    "mt_analysis_pass": true,
+    "co_analysis_pass": true,
+    "dev_groups_only": true
+  },
+  "runner_limits": {
+    "r_c_computed": false,
+    "isolated_event_granted": false,
+    "cross_family_metrics": false,
+    "gain_reference_absent": true,
+    "gain_arrays_persisted": false,
+    "gain_arrays_reason": "ladder volumes; outputs deterministically reproducible from archived inputs + frozen script; scalar diagnostics only",
+    "waveform_metrics_computed_within_ladder": true,
+    "waveform_reference": "complete_clean/mixed/complete on identity(damaged input); constructed only"
+  },
+  "feasibility": {
+    "status": "partial_only",
+    "note": "all limits null (G4 unresolved): every gate undetermined; no ranking, no unique label"
+  },
+  "hard_limits": {
+    "absolute_accuracy_claimed": false,
+    "clean_truth_generated": false,
+    "conclusions_scope": "operator behaviour under closed-form damages on archived dev-group windows only; not field performance, not detectability, not physical thresholds",
+    "constructed_reference_is_physical_truth": false,
+    "cross_family_differencing": false,
+    "cross_tier_differencing": false,
+    "fdtd_solver_invoked": false,
+    "grid_convergence_certified": false,
+    "grid_tier": "BASE",
+    "physical_acceptance_threshold": null,
+    "physical_label_eligible": false,
+    "reference_state": "numerically_unresolved",
+    "training_eligible": false,
+    "training_labels_generated": false,
+    "negative_controls_merged_into_targets": false,
+    "test_groups_excluded": [
+      "B2D-C5m",
+      "B2D-C8m"
+    ]
+  },
+  "total_wall_s": 25.34464400005527,
+  "stop_reason": null
+}

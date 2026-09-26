@@ -1345,6 +1345,44 @@
     "no labels, no ranking, no solver invocation; MT/CO layered separately"
    ],
    "record": "docs/research/2026-09-26_g4_calibration_plan_v0.1.md"
+  },
+  {
+   "id": "damage_ladder_v0_1",
+   "status": "complete_598_instances_34086_records_r1r2_byte_identical",
+   "directory": "artifacts/research_checks/2026-09-26_damage_ladder_r1_c00",
+   "directory_note": "8 chunks per run (r1_c00..c07, r2_c00..c07); merged 34086 records byte-identical across r1/r2 after stripping resource (stripped sha256 6bc13f63c5985fa0b38b4724c2ffa0cf61716053751746520766ef6fa0e4d0d9). Per-chunk manifests identical except run_tag/total_wall_s. Mechanism summary at artifacts/research_checks/2026-09-26_damage_ladder_analysis/summary.json. No .npy arrays (scalar gain diagnostics only; reproducible from archived inputs).",
+   "tracked": true,
+   "solver_executed": false,
+   "training_executed": false,
+   "report": "docs/research/2026-09-26_damage_ladder_v0.1.md",
+   "runner_script": "scripts/run_damage_ladder.py",
+   "acceptance_script": "scripts/check_damage_ladder_acceptance.py",
+   "plan": "docs/research/2026-09-26_g4_calibration_plan_v0.1.md",
+   "key_numbers": {
+    "dev_families": [
+     "c1",
+     "c3"
+    ],
+    "n_rows": 44,
+    "damage_instances": 598,
+    "configs_per_instance": 57,
+    "n_records": 34086,
+    "ran": 33084,
+    "unavailable": 1002,
+    "numeric_failures": 0,
+    "identity_anchor_D_zero": "598/598 instances",
+    "headline": "strong background-removal operators (mean lambda1.0/svd k1/L lambda1.0) erase local damages (D median 0.75-0.99 across damage types); mean lambda0.25 partial (D~0.2); R rule re-selects svd_k2 on 48 MT instances; nc_amplify 952 gain records zero clip/overflow",
+    "feasibility": "partial_only"
+   },
+   "limitations": [
+    "constructed reference (identity of damaged input) is not physical truth; no field detectability claims",
+    "G4 step 3 (mission tolerance) still requires 4 user inputs; no thresholds produced, no ranking, no labels",
+    "D/A/H legal only within ladder via complete_clean/mixed/complete on constructed reference",
+    "dev families only (C1/C3 per frozen S4 split); test families excluded",
+    "MT and CO layered separately; never merged or cross-paired",
+    "gain arrays not persisted (scalar diagnostics only, documented in runner_limits)",
+    "reference_state stays numerically_unresolved; training_eligible=false; BASE tier; G1/G5 open"
+   ]
   }
  ],
  "default_array_verification": {
