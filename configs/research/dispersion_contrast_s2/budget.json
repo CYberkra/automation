@@ -1,0 +1,32 @@
+{
+ "schema": "dispersion_contrast_s2_budget/1",
+ "date": "2026-09-28",
+ "grid": {
+  "dy_m": 0.025,
+  "dz_m": 0.025,
+  "cells": 2560000,
+  "dt_s": 5.896635841874211e-11,
+  "time_steps": 20352,
+  "time_window_ns": 1200
+ },
+ "single_case": {
+  "main_fields_ID_GiB": 0.3437627702951431,
+  "measured_co_wall_s": 19.3,
+  "note": "same grid/window as archived CO t17; Debye ADE adds one polarisation accumulator per dispersive material (negligible)"
+ },
+ "batch_totals": {
+  "n_cases": 2,
+  "measured_estimate_s": 50,
+  "conservative_budget_min": 5
+ },
+ "hard_stops": {
+  "wall_minutes_per_case": 20,
+  "job_commit_GiB": 4,
+  "output_GiB": 1,
+  "retries": 0,
+  "max_fdtd_runs": 2
+ },
+ "known_limitations": [
+  "estimates are for cap-setting only, not ETA"
+ ]
+}

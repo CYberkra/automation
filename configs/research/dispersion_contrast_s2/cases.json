@@ -1,0 +1,43 @@
+{
+ "batch_id": "dispersion_contrast_s2_t17",
+ "segment": "dispersion_contrast",
+ "grid_tier": "BASE",
+ "spec": "docs/research/2026-09-28_dispersion_parameters.md + configs/research/dispersion_materials_v0.1.json",
+ "n_cases": 2,
+ "n_exceptions": 0,
+ "derivation": "mother text byte-identical except #title, cover/tzone #material lines and the inserted #add_dispersion_debye lines",
+ "cases": [
+  {
+   "run_id": "B2D-C3mS2-BG-DISP-T17",
+   "file": "B2D-C3mS2-BG-DISP-T17.in",
+   "input_sha256": "8c0043b95a559c7d54c8dd069a4694a1124fbd8ae9df52b0c7a8906196dba8eb",
+   "mother_model_id": "B2D-C3mS2-BG",
+   "case_id": "B2D-C3mS2-BG-DISP-T17",
+   "group_id": "dispersion_contrast_s2_t17",
+   "segment": "dispersion_contrast",
+   "seed": 549732246946548075,
+   "baseline_run_directory": "artifacts/simulations/2026-09-27_B2D-C3mS2-BG",
+   "anchor": {
+    "tx_y_m": 15.35,
+    "rx_y_m": 16.65,
+    "z_m": 45.0
+   }
+  },
+  {
+   "run_id": "B2D-C3mS2TZ-BG-DISP-T17",
+   "file": "B2D-C3mS2TZ-BG-DISP-T17.in",
+   "input_sha256": "4c8f5d37fe138bc8a09ae230e6b21465ed6c2acb44ff7a2ece5c2f4d9975f190",
+   "mother_model_id": "B2D-C3mS2TZ-BG",
+   "case_id": "B2D-C3mS2TZ-BG-DISP-T17",
+   "group_id": "dispersion_contrast_s2_t17",
+   "segment": "dispersion_contrast",
+   "seed": 8578084565189678891,
+   "baseline_run_directory": "artifacts/simulations/2026-09-27_B2D-C3mS2TZ-BG",
+   "anchor": {
+    "tx_y_m": 15.35,
+    "rx_y_m": 16.65,
+    "z_m": 45.0
+   }
+  }
+ ]
+}

@@ -5,17 +5,15 @@
  "user_instruction": "整夜运行授权：证据到位时可主动解除旧约束（含新仿真批次），每次解除须写明依据留痕（2026-09-26 会话）",
  "target_solver": "gprMax 4.0.0",
  "source_root_on_current_machine": "E:/gprMax-v.4.0.0/gprMax-v.4.0.0",
- "batch_id": "pml_sensitivity_s2bg_t17",
+ "batch_id": "dispersion_contrast_s2_t17",
  "approved_to_simulate": true,
  "approved_run_ids": [
-  "B2D-C3mS2-BG-PML20b-T17",
-  "B2D-C3mS2-BG-PML80-T17",
-  "B2D-FS-PML40-T17"
+  "B2D-C3mS2-BG-DISP-T17",
+  "B2D-C3mS2TZ-BG-DISP-T17"
  ],
  "approved_run_ids_pending_agreement": [
-  "B2D-C3mS2-BG-PML20b-T17",
-  "B2D-C3mS2-BG-PML80-T17",
-  "B2D-FS-PML40-T17"
+  "B2D-C3mS2-BG-DISP-T17",
+  "B2D-C3mS2TZ-BG-DISP-T17"
  ],
  "approved_compute_budget": {
   "wall_minutes": 20,
@@ -26,16 +24,16 @@
   "backend": "CUDA",
   "precision": "double",
   "retries": 0,
-  "max_fdtd_runs": 3,
+  "max_fdtd_runs": 2,
   "official_postprocess_wall_minutes": 10,
   "device_id": 0,
   "minimum_available_VRAM_GiB": 4,
   "VRAM_limit_semantics": "Preflight availability threshold; not a hard device-memory quota"
  },
  "scope_expansion_basis": [
-  "user 2026-09-28: \"可以\" — schedules the PML sensitivity experiment proposed after the CO B-scan display found the interface echo only a few dB above a trace-invariant broadband floor",
-  "decision_log 2026-09-28: floor origin (PML vs physical) explicitly marked uncertified; this segment is the certifying experiment",
-  "cost basis: measured 17.8-23.6 s/case on identical grid; 3 cases conservative 10 min total; per-case wall cap 20 min"
+  "user 2026-09-28: \"做吧\" — schedules the dispersion contrast batch proposed in docs/research/2026-09-28_dispersion_parameters.md (quantify dispersion effect on interface arrival/amplitude before any batch-wide material switch)",
+  "parameters: configs/research/dispersion_materials_v0.1.json (fitted to literature anchors 2026-09-28; cover single-pole Debye, tzone half-strength pole, rock non-dispersive)",
+  "cost basis: measured 16.8-23.3 s/case on identical grid 2026-09-28; 2 cases conservative 5 min total; per-case wall cap 20 min"
  ],
  "permitted_preparation": [
   "read official docs and local source",
@@ -52,49 +50,34 @@
  ],
  "approved_execution_contracts": [
   {
-   "packet_id": "PML-SENS-S2BG-T17",
-   "run_id": "B2D-C3mS2-BG-PML20b-T17",
-   "input_path": "configs/research/pml_sensitivity_s2bg/B2D-C3mS2-BG-PML20b-T17.in",
-   "input_sha256": "99e4536a31c6ab3b6475791428fa806cb362fb16589446ed80c3cdab5a0ee523",
+   "packet_id": "DISP-CONTRAST-S2-T17",
+   "run_id": "B2D-C3mS2-BG-DISP-T17",
+   "input_path": "configs/research/dispersion_contrast_s2/B2D-C3mS2-BG-DISP-T17.in",
+   "input_sha256": "8c0043b95a559c7d54c8dd069a4694a1124fbd8ae9df52b0c7a8906196dba8eb",
    "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
    "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
    "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
    "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-   "launcher_sha256": "f1fbb9742c31f946332754ba8a3e933f5fcc2a7adbf2a567d7b256bb19e1de5f",
+   "launcher_sha256": "1e5f449218cf454983d9b8c58534616157532b8ff4f4b9095de19c931b352821",
    "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-   "attempt_record": "artifacts/research_checks/2026-09-28_B2D-C3mS2-BG-PML20b-T17_attempt.json",
-   "run_directory": "artifacts/simulations/2026-09-28_B2D-C3mS2-BG-PML20b-T17",
-   "continuation": "Serial in frozen order (PML20, PML80, FS); any failure aborts the batch, later attempts untouched. No retries."
+   "attempt_record": "artifacts/research_checks/2026-09-28_B2D-C3mS2-BG-DISP-T17_attempt.json",
+   "run_directory": "artifacts/simulations/2026-09-28_B2D-C3mS2-BG-DISP-T17",
+   "continuation": "Serial in frozen order (S2 BG, S2TZ BG); any failure aborts the batch, later attempts untouched. No retries."
   },
   {
-   "packet_id": "PML-SENS-S2BG-T17",
-   "run_id": "B2D-C3mS2-BG-PML80-T17",
-   "input_path": "configs/research/pml_sensitivity_s2bg/B2D-C3mS2-BG-PML80-T17.in",
-   "input_sha256": "ea24a4685f71407900948fc2ff634d1d12b6eca5d045293dce29c792dd01682f",
+   "packet_id": "DISP-CONTRAST-S2-T17",
+   "run_id": "B2D-C3mS2TZ-BG-DISP-T17",
+   "input_path": "configs/research/dispersion_contrast_s2/B2D-C3mS2TZ-BG-DISP-T17.in",
+   "input_sha256": "4c8f5d37fe138bc8a09ae230e6b21465ed6c2acb44ff7a2ece5c2f4d9975f190",
    "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
    "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
    "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
    "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-   "launcher_sha256": "f1fbb9742c31f946332754ba8a3e933f5fcc2a7adbf2a567d7b256bb19e1de5f",
+   "launcher_sha256": "1e5f449218cf454983d9b8c58534616157532b8ff4f4b9095de19c931b352821",
    "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-   "attempt_record": "artifacts/research_checks/2026-09-28_B2D-C3mS2-BG-PML80-T17_attempt.json",
-   "run_directory": "artifacts/simulations/2026-09-28_B2D-C3mS2-BG-PML80-T17",
-   "continuation": "Serial in frozen order (PML20, PML80, FS); any failure aborts the batch, later attempts untouched. No retries."
-  },
-  {
-   "packet_id": "PML-SENS-S2BG-T17",
-   "run_id": "B2D-FS-PML40-T17",
-   "input_path": "configs/research/pml_sensitivity_s2bg/B2D-FS-PML40-T17.in",
-   "input_sha256": "8e428a21a06c730555e835cbafc53ffd17635c3abf40f08f35cd46074d1b136a",
-   "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
-   "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
-   "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
-   "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-   "launcher_sha256": "f1fbb9742c31f946332754ba8a3e933f5fcc2a7adbf2a567d7b256bb19e1de5f",
-   "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-   "attempt_record": "artifacts/research_checks/2026-09-28_B2D-FS-PML40-T17_attempt.json",
-   "run_directory": "artifacts/simulations/2026-09-28_B2D-FS-PML40-T17",
-   "continuation": "Serial in frozen order (PML20, PML80, FS); any failure aborts the batch, later attempts untouched. No retries."
+   "attempt_record": "artifacts/research_checks/2026-09-28_B2D-C3mS2TZ-BG-DISP-T17_attempt.json",
+   "run_directory": "artifacts/simulations/2026-09-28_B2D-C3mS2TZ-BG-DISP-T17",
+   "continuation": "Serial in frozen order (S2 BG, S2TZ BG); any failure aborts the batch, later attempts untouched. No retries."
   }
  ],
  "execution_policy": {
@@ -108,30 +91,40 @@
   "status": "completed",
   "date": "2026-09-28",
   "runs": {
-   "B2D-C3mS2-BG-PML20b-T17": {
-    "wall_s": 16.8,
+   "B2D-C3mS2-BG-DISP-T17": {
+    "wall_s": 28.6,
     "exit": 0
    },
-   "B2D-C3mS2-BG-PML80-T17": {
-    "wall_s": 18.8,
-    "exit": 0
-   },
-   "B2D-FS-PML40-T17": {
-    "wall_s": 23.3,
+   "B2D-C3mS2TZ-BG-DISP-T17": {
+    "wall_s": 28.9,
     "exit": 0
    }
   },
-  "failed_attempt_retained": "B2D-C3mS2-BG-PML20-T17 (ASCII-encoding input defect; no solver steps; not rerun per no-rerun rule)",
-  "finding": "floor insensitive to PML thickness (20/40/80 cells identical to 0.1 dB) and present identically in the free-space control; spectral-window sweep identifies the floor as the sidelobe pedestal of the default gaussian sigma=0.2 window; Hann lowers it to -93/-108 dB"
+  "finding": "dispersion shifts the interface echo +2.5 ns later and -3.3 dB (S2 BG) / -6.6 dB (S2TZ BG); direct wave bit-identical control passes (air path); surface reflection +0.40 dB (band-centre permittivity 16->18)."
  },
  "last_completed_execution_contract": {
   "batch_id": "pml_sensitivity_s2bg_t17",
   "execution_outcome": {
-   "status": "approved_by_user",
+   "status": "completed",
    "date": "2026-09-28",
-   "basis": "user 2026-09-28 \"可以\" (PML sensitivity experiment scheduled)"
+   "runs": {
+    "B2D-C3mS2-BG-PML20b-T17": {
+     "wall_s": 16.8,
+     "exit": 0
+    },
+    "B2D-C3mS2-BG-PML80-T17": {
+     "wall_s": 18.8,
+     "exit": 0
+    },
+    "B2D-FS-PML40-T17": {
+     "wall_s": 23.3,
+     "exit": 0
+    }
+   },
+   "failed_attempt_retained": "B2D-C3mS2-BG-PML20-T17 (ASCII-encoding input defect; no solver steps; not rerun per no-rerun rule)",
+   "finding": "floor insensitive to PML thickness (20/40/80 cells identical to 0.1 dB) and present identically in the free-space control; spectral-window sweep identifies the floor as the sidelobe pedestal of the default gaussian sigma=0.2 window; Hann lowers it to -93/-108 dB"
   },
   "note": "pml_sensitivity_s2bg_t17 frozen 2026-09-28 (S2 BG anchor t17: PML20, PML80, free-space control; pml40 baseline archived as CO33-t17, not rerun). approved_to_simulate stays false until the recorded basis is applied; G1/G3/G4/G5 untouched; no physical/training labels."
  },
- "note": "pml_sensitivity_s2bg_t17 frozen 2026-09-28 (S2 BG anchor t17: PML20, PML80, free-space control; pml40 baseline archived as CO33-t17, not rerun). approved_to_simulate stays false until the recorded basis is applied; G1/G3/G4/G5 untouched; no physical/training labels."
+ "note": "dispersion_contrast_s2_t17 frozen 2026-09-28 (2 anchor traces, dispersive cover/tzone vs archived non-dispersive baselines). approved_to_simulate stays false until the recorded basis is applied; G1/G3/G4/G5 untouched; no physical/training labels."
 }

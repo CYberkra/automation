@@ -1,0 +1,35 @@
+{
+ "schema": "dispersion_contrast_s2_static_check/1",
+ "checked_date": "2026-09-28",
+ "question": "effect of the fitted Debye dispersion (dispersion_materials_v0.1) on interface arrival time and amplitude, anchor-trace geometry",
+ "dispersion_config": "configs/research/dispersion_materials_v0.1.json",
+ "dispersion_config_sha256": "35760a42d7b968b61539418ba6f12940206a050a2e564e9b7e448b74696cf1da",
+ "anchor": {
+  "tx_y_m": 15.35,
+  "rx_y_m": 16.65,
+  "z_m": 45.0
+ },
+ "grid": {
+  "dy_m": 0.025,
+  "dz_m": 0.025,
+  "ny": 1280,
+  "nz": 2000,
+  "cells": 2560000,
+  "dt_formula_s": 5.896635841874211e-11,
+  "dt_contract_s": 5.896635841874211e-11
+ },
+ "time_window_s": 1.2e-06,
+ "variants": [
+  {
+   "run_id": "B2D-C3mS2-BG-DISP-T17",
+   "mother": "B2D-C3mS2-BG",
+   "baseline_dir": "artifacts/simulations/2026-09-27_B2D-C3mS2-BG"
+  },
+  {
+   "run_id": "B2D-C3mS2TZ-BG-DISP-T17",
+   "mother": "B2D-C3mS2TZ-BG",
+   "baseline_dir": "artifacts/simulations/2026-09-27_B2D-C3mS2TZ-BG"
+  }
+ ],
+ "controls": "direct wave propagates in air only and must be unchanged; the surface reflection may change slightly (ground reflection coefficient moves with band-centre permittivity 16 -> ~18)"
+}
