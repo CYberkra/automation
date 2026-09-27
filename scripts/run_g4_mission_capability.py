@@ -20,6 +20,7 @@ no threshold is applied here, that happens once in S5.
 import argparse
 import hashlib
 import json
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -29,7 +30,7 @@ MISSION_SHA256 = 'ee039fb1fab3f1147e8a5fe53809bbb8ae9d6f51aafc2feee0fb90071a6c57
 EVENT_TABLE = ROOT / 'configs/research/batch2d_v1_event_table_v0.1.json'
 EVENT_TABLE_SHA256 = 'b0ad100334132cb6e6a706af4f5d8fbbff7cced26b6e07613c50be77a607f56c'
 CHUNK_GLOB = 'artifacts/research_checks/2026-09-26_damage_ladder_r1_c{:02d}'
-TEST_CHUNK_GLOB = 'artifacts/research_checks/2026-09-27_damage_ladder_test_r1_c{:02d}'
+TEST_CHUNK_GLOB = 'artifacts/research_checks/2026-09-27_damage_ladder_test_{run}_c{:02d}'
 N_CHUNKS = 8
 DEV_FAMILIES = ('c1', 'c3')
 TEST_FAMILIES = ('c5', 'c8')
@@ -60,10 +61,10 @@ def sha256_file(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
-def load_chunks(glob=CHUNK_GLOB):
+def load_chunks(glob=CHUNK_GLOB, *, run=None):
     recs = []
     for k in range(N_CHUNKS):
-        d = json.loads((ROOT / glob.format(k) / 'records.json').read_text(encoding='utf-8'))
+        d = json.loads((ROOT / glob.format(k, run=run) / 'records.json').read_text(encoding='utf-8'))
         for r in d['records']:
             r.pop('resource', None)
         recs.extend(d['records'])
@@ -146,6 +147,8 @@ def main():
     ap.add_argument('--split', choices=['dev', 'test'], default='dev',
                     help="dev={c1,c3} frozen export (unchanged); "
                          "test={c5,c8} from the test-family ladder")
+    ap.add_argument('--ladder-run', choices=['r1', 'r2'], default='r1',
+                    help='which test-family ladder run to read; dev always uses its frozen r1 input')
     args = ap.parse_args()
     split = args.split
     out = Path(args.output_dir)
@@ -157,13 +160,16 @@ def main():
         families = DEV_FAMILIES
     else:
         chunk_glob = TEST_CHUNK_GLOB
-        source_note = (' (r1; r2 byte-identity for the test split is to be '
-                       'demonstrated by acceptance, not assumed here)')
+        source_note = (' (run selected by --ladder-run; r1/r2 result bytes '
+                       'must match after independent reads)')
         families = TEST_FAMILIES
 
     assert sha256_file(MISSION) == MISSION_SHA256, 'mission tolerance gate mismatch'
     assert sha256_file(EVENT_TABLE) == EVENT_TABLE_SHA256, 'event table gate mismatch'
-    recs = load_chunks(chunk_glob)
+    if split == 'dev':
+        recs = load_chunks(chunk_glob)
+    else:
+        recs = load_chunks(chunk_glob, run=args.ladder_run)
     if split == 'dev':
         assert len(recs) == DEV_N_RECORDS, f'unexpected ladder record count: {len(recs)}'
     validate_records(recs, families)
@@ -231,7 +237,8 @@ def main():
         'mission_tolerance_config': str(MISSION.relative_to(ROOT)),
         'mission_tolerance_sha256': MISSION_SHA256,
         'event_table_sha256': EVENT_TABLE_SHA256,
-        'ladder_source': chunk_glob.replace('{:02d}', '00..07') + source_note,
+        'ladder_source': (chunk_glob.replace('{:02d}', '00..07') if split == 'dev'
+                          else chunk_glob.replace('{run}', '{r1,r2}').replace('{:02d}', '00..07')) + source_note,
         'ladder_records_merged': len(recs),
         'identity_anchor': 'B0_G1_BG D==0 on all ran instances',
         'a80_note': 'D_p80 is the a80-style conservative upper bound of erasure (D->1 = damage erased); capability statements must add the explicit systematic bias term per mission_tolerance.conservativeness',
@@ -269,6 +276,31 @@ def main():
     out.mkdir(parents=True)
     text = json.dumps(result, indent=1, sort_keys=True, ensure_ascii=False)
     (out / 'results.json').write_bytes(text.encode('utf-8'))
+    if split == 'test':
+        ladder_inputs = []
+        for k in range(N_CHUNKS):
+            source = ROOT / chunk_glob.format(k, run=args.ladder_run)
+            ladder_inputs.append({
+                'chunk': k,
+                'records_path': str(source.relative_to(ROOT) / 'records.json'),
+                'records_sha256': sha256_file(source / 'records.json'),
+                'manifest_path': str(source.relative_to(ROOT) / 'run_manifest.json'),
+                'manifest_sha256': sha256_file(source / 'run_manifest.json'),
+            })
+        run_manifest = {
+            'schema': 'g4-mission-capability-run-manifest/1',
+            'split': split,
+            'ladder_run': args.ladder_run,
+            'command': [sys.executable, str(Path(__file__).relative_to(ROOT)), *sys.argv[1:]],
+            'exporter_sha256': sha256_file(__file__),
+            'mission_tolerance_sha256': sha256_file(MISSION),
+            'event_table_sha256': sha256_file(EVENT_TABLE),
+            'ladder_inputs': ladder_inputs,
+            'results_sha256': sha256_file(out / 'results.json'),
+        }
+        (out / 'run_manifest.json').write_text(
+            json.dumps(run_manifest, indent=2, sort_keys=True, ensure_ascii=False) + '\n',
+            encoding='utf-8')
     print('wrote', out / 'results.json')
     print('sha256:', sha256_file(out / 'results.json'))
     print('capability rows:', len(capability), 'nc rows:', len(negative_control))

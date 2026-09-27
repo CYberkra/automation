@@ -1,0 +1,21 @@
+{
+  "s4_source_acceptance": "passed: r1/r2 actual chunk paths and hashes, 1482 capability rows, 228 negative-control rows",
+  "s5_read_only_acceptance": "passed after handoff documents updated; frozen input chain intact",
+  "root_raw_record_audit": "passed; see results.json",
+  "missing_input_regression_checks": "passed: empty, missing row, duplicate, missing family, missing identity, wrong family, unavailable identity; source-identity exclusions and spectrum counterexample",
+  "git_diff_cached_check": "passed",
+  "handoff": {
+    "tracked_files": 2033,
+    "entry_links_checked": 202,
+    "missing_links": [],
+    "missing_tracked_artifacts": [],
+    "current_evidence_hash_mismatches": [],
+    "credential_pattern_files": [],
+    "missing_tracked_files": [],
+    "simulation_authorization_consistent": true,
+    "authorization_errors": [],
+    "checker_invoked_solver": false,
+    "passed": true
+  },
+  "scope_note": "The unchanged 182 array checks were not repeated; this batch changed export provenance, test confirmation, and handoff documents. No FDTD, training, or formal S5 rerun. Handoff count is the staged snapshot before this verification file was added."
+}

@@ -1,0 +1,77 @@
+{
+  "command": [
+    "E:\\automation_djh\\automation_repo\\artifacts\\local_checks\\gprmax_v4_gpu_env\\Scripts\\python.exe",
+    "scripts\\run_g4_mission_capability.py",
+    "--split",
+    "test",
+    "--ladder-run",
+    "r2",
+    "--output-dir",
+    "artifacts/research_checks/2026-09-27_g4_mission_capability_test_r2"
+  ],
+  "event_table_sha256": "b0ad100334132cb6e6a706af4f5d8fbbff7cced26b6e07613c50be77a607f56c",
+  "exporter_sha256": "6e767c01b649d47135d20e6e7109dc260d6e849395c11448b28e83daebe77f5f",
+  "ladder_inputs": [
+    {
+      "chunk": 0,
+      "manifest_path": "artifacts\\research_checks\\2026-09-27_damage_ladder_test_r2_c00\\run_manifest.json",
+      "manifest_sha256": "e78ee7aff854be194fae6138cf7c55b77c73ef045e76f24a19d478309e717486",
+      "records_path": "artifacts\\research_checks\\2026-09-27_damage_ladder_test_r2_c00\\records.json",
+      "records_sha256": "4d02a3b0daca6244bc316c6963de94fde006f511cdee90da28987015db423ae7"
+    },
+    {
+      "chunk": 1,
+      "manifest_path": "artifacts\\research_checks\\2026-09-27_damage_ladder_test_r2_c01\\run_manifest.json",
+      "manifest_sha256": "4f00eeb538f670df74ae7dc9c97c5ec7c3a8d0343eefafd6380ecdb08eabb8d6",
+      "records_path": "artifacts\\research_checks\\2026-09-27_damage_ladder_test_r2_c01\\records.json",
+      "records_sha256": "56b65cbb61a6cff8056c7745b2dcabbb6110762dc6ebeb350d3f2fd796c73426"
+    },
+    {
+      "chunk": 2,
+      "manifest_path": "artifacts\\research_checks\\2026-09-27_damage_ladder_test_r2_c02\\run_manifest.json",
+      "manifest_sha256": "b0753011f2f958afc38f8a02a77ee08241070a128abacb4f0e26a733169511a3",
+      "records_path": "artifacts\\research_checks\\2026-09-27_damage_ladder_test_r2_c02\\records.json",
+      "records_sha256": "f33daff6c64967a410fcfbb703e3e959e89d5a3a4996d34321dd3932ea06de8c"
+    },
+    {
+      "chunk": 3,
+      "manifest_path": "artifacts\\research_checks\\2026-09-27_damage_ladder_test_r2_c03\\run_manifest.json",
+      "manifest_sha256": "01afa87840e2bb9b726c70552b0e66a35f7112685538d4d7577a7950c999e09a",
+      "records_path": "artifacts\\research_checks\\2026-09-27_damage_ladder_test_r2_c03\\records.json",
+      "records_sha256": "65e966bf09bf11b66eb42f5847a6e6309c98221e932bd40c49f8beb380e3ed0f"
+    },
+    {
+      "chunk": 4,
+      "manifest_path": "artifacts\\research_checks\\2026-09-27_damage_ladder_test_r2_c04\\run_manifest.json",
+      "manifest_sha256": "c35800bf45b2064948254f8c24ac6a12378dc746b53a9a2420207b78bcb3f245",
+      "records_path": "artifacts\\research_checks\\2026-09-27_damage_ladder_test_r2_c04\\records.json",
+      "records_sha256": "ad5ffcc42b6902e2dd3a599f9b31b1324d4aa3d9efafbf09d77119c12cc97912"
+    },
+    {
+      "chunk": 5,
+      "manifest_path": "artifacts\\research_checks\\2026-09-27_damage_ladder_test_r2_c05\\run_manifest.json",
+      "manifest_sha256": "b6f8571ce2a95c3fa8979bb9802602392caed32b20acc33b0736546693faf208",
+      "records_path": "artifacts\\research_checks\\2026-09-27_damage_ladder_test_r2_c05\\records.json",
+      "records_sha256": "da8e3ad5d417a9f05367da5043ec5b7e147ce5ef9550f734179284a8955745f9"
+    },
+    {
+      "chunk": 6,
+      "manifest_path": "artifacts\\research_checks\\2026-09-27_damage_ladder_test_r2_c06\\run_manifest.json",
+      "manifest_sha256": "c95953b4ca5b730e84e8f01e8b46848a3602d420ad88490c8dc3338e58f6b1cb",
+      "records_path": "artifacts\\research_checks\\2026-09-27_damage_ladder_test_r2_c06\\records.json",
+      "records_sha256": "1858d72d640da3859c0f31146f4b4d6f4f9ec15f9238e25bbeb3f02b41c3f028"
+    },
+    {
+      "chunk": 7,
+      "manifest_path": "artifacts\\research_checks\\2026-09-27_damage_ladder_test_r2_c07\\run_manifest.json",
+      "manifest_sha256": "79d47924cab2f9cd17bbdf6acc16cdb28a51fdf60d0c126fba1280b697807a76",
+      "records_path": "artifacts\\research_checks\\2026-09-27_damage_ladder_test_r2_c07\\records.json",
+      "records_sha256": "0893b4112fe5ff154593326e65682e2502658d5b84dee5e9953b184685d0438e"
+    }
+  ],
+  "ladder_run": "r2",
+  "mission_tolerance_sha256": "ee039fb1fab3f1147e8a5fe53809bbb8ae9d6f51aafc2feee0fb90071a6c57ea",
+  "results_sha256": "8c5bd82392cd0f457c678ec8bb8b9e66ded466c8af2f241f73b9d65ceeee3efe",
+  "schema": "g4-mission-capability-run-manifest/1",
+  "split": "test"
+}

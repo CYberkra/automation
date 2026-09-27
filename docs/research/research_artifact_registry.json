@@ -1677,9 +1677,39 @@
    "solver_executed": true,
    "tracked": true,
    "training_executed": false
+  },
+  {
+   "id": "g4_s4_s5_luna_v1",
+   "status": "s4_s5_complete_root_accepted_s6_signoff_pending",
+   "record": "docs/research/2026-09-27_luna_s4_s5_root_acceptance.md",
+   "directory": "artifacts/research_checks/2026-09-27_g4_s5_test_confirmation_r1",
+   "executor": "GPT-6 Luna / high",
+   "acceptance": "root independently recomputed 114 candidate-family pairs and 1254 D/N cells from 12768 raw test records; all equal",
+   "results_sha256": "157c3d6b1e3ba5a61422e8eb17daae167aa9a50861f4b706c76a4d0d3b15bec3",
+   "dev_records_per_run": 34086,
+   "test_records_per_run": 12768,
+   "s5_formal_attempts": 1,
+   "test_families": [
+    "c5",
+    "c8"
+   ],
+   "geometry": "mt",
+   "admissible_per_family": [
+    "B0_G1_BG"
+   ],
+   "limitations": [
+    "identity is constructed-reference self-consistency, not algorithm selection",
+    "all 14 D strata have singleton vacuity; N_b stability not applied",
+    "test epsilon is conservative dev reuse, not test calibration",
+    "G4 not relieved; S6 user sign-off pending; no labels or training"
+   ],
+   "solver_executed": false,
+   "training_executed": false,
+   "tracked": true
   }
  ],
  "schema": "research-artifact-registry/1",
  "solver_execution_gate": "configs/research/gprmax_v4_execution_gate.json",
- "updated_date": "2026-09-27"
+ "updated_date": "2026-09-27",
+ "current_handoff": "START_HERE.md — G4 S4/S5 complete; S6 user sign-off pending; never rerun formal S5"
 }

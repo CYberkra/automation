@@ -1,0 +1,4 @@
+COMMAND: artifacts/local_checks/gprmax_v4_gpu_env/Scripts/python.exe scripts/run_g4_test_confirmation.py --selftest
+EXIT_CODE: 1
+ERROR: ImportError: cannot import name 'IDENTITY_ANCHOR' from 'run_damage_ladder'; corrected import to reuse run_g4_threshold_derivation.IDENTITY_ANCHOR.
+---

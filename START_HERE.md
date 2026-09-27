@@ -4,11 +4,11 @@
 
 ## 当前状态与下一步（唯一有效接续指引）
 
-- **已完成**：ZFINE2、二维BASE/FINE2/MT/CO批次、dep3d、A0三维配对与分析；G4 S1冻结及S2–S3开发组阈值推导。不要重复求解这些批次。A0当前gate已关闭（a0_3d_v1_consumed）。
-- **本次修复**：S4的dev/test扩展保留，能力导出新增完整性检查；跨版本阶梯回归保留真实源码哈希、仅在比较时排除runner身份与既定资源字段。A0/规格草稿删除“幅度谱相关支持NRMSE跨维迁移”的推论。见[修复记录](docs/research/2026-09-27_ponytail_review_fixes.md)。
-- **下一步**：完成S4新阶梯版本验收与测试族{C5,C8}数据生成，然后依冻结程序执行S5一次性确认评价。本修复没有执行测试族阶梯或应用测试阈值；S5不得被当作已经完成。G4仍未解除，不训练、不宣称选型完成。
-- **另有草稿**：[2D规格v1.1](docs/research/2026-09-27_batch_2d_spec_v1_1_draft.md)仍待验收，尤其硬件归属须按运行证据逐批核对；不因本次文字修复自动冻结。
-- **已核验**：开发组能力导出保留原SHA；旧阶梯r1/r2一致；新增拒绝缺失/重复/错族及源码身份回归检查通过。未重跑新脚本开发阶梯8块，不能把旧数据复核说成新阶梯验收完成。
+- **已完成**：ZFINE2、二维BASE/FINE2/MT/CO、dep3d、A0三维配对与分析；G4 S1–S5。S4新开发阶梯每遍34,086条、测试每遍12,768条，两遍复现通过。S5正式一次执行并独立验收完成，禁止重复应用测试阈值。
+- **本轮结果**：C5/C8各57候选，D通过1、N通过43、联合仅恒等基准B0_G1_BG通过。14个D稳定分层均为单元素空真，不是算法胜出。详见[主agent验收与接续](docs/research/2026-09-27_luna_s4_s5_root_acceptance.md)。GPT-6 Luna/high执行，主agent从原始记录独立复算114组合、1,254个D/N格全部一致。
+- **下一步**：S6综合结论及用户签认；G4尚未解除，未选出非恒等处理算法，不训练、不据test调参。阈值仅为仿真域构造参考标准，reference_state仍numerically_unresolved。
+- **保留限制**：[2D规格v1.1](docs/research/2026-09-27_batch_2d_spec_v1_1_draft.md)仍为待验收草稿，硬件归属需逐批证据核对；幅度谱相关不证明波形NRMSE跨维迁移。A0 gate已消耗关闭，不重跑历史求解批次。
+- **复核入口**：S5用scripts/check_g4_test_confirmation_acceptance.py读取归档结果；独立原始记录复算见artifacts/research_checks/2026-09-27_g4_s5_root_audit/audit.py。不要运行正式S5命令来做验收，attempt已消耗。
 
 ## 历史进度快照（保留证据，以下“最新/待批准/下一步”均不再是当前指令）
 
@@ -164,14 +164,14 @@
 ## 新地点的最短接续步骤
 
 1. 获取最新main，检查git status，保留已有未提交改动。原电脑曾有设备图片缺失的本地状态；本次接续图片存在且交接检查通过，不把旧缺失记录当当前状态。
-2. 先读本页当前状态、[本次修复](docs/research/2026-09-27_ponytail_review_fixes.md)与[A0结果](docs/research/2026-09-27_a0_3d_results.md)；需要背景再查[V4阅读](docs/research/2026-09-24_gprmax_v4_review.md)、[粉质粘土—砂岩简报](docs/research/2026-09-24_cover_sandstone_brief.md)、[损伤研究](docs/research/2026-09-24_damage_pilot_findings.md)。保留实测数据不用于当前开发。
+2. 先读本页当前状态、[S4/S5验收](docs/research/2026-09-27_luna_s4_s5_root_acceptance.md)、[本次修复](docs/research/2026-09-27_ponytail_review_fixes.md)与[A0结果](docs/research/2026-09-27_a0_3d_results.md)；需要背景再查[V4阅读](docs/research/2026-09-24_gprmax_v4_review.md)、[粉质粘土—砂岩简报](docs/research/2026-09-24_cover_sandstone_brief.md)、[损伤研究](docs/research/2026-09-24_damage_pilot_findings.md)。保留实测数据不用于当前开发。
 3. `python scripts/verify_workspace.py`为182项数组检查（八组：10/23/5/26/72/21/20/5），不调用FDTD/实测/网络。无相关改动或疑点不重复跑。`python scripts/check_handoff.py`检查文件、链接、历史来源提交和当前执行契约。
 4. 环境不随Git上传。GPU环境按上述说明复建；独立参考环境按最新报告及锁定依赖复建。不要把本机成功当成新机器核验，也不要调用可能启动FDTD的示例作导入检查。
 5. 每个研究单元保留设计、数据、代码、日志、来源/hash、失败与限制，更新本页/进度/运行索引，再显式暂存、提交、推送。跨地点并行用codex/前缀分支，不强推或重写共享历史。
 
 早期[远端克隆验证](artifacts/research_checks/2026-09-24_remote_handoff_verification.json)对应提交251986e，只证明当时86文件与136项数组检查，不是当前全部产物的新机认证。
 
-可交给新会话的任务：按顶部“当前状态与下一步”继续S4验收/测试族生成，再进入S5；保留测试划分与冻结程序，不重跑已消耗的FDTD批次。
+可交给新会话的任务：按顶部“当前状态与下一步”进入S6综合结论与用户签认；S4/S5已完成，禁止重跑S5或据test调参；保留测试划分与冻结程序，不重跑已消耗的FDTD批次。
 
 ## 记录索引
 

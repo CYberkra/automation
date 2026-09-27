@@ -1,11 +1,3 @@
-## 2026-09-27 G4 S4/S5完成：Luna执行、主agent独立验收
-
-用户明确指定GPT-6 Luna/high执行，主agent布置和验收。S4新dev每遍34,086条、test每遍12,768条，r1/r2复现和完整性通过；跨版本dev只排除约定资源字段及runner源码身份比较，旧数值不变（取代下方历史启动条目要求整文件旧SHA的说法）。测试能力导出r1/r2分别读取各自8块来源，字节一致。
-
-S5冻结53项输入后唯一一次正式执行成功，结果SHA `157c3d6b1e3ba5a61422e8eb17daae167aa9a50861f4b706c76a4d0d3b15bec3`。主agent审查后放行，并独立从原始记录复算114组合/1,254格D-N数值与判定全部一致。C5/C8各57候选，D通过1、N通过43，联合仅恒等基准B0_G1_BG；14个D稳定分层均为单元素空真，无算法选优含义。N_b跨尺度限制保留。
-
-见[验收与接续](2026-09-27_luna_s4_s5_root_acceptance.md)。S4/S5已完成，禁止重跑正式S5、禁止据test调参。下一步S6综合结论及用户签认；G4尚未解除，不训练，无物理标签，无新增FDTD。执行前本日志快照随输入清单归档，后续追加不改变冻结证据。
-
 ## 2026-09-27 G4 第 5 步 S4 启动留痕：锁后首次动测试族 {C5,C8}（执行前登记）
 
 - **动作**：按 S1 冻结程序进入 S4——测试族 {C5,C8} 的损伤阶梯与能力导出**数据生成**（无阈值、无判定、无排名）。实现经任务书 [task_codebuddy_g4_s4_test_split.md](task_codebuddy_g4_s4_test_split.md) 委派 CodeBuddy：`scripts/run_damage_ladder.py` 与 `scripts/run_g4_mission_capability.py` 增加 `--split {dev,test}`（默认 dev，**dev 路径字节级不变**；回归门 = dev 8 块重跑合并剥离 SHA 复现 `6bc13f63…` + 能力导出重跑复现 `2091f417…`）。
