@@ -5,13 +5,13 @@
  "user_instruction": "整夜运行授权：证据到位时可主动解除旧约束（含新仿真批次），每次解除须写明依据留痕（2026-09-26 会话）",
  "target_solver": "gprMax 4.0.0",
  "source_root_on_current_machine": "E:/gprMax-v.4.0.0/gprMax-v.4.0.0",
- "batch_id": "a0_3d_v1_pending_agreement",
- "approved_to_simulate": false,
- "approved_run_ids": [],
- "approved_run_ids_pending_agreement": [
+ "batch_id": "a0_3d_v1",
+ "approved_to_simulate": true,
+ "approved_run_ids": [
   "B2D-C3m-BG-3D5CM",
   "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-3D5CM"
  ],
+ "approved_run_ids_pending_agreement": [],
  "approved_compute_budget": {
   "wall_minutes": 40,
   "job_commit_GiB": 20,
@@ -221,8 +221,8 @@
  },
  "note": "a0_3d_v1 frozen 2026-09-27 (2 runs: C3 anchor A0 3D validation pair, 5 cm isotropic, derived from dep3d_gold_v1 5 cm inputs with only title and target z 9.75-10.25 -> 19.75-20.25 changed). approved_to_simulate stays false until the user agrees to execute; G1 stays open until analysis; no physical/training labels.",
  "user_agreement": {
-  "utc": "2026-09-26T17:49:00+08:00",
-  "instruction": "开始并执行，持续推进两轮。期间我也有事所以你自主决策",
-  "scope": "batch2d_v1_co 全部 22 例（4 块），含验收与归档；修复supervise目录冲突后第三次冻结"
+  "utc": "2026-09-27T00:00:00+08:00",
+  "instruction": "按你建议，开始做吧 (approving the recommended plan: G4 step-5 lock program at the draft's recommended values AND A0 3D contract execution)",
+  "scope": "a0_3d_v1 full 2 runs (BG then TGT, serial, 1 attempt each, no retries); G4 step5 S1-S5 autonomous, S6 G4 relief requires separate user sign-off"
  }
 }
