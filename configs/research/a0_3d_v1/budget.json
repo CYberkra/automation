@@ -1,0 +1,65 @@
+{
+ "schema": "a0_3d_v1_budget/1",
+ "date": "2026-09-27",
+ "method": "dep3d_gold_v1 5 cm measured supervision values only; no extrapolation to other grids/domains/machines",
+ "dep3d_measured": {
+  "DEP3D_5CM_BG": {
+   "wall_s": 916.0780000002123,
+   "peak_job_commit_bytes": 8567218176
+  },
+  "DEP3D_5CM_TGT": {
+   "wall_s": 916.1560000001919,
+   "peak_job_commit_bytes": 8565354496
+  }
+ },
+ "grid": {
+  "dx_dy_dz_m": [
+   0.05,
+   0.05,
+   0.05
+  ],
+  "cells": 32000000,
+  "dt_s": 9.629166007732353e-11,
+  "time_steps": 12464,
+  "time_window_ns": 1200
+ },
+ "single_case": {
+  "measured_wall_s_envelope": [
+   916.0780000002123,
+   916.1560000001919
+  ],
+  "measured_job_peak_commit_bytes": [
+   8565354496,
+   8567218176
+  ]
+ },
+ "batch_totals": {
+  "n_cases": 2,
+  "expected_wall_s_envelope": [
+   1832.1560000004247,
+   1832.3120000003837
+  ]
+ },
+ "hard_stops": {
+  "wall_minutes_per_case": 40,
+  "job_commit_GiB": 20,
+  "output_GiB": 1,
+  "retries": 0,
+  "max_fdtd_runs": 2
+ },
+ "preflight": {
+  "minimum_available_RAM_GiB": 24,
+  "minimum_available_VRAM_GiB": 8
+ },
+ "execution": {
+  "threads": 8,
+  "backend": "CUDA",
+  "precision": "double",
+  "device_id": 0,
+  "cpu_fallback": false
+ },
+ "known_limitations": [
+  "dep3d wall clock includes unmeasured vctip residency; no basis to lower the 3D wall envelope",
+  "budgets are magnitude references, not ETA promises; supervisor records govern"
+ ]
+}

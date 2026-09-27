@@ -1,0 +1,85 @@
+{
+ "batch_id": "a0_3d_v1",
+ "grid_tier": "3D5CM",
+ "spec": "docs/research/2026-09-26_a0_3d_validation_contract_proposal.md (user ratified 2026-09-27) + docs/research/2026-09-26_3d_validation_subset_decision.md D3",
+ "n_cases": 2,
+ "n_exceptions": 0,
+ "derivation": "dep3d_gold_v1 5 cm pair, target z 9.75-10.25 -> 19.75-20.25 (D20m class -> D10m anchor); BG otherwise byte-derived from DEP3D_5CM_BG.in",
+ "cases": [
+  {
+   "case_id": "B2D-C3m-BG",
+   "run_id": "B2D-C3m-BG-3D5CM",
+   "file": "B2D-C3m-BG-3D5CM.in",
+   "input_sha256": "483bc686a0a58f3e3d7a5b94d25287b1e9c8814597386c8777f62e4d672bcfbf",
+   "batch_id": "a0_3d_v1",
+   "grid_tier": "3D5CM",
+   "family": "C3",
+   "cover_thickness_m": 3.0,
+   "role": "bg",
+   "mother_model_id": "B2D-C3m-BG",
+   "group_id": "B2D-C3m",
+   "seed": 11579767774421507061,
+   "variant_tag": "3d5cm",
+   "materials": {
+    "rock": [
+     9.0,
+     0.001
+    ],
+    "cover": [
+     16.0,
+     0.01
+    ],
+    "wet_target": [
+     20.0,
+     0.02
+    ]
+   },
+   "target_box_m": null,
+   "target_box_note_3d": null,
+   "diagnostic_window_ns": [
+    240.0,
+    400.0
+   ]
+  },
+  {
+   "case_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+   "run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-3D5CM",
+   "file": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-3D5CM.in",
+   "input_sha256": "bac530409eae47b8c1a4899eb92a86ab234cd4a9adc9f50190711e23b2e0363a",
+   "batch_id": "a0_3d_v1",
+   "grid_tier": "3D5CM",
+   "family": "C3",
+   "cover_thickness_m": 3.0,
+   "role": "target",
+   "mother_model_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+   "group_id": "B2D-C3m",
+   "seed": 4619511101826314051,
+   "variant_tag": "3d5cm",
+   "materials": {
+    "rock": [
+     9.0,
+     0.001
+    ],
+    "cover": [
+     16.0,
+     0.01
+    ],
+    "wet_target": [
+     20.0,
+     0.02
+    ]
+   },
+   "target_box_m": [
+    3.0,
+    19.75,
+    5.0,
+    20.25
+   ],
+   "target_box_note_3d": "3D box x 3-5 m, y 3-7 m (= 2D y 14-18 m relocated by y_3D = y_2D - 11), z 19.75-20.25 m; x-limited 2 m finite target",
+   "diagnostic_window_ns": [
+    240.0,
+    400.0
+   ]
+  }
+ ]
+}

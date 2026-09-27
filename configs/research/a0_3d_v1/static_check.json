@@ -1,0 +1,90 @@
+{
+ "schema": "a0_3d_v1_static_check/1",
+ "checked_date": "2026-09-27",
+ "derivation": "inputs derived from dep3d_gold_v1 5 cm pair (SHA-pinned); only title and target z range differ",
+ "source_inputs_sha256": {
+  "DEP3D_5CM_BG.in": "8705969e425886cd01ee12dab8b9cab5d21a1bdf1cdab7c2b7fa2d4f96ee2343",
+  "DEP3D_5CM_TGT.in": "00d370d8590366269517a5b2090ba18a5b12ea91ddad7fe692d51326421ab848"
+ },
+ "grid": {
+  "dx_m": 0.05,
+  "dy_m": 0.05,
+  "dz_m": 0.05,
+  "nx": 160,
+  "ny": 200,
+  "nz": 1000,
+  "cells": 32000000,
+  "cell_cap_3d": 64000000,
+  "dt_formula_s": 9.629166007732351e-11,
+  "time_steps": 12464,
+  "dt_crosscheck": "equals dep3d 5 cm measured dt 9.629166007732353e-11 s and Iterations=12464"
+ },
+ "time_window_s": 1.2e-06,
+ "pml": {
+  "cells": [
+   20,
+   20,
+   20,
+   20,
+   20,
+   20
+  ],
+  "formulation": "HORIPML",
+  "physical_thickness_m": 1.0,
+  "pml_cfs": "identical to dep3d 5 cm pair"
+ },
+ "coordinates": {
+  "domain_m": [
+   8.0,
+   10.0,
+   50.0
+  ],
+  "surface_z_m": 30.0,
+  "cover_bottom_z_m": 27.0,
+  "antenna_z_m": 45.0,
+  "target_z_m": [
+   19.75,
+   20.25
+  ],
+  "target_y_m": [
+   3.0,
+   7.0
+  ],
+  "antenna_y_m": [
+   4.35,
+   5.65
+  ],
+  "target_x_m": [
+   3.0,
+   5.0
+  ],
+  "tx_rx_x_m": 4.0,
+  "pml_thickness_m": 1.0
+ },
+ "all_coordinates_on_grid": true,
+ "margins_m": {
+  "bottom_pml_to_target_z_m": 18.75,
+  "side_x_pml_to_target_m": 2.0,
+  "side_y_pml_to_target_m": 2.0,
+  "top_pml_to_antenna_z_m": 4.0
+ },
+ "diagnostic_window_ns": [
+  240.0,
+  400.0
+ ],
+ "diagnostic_window_basis": "same +/-80 ns rule around the D10m self-computed two-way time 320.2 ns (air 30 m/c + cover 6 m/(c/4) + rock 14 m/(c/3)); reference only, not a physical timing calibration",
+ "materials": {
+  "rock": [
+   9.0,
+   0.001
+  ],
+  "cover": [
+   16.0,
+   0.01
+  ],
+  "wet_target": [
+   20.0,
+   0.02
+  ]
+ }
+}
