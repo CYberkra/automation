@@ -1740,10 +1740,27 @@
    "solver_executed": false,
    "training_executed": false,
    "tracked": true
+  },
+  {
+   "id": "dev_reference_eligibility_review",
+   "status": "complete_root_accepted",
+   "record": "docs/research/2026-09-27_dev_reference_eligibility.md",
+   "directory": "artifacts/research_checks/2026-09-27_dev_reference_eligibility",
+   "scope": "development C1/C3 MT/CO metadata only",
+   "executor": "GPT-6 Luna/high report and draft; root canonical table and independent 69-slot comparison",
+   "n_slots": 69,
+   "n_available_input_slots": 44,
+   "n_unavailable_slots": 25,
+   "n_role_negative_control_diagnostic_slots": 13,
+   "n_absolute_event_fidelity_eligible": 0,
+   "g4_relieved": false,
+   "solver_executed": false,
+   "training_executed": false,
+   "tracked": true
   }
  ],
  "schema": "research-artifact-registry/1",
  "solver_execution_gate": "configs/research/gprmax_v4_execution_gate.json",
  "updated_date": "2026-09-27",
- "current_handoff": "START_HERE.md — synthetic metric identifiability check accepted; next: development reference eligibility table; G4 unresolved, no training or S5 rerun"
+ "current_handoff": "START_HERE.md — development reference eligibility audited; next: archived C3 CO frozen-window F0/delta contamination diagnostic; no new FDTD, no training or S5 rerun"
 }

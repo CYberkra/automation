@@ -8,7 +8,8 @@
 - **本轮结果**：C5/C8各57候选，D通过1、N通过43、联合仅恒等基准B0_G1_BG通过。14个D稳定分层均为单元素空真，不是算法胜出。详见[主agent验收与接续](docs/research/2026-09-27_luna_s4_s5_root_acceptance.md)。GPT-6 Luna/high执行，主agent从原始记录独立复算114组合、1,254个D/N格全部一致。
 - **当前结论**：[S6综合报告](docs/research/2026-09-27_g4_s6_synthesis.md)已完成主agent核验，待用户审阅。拟签认范围仅为仿真域程序执行与归档，不解除G4、不把D/N限值写成物理阈值、不训练。D相对完整输入，无法单独区分正确去背景与目标损失。
 - **合成审查完成**：[六算子对照](docs/research/2026-09-27_g4_s6_metric_identifiability.md)证明(D_X,N_b)相同仍可对应不同的已知目标重构误差；主agent用精确有理数运算独立核查18项指标通过。未读取任何仿真/测试/实测输入，未改冻结阈值。
-- **下一步**：只读审查开发组已有参考资格，区分完整目标/独立事件/配对变化/混合信号，先留参考资格表；证据不足不生成目标保真标签。新方法须独立设计验证集，不在已消费C5/C8上调参或重跑S5。reference_state仍numerically_unresolved。
+- **参考资格审查完成**：[开发组资格表](docs/research/2026-09-27_dev_reference_eligibility.md)登记69槽，44有输入、25缺案例；13槽可报告角色负控能量诊断，绝对事件保真资格为0。评价器实际reference为x_window，waveform指标仍不可用；paired_contrast元数据不代表已有干净目标或实际差分数组。
+- **下一步**：仅用已有C3 CO BG/TGT配对及冻结窗，做F0相对Δ=F1−F0的污染诊断；无需新仿真。比值不自动授予clean资格，四条件仍须分别审查。不在已消费C5/C8上调参或重跑S5，reference_state仍numerically_unresolved。
 - **保留限制**：[2D规格v1.1](docs/research/2026-09-27_batch_2d_spec_v1_1_draft.md)仍为待验收草稿，硬件归属需逐批证据核对；幅度谱相关不证明波形NRMSE跨维迁移。A0 gate已消耗关闭，不重跑历史求解批次。
 - **复核入口**：S5用scripts/check_g4_test_confirmation_acceptance.py读取归档结果；独立原始记录复算见artifacts/research_checks/2026-09-27_g4_s5_root_audit/audit.py。不要运行正式S5命令来做验收，attempt已消耗。
 
@@ -173,7 +174,7 @@
 
 早期[远端克隆验证](artifacts/research_checks/2026-09-24_remote_handoff_verification.json)对应提交251986e，只证明当时86文件与136项数组检查，不是当前全部产物的新机认证。
 
-可交给新会话的任务：按顶部“当前状态与下一步”审阅S6有限范围签认建议，并推进开发组参考资格表；合成可辨识性对照已完成；S4/S5已完成，禁止重跑S5或据test调参；保留测试划分与冻结程序，不重跑已消耗的FDTD批次。
+可交给新会话的任务：按顶部“当前状态与下一步”审阅S6有限范围签认建议，并推进已有C3 CO冻结窗污染诊断；开发参考资格表和合成可辨识性对照均已完成；S4/S5已完成，禁止重跑S5或据test调参；保留测试划分与冻结程序，不重跑已消耗的FDTD批次。
 
 ## 记录索引
 

@@ -1,0 +1,27 @@
+{
+  "status": "pass_after_review",
+  "n_independently_matched_slots": 69,
+  "matched_fields": [
+    "key",
+    "case",
+    "family",
+    "event_id",
+    "event_role",
+    "row_type",
+    "availability",
+    "declared reference type/state",
+    "absolute-event eligibility",
+    "negative-control diagnostic eligibility"
+  ],
+  "all_source_hashes_verified": true,
+  "results_sha256": "c71afedc461a25d6c08862a918760dedf4bfd5dbf3671fd0a69c63a64326e50b",
+  "luna_draft_sha256": "afe8ac5bd50d8491fb307b0dd427318802cbf4b999a0228d9e071e8d2bbd8393",
+  "draft_note": "Duplicate Luna JSON had replacement characters in prose fields; canonical results.json uses valid English strings and all 69 structural records independently match. Redundant untracked draft removed after comparison; no frozen artifact changed.",
+  "scope": "metadata only, no large arrays loaded or evaluation rerun",
+  "c3_co_next_step_file_presence": {
+    "files_present": 22,
+    "files_expected": 22,
+    "bytes": 3998016,
+    "h5_contents_rehashed": false
+  }
+}
