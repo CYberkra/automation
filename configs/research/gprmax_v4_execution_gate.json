@@ -5,12 +5,9 @@
  "user_instruction": "整夜运行授权：证据到位时可主动解除旧约束（含新仿真批次），每次解除须写明依据留痕（2026-09-26 会话）",
  "target_solver": "gprMax 4.0.0",
  "source_root_on_current_machine": "E:/gprMax-v.4.0.0/gprMax-v.4.0.0",
- "batch_id": "a0_3d_v1",
- "approved_to_simulate": true,
- "approved_run_ids": [
-  "B2D-C3m-BG-3D5CM",
-  "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-3D5CM"
- ],
+ "batch_id": "a0_3d_v1_consumed",
+ "approved_to_simulate": false,
+ "approved_run_ids": [],
  "approved_run_ids_pending_agreement": [],
  "approved_compute_budget": {
   "wall_minutes": 40,
@@ -86,131 +83,25 @@
  },
  "execution_outcome": {
   "status": "completed",
-  "completed_cases": 22,
+  "completed_cases": 2,
   "failed_cases": 0,
-  "anchor_trace": "t05",
-  "anchor_bit_for_bit_cases": 2,
-  "anchor_verified_vs": "archived single-trace runs B2D-C3m-BG / B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
-  "chunk_walls_s": {
-   "co_c01": 290.89,
-   "co_c02": 290.88,
-   "co_c03": 290.95,
-   "co_c04": 290.92
-  },
-  "peak_job_commit_bytes_max": 3010732032,
   "cases": [
    {
-    "run_id": "B2D-C3m-BG-CO11-t01",
+    "run_id": "B2D-C3m-BG-3D5CM",
     "exit_code": 0,
-    "h5_bytes": 181728
+    "wall_s": 908.9840000001714,
+    "peak_job_commit_bytes": 8536059904,
+    "h5_sha256": "554dd5a64df660a0f43b17d6aba7b6374f74b536e571d64c73d317796e722430"
    },
    {
-    "run_id": "B2D-C3m-BG-CO11-t02",
+    "run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-3D5CM",
     "exit_code": 0,
-    "h5_bytes": 181728
-   },
-   {
-    "run_id": "B2D-C3m-BG-CO11-t03",
-    "exit_code": 0,
-    "h5_bytes": 181728
-   },
-   {
-    "run_id": "B2D-C3m-BG-CO11-t04",
-    "exit_code": 0,
-    "h5_bytes": 181728
-   },
-   {
-    "run_id": "B2D-C3m-BG-CO11-t05",
-    "exit_code": 0,
-    "h5_bytes": 181728
-   },
-   {
-    "run_id": "B2D-C3m-BG-CO11-t06",
-    "exit_code": 0,
-    "h5_bytes": 181728
-   },
-   {
-    "run_id": "B2D-C3m-BG-CO11-t07",
-    "exit_code": 0,
-    "h5_bytes": 181728
-   },
-   {
-    "run_id": "B2D-C3m-BG-CO11-t08",
-    "exit_code": 0,
-    "h5_bytes": 181728
-   },
-   {
-    "run_id": "B2D-C3m-BG-CO11-t09",
-    "exit_code": 0,
-    "h5_bytes": 181728
-   },
-   {
-    "run_id": "B2D-C3m-BG-CO11-t10",
-    "exit_code": 0,
-    "h5_bytes": 181728
-   },
-   {
-    "run_id": "B2D-C3m-BG-CO11-t11",
-    "exit_code": 0,
-    "h5_bytes": 181728
-   },
-   {
-    "run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01",
-    "exit_code": 0,
-    "h5_bytes": 181728
-   },
-   {
-    "run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02",
-    "exit_code": 0,
-    "h5_bytes": 181728
-   },
-   {
-    "run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03",
-    "exit_code": 0,
-    "h5_bytes": 181728
-   },
-   {
-    "run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04",
-    "exit_code": 0,
-    "h5_bytes": 181728
-   },
-   {
-    "run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05",
-    "exit_code": 0,
-    "h5_bytes": 181728
-   },
-   {
-    "run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06",
-    "exit_code": 0,
-    "h5_bytes": 181728
-   },
-   {
-    "run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07",
-    "exit_code": 0,
-    "h5_bytes": 181728
-   },
-   {
-    "run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08",
-    "exit_code": 0,
-    "h5_bytes": 181728
-   },
-   {
-    "run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09",
-    "exit_code": 0,
-    "h5_bytes": 181728
-   },
-   {
-    "run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10",
-    "exit_code": 0,
-    "h5_bytes": 181728
-   },
-   {
-    "run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11",
-    "exit_code": 0,
-    "h5_bytes": 181728
+    "wall_s": 908.905999999959,
+    "peak_job_commit_bytes": 8534765568,
+    "h5_sha256": "6bc826047568ea1e7c250b489f4e4775ab861f2660f9f6731c5cd393e579557a"
    }
   ],
-  "analysis": "docs/research/2026-09-26_batch2d_v1_co_results.md; analysis r1/r2 byte-identical"
+  "note": "both runs completed 2026-09-27, serial BG->TGT, 1 attempt each, no retries; analysis pending"
  },
  "last_completed_execution_contract": {
   "batch_id": "batch2d_v1_co",
