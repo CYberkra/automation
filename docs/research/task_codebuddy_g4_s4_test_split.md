@@ -10,7 +10,7 @@
 ## 改动一：`scripts/run_damage_ladder.py`
 
 1. argparse 增加 `--split`，choices `['dev','test']`，**默认 `dev`**。
-2. `split='dev'` 时行为必须与当前版本**逐字节一致**：同一 DEV_FAMILIES `('c1','c3')`、同一记录内容、同一 manifest 全部字段与取值（含 `dev_families`、`gates.dev_groups_only: True`、`hard_limits.test_groups_excluded`、`conclusions_scope` 原文）。kimi 将重跑 dev 全部 8 chunk 并比对合并剥离 SHA `6bc13f63c5985fa0b38b4724c2ffa0cf61716053751746520766ef6fa0e4d0d9`。
+2. `split='dev'` 保持同一开发族、工作项顺序、全部数值和manifest业务字段。跨版本阶梯回归仅排除记录resource及provenance.runner_script_sha256；manifest仅排除run_tag/total_wall_s。源码哈希必须记录真实新版本，不能伪造旧哈希。用 `scripts/check_damage_ladder_acceptance.py --cross-version --left-pattern <旧8块路径模板> --right-pattern <新8块路径模板>` 比较，模板含 `{run}` 和 `{k:02d}`。旧合并SHA `6bc13f63…`只用于旧版本复现，不作为改后源码输出的整文件哈希门。新版本r1/r2仍保留runner身份，仅剥离既定资源字段作字节一致检查。
 3. `split='test'` 时：族集合为 `('c5','c8')`；其余逻辑（损伤实例、矩形、指标、chunk 协议、确定性）完全不变。manifest 相应调整：
    - 新增 `'split': 'test'` 与 `'families_used': ['c5','c8']`；`'dev_families'` 字段保留但值为 `[]` 并在旁加 `'note'` 或改名字段需保持 schema 自洽（推荐：保留 `dev_families: []` + 新增字段，避免破坏既有读取方的键存在性假设）。
    - `gates.dev_groups_only` → `False`，新增 `gates.test_groups_only: True`。
@@ -24,7 +24,7 @@
 2. `split='dev'`：逐字节一致（kimi 回归门：重跑结果与 `artifacts/research_checks/2026-09-26_g4_mission_capability_v3_r1/results.json` SHA-256 `2091f4171c16341731f57bb94c8fead0a72e47a1d58389caa74926286bf8e6c8` 相同）。注意当前文件的 CHUNK_GLOB 指向 r1 08 块、记录数断言 34086、DEV_FAMILIES 过滤——这些在 dev 模式全部不变。
 3. `split='test'`：
    - 阶梯来源改为 `artifacts/research_checks/2026-09-27_damage_ladder_test_r1_c{:02d}`，N_CHUNKS 仍为 8；
-   - 记录数 34086 断言仅对 dev 生效；test 模式断言 `len(recs) > 0` 并在结果中如实记录合并条数与来源 glob；
+   - dev保留34086记录断言；两模式均按冻结事件表、MT母模型及候选集合核对完整且唯一的record_id与族/几何/案例/损伤元数据，identity必须存在且逐条可运行、D=0。test期望12768条（当前冻结输入推导），不只检查len>0；不可用候选保留记录，错族/缺族/缺行/重复均报错。
    - 族过滤改 `('c5','c8')`；
    - 结果 JSON 新增 `'split': 'test'`，`'ladder_source'` 字符串改为测试族 glob 并注明 r1（r2 字节一致由验收证明），`'dev_families'` 字段改为 `'families': ['c5','c8']`（dev 模式字段名与值保持原样不动）；hard_limits 全部逐字保留。
    - 聚合逻辑（mission_levels 映射、describe/p80、分层、nc 收集）一行不改。
@@ -33,4 +33,4 @@
 
 - 不应用任何阈值；不触碰 ε；不排名不选优；不训练；不调求解器。
 - 两脚本保持确定性（无随机、无时间戳进入结果 JSON 正文；manifest 的 total_wall_s 除外，它在既有 dev 产物中也存在）。
-- 完成后报告：改动摘要、dev 路径为何逐字节不变（逐点说明）、test 模式 manifest/schema 差异清单、你无法验证的事项。
+- 完成后报告：改动摘要、跨版本数值一致的明确排除字段、同版本字节一致证据、test模式manifest/schema差异及尚未执行的检查。

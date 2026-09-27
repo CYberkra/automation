@@ -1,0 +1,34 @@
+{
+  "scope": "Fix four findings in latest review; preserve concurrent split extension and draft. No FDTD or held-out evaluation.",
+  "checks": {
+    "malformed_ladder_rejections": [
+      "empty",
+      "missing_row",
+      "duplicate",
+      "missing_family",
+      "missing_identity",
+      "wrong_family",
+      "unavailable_identity"
+    ],
+    "synthetic_expected_test_records": 12768,
+    "cross_version_exclusions_and_source_immutability": true,
+    "spectrum_waveform_counterexample": true,
+    "historical_dev_r1_r2_records": 34086,
+    "old_new_first_work_item_records": 57,
+    "old_new_first_work_item_equal": true,
+    "full_new_dev_eight_chunk_regression_executed": false,
+    "workspace_regression_checks_passed": 182,
+    "handoff_passed": true
+  },
+  "dev_export_SHA256": "2091f4171c16341731f57bb94c8fead0a72e47a1d58389caa74926286bf8e6c8",
+  "historical_ladder_merged_SHA256": "6bc13f63c5985fa0b38b4724c2ffa0cf61716053751746520766ef6fa0e4d0d9",
+  "workspace_check_output": "artifacts/local_checks/20260927T050801Z-bb5c7144",
+  "source_SHA256": {
+    "scripts/run_damage_ladder.py": "a178c983f2b67644f68ed3fceccf1c8633ca05ca78ae754abebfbb366864930d",
+    "scripts/run_g4_mission_capability.py": "86562d7dc6ba56c33c4a8f38b612dee17a0acc4eb3fa8e502655c6302be37cab",
+    "scripts/check_damage_ladder_acceptance.py": "86104db6fb1db7bdf0b2b415059340f23cb6ba3613d1b943a98971a51039ad73",
+    "scripts/check_ponytail_review_fixes.py": "7dfa3c8b4cd83f53cd23d36c6f9398275885aa2baaf75e136754e92655e727f6"
+  },
+  "solver_invoked": false,
+  "held_out_waveforms_evaluated": false
+}
