@@ -1,0 +1,131 @@
+{
+ "schema": "batch2d_slope_t2_static_check/1",
+ "checked_date": "2026-09-27",
+ "anchor_mother": "configs/research/batch2d_v1/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02.in",
+ "anchor_mother_sha256": "c5911e79a17db7d1bf0a6dfd42284a5cf5c753aebe666053b3198a82095f583b",
+ "geometry_contract": "configs/research/slope_family_v0/geometry.json",
+ "geometry_sha256": "760f1b71146edc4475dc7357e1ba8ebace7bf04f774385ff0b5123c92ff4b3de",
+ "grid": {
+  "dy_m": 0.025,
+  "dz_m": 0.025,
+  "ny": 1280,
+  "nz": 2000,
+  "cells": 2560000,
+  "dt_formula_s": 5.896635841874211e-11,
+  "dt_contract_s": 5.896635841874211e-11,
+  "dt_formula_over_contract": 1.0
+ },
+ "time_window_s": 1.2e-06,
+ "time_steps_contract": 20352,
+ "pml": {
+  "cells": [
+   0,
+   40,
+   40,
+   0,
+   40,
+   40
+  ],
+  "physical_thickness_m": 1.0
+ },
+ "naming_caveat": "C3m family tag inherited from the flat anchor; T2 tier cover center is 4.2 m (zc 25.8, range [1.025, 7.375]), not 3.0 m. Do not attribute cross-tier cover-center differences to slope angle alone.",
+ "case_checks": [
+  {
+   "run_id": "B2D-C3mS2-BG",
+   "header_byte_identical_to_mother": true,
+   "n_cover_strips": 128,
+   "n_tz_strips": 0,
+   "all_box_coordinates_grid_aligned": true,
+   "y_partition_0_32": true,
+   "strips_match_geometry_json": true,
+   "z_interface_min_m": 22.625,
+   "target_slot_clearance_m": null,
+   "materials": [
+    "cover",
+    "rock"
+   ]
+  },
+  {
+   "run_id": "B2D-C3mS2-NC",
+   "header_byte_identical_to_mother": true,
+   "n_cover_strips": 128,
+   "n_tz_strips": 0,
+   "all_box_coordinates_grid_aligned": true,
+   "y_partition_0_32": true,
+   "strips_match_geometry_json": true,
+   "z_interface_min_m": 22.625,
+   "target_slot_clearance_m": 2.375,
+   "materials": [
+    "cover",
+    "nullcontrast",
+    "rock"
+   ]
+  },
+  {
+   "run_id": "B2D-C3mS2-D10m-W4m-T0.5m-E20-S0.02",
+   "header_byte_identical_to_mother": true,
+   "n_cover_strips": 128,
+   "n_tz_strips": 0,
+   "all_box_coordinates_grid_aligned": true,
+   "y_partition_0_32": true,
+   "strips_match_geometry_json": true,
+   "z_interface_min_m": 22.625,
+   "target_slot_clearance_m": 2.375,
+   "materials": [
+    "cover",
+    "rock",
+    "target"
+   ]
+  },
+  {
+   "run_id": "B2D-C3mS2TZ-BG",
+   "header_byte_identical_to_mother": true,
+   "n_cover_strips": 128,
+   "n_tz_strips": 128,
+   "all_box_coordinates_grid_aligned": true,
+   "y_partition_0_32": true,
+   "strips_match_geometry_json": true,
+   "z_interface_min_m": 22.625,
+   "target_slot_clearance_m": null,
+   "materials": [
+    "cover",
+    "rock",
+    "tzone"
+   ]
+  },
+  {
+   "run_id": "B2D-C3mS2TZ-NC",
+   "header_byte_identical_to_mother": true,
+   "n_cover_strips": 128,
+   "n_tz_strips": 128,
+   "all_box_coordinates_grid_aligned": true,
+   "y_partition_0_32": true,
+   "strips_match_geometry_json": true,
+   "z_interface_min_m": 22.625,
+   "target_slot_clearance_m": 1.375,
+   "materials": [
+    "cover",
+    "nullcontrast",
+    "rock",
+    "tzone"
+   ]
+  },
+  {
+   "run_id": "B2D-C3mS2TZ-D10m-W4m-T0.5m-E20-S0.02",
+   "header_byte_identical_to_mother": true,
+   "n_cover_strips": 128,
+   "n_tz_strips": 128,
+   "all_box_coordinates_grid_aligned": true,
+   "y_partition_0_32": true,
+   "strips_match_geometry_json": true,
+   "z_interface_min_m": 22.625,
+   "target_slot_clearance_m": 1.375,
+   "materials": [
+    "cover",
+    "rock",
+    "target",
+    "tzone"
+   ]
+  }
+ ]
+}

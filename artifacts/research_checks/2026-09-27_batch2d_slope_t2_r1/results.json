@@ -1,0 +1,616 @@
+{
+  "batch": "batch2d_slope_t2",
+  "cases": {
+    "B2D-C3mS2-BG": {
+      "analysis_status": "analyzed",
+      "cover_thickness_center_m": 4.2,
+      "difference": {
+        "computed": false,
+        "note": "variant BG is the differencing reference itself (spec 6-P7)",
+        "reference_role": "bg"
+      },
+      "direct_wave_region": {
+        "envelope_peak_V_m": 581.0188973120886,
+        "envelope_peak_time_ns": 4.5404095982431425,
+        "time_peak_abs_V_m": 539.6669491109926
+      },
+      "family": "C3S2",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C3mS2",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/simulations/2026-09-27_B2D-C3mS2-BG/B2D-C3mS2-BG.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "8e3bc13d0b32470db3d73df9b8b8037c653ac486842b0524f16b3590be3f5264",
+        "transformed_samples": 20351
+      },
+      "role": "bg",
+      "run_id": "B2D-C3mS2-BG",
+      "scan_axis": {
+        "depth_m": null,
+        "eps_r": null,
+        "sigma_s_m": null,
+        "slope_tier": "T2",
+        "tan_theta_nominal": 0.2,
+        "theta_eff_deg": 11.309932,
+        "thickness_m": null,
+        "transition_zone": false,
+        "width_m": null
+      },
+      "seed": 8342359261260033443,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2946723840,
+        "reason": "completed",
+        "wall_s": 911.875
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "theta_eff_deg": 11.309932,
+      "transition_zone": false,
+      "variant_tag": "slope_t2"
+    },
+    "B2D-C3mS2-D10m-W4m-T0.5m-E20-S0.02": {
+      "analysis_status": "analyzed",
+      "cover_thickness_center_m": 4.2,
+      "difference": {
+        "bg_run_id": "B2D-C3mS2-BG",
+        "computed": true,
+        "envelope_peak_time_ns": 324.1970385862441,
+        "grid_tier": "BASE",
+        "in_band_energy_ratio_DIFF_over_REF": 1.549560065485095e-08,
+        "in_band_energy_ratio_DIFF_over_REF_dB": -78.09791584572723,
+        "normalized_mag_dB_at_selected_MHz": {
+          "110": -0.9275055566074387,
+          "140": -6.378021526555068,
+          "170": -3.187006666991758,
+          "20": -6.744723115035249,
+          "50": -4.569441207559811,
+          "80": -4.036926003667948
+        },
+        "note": "time_diff_peak_V_m carries the pair-internal excitation scale; no absolute detectability claim",
+        "reference_label": "same-variant BG",
+        "robustness_400ns_relative_L2_vs_200ns": 7.856858491679935e-07,
+        "robustness_400ns_spectral_peak_frequency_MHz": 100.4,
+        "source_samples_identical_to_variant_bg": true,
+        "spectral_peak_frequency_MHz": 100.4,
+        "spectral_peak_phase_deg": -89.91771777189729,
+        "time_diff_peak_V_m": 0.0002383810605133263
+      },
+      "direct_wave_region": {
+        "envelope_peak_V_m": 581.0188973621612,
+        "envelope_peak_time_ns": 4.5404095982431425,
+        "time_peak_abs_V_m": 539.6669491109926
+      },
+      "family": "C3S2",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C3mS2",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/simulations/2026-09-27_B2D-C3mS2-D10m-W4m-T0.5m-E20-S0.02/B2D-C3mS2-D10m-W4m-T0.5m-E20-S0.02.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "94ba17eed4e1e9af6db3ce9b025282ed3829788d7079eb01b9ba54f336568199",
+        "transformed_samples": 20351
+      },
+      "role": "tgt",
+      "run_id": "B2D-C3mS2-D10m-W4m-T0.5m-E20-S0.02",
+      "scan_axis": {
+        "depth_m": 10.0,
+        "eps_r": 20.0,
+        "sigma_s_m": 0.02,
+        "slope_tier": "T2",
+        "tan_theta_nominal": 0.2,
+        "theta_eff_deg": 11.309932,
+        "thickness_m": 0.5,
+        "transition_zone": false,
+        "width_m": 4.0
+      },
+      "seed": 1157608795847758357,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2876960768,
+        "reason": "completed",
+        "wall_s": 17.812000000150874
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "theta_eff_deg": 11.309932,
+      "transition_zone": false,
+      "variant_tag": "slope_t2"
+    },
+    "B2D-C3mS2-NC": {
+      "analysis_status": "analyzed",
+      "cover_thickness_center_m": 4.2,
+      "difference": {
+        "bg_run_id": "B2D-C3mS2-BG",
+        "computed": true,
+        "envelope_peak_time_ns": null,
+        "grid_tier": "BASE",
+        "in_band_energy_ratio_DIFF_over_REF": 0.0,
+        "in_band_energy_ratio_DIFF_over_REF_dB": null,
+        "normalized_mag_dB_at_selected_MHz": null,
+        "note": "paired difference is identically zero on both tail windows and in time; peak/phase/dB metrics not applicable, reported as null",
+        "robustness_400ns_relative_L2_vs_200ns": null,
+        "robustness_400ns_spectral_peak_frequency_MHz": null,
+        "source_samples_identical_to_variant_bg": true,
+        "spectral_peak_frequency_MHz": null,
+        "spectral_peak_phase_deg": null,
+        "time_diff_peak_V_m": 0.0,
+        "zero_difference": true
+      },
+      "direct_wave_region": {
+        "envelope_peak_V_m": 581.0188973120886,
+        "envelope_peak_time_ns": 4.5404095982431425,
+        "time_peak_abs_V_m": 539.6669491109926
+      },
+      "family": "C3S2",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C3mS2",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/simulations/2026-09-27_B2D-C3mS2-NC_att2/B2D-C3mS2-NC.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "b3db8538f063355f3b96e395c79c347e427c1b038de078e6533ffe118fe0fd0e",
+        "transformed_samples": 20351
+      },
+      "role": "nc",
+      "run_id": "B2D-C3mS2-NC",
+      "scan_axis": {
+        "depth_m": null,
+        "eps_r": null,
+        "sigma_s_m": null,
+        "slope_tier": "T2",
+        "tan_theta_nominal": 0.2,
+        "theta_eff_deg": 11.309932,
+        "thickness_m": null,
+        "transition_zone": false,
+        "width_m": null
+      },
+      "seed": 3451434019355919612,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2879127552,
+        "reason": "completed",
+        "wall_s": 17.82799999997951
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "theta_eff_deg": 11.309932,
+      "transition_zone": false,
+      "variant_tag": "slope_t2"
+    },
+    "B2D-C3mS2TZ-BG": {
+      "analysis_status": "analyzed",
+      "cover_thickness_center_m": 4.2,
+      "difference": {
+        "computed": false,
+        "note": "variant BG is the differencing reference itself (spec 6-P7)",
+        "reference_role": "bg"
+      },
+      "direct_wave_region": {
+        "envelope_peak_V_m": 581.0188980251742,
+        "envelope_peak_time_ns": 4.5404095982431425,
+        "time_peak_abs_V_m": 539.6669491109926
+      },
+      "family": "C3S2TZ",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C3mS2TZ",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/simulations/2026-09-27_B2D-C3mS2TZ-BG/B2D-C3mS2TZ-BG.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "7c992b498b4b83c5ee2a8e0bcb88d6031898abfa0f5676f74d02e08951a9c897",
+        "transformed_samples": 20351
+      },
+      "role": "bg",
+      "run_id": "B2D-C3mS2TZ-BG",
+      "scan_axis": {
+        "depth_m": null,
+        "eps_r": null,
+        "sigma_s_m": null,
+        "slope_tier": "T2",
+        "tan_theta_nominal": 0.2,
+        "theta_eff_deg": 11.309932,
+        "thickness_m": null,
+        "transition_zone": true,
+        "width_m": null
+      },
+      "seed": 181206218985376943,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2910896128,
+        "reason": "completed",
+        "wall_s": 23.593999999808148
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "theta_eff_deg": 11.309932,
+      "transition_zone": true,
+      "variant_tag": "slope_t2_tz"
+    },
+    "B2D-C3mS2TZ-D10m-W4m-T0.5m-E20-S0.02": {
+      "analysis_status": "analyzed",
+      "cover_thickness_center_m": 4.2,
+      "difference": {
+        "bg_run_id": "B2D-C3mS2TZ-BG",
+        "computed": true,
+        "envelope_peak_time_ns": 327.2632892240187,
+        "grid_tier": "BASE",
+        "in_band_energy_ratio_DIFF_over_REF": 6.656060850480773e-09,
+        "in_band_energy_ratio_DIFF_over_REF_dB": -81.76782716328628,
+        "normalized_mag_dB_at_selected_MHz": {
+          "110": -0.8239788889503217,
+          "140": -6.385636868123592,
+          "170": -3.2612994495983783,
+          "20": -6.629386549592608,
+          "50": -4.406199483666628,
+          "80": -3.9355716259508746
+        },
+        "note": "time_diff_peak_V_m carries the pair-internal excitation scale; no absolute detectability claim",
+        "reference_label": "same-variant BG",
+        "robustness_400ns_relative_L2_vs_200ns": 1.1642444008021685e-06,
+        "robustness_400ns_spectral_peak_frequency_MHz": 102.2,
+        "source_samples_identical_to_variant_bg": true,
+        "spectral_peak_frequency_MHz": 102.2,
+        "spectral_peak_phase_deg": -57.468413631689884,
+        "time_diff_peak_V_m": 0.00015114192530329973
+      },
+      "direct_wave_region": {
+        "envelope_peak_V_m": 581.0188980698312,
+        "envelope_peak_time_ns": 4.5404095982431425,
+        "time_peak_abs_V_m": 539.6669491109926
+      },
+      "family": "C3S2TZ",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C3mS2TZ",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/simulations/2026-09-27_B2D-C3mS2TZ-D10m-W4m-T0.5m-E20-S0.02/B2D-C3mS2TZ-D10m-W4m-T0.5m-E20-S0.02.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "50cc244aee789f6363de28058e181672aee9288f5b125facfc315819bcebd49c",
+        "transformed_samples": 20351
+      },
+      "role": "tgt",
+      "run_id": "B2D-C3mS2TZ-D10m-W4m-T0.5m-E20-S0.02",
+      "scan_axis": {
+        "depth_m": 10.0,
+        "eps_r": 20.0,
+        "sigma_s_m": 0.02,
+        "slope_tier": "T2",
+        "tan_theta_nominal": 0.2,
+        "theta_eff_deg": 11.309932,
+        "thickness_m": 0.5,
+        "transition_zone": true,
+        "width_m": 4.0
+      },
+      "seed": 12260702475116588772,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2876448768,
+        "reason": "completed",
+        "wall_s": 18.062000000150874
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "theta_eff_deg": 11.309932,
+      "transition_zone": true,
+      "variant_tag": "slope_t2_tz"
+    },
+    "B2D-C3mS2TZ-NC": {
+      "analysis_status": "analyzed",
+      "cover_thickness_center_m": 4.2,
+      "difference": {
+        "bg_run_id": "B2D-C3mS2TZ-BG",
+        "computed": true,
+        "envelope_peak_time_ns": null,
+        "grid_tier": "BASE",
+        "in_band_energy_ratio_DIFF_over_REF": 0.0,
+        "in_band_energy_ratio_DIFF_over_REF_dB": null,
+        "normalized_mag_dB_at_selected_MHz": null,
+        "note": "paired difference is identically zero on both tail windows and in time; peak/phase/dB metrics not applicable, reported as null",
+        "robustness_400ns_relative_L2_vs_200ns": null,
+        "robustness_400ns_spectral_peak_frequency_MHz": null,
+        "source_samples_identical_to_variant_bg": true,
+        "spectral_peak_frequency_MHz": null,
+        "spectral_peak_phase_deg": null,
+        "time_diff_peak_V_m": 0.0,
+        "zero_difference": true
+      },
+      "direct_wave_region": {
+        "envelope_peak_V_m": 581.0188980251742,
+        "envelope_peak_time_ns": 4.5404095982431425,
+        "time_peak_abs_V_m": 539.6669491109926
+      },
+      "family": "C3S2TZ",
+      "grid_tier": "BASE",
+      "group_id": "B2D-C3mS2TZ",
+      "h5": {
+        "all_finite": true,
+        "dt_s": 5.896635841874211e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "iterations": 20352,
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "path": "artifacts/simulations/2026-09-27_B2D-C3mS2TZ-NC/B2D-C3mS2TZ-NC.h5",
+        "receiver_component": "Ex",
+        "receiver_position_m": [
+          16.65,
+          45.0
+        ],
+        "sha256": "ab8d97064e5b494e54afacb54de6b18ceda4aeadb4ccfbcc231da02c7247a2df",
+        "transformed_samples": 20351
+      },
+      "role": "nc",
+      "run_id": "B2D-C3mS2TZ-NC",
+      "scan_axis": {
+        "depth_m": null,
+        "eps_r": null,
+        "sigma_s_m": null,
+        "slope_tier": "T2",
+        "tan_theta_nominal": 0.2,
+        "theta_eff_deg": 11.309932,
+        "thickness_m": null,
+        "transition_zone": true,
+        "width_m": null
+      },
+      "seed": 109906765502518266,
+      "supervision": {
+        "exit_code": 0,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "peak_job_commit_bytes": 2908008448,
+        "reason": "completed",
+        "wall_s": 23.609999999869615
+      },
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "theta_eff_deg": 11.309932,
+      "transition_zone": true,
+      "variant_tag": "slope_t2_tz"
+    }
+  },
+  "cross_geometry_diagnostic_vs_flat": {
+    "S2TZ_BG": {
+      "envelope_peak_time_ns_flat": 4.5404095982431425,
+      "envelope_peak_time_ns_slope": 4.5404095982431425,
+      "flat_run_id": "B2D-C3m-BG",
+      "note": "cross-geometry diagnostic, NOT a paired difference: cover center differs (flat 3.0 m vs T2 4.2 m) in addition to the interface tilt; differences confound slope angle with cover thickness (cases.json naming_caveat)",
+      "relative_L2_vs_flat_BG_200ns": 0.0013080505851086526,
+      "slope_run_id": "B2D-C3mS2TZ-BG"
+    },
+    "S2_BG": {
+      "envelope_peak_time_ns_flat": 4.5404095982431425,
+      "envelope_peak_time_ns_slope": 4.5404095982431425,
+      "flat_run_id": "B2D-C3m-BG",
+      "note": "cross-geometry diagnostic, NOT a paired difference: cover center differs (flat 3.0 m vs T2 4.2 m) in addition to the interface tilt; differences confound slope angle with cover thickness (cases.json naming_caveat)",
+      "relative_L2_vs_flat_BG_200ns": 0.0016091117333723235,
+      "slope_run_id": "B2D-C3mS2-BG"
+    },
+    "flat_anchor_reference": {
+      "flat_tgt_envelope_peak_time_ns": 4.5404095982431425,
+      "note": "flat C3 anchor TGT direct-region envelope peak, archived for orientation only"
+    }
+  },
+  "cross_variant_background_difference": {
+    "computed": true,
+    "envelope_peak_time_ns": 174.00972369370797,
+    "grid_tier": "BASE",
+    "in_band_energy_ratio_DIFF_over_REF": 5.749723746994398e-07,
+    "in_band_energy_ratio_DIFF_over_REF_dB": -62.40353021056122,
+    "minus": "B2D-C3mS2TZ-BG",
+    "normalized_mag_dB_at_selected_MHz": {
+      "110": -0.33934728585683077,
+      "140": -4.1749062914943496,
+      "170": -6.935709210545711,
+      "20": -2.7450599369482016,
+      "50": -7.981246610936052,
+      "80": -5.857200356828642
+    },
+    "note": "time_diff_peak_V_m carries the pair-internal excitation scale; no absolute detectability claim",
+    "plus_reference": "B2D-C3mS2-BG",
+    "reference_label": "BG_S2",
+    "robustness_400ns_relative_L2_vs_200ns": 4.997003697771754e-07,
+    "robustness_400ns_spectral_peak_frequency_MHz": 153.5,
+    "semantics": "BG_S2TZ - BG_S2: transition-zone effect on the background/interface response; same mother except the 1 m tzone strips",
+    "spectral_peak_frequency_MHz": 153.5,
+    "spectral_peak_phase_deg": 179.02029367358762,
+    "time_diff_peak_V_m": 0.002260195139147214
+  },
+  "frequency_Hz": "linspace(20e6,170e6,501)",
+  "grid_tier": "BASE",
+  "hard_limits": {
+    "absolute_accuracy_claimed": false,
+    "clean_truth_generated": false,
+    "conclusions_scope": "mechanism and operator-evaluation evidence for the batch2d_slope_t2 tier-T2 slope variants only; not field performance, not 3D, not absolute accuracy, no cross-tier slope-angle conclusion",
+    "cross_variant_differencing": false,
+    "fdtd_solver_invoked": false,
+    "grid_convergence_certified": false,
+    "grid_tier": "BASE",
+    "grid_tiers_merged": false,
+    "in_band_energy_ratio_is": "diagnostic energy ratio on the 501-point analysis grid; not detectability, not SNR, not a physical threshold",
+    "negative_controls_merged_into_targets": false,
+    "physical_acceptance_threshold": null,
+    "physical_label_eligible": false,
+    "reference_state": "numerically_unresolved",
+    "training_eligible": false,
+    "training_labels_generated": false,
+    "variant_bg_required": true
+  },
+  "inputs": {
+    "artifacts/simulations/2026-09-26_B2D-C3m-BG/B2D-C3m-BG.h5": "a261e9958b90e82ad11a23464e797e5d7c98ad0a9cf2262c41cfd5b623b236c6",
+    "artifacts/simulations/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02.h5": "f30d7feb6a23525aa97ad8d26423b6cf10e50b788f8c77e296acc6f3fc14638e",
+    "artifacts/simulations/2026-09-27_B2D-C3mS2-BG/B2D-C3mS2-BG.h5": "8e3bc13d0b32470db3d73df9b8b8037c653ac486842b0524f16b3590be3f5264",
+    "artifacts/simulations/2026-09-27_B2D-C3mS2-D10m-W4m-T0.5m-E20-S0.02/B2D-C3mS2-D10m-W4m-T0.5m-E20-S0.02.h5": "94ba17eed4e1e9af6db3ce9b025282ed3829788d7079eb01b9ba54f336568199",
+    "artifacts/simulations/2026-09-27_B2D-C3mS2-NC_att2/B2D-C3mS2-NC.h5": "b3db8538f063355f3b96e395c79c347e427c1b038de078e6533ffe118fe0fd0e",
+    "artifacts/simulations/2026-09-27_B2D-C3mS2TZ-BG/B2D-C3mS2TZ-BG.h5": "7c992b498b4b83c5ee2a8e0bcb88d6031898abfa0f5676f74d02e08951a9c897",
+    "artifacts/simulations/2026-09-27_B2D-C3mS2TZ-D10m-W4m-T0.5m-E20-S0.02/B2D-C3mS2TZ-D10m-W4m-T0.5m-E20-S0.02.h5": "50cc244aee789f6363de28058e181672aee9288f5b125facfc315819bcebd49c",
+    "artifacts/simulations/2026-09-27_B2D-C3mS2TZ-NC/B2D-C3mS2TZ-NC.h5": "ab8d97064e5b494e54afacb54de6b18ceda4aeadb4ccfbcc231da02c7247a2df",
+    "configs/research/batch2d_slope_t2/cases.json": "b4838d0f49a3b5c237c8a5bbfb4cee8d7badd4a0c4d8ae6d3a17a4dea5e17fbf",
+    "configs/research/batch2d_slope_t2/groups.json": "fe45b3efab961e64e5dde2283eefe74886705d52e1fdfde4494b93382ccf7c15"
+  },
+  "n_cases_analyzed": 6,
+  "n_cases_contract": 6,
+  "nc_attempt_determinism": {
+    "att1_h5": "artifacts/simulations/2026-09-27_B2D-C3mS2-NC/B2D-C3mS2-NC.h5",
+    "att1_h5_sha256": "b3db8538f063355f3b96e395c79c347e427c1b038de078e6533ffe118fe0fd0e",
+    "att2_h5": "artifacts/simulations/2026-09-27_B2D-C3mS2-NC_att2/B2D-C3mS2-NC.h5",
+    "ex_samples_identical": true,
+    "max_abs_diff_V_m": 0.0,
+    "note": "attempt 1 supervision record lost (harness task timeout, not a solver failure); attempt 2 re-ran the identical hash-locked input; identical Ex samples would be consistent with a deterministic solver build, not a proof of correctness"
+  },
+  "negative_controls": {
+    "nc": [
+      {
+        "computed": true,
+        "envelope_peak_time_ns": null,
+        "expectation": "预期近零，偏离指示几何/平滑残差",
+        "family": "C3S2",
+        "grid_tier": "BASE",
+        "group_id": "B2D-C3mS2",
+        "in_band_energy_ratio_DIFF_over_REF": 0.0,
+        "in_band_energy_ratio_DIFF_over_REF_dB": null,
+        "run_id": "B2D-C3mS2-NC",
+        "spectral_peak_frequency_MHz": null
+      },
+      {
+        "computed": true,
+        "envelope_peak_time_ns": null,
+        "expectation": "预期近零，偏离指示几何/平滑残差",
+        "family": "C3S2TZ",
+        "grid_tier": "BASE",
+        "group_id": "B2D-C3mS2TZ",
+        "in_band_energy_ratio_DIFF_over_REF": 0.0,
+        "in_band_energy_ratio_DIFF_over_REF_dB": null,
+        "run_id": "B2D-C3mS2TZ-NC",
+        "spectral_peak_frequency_MHz": null
+      }
+    ],
+    "note": "negative controls are single-listed and never merged into the target rows"
+  },
+  "pairing_policy": {
+    "cross_geometry_vs_flat": "diagnostic only, never a paired difference (cover-center confound)",
+    "cross_variant_differencing": false,
+    "rule": "every non-BG case is differenced against the same-variant same-grid BG only",
+    "variant_bg": {
+      "S2": "B2D-C3mS2-BG",
+      "S2TZ": "B2D-C3mS2TZ-BG"
+    }
+  },
+  "segment": "base",
+  "spec": "docs/research/2026-09-26_batch_2d_spec_v1.md 6-P2/P6/P7 applied per slope variant; docs/research/2026-09-27_slope_family_design_draft.md (kimi-accepted draft)",
+  "tail_windows_ns": {
+    "main": 200,
+    "robustness": 400
+  },
+  "time_window_ns": 1200,
+  "unavailable_cases": []
+}

@@ -1,0 +1,611 @@
+{
+ "batch_id": "batch2d_slope_t2",
+ "segment": "base",
+ "grid_tier": "BASE",
+ "spec": "docs/research/2026-09-27_slope_family_design_draft.md (kimi-accepted draft; first-batch scope designated by kimi under user 2026-09-27 five-point reply) + docs/research/2026-09-26_batch_2d_spec_v1.md",
+ "n_cases": 6,
+ "n_exceptions": 0,
+ "derivation": "cover-bedrock geometry from slope_family_v0 geometry.json variants 2d_T2/2d_T2TZ; all other lines byte-identical to the frozen batch2d_v1 C3 anchor mother",
+ "naming_caveat": "C3m family tag inherited from the flat anchor; T2 tier cover center is 4.2 m (zc 25.8, range [1.025, 7.375]), not 3.0 m. Do not attribute cross-tier cover-center differences to slope angle alone.",
+ "cases": [
+  {
+   "case_id": "B2D-C3mS2-BG",
+   "run_id": "B2D-C3mS2-BG",
+   "file": "B2D-C3mS2-BG.in",
+   "input_sha256": "8a427df22fea76a07c150c5a9f28194bdb46bd7635fc0baae6593182f724cebc",
+   "batch_id": "batch2d_slope_t2",
+   "segment": "base",
+   "grid_tier": "BASE",
+   "family": "C3S2",
+   "cover_thickness_center_m": 4.2,
+   "role": "bg",
+   "mother_model_id": "B2D-C3mS2-BG",
+   "group_id": "B2D-C3mS2",
+   "seed": 8342359261260033443,
+   "variant_tag": "slope_t2",
+   "scan_axis": {
+    "slope_tier": "T2",
+    "tan_theta_nominal": 0.2,
+    "theta_eff_deg": 11.309932,
+    "transition_zone": false,
+    "depth_m": null,
+    "width_m": null,
+    "thickness_m": null,
+    "eps_r": null,
+    "sigma_s_m": null
+   },
+   "materials": {
+    "rock": [
+     9.0,
+     0.001
+    ],
+    "cover": [
+     16.0,
+     0.01
+    ],
+    "tzone": null,
+    "target": null,
+    "nullcontrast": null
+   },
+   "geometry": {
+    "domain_m": [
+     null,
+     32.0,
+     50.0
+    ],
+    "dy_dz_m": [
+     0.025,
+     0.025
+    ],
+    "pml_cells": [
+     0,
+     40,
+     40,
+     0,
+     40,
+     40
+    ],
+    "pml_physical_thickness_m": 1.0,
+    "surface_z_m": 30.0,
+    "cover_strips_n": 128,
+    "cover_strip_width_m": 0.25,
+    "zc_m": 25.8,
+    "z_interface_range_m": [
+     22.625,
+     28.975
+    ],
+    "cover_thickness_range_m": [
+     1.025,
+     7.375
+    ],
+    "max_quantization_deviation_m": 0.0,
+    "target_box_m": null,
+    "target_z_fixed_horizontal": true,
+    "tx_m": [
+     15.35,
+     45.0
+    ],
+    "rx_m": [
+     16.65,
+     45.0
+    ],
+    "component": "Ex"
+   },
+   "cells": 2560000,
+   "dt_s": 5.896635841874211e-11,
+   "time_steps": 20352,
+   "main_fields_ID_GiB": 0.3437627702951431,
+   "static_check": {
+    "grid_aligned": true,
+    "target_slot_clearance_m": null
+   },
+   "exceptions": null
+  },
+  {
+   "case_id": "B2D-C3mS2-NC",
+   "run_id": "B2D-C3mS2-NC",
+   "file": "B2D-C3mS2-NC.in",
+   "input_sha256": "e0b1c4e3178f08a7d36631dba40148cee794cd4c6a9a8ed55776211647b08d60",
+   "batch_id": "batch2d_slope_t2",
+   "segment": "base",
+   "grid_tier": "BASE",
+   "family": "C3S2",
+   "cover_thickness_center_m": 4.2,
+   "role": "nc",
+   "mother_model_id": "B2D-C3mS2-BG",
+   "group_id": "B2D-C3mS2",
+   "seed": 3451434019355919612,
+   "variant_tag": "slope_t2",
+   "scan_axis": {
+    "slope_tier": "T2",
+    "tan_theta_nominal": 0.2,
+    "theta_eff_deg": 11.309932,
+    "transition_zone": false,
+    "depth_m": null,
+    "width_m": null,
+    "thickness_m": null,
+    "eps_r": null,
+    "sigma_s_m": null
+   },
+   "materials": {
+    "rock": [
+     9.0,
+     0.001
+    ],
+    "cover": [
+     16.0,
+     0.01
+    ],
+    "tzone": null,
+    "target": null,
+    "nullcontrast": [
+     9.0,
+     0.001
+    ]
+   },
+   "geometry": {
+    "domain_m": [
+     null,
+     32.0,
+     50.0
+    ],
+    "dy_dz_m": [
+     0.025,
+     0.025
+    ],
+    "pml_cells": [
+     0,
+     40,
+     40,
+     0,
+     40,
+     40
+    ],
+    "pml_physical_thickness_m": 1.0,
+    "surface_z_m": 30.0,
+    "cover_strips_n": 128,
+    "cover_strip_width_m": 0.25,
+    "zc_m": 25.8,
+    "z_interface_range_m": [
+     22.625,
+     28.975
+    ],
+    "cover_thickness_range_m": [
+     1.025,
+     7.375
+    ],
+    "max_quantization_deviation_m": 0.0,
+    "target_box_m": [
+     14.0,
+     19.75,
+     18.0,
+     20.25
+    ],
+    "target_z_fixed_horizontal": true,
+    "tx_m": [
+     15.35,
+     45.0
+    ],
+    "rx_m": [
+     16.65,
+     45.0
+    ],
+    "component": "Ex"
+   },
+   "cells": 2560000,
+   "dt_s": 5.896635841874211e-11,
+   "time_steps": 20352,
+   "main_fields_ID_GiB": 0.3437627702951431,
+   "static_check": {
+    "grid_aligned": true,
+    "target_slot_clearance_m": 2.375
+   },
+   "exceptions": null
+  },
+  {
+   "case_id": "B2D-C3mS2-D10m-W4m-T0.5m-E20-S0.02",
+   "run_id": "B2D-C3mS2-D10m-W4m-T0.5m-E20-S0.02",
+   "file": "B2D-C3mS2-D10m-W4m-T0.5m-E20-S0.02.in",
+   "input_sha256": "32203f9fa5cfa78e52f67a7f0b2ca92ba8ff390ee62bbf99f471d60330b5ef5a",
+   "batch_id": "batch2d_slope_t2",
+   "segment": "base",
+   "grid_tier": "BASE",
+   "family": "C3S2",
+   "cover_thickness_center_m": 4.2,
+   "role": "tgt",
+   "mother_model_id": "B2D-C3mS2-BG",
+   "group_id": "B2D-C3mS2",
+   "seed": 1157608795847758357,
+   "variant_tag": "slope_t2",
+   "scan_axis": {
+    "slope_tier": "T2",
+    "tan_theta_nominal": 0.2,
+    "theta_eff_deg": 11.309932,
+    "transition_zone": false,
+    "depth_m": 10.0,
+    "width_m": 4.0,
+    "thickness_m": 0.5,
+    "eps_r": 20.0,
+    "sigma_s_m": 0.02
+   },
+   "materials": {
+    "rock": [
+     9.0,
+     0.001
+    ],
+    "cover": [
+     16.0,
+     0.01
+    ],
+    "tzone": null,
+    "target": [
+     20.0,
+     0.02
+    ],
+    "nullcontrast": null
+   },
+   "geometry": {
+    "domain_m": [
+     null,
+     32.0,
+     50.0
+    ],
+    "dy_dz_m": [
+     0.025,
+     0.025
+    ],
+    "pml_cells": [
+     0,
+     40,
+     40,
+     0,
+     40,
+     40
+    ],
+    "pml_physical_thickness_m": 1.0,
+    "surface_z_m": 30.0,
+    "cover_strips_n": 128,
+    "cover_strip_width_m": 0.25,
+    "zc_m": 25.8,
+    "z_interface_range_m": [
+     22.625,
+     28.975
+    ],
+    "cover_thickness_range_m": [
+     1.025,
+     7.375
+    ],
+    "max_quantization_deviation_m": 0.0,
+    "target_box_m": [
+     14.0,
+     19.75,
+     18.0,
+     20.25
+    ],
+    "target_z_fixed_horizontal": true,
+    "tx_m": [
+     15.35,
+     45.0
+    ],
+    "rx_m": [
+     16.65,
+     45.0
+    ],
+    "component": "Ex"
+   },
+   "cells": 2560000,
+   "dt_s": 5.896635841874211e-11,
+   "time_steps": 20352,
+   "main_fields_ID_GiB": 0.3437627702951431,
+   "static_check": {
+    "grid_aligned": true,
+    "target_slot_clearance_m": 2.375
+   },
+   "exceptions": null
+  },
+  {
+   "case_id": "B2D-C3mS2TZ-BG",
+   "run_id": "B2D-C3mS2TZ-BG",
+   "file": "B2D-C3mS2TZ-BG.in",
+   "input_sha256": "2a992a70ce0e8dfda76f2a4771b04db9665d7d0add27344e49264af59584d13a",
+   "batch_id": "batch2d_slope_t2",
+   "segment": "base",
+   "grid_tier": "BASE",
+   "family": "C3S2TZ",
+   "cover_thickness_center_m": 4.2,
+   "role": "bg",
+   "mother_model_id": "B2D-C3mS2TZ-BG",
+   "group_id": "B2D-C3mS2TZ",
+   "seed": 181206218985376943,
+   "variant_tag": "slope_t2_tz",
+   "scan_axis": {
+    "slope_tier": "T2",
+    "tan_theta_nominal": 0.2,
+    "theta_eff_deg": 11.309932,
+    "transition_zone": true,
+    "depth_m": null,
+    "width_m": null,
+    "thickness_m": null,
+    "eps_r": null,
+    "sigma_s_m": null
+   },
+   "materials": {
+    "rock": [
+     9.0,
+     0.001
+    ],
+    "cover": [
+     16.0,
+     0.01
+    ],
+    "tzone": [
+     12.0,
+     0.005
+    ],
+    "target": null,
+    "nullcontrast": null
+   },
+   "geometry": {
+    "domain_m": [
+     null,
+     32.0,
+     50.0
+    ],
+    "dy_dz_m": [
+     0.025,
+     0.025
+    ],
+    "pml_cells": [
+     0,
+     40,
+     40,
+     0,
+     40,
+     40
+    ],
+    "pml_physical_thickness_m": 1.0,
+    "surface_z_m": 30.0,
+    "cover_strips_n": 128,
+    "cover_strip_width_m": 0.25,
+    "zc_m": 25.8,
+    "z_interface_range_m": [
+     22.625,
+     28.975
+    ],
+    "cover_thickness_range_m": [
+     1.025,
+     7.375
+    ],
+    "max_quantization_deviation_m": 0.0,
+    "target_box_m": null,
+    "target_z_fixed_horizontal": true,
+    "tx_m": [
+     15.35,
+     45.0
+    ],
+    "rx_m": [
+     16.65,
+     45.0
+    ],
+    "component": "Ex"
+   },
+   "cells": 2560000,
+   "dt_s": 5.896635841874211e-11,
+   "time_steps": 20352,
+   "main_fields_ID_GiB": 0.3437627702951431,
+   "static_check": {
+    "grid_aligned": true,
+    "target_slot_clearance_m": null
+   },
+   "exceptions": null
+  },
+  {
+   "case_id": "B2D-C3mS2TZ-NC",
+   "run_id": "B2D-C3mS2TZ-NC",
+   "file": "B2D-C3mS2TZ-NC.in",
+   "input_sha256": "0910f42462e48c6fc1fbb52d48e2904a18181153bfbfceda904976e393423ea0",
+   "batch_id": "batch2d_slope_t2",
+   "segment": "base",
+   "grid_tier": "BASE",
+   "family": "C3S2TZ",
+   "cover_thickness_center_m": 4.2,
+   "role": "nc",
+   "mother_model_id": "B2D-C3mS2TZ-BG",
+   "group_id": "B2D-C3mS2TZ",
+   "seed": 109906765502518266,
+   "variant_tag": "slope_t2_tz",
+   "scan_axis": {
+    "slope_tier": "T2",
+    "tan_theta_nominal": 0.2,
+    "theta_eff_deg": 11.309932,
+    "transition_zone": true,
+    "depth_m": null,
+    "width_m": null,
+    "thickness_m": null,
+    "eps_r": null,
+    "sigma_s_m": null
+   },
+   "materials": {
+    "rock": [
+     9.0,
+     0.001
+    ],
+    "cover": [
+     16.0,
+     0.01
+    ],
+    "tzone": [
+     12.0,
+     0.005
+    ],
+    "target": null,
+    "nullcontrast": [
+     9.0,
+     0.001
+    ]
+   },
+   "geometry": {
+    "domain_m": [
+     null,
+     32.0,
+     50.0
+    ],
+    "dy_dz_m": [
+     0.025,
+     0.025
+    ],
+    "pml_cells": [
+     0,
+     40,
+     40,
+     0,
+     40,
+     40
+    ],
+    "pml_physical_thickness_m": 1.0,
+    "surface_z_m": 30.0,
+    "cover_strips_n": 128,
+    "cover_strip_width_m": 0.25,
+    "zc_m": 25.8,
+    "z_interface_range_m": [
+     22.625,
+     28.975
+    ],
+    "cover_thickness_range_m": [
+     1.025,
+     7.375
+    ],
+    "max_quantization_deviation_m": 0.0,
+    "target_box_m": [
+     14.0,
+     19.75,
+     18.0,
+     20.25
+    ],
+    "target_z_fixed_horizontal": true,
+    "tx_m": [
+     15.35,
+     45.0
+    ],
+    "rx_m": [
+     16.65,
+     45.0
+    ],
+    "component": "Ex"
+   },
+   "cells": 2560000,
+   "dt_s": 5.896635841874211e-11,
+   "time_steps": 20352,
+   "main_fields_ID_GiB": 0.3437627702951431,
+   "static_check": {
+    "grid_aligned": true,
+    "target_slot_clearance_m": 1.375
+   },
+   "exceptions": null
+  },
+  {
+   "case_id": "B2D-C3mS2TZ-D10m-W4m-T0.5m-E20-S0.02",
+   "run_id": "B2D-C3mS2TZ-D10m-W4m-T0.5m-E20-S0.02",
+   "file": "B2D-C3mS2TZ-D10m-W4m-T0.5m-E20-S0.02.in",
+   "input_sha256": "5beee201fecfbcb38c189fa11a4f80621753e06c90e2e7a1e9f4ce740a163f17",
+   "batch_id": "batch2d_slope_t2",
+   "segment": "base",
+   "grid_tier": "BASE",
+   "family": "C3S2TZ",
+   "cover_thickness_center_m": 4.2,
+   "role": "tgt",
+   "mother_model_id": "B2D-C3mS2TZ-BG",
+   "group_id": "B2D-C3mS2TZ",
+   "seed": 12260702475116588772,
+   "variant_tag": "slope_t2_tz",
+   "scan_axis": {
+    "slope_tier": "T2",
+    "tan_theta_nominal": 0.2,
+    "theta_eff_deg": 11.309932,
+    "transition_zone": true,
+    "depth_m": 10.0,
+    "width_m": 4.0,
+    "thickness_m": 0.5,
+    "eps_r": 20.0,
+    "sigma_s_m": 0.02
+   },
+   "materials": {
+    "rock": [
+     9.0,
+     0.001
+    ],
+    "cover": [
+     16.0,
+     0.01
+    ],
+    "tzone": [
+     12.0,
+     0.005
+    ],
+    "target": [
+     20.0,
+     0.02
+    ],
+    "nullcontrast": null
+   },
+   "geometry": {
+    "domain_m": [
+     null,
+     32.0,
+     50.0
+    ],
+    "dy_dz_m": [
+     0.025,
+     0.025
+    ],
+    "pml_cells": [
+     0,
+     40,
+     40,
+     0,
+     40,
+     40
+    ],
+    "pml_physical_thickness_m": 1.0,
+    "surface_z_m": 30.0,
+    "cover_strips_n": 128,
+    "cover_strip_width_m": 0.25,
+    "zc_m": 25.8,
+    "z_interface_range_m": [
+     22.625,
+     28.975
+    ],
+    "cover_thickness_range_m": [
+     1.025,
+     7.375
+    ],
+    "max_quantization_deviation_m": 0.0,
+    "target_box_m": [
+     14.0,
+     19.75,
+     18.0,
+     20.25
+    ],
+    "target_z_fixed_horizontal": true,
+    "tx_m": [
+     15.35,
+     45.0
+    ],
+    "rx_m": [
+     16.65,
+     45.0
+    ],
+    "component": "Ex"
+   },
+   "cells": 2560000,
+   "dt_s": 5.896635841874211e-11,
+   "time_steps": 20352,
+   "main_fields_ID_GiB": 0.3437627702951431,
+   "static_check": {
+    "grid_aligned": true,
+    "target_slot_clearance_m": 1.375
+   },
+   "exceptions": null
+  }
+ ]
+}

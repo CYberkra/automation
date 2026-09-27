@@ -1,0 +1,56 @@
+{
+ "batch_id": "batch2d_slope_t2",
+ "segment": "base",
+ "grid_tier": "BASE",
+ "convention": "spec 4.2: any split is by group_id only, never by case_id, window or trace; each slope variant is its own mother-model family with its own BG/NC (never paired against the flat batch2d_v1 backgrounds)",
+ "groups": [
+  {
+   "case_id": "B2D-C3mS2-BG",
+   "group_id": "B2D-C3mS2",
+   "run_id": "B2D-C3mS2-BG",
+   "mother_model_hash": "7fb17c6d5eb58612beb6c1beee8f07439d17945fff3b791fca7fedb190ad0d34",
+   "seed": 8342359261260033443,
+   "variant_tag": "slope_t2"
+  },
+  {
+   "case_id": "B2D-C3mS2-NC",
+   "group_id": "B2D-C3mS2",
+   "run_id": "B2D-C3mS2-NC",
+   "mother_model_hash": "7fb17c6d5eb58612beb6c1beee8f07439d17945fff3b791fca7fedb190ad0d34",
+   "seed": 3451434019355919612,
+   "variant_tag": "slope_t2"
+  },
+  {
+   "case_id": "B2D-C3mS2-D10m-W4m-T0.5m-E20-S0.02",
+   "group_id": "B2D-C3mS2",
+   "run_id": "B2D-C3mS2-D10m-W4m-T0.5m-E20-S0.02",
+   "mother_model_hash": "7fb17c6d5eb58612beb6c1beee8f07439d17945fff3b791fca7fedb190ad0d34",
+   "seed": 1157608795847758357,
+   "variant_tag": "slope_t2"
+  },
+  {
+   "case_id": "B2D-C3mS2TZ-BG",
+   "group_id": "B2D-C3mS2TZ",
+   "run_id": "B2D-C3mS2TZ-BG",
+   "mother_model_hash": "be6d9e5c325e293049d2f4cfd0da03d114882e1295660b3f814629616913d111",
+   "seed": 181206218985376943,
+   "variant_tag": "slope_t2_tz"
+  },
+  {
+   "case_id": "B2D-C3mS2TZ-NC",
+   "group_id": "B2D-C3mS2TZ",
+   "run_id": "B2D-C3mS2TZ-NC",
+   "mother_model_hash": "be6d9e5c325e293049d2f4cfd0da03d114882e1295660b3f814629616913d111",
+   "seed": 109906765502518266,
+   "variant_tag": "slope_t2_tz"
+  },
+  {
+   "case_id": "B2D-C3mS2TZ-D10m-W4m-T0.5m-E20-S0.02",
+   "group_id": "B2D-C3mS2TZ",
+   "run_id": "B2D-C3mS2TZ-D10m-W4m-T0.5m-E20-S0.02",
+   "mother_model_hash": "be6d9e5c325e293049d2f4cfd0da03d114882e1295660b3f814629616913d111",
+   "seed": 12260702475116588772,
+   "variant_tag": "slope_t2_tz"
+  }
+ ]
+}

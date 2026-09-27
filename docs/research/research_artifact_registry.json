@@ -1895,10 +1895,30 @@
    "training_executed": false,
    "g4_relieved": false,
    "tracked": true
+  },
+  {
+   "id": "batch2d_slope_t2",
+   "status": "completed_base_grid_first_slope_batch",
+   "record": "docs/research/decision_log.md#2026-09-27-slope-t2-first-batch",
+   "contract": "configs/research/batch2d_slope_t2/cases.json",
+   "freeze_script": "scripts/freeze_batch2d_slope_t2.py",
+   "analysis_script": "scripts/analyze_batch2d_slope_t2.py",
+   "results_directory": "artifacts/research_checks/2026-09-27_batch2d_slope_t2_r1",
+   "results_sha256": "87c6a35b58c23d44ca5bd03a3ccb876e55b7129a276ed3954a78fb72eea7fb91",
+   "results_r2_sha256": "87c6a35b58c23d44ca5bd03a3ccb876e55b7129a276ed3954a78fb72eea7fb91",
+   "r1_r2_byte_identical": true,
+   "geometry_contract": "configs/research/slope_family_v0/geometry.json",
+   "geometry_sha256": "760f1b71146edc4475dc7357e1ba8ebace7bf04f774385ff0b5123c92ff4b3de",
+   "n_cases": 6,
+   "solver_executed": true,
+   "training_executed": false,
+   "g4_relieved": false,
+   "reference_state": "numerically_unresolved",
+   "tracked": true
   }
  ],
  "schema": "research-artifact-registry/1",
  "solver_execution_gate": "configs/research/gprmax_v4_execution_gate.json",
  "updated_date": "2026-09-27",
- "current_handoff": "START_HERE.md - C3 CO BG tail decomposition independently accepted: raw cross-trace variation spans multiple windows, removed tail explains SFCW residual change; physical boundary/truncation cause unresolved. Next: design minimal separated controls with mesh checks and GPU budget, no launch yet; no S5/training."
+ "current_handoff": "START_HERE.md - batch2d_slope_t2 first slope batch completed (6/6, tier T2 +/-TZ x BG/NC/TGT): NC controls exactly zero, TGT-BG -78.1/-81.8 dB, TZ effect on BG -62.4 dB (dominates deep-target signature), single-offset Rx insensitive to tilt (rel L2 0.13-0.16% vs flat). Next: slope MT batch design / T1+T3 tiers / tilt_target scheduling; G4 unchanged."
 }

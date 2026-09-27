@@ -5,29 +5,38 @@
  "user_instruction": "整夜运行授权：证据到位时可主动解除旧约束（含新仿真批次），每次解除须写明依据留痕（2026-09-26 会话）",
  "target_solver": "gprMax 4.0.0",
  "source_root_on_current_machine": "E:/gprMax-v.4.0.0/gprMax-v.4.0.0",
- "batch_id": "a0_3d_v1_consumed",
- "approved_to_simulate": false,
- "approved_run_ids": [],
+ "batch_id": "batch2d_slope_t2",
+ "approved_to_simulate": true,
+ "approved_run_ids": [
+  "B2D-C3mS2-BG",
+  "B2D-C3mS2-NC",
+  "B2D-C3mS2-D10m-W4m-T0.5m-E20-S0.02",
+  "B2D-C3mS2TZ-BG",
+  "B2D-C3mS2TZ-NC",
+  "B2D-C3mS2TZ-D10m-W4m-T0.5m-E20-S0.02"
+ ],
  "approved_run_ids_pending_agreement": [],
  "approved_compute_budget": {
-  "wall_minutes": 40,
-  "job_commit_GiB": 20,
-  "minimum_available_RAM_GiB": 24,
-  "minimum_available_VRAM_GiB": 8,
-  "output_GiB": 1,
+  "wall_minutes": 20,
+  "job_commit_GiB": 4,
+  "minimum_available_RAM_GiB": 8,
+  "output_GiB": 2,
   "threads": 8,
   "backend": "CUDA",
   "precision": "double",
   "retries": 0,
-  "max_fdtd_runs": 2,
+  "max_fdtd_runs": 6,
+  "official_postprocess_wall_minutes": 10,
   "device_id": 0,
+  "minimum_available_VRAM_GiB": 4,
   "VRAM_limit_semantics": "Preflight availability threshold; not a hard device-memory quota"
  },
  "scope_expansion_basis": [
-  "common-offset subset proposal (docs/research/2026-09-26_common_offset_subset_proposal.md), ratified by user 2026-09-26 17:49 (\"开始并执行\"): answers whether trace-to-trace moveout on the variable-offset CSG changes operator-baseline (S4) conclusions",
-  "parent proposal §2.4-B (2026-09-26_multitrace_batch_proposal.md) reserved this paired common-offset subset, contingent on the moveout-difference mattering",
-  "speedup probe (docs/research/2026-09-26_speedup_probe_results.md): in-process multi-model execution measured 20.5-21.6 s/case vs 45-58 s/case per-process; chunk-of-6 wall ~3.5 min",
-  "input package verified 2026-09-26: 22 .in derived from frozen C3 mothers; only #hertzian_dipole/#rx lines differ (title too, except anchor t05 which is byte-identical to the mother input); static_check.json + budget.json + chunks.json on disk"
+  "slope_family_v0 design draft (docs/research/2026-09-27_slope_family_design_draft.md), kimi-accepted 2026-09-27; user five-point reply authorizes first 2D batch (\"首批做个2D的即可，具体你来指定，最大效率验证即可\") and schedule (\"排期\", scheme A first)",
+  "first-batch designation by kimi: C3 family x tier T2 (tan_theta=0.2, theta_eff=11.309932 deg) x {noTZ, +1m tzone} x {BG, NC, TGT} = 6 cases, BASE coarse grid; T2 is the middle tier, maximally informative per case for interface-tilt response and TZ effect screening",
+  "geometry contract configs/research/slope_family_v0/geometry.json sha256 760f1b71146edc4475dc7357e1ba8ebace7bf04f774385ff0b5123c92ff4b3de (two-run byte-identical, registry slope_family_v0)",
+  "cost basis: batch2d_v1 coarse measured 29.9-59.2 s/case excl. first, job peak ~2.72 GiB; same domain/grid/time window; 6-case conservative budget 20 min; cap wall 20 min/case",
+  "naming caveat recorded in cases.json/static_check.json: C3m tag inherited, T2 cover center is 4.2 m not 3.0 m; cross-tier cover-center differences must not be attributed to slope alone"
  ],
  "permitted_preparation": [
   "read official docs and local source",
@@ -44,34 +53,95 @@
  ],
  "approved_execution_contracts": [
   {
-   "packet_id": "A0-3D-V1",
-   "run_id": "B2D-C3m-BG-3D5CM",
-   "input_path": "configs/research/a0_3d_v1/B2D-C3m-BG-3D5CM.in",
-   "input_sha256": "483bc686a0a58f3e3d7a5b94d25287b1e9c8814597386c8777f62e4d672bcfbf",
+   "packet_id": "BATCH2D-SLOPE-T2",
+   "run_id": "B2D-C3mS2-BG",
+   "input_path": "configs/research/batch2d_slope_t2/B2D-C3mS2-BG.in",
+   "input_sha256": "8a427df22fea76a07c150c5a9f28194bdb46bd7635fc0baae6593182f724cebc",
    "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
    "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
    "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
    "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-   "launcher_sha256": "5fccbe2955df9fe35c2d3f314ed9e51021d48dcd641615c72015e3769b019636",
+   "launcher_sha256": "30be2033ae74bcc7947fb9f1e9d08733905b4a8bef1448abf55d5c27e4a0df67",
    "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-   "attempt_record": "artifacts/research_checks/2026-09-27_B2D-C3m-BG-3D5CM_attempt.json",
-   "run_directory": "artifacts/simulations/2026-09-27_B2D-C3m-BG-3D5CM",
-   "continuation": "Serial in frozen order (BG then TGT); any failure aborts the batch, later attempts untouched. No retries."
+   "attempt_record": "artifacts/research_checks/2026-09-27_B2D-C3mS2-BG_attempt.json",
+   "run_directory": "artifacts/simulations/2026-09-27_B2D-C3mS2-BG",
+   "continuation": "Serial in frozen order (per variant: BG, NC, TGT); any failure aborts the batch, later attempts untouched. No retries."
   },
   {
-   "packet_id": "A0-3D-V1",
-   "run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-3D5CM",
-   "input_path": "configs/research/a0_3d_v1/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-3D5CM.in",
-   "input_sha256": "bac530409eae47b8c1a4899eb92a86ab234cd4a9adc9f50190711e23b2e0363a",
+   "packet_id": "BATCH2D-SLOPE-T2",
+   "run_id": "B2D-C3mS2-NC",
+   "input_path": "configs/research/batch2d_slope_t2/B2D-C3mS2-NC.in",
+   "input_sha256": "e0b1c4e3178f08a7d36631dba40148cee794cd4c6a9a8ed55776211647b08d60",
    "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
    "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
    "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
    "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
-   "launcher_sha256": "5fccbe2955df9fe35c2d3f314ed9e51021d48dcd641615c72015e3769b019636",
+   "launcher_sha256": "30be2033ae74bcc7947fb9f1e9d08733905b4a8bef1448abf55d5c27e4a0df67",
    "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
-   "attempt_record": "artifacts/research_checks/2026-09-27_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-3D5CM_attempt.json",
-   "run_directory": "artifacts/simulations/2026-09-27_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-3D5CM",
-   "continuation": "Serial in frozen order (BG then TGT); any failure aborts the batch, later attempts untouched. No retries."
+   "attempt_record": "artifacts/research_checks/2026-09-27_B2D-C3mS2-NC_attempt2.json",
+   "run_directory": "artifacts/simulations/2026-09-27_B2D-C3mS2-NC_att2",
+   "continuation": "Serial in frozen order (per variant: BG, NC, TGT); any failure aborts the batch, later attempts untouched. No retries.",
+   "attempt_history_note": "attempt 1 (2026-09-27_B2D-C3mS2-NC_attempt.json + run dir 2026-09-27_B2D-C3mS2-NC): solver completed per stdout banner and h5 written 21:37, but the launcher process was killed by a harness-level 30-min task timeout at 21:51:40 before supervision.json was finalized; attempt-1 h5 preserved untouched as evidence, excluded from analysis. attempt 2 re-runs the identical hash-locked input under the same user authorization; att1/att2 Ex samples are compared as a determinism check. Root cause of the 15-min-per-case wall: vctip.exe (MSVC telemetry helper) lingering in the job object; mitigated by an out-of-job vctip singleton warden."
+  },
+  {
+   "packet_id": "BATCH2D-SLOPE-T2",
+   "run_id": "B2D-C3mS2-D10m-W4m-T0.5m-E20-S0.02",
+   "input_path": "configs/research/batch2d_slope_t2/B2D-C3mS2-D10m-W4m-T0.5m-E20-S0.02.in",
+   "input_sha256": "32203f9fa5cfa78e52f67a7f0b2ca92ba8ff390ee62bbf99f471d60330b5ef5a",
+   "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
+   "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
+   "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
+   "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
+   "launcher_sha256": "30be2033ae74bcc7947fb9f1e9d08733905b4a8bef1448abf55d5c27e4a0df67",
+   "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
+   "attempt_record": "artifacts/research_checks/2026-09-27_B2D-C3mS2-D10m-W4m-T0.5m-E20-S0.02_attempt.json",
+   "run_directory": "artifacts/simulations/2026-09-27_B2D-C3mS2-D10m-W4m-T0.5m-E20-S0.02",
+   "continuation": "Serial in frozen order (per variant: BG, NC, TGT); any failure aborts the batch, later attempts untouched. No retries."
+  },
+  {
+   "packet_id": "BATCH2D-SLOPE-T2",
+   "run_id": "B2D-C3mS2TZ-BG",
+   "input_path": "configs/research/batch2d_slope_t2/B2D-C3mS2TZ-BG.in",
+   "input_sha256": "2a992a70ce0e8dfda76f2a4771b04db9665d7d0add27344e49264af59584d13a",
+   "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
+   "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
+   "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
+   "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
+   "launcher_sha256": "30be2033ae74bcc7947fb9f1e9d08733905b4a8bef1448abf55d5c27e4a0df67",
+   "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
+   "attempt_record": "artifacts/research_checks/2026-09-27_B2D-C3mS2TZ-BG_attempt.json",
+   "run_directory": "artifacts/simulations/2026-09-27_B2D-C3mS2TZ-BG",
+   "continuation": "Serial in frozen order (per variant: BG, NC, TGT); any failure aborts the batch, later attempts untouched. No retries."
+  },
+  {
+   "packet_id": "BATCH2D-SLOPE-T2",
+   "run_id": "B2D-C3mS2TZ-NC",
+   "input_path": "configs/research/batch2d_slope_t2/B2D-C3mS2TZ-NC.in",
+   "input_sha256": "0910f42462e48c6fc1fbb52d48e2904a18181153bfbfceda904976e393423ea0",
+   "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
+   "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
+   "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
+   "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
+   "launcher_sha256": "30be2033ae74bcc7947fb9f1e9d08733905b4a8bef1448abf55d5c27e4a0df67",
+   "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
+   "attempt_record": "artifacts/research_checks/2026-09-27_B2D-C3mS2TZ-NC_attempt.json",
+   "run_directory": "artifacts/simulations/2026-09-27_B2D-C3mS2TZ-NC",
+   "continuation": "Serial in frozen order (per variant: BG, NC, TGT); any failure aborts the batch, later attempts untouched. No retries."
+  },
+  {
+   "packet_id": "BATCH2D-SLOPE-T2",
+   "run_id": "B2D-C3mS2TZ-D10m-W4m-T0.5m-E20-S0.02",
+   "input_path": "configs/research/batch2d_slope_t2/B2D-C3mS2TZ-D10m-W4m-T0.5m-E20-S0.02.in",
+   "input_sha256": "5beee201fecfbcb38c189fa11a4f80621753e06c90e2e7a1e9f4ce740a163f17",
+   "runtime_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
+   "runtime_identity_sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38",
+   "cuda_identity_path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
+   "cuda_identity_sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df",
+   "launcher_sha256": "30be2033ae74bcc7947fb9f1e9d08733905b4a8bef1448abf55d5c27e4a0df67",
+   "supervisor_sha256": "0c111cdd1f8dc1799c85707b9a4de8040d80b0b9f6a0663c9d87dd4275fec9cc",
+   "attempt_record": "artifacts/research_checks/2026-09-27_B2D-C3mS2TZ-D10m-W4m-T0.5m-E20-S0.02_attempt.json",
+   "run_directory": "artifacts/simulations/2026-09-27_B2D-C3mS2TZ-D10m-W4m-T0.5m-E20-S0.02",
+   "continuation": "Serial in frozen order (per variant: BG, NC, TGT); any failure aborts the batch, later attempts untouched. No retries."
   }
  ],
  "execution_policy": {
@@ -83,37 +153,91 @@
  },
  "execution_outcome": {
   "status": "completed",
-  "completed_cases": 2,
+  "completed_cases": 6,
   "failed_cases": 0,
   "cases": [
    {
-    "run_id": "B2D-C3m-BG-3D5CM",
+    "run_id": "B2D-C3mS2-BG",
     "exit_code": 0,
-    "wall_s": 908.9840000001714,
-    "peak_job_commit_bytes": 8536059904,
-    "h5_sha256": "554dd5a64df660a0f43b17d6aba7b6374f74b536e571d64c73d317796e722430"
+    "wall_s": 911.875,
+    "peak_job_commit_bytes": 2946723840,
+    "h5_sha256": "8e3bc13d0b32470db3d73df9b8b8037c653ac486842b0524f16b3590be3f5264"
    },
    {
-    "run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-3D5CM",
+    "run_id": "B2D-C3mS2-NC",
     "exit_code": 0,
-    "wall_s": 908.905999999959,
-    "peak_job_commit_bytes": 8534765568,
-    "h5_sha256": "6bc826047568ea1e7c250b489f4e4775ab861f2660f9f6731c5cd393e579557a"
+    "wall_s": 17.82799999997951,
+    "peak_job_commit_bytes": 2879127552,
+    "h5_sha256": "b3db8538f063355f3b96e395c79c347e427c1b038de078e6533ffe118fe0fd0e",
+    "attempt": 2,
+    "attempt_note": "attempt 1 solver completed (h5 written) but supervision record lost to a harness task timeout; attempt 2 same hash-locked input; att1/att2 Ex samples bit-identical (see analysis nc_attempt_determinism); att1 evidence preserved, excluded from analysis"
+   },
+   {
+    "run_id": "B2D-C3mS2-D10m-W4m-T0.5m-E20-S0.02",
+    "exit_code": 0,
+    "wall_s": 17.812000000150874,
+    "peak_job_commit_bytes": 2876960768,
+    "h5_sha256": "94ba17eed4e1e9af6db3ce9b025282ed3829788d7079eb01b9ba54f336568199"
+   },
+   {
+    "run_id": "B2D-C3mS2TZ-BG",
+    "exit_code": 0,
+    "wall_s": 23.593999999808148,
+    "peak_job_commit_bytes": 2910896128,
+    "h5_sha256": "7c992b498b4b83c5ee2a8e0bcb88d6031898abfa0f5676f74d02e08951a9c897"
+   },
+   {
+    "run_id": "B2D-C3mS2TZ-NC",
+    "exit_code": 0,
+    "wall_s": 23.609999999869615,
+    "peak_job_commit_bytes": 2908008448,
+    "h5_sha256": "ab8d97064e5b494e54afacb54de6b18ceda4aeadb4ccfbcc231da02c7247a2df"
+   },
+   {
+    "run_id": "B2D-C3mS2TZ-D10m-W4m-T0.5m-E20-S0.02",
+    "exit_code": 0,
+    "wall_s": 18.062000000150874,
+    "peak_job_commit_bytes": 2876448768,
+    "h5_sha256": "50cc244aee789f6363de28058e181672aee9288f5b125facfc315819bcebd49c"
    }
   ],
-  "note": "both runs completed 2026-09-27, serial BG->TGT, 1 attempt each, no retries; analysis pending"
+  "note": "6 runs completed 2026-09-27, serial S2(BG,NC,TGT) then S2TZ(BG,NC,TGT), no retries of solver failures (none occurred). NC ran as attempt 2 under documented attempt-history note. First case wall 911.875 s includes ~885 s waiting for a lingering vctip.exe (MSVC telemetry helper spawned by nvcc/cl inside the job object; also explains the a0_3d 909 s walls); after the out-of-job vctip singleton warden, cases ran 17.8-23.6 s each. reference_state unchanged (numerically_unresolved); no physical/training labels."
  },
  "last_completed_execution_contract": {
-  "batch_id": "batch2d_v1_co",
+  "batch_id": "a0_3d_v1_consumed",
   "execution_outcome": {
-   "status": "approved_awaiting_execution"
+   "status": "completed",
+   "completed_cases": 2,
+   "failed_cases": 0,
+   "cases": [
+    {
+     "run_id": "B2D-C3m-BG-3D5CM",
+     "exit_code": 0,
+     "wall_s": 908.9840000001714,
+     "peak_job_commit_bytes": 8536059904,
+     "h5_sha256": "554dd5a64df660a0f43b17d6aba7b6374f74b536e571d64c73d317796e722430"
+    },
+    {
+     "run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-3D5CM",
+     "exit_code": 0,
+     "wall_s": 908.905999999959,
+     "peak_job_commit_bytes": 8534765568,
+     "h5_sha256": "6bc826047568ea1e7c250b489f4e4775ab861f2660f9f6731c5cd393e579557a"
+    }
+   ],
+   "note": "both runs completed 2026-09-27, serial BG->TGT, 1 attempt each, no retries; analysis pending"
   },
-  "note": "batch2d_v1_co frozen 2026-09-26 (22 cases = 2 C3 mothers x 11 common-offset traces, BASE, double, chunked in-process execution). approved_to_simulate stays false until the user agrees to execute; results are stratified vs the MT33 batch and never cross-geometry paired; G1/G3/G4/G5 untouched; no physical/training labels."
+  "note": "a0_3d_v1 frozen 2026-09-27 (2 runs: C3 anchor A0 3D validation pair, 5 cm isotropic, derived from dep3d_gold_v1 5 cm inputs with only title and target z 9.75-10.25 -> 19.75-20.25 changed). approved_to_simulate stays false until the user agrees to execute; G1 stays open until analysis; no physical/training labels."
  },
- "note": "a0_3d_v1 frozen 2026-09-27 (2 runs: C3 anchor A0 3D validation pair, 5 cm isotropic, derived from dep3d_gold_v1 5 cm inputs with only title and target z 9.75-10.25 -> 19.75-20.25 changed). approved_to_simulate stays false until the user agrees to execute; G1 stays open until analysis; no physical/training labels.",
+ "note": "batch2d_slope_t2 frozen 2026-09-27 (6 cases: slope_family_v0 tier T2 +/- 1m transition zone x BG/NC/TGT, BASE coarse, target fixed horizontal z 19.75-20.25 with >=1.375 m clearance to TZ bottom). approved_to_simulate=true per user_agreement 2026-09-27T21:21:03+08:00; G1/G3/G4/G5 untouched; no physical/training labels.",
  "user_agreement": {
-  "utc": "2026-09-27T00:00:00+08:00",
-  "instruction": "按你建议，开始做吧 (approving the recommended plan: G4 step-5 lock program at the draft's recommended values AND A0 3D contract execution)",
-  "scope": "a0_3d_v1 full 2 runs (BG then TGT, serial, 1 attempt each, no retries); G4 step5 S1-S5 autonomous, S6 G4 relief requires separate user sign-off"
+  "utc": "2026-09-27T21:21:03+08:00",
+  "instruction": "用户2026-09-27对坡地族设计书§9的五点回复：点1\"首批做个2D的即可，具体你来指定，最大效率验证即可\"；点5\"排期\"（方案A先）。kimi据此指定并获准执行首批6例",
+  "scope": "batch2d_slope_t2 full 6 runs (S2: BG,NC,TGT then S2TZ: BG,NC,TGT, serial, 1 attempt each, no retries); tier T1/T3、3D坡地、目标倾斜档与方案B均不在本次范围，须另行授权"
+ },
+ "reactivation_note": {
+  "utc": "2026-09-27T21:53:56+08:00",
+  "reason": "launcher killed by harness task timeout (my error, not a solver failure); NC attempt 2 with new attempt/run paths; BG attempt already consumed and completed, runner will skip it; S2-TGT and S2TZ x3 never started, attempts unconsumed",
+  "user_authorization": "same as user_agreement: 2026-09-27 five-point reply, batch2d_slope_t2 full 6 runs"
  }
 }
