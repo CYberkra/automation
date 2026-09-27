@@ -1,0 +1,4603 @@
+{
+  "schema": "research-sfcw-unified-dev-adapter/1",
+  "scope": "C3 2D mechanism-model development proxy only; not clean field data or physical acceptance",
+  "status": "completed",
+  "record_decay_certified": false,
+  "record_decay_note": "full raw receiver tails are retained; no taper is treated as a convergence test, and archived tail levels do not certify decay",
+  "acquisition_contract": {
+    "path": "docs/research/2026-09-27_acquisition_and_sfcw_data_contract.md",
+    "sha256": "313e41eef8e5100882fb419018590e9354c70d0fa76dfb76f2aae6e8ccbdb52d"
+  },
+  "inputs_n": 24,
+  "records_n": 48,
+  "tapers": [
+    "no_taper",
+    "tail_200ns"
+  ],
+  "frequency_hz": [
+    20000000.0,
+    20300000.0,
+    20600000.0,
+    20900000.0,
+    21200000.0,
+    21500000.0,
+    21800000.0,
+    22100000.0,
+    22400000.0,
+    22700000.0,
+    23000000.0,
+    23300000.0,
+    23600000.0,
+    23900000.0,
+    24200000.0,
+    24500000.0,
+    24800000.0,
+    25100000.0,
+    25400000.0,
+    25700000.0,
+    26000000.0,
+    26300000.0,
+    26600000.0,
+    26900000.0,
+    27200000.0,
+    27500000.0,
+    27800000.0,
+    28100000.0,
+    28400000.0,
+    28700000.0,
+    29000000.0,
+    29300000.0,
+    29600000.0,
+    29900000.0,
+    30200000.0,
+    30500000.0,
+    30800000.0,
+    31100000.0,
+    31400000.0,
+    31700000.0,
+    32000000.0,
+    32300000.0,
+    32600000.0,
+    32900000.0,
+    33200000.0,
+    33500000.0,
+    33800000.0,
+    34100000.0,
+    34400000.0,
+    34700000.0,
+    35000000.0,
+    35300000.0,
+    35600000.0,
+    35900000.0,
+    36200000.0,
+    36500000.0,
+    36800000.0,
+    37100000.0,
+    37400000.0,
+    37700000.0,
+    38000000.0,
+    38300000.0,
+    38600000.0,
+    38900000.0,
+    39200000.0,
+    39500000.0,
+    39800000.0,
+    40100000.0,
+    40400000.0,
+    40700000.0,
+    41000000.0,
+    41300000.0,
+    41600000.0,
+    41900000.0,
+    42200000.0,
+    42500000.0,
+    42800000.0,
+    43100000.0,
+    43400000.0,
+    43700000.0,
+    44000000.0,
+    44300000.0,
+    44600000.0,
+    44900000.0,
+    45200000.0,
+    45500000.0,
+    45800000.0,
+    46100000.0,
+    46400000.0,
+    46700000.0,
+    47000000.0,
+    47300000.0,
+    47600000.0,
+    47900000.0,
+    48200000.0,
+    48500000.0,
+    48800000.0,
+    49100000.0,
+    49400000.0,
+    49700000.0,
+    50000000.0,
+    50300000.0,
+    50600000.0,
+    50900000.0,
+    51200000.0,
+    51500000.0,
+    51800000.0,
+    52100000.0,
+    52400000.0,
+    52700000.0,
+    53000000.0,
+    53300000.0,
+    53600000.0,
+    53900000.0,
+    54200000.0,
+    54500000.0,
+    54800000.0,
+    55100000.0,
+    55400000.0,
+    55700000.0,
+    56000000.0,
+    56300000.0,
+    56600000.0,
+    56900000.0,
+    57200000.0,
+    57500000.0,
+    57800000.0,
+    58100000.0,
+    58400000.0,
+    58700000.0,
+    59000000.0,
+    59300000.0,
+    59600000.0,
+    59900000.0,
+    60200000.0,
+    60500000.0,
+    60800000.0,
+    61100000.0,
+    61400000.0,
+    61700000.0,
+    62000000.0,
+    62300000.0,
+    62600000.0,
+    62900000.0,
+    63200000.0,
+    63500000.0,
+    63800000.0,
+    64100000.0,
+    64400000.0,
+    64700000.0,
+    65000000.0,
+    65300000.0,
+    65600000.0,
+    65900000.0,
+    66200000.0,
+    66500000.0,
+    66800000.0,
+    67100000.0,
+    67400000.0,
+    67700000.0,
+    68000000.0,
+    68300000.0,
+    68600000.0,
+    68900000.0,
+    69200000.0,
+    69500000.0,
+    69800000.0,
+    70100000.0,
+    70400000.0,
+    70700000.0,
+    71000000.0,
+    71300000.0,
+    71600000.0,
+    71900000.0,
+    72200000.0,
+    72500000.0,
+    72800000.0,
+    73100000.0,
+    73400000.0,
+    73700000.0,
+    74000000.0,
+    74300000.0,
+    74600000.0,
+    74900000.0,
+    75200000.0,
+    75500000.0,
+    75800000.0,
+    76100000.0,
+    76400000.0,
+    76700000.0,
+    77000000.0,
+    77300000.0,
+    77600000.0,
+    77900000.0,
+    78200000.0,
+    78500000.0,
+    78800000.0,
+    79100000.0,
+    79400000.0,
+    79700000.0,
+    80000000.0,
+    80300000.0,
+    80600000.0,
+    80900000.0,
+    81200000.0,
+    81500000.0,
+    81800000.0,
+    82100000.0,
+    82400000.0,
+    82700000.0,
+    83000000.0,
+    83300000.0,
+    83600000.0,
+    83900000.0,
+    84200000.0,
+    84500000.0,
+    84800000.0,
+    85100000.0,
+    85400000.0,
+    85700000.0,
+    86000000.0,
+    86300000.0,
+    86600000.0,
+    86900000.0,
+    87200000.0,
+    87500000.0,
+    87800000.0,
+    88100000.0,
+    88400000.0,
+    88700000.0,
+    89000000.0,
+    89300000.0,
+    89600000.0,
+    89900000.0,
+    90200000.0,
+    90500000.0,
+    90800000.0,
+    91100000.0,
+    91400000.0,
+    91700000.0,
+    92000000.0,
+    92300000.0,
+    92600000.0,
+    92900000.0,
+    93200000.0,
+    93500000.0,
+    93800000.0,
+    94100000.0,
+    94400000.0,
+    94700000.0,
+    95000000.0,
+    95300000.0,
+    95600000.0,
+    95900000.0,
+    96200000.0,
+    96500000.0,
+    96800000.0,
+    97100000.0,
+    97400000.0,
+    97700000.0,
+    98000000.0,
+    98300000.0,
+    98600000.0,
+    98900000.0,
+    99200000.0,
+    99500000.0,
+    99800000.0,
+    100100000.0,
+    100400000.0,
+    100700000.0,
+    101000000.0,
+    101300000.0,
+    101600000.0,
+    101900000.0,
+    102200000.0,
+    102500000.0,
+    102800000.0,
+    103100000.0,
+    103400000.0,
+    103700000.0,
+    104000000.0,
+    104300000.0,
+    104600000.0,
+    104900000.0,
+    105200000.0,
+    105500000.0,
+    105800000.0,
+    106100000.0,
+    106400000.0,
+    106700000.0,
+    107000000.0,
+    107300000.0,
+    107600000.0,
+    107900000.0,
+    108200000.0,
+    108500000.0,
+    108800000.0,
+    109100000.0,
+    109400000.0,
+    109700000.0,
+    110000000.0,
+    110300000.0,
+    110600000.0,
+    110900000.0,
+    111200000.0,
+    111500000.0,
+    111800000.0,
+    112100000.0,
+    112400000.0,
+    112700000.0,
+    113000000.0,
+    113300000.0,
+    113600000.0,
+    113900000.0,
+    114200000.0,
+    114500000.0,
+    114800000.0,
+    115100000.0,
+    115400000.0,
+    115700000.0,
+    116000000.0,
+    116300000.0,
+    116600000.0,
+    116900000.0,
+    117200000.0,
+    117500000.0,
+    117800000.0,
+    118100000.0,
+    118400000.0,
+    118700000.0,
+    119000000.0,
+    119300000.0,
+    119600000.0,
+    119900000.0,
+    120200000.0,
+    120500000.0,
+    120800000.0,
+    121100000.0,
+    121400000.0,
+    121700000.0,
+    122000000.0,
+    122300000.0,
+    122600000.0,
+    122900000.0,
+    123200000.0,
+    123500000.0,
+    123800000.0,
+    124100000.0,
+    124400000.0,
+    124700000.0,
+    125000000.0,
+    125300000.0,
+    125600000.0,
+    125900000.0,
+    126200000.0,
+    126500000.0,
+    126800000.0,
+    127100000.0,
+    127400000.0,
+    127700000.0,
+    128000000.0,
+    128300000.0,
+    128600000.0,
+    128900000.0,
+    129200000.0,
+    129500000.0,
+    129800000.0,
+    130100000.0,
+    130400000.0,
+    130700000.0,
+    131000000.0,
+    131300000.0,
+    131600000.0,
+    131900000.0,
+    132200000.0,
+    132500000.0,
+    132800000.0,
+    133100000.0,
+    133400000.0,
+    133700000.0,
+    134000000.0,
+    134300000.0,
+    134600000.0,
+    134900000.0,
+    135200000.0,
+    135500000.0,
+    135800000.0,
+    136100000.0,
+    136400000.0,
+    136700000.0,
+    137000000.0,
+    137300000.0,
+    137600000.0,
+    137900000.0,
+    138200000.0,
+    138500000.0,
+    138800000.0,
+    139100000.0,
+    139400000.0,
+    139700000.0,
+    140000000.0,
+    140300000.0,
+    140600000.0,
+    140900000.0,
+    141200000.0,
+    141500000.0,
+    141800000.0,
+    142100000.0,
+    142400000.0,
+    142700000.0,
+    143000000.0,
+    143300000.0,
+    143600000.0,
+    143900000.0,
+    144200000.0,
+    144500000.0,
+    144800000.0,
+    145100000.0,
+    145400000.0,
+    145700000.0,
+    146000000.0,
+    146300000.0,
+    146600000.0,
+    146900000.0,
+    147200000.0,
+    147500000.0,
+    147800000.0,
+    148100000.0,
+    148400000.0,
+    148700000.0,
+    149000000.0,
+    149300000.0,
+    149600000.0,
+    149900000.0,
+    150200000.0,
+    150500000.0,
+    150800000.0,
+    151100000.0,
+    151400000.0,
+    151700000.0,
+    152000000.0,
+    152300000.0,
+    152600000.0,
+    152900000.0,
+    153200000.0,
+    153500000.0,
+    153800000.0,
+    154100000.0,
+    154400000.0,
+    154700000.0,
+    155000000.0,
+    155300000.0,
+    155600000.0,
+    155900000.0,
+    156200000.0,
+    156500000.0,
+    156800000.0,
+    157100000.0,
+    157400000.0,
+    157700000.0,
+    158000000.0,
+    158300000.0,
+    158600000.0,
+    158900000.0,
+    159200000.0,
+    159500000.0,
+    159800000.0,
+    160100000.0,
+    160400000.0,
+    160700000.0,
+    161000000.0,
+    161300000.0,
+    161600000.0,
+    161900000.0,
+    162200000.0,
+    162500000.0,
+    162800000.0,
+    163100000.0,
+    163400000.0,
+    163700000.0,
+    164000000.0,
+    164300000.0,
+    164600000.0,
+    164900000.0,
+    165200000.0,
+    165500000.0,
+    165800000.0,
+    166100000.0,
+    166400000.0,
+    166700000.0,
+    167000000.0,
+    167300000.0,
+    167600000.0,
+    167900000.0,
+    168200000.0,
+    168500000.0,
+    168800000.0,
+    169100000.0,
+    169400000.0,
+    169700000.0,
+    170000000.0
+  ],
+  "frequency_step_hz": 300000.0,
+  "record_window": "full archived receiver history; no truncation",
+  "reconstruction": {
+    "window": "rectangular",
+    "zero_pad_factor": 4,
+    "time_shift_s": 0.0,
+    "purpose_of_zero_padding": "interpolates time sampling to 601.2 MHz so real_bandpass can represent the 170 MHz upper carrier; does not increase bandwidth or resolution",
+    "complex_envelope_period_s": 3.3333333333333333e-06,
+    "complex_envelope_preferred": true,
+    "real_bandpass_periodic_continuity_assumed": false
+  },
+  "api": {
+    "module": "gprMax.toolboxes.SFCW.processing",
+    "calls": [
+      "load_source",
+      "load_receiver",
+      "direct_frequency_response",
+      "reconstruct_time_response"
+    ],
+    "processing_source_path": "E:\\automation_djh\\automation_repo\\artifacts\\local_checks\\gprmax_v4_gpu_env\\Lib\\site-packages\\gprMax\\toolboxes\\SFCW\\processing.py",
+    "processing_source_sha256": "adad556f09140956f0ee19d3038430e06a9ae8be6a826dcad723096d99624a3b",
+    "adapter_script_path": "scripts/research_sfcw_unified_adapter.py",
+    "adapter_script_sha256": "4a8a6a4ed319f8ca6bd57f7a99d9c8d60b95fec64f2a0ca273e317f7ad6f2088"
+  },
+  "runtime_versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "h5py": "3.16.0",
+    "gprMax": "4.0.0"
+  },
+  "synthetic_check": {
+    "status": "passed",
+    "frequency_points": 501,
+    "half_step_source_phase_max_abs_error": 3.7238012298709097e-16,
+    "delay_s": 1.5302727877578177e-07,
+    "delay_peak_index": 92,
+    "delay_expected_index": 92,
+    "multitrace_shape": [
+      501,
+      2
+    ],
+    "linearity_max_abs_error": 1.7763568394002505e-15
+  },
+  "array_archive": {
+    "path": "responses_and_reconstructions.npz",
+    "sha256": "52f544f8516dceb9a8573e4f1f35efbb78f6b971d7c315526fb95df4f6a30984",
+    "keys_n": 528
+  },
+  "records": [
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-MT33/B2D-C3m-BG-MT33.h5",
+      "input_sha256": "36d9cc0bb44682e56936218dfd62047c696eecf9c2b0a33b6223e83347e50ef2",
+      "family": "MT",
+      "role": "BG",
+      "receiver_path": "name:mt01..mt33",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "mt01",
+        "mt02",
+        "mt03",
+        "mt04",
+        "mt05",
+        "mt06",
+        "mt07",
+        "mt08",
+        "mt09",
+        "mt10",
+        "mt11",
+        "mt12",
+        "mt13",
+        "mt14",
+        "mt15",
+        "mt16",
+        "mt17",
+        "mt18",
+        "mt19",
+        "mt20",
+        "mt21",
+        "mt22",
+        "mt23",
+        "mt24",
+        "mt25",
+        "mt26",
+        "mt27",
+        "mt28",
+        "mt29",
+        "mt30",
+        "mt31",
+        "mt32",
+        "mt33"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          12.65,
+          45.0
+        ],
+        [
+          0.0,
+          12.9,
+          45.0
+        ],
+        [
+          0.0,
+          13.15,
+          45.0
+        ],
+        [
+          0.0,
+          13.4,
+          45.0
+        ],
+        [
+          0.0,
+          13.65,
+          45.0
+        ],
+        [
+          0.0,
+          13.9,
+          45.0
+        ],
+        [
+          0.0,
+          14.15,
+          45.0
+        ],
+        [
+          0.0,
+          14.4,
+          45.0
+        ],
+        [
+          0.0,
+          14.65,
+          45.0
+        ],
+        [
+          0.0,
+          14.9,
+          45.0
+        ],
+        [
+          0.0,
+          15.15,
+          45.0
+        ],
+        [
+          0.0,
+          15.4,
+          45.0
+        ],
+        [
+          0.0,
+          15.65,
+          45.0
+        ],
+        [
+          0.0,
+          15.9,
+          45.0
+        ],
+        [
+          0.0,
+          16.150000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          16.400000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          16.650000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          16.900000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          17.150000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          17.400000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          17.650000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          17.900000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          18.150000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          18.400000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          18.650000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          18.900000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          19.150000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          19.400000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          19.650000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          19.900000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          20.150000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          20.400000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          20.650000000000002,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        15.350000000000001,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "no_taper",
+      "tail_taper_fraction": 0.0,
+      "tail_relative_db_before_taper": -46.47166542387987,
+      "frequency_response_array": "MT_BG_B2D-C3m-BG-MT33_no_taper_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "MT_BG_B2D-C3m-BG-MT33_no_taper_frequency_hz",
+          "response": "MT_BG_B2D-C3m-BG-MT33_no_taper_response",
+          "source_spectrum": "MT_BG_B2D-C3m-BG-MT33_no_taper_source_spectrum",
+          "receiver_spectrum": "MT_BG_B2D-C3m-BG-MT33_no_taper_receiver_spectrum",
+          "source_valid": "MT_BG_B2D-C3m-BG-MT33_no_taper_source_valid",
+          "envelope_time_s": "MT_BG_B2D-C3m-BG-MT33_no_taper_envelope_time_s",
+          "complex_envelope": "MT_BG_B2D-C3m-BG-MT33_no_taper_complex_envelope",
+          "complex_bandpass": "MT_BG_B2D-C3m-BG-MT33_no_taper_complex_bandpass",
+          "real_bandpass": "MT_BG_B2D-C3m-BG-MT33_no_taper_real_bandpass",
+          "window_weights": "MT_BG_B2D-C3m-BG-MT33_no_taper_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-MT33/B2D-C3m-BG-MT33.h5",
+      "input_sha256": "36d9cc0bb44682e56936218dfd62047c696eecf9c2b0a33b6223e83347e50ef2",
+      "family": "MT",
+      "role": "BG",
+      "receiver_path": "name:mt01..mt33",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "mt01",
+        "mt02",
+        "mt03",
+        "mt04",
+        "mt05",
+        "mt06",
+        "mt07",
+        "mt08",
+        "mt09",
+        "mt10",
+        "mt11",
+        "mt12",
+        "mt13",
+        "mt14",
+        "mt15",
+        "mt16",
+        "mt17",
+        "mt18",
+        "mt19",
+        "mt20",
+        "mt21",
+        "mt22",
+        "mt23",
+        "mt24",
+        "mt25",
+        "mt26",
+        "mt27",
+        "mt28",
+        "mt29",
+        "mt30",
+        "mt31",
+        "mt32",
+        "mt33"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          12.65,
+          45.0
+        ],
+        [
+          0.0,
+          12.9,
+          45.0
+        ],
+        [
+          0.0,
+          13.15,
+          45.0
+        ],
+        [
+          0.0,
+          13.4,
+          45.0
+        ],
+        [
+          0.0,
+          13.65,
+          45.0
+        ],
+        [
+          0.0,
+          13.9,
+          45.0
+        ],
+        [
+          0.0,
+          14.15,
+          45.0
+        ],
+        [
+          0.0,
+          14.4,
+          45.0
+        ],
+        [
+          0.0,
+          14.65,
+          45.0
+        ],
+        [
+          0.0,
+          14.9,
+          45.0
+        ],
+        [
+          0.0,
+          15.15,
+          45.0
+        ],
+        [
+          0.0,
+          15.4,
+          45.0
+        ],
+        [
+          0.0,
+          15.65,
+          45.0
+        ],
+        [
+          0.0,
+          15.9,
+          45.0
+        ],
+        [
+          0.0,
+          16.150000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          16.400000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          16.650000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          16.900000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          17.150000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          17.400000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          17.650000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          17.900000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          18.150000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          18.400000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          18.650000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          18.900000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          19.150000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          19.400000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          19.650000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          19.900000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          20.150000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          20.400000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          20.650000000000002,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        15.350000000000001,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "tail_200ns",
+      "tail_taper_fraction": 0.16665438286163523,
+      "tail_relative_db_before_taper": -46.47166542387987,
+      "frequency_response_array": "MT_BG_B2D-C3m-BG-MT33_tail_200ns_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "MT_BG_B2D-C3m-BG-MT33_tail_200ns_frequency_hz",
+          "response": "MT_BG_B2D-C3m-BG-MT33_tail_200ns_response",
+          "source_spectrum": "MT_BG_B2D-C3m-BG-MT33_tail_200ns_source_spectrum",
+          "receiver_spectrum": "MT_BG_B2D-C3m-BG-MT33_tail_200ns_receiver_spectrum",
+          "source_valid": "MT_BG_B2D-C3m-BG-MT33_tail_200ns_source_valid",
+          "envelope_time_s": "MT_BG_B2D-C3m-BG-MT33_tail_200ns_envelope_time_s",
+          "complex_envelope": "MT_BG_B2D-C3m-BG-MT33_tail_200ns_complex_envelope",
+          "complex_bandpass": "MT_BG_B2D-C3m-BG-MT33_tail_200ns_complex_bandpass",
+          "real_bandpass": "MT_BG_B2D-C3m-BG-MT33_tail_200ns_real_bandpass",
+          "window_weights": "MT_BG_B2D-C3m-BG-MT33_tail_200ns_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33.h5",
+      "input_sha256": "faf847e66293b215d3b22117b7935c9b0c9dc800a1cefd84e965e56aca7c4e21",
+      "family": "MT",
+      "role": "TGT",
+      "receiver_path": "name:mt01..mt33",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "mt01",
+        "mt02",
+        "mt03",
+        "mt04",
+        "mt05",
+        "mt06",
+        "mt07",
+        "mt08",
+        "mt09",
+        "mt10",
+        "mt11",
+        "mt12",
+        "mt13",
+        "mt14",
+        "mt15",
+        "mt16",
+        "mt17",
+        "mt18",
+        "mt19",
+        "mt20",
+        "mt21",
+        "mt22",
+        "mt23",
+        "mt24",
+        "mt25",
+        "mt26",
+        "mt27",
+        "mt28",
+        "mt29",
+        "mt30",
+        "mt31",
+        "mt32",
+        "mt33"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          12.65,
+          45.0
+        ],
+        [
+          0.0,
+          12.9,
+          45.0
+        ],
+        [
+          0.0,
+          13.15,
+          45.0
+        ],
+        [
+          0.0,
+          13.4,
+          45.0
+        ],
+        [
+          0.0,
+          13.65,
+          45.0
+        ],
+        [
+          0.0,
+          13.9,
+          45.0
+        ],
+        [
+          0.0,
+          14.15,
+          45.0
+        ],
+        [
+          0.0,
+          14.4,
+          45.0
+        ],
+        [
+          0.0,
+          14.65,
+          45.0
+        ],
+        [
+          0.0,
+          14.9,
+          45.0
+        ],
+        [
+          0.0,
+          15.15,
+          45.0
+        ],
+        [
+          0.0,
+          15.4,
+          45.0
+        ],
+        [
+          0.0,
+          15.65,
+          45.0
+        ],
+        [
+          0.0,
+          15.9,
+          45.0
+        ],
+        [
+          0.0,
+          16.150000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          16.400000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          16.650000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          16.900000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          17.150000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          17.400000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          17.650000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          17.900000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          18.150000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          18.400000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          18.650000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          18.900000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          19.150000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          19.400000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          19.650000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          19.900000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          20.150000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          20.400000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          20.650000000000002,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        15.350000000000001,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "no_taper",
+      "tail_taper_fraction": 0.0,
+      "tail_relative_db_before_taper": -46.47166544382004,
+      "frequency_response_array": "MT_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33_no_taper_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "MT_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33_no_taper_frequency_hz",
+          "response": "MT_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33_no_taper_response",
+          "source_spectrum": "MT_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33_no_taper_source_spectrum",
+          "receiver_spectrum": "MT_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33_no_taper_receiver_spectrum",
+          "source_valid": "MT_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33_no_taper_source_valid",
+          "envelope_time_s": "MT_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33_no_taper_envelope_time_s",
+          "complex_envelope": "MT_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33_no_taper_complex_envelope",
+          "complex_bandpass": "MT_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33_no_taper_complex_bandpass",
+          "real_bandpass": "MT_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33_no_taper_real_bandpass",
+          "window_weights": "MT_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33_no_taper_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33.h5",
+      "input_sha256": "faf847e66293b215d3b22117b7935c9b0c9dc800a1cefd84e965e56aca7c4e21",
+      "family": "MT",
+      "role": "TGT",
+      "receiver_path": "name:mt01..mt33",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "mt01",
+        "mt02",
+        "mt03",
+        "mt04",
+        "mt05",
+        "mt06",
+        "mt07",
+        "mt08",
+        "mt09",
+        "mt10",
+        "mt11",
+        "mt12",
+        "mt13",
+        "mt14",
+        "mt15",
+        "mt16",
+        "mt17",
+        "mt18",
+        "mt19",
+        "mt20",
+        "mt21",
+        "mt22",
+        "mt23",
+        "mt24",
+        "mt25",
+        "mt26",
+        "mt27",
+        "mt28",
+        "mt29",
+        "mt30",
+        "mt31",
+        "mt32",
+        "mt33"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          12.65,
+          45.0
+        ],
+        [
+          0.0,
+          12.9,
+          45.0
+        ],
+        [
+          0.0,
+          13.15,
+          45.0
+        ],
+        [
+          0.0,
+          13.4,
+          45.0
+        ],
+        [
+          0.0,
+          13.65,
+          45.0
+        ],
+        [
+          0.0,
+          13.9,
+          45.0
+        ],
+        [
+          0.0,
+          14.15,
+          45.0
+        ],
+        [
+          0.0,
+          14.4,
+          45.0
+        ],
+        [
+          0.0,
+          14.65,
+          45.0
+        ],
+        [
+          0.0,
+          14.9,
+          45.0
+        ],
+        [
+          0.0,
+          15.15,
+          45.0
+        ],
+        [
+          0.0,
+          15.4,
+          45.0
+        ],
+        [
+          0.0,
+          15.65,
+          45.0
+        ],
+        [
+          0.0,
+          15.9,
+          45.0
+        ],
+        [
+          0.0,
+          16.150000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          16.400000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          16.650000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          16.900000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          17.150000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          17.400000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          17.650000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          17.900000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          18.150000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          18.400000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          18.650000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          18.900000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          19.150000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          19.400000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          19.650000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          19.900000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          20.150000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          20.400000000000002,
+          45.0
+        ],
+        [
+          0.0,
+          20.650000000000002,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        15.350000000000001,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "tail_200ns",
+      "tail_taper_fraction": 0.16665438286163523,
+      "tail_relative_db_before_taper": -46.47166544382004,
+      "frequency_response_array": "MT_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33_tail_200ns_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "MT_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33_tail_200ns_frequency_hz",
+          "response": "MT_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33_tail_200ns_response",
+          "source_spectrum": "MT_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33_tail_200ns_source_spectrum",
+          "receiver_spectrum": "MT_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33_tail_200ns_receiver_spectrum",
+          "source_valid": "MT_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33_tail_200ns_source_valid",
+          "envelope_time_s": "MT_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33_tail_200ns_envelope_time_s",
+          "complex_envelope": "MT_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33_tail_200ns_complex_envelope",
+          "complex_bandpass": "MT_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33_tail_200ns_complex_bandpass",
+          "real_bandpass": "MT_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33_tail_200ns_real_bandpass",
+          "window_weights": "MT_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33_tail_200ns_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t01/B2D-C3m-BG-CO11-t01.h5",
+      "input_sha256": "5be9962c4485a4d9ccbd6bb2a546cdc1b292cce0451080c72f805e06499f08ae",
+      "family": "CO",
+      "role": "BG",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          12.65,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        11.350000000000001,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "no_taper",
+      "tail_taper_fraction": 0.0,
+      "tail_relative_db_before_taper": -34.397939796043914,
+      "frequency_response_array": "CO_BG_B2D-C3m-BG-CO11-t01_no_taper_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_BG_B2D-C3m-BG-CO11-t01_no_taper_frequency_hz",
+          "response": "CO_BG_B2D-C3m-BG-CO11-t01_no_taper_response",
+          "source_spectrum": "CO_BG_B2D-C3m-BG-CO11-t01_no_taper_source_spectrum",
+          "receiver_spectrum": "CO_BG_B2D-C3m-BG-CO11-t01_no_taper_receiver_spectrum",
+          "source_valid": "CO_BG_B2D-C3m-BG-CO11-t01_no_taper_source_valid",
+          "envelope_time_s": "CO_BG_B2D-C3m-BG-CO11-t01_no_taper_envelope_time_s",
+          "complex_envelope": "CO_BG_B2D-C3m-BG-CO11-t01_no_taper_complex_envelope",
+          "complex_bandpass": "CO_BG_B2D-C3m-BG-CO11-t01_no_taper_complex_bandpass",
+          "real_bandpass": "CO_BG_B2D-C3m-BG-CO11-t01_no_taper_real_bandpass",
+          "window_weights": "CO_BG_B2D-C3m-BG-CO11-t01_no_taper_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t01/B2D-C3m-BG-CO11-t01.h5",
+      "input_sha256": "5be9962c4485a4d9ccbd6bb2a546cdc1b292cce0451080c72f805e06499f08ae",
+      "family": "CO",
+      "role": "BG",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          12.65,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        11.350000000000001,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "tail_200ns",
+      "tail_taper_fraction": 0.16665438286163523,
+      "tail_relative_db_before_taper": -34.397939796043914,
+      "frequency_response_array": "CO_BG_B2D-C3m-BG-CO11-t01_tail_200ns_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_BG_B2D-C3m-BG-CO11-t01_tail_200ns_frequency_hz",
+          "response": "CO_BG_B2D-C3m-BG-CO11-t01_tail_200ns_response",
+          "source_spectrum": "CO_BG_B2D-C3m-BG-CO11-t01_tail_200ns_source_spectrum",
+          "receiver_spectrum": "CO_BG_B2D-C3m-BG-CO11-t01_tail_200ns_receiver_spectrum",
+          "source_valid": "CO_BG_B2D-C3m-BG-CO11-t01_tail_200ns_source_valid",
+          "envelope_time_s": "CO_BG_B2D-C3m-BG-CO11-t01_tail_200ns_envelope_time_s",
+          "complex_envelope": "CO_BG_B2D-C3m-BG-CO11-t01_tail_200ns_complex_envelope",
+          "complex_bandpass": "CO_BG_B2D-C3m-BG-CO11-t01_tail_200ns_complex_bandpass",
+          "real_bandpass": "CO_BG_B2D-C3m-BG-CO11-t01_tail_200ns_real_bandpass",
+          "window_weights": "CO_BG_B2D-C3m-BG-CO11-t01_tail_200ns_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t02/B2D-C3m-BG-CO11-t02.h5",
+      "input_sha256": "724f4955cb37207a3db889b20170bc182c317983fb8ac3a3656760389ca0d553",
+      "family": "CO",
+      "role": "BG",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          13.65,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        12.350000000000001,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "no_taper",
+      "tail_taper_fraction": 0.0,
+      "tail_relative_db_before_taper": -33.220241790039786,
+      "frequency_response_array": "CO_BG_B2D-C3m-BG-CO11-t02_no_taper_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_BG_B2D-C3m-BG-CO11-t02_no_taper_frequency_hz",
+          "response": "CO_BG_B2D-C3m-BG-CO11-t02_no_taper_response",
+          "source_spectrum": "CO_BG_B2D-C3m-BG-CO11-t02_no_taper_source_spectrum",
+          "receiver_spectrum": "CO_BG_B2D-C3m-BG-CO11-t02_no_taper_receiver_spectrum",
+          "source_valid": "CO_BG_B2D-C3m-BG-CO11-t02_no_taper_source_valid",
+          "envelope_time_s": "CO_BG_B2D-C3m-BG-CO11-t02_no_taper_envelope_time_s",
+          "complex_envelope": "CO_BG_B2D-C3m-BG-CO11-t02_no_taper_complex_envelope",
+          "complex_bandpass": "CO_BG_B2D-C3m-BG-CO11-t02_no_taper_complex_bandpass",
+          "real_bandpass": "CO_BG_B2D-C3m-BG-CO11-t02_no_taper_real_bandpass",
+          "window_weights": "CO_BG_B2D-C3m-BG-CO11-t02_no_taper_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t02/B2D-C3m-BG-CO11-t02.h5",
+      "input_sha256": "724f4955cb37207a3db889b20170bc182c317983fb8ac3a3656760389ca0d553",
+      "family": "CO",
+      "role": "BG",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          13.65,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        12.350000000000001,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "tail_200ns",
+      "tail_taper_fraction": 0.16665438286163523,
+      "tail_relative_db_before_taper": -33.220241790039786,
+      "frequency_response_array": "CO_BG_B2D-C3m-BG-CO11-t02_tail_200ns_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_BG_B2D-C3m-BG-CO11-t02_tail_200ns_frequency_hz",
+          "response": "CO_BG_B2D-C3m-BG-CO11-t02_tail_200ns_response",
+          "source_spectrum": "CO_BG_B2D-C3m-BG-CO11-t02_tail_200ns_source_spectrum",
+          "receiver_spectrum": "CO_BG_B2D-C3m-BG-CO11-t02_tail_200ns_receiver_spectrum",
+          "source_valid": "CO_BG_B2D-C3m-BG-CO11-t02_tail_200ns_source_valid",
+          "envelope_time_s": "CO_BG_B2D-C3m-BG-CO11-t02_tail_200ns_envelope_time_s",
+          "complex_envelope": "CO_BG_B2D-C3m-BG-CO11-t02_tail_200ns_complex_envelope",
+          "complex_bandpass": "CO_BG_B2D-C3m-BG-CO11-t02_tail_200ns_complex_bandpass",
+          "real_bandpass": "CO_BG_B2D-C3m-BG-CO11-t02_tail_200ns_real_bandpass",
+          "window_weights": "CO_BG_B2D-C3m-BG-CO11-t02_tail_200ns_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t03/B2D-C3m-BG-CO11-t03.h5",
+      "input_sha256": "996962d4df8719952f9e9de8bba2a39632ac1fc7191996cfe5da317aa6c2704e",
+      "family": "CO",
+      "role": "BG",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          14.65,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        13.350000000000001,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "no_taper",
+      "tail_taper_fraction": 0.0,
+      "tail_relative_db_before_taper": -32.92909033581143,
+      "frequency_response_array": "CO_BG_B2D-C3m-BG-CO11-t03_no_taper_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_BG_B2D-C3m-BG-CO11-t03_no_taper_frequency_hz",
+          "response": "CO_BG_B2D-C3m-BG-CO11-t03_no_taper_response",
+          "source_spectrum": "CO_BG_B2D-C3m-BG-CO11-t03_no_taper_source_spectrum",
+          "receiver_spectrum": "CO_BG_B2D-C3m-BG-CO11-t03_no_taper_receiver_spectrum",
+          "source_valid": "CO_BG_B2D-C3m-BG-CO11-t03_no_taper_source_valid",
+          "envelope_time_s": "CO_BG_B2D-C3m-BG-CO11-t03_no_taper_envelope_time_s",
+          "complex_envelope": "CO_BG_B2D-C3m-BG-CO11-t03_no_taper_complex_envelope",
+          "complex_bandpass": "CO_BG_B2D-C3m-BG-CO11-t03_no_taper_complex_bandpass",
+          "real_bandpass": "CO_BG_B2D-C3m-BG-CO11-t03_no_taper_real_bandpass",
+          "window_weights": "CO_BG_B2D-C3m-BG-CO11-t03_no_taper_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t03/B2D-C3m-BG-CO11-t03.h5",
+      "input_sha256": "996962d4df8719952f9e9de8bba2a39632ac1fc7191996cfe5da317aa6c2704e",
+      "family": "CO",
+      "role": "BG",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          14.65,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        13.350000000000001,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "tail_200ns",
+      "tail_taper_fraction": 0.16665438286163523,
+      "tail_relative_db_before_taper": -32.92909033581143,
+      "frequency_response_array": "CO_BG_B2D-C3m-BG-CO11-t03_tail_200ns_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_BG_B2D-C3m-BG-CO11-t03_tail_200ns_frequency_hz",
+          "response": "CO_BG_B2D-C3m-BG-CO11-t03_tail_200ns_response",
+          "source_spectrum": "CO_BG_B2D-C3m-BG-CO11-t03_tail_200ns_source_spectrum",
+          "receiver_spectrum": "CO_BG_B2D-C3m-BG-CO11-t03_tail_200ns_receiver_spectrum",
+          "source_valid": "CO_BG_B2D-C3m-BG-CO11-t03_tail_200ns_source_valid",
+          "envelope_time_s": "CO_BG_B2D-C3m-BG-CO11-t03_tail_200ns_envelope_time_s",
+          "complex_envelope": "CO_BG_B2D-C3m-BG-CO11-t03_tail_200ns_complex_envelope",
+          "complex_bandpass": "CO_BG_B2D-C3m-BG-CO11-t03_tail_200ns_complex_bandpass",
+          "real_bandpass": "CO_BG_B2D-C3m-BG-CO11-t03_tail_200ns_real_bandpass",
+          "window_weights": "CO_BG_B2D-C3m-BG-CO11-t03_tail_200ns_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t04/B2D-C3m-BG-CO11-t04.h5",
+      "input_sha256": "5dc659e4dfa68791b53898d94a4f0b0a61e4624ee4ec8830386bb73d63a7f4a3",
+      "family": "CO",
+      "role": "BG",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          15.65,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        14.350000000000001,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "no_taper",
+      "tail_taper_fraction": 0.0,
+      "tail_relative_db_before_taper": -32.822896558261434,
+      "frequency_response_array": "CO_BG_B2D-C3m-BG-CO11-t04_no_taper_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_BG_B2D-C3m-BG-CO11-t04_no_taper_frequency_hz",
+          "response": "CO_BG_B2D-C3m-BG-CO11-t04_no_taper_response",
+          "source_spectrum": "CO_BG_B2D-C3m-BG-CO11-t04_no_taper_source_spectrum",
+          "receiver_spectrum": "CO_BG_B2D-C3m-BG-CO11-t04_no_taper_receiver_spectrum",
+          "source_valid": "CO_BG_B2D-C3m-BG-CO11-t04_no_taper_source_valid",
+          "envelope_time_s": "CO_BG_B2D-C3m-BG-CO11-t04_no_taper_envelope_time_s",
+          "complex_envelope": "CO_BG_B2D-C3m-BG-CO11-t04_no_taper_complex_envelope",
+          "complex_bandpass": "CO_BG_B2D-C3m-BG-CO11-t04_no_taper_complex_bandpass",
+          "real_bandpass": "CO_BG_B2D-C3m-BG-CO11-t04_no_taper_real_bandpass",
+          "window_weights": "CO_BG_B2D-C3m-BG-CO11-t04_no_taper_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t04/B2D-C3m-BG-CO11-t04.h5",
+      "input_sha256": "5dc659e4dfa68791b53898d94a4f0b0a61e4624ee4ec8830386bb73d63a7f4a3",
+      "family": "CO",
+      "role": "BG",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          15.65,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        14.350000000000001,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "tail_200ns",
+      "tail_taper_fraction": 0.16665438286163523,
+      "tail_relative_db_before_taper": -32.822896558261434,
+      "frequency_response_array": "CO_BG_B2D-C3m-BG-CO11-t04_tail_200ns_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_BG_B2D-C3m-BG-CO11-t04_tail_200ns_frequency_hz",
+          "response": "CO_BG_B2D-C3m-BG-CO11-t04_tail_200ns_response",
+          "source_spectrum": "CO_BG_B2D-C3m-BG-CO11-t04_tail_200ns_source_spectrum",
+          "receiver_spectrum": "CO_BG_B2D-C3m-BG-CO11-t04_tail_200ns_receiver_spectrum",
+          "source_valid": "CO_BG_B2D-C3m-BG-CO11-t04_tail_200ns_source_valid",
+          "envelope_time_s": "CO_BG_B2D-C3m-BG-CO11-t04_tail_200ns_envelope_time_s",
+          "complex_envelope": "CO_BG_B2D-C3m-BG-CO11-t04_tail_200ns_complex_envelope",
+          "complex_bandpass": "CO_BG_B2D-C3m-BG-CO11-t04_tail_200ns_complex_bandpass",
+          "real_bandpass": "CO_BG_B2D-C3m-BG-CO11-t04_tail_200ns_real_bandpass",
+          "window_weights": "CO_BG_B2D-C3m-BG-CO11-t04_tail_200ns_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t05/B2D-C3m-BG-CO11-t05.h5",
+      "input_sha256": "a261e9958b90e82ad11a23464e797e5d7c98ad0a9cf2262c41cfd5b623b236c6",
+      "family": "CO",
+      "role": "BG",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          16.650000000000002,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        15.350000000000001,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "no_taper",
+      "tail_taper_fraction": 0.0,
+      "tail_relative_db_before_taper": -33.48866629393268,
+      "frequency_response_array": "CO_BG_B2D-C3m-BG-CO11-t05_no_taper_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_BG_B2D-C3m-BG-CO11-t05_no_taper_frequency_hz",
+          "response": "CO_BG_B2D-C3m-BG-CO11-t05_no_taper_response",
+          "source_spectrum": "CO_BG_B2D-C3m-BG-CO11-t05_no_taper_source_spectrum",
+          "receiver_spectrum": "CO_BG_B2D-C3m-BG-CO11-t05_no_taper_receiver_spectrum",
+          "source_valid": "CO_BG_B2D-C3m-BG-CO11-t05_no_taper_source_valid",
+          "envelope_time_s": "CO_BG_B2D-C3m-BG-CO11-t05_no_taper_envelope_time_s",
+          "complex_envelope": "CO_BG_B2D-C3m-BG-CO11-t05_no_taper_complex_envelope",
+          "complex_bandpass": "CO_BG_B2D-C3m-BG-CO11-t05_no_taper_complex_bandpass",
+          "real_bandpass": "CO_BG_B2D-C3m-BG-CO11-t05_no_taper_real_bandpass",
+          "window_weights": "CO_BG_B2D-C3m-BG-CO11-t05_no_taper_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t05/B2D-C3m-BG-CO11-t05.h5",
+      "input_sha256": "a261e9958b90e82ad11a23464e797e5d7c98ad0a9cf2262c41cfd5b623b236c6",
+      "family": "CO",
+      "role": "BG",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          16.650000000000002,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        15.350000000000001,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "tail_200ns",
+      "tail_taper_fraction": 0.16665438286163523,
+      "tail_relative_db_before_taper": -33.48866629393268,
+      "frequency_response_array": "CO_BG_B2D-C3m-BG-CO11-t05_tail_200ns_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_BG_B2D-C3m-BG-CO11-t05_tail_200ns_frequency_hz",
+          "response": "CO_BG_B2D-C3m-BG-CO11-t05_tail_200ns_response",
+          "source_spectrum": "CO_BG_B2D-C3m-BG-CO11-t05_tail_200ns_source_spectrum",
+          "receiver_spectrum": "CO_BG_B2D-C3m-BG-CO11-t05_tail_200ns_receiver_spectrum",
+          "source_valid": "CO_BG_B2D-C3m-BG-CO11-t05_tail_200ns_source_valid",
+          "envelope_time_s": "CO_BG_B2D-C3m-BG-CO11-t05_tail_200ns_envelope_time_s",
+          "complex_envelope": "CO_BG_B2D-C3m-BG-CO11-t05_tail_200ns_complex_envelope",
+          "complex_bandpass": "CO_BG_B2D-C3m-BG-CO11-t05_tail_200ns_complex_bandpass",
+          "real_bandpass": "CO_BG_B2D-C3m-BG-CO11-t05_tail_200ns_real_bandpass",
+          "window_weights": "CO_BG_B2D-C3m-BG-CO11-t05_tail_200ns_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t06/B2D-C3m-BG-CO11-t06.h5",
+      "input_sha256": "b1ced407e2cb7eb0ce600d18b5104cc9eaedf2beb1b78d4fc6d1229cbd2ab940",
+      "family": "CO",
+      "role": "BG",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          17.650000000000002,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        16.35,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "no_taper",
+      "tail_taper_fraction": 0.0,
+      "tail_relative_db_before_taper": -32.822896558261355,
+      "frequency_response_array": "CO_BG_B2D-C3m-BG-CO11-t06_no_taper_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_BG_B2D-C3m-BG-CO11-t06_no_taper_frequency_hz",
+          "response": "CO_BG_B2D-C3m-BG-CO11-t06_no_taper_response",
+          "source_spectrum": "CO_BG_B2D-C3m-BG-CO11-t06_no_taper_source_spectrum",
+          "receiver_spectrum": "CO_BG_B2D-C3m-BG-CO11-t06_no_taper_receiver_spectrum",
+          "source_valid": "CO_BG_B2D-C3m-BG-CO11-t06_no_taper_source_valid",
+          "envelope_time_s": "CO_BG_B2D-C3m-BG-CO11-t06_no_taper_envelope_time_s",
+          "complex_envelope": "CO_BG_B2D-C3m-BG-CO11-t06_no_taper_complex_envelope",
+          "complex_bandpass": "CO_BG_B2D-C3m-BG-CO11-t06_no_taper_complex_bandpass",
+          "real_bandpass": "CO_BG_B2D-C3m-BG-CO11-t06_no_taper_real_bandpass",
+          "window_weights": "CO_BG_B2D-C3m-BG-CO11-t06_no_taper_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t06/B2D-C3m-BG-CO11-t06.h5",
+      "input_sha256": "b1ced407e2cb7eb0ce600d18b5104cc9eaedf2beb1b78d4fc6d1229cbd2ab940",
+      "family": "CO",
+      "role": "BG",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          17.650000000000002,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        16.35,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "tail_200ns",
+      "tail_taper_fraction": 0.16665438286163523,
+      "tail_relative_db_before_taper": -32.822896558261355,
+      "frequency_response_array": "CO_BG_B2D-C3m-BG-CO11-t06_tail_200ns_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_BG_B2D-C3m-BG-CO11-t06_tail_200ns_frequency_hz",
+          "response": "CO_BG_B2D-C3m-BG-CO11-t06_tail_200ns_response",
+          "source_spectrum": "CO_BG_B2D-C3m-BG-CO11-t06_tail_200ns_source_spectrum",
+          "receiver_spectrum": "CO_BG_B2D-C3m-BG-CO11-t06_tail_200ns_receiver_spectrum",
+          "source_valid": "CO_BG_B2D-C3m-BG-CO11-t06_tail_200ns_source_valid",
+          "envelope_time_s": "CO_BG_B2D-C3m-BG-CO11-t06_tail_200ns_envelope_time_s",
+          "complex_envelope": "CO_BG_B2D-C3m-BG-CO11-t06_tail_200ns_complex_envelope",
+          "complex_bandpass": "CO_BG_B2D-C3m-BG-CO11-t06_tail_200ns_complex_bandpass",
+          "real_bandpass": "CO_BG_B2D-C3m-BG-CO11-t06_tail_200ns_real_bandpass",
+          "window_weights": "CO_BG_B2D-C3m-BG-CO11-t06_tail_200ns_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t07/B2D-C3m-BG-CO11-t07.h5",
+      "input_sha256": "7ab6986b5fb81d6556575065ab6d79fa784043d75729ecd5ddaaf58c6873ac05",
+      "family": "CO",
+      "role": "BG",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          18.650000000000002,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        17.35,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "no_taper",
+      "tail_taper_fraction": 0.0,
+      "tail_relative_db_before_taper": -32.9290903358114,
+      "frequency_response_array": "CO_BG_B2D-C3m-BG-CO11-t07_no_taper_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_BG_B2D-C3m-BG-CO11-t07_no_taper_frequency_hz",
+          "response": "CO_BG_B2D-C3m-BG-CO11-t07_no_taper_response",
+          "source_spectrum": "CO_BG_B2D-C3m-BG-CO11-t07_no_taper_source_spectrum",
+          "receiver_spectrum": "CO_BG_B2D-C3m-BG-CO11-t07_no_taper_receiver_spectrum",
+          "source_valid": "CO_BG_B2D-C3m-BG-CO11-t07_no_taper_source_valid",
+          "envelope_time_s": "CO_BG_B2D-C3m-BG-CO11-t07_no_taper_envelope_time_s",
+          "complex_envelope": "CO_BG_B2D-C3m-BG-CO11-t07_no_taper_complex_envelope",
+          "complex_bandpass": "CO_BG_B2D-C3m-BG-CO11-t07_no_taper_complex_bandpass",
+          "real_bandpass": "CO_BG_B2D-C3m-BG-CO11-t07_no_taper_real_bandpass",
+          "window_weights": "CO_BG_B2D-C3m-BG-CO11-t07_no_taper_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t07/B2D-C3m-BG-CO11-t07.h5",
+      "input_sha256": "7ab6986b5fb81d6556575065ab6d79fa784043d75729ecd5ddaaf58c6873ac05",
+      "family": "CO",
+      "role": "BG",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          18.650000000000002,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        17.35,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "tail_200ns",
+      "tail_taper_fraction": 0.16665438286163523,
+      "tail_relative_db_before_taper": -32.9290903358114,
+      "frequency_response_array": "CO_BG_B2D-C3m-BG-CO11-t07_tail_200ns_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_BG_B2D-C3m-BG-CO11-t07_tail_200ns_frequency_hz",
+          "response": "CO_BG_B2D-C3m-BG-CO11-t07_tail_200ns_response",
+          "source_spectrum": "CO_BG_B2D-C3m-BG-CO11-t07_tail_200ns_source_spectrum",
+          "receiver_spectrum": "CO_BG_B2D-C3m-BG-CO11-t07_tail_200ns_receiver_spectrum",
+          "source_valid": "CO_BG_B2D-C3m-BG-CO11-t07_tail_200ns_source_valid",
+          "envelope_time_s": "CO_BG_B2D-C3m-BG-CO11-t07_tail_200ns_envelope_time_s",
+          "complex_envelope": "CO_BG_B2D-C3m-BG-CO11-t07_tail_200ns_complex_envelope",
+          "complex_bandpass": "CO_BG_B2D-C3m-BG-CO11-t07_tail_200ns_complex_bandpass",
+          "real_bandpass": "CO_BG_B2D-C3m-BG-CO11-t07_tail_200ns_real_bandpass",
+          "window_weights": "CO_BG_B2D-C3m-BG-CO11-t07_tail_200ns_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t08/B2D-C3m-BG-CO11-t08.h5",
+      "input_sha256": "4af524af3967a7ede2f3b1b395d0a31a2d8af4cee4891e3c615492a302ee9b3c",
+      "family": "CO",
+      "role": "BG",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          19.650000000000002,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        18.35,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "no_taper",
+      "tail_taper_fraction": 0.0,
+      "tail_relative_db_before_taper": -33.22024179003976,
+      "frequency_response_array": "CO_BG_B2D-C3m-BG-CO11-t08_no_taper_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_BG_B2D-C3m-BG-CO11-t08_no_taper_frequency_hz",
+          "response": "CO_BG_B2D-C3m-BG-CO11-t08_no_taper_response",
+          "source_spectrum": "CO_BG_B2D-C3m-BG-CO11-t08_no_taper_source_spectrum",
+          "receiver_spectrum": "CO_BG_B2D-C3m-BG-CO11-t08_no_taper_receiver_spectrum",
+          "source_valid": "CO_BG_B2D-C3m-BG-CO11-t08_no_taper_source_valid",
+          "envelope_time_s": "CO_BG_B2D-C3m-BG-CO11-t08_no_taper_envelope_time_s",
+          "complex_envelope": "CO_BG_B2D-C3m-BG-CO11-t08_no_taper_complex_envelope",
+          "complex_bandpass": "CO_BG_B2D-C3m-BG-CO11-t08_no_taper_complex_bandpass",
+          "real_bandpass": "CO_BG_B2D-C3m-BG-CO11-t08_no_taper_real_bandpass",
+          "window_weights": "CO_BG_B2D-C3m-BG-CO11-t08_no_taper_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t08/B2D-C3m-BG-CO11-t08.h5",
+      "input_sha256": "4af524af3967a7ede2f3b1b395d0a31a2d8af4cee4891e3c615492a302ee9b3c",
+      "family": "CO",
+      "role": "BG",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          19.650000000000002,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        18.35,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "tail_200ns",
+      "tail_taper_fraction": 0.16665438286163523,
+      "tail_relative_db_before_taper": -33.22024179003976,
+      "frequency_response_array": "CO_BG_B2D-C3m-BG-CO11-t08_tail_200ns_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_BG_B2D-C3m-BG-CO11-t08_tail_200ns_frequency_hz",
+          "response": "CO_BG_B2D-C3m-BG-CO11-t08_tail_200ns_response",
+          "source_spectrum": "CO_BG_B2D-C3m-BG-CO11-t08_tail_200ns_source_spectrum",
+          "receiver_spectrum": "CO_BG_B2D-C3m-BG-CO11-t08_tail_200ns_receiver_spectrum",
+          "source_valid": "CO_BG_B2D-C3m-BG-CO11-t08_tail_200ns_source_valid",
+          "envelope_time_s": "CO_BG_B2D-C3m-BG-CO11-t08_tail_200ns_envelope_time_s",
+          "complex_envelope": "CO_BG_B2D-C3m-BG-CO11-t08_tail_200ns_complex_envelope",
+          "complex_bandpass": "CO_BG_B2D-C3m-BG-CO11-t08_tail_200ns_complex_bandpass",
+          "real_bandpass": "CO_BG_B2D-C3m-BG-CO11-t08_tail_200ns_real_bandpass",
+          "window_weights": "CO_BG_B2D-C3m-BG-CO11-t08_tail_200ns_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t09/B2D-C3m-BG-CO11-t09.h5",
+      "input_sha256": "bc6e3a32dc22c3fd8e809c961eb55564a2db66bf8b5397ef326701f4cd8161d4",
+      "family": "CO",
+      "role": "BG",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          20.650000000000002,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        19.35,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "no_taper",
+      "tail_taper_fraction": 0.0,
+      "tail_relative_db_before_taper": -34.39793979604409,
+      "frequency_response_array": "CO_BG_B2D-C3m-BG-CO11-t09_no_taper_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_BG_B2D-C3m-BG-CO11-t09_no_taper_frequency_hz",
+          "response": "CO_BG_B2D-C3m-BG-CO11-t09_no_taper_response",
+          "source_spectrum": "CO_BG_B2D-C3m-BG-CO11-t09_no_taper_source_spectrum",
+          "receiver_spectrum": "CO_BG_B2D-C3m-BG-CO11-t09_no_taper_receiver_spectrum",
+          "source_valid": "CO_BG_B2D-C3m-BG-CO11-t09_no_taper_source_valid",
+          "envelope_time_s": "CO_BG_B2D-C3m-BG-CO11-t09_no_taper_envelope_time_s",
+          "complex_envelope": "CO_BG_B2D-C3m-BG-CO11-t09_no_taper_complex_envelope",
+          "complex_bandpass": "CO_BG_B2D-C3m-BG-CO11-t09_no_taper_complex_bandpass",
+          "real_bandpass": "CO_BG_B2D-C3m-BG-CO11-t09_no_taper_real_bandpass",
+          "window_weights": "CO_BG_B2D-C3m-BG-CO11-t09_no_taper_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t09/B2D-C3m-BG-CO11-t09.h5",
+      "input_sha256": "bc6e3a32dc22c3fd8e809c961eb55564a2db66bf8b5397ef326701f4cd8161d4",
+      "family": "CO",
+      "role": "BG",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          20.650000000000002,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        19.35,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "tail_200ns",
+      "tail_taper_fraction": 0.16665438286163523,
+      "tail_relative_db_before_taper": -34.39793979604409,
+      "frequency_response_array": "CO_BG_B2D-C3m-BG-CO11-t09_tail_200ns_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_BG_B2D-C3m-BG-CO11-t09_tail_200ns_frequency_hz",
+          "response": "CO_BG_B2D-C3m-BG-CO11-t09_tail_200ns_response",
+          "source_spectrum": "CO_BG_B2D-C3m-BG-CO11-t09_tail_200ns_source_spectrum",
+          "receiver_spectrum": "CO_BG_B2D-C3m-BG-CO11-t09_tail_200ns_receiver_spectrum",
+          "source_valid": "CO_BG_B2D-C3m-BG-CO11-t09_tail_200ns_source_valid",
+          "envelope_time_s": "CO_BG_B2D-C3m-BG-CO11-t09_tail_200ns_envelope_time_s",
+          "complex_envelope": "CO_BG_B2D-C3m-BG-CO11-t09_tail_200ns_complex_envelope",
+          "complex_bandpass": "CO_BG_B2D-C3m-BG-CO11-t09_tail_200ns_complex_bandpass",
+          "real_bandpass": "CO_BG_B2D-C3m-BG-CO11-t09_tail_200ns_real_bandpass",
+          "window_weights": "CO_BG_B2D-C3m-BG-CO11-t09_tail_200ns_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t10/B2D-C3m-BG-CO11-t10.h5",
+      "input_sha256": "879e4b2f28b75d1347c2e04674b3978e34b867750f3ad77e32c7f50247194709",
+      "family": "CO",
+      "role": "BG",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          21.650000000000002,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        20.35,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "no_taper",
+      "tail_taper_fraction": 0.0,
+      "tail_relative_db_before_taper": -36.5552869981008,
+      "frequency_response_array": "CO_BG_B2D-C3m-BG-CO11-t10_no_taper_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_BG_B2D-C3m-BG-CO11-t10_no_taper_frequency_hz",
+          "response": "CO_BG_B2D-C3m-BG-CO11-t10_no_taper_response",
+          "source_spectrum": "CO_BG_B2D-C3m-BG-CO11-t10_no_taper_source_spectrum",
+          "receiver_spectrum": "CO_BG_B2D-C3m-BG-CO11-t10_no_taper_receiver_spectrum",
+          "source_valid": "CO_BG_B2D-C3m-BG-CO11-t10_no_taper_source_valid",
+          "envelope_time_s": "CO_BG_B2D-C3m-BG-CO11-t10_no_taper_envelope_time_s",
+          "complex_envelope": "CO_BG_B2D-C3m-BG-CO11-t10_no_taper_complex_envelope",
+          "complex_bandpass": "CO_BG_B2D-C3m-BG-CO11-t10_no_taper_complex_bandpass",
+          "real_bandpass": "CO_BG_B2D-C3m-BG-CO11-t10_no_taper_real_bandpass",
+          "window_weights": "CO_BG_B2D-C3m-BG-CO11-t10_no_taper_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t10/B2D-C3m-BG-CO11-t10.h5",
+      "input_sha256": "879e4b2f28b75d1347c2e04674b3978e34b867750f3ad77e32c7f50247194709",
+      "family": "CO",
+      "role": "BG",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          21.650000000000002,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        20.35,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "tail_200ns",
+      "tail_taper_fraction": 0.16665438286163523,
+      "tail_relative_db_before_taper": -36.5552869981008,
+      "frequency_response_array": "CO_BG_B2D-C3m-BG-CO11-t10_tail_200ns_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_BG_B2D-C3m-BG-CO11-t10_tail_200ns_frequency_hz",
+          "response": "CO_BG_B2D-C3m-BG-CO11-t10_tail_200ns_response",
+          "source_spectrum": "CO_BG_B2D-C3m-BG-CO11-t10_tail_200ns_source_spectrum",
+          "receiver_spectrum": "CO_BG_B2D-C3m-BG-CO11-t10_tail_200ns_receiver_spectrum",
+          "source_valid": "CO_BG_B2D-C3m-BG-CO11-t10_tail_200ns_source_valid",
+          "envelope_time_s": "CO_BG_B2D-C3m-BG-CO11-t10_tail_200ns_envelope_time_s",
+          "complex_envelope": "CO_BG_B2D-C3m-BG-CO11-t10_tail_200ns_complex_envelope",
+          "complex_bandpass": "CO_BG_B2D-C3m-BG-CO11-t10_tail_200ns_complex_bandpass",
+          "real_bandpass": "CO_BG_B2D-C3m-BG-CO11-t10_tail_200ns_real_bandpass",
+          "window_weights": "CO_BG_B2D-C3m-BG-CO11-t10_tail_200ns_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t11/B2D-C3m-BG-CO11-t11.h5",
+      "input_sha256": "87c5fbf016914d98a4b7d9740b3c39e8fb972bb9961b9f838a2204a860ad5a5d",
+      "family": "CO",
+      "role": "BG",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          22.650000000000002,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        21.35,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "no_taper",
+      "tail_taper_fraction": 0.0,
+      "tail_relative_db_before_taper": -38.823023605222645,
+      "frequency_response_array": "CO_BG_B2D-C3m-BG-CO11-t11_no_taper_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_BG_B2D-C3m-BG-CO11-t11_no_taper_frequency_hz",
+          "response": "CO_BG_B2D-C3m-BG-CO11-t11_no_taper_response",
+          "source_spectrum": "CO_BG_B2D-C3m-BG-CO11-t11_no_taper_source_spectrum",
+          "receiver_spectrum": "CO_BG_B2D-C3m-BG-CO11-t11_no_taper_receiver_spectrum",
+          "source_valid": "CO_BG_B2D-C3m-BG-CO11-t11_no_taper_source_valid",
+          "envelope_time_s": "CO_BG_B2D-C3m-BG-CO11-t11_no_taper_envelope_time_s",
+          "complex_envelope": "CO_BG_B2D-C3m-BG-CO11-t11_no_taper_complex_envelope",
+          "complex_bandpass": "CO_BG_B2D-C3m-BG-CO11-t11_no_taper_complex_bandpass",
+          "real_bandpass": "CO_BG_B2D-C3m-BG-CO11-t11_no_taper_real_bandpass",
+          "window_weights": "CO_BG_B2D-C3m-BG-CO11-t11_no_taper_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t11/B2D-C3m-BG-CO11-t11.h5",
+      "input_sha256": "87c5fbf016914d98a4b7d9740b3c39e8fb972bb9961b9f838a2204a860ad5a5d",
+      "family": "CO",
+      "role": "BG",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          22.650000000000002,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        21.35,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "tail_200ns",
+      "tail_taper_fraction": 0.16665438286163523,
+      "tail_relative_db_before_taper": -38.823023605222645,
+      "frequency_response_array": "CO_BG_B2D-C3m-BG-CO11-t11_tail_200ns_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_BG_B2D-C3m-BG-CO11-t11_tail_200ns_frequency_hz",
+          "response": "CO_BG_B2D-C3m-BG-CO11-t11_tail_200ns_response",
+          "source_spectrum": "CO_BG_B2D-C3m-BG-CO11-t11_tail_200ns_source_spectrum",
+          "receiver_spectrum": "CO_BG_B2D-C3m-BG-CO11-t11_tail_200ns_receiver_spectrum",
+          "source_valid": "CO_BG_B2D-C3m-BG-CO11-t11_tail_200ns_source_valid",
+          "envelope_time_s": "CO_BG_B2D-C3m-BG-CO11-t11_tail_200ns_envelope_time_s",
+          "complex_envelope": "CO_BG_B2D-C3m-BG-CO11-t11_tail_200ns_complex_envelope",
+          "complex_bandpass": "CO_BG_B2D-C3m-BG-CO11-t11_tail_200ns_complex_bandpass",
+          "real_bandpass": "CO_BG_B2D-C3m-BG-CO11-t11_tail_200ns_real_bandpass",
+          "window_weights": "CO_BG_B2D-C3m-BG-CO11-t11_tail_200ns_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01.h5",
+      "input_sha256": "903633374bda85ab57ae0bb691bbd3d18e62678fca521c5f30613a3dff2822a0",
+      "family": "CO",
+      "role": "TGT",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          12.65,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        11.350000000000001,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "no_taper",
+      "tail_taper_fraction": 0.0,
+      "tail_relative_db_before_taper": -34.39793982078078,
+      "frequency_response_array": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01_no_taper_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01_no_taper_frequency_hz",
+          "response": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01_no_taper_response",
+          "source_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01_no_taper_source_spectrum",
+          "receiver_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01_no_taper_receiver_spectrum",
+          "source_valid": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01_no_taper_source_valid",
+          "envelope_time_s": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01_no_taper_envelope_time_s",
+          "complex_envelope": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01_no_taper_complex_envelope",
+          "complex_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01_no_taper_complex_bandpass",
+          "real_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01_no_taper_real_bandpass",
+          "window_weights": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01_no_taper_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01.h5",
+      "input_sha256": "903633374bda85ab57ae0bb691bbd3d18e62678fca521c5f30613a3dff2822a0",
+      "family": "CO",
+      "role": "TGT",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          12.65,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        11.350000000000001,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "tail_200ns",
+      "tail_taper_fraction": 0.16665438286163523,
+      "tail_relative_db_before_taper": -34.39793982078078,
+      "frequency_response_array": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01_tail_200ns_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01_tail_200ns_frequency_hz",
+          "response": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01_tail_200ns_response",
+          "source_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01_tail_200ns_source_spectrum",
+          "receiver_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01_tail_200ns_receiver_spectrum",
+          "source_valid": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01_tail_200ns_source_valid",
+          "envelope_time_s": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01_tail_200ns_envelope_time_s",
+          "complex_envelope": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01_tail_200ns_complex_envelope",
+          "complex_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01_tail_200ns_complex_bandpass",
+          "real_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01_tail_200ns_real_bandpass",
+          "window_weights": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01_tail_200ns_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02.h5",
+      "input_sha256": "f398cbcdbe162aa695cb931cf2a124eaca9b5da052a7687704a3e01df5387534",
+      "family": "CO",
+      "role": "TGT",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          13.65,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        12.350000000000001,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "no_taper",
+      "tail_taper_fraction": 0.0,
+      "tail_relative_db_before_taper": -33.22024181163524,
+      "frequency_response_array": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02_no_taper_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02_no_taper_frequency_hz",
+          "response": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02_no_taper_response",
+          "source_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02_no_taper_source_spectrum",
+          "receiver_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02_no_taper_receiver_spectrum",
+          "source_valid": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02_no_taper_source_valid",
+          "envelope_time_s": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02_no_taper_envelope_time_s",
+          "complex_envelope": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02_no_taper_complex_envelope",
+          "complex_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02_no_taper_complex_bandpass",
+          "real_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02_no_taper_real_bandpass",
+          "window_weights": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02_no_taper_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02.h5",
+      "input_sha256": "f398cbcdbe162aa695cb931cf2a124eaca9b5da052a7687704a3e01df5387534",
+      "family": "CO",
+      "role": "TGT",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          13.65,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        12.350000000000001,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "tail_200ns",
+      "tail_taper_fraction": 0.16665438286163523,
+      "tail_relative_db_before_taper": -33.22024181163524,
+      "frequency_response_array": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02_tail_200ns_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02_tail_200ns_frequency_hz",
+          "response": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02_tail_200ns_response",
+          "source_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02_tail_200ns_source_spectrum",
+          "receiver_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02_tail_200ns_receiver_spectrum",
+          "source_valid": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02_tail_200ns_source_valid",
+          "envelope_time_s": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02_tail_200ns_envelope_time_s",
+          "complex_envelope": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02_tail_200ns_complex_envelope",
+          "complex_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02_tail_200ns_complex_bandpass",
+          "real_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02_tail_200ns_real_bandpass",
+          "window_weights": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02_tail_200ns_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03.h5",
+      "input_sha256": "7901059fa7597e74840854a7833b5e0ba9134b07af4a968cad05778213ee9223",
+      "family": "CO",
+      "role": "TGT",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          14.65,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        13.350000000000001,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "no_taper",
+      "tail_taper_fraction": 0.0,
+      "tail_relative_db_before_taper": -32.92909035632043,
+      "frequency_response_array": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03_no_taper_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03_no_taper_frequency_hz",
+          "response": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03_no_taper_response",
+          "source_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03_no_taper_source_spectrum",
+          "receiver_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03_no_taper_receiver_spectrum",
+          "source_valid": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03_no_taper_source_valid",
+          "envelope_time_s": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03_no_taper_envelope_time_s",
+          "complex_envelope": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03_no_taper_complex_envelope",
+          "complex_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03_no_taper_complex_bandpass",
+          "real_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03_no_taper_real_bandpass",
+          "window_weights": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03_no_taper_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03.h5",
+      "input_sha256": "7901059fa7597e74840854a7833b5e0ba9134b07af4a968cad05778213ee9223",
+      "family": "CO",
+      "role": "TGT",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          14.65,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        13.350000000000001,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "tail_200ns",
+      "tail_taper_fraction": 0.16665438286163523,
+      "tail_relative_db_before_taper": -32.92909035632043,
+      "frequency_response_array": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03_tail_200ns_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03_tail_200ns_frequency_hz",
+          "response": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03_tail_200ns_response",
+          "source_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03_tail_200ns_source_spectrum",
+          "receiver_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03_tail_200ns_receiver_spectrum",
+          "source_valid": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03_tail_200ns_source_valid",
+          "envelope_time_s": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03_tail_200ns_envelope_time_s",
+          "complex_envelope": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03_tail_200ns_complex_envelope",
+          "complex_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03_tail_200ns_complex_bandpass",
+          "real_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03_tail_200ns_real_bandpass",
+          "window_weights": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03_tail_200ns_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04.h5",
+      "input_sha256": "b0d94052f21d8ae6b9768beb7b03eff12674bc3293d4ef860046737d329c2ca0",
+      "family": "CO",
+      "role": "TGT",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          15.65,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        14.350000000000001,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "no_taper",
+      "tail_taper_fraction": 0.0,
+      "tail_relative_db_before_taper": -32.822896578594495,
+      "frequency_response_array": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04_no_taper_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04_no_taper_frequency_hz",
+          "response": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04_no_taper_response",
+          "source_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04_no_taper_source_spectrum",
+          "receiver_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04_no_taper_receiver_spectrum",
+          "source_valid": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04_no_taper_source_valid",
+          "envelope_time_s": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04_no_taper_envelope_time_s",
+          "complex_envelope": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04_no_taper_complex_envelope",
+          "complex_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04_no_taper_complex_bandpass",
+          "real_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04_no_taper_real_bandpass",
+          "window_weights": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04_no_taper_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04.h5",
+      "input_sha256": "b0d94052f21d8ae6b9768beb7b03eff12674bc3293d4ef860046737d329c2ca0",
+      "family": "CO",
+      "role": "TGT",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          15.65,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        14.350000000000001,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "tail_200ns",
+      "tail_taper_fraction": 0.16665438286163523,
+      "tail_relative_db_before_taper": -32.822896578594495,
+      "frequency_response_array": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04_tail_200ns_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04_tail_200ns_frequency_hz",
+          "response": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04_tail_200ns_response",
+          "source_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04_tail_200ns_source_spectrum",
+          "receiver_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04_tail_200ns_receiver_spectrum",
+          "source_valid": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04_tail_200ns_source_valid",
+          "envelope_time_s": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04_tail_200ns_envelope_time_s",
+          "complex_envelope": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04_tail_200ns_complex_envelope",
+          "complex_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04_tail_200ns_complex_bandpass",
+          "real_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04_tail_200ns_real_bandpass",
+          "window_weights": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04_tail_200ns_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05.h5",
+      "input_sha256": "f30d7feb6a23525aa97ad8d26423b6cf10e50b788f8c77e296acc6f3fc14638e",
+      "family": "CO",
+      "role": "TGT",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          16.650000000000002,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        15.350000000000001,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "no_taper",
+      "tail_taper_fraction": 0.0,
+      "tail_relative_db_before_taper": -33.48866631524258,
+      "frequency_response_array": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05_no_taper_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05_no_taper_frequency_hz",
+          "response": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05_no_taper_response",
+          "source_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05_no_taper_source_spectrum",
+          "receiver_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05_no_taper_receiver_spectrum",
+          "source_valid": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05_no_taper_source_valid",
+          "envelope_time_s": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05_no_taper_envelope_time_s",
+          "complex_envelope": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05_no_taper_complex_envelope",
+          "complex_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05_no_taper_complex_bandpass",
+          "real_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05_no_taper_real_bandpass",
+          "window_weights": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05_no_taper_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05.h5",
+      "input_sha256": "f30d7feb6a23525aa97ad8d26423b6cf10e50b788f8c77e296acc6f3fc14638e",
+      "family": "CO",
+      "role": "TGT",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          16.650000000000002,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        15.350000000000001,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "tail_200ns",
+      "tail_taper_fraction": 0.16665438286163523,
+      "tail_relative_db_before_taper": -33.48866631524258,
+      "frequency_response_array": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05_tail_200ns_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05_tail_200ns_frequency_hz",
+          "response": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05_tail_200ns_response",
+          "source_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05_tail_200ns_source_spectrum",
+          "receiver_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05_tail_200ns_receiver_spectrum",
+          "source_valid": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05_tail_200ns_source_valid",
+          "envelope_time_s": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05_tail_200ns_envelope_time_s",
+          "complex_envelope": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05_tail_200ns_complex_envelope",
+          "complex_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05_tail_200ns_complex_bandpass",
+          "real_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05_tail_200ns_real_bandpass",
+          "window_weights": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05_tail_200ns_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06.h5",
+      "input_sha256": "ae09b7945511d233daf9cef146a9a9d7acf7562c67c2e5925e0815ccebeff7e7",
+      "family": "CO",
+      "role": "TGT",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          17.650000000000002,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        16.35,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "no_taper",
+      "tail_taper_fraction": 0.0,
+      "tail_relative_db_before_taper": -32.822896578594424,
+      "frequency_response_array": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06_no_taper_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06_no_taper_frequency_hz",
+          "response": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06_no_taper_response",
+          "source_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06_no_taper_source_spectrum",
+          "receiver_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06_no_taper_receiver_spectrum",
+          "source_valid": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06_no_taper_source_valid",
+          "envelope_time_s": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06_no_taper_envelope_time_s",
+          "complex_envelope": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06_no_taper_complex_envelope",
+          "complex_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06_no_taper_complex_bandpass",
+          "real_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06_no_taper_real_bandpass",
+          "window_weights": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06_no_taper_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06.h5",
+      "input_sha256": "ae09b7945511d233daf9cef146a9a9d7acf7562c67c2e5925e0815ccebeff7e7",
+      "family": "CO",
+      "role": "TGT",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          17.650000000000002,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        16.35,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "tail_200ns",
+      "tail_taper_fraction": 0.16665438286163523,
+      "tail_relative_db_before_taper": -32.822896578594424,
+      "frequency_response_array": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06_tail_200ns_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06_tail_200ns_frequency_hz",
+          "response": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06_tail_200ns_response",
+          "source_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06_tail_200ns_source_spectrum",
+          "receiver_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06_tail_200ns_receiver_spectrum",
+          "source_valid": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06_tail_200ns_source_valid",
+          "envelope_time_s": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06_tail_200ns_envelope_time_s",
+          "complex_envelope": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06_tail_200ns_complex_envelope",
+          "complex_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06_tail_200ns_complex_bandpass",
+          "real_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06_tail_200ns_real_bandpass",
+          "window_weights": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06_tail_200ns_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07.h5",
+      "input_sha256": "4ceb433346b28fd371ba24d3faaf5d011503a50650d5911a415107689943ec88",
+      "family": "CO",
+      "role": "TGT",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          18.650000000000002,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        17.35,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "no_taper",
+      "tail_taper_fraction": 0.0,
+      "tail_relative_db_before_taper": -32.92909035632028,
+      "frequency_response_array": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07_no_taper_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07_no_taper_frequency_hz",
+          "response": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07_no_taper_response",
+          "source_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07_no_taper_source_spectrum",
+          "receiver_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07_no_taper_receiver_spectrum",
+          "source_valid": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07_no_taper_source_valid",
+          "envelope_time_s": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07_no_taper_envelope_time_s",
+          "complex_envelope": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07_no_taper_complex_envelope",
+          "complex_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07_no_taper_complex_bandpass",
+          "real_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07_no_taper_real_bandpass",
+          "window_weights": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07_no_taper_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07.h5",
+      "input_sha256": "4ceb433346b28fd371ba24d3faaf5d011503a50650d5911a415107689943ec88",
+      "family": "CO",
+      "role": "TGT",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          18.650000000000002,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        17.35,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "tail_200ns",
+      "tail_taper_fraction": 0.16665438286163523,
+      "tail_relative_db_before_taper": -32.92909035632028,
+      "frequency_response_array": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07_tail_200ns_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07_tail_200ns_frequency_hz",
+          "response": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07_tail_200ns_response",
+          "source_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07_tail_200ns_source_spectrum",
+          "receiver_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07_tail_200ns_receiver_spectrum",
+          "source_valid": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07_tail_200ns_source_valid",
+          "envelope_time_s": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07_tail_200ns_envelope_time_s",
+          "complex_envelope": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07_tail_200ns_complex_envelope",
+          "complex_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07_tail_200ns_complex_bandpass",
+          "real_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07_tail_200ns_real_bandpass",
+          "window_weights": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07_tail_200ns_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08.h5",
+      "input_sha256": "4dfc1676396cb4fb87e750fa7f9fd50983d4475ab0f53b55291147e8c129263c",
+      "family": "CO",
+      "role": "TGT",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          19.650000000000002,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        18.35,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "no_taper",
+      "tail_taper_fraction": 0.0,
+      "tail_relative_db_before_taper": -33.22024181163532,
+      "frequency_response_array": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08_no_taper_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08_no_taper_frequency_hz",
+          "response": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08_no_taper_response",
+          "source_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08_no_taper_source_spectrum",
+          "receiver_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08_no_taper_receiver_spectrum",
+          "source_valid": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08_no_taper_source_valid",
+          "envelope_time_s": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08_no_taper_envelope_time_s",
+          "complex_envelope": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08_no_taper_complex_envelope",
+          "complex_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08_no_taper_complex_bandpass",
+          "real_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08_no_taper_real_bandpass",
+          "window_weights": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08_no_taper_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08.h5",
+      "input_sha256": "4dfc1676396cb4fb87e750fa7f9fd50983d4475ab0f53b55291147e8c129263c",
+      "family": "CO",
+      "role": "TGT",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          19.650000000000002,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        18.35,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "tail_200ns",
+      "tail_taper_fraction": 0.16665438286163523,
+      "tail_relative_db_before_taper": -33.22024181163532,
+      "frequency_response_array": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08_tail_200ns_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08_tail_200ns_frequency_hz",
+          "response": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08_tail_200ns_response",
+          "source_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08_tail_200ns_source_spectrum",
+          "receiver_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08_tail_200ns_receiver_spectrum",
+          "source_valid": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08_tail_200ns_source_valid",
+          "envelope_time_s": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08_tail_200ns_envelope_time_s",
+          "complex_envelope": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08_tail_200ns_complex_envelope",
+          "complex_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08_tail_200ns_complex_bandpass",
+          "real_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08_tail_200ns_real_bandpass",
+          "window_weights": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08_tail_200ns_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09.h5",
+      "input_sha256": "0d9cc57fe6df22adc9888b96dc7c4454b53ca63682234f9ce7381ae2c2b38812",
+      "family": "CO",
+      "role": "TGT",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          20.650000000000002,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        19.35,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "no_taper",
+      "tail_taper_fraction": 0.0,
+      "tail_relative_db_before_taper": -34.39793982078099,
+      "frequency_response_array": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09_no_taper_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09_no_taper_frequency_hz",
+          "response": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09_no_taper_response",
+          "source_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09_no_taper_source_spectrum",
+          "receiver_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09_no_taper_receiver_spectrum",
+          "source_valid": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09_no_taper_source_valid",
+          "envelope_time_s": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09_no_taper_envelope_time_s",
+          "complex_envelope": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09_no_taper_complex_envelope",
+          "complex_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09_no_taper_complex_bandpass",
+          "real_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09_no_taper_real_bandpass",
+          "window_weights": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09_no_taper_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09.h5",
+      "input_sha256": "0d9cc57fe6df22adc9888b96dc7c4454b53ca63682234f9ce7381ae2c2b38812",
+      "family": "CO",
+      "role": "TGT",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          20.650000000000002,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        19.35,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "tail_200ns",
+      "tail_taper_fraction": 0.16665438286163523,
+      "tail_relative_db_before_taper": -34.39793982078099,
+      "frequency_response_array": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09_tail_200ns_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09_tail_200ns_frequency_hz",
+          "response": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09_tail_200ns_response",
+          "source_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09_tail_200ns_source_spectrum",
+          "receiver_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09_tail_200ns_receiver_spectrum",
+          "source_valid": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09_tail_200ns_source_valid",
+          "envelope_time_s": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09_tail_200ns_envelope_time_s",
+          "complex_envelope": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09_tail_200ns_complex_envelope",
+          "complex_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09_tail_200ns_complex_bandpass",
+          "real_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09_tail_200ns_real_bandpass",
+          "window_weights": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09_tail_200ns_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10.h5",
+      "input_sha256": "158fb0315af841ab1236d8b338c941857e9cf1ce2713d5bea78b4a26aaf4c9c7",
+      "family": "CO",
+      "role": "TGT",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          21.650000000000002,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        20.35,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "no_taper",
+      "tail_taper_fraction": 0.0,
+      "tail_relative_db_before_taper": -36.55528703003548,
+      "frequency_response_array": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10_no_taper_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10_no_taper_frequency_hz",
+          "response": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10_no_taper_response",
+          "source_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10_no_taper_source_spectrum",
+          "receiver_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10_no_taper_receiver_spectrum",
+          "source_valid": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10_no_taper_source_valid",
+          "envelope_time_s": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10_no_taper_envelope_time_s",
+          "complex_envelope": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10_no_taper_complex_envelope",
+          "complex_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10_no_taper_complex_bandpass",
+          "real_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10_no_taper_real_bandpass",
+          "window_weights": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10_no_taper_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10.h5",
+      "input_sha256": "158fb0315af841ab1236d8b338c941857e9cf1ce2713d5bea78b4a26aaf4c9c7",
+      "family": "CO",
+      "role": "TGT",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          21.650000000000002,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        20.35,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "tail_200ns",
+      "tail_taper_fraction": 0.16665438286163523,
+      "tail_relative_db_before_taper": -36.55528703003548,
+      "frequency_response_array": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10_tail_200ns_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10_tail_200ns_frequency_hz",
+          "response": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10_tail_200ns_response",
+          "source_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10_tail_200ns_source_spectrum",
+          "receiver_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10_tail_200ns_receiver_spectrum",
+          "source_valid": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10_tail_200ns_source_valid",
+          "envelope_time_s": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10_tail_200ns_envelope_time_s",
+          "complex_envelope": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10_tail_200ns_complex_envelope",
+          "complex_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10_tail_200ns_complex_bandpass",
+          "real_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10_tail_200ns_real_bandpass",
+          "window_weights": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10_tail_200ns_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11.h5",
+      "input_sha256": "7c78de18817732cebeaa1233527f4118354cd58a820b3b1a4512ddc50e3e64be",
+      "family": "CO",
+      "role": "TGT",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          22.650000000000002,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        21.35,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "no_taper",
+      "tail_taper_fraction": 0.0,
+      "tail_relative_db_before_taper": -38.82302364740737,
+      "frequency_response_array": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11_no_taper_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11_no_taper_frequency_hz",
+          "response": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11_no_taper_response",
+          "source_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11_no_taper_source_spectrum",
+          "receiver_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11_no_taper_receiver_spectrum",
+          "source_valid": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11_no_taper_source_valid",
+          "envelope_time_s": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11_no_taper_envelope_time_s",
+          "complex_envelope": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11_no_taper_complex_envelope",
+          "complex_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11_no_taper_complex_bandpass",
+          "real_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11_no_taper_real_bandpass",
+          "window_weights": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11_no_taper_window_weights"
+        }
+      }
+    },
+    {
+      "input_path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11.h5",
+      "input_sha256": "7c78de18817732cebeaa1233527f4118354cd58a820b3b1a4512ddc50e3e64be",
+      "family": "CO",
+      "role": "TGT",
+      "receiver_path": "name:measurement",
+      "component": "Ex",
+      "source_path": "src1",
+      "receiver_names": [
+        "measurement"
+      ],
+      "receiver_positions_xyz_m": [
+        [
+          0.0,
+          22.650000000000002,
+          45.0
+        ]
+      ],
+      "source_position_xyz_m": [
+        0.0,
+        21.35,
+        45.0
+      ],
+      "coordinate_note": "2D x-invariant input; x coordinate is an H5 placeholder, not a physical cross-track/flight position",
+      "source_type": "HertzianDipole",
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "source_spatial_scale": 0.025,
+      "source_dt_s": 5.896635841874211e-11,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "source_n_samples": 20352,
+      "receiver_quantity": "Ex",
+      "receiver_units": "V/m",
+      "receiver_dt_s": 5.896635841874211e-11,
+      "receiver_time_offset_s": 0.0,
+      "receiver_n_samples": 20352,
+      "source_time_s_array": "source physical sample axis = source_time_offset_s + n*source_dt_s",
+      "receiver_time_s_array": "receiver physical sample axis = receiver_time_offset_s + n*receiver_dt_s",
+      "response_units": "receiver sample units / source sample units; no extra spatial-scale normalization",
+      "source_sample_count": 20352,
+      "receiver_sample_count": 20352,
+      "taper": "tail_200ns",
+      "tail_taper_fraction": 0.16665438286163523,
+      "tail_relative_db_before_taper": -38.82302364740737,
+      "frequency_response_array": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11_tail_200ns_response",
+      "official_reconstruction": {
+        "function": "gprMax.toolboxes.SFCW.processing.reconstruct_time_response",
+        "window": "rectangular",
+        "zero_pad_factor": 4,
+        "time_shift_s": 0.0,
+        "time_period_s": 3.3333333333333333e-06,
+        "time_sample_interval_s": 1.66333998669328e-09,
+        "representation": "complex_envelope preferred; real_bandpass is twice real(carrier-modulated envelope)",
+        "periodic_boundary": "complex_envelope repeats every 1/df; real_bandpass endpoint continuity is not assumed",
+        "output_keys": {
+          "frequency_hz": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11_tail_200ns_frequency_hz",
+          "response": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11_tail_200ns_response",
+          "source_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11_tail_200ns_source_spectrum",
+          "receiver_spectrum": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11_tail_200ns_receiver_spectrum",
+          "source_valid": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11_tail_200ns_source_valid",
+          "envelope_time_s": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11_tail_200ns_envelope_time_s",
+          "complex_envelope": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11_tail_200ns_complex_envelope",
+          "complex_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11_tail_200ns_complex_bandpass",
+          "real_bandpass": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11_tail_200ns_real_bandpass",
+          "window_weights": "CO_TGT_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11_tail_200ns_window_weights"
+        }
+      }
+    }
+  ]
+}

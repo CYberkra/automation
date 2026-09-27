@@ -11,7 +11,8 @@
 - **参考资格审查完成**：[开发组资格表](docs/research/2026-09-27_dev_reference_eligibility.md)登记69槽，44有输入、25缺案例；13槽可报告角色负控能量诊断，绝对事件保真资格为0。评价器实际reference为x_window，waveform指标仍不可用；paired_contrast元数据不代表已有干净目标或实际差分数组。
 - **污染诊断完成**：[C3 CO冻结窗诊断](docs/research/2026-09-27_c3_co_pair_window_contamination.md)已核对22个H5及180个标量。D10合并范数比F0/Δ≈64581.25；COV差分严格零，比例缺失；D5极小非零差分只报告算术值，不能作物理比例认证。差分不升级为clean参考。
 - **模型合理性审查**：[主审报告](docs/research/2026-09-27_model_reasonableness_root_review.md)。当前模型是机制基准，不能直接代表真实沿航迹测线；CO沿横航迹平移、MT是变偏移距；后续评价直接用raw Ex，CO最近FFT格501点仅181不同格，不能等同完整SFCW复频响。impulse本身符合官方V4方法。
-- **下一步**：优先冻结真实几何/二维代理语义，并复用开发组H5统一官方SFCW复频响与重建流程，再设计配对变化诊断；旧原始冲激时间索引/阈值不可直接迁移。不重跑S5、不调已消费测试组、不新增FDTD、不训练。
+- **几何与SFCW适配完成**：[坐标/数据约定](docs/research/2026-09-27_acquisition_and_sfcw_data_contract.md)、[执行与验收](docs/research/2026-09-27_sfcw_unified_adapter_execution.md)。C3 CO11+MT33的24个已有H5导出48组官方复频响/重建；独立核验1584复数DFT点及逆变换通过。正式目录以`2026-09-27_sfcw_unified_dev_adapter_mt33_rerun`为准，首次误选MT单道输入无效并已隔离留档。
+- **下一步**：使用新SFCW数据域，按物理时间重新声明开发侧窗口，设计配对变化与背景残留诊断；先报告尾窗敏感性（当前整体谱变化约3.4%，记录衰减未认证），不套用旧冲激域索引/阈值，不把差分当clean。仍仅C3示范适配，不声称全部开发组完成；不重跑S5、不新增FDTD、不训练。
 - **保留限制**：[2D规格v1.1](docs/research/2026-09-27_batch_2d_spec_v1_1_draft.md)仍为待验收草稿，硬件归属需逐批证据核对；幅度谱相关不证明波形NRMSE跨维迁移。A0 gate已消耗关闭，不重跑历史求解批次。
 - **复核入口**：S5用scripts/check_g4_test_confirmation_acceptance.py读取归档结果；独立原始记录复算见artifacts/research_checks/2026-09-27_g4_s5_root_audit/audit.py。不要运行正式S5命令来做验收，attempt已消耗。
 

@@ -1791,10 +1791,27 @@
    "training_executed": false,
    "g4_relieved": false,
    "tracked": true
+  },
+  {
+   "id": "sfcw_unified_c3_development_adapter",
+   "status": "complete_root_accepted",
+   "record": "docs/research/2026-09-27_sfcw_unified_adapter_execution.md",
+   "directory": "artifacts/research_checks/2026-09-27_sfcw_unified_dev_adapter_mt33_rerun",
+   "script": "scripts/research_sfcw_unified_adapter.py",
+   "geometry_contract": "docs/research/2026-09-27_acquisition_and_sfcw_data_contract.md",
+   "manifest_sha256": "00ecdf7c62fabd62b45af7c43aaed125161f9456ea95c20d077c933bb3c6125a",
+   "root_acceptance_sha256": "088395b8215460899ddf35c21705281f2eb64fbe66afed312bbc196414d80ca6",
+   "input_H5_count": 24,
+   "output_record_count": 48,
+   "record_decay_certified": false,
+   "g4_relieved": false,
+   "solver_executed": false,
+   "training_executed": false,
+   "tracked": true
   }
  ],
  "schema": "research-artifact-registry/1",
  "solver_execution_gate": "configs/research/gprmax_v4_execution_gate.json",
  "updated_date": "2026-09-27",
- "current_handoff": "START_HERE.md — model appropriateness audit; next: acquisition semantics and official SFCW development-data pipeline before paired-change diagnostics; no FDTD or S5 rerun"
+ "current_handoff": "START_HERE.md — C3 official SFCW adapter and geometry contract accepted; next: physical-time development windows and paired-change/tail sensitivity diagnostics; no FDTD or S5 rerun"
 }

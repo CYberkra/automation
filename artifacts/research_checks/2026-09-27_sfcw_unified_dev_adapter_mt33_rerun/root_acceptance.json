@@ -1,0 +1,328 @@
+{
+  "tail_taper_sensitivity": [
+    {
+      "family": "MT",
+      "role": "BG",
+      "relative_L2_200ns_change_from_no_taper": 0.03375996541067813
+    },
+    {
+      "family": "MT",
+      "role": "TGT",
+      "relative_L2_200ns_change_from_no_taper": 0.033759964887119735
+    },
+    {
+      "family": "CO",
+      "role": "BG",
+      "relative_L2_200ns_change_from_no_taper": 0.03473670481631015
+    },
+    {
+      "family": "CO",
+      "role": "TGT",
+      "relative_L2_200ns_change_from_no_taper": 0.03473673723840732
+    }
+  ],
+  "passed": true,
+  "source_H5_files": 24,
+  "records_checked": 48,
+  "complex_DFT_values_checked": 1584,
+  "method": "explicit complex exponential sums from H5 with physical time origins; inverse Fourier sums at 9 samples for every trace",
+  "max_DFT_error_over_selected_peak": 8.868162097520925e-12,
+  "max_inverse_error_over_selected_peak": 2.157686669219637e-13,
+  "CO_t05_MT_rx17_anchor_checks": 4,
+  "raw_tail_dB_range": [
+    -46.47166544382004,
+    -32.822896558261355
+  ],
+  "record_decay_certified": false,
+  "solver_invoked": false,
+  "rows": [
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-MT33/B2D-C3m-BG-MT33.h5",
+      "taper": "no_taper",
+      "DFT_max_error_over_selected_peak": 2.558320425670583e-12,
+      "inverse_max_error_over_selected_peak": 2.154396172395512e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-MT33/B2D-C3m-BG-MT33.h5",
+      "taper": "tail_200ns",
+      "DFT_max_error_over_selected_peak": 1.533257956903095e-12,
+      "inverse_max_error_over_selected_peak": 2.1535264428444286e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33.h5",
+      "taper": "no_taper",
+      "DFT_max_error_over_selected_peak": 2.556998513971909e-12,
+      "inverse_max_error_over_selected_peak": 2.157686669219637e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33.h5",
+      "taper": "tail_200ns",
+      "DFT_max_error_over_selected_peak": 1.5338992921425202e-12,
+      "inverse_max_error_over_selected_peak": 2.156958649971402e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t01/B2D-C3m-BG-CO11-t01.h5",
+      "taper": "no_taper",
+      "DFT_max_error_over_selected_peak": 8.868162097520925e-12,
+      "inverse_max_error_over_selected_peak": 1.3597801876953203e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t01/B2D-C3m-BG-CO11-t01.h5",
+      "taper": "tail_200ns",
+      "DFT_max_error_over_selected_peak": 5.00624272270919e-12,
+      "inverse_max_error_over_selected_peak": 1.358176987211581e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t02/B2D-C3m-BG-CO11-t02.h5",
+      "taper": "no_taper",
+      "DFT_max_error_over_selected_peak": 8.11482188724269e-12,
+      "inverse_max_error_over_selected_peak": 1.3589209209773857e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t02/B2D-C3m-BG-CO11-t02.h5",
+      "taper": "tail_200ns",
+      "DFT_max_error_over_selected_peak": 5.205888823911538e-12,
+      "inverse_max_error_over_selected_peak": 1.3602513284645322e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t03/B2D-C3m-BG-CO11-t03.h5",
+      "taper": "no_taper",
+      "DFT_max_error_over_selected_peak": 7.742231175626917e-12,
+      "inverse_max_error_over_selected_peak": 1.3573570663621474e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t03/B2D-C3m-BG-CO11-t03.h5",
+      "taper": "tail_200ns",
+      "DFT_max_error_over_selected_peak": 5.763744420502021e-12,
+      "inverse_max_error_over_selected_peak": 1.364139871340008e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t04/B2D-C3m-BG-CO11-t04.h5",
+      "taper": "no_taper",
+      "DFT_max_error_over_selected_peak": 7.960807795155806e-12,
+      "inverse_max_error_over_selected_peak": 1.3592718620203353e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t04/B2D-C3m-BG-CO11-t04.h5",
+      "taper": "tail_200ns",
+      "DFT_max_error_over_selected_peak": 5.737292489452814e-12,
+      "inverse_max_error_over_selected_peak": 1.3592692719783116e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t05/B2D-C3m-BG-CO11-t05.h5",
+      "taper": "no_taper",
+      "DFT_max_error_over_selected_peak": 8.100543338205094e-12,
+      "inverse_max_error_over_selected_peak": 1.358845284149554e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t05/B2D-C3m-BG-CO11-t05.h5",
+      "taper": "tail_200ns",
+      "DFT_max_error_over_selected_peak": 5.53268068972068e-12,
+      "inverse_max_error_over_selected_peak": 1.3589249052131835e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t06/B2D-C3m-BG-CO11-t06.h5",
+      "taper": "no_taper",
+      "DFT_max_error_over_selected_peak": 7.939602853003353e-12,
+      "inverse_max_error_over_selected_peak": 1.3571411934452704e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t06/B2D-C3m-BG-CO11-t06.h5",
+      "taper": "tail_200ns",
+      "DFT_max_error_over_selected_peak": 5.746286650924411e-12,
+      "inverse_max_error_over_selected_peak": 1.3611371695539497e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t07/B2D-C3m-BG-CO11-t07.h5",
+      "taper": "no_taper",
+      "DFT_max_error_over_selected_peak": 7.702894891270684e-12,
+      "inverse_max_error_over_selected_peak": 1.3587940716437237e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t07/B2D-C3m-BG-CO11-t07.h5",
+      "taper": "tail_200ns",
+      "DFT_max_error_over_selected_peak": 5.771620613660952e-12,
+      "inverse_max_error_over_selected_peak": 1.3587984780882911e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t08/B2D-C3m-BG-CO11-t08.h5",
+      "taper": "no_taper",
+      "DFT_max_error_over_selected_peak": 8.0645552942851e-12,
+      "inverse_max_error_over_selected_peak": 1.360788852271837e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t08/B2D-C3m-BG-CO11-t08.h5",
+      "taper": "tail_200ns",
+      "DFT_max_error_over_selected_peak": 5.225026860314266e-12,
+      "inverse_max_error_over_selected_peak": 1.359199730873973e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t09/B2D-C3m-BG-CO11-t09.h5",
+      "taper": "no_taper",
+      "DFT_max_error_over_selected_peak": 8.823817444664619e-12,
+      "inverse_max_error_over_selected_peak": 1.3590633404948058e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t09/B2D-C3m-BG-CO11-t09.h5",
+      "taper": "tail_200ns",
+      "DFT_max_error_over_selected_peak": 4.958732265923454e-12,
+      "inverse_max_error_over_selected_peak": 1.3609713459679346e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t10/B2D-C3m-BG-CO11-t10.h5",
+      "taper": "no_taper",
+      "DFT_max_error_over_selected_peak": 8.69199534970751e-12,
+      "inverse_max_error_over_selected_peak": 1.356419894058301e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t10/B2D-C3m-BG-CO11-t10.h5",
+      "taper": "tail_200ns",
+      "DFT_max_error_over_selected_peak": 5.222592016959181e-12,
+      "inverse_max_error_over_selected_peak": 1.3624954611710504e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t11/B2D-C3m-BG-CO11-t11.h5",
+      "taper": "no_taper",
+      "DFT_max_error_over_selected_peak": 7.509945838832425e-12,
+      "inverse_max_error_over_selected_peak": 1.3573213106499474e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t11/B2D-C3m-BG-CO11-t11.h5",
+      "taper": "tail_200ns",
+      "DFT_max_error_over_selected_peak": 4.75634394583417e-12,
+      "inverse_max_error_over_selected_peak": 1.358314273627821e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01.h5",
+      "taper": "no_taper",
+      "DFT_max_error_over_selected_peak": 8.849603475328323e-12,
+      "inverse_max_error_over_selected_peak": 1.3593514180859301e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t01.h5",
+      "taper": "tail_200ns",
+      "DFT_max_error_over_selected_peak": 4.968461231477334e-12,
+      "inverse_max_error_over_selected_peak": 1.360003139668058e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02.h5",
+      "taper": "no_taper",
+      "DFT_max_error_over_selected_peak": 8.037971548577783e-12,
+      "inverse_max_error_over_selected_peak": 1.3601670151612775e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t02.h5",
+      "taper": "tail_200ns",
+      "DFT_max_error_over_selected_peak": 5.198557659553731e-12,
+      "inverse_max_error_over_selected_peak": 1.3611388907795e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03.h5",
+      "taper": "no_taper",
+      "DFT_max_error_over_selected_peak": 7.789002057765688e-12,
+      "inverse_max_error_over_selected_peak": 1.3585494875352323e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t03.h5",
+      "taper": "tail_200ns",
+      "DFT_max_error_over_selected_peak": 5.762743081391047e-12,
+      "inverse_max_error_over_selected_peak": 1.3587341120925459e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04.h5",
+      "taper": "no_taper",
+      "DFT_max_error_over_selected_peak": 7.956059454829393e-12,
+      "inverse_max_error_over_selected_peak": 1.357535581564934e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t04.h5",
+      "taper": "tail_200ns",
+      "DFT_max_error_over_selected_peak": 5.745759948405129e-12,
+      "inverse_max_error_over_selected_peak": 1.3562867494679083e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05.h5",
+      "taper": "no_taper",
+      "DFT_max_error_over_selected_peak": 8.135885217453446e-12,
+      "inverse_max_error_over_selected_peak": 1.3579801686588848e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05.h5",
+      "taper": "tail_200ns",
+      "DFT_max_error_over_selected_peak": 5.532854456763372e-12,
+      "inverse_max_error_over_selected_peak": 1.3591662954781696e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06.h5",
+      "taper": "no_taper",
+      "DFT_max_error_over_selected_peak": 7.976195434485057e-12,
+      "inverse_max_error_over_selected_peak": 1.356926440195877e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t06.h5",
+      "taper": "tail_200ns",
+      "DFT_max_error_over_selected_peak": 5.7414531303360215e-12,
+      "inverse_max_error_over_selected_peak": 1.3577394916924838e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07.h5",
+      "taper": "no_taper",
+      "DFT_max_error_over_selected_peak": 7.79591161638971e-12,
+      "inverse_max_error_over_selected_peak": 1.3576363803190846e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t07.h5",
+      "taper": "tail_200ns",
+      "DFT_max_error_over_selected_peak": 5.77262559879161e-12,
+      "inverse_max_error_over_selected_peak": 1.3583620526527297e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08.h5",
+      "taper": "no_taper",
+      "DFT_max_error_over_selected_peak": 8.022533764671063e-12,
+      "inverse_max_error_over_selected_peak": 1.3582855881058488e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t08.h5",
+      "taper": "tail_200ns",
+      "DFT_max_error_over_selected_peak": 5.221118085378437e-12,
+      "inverse_max_error_over_selected_peak": 1.3601293369652587e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09.h5",
+      "taper": "no_taper",
+      "DFT_max_error_over_selected_peak": 8.783527076973107e-12,
+      "inverse_max_error_over_selected_peak": 1.3596697254910501e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t09.h5",
+      "taper": "tail_200ns",
+      "DFT_max_error_over_selected_peak": 4.9774934971719115e-12,
+      "inverse_max_error_over_selected_peak": 1.3582319074231404e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10.h5",
+      "taper": "no_taper",
+      "DFT_max_error_over_selected_peak": 8.66343430617778e-12,
+      "inverse_max_error_over_selected_peak": 1.3603638538819838e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t10.h5",
+      "taper": "tail_200ns",
+      "DFT_max_error_over_selected_peak": 5.180946743434675e-12,
+      "inverse_max_error_over_selected_peak": 1.3602646962539047e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11.h5",
+      "taper": "no_taper",
+      "DFT_max_error_over_selected_peak": 7.420776991168294e-12,
+      "inverse_max_error_over_selected_peak": 1.3565867202265923e-13
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t11.h5",
+      "taper": "tail_200ns",
+      "DFT_max_error_over_selected_peak": 4.7353609046703605e-12,
+      "inverse_max_error_over_selected_peak": 1.3628510393503473e-13
+    }
+  ]
+}
