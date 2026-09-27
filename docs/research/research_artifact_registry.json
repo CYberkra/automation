@@ -1706,10 +1706,23 @@
    "solver_executed": false,
    "training_executed": false,
    "tracked": true
+  },
+  {
+   "id": "g4_s6_synthesis_review",
+   "status": "report_root_reviewed_limited_signoff_pending_g4_unresolved",
+   "record": "docs/research/2026-09-27_g4_s6_synthesis.md",
+   "evidence": "artifacts/research_checks/2026-09-27_g4_s6_root_review.json",
+   "executor": "GPT-6 Luna / high draft; root acceptance",
+   "scope": "5 archived dev/test combinations and algebraic interpretation check; no new threshold application",
+   "physical_acceptance_threshold": null,
+   "g4_relieved": false,
+   "solver_executed": false,
+   "training_executed": false,
+   "tracked": true
   }
  ],
  "schema": "research-artifact-registry/1",
  "solver_execution_gate": "configs/research/gprmax_v4_execution_gate.json",
  "updated_date": "2026-09-27",
- "current_handoff": "START_HERE.md — G4 S4/S5 complete; S6 user sign-off pending; never rerun formal S5"
+ "current_handoff": "START_HERE.md — S6 synthesis reviewed; limited simulation-domain sign-off pending; G4 unresolved; next: development-side reference/metric identifiability review"
 }

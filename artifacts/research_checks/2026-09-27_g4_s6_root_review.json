@@ -1,0 +1,124 @@
+{
+  "source_results_sha256": {
+    "artifacts/research_checks/2026-09-27_g4_threshold_derivation_r1/results.json": "3aca2b20559fa357ff5404a73e2ef844233c134ee5fbc0288ae7876f913abac4",
+    "artifacts/research_checks/2026-09-27_g4_s5_test_confirmation_r1/results.json": "157c3d6b1e3ba5a61422e8eb17daae167aa9a50861f4b706c76a4d0d3b15bec3"
+  },
+  "combo_summary": [
+    {
+      "split": "dev",
+      "geometry": "co",
+      "family": "c3",
+      "n_candidates": 57,
+      "n_D_pass": 1,
+      "n_N_pass": 32,
+      "n_admissible": 1,
+      "admissible": [
+        "B0_G1_BG"
+      ],
+      "epsilon_by_damage_type": {
+        "amplitude_scale": 0.034122773235149714,
+        "polarity_flip": 0.034122773235149714,
+        "sample_shift": 0.034122773235149714,
+        "trace_deletion": 0.034122773235149714
+      }
+    },
+    {
+      "split": "dev",
+      "geometry": "mt",
+      "family": "c1",
+      "n_candidates": 57,
+      "n_D_pass": 1,
+      "n_N_pass": 43,
+      "n_admissible": 1,
+      "admissible": [
+        "B0_G1_BG"
+      ],
+      "epsilon_by_damage_type": {
+        "amplitude_scale": 0.03003563001306807,
+        "polarity_flip": 0.03003563001306807,
+        "sample_shift": 0.03003563001306807,
+        "trace_deletion": 0.03003563001306807
+      }
+    },
+    {
+      "split": "dev",
+      "geometry": "mt",
+      "family": "c3",
+      "n_candidates": 57,
+      "n_D_pass": 1,
+      "n_N_pass": 43,
+      "n_admissible": 1,
+      "admissible": [
+        "B0_G1_BG"
+      ],
+      "epsilon_by_damage_type": {
+        "amplitude_scale": 0.034122773235149714,
+        "polarity_flip": 0.034122773235149714,
+        "sample_shift": 0.034122773235149714,
+        "trace_deletion": 0.034122773235149714
+      }
+    },
+    {
+      "split": "test",
+      "geometry": "mt",
+      "family": "c5",
+      "n_candidates": 57,
+      "n_D_pass": 1,
+      "n_N_pass": 43,
+      "n_admissible": 1,
+      "admissible": [
+        "B0_G1_BG"
+      ],
+      "epsilon_by_damage_type": {
+        "amplitude_scale": 0.03003563001306807,
+        "polarity_flip": 0.03003563001306807,
+        "sample_shift": 0.03003563001306807,
+        "trace_deletion": 0.03003563001306807
+      }
+    },
+    {
+      "split": "test",
+      "geometry": "mt",
+      "family": "c8",
+      "n_candidates": 57,
+      "n_D_pass": 1,
+      "n_N_pass": 43,
+      "n_admissible": 1,
+      "admissible": [
+        "B0_G1_BG"
+      ],
+      "epsilon_by_damage_type": {
+        "amplitude_scale": 0.03003563001306807,
+        "polarity_flip": 0.03003563001306807,
+        "sample_shift": 0.03003563001306807,
+        "trace_deletion": 0.03003563001306807
+      }
+    }
+  ],
+  "counterexample": {
+    "type": "pure_algebra_not_an_electromagnetic_decomposition",
+    "S": [
+      1.0,
+      0.0
+    ],
+    "C": [
+      0.0,
+      1.0
+    ],
+    "X": [
+      1.0,
+      1.0
+    ],
+    "Y": [
+      1.0,
+      0.0
+    ],
+    "D_against_identity_X": 0.7071067811865475,
+    "error_against_known_S": 0.0,
+    "interpretation": "Large change relative to complete input does not by itself establish protected-target loss."
+  },
+  "g4_relieved": false,
+  "physical_acceptance_threshold": null,
+  "training_eligible": false,
+  "formal_s5_rerun": false
+}
