@@ -1757,10 +1757,34 @@
    "solver_executed": false,
    "training_executed": false,
    "tracked": true
+  },
+  {
+   "id": "c3_co_pair_window_contamination",
+   "status": "complete_root_accepted",
+   "record": "docs/research/2026-09-27_c3_co_pair_window_contamination.md",
+   "directory": "artifacts/research_checks/2026-09-27_c3_co_pair_window_contamination",
+   "script": "scripts/diagnose_c3_co_pair_window_contamination.py",
+   "results_sha256": "75ca1976fb6fe379c9c6861130bd7b6a0818c17ecdd32647c1a3d9cf5c432924",
+   "executor": "GPT-6 Luna/high; root independent H5/math.fsum recomputation",
+   "n_source_h5": 22,
+   "n_role_windows": 5,
+   "n_unique_index_windows": 4,
+   "n_independently_checked_scalars": 180,
+   "D10_aggregate_F0_over_delta_norm_ratio": 64581.248350991176,
+   "limitations": [
+    "COV exact-zero delta -> missing ratio",
+    "D5 extremely small nonzero delta -> arithmetic value only, no physical interpretation",
+    "D10 target/BG-NEG windows share indices and are not independent evidence",
+    "No absolute clean target or event reference certification"
+   ],
+   "g4_relieved": false,
+   "solver_executed": false,
+   "training_executed": false,
+   "tracked": true
   }
  ],
  "schema": "research-artifact-registry/1",
  "solver_execution_gate": "configs/research/gprmax_v4_execution_gate.json",
  "updated_date": "2026-09-27",
- "current_handoff": "START_HERE.md — development reference eligibility audited; next: archived C3 CO frozen-window F0/delta contamination diagnostic; no new FDTD, no training or S5 rerun"
+ "current_handoff": "START_HERE.md — C3 CO frozen-window contamination diagnosis accepted; next: development paired-change diagnostic design with residual-background and small-difference sensitivity; no FDTD, training or S5 rerun"
 }
