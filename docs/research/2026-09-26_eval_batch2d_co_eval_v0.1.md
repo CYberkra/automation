@@ -51,3 +51,7 @@
 2. **G4 仍是可行性与排序的总阻塞**：阈值校准（v0.2 §9 四步）前，一切候选维持 `undetermined`。
 3. **A0 3D 校核**：提案待用户批准，与本文独立。
 4. 选择器训练继续禁止（`training_eligible=false`）。
+
+## 勘误（2026-09-27 独立审查登记）
+
+上文"EV-C3m-COV（applies_to=all_cases_of_family）× 2 母模型 = 2 行"的措辞不精确：records.json 中这两行的 `mother_model_id` 字段均为族基母模型 `B2D-C3m-BG`，两行实际靠 `case` 字段（BG/TGT）区分；TGT 行的 `case_h5_files` 已核验正确指向 TGT 母模型的 11 个 h5，**数据本身无误**。字段语义应读作"族基母模型"，事件行的数据来源以 `case`/`case_h5_files` 为准。

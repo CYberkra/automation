@@ -1293,7 +1293,7 @@
   },
   {
    "directory": "artifacts/research_checks/2026-09-26_s4_baseline_r1",
-   "directory_note": "Baseline runner r1/r2; records byte-identical after stripping per-record resource fields (stripped sha256 f6b9fafb63408da063e191d05008f3a95c51663fbcc8b9305cc066dc58751d6e); manifest identical except run_tag/total_wall_s. Arrays (2088 pre_gain/gain-curve .npy, ~1.4 GB) in git-ignored artifacts/simulations/2026-09-26_s4_baseline_arrays/ with sha256 in records.",
+   "directory_note": "Baseline runner r1/r2; records byte-identical after stripping per-record resource fields (stripped sha256 f6b9fafb63408da063e191d05008f3a95c51663fbcc8b9305cc066dc58751d6e); manifest identical except run_tag/total_wall_s. Arrays (2088 pre_gain/gain-curve .npy, ~1.08 GB (1,081,908,864 B; earlier '~1.4 GB' wording corrected 2026-09-27)) in git-ignored artifacts/simulations/2026-09-26_s4_baseline_arrays/ with sha256 in records.",
    "freeze_script": "scripts/freeze_s4_baseline_group.py",
    "frozen_contract": "configs/research/s4_baseline_group_v0.1.json",
    "id": "s4_baseline_group_v0_1",
@@ -1303,7 +1303,7 @@
     "L_unavailable": 99,
     "R_ran": 180,
     "R_records": 225,
-    "R_selection": "svd_k1 on all 60 evaluable windows under all three threshold candidates (0.05/0.1/0.2); d1 median MT 0.755 / CO 0.723; thresholds do not differentiate on current windows",
+    "R_selection": "svd_k1 on all 60 evaluable windows under all three threshold candidates (0.05/0.1/0.2); d1 upper-median MT 0.755 / CO 0.723 (standard medians 0.7434 / 0.6746; see report erratum 2026-09-27); thresholds do not differentiate on current windows",
     "clipped_or_overflow": 0,
     "dev_groups": [
      "B2D-C1m",
@@ -1501,7 +1501,7 @@
    "relevance": "G4 step-3 mission input anchor: minimum recognizable damage (interface at 10-20 m, <1m/<10% validated), false-call cost (ghost interfaces), conservativeness template (a80-style band + explicit systematic bias), per-family (per-site) tolerances; their preprocessing (direct-wave removal/gain/bandpass) is the operator class our G4 calibrates",
    "report": "docs/research/2026-09-26_wang2026_uav_gpr_landslide_reading.md",
    "solver_executed": false,
-   "source_pdf": "E:/automation_djh/Wang 等 - 2026 - Deep-Penetrating Uncrewed Aerial Vehicle-Based Ground-Penetrating Radar for Landslide Surveys A fra.pdf",
+   "source_pdf": "E:/automation_djh/Wang \u7b49 - 2026 - Deep-Penetrating Uncrewed Aerial Vehicle-Based Ground-Penetrating Radar for Landslide Surveys A fra.pdf",
    "status": "complete_reading_note_design_reference_only",
    "tracked": true,
    "training_executed": false
@@ -1515,7 +1515,6 @@
    "id": "g4_mission_tolerance_v0_1",
    "key_numbers": {
     "capability_export_sha256_v1_superseded": "37d9597ca0a6e6be758c9c6104b8224ba06e4c2e0d80a3d0f909ae03e6f5323c",
-    "capability_export_sha256_v2": "c92929129718703fce7fa6f5b0922d48d22a6e075e9f130e37e51226103b21a0",
     "capability_export_sha256_v2_superseded": "c92929129718703fce7fa6f5b0922d48d22a6e075e9f130e37e51226103b21a0",
     "capability_export_sha256_v3": "2091f4171c16341731f57bb94c8fead0a72e47a1d58389caa74926286bf8e6c8",
     "capability_rows": 2065,
@@ -1533,7 +1532,7 @@
     "mission_relevant_levels": "amplitude_scale {0.5,0.1}; polarity_flip all; sample_shift {-16,-4,4,16} (sign-symmetric explicit grid, v0.2); trace_deletion {4,8}",
     "negative_control_rows": 324,
     "sign_symmetry_evidence": "scripts/study_shift_sign_symmetry.py: 484/486 candidate x geometry x family x |shift| groups have |median(D+) - median(D-)| <= 0.01 (worst 0.012 < jitter epsilon ~0.03)",
-    "user_approval": "2026-09-26 21:38 '同意' — four mission inputs at proposed defaults (Wang 2026 anchored)",
+    "user_approval": "2026-09-26 21:38 user approved the four mission inputs at proposed defaults (Wang 2026 anchored); mojibake in the previous wording fixed 2026-09-27",
     "weak_event_band": "amplitude_scale 0.9; sample_shift {-1,1}; trace_deletion 1 (protected, feeds tau calibration and step-4 undetermined-band checks)"
    },
    "limitations": [
@@ -1561,10 +1560,10 @@
    "id": "g4_sensitivity_fliprate_v0_1",
    "key_numbers": {
     "companion_correction": "capability export v2 (c9292912...) supersedes v1 (37d9597c...): level mapping now derived from frozen config; negative sample_shift excluded",
-    "flip_rate_ranges": "level_axis 0.2-3.1%; window_jackknife 0.1-9.0%; value_jitter 1.6-8.1% (diagnostic distributions, no cutoff fixed)",
+    "flip_rate_ranges": "v1 (superseded): level_axis 0.2-3.1%; window_jackknife 0.1-9.0%; value_jitter 1.6-8.1%. v2 (current): shift-strata level_axis 0.4-0.6% over signed grid, weak-event band 0.0%; see directory_note and v2 results.json f96d317a...",
     "fliprate_export_sha256_v1_superseded": "b30f787763aa353fd21ada0e51111b802adfa9f87bd4c1b5e004261e44a8eec9",
     "fliprate_export_sha256_v2": "f96d317a3e046dfcc9efb01da55d49f78ab09c6fdb562c37e4ce93c6480e558f",
-    "gates": "mission tolerance 2d630c01..., event table b0ad1003..., reference budget 38cf98bab..., 34086 ladder records, identity anchor D=0",
+    "gates": "v2 exports gate on mission tolerance v0.2 ee039fb1...; event table b0ad1003...; reference budget 38cf98bab...; 34086 ladder records; identity anchor D=0 (superseded v1 exports gated on v0.1 2d630c01...)",
     "jitter_epsilon": "sqrt(2*median deviation_from_unity) per stratum, 0.0300-0.0341 (budget shape class 0.99813-0.99955 correlation)",
     "jitter_replicates": 200,
     "n_strata": 24,
@@ -1630,9 +1629,24 @@
    "status": "draft_pending_user_review",
    "tracked": true,
    "training_executed": false
+  },
+  {
+   "id": "independent_audit_2026_09_27",
+   "status": "complete_core_claims_verified_four_narrative_errata_registered",
+   "record": "docs/research/decision_log.md",
+   "report": "docs/research/decision_log.md",
+   "directory_note": "User-ordered independent audit of all recent work (commits 2669681..3102318): two baselines (verify_workspace 182/182, check_handoff pass) plus 7 parallel read-only reviews (event table freeze, MT batch+eval, CO batch+eval, S4 baseline, three G4 frozen configs, four G4 pipeline products, step-5 draft consistency). Methods: SHA-256 recomputation, freeze-script byte-identity reruns (all byte-identical, no restore needed), independent numeric recomputation (43/43 event windows via exact rational arithmetic, h5py zero-difference spot checks, Clopper-Peason certificate closed-form + 4M-point numeric integration). No artifact-level error, arithmetic error, or discipline violation found. Four narrative-statistics errata registered at the end of the S4 report and CO eval report (d1/d2 'medians' were upper-medians; array volume 1.4->1.08 GB; negative-control residual medians were an unstated 3-family subset with full-window MT/CO max ratio ~48x not 35x; CO 'x2 mother models' wording vs mother_model_id field semantics); registry stale fields corrected (fliprate gates/flip_rate_ranges to v2, tolerance duplicate key + mojibake). Qualitative conclusions unchanged. Observation items logged: event-table t_lo 1-2 ulp evaluation-order effect (absorbed by %.6f hash normalization), stability-rule input chain references superseded fliprate v1 (disclosed, anti-overfit intact), value_axis epsilon cross-scale application to N_b, analyze_batch2d_mt.py gate assertion points at consumed batch (by-design).",
+   "limitations": [
+    "audit was artifact-level verification plus narrative-number spot checks; no evaluation pipeline rerun (r1/r2 archives already byte-identical)",
+    "FDTD raw h5 only spot-checked, not exhaustively re-verified; large .npy arrays in git-ignored dirs only 5 SHA spot checks",
+    "no frozen artifact modified; no G gate relieved; thresholds stay null"
+   ],
+   "solver_executed": false,
+   "tracked": true,
+   "training_executed": false
   }
  ],
  "schema": "research-artifact-registry/1",
  "solver_execution_gate": "configs/research/gprmax_v4_execution_gate.json",
- "updated_date": "2026-09-26"
+ "updated_date": "2026-09-27"
 }
