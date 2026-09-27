@@ -1,0 +1,45 @@
+{
+  "status": "pass",
+  "method": "independent exact Fraction matrix multiplication and squared norm ratios; no production metric helper used",
+  "cases": [
+    {
+      "operator": "identity",
+      "D_X_squared_exact": "0",
+      "D_S_squared_exact": "1",
+      "N_b_exact": "1"
+    },
+    {
+      "operator": "P_S",
+      "D_X_squared_exact": "1/2",
+      "D_S_squared_exact": "0",
+      "N_b_exact": "0"
+    },
+    {
+      "operator": "P_C",
+      "D_X_squared_exact": "1/2",
+      "D_S_squared_exact": "2",
+      "N_b_exact": "1"
+    },
+    {
+      "operator": "zero",
+      "D_X_squared_exact": "1",
+      "D_S_squared_exact": "1",
+      "N_b_exact": "0"
+    },
+    {
+      "operator": "2P_S",
+      "D_X_squared_exact": "1",
+      "D_S_squared_exact": "1",
+      "N_b_exact": "0"
+    },
+    {
+      "operator": "A_target_plus_2_background",
+      "D_X_squared_exact": "1/2",
+      "D_S_squared_exact": "4",
+      "N_b_exact": "0"
+    }
+  ],
+  "results_sha256": "e07ee4c821c617388000776df5e36889b6e9b64a550f81edb8622b70a63e462b",
+  "s5_reexecuted": false,
+  "thresholds_changed": false
+}

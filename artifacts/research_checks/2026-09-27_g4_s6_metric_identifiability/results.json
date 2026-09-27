@@ -1,0 +1,191 @@
+{
+  "checks": {
+    "P_S_vs_A_same_D_X_and_N_b_different_D_S": true,
+    "P_S_vs_P_C_same_D_X_different_D_S_and_N_b": true,
+    "values_are_diagnostics_only_no_threshold_application": true
+  },
+  "data_scope": "newly_constructed_arrays_only; no simulation, measured, or test-family data",
+  "inputs": {
+    "C_background_negative_control": [
+      1.0,
+      -1.0
+    ],
+    "S_target": [
+      1.0,
+      1.0
+    ],
+    "X_mixture": [
+      2.0,
+      0.0
+    ],
+    "mask_shape": [
+      2,
+      1
+    ]
+  },
+  "metrics": {
+    "D_S": "waveform_metrics(output, S, full_mask, complete_clean/mixed/complete).nrmse",
+    "D_X": "waveform_metrics(output, X, full_mask, complete_clean/mixed/complete).nrmse",
+    "N_b": "energy_metrics(operator(C), C, full_mask).energy_ratio"
+  },
+  "operator_scope": "each fixed matrix is applied identically to X and C; operators are oracle algebraic controls, not deployable algorithms or electromagnetic decompositions",
+  "operators": [
+    {
+      "D_S_nrmse": 1.0,
+      "D_X_nrmse": 0.0,
+      "N_b_energy_ratio": 1.0,
+      "matrix": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "operator": "identity",
+      "output_for_C_negative_control": [
+        1.0,
+        -1.0
+      ],
+      "output_for_X": [
+        2.0,
+        0.0
+      ],
+      "waveform_metric_reference_contract": "complete_clean / mixed / complete"
+    },
+    {
+      "D_S_nrmse": 0.0,
+      "D_X_nrmse": 0.7071067811865476,
+      "N_b_energy_ratio": 0.0,
+      "matrix": [
+        [
+          0.5,
+          0.5
+        ],
+        [
+          0.5,
+          0.5
+        ]
+      ],
+      "operator": "P_S",
+      "output_for_C_negative_control": [
+        0.0,
+        0.0
+      ],
+      "output_for_X": [
+        1.0,
+        1.0
+      ],
+      "waveform_metric_reference_contract": "complete_clean / mixed / complete"
+    },
+    {
+      "D_S_nrmse": 1.414213562373095,
+      "D_X_nrmse": 0.7071067811865476,
+      "N_b_energy_ratio": 1.0,
+      "matrix": [
+        [
+          0.5,
+          -0.5
+        ],
+        [
+          -0.5,
+          0.5
+        ]
+      ],
+      "operator": "P_C",
+      "output_for_C_negative_control": [
+        1.0,
+        -1.0
+      ],
+      "output_for_X": [
+        1.0,
+        -1.0
+      ],
+      "waveform_metric_reference_contract": "complete_clean / mixed / complete"
+    },
+    {
+      "D_S_nrmse": 1.0,
+      "D_X_nrmse": 1.0,
+      "N_b_energy_ratio": 0.0,
+      "matrix": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "operator": "zero",
+      "output_for_C_negative_control": [
+        0.0,
+        0.0
+      ],
+      "output_for_X": [
+        0.0,
+        0.0
+      ],
+      "waveform_metric_reference_contract": "complete_clean / mixed / complete"
+    },
+    {
+      "D_S_nrmse": 1.0,
+      "D_X_nrmse": 1.0,
+      "N_b_energy_ratio": 0.0,
+      "matrix": [
+        [
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "operator": "2P_S",
+      "output_for_C_negative_control": [
+        0.0,
+        0.0
+      ],
+      "output_for_X": [
+        2.0,
+        2.0
+      ],
+      "waveform_metric_reference_contract": "complete_clean / mixed / complete"
+    },
+    {
+      "D_S_nrmse": 2.0,
+      "D_X_nrmse": 0.7071067811865476,
+      "N_b_energy_ratio": 0.0,
+      "matrix": [
+        [
+          1.5,
+          1.5
+        ],
+        [
+          -0.5,
+          -0.5
+        ]
+      ],
+      "operator": "A_target_plus_2_background",
+      "output_for_C_negative_control": [
+        0.0,
+        0.0
+      ],
+      "output_for_X": [
+        3.0,
+        -1.0
+      ],
+      "waveform_metric_reference_contract": "complete_clean / mixed / complete"
+    }
+  ],
+  "provenance": {
+    "metric_contract_sha256": "03c5b48a1df3b0ffb0fe7f2ca380857ee8d452937621a28837efe9d4b2917eb5",
+    "numpy_version": "2.5.3",
+    "script_sha256": "e9201048e325c226f5bbaa0fc87d400c63c28c4ff683f58cb953b6f010061048"
+  },
+  "purpose": "mathematical_identifiability_demonstration_only",
+  "schema_version": "g4_s6_metric_identifiability_synthetic_v1"
+}
