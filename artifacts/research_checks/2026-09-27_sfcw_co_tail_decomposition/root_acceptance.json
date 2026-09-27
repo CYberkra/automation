@@ -1,0 +1,55 @@
+{
+  "status": "passed_arithmetic_and_input_geometry_checks_only",
+  "scalar_checks": 92,
+  "arrays": [
+    {
+      "name": "raw_time_s",
+      "count": 20352,
+      "bit_identical": true
+    },
+    {
+      "name": "raw_centered",
+      "count": 223872,
+      "bit_identical": true
+    },
+    {
+      "name": "weights",
+      "count": 20352,
+      "bit_identical": true
+    },
+    {
+      "name": "removed_response",
+      "complex_values": 5511,
+      "relative_l2_difference": 1.293339348006121e-10
+    },
+    {
+      "name": "removed_envelope",
+      "complex_values": 22044,
+      "relative_l2_difference": 1.2933393586551876e-10
+    }
+  ],
+  "scalar_rtol": 1e-11,
+  "scalar_atol": 1e-20,
+  "independent_dft_relative_tolerance": 1e-08,
+  "tolerance_scope": "numerical implementation comparison only, not solver/physical error certification",
+  "input_specifications_sha256": {
+    "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t01/B2D-C3m-BG-CO11-t01.in": "d3ab5b45535090e6a7e2bae093101ae9265a62e367b580da7c652311ca530663",
+    "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t02/B2D-C3m-BG-CO11-t02.in": "3c925ac8bba24e983f825f3ee36097066cc1699fae6f97861b09723c096ba102",
+    "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t03/B2D-C3m-BG-CO11-t03.in": "a501d2e173a0d1b49ebde34df259193bee2681a1ad1be32ed61e96431a38f9a3",
+    "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t04/B2D-C3m-BG-CO11-t04.in": "408bdb5f9e885f16a56dc60cba51f9114f7fe3766f6207f6fe0ccbaf409057f4",
+    "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t05/B2D-C3m-BG-CO11-t05.in": "d7a5a461f05054b8395c363f63ab21552b37519aa159f468cd9b77630fa3a15f",
+    "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t06/B2D-C3m-BG-CO11-t06.in": "1d2fe7e5fb050398d54ebaf172bd75cf044b430561b7f67ff8a2791132b62a4a",
+    "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t07/B2D-C3m-BG-CO11-t07.in": "d86df6699dac515f695b56be2f24e3ae92f2e81d746602bbc76ef13d7a4bfd11",
+    "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t08/B2D-C3m-BG-CO11-t08.in": "09e6aca6f882a838f9b8ab8f8f1a6fbf07deb4713d459952ff5584ba6fa11120",
+    "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t09/B2D-C3m-BG-CO11-t09.in": "b0a4d8ee3d36948df4a1f54346b2ca50f554c1088e18077beee233a5d55049ec",
+    "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t10/B2D-C3m-BG-CO11-t10.in": "cb146d16e7ae69b98049c20c918fd6124388f52569fbf63f25efc375ebce5de4",
+    "artifacts/research_checks/2026-09-26_B2D-C3m-BG-CO11-t11/B2D-C3m-BG-CO11-t11.in": "6655ef8b8b63739838d9cfd2b494f17d32188ee0a04550cb4bd0d5a04837fc2f"
+  },
+  "results_sha256": "2f47380bce151a19c0aa2a0c01da742607d3886ca468822f397fd3bf7e747db5",
+  "independent_script_sha256": "e7984c8c86b51b3f353f5d577084f5647f4b4ceaae2ec77c5afcfa492d94b296",
+  "independent_json_sha256": "7f0e2a0bdc86c443c4b24ccbff569db2288260949d76d8233485bf4c5374b335",
+  "independent_npz_sha256": "5eb38f93080355f7e47a79f75173d3c2496583e3837620dd4ac8bea5f2b343f3",
+  "PML_physical_cause_certified": false,
+  "solver_executed": false,
+  "training_executed": false
+}

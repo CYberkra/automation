@@ -1843,10 +1843,30 @@
    "solver_executed": false,
    "training_executed": false,
    "tracked": true
+  },
+  {
+   "id": "sfcw_co_tail_decomposition",
+   "status": "complete_root_accepted_processing_contribution_only",
+   "record": "docs/research/2026-09-27_sfcw_co_tail_decomposition.md",
+   "directory": "artifacts/research_checks/2026-09-27_sfcw_co_tail_decomposition",
+   "script": "scripts/diagnose_sfcw_co_tail.py",
+   "contract": "configs/research/sfcw_co_tail_decomposition_v1.json",
+   "results_sha256": "2f47380bce151a19c0aa2a0c01da742607d3886ca468822f397fd3bf7e747db5",
+   "root_acceptance_sha256": "684650dc1d51a88a36cb187dce15c3c24e02aa720761f0df8f2a9b185ab43d5f",
+   "source_h5_count": 11,
+   "independent_scalar_checks": 92,
+   "independent_complex_frequency_values": 5511,
+   "independent_complex_reconstruction_values": 22044,
+   "PML_physical_cause_certified": false,
+   "clean_reference_qualified": false,
+   "g4_relieved": false,
+   "solver_executed": false,
+   "training_executed": false,
+   "tracked": true
   }
  ],
  "schema": "research-artifact-registry/1",
  "solver_execution_gate": "configs/research/gprmax_v4_execution_gate.json",
  "updated_date": "2026-09-27",
- "current_handoff": "START_HERE.md - C3 SFCW pair diagnostic independently checked (456 scalars): mean removal suppresses coherent anomaly contrast; CO background depends on tail processing and MT background persists. Next: existing C3 cross-trace background/record-tail diagnosis; no FDTD/S5/training."
+ "current_handoff": "START_HERE.md - C3 CO BG tail decomposition independently accepted: raw cross-trace variation spans multiple windows, removed tail explains SFCW residual change; physical boundary/truncation cause unresolved. Next: design minimal separated controls with mesh checks and GPU budget, no launch yet; no S5/training."
 }

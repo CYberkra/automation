@@ -1,0 +1,88 @@
+{
+  "schema": "sfcw-co-tail-decomposition/1",
+  "status": "fixed_before_output",
+  "scope": "existing C3 CO BG 11 traces only; CPU postprocessing; no FDTD, test families, training or G4 relief",
+  "parent_window_contract": "configs/research/sfcw_c3_pair_diagnostic_v1.json",
+  "parent_window_contract_sha256": "abf641d21602eb6f013b5fa78779664ba8732a90bd409e86e1c14328bf25a170",
+  "manifest": "artifacts/research_checks/2026-09-27_sfcw_unified_dev_adapter_mt33_rerun/manifest.json",
+  "manifest_sha256": "00ecdf7c62fabd62b45af7c43aaed125161f9456ea95c20d077c933bb3c6125a",
+  "raw_windows": [
+    {
+      "id": "direct_context",
+      "start_s": 0.0,
+      "stop_s": 6.000000000000001e-08
+    },
+    {
+      "id": "surface_cover_context",
+      "start_s": 6.000000000000001e-08,
+      "stop_s": 2.4000000000000003e-07
+    },
+    {
+      "id": "D10_context",
+      "start_s": 2.4000000000000003e-07,
+      "stop_s": 4.2e-07
+    },
+    {
+      "id": "late_record",
+      "start_s": 4.2e-07,
+      "stop_s": 1.0000000000000002e-06
+    },
+    {
+      "id": "taper_region_context",
+      "start_s": 1.0000000000000002e-06,
+      "stop_s": 1.2000000000000002e-06
+    }
+  ],
+  "reconstruction_windows": [
+    {
+      "id": "direct_context",
+      "start_s": 0.0,
+      "stop_s": 6.000000000000001e-08
+    },
+    {
+      "id": "surface_cover_context",
+      "start_s": 6.000000000000001e-08,
+      "stop_s": 2.4000000000000003e-07
+    },
+    {
+      "id": "D10_context",
+      "start_s": 2.4000000000000003e-07,
+      "stop_s": 4.2e-07
+    },
+    {
+      "id": "late_record",
+      "start_s": 4.2e-07,
+      "stop_s": 1.0000000000000002e-06
+    },
+    {
+      "id": "taper_region_context",
+      "start_s": 1.0000000000000002e-06,
+      "stop_s": 1.2000000000000002e-06
+    },
+    {
+      "id": "periodic_extension",
+      "start_s": 1.2e-06,
+      "stop_s": 3.3333333333333333e-06
+    }
+  ],
+  "operators": {
+    "center": "C(X)=X-mean_trace(X), complex values retained",
+    "tail_removed": "U=X-WX; W is exactly the archived official 200ns receiver-only taper",
+    "transform": "official direct_frequency_response with identical original source, no added taper on U; reconstruct rectangular, zero_pad_factor=4, time_shift=0"
+  },
+  "required_checks": [
+    "source samples, dt, time origin, spatial scale identical across 11 traces",
+    "source/receiver geometry and input hashes",
+    "saved reconstruction and raw samples use their respective physical time axes",
+    "official F(U) equals archived E_no_taper-E_tail, arithmetic comparison only",
+    "C(E_no)=C(E_tail)+C(F(U)); no independence assumed for norm squares"
+  ],
+  "metrics": [
+    "raw centered L2, squared-norm share, per-trace centered norm and raw mean/last sample",
+    "raw centered squared-norm share in actual nonzero taper support; support defined by official weights, not observed amplitudes",
+    "reconstruction window centered before/after/removed norms, relative closure and after/before norm; zero denominator null",
+    "per-trace receiver y and distance to lateral PML inner interfaces at y=1,31 m; descriptive only"
+  ],
+  "zero_denominator": "null with reason; no epsilon",
+  "interpretation": "operation attribution only; no physical PML/finite-domain/truncation cause certification, no clean truth or numerical error budget; no output-selected windows or best taper search"
+}
