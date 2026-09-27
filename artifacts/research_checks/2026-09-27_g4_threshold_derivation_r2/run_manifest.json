@@ -1,0 +1,28 @@
+{
+ "checks": {
+  "identity_anchor_admissible_and_D_zero": true,
+  "per_pair_rederivation_reproduces_fliprate_v2_aggregates": true
+ },
+ "g4_relieved": false,
+ "hard_limits_source": "configs\\research\\g4_threshold_derivation_v1.0.json",
+ "inputs_gated": 9,
+ "n_candidates": 57,
+ "n_combos": 3,
+ "n_d_strata": 21,
+ "n_n_b_strata": 3,
+ "per_combo_admissible": {
+  "co/c3": 1,
+  "mt/c1": 1,
+  "mt/c3": 1
+ },
+ "run_tag": "r2",
+ "runner": "scripts\\run_g4_threshold_derivation.py",
+ "solver_invoked": false,
+ "stability_verdict_histogram": {
+  "not_applied_cross_scale_caveat": 3,
+  "unique_stable_top": 21
+ },
+ "stop_reason": null,
+ "total_wall_s": 7.032654999988154,
+ "training_eligible": false
+}

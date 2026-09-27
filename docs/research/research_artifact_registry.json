@@ -1501,7 +1501,7 @@
    "relevance": "G4 step-3 mission input anchor: minimum recognizable damage (interface at 10-20 m, <1m/<10% validated), false-call cost (ghost interfaces), conservativeness template (a80-style band + explicit systematic bias), per-family (per-site) tolerances; their preprocessing (direct-wave removal/gain/bandpass) is the operator class our G4 calibrates",
    "report": "docs/research/2026-09-26_wang2026_uav_gpr_landslide_reading.md",
    "solver_executed": false,
-   "source_pdf": "E:/automation_djh/Wang \u7b49 - 2026 - Deep-Penetrating Uncrewed Aerial Vehicle-Based Ground-Penetrating Radar for Landslide Surveys A fra.pdf",
+   "source_pdf": "E:/automation_djh/Wang 等 - 2026 - Deep-Penetrating Uncrewed Aerial Vehicle-Based Ground-Penetrating Radar for Landslide Surveys A fra.pdf",
    "status": "complete_reading_note_design_reference_only",
    "tracked": true,
    "training_executed": false
@@ -1640,6 +1640,23 @@
     "audit was artifact-level verification plus narrative-number spot checks; no evaluation pipeline rerun (r1/r2 archives already byte-identical)",
     "FDTD raw h5 only spot-checked, not exhaustively re-verified; large .npy arrays in git-ignored dirs only 5 SHA spot checks",
     "no frozen artifact modified; no G gate relieved; thresholds stay null"
+   ],
+   "solver_executed": false,
+   "tracked": true,
+   "training_executed": false
+  },
+  {
+   "id": "g4_threshold_derivation_v1_0",
+   "status": "s2_s3_complete_g4_not_relieved",
+   "record": "docs/research/decision_log.md",
+   "report": "artifacts/research_checks/2026-09-27_g4_threshold_derivation_r1/results.json",
+   "directory_note": "G4 step-5 S2+S3: frozen threshold-derivation program (configs/research/g4_threshold_derivation_v1.0.json SHA d114fd19...) executed on the development group by scripts/run_g4_threshold_derivation.py (codebuddy hy4-preview draft + kimi acceptance). r1/r2 results.json byte-identical (SHA-256 3aca2b20559fa357ff5404a73e2ef844233c134ee5fbc0288ae7876f913abac4). Internal acceptance gate: per-pair re-derivation reproduces fliprate v2 aggregates on all 24 strata x 3 axes. Cross-checked against an independent kimi reference implementation (171 combo-candidate verdicts): final admissible identical, all numeric values identical; 36 sub-flag differences traced to the reference's own vacuous-true encoding for wholly-unavailable combos (official stricter, official stands). Headline (dev group only, threshold numbers appear here for the first time): epsilon_stratum ~0.034; the ONLY admissible candidate in all three dev combos (mt/c1, mt/c3, co/c3) is the identity anchor B0_G1_BG (D_p80=0<=eps, N_b=1.0); all real operators show D_p80 0.17-0.96 on mission-relevant levels (detection-vs-background-removal dilemma made quantitative); N constraint alone passes 32-43/57, D constraint binds (n_D_pass=1 per combo). 21 D strata -> unique_stable_top (identity anchor, singleton vacuity explicitly flagged); 3 N_b strata carry the cross-scale caveat with no per-pair verdict. Identity admissibility is constructed-reference self-consistency, NOT a selection result. Acceptance: scripts/check_g4_threshold_derivation_acceptance.py all pass.",
+   "limitations": [
+    "G4 NOT relieved: test-family one-shot evaluation (S5) and user sign-off (S6) still missing",
+    "thresholds calibrated on dev families only; no extrapolation to test families {C5,C8}",
+    "constructed reference (identity of damaged input), simulation domain only; no field extrapolation",
+    "no ranking, no selection, no training, no labels; amplitude class remains G1/G6-limited",
+    "epsilon is calibrated on the NRMSE (linear) scale; N_b strata get a reported cross-scale caveat instead of a per-pair verdict"
    ],
    "solver_executed": false,
    "tracked": true,

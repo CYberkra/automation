@@ -1,3 +1,12 @@
+## 2026-09-27 G4 第 5 步 S2+S3 完成：冻结阈值推导程序在开发组执行（阈值数值首次出现，G4 维持未解除）
+
+- **执行与验收链**：S1 冻结程序 `configs/research/g4_threshold_derivation_v1.0.json`（SHA-256 `d114fd19…`）由 CodeBuddy hy4-preview 按任务书 `docs/research/task_codebuddy_g4_s2_derivation.md` 实现为 `scripts/run_g4_threshold_derivation.py`（**codebuddy 起草 + kimi 验收**）。kimi 验收四道：① 通读全文并核对 6 个操作化裁定点（tie 不构成 determined；单元素 admissible 的空真显式标注；set/partial_only 按"存在任何 determined 对"切分；系统偏差项带符号中位+绝对值并报；每块一次不重复计入；候选=能力∪负控并集）；② r1/r2 两遍执行 results.json **逐字节一致**（SHA-256 `3aca2b20…`）；③ 内置验收门通过：逐对重导精确复现翻转率 v2 全部 24 strata × 3 轴聚合（flips/comparisons/ties 逐 stratum 逐轴）且与 v2 原函数双路互验一致；④ 与 kimi 独立参照实现（`artifacts/local_checks/indep_g4_s3_verdicts.json`）171 个 组合×候选 逐条比对：**最终 admissible 完全一致、全部数值（D_p80/ε/N_b）零差异**；36 处子标记差异全部定位为参照实现自身对"整组不可用"（L_* 增益类候选在 co 几何下无能力/负控行）的空真（vacuous-true）子标记编码，官方实现对缺失行判负、更严格且信息更完整——**官方实现为准，差异不入产物**。
+- **结果（开发组，阈值数值首次出现）**：ε_stratum≈0.034（值抖动标定，逐 stratum 取自翻转率 v2 `value_jitter.epsilon`）；三个开发组合 (mt/c1, mt/c3, co/c3) 的**唯一 admissible 候选均为 identity 锚 `B0_G1_BG`**（D_p80=0≤ε、N_b=1.0）；所有真实算子在任务档级别 D_p80 0.17–0.96 远超 ε（"保目标 vs 压背景"两难的定量实锤）；N 约束单独通过率 32–43/57，D 约束为绑定约束（每组合 D_pass 恰 1 人=identity）。21 个 D strata 判 `unique_stable_top`（=identity 锚，单元素空真已显式标注 `singleton_admissible_set_vacuously_unique: true`）；3 个 N_b strata 按冻结程序不施规则、报跨尺度 caveat（ε 为 NRMSE 线性尺度标定，施于能量比二次尺度）。
+- **口径警示**：identity 锚的 admissible 语义是**构造参考自洽性锚点**（对零损伤恒等算子 D≡0 是定义使然），**不是"identity 为最优算子"的选型结论**；不排名不选优不训练、无物理/训练标签、仿真域构造参考、幅度类 G1/G6 限制照录。
+- **验收脚本**：`scripts/check_g4_threshold_derivation_acceptance.py` 全过（r1/r2 字节一致、九输入门禁对盘再核验、57/57 候选集、逐组合 admissible 重算、ε 与 v2 strata 逐一一致、a80 系统偏差项单列未混入统计项未做深度换算、21+3 strata 结构与纪律常量）。
+- **依据**：用户 2026-09-27 "按你建议，开始做吧"（批准 G4 第 5 步锁定程序 5 过目点建议值 + A0 执行）；S1 冻结配置为唯一规格来源。
+- **限制与下一步**：G4 未解除（四要件缺 S5 测试族一次性评价 + S6 用户签认）；阈值数值仅开发组内标定，不得外推测试族；下一步 S4 测试族 {C5,C8} 梯子生成（锁后首次动测试族，执行前留痕），测试族 ε 按 S1 定案沿用开发族同 geometry 值并如实声明。registry 条目 `g4_threshold_derivation_v1_0`；证据 `artifacts/research_checks/2026-09-27_g4_threshold_derivation_r1/`（r2 同构）。
+
 ## 2026-09-27 近期工作独立审查（用户指令"我要你审查最近工作是否严谨无误"）与勘误登记
 
 - **审查方式**：两道基线先行（`scripts/verify_workspace.py` 182 项全过、`scripts/check_handoff.py` 通过），随后 7 路并行独立审查（事件表冻结 / MT 批与评价 / CO 批与评价 / S4 基线 / G4 三冻结配置 / G4 四管线产物 / 第 5 步草案与文档自洽），方法为 SHA-256 重算、冻结脚本重跑字节一致测试、数值独立复算（含精确有理数窗索引复算 43/43、h5py 独立零差分抽查、统计证书闭式+数值积分双向验证）、文档与产物逐条对照。审查全程未运行 FDTD、未修改任何冻结产物（冻结脚本重跑均字节一致，无需恢复）。
