@@ -10,7 +10,8 @@
 - **合成审查完成**：[六算子对照](docs/research/2026-09-27_g4_s6_metric_identifiability.md)证明(D_X,N_b)相同仍可对应不同的已知目标重构误差；主agent用精确有理数运算独立核查18项指标通过。未读取任何仿真/测试/实测输入，未改冻结阈值。
 - **参考资格审查完成**：[开发组资格表](docs/research/2026-09-27_dev_reference_eligibility.md)登记69槽，44有输入、25缺案例；13槽可报告角色负控能量诊断，绝对事件保真资格为0。评价器实际reference为x_window，waveform指标仍不可用；paired_contrast元数据不代表已有干净目标或实际差分数组。
 - **污染诊断完成**：[C3 CO冻结窗诊断](docs/research/2026-09-27_c3_co_pair_window_contamination.md)已核对22个H5及180个标量。D10合并范数比F0/Δ≈64581.25；COV差分严格零，比例缺失；D5极小非零差分只报告算术值，不能作物理比例认证。差分不升级为clean参考。
-- **下一步**：开发侧按既有协议设计T(F1)−T(F0)对ΔF的配对变化诊断，并报告背景残留和小差分数值敏感性；不能据此生成绝对质量标签或选型。不缩窗绕结论、不在已消费C5/C8上调参或重跑S5；G4/训练闸门不变，无新仿真。
+- **模型合理性审查**：[主审报告](docs/research/2026-09-27_model_reasonableness_root_review.md)。当前模型是机制基准，不能直接代表真实沿航迹测线；CO沿横航迹平移、MT是变偏移距；后续评价直接用raw Ex，CO最近FFT格501点仅181不同格，不能等同完整SFCW复频响。impulse本身符合官方V4方法。
+- **下一步**：优先冻结真实几何/二维代理语义，并复用开发组H5统一官方SFCW复频响与重建流程，再设计配对变化诊断；旧原始冲激时间索引/阈值不可直接迁移。不重跑S5、不调已消费测试组、不新增FDTD、不训练。
 - **保留限制**：[2D规格v1.1](docs/research/2026-09-27_batch_2d_spec_v1_1_draft.md)仍为待验收草稿，硬件归属需逐批证据核对；幅度谱相关不证明波形NRMSE跨维迁移。A0 gate已消耗关闭，不重跑历史求解批次。
 - **复核入口**：S5用scripts/check_g4_test_confirmation_acceptance.py读取归档结果；独立原始记录复算见artifacts/research_checks/2026-09-27_g4_s5_root_audit/audit.py。不要运行正式S5命令来做验收，attempt已消耗。
 

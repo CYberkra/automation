@@ -1781,10 +1781,20 @@
    "solver_executed": false,
    "training_executed": false,
    "tracked": true
+  },
+  {
+   "id": "model_reasonableness_review",
+   "status": "complete_root_review",
+   "record": "docs/research/2026-09-27_model_reasonableness_root_review.md",
+   "directory": "artifacts/research_checks/2026-09-27_model_reasonableness",
+   "solver_executed": false,
+   "training_executed": false,
+   "g4_relieved": false,
+   "tracked": true
   }
  ],
  "schema": "research-artifact-registry/1",
  "solver_execution_gate": "configs/research/gprmax_v4_execution_gate.json",
  "updated_date": "2026-09-27",
- "current_handoff": "START_HERE.md — C3 CO frozen-window contamination diagnosis accepted; next: development paired-change diagnostic design with residual-background and small-difference sensitivity; no FDTD, training or S5 rerun"
+ "current_handoff": "START_HERE.md — model appropriateness audit; next: acquisition semantics and official SFCW development-data pipeline before paired-change diagnostics; no FDTD or S5 rerun"
 }
