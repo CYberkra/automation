@@ -1,3 +1,11 @@
+## 2026-09-27 A0 3D 校核 a0_3d_v1 分析完成与收口（执行提交 `0526744` 之后，G 缺口不变）
+
+- **分析链验收**：`scripts/analyze_a0_3d.py`（codebuddy hy4-preview 起草 + kimi 验收；任务书 `docs/research/task_codebuddy_a0_analysis.md`）。验收三道：① 通读对照契约提案 §2.1 七指标/§2.2 六条不做项——指标函数与 `scripts/analyze_dep3d_gold.py` 模板逐函数同一（taper `(round(tail/dt)−0.25)/n`、谱形状相关、波形互相关、相位线性拟合、远场变换、诊断窗规则）；② `--selftest` 以 dep3d 5CM 配对为伪输入跑通，且 3D 内部差分块与 dep3d gold r1 `per_pair.DEP3D_5CM` **逐值相等**（taper/包络峰/谱峰/选频 dB/相位/稳健性 L2 全等）——同一输入同一实现同一数字；③ 正式 r1/r2 `results.json` 逐字节一致（SHA-256 `2d0fe750…`）。codebuddy 自报 8 项不确定处逐项核对：h5 解析（run_id 词干命中）、2D 双根顺序、格距断言、缺档中止语义、符号约定、产物范围、`allow_nan=False`、selftest 伪输入标注——全部符合任务书。
+- **结果**（[结果文档](2026-09-27_a0_3d_results.md)）：2D/3D 归一化谱形状相关 BASE 0.9686 / FINE2 0.9729（400 ns 尾窗稳健性同值），落在 dep3d D20m 类 0.935/0.958 同类量级且略高；远场变换后 0.9860/0.9877（探索性非结论依据）；包络峰 3D 一致晚于 2D +2.46/+18.13 ns（与已知 BASE↔FINE2 档间偏移 15.7 ns 定量自洽；方向与 D20m 类相反，不得跨场景迁移）；时域波形互相关弱（0.29/0.05）——跨维度稳定量是归一化谱形状而非逐样本波形；谱峰频差 −1.20/−1.50 MHz。
+- **对本季目标（3）的含义**："2D 能否替代 3D 满足批量速度需求"获得 D10m 锚点的形状级支持证据（谱形状类指标 0.97 量级同形）；四类混淆（维度/侧向域宽/目标 y 位置/格距）未分离、无收敛认证、无绝对幅值比较，外推到其他族/深度档（C5/C8 锚点、电性档）仍需各自 3D 校核。2D 批量规格书据此进入固化阶段（见目标（2）线）。
+- **依据**：用户 2026-09-27 "按你建议，开始做吧"敲定 A0 契约建议值（诊断窗 240–400 ns、上限沿用 dep3d、远场变换列探索性）；契约 `configs/research/a0_3d_v1/`。
+- **限制**：硬限制六条照录于结果文档 §5；`reference_state` 不变；G1/G4/G5 维持。registry 条目 `a0_3d_v1`。
+
 ## 2026-09-27 G4 第 5 步 S2+S3 完成：冻结阈值推导程序在开发组执行（阈值数值首次出现，G4 维持未解除）
 
 - **执行与验收链**：S1 冻结程序 `configs/research/g4_threshold_derivation_v1.0.json`（SHA-256 `d114fd19…`）由 CodeBuddy hy4-preview 按任务书 `docs/research/task_codebuddy_g4_s2_derivation.md` 实现为 `scripts/run_g4_threshold_derivation.py`（**codebuddy 起草 + kimi 验收**）。kimi 验收四道：① 通读全文并核对 6 个操作化裁定点（tie 不构成 determined；单元素 admissible 的空真显式标注；set/partial_only 按"存在任何 determined 对"切分；系统偏差项带符号中位+绝对值并报；每块一次不重复计入；候选=能力∪负控并集）；② r1/r2 两遍执行 results.json **逐字节一致**（SHA-256 `3aca2b20…`）；③ 内置验收门通过：逐对重导精确复现翻转率 v2 全部 24 strata × 3 轴聚合（flips/comparisons/ties 逐 stratum 逐轴）且与 v2 原函数双路互验一致；④ 与 kimi 独立参照实现（`artifacts/local_checks/indep_g4_s3_verdicts.json`）171 个 组合×候选 逐条比对：**最终 admissible 完全一致、全部数值（D_p80/ε/N_b）零差异**；36 处子标记差异全部定位为参照实现自身对"整组不可用"（L_* 增益类候选在 co 几何下无能力/负控行）的空真（vacuous-true）子标记编码，官方实现对缺失行判负、更严格且信息更完整——**官方实现为准，差异不入产物**。

@@ -1661,6 +1661,22 @@
    "solver_executed": false,
    "tracked": true,
    "training_executed": false
+  },
+  {
+   "id": "a0_3d_v1",
+   "status": "execution_and_analysis_complete",
+   "record": "docs/research/decision_log.md",
+   "report": "docs/research/2026-09-27_a0_3d_results.md",
+   "directory_note": "A0 3D cross-check of the C3-family D10m anchor (contract configs/research/a0_3d_v1/, user-approved 2026-09-27). Execution 2/2 (BG 909.0 s / TGT 908.9 s, 1 attempt each, Job peak 7.95 GiB, 12464 steps as statically verified, Ex float64 finite; paired difference identically zero for t<240 ns; diagnostic-window peak 333.55 ns); evidence artifacts/research_checks/2026-09-27_B2D-C3m-*-3D5CM/ with SHA manifests; gate a0_3d_v1_consumed closed. Analysis scripts/analyze_a0_3d.py (codebuddy hy4-preview draft + kimi acceptance; --selftest reproduces dep3d gold per_pair.DEP3D_5CM bit-for-bit) r1/r2 byte-identical results.json SHA-256 2d0fe750d97665ef85f6f5c11f207758be485d7427bca64ad026ffb0e9f5096f. Headline: 2D/3D normalized spectrum shape correlation of the paired difference 0.9686 (BASE) / 0.9729 (FINE2), same class as and slightly above the dep3d D20m-class 0.935/0.958; far-field-transformed 0.9860/0.9877 (exploratory); envelope peak 3D later than 2D by +2.46/+18.13 ns (consistent with the known BASE<->FINE2 tier offset; direction opposite to the D20m class - not transferable); waveform-level cross-correlation weak (0.29/0.05); spectral shape is the stable cross-dimension quantity.",
+   "limitations": [
+    "four confound classes not separated (dimension, lateral domain width, target y position, grid spacing)",
+    "no grid convergence certification; no absolute amplitude comparison; no thresholds; reference_state stays numerically_unresolved",
+    "scope limited to the C3 A0 D10m anchor; C5/C8 anchors and the electrical-contrast tier still lack 3D cross-checks",
+    "no physical or training labels; conclusions are shape-level only"
+   ],
+   "solver_executed": true,
+   "tracked": true,
+   "training_executed": false
   }
  ],
  "schema": "research-artifact-registry/1",

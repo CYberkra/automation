@@ -1,0 +1,661 @@
+{
+  "analysis": "3D cross-check of the C3-family A0 anchor (D10m): shape-only comparison of the 3D TGT-BG paired difference against the two archived 2D A0 anchor differences",
+  "batch": "a0_3d_v1",
+  "cases": {
+    "3D_BG": {
+      "all_finite": true,
+      "dt_s": 9.629166007732353e-11,
+      "dtype": "float64",
+      "dx_dy_dz": [
+        0.05,
+        0.05,
+        0.05
+      ],
+      "grid_tier": "3D5CM",
+      "iterations": 12464,
+      "nx_ny_nz": [
+        160,
+        200,
+        1000
+      ],
+      "path": "artifacts/simulations/2026-09-27_B2D-C3m-BG-3D5CM/B2D-C3m-BG-3D5CM.h5",
+      "receiver_component": "Ex",
+      "receiver_position_m": [
+        4.0,
+        5.65,
+        45.0
+      ],
+      "run_id": "B2D-C3m-BG-3D5CM",
+      "sha256": "554dd5a64df660a0f43b17d6aba7b6374f74b536e571d64c73d317796e722430",
+      "side": "3D",
+      "tail_taper_fraction": {
+        "200ns": 0.1666332343737463,
+        "400ns": 0.33328652812324483
+      },
+      "transformed_samples": 12463
+    },
+    "3D_TGT": {
+      "all_finite": true,
+      "dt_s": 9.629166007732353e-11,
+      "dtype": "float64",
+      "dx_dy_dz": [
+        0.05,
+        0.05,
+        0.05
+      ],
+      "grid_tier": "3D5CM",
+      "iterations": 12464,
+      "nx_ny_nz": [
+        160,
+        200,
+        1000
+      ],
+      "path": "artifacts/simulations/2026-09-27_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-3D5CM/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-3D5CM.h5",
+      "receiver_component": "Ex",
+      "receiver_position_m": [
+        4.0,
+        5.65,
+        45.0
+      ],
+      "run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-3D5CM",
+      "sha256": "6bc826047568ea1e7c250b489f4e4775ab861f2660f9f6731c5cd393e579557a",
+      "side": "3D",
+      "tail_taper_fraction": {
+        "200ns": 0.1666332343737463,
+        "400ns": 0.33328652812324483
+      },
+      "transformed_samples": 12463
+    },
+    "BASE_BG": {
+      "all_finite": true,
+      "dt_s": 5.896635841874211e-11,
+      "dtype": "float64",
+      "dx_dy_dz": [
+        0.025,
+        0.025,
+        0.025
+      ],
+      "grid_tier": "BASE",
+      "iterations": 20352,
+      "nx_ny_nz": [
+        1,
+        1280,
+        2000
+      ],
+      "path": "artifacts/research_checks/2026-09-26_B2D-C3m-BG/B2D-C3m-BG.h5",
+      "receiver_component": "Ex",
+      "receiver_position_m": [
+        0.0,
+        16.650000000000002,
+        45.0
+      ],
+      "run_id": "B2D-C3m-BG",
+      "sha256": "a261e9958b90e82ad11a23464e797e5d7c98ad0a9cf2262c41cfd5b623b236c6",
+      "side": "2D",
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "transformed_samples": 20351
+    },
+    "BASE_TGT": {
+      "all_finite": true,
+      "dt_s": 5.896635841874211e-11,
+      "dtype": "float64",
+      "dx_dy_dz": [
+        0.025,
+        0.025,
+        0.025
+      ],
+      "grid_tier": "BASE",
+      "iterations": 20352,
+      "nx_ny_nz": [
+        1,
+        1280,
+        2000
+      ],
+      "path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02.h5",
+      "receiver_component": "Ex",
+      "receiver_position_m": [
+        0.0,
+        16.650000000000002,
+        45.0
+      ],
+      "run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "sha256": "f30d7feb6a23525aa97ad8d26423b6cf10e50b788f8c77e296acc6f3fc14638e",
+      "side": "2D",
+      "tail_taper_fraction": {
+        "200ns": 0.16666257186379047,
+        "400ns": 0.33333742813620953
+      },
+      "transformed_samples": 20351
+    },
+    "FINE2_BG": {
+      "all_finite": true,
+      "dt_s": 1.0112647039820337e-11,
+      "dtype": "float64",
+      "dx_dy_dz": [
+        0.0125,
+        0.0125,
+        0.003125
+      ],
+      "grid_tier": "FINE2",
+      "iterations": 118665,
+      "nx_ny_nz": [
+        1,
+        2560,
+        16000
+      ],
+      "path": "artifacts/simulations/2026-09-26_B2D-C3m-BG-F2/B2D-C3m-BG-F2.h5",
+      "receiver_component": "Ex",
+      "receiver_position_m": [
+        0.0,
+        16.650000000000002,
+        45.0
+      ],
+      "run_id": "B2D-C3m-BG-F2",
+      "sha256": "97e576e9b4f825f5c308f0567009d5cdb45ed48a5e90ee44da397c8d145961a2",
+      "side": "2D",
+      "tail_taper_fraction": {
+        "200ns": 0.16666175082586127,
+        "400ns": 0.33332560844063913
+      },
+      "transformed_samples": 118664
+    },
+    "FINE2_TGT": {
+      "all_finite": true,
+      "dt_s": 1.0112647039820337e-11,
+      "dtype": "float64",
+      "dx_dy_dz": [
+        0.0125,
+        0.0125,
+        0.003125
+      ],
+      "grid_tier": "FINE2",
+      "iterations": 118665,
+      "nx_ny_nz": [
+        1,
+        2560,
+        16000
+      ],
+      "path": "artifacts/simulations/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2.h5",
+      "receiver_component": "Ex",
+      "receiver_position_m": [
+        0.0,
+        16.650000000000002,
+        45.0
+      ],
+      "run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2",
+      "sha256": "dd6edf715eaff04e896ff76630fdf28e37319832d8261d502aef07744ed1c553",
+      "side": "2D",
+      "tail_taper_fraction": {
+        "200ns": 0.16666175082586127,
+        "400ns": 0.33332560844063913
+      },
+      "transformed_samples": 118664
+    }
+  },
+  "convention_source": {
+    "hard_limits": "proposal §2.2 (six \"explicitly not done\" items) copied into hard_limits",
+    "metric_definitions": "proposal §2.1 (seven quantities); implementation reused from scripts/analyze_dep3d_gold.py",
+    "proposal": "docs/research/2026-09-26_a0_3d_validation_contract_proposal.md §1-§3, §8",
+    "proposal_sha256": "b1e789bdd587e8d2e8d8af6b352a2694e5f1d7d0457bd1fd8ac8005c003cbc1a",
+    "proposal_sha256_is_asserted": false,
+    "proposal_sha256_note": "recorded as a self-check only; the contract text may be revised, the structural assertions on the h5 are the enforced part",
+    "solver_invoked": false
+  },
+  "cross_dimension_shape_comparison": {
+    "BASE": {
+      "computed": true,
+      "confounds": "Cross-dimension comparisons here mix at least four factors that are NOT separated by this analysis (proposal §8.4 and §8.5): (i) the dimension effect under study - 2D x-infinite target / line source / cylindrical spreading vs 3D x-limited 2 m target / point source / spherical spreading; (ii) lateral domain width - 2D 32 m vs 3D 10 m; (iii) target y position - 2D y 14-18 m vs 3D y 3-7 m, the same relative position but a different absolute distance to the lateral PML; (iv) grid spacing, which is not aligned - 3D 5 cm isotropic vs 2D BASE dy=dz=25 mm and 2D FINE2 dy 12.5 / dz 3.125 mm. None of these is claimed to be removed. Consequently the BASE and FINE2 rows must not be subtracted from one another, and no row is a grid-error or dimension-error decomposition.",
+      "grids_aligned": false,
+      "grids_alignment_note": "3D is 5 cm isotropic; this 2D tier has its own spacing; the two sides are only ever compared as shapes after each side is differenced inside itself (proposal §2.2 items 2-3)",
+      "interpretation": "direction and magnitude evidence on paired-difference shapes; not a convergence result, not an absolute-accuracy result, not a physical decision",
+      "main_tail_ns": 200,
+      "metric_1_normalized_spectrum_shape_correlation": {
+        "is_main_quantity": true,
+        "main_200ns": 0.9685517092751508,
+        "robustness_400ns": 0.9685517093222137
+      },
+      "metric_2_envelope_peak_arrival_direction": {
+        "direction": "3D envelope peak later than 2D",
+        "note": "each side is read on its own native time axis; the dt differ, so this compares the peak index time. Reported as a direction and a difference only, never as an offset error (proposal §2.1 item 2)",
+        "three_d_minus_two_d_ns": 2.4619786077867047,
+        "three_d_ns": 334.3246437884673,
+        "two_d_ns": 331.8626651806806
+      },
+      "metric_3_spectral_peak_frequency_difference_MHz": {
+        "three_d": 168.5,
+        "three_d_minus_two_d": -1.1999999999999886,
+        "threshold": "none: reported as a number, no pass reading (proposal §2.1 item 3)",
+        "two_d": 169.7
+      },
+      "metric_4_time_difference_waveform_correlation": {
+        "base_side_larger_dt": "3D",
+        "native_dt_s": {
+          "3D": 9.629166007732353e-11,
+          "BASE": 5.896635841874211e-11
+        },
+        "resampled_side_smaller_dt": "BASE",
+        "waveform_max_normalized_correlation": 0.2907014628973212,
+        "waveform_optimal_lag_ns": 25.42099826041341
+      },
+      "metric_5_selected_freq_normalized_mag_trend_difference_dB": {
+        "note": "each side normalised by its own maximum first; absolute amplitudes are never compared (proposal §2.2 item 1)",
+        "selected_MHz": [
+          20,
+          50,
+          80,
+          110,
+          140,
+          170
+        ],
+        "two_d_minus_three_d_dB": {
+          "110": 1.6898951867509484,
+          "140": 0.8227217393311506,
+          "170": 0.04814536150412622,
+          "20": 14.784169692519248,
+          "50": 7.296426758236214,
+          "80": 5.389827632261621
+        }
+      },
+      "metric_6_phase_difference_linear_fit": {
+        "difference_is": "angle(A) - angle(B) with A the 2D side and B the 3D side",
+        "equivalent_time_offset_ns": -2.7734360533942706,
+        "is_physical_delay": false,
+        "residual_std_deg": 17.574298824699767,
+        "slope_rad_per_Hz": 1.742601266108902e-08
+      },
+      "metric_7_far_field_3d_to_2d_exploratory": {
+        "form": "D_2D_equiv(f) proportional to D_3D(f) / sqrt(i*2*pi*f); constants omitted, shape only",
+        "is_conclusion_basis": false,
+        "transformed_normalized_mag_dB_at_selected_MHz": {
+          "110": -3.3668418948031835,
+          "140": -8.10594788818841,
+          "170": -0.09349791220104034,
+          "20": -20.020743792190615,
+          "50": -12.819664118148406,
+          "80": -11.384473628546147
+        },
+        "transformed_vs_2D_shape_correlation": 0.9860390643455718
+      },
+      "robustness_tail_ns": 400,
+      "three_d": {
+        "bg_run_id": "B2D-C3m-BG-3D5CM",
+        "dt_s": 9.629166007732353e-11,
+        "dx_dy_dz": [
+          0.05,
+          0.05,
+          0.05
+        ],
+        "native_time_base": "own dt, own sample count",
+        "nx_ny_nz": [
+          160,
+          200,
+          1000
+        ],
+        "tgt_run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-3D5CM"
+      },
+      "thresholds": {
+        "direction_consistency_threshold": null,
+        "note": "no threshold of any kind is declared (proposal §2.2 item 5)",
+        "physical_acceptance_threshold": null,
+        "shape_correlation_threshold": null
+      },
+      "tier": "BASE",
+      "two_d": {
+        "bg_run_id": "B2D-C3m-BG",
+        "dt_s": 5.896635841874211e-11,
+        "dx_dy_dz": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "native_time_base": "own dt, own sample count",
+        "nx_ny_nz": [
+          1,
+          1280,
+          2000
+        ],
+        "tgt_run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02"
+      }
+    },
+    "FINE2": {
+      "computed": true,
+      "confounds": "Cross-dimension comparisons here mix at least four factors that are NOT separated by this analysis (proposal §8.4 and §8.5): (i) the dimension effect under study - 2D x-infinite target / line source / cylindrical spreading vs 3D x-limited 2 m target / point source / spherical spreading; (ii) lateral domain width - 2D 32 m vs 3D 10 m; (iii) target y position - 2D y 14-18 m vs 3D y 3-7 m, the same relative position but a different absolute distance to the lateral PML; (iv) grid spacing, which is not aligned - 3D 5 cm isotropic vs 2D BASE dy=dz=25 mm and 2D FINE2 dy 12.5 / dz 3.125 mm. None of these is claimed to be removed. Consequently the BASE and FINE2 rows must not be subtracted from one another, and no row is a grid-error or dimension-error decomposition.",
+      "grids_aligned": false,
+      "grids_alignment_note": "3D is 5 cm isotropic; this 2D tier has its own spacing; the two sides are only ever compared as shapes after each side is differenced inside itself (proposal §2.2 items 2-3)",
+      "interpretation": "direction and magnitude evidence on paired-difference shapes; not a convergence result, not an absolute-accuracy result, not a physical decision",
+      "main_tail_ns": 200,
+      "metric_1_normalized_spectrum_shape_correlation": {
+        "is_main_quantity": true,
+        "main_200ns": 0.9729156834409768,
+        "robustness_400ns": 0.972915683579874
+      },
+      "metric_2_envelope_peak_arrival_direction": {
+        "direction": "3D envelope peak later than 2D",
+        "note": "each side is read on its own native time axis; the dt differ, so this compares the peak index time. Reported as a direction and a difference only, never as an offset error (proposal §2.1 item 2)",
+        "three_d_minus_two_d_ns": 18.132508794404885,
+        "three_d_ns": 334.3246437884673,
+        "two_d_ns": 316.1921349940624
+      },
+      "metric_3_spectral_peak_frequency_difference_MHz": {
+        "three_d": 168.5,
+        "three_d_minus_two_d": -1.5,
+        "threshold": "none: reported as a number, no pass reading (proposal §2.1 item 3)",
+        "two_d": 170.0
+      },
+      "metric_4_time_difference_waveform_correlation": {
+        "base_side_larger_dt": "3D",
+        "native_dt_s": {
+          "3D": 9.629166007732353e-11,
+          "FINE2": 1.0112647039820337e-11
+        },
+        "resampled_side_smaller_dt": "FINE2",
+        "waveform_max_normalized_correlation": 0.04812390366605409,
+        "waveform_optimal_lag_ns": 14.347457351521205
+      },
+      "metric_5_selected_freq_normalized_mag_trend_difference_dB": {
+        "note": "each side normalised by its own maximum first; absolute amplitudes are never compared (proposal §2.2 item 1)",
+        "selected_MHz": [
+          20,
+          50,
+          80,
+          110,
+          140,
+          170
+        ],
+        "two_d_minus_three_d_dB": {
+          "110": 1.3214356397326057,
+          "140": 0.27641494073414385,
+          "170": 0.05350735221478614,
+          "20": 14.120237004375982,
+          "50": 6.687652717577528,
+          "80": 4.803725954415814
+        }
+      },
+      "metric_6_phase_difference_linear_fit": {
+        "difference_is": "angle(A) - angle(B) with A the 2D side and B the 3D side",
+        "equivalent_time_offset_ns": -3.626170736113855,
+        "is_physical_delay": false,
+        "residual_std_deg": 22.569566390208387,
+        "slope_rad_per_Hz": 2.2783902690475155e-08
+      },
+      "metric_7_far_field_3d_to_2d_exploratory": {
+        "form": "D_2D_equiv(f) proportional to D_3D(f) / sqrt(i*2*pi*f); constants omitted, shape only",
+        "is_conclusion_basis": false,
+        "transformed_normalized_mag_dB_at_selected_MHz": {
+          "110": -3.3668418948031835,
+          "140": -8.10594788818841,
+          "170": -0.09349791220104034,
+          "20": -20.020743792190615,
+          "50": -12.819664118148406,
+          "80": -11.384473628546147
+        },
+        "transformed_vs_2D_shape_correlation": 0.9876642585690001
+      },
+      "robustness_tail_ns": 400,
+      "three_d": {
+        "bg_run_id": "B2D-C3m-BG-3D5CM",
+        "dt_s": 9.629166007732353e-11,
+        "dx_dy_dz": [
+          0.05,
+          0.05,
+          0.05
+        ],
+        "native_time_base": "own dt, own sample count",
+        "nx_ny_nz": [
+          160,
+          200,
+          1000
+        ],
+        "tgt_run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-3D5CM"
+      },
+      "thresholds": {
+        "direction_consistency_threshold": null,
+        "note": "no threshold of any kind is declared (proposal §2.2 item 5)",
+        "physical_acceptance_threshold": null,
+        "shape_correlation_threshold": null
+      },
+      "tier": "FINE2",
+      "two_d": {
+        "bg_run_id": "B2D-C3m-BG-F2",
+        "dt_s": 1.0112647039820337e-11,
+        "dx_dy_dz": [
+          0.0125,
+          0.0125,
+          0.003125
+        ],
+        "native_time_base": "own dt, own sample count",
+        "nx_ny_nz": [
+          1,
+          2560,
+          16000
+        ],
+        "tgt_run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2"
+      }
+    },
+    "reference_context_check": {
+      "BASE": {
+        "recomputed_envelope_peak_time_ns": 331.8626651806806,
+        "recomputed_minus_reference_ns": 0.0,
+        "reference_context_envelope_peak_time_ns": 331.8626651806806,
+        "status": "reported only; not asserted and not a pass criterion"
+      },
+      "FINE2": {
+        "recomputed_envelope_peak_time_ns": 316.1921349940624,
+        "recomputed_minus_reference_ns": 0.0,
+        "reference_context_envelope_peak_time_ns": 316.1921349940624,
+        "status": "reported only; not asserted and not a pass criterion"
+      }
+    },
+    "reporting": "each tier is a separate control against the same 3D difference: no cross-grid subtraction, no cross-tier merging, no cross-tier subtraction, no cross-family differencing (proposal §2.2 items 2-4). Both rows may be quoted side by side, never combined."
+  },
+  "diagnostic_window_ns": [
+    240.0,
+    400.0
+  ],
+  "difference_3d_internal": {
+    "bg_run_id": "B2D-C3m-BG-3D5CM",
+    "diagnostic_window_240_400ns": {
+      "note": "reference only: the same +/-80 ns rule applied to the D10m self-computed two-way time 320.2 ns (air 30 m/c + cover 6 m/(c/4) + rock 14 m/(c/3)); not a physical timing calibration (proposal §1.3 difference 4)",
+      "window_envelope_peak_time_ns": 334.3246437884673,
+      "window_envelope_peak_to_global_peak_ratio": 1.0
+    },
+    "dt_s": 9.629166007732353e-11,
+    "envelope_peak_time_ns": 334.3246437884673,
+    "grid_tier": "3D5CM",
+    "normalized_mag_dB_at_selected_MHz": {
+      "110": -5.21741369701742,
+      "140": -8.909166185202515,
+      "170": -0.05350735221478614,
+      "20": -29.27494248934729,
+      "50": -18.094462728584706,
+      "80": -14.618072412423196
+    },
+    "note": "time_diff_peak_V_m carries the pair-internal excitation scale; it is never compared across dimensions or across grid tiers (proposal §2.2 item 1)",
+    "robustness_400ns": {
+      "relative_L2_vs_main": 9.187142112614185e-08,
+      "spectral_peak_frequency_MHz": 168.5
+    },
+    "source_samples_identical_to_bg": true,
+    "spectral_peak_frequency_MHz": 168.5,
+    "spectral_peak_phase_deg": -102.1463344376804,
+    "tgt_run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-3D5CM",
+    "time_diff_peak_V_m": 3.373305731604187e-06,
+    "transformed_samples": 12463
+  },
+  "frequency_Hz": "linspace(20e6,170e6,501)",
+  "grid_tiers": {
+    "three_d": "3D5CM",
+    "tiers_merged": false,
+    "two_d": [
+      "BASE",
+      "FINE2"
+    ]
+  },
+  "hard_limits": {
+    "clean_truth_generated": false,
+    "conclusions_scope": "limited to the a0_3d_v1 scenario family (C3 A0 anchor, 3D 5 cm isotropic and the two 2D grid tiers analysed); not field performance, not a maximum-depth or detectability conclusion",
+    "cross_dimension_absolute_amplitude_compared": false,
+    "cross_family_differencing": false,
+    "cross_grid_subtraction_performed": false,
+    "cross_tier_merged": false,
+    "cross_tier_subtraction_performed": false,
+    "dep3d_d20m_reference_is": "mutually quotable magnitude reference measured on the D20m class; not an expected value and not a threshold for this D10m anchor (proposal §2.3/§8)",
+    "direction_consistency_threshold": null,
+    "far_field_transform_is_conclusion_basis": false,
+    "fdtd_solver_invoked": false,
+    "grid_convergence_certified": false,
+    "phase_not_transferable_across_dimensions": true,
+    "phase_reported_only_as": "linear fit of the phase difference vs frequency; the equivalent time offset is a formal quantity, not a physical delay",
+    "physical_acceptance_threshold": null,
+    "physical_label_eligible": false,
+    "reference_state": "numerically_unresolved",
+    "solver_invoked": false,
+    "training_eligible": false,
+    "training_labels_generated": false
+  },
+  "inputs": {
+    "artifacts/research_checks/2026-09-26_B2D-C3m-BG/B2D-C3m-BG.h5": "a261e9958b90e82ad11a23464e797e5d7c98ad0a9cf2262c41cfd5b623b236c6",
+    "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02.h5": "f30d7feb6a23525aa97ad8d26423b6cf10e50b788f8c77e296acc6f3fc14638e",
+    "artifacts/simulations/2026-09-26_B2D-C3m-BG-F2/B2D-C3m-BG-F2.h5": "97e576e9b4f825f5c308f0567009d5cdb45ed48a5e90ee44da397c8d145961a2",
+    "artifacts/simulations/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2.h5": "dd6edf715eaff04e896ff76630fdf28e37319832d8261d502aef07744ed1c553",
+    "artifacts/simulations/2026-09-27_B2D-C3m-BG-3D5CM/B2D-C3m-BG-3D5CM.h5": "554dd5a64df660a0f43b17d6aba7b6374f74b536e571d64c73d317796e722430",
+    "artifacts/simulations/2026-09-27_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-3D5CM/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-3D5CM.h5": "6bc826047568ea1e7c250b489f4e4775ab861f2660f9f6731c5cd393e579557a",
+    "configs/research/a0_3d_v1/cases.json": "8336be9a86c54b528a3cb4171b4c3dadfc692fb513d64c37fe90eee9bf23e24a",
+    "configs/research/a0_3d_v1/groups.json": "129c8de26971661373e284c032af8c4404140fded3e0590263473c4895fea40c",
+    "configs/research/a0_3d_v1/static_check.json": "e368f94dcf5fdacbbc26f12b0b8dfd0fadebcc3dbca036d64de97280b8d770cf",
+    "docs/research/2026-09-26_a0_3d_validation_contract_proposal.md": "b1e789bdd587e8d2e8d8af6b352a2694e5f1d7d0457bd1fd8ac8005c003cbc1a"
+  },
+  "provenance": {
+    "3D_BG": {
+      "path": "artifacts/simulations/2026-09-27_B2D-C3m-BG-3D5CM/B2D-C3m-BG-3D5CM.h5",
+      "resolution": "exact run_id stem",
+      "run_id": "B2D-C3m-BG-3D5CM",
+      "tried": [
+        "artifacts/simulations/2026-09-27_B2D-C3m-BG-3D5CM/B2D-C3m-BG-3D5CM.h5"
+      ]
+    },
+    "3D_TGT": {
+      "path": "artifacts/simulations/2026-09-27_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-3D5CM/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-3D5CM.h5",
+      "resolution": "exact run_id stem",
+      "run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-3D5CM",
+      "tried": [
+        "artifacts/simulations/2026-09-27_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-3D5CM/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-3D5CM.h5"
+      ]
+    },
+    "3D_structural_expectations": {
+      "asserted": {
+        "all_finite": true,
+        "bg_tgt_source_samples_identical": true,
+        "dt_s": 9.629166007732351e-11,
+        "dtype": "float64",
+        "dx_dy_dz": [
+          0.05,
+          0.05,
+          0.05
+        ],
+        "iterations": 12464,
+        "nx_ny_nz": [
+          160,
+          200,
+          1000
+        ],
+        "rx_yz": [
+          5.65,
+          45.0
+        ]
+      },
+      "source": "configs/research/a0_3d_v1/static_check.json (mirrored in this script)"
+    },
+    "BASE_BG": {
+      "path": "artifacts/research_checks/2026-09-26_B2D-C3m-BG/B2D-C3m-BG.h5",
+      "resolution": "exact run_id stem",
+      "run_id": "B2D-C3m-BG",
+      "tried": [
+        "artifacts/research_checks/2026-09-26_B2D-C3m-BG/B2D-C3m-BG.h5"
+      ]
+    },
+    "BASE_TGT": {
+      "path": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02.h5",
+      "resolution": "exact run_id stem",
+      "run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02",
+      "tried": [
+        "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02.h5"
+      ]
+    },
+    "FINE2_BG": {
+      "path": "artifacts/simulations/2026-09-26_B2D-C3m-BG-F2/B2D-C3m-BG-F2.h5",
+      "resolution": "exact run_id stem",
+      "run_id": "B2D-C3m-BG-F2",
+      "tried": [
+        "artifacts/simulations/2026-09-26_B2D-C3m-BG-F2/B2D-C3m-BG-F2.h5"
+      ]
+    },
+    "FINE2_TGT": {
+      "path": "artifacts/simulations/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2.h5",
+      "resolution": "exact run_id stem",
+      "run_id": "B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2",
+      "tried": [
+        "artifacts/simulations/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-F2.h5"
+      ]
+    }
+  },
+  "receiver": {
+    "component": "Ex",
+    "name": "measurement"
+  },
+  "reference_context": {
+    "dep3d_d20m_class_measured": {
+      "envelope_peak_time_difference_ns": {
+        "B2D5CM_vs_DEP3D_5CM": -71.02,
+        "B2DANISO_vs_DEP3D_ANISO": -53.72
+      },
+      "far_field_transformed_shape_correlation": {
+        "B2D5CM_vs_DEP3D_5CM": 0.967,
+        "B2DANISO_vs_DEP3D_ANISO": 0.979
+      },
+      "max_normalized_waveform_correlation": {
+        "B2D5CM_vs_DEP3D_5CM": 0.738,
+        "B2DANISO_vs_DEP3D_ANISO": 0.732
+      },
+      "max_selected_freq_trend_difference_dB": 17.43,
+      "normalized_spectrum_shape_correlation": {
+        "B2D5CM_vs_DEP3D_5CM": 0.935,
+        "B2DANISO_vs_DEP3D_ANISO": 0.958
+      },
+      "spectral_peak_frequency_difference_MHz": {
+        "B2D5CM_vs_DEP3D_5CM": -5.7,
+        "B2DANISO_vs_DEP3D_ANISO": -0.3
+      },
+      "status": "dep3d_gold_v1 measured values on the D20m class; mutually quotable as a magnitude reference only, NOT an expected value for this D10m anchor (proposal §2.3/§8)"
+    },
+    "note": "read-only magnitude cross-reference recorded for interpretation; it never enters any judgement, threshold or expectation in this analysis (proposal §2.3)",
+    "two_d_a0_anchor": {
+      "coarse_to_fine_envelope_peak_FINE2_minus_BASE_ns": -15.67053018661818,
+      "coarse_to_fine_shape_correlation": 0.9994178181733713,
+      "coarse_to_fine_sign_agreement": 0.9222,
+      "envelope_peak_time_ns": {
+        "BASE": 331.8626651806806,
+        "FINE2": 316.1921349940624
+      },
+      "in_band_energy_ratio_DIFF_over_BG": {
+        "BASE": 2.8635252336237045e-07,
+        "FINE2": 3.092143334046171e-07
+      },
+      "source": "proposal §2.3 table (batch2d_v1 BASE and fine2 analyses)",
+      "spectral_peak_frequency_MHz": {
+        "BASE": 169.7,
+        "FINE2": 170.0
+      }
+    }
+  },
+  "selftest": false,
+  "tail_windows_ns": {
+    "main": 200,
+    "robustness": 400
+  },
+  "time_window_ns": 1200,
+  "unavailable_2d_tiers": []
+}
