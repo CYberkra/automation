@@ -1,3 +1,10 @@
+## 2026-09-27 G4 第 5 步 S4 启动留痕：锁后首次动测试族 {C5,C8}（执行前登记）
+
+- **动作**：按 S1 冻结程序进入 S4——测试族 {C5,C8} 的损伤阶梯与能力导出**数据生成**（无阈值、无判定、无排名）。实现经任务书 [task_codebuddy_g4_s4_test_split.md](task_codebuddy_g4_s4_test_split.md) 委派 CodeBuddy：`scripts/run_damage_ladder.py` 与 `scripts/run_g4_mission_capability.py` 增加 `--split {dev,test}`（默认 dev，**dev 路径字节级不变**；回归门 = dev 8 块重跑合并剥离 SHA 复现 `6bc13f63…` + 能力导出重跑复现 `2091f417…`）。
+- **数据事实（不是偷工）**：测试族仅 MT 几何——C5/C8 各 3 母模型（BG/NC/D10m 锚点）；CO 批只有 C3 族案例，测试族 CO 组合自动为空，不补造、不跨几何替代。
+- **冻结程序缺口定夺（S5 的 ε 来源，执行前冻结于此）**：S1 冻结程序的 ε 来源为"翻转率 v2 同 stratum 的 `value_jitter.epsilon`"，该 stratum 仅存在于开发族——测试族无对应 stratum，属程序文本未覆盖的缺口。定夺（保守读法）：**测试族 (mt, c5/c8, damage_type) 的 ε 取开发族同 geometry 两值中的较小者 min(ε(mt,c1,dt), ε(mt,c3,dt))**——更小 ε = 更严 D 约束 = 更保守；逐 stratum 如实声明 ε 为开发族标定值的保守沿用，**不是**测试族重标定。N 约束 N_th=1.0 不变；稳定规则在测试 strata 的 value 轴抖动沿用同一 ε 来源规则。
+- **纪律**：S4 只产数据（D_p80/N_b 分布）；阈值只在 S5 应用且**只执行一次**，不反馈调参；G4 维持未解除；S6 解除请求须用户签认。
+
 ## 2026-09-27 A0 3D 校核 a0_3d_v1 分析完成与收口（执行提交 `0526744` 之后，G 缺口不变）
 
 - **分析链验收**：`scripts/analyze_a0_3d.py`（codebuddy hy4-preview 起草 + kimi 验收；任务书 `docs/research/task_codebuddy_a0_analysis.md`）。验收三道：① 通读对照契约提案 §2.1 七指标/§2.2 六条不做项——指标函数与 `scripts/analyze_dep3d_gold.py` 模板逐函数同一（taper `(round(tail/dt)−0.25)/n`、谱形状相关、波形互相关、相位线性拟合、远场变换、诊断窗规则）；② `--selftest` 以 dep3d 5CM 配对为伪输入跑通，且 3D 内部差分块与 dep3d gold r1 `per_pair.DEP3D_5CM` **逐值相等**（taper/包络峰/谱峰/选频 dB/相位/稳健性 L2 全等）——同一输入同一实现同一数字；③ 正式 r1/r2 `results.json` 逐字节一致（SHA-256 `2d0fe750…`）。codebuddy 自报 8 项不确定处逐项核对：h5 解析（run_id 词干命中）、2D 双根顺序、格距断言、缺档中止语义、符号约定、产物范围、`allow_nan=False`、selftest 伪输入标注——全部符合任务书。
