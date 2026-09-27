@@ -1,0 +1,71 @@
+{
+ "schema": "gssi400_fs_validation_v1_manifest/1",
+ "date": "2026-09-27",
+ "purpose": "official antenna pipeline validation sample (NOT a project SFCW sample; GSSI 400 band >> project 20-170 MHz)",
+ "run_id": "GSSI400FS-VALID",
+ "model": {
+  "name": "antenna_like_GSSI_400 (Stadler et al. 2022 update, official gprMax v4 toolbox)",
+  "discretisation_m": 0.002,
+  "domain_m": [
+   0.34,
+   0.34,
+   0.318
+  ],
+  "cells": {
+   "nx": 170,
+   "ny": 170,
+   "nz": 159,
+   "total": 4595100
+  },
+  "time_window_s": 1.5e-08,
+  "dt_formula_s": 3.851666403092941e-12,
+  "time_steps_estimate": 3895,
+  "antenna_external_dims_m": [
+   0.3,
+   0.3,
+   0.178
+  ],
+  "antenna_position_m": [
+   0.17,
+   0.17,
+   0.1
+  ],
+  "medium": "free space",
+  "precision": "single (official example default; project batches use double)"
+ },
+ "hashes": {
+  "runner_script": {
+   "path": "scripts/run_gssi400_fs_gpu.py",
+   "sha256": "d4c4ad166f6804b2322558f5bcb17f722cec75876770f58b2c31c790e878076e"
+  },
+  "launcher_script": {
+   "path": "scripts/run_gssi400_fs_supervised.py",
+   "sha256": "93592f8acf5e3b0d061e6288f3102ff338f5b6bf9bea2a48d8a0ecd53d0f4024"
+  },
+  "official_example_reference": {
+   "path": "E:\\gprMax-v.4.0.0\\gprMax-v.4.0.0\\examples\\gpr\\antennas\\antenna_like_GSSI_400_fs.py",
+   "sha256": "8b8f7ddca2ad0d9deffb08b81e6d78477d1764f90ed3eb730f089732e733236d"
+  },
+  "toolbox_gssi_py": {
+   "path": "E:\\automation_djh\\automation_repo\\artifacts\\local_checks\\gprmax_v4_gpu_env\\Lib\\site-packages\\gprMax\\toolboxes\\GPRAntennaModels\\GSSI.py",
+   "sha256": "7fa5a72536af11584bb62db1796d9cd03f3498925ac90b9db7ce2df35bdcdfa3"
+  },
+  "toolbox_gssi_400_pulse": {
+   "path": "E:\\automation_djh\\automation_repo\\artifacts\\local_checks\\gprmax_v4_gpu_env\\Lib\\site-packages\\gprMax\\toolboxes\\GPRAntennaModels\\GSSI_400MHz_pulse.txt",
+   "sha256": "a83e0a70bb3aa73e06641c3a7c417e9533f9ecaff888a3688ece3be3b805ff15"
+  },
+  "runtime_identity": {
+   "path": "artifacts/research_checks/2026-09-24_gpu_setup/runtime_identity.json",
+   "sha256": "14abf893d12a6db11e264f324ee83ec66194b9983efbcbc46cab5b79d74c9f38"
+  },
+  "cuda_identity": {
+   "path": "artifacts/research_checks/2026-09-24_gpu_setup/cuda_identity.json",
+   "sha256": "65c7c240db5146e1bf37f10a171f572f8ac599933d229a2272c44af0b780e9df"
+  }
+ },
+ "known_limitations": [
+  "validation of install/toolbox/GPU chain only; no bearing on project 20-170 MHz samples",
+  "single precision follows the official example default; double-precision project batches unchanged",
+  "free-space only; no ground, no claim about antenna-ground coupling"
+ ]
+}

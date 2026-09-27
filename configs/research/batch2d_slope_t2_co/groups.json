@@ -1,0 +1,29 @@
+{
+ "batch_id": "batch2d_slope_t2_co",
+ "segment": "co",
+ "grid_tier": "BASE",
+ "convention": "spec 4.2: any split is by group_id (mother model) only, never by case, window or trace; each mother is its own family",
+ "groups": [
+  {
+   "case_id": "B2D-C3mS2-BG",
+   "group_id": "B2D-C3mS2-BG",
+   "run_id_pattern": "B2D-C3mS2-BG-CO33-t*",
+   "n_traces": 33,
+   "variant_tag": "common_offset_33tx_0p25m_off1p30"
+  },
+  {
+   "case_id": "B2D-C3mS2TZ-BG",
+   "group_id": "B2D-C3mS2TZ-BG",
+   "run_id_pattern": "B2D-C3mS2TZ-BG-CO33-t*",
+   "n_traces": 33,
+   "variant_tag": "common_offset_33tx_0p25m_off1p30"
+  },
+  {
+   "case_id": "B2D-C3m-BG",
+   "group_id": "B2D-C3m-BG",
+   "run_id_pattern": "B2D-C3m-BG-CO33-t*",
+   "n_traces": 33,
+   "variant_tag": "common_offset_33tx_0p25m_off1p30"
+  }
+ ]
+}
