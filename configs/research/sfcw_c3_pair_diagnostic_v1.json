@@ -1,0 +1,64 @@
+{
+  "schema": "sfcw-c3-paired-diagnostic/1",
+  "status": "fixed_before_diagnostic_output",
+  "scope": "C3 CO11 horizontal cross-track 2D proxy and MT33 variable-offset 2D gather, D10 box vs matched BG; development diagnostics only",
+  "input_manifest": "artifacts/research_checks/2026-09-27_sfcw_unified_dev_adapter_mt33_rerun/manifest.json",
+  "input_manifest_sha256": "00ecdf7c62fabd62b45af7c43aaed125161f9456ea95c20d077c933bb3c6125a",
+  "representation": "complex_envelope",
+  "operators": [
+    "identity",
+    "trace_mean_removal"
+  ],
+  "operator_application": "whole gather before windowing; trace mean taken at each time sample independently, complex values retained",
+  "window_rule": "half-open [start_s,stop_s), compared on saved physical time_s without rounding to old FDTD indices",
+  "windows": [
+    {
+      "id": "direct_context",
+      "start_s": 0.0,
+      "stop_s": 6.000000000000001e-08
+    },
+    {
+      "id": "surface_cover_context",
+      "start_s": 6.000000000000001e-08,
+      "stop_s": 2.4000000000000003e-07
+    },
+    {
+      "id": "D10_context",
+      "start_s": 2.4000000000000003e-07,
+      "stop_s": 4.2e-07
+    },
+    {
+      "id": "late_record",
+      "start_s": 4.2e-07,
+      "stop_s": 1.0000000000000002e-06
+    },
+    {
+      "id": "taper_region_context",
+      "start_s": 1.0000000000000002e-06,
+      "stop_s": 1.2000000000000002e-06
+    },
+    {
+      "id": "periodic_extension",
+      "start_s": 1.2e-06,
+      "stop_s": 3.3333333333333333e-06
+    }
+  ],
+  "window_basis": {
+    "assumptions": "normal-incidence, nondispersive travel-time guide only; air15m, cover3m epsilon16, rock epsilon9, D10 box top9.75m/bottom10.25m",
+    "air_surface_return_s": 1.0006922855944561e-07,
+    "cover_base_return_s": 1.801246114070021e-07,
+    "D10_top_return_s": 3.152180699622537e-07,
+    "D10_bottom_return_s": 3.2522499281819825e-07,
+    "rationale": "broad contexts bracket nominal 100/180/315\u2013325ns arrivals; allow offsets and band sidelobes without output-based peak selection; 1000\u20131200ns marks existing tail taper, later samples are periodic reconstruction, not new propagation observations"
+  },
+  "zero_denominator": "null with explicit reason; no epsilon regularisation",
+  "tiny_difference": "arithmetic ratios only; no numerical or physical error threshold inferred",
+  "prohibited_interpretations": [
+    "delta is not clean truth",
+    "retention is not a detection score",
+    "no candidate ranking or passing threshold",
+    "prearrival/late windows not certified target-free after band limitation",
+    "no G4 relief, training, S5 rerun or FDTD"
+  ],
+  "units": "source-normalised ideal field response; unweighted discrete L2 on common saved grid, not calibrated physical energy"
+}
