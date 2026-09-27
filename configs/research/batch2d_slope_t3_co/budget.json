@@ -1,0 +1,41 @@
+{
+ "schema": "batch2d_slope_t3_co_budget/1",
+ "date": "2026-09-28",
+ "grid": {
+  "dy_m": 0.025,
+  "dz_m": 0.025,
+  "cells_slope": 3200000,
+  "cells_flat": 2560000,
+  "dt_s": 5.896635841874211e-11,
+  "dt_formula_s": 5.896635841874211e-11,
+  "time_steps": 20352,
+  "time_window_ns": 1200
+ },
+ "single_case": {
+  "main_fields_ID_GiB_slope": 0.4296363741159439,
+  "main_fields_ID_GiB_flat": 0.3437627702951431,
+  "measured_t2_wall_range_s": [
+   17.812,
+   29.0
+  ],
+  "note": "slope traces scale ~x1.25 cells vs the measured t2 grid; Debye ADE adds one polarisation accumulator per dispersive material (negligible); flat traces match the measured t2 grid"
+ },
+ "batch_totals": {
+  "n_cases": 99,
+  "measured_estimate_s": 3762,
+  "conservative_budget_min": 150
+ },
+ "hard_stops": {
+  "wall_minutes_per_case": 20,
+  "job_commit_GiB": 6,
+  "output_GiB": 2,
+  "retries": 0,
+  "max_fdtd_runs": 99
+ },
+ "known_limitations": [
+  "per-case supervised process startup included in the measured range",
+  "vctip.exe job-lingering can add ~15 min per case if the out-of-job singleton lapses",
+  "job_commit raised 4->6 GiB: slope domain cells x1.25 vs the 3.16 GB measured peak",
+  "estimates are for cap-setting only, not ETA"
+ ]
+}
