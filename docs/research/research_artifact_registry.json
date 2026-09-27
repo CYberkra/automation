@@ -1915,10 +1915,25 @@
    "g4_relieved": false,
    "reference_state": "numerically_unresolved",
    "tracked": true
+  },
+  {
+   "id": "batch2d_slope_t2_mt",
+   "status": "completed_base_grid_first_slope_mt_batch",
+   "record": "docs/research/decision_log.md (2026-09-27 坡地MT批次)",
+   "contract": "configs/research/batch2d_slope_t2_mt/cases.json",
+   "freeze_script": "scripts/freeze_batch2d_slope_t2_mt.py",
+   "n_cases": 6,
+   "n_traces_per_case": 33,
+   "solver_executed": true,
+   "training_executed": false,
+   "g4_relieved": false,
+   "reference_state": "numerically_unresolved",
+   "viewer": "artifacts/local_checks/slope_t2_bscan_viewer.html (local, untracked)",
+   "tracked": true
   }
  ],
  "schema": "research-artifact-registry/1",
  "solver_execution_gate": "configs/research/gprmax_v4_execution_gate.json",
  "updated_date": "2026-09-27",
- "current_handoff": "START_HERE.md - batch2d_slope_t2 first slope batch completed (6/6, tier T2 +/-TZ x BG/NC/TGT): NC controls exactly zero, TGT-BG -78.1/-81.8 dB, TZ effect on BG -62.4 dB (dominates deep-target signature), single-offset Rx insensitive to tilt (rel L2 0.13-0.16% vs flat). Next: slope MT batch design / T1+T3 tiers / tilt_target scheduling; G4 unchanged."
+ "current_handoff": "START_HERE.md - batch2d_slope_t2 + _mt both completed (6+6). B-scan viewer: artifacts/local_checks/slope_t2_bscan_viewer.html via 127.0.0.1:8765. Dispersion measured-data research registered (West 2003 etc). Next candidates: T1/T3, 3D slope, tilt_target, dispersive TZ; G4 unchanged."
 }

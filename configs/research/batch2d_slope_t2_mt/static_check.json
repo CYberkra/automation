@@ -1,0 +1,162 @@
+{
+ "schema": "batch2d_slope_t2_mt_static_check/1",
+ "checked_date": "2026-09-27",
+ "base_batch": "batch2d_slope_t2 (mothers are the frozen slope inputs; only #rx/#title differ)",
+ "grid": {
+  "dy_m": 0.025,
+  "dz_m": 0.025,
+  "ny": 1280,
+  "nz": 2000,
+  "cells": 2560000,
+  "dt_formula_s": 5.896635841874211e-11,
+  "dt_contract_s": 5.896635841874211e-11,
+  "dt_formula_over_contract": 1.0
+ },
+ "time_window_s": 1.2e-06,
+ "time_steps_contract": 20352,
+ "pml": {
+  "cells": [
+   0,
+   40,
+   40,
+   0,
+   40,
+   40
+  ],
+  "physical_thickness_m": 1.0
+ },
+ "receiver_array": {
+  "n_traces": 33,
+  "spacing_m": 0.25,
+  "first_y_m": 12.65,
+  "last_y_m": 20.65,
+  "z_m": 45.0,
+  "anchor_index": 16,
+  "anchor_y_m": 16.65,
+  "trace_ids": [
+   "mt01",
+   "mt02",
+   "mt03",
+   "mt04",
+   "mt05",
+   "mt06",
+   "mt07",
+   "mt08",
+   "mt09",
+   "mt10",
+   "mt11",
+   "mt12",
+   "mt13",
+   "mt14",
+   "mt15",
+   "mt16",
+   "mt17",
+   "mt18",
+   "mt19",
+   "mt20",
+   "mt21",
+   "mt22",
+   "mt23",
+   "mt24",
+   "mt25",
+   "mt26",
+   "mt27",
+   "mt28",
+   "mt29",
+   "mt30",
+   "mt31",
+   "mt32",
+   "mt33"
+  ]
+ },
+ "trace_checks": [
+  {
+   "run_id": "B2D-C3mS2-BG-MT33",
+   "n_rx_lines": 33,
+   "y_cells_first_last": [
+    506,
+    826
+   ],
+   "all_ex_only": true,
+   "ids_unique": true,
+   "outside_pml": true,
+   "anchor_cell_666": true
+  },
+  {
+   "run_id": "B2D-C3mS2-NC-MT33",
+   "n_rx_lines": 33,
+   "y_cells_first_last": [
+    506,
+    826
+   ],
+   "all_ex_only": true,
+   "ids_unique": true,
+   "outside_pml": true,
+   "anchor_cell_666": true
+  },
+  {
+   "run_id": "B2D-C3mS2-D10m-W4m-T0.5m-E20-S0.02-MT33",
+   "n_rx_lines": 33,
+   "y_cells_first_last": [
+    506,
+    826
+   ],
+   "all_ex_only": true,
+   "ids_unique": true,
+   "outside_pml": true,
+   "anchor_cell_666": true
+  },
+  {
+   "run_id": "B2D-C3mS2TZ-BG-MT33",
+   "n_rx_lines": 33,
+   "y_cells_first_last": [
+    506,
+    826
+   ],
+   "all_ex_only": true,
+   "ids_unique": true,
+   "outside_pml": true,
+   "anchor_cell_666": true
+  },
+  {
+   "run_id": "B2D-C3mS2TZ-NC-MT33",
+   "n_rx_lines": 33,
+   "y_cells_first_last": [
+    506,
+    826
+   ],
+   "all_ex_only": true,
+   "ids_unique": true,
+   "outside_pml": true,
+   "anchor_cell_666": true
+  },
+  {
+   "run_id": "B2D-C3mS2TZ-D10m-W4m-T0.5m-E20-S0.02-MT33",
+   "n_rx_lines": 33,
+   "y_cells_first_last": [
+    506,
+    826
+   ],
+   "all_ex_only": true,
+   "ids_unique": true,
+   "outside_pml": true,
+   "anchor_cell_666": true
+  }
+ ],
+ "materials_unchanged_vs_mother": [
+  "B2D-C3mS2-BG-MT33",
+  "B2D-C3mS2-NC-MT33",
+  "B2D-C3mS2-D10m-W4m-T0.5m-E20-S0.02-MT33",
+  "B2D-C3mS2TZ-BG-MT33",
+  "B2D-C3mS2TZ-NC-MT33",
+  "B2D-C3mS2TZ-D10m-W4m-T0.5m-E20-S0.02-MT33"
+ ],
+ "source_unchanged_vs_mother": [
+  "B2D-C3mS2-BG-MT33",
+  "B2D-C3mS2-NC-MT33",
+  "B2D-C3mS2-D10m-W4m-T0.5m-E20-S0.02-MT33",
+  "B2D-C3mS2TZ-BG-MT33",
+  "B2D-C3mS2TZ-NC-MT33",
+  "B2D-C3mS2TZ-D10m-W4m-T0.5m-E20-S0.02-MT33"
+ ]
+}

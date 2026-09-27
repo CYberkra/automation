@@ -1,3 +1,10 @@
+## 2026-09-27 坡地MT批次 batch2d_slope_t2_mt 完成 + Qin2024全文入库 + 色散实测调研立项
+
+用户三条新指令：①"跑完的那批先给我看看bscan"；②色散后续调研有无实测数据；③提供 Qin et al. 2024 全文。
+
+- **MT 批次**：单道批无法出 B-scan，故按 batch2d_v1_mt 同一 33 道变偏移距阵列约定（y 12.65–20.65 m、mt17=单道锚点单元 666）对 6 个坡地母模型派生 MT 批。`scripts/freeze_batch2d_slope_t2_mt.py` 冻结（--verify-only 两跑字节一致通过），gate 以"用户 bscan 请求 + 五点回复首批授权"为依据激活。6/6 完成，wall 21.3–22.1 s/例（vctip 看守全程生效），无重试。**mt17 与单道批 BG 的 Ex 逐位一致**（阵列派生不改变锚点道）。NC−BG 差分矩阵最大值严格 0.0（两变体）。B-scan 查看器 `artifacts/local_checks/slope_t2_bscan_viewer.html`（本地工具不入库）：S2/S2TZ BG 界面回波倾斜可见，TGT−BG 双曲线绕射清晰（S2 峰 4.56e-4 / S2TZ 2.91e-4 V/m），水平 C3 MT 对照并列。
+- **Qin et al. 2024 全文**：Yulong Qin et al., "Deep learning–based inverse analysis of GPR data for landslide hazards", Frontiers in Earth Science 11:1340484, doi:10.3389/feart.2023.1340484（开放获取）。PDF 已存档 `artifacts/research_sources/Qin2024_feart.2023.1340484.pdf`（SHA-256 `5e5f9993…`，该目录按 .gitignore 不入库，可由来源链接恢复）。此前仅读过摘要+引言，模型几何细节待全文通读。
+- **色散实测数据调研（立项，初查线索）**：gprMax v4 支持 Debye/Lorentz/Drude 色散已实证（源码）。实测侧线索：West et al. 2003（WRR，砂岩 GPR 频段 20–200 MHz 介电色散，被引121）；Gapeev et al. 2024（储层岩介电/电导频率依赖）；Skierucha 2010（10–500 MHz 土壤复介电 FDR 实测）；Bradford 2009（GPR 复介电测量）。关键待答：20–170 MHz 窄低频段内风化砂岩/粉质粘土过渡带的色散幅度是否不可忽略、是否存在可直接参数化的实测 Debye/Cole-Cole 数据。首批 TZ 保持非色散常数的决定不变，色散化须以实测依据先行。
 ## 2026-09-27 坡地族首批2D批次 batch2d_slope_t2 冻结、执行与分析完成
 
 用户对坡地族设计书 §9 的五点回复授权：点 1"首批做个2D的即可，具体你来指定，最大效率验证即可"、点 5"排期"（方案 A 先）；kimi 据此定案 **C3 族 × T2 档（tanθ=0.2，θ_eff=11.309932°）× ±1m 过渡带 × (BG/NC/TGT) = 6 例**，BASE 粗档，除覆盖层/过渡带几何外全部行与冻结锚点 `B2D-C3m-D10m-W4m-T0.5m-E20-S0.02` 字节一致；目标体固定 z 19.75–20.25 不随界面平移（距 TZ 底 ≥1.375 m）。T1/T3、3D 坡地、目标倾斜档、方案 B 均不在本次范围。

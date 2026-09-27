@@ -1,0 +1,51 @@
+{
+ "schema": "batch2d_slope_t2_mt_budget/1",
+ "date": "2026-09-27",
+ "formulas": "spec 3.1: cells=(32/dy)*(50/dz); dt=1/(c*sqrt(dy^-2+dz^-2)); main_fields_ID_GiB=72B*2*(ny+1)(nz+1)/2^30; wall=ref*(cells/cells_ref)*(dt_ref/dt)",
+ "grid": {
+  "dy_m": 0.025,
+  "dz_m": 0.025,
+  "cells": 2560000,
+  "dt_s": 5.896635841874211e-11,
+  "dt_formula_s": 5.896635841874211e-11,
+  "time_steps": 20352,
+  "time_window_ns": 1200
+ },
+ "single_case": {
+  "main_fields_ID_GiB": 0.3437627702951431,
+  "wall_scaled_from_YFINE_s": 17.010368677119963,
+  "measured_slope_base_batch_range_s": [
+   17.812,
+   23.61
+  ],
+  "measured_slope_base_note": "post vctip-warden walls; pre-warden first case was 911.875 s (vctip.exe lingering in the job object)"
+ },
+ "multitrace_increment": {
+  "output_per_case_bytes": 5372928,
+  "output_per_case_MiB": 5.1240234375,
+  "device_rx_array_bytes": 32237568,
+  "device_rx_array_MiB": 30.744140625,
+  "job_peak_increment_GiB": 0.034,
+  "wall_increment": "expected negligible (measured on batch2d_v1_mt); not used to relax budget"
+ },
+ "batch_totals": {
+  "n_cases": 6,
+  "planning_envelope_s": 900,
+  "measured_mean_estimate_s": 360,
+  "conservative_budget_min": 20
+ },
+ "hard_stops": {
+  "wall_minutes_per_case": 20,
+  "job_commit_GiB": 4,
+  "output_GiB": 2,
+  "retries": 0,
+  "max_fdtd_runs": 6
+ },
+ "known_limitations": [
+  "working scaling is not a guaranteed runtime",
+  "main-field array excludes PML, update coefficients, CUDA context and host temporaries",
+  "Job committed memory is not GPU VRAM",
+  "estimates are for ranking and cap-setting only, not ETA",
+  "vctip.exe job-lingering can add ~15 min per case if the out-of-job singleton lapses"
+ ]
+}
