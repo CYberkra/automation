@@ -1,0 +1,32 @@
+{
+ "schema": "pml_sensitivity_s2bg_budget/1",
+ "date": "2026-09-28",
+ "grid": {
+  "dy_m": 0.025,
+  "dz_m": 0.025,
+  "cells": 2560000,
+  "dt_s": 5.896635841874211e-11,
+  "time_steps": 20352,
+  "time_window_ns": 1200
+ },
+ "single_case": {
+  "main_fields_ID_GiB": 0.3437627702951431,
+  "measured_co_wall_s": 19.3,
+  "note": "same grid/window as the archived CO t17 anchor (measured 17.8-23.6 s); pml80 adds cells only inside the PML region of an unchanged domain"
+ },
+ "batch_totals": {
+  "n_cases": 3,
+  "measured_estimate_s": 75,
+  "conservative_budget_min": 10
+ },
+ "hard_stops": {
+  "wall_minutes_per_case": 20,
+  "job_commit_GiB": 4,
+  "output_GiB": 1,
+  "retries": 0,
+  "max_fdtd_runs": 3
+ },
+ "known_limitations": [
+  "estimates are for cap-setting only, not ETA"
+ ]
+}

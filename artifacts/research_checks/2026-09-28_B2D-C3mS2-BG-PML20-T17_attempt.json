@@ -1,0 +1,38 @@
+{
+  "run_id": "B2D-C3mS2-BG-PML20-T17",
+  "batch": "pml_sensitivity_s2bg_t17",
+  "input_sha256": "a57e1e761351b6bccc90446b9af6ae8b486fe396ae750991ea0ee148779eaf08",
+  "available_RAM_bytes": 46729187328,
+  "available_VRAM_bytes": 15806234624,
+  "total_VRAM_bytes": 17170956288,
+  "backend": "CUDA",
+  "device_id": 0,
+  "precision": "double",
+  "cpu_fallback": false,
+  "approved": true,
+  "execute": true,
+  "utc": "2026-09-27T17:09:50.470010+00:00",
+  "outcome": {
+    "reason": "nonzero_exit",
+    "exit_code": 1,
+    "wall_s": 1.0149999996647239,
+    "peak_job_commit_bytes": 1694498816,
+    "observed_output_bytes": 9225,
+    "memory_cap_bytes": 4294967296,
+    "wall_cap_s": 1200,
+    "output_cap_bytes": 1073741824,
+    "memory_semantics": "Windows job committed memory, not RSS",
+    "output_semantics": "polled file bytes; overshoot possible",
+    "active_job_processes_at_stop": 0,
+    "total_job_processes": 3,
+    "waited_for_descendants": false,
+    "completion_semantics": "root exit zero and job empty; application must propagate child failures",
+    "child_exit_codes_collected": false,
+    "command": [
+      "E:\\automation_djh\\automation_repo\\artifacts\\local_checks\\gprmax_v4_gpu_env\\Scripts\\python.exe",
+      "-u",
+      "-c",
+      "import hashlib,pathlib,runpy,sys; p=pathlib.Path('E:\\\\automation_djh\\\\automation_repo\\\\configs\\\\research\\\\pml_sensitivity_s2bg\\\\B2D-C3mS2-BG-PML20-T17.in'); b=p.read_bytes(); assert hashlib.sha256(b).hexdigest()=='a57e1e761351b6bccc90446b9af6ae8b486fe396ae750991ea0ee148779eaf08'; pathlib.Path('B2D-C3mS2-BG-PML20-T17.in').write_bytes(b); sys.argv=['gprMax','B2D-C3mS2-BG-PML20-T17.in','-gpu','0','-gpu_precision','double']; runpy.run_module('gprMax',run_name='__main__')"
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+{
+ "batch_id": "pml_sensitivity_s2bg_t17",
+ "segment": "pml_sensitivity",
+ "grid_tier": "BASE",
+ "spec": "decision_log 2026-09-28 (CO B-scan floor observability) + user 2026-09-28 \"可以\" scheduling the PML sensitivity experiment",
+ "n_cases": 3,
+ "n_exceptions": 0,
+ "derivation": "mother text byte-identical except #title, and #pml_cells (PML20/PML80) or dropped #material/#box lines (FS control); pml40 baseline is the archived CO33-t17 run, not rerun",
+ "cases": [
+  {
+   "run_id": "B2D-C3mS2-BG-PML20b-T17",
+   "file": "B2D-C3mS2-BG-PML20b-T17.in",
+   "input_sha256": "99e4536a31c6ab3b6475791428fa806cb362fb16589446ed80c3cdab5a0ee523",
+   "mother_model_id": "B2D-C3mS2-BG",
+   "case_id": "B2D-C3mS2-BG-PML20b-T17",
+   "group_id": "pml_sensitivity_s2bg_t17",
+   "segment": "pml_sensitivity",
+   "variant_tag": "0.5 m PML (20 cells), HORIPML + CFS unchanged",
+   "seed": 2592990504593391769,
+   "anchor": {
+    "tx_y_m": 15.35,
+    "rx_y_m": 16.65,
+    "z_m": 45.0
+   }
+  },
+  {
+   "run_id": "B2D-C3mS2-BG-PML80-T17",
+   "file": "B2D-C3mS2-BG-PML80-T17.in",
+   "input_sha256": "ea24a4685f71407900948fc2ff634d1d12b6eca5d045293dce29c792dd01682f",
+   "mother_model_id": "B2D-C3mS2-BG",
+   "case_id": "B2D-C3mS2-BG-PML80-T17",
+   "group_id": "pml_sensitivity_s2bg_t17",
+   "segment": "pml_sensitivity",
+   "variant_tag": "2.0 m PML (80 cells), HORIPML + CFS unchanged",
+   "seed": 6102306320236402716,
+   "anchor": {
+    "tx_y_m": 15.35,
+    "rx_y_m": 16.65,
+    "z_m": 45.0
+   }
+  },
+  {
+   "run_id": "B2D-FS-PML40-T17",
+   "file": "B2D-FS-PML40-T17.in",
+   "input_sha256": "8e428a21a06c730555e835cbafc53ffd17635c3abf40f08f35cd46074d1b136a",
+   "mother_model_id": "B2D-C3mS2-BG",
+   "case_id": "B2D-FS-PML40-T17",
+   "group_id": "pml_sensitivity_s2bg_t17",
+   "segment": "pml_sensitivity",
+   "variant_tag": "free-space control: materials/boxes removed, pml40 kept",
+   "seed": 10840866666533514632,
+   "anchor": {
+    "tx_y_m": 15.35,
+    "rx_y_m": 16.65,
+    "z_m": 45.0
+   }
+  }
+ ]
+}

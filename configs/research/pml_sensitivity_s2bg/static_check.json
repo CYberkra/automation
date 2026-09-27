@@ -1,0 +1,58 @@
+{
+ "schema": "pml_sensitivity_s2bg_static_check/1",
+ "checked_date": "2026-09-28",
+ "question": "origin of the trace-invariant broadband floor seen in the CO B-scan (median envelope ~-65 dB vs direct): PML reflection or physical/geometric",
+ "mother": {
+  "id": "B2D-C3mS2-BG",
+  "base": "configs/research/batch2d_slope_t2",
+  "sha256": "8a427df22fea76a07c150c5a9f28194bdb46bd7635fc0baae6593182f724cebc"
+ },
+ "anchor": {
+  "tx_y_m": 15.35,
+  "rx_y_m": 16.65,
+  "z_m": 45.0,
+  "equals": "archived CO33-t17 pair; archived run is the pml40 baseline",
+  "baseline_run_directory": "artifacts/simulations/2026-09-27_B2D-C3mS2-BG-CO33-t17"
+ },
+ "grid": {
+  "dy_m": 0.025,
+  "dz_m": 0.025,
+  "ny": 1280,
+  "nz": 2000,
+  "cells": 2560000,
+  "dt_formula_s": 5.896635841874211e-11,
+  "dt_contract_s": 5.896635841874211e-11
+ },
+ "time_window_s": 1.2e-06,
+ "pml_variants": [
+  {
+   "run_id": "B2D-C3mS2-BG-PML20b-T17",
+   "note": "0.5 m PML (20 cells), HORIPML + CFS unchanged"
+  },
+  {
+   "run_id": "B2D-C3mS2-BG-PML80-T17",
+   "note": "2.0 m PML (80 cells), HORIPML + CFS unchanged"
+  },
+  {
+   "run_id": "B2D-FS-PML40-T17",
+   "note": "free-space control: materials/boxes removed, pml40 kept"
+  }
+ ],
+ "pml_cfs_unchanged": "#pml_cfs: constant forward 0 0 constant forward 1 1 quartic forward 0 0.21235349838321013",
+ "formulation": "HORIPML (unchanged from mother)",
+ "interior_check": "pml80 leaves interior y in (2,30) m, z in (2,48) m; antennas (y 15.35/16.65, z 45), surface (z 30) and slope interface (z 25.0-26.65) all remain inside the interior",
+ "readout_windows_ns": {
+  "mid": [
+   130,
+   170
+  ],
+  "deep": [
+   240,
+   280
+  ],
+  "interface_approx": [
+   199,
+   223
+  ]
+ }
+}
