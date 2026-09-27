@@ -1808,10 +1808,25 @@
    "solver_executed": false,
    "training_executed": false,
    "tracked": true
+  },
+  {
+   "id": "sfcw_manual_literature_reaudit",
+   "status": "complete_with_physical_qualification_limits",
+   "record": "docs/research/2026-09-27_sfcw_manual_literature_reaudit.md",
+   "source_ledger": "docs/research/2026-09-27_sfcw_manual_literature_ledger.json",
+   "directory": "artifacts/research_checks/2026-09-27_sfcw_second_audit",
+   "results_sha256": "defb48ed938d81f9066b1b927d9d3f45445b92268917dbd9535da581fa7175b3",
+   "A0_full_band_reference_qualified": false,
+   "POD_or_confidence_from_D_p80_qualified": false,
+   "record_decay_certified": false,
+   "g4_relieved": false,
+   "solver_executed": false,
+   "training_executed": false,
+   "tracked": true
   }
  ],
  "schema": "research-artifact-registry/1",
  "solver_execution_gate": "configs/research/gprmax_v4_execution_gate.json",
  "updated_date": "2026-09-27",
- "current_handoff": "START_HERE.md — C3 official SFCW adapter and geometry contract accepted; next: physical-time development windows and paired-change/tail sensitivity diagnostics; no FDTD or S5 rerun"
+ "current_handoff": "START_HERE.md — official/manual literature reaudit: conversion consistent, A0 full-band mesh screen fails, per-trace tails unresolved, depth intervals and POD must not be conflated; development diagnostics only, no FDTD/S5/training"
 }

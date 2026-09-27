@@ -1,0 +1,105 @@
+{
+  "date": "2026-09-27",
+  "type": "targeted claim verification, not systematic review",
+  "search_queries": [
+    "Giannopoulos Warren Giannakis SFCW FDTD 2023",
+    "Deep-Penetrating UAV GPR Landslide Surveys Wang",
+    "stepped frequency motion compensation sweep",
+    "NASA a90/95 probability detection"
+  ],
+  "rejected_as_support": [
+    "commercial paper-reseller summaries",
+    "irrelevant exact-number search hits",
+    "2D/2.5D bridge-deck paper found only through secondary citation; no new quantitative inference"
+  ],
+  "sources": [
+    {
+      "id": "M1",
+      "title": "gprMax V4 SFCW",
+      "url": "https://docs.gprmax.com/en/latest/inc_SFCW.html",
+      "read_scope": "Information, preparing model, usage, frequency/time-window validity",
+      "supports": "Impulse-response synthesis, source-normalized direct transform, physical time offsets, finite-record and taper limits",
+      "limit": "Latest web manual not immutable; installed implementation separately SHA-pinned"
+    },
+    {
+      "id": "M2",
+      "title": "gprMax V4 modelling guidance",
+      "url": "https://docs.gprmax.com/en/latest/gprmodelling.html",
+      "read_scope": "2D reduction, spatial discretization, absorbing boundaries",
+      "supports": "Invariant-axis/line-source meaning; ten-cell wavelength screening and finer-grid recommendation",
+      "limit": "Rule of thumb is not an error certificate"
+    },
+    {
+      "id": "M3",
+      "title": "gprMax V4 sources and ports",
+      "url": "https://docs.gprmax.com/en/latest/sources_ports.html",
+      "read_scope": "source families; raw fields/time axes; spectra",
+      "supports": "Raw Ex/source ratio is not a port S21 or received voltage"
+    },
+    {
+      "id": "P1",
+      "title": "Efficient finite-difference time-domain simulation of step-frequency continuous-wave ground penetrating radar systems",
+      "authors": "Giannopoulos, Warren, Giannakis",
+      "year": 2023,
+      "doi": "10.3997/2214-4609.202320168",
+      "url": "https://www.research.ed.ac.uk/en/publications/efficient-finite-difference-time-domain-simulation-of-step-freque/",
+      "read_scope": "author institutional abstract and bibliographic record only; publisher/DOI full text unavailable in this run",
+      "supports": "One impulse FDTD run per A-scan with postprocessed tone responses",
+      "limit": "Does not certify our geometry or material assumptions"
+    },
+    {
+      "id": "P2",
+      "title": "Realistic FDTD GPR antenna models optimised using a novel linear/non-linear Full Waveform Inversion",
+      "authors": "Giannakis, Giannopoulos, Warren",
+      "year": 2019,
+      "doi": "10.1109/TGRS.2018.2869027",
+      "url": "https://repository.uwl.ac.uk/id/eprint/5753/1/IEEE___TGRS_Antenna_FWI.pdf",
+      "read_scope": "repository cover plus PDF pages 2–3 abstract/introduction; accepted version dated 2018, journal volume 57(3) 1768–1778",
+      "supports": "Antenna structure/excitation/coupling affect correspondence with real data",
+      "limit": "1.5GHz antenna study; transfer only mechanism, not quantitative errors to 20–170MHz"
+    },
+    {
+      "id": "P3",
+      "title": "Deep-Penetrating Uncrewed Aerial Vehicle-Based Ground-Penetrating Radar for Landslide Surveys",
+      "authors": "Wang et al.",
+      "year": 2026,
+      "doi": "10.1109/MGRS.2026.3702334",
+      "local_file": "E:/automation_djh/Wang 等 - 2026 - Deep-Penetrating Uncrewed Aerial Vehicle-Based Ground-Penetrating Radar for Landslide Surveys A fra.pdf",
+      "sha256": "1aaa254b56e27b236e4702be5d86bc282ee75b57bcb946d7161f164861b950d0",
+      "read_scope": "user-supplied accepted PDF: physical pages 7–9 and 11–12; Eq23–30, Tables1–2, numerical/field acquisition sections; no claim to reread full21 pages",
+      "supports": "Different numerical and field acquisitions; table frequency parameters; probabilistic depth interval",
+      "limit": "Publisher DOI fetch failed; local original supports details. Paper hardware cannot establish identity/calibration of user hardware"
+    },
+    {
+      "id": "P4",
+      "title": "A Doppler Range Compensation for Step-Frequency Continuous-Wave Radar for Detecting Small UAV",
+      "authors": "Pieraccini, Miccinesi, Rojhani",
+      "year": 2019,
+      "doi": "10.3390/s19061331",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6471206/",
+      "read_scope": "primary paper search-index full-text excerpts: abstract, introduction, Eq4–11, conclusions; live page CAPTCHA, publisher429",
+      "supports": "Motion during sweep can modify SFCW phase/range",
+      "limit": "Their narrowband approximation is not quantitatively applicable to our wide fractional bandwidth; do not import their correction formula"
+    },
+    {
+      "id": "P5",
+      "title": "Modelling Arbitrary Complex Dielectric Properties -- an automated implementation for gprMax",
+      "authors": "Majchrowska et al.",
+      "year": 2021,
+      "doi": "10.1109/IWAGPR50767.2021.9843152",
+      "url": "https://arxiv.org/abs/2109.01928",
+      "read_scope": "author abstract/bibliographic record; PDF opened but no full-paper reading claim",
+      "supports": "Dispersive constitutive models can be represented with multi-Debye fits",
+      "limit": "No site-specific soil parameters or endorsement of current constants"
+    },
+    {
+      "id": "S1",
+      "title": "Binomial Test Method for Determining Probability of Detection Capability for Fracture Critical Applications",
+      "year": 2011,
+      "url": "https://ntrs.nasa.gov/citations/20110015149",
+      "read_scope": "NASA original technical-report abstract",
+      "supports": "POD probability/confidence refer to detection of flaws as a function of size",
+      "limit": "Terminology distinction only; not an applicable GPR acceptance standard"
+    }
+  ]
+}

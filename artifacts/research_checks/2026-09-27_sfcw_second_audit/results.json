@@ -1,0 +1,338 @@
+{
+  "MT_per_trace_tail_check": [
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-BG-MT33/B2D-C3m-BG-MT33.h5",
+      "receiver_names": [
+        "mt01",
+        "mt02",
+        "mt03",
+        "mt04",
+        "mt05",
+        "mt06",
+        "mt07",
+        "mt08",
+        "mt09",
+        "mt10",
+        "mt11",
+        "mt12",
+        "mt13",
+        "mt14",
+        "mt15",
+        "mt16",
+        "mt17",
+        "mt18",
+        "mt19",
+        "mt20",
+        "mt21",
+        "mt22",
+        "mt23",
+        "mt24",
+        "mt25",
+        "mt26",
+        "mt27",
+        "mt28",
+        "mt29",
+        "mt30",
+        "mt31",
+        "mt32",
+        "mt33"
+      ],
+      "per_trace_raw_tail_dB": [
+        -28.62252246005275,
+        -29.058450819409313,
+        -29.561494404272977,
+        -30.029280872175242,
+        -30.793669162379018,
+        -32.14295124796355,
+        -33.51399562745545,
+        -34.78673536445883,
+        -35.97992995117173,
+        -37.926436787035115,
+        -43.526359627400154,
+        -47.33260737352114,
+        -41.45018363210554,
+        -37.288107635054395,
+        -35.072109572664914,
+        -34.39123706998297,
+        -33.48866629393268,
+        -32.20130608656695,
+        -30.81029656933969,
+        -29.794405113522355,
+        -29.528650561650235,
+        -29.25489545878515,
+        -28.596917862024945,
+        -27.7983762953071,
+        -27.26404779738402,
+        -26.94617054794936,
+        -26.556578873308926,
+        -26.080208251456817,
+        -25.789289437750472,
+        -25.585496398196348,
+        -25.443695221932174,
+        -25.31745522931204,
+        -25.082080513498454
+      ],
+      "per_trace_range_dB": [
+        -47.33260737352114,
+        -25.082080513498454
+      ]
+    },
+    {
+      "input": "artifacts/research_checks/2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33/B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-MT33.h5",
+      "receiver_names": [
+        "mt01",
+        "mt02",
+        "mt03",
+        "mt04",
+        "mt05",
+        "mt06",
+        "mt07",
+        "mt08",
+        "mt09",
+        "mt10",
+        "mt11",
+        "mt12",
+        "mt13",
+        "mt14",
+        "mt15",
+        "mt16",
+        "mt17",
+        "mt18",
+        "mt19",
+        "mt20",
+        "mt21",
+        "mt22",
+        "mt23",
+        "mt24",
+        "mt25",
+        "mt26",
+        "mt27",
+        "mt28",
+        "mt29",
+        "mt30",
+        "mt31",
+        "mt32",
+        "mt33"
+      ],
+      "per_trace_raw_tail_dB": [
+        -28.622522480249355,
+        -29.058450839591504,
+        -29.561494424485666,
+        -30.02928089224351,
+        -30.793669182425106,
+        -32.14295126855065,
+        -33.513995648579154,
+        -34.786735385180194,
+        -35.979929971544685,
+        -37.926436807639945,
+        -43.52635964903753,
+        -47.33260739560081,
+        -41.45018365408052,
+        -37.28810765534017,
+        -35.072109593243184,
+        -34.391237090883095,
+        -33.48866631524258,
+        -32.20130610758008,
+        -30.81029659025601,
+        -29.794405133802037,
+        -29.52865058295299,
+        -29.25489548000746,
+        -28.596917882947817,
+        -27.798376315398706,
+        -27.26404781732419,
+        -26.946170568101408,
+        -26.556578893797397,
+        -26.080208271897686,
+        -25.78928945798639,
+        -25.58549641859527,
+        -25.44369524252279,
+        -25.317455250356037,
+        -25.08208053456972
+      ],
+      "per_trace_range_dB": [
+        -47.33260739560081,
+        -25.08208053456972
+      ]
+    }
+  ],
+  "pinned_API_defaults": {
+    "source_floor_db": -100.0,
+    "normalise_window": true,
+    "scope": "omitted call arguments resolved against processing_sha256; original export manifest preserved"
+  },
+  "scope": "algorithm consistency and homogeneous material wavelength screening only; no physical convergence certificate",
+  "solver_invoked": false,
+  "processing_sha256": "adad556f09140956f0ee19d3038430e06a9ae8be6a826dcad723096d99624a3b",
+  "homodyne_comparisons": [
+    {
+      "input": "artifacts\\research_checks\\2026-09-26_B2D-C3m-BG-CO11-t05\\B2D-C3m-BG-CO11-t05.h5",
+      "sha256": "a261e9958b90e82ad11a23464e797e5d7c98ad0a9cf2262c41cfd5b623b236c6",
+      "tail_ns": 0,
+      "frequencies_hz": [
+        20000000.0,
+        95000000.0,
+        170000000.0
+      ],
+      "relative_direct_homodyne_difference": [
+        7.091793744894046e-14,
+        3.782383373395639e-09,
+        2.785271421646144e-10
+      ]
+    },
+    {
+      "input": "artifacts\\research_checks\\2026-09-26_B2D-C3m-BG-CO11-t05\\B2D-C3m-BG-CO11-t05.h5",
+      "sha256": "a261e9958b90e82ad11a23464e797e5d7c98ad0a9cf2262c41cfd5b623b236c6",
+      "tail_ns": 200,
+      "frequencies_hz": [
+        20000000.0,
+        95000000.0,
+        170000000.0
+      ],
+      "relative_direct_homodyne_difference": [
+        5.202020117570778e-14,
+        2.9963625832027334e-09,
+        1.5708957578431941e-10
+      ]
+    },
+    {
+      "input": "artifacts\\research_checks\\2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05\\B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05.h5",
+      "sha256": "f30d7feb6a23525aa97ad8d26423b6cf10e50b788f8c77e296acc6f3fc14638e",
+      "tail_ns": 0,
+      "frequencies_hz": [
+        20000000.0,
+        95000000.0,
+        170000000.0
+      ],
+      "relative_direct_homodyne_difference": [
+        8.589046489078684e-14,
+        3.779755377623058e-09,
+        2.7872173240179935e-10
+      ]
+    },
+    {
+      "input": "artifacts\\research_checks\\2026-09-26_B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05\\B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-CO11-t05.h5",
+      "sha256": "f30d7feb6a23525aa97ad8d26423b6cf10e50b788f8c77e296acc6f3fc14638e",
+      "tail_ns": 200,
+      "frequencies_hz": [
+        20000000.0,
+        95000000.0,
+        170000000.0
+      ],
+      "relative_direct_homodyne_difference": [
+        3.7269916694410896e-14,
+        2.9942680497825008e-09,
+        1.5721037294300143e-10
+      ]
+    }
+  ],
+  "mesh_screens": [
+    {
+      "input": "configs\\research\\batch2d_v1\\B2D-C3m-D10m-W4m-T0.5m-E20-S0.02.in",
+      "sha256": "c5911e79a17db7d1bf0a6dfd42284a5cf5c753aebe666053b3198a82095f583b",
+      "material": "rock",
+      "dx_max_m": 0.025,
+      "epsilon_r": 9.0,
+      "conductivity_S_m": 0.001,
+      "wavelength_170MHz_m": 0.5878182077049692,
+      "cells_per_wavelength_170MHz": 23.512728308198767,
+      "ten_cell_screen_cutoff_hz": 399722029.9316604,
+      "passes_ten_cell_screen_170MHz": true
+    },
+    {
+      "input": "configs\\research\\batch2d_v1\\B2D-C3m-D10m-W4m-T0.5m-E20-S0.02.in",
+      "sha256": "c5911e79a17db7d1bf0a6dfd42284a5cf5c753aebe666053b3198a82095f583b",
+      "material": "cover",
+      "dx_max_m": 0.025,
+      "epsilon_r": 16.0,
+      "conductivity_S_m": 0.01,
+      "wavelength_170MHz_m": 0.44063104774551015,
+      "cells_per_wavelength_170MHz": 17.625241909820407,
+      "ten_cell_screen_cutoff_hz": 299739846.84771675,
+      "passes_ten_cell_screen_170MHz": true
+    },
+    {
+      "input": "configs\\research\\batch2d_v1\\B2D-C3m-D10m-W4m-T0.5m-E20-S0.02.in",
+      "sha256": "c5911e79a17db7d1bf0a6dfd42284a5cf5c753aebe666053b3198a82095f583b",
+      "material": "target",
+      "dx_max_m": 0.025,
+      "epsilon_r": 20.0,
+      "conductivity_S_m": 0.02,
+      "wavelength_170MHz_m": 0.393778845769351,
+      "cells_per_wavelength_170MHz": 15.75115383077404,
+      "ten_cell_screen_cutoff_hz": 267992031.331723,
+      "passes_ten_cell_screen_170MHz": true
+    },
+    {
+      "input": "configs\\research\\batch2d_v1\\B2D-C3m-D10m-W4m-T0.5m-E28-S0.05.in",
+      "sha256": "2b304f18d4264e0475dcfab0c5414c4bcd99dfc1a56cacec13afbc2d8301c117",
+      "material": "rock",
+      "dx_max_m": 0.025,
+      "epsilon_r": 9.0,
+      "conductivity_S_m": 0.001,
+      "wavelength_170MHz_m": 0.5878182077049692,
+      "cells_per_wavelength_170MHz": 23.512728308198767,
+      "ten_cell_screen_cutoff_hz": 399722029.9316604,
+      "passes_ten_cell_screen_170MHz": true
+    },
+    {
+      "input": "configs\\research\\batch2d_v1\\B2D-C3m-D10m-W4m-T0.5m-E28-S0.05.in",
+      "sha256": "2b304f18d4264e0475dcfab0c5414c4bcd99dfc1a56cacec13afbc2d8301c117",
+      "material": "cover",
+      "dx_max_m": 0.025,
+      "epsilon_r": 16.0,
+      "conductivity_S_m": 0.01,
+      "wavelength_170MHz_m": 0.44063104774551015,
+      "cells_per_wavelength_170MHz": 17.625241909820407,
+      "ten_cell_screen_cutoff_hz": 299739846.84771675,
+      "passes_ten_cell_screen_170MHz": true
+    },
+    {
+      "input": "configs\\research\\batch2d_v1\\B2D-C3m-D10m-W4m-T0.5m-E28-S0.05.in",
+      "sha256": "2b304f18d4264e0475dcfab0c5414c4bcd99dfc1a56cacec13afbc2d8301c117",
+      "material": "target",
+      "dx_max_m": 0.025,
+      "epsilon_r": 28.0,
+      "conductivity_S_m": 0.05,
+      "wavelength_170MHz_m": 0.33180488263719266,
+      "cells_per_wavelength_170MHz": 13.272195305487706,
+      "ten_cell_screen_cutoff_hz": 226055628.93619367,
+      "passes_ten_cell_screen_170MHz": true
+    },
+    {
+      "input": "configs\\research\\a0_3d_v1\\B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-3D5CM.in",
+      "sha256": "bac530409eae47b8c1a4899eb92a86ab234cd4a9adc9f50190711e23b2e0363a",
+      "material": "rock",
+      "dx_max_m": 0.05,
+      "epsilon_r": 9.0,
+      "conductivity_S_m": 0.001,
+      "wavelength_170MHz_m": 0.5878182077049692,
+      "cells_per_wavelength_170MHz": 11.756364154099384,
+      "ten_cell_screen_cutoff_hz": 199859143.89834175,
+      "passes_ten_cell_screen_170MHz": true
+    },
+    {
+      "input": "configs\\research\\a0_3d_v1\\B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-3D5CM.in",
+      "sha256": "bac530409eae47b8c1a4899eb92a86ab234cd4a9adc9f50190711e23b2e0363a",
+      "material": "cover",
+      "dx_max_m": 0.05,
+      "epsilon_r": 16.0,
+      "conductivity_S_m": 0.01,
+      "wavelength_170MHz_m": 0.44063104774551015,
+      "cells_per_wavelength_170MHz": 8.812620954910203,
+      "ten_cell_screen_cutoff_hz": 149791089.7132131,
+      "passes_ten_cell_screen_170MHz": false
+    },
+    {
+      "input": "configs\\research\\a0_3d_v1\\B2D-C3m-D10m-W4m-T0.5m-E20-S0.02-3D5CM.in",
+      "sha256": "bac530409eae47b8c1a4899eb92a86ab234cd4a9adc9f50190711e23b2e0363a",
+      "material": "wet",
+      "dx_max_m": 0.05,
+      "epsilon_r": 20.0,
+      "conductivity_S_m": 0.02,
+      "wavelength_170MHz_m": 0.393778845769351,
+      "cells_per_wavelength_170MHz": 7.87557691538702,
+      "ten_cell_screen_cutoff_hz": 133771031.4427449,
+      "passes_ten_cell_screen_170MHz": false
+    }
+  ]
+}
