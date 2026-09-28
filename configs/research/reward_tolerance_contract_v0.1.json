@@ -1,0 +1,55 @@
+{
+ "date": "2026-09-28",
+ "evidence": {
+  "damage_ladder_r1": {
+   "path": "2026-09-28_t3_damage_ladder_r1.json",
+   "sha256": "bca1595bb203306d57dc7df1df3bdb474dacc6fa5429a94fc400236aa9289528"
+  },
+  "operator_effects_r1": {
+   "path": "2026-09-28_t3_operator_effects_r1.json",
+   "sha256": "bad19a221aab1368b068b1b87be28de24daa9aef04f980edfc75cf6da2fdb9d5"
+  },
+  "tolerance_sensitivity_r1": {
+   "path": "2026-09-28_tolerance_sensitivity_r1.json",
+   "sha256": "d68e1f92081cf0ce3770515bfbbd9ad631527b2f7e15461c31099dc0debe950f"
+  }
+ },
+ "frozen_by": "user confirmation \"确认\" (2026-09-28) of the proposal in docs/research/2026-09-28_t3_damage_ladder_results.md §2, after operator-effects + sensitivity evidence (docs/research/2026-09-28_t3_operator_effects_and_sensitivity.md)",
+ "judgement_rules": {
+  "hard_constraints_first": true,
+  "implementation": "scripts/study_tolerance_sensitivity.py (judge)",
+  "ladder_pass": "A<=tau_A and D<=tau_D and (Nb_ratio is None or Nb_ratio<=eps_Nb)",
+  "operator_admissible": "available and A<=tau_A and D_e<=tau_D and Nb_ratio<=eps_Nb",
+  "scalar_weights": "TBD (draft §4 step 5, after this freeze; not derived from candidate outcomes, Cawley-Talbot clause)"
+ },
+ "schema": "reward-tolerance-contract/0.1",
+ "scope_limits": [
+  "values are properties of the t3 development families plus the stated dispersion material assumption; not field-data thresholds",
+  "do not tighten beyond the material-assumption sensitivity (+/-3.3..6.6 dB) before the dispersion field-data study",
+  "all peak-based readouts quantised to the 0.832 ns reconstruction axis",
+  "test families {C5,C8} untouched; no solver runs; no training",
+  "gain-compensated outputs (audit_before_gain) used for the D_e battery so the fixed shared gain is not counted as damage"
+ ],
+ "status": "frozen",
+ "tolerances": {
+  "arrival_drift": {
+   "meaning": "diagnostic only; not a hard constraint at v0.1 (0.832 ns reconstruction-axis quantisation)",
+   "value": null
+  },
+  "eps_Nb": {
+   "anchor": "structural floor 1.0 measured: eps x0.5 = 0.75 makes identity inadmissible (sensitivity r1); 1.5 margin admits pure gain (Nb=1.273) and excludes nc_amp +6 dB (Nb=4.96)",
+   "meaning": "negative-control window (250-400 ns) mean-square ratio out/in limit",
+   "value": 1.5
+  },
+  "tau_A": {
+   "anchor": "damage ladder: -1 dB rung passes (A=0.109), -3 dB rung fails (A=0.292); resolution limited by ladder spacing (+/-50% perturbation moves the rung boundary, recorded as ladder property, not refitted)",
+   "meaning": "event amplitude-factor deviation |a-1| limit",
+   "value": 0.2
+  },
+  "tau_D": {
+   "anchor": "ladder: 1-sample (0.832 ns) shift passes (D~0.86-0.89), delete fails (D=1.0); +/-50% sensitivity: zero flips both directions (robust on current evidence set)",
+   "meaning": "event-window total distortion D limit",
+   "value": 0.95
+  }
+ }
+}
