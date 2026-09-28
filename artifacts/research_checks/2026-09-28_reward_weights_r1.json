@@ -1,0 +1,364 @@
+{
+ "basis": "reward draft v0.1 §4 step 5; tolerances frozen in reward_tolerance_contract_v0.1.json (user \"确认\", commit 619170f)",
+ "date": "2026-09-28",
+ "formula": "R_bg = contrast_db_delta - 20*log10(1/(1-D_e)) - max(10*log10(Nb_ratio), 0); coefficients 1 by dB-unit construction",
+ "note": "background-suppression class scalar proposal (unfrozen, user confirmation required before contract freeze); gain-class quality labels undetermined (v0.2 §6: no controlled-attenuation cases yet)",
+ "rows": [
+  {
+   "A": 0.0,
+   "D_e": 0.0,
+   "Nb_ratio": 1.0,
+   "R_bg_db": 0.0,
+   "config": "B0_G1_BG",
+   "contrast_db_delta": 0.0,
+   "family": "S2X",
+   "feasible": true,
+   "nb_penalty_db": 0.0,
+   "preservation_db": -0.0
+  },
+  {
+   "A": 0.001897,
+   "D_e": 0.015938,
+   "Nb_ratio": 0.254634,
+   "R_bg_db": 5.698449,
+   "config": "B2_G1_BG",
+   "contrast_db_delta": 5.838,
+   "family": "S2X",
+   "feasible": true,
+   "nb_penalty_db": 0.0,
+   "preservation_db": 0.139551
+  },
+  {
+   "A": 0.003795,
+   "D_e": 0.031875,
+   "Nb_ratio": 0.006178,
+   "R_bg_db": 21.743629,
+   "config": "B3_G1_BG",
+   "contrast_db_delta": 22.025,
+   "family": "S2X",
+   "feasible": true,
+   "nb_penalty_db": 0.0,
+   "preservation_db": 0.281371
+  },
+  {
+   "A": 0.003795,
+   "D_e": 0.031875,
+   "Nb_ratio": 0.006178,
+   "R_bg_db": 21.743629,
+   "config": "B4_G1_BG",
+   "contrast_db_delta": 22.025,
+   "family": "S2X",
+   "feasible": true,
+   "nb_penalty_db": 0.0,
+   "preservation_db": 0.281371
+  },
+  {
+   "A": 0.189502,
+   "D_e": 0.319191,
+   "Nb_ratio": 0.006173,
+   "R_bg_db": 18.356506,
+   "config": "B5_G1_BG",
+   "contrast_db_delta": 21.696,
+   "family": "S2X",
+   "feasible": true,
+   "nb_penalty_db": 0.0,
+   "preservation_db": 3.339494
+  },
+  {
+   "A": 0.0,
+   "D_e": 0.0,
+   "Nb_ratio": 1.128225,
+   "R_bg_db": -0.770957,
+   "config": "B0_G2_BG",
+   "contrast_db_delta": -0.247,
+   "family": "S2X",
+   "feasible": true,
+   "nb_penalty_db": 0.523957,
+   "preservation_db": -0.0
+  },
+  {
+   "A": 0.0,
+   "D_e": 0.0,
+   "Nb_ratio": 1.273175,
+   "R_bg_db": -1.544881,
+   "config": "B0_G4_BG",
+   "contrast_db_delta": -0.496,
+   "family": "S2X",
+   "feasible": true,
+   "nb_penalty_db": 1.048881,
+   "preservation_db": -0.0
+  },
+  {
+   "A": 0.003795,
+   "D_e": 0.031875,
+   "Nb_ratio": 0.006904,
+   "R_bg_db": 21.548629,
+   "config": "B3_G2_BG",
+   "contrast_db_delta": 21.83,
+   "family": "S2X",
+   "feasible": true,
+   "nb_penalty_db": 0.0,
+   "preservation_db": 0.281371
+  },
+  {
+   "A": 0.003795,
+   "D_e": 0.031875,
+   "Nb_ratio": 0.006904,
+   "R_bg_db": 21.548629,
+   "config": "B4_G2_BG",
+   "contrast_db_delta": 21.83,
+   "family": "S2X",
+   "feasible": true,
+   "nb_penalty_db": 0.0,
+   "preservation_db": 0.281371
+  },
+  {
+   "A": 0.088513,
+   "D_e": 0.174985,
+   "Nb_ratio": 0.004276,
+   "R_bg_db": 22.492237,
+   "config": "local_mean_w11_s1.0(out-of-catalogue)",
+   "contrast_db_delta": 24.163,
+   "family": "S2X",
+   "feasible": true,
+   "nb_penalty_db": 0.0,
+   "preservation_db": 1.670763
+  },
+  {
+   "A": 0.0,
+   "D_e": 0.0,
+   "Nb_ratio": 1.0,
+   "R_bg_db": 0.0,
+   "config": "B0_G1_BG",
+   "contrast_db_delta": 0.0,
+   "family": "S2TZX",
+   "feasible": true,
+   "nb_penalty_db": 0.0,
+   "preservation_db": -0.0
+  },
+  {
+   "A": 0.00225,
+   "D_e": 0.01994,
+   "Nb_ratio": 0.254655,
+   "R_bg_db": 5.661053,
+   "config": "B2_G1_BG",
+   "contrast_db_delta": 5.836,
+   "family": "S2TZX",
+   "feasible": true,
+   "nb_penalty_db": 0.0,
+   "preservation_db": 0.174947
+  },
+  {
+   "A": 0.004501,
+   "D_e": 0.03988,
+   "Nb_ratio": 0.006207,
+   "R_bg_db": 21.68551,
+   "config": "B3_G1_BG",
+   "contrast_db_delta": 22.039,
+   "family": "S2TZX",
+   "feasible": true,
+   "nb_penalty_db": 0.0,
+   "preservation_db": 0.35349
+  },
+  {
+   "A": 0.004501,
+   "D_e": 0.03988,
+   "Nb_ratio": 0.006207,
+   "R_bg_db": 21.68551,
+   "config": "B4_G1_BG",
+   "contrast_db_delta": 22.039,
+   "family": "S2TZX",
+   "feasible": true,
+   "nb_penalty_db": 0.0,
+   "preservation_db": 0.35349
+  },
+  {
+   "A": 0.183407,
+   "D_e": 0.307538,
+   "Nb_ratio": 0.006196,
+   "R_bg_db": 18.619919,
+   "config": "B5_G1_BG",
+   "contrast_db_delta": 21.812,
+   "family": "S2TZX",
+   "feasible": true,
+   "nb_penalty_db": 0.0,
+   "preservation_db": 3.192081
+  },
+  {
+   "A": 0.0,
+   "D_e": 0.0,
+   "Nb_ratio": 1.128164,
+   "R_bg_db": -0.769722,
+   "config": "B0_G2_BG",
+   "contrast_db_delta": -0.246,
+   "family": "S2TZX",
+   "feasible": true,
+   "nb_penalty_db": 0.523722,
+   "preservation_db": -0.0
+  },
+  {
+   "A": 0.0,
+   "D_e": 0.0,
+   "Nb_ratio": 1.273038,
+   "R_bg_db": -1.540414,
+   "config": "B0_G4_BG",
+   "contrast_db_delta": -0.492,
+   "family": "S2TZX",
+   "feasible": true,
+   "nb_penalty_db": 1.048414,
+   "preservation_db": -0.0
+  },
+  {
+   "A": 0.004501,
+   "D_e": 0.03988,
+   "Nb_ratio": 0.006925,
+   "R_bg_db": 21.49751,
+   "config": "B3_G2_BG",
+   "contrast_db_delta": 21.851,
+   "family": "S2TZX",
+   "feasible": true,
+   "nb_penalty_db": 0.0,
+   "preservation_db": 0.35349
+  },
+  {
+   "A": 0.004501,
+   "D_e": 0.03988,
+   "Nb_ratio": 0.006925,
+   "R_bg_db": 21.49751,
+   "config": "B4_G2_BG",
+   "contrast_db_delta": 21.851,
+   "family": "S2TZX",
+   "feasible": true,
+   "nb_penalty_db": 0.0,
+   "preservation_db": 0.35349
+  },
+  {
+   "A": 0.085161,
+   "D_e": 0.172809,
+   "Nb_ratio": 0.0048,
+   "R_bg_db": 22.030116,
+   "config": "local_mean_w11_s1.0(out-of-catalogue)",
+   "contrast_db_delta": 23.678,
+   "family": "S2TZX",
+   "feasible": true,
+   "nb_penalty_db": 0.0,
+   "preservation_db": 1.647884
+  },
+  {
+   "A": 0.0,
+   "D_e": 0.0,
+   "Nb_ratio": 1.0,
+   "R_bg_db": 0.0,
+   "config": "B0_G1_BG",
+   "contrast_db_delta": 0.0,
+   "family": "C3mX",
+   "feasible": true,
+   "nb_penalty_db": 0.0,
+   "preservation_db": -0.0
+  },
+  {
+   "config": "B2_G1_BG",
+   "family": "C3mX",
+   "feasible": false,
+   "reason": "constraint:A"
+  },
+  {
+   "config": "B3_G1_BG",
+   "family": "C3mX",
+   "feasible": false,
+   "reason": "constraint:A,D_e"
+  },
+  {
+   "config": "B4_G1_BG",
+   "family": "C3mX",
+   "feasible": false,
+   "reason": "constraint:A,D_e"
+  },
+  {
+   "config": "B5_G1_BG",
+   "family": "C3mX",
+   "feasible": false,
+   "reason": "svd_cutoff_gap_unresolved"
+  },
+  {
+   "A": 0.0,
+   "D_e": 0.0,
+   "Nb_ratio": 1.127465,
+   "R_bg_db": -0.705031,
+   "config": "B0_G2_BG",
+   "contrast_db_delta": -0.184,
+   "family": "C3mX",
+   "feasible": true,
+   "nb_penalty_db": 0.521031,
+   "preservation_db": -0.0
+  },
+  {
+   "A": 0.0,
+   "D_e": 0.0,
+   "Nb_ratio": 1.271448,
+   "R_bg_db": -1.412986,
+   "config": "B0_G4_BG",
+   "contrast_db_delta": -0.37,
+   "family": "C3mX",
+   "feasible": true,
+   "nb_penalty_db": 1.042986,
+   "preservation_db": -0.0
+  },
+  {
+   "config": "B3_G2_BG",
+   "family": "C3mX",
+   "feasible": false,
+   "reason": "constraint:A,D_e"
+  },
+  {
+   "config": "B4_G2_BG",
+   "family": "C3mX",
+   "feasible": false,
+   "reason": "constraint:A,D_e"
+  },
+  {
+   "config": "local_mean_w11_s1.0(out-of-catalogue)",
+   "family": "C3mX",
+   "feasible": false,
+   "reason": "constraint:A,D_e"
+  }
+ ],
+ "schema": "reward_weights/0.1",
+ "sensitivity": [
+  {
+   "coefficient": "c_d",
+   "factor": 0.5,
+   "n_inversions": 0,
+   "pairwise_inversions": []
+  },
+  {
+   "coefficient": "c_d",
+   "factor": 1.5,
+   "n_inversions": 4,
+   "pairwise_inversions": [
+    "S2TZX|B3_G1_BG|local_mean_w11_s1.0(out-of-catalogue)",
+    "S2TZX|B3_G2_BG|local_mean_w11_s1.0(out-of-catalogue)",
+    "S2TZX|B4_G1_BG|local_mean_w11_s1.0(out-of-catalogue)",
+    "S2TZX|B4_G2_BG|local_mean_w11_s1.0(out-of-catalogue)"
+   ]
+  },
+  {
+   "coefficient": "c_b",
+   "factor": 0.5,
+   "n_inversions": 0,
+   "pairwise_inversions": []
+  },
+  {
+   "coefficient": "c_b",
+   "factor": 1.5,
+   "n_inversions": 0,
+   "pairwise_inversions": []
+  }
+ ],
+ "tolerances_frozen": {
+  "eps_Nb": 1.5,
+  "tau_A": 0.2,
+  "tau_D": 0.95
+ },
+ "weight_derivation": "coefficients = 1 by dB-unit identities (equal dB = equal scale; net event-to-interference improvement); NOT fitted to candidate outcomes (Cawley-Talbot)"
+}
