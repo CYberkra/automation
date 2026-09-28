@@ -1,0 +1,22 @@
+{
+ "batch_id": "batch3d_slope_t3_xcheck",
+ "segment": "xcheck_2d3d",
+ "grid_tier": "BASE5CM",
+ "convention": "spec 4.2: any split is by group_id (mother model) only",
+ "groups": [
+  {
+   "case_id": "B2D5CM-C3mS2X-BG",
+   "group_id": "B2D5CM-C3mS2X-BG",
+   "run_id_pattern": "B2D5CM-C3mS2X-BG-CO33-t*",
+   "n_traces": 33,
+   "variant_tag": "common_offset_33tx_0p25m_off1p30_5cm"
+  },
+  {
+   "case_id": "B3D5CM-C3mS2X-BG",
+   "group_id": "B3D5CM-C3mS2X-BG",
+   "run_id_pattern": "B3D5CM-C3mS2X-BG-T*",
+   "n_traces": 1,
+   "variant_tag": "true3d_5cm_anchor_t17"
+  }
+ ]
+}

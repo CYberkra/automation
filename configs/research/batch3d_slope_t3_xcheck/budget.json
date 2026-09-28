@@ -1,0 +1,32 @@
+{
+ "schema": "batch3d_slope_t3_xcheck_budget/1",
+ "date": "2026-09-28",
+ "grid": {
+  "d_m": 0.05,
+  "cells_3d": 128000000,
+  "cells_2d": 800000,
+  "time_window_ns": 1200
+ },
+ "single_case": {
+  "wall_s_2d_estimate": 10,
+  "wall_s_3d_estimate": "3660-4400",
+  "host_commit_GB_3d_estimate": 36
+ },
+ "batch_totals": {
+  "n_cases": 34,
+  "measured_estimate_s": 4730,
+  "conservative_budget_min": 150
+ },
+ "hard_stops": {
+  "wall_minutes_per_case": 150,
+  "job_commit_GiB": 48,
+  "output_GiB": 2,
+  "retries": 0,
+  "max_fdtd_runs": 34
+ },
+ "known_limitations": [
+  "3D estimate scaled from archived DEP3D_5CM_BG (32M cells, 916 s, 8.57 GB commit); Debye ADE overhead not included in the archived figure",
+  "job_commit cap 48 GiB vs 63.2 GB total RAM; preflight RAM gate 40 GiB",
+  "estimates are for cap-setting only, not ETA"
+ ]
+}

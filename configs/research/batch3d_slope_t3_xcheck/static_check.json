@@ -1,0 +1,65 @@
+{
+ "schema": "batch3d_slope_t3_xcheck_static_check/1",
+ "checked_date": "2026-09-28",
+ "question": "does the batch-2D (TM, line source) slope model reproduce the true-3D (point dipole, 3D spreading) interface response on identical geometry, grid and materials — i.e. can t3 2D stand in for 3D in batch generation",
+ "design": "same smooth interface line (t3: z=0.2y+22.625 clamped at outcrop) realised by one generator for both mothers; identical 5 cm grid, PML thickness 1.0 m, HORIPML + archived pml_cfs, dispersive Debye cover (dispersion_materials_v0.1), non-dispersive rock; only dimensionality differs",
+ "grid_3d": {
+  "nx": 160,
+  "ny": 800,
+  "nz": 1000,
+  "cells": 128000000,
+  "d_m": 0.05,
+  "dt_formula_s": 9.629166007732353e-11,
+  "time_steps_formula": 12462
+ },
+ "grid_2d": {
+  "ny": 800,
+  "nz": 1000,
+  "cells": 800000,
+  "d_m": 0.05,
+  "dt_formula_s": 1.1793271683748422e-10,
+  "time_steps_formula": 10175
+ },
+ "staircase": {
+  "rule": "zif_c = floor((0.2*ycen+22.625)/0.05 + 0.5), strips 0.25 m, clamp at surface = natural outcrop",
+  "n_cover_strips": 147,
+  "max_deviation_from_line_m": 0.0,
+  "outcrop_y_interval_m": [
+   36.75,
+   37.0
+  ]
+ },
+ "fermat_domain_sizing": {
+  "yq_max_er16_er18_m": 34.818,
+  "margin_rule_m": 2.0,
+  "pml_start_m": 39.0,
+  "assertion": "max(yq) + 2.0 <= 39.0 holds (34.818)"
+ },
+ "dispersion_config": "configs/research/dispersion_materials_v0.1.json",
+ "dispersion_config_sha256": "35760a42d7b968b61539418ba6f12940206a050a2e564e9b7e448b74696cf1da",
+ "comparisons": {
+  "a_dimensionality": "B3D5CM-C3mS2X-BG-T17 vs B2D5CM-C3mS2X-BG-CO33-t17 (same grid, same materials, same strips)",
+  "b_grid": "B2D5CM-C3mS2X-BG-CO33-t* vs archived batch2d_slope_t3_co B2D-C3mS2X-BG-CO33-t* (2.5 cm vs 5 cm, same line; staircase quantisation differs by design)"
+ },
+ "cost_basis": {
+  "archived_dep3d_5cm": {
+   "cells": 32000000,
+   "wall_s": 916.078,
+   "peak_job_commit_GB": 8.57
+  },
+  "scaled_128M": {
+   "wall_s_estimate": "3660-4400",
+   "host_commit_GB_estimate": "~36",
+   "note": "linear in cells; Debye ADE adds one pole accumulator"
+  },
+  "machine": {
+   "RAM_total_GB": 63.2,
+   "RAM_free_at_freeze_GB": 43.0,
+   "VRAM_free_at_freeze_GB": 15.8
+  }
+ },
+ "mother_sha256": {
+  "B3D5CM-C3mS2X-BG": "d3cc4968c8a068d9a059327d57cca025fb5c81ab6daf5fa2d4e583f1611ac2cc",
+  "B2D5CM-C3mS2X-BG": "a7dbb9e9367d207c8b39e0875208b2b31d4925cc17195f106a0e950616c89282"
+ }
+}
