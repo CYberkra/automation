@@ -1,0 +1,180 @@
+{
+ "axes": [
+  {
+   "axis": "tau_A",
+   "best_flips": [],
+   "factor": 0.5,
+   "ladder_flip_rate": 0.090909,
+   "ladder_flips": [
+    "C3mX|amp_db|-1.0",
+    "S2TZX|amp_db|-1.0",
+    "S2X|amp_db|-1.0"
+   ],
+   "operator_flip_rate": 0.066667,
+   "operator_flips": [
+    "S2TZX|B5_G1_BG",
+    "S2X|B5_G1_BG"
+   ],
+   "value": 0.1
+  },
+  {
+   "axis": "tau_A",
+   "best_flips": [],
+   "factor": 1.5,
+   "ladder_flip_rate": 0.090909,
+   "ladder_flips": [
+    "C3mX|amp_db|-3.0",
+    "S2TZX|amp_db|-3.0",
+    "S2X|amp_db|-3.0"
+   ],
+   "operator_flip_rate": 0.0,
+   "operator_flips": [],
+   "value": 0.3
+  },
+  {
+   "axis": "tau_D",
+   "best_flips": [],
+   "factor": 0.5,
+   "ladder_flip_rate": 0.0,
+   "ladder_flips": [],
+   "operator_flip_rate": 0.0,
+   "operator_flips": [],
+   "value": 0.475
+  },
+  {
+   "axis": "tau_D",
+   "best_flips": [],
+   "factor": 1.5,
+   "ladder_flip_rate": 0.0,
+   "ladder_flips": [],
+   "operator_flip_rate": 0.0,
+   "operator_flips": [],
+   "value": 1.425
+  },
+  {
+   "axis": "eps_Nb",
+   "best_flips": [
+    "C3mX"
+   ],
+   "factor": 0.5,
+   "ladder_flip_rate": 0.181818,
+   "ladder_flips": [
+    "C3mX|amp_db|-1.0",
+    "C3mX|identity|0.0",
+    "S2TZX|amp_db|-1.0",
+    "S2TZX|identity|0.0",
+    "S2X|amp_db|-1.0",
+    "S2X|identity|0.0"
+   ],
+   "operator_flip_rate": 0.3,
+   "operator_flips": [
+    "C3mX|B0_G1_BG",
+    "C3mX|B0_G2_BG",
+    "C3mX|B0_G4_BG",
+    "S2TZX|B0_G1_BG",
+    "S2TZX|B0_G2_BG",
+    "S2TZX|B0_G4_BG",
+    "S2X|B0_G1_BG",
+    "S2X|B0_G2_BG",
+    "S2X|B0_G4_BG"
+   ],
+   "value": 0.75
+  },
+  {
+   "axis": "eps_Nb",
+   "best_flips": [],
+   "factor": 1.5,
+   "ladder_flip_rate": 0.0,
+   "ladder_flips": [],
+   "operator_flip_rate": 0.0,
+   "operator_flips": [],
+   "value": 2.25
+  }
+ ],
+ "basis": "reward metrics draft v0.1 §4 step 4 (tolerance ±50% sensitivity); tolerances are the unfrozen proposal from the damage ladder (commit 6501783), derived from ladder scale, not from candidate outcomes",
+ "central_tolerances": {
+  "eps_Nb": 1.5,
+  "tau_A": 0.2,
+  "tau_D": 0.95
+ },
+ "date": "2026-09-28",
+ "inputs": {
+  "ladder": "2026-09-28_t3_damage_ladder_r1.json",
+  "operator_effects": "2026-09-28_t3_operator_effects_r1.json"
+ },
+ "ladder_judgments_central": {
+  "C3mX|amp_db|-1.0": true,
+  "C3mX|amp_db|-10.0": false,
+  "C3mX|amp_db|-3.0": false,
+  "C3mX|delete|0.0": false,
+  "C3mX|identity|0.0": true,
+  "C3mX|nc_amp|20.0": false,
+  "C3mX|nc_amp|6.0": false,
+  "C3mX|polarity|0.0": false,
+  "C3mX|shift_smp|1": false,
+  "C3mX|shift_smp|2": false,
+  "C3mX|shift_smp|4": false,
+  "S2TZX|amp_db|-1.0": true,
+  "S2TZX|amp_db|-10.0": false,
+  "S2TZX|amp_db|-3.0": false,
+  "S2TZX|delete|0.0": false,
+  "S2TZX|identity|0.0": true,
+  "S2TZX|nc_amp|20.0": false,
+  "S2TZX|nc_amp|6.0": false,
+  "S2TZX|polarity|0.0": false,
+  "S2TZX|shift_smp|1": false,
+  "S2TZX|shift_smp|2": false,
+  "S2TZX|shift_smp|4": false,
+  "S2X|amp_db|-1.0": true,
+  "S2X|amp_db|-10.0": false,
+  "S2X|amp_db|-3.0": false,
+  "S2X|delete|0.0": false,
+  "S2X|identity|0.0": true,
+  "S2X|nc_amp|20.0": false,
+  "S2X|nc_amp|6.0": false,
+  "S2X|polarity|0.0": false,
+  "S2X|shift_smp|1": false,
+  "S2X|shift_smp|2": false,
+  "S2X|shift_smp|4": false
+ },
+ "note": "development family; flips measure proposal sensitivity on a coarse ladder; no tolerance is fitted or frozen here",
+ "operator_admissible_central": {
+  "C3mX|B0_G1_BG": true,
+  "C3mX|B0_G2_BG": true,
+  "C3mX|B0_G4_BG": true,
+  "C3mX|B2_G1_BG": false,
+  "C3mX|B3_G1_BG": false,
+  "C3mX|B3_G2_BG": false,
+  "C3mX|B4_G1_BG": false,
+  "C3mX|B4_G2_BG": false,
+  "C3mX|B5_G1_BG": false,
+  "C3mX|local_mean_w11_s1.0(out-of-catalogue)": false,
+  "S2TZX|B0_G1_BG": true,
+  "S2TZX|B0_G2_BG": true,
+  "S2TZX|B0_G4_BG": true,
+  "S2TZX|B2_G1_BG": true,
+  "S2TZX|B3_G1_BG": true,
+  "S2TZX|B3_G2_BG": true,
+  "S2TZX|B4_G1_BG": true,
+  "S2TZX|B4_G2_BG": true,
+  "S2TZX|B5_G1_BG": true,
+  "S2TZX|local_mean_w11_s1.0(out-of-catalogue)": true,
+  "S2X|B0_G1_BG": true,
+  "S2X|B0_G2_BG": true,
+  "S2X|B0_G4_BG": true,
+  "S2X|B2_G1_BG": true,
+  "S2X|B3_G1_BG": true,
+  "S2X|B3_G2_BG": true,
+  "S2X|B4_G1_BG": true,
+  "S2X|B4_G2_BG": true,
+  "S2X|B5_G1_BG": true,
+  "S2X|local_mean_w11_s1.0(out-of-catalogue)": true
+ },
+ "operator_best_central": {
+  "C3mX": "B0_G1_BG",
+  "S2TZX": "local_mean_w11_s1.0(out-of-catalogue)",
+  "S2X": "local_mean_w11_s1.0(out-of-catalogue)"
+ },
+ "perturbation": "one axis at a time, x0.5 / x1.5",
+ "schema": "tolerance_sensitivity/1"
+}
