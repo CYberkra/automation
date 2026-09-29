@@ -1,0 +1,1382 @@
+{
+ "basis": "user \"行\" 2026-09-29 on docs/research/2026-09-29_s1s3_reference_window_proposal.md (section 6 points 1-5 confirmed as drafted); freeze-time forward-model correction: exact full-line Fermat incl. outcrop-grazing branch (legacy ladder grids bounded air entry/exit to rx+12/+14 m and overstated S3 arrivals by up to ~51 ns; caught by the freeze assertion, see decision_log 2026-09-29)",
+ "constants": {
+  "er_diagnostic": 16.0,
+  "er_fermat": 18.0,
+  "ev_half_ns": 10.0,
+  "freq_hz": [
+   20000000.0,
+   170000000.0,
+   501
+  ],
+  "hann_window": true,
+  "nc_window_ns": [
+   250.0,
+   400.0
+  ],
+  "reconstruction_axis_note": "reconstructed time-axis step ~0.832 ns; all readings quantized to it (ladder erratum)",
+  "search_half_note": "proposal §4.2 specified 25 ns; narrowed to 15 ns at freeze time on measured evidence (surface-complex ringing intrusion), see decision_log 2026-09-29",
+  "search_half_ns": 15.0,
+  "zero_pad_factor": 8
+ },
+ "date": "2026-09-29",
+ "families": {
+  "S1TZX": {
+   "delta_measured_minus_fermat_ns": [
+    -2.7417,
+    0.457,
+    -2.1651,
+    1.0341,
+    -1.589,
+    1.6098,
+    -1.0122,
+    2.187,
+    -0.4359,
+    -3.059,
+    0.1409,
+    -2.4816,
+    0.7171,
+    -1.9057,
+    1.2941,
+    -1.3285,
+    -0.625,
+    -0.7527,
+    -0.048,
+    -0.1756,
+    0.5278,
+    0.4004,
+    1.1049,
+    -1.5178,
+    -1.646,
+    -0.9418,
+    -1.0688,
+    -0.3647,
+    -0.4929,
+    0.2113,
+    0.0843,
+    0.7883,
+    -1.8351
+   ],
+   "event_window": {
+    "anchor": "geometry+Fermat, frozen before any candidate run (reward draft §3.2; v0.2 §2); measured peaks are registered diagnostics, never re-anchored",
+    "definition": "per trace k: [t_fermat_er18(k)-10, t_fermat_er18(k)+10] ns",
+    "half_width_ns": 10.0
+   },
+   "geometry": {
+    "domain_y_m": 50.0,
+    "outcrop_y_lo_m": 45.75,
+    "tan_theta": 0.1,
+    "theta_eff_deg": 5.713826,
+    "zc_m": 27.0
+   },
+   "inputs": [
+    {
+     "h5_sha256": "e0658a33c4655d04c98cef7202cf4a74b178e620b36cd95cb76c3a4d8fa65107",
+     "run_id": "B2D-C3mS1TZX-BG-CO33-t01",
+     "source_dir": "2026-09-29_B2D-C3mS1TZX-BG-CO33-t01"
+    },
+    {
+     "h5_sha256": "c64b669f0495b56b328d08a1fa5387b928d1fb2c2382ca693907a110d6fcd87f",
+     "run_id": "B2D-C3mS1TZX-BG-CO33-t02",
+     "source_dir": "2026-09-29_B2D-C3mS1TZX-BG-CO33-t02"
+    },
+    {
+     "h5_sha256": "f878a16026a06afa7907786f7c527211edb179436d977317c5d050c046c70eb8",
+     "run_id": "B2D-C3mS1TZX-BG-CO33-t03",
+     "source_dir": "2026-09-29_B2D-C3mS1TZX-BG-CO33-t03"
+    },
+    {
+     "h5_sha256": "3a127c5724a1a687a8f3bf56af4c1b4ccafad6ad247abb61a00a292594f1699e",
+     "run_id": "B2D-C3mS1TZX-BG-CO33-t04",
+     "source_dir": "2026-09-29_B2D-C3mS1TZX-BG-CO33-t04"
+    },
+    {
+     "h5_sha256": "20fa10fdda3ca3bf36cf144b5e9cd203ee83219d313db3ffb44990071e2a9bf4",
+     "run_id": "B2D-C3mS1TZX-BG-CO33-t05",
+     "source_dir": "2026-09-29_B2D-C3mS1TZX-BG-CO33-t05"
+    },
+    {
+     "h5_sha256": "f4cd39e8e0a034fcc9a548947002d59e23919183d14a5406a172de745974c3a3",
+     "run_id": "B2D-C3mS1TZX-BG-CO33-t06",
+     "source_dir": "2026-09-29_B2D-C3mS1TZX-BG-CO33-t06"
+    },
+    {
+     "h5_sha256": "fdbec5da3e33246720192822518f2427100c1eb1714655c9047979dbe61288af",
+     "run_id": "B2D-C3mS1TZX-BG-CO33-t07",
+     "source_dir": "2026-09-29_B2D-C3mS1TZX-BG-CO33-t07_att2"
+    },
+    {
+     "h5_sha256": "423dc137663efa26e4864a80f89cb735292941f550589b9d7f78801738b864a5",
+     "run_id": "B2D-C3mS1TZX-BG-CO33-t08",
+     "source_dir": "2026-09-29_B2D-C3mS1TZX-BG-CO33-t08"
+    },
+    {
+     "h5_sha256": "1c8dbe15770d044d7e612ff1eb236650a120047209f564b2731010c833e3edad",
+     "run_id": "B2D-C3mS1TZX-BG-CO33-t09",
+     "source_dir": "2026-09-29_B2D-C3mS1TZX-BG-CO33-t09"
+    },
+    {
+     "h5_sha256": "be6c2bb92118a704bc5dd607a0f2f847ac5a056d1cb3e108812ac07bb435c754",
+     "run_id": "B2D-C3mS1TZX-BG-CO33-t10",
+     "source_dir": "2026-09-29_B2D-C3mS1TZX-BG-CO33-t10"
+    },
+    {
+     "h5_sha256": "b80bd1648433223b25c3f0602be1fd41d84eae782fcb85c3775db05f7777b22e",
+     "run_id": "B2D-C3mS1TZX-BG-CO33-t11",
+     "source_dir": "2026-09-29_B2D-C3mS1TZX-BG-CO33-t11"
+    },
+    {
+     "h5_sha256": "713d6a08a3d5b5fc6fa8a51b7c0aba2a2bb6627213ea40300122e1c3b40887a1",
+     "run_id": "B2D-C3mS1TZX-BG-CO33-t12",
+     "source_dir": "2026-09-29_B2D-C3mS1TZX-BG-CO33-t12"
+    },
+    {
+     "h5_sha256": "6318fa5e0c0ad9d63992a99a482a780032bd3b521c1ed94ff18129da086c14f5",
+     "run_id": "B2D-C3mS1TZX-BG-CO33-t13",
+     "source_dir": "2026-09-29_B2D-C3mS1TZX-BG-CO33-t13"
+    },
+    {
+     "h5_sha256": "0ba95ca81b120c077c0270aeae98fb6228ce6c6b83c5550e8a610e6924a31866",
+     "run_id": "B2D-C3mS1TZX-BG-CO33-t14",
+     "source_dir": "2026-09-29_B2D-C3mS1TZX-BG-CO33-t14"
+    },
+    {
+     "h5_sha256": "5f061ce30481d8e3b03c79cdcc4b6c47ac4ec48cb5cf8b176b7c05736e7b9362",
+     "run_id": "B2D-C3mS1TZX-BG-CO33-t15",
+     "source_dir": "2026-09-29_B2D-C3mS1TZX-BG-CO33-t15"
+    },
+    {
+     "h5_sha256": "b3b11b42a2a12772a8536b960c0f1161db6aa440e3d6801e31fa3599ff272b67",
+     "run_id": "B2D-C3mS1TZX-BG-CO33-t16",
+     "source_dir": "2026-09-29_B2D-C3mS1TZX-BG-CO33-t16_att2"
+    },
+    {
+     "h5_sha256": "a1b600c5002dbd93a55f356186da237702b1e4790ed6906842227a18777f702b",
+     "run_id": "B2D-C3mS1TZX-BG-CO33-t17",
+     "source_dir": "2026-09-29_B2D-C3mS1TZX-BG-CO33-t17"
+    },
+    {
+     "h5_sha256": "c527e20bb0b481e7c6b3fa56a5a8cea0ddde16d14e22ede99f06f0e284e75f98",
+     "run_id": "B2D-C3mS1TZX-BG-CO33-t18",
+     "source_dir": "2026-09-29_B2D-C3mS1TZX-BG-CO33-t18"
+    },
+    {
+     "h5_sha256": "e1ffb000d00e9fbb6017836b49ade1942050f6b17bed6b1ed57b4e4295bf989f",
+     "run_id": "B2D-C3mS1TZX-BG-CO33-t19",
+     "source_dir": "2026-09-29_B2D-C3mS1TZX-BG-CO33-t19"
+    },
+    {
+     "h5_sha256": "9518bda11e4d37463e2d26d3be8b7fb9fac152a4aa4627bdf720ed6647f1155d",
+     "run_id": "B2D-C3mS1TZX-BG-CO33-t20",
+     "source_dir": "2026-09-29_B2D-C3mS1TZX-BG-CO33-t20"
+    },
+    {
+     "h5_sha256": "2818c15044e2536ec06855d9840945e69ae8533920b1a13be2b1c222cf3f5eca",
+     "run_id": "B2D-C3mS1TZX-BG-CO33-t21",
+     "source_dir": "2026-09-29_B2D-C3mS1TZX-BG-CO33-t21"
+    },
+    {
+     "h5_sha256": "7aeb4e4cd4dce3aaa89f42d03c44774f58639d89bbec8a8f541b161f29f86e80",
+     "run_id": "B2D-C3mS1TZX-BG-CO33-t22",
+     "source_dir": "2026-09-29_B2D-C3mS1TZX-BG-CO33-t22"
+    },
+    {
+     "h5_sha256": "f19eca040322883afe05e6f013b8eda3fca7ec65b2e7af04de3cc3636c96f20a",
+     "run_id": "B2D-C3mS1TZX-BG-CO33-t23",
+     "source_dir": "2026-09-29_B2D-C3mS1TZX-BG-CO33-t23"
+    },
+    {
+     "h5_sha256": "f8981ef9a1d3a53fe7a38651ec7963bfe479a6e5d2bbd426c00aa9e0f321e3ef",
+     "run_id": "B2D-C3mS1TZX-BG-CO33-t24",
+     "source_dir": "2026-09-29_B2D-C3mS1TZX-BG-CO33-t24"
+    },
+    {
+     "h5_sha256": "ee066e0ef15c7f99e5eeef387809a8b3b4756a67b499eaa19618b04292a52934",
+     "run_id": "B2D-C3mS1TZX-BG-CO33-t25",
+     "source_dir": "2026-09-29_B2D-C3mS1TZX-BG-CO33-t25_att2"
+    },
+    {
+     "h5_sha256": "1b89d2ed9fabb222fa79de0fb574a5fbd690b03db09767cbe2a673c0905dd6e9",
+     "run_id": "B2D-C3mS1TZX-BG-CO33-t26",
+     "source_dir": "2026-09-29_B2D-C3mS1TZX-BG-CO33-t26"
+    },
+    {
+     "h5_sha256": "d5a96cda138e876cad66186c8525475d7ab37f0045ea8b338293874397a90d71",
+     "run_id": "B2D-C3mS1TZX-BG-CO33-t27",
+     "source_dir": "2026-09-29_B2D-C3mS1TZX-BG-CO33-t27"
+    },
+    {
+     "h5_sha256": "72dc875e1b8019eeca61a84a2fda31e1647cb1e288b87f8c35799be98c695f6c",
+     "run_id": "B2D-C3mS1TZX-BG-CO33-t28",
+     "source_dir": "2026-09-29_B2D-C3mS1TZX-BG-CO33-t28"
+    },
+    {
+     "h5_sha256": "20da046aadb427aa4222488e31f08e8680f7a65e395b167468df1862f561a775",
+     "run_id": "B2D-C3mS1TZX-BG-CO33-t29",
+     "source_dir": "2026-09-29_B2D-C3mS1TZX-BG-CO33-t29"
+    },
+    {
+     "h5_sha256": "3b1e0ebd5df23784bca35ed34b8a6353a8258aeb15ee4b0b67467de00c84ce45",
+     "run_id": "B2D-C3mS1TZX-BG-CO33-t30",
+     "source_dir": "2026-09-29_B2D-C3mS1TZX-BG-CO33-t30"
+    },
+    {
+     "h5_sha256": "0a8f6d852cb4702c48e95ee05755ad5268e6dc14124233e446bffb5846d69bbd",
+     "run_id": "B2D-C3mS1TZX-BG-CO33-t31",
+     "source_dir": "2026-09-29_B2D-C3mS1TZX-BG-CO33-t31"
+    },
+    {
+     "h5_sha256": "0ba5787947a7967ca954dfe45b6a386ba0261d2dfd028fcd6e083e43d114c605",
+     "run_id": "B2D-C3mS1TZX-BG-CO33-t32",
+     "source_dir": "2026-09-29_B2D-C3mS1TZX-BG-CO33-t32"
+    },
+    {
+     "h5_sha256": "16de298c6fcea215f260b4d873ace6461401f2ccc6bccf9b13ce64e0576c8580",
+     "run_id": "B2D-C3mS1TZX-BG-CO33-t33",
+     "source_dir": "2026-09-29_B2D-C3mS1TZX-BG-CO33-t33"
+    }
+   ],
+   "max_abs_delta_ns": 3.059,
+   "nc_window": {
+    "fermat_band_upper_ns": 196.5408,
+    "measured_band_upper_ns": 196.2941,
+    "measured_clearance_ns": 53.7059,
+    "nc_rms_mean": 0.000977401096,
+    "ns": [
+     250.0,
+     400.0
+    ],
+    "pre_event_floor_rms_mean": 3.038389260773
+   },
+   "t_fermat_er16_ns": [
+    182.1531,
+    181.4893,
+    180.8255,
+    180.1617,
+    179.4979,
+    178.834,
+    178.1705,
+    177.5066,
+    176.8427,
+    176.1789,
+    175.5154,
+    174.8516,
+    174.1876,
+    173.5237,
+    172.8603,
+    172.1967,
+    171.5322,
+    170.8683,
+    170.205,
+    169.5412,
+    168.8768,
+    168.213,
+    167.5498,
+    166.8858,
+    166.2215,
+    165.5578,
+    164.8948,
+    164.2306,
+    163.5663,
+    162.9028,
+    162.2396,
+    161.5754,
+    160.9112
+   ],
+   "t_fermat_er18_ns": [
+    186.5408,
+    185.8371,
+    185.1325,
+    184.4283,
+    183.7247,
+    183.0209,
+    182.3163,
+    181.6121,
+    180.9083,
+    180.2047,
+    179.4998,
+    178.7956,
+    178.0919,
+    177.3881,
+    176.6833,
+    175.9792,
+    175.2757,
+    174.5717,
+    173.867,
+    173.163,
+    172.4596,
+    171.7553,
+    171.0508,
+    170.3468,
+    169.6433,
+    168.9391,
+    168.2345,
+    167.5304,
+    166.8269,
+    166.1227,
+    165.418,
+    164.714,
+    164.0107
+   ],
+   "t_measured_ns": [
+    183.7991,
+    186.2941,
+    182.9674,
+    185.4624,
+    182.1357,
+    184.6307,
+    181.3041,
+    183.7991,
+    180.4724,
+    177.1457,
+    179.6407,
+    176.314,
+    178.809,
+    175.4824,
+    177.9774,
+    174.6507,
+    174.6507,
+    173.819,
+    173.819,
+    172.9874,
+    172.9874,
+    172.1557,
+    172.1557,
+    168.829,
+    167.9973,
+    167.9973,
+    167.1657,
+    167.1657,
+    166.334,
+    166.334,
+    165.5023,
+    165.5023,
+    162.1756
+   ]
+  },
+  "S1X": {
+   "delta_measured_minus_fermat_ns": [
+    0.5849,
+    -2.038,
+    1.1616,
+    -1.4609,
+    1.7377,
+    -0.8852,
+    -0.1806,
+    -0.308,
+    0.3958,
+    0.2677,
+    0.9726,
+    0.8451,
+    -1.7779,
+    -1.0741,
+    -1.2009,
+    -0.4968,
+    -0.625,
+    0.079,
+    -0.048,
+    0.656,
+    0.5278,
+    1.2321,
+    -1.3901,
+    1.8089,
+    -0.8143,
+    2.3849,
+    -0.2372,
+    -0.3647,
+    0.3388,
+    -2.2837,
+    0.916,
+    -1.7067,
+    1.4916
+   ],
+   "event_window": {
+    "anchor": "geometry+Fermat, frozen before any candidate run (reward draft §3.2; v0.2 §2); measured peaks are registered diagnostics, never re-anchored",
+    "definition": "per trace k: [t_fermat_er18(k)-10, t_fermat_er18(k)+10] ns",
+    "half_width_ns": 10.0
+   },
+   "geometry": {
+    "domain_y_m": 50.0,
+    "outcrop_y_lo_m": 45.75,
+    "tan_theta": 0.1,
+    "theta_eff_deg": 5.713826,
+    "zc_m": 27.0
+   },
+   "inputs": [
+    {
+     "h5_sha256": "a3a3df4d14520819a967a222f0f39b60b1c83bcafa0d7fecb4df212ffd09d529",
+     "run_id": "B2D-C3mS1X-BG-CO33-t01",
+     "source_dir": "2026-09-29_B2D-C3mS1X-BG-CO33-t01"
+    },
+    {
+     "h5_sha256": "2b98c1402d8c760c3fecdc459a15c3dce73572b8ec12d3af7b0f836d395ff011",
+     "run_id": "B2D-C3mS1X-BG-CO33-t02",
+     "source_dir": "2026-09-29_B2D-C3mS1X-BG-CO33-t02"
+    },
+    {
+     "h5_sha256": "b2aa1266929b7bfa3e2685ffa89eeb3b382789ec40d6907a8060deaf75bebc13",
+     "run_id": "B2D-C3mS1X-BG-CO33-t03",
+     "source_dir": "2026-09-29_B2D-C3mS1X-BG-CO33-t03"
+    },
+    {
+     "h5_sha256": "9f12da2894c684f3ef75854ecffee4fd5894bb25717a4aaff2b44c4fb6c64227",
+     "run_id": "B2D-C3mS1X-BG-CO33-t04",
+     "source_dir": "2026-09-29_B2D-C3mS1X-BG-CO33-t04"
+    },
+    {
+     "h5_sha256": "18018f139a9e719fd88a095e56478ff0ac8847f88b4dc6d2bb954a459d1ebc80",
+     "run_id": "B2D-C3mS1X-BG-CO33-t05",
+     "source_dir": "2026-09-29_B2D-C3mS1X-BG-CO33-t05"
+    },
+    {
+     "h5_sha256": "6067731d9ae7929aa67e434c5aab45259d30de484495c6f7000f025ad7437886",
+     "run_id": "B2D-C3mS1X-BG-CO33-t06",
+     "source_dir": "2026-09-29_B2D-C3mS1X-BG-CO33-t06"
+    },
+    {
+     "h5_sha256": "d9dd0d711898619ec68e19345a9fb769dad4dabc642624603480b1a1bacaa46b",
+     "run_id": "B2D-C3mS1X-BG-CO33-t07",
+     "source_dir": "2026-09-29_B2D-C3mS1X-BG-CO33-t07_att2"
+    },
+    {
+     "h5_sha256": "a795434d66e9e2fa41342cbd9d7c7162671c602e53bd8cfacd1c75ccae568c57",
+     "run_id": "B2D-C3mS1X-BG-CO33-t08",
+     "source_dir": "2026-09-29_B2D-C3mS1X-BG-CO33-t08"
+    },
+    {
+     "h5_sha256": "13e00aca6a9409b486eabb5692cd5aef23499c785cf9409c951898d6871f143b",
+     "run_id": "B2D-C3mS1X-BG-CO33-t09",
+     "source_dir": "2026-09-29_B2D-C3mS1X-BG-CO33-t09"
+    },
+    {
+     "h5_sha256": "ea168a6bb85db83a8dc86245f4e56e9e69ea22838600ea3a36fdcaa529317b6d",
+     "run_id": "B2D-C3mS1X-BG-CO33-t10",
+     "source_dir": "2026-09-29_B2D-C3mS1X-BG-CO33-t10"
+    },
+    {
+     "h5_sha256": "303f7ee27d5c95b9c5960c841eb4de81e5ee27eb58c7add19f16035f72c07aff",
+     "run_id": "B2D-C3mS1X-BG-CO33-t11",
+     "source_dir": "2026-09-29_B2D-C3mS1X-BG-CO33-t11"
+    },
+    {
+     "h5_sha256": "747aa8d8550fe76f9e6d6769391bf590c5a9ed70da3e75fdd907f735385dd1ab",
+     "run_id": "B2D-C3mS1X-BG-CO33-t12",
+     "source_dir": "2026-09-29_B2D-C3mS1X-BG-CO33-t12"
+    },
+    {
+     "h5_sha256": "07809990375f1eb5ac9214b41455d34f09d4151255ec8aa68b6e27ba2b0b34ae",
+     "run_id": "B2D-C3mS1X-BG-CO33-t13",
+     "source_dir": "2026-09-29_B2D-C3mS1X-BG-CO33-t13"
+    },
+    {
+     "h5_sha256": "3cc459afd24bcf8d73131cc5f65cfd8c84757968c32a76f747d3f8c6ca9dbfbf",
+     "run_id": "B2D-C3mS1X-BG-CO33-t14",
+     "source_dir": "2026-09-29_B2D-C3mS1X-BG-CO33-t14"
+    },
+    {
+     "h5_sha256": "5ffce87cac3d90b5006eabf3723985327261830f00cea0fc9dda3b39e1e446c0",
+     "run_id": "B2D-C3mS1X-BG-CO33-t15",
+     "source_dir": "2026-09-29_B2D-C3mS1X-BG-CO33-t15"
+    },
+    {
+     "h5_sha256": "9a44de0e9acffc71c7d42fb47fcd32a2539fe8a8e5d6759334011200137a8b6a",
+     "run_id": "B2D-C3mS1X-BG-CO33-t16",
+     "source_dir": "2026-09-29_B2D-C3mS1X-BG-CO33-t16_att2"
+    },
+    {
+     "h5_sha256": "7268abf7fdf988232441505437368db1067b77f290595d5db3bd8f1b6e3f7fbf",
+     "run_id": "B2D-C3mS1X-BG-CO33-t17",
+     "source_dir": "2026-09-29_B2D-C3mS1X-BG-CO33-t17"
+    },
+    {
+     "h5_sha256": "287cd89d20878e4a6871db38ca8051bee26ec77427ebb7b4617c492cf4c6f0c0",
+     "run_id": "B2D-C3mS1X-BG-CO33-t18",
+     "source_dir": "2026-09-29_B2D-C3mS1X-BG-CO33-t18"
+    },
+    {
+     "h5_sha256": "3e901363a917c8ee176ebb081381517fe5b1cf3907184f90bdec8fc5341085e2",
+     "run_id": "B2D-C3mS1X-BG-CO33-t19",
+     "source_dir": "2026-09-29_B2D-C3mS1X-BG-CO33-t19"
+    },
+    {
+     "h5_sha256": "e5b5f8f670e60558a936a1f486184c89a2d3989bebbc727306e004f2d4b62e50",
+     "run_id": "B2D-C3mS1X-BG-CO33-t20",
+     "source_dir": "2026-09-29_B2D-C3mS1X-BG-CO33-t20"
+    },
+    {
+     "h5_sha256": "683a594e67dd03886934a9062274b0aff4e638c6b97c3c5090701c0d257a2b3e",
+     "run_id": "B2D-C3mS1X-BG-CO33-t21",
+     "source_dir": "2026-09-29_B2D-C3mS1X-BG-CO33-t21"
+    },
+    {
+     "h5_sha256": "2fed2e70dbe8601ae183e66ad8c656a0567db45bbf1a5631f16869bd4daf08c1",
+     "run_id": "B2D-C3mS1X-BG-CO33-t22",
+     "source_dir": "2026-09-29_B2D-C3mS1X-BG-CO33-t22"
+    },
+    {
+     "h5_sha256": "07332c3a09da1434b0381f0ddc3118c12c7b62fbc8ec2f2d4aeaa0ad26ea97d1",
+     "run_id": "B2D-C3mS1X-BG-CO33-t23",
+     "source_dir": "2026-09-29_B2D-C3mS1X-BG-CO33-t23"
+    },
+    {
+     "h5_sha256": "ccaabc87614fbfaf4fa8c8d013b62c24e35516cfce7b7c02df2e346a666d5515",
+     "run_id": "B2D-C3mS1X-BG-CO33-t24",
+     "source_dir": "2026-09-29_B2D-C3mS1X-BG-CO33-t24"
+    },
+    {
+     "h5_sha256": "6ad243da7f59f825dce6fe8fa642586c7c2eff5c1b781595f2dee816dcb20491",
+     "run_id": "B2D-C3mS1X-BG-CO33-t25",
+     "source_dir": "2026-09-29_B2D-C3mS1X-BG-CO33-t25_att2"
+    },
+    {
+     "h5_sha256": "4c9ad0251e030adcce958a3083fa975f2539ee29dd48f36146d4c0dbea5f40b2",
+     "run_id": "B2D-C3mS1X-BG-CO33-t26",
+     "source_dir": "2026-09-29_B2D-C3mS1X-BG-CO33-t26"
+    },
+    {
+     "h5_sha256": "7000a72400f129032660c478ed6874c946ee9201b43ae6a5d5a092a115a90b16",
+     "run_id": "B2D-C3mS1X-BG-CO33-t27",
+     "source_dir": "2026-09-29_B2D-C3mS1X-BG-CO33-t27"
+    },
+    {
+     "h5_sha256": "7f5f7ba28d2ddeb7f08ef75951039cb277dc029cc79a42260133af6c9b86f6e5",
+     "run_id": "B2D-C3mS1X-BG-CO33-t28",
+     "source_dir": "2026-09-29_B2D-C3mS1X-BG-CO33-t28"
+    },
+    {
+     "h5_sha256": "f30175ff2a502873bd8a256412e988ecc4c5d9d4f2b036f1da8abce482f06890",
+     "run_id": "B2D-C3mS1X-BG-CO33-t29",
+     "source_dir": "2026-09-29_B2D-C3mS1X-BG-CO33-t29"
+    },
+    {
+     "h5_sha256": "60dbd715248af47c435b59da3dd2554d2042e52e8b6e32762dcec48eece01b69",
+     "run_id": "B2D-C3mS1X-BG-CO33-t30",
+     "source_dir": "2026-09-29_B2D-C3mS1X-BG-CO33-t30"
+    },
+    {
+     "h5_sha256": "efd41387ad43471ca97e6e613bdfb557fdda49973e019d4b39961b4c8c345887",
+     "run_id": "B2D-C3mS1X-BG-CO33-t31",
+     "source_dir": "2026-09-29_B2D-C3mS1X-BG-CO33-t31"
+    },
+    {
+     "h5_sha256": "a92ca7808ec0b84c5409b386770c2828cc5748f2d70be0af402929322b4fe466",
+     "run_id": "B2D-C3mS1X-BG-CO33-t32",
+     "source_dir": "2026-09-29_B2D-C3mS1X-BG-CO33-t32"
+    },
+    {
+     "h5_sha256": "8e1acc7d55830c5ac9d6d030e2817b9dcb18346bb1cd9e7d86df5806fa2aed1e",
+     "run_id": "B2D-C3mS1X-BG-CO33-t33",
+     "source_dir": "2026-09-29_B2D-C3mS1X-BG-CO33-t33"
+    }
+   ],
+   "max_abs_delta_ns": 2.3849,
+   "nc_window": {
+    "fermat_band_upper_ns": 196.5408,
+    "measured_band_upper_ns": 197.1257,
+    "measured_clearance_ns": 52.8743,
+    "nc_rms_mean": 0.0004165575,
+    "ns": [
+     250.0,
+     400.0
+    ],
+    "pre_event_floor_rms_mean": 3.038389231913
+   },
+   "t_fermat_er16_ns": [
+    182.1531,
+    181.4893,
+    180.8255,
+    180.1617,
+    179.4979,
+    178.834,
+    178.1705,
+    177.5066,
+    176.8427,
+    176.1789,
+    175.5154,
+    174.8516,
+    174.1876,
+    173.5237,
+    172.8603,
+    172.1967,
+    171.5322,
+    170.8683,
+    170.205,
+    169.5412,
+    168.8768,
+    168.213,
+    167.5498,
+    166.8858,
+    166.2215,
+    165.5578,
+    164.8948,
+    164.2306,
+    163.5663,
+    162.9028,
+    162.2396,
+    161.5754,
+    160.9112
+   ],
+   "t_fermat_er18_ns": [
+    186.5408,
+    185.8371,
+    185.1325,
+    184.4283,
+    183.7247,
+    183.0209,
+    182.3163,
+    181.6121,
+    180.9083,
+    180.2047,
+    179.4998,
+    178.7956,
+    178.0919,
+    177.3881,
+    176.6833,
+    175.9792,
+    175.2757,
+    174.5717,
+    173.867,
+    173.163,
+    172.4596,
+    171.7553,
+    171.0508,
+    170.3468,
+    169.6433,
+    168.9391,
+    168.2345,
+    167.5304,
+    166.8269,
+    166.1227,
+    165.418,
+    164.714,
+    164.0107
+   ],
+   "t_measured_ns": [
+    187.1257,
+    183.7991,
+    186.2941,
+    182.9674,
+    185.4624,
+    182.1357,
+    182.1357,
+    181.3041,
+    181.3041,
+    180.4724,
+    180.4724,
+    179.6407,
+    176.314,
+    176.314,
+    175.4824,
+    175.4824,
+    174.6507,
+    174.6507,
+    173.819,
+    173.819,
+    172.9874,
+    172.9874,
+    169.6607,
+    172.1557,
+    168.829,
+    171.324,
+    167.9973,
+    167.1657,
+    167.1657,
+    163.839,
+    166.334,
+    163.0073,
+    165.5023
+   ]
+  },
+  "S3TZX": {
+   "delta_measured_minus_fermat_ns": [
+    -0.0666,
+    -2.8399,
+    1.0353,
+    1.579,
+    -1.2092,
+    -0.6759,
+    -2.643,
+    1.2061,
+    -1.6037,
+    -1.0925,
+    -0.5873,
+    -0.088,
+    1.2367,
+    -1.6031,
+    -1.1228,
+    -0.6492,
+    0.6494,
+    1.1094,
+    -1.7645,
+    -1.319,
+    -0.0493,
+    0.3811,
+    0.8036,
+    -2.1086,
+    -0.8707,
+    -0.4731,
+    -0.0841,
+    0.296,
+    -1.828,
+    -1.4664,
+    2.2123,
+    2.5544,
+    -2.9352
+   ],
+   "event_window": {
+    "anchor": "geometry+Fermat, frozen before any candidate run (reward draft §3.2; v0.2 §2); measured peaks are registered diagnostics, never re-anchored",
+    "definition": "per trace k: [t_fermat_er18(k)-10, t_fermat_er18(k)+10] ns",
+    "half_width_ns": 10.0
+   },
+   "geometry": {
+    "domain_y_m": 40.0,
+    "outcrop_y_lo_m": 34.5,
+    "tan_theta": 0.4,
+    "theta_eff_deg": 21.801409,
+    "zc_m": 22.6
+   },
+   "inputs": [
+    {
+     "h5_sha256": "60322932b4b9d3855705ecc9d8852966ed568de7c7eb9b7a52295f39a7f13c1d",
+     "run_id": "B2D-C3mS3TZX-BG-CO33-t01",
+     "source_dir": "2026-09-29_B2D-C3mS3TZX-BG-CO33-t01"
+    },
+    {
+     "h5_sha256": "bf00de9140c5c13fa60763a6c3687ce668b8143678c0fb69692feb9ae800d63c",
+     "run_id": "B2D-C3mS3TZX-BG-CO33-t02",
+     "source_dir": "2026-09-29_B2D-C3mS3TZX-BG-CO33-t02"
+    },
+    {
+     "h5_sha256": "00ee6aa32ae9549d5798bb4e537382fc930efccd2b375824ee375e24ca54bba5",
+     "run_id": "B2D-C3mS3TZX-BG-CO33-t03",
+     "source_dir": "2026-09-29_B2D-C3mS3TZX-BG-CO33-t03"
+    },
+    {
+     "h5_sha256": "012ec62f332b71e745b819766a06a4e66734a34f67681ef9e9ce1a553f3d477e",
+     "run_id": "B2D-C3mS3TZX-BG-CO33-t04",
+     "source_dir": "2026-09-29_B2D-C3mS3TZX-BG-CO33-t04"
+    },
+    {
+     "h5_sha256": "2eef2e77a43fdb3c0e6069cc5e4eee24da95bef0bf01449d3abcc3b126189da2",
+     "run_id": "B2D-C3mS3TZX-BG-CO33-t05",
+     "source_dir": "2026-09-29_B2D-C3mS3TZX-BG-CO33-t05"
+    },
+    {
+     "h5_sha256": "ab1742da42cc5b8725d7a8538d5830d036135bc6a07b6cff0306e303ead581c3",
+     "run_id": "B2D-C3mS3TZX-BG-CO33-t06",
+     "source_dir": "2026-09-29_B2D-C3mS3TZX-BG-CO33-t06"
+    },
+    {
+     "h5_sha256": "9c3d6deab0da30f89a93f348e759736f580e65939715178f5d32495f85d0a0b0",
+     "run_id": "B2D-C3mS3TZX-BG-CO33-t07",
+     "source_dir": "2026-09-29_B2D-C3mS3TZX-BG-CO33-t07"
+    },
+    {
+     "h5_sha256": "988f29a5b9436d3380bedadac275a66d3e8d9da7a77227fea1808cbab122b96d",
+     "run_id": "B2D-C3mS3TZX-BG-CO33-t08",
+     "source_dir": "2026-09-29_B2D-C3mS3TZX-BG-CO33-t08"
+    },
+    {
+     "h5_sha256": "32b98e1d5a1a07baffa3ba64feb10f16f062862f371a2d164ca31556210c28f8",
+     "run_id": "B2D-C3mS3TZX-BG-CO33-t09",
+     "source_dir": "2026-09-29_B2D-C3mS3TZX-BG-CO33-t09"
+    },
+    {
+     "h5_sha256": "6958742a8ec53d7e0dda4867c497f7c5bbace43b9832cd412a9651da2df79cfb",
+     "run_id": "B2D-C3mS3TZX-BG-CO33-t10",
+     "source_dir": "2026-09-29_B2D-C3mS3TZX-BG-CO33-t10_att2"
+    },
+    {
+     "h5_sha256": "7e1f7ca6c04913bb4b8b410aa844ae2ef349d83da95b28de633fe2a38df3a071",
+     "run_id": "B2D-C3mS3TZX-BG-CO33-t11",
+     "source_dir": "2026-09-29_B2D-C3mS3TZX-BG-CO33-t11"
+    },
+    {
+     "h5_sha256": "618ef988b6c52784da10a449f6f13e30883678483e48855efe438b7d1b498225",
+     "run_id": "B2D-C3mS3TZX-BG-CO33-t12",
+     "source_dir": "2026-09-29_B2D-C3mS3TZX-BG-CO33-t12"
+    },
+    {
+     "h5_sha256": "ab505afb0cdabc45c5efc7304c4145e946fc2ab1864b916263905a2366f9707f",
+     "run_id": "B2D-C3mS3TZX-BG-CO33-t13",
+     "source_dir": "2026-09-29_B2D-C3mS3TZX-BG-CO33-t13"
+    },
+    {
+     "h5_sha256": "0369d525ef9d072454c1db7b3a6b816dfa6260de70ac46571c9aa773b09ed375",
+     "run_id": "B2D-C3mS3TZX-BG-CO33-t14",
+     "source_dir": "2026-09-29_B2D-C3mS3TZX-BG-CO33-t14"
+    },
+    {
+     "h5_sha256": "bfeea875ab0020f5885ce60a8120efded687313e6ba9048452214455173d37fe",
+     "run_id": "B2D-C3mS3TZX-BG-CO33-t15",
+     "source_dir": "2026-09-29_B2D-C3mS3TZX-BG-CO33-t15"
+    },
+    {
+     "h5_sha256": "f4cd028b66c36542bbc6fae1d503b021c434b1b7f0cfe3f6080af242b9c0bba6",
+     "run_id": "B2D-C3mS3TZX-BG-CO33-t16",
+     "source_dir": "2026-09-29_B2D-C3mS3TZX-BG-CO33-t16"
+    },
+    {
+     "h5_sha256": "fc2c5153ddbe3a93405c94ccb3a1a92b8811d88d9f53d12bc7b6a45cef331f34",
+     "run_id": "B2D-C3mS3TZX-BG-CO33-t17",
+     "source_dir": "2026-09-29_B2D-C3mS3TZX-BG-CO33-t17"
+    },
+    {
+     "h5_sha256": "d31511a1bbe39b9610968058cfd5183af075b6d2545483818eb7a1e078d91dfd",
+     "run_id": "B2D-C3mS3TZX-BG-CO33-t18",
+     "source_dir": "2026-09-29_B2D-C3mS3TZX-BG-CO33-t18"
+    },
+    {
+     "h5_sha256": "8b43efd35b3ec1a2c3dae207f7344cbbf8613e7522d6ce26e33cf48319bf5aa2",
+     "run_id": "B2D-C3mS3TZX-BG-CO33-t19",
+     "source_dir": "2026-09-29_B2D-C3mS3TZX-BG-CO33-t19"
+    },
+    {
+     "h5_sha256": "a13a8c8497729d350be2f22ea1ddc848fc14cc913e51aa092d5069a12cb6d850",
+     "run_id": "B2D-C3mS3TZX-BG-CO33-t20",
+     "source_dir": "2026-09-29_B2D-C3mS3TZX-BG-CO33-t20"
+    },
+    {
+     "h5_sha256": "9e6598fa1b1a1e6c4fa44eaa094fae6e1b853a0fdd7b985df2af41cfc577cef6",
+     "run_id": "B2D-C3mS3TZX-BG-CO33-t21",
+     "source_dir": "2026-09-29_B2D-C3mS3TZX-BG-CO33-t21_att2"
+    },
+    {
+     "h5_sha256": "8f63a5bb6103ececf49da8e14b6af5eaa9a39c7cfc596993d6bd0fc457af68bb",
+     "run_id": "B2D-C3mS3TZX-BG-CO33-t22",
+     "source_dir": "2026-09-29_B2D-C3mS3TZX-BG-CO33-t22"
+    },
+    {
+     "h5_sha256": "b9984d795266dcfb8d0a521a13b687b99ba1941c106f47e35227d49a244f0ed7",
+     "run_id": "B2D-C3mS3TZX-BG-CO33-t23",
+     "source_dir": "2026-09-29_B2D-C3mS3TZX-BG-CO33-t23"
+    },
+    {
+     "h5_sha256": "4d662de316052bd82cb0426dfd4fbdd0d17b4ba531c94ddd3c3344a2d927ac31",
+     "run_id": "B2D-C3mS3TZX-BG-CO33-t24",
+     "source_dir": "2026-09-29_B2D-C3mS3TZX-BG-CO33-t24"
+    },
+    {
+     "h5_sha256": "e05166fdb3a4aae0b3bc26eac99d7603fd006ce65e27c2af66ba240a6579fdb8",
+     "run_id": "B2D-C3mS3TZX-BG-CO33-t25",
+     "source_dir": "2026-09-29_B2D-C3mS3TZX-BG-CO33-t25"
+    },
+    {
+     "h5_sha256": "3bf59e9100975f66fb43f63e6ac70a97946d5811e2e4b8a25f4aa7c3b10a5721",
+     "run_id": "B2D-C3mS3TZX-BG-CO33-t26",
+     "source_dir": "2026-09-29_B2D-C3mS3TZX-BG-CO33-t26"
+    },
+    {
+     "h5_sha256": "77ee820fa13b620f1975ad0c970c738bd04282d29d372a2aa21744ca5e4268e9",
+     "run_id": "B2D-C3mS3TZX-BG-CO33-t27",
+     "source_dir": "2026-09-29_B2D-C3mS3TZX-BG-CO33-t27"
+    },
+    {
+     "h5_sha256": "04213a8cc517c408b085713e8530de98d24d9a9039ff5669b3feb303e1af0d01",
+     "run_id": "B2D-C3mS3TZX-BG-CO33-t28",
+     "source_dir": "2026-09-29_B2D-C3mS3TZX-BG-CO33-t28"
+    },
+    {
+     "h5_sha256": "17631804497d1dffa788767be3542cd8d0083bfafaed23595621436904baa005",
+     "run_id": "B2D-C3mS3TZX-BG-CO33-t29",
+     "source_dir": "2026-09-29_B2D-C3mS3TZX-BG-CO33-t29"
+    },
+    {
+     "h5_sha256": "d361500401568bccad9bfb98ac7827fd46b0fa6643956721a01c2922780e9a99",
+     "run_id": "B2D-C3mS3TZX-BG-CO33-t30",
+     "source_dir": "2026-09-29_B2D-C3mS3TZX-BG-CO33-t30"
+    },
+    {
+     "h5_sha256": "9cc1fa8d0c8e6d4d3bf14b83250d3f562c4a809e04baadbcaa54dccd2fa24f02",
+     "run_id": "B2D-C3mS3TZX-BG-CO33-t31",
+     "source_dir": "2026-09-29_B2D-C3mS3TZX-BG-CO33-t31"
+    },
+    {
+     "h5_sha256": "5d931d7489e1c5edd3eeb7fe6fa8b05675605330b13530a928857931f22f3b9b",
+     "run_id": "B2D-C3mS3TZX-BG-CO33-t32",
+     "source_dir": "2026-09-29_B2D-C3mS3TZX-BG-CO33-t32_att2"
+    },
+    {
+     "h5_sha256": "0a461966324f11f6c35d0807dabae9a6dde84d6b7b2ff984aa4aed0586146523",
+     "run_id": "B2D-C3mS3TZX-BG-CO33-t33",
+     "source_dir": "2026-09-29_B2D-C3mS3TZX-BG-CO33-t33"
+    }
+   ],
+   "max_abs_delta_ns": 2.9352,
+   "nc_window": {
+    "fermat_band_upper_ns": 190.539,
+    "measured_band_upper_ns": 190.4724,
+    "measured_clearance_ns": 59.5276,
+    "nc_rms_mean": 0.000184199164,
+    "ns": [
+     250.0,
+     400.0
+    ],
+    "pre_event_floor_rms_mean": 3.038395875632
+   },
+   "t_fermat_er16_ns": [
+    180.5345,
+    179.1494,
+    177.7692,
+    176.3939,
+    175.0238,
+    173.6588,
+    172.2992,
+    170.9451,
+    169.5966,
+    168.2537,
+    166.9168,
+    165.5859,
+    164.2611,
+    162.9427,
+    161.6307,
+    160.3253,
+    159.0267,
+    157.7351,
+    156.4506,
+    155.1734,
+    153.9037,
+    152.6417,
+    151.3875,
+    150.1414,
+    148.9036,
+    147.6742,
+    146.4535,
+    145.2418,
+    144.0391,
+    142.8459,
+    141.6622,
+    140.4883,
+    139.3246
+   ],
+   "t_fermat_er18_ns": [
+    180.539,
+    179.1539,
+    177.7737,
+    176.3984,
+    175.0282,
+    173.6633,
+    172.3037,
+    170.9496,
+    169.601,
+    168.2582,
+    166.9213,
+    165.5903,
+    164.2656,
+    162.9471,
+    161.6351,
+    160.3298,
+    159.0312,
+    157.7396,
+    156.4551,
+    155.1779,
+    153.9082,
+    152.6462,
+    151.392,
+    150.1459,
+    148.908,
+    147.6787,
+    146.458,
+    145.2462,
+    144.0436,
+    142.8503,
+    141.6666,
+    140.4928,
+    139.3291
+   ],
+   "t_measured_ns": [
+    180.4724,
+    176.314,
+    178.809,
+    177.9774,
+    173.819,
+    172.9874,
+    169.6607,
+    172.1557,
+    167.9973,
+    167.1657,
+    166.334,
+    165.5023,
+    165.5023,
+    161.344,
+    160.5123,
+    159.6806,
+    159.6806,
+    158.849,
+    154.6906,
+    153.8589,
+    153.8589,
+    153.0273,
+    152.1956,
+    148.0373,
+    148.0373,
+    147.2056,
+    146.3739,
+    145.5422,
+    142.2156,
+    141.3839,
+    143.8789,
+    143.0472,
+    136.3939
+   ]
+  },
+  "S3X": {
+   "delta_measured_minus_fermat_ns": [
+    -0.0666,
+    0.4868,
+    1.0353,
+    1.579,
+    -0.3775,
+    0.1557,
+    0.6837,
+    1.2061,
+    1.723,
+    -0.2609,
+    0.2444,
+    0.7437,
+    1.2367,
+    1.7236,
+    -0.2911,
+    0.1825,
+    0.6494,
+    1.1094,
+    1.5622,
+    -0.4873,
+    -0.0493,
+    0.3811,
+    0.8036,
+    -1.277,
+    -0.8707,
+    -0.4731,
+    3.2426,
+    3.6227,
+    -1.828,
+    -1.4664,
+    2.2123,
+    0.0594,
+    0.3915
+   ],
+   "event_window": {
+    "anchor": "geometry+Fermat, frozen before any candidate run (reward draft §3.2; v0.2 §2); measured peaks are registered diagnostics, never re-anchored",
+    "definition": "per trace k: [t_fermat_er18(k)-10, t_fermat_er18(k)+10] ns",
+    "half_width_ns": 10.0
+   },
+   "geometry": {
+    "domain_y_m": 40.0,
+    "outcrop_y_lo_m": 34.5,
+    "tan_theta": 0.4,
+    "theta_eff_deg": 21.801409,
+    "zc_m": 22.6
+   },
+   "inputs": [
+    {
+     "h5_sha256": "42baf792c7db8b08b955f2299b7bbf3e809fd8574976bede216f4bec12e2d9de",
+     "run_id": "B2D-C3mS3X-BG-CO33-t01",
+     "source_dir": "2026-09-29_B2D-C3mS3X-BG-CO33-t01"
+    },
+    {
+     "h5_sha256": "8369a9ee74be4a8005345d7bc69c42248aa112e5dd9117dc791496ffa6659738",
+     "run_id": "B2D-C3mS3X-BG-CO33-t02",
+     "source_dir": "2026-09-29_B2D-C3mS3X-BG-CO33-t02"
+    },
+    {
+     "h5_sha256": "1997f5462520b437fb5459da2000553264bcbed20505bdb686bdb21b07458adb",
+     "run_id": "B2D-C3mS3X-BG-CO33-t03",
+     "source_dir": "2026-09-29_B2D-C3mS3X-BG-CO33-t03"
+    },
+    {
+     "h5_sha256": "ae1064a512d2475c1b37d4883225d5f03059ed288d41566f3d70ac514bbfadd8",
+     "run_id": "B2D-C3mS3X-BG-CO33-t04",
+     "source_dir": "2026-09-29_B2D-C3mS3X-BG-CO33-t04"
+    },
+    {
+     "h5_sha256": "2b629cb27f4707f76ba2612511936b1e77e33c715d5fa1b34f5cf821a7b59147",
+     "run_id": "B2D-C3mS3X-BG-CO33-t05",
+     "source_dir": "2026-09-29_B2D-C3mS3X-BG-CO33-t05"
+    },
+    {
+     "h5_sha256": "334309a1a21307664f446e7b0b326095ba1e3c4482394afc56bd2a742207148e",
+     "run_id": "B2D-C3mS3X-BG-CO33-t06",
+     "source_dir": "2026-09-29_B2D-C3mS3X-BG-CO33-t06"
+    },
+    {
+     "h5_sha256": "45995b3da10eb3c1462e9228bae214a3d74807a87dc39967e4bcfc252743b74f",
+     "run_id": "B2D-C3mS3X-BG-CO33-t07",
+     "source_dir": "2026-09-29_B2D-C3mS3X-BG-CO33-t07"
+    },
+    {
+     "h5_sha256": "5e8fec770f5e7626e42b3d7fda099458127ab6c21fcf5039acd20c355ee6ec53",
+     "run_id": "B2D-C3mS3X-BG-CO33-t08",
+     "source_dir": "2026-09-29_B2D-C3mS3X-BG-CO33-t08"
+    },
+    {
+     "h5_sha256": "95517182bfd279294ec11ccedd7cb1b7434cfab2e57c0bf39f0b00c828108db6",
+     "run_id": "B2D-C3mS3X-BG-CO33-t09",
+     "source_dir": "2026-09-29_B2D-C3mS3X-BG-CO33-t09"
+    },
+    {
+     "h5_sha256": "50a7c374ae26e136be9b9b361551e22d3c80242e0f5f86cf2f4cbf4b5e9886a5",
+     "run_id": "B2D-C3mS3X-BG-CO33-t10",
+     "source_dir": "2026-09-29_B2D-C3mS3X-BG-CO33-t10"
+    },
+    {
+     "h5_sha256": "d9cd27f8d28e4dad05f970f5bd30545420379b83d1c5814337177ec6b1a110c8",
+     "run_id": "B2D-C3mS3X-BG-CO33-t11",
+     "source_dir": "2026-09-29_B2D-C3mS3X-BG-CO33-t11"
+    },
+    {
+     "h5_sha256": "0953ddcd47f0a66a84fd7dbeed3481164278242ce7aabf9f5c2138fb5e2204bb",
+     "run_id": "B2D-C3mS3X-BG-CO33-t12",
+     "source_dir": "2026-09-29_B2D-C3mS3X-BG-CO33-t12_att3"
+    },
+    {
+     "h5_sha256": "86565cbd6ee1cf2719ffb5f98ced8c67a39ec51b1cf4de1265ad8033c3b134b0",
+     "run_id": "B2D-C3mS3X-BG-CO33-t13",
+     "source_dir": "2026-09-29_B2D-C3mS3X-BG-CO33-t13"
+    },
+    {
+     "h5_sha256": "7a6e782d03981798e9287f010a7dae9b8fcea76d861932ee0bd2b4872f71266f",
+     "run_id": "B2D-C3mS3X-BG-CO33-t14",
+     "source_dir": "2026-09-29_B2D-C3mS3X-BG-CO33-t14"
+    },
+    {
+     "h5_sha256": "84a29bcc0b46a647b4751167f832733f55d7afb7022ff27359dcdeb0864957e2",
+     "run_id": "B2D-C3mS3X-BG-CO33-t15",
+     "source_dir": "2026-09-29_B2D-C3mS3X-BG-CO33-t15"
+    },
+    {
+     "h5_sha256": "393dd74876b401881f2b9cb9e53410a787279bdfb918e7e64b9336623bdd11f3",
+     "run_id": "B2D-C3mS3X-BG-CO33-t16",
+     "source_dir": "2026-09-29_B2D-C3mS3X-BG-CO33-t16"
+    },
+    {
+     "h5_sha256": "5d8f8bca02a8b10ef66e0be1dc7e983a7266c0b3920fd072c27d21411c35d0ac",
+     "run_id": "B2D-C3mS3X-BG-CO33-t17",
+     "source_dir": "2026-09-29_B2D-C3mS3X-BG-CO33-t17"
+    },
+    {
+     "h5_sha256": "9aa21fedf5bbf09408a194382ac62065b44523ab9609f7e0a741e6077b2acd8a",
+     "run_id": "B2D-C3mS3X-BG-CO33-t18",
+     "source_dir": "2026-09-29_B2D-C3mS3X-BG-CO33-t18"
+    },
+    {
+     "h5_sha256": "5b0a8f496815a662bfc1da85bbdbdf1894c8c1c9e297726bb96dae099ca85e2b",
+     "run_id": "B2D-C3mS3X-BG-CO33-t19",
+     "source_dir": "2026-09-29_B2D-C3mS3X-BG-CO33-t19"
+    },
+    {
+     "h5_sha256": "cbf6423e99c8c3d4f9cd51fc0faa0c03f980e85cca1504344aab1c59d996bdaf",
+     "run_id": "B2D-C3mS3X-BG-CO33-t20",
+     "source_dir": "2026-09-29_B2D-C3mS3X-BG-CO33-t20"
+    },
+    {
+     "h5_sha256": "c7a1f436d0a83e1001d3d3ba10ae9abf53d24b262eb769937224632ca197f627",
+     "run_id": "B2D-C3mS3X-BG-CO33-t21",
+     "source_dir": "2026-09-29_B2D-C3mS3X-BG-CO33-t21"
+    },
+    {
+     "h5_sha256": "9b290d7f7d5fb5a66a6321904615d81fea0cd31e411938acf2ef535d218ba8ed",
+     "run_id": "B2D-C3mS3X-BG-CO33-t22",
+     "source_dir": "2026-09-29_B2D-C3mS3X-BG-CO33-t22"
+    },
+    {
+     "h5_sha256": "0e75307bd477a6b06b823ee090585b3c4915e9a4e3ba3a53d05892efd77b7dc6",
+     "run_id": "B2D-C3mS3X-BG-CO33-t23",
+     "source_dir": "2026-09-29_B2D-C3mS3X-BG-CO33-t23_att3"
+    },
+    {
+     "h5_sha256": "c4d76f80554da50bf1027b0ad259b45ab17161bbfafde26942535c58278bd06d",
+     "run_id": "B2D-C3mS3X-BG-CO33-t24",
+     "source_dir": "2026-09-29_B2D-C3mS3X-BG-CO33-t24"
+    },
+    {
+     "h5_sha256": "99db5400468b7ac1a329f4ec0dac49ccbff612a4331958cbbcf21588ba983250",
+     "run_id": "B2D-C3mS3X-BG-CO33-t25",
+     "source_dir": "2026-09-29_B2D-C3mS3X-BG-CO33-t25"
+    },
+    {
+     "h5_sha256": "744eeb9106d20570a8f50614ae89b54af388136b1c9a5dc709db870a1559c9f8",
+     "run_id": "B2D-C3mS3X-BG-CO33-t26",
+     "source_dir": "2026-09-29_B2D-C3mS3X-BG-CO33-t26"
+    },
+    {
+     "h5_sha256": "d787a6dda76306de614864c1f96dcf1a4d8313fb699c3cf9511405909253bf69",
+     "run_id": "B2D-C3mS3X-BG-CO33-t27",
+     "source_dir": "2026-09-29_B2D-C3mS3X-BG-CO33-t27"
+    },
+    {
+     "h5_sha256": "d4444ef7fec1283d881b6fd81a39a8a8c7608c1dcf1ea73214eafb9fc256d61d",
+     "run_id": "B2D-C3mS3X-BG-CO33-t28",
+     "source_dir": "2026-09-29_B2D-C3mS3X-BG-CO33-t28"
+    },
+    {
+     "h5_sha256": "4430abf8326b7fab1016cf605bbc1f8fe44b4b6db997ef0dcf799a5b86c3d521",
+     "run_id": "B2D-C3mS3X-BG-CO33-t29",
+     "source_dir": "2026-09-29_B2D-C3mS3X-BG-CO33-t29"
+    },
+    {
+     "h5_sha256": "7abfe63e3b9e64d333b7674e64011de38e7c2a1d903019787ce0d2b57d1a57a9",
+     "run_id": "B2D-C3mS3X-BG-CO33-t30",
+     "source_dir": "2026-09-29_B2D-C3mS3X-BG-CO33-t30"
+    },
+    {
+     "h5_sha256": "a7f219d1b909aecc2c2d05b83f7dc7a635228d0bc3b984730c3e072f75b07af5",
+     "run_id": "B2D-C3mS3X-BG-CO33-t31",
+     "source_dir": "2026-09-29_B2D-C3mS3X-BG-CO33-t31"
+    },
+    {
+     "h5_sha256": "01edb9f3b4f35f8bc95687c22acf0f1208615395cdc614fc5eac8d74e1c2022b",
+     "run_id": "B2D-C3mS3X-BG-CO33-t32",
+     "source_dir": "2026-09-29_B2D-C3mS3X-BG-CO33-t32"
+    },
+    {
+     "h5_sha256": "4cb9ae5bb4567868d4ef17b6f82593c0227701102e7d90409b07bebd0af95a21",
+     "run_id": "B2D-C3mS3X-BG-CO33-t33",
+     "source_dir": "2026-09-29_B2D-C3mS3X-BG-CO33-t33"
+    }
+   ],
+   "max_abs_delta_ns": 3.6227,
+   "nc_window": {
+    "fermat_band_upper_ns": 190.539,
+    "measured_band_upper_ns": 190.4724,
+    "measured_clearance_ns": 59.5276,
+    "nc_rms_mean": 0.000184164337,
+    "ns": [
+     250.0,
+     400.0
+    ],
+    "pre_event_floor_rms_mean": 3.038397533895
+   },
+   "t_fermat_er16_ns": [
+    180.5345,
+    179.1494,
+    177.7692,
+    176.3939,
+    175.0238,
+    173.6588,
+    172.2992,
+    170.9451,
+    169.5966,
+    168.2537,
+    166.9168,
+    165.5859,
+    164.2611,
+    162.9427,
+    161.6307,
+    160.3253,
+    159.0267,
+    157.7351,
+    156.4506,
+    155.1734,
+    153.9037,
+    152.6417,
+    151.3875,
+    150.1414,
+    148.9036,
+    147.6742,
+    146.4535,
+    145.2418,
+    144.0391,
+    142.8459,
+    141.6622,
+    140.4883,
+    139.3246
+   ],
+   "t_fermat_er18_ns": [
+    180.539,
+    179.1539,
+    177.7737,
+    176.3984,
+    175.0282,
+    173.6633,
+    172.3037,
+    170.9496,
+    169.601,
+    168.2582,
+    166.9213,
+    165.5903,
+    164.2656,
+    162.9471,
+    161.6351,
+    160.3298,
+    159.0312,
+    157.7396,
+    156.4551,
+    155.1779,
+    153.9082,
+    152.6462,
+    151.392,
+    150.1459,
+    148.908,
+    147.6787,
+    146.458,
+    145.2462,
+    144.0436,
+    142.8503,
+    141.6666,
+    140.4928,
+    139.3291
+   ],
+   "t_measured_ns": [
+    180.4724,
+    179.6407,
+    178.809,
+    177.9774,
+    174.6507,
+    173.819,
+    172.9874,
+    172.1557,
+    171.324,
+    167.9973,
+    167.1657,
+    166.334,
+    165.5023,
+    164.6707,
+    161.344,
+    160.5123,
+    159.6806,
+    158.849,
+    158.0173,
+    154.6906,
+    153.8589,
+    153.0273,
+    152.1956,
+    148.8689,
+    148.0373,
+    147.2056,
+    149.7006,
+    148.8689,
+    142.2156,
+    141.3839,
+    143.8789,
+    140.5522,
+    139.7206
+   ]
+  }
+ },
+ "inputs": {
+  "array": {
+   "dy_rx_m": 0.25,
+   "n_traces": 33,
+   "offset_m": 1.3,
+   "rx_first_y_m": 12.65,
+   "z_m": 45.0
+  },
+  "data": "artifacts/simulations 2026-09-29 batch2d_slope_t1t3_co BG CO33 only (132 traces, acceptance SHA prefix 005625df, NC=BG bit-zero verified 132/132)",
+  "geometry_source": {
+   "path": "configs\\research\\batch2d_slope_t1t3_co\\static_check.json",
+   "sha256": "238d9347e79c57e9938223e86da8440ca813303a232023eede0e401cd2a75532"
+  },
+  "processing_chain_source": {
+   "path": "scripts\\study_t3_damage_ladder.py",
+   "sha256": "5399b81a90aa7f13fc43f8879330be989fd44e253dd66bd219c03e8bdd3c47fc"
+  }
+ },
+ "schema": "s1s3_reference_window_contract/0.1",
+ "scope_limits": [
+  "does NOT unlock reward application on S1/S3: tolerance recalibration (damage ladder on the new families) is a separate pending proposal",
+  "test families {C5,C8} excluded",
+  "no contract supersedes reward_tolerance v0.2 / reward_weights v0.3 / event table v0.1",
+  "G4 stays unresolved; no training; reference_state not upgraded"
+ ]
+}
