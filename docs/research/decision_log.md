@@ -1,3 +1,7 @@
+## 2026-09-29 权重契约 v0.3 冻结（增益类五步闭合，用户"你先推进着做吧"）
+
+`scripts/freeze_reward_weights_v0_3.py` 冻结 `reward_weights_contract_v0.3.json`（**SHA-256 `282d083b…e0d0`**；锚点断言全过：背景类 v0.2 哈希锁 `0427b6ed…`、容差 v0.2 哈希锁 `2b2b6aff…`、gain_weights r1/r2 字节一致、oracle 恒等（5 档 3/6/10/20/40 dB 每格恰读 +|due|）、identity 诊断 −due、可行行 72/864=仅 oracle、敏感性计数锚（可行格内零倒序、无门诊断 138–328 只记录不回拟）；双构建字节一致）。v0.2 背景类节不动，v0.3 新增增益类：R_gain 四系数恒 1（dB 恒等式），公式/推导/恒等锚/适用范围限制成文。**奖励/评价落量草案 §4 校准路线背景类+增益类全部闭合**。scope_limits 如实登记：增益类质量标签仍需已知乘性衰减控制例才能越出 contract-derived oracle 应用。G4 维持未解除，不训练。
+
 ## 2026-09-29 AlphaD3M 架构对照调研（用户"存入"，纯调研）
 
 产物 [对照笔记](2026-09-29_alphad3m_architecture_comparison.md)（registry 条目 `alphad3m_architecture_comparison`）。文献：Drori et al. 2018 ICML AutoML Workshop（单人版 AlphaZero 做管道合成：状态=元特征+任务+当前管道，动作=插入/删除/替换，奖励=交叉验证性能，LSTM+MCTS 自对弈；后续 PMLR v224 开源版 312 原语/CFG 文法）。**六条差异**：①学习搜索 vs 冻结契约选择（我们无任何学习组件）；②奖励=性能代理（Goodhart 最高风险形态）vs dB 恒等式+identity/oracle 结构锚（对应 R3）；③无容差概念 vs 阈值全部机制阶梯推导且禁止从候选表现倒推——AlphaD3M 整个搜索本质上就是从候选表现倒推，方向相反；④OpenML 表格基准 vs gprMax FDTD 物理仿真链真值锚定；⑤泛用=元学习跨数据集 vs 契约层跨算法族（同一奖励约束背景抑制+增益两大类）；⑥自对弈随机性大靠置信区间论持平 vs r1/r2 字节一致+冻结确认闸。**结论：互补不冲突**——它代表"让学习系统自己搜"，我们代表"先建不可作弊的评价再谈选择"；G4 解除后若做学习式选型，MCTS+策略网络是候选架构，其"奖励=性能代理"弱点恰以本项目恒等式契约补足。纯阅读对照，未动任何契约/阈值/目录，G4 维持。

@@ -1,0 +1,48 @@
+{
+ "date": "2026-09-29",
+ "evidence": {
+  "doc": {
+   "path": "docs/research/2026-09-29_gain_weights_proposal.md"
+  },
+  "gain_weights_r1": {
+   "path": "2026-09-29_gain_weights_r1.json",
+   "sha256": "b4c9042a661483558f8735923365d45c36ccac82bc48201deed97d09e7909ef4"
+  },
+  "gain_weights_r2": {
+   "path": "2026-09-29_gain_weights_r2.json",
+   "sha256": "b4c9042a661483558f8735923365d45c36ccac82bc48201deed97d09e7909ef4"
+  }
+ },
+ "frozen_by": "user \"你先推进着做吧\" (2026-09-29), gain class step 5",
+ "reward_gain_class": {
+  "coefficients": {
+   "c_clip": 1,
+   "c_nb": 1,
+   "c_rec": 1,
+   "c_under": 1
+  },
+  "derivation": "all coefficients = 1 by dB-unit identities (benefit capped at known loss; 1 dB short = 1 dB penalty; clip = destroyed-energy dB equivalent; nc term isomorphic to R_bg); NOT fitted to candidate outcomes (Cawley-Talbot)",
+  "domain": "feasible rows only (hard gates of tolerance contract v0.2 apply first, incl. tau_clip=0.002 on clip_frac)",
+  "formula": "R_gain = c_rec*min(drec,due) - c_under*(due-drec)+ - c_clip*10log10(1/(1-clip_ratio)) - c_nb*max(10log10(nc_ratio),0)",
+  "identity_anchor": "oracle reads exactly +|due| at every level (3/6/10/20/40 dB); identity diagnostic = -due; feasible set on the effects table = oracle only (72/864)",
+  "sensitivity_note": "zero inversions inside feasible cells (degenerate-robust, honestly flagged); ungated diagnostic inversions 138-328 recorded, not refit against"
+ },
+ "schema": "reward-weights-contract/0.3",
+ "scope_limits": [
+  "values are properties of the t3 gain effects table (3 families x 24 cells x 12 candidates); not field-data thresholds",
+  "gain-class quality labels require controlled multiplicative-attenuation cases (known-decay control examples) before the reward is applied beyond the contract-derived oracle",
+  "new scenes require their own reference/window construction and recalibration of tolerances before the reward is applied",
+  "test families {C5,C8} untouched; no solver runs; no training (G4 maintained)"
+ ],
+ "status": "frozen",
+ "supersedes": {
+  "path": "reward_weights_contract_v0.2.json",
+  "relation": "v0.2 background-class section unchanged; this contract adds the gain class",
+  "sha256": "0427b6ed58328e5ae01d2e0bfbda90460ef1a68beea318808a3f2ae2ed69bfb0"
+ },
+ "tolerance_contract": {
+  "path": "reward_tolerance_contract_v0.2.json",
+  "relation": "referenced, not modified",
+  "sha256": "2b2b6aff6a6bb3710f6d361a61ca710946a52e6d1cfeb4dc8828a64d4c9a5fee"
+ }
+}
