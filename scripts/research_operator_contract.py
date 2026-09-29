@@ -1,6 +1,7 @@
 """Dense-array research prototype, not a validated GPR processing library.
 
-Only fixed shared gain, partial row-mean subtraction, and leading-SVD removal.
+Only fixed shared gain, partial row-mean subtraction, and leading-SVD removal,
+plus two out-of-catalogue mechanism references (local mean, robust PCA).
 No field reader, FDTD execution, learning, ROI selection, or physical inversion.
 """
 
@@ -110,6 +111,57 @@ def apply_configuration(x, config_id, *, mask=None, domain="time_real", gap_rtol
             "gain_curve": curve[:, 0].copy(), "steps": steps,
             "mask": None if mask is None else mask.copy(), "input_dtype": str(np.asarray(x).dtype),
             "compute_dtype": "float64", "domain": domain, "axes": ["sample", "trace"]}
+
+
+def rpca_control(x, lam, max_iter=500, tol=1e-7):
+    """Robust PCA / principal component pursuit, out-of-catalogue mechanism reference.
+
+    Decomposes the [sample, trace] array as x = L + S with L low-rank (trace-
+    invariant background) and S sparse (events/anomalies) via the inexact
+    augmented-Lagrange method of Lin, Chen & Ma (2009); deterministic, float64.
+    Returns (x - L, diagnostics): the sparse output is the background-suppressed
+    radargram. lam is the sparsity weight (standard choice 1/sqrt(max(shape))).
+    """
+    a = np.array(x, dtype=np.float64, copy=True)
+    if a.ndim != 2 or min(a.shape) < 2 or not np.isfinite(a).all():
+        raise ValueError("invalid_control_array")
+    if not np.isfinite(lam) or lam <= 0:
+        raise ValueError("invalid_lambda")
+    scale = float(np.max(np.abs(a)))
+    if scale == 0:
+        return a.copy(), {"kind": "rpca", "lam": lam, "status": "zero_input",
+                          "rank_L": 0, "iterations": 0, "rel_residual": 0.0}
+    m = a / scale
+    fro = float(np.linalg.norm(m))
+    norm2 = float(np.linalg.svd(m, compute_uv=False)[0])
+    dual = max(norm2, float(np.linalg.norm(m, np.inf)) / lam)
+    y = m / dual
+    L = np.zeros_like(m)
+    S = np.zeros_like(m)
+    mu = 1.25 / norm2
+    mu_bar = mu * 1e7
+    rho = 1.5
+    rel = None
+    it = 0
+    for it in range(1, max_iter + 1):
+        u, sv, vt = np.linalg.svd(m - S + y / mu, full_matrices=False)
+        sv_thr = np.maximum(sv - 1.0 / mu, 0.0)
+        L = (u * sv_thr) @ vt
+        t2 = m - L + y / mu
+        S = np.sign(t2) * np.maximum(np.abs(t2) - lam / mu, 0.0)
+        r = m - L - S
+        y = y + mu * r
+        mu = min(mu * rho, mu_bar)
+        rel = float(np.linalg.norm(r) / fro)
+        if rel < tol:
+            break
+    out = m - L
+    return out * scale, {"kind": "rpca", "lam": lam,
+                         "lam_over_standard": round(lam * (max(a.shape) ** 0.5), 6),
+                         "status": "converged" if rel is not None and rel < tol else "max_iter",
+                         "rank_L": int(np.count_nonzero(np.linalg.svd(L, compute_uv=False) > 1e-10 * max(L.shape))),
+                         "iterations": it, "rel_residual": rel,
+                         "sparse_fraction": float(np.count_nonzero(S) / S.size)}
 
 
 def local_mean_control(x, width, strength=1.0):
