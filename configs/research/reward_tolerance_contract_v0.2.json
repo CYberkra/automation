@@ -1,0 +1,66 @@
+{
+ "date": "2026-09-29",
+ "evidence": {
+  "clip_scale_r1": {
+   "path": "2026-09-29_clip_scale_r1.json",
+   "sha256": "8b472dbe992891d8a0a940603ac40aaa47f638837dbc2c17504fb051755c4b77"
+  },
+  "gain_effects_r1": {
+   "path": "2026-09-29_gain_effects_r1.json",
+   "sha256": "057ede4c7223ae0e5082fa93b2956a67b8eeb6123de751da690310412d819abb"
+  },
+  "tolerance_contract_v0_1": {
+   "path": "reward_tolerance_contract_v0.1.json",
+   "sha256": "9e7a0551e90e0bc8cd025f0d70b1bb434441ef980e2901bb61f4bfa82c023bf3"
+  }
+ },
+ "frozen_by": "user confirmation \"确认\" (2026-09-29) of docs/research/2026-09-29_tolerance_v0_2_proposal.md (gain class step 4)",
+ "judgement_rules": {
+  "background_class": "v0.1 rules unchanged (no FS convention there)",
+  "gain_class_feasible": "D_e<=tau_D and |a-1|<=tau_A and nc_ratio<=eps_Nb and clip_frac<=tau_clip",
+  "hard_constraints_first": true,
+  "implementation": "scripts/study_clip_scale_v0_1.py (feasibility) + scripts/study_gain_effects_v0_1.py (metrics)",
+  "scalar_weights": "R_bg weights frozen in reward_weights_contract_v0.2.json; R_gain construction proposal at gain class step 5 (dB-identity coefficients, user confirmation pending at v0.2 freeze time)"
+ },
+ "schema": "reward-tolerance-contract/0.2",
+ "scope_limits": [
+  "values are properties of the t3 development families plus the stated dispersion material assumption; not field-data thresholds",
+  "do not tighten beyond the material-assumption sensitivity (+/-3.3..6.6 dB) before the dispersion field-data study",
+  "all peak-based readouts quantised to the 0.832 ns reconstruction axis",
+  "test families {C5,C8} untouched; no solver runs; no training",
+  "gain-compensated outputs (audit_before_gain) used for the D_e battery so the fixed shared gain is not counted as damage",
+  "tau_clip is a property of the simulated_full_scale array convention (FS = max|original signature|, fixed per family); not a device ADC specification; conclusions do not extrapolate to hardware"
+ ],
+ "status": "frozen",
+ "supersedes": {
+  "note": "v0.1 remains valid for the background class; v0.2 adds one gain-class tolerance, reuses the rest verbatim",
+  "path": "reward_tolerance_contract_v0.1.json",
+  "sha256": "9e7a0551e90e0bc8cd025f0d70b1bb434441ef980e2901bb61f4bfa82c023bf3"
+ },
+ "tolerances": {
+  "arrival_drift": {
+   "meaning": "diagnostic only; not a hard constraint at v0.1 (0.832 ns reconstruction-axis quantisation)",
+   "value": null
+  },
+  "eps_Nb": {
+   "anchor": "structural floor 1.0 measured: eps x0.5 = 0.75 makes identity inadmissible (sensitivity r1); 1.5 margin admits pure gain (Nb=1.273) and excludes nc_amp +6 dB (Nb=4.96)",
+   "meaning": "negative-control window (250-400 ns) mean-square ratio out/in limit",
+   "value": 1.5
+  },
+  "tau_A": {
+   "anchor": "damage ladder: -1 dB rung passes (A=0.109), -3 dB rung fails (A=0.292); resolution limited by ladder spacing (+/-50% perturbation moves the rung boundary, recorded as ladder property, not refitted)",
+   "meaning": "event amplitude-factor deviation |a-1| limit",
+   "value": 0.2
+  },
+  "tau_D": {
+   "anchor": "ladder: 1-sample (0.832 ns) shift passes (D~0.86-0.89), delete fails (D=1.0); +/-50% sensitivity: zero flips both directions (robust on current evidence set)",
+   "meaning": "event-window total distortion D limit",
+   "value": 0.95
+  },
+  "tau_clip": {
+   "anchor": "metered clip ladder (0.1% rung = direct-wave neighbourhood only, 0.5% rung = record-wide headroom destruction); incumbent catalogue baselines 0.0005-0.00125 below, all mechanism-reference hard pulls >=0.0022 above; +/-50% sensitivity zero ranking effect on the current effects table; guards the future high-recovery +over-drive attack surface",
+   "meaning": "gain-class only: full-record clipped-sample fraction (|y|>1 vs simulated_full_scale) on the operator output",
+   "value": 0.002
+  }
+ }
+}
