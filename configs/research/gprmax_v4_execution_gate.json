@@ -6390,8 +6390,12 @@
   "postprocessing": "Prefer official CPU implementation"
  },
  "execution_outcome": {
-  "status": "approved_for_execution",
-  "basis": "user 2026-09-29: \"按建议开始\" (T1/T3 proposal, per recommendation)"
+  "status": "completed",
+  "completed_utc": "2026-09-29",
+  "n_runs": 396,
+  "basis": "user 2026-09-29: \"按建议开始\" (T1/T3 proposal, per recommendation)",
+  "accident_record": "356/396 completed in the primary pass. 40 cases were killed MID-SOLVER by the 300 s execution-chunk timeout (attempt already consumed at launch; h5 never written; stdout progress bars stop at 5-13%). Recovered via att2/att3/att4/att5 reruns of the SAME hash-locked inputs under the same authorization (scripts/rerun_t1t3_att2.py, vcvars wrapper; 3 further attempts lost to the launch-environment miss and chunk timeouts, all recovered). Final coverage 396/396 h5.",
+  "acceptance": "analyze_batch2d_slope_t1t3_co.py r1/r2 byte-identical (SHA 005625dfc6e4...): 396/396 h5 present (20352 samples), NC-BG zero-difference 132/132, wall 27.8-43.4 s, job commit max 3.53 GiB (< 6 GiB cap)."
  },
  "last_completed_execution_contract": {
   "batch_id": "batch3d_slope_t3_xcheck",
@@ -6401,5 +6405,5 @@
   },
   "note": "batch3d_slope_t3_xcheck frozen 2026-09-28 (33 2D-5cm CO traces + 1 true-3D 5cm anchor, identical strips/materials; 2D first, 3D last). approved_to_simulate stays false until the recorded basis is applied; no physical/training labels."
  },
- "note": "batch2d_slope_t1t3_co frozen 2026-09-29 (12 mothers = T1/T3 x +/-TZ x BG/NC/TGT, 33 CO traces each, BASE, dispersive cover/tzone per dispersion_materials_v0.1). New families S1X/S1TZX/S3X/S3TZX: mechanism/fidelity input only — no frozen reward contract applies until their own reference windows + tolerance recalibration exist (reward_weights v0.3 scope_limits). Test families {C5,C8} untouched; no labels; G4 maintained."
+ "note": "batch2d_slope_t1t3_co frozen 2026-09-29 (12 mothers = T1/T3 x +/-TZ x BG/NC/TGT, 33 CO traces each, BASE, dispersive cover/tzone per dispersion_materials_v0.1). New families S1X/S1TZX/S3X/S3TZX: mechanism/fidelity input only — no frozen reward contract applies until their own reference windows + tolerance recalibration exist (reward_weights v0.3 scope_limits). Test families {C5,C8} untouched; no labels; G4 maintained. EXECUTION COMPLETED 2026-09-29: 396/396, acceptance passed; see execution_outcome.accident_record for the 40-case chunk-timeout accident and att2-att5 recovery (full disclosure)."
 }
