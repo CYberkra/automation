@@ -1,0 +1,264 @@
+{
+ "axes": [
+  "sample",
+  "trace"
+ ],
+ "candidate_count": 30,
+ "configurations": [
+  {
+   "background": "identity",
+   "end_gain": 1,
+   "id": "B0_G1_BG",
+   "order": "BG",
+   "parameter": null
+  },
+  {
+   "background": "identity",
+   "end_gain": 2,
+   "id": "B0_G2_BG",
+   "order": "BG",
+   "parameter": null
+  },
+  {
+   "background": "identity",
+   "end_gain": 4,
+   "id": "B0_G4_BG",
+   "order": "BG",
+   "parameter": null
+  },
+  {
+   "background": "mean",
+   "end_gain": 1,
+   "id": "B1_G1_BG",
+   "order": "BG",
+   "parameter": 0.25
+  },
+  {
+   "background": "mean",
+   "end_gain": 2,
+   "id": "B1_G2_BG",
+   "order": "BG",
+   "parameter": 0.25
+  },
+  {
+   "background": "mean",
+   "end_gain": 4,
+   "id": "B1_G4_BG",
+   "order": "BG",
+   "parameter": 0.25
+  },
+  {
+   "background": "mean",
+   "end_gain": 1,
+   "id": "B2_G1_BG",
+   "order": "BG",
+   "parameter": 0.5
+  },
+  {
+   "background": "mean",
+   "end_gain": 2,
+   "id": "B2_G2_BG",
+   "order": "BG",
+   "parameter": 0.5
+  },
+  {
+   "background": "mean",
+   "end_gain": 4,
+   "id": "B2_G4_BG",
+   "order": "BG",
+   "parameter": 0.5
+  },
+  {
+   "background": "mean",
+   "end_gain": 1,
+   "id": "B3_G1_BG",
+   "order": "BG",
+   "parameter": 1.0
+  },
+  {
+   "background": "mean",
+   "end_gain": 2,
+   "id": "B3_G2_BG",
+   "order": "BG",
+   "parameter": 1.0
+  },
+  {
+   "background": "mean",
+   "end_gain": 4,
+   "id": "B3_G4_BG",
+   "order": "BG",
+   "parameter": 1.0
+  },
+  {
+   "background": "svd",
+   "end_gain": 1,
+   "id": "B4_G1_BG",
+   "order": "BG",
+   "parameter": 1
+  },
+  {
+   "background": "svd",
+   "end_gain": 2,
+   "id": "B4_G2_BG",
+   "order": "BG",
+   "parameter": 1
+  },
+  {
+   "background": "svd",
+   "end_gain": 2,
+   "id": "B4_G2_GB",
+   "order": "GB",
+   "parameter": 1
+  },
+  {
+   "background": "svd",
+   "end_gain": 4,
+   "id": "B4_G4_BG",
+   "order": "BG",
+   "parameter": 1
+  },
+  {
+   "background": "svd",
+   "end_gain": 4,
+   "id": "B4_G4_GB",
+   "order": "GB",
+   "parameter": 1
+  },
+  {
+   "background": "svd",
+   "end_gain": 1,
+   "id": "B5_G1_BG",
+   "order": "BG",
+   "parameter": 2
+  },
+  {
+   "background": "svd",
+   "end_gain": 2,
+   "id": "B5_G2_BG",
+   "order": "BG",
+   "parameter": 2
+  },
+  {
+   "background": "svd",
+   "end_gain": 2,
+   "id": "B5_G2_GB",
+   "order": "GB",
+   "parameter": 2
+  },
+  {
+   "background": "svd",
+   "end_gain": 4,
+   "id": "B5_G4_BG",
+   "order": "BG",
+   "parameter": 2
+  },
+  {
+   "background": "svd",
+   "end_gain": 4,
+   "id": "B5_G4_GB",
+   "order": "GB",
+   "parameter": 2
+  },
+  {
+   "background": "svd",
+   "end_gain": 1,
+   "id": "B6_G1_BG",
+   "order": "BG",
+   "parameter": 3
+  },
+  {
+   "background": "svd",
+   "end_gain": 2,
+   "id": "B6_G2_BG",
+   "order": "BG",
+   "parameter": 3
+  },
+  {
+   "background": "svd",
+   "end_gain": 2,
+   "id": "B6_G2_GB",
+   "order": "GB",
+   "parameter": 3
+  },
+  {
+   "background": "svd",
+   "end_gain": 4,
+   "id": "B6_G4_BG",
+   "order": "BG",
+   "parameter": 3
+  },
+  {
+   "background": "svd",
+   "end_gain": 4,
+   "id": "B6_G4_GB",
+   "order": "GB",
+   "parameter": 3
+  },
+  {
+   "background": "rpca",
+   "end_gain": 1,
+   "id": "B7_G1_BG",
+   "order": "BG",
+   "parameter": 0.5
+  },
+  {
+   "background": "rpca",
+   "end_gain": 1,
+   "id": "B8_G1_BG",
+   "order": "BG",
+   "parameter": 1.0
+  },
+  {
+   "background": "rpca",
+   "end_gain": 1,
+   "id": "B9_G1_BG",
+   "order": "BG",
+   "parameter": 2.0
+  }
+ ],
+ "date": "2026-09-29",
+ "domain": "time_real",
+ "evidence": {
+  "catalogue_v0.1": {
+   "path": "operator_catalogue_v0.1.json",
+   "sha256": "59c2bc3d321c1cc6e8d320d8d4f7d822f82c7170a5ce6895d03c866d8eaf8add"
+  },
+  "module": {
+   "path": "scripts/research_operator_contract.py",
+   "sha256": "eb7b0f114c3e488d944a5158106545f4d86f445279872311a800f87b0e2612d4"
+  },
+  "rpca_effects_r1": {
+   "path": "2026-09-29_t3_operator_effects_rpca_r1.json",
+   "sha256": "7e794a7f6f029c43060af2cf19a4726aa2a8383ac34127ed9fc869c85436700a"
+  }
+ },
+ "fdtd_execution_enabled": false,
+ "frozen_by": "user \"按你的建议最佳实践\" (2026-09-29), on docs/research/2026-09-29_rpca_effects_addendum.md",
+ "gain_coordinate": "u=i/(n_samples-1)",
+ "gap_rtol": 1e-08,
+ "input_window": "entire_predeclared_window",
+ "legal_count_is_input_dependent": true,
+ "local_mean_control_in_catalogue": false,
+ "numerical_rank_floor": "max(n_samples,n_traces)*float64_eps",
+ "operator_version": "research-operators/0.2",
+ "rpca_lambda_axis": {
+  "factors": [
+   0.5,
+   1.0,
+   2.0
+  ],
+  "lambda0": "1/sqrt(max(n_samples,n_traces)) (standard PCP choice)",
+  "measured_basis": "t3 operator effects: 2.0x tops slope-family R_bg (+27.0/+25.3 dB), 0.5x is the only admissible background removal on the flat family (D_e=0.014); no single factor wins both families",
+  "solver": "rpca_control: inexact ALM principal component pursuit (Lin-Chen-Ma 2009), deterministic float64, max_iter=500, tol=1e-7"
+ },
+ "schema": "research-operator-catalogue/0.2",
+ "scope_limits": [
+  "RPCA entries have no damage-ladder coverage yet (deferred); tolerance contract anchors do not depend on operators, Cawley-Talbot clause intact",
+  "RPCA x end_gain>1 and GB order combinations not in catalogue v0.2",
+  "RPCA compute cost is orders of magnitude above mean/SVD; cost accounting is diagnostic-only in the 2026-09-29 addendum, not a reward cost term",
+  "same validity class as v0.1: array contract checked, not physics validated"
+ ],
+ "status": "array_contract_checked_not_physics_validated",
+ "supersedes": "operator_catalogue_v0.1.json (v0.1 preserved; default catalogue() remains v0.1 for backward compatibility)",
+ "training_enabled": false
+}

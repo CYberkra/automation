@@ -9,19 +9,32 @@ import numpy as np
 
 
 VERSION = "research-operators/0.1"
+VERSION_02 = "research-operators/0.2"
 GAP_RTOL = 1e-8  # Proposed numerical guard, not a physical acceptance threshold.
+
+# v0.2 adds the RPCA background kind as a lambda axis (0.5/1.0/2.0 x standard
+# PCP lambda0 = 1/sqrt(max(shape))), end_gain 1, BG order only (frozen as
+# operator_catalogue_v0.2.json, 2026-09-29; v0.1 remains the default so all
+# v0.1-era checks and frozen hashes stay valid).
+RPCA_LAM_FACTORS = (0.5, 1.0, 2.0)
 
 
 class ConfigUnavailable(ValueError):
     """A valid catalogue entry cannot be applied to this particular input."""
 
 
-def catalogue():
+def catalogue(version="0.1"):
     backgrounds = [("identity", None), ("mean", 0.25), ("mean", 0.5),
                    ("mean", 1.0), ("svd", 1), ("svd", 2), ("svd", 3)]
+    if version == "0.2":
+        backgrounds = backgrounds + [("rpca", f) for f in RPCA_LAM_FACTORS]
+    elif version != "0.1":
+        raise ValueError("unknown_catalogue_version")
     rows = []
     for index, (kind, parameter) in enumerate(backgrounds):
         for end_gain in (1, 2, 4):
+            if kind == "rpca" and end_gain > 1:
+                continue  # RPCA joins with end_gain 1 / BG order only in v0.2
             for order in (["BG", "GB"] if kind == "svd" and end_gain > 1 else ["BG"]):
                 rows.append({"id": f"B{index}_G{end_gain}_{order}", "background": kind,
                              "parameter": parameter, "end_gain": end_gain, "order": order})
@@ -36,6 +49,19 @@ def _background(x, kind, parameter, gap_rtol):
         scale = float(np.max(np.abs(x)))
         mean = np.zeros((x.shape[0], 1)) if scale == 0 else (x / scale).mean(axis=1, keepdims=True) * scale
         return x - parameter * mean, {"kind": kind, "lambda": parameter}
+    if kind == "rpca":
+        # parameter is the lambda factor relative to the standard PCP choice
+        # lambda0 = 1/sqrt(max(shape)); see rpca_control for the solver.
+        lam = float(parameter) / (max(x.shape) ** 0.5)
+        try:
+            y, diag = rpca_control(x, lam)
+        except (FloatingPointError, np.linalg.LinAlgError) as exc:
+            raise ConfigUnavailable("numeric_failure") from exc
+        return y, {"kind": kind, "lam_factor": float(parameter),
+                   "lam_over_lambda0": diag["lam_over_standard"],
+                   "status": diag["status"], "rank_L": diag["rank_L"],
+                   "iterations": diag["iterations"],
+                   "rel_residual": diag["rel_residual"]}
     k = int(parameter)
     if k >= min(x.shape):
         raise ConfigUnavailable("svd_rank_must_be_less_than_minimum_dimension")
@@ -60,7 +86,8 @@ def _background(x, kind, parameter, gap_rtol):
     }
 
 
-def apply_configuration(x, config_id, *, mask=None, domain="time_real", gap_rtol=GAP_RTOL):
+def apply_configuration(x, config_id, *, mask=None, domain="time_real", gap_rtol=GAP_RTOL,
+                        catalogue_version="0.1"):
     """Return Y and actual step arrays. BG pre_gain differs from GB audit_before_gain.
 
     Axes are [sample, trace]. The caller defines the entire input window in advance.
@@ -74,7 +101,7 @@ def apply_configuration(x, config_id, *, mask=None, domain="time_real", gap_rtol
         raise ValueError("require_finite_real_floating_input")
     if not np.isfinite(gap_rtol) or not 0 < gap_rtol < 1:
         raise ValueError("invalid_gap_guard")
-    matches = [c for c in catalogue() if c["id"] == config_id]
+    matches = [c for c in catalogue(catalogue_version) if c["id"] == config_id]
     if not matches:
         raise ValueError("unknown_configuration")
     config = matches[0]
@@ -106,7 +133,8 @@ def apply_configuration(x, config_id, *, mask=None, domain="time_real", gap_rtol
                     pre_gain = current.copy()
         except (FloatingPointError, np.linalg.LinAlgError) as exc:
             raise ConfigUnavailable("numeric_failure") from exc
-    return {"version": VERSION, "config": config, "output": current,
+    return {"version": VERSION_02 if catalogue_version == "0.2" else VERSION,
+            "config": config, "output": current,
             "pre_gain": pre_gain, "audit_before_gain": current / curve,
             "gain_curve": curve[:, 0].copy(), "steps": steps,
             "mask": None if mask is None else mask.copy(), "input_dtype": str(np.asarray(x).dtype),
