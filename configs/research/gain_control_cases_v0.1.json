@@ -1,0 +1,65 @@
+{
+ "attenuation_levels_db": [
+  -3.0,
+  -6.0,
+  -10.0,
+  -20.0,
+  -40.0
+ ],
+ "carrier": "t3 development families BG CO33 signed radargrams (S2X/S2TZX/C3mX; official SFCW chain, Hann window, 95 MHz; identical loading chain to study_t3_damage_ladder)",
+ "clipping_model": {
+  "clip_tolerance": null,
+  "clip_tolerance_rule": "to be derived from effects-table evidence (design step 3-4) and user-confirmed; no existing number may be reused",
+  "full_scale": 1.0,
+  "normalization": "radargram scaled so global max|x| = 1 before gain",
+  "status": "simulated_full_scale_array_construction_not_device_adc"
+ },
+ "date": "2026-09-29",
+ "evidence": {
+  "design_doc": {
+   "path": "docs/research/2026-09-29_gain_class_control_case_design.md",
+   "sha256": "f0f3a5b56bf3025e7c0acc80fcf4b4f90990cb49d329aa85af8da7532ef620d1"
+  }
+ },
+ "frozen_by": "user \"批准\" (2026-09-29) of docs/research/2026-09-29_gain_class_control_case_design.md",
+ "identity_anchor_expectations": {
+  "control_unattenuated": "identity/no-attenuation control: a=1, D_e=0",
+  "event_only": "measured a on the event window equals the linear factor exactly (float tolerance 1e-12 relative)",
+  "nc_attenuated": "NC energy ratio vs original equals k^2 exactly",
+  "nc_untouched": "NC energy ratio vs original equals 1.0 exactly"
+ },
+ "linear_factors": {
+  "-10.0": 0.316227766,
+  "-20.0": 0.1,
+  "-3.0": 0.707945784,
+  "-40.0": 0.01,
+  "-6.0": 0.501187234
+ },
+ "metric_battery": [
+  "a (event amplitude factor vs original)",
+  "D_e/A/H/rho (event window vs original)",
+  "nc_ratio_vs_original (mean-square ratio)",
+  "peak_abs diagnostic"
+ ],
+ "nc_states": {
+  "nc_attenuated": "NC window carries the same factor k; genuine compensation restores it equally (distinguishes true compensation from event-directed amplification)",
+  "nc_untouched": "NC window (250-400 ns) not attenuated; gain must not inflate NC energy"
+ },
+ "reference": {
+  "declaration": "constructed_reference: the attenuation is imposed by us, so the original event is known; quality labels measure recovery OF the known original, the opposite direction of the background-class ladder (whose reference is the damaged input itself)",
+  "type": "original_unattenuated_event"
+ },
+ "schema": "gain-control-cases/0.1",
+ "scope_limits": [
+  "values are properties of the t3 development families plus the dispersion material assumption; not field attenuation models",
+  "background-class frozen contracts untouched; this contract adds the gain class only",
+  "test families {C5,C8} untouched; no solver runs; no training",
+  "clip conclusions are internal-scale comparisons; not device claims"
+ ],
+ "status": "frozen",
+ "structures": {
+  "event_band": "factor k inside the event window; raised-cosine taper to 1 over +/-20 ns around the window (local lossy body edge model)",
+  "event_only": "multiplicative factor k inside the Fermat event window (er=18, +/-10 ns) only",
+  "time_global": "factor k on all samples from the earliest event-window edge onward (extra path-loss model)"
+ }
+}
