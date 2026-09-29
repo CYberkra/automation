@@ -1,0 +1,559 @@
+{
+ "basis": "reward draft §4 complete: tolerances frozen (v0.1, user \"确认\" 2026-09-28) + weights frozen (v0.2, user \"确认这版\" 2026-09-29); this run executes the protocol end-to-end from archived t3 inputs through both frozen contracts",
+ "candidates": [
+  "B0_G1_BG",
+  "B2_G1_BG",
+  "B3_G1_BG",
+  "B4_G1_BG",
+  "B5_G1_BG",
+  "B7_G1_BG",
+  "B8_G1_BG",
+  "B9_G1_BG",
+  "local_mean_w11(out-of-catalogue)"
+ ],
+ "contracts": {
+  "tolerance": {
+   "path": "reward_tolerance_contract_v0.1.json",
+   "sha256": "9e7a0551e90e0bc8cd025f0d70b1bb434441ef980e2901bb61f4bfa82c023bf3"
+  },
+  "weights": {
+   "formula_applied": "R_bg = contrast_db_delta - 20*log10(1/(1-D_e)) - max(10*log10(Nb_ratio), 0)",
+   "path": "reward_weights_contract_v0.2.json",
+   "sha256": "0427b6ed58328e5ae01d2e0bfbda90460ef1a68beea318808a3f2ae2ed69bfb0"
+  }
+ },
+ "date": "2026-09-29",
+ "note": "protocol-mechanics demonstration on archived development data; expected to reproduce the confirmed weights v0.2 ranking; no solver runs; no test-family data",
+ "results": [
+  {
+   "excluded": [],
+   "family": "S2X",
+   "mother": "B2D-C3mS2X-BG",
+   "ranking": [
+    "B9_G1_BG",
+    "local_mean_w11(out-of-catalogue)",
+    "B8_G1_BG",
+    "B4_G1_BG",
+    "B3_G1_BG",
+    "B5_G1_BG",
+    "B7_G1_BG",
+    "B2_G1_BG",
+    "B0_G1_BG"
+   ],
+   "rows": [
+    {
+     "A": 0.0,
+     "D_e": 0.0,
+     "Nb_ratio": 1.0,
+     "R_bg_db": 0.0,
+     "a": 1.0,
+     "available": true,
+     "config": "B0_G1_BG",
+     "contrast_db_delta": 0.0,
+     "feasible": true,
+     "gates": {
+      "A": true,
+      "D_e": true,
+      "Nb": true
+     },
+     "preservation_db": -0.0
+    },
+    {
+     "A": 0.001897,
+     "D_e": 0.015938,
+     "Nb_ratio": 0.254634,
+     "R_bg_db": 5.698477,
+     "a": 0.998103,
+     "available": true,
+     "config": "B2_G1_BG",
+     "contrast_db_delta": 5.838,
+     "feasible": true,
+     "gates": {
+      "A": true,
+      "D_e": true,
+      "Nb": true
+     },
+     "preservation_db": 0.139547
+    },
+    {
+     "A": 0.003795,
+     "D_e": 0.031875,
+     "Nb_ratio": 0.006178,
+     "R_bg_db": 21.743956,
+     "a": 0.996205,
+     "available": true,
+     "config": "B3_G1_BG",
+     "contrast_db_delta": 22.025,
+     "feasible": true,
+     "gates": {
+      "A": true,
+      "D_e": true,
+      "Nb": true
+     },
+     "preservation_db": 0.281372
+    },
+    {
+     "A": 0.003795,
+     "D_e": 0.031875,
+     "Nb_ratio": 0.006178,
+     "R_bg_db": 21.743958,
+     "a": 0.996205,
+     "available": true,
+     "config": "B4_G1_BG",
+     "contrast_db_delta": 22.025,
+     "feasible": true,
+     "gates": {
+      "A": true,
+      "D_e": true,
+      "Nb": true
+     },
+     "preservation_db": 0.281372
+    },
+    {
+     "A": 0.189502,
+     "D_e": 0.319191,
+     "Nb_ratio": 0.006173,
+     "R_bg_db": 18.356162,
+     "a": 0.810498,
+     "available": true,
+     "config": "B5_G1_BG",
+     "contrast_db_delta": 21.696,
+     "feasible": true,
+     "gates": {
+      "A": true,
+      "D_e": true,
+      "Nb": true
+     },
+     "preservation_db": 3.339498
+    },
+    {
+     "A": 6e-06,
+     "D_e": 0.000779,
+     "Nb_ratio": 0.015258,
+     "R_bg_db": 18.155413,
+     "a": 0.999994,
+     "available": true,
+     "config": "B7_G1_BG",
+     "contrast_db_delta": 18.162,
+     "feasible": true,
+     "gates": {
+      "A": true,
+      "D_e": true,
+      "Nb": true
+     },
+     "preservation_db": 0.006768
+    },
+    {
+     "A": 0.000241,
+     "D_e": 0.015112,
+     "Nb_ratio": 0.006228,
+     "R_bg_db": 21.963485,
+     "a": 0.999759,
+     "available": true,
+     "config": "B8_G1_BG",
+     "contrast_db_delta": 22.096,
+     "feasible": true,
+     "gates": {
+      "A": true,
+      "D_e": true,
+      "Nb": true
+     },
+     "preservation_db": 0.132263
+    },
+    {
+     "A": 0.000227,
+     "D_e": 0.015571,
+     "Nb_ratio": 0.001944,
+     "R_bg_db": 27.017277,
+     "a": 0.999773,
+     "available": true,
+     "config": "B9_G1_BG",
+     "contrast_db_delta": 27.154,
+     "feasible": true,
+     "gates": {
+      "A": true,
+      "D_e": true,
+      "Nb": true
+     },
+     "preservation_db": 0.136313
+    },
+    {
+     "A": 0.088513,
+     "D_e": 0.174985,
+     "Nb_ratio": 0.004276,
+     "R_bg_db": 22.492002,
+     "a": 1.088513,
+     "available": true,
+     "config": "local_mean_w11(out-of-catalogue)",
+     "contrast_db_delta": 24.163,
+     "feasible": true,
+     "gates": {
+      "A": true,
+      "D_e": true,
+      "Nb": true
+     },
+     "preservation_db": 1.670761
+    }
+   ],
+   "selection": "B9_G1_BG",
+   "selection_R_bg_db": 27.017277
+  },
+  {
+   "excluded": [],
+   "family": "S2TZX",
+   "mother": "B2D-C3mS2TZX-BG",
+   "ranking": [
+    "B9_G1_BG",
+    "local_mean_w11(out-of-catalogue)",
+    "B4_G1_BG",
+    "B3_G1_BG",
+    "B8_G1_BG",
+    "B5_G1_BG",
+    "B7_G1_BG",
+    "B2_G1_BG",
+    "B0_G1_BG"
+   ],
+   "rows": [
+    {
+     "A": 0.0,
+     "D_e": 0.0,
+     "Nb_ratio": 1.0,
+     "R_bg_db": 0.0,
+     "a": 1.0,
+     "available": true,
+     "config": "B0_G1_BG",
+     "contrast_db_delta": 0.0,
+     "feasible": true,
+     "gates": {
+      "A": true,
+      "D_e": true,
+      "Nb": true
+     },
+     "preservation_db": -0.0
+    },
+    {
+     "A": 0.00225,
+     "D_e": 0.01994,
+     "Nb_ratio": 0.254655,
+     "R_bg_db": 5.66123,
+     "a": 0.99775,
+     "available": true,
+     "config": "B2_G1_BG",
+     "contrast_db_delta": 5.836,
+     "feasible": true,
+     "gates": {
+      "A": true,
+      "D_e": true,
+      "Nb": true
+     },
+     "preservation_db": 0.174946
+    },
+    {
+     "A": 0.004501,
+     "D_e": 0.03988,
+     "Nb_ratio": 0.006207,
+     "R_bg_db": 21.685981,
+     "a": 0.995499,
+     "available": true,
+     "config": "B3_G1_BG",
+     "contrast_db_delta": 22.039,
+     "feasible": true,
+     "gates": {
+      "A": true,
+      "D_e": true,
+      "Nb": true
+     },
+     "preservation_db": 0.353488
+    },
+    {
+     "A": 0.004501,
+     "D_e": 0.03988,
+     "Nb_ratio": 0.006207,
+     "R_bg_db": 21.685982,
+     "a": 0.995499,
+     "available": true,
+     "config": "B4_G1_BG",
+     "contrast_db_delta": 22.039,
+     "feasible": true,
+     "gates": {
+      "A": true,
+      "D_e": true,
+      "Nb": true
+     },
+     "preservation_db": 0.353488
+    },
+    {
+     "A": 0.183407,
+     "D_e": 0.307538,
+     "Nb_ratio": 0.006196,
+     "R_bg_db": 18.619679,
+     "a": 0.816593,
+     "available": true,
+     "config": "B5_G1_BG",
+     "contrast_db_delta": 21.812,
+     "feasible": true,
+     "gates": {
+      "A": true,
+      "D_e": true,
+      "Nb": true
+     },
+     "preservation_db": 3.192087
+    },
+    {
+     "A": 2.6e-05,
+     "D_e": 0.001206,
+     "Nb_ratio": 0.019334,
+     "R_bg_db": 17.114526,
+     "a": 0.999974,
+     "available": true,
+     "config": "B7_G1_BG",
+     "contrast_db_delta": 17.125,
+     "feasible": true,
+     "gates": {
+      "A": true,
+      "D_e": true,
+      "Nb": true
+     },
+     "preservation_db": 0.010477
+    },
+    {
+     "A": 0.000692,
+     "D_e": 0.029612,
+     "Nb_ratio": 0.006244,
+     "R_bg_db": 21.633495,
+     "a": 0.999308,
+     "available": true,
+     "config": "B8_G1_BG",
+     "contrast_db_delta": 21.895,
+     "feasible": true,
+     "gates": {
+      "A": true,
+      "D_e": true,
+      "Nb": true
+     },
+     "preservation_db": 0.261088
+    },
+    {
+     "A": 0.000602,
+     "D_e": 0.033098,
+     "Nb_ratio": 0.002659,
+     "R_bg_db": 25.310873,
+     "a": 0.999398,
+     "available": true,
+     "config": "B9_G1_BG",
+     "contrast_db_delta": 25.603,
+     "feasible": true,
+     "gates": {
+      "A": true,
+      "D_e": true,
+      "Nb": true
+     },
+     "preservation_db": 0.292353
+    },
+    {
+     "A": 0.085161,
+     "D_e": 0.172809,
+     "Nb_ratio": 0.0048,
+     "R_bg_db": 22.030385,
+     "a": 1.085161,
+     "available": true,
+     "config": "local_mean_w11(out-of-catalogue)",
+     "contrast_db_delta": 23.678,
+     "feasible": true,
+     "gates": {
+      "A": true,
+      "D_e": true,
+      "Nb": true
+     },
+     "preservation_db": 1.647886
+    }
+   ],
+   "selection": "B9_G1_BG",
+   "selection_R_bg_db": 25.310873
+  },
+  {
+   "excluded": [
+    {
+     "config": "B5_G1_BG",
+     "reason": "svd_cutoff_gap_unresolved"
+    },
+    {
+     "config": "B2_G1_BG",
+     "reason": "gate:A"
+    },
+    {
+     "config": "B3_G1_BG",
+     "reason": "gate:A,D_e"
+    },
+    {
+     "config": "B4_G1_BG",
+     "reason": "gate:A,D_e"
+    },
+    {
+     "config": "B8_G1_BG",
+     "reason": "gate:A,D_e"
+    },
+    {
+     "config": "B9_G1_BG",
+     "reason": "gate:A,D_e"
+    },
+    {
+     "config": "local_mean_w11(out-of-catalogue)",
+     "reason": "gate:A,D_e"
+    }
+   ],
+   "family": "C3mX",
+   "mother": "B2D-C3mX-BG",
+   "ranking": [
+    "B7_G1_BG",
+    "B0_G1_BG"
+   ],
+   "rows": [
+    {
+     "available": false,
+     "config": "B5_G1_BG",
+     "reason": "svd_cutoff_gap_unresolved"
+    },
+    {
+     "A": 0.0,
+     "D_e": 0.0,
+     "Nb_ratio": 1.0,
+     "R_bg_db": 0.0,
+     "a": 1.0,
+     "available": true,
+     "config": "B0_G1_BG",
+     "contrast_db_delta": 0.0,
+     "feasible": true,
+     "gates": {
+      "A": true,
+      "D_e": true,
+      "Nb": true
+     },
+     "preservation_db": -0.0
+    },
+    {
+     "A": 0.5,
+     "D_e": 0.5,
+     "Nb_ratio": 0.25,
+     "R_bg_db": null,
+     "a": 0.5,
+     "available": true,
+     "config": "B2_G1_BG",
+     "contrast_db_delta": 0.0,
+     "feasible": false,
+     "gates": {
+      "A": false,
+      "D_e": true,
+      "Nb": true
+     },
+     "preservation_db": null
+    },
+    {
+     "A": 1.0,
+     "D_e": 1.0,
+     "Nb_ratio": 0.0,
+     "R_bg_db": null,
+     "a": 0.0,
+     "available": true,
+     "config": "B3_G1_BG",
+     "contrast_db_delta": -14.836,
+     "feasible": false,
+     "gates": {
+      "A": false,
+      "D_e": false,
+      "Nb": true
+     },
+     "preservation_db": null
+    },
+    {
+     "A": 1.0,
+     "D_e": 1.0,
+     "Nb_ratio": 0.0,
+     "R_bg_db": null,
+     "a": -0.0,
+     "available": true,
+     "config": "B4_G1_BG",
+     "contrast_db_delta": -14.836,
+     "feasible": false,
+     "gates": {
+      "A": false,
+      "D_e": false,
+      "Nb": true
+     },
+     "preservation_db": null
+    },
+    {
+     "A": 0.011608,
+     "D_e": 0.014118,
+     "Nb_ratio": 0.000952,
+     "R_bg_db": 30.024834,
+     "a": 0.988392,
+     "available": true,
+     "config": "B7_G1_BG",
+     "contrast_db_delta": 30.148,
+     "feasible": true,
+     "gates": {
+      "A": true,
+      "D_e": true,
+      "Nb": true
+     },
+     "preservation_db": 0.123502
+    },
+    {
+     "A": 1.000019,
+     "D_e": 1.000019,
+     "Nb_ratio": 0.0,
+     "R_bg_db": null,
+     "a": -1.9e-05,
+     "available": true,
+     "config": "B8_G1_BG",
+     "contrast_db_delta": 0.001,
+     "feasible": false,
+     "gates": {
+      "A": false,
+      "D_e": false,
+      "Nb": true
+     },
+     "preservation_db": null
+    },
+    {
+     "A": 1.0,
+     "D_e": 1.0,
+     "Nb_ratio": 0.0,
+     "R_bg_db": null,
+     "a": 0.0,
+     "available": true,
+     "config": "B9_G1_BG",
+     "contrast_db_delta": -0.001,
+     "feasible": false,
+     "gates": {
+      "A": false,
+      "D_e": false,
+      "Nb": true
+     },
+     "preservation_db": null
+    },
+    {
+     "A": 1.0,
+     "D_e": 1.0,
+     "Nb_ratio": 0.0,
+     "R_bg_db": null,
+     "a": -0.0,
+     "available": true,
+     "config": "local_mean_w11(out-of-catalogue)",
+     "contrast_db_delta": -10.112,
+     "feasible": false,
+     "gates": {
+      "A": false,
+      "D_e": false,
+      "Nb": true
+     },
+     "preservation_db": null
+    }
+   ],
+   "selection": "B7_G1_BG",
+   "selection_R_bg_db": 30.024834
+  }
+ ],
+ "schema": "reward_protocol_first_run/0.1"
+}

@@ -3,7 +3,7 @@
 - 日期：2026-09-29
 - 与 v0.1 的差异：**仅候选表**——2026-09-29 RPCA 追加的 9 行并入（以目录 v0.2 编号 B7/B8/B9_G1_BG 报告）；公式（w=1 dB 单位恒等式构造）、冻结容差（`reward_tolerance_contract_v0.1.json`，SHA 断言）、±50% 敏感性协议全部不变
 - 脚本：`scripts/study_reward_weights_v0_2.py`；产物 `artifacts/research_checks/2026-09-29_reward_weights_v0_2_r1.json`/`_r2.json`（r1/r2 字节一致，SHA-256 前缀 `ed8db374f78dea9f`）
-- 状态：**未冻结，待用户确认**；增益类质量标签维持 undetermined
+- 状态：**已于 2026-09-29 经用户"确认这版"冻结为 `configs/research/reward_weights_contract_v0.2.json`**（`scripts/freeze_reward_weights_v0_2.py` 生成，SHA-256 `0427b6ed…`，锚点断言：容差契约哈希、r1/r2 一致、各族 top-1、敏感性计数、目录 v0.2 RPCA 编号）；增益类质量标签维持 undetermined；协议首跑见 [2026-09-29_reward_protocol_first_run](2026-09-29_reward_protocol_first_run.md)
 
 ## 排名（冻结容差门后）
 

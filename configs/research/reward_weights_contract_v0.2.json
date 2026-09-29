@@ -1,0 +1,55 @@
+{
+ "catalogue": {
+  "note": "RPCA ids B7/B8/B9_G1_BG reported by this ranking",
+  "path": "operator_catalogue_v0.2.json",
+  "sha256": "8ac17b0725c189ab3084f2721e749bcb8a3777fc96371175fc28ec34a246570c"
+ },
+ "confirmed_ranking_top": {
+  "C3mX": "B7_G1_BG +30.02 dB (only non-identity feasible)",
+  "S2TZX": "B9_G1_BG +25.31 dB",
+  "S2X": "B9_G1_BG +27.02 dB"
+ },
+ "date": "2026-09-29",
+ "evidence": {
+  "doc": {
+   "path": "docs/research/2026-09-29_reward_weights_v0.2.md"
+  },
+  "reward_weights_v0_2_r1": {
+   "path": "2026-09-29_reward_weights_v0_2_r1.json",
+   "sha256": "ed8db374f78dea9f5ace756ff790751157afc9f092d6bff3945fbc17fd9cda36"
+  },
+  "reward_weights_v0_2_r2": {
+   "path": "2026-09-29_reward_weights_v0_2_r2.json",
+   "sha256": "ed8db374f78dea9f5ace756ff790751157afc9f092d6bff3945fbc17fd9cda36"
+  },
+  "rpca_effects_r1": {
+   "path": "2026-09-29_t3_operator_effects_rpca_r1.json",
+   "sha256": "7e794a7f6f029c43060af2cf19a4726aa2a8383ac34127ed9fc869c85436700a"
+  }
+ },
+ "frozen_by": "user \"确认这版，继续推进吧\" (2026-09-29)",
+ "reward_background_class": {
+  "coefficients": {
+   "w_b": 1,
+   "w_c": 1,
+   "w_d": 1
+  },
+  "derivation": "coefficients = 1 by dB-unit identities (equal dB = equal scale; net event-to-interference improvement); NOT fitted to candidate outcomes (Cawley-Talbot)",
+  "domain": "feasible rows only (hard gates of the tolerance contract apply first); D_e < 1 required by the log identity",
+  "formula": "R_bg = contrast_db_delta - 20*log10(1/(1-D_e)) - max(10*log10(Nb_ratio), 0)",
+  "inputs": "per-family effects rows: contrast_db_delta, D_e, Nb_ratio from the v0.2 battery (event window = Fermat line +/-10 ns; NC window 250-400 ns)"
+ },
+ "schema": "reward-weights-contract/0.2",
+ "scope_limits": [
+  "values are properties of the t3 development families plus the dispersion material assumption; not field-data thresholds",
+  "background-suppression class only; gain-class quality labels remain undetermined (no controlled multiplicative-attenuation cases yet)",
+  "new scenes require their own reference/window construction and recalibration of tolerances before the reward is applied",
+  "test families {C5,C8} untouched; no solver runs; no training"
+ ],
+ "status": "frozen",
+ "tolerance_contract": {
+  "path": "reward_tolerance_contract_v0.1.json",
+  "relation": "referenced, not modified",
+  "sha256": "9e7a0551e90e0bc8cd025f0d70b1bb434441ef980e2901bb61f4bfa82c023bf3"
+ }
+}
