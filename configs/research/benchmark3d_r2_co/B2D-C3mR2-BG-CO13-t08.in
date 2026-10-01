@@ -1,0 +1,56 @@
+#title: B2D-C3mR2-BG-CO13-t08 benchmark3d_r2_co 2D pair of the 3D rough-interface benchmark (eta slice x=6.0, seed 20261002, field eabcad0b16db)
+#domain_mode: TM
+#domain: inf 12 33
+#dx_dy_dz: 0.025 0.025 0.025
+#time_window: 600e-9
+#omp_threads: 8
+#pml_cells: 0 40 40 0 40 40
+#pml_formulation: HORIPML
+#waveform: impulse 1 1 impulse
+#hertzian_dipole: x inf 5.6 27 impulse
+#rx: inf 6.9 27 t08 Ex
+#pml_cfs: constant forward 0 0 constant forward 1 1 quartic forward 0 0.21235349838321013
+#material: 9 0.001 1 0 rock
+#material: 18.017 0.003 1 0 cover
+#add_dispersion_debye: 1 7.878 6.4567e-09 cover
+#box: inf 1 1 inf 11 12 rock
+#box: inf 1 8.8 inf 1.25 12 cover
+#box: inf 1.25 8.8 inf 1.5 12 cover
+#box: inf 1.5 8.75 inf 1.75 12 cover
+#box: inf 1.75 8.75 inf 2 12 cover
+#box: inf 2 8.7 inf 2.25 12 cover
+#box: inf 2.25 8.7 inf 2.5 12 cover
+#box: inf 2.5 8.7 inf 2.75 12 cover
+#box: inf 2.75 8.7 inf 3 12 cover
+#box: inf 3 8.75 inf 3.25 12 cover
+#box: inf 3.25 8.75 inf 3.5 12 cover
+#box: inf 3.5 8.75 inf 3.75 12 cover
+#box: inf 3.75 8.8 inf 4 12 cover
+#box: inf 4 8.85 inf 4.25 12 cover
+#box: inf 4.25 8.85 inf 4.5 12 cover
+#box: inf 4.5 8.9 inf 4.75 12 cover
+#box: inf 4.75 8.9 inf 5 12 cover
+#box: inf 5 8.95 inf 5.25 12 cover
+#box: inf 5.25 8.95 inf 5.5 12 cover
+#box: inf 5.5 8.95 inf 5.75 12 cover
+#box: inf 5.75 9 inf 6 12 cover
+#box: inf 6 9 inf 6.25 12 cover
+#box: inf 6.25 9 inf 6.5 12 cover
+#box: inf 6.5 9 inf 6.75 12 cover
+#box: inf 6.75 9 inf 7 12 cover
+#box: inf 7 9.05 inf 7.25 12 cover
+#box: inf 7.25 9.05 inf 7.5 12 cover
+#box: inf 7.5 9.05 inf 7.75 12 cover
+#box: inf 7.75 9.05 inf 8 12 cover
+#box: inf 8 9.05 inf 8.25 12 cover
+#box: inf 8.25 9.05 inf 8.5 12 cover
+#box: inf 8.5 9 inf 8.75 12 cover
+#box: inf 8.75 9 inf 9 12 cover
+#box: inf 9 9 inf 9.25 12 cover
+#box: inf 9.25 8.95 inf 9.5 12 cover
+#box: inf 9.5 8.95 inf 9.75 12 cover
+#box: inf 9.75 8.95 inf 10 12 cover
+#box: inf 10 8.9 inf 10.25 12 cover
+#box: inf 10.25 8.9 inf 10.5 12 cover
+#box: inf 10.5 8.9 inf 10.75 12 cover
+#box: inf 10.75 8.9 inf 11 12 cover

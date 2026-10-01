@@ -1,0 +1,170 @@
+{
+ "schema": "benchmark3d-r2-co-sample-table/1",
+ "date": "2026-10-01",
+ "batch_id": "benchmark3d_r2_co",
+ "seed": 20261002,
+ "field": {
+  "kind": "gaussian-correlated zero-mean random interface",
+  "rms_m": 0.16,
+  "correlation_length_m": 2.5,
+  "kernel_sigma_m": 1.25,
+  "sigma_convention": "Gaussian kernel std = CL/2",
+  "clip_m": [
+   -2.0,
+   1.95
+  ],
+  "quantize_m": 0.05,
+  "grid_m": 0.05,
+  "domain_m": [
+   12.0,
+   12.0
+  ],
+  "filter": "reflect-padded FFT Gaussian (numpy-only)",
+  "z_if_nominal_in_coords_m": 9.0
+ },
+ "field_file": "interface_field.npz",
+ "field_sha256": "eabcad0b16db97d1515555d5a08775181d6022b4f0720ebfbea738e279e47c62",
+ "field_note": "2D pairs use the slice eta(x=6.0, y); 2D/3D differ only by dimension",
+ "traces": [
+  {
+   "k": 0,
+   "tx_y": 3.85,
+   "rx_y": 5.15,
+   "x": 6.0,
+   "z": 27.0
+  },
+  {
+   "k": 1,
+   "tx_y": 4.1,
+   "rx_y": 5.3999999999999995,
+   "x": 6.0,
+   "z": 27.0
+  },
+  {
+   "k": 2,
+   "tx_y": 4.35,
+   "rx_y": 5.6499999999999995,
+   "x": 6.0,
+   "z": 27.0
+  },
+  {
+   "k": 3,
+   "tx_y": 4.6,
+   "rx_y": 5.8999999999999995,
+   "x": 6.0,
+   "z": 27.0
+  },
+  {
+   "k": 4,
+   "tx_y": 4.85,
+   "rx_y": 6.1499999999999995,
+   "x": 6.0,
+   "z": 27.0
+  },
+  {
+   "k": 5,
+   "tx_y": 5.1,
+   "rx_y": 6.3999999999999995,
+   "x": 6.0,
+   "z": 27.0
+  },
+  {
+   "k": 6,
+   "tx_y": 5.35,
+   "rx_y": 6.6499999999999995,
+   "x": 6.0,
+   "z": 27.0
+  },
+  {
+   "k": 7,
+   "tx_y": 5.6,
+   "rx_y": 6.8999999999999995,
+   "x": 6.0,
+   "z": 27.0
+  },
+  {
+   "k": 8,
+   "tx_y": 5.85,
+   "rx_y": 7.1499999999999995,
+   "x": 6.0,
+   "z": 27.0
+  },
+  {
+   "k": 9,
+   "tx_y": 6.1,
+   "rx_y": 7.3999999999999995,
+   "x": 6.0,
+   "z": 27.0
+  },
+  {
+   "k": 10,
+   "tx_y": 6.35,
+   "rx_y": 7.6499999999999995,
+   "x": 6.0,
+   "z": 27.0
+  },
+  {
+   "k": 11,
+   "tx_y": 6.6,
+   "rx_y": 7.8999999999999995,
+   "x": 6.0,
+   "z": 27.0
+  },
+  {
+   "k": 12,
+   "tx_y": 6.85,
+   "rx_y": 8.15,
+   "x": 6.0,
+   "z": 27.0
+  }
+ ],
+ "materials": [
+  "#material: 9 0.001 1 0 rock",
+  "#material: 18.017 0.003 1 0 cover",
+  "#add_dispersion_debye: 1 7.878 6.4567e-09 cover"
+ ],
+ "pml_cfs": "#pml_cfs: constant forward 0 0 constant forward 1 1 quartic forward 0 0.21235349838321013",
+ "time_window_s": "600e-9",
+ "runs": [
+  "B3D5CM-C3mR2-BG-CO13-t01",
+  "B3D5CM-C3mR2-BG-CO13-t02",
+  "B3D5CM-C3mR2-BG-CO13-t03",
+  "B3D5CM-C3mR2-BG-CO13-t04",
+  "B3D5CM-C3mR2-BG-CO13-t05",
+  "B3D5CM-C3mR2-BG-CO13-t06",
+  "B3D5CM-C3mR2-BG-CO13-t07",
+  "B3D5CM-C3mR2-BG-CO13-t08",
+  "B3D5CM-C3mR2-BG-CO13-t09",
+  "B3D5CM-C3mR2-BG-CO13-t10",
+  "B3D5CM-C3mR2-BG-CO13-t11",
+  "B3D5CM-C3mR2-BG-CO13-t12",
+  "B3D5CM-C3mR2-BG-CO13-t13",
+  "B2D5CM-C3mR2-BG-CO13-t01",
+  "B2D5CM-C3mR2-BG-CO13-t02",
+  "B2D5CM-C3mR2-BG-CO13-t03",
+  "B2D5CM-C3mR2-BG-CO13-t04",
+  "B2D5CM-C3mR2-BG-CO13-t05",
+  "B2D5CM-C3mR2-BG-CO13-t06",
+  "B2D5CM-C3mR2-BG-CO13-t07",
+  "B2D5CM-C3mR2-BG-CO13-t08",
+  "B2D5CM-C3mR2-BG-CO13-t09",
+  "B2D5CM-C3mR2-BG-CO13-t10",
+  "B2D5CM-C3mR2-BG-CO13-t11",
+  "B2D5CM-C3mR2-BG-CO13-t12",
+  "B2D5CM-C3mR2-BG-CO13-t13",
+  "B2D-C3mR2-BG-CO13-t01",
+  "B2D-C3mR2-BG-CO13-t02",
+  "B2D-C3mR2-BG-CO13-t03",
+  "B2D-C3mR2-BG-CO13-t04",
+  "B2D-C3mR2-BG-CO13-t05",
+  "B2D-C3mR2-BG-CO13-t06",
+  "B2D-C3mR2-BG-CO13-t07",
+  "B2D-C3mR2-BG-CO13-t08",
+  "B2D-C3mR2-BG-CO13-t09",
+  "B2D-C3mR2-BG-CO13-t10",
+  "B2D-C3mR2-BG-CO13-t11",
+  "B2D-C3mR2-BG-CO13-t12",
+  "B2D-C3mR2-BG-CO13-t13"
+ ],
+ "basis": "docs/research/2026-10-01_3d_benchmark_design_draft.md; user 确认 2026-10-01 22:23 (S1-S5)"
+}
