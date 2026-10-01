@@ -2096,9 +2096,29 @@
   },
   {
    "id": "sim2real_augmentation_v0_4",
-   "status": "delivered_pending_user_review",
+   "status": "superseded_by_v0_6",
    "record": "fig_augment_v04_bscan.png",
    "note": "augmentation v0.4 (augment_sim2real_v0_4.py): convolutional ringing with beta solved by bisection to match measured E_ring/E_direct distribution of Line9 (median 0.029, p25-75 0.021-0.038, smooth along-trace drift); direct-wave fidelity: window corr 0.974 (min 0.960), peak change 0.43%, zero arrival shift; smooth_series mean-removal bug fixed (was saturating params to upper bound); analysis analyze_direct_fidelity.py",
+   "solver_executed": false,
+   "training_executed": false,
+   "g4_relieved": false,
+   "tracked": true
+  },
+  {
+   "id": "sim2real_augmentation_v0_5",
+   "status": "superseded_by_v0_6",
+   "record": "fig_augment_v05_bscan.png",
+   "note": "augmentation v0.5 (augment_sim2real_v0_5.py): operator order swapped (OP2 surface edit before OP1 ringing, fixes ringing notch at t0+100~140ns: env 0.24x->0.81x of measured); retightened windows E_d=t0-6~12 / E_r=t0+40~140 recalibrated on full Line9 2378 traces (p25-75 0.0295-0.0464); per-trace amplitude jitter sigma=0.12. Residual: envelope still 0.77-0.88x of measured (full-band energy target dilutes 107MHz component), lateral texture too smooth (diff_rms 0.140 vs 0.179).",
+   "solver_executed": false,
+   "training_executed": false,
+   "g4_relieved": false,
+   "tracked": true
+  },
+  {
+   "id": "sim2real_augmentation_v0_6",
+   "status": "delivered_pending_user_review",
+   "record": "fig_augment_v06_bscan.png",
+   "note": "augmentation v0.6 FINAL candidate (augment_sim2real_v0_6.py): direct match of visual quantity q = bandpass(90-125MHz) envelope median in t0+45~70ns / direct peak, calibrated on full Line9 (p25-75 0.053-0.091, median 0.0713); onset gate (c=0 before t0+12, Hann ramp t0+12~22) makes direct wave exactly lossless: corr_med 0.9956 (min 0.9904), peak change 0.00%, zero arrival shift; phase jitter delta=+-3.5ns (corr~3 traces) + amplitude jitter sigma=0.16 reproduces beaded texture (diff_rms 0.190 vs measured 0.179); envelope profile per t0-relative window 0.84-0.95x of measured in 45~140ns (25-45ns zone kept lower on purpose: instrument wavelet tail, known item, not faked); 140-200ns tail 1.73x but absolute 0.015 near display floor. Metrics: augment_v06_metrics.json; diagnostics diag_v04_display.py / diag_v04_t0rel.py.",
    "solver_executed": false,
    "training_executed": false,
    "g4_relieved": false,
