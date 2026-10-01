@@ -2123,6 +2123,16 @@
    "training_executed": false,
    "g4_relieved": false,
    "tracked": true
+  },
+  {
+   "id": "benchmark_3d_design_draft",
+   "status": "draft_pending_user_signoff",
+   "record": "docs/research/2026-10-01_3d_benchmark_design_draft.md",
+   "note": "First 3D standard benchmark design (user-directed 2026-10-01 late): new reference sample informed by rough-interface research; goals = realistic bedrock-cover interface echo + surface echo in 3D; user signed off two premises (flat ground surface, reduced domain). Spec: C3mX base shrunk to 10x10x31m physical + 1m PML (38.0M cells @5cm), 13 traces @0.25m, 600ns, rough interface RMS 0.16m / CL 2.5m isotropic Gaussian (R2 grade, ~lambda/4), materials verbatim from 2D frozen params, no target body. Runs: 3D-R2 core ~1h + 2D paired 5cm/2.5cm (minutes) + optional 3D-flat control. Accuracy limit stated: 8.3 cells/lambda at 170MHz in cover. Sign-off items S1-S5 pending; gate stays false; first trace smoke-timed before continuing.",
+   "solver_executed": false,
+   "training_executed": false,
+   "g4_relieved": false,
+   "tracked": true
   }
  ],
  "schema": "research-artifact-registry/1",
