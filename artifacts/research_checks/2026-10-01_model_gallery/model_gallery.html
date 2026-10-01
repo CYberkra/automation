@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>标准仿真模型几何画廊</title>
+<style>
+  body { font-family: "Microsoft YaHei", sans-serif; margin: 0; background: #f5f7fa; color: #1f2933; }
+  header { padding: 24px 32px 8px; }
+  header h1 { margin: 0 0 6px; font-size: 22px; }
+  header p { margin: 0; color: #5b6470; font-size: 13px; }
+  main { display: grid; grid-template-columns: 1fr; gap: 20px; padding: 20px 32px 40px; }
+  .card { background: #fff; border: 1px solid #e3e8ee; border-radius: 10px; padding: 16px 20px; box-shadow: 0 1px 3px rgba(16,24,40,.06); }
+  .card h3 { margin: 0 0 4px; font-size: 16px; color: #0f62fe; }
+  .card .meta { margin: 0 0 6px; font-size: 12px; color: #8a94a6; }
+  .card p { margin: 0 0 10px; font-size: 13px; }
+  .card img { width: 100%; border-radius: 6px; border: 1px solid #eef1f4; }
+</style>
+</head>
+<body>
+<header>
+  <h1>标准仿真模型几何画廊（试点批 8 族 · 按 .in 逐箱真实还原）</h1>
+  <p>生成于 2026-10-01 · 数据源：automation_repo/configs/research/ 各 t17 道输入文件 · 阶梯坡地、目标体、过渡带均为输入文件原样栅格化</p>
+</header>
+<main>
+      <div class="card">
+        <h3>C1mX_BG</h3>
+        <p class="meta">域 32 m × 50 m · 几何箱 2 个 · 材料：rock, cover</p>
+        <p>平地 · 覆土 1 m · 无目标背景</p>
+        <img src="fig_model_C1mX_BG.png" alt="C1mX_BG" />
+      </div>
+      <div class="card">
+        <h3>C3mX_BG</h3>
+        <p class="meta">域 32 m × 50 m · 几何箱 2 个 · 材料：rock, cover</p>
+        <p>平地 · 覆土 3 m · 无目标背景</p>
+        <img src="fig_model_C3mX_BG.png" alt="C3mX_BG" />
+      </div>
+      <div class="card">
+        <h3>C3mS2X_BG</h3>
+        <p class="meta">域 40 m × 50 m · 几何箱 149 个 · 材料：rock, cover</p>
+        <p>坡地（阶梯 0.25 m/格）· 覆土 3 m · 无目标背景</p>
+        <img src="fig_model_C3mS2X_BG.png" alt="C3mS2X_BG" />
+      </div>
+      <div class="card">
+        <h3>C3mS2TZX_BG</h3>
+        <p class="meta">域 40 m × 50 m · 几何箱 297 个 · 材料：rock, cover, tzone</p>
+        <p>坡地 + 过渡带（TZ，εr=12.5 半强度色散）· 覆土 3 m · 无目标背景</p>
+        <img src="fig_model_C3mS2TZX_BG.png" alt="C3mS2TZX_BG" />
+      </div>
+      <div class="card">
+        <h3>C1p5mS1X_BG</h3>
+        <p class="meta">域 50 m × 50 m · 几何箱 124 个 · 材料：rock, cover</p>
+        <p>B 层缓坡（S1X）· 覆土 1.5 m（天线处）· 无目标背景</p>
+        <img src="fig_model_C1p5mS1X_BG.png" alt="C1p5mS1X_BG" />
+      </div>
+      <div class="card">
+        <h3>C1p5mS3X_BG</h3>
+        <p class="meta">域 40 m × 50 m · 几何箱 80 个 · 材料：rock, cover</p>
+        <p>B 层陡坡（S3X）· 覆土 1.5 m（天线处）· 无目标背景</p>
+        <img src="fig_model_C1p5mS3X_BG.png" alt="C1p5mS3X_BG" />
+      </div>
+      <div class="card">
+        <h3>C2mS3X_BG</h3>
+        <p class="meta">域 40 m × 50 m · 几何箱 85 个 · 材料：rock, cover</p>
+        <p>B 层陡坡（S3X）· 覆土 2 m（天线处）· 无目标背景</p>
+        <img src="fig_model_C2mS3X_BG.png" alt="C2mS3X_BG" />
+      </div>
+      <div class="card">
+        <h3>C2mS3TZX_BG</h3>
+        <p class="meta">域 40 m × 50 m · 几何箱 169 个 · 材料：rock, cover, tzone</p>
+        <p>B 层陡坡 + 过渡带（TZ）· 覆土 2 m · 无目标背景</p>
+        <img src="fig_model_C2mS3TZX_BG.png" alt="C2mS3TZX_BG" />
+      </div>
+</main>
+</body>
+</html>
