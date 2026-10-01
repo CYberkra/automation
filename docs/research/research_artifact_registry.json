@@ -2066,9 +2066,29 @@
   },
   {
    "id": "sim2real_augmentation_v0_2",
-   "status": "delivered_pending_user_review",
+   "status": "superseded_by_v0_3",
    "record": "fig_augment_v02_bscan.png",
-   "note": "augmentation v0.2 (augment_sim2real_v0_2.py, seed 20261001): fix1 alpha/phi/k/delta vary slowly along traces (Gaussian-smoothed walk, sigma=3 traces) matching measured inter-trace correlation 0.72-0.96, kills v0.1 speckle; fix2 Hann-blend on surface-edit window, no hard cuts. Deep region now smooth, ringing band laterally coherent; self-assessed pass of P2-4 seven-tenths gate; P2-3 noise floor still open",
+   "note": "augmentation v0.2 (augment_sim2real_v0_2.py, seed 20261001): fix1 alpha/phi/k/delta vary slowly along traces (Gaussian-smoothed walk, sigma=3 traces) matching measured inter-trace correlation 0.72-0.96, kills v0.1 speckle; fix2 Hann-blend on surface-edit window, no hard cuts. Deep region now smooth, ringing band laterally coherent; self-assessed pass of P2-4 seven-tenths gate; P2-3 noise floor still open | SUPERSEDED by v0.3 (convolutional ringing, phase-locked)",
+   "solver_executed": false,
+   "training_executed": false,
+   "g4_relieved": false,
+   "tracked": true
+  },
+  {
+   "id": "line9_full_texture_analysis",
+   "status": "delivered",
+   "record": "fig_line9_full_texture.png",
+   "note": "full-line texture analysis of Line9 (2378 traces) + 6-line compare (fig_lines_compare.png; analyze_line9_full.py): direct wave multi-stripe over 0-30ns; ringing band coherent across whole line; ring-window neighbor corr median 0.81 (p25-75 0.64-0.93), deep-window 0.83 (systematic faint banding, not random noise); power envelope smooth decay -46dB@50ns to -84dB@400ns",
+   "solver_executed": false,
+   "training_executed": false,
+   "g4_relieved": false,
+   "tracked": true
+  },
+  {
+   "id": "sim2real_augmentation_v0_3",
+   "status": "delivered_pending_user_review",
+   "record": "fig_augment_v03_bscan.png",
+   "note": "augmentation v0.3 (augment_sim2real_v0_3.py, seed 20261001): CONVOLUTIONAL ringing y=x+beta*(x*g), g=exp(-t/73ns)sin(2pi*107MHz t), beta per-trace scaled to alpha median 0.11 with slow along-trace drift (sigma=5 traces, +-25%), phase locked via convolution; OP2 unchanged from v0.2; 4-panel same-normalization comparison vs real Line9; matches ledger P2-1 original convolution intent; supersedes additive v0.1/v0.2",
    "solver_executed": false,
    "training_executed": false,
    "g4_relieved": false,
