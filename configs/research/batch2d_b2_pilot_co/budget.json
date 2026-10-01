@@ -1,0 +1,53 @@
+{
+ "schema": "batch2d_b2_pilot_co_budget/1",
+ "date": "2026-10-01",
+ "grid": {
+  "dy_m": 0.025,
+  "dz_m": 0.025,
+  "time_steps": 20352,
+  "time_window_ns": 1200
+ },
+ "single_case": {
+  "measured_t3_wall_range_s": [
+   24.0,
+   29.0
+  ],
+  "estimate_flat_32m_s": [
+   18.0,
+   24.0
+  ],
+  "estimate_slope_40m_s": [
+   24.0,
+   29.0
+  ],
+  "estimate_s1_50m_s": [
+   30.0,
+   36.0
+  ],
+  "note": "estimates for cap-setting only, not ETA; vctip lingering can add ~15 min per case if the singleton watcher lapses"
+ },
+ "batch_totals": {
+  "n_cases": 396,
+  "mothers_by_domain": {
+   "32m_flat": 5,
+   "40m_slope": 6,
+   "50m_s1": 1
+  },
+  "estimate_total_h": [
+   2.4,
+   3.6
+  ],
+  "conservative_budget_min": 300
+ },
+ "hard_stops": {
+  "wall_minutes_per_case": 20,
+  "job_commit_GiB": 6,
+  "output_GiB": 2,
+  "retries": 0,
+  "max_fdtd_runs": 396
+ },
+ "known_limitations": [
+  "serial fail-abort, retries=0, CUDA double, no CPU fallback",
+  "GPU blocked at freeze time: NVML init failure pending OS reboot (CBS_RebootPending=True, 2026-10-01); preflight must re-verify"
+ ]
+}

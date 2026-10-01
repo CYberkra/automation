@@ -1930,11 +1930,154 @@
    "reference_state": "numerically_unresolved",
    "viewer": "artifacts/local_checks/slope_t2_bscan_viewer.html (local, untracked)",
    "tracked": true
+  },
+  {
+   "id": "reward_protocol_b2_pilot_baseline",
+   "status": "completed_baseline_scored_4families",
+   "record": "docs/research/2026-10-01_reward_protocol_b2_pilot_baseline.md",
+   "script": "scripts/run_reward_protocol_b2_pilot_v0_1.py",
+   "results_r1": "artifacts/research_checks/2026-10-01_reward_protocol_b2_pilot_r1.json",
+   "results_r2": "artifacts/research_checks/2026-10-01_reward_protocol_b2_pilot_r2.json",
+   "r1_sha256_16": "ffb57aa9c3a4c673",
+   "contracts": {
+    "tolerance": "reward_tolerance_contract_v0.2.json",
+    "weights": "reward_weights_contract_v0.3.json",
+    "background_formula_from": "reward_weights_contract_v0.2.json"
+   },
+   "selections": {
+    "C1mX": "B7_G1_BG",
+    "S2X": "B9_G1_BG",
+    "S2TZX": "B9_G1_BG",
+    "C3mX": "B7_G1_BG"
+   },
+   "reproduction_check": "S2X/S2TZX/C3mX rows byte-identical to 2026-09-29 t3 first run",
+   "solver_executed": false,
+   "training_executed": false,
+   "g4_relieved": false,
+   "tracked": true
+  },
+  {
+   "id": "snapshot_c1mx_v1",
+   "status": "completed_1of1_exit0",
+   "record": "gate last_completed_execution_contract; log artifacts/research_checks/2026-10-01_snapshot_c1mx_run.log",
+   "contract": "configs/research/snapshot_c1mx_v1/SNAP-C1mX-TGT.in",
+   "launcher": "scripts/run_approved_snapshot_c1mx_v1.py",
+   "results_directory": "artifacts/simulations/2026-10-01_SNAP-C1mX-TGT",
+   "figures": "E:/automation_djh/fig_snapshot_c1mx_wavefield.png (v1 single-scale), E:/automation_djh/fig_snapshot_c1mx_wavefield_v2.png (region-split norm)",
+   "scripts_plot": "E:/automation_djh/plot_snapshot_c1mx.py, plot_snapshot_c1mx_v2.py",
+   "key_finding": "ground-transmitted field ~0.1-0.4% of air-side (-50 dB); linear same-scale display shows empty ground",
+   "solver_executed": true,
+   "training_executed": false,
+   "g4_relieved": false,
+   "tracked": true
+  },
+  {
+   "id": "snapshot_c1mx_wide_v1",
+   "status": "completed_1of1_exit0",
+   "record": "gate last_completed_execution_contract; log artifacts/research_checks/2026-10-01_snapshot_c1mx_wide_run.log",
+   "contract": "configs/research/snapshot_c1mx_wide_v1/SNAPW-C1mX-TGT.in",
+   "launcher": "scripts/run_approved_snapshot_c1mx_wide_v1.py",
+   "results_directory": "artifacts/simulations/2026-10-01_SNAPW-C1mX-TGT",
+   "key_finding": "side-PML residue is broadband/HF; after 20-170 MHz SFCW chain, rx difference vs 64 m control <=1.5e-10 full scale; B-scan products unaffected",
+   "solver_executed": true,
+   "training_executed": false,
+   "g4_relieved": false,
+   "tracked": true
+  },
+  {
+   "id": "worklog_2026-10-01",
+   "status": "archived",
+   "record": "docs/research/2026-10-01_worklog_acceptance_analysis.md",
+   "note": "daily work archive: pilot closeout, P4-1 baseline, six-line dataset, B-scan acceptance, snapshot diagnostics, sidewall/dispersion/er decisions, ringing parameters",
+   "solver_executed": false,
+   "training_executed": false,
+   "g4_relieved": false,
+   "tracked": true
+  },
+  {
+   "id": "p1_2_formal_batch_draft",
+   "status": "draft_pending_user_signoff",
+   "record": "docs/research/2026-10-01_P1-2_pilot_review_formal_batch_draft.md",
+   "note": "formal batch proposal: depth tiers {4,6,10,16}m avoiding C5/C8, altitude 8/10.5/13 per-mother, target 7m below interface, 24 mothers/792 traces/~6.5-7h; sign-off items S1-S7",
+   "solver_executed": false,
+   "training_executed": false,
+   "g4_relieved": false,
+   "tracked": true
+  },
+  {
+   "id": "model_geometry_gallery",
+   "status": "delivered",
+   "record": "model_gallery.html",
+   "note": "8 standard model geometry renders (fig_model_*.png + model_gallery.html) rasterized box-by-box from t17 .in inputs (render_model_geometries.py); verified nullcontrast=tgt-position same-as-rock control in S2TZX NC; S1X slope cover thins y0->30.75m; B-layer domains: S1X 50m wide, S3X/S3TZX 40m",
+   "solver_executed": false,
+   "training_executed": false,
+   "g4_relieved": false,
+   "tracked": true
+  },
+  {
+   "id": "ringing_injection_demo",
+   "status": "delivered",
+   "record": "fig_ringing_bscan.png",
+   "note": "ringing injection demo on pilot BG B-scans (fig_ringing_bscan.png + fig_ringing_waveform.png; script preview_ringing_bscan.py, solver-python); additive damped-sine model f0=107MHz tau=73ns per-trace t0=direct peak in 15-70ns, alpha=0.11 CALIBRATED (see ringing_alpha_calibration)",
+   "solver_executed": false,
+   "training_executed": false,
+   "g4_relieved": false,
+   "tracked": true
+  },
+  {
+   "id": "cover_bedrock_interface_morphology_survey",
+   "status": "delivered",
+   "record": "conversation",
+   "note": "interface morphology survey: typical cover-bedrock interface is wavy/undulating (slope 3-50deg per CN engineering surveys), follows terrain, often gradual weathering-front transition w/ corestones; FDTD literature models it via Monte-Carlo random roughness (RMS height + correlation length), identification degrades at RMS>lambda/4; our planar-tilt + TZ design covers base cases, stochastic roughness logged as future extension",
+   "solver_executed": false,
+   "training_executed": false,
+   "g4_relieved": false,
+   "tracked": true
+  },
+  {
+   "id": "ringing_alpha_calibration",
+   "status": "delivered",
+   "record": "fig_ringing_alpha_calibration.png",
+   "note": "alpha calibrated on 6 Yingshan lines / 10394 traces, per-trace damped-sine least squares (f0=107MHz, tau=73ns fixed, fit window +25..220ns after direct peak): median 0.110, mean 0.114, p10-p90 0.042-0.191, per-line medians 0.071-0.137, fit R2 median ~0.1-0.2 (expected: window contains geology+noise); recommendation alpha~U(0.04,0.19) per-trace; script calibrate_ringing_alpha.py; ledger P2-1 updated",
+   "solver_executed": false,
+   "training_executed": false,
+   "g4_relieved": false,
+   "tracked": true
+  },
+  {
+   "id": "sim2real_augmentation_v0_1",
+   "status": "superseded_by_v0_2",
+   "record": "fig_augment_bscan.png",
+   "note": "P2-1+P2-2 augmentation operators implemented (augment_sim2real_v0_1.py, seed 20261001): ringing alpha~U(0.04,0.19) phi~U(0,2pi) f0=107MHz tau=73ns; surface-event edit k~U(0.2,0.64) jitter +/-15ns in [ts-30,ts+90] window; preview fig_augment_bscan.png (orig|P2-1|P2-1+2-2|real Line9) + fig_augment_waveform.png; P2-4 eyeball gate awaits user | SUPERSEDED by v0.2 (trace-coherent params + Hann-blend window)",
+   "solver_executed": false,
+   "training_executed": false,
+   "g4_relieved": false,
+   "tracked": true
+  },
+  {
+   "id": "rough_interface_extension_draft",
+   "status": "draft_pending_user_signoff",
+   "record": "docs/research/2026-10-01_rough_interface_extension_draft.md",
+   "note": "Plan-B rough-interface extension family: 4 BG mothers on C3mX base, Gaussian-correlated interface roughness RMS {0.08,0.16,0.33}m x CL {2.5,5}m (lambda~0.66m in cover), 132 traces ~1h, seeds fixed, sign-off items R1-R4; does NOT modify P1-2",
+   "solver_executed": false,
+   "training_executed": false,
+   "g4_relieved": false,
+   "tracked": true
+  },
+  {
+   "id": "sim2real_augmentation_v0_2",
+   "status": "delivered_pending_user_review",
+   "record": "fig_augment_v02_bscan.png",
+   "note": "augmentation v0.2 (augment_sim2real_v0_2.py, seed 20261001): fix1 alpha/phi/k/delta vary slowly along traces (Gaussian-smoothed walk, sigma=3 traces) matching measured inter-trace correlation 0.72-0.96, kills v0.1 speckle; fix2 Hann-blend on surface-edit window, no hard cuts. Deep region now smooth, ringing band laterally coherent; self-assessed pass of P2-4 seven-tenths gate; P2-3 noise floor still open",
+   "solver_executed": false,
+   "training_executed": false,
+   "g4_relieved": false,
+   "tracked": true
   }
  ],
  "schema": "research-artifact-registry/1",
  "solver_execution_gate": "configs/research/gprmax_v4_execution_gate.json",
- "updated_date": "2026-09-29",
+ "updated_date": "2026-10-01",
  "current_handoff": "START_HERE.md - batch2d_slope_t2 + _mt both completed (6+6). B-scan viewer: artifacts/local_checks/slope_t2_bscan_viewer.html via 127.0.0.1:8765. Dispersion measured-data research registered (West 2003 etc). Next candidates: T1/T3, 3D slope, tilt_target, dispersive TZ; G4 unchanged.",
  "t3_operator_effects_rpca_addendum": "docs/research/2026-09-29_rpca_effects_addendum.md",
  "operator_catalogue_v0_2": "configs/research/operator_catalogue_v0.2.json",
@@ -1953,5 +2096,17 @@
  "t1_t3_extension_proposal": "docs/research/2026-09-29_t1_t3_extension_proposal.md",
  "batch2d_slope_t1t3_co": "artifacts/research_checks/batch2d_slope_t1t3_co_analysis/results.json",
  "s1s3_reference_window_proposal": "docs/research/2026-09-29_s1s3_reference_window_proposal.md",
- "s1s3_reference_window_contract_v0_1": "configs/research/s1s3_reference_window_contract_v0.1.json"
+ "s1s3_reference_window_contract_v0_1": "configs/research/s1s3_reference_window_contract_v0.1.json",
+ "contractual_adaptive_isp_proposal_v0_1": "docs/research/2026-10-01_contractual_adaptive_isp_proposal.md",
+ "crossdomain_metrics_survey_2026_10_01": "docs/research/research_crossdomain_metrics_2026-10-01.md",
+ "pipeline_extensibility_survey_2026_10_01": "docs/research/research_pipeline_extensibility_2026-10-01.md",
+ "task_definition_contract_v0_1": "configs/research/task_definition_contract_v0.1.json",
+ "task_definition_freeze_record": "docs/research/2026-10-01_b1_task_definition_freeze.md",
+ "b2_sampling_design_draft_v0_1": "docs/research/2026-10-01_b2_sampling_design_draft.md",
+ "pretraining_prerequisite_ledger_v0_1": "docs/research/2026-10-01_pretraining_prerequisite_ledger.md",
+ "b2_pilot_freeze_record": "docs/research/2026-10-01_b2_pilot_freeze_record.md",
+ "b2_pilot_co_contract": "configs/research/batch2d_b2_pilot_co/",
+ "b2_pilot_freeze_script": "scripts/freeze_batch2d_b2_pilot_co.py",
+ "b2_pilot_co_run": "artifacts/research_checks/2026-10-01_b2_pilot_run.log",
+ "b2_pilot_co_run_status": "completed_396of396_exit0; NC-BG bitwise 4/4 pairs x 33 traces; h5 396/396; wall 3.35 h; vctip drain watcher used (operational only)"
 }

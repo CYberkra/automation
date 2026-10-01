@@ -1,0 +1,27 @@
+#title: SNAPW-C1mX-TGT snapshot_c1mx_wide_v1 wavefield snapshots (mother B2D-C1mX-D10m-W4m-T0.5m-E20-S0.02, CO33-t17 antenna position)
+#domain_mode: TM
+#domain: inf 64 50
+#dx_dy_dz: 0.025 0.025 0.025
+#time_window: 1200e-9
+#omp_threads: 8
+#pml_cells: 0 40 40 0 40 40
+#pml_formulation: HORIPML
+#waveform: impulse 1 1 impulse
+#hertzian_dipole: x inf 31.35 45 impulse
+#rx: inf 32.65 45 t17 Ex
+#pml_cfs: constant forward 0 0 constant forward 1 1 quartic forward 0 0.21235349838321013
+#material: 9 0.001 1 0 rock
+#box: inf 0 0 inf 64 30 rock
+#material: 18.017 0.003 1 0 cover
+#add_dispersion_debye: 1 7.878 6.4567e-09 cover
+#box: inf 0 29 inf 64 30 cover
+#material: 20 0.02 1 0 target
+#box: inf 30 19.75 inf 34 20.25 target
+#snapshot: 0 0 0 inf 64 50 0.05 0.05 0.05 20e-9 s020
+#snapshot: 0 0 0 inf 64 50 0.05 0.05 0.05 50e-9 s050
+#snapshot: 0 0 0 inf 64 50 0.05 0.05 0.05 90e-9 s090
+#snapshot: 0 0 0 inf 64 50 0.05 0.05 0.05 130e-9 s130
+#snapshot: 0 0 0 inf 64 50 0.05 0.05 0.05 160e-9 s160
+#snapshot: 0 0 0 inf 64 50 0.05 0.05 0.05 190e-9 s190
+#snapshot: 0 0 0 inf 64 50 0.05 0.05 0.05 240e-9 s240
+#snapshot: 0 0 0 inf 64 50 0.05 0.05 0.05 320e-9 s320

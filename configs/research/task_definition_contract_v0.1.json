@@ -1,0 +1,117 @@
+{
+ "acceptance_criteria_draft": [
+  "one-shot synthetic test evaluation: significantly above identity baseline",
+  "not below the protocol first-run global winners (S2X/S2TZX->B9, C3mX->B7) on the same families",
+  "no selection-frequency collapse alarm",
+  "any failure -> undetermined, not negative; no test-family iteration"
+ ],
+ "action_space": {
+  "catalogue_entry_count": 30,
+  "continuous_parameter_head": false,
+  "discrete_tiers_only": true,
+  "enumerated_from_frozen_catalogue_only": true,
+  "identity_anchor": "B0_G1_BG",
+  "masking": "illegality rules from operator contracts (truncation degeneracy refusal, mask limits, gain overflow) applied as -inf before softmax",
+  "plus_stop": true,
+  "source": "configs/research/operator_catalogue_v0.2.json"
+ },
+ "data_discipline": {
+  "dev_families": [
+   "C1",
+   "C3"
+  ],
+  "test_families": [
+   "C5",
+   "C8"
+  ],
+  "test_zero_contact_until_one_shot_evaluation": true
+ },
+ "date": "2026-10-01",
+ "extension_spec_v0_1": {
+  "explicit_non_reservations": [
+   "no continuous parameter head interface",
+   "no multi-objective reward structure (lambda_c*cost covers the accuracy/latency trade-off)"
+  ],
+  "five_step_new_family_entry": [
+   "catalogue version bump with composition-schema review",
+   "mechanism-ladder calibration producing discrete tiers",
+   "scope_limits registration of uncovered regions",
+   "action-space column extension synced to the frozen catalogue version; old weights keep working (new columns small-constant init)",
+   "evaluation-rule coverage for the new family registered in the next tolerance/weights contract version"
+  ]
+ },
+ "fdtd_execution_enabled": false,
+ "frozen_by": "kimi, freeze script scripts/freeze_task_definition_b1.py",
+ "g4_relieved": false,
+ "goodhart_guardrails": [
+  "reward coefficients stay dB-identity-constructed (=1); never back-fitted from policy training performance",
+  "tau_A / tau_D / epsilon update only via mechanism-ladder recalibration (pending: S1/S3), never from training results",
+  "identity/oracle anchors evaluated every episode as online calibration of the reward scale",
+  "selection-frequency entropy below bound -> diagnose, not judge",
+  "test families evaluated once (S5-style); no threshold re-tuning on test"
+ ],
+ "inputs": {
+  "operator_catalogue": "configs/research/operator_catalogue_v0.2.json",
+  "proposal": "docs/research/2026-10-01_contractual_adaptive_isp_proposal.md",
+  "reward_tolerance_contract": "configs/research/reward_tolerance_contract_v0.2.json",
+  "reward_weights_contract": "configs/research/reward_weights_contract_v0.3.json",
+  "solver_execution_gate": "configs/research/gprmax_v4_execution_gate.json"
+ },
+ "inputs_sha256": {
+  "operator_catalogue": "8ac17b0725c189ab3084f2721e749bcb8a3777fc96371175fc28ec34a246570c",
+  "proposal": "bc3db0dbadbd03655c954f49f681bdb136c46d71ffce29fbc1442851722eed04",
+  "reward_tolerance_contract": "2b2b6aff6a6bb3710f6d361a61ca710946a52e6d1cfeb4dc8828a64d4c9a5fee",
+  "reward_weights_contract": "282d083b34477bafff25473f853e3e8d47c6c44807c82e3c5f9d41170399e0d0",
+  "solver_execution_gate": "df3e45ba4391a6588b5a9f918d5028f0d34f221963e09825c621cbac773a1bad"
+ },
+ "mdp": {
+  "action": "(operator_id, discrete_parameter_tier) or STOP; identity anchor B0_G1_BG always present",
+  "gamma": 1.0,
+  "reward_timing": "sparse terminal reward; per-stage reward zero",
+  "state": "current B-scan (dB scale, fixed size) + EC channels (stage counter t, operator one-hot history)",
+  "termination": {
+   "stop_action": true,
+   "t_max": 4
+  },
+  "transition": "deterministic array operators (mean lambda / SVD k / local mean / RPCA lambda axis / gain class)"
+ },
+ "one_line_definition": "per input B-scan, a lightweight policy network selects operator and discrete parameter tier stage by stage from operator_catalogue v0.2 (30 entries + STOP) to maximize the frozen contract reward",
+ "prerequisites_before_any_training": [
+  "A1 G4 relief (user sign-off)",
+  "A2 S1/S3 tolerance recalibration",
+  "B2/B3 sampling design freeze + batch simulation budget",
+  "B4 label/reward generation chain acceptance (r1/r2 byte-identical)",
+  "C1 PyTorch environment locked (wheel hashes archived, import verified)"
+ ],
+ "reward": {
+  "anchors_online_per_episode": [
+   "identity reads -due",
+   "oracle reads +due"
+  ],
+  "cost_initial_values": "from existing batch telemetry",
+  "dB_identity_coefficients_fixed_at_one_not_fittable": true,
+  "formula": "R = R_contract - lambda_c * cost(a_1:T)",
+  "hard_constraint_priority": "violations clamp R below the identity anchor (\"worse than doing nothing\")",
+  "lambda_c": "inference-time knob; switching accuracy/latency mode needs no retrain",
+  "r_contract_computed_by": [
+   "configs/research/reward_tolerance_contract_v0.2.json",
+   "configs/research/reward_weights_contract_v0.3.json"
+  ],
+  "weights_contract_note": "v0.3 supersedes v0.2 with the background-class section verbatim unchanged (its own supersedes block asserts this); binding to v0.3 is equivalent to the proposal text \"权重契约 v0.2\" for the background class and additionally covers the gain class"
+ },
+ "schema": "task_definition_contract/v0.1",
+ "status": "frozen_task_definition_only__no_simulation_no_training",
+ "task_id": "b1_contractual_adaptive_isp",
+ "training_enabled": false,
+ "training_method": {
+  "algorithm": "PPO (reward need not be differentiable)",
+  "episode": "sample one simulated gather from dev families -> rollout <= t_max stages -> contract reward settlement",
+  "monitoring": [
+   "train/val reward curves",
+   "per-operator selection frequency entropy (collapse alarm)",
+   "repeat runs report std"
+  ],
+  "reproducibility": "fixed seeds, deterministic operators, r1/r2 double pass; training config frozen as its own contract JSON before any start"
+ },
+ "user_approval": "user 2026-10-01 13:23 \"确认，先试试效果\" — B1 proposal signed off after review of the one-page review sheet"
+}

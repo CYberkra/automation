@@ -1,0 +1,17 @@
+#title: B2D-C1mX-BG batch2d_b2_pilot_co mother flat dispersive (source batch2d_v1 B2D-C1m-BG)
+#domain_mode: TM
+#domain: inf 32 50
+#dx_dy_dz: 0.025 0.025 0.025
+#time_window: 1200e-9
+#omp_threads: 8
+#pml_cells: 0 40 40 0 40 40
+#pml_formulation: HORIPML
+#waveform: impulse 1 1 impulse
+#hertzian_dipole: x inf 15.35 45 impulse
+#rx: inf 16.65 45 measurement Ex
+#pml_cfs: constant forward 0 0 constant forward 1 1 quartic forward 0 0.21235349838321013
+#material: 9 0.001 1 0 rock
+#box: inf 0 0 inf 32 30 rock
+#material: 18.017 0.003 1 0 cover
+#add_dispersion_debye: 1 7.878 6.4567e-09 cover
+#box: inf 0 29 inf 32 30 cover
