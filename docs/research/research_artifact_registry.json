@@ -2198,6 +2198,15 @@
    "report": "docs/research/2026-10-02_halfspace_standard_design_draft.md",
    "key_numbers": "HS1 flat anchor + HS2 cover-only ablation .in built (frozen t07 numerics verbatim; materials extend through PML to domain boundary); HS3 domain-sensitivity (y 12->16) and HS4 rough-interface (interface_field.npz sha eabcad0b16db97d1) designed, not yet generated; GPU budget <12 min total",
    "notes": "fixes model-design-review 2026-10-02 section 3.1; one-change-at-a-time: no material/PML/source edits; awaiting user confirmation before GPU burn"
+  },
+  {
+   "id": "2026-10-02_halfspace_standard_hs_run",
+   "status": "completed_accepted",
+   "directory": "verify_runs/2026-10-02_halfspace_standard",
+   "solver_executed": "gprMax v4 GPU double-precision, 3 runs, zero retry: HS1 3m22s, HS2 3m16s, HS3 4m13s (total 10m52s)",
+   "report": "docs/research/2026-10-02_halfspace_standard_design_draft.md",
+   "key_numbers": "geometry asserts pass (side-face air cells below z=12m: 0; base all rock; interfaces at z=9.0/12.0m). Official SFCW chain (20-170MHz/501pt/Hann, carrier=20MHz): direct coupling 3.33ns; ground reflection env peak 0.1299 @ 96.5ns; HS1-HS2 differential = pure bedrock-cover interface echo, env peak 6.06e-4 @ 187.1ns (0.47% of ground = -46.6 dB, 0.013% of direct); HS3(y=16m) vs HS1(y=12m) max rel diff in event windows 4.4e-6 -> domain-width insensitive",
+   "notes": "PML/air-ring geometry defect of legacy B3D5CM fixed (materials through PML to boundary); interface echo extremely weak -> consistent with known Debye over-loss issue (material recalibration is a separate pending task); figure: fig_hs_official_sfcw_acceptance.png"
   }
  ],
  "schema": "research-artifact-registry/1",
