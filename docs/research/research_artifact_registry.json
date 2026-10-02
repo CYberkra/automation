@@ -2189,6 +2189,15 @@
    "report": "docs/research/2026-10-02_legacy_carrier_archive_index.md",
    "key_numbers": "13 analysis JSON families + augment v0_1..v0_6 + diagnostic figures archived as legacy-95MHz in place (no file moved/altered; frozen-contract SHA chains intact); unaffected: attempt records, H5, envelope-only evidence, 09-27 unified adapter (already official)",
    "notes": "user instruction '把以前错误的版本全部归档'; archived = numeric values retired from current use, valid as historical/reproduction baseline only; successors: carrierfix v0_2 dev / v0_3 acceptance-gated"
+  },
+  {
+   "id": "2026-10-02_halfspace_standard_design_draft",
+   "status": "draft_pending_user_confirmation",
+   "directory": "verify_runs/2026-10-02_halfspace_standard",
+   "solver_executed": "geometry-only (hs1 passed: side-face air cells 57600->0, base all rock, interfaces at z=9.0/12.0 m)",
+   "report": "docs/research/2026-10-02_halfspace_standard_design_draft.md",
+   "key_numbers": "HS1 flat anchor + HS2 cover-only ablation .in built (frozen t07 numerics verbatim; materials extend through PML to domain boundary); HS3 domain-sensitivity (y 12->16) and HS4 rough-interface (interface_field.npz sha eabcad0b16db97d1) designed, not yet generated; GPU budget <12 min total",
+   "notes": "fixes model-design-review 2026-10-02 section 3.1; one-change-at-a-time: no material/PML/source edits; awaiting user confirmation before GPU burn"
   }
  ],
  "schema": "research-artifact-registry/1",
