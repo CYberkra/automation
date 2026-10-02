@@ -2234,6 +2234,15 @@
    "report": "docs/research/2026-10-02_hs_storage_review.md",
    "key_numbers": "P1 gate fix: scripts/run_hs_acceptance_v0_2.py (input SHA-256 identity check vs manifest; explicit thresholds; nonzero exit on fail; exclusive-create output dir, read-only input capsule; official-envelope convention 2|env|, differential 2|env1_c-env2_c|; ALL figure numbers computed). Counterexamples: tampered-content->exit 2, forged-manifest+doubled-HS3->exit 1 FAIL, overwrite-attempt->exit 1. Official-envelope metrics: direct 4.2875 @ 3.327 ns; ground 0.12630 @ 99.80 ns; interface diff echo 6.0602e-4 @ 187.13 ns = 0.480% of ground (-46.38 dB); domain control |e1-e3|/direct <= 1.23e-7 (threshold 1e-5) and interface-window diff = 0.0075% of interface echo -> PASS. Window-local relative metric documented as ill-conditioned near noise floor (diagnostic only). P2 envelope-mixing fixed (v0.1 Hilbert metrics archived, not overwritten). Convention section 2.1 added: raw batch H5 = must-keep asset, no cleanup until hash-verified retrievable backup; demotion != deletion, recovery entrypoint scripts/recover_demoted_evidence.py (restore from pinned commit c921881 blobs, SHA-verified; live-tested 1 file restored byte-identical). Archive index corrected field-level: noise-injection Nb void (6 items changed, S2TZX +6dB 4.960311->5.056014), S1X NC RMS 0.0004165575->0.0008200593, floor RMS 3.0384->6.0768 void",
    "notes": "review branch codex/hs-storage-review-20261002 merged (dcf3875); open: raw H5 backup destination (user decision); v0.3 full rerun pending"
+  },
+  {
+   "id": "2026-10-02_simulations_backup_d",
+   "status": "completed_verified",
+   "directory": "D:/gpr_evidence_backup/2026-10-02_simulations",
+   "solver_executed": "none",
+   "report": "docs/research/2026-10-02_simulations_h5_backup_manifest.json",
+   "key_numbers": "artifacts/simulations full backup: 11622 files / 3.24 GB mirrored to second physical SSD (E=disk1, D=disk0, 203GB free); per-file SHA-256 verified 11622/11622 identical; manifest tracked in repo; user decision: no cloud, local dual-disk redundancy suffices (science re-runnable, byte identity protected)",
+   "notes": "closes review P1 no-backup finding; future batch H5 must be incrementally backed up with manifest update"
   }
  ],
  "schema": "research-artifact-registry/1",
