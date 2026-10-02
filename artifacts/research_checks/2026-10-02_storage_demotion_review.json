@@ -1,0 +1,17 @@
+{
+  "schema": "storage_demotion_review/1",
+  "reviewed_commit": "cbe203e",
+  "manifest_sha256": "b4ccbf6d4a42865bdd46a62c052eaba64c874aec5fb69f860035e7bc63cb5ea2",
+  "demoted_count": 33,
+  "demoted_files_absent_from_current_git_tree": 33,
+  "preserved_local_files_matching_original_sha256": 33,
+  "frozen_contract_manifest_sha_matches": true,
+  "transitively_required_array": "artifacts/research_checks/2026-09-27_sfcw_unified_dev_adapter_mt33_rerun/responses_and_reconstructions.npz",
+  "array_manifest_sha_matches_demotion": true,
+  "clean_checkout_verifier_exit_code": 1,
+  "clean_checkout_error": "FileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\自动处理\\\\artifacts\\\\local_checks\\\\demotion_review_mekkp589\\\\clean_checkout\\\\artifacts\\\\research_checks\\\\2026-09-27_sfcw_unified_dev_adapter_mt33_rerun\\\\responses_and_reconstructions.npz'",
+  "recovery": "Git history still retains original blobs; restore them explicitly, without rerunning scientific evaluation.",
+  "solver_invoked": false,
+  "test_family_read": false,
+  "source_sha256": "92138d5c180c43b6319c990876cf8f5ee597e32ed7bb4328f24e5b31ef2a73a8"
+}
