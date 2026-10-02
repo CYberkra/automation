@@ -2252,6 +2252,15 @@
    "report": "docs/research/2026-10-02_halfspace_standard_design_draft.md",
    "key_numbers": "HS4 rough-interface standard piece built by scripts/build_hs4_rough_interface_v0_1.py: frozen field interface_field.npz (sha eabcad0b16db97d1, RMS 0.16m/CL 2.5m/seed 20261002) + edge-controlled continuation (PML ring = edge replication); rock base box 0..12^2 x 0..12 + 2304 cover patches (0.25m bins, z0 in [8.6,9.4] m, mean 9.0007 m); geometry asserts: side-face air cells below z=12m = 0, base all rock, PML ring interface constant (col transitions identical at y=x=0..0.95m), interior rough. binned table saved for mandatory 2D-pair extraction",
    "notes": "capsule manifest now 15 entries; figure fig_hs4_rough_geometry.png inspected; awaiting user confirmation before GPU (~3 min)"
+  },
+  {
+   "id": "2026-10-02_hs4_rough_run",
+   "status": "completed_accepted",
+   "directory": "artifacts/research_checks/2026-10-02_halfspace_standard_hs",
+   "solver_executed": "gprMax v4 GPU double, single run zero retry, 3m06s",
+   "report": "docs/research/2026-10-02_halfspace_standard_design_draft.md",
+   "key_numbers": "official-envelope convention: HS4 direct/ground IDENTICAL to HS1 (0.12630 @ 99.80 ns) as designed; rough interface echo (HS4-HS2) peak 3.15e-4 @ 190.45 ns vs flat (HS1-HS2) 6.06e-4 @ 187.13 ns -> roughness halves peak (-5.7 dB) and delays +3.3 ns; interface/ground 0.249% (rough) vs 0.480% (flat)",
+   "notes": "physical interpretation: interface undulation defocuses specular echo; capsule manifest now 18 entries; figure fig_hs4_vs_hs1_interface.png inspected"
   }
  ],
  "schema": "research-artifact-registry/1",
