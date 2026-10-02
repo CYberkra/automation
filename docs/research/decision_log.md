@@ -1,3 +1,7 @@
+## 2026-10-02 HS4 起伏界面标准件建成待确认（用户"HS4做好后依旧是先给我过目"）
+
+按既定流程（过目→确认→才烧 GPU）建成 HS4：生成器 `scripts/build_hs4_rough_interface_v0_1.py`（冻结界面场 sha `eabcad0b16db97d1` + **边缘受控延续**：PML 环 20 格全部用内区边缘值复制，断言通过；基岩基底 `#box: 0 0 0 12 12 12` 贯穿 PML 直达边界 + 48×48=2304 块 0.25 m 分箱 cover 补丁，z0 ∈ [8.6, 9.4] m、均值 9.0007 m）。几何验证 2.9 s 通过：四个侧立面 z<12 m 空气单元 0、底面全 rock、PML 环内界面恒定、内部起伏正常。中央剖面与界面高程图 `fig_hs4_rough_geometry.png` 已目验。分箱表 `hs4_interface_binned_table.npz` 入胶囊——未来 2D 配对必须从此分箱表提取（不得用原始场）。产物已归档入 HS 胶囊（manifest 15 件），**GPU 未烧**，等用户确认（约 3 min）。台账条目 `2026-10-02_hs4_rough_built`（160 条）。
+
 ## 2026-10-02 原始 H5 备份落地：本机异盘双副本（用户"不行就只存在本机吧"）
 
 用户决策：不上云端长期存储（科学结果可重跑复现），本机冗余即可。执行：确认 E 盘与 D 盘分属**两块独立物理 SSD**（E=disk 1 的 2 TB，D=disk 0 的 1 TB，D 余量 203 GB）；为 `artifacts/simulations/` 全量 **11622 件（3.24 GB）**生成 SHA-256 清单（入库 `docs/research/2026-10-02_simulations_h5_backup_manifest.json`）；镜像复制至 `D:\gpr_evidence_backup\2026-10-02_simulations\` 并**逐件哈希验证 11622/11622 一致**。规范 §2.1 已更新为"首次备份已落地"，并规定后续新增批量 H5 按同口径增量备份+更新清单。至此审查 P1"原始证据无备份"关闭：字节身份有双副本+清单保护，科学内容另有 .in+脚本可重跑。（过程注记：robocopy 在 Git Bash 下因 /E 被路径转换误吞而失败，改用 python 复制+验证。）

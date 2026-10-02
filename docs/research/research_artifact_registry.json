@@ -2243,6 +2243,15 @@
    "report": "docs/research/2026-10-02_simulations_h5_backup_manifest.json",
    "key_numbers": "artifacts/simulations full backup: 11622 files / 3.24 GB mirrored to second physical SSD (E=disk1, D=disk0, 203GB free); per-file SHA-256 verified 11622/11622 identical; manifest tracked in repo; user decision: no cloud, local dual-disk redundancy suffices (science re-runnable, byte identity protected)",
    "notes": "closes review P1 no-backup finding; future batch H5 must be incrementally backed up with manifest update"
+  },
+  {
+   "id": "2026-10-02_hs4_rough_built",
+   "status": "built_geometry_verified_pending_user_confirmation",
+   "directory": "artifacts/research_checks/2026-10-02_halfspace_standard_hs",
+   "solver_executed": "geometry-only (2.9s); NO GPU solve yet",
+   "report": "docs/research/2026-10-02_halfspace_standard_design_draft.md",
+   "key_numbers": "HS4 rough-interface standard piece built by scripts/build_hs4_rough_interface_v0_1.py: frozen field interface_field.npz (sha eabcad0b16db97d1, RMS 0.16m/CL 2.5m/seed 20261002) + edge-controlled continuation (PML ring = edge replication); rock base box 0..12^2 x 0..12 + 2304 cover patches (0.25m bins, z0 in [8.6,9.4] m, mean 9.0007 m); geometry asserts: side-face air cells below z=12m = 0, base all rock, PML ring interface constant (col transitions identical at y=x=0..0.95m), interior rough. binned table saved for mandatory 2D-pair extraction",
+   "notes": "capsule manifest now 15 entries; figure fig_hs4_rough_geometry.png inspected; awaiting user confirmation before GPU (~3 min)"
   }
  ],
  "schema": "research-artifact-registry/1",
