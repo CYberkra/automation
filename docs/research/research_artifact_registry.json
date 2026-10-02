@@ -2180,6 +2180,15 @@
    "checks": "artifacts/research_checks/2026-10-02_carrierfix_acceptance_checks.json",
    "solver_executed": false,
    "scope": "three review findings repaired; historical outputs and frozen contracts unchanged; full t3/S1S3/B2 H5 rerun unavailable on this host"
+  },
+  {
+   "id": "2026-10-02_legacy_carrier_archive_register",
+   "status": "archive_register_active",
+   "directory": "docs/research/2026-10-02_legacy_carrier_archive_index.md",
+   "solver_executed": "none",
+   "report": "docs/research/2026-10-02_legacy_carrier_archive_index.md",
+   "key_numbers": "13 analysis JSON families + augment v0_1..v0_6 + diagnostic figures archived as legacy-95MHz in place (no file moved/altered; frozen-contract SHA chains intact); unaffected: attempt records, H5, envelope-only evidence, 09-27 unified adapter (already official)",
+   "notes": "user instruction '把以前错误的版本全部归档'; archived = numeric values retired from current use, valid as historical/reproduction baseline only; successors: carrierfix v0_2 dev / v0_3 acceptance-gated"
   }
  ],
  "schema": "research-artifact-registry/1",
