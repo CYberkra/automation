@@ -1,0 +1,70 @@
+{
+  "schema": "workspace-verification/1",
+  "utc": "20261002T182443Z",
+  "python": "3.12.0",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "numpy": "2.5.3",
+  "total_checks_passed": 182,
+  "evidence_level": "constructed_array_checks_only",
+  "field_data_used": false,
+  "fdtd_executed": false,
+  "training_executed": false,
+  "runs": [
+    {
+      "script": "scripts/check_processing_algebra.py",
+      "checks_passed": 10,
+      "script_sha256": "abb9f9d4b94437b2ec073ab0675ee8b386b559dce086e0426cd07cdb8723d323",
+      "result_file": "check_processing_algebra.json",
+      "result_sha256": "027a2e778f8a3eb1f1e9862d2dec6f58e5fbbb7e799332803188be5e92e6d91f"
+    },
+    {
+      "script": "scripts/check_operator_contract.py",
+      "checks_passed": 23,
+      "script_sha256": "56801fd3333fb814aa546aa77b0e29d8d4a4334107ee2e5ca67376b5d0ea44a2",
+      "result_file": "check_operator_contract.json",
+      "result_sha256": "95250f046d89f9ae8ad6640d20290935842ab9521703dc5190db3429cd99f1a2"
+    },
+    {
+      "script": "scripts/check_manual_weight_tradeoff.py",
+      "checks_passed": 5,
+      "script_sha256": "d5e081b5fcd8d03437f44dd036106db0bcf165c20496b563ccd34fbdcfc82800",
+      "result_file": "check_manual_weight_tradeoff.json",
+      "result_sha256": "63e1e5e029782ce00fa6e96f6607141a8466bef41eb779c26f30acc5e819a01d"
+    },
+    {
+      "script": "scripts/check_evaluation_labels.py",
+      "checks_passed": 26,
+      "script_sha256": "b166cfbd444c0b233745d264b902b1bcb6aba11c15bac69c4e2345cf6139e03c",
+      "result_file": "check_evaluation_labels.json",
+      "result_sha256": "64f5649dddb29bcc59e3158e352e3e7c83039e76b2dd21552efeaa7731c465b9"
+    },
+    {
+      "script": "scripts/study_damage_pilot.py",
+      "checks_passed": 72,
+      "script_sha256": "e75508050356886f34ec1c1c68f3edfd5f05c27547266f54e289bf7ef5e9976f",
+      "result_file": "damage_pilot/results.json",
+      "result_sha256": "68b25a98529a958db3dc34e38deae24e7b700bd22fe925955ca8c008e8fe3045"
+    },
+    {
+      "script": "scripts/check_direction_diagnostics.py",
+      "checks_passed": 21,
+      "script_sha256": "dfed2d34f71def65831ed5c3e0856348f40c846268c194fc46d1d8c1be14cb35",
+      "result_file": "check_direction_diagnostics.json",
+      "result_sha256": "1df72adcd061b18c2b1fa750e7e56a5e552b70bef75f4af3f34917a0f222a260"
+    },
+    {
+      "script": "scripts/check_error_budget.py",
+      "checks_passed": 20,
+      "script_sha256": "1a08a96c443e0b059eef49507f44c822130d9571819603ef9524c903e08c2de8",
+      "result_file": "check_error_budget.json",
+      "result_sha256": "9f40ac7c821c405c01d529fa1030cab8f8e1044134043f1b203f75ffe9b019ec"
+    },
+    {
+      "script": "scripts/study_error_budget_restoration.py",
+      "checks_passed": 5,
+      "script_sha256": "3668f940efc85298d390affaeb95a83c828af9e9ebd9ec1825620ba6763302b5",
+      "result_file": "study_error_budget_restoration.json",
+      "result_sha256": "5bd9d9df7e95c333f16520bdde09f873296ee72894ed672a0c203d80e7047252"
+    }
+  ]
+}

@@ -7,7 +7,9 @@ Kinematic companion to the 3D HS4 rough-interface standard piece.
   the 3D edge-controlled continuation.
 - Numerics inherited from HS4 header (dx 0.05, time_window 600e-9, impulse waveform,
   HORIPML, Debye cover dispersion); pml_cfs line dropped for 2D (defaults) -- documented
-  deviation: kinematics unaffected, amplitudes not cross-comparable to 3D capsules.
+  deviation: kinematics require independent checks; amplitudes are not
+  cross-comparable to 3D capsules. Signed absolute peaks are phase-dependent
+  and cannot establish a propagation-time difference (2026-10-03 erratum).
 """
 import argparse
 from pathlib import Path

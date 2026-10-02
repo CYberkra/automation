@@ -1,0 +1,118 @@
+{
+  "schema": "manual-weight-tradeoff/0.1",
+  "date": "2026-09-24",
+  "evidence_level": "constructed_known_component_array_only",
+  "field_data_used": false,
+  "fdtd_executed": false,
+  "training_executed": false,
+  "numpy_version": "2.5.3",
+  "source_hashes": {
+    "check_manual_weight_tradeoff.py": "d5e081b5fcd8d03437f44dd036106db0bcf165c20496b563ccd34fbdcfc82800",
+    "research_operator_contract.py": "eb7b0f114c3e488d944a5158106545f4d86f445279872311a800f87b0e2612d4"
+  },
+  "score": "w*protected_squared_nrmse+(1-w)*clutter_residual_energy_ratio",
+  "evaluated_background_configurations": [
+    {
+      "configuration": "B0_G1_BG",
+      "protected_squared_nrmse": 0.0,
+      "clutter_residual_energy_ratio": 1.0
+    },
+    {
+      "configuration": "B1_G1_BG",
+      "protected_squared_nrmse": 0.06249999999999996,
+      "clutter_residual_energy_ratio": 0.5625
+    },
+    {
+      "configuration": "B2_G1_BG",
+      "protected_squared_nrmse": 0.25,
+      "clutter_residual_energy_ratio": 0.25
+    },
+    {
+      "configuration": "B3_G1_BG",
+      "protected_squared_nrmse": 1.0,
+      "clutter_residual_energy_ratio": 0.0
+    },
+    {
+      "configuration": "B4_G1_BG",
+      "protected_squared_nrmse": 1.0000000000000004,
+      "clutter_residual_energy_ratio": 6.77927340424307e-32
+    },
+    {
+      "configuration": "B5_G1_BG",
+      "protected_squared_nrmse": 1.0000000000000004,
+      "clutter_residual_energy_ratio": 6.77927340424307e-32
+    },
+    {
+      "configuration": "B6_G1_BG",
+      "protected_squared_nrmse": 1.0000000000000004,
+      "clutter_residual_energy_ratio": 6.77927340424307e-32
+    }
+  ],
+  "weight_sweeps": [
+    {
+      "structure_weight": 0.0,
+      "clutter_weight": 1.0,
+      "minimum_score": 0.0,
+      "equivalent_minimisers": [
+        "B3_G1_BG",
+        "B4_G1_BG",
+        "B5_G1_BG",
+        "B6_G1_BG"
+      ],
+      "winner_squared_nrmse": 1.0,
+      "winner_clutter_residual_energy_ratio": 0.0
+    },
+    {
+      "structure_weight": 0.2,
+      "clutter_weight": 0.8,
+      "minimum_score": 0.2,
+      "equivalent_minimisers": [
+        "B3_G1_BG",
+        "B4_G1_BG",
+        "B5_G1_BG",
+        "B6_G1_BG"
+      ],
+      "winner_squared_nrmse": 1.0,
+      "winner_clutter_residual_energy_ratio": 0.0
+    },
+    {
+      "structure_weight": 0.5,
+      "clutter_weight": 0.5,
+      "minimum_score": 0.25,
+      "equivalent_minimisers": [
+        "B2_G1_BG"
+      ],
+      "winner_squared_nrmse": 0.25,
+      "winner_clutter_residual_energy_ratio": 0.25
+    },
+    {
+      "structure_weight": 0.8,
+      "clutter_weight": 0.19999999999999996,
+      "minimum_score": 0.16249999999999995,
+      "equivalent_minimisers": [
+        "B1_G1_BG"
+      ],
+      "winner_squared_nrmse": 0.06249999999999996,
+      "winner_clutter_residual_energy_ratio": 0.5625
+    },
+    {
+      "structure_weight": 1.0,
+      "clutter_weight": 0.0,
+      "minimum_score": 0.0,
+      "equivalent_minimisers": [
+        "B0_G1_BG"
+      ],
+      "winner_squared_nrmse": 0.0,
+      "winner_clutter_residual_energy_ratio": 1.0
+    }
+  ],
+  "illustrative_gate": {
+    "protected_nrmse_limit": 0.1,
+    "feasible_configurations": [
+      "B0_G1_BG"
+    ],
+    "physical_standard": false
+  },
+  "checks_passed": 5,
+  "conclusion": "Weight changes can reward deletion; a constraint can reveal an inadequate action set. No selector can exceed the same set's valid oracle."
+}

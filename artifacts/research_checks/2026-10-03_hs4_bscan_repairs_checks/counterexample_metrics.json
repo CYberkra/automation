@@ -1,0 +1,260 @@
+{
+ "polarity_reversal": {
+  "version": "v0.3",
+  "input_manifest_sha256": "58ace329a2f17e4b4ed1b19b88595afa144ba12f4a5b46eed0c3916b25d2bf5b",
+  "input_identities": [
+   {
+    "file": "hs1_flat_halfspace.h5",
+    "sha256": "29b131e9e6032ccd9b394696ca9ae02149f50432b6b365a3c1c2049e07c47502",
+    "bytes": 68776
+   },
+   {
+    "file": "hs2_coveronly_halfspace.h5",
+    "sha256": "8fa62832fd8dc4e2ffd881236bdb3ba4715808849dde29b91e9f8b49fd2257a0",
+    "bytes": 68776
+   },
+   {
+    "file": "hs3_domain16_halfspace.h5",
+    "sha256": "71526e9868e7d64834b71fc47da74affa45910435b7ee52bfdb327a14239288e",
+    "bytes": 68776
+   }
+  ],
+  "script_sha256": "98798f6c1405f9506ba2e2912607b8bf6e9469cf816046e4db7b1baa62b65919",
+  "identity_helper_sha256": "e2a698c20217411b253d39b06c5db43aabd0a7e892a2bb618c75fc1e2c2b2d6b",
+  "loader_sha256": "650b0d143150efe0119ad4be1ebc93845f09a6f0707351a2e2df945e687b7593",
+  "official_processing_sha256": "adad556f09140956f0ee19d3038430e06a9ae8be6a826dcad723096d99624a3b",
+  "chain": "sfcw_official_loader_v0_2 (20-170 MHz, 501 pt, Hann, carrier 20 MHz)",
+  "envelope_convention": "official: 2*|complex_envelope|; differential = 2*|env1_c-env2_c|",
+  "supersedes": "v0.2 amplitude-only domain gates; v0.1/v0.2 artifacts remain unchanged",
+  "domain_difference_convention": "2*abs(complex_envelope_HS1-complex_envelope_HS3)",
+  "direct_env_peak": 4.28749404952118,
+  "direct_env_peak_ns": 3.32667997338656,
+  "ground_env_peak": 0.1262966720820151,
+  "ground_env_peak_ns": 99.8003992015968,
+  "interface_diff_env_peak": 0.0006060195407602472,
+  "interface_diff_env_peak_ns": 187.125748502994,
+  "interface_over_ground": 0.004798380913526428,
+  "interface_over_ground_dB": -46.378105581401854,
+  "interface_over_direct": 0.0001413458616526655,
+  "hs3_vs_hs1_rel_diff_window_local_DIAGNOSTIC_ONLY": {
+   "direct_ns": 2.0000000000486806,
+   "ground_ns": 1.9999999271272326,
+   "interface_ns": 1.999980578618416
+  },
+  "hs3_vs_hs1_window_local_ill_conditioning_note": "A small window-local envelope peak can make this ratio ill-conditioned; diagnostic only. Gates use direct peak and HS1-HS2 interface contrast.",
+  "hs3_vs_hs1_amplitude_only_over_direct_DIAGNOSTIC_ONLY": {
+   "direct_ns": 9.771208751970869e-11,
+   "ground_ns": 1.228724068139289e-07,
+   "interface_ns": 1.0550836305273929e-08
+  },
+  "hs3_vs_hs1_rel_diff_over_direct_peak": {
+   "direct_ns": 2.0000000000486806,
+   "ground_ns": 0.05891397913162151,
+   "interface_ns": 0.0002624326099466471
+  },
+  "hs3_vs_hs1_interface_window_abs_diff": 0.0011251782535465623,
+  "hs3_vs_hs1_iface_diff_over_iface_echo": 1.8566699221200593,
+  "domain_control_threshold_over_direct_peak": 1e-05,
+  "domain_control_threshold_over_iface_echo": 0.01,
+  "gates": [
+   {
+    "gate": "hs3_vs_hs1 2|c1-c3|/direct_peak [direct_ns] < 1e-05",
+    "value": 2.0000000000486806,
+    "pass": false
+   },
+   {
+    "gate": "hs3_vs_hs1 2|c1-c3|/direct_peak [ground_ns] < 1e-05",
+    "value": 0.05891397913162151,
+    "pass": false
+   },
+   {
+    "gate": "hs3_vs_hs1 2|c1-c3|/direct_peak [interface_ns] < 1e-05",
+    "value": 0.0002624326099466471,
+    "pass": false
+   },
+   {
+    "gate": "hs3_vs_hs1 interface-window diff < 1% of interface echo",
+    "value": 1.8566699221200593,
+    "pass": false
+   },
+   {
+    "gate": "interface echo present in window (diff peak > 1e-6)",
+    "value": 0.0006060195407602472,
+    "pass": true
+   }
+  ],
+  "verdict": "FAIL"
+ },
+ "amplitude_x2": {
+  "version": "v0.3",
+  "input_manifest_sha256": "de8dc257b1dfdfd847fbe390832c110442d8574a4f6707ec2a0c6a95d0175ba3",
+  "input_identities": [
+   {
+    "file": "hs1_flat_halfspace.h5",
+    "sha256": "29b131e9e6032ccd9b394696ca9ae02149f50432b6b365a3c1c2049e07c47502",
+    "bytes": 68776
+   },
+   {
+    "file": "hs2_coveronly_halfspace.h5",
+    "sha256": "8fa62832fd8dc4e2ffd881236bdb3ba4715808849dde29b91e9f8b49fd2257a0",
+    "bytes": 68776
+   },
+   {
+    "file": "hs3_domain16_halfspace.h5",
+    "sha256": "c079e6853040e1a859a9cba64090cdbff254f70bada3d4ce05f315f78d2619d8",
+    "bytes": 68776
+   }
+  ],
+  "script_sha256": "98798f6c1405f9506ba2e2912607b8bf6e9469cf816046e4db7b1baa62b65919",
+  "identity_helper_sha256": "e2a698c20217411b253d39b06c5db43aabd0a7e892a2bb618c75fc1e2c2b2d6b",
+  "loader_sha256": "650b0d143150efe0119ad4be1ebc93845f09a6f0707351a2e2df945e687b7593",
+  "official_processing_sha256": "adad556f09140956f0ee19d3038430e06a9ae8be6a826dcad723096d99624a3b",
+  "chain": "sfcw_official_loader_v0_2 (20-170 MHz, 501 pt, Hann, carrier 20 MHz)",
+  "envelope_convention": "official: 2*|complex_envelope|; differential = 2*|env1_c-env2_c|",
+  "supersedes": "v0.2 amplitude-only domain gates; v0.1/v0.2 artifacts remain unchanged",
+  "domain_difference_convention": "2*abs(complex_envelope_HS1-complex_envelope_HS3)",
+  "direct_env_peak": 4.28749404952118,
+  "direct_env_peak_ns": 3.32667997338656,
+  "ground_env_peak": 0.1262966720820151,
+  "ground_env_peak_ns": 99.8003992015968,
+  "interface_diff_env_peak": 0.0006060195407602472,
+  "interface_diff_env_peak_ns": 187.125748502994,
+  "interface_over_ground": 0.004798380913526428,
+  "interface_over_ground_dB": -46.378105581401854,
+  "interface_over_direct": 0.0001413458616526655,
+  "hs3_vs_hs1_rel_diff_window_local_DIAGNOSTIC_ONLY": {
+   "direct_ns": 1.0000000000973606,
+   "ground_ns": 0.9999998542562458,
+   "interface_ns": 0.9999611574979047
+  },
+  "hs3_vs_hs1_window_local_ill_conditioning_note": "A small window-local envelope peak can make this ratio ill-conditioned; diagnostic only. Gates use direct peak and HS1-HS2 interface contrast.",
+  "hs3_vs_hs1_amplitude_only_over_direct_DIAGNOSTIC_ONLY": {
+   "direct_ns": 1.0000000000973606,
+   "ground_ns": 0.029456986345909594,
+   "interface_ns": 0.0001312124823447285
+  },
+  "hs3_vs_hs1_rel_diff_over_direct_peak": {
+   "direct_ns": 1.0000000000973606,
+   "ground_ns": 0.029456986345944566,
+   "interface_ns": 0.00013121248236756702
+  },
+  "hs3_vs_hs1_interface_window_abs_diff": 0.0005625727373738463,
+  "hs3_vs_hs1_iface_diff_over_iface_echo": 0.9283079167184987,
+  "domain_control_threshold_over_direct_peak": 1e-05,
+  "domain_control_threshold_over_iface_echo": 0.01,
+  "gates": [
+   {
+    "gate": "hs3_vs_hs1 2|c1-c3|/direct_peak [direct_ns] < 1e-05",
+    "value": 1.0000000000973606,
+    "pass": false
+   },
+   {
+    "gate": "hs3_vs_hs1 2|c1-c3|/direct_peak [ground_ns] < 1e-05",
+    "value": 0.029456986345944566,
+    "pass": false
+   },
+   {
+    "gate": "hs3_vs_hs1 2|c1-c3|/direct_peak [interface_ns] < 1e-05",
+    "value": 0.00013121248236756702,
+    "pass": false
+   },
+   {
+    "gate": "hs3_vs_hs1 interface-window diff < 1% of interface echo",
+    "value": 0.9283079167184987,
+    "pass": false
+   },
+   {
+    "gate": "interface echo present in window (diff peak > 1e-6)",
+    "value": 0.0006060195407602472,
+    "pass": true
+   }
+  ],
+  "verdict": "FAIL"
+ },
+ "raw_shift_8_samples": {
+  "version": "v0.3",
+  "input_manifest_sha256": "ca16eba7225d02ca6306aafe5c8bb4d67ae5ab10c8211e3c93b539189f6ff8d6",
+  "input_identities": [
+   {
+    "file": "hs1_flat_halfspace.h5",
+    "sha256": "29b131e9e6032ccd9b394696ca9ae02149f50432b6b365a3c1c2049e07c47502",
+    "bytes": 68776
+   },
+   {
+    "file": "hs2_coveronly_halfspace.h5",
+    "sha256": "8fa62832fd8dc4e2ffd881236bdb3ba4715808849dde29b91e9f8b49fd2257a0",
+    "bytes": 68776
+   },
+   {
+    "file": "hs3_domain16_halfspace.h5",
+    "sha256": "7ce7a0e880b0a5d2aed33722831fab4d5d4e88d29a1b3a568c025a84a5d3293f",
+    "bytes": 68776
+   }
+  ],
+  "script_sha256": "98798f6c1405f9506ba2e2912607b8bf6e9469cf816046e4db7b1baa62b65919",
+  "identity_helper_sha256": "e2a698c20217411b253d39b06c5db43aabd0a7e892a2bb618c75fc1e2c2b2d6b",
+  "loader_sha256": "650b0d143150efe0119ad4be1ebc93845f09a6f0707351a2e2df945e687b7593",
+  "official_processing_sha256": "adad556f09140956f0ee19d3038430e06a9ae8be6a826dcad723096d99624a3b",
+  "chain": "sfcw_official_loader_v0_2 (20-170 MHz, 501 pt, Hann, carrier 20 MHz)",
+  "envelope_convention": "official: 2*|complex_envelope|; differential = 2*|env1_c-env2_c|",
+  "supersedes": "v0.2 amplitude-only domain gates; v0.1/v0.2 artifacts remain unchanged",
+  "domain_difference_convention": "2*abs(complex_envelope_HS1-complex_envelope_HS3)",
+  "direct_env_peak": 4.28749404952118,
+  "direct_env_peak_ns": 3.32667997338656,
+  "ground_env_peak": 0.1262966720820151,
+  "ground_env_peak_ns": 99.8003992015968,
+  "interface_diff_env_peak": 0.0006060195407602472,
+  "interface_diff_env_peak_ns": 187.125748502994,
+  "interface_over_ground": 0.004798380913526428,
+  "interface_over_ground_dB": -46.378105581401854,
+  "interface_over_direct": 0.0001413458616526655,
+  "hs3_vs_hs1_rel_diff_window_local_DIAGNOSTIC_ONLY": {
+   "direct_ns": 0.4351054311719234,
+   "ground_ns": 0.49245023518531433,
+   "interface_ns": 0.43550549492437823
+  },
+  "hs3_vs_hs1_window_local_ill_conditioning_note": "A small window-local envelope peak can make this ratio ill-conditioned; diagnostic only. Gates use direct peak and HS1-HS2 interface contrast.",
+  "hs3_vs_hs1_amplitude_only_over_direct_DIAGNOSTIC_ONLY": {
+   "direct_ns": 0.09161073316059377,
+   "ground_ns": 0.002456726140137912,
+   "interface_ns": 1.3212175997040024e-05
+  },
+  "hs3_vs_hs1_rel_diff_over_direct_peak": {
+   "direct_ns": 0.4351054311719234,
+   "ground_ns": 0.014506101968084753,
+   "interface_ns": 5.7145976766465815e-05
+  },
+  "hs3_vs_hs1_interface_window_abs_diff": 0.0002450130353402978,
+  "hs3_vs_hs1_iface_diff_over_iface_echo": 0.40429890269368324,
+  "domain_control_threshold_over_direct_peak": 1e-05,
+  "domain_control_threshold_over_iface_echo": 0.01,
+  "gates": [
+   {
+    "gate": "hs3_vs_hs1 2|c1-c3|/direct_peak [direct_ns] < 1e-05",
+    "value": 0.4351054311719234,
+    "pass": false
+   },
+   {
+    "gate": "hs3_vs_hs1 2|c1-c3|/direct_peak [ground_ns] < 1e-05",
+    "value": 0.014506101968084753,
+    "pass": false
+   },
+   {
+    "gate": "hs3_vs_hs1 2|c1-c3|/direct_peak [interface_ns] < 1e-05",
+    "value": 5.7145976766465815e-05,
+    "pass": false
+   },
+   {
+    "gate": "hs3_vs_hs1 interface-window diff < 1% of interface echo",
+    "value": 0.40429890269368324,
+    "pass": false
+   },
+   {
+    "gate": "interface echo present in window (diff peak > 1e-6)",
+    "value": 0.0006060195407602472,
+    "pass": true
+   }
+  ],
+  "verdict": "FAIL"
+ }
+}
