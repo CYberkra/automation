@@ -2275,6 +2275,20 @@
     "fig_hs4_co13_bscan.png"
    ],
    "summary": "HS4 rough-interface 13-trace common-offset line (Tx y=3.85+0.25k, offset 1.30m, x=6, z=27). 13/13 GPU solves (~190s each); two tool-window kills (t02, t04) were segment-boundary artifacts, t04 rerun ok. Official SFCW chain v0.2 -> B-scan triple view (raw 99.9% clip / AGC 20ns / per-trace norm). Direct wave ~3ns and ground reflection ~100ns uniform across all traces; interface echo at ~187ns only visible after AGC (real amplitude ~0.25% of ground reflection, -46dB class)."
+  },
+  {
+   "id": "2026-10-02_HS4_col6_25trace_highrelief_bscan",
+   "date": "2026-10-02",
+   "type": "simulation_batch",
+   "status": "validated",
+   "capsule": "artifacts/research_checks/2026-10-02_halfspace_standard_hs",
+   "artifacts": [
+    "hs4_col6_t01..t25.in",
+    "hs4_col6_t01..t25.h5",
+    "hs4_col6_bscan_official.npz",
+    "fig_hs4_col6_bscan_svd.png"
+   ],
+   "summary": "HS4 high-relief transect at x=1.625m (bi=6), 25 traces y=2.60..8.60m step 0.25m, offset 1.30m. Underlying interface relief 0.40m arch (8.85->9.25->9.00m, 11.3ns p2p). 25/25 GPU solves ~190s each, zero failure. After mean+rank1 SVD the interface event visibly arches following the binned-table predicted arrival curve -- morphology now resolvable. Axis convention confirmed: z0tab[bi,bj] bi=x, bj=y."
   }
  ],
  "schema": "research-artifact-registry/1",
