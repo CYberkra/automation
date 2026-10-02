@@ -2207,6 +2207,15 @@
    "report": "docs/research/2026-10-02_halfspace_standard_design_draft.md",
    "key_numbers": "geometry asserts pass (side-face air cells below z=12m: 0; base all rock; interfaces at z=9.0/12.0m). Official SFCW chain (20-170MHz/501pt/Hann, carrier=20MHz): direct coupling 3.33ns; ground reflection env peak 0.1299 @ 96.5ns; HS1-HS2 differential = pure bedrock-cover interface echo, env peak 6.06e-4 @ 187.1ns (0.47% of ground = -46.6 dB, 0.013% of direct); HS3(y=16m) vs HS1(y=12m) max rel diff in event windows 4.4e-6 -> domain-width insensitive",
    "notes": "PML/air-ring geometry defect of legacy B3D5CM fixed (materials through PML to boundary); interface echo extremely weak -> consistent with known Debye over-loss issue (material recalibration is a separate pending task); figure: fig_hs_official_sfcw_acceptance.png"
+  },
+  {
+   "id": "2026-10-02_artifact_storage_convention_v0_1",
+   "status": "convention_active",
+   "directory": "docs/research",
+   "solver_executed": "none",
+   "report": "docs/research/2026-10-02_artifact_storage_convention_v0_1.md",
+   "key_numbers": "3-tier storage model: T1 git-tracked evidence capsules (artifacts/research_checks/<date>_<name>/, <=10MB/file), T2 local-only bulk (artifacts/simulations, verify_runs), T3 GitHub remote; first executed case: 2026-10-02_halfspace_standard_hs (3x .in + 3x .h5 + npz + metrics + figure + manifest.json, 11 SHA256 entries); acceptance script scripts/run_hs_acceptance_v0_1.py replays all metrics byte-identical from archived copies",
+   "notes": "user instruction: HS inputs/H5/acceptance scripts must be committed with a long-term storage convention; heredoc analysis banned from conclusions"
   }
  ],
  "schema": "research-artifact-registry/1",

@@ -1,0 +1,15 @@
+#title: HS2 uniform-cover half-space ablation reference v0.1 (cover full depth, no rock interface; materials through PML); clean differencing reference for the HS1 interface echo - surface contrast identical to HS1 (cover-air); frozen numerics identical to B3D5CM-t07
+#domain_mode: 3D
+#domain: 12 12 33
+#dx_dy_dz: 0.05 0.05 0.05
+#time_window: 600e-9
+#omp_threads: 8
+#pml_cells: 20 20 20 20 20 20
+#pml_formulation: HORIPML
+#waveform: impulse 1 1 impulse
+#hertzian_dipole: x 6 5.35 27 impulse
+#rx: 6 6.65 27 hs2 Ex
+#pml_cfs: constant forward 0 0 constant forward 1 1 quartic forward 0 0.21235349838321013
+#material: 18.017 0.003 1 0 cover
+#add_dispersion_debye: 1 7.878 6.4567e-09 cover
+#box: 0 0 0 12 12 12 cover

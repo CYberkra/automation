@@ -1,3 +1,7 @@
+## 2026-10-02 仿真产物长期存储规范 v0.1 生效（用户"有必要创建一个长期的存储的规范和方案吧"）
+
+用户指出 HS1/HS2/HS3 的输入、H5、验收脚本均未提交，要求建立长期存储规范。执行：[存储规范 v0.1](2026-10-02_artifact_storage_convention_v0_1.md)——三层模型：**T1 追踪层**（`artifacts/research_checks/<date>_<name>/`，git 追踪，≤10 MB/件，.in/小 H5/npz/metrics/图/manifest.json 构成自包含"实验胶囊"）、**T2 本地层**（`artifacts/simulations`、`verify_runs/` 等 gitignore 区，批量原始 H5 与 vtkhdf 大文件，必须能由 T1 的 .in+脚本重建）、**T3 远端层**（GitHub 随推送同步 T1）；提交前强制复现性自检（用归档副本重跑、manifest 无漂移、图目验）。首个执行案例：HS 批整体入轨 `artifacts/research_checks/2026-10-02_halfspace_standard_hs/`（3×.in + 3×.h5 + npz + metrics JSON + 验收图 + manifest 11 项 SHA256）；验收脚本实体化为 `scripts/run_hs_acceptance_v0_1.py`（此前是 heredoc 现场分析，规范明令禁止），用归档副本重跑全部数字复现一致。规范自身待办：T2 异地备份（本机 3.3 GB 批量 H5 单点）、manifest 自动校验脚本、公共绘图模块。台账条目 `2026-10-02_artifact_storage_convention_v0_1`（156 条）。
+
 ## 2026-10-02 半空间标准件 HS1/HS2/HS3 求解完成并验收（用户"开始"）
 
 用户确认草案后按 HS1→HS2→HS3 顺序跑完，GPU 双精度，三次全部一次性成功零重试（HS1 3m22s、HS2 3m16s、HS3 4m13s，合计 10m52s，在 <12 min 预算内）。HS2/HS3 几何验证先行通过（侧立面 z<12 m 空气单元 0、底面全 rock、分界恰在 z=9.0/12.0 m）。官方 SFCW 链（v0.2，20–170 MHz/501 点/Hann/载频 20 MHz）带内验收：**直达耦合 3.33 ns；地表反射包络峰 0.1299 @ 96.5 ns；HS1−HS2 差分（HS2 为全覆盖层消融、地表对比一致）提取出纯基覆界面回波，包络峰 6.06e-4 @ 187.1 ns，为地表的 0.47%（−46.6 dB）、直达的 0.013%**；**HS3（y=16 m）vs HS1（y=12 m）事件窗内最大相对差 4.4e-6，域宽不敏感对照通过**。物理结论：几何缺陷修复后模型行为干净（侧壁/底面杂散消失），界面回波极弱与已登记的 Debye 带内损耗过强问题一致，材料重标定仍是独立待办。验收图 `fig_hs_official_sfcw_acceptance.png`（已目验）；台账条目 `2026-10-02_halfspace_standard_hs_run`（155 条）。HS4 起伏界面第二阶段待用户指示。
