@@ -1,0 +1,109 @@
+{
+  "schema": "error-budget-checks/1",
+  "checks": [
+    {
+      "id": "identity_zero_budget",
+      "passed": true
+    },
+    {
+      "id": "mean_certificate_conservative",
+      "passed": true,
+      "measured": 1.3053330210807096e-15,
+      "budget": 4.339351153685569e-15
+    },
+    {
+      "id": "mean_budget_scales_with_units",
+      "passed": true
+    },
+    {
+      "id": "gain_certificate_conservative",
+      "passed": true,
+      "measured": 0.0,
+      "budget": 3.930485568492542e-15
+    },
+    {
+      "id": "svd_budget_available_large_gap",
+      "passed": true
+    },
+    {
+      "id": "svd_certificate_conservative",
+      "passed": true,
+      "measured": 0.0,
+      "budget": 2.5020305386336127e-14
+    },
+    {
+      "id": "svd_perturbation_formula",
+      "passed": true
+    },
+    {
+      "id": "svd_vacuous_bound_missing",
+      "passed": true
+    },
+    {
+      "id": "svd_gap_unavailable_missing",
+      "passed": true
+    },
+    {
+      "id": "chain_composition_conservative",
+      "passed": true,
+      "measured": 1.3424989003909106e-15,
+      "budget": 1.085464949762872e-14
+    },
+    {
+      "id": "difference_triangle",
+      "passed": true
+    },
+    {
+      "id": "difference_amplification",
+      "passed": true
+    },
+    {
+      "id": "restored_cosine_matches_direct",
+      "passed": true,
+      "cosine": 0.4472140726687296,
+      "budget": 2.946150751372557e-15
+    },
+    {
+      "id": "cancelled_output_stays_missing",
+      "passed": true,
+      "reason": "output_direction_numerically_unresolved",
+      "budget": 6.936886161509671e-15,
+      "output_norm": 1.2850261998564916e-15
+    },
+    {
+      "id": "fdtd_provenance_missing",
+      "passed": true
+    },
+    {
+      "id": "unknown_provenance_missing",
+      "passed": true
+    },
+    {
+      "id": "unit_scale_invariant_decision",
+      "passed": true
+    },
+    {
+      "id": "window_budget_within_full",
+      "passed": true
+    },
+    {
+      "id": "invalid_input_bound_rejected",
+      "passed": true
+    },
+    {
+      "id": "certificates_nonempty",
+      "passed": true
+    }
+  ],
+  "evidence_level": "constructed_array_certificates_only",
+  "numpy": "2.5.3",
+  "physical_thresholds_frozen": false,
+  "fdtd_executed": false,
+  "training_executed": false,
+  "source_sha256": {
+    "check_error_budget.py": "1a08a96c443e0b059eef49507f44c822130d9571819603ef9524c903e08c2de8",
+    "research_error_budget.py": "d867877ab1a751adc935e8f70e8ce9b4107949b884565b6305301aade3c7e4c1",
+    "research_operator_contract.py": "eb7b0f114c3e488d944a5158106545f4d86f445279872311a800f87b0e2612d4",
+    "research_evaluation_contract.py": "03c5b48a1df3b0ffb0fe7f2ca380857ee8d452937621a28837efe9d4b2917eb5"
+  }
+}
