@@ -27,6 +27,7 @@ no solver runs; no test-family (C5/C8) data.
 """
 
 from dataclasses import replace
+import hashlib
 from pathlib import Path
 
 import h5py
@@ -34,6 +35,15 @@ import numpy as np
 from gprMax.toolboxes.SFCW.processing import (
     load_source, load_receiver, direct_frequency_response,
     reconstruct_time_response)
+import gprMax.toolboxes.SFCW.processing as _processing
+
+OFFICIAL_PROCESSING_SHA256 = 'adad556f09140956f0ee19d3038430e06a9ae8be6a826dcad723096d99624a3b'
+
+
+def verify_official_runtime():
+    digest = hashlib.sha256(Path(_processing.__file__).read_bytes()).hexdigest()
+    if digest != OFFICIAL_PROCESSING_SHA256:
+        raise ValueError('official SFCW processing SHA-256 differs from reviewed version')
 
 ROOT = Path(__file__).resolve().parents[1]
 SIMS = ROOT / 'artifacts/simulations'
@@ -49,11 +59,13 @@ def trace_time_response(h5_path):
     Preprocessing is ladder-exact: 1200 ns window, same tail-taper fraction
     formula, 501 x 0.3 MHz grid, zero_pad_factor=8, Hann window.
     """
+    verify_official_runtime()
     h5_path = Path(h5_path)
     with h5py.File(h5_path, 'r') as h:
         dt = float(h.attrs['dt'])
         items = list(h['rxs'].items())
-        assert len(items) == 1
+        if len(items) != 1:
+            raise ValueError('carrier loader requires exactly one receiver')
         rx_name = items[0][1].attrs['Name']
         raw = items[0][1]['Ex'][:]
     src = load_source(h5_path)
@@ -92,7 +104,8 @@ def dominant_freq_mhz(sig, dt_s):
     return float(fr[int(np.argmax(sp))] * 1e-6)
 
 
-def load_bscan_both(mother, date, n_traces=33):
+def load_bscan_both(mother, date, n_traces=33, *, input_records=None,
+                    audited_inputs=None):
     """Load one mother model once; return (t_ns, sig_official, sig_legacy).
 
     Both signed arrays derive from the same per-trace complex envelopes.
@@ -101,8 +114,20 @@ def load_bscan_both(mother, date, n_traces=33):
     for k in range(n_traces):
         rid = f'{mother}-CO33-t{k + 1:02d}'
         h5 = SIMS / f'{date}_{rid}' / f'{rid}.h5'
+        if input_records is not None:
+            from sfcw_carrierfix_acceptance import verify_input
+            record = input_records[rid]
+            h5 = SIMS / record['source_dir'] / f'{rid}.h5'
+            checked = verify_input(h5, record)
+            if audited_inputs is not None:
+                audited_inputs.append(checked)
         tr = trace_time_response(h5)
+        if input_records is not None:
+            verify_input(h5, record)  # Reject a concurrent change during loading.
         sig_off.append(signed_official(tr))
         sig_leg.append(signed_legacy(tr))
-        t = time_ns(tr)
+        current_t = time_ns(tr)
+        if t is not None and not np.array_equal(t, current_t):
+            raise ValueError('reconstructed axes differ between traces')
+        t = current_t
     return t, np.stack(sig_off), np.stack(sig_leg)

@@ -11,6 +11,7 @@ Frozen ladder outputs are NOT overwritten; this writes new files only.
 No solver runs; no test-family data.
 """
 
+import argparse
 import hashlib
 import json
 import sys
@@ -22,25 +23,30 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
 
 import sfcw_official_loader_v0_2 as L
+from sfcw_carrierfix_acceptance import (accept_t3, input_manifest, provenance,
+                                       require, write_new_pair)
 from study_t3_damage_ladder import (
     MOTHERS, AMP_DB, SHIFT_SMP, NC_AMP_DB, SEED, NC_WIN, N_TRACES,
     fermat_times, event_mask, metrics, apply_damage)
 
 ARCH_R1 = ROOT / 'artifacts/research_checks/2026-09-28_t3_damage_ladder_r1.json'
-OUT_R1 = ROOT / 'artifacts/research_checks/2026-10-02_t3_ladder_carrierfix_v0_2_r1.json'
-OUT_R2 = ROOT / 'artifacts/research_checks/2026-10-02_t3_ladder_carrierfix_v0_2_r2.json'
+OUT_R1 = ROOT / 'artifacts/research_checks/2026-10-02_t3_ladder_carrierfix_v0_3_r1.json'
+OUT_R2 = ROOT / 'artifacts/research_checks/2026-10-02_t3_ladder_carrierfix_v0_3_r2.json'
 
 KEYS = ('D', 'a', 'A', 'H', 'rho', 'Nb_ratio',
         'arrival_drift_ns_median', 'arrival_drift_ns_max_abs')
 
 
-def build_records():
+def build_records(input_records, audited_inputs):
+    require(input_records is not None, 't3 input manifest is required')
     records = []
     for fam, mother, geo in MOTHERS:
         ifz = (lambda y: np.minimum(0.2 * y + 22.625, 30.0)) if geo == 'slope' \
             else (lambda y: np.zeros_like(np.asarray(y, float)) + 27.0)
         t, s_off, s_leg = L.load_bscan_both(mother, date='2026-09-28',
-                                            n_traces=N_TRACES)
+                                            n_traces=N_TRACES,
+                                            input_records=input_records,
+                                            audited_inputs=audited_inputs)
         t_ev = fermat_times(ifz)
         m_ev = event_mask(t, t_ev)
         m_nc = np.broadcast_to((t >= NC_WIN[0]) & (t <= NC_WIN[1]), s_off.shape)
@@ -82,10 +88,17 @@ def pair_delta(records):
 
 
 def main():
-    records = build_records()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--input-manifest', type=Path, required=True)
+    args = parser.parse_args()
+    ids = [f'{mother}-CO33-t{k + 1:02d}' for _, mother, _ in MOTHERS for k in range(N_TRACES)]
+    manifest = input_manifest(args.input_manifest, ids)
+    inputs = []
+    records = build_records(manifest, inputs)
     arch = json.loads(ARCH_R1.read_text(encoding='utf-8'))
+    acceptance = accept_t3(records, arch, KEYS)
     doc = {
-        'schema': 't3_damage_ladder_carrierfix/1',
+        'schema': 't3_damage_ladder_carrierfix/2',
         'date': '2026-10-02',
         'basis': 'model design review 2026-10-02 §2 (75 MHz carrier bug); '
                  'dev-side recompute, frozen outputs untouched',
@@ -94,6 +107,10 @@ def main():
             'official20': 'tr.real_bandpass = 2*Re(env*exp(2j*pi*20MHz*t)) '
                           '— official gprMax chain'},
         'loader_module': 'scripts/sfcw_official_loader_v0_2.py',
+        'acceptance': acceptance,
+        'provenance': provenance(__file__, inputs, [ARCH_R1, args.input_manifest,
+            ROOT / 'scripts/study_t3_damage_ladder.py',
+            ROOT / 'scripts/sfcw_carrierfix_acceptance.py']),
         'archived_r1_sha256': hashlib.sha256(ARCH_R1.read_bytes()).hexdigest(),
         'note': 'envelope arrays and 501-pt complex frequency responses are '
                 'unaffected by the carrier fix; only signed-waveform metrics '
@@ -101,16 +118,15 @@ def main():
         'records': records,
         'paired_delta': pair_delta(records),
     }
-    text1 = json.dumps(doc, ensure_ascii=False, indent=1) + '\n'
-    rec2 = build_records()
-    doc2 = dict(doc, records=rec2, paired_delta=pair_delta(rec2))
-    text2 = json.dumps(doc2, ensure_ascii=False, indent=1) + '\n'
-    assert text1 == text2, 'r1/r2 mismatch'
-    OUT_R1.parent.mkdir(parents=True, exist_ok=True)
-    OUT_R1.write_text(text1, encoding='utf-8', newline='\n')
-    OUT_R2.write_text(text2, encoding='utf-8', newline='\n')
-    print('records:', len(records),
-          '| sha256', hashlib.sha256(text1.encode('utf-8')).hexdigest()[:16])
+    inputs2 = []
+    rec2 = build_records(manifest, inputs2)
+    doc2 = dict(doc, records=rec2, paired_delta=pair_delta(rec2),
+        acceptance=accept_t3(rec2, arch, KEYS),
+        provenance=provenance(__file__, inputs2, [ARCH_R1, args.input_manifest,
+            ROOT / 'scripts/study_t3_damage_ladder.py',
+            ROOT / 'scripts/sfcw_carrierfix_acceptance.py']))
+    write_new_pair(OUT_R1, OUT_R2, doc, doc2)
+    print('accepted records:', len(records))
     print('wrote', OUT_R1.relative_to(ROOT), 'and', OUT_R2.relative_to(ROOT))
 
 
