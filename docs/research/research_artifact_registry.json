@@ -2261,6 +2261,20 @@
    "report": "docs/research/2026-10-02_halfspace_standard_design_draft.md",
    "key_numbers": "official-envelope convention: HS4 direct/ground IDENTICAL to HS1 (0.12630 @ 99.80 ns) as designed; rough interface echo (HS4-HS2) peak 3.15e-4 @ 190.45 ns vs flat (HS1-HS2) 6.06e-4 @ 187.13 ns -> roughness halves peak (-5.7 dB) and delays +3.3 ns; interface/ground 0.249% (rough) vs 0.480% (flat)",
    "notes": "physical interpretation: interface undulation defocuses specular echo; capsule manifest now 18 entries; figure fig_hs4_vs_hs1_interface.png inspected"
+  },
+  {
+   "id": "2026-10-02_HS4_CO13_official_sfcw_bscan",
+   "date": "2026-10-02",
+   "type": "simulation_batch",
+   "status": "validated",
+   "capsule": "artifacts/research_checks/2026-10-02_halfspace_standard_hs",
+   "artifacts": [
+    "hs4_co13_t01..t13.in",
+    "hs4_co13_t01..t13.h5",
+    "hs4_co13_bscan_official.npz",
+    "fig_hs4_co13_bscan.png"
+   ],
+   "summary": "HS4 rough-interface 13-trace common-offset line (Tx y=3.85+0.25k, offset 1.30m, x=6, z=27). 13/13 GPU solves (~190s each); two tool-window kills (t02, t04) were segment-boundary artifacts, t04 rerun ok. Official SFCW chain v0.2 -> B-scan triple view (raw 99.9% clip / AGC 20ns / per-trace norm). Direct wave ~3ns and ground reflection ~100ns uniform across all traces; interface echo at ~187ns only visible after AGC (real amplitude ~0.25% of ground reflection, -46dB class)."
   }
  ],
  "schema": "research-artifact-registry/1",

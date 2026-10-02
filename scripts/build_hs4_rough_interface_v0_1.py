@@ -102,6 +102,8 @@ def build(eta_ext):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--out', required=True)
+    ap.add_argument('--co13', action='store_true',
+                    help='also write 13 common-offset traces (Tx y=3.85+0.25k, Rx=Tx+1.30, x=6, z=27)')
     args = ap.parse_args()
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=False)
@@ -113,13 +115,21 @@ def main():
     assert np.all(eta_ext[:, :PML_CELLS] == eta_ext[:, PML_CELLS][:, None])
 
     lines, z0tab = build(eta_ext)
-    in_path = out / 'hs4_rough_halfspace.in'
-    in_path.write_text(
-        HEADER
-        + lines[0] + '\n'
-        + '\n'.join(lines[1:]) + '\n'
-        + '#geometry_view: 0 0 0 12 12 33 0.05 0.05 0.05 hs4_geom n\n',
-        encoding='utf-8')
+    geom = (lines[0] + '\n' + '\n'.join(lines[1:]) + '\n'
+            + '#geometry_view: 0 0 0 12 12 33 0.05 0.05 0.05 hs4_geom n\n')
+
+    def write_in(path, tx_y, tag):
+        header = HEADER.replace(
+            '#hertzian_dipole: x 6 5.35 27 impulse',
+            f'#hertzian_dipole: x 6 {tx_y:g} 27 impulse').replace(
+            '#rx: 6 6.65 27 hs4 Ex',
+            f'#rx: 6 {tx_y + 1.30:g} 27 {tag} Ex')
+        path.write_text(header + geom, encoding='utf-8')
+
+    write_in(out / 'hs4_rough_halfspace.in', 5.35, 'hs4')
+    if args.co13:
+        for k in range(13):
+            write_in(out / f'hs4_co13_t{k + 1:02d}.in', 3.85 + 0.25 * k, f't{k + 1:02d}')
     np.savez(out / 'hs4_interface_binned_table.npz',
              z0_m=z0tab, bin_m=BIN_CELLS * DX, z_if0=Z_IF0,
              field_sha256=sha, eta_extended=eta_ext)
