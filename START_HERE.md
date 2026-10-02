@@ -1,5 +1,7 @@
 # 接续入口：无需聊天上下文
 
+**2026-10-02 当前设计独立审查（基线 `eb9d1fd`）**：[审查报告](docs/research/2026-10-02_model_design_review.md)。gate 已登记标杆批执行完成（2D-5cm t11 仍为 unverified），下方“等待重启”是历史交接状态。本轮发现带符号重建额外频移75MHz、半空间材料在PML内缘截断、2D/3D配对几何不一致；归档t07的501点带限复算也修正了旧验收的边界主导归因。先处理链路/参考与物理标准件，再考虑扩大批次或训练；本轮未改冻结契约/门禁，未运行求解器或训练。
+
 更新：2026-09-27。当前接续工作区为 `E:/automation_djh/automation_repo`（本机）；另一台电脑的历史工作区为 `D:/自动处理`，远端 `CYberkra/automation`。以本页当前状态为准；历史报告中的旧“下一步”不代表待办，历史快照仅供追溯，接续只按顶部唯一当前状态执行。
 
 **2026-10-02 交接（本机 E:/automation_djh，main `07c618e`）**：[交接文档](docs/research/2026-10-02_handoff.md)。3D 标杆批 benchmark3d_r2_co（39 例 = 3D 起伏基覆界面 13 道 + 2D-5cm 配对 13 + 2D-2.5cm 参照 13）已冻结、gate 已批准（用户 10-01 22:23 “确认” S1–S5，草案 `2026-10-01_3d_benchmark_design_draft.md`）；**唯一阻塞 = 主机尚未真正重启**（LastBootUpTime 仍 2026-10-01 22:34:15、pending.xml 存在、NVML 初始化失败；快速启动开启，必须开始菜单“重启”而非关机）。重启生效后按交接文档 §3 执行：nvidia-smi 验证 → 启动 vctip 看守器 → `run_benchmark3d_r2_gpu.cmd --execute --max-runs 1` 冒烟首道 → 用户过目 → 续跑其余 38 道。增广 v0.6 保持经验候选（未冻结、未验收）；功率口径 36 dBm。
