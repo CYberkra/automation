@@ -1,0 +1,200 @@
+{
+  "schema": "hs_storage_review/1",
+  "reviewed_commit": "c921881",
+  "scope": "Archived HS postprocessing only; no solver, training or C5/C8 reads",
+  "capsule_hashes": {
+    "fig_hs_official_sfcw_acceptance.png": "010d2d2a668e72e459379e180d0c4f10926027985741f726fe47d62fdc0c5018",
+    "hs1_flat_halfspace.h5": "29b131e9e6032ccd9b394696ca9ae02149f50432b6b365a3c1c2049e07c47502",
+    "hs1_flat_halfspace.in": "22df03c2efcf1fe5b56214fcbbfd9fec59149907ecd4a5d27f3b7549528e3c7d",
+    "hs2_coveronly_halfspace.h5": "8fa62832fd8dc4e2ffd881236bdb3ba4715808849dde29b91e9f8b49fd2257a0",
+    "hs2_coveronly_halfspace.in": "1195227fda924e9af95cb11249dcb54d1d9374de42b2dbaff31b14aa474593bb",
+    "hs3_domain16_halfspace.h5": "8b4babb0d60034c56bd04c3ce970cc3698df2c8a32ba1175c258550772b0cb6f",
+    "hs3_domain16_halfspace.in": "5077fd70607f0ca4fa946b094dd573be545037ea08a2304600bbd75e431cfab0",
+    "hs_acceptance_metrics.json": "b76b34b02ef76b1916caecbd1c30dd75d857c26827cf45a3ef14bf1abdb129c5",
+    "hs_sfcw_official_traces.npz": "4006ca9d2095b843b3476e03eff1b5491672999d1bff2b344e9e2b94cdbe288a",
+    "manifest.json": "90b7fd198e1ed3693d3e8f4a6addd4033508351b3ae928d6d3970a13d984a13d",
+    "run_geom.cmd": "a00c5b0b20266b832eed39713cde69425cccab729836c6ab95a72b76816bc97a",
+    "run_solve.cmd": "e8a9162ed83073a63e32e85cfc43c596db236298e77dda215548b515a7ab68e9"
+  },
+  "manifest_matches": 11,
+  "original_capsule_unchanged": true,
+  "h5_metadata": {
+    "hs1_flat_halfspace": {
+      "version": "4.0.0",
+      "dt": 9.629166007732353e-11,
+      "iterations": 6233,
+      "grid": [
+        240,
+        240,
+        660
+      ],
+      "receiver_position": [
+        6.0,
+        6.65,
+        27.0
+      ],
+      "dtype": "float64"
+    },
+    "hs2_coveronly_halfspace": {
+      "version": "4.0.0",
+      "dt": 9.629166007732353e-11,
+      "iterations": 6233,
+      "grid": [
+        240,
+        240,
+        660
+      ],
+      "receiver_position": [
+        6.0,
+        6.65,
+        27.0
+      ],
+      "dtype": "float64"
+    },
+    "hs3_domain16_halfspace": {
+      "version": "4.0.0",
+      "dt": 9.629166007732353e-11,
+      "iterations": 6233,
+      "grid": [
+        240,
+        320,
+        660
+      ],
+      "receiver_position": [
+        6.0,
+        8.65,
+        27.0
+      ],
+      "dtype": "float64"
+    }
+  },
+  "archived_signed_arrays_exact": true,
+  "envelope_comparison": {
+    "direct": {
+      "official_peak": 4.28749404952118,
+      "official_peak_ns": 3.32667997338656,
+      "hilbert_peak": 4.7128566303660575,
+      "hilbert_peak_ns": 4.1583499667332005,
+      "max_envelope_difference": 1.5273844842791102
+    },
+    "ground": {
+      "official_peak": 0.1262966720820151,
+      "official_peak_ns": 99.8003992015968,
+      "hilbert_peak": 0.1298639907777815,
+      "hilbert_peak_ns": 96.47371922821024,
+      "max_envelope_difference": 0.032684111445623956
+    },
+    "interface": {
+      "official_peak": 0.0006060195407602472,
+      "official_peak_ns": 187.125748502994,
+      "hilbert_peak": 0.0006060195958075546,
+      "hilbert_peak_ns": 187.125748502994,
+      "max_envelope_difference": 1.3719171298969335e-10
+    },
+    "official_interface_over_ground": 0.004798380913526428,
+    "official_interface_over_ground_dB": -46.378105581401854
+  },
+  "normal_replay": {
+    "exit_code": 0,
+    "metrics": {
+      "chain": "sfcw_official_loader_v0_2 (20-170 MHz, 501 pt, Hann, carrier 20 MHz)",
+      "direct_coupling_ns": 3.33,
+      "ground_env_peak": 0.1298639907777815,
+      "ground_env_peak_ns": 96.47371922821024,
+      "interface_diff_env_peak": 0.0006060195958075546,
+      "interface_diff_env_peak_ns": 187.125748502994,
+      "interface_over_ground": 0.004666571481270379,
+      "interface_over_ground_dB": -46.620041547602604,
+      "interface_over_direct": 0.00012858859145063444,
+      "hs3_vs_hs1_max_rel_diff_by_window": {
+        "direct_ns": 7.902729211519075e-11,
+        "ground_ns": 4.373315663341256e-06,
+        "interface_ns": 1.7201283421742221e-06
+      },
+      "hs3_vs_hs1_verdict": "domain-width insensitive (max rel diff < 1e-5)"
+    },
+    "existing_outputs_changed": {
+      "hs_acceptance_metrics.json": false,
+      "hs_sfcw_official_traces.npz": false
+    },
+    "input_manifest_matches": true
+  },
+  "scaled_hs3_replay": {
+    "exit_code": 0,
+    "metrics": {
+      "chain": "sfcw_official_loader_v0_2 (20-170 MHz, 501 pt, Hann, carrier 20 MHz)",
+      "direct_coupling_ns": 3.33,
+      "ground_env_peak": 0.1298639907777815,
+      "ground_env_peak_ns": 96.47371922821024,
+      "interface_diff_env_peak": 0.0006060195958075546,
+      "interface_diff_env_peak_ns": 187.125748502994,
+      "interface_over_ground": 0.004666571481270379,
+      "interface_over_ground_dB": -46.620041547602604,
+      "interface_over_direct": 0.00012858859145063444,
+      "hs3_vs_hs1_max_rel_diff_by_window": {
+        "direct_ns": 0.9000318617501945,
+        "ground_ns": 0.8948004739458029,
+        "interface_ns": 0.02713289991448747
+      },
+      "hs3_vs_hs1_verdict": "domain-width insensitive (max rel diff < 1e-5)"
+    },
+    "existing_outputs_changed": {
+      "hs_acceptance_metrics.json": true,
+      "hs_sfcw_official_traces.npz": true
+    },
+    "input_manifest_matches": false
+  },
+  "legacy_archive_counterexamples": {
+    "noise_Nb": [
+      {
+        "family": "S2X",
+        "level": 6.0,
+        "legacy_Nb_ratio": 4.960706,
+        "official_Nb_ratio": 5.053807
+      },
+      {
+        "family": "S2X",
+        "level": 20.0,
+        "legacy_Nb_ratio": 101.74497,
+        "official_Nb_ratio": 101.9042
+      },
+      {
+        "family": "S2TZX",
+        "level": 6.0,
+        "legacy_Nb_ratio": 4.960311,
+        "official_Nb_ratio": 5.056014
+      },
+      {
+        "family": "S2TZX",
+        "level": 20.0,
+        "legacy_Nb_ratio": 101.714039,
+        "official_Nb_ratio": 101.873909
+      },
+      {
+        "family": "C3mX",
+        "level": 6.0,
+        "legacy_Nb_ratio": 4.963538,
+        "official_Nb_ratio": 5.034906
+      },
+      {
+        "family": "C3mX",
+        "level": 20.0,
+        "legacy_Nb_ratio": 101.809437,
+        "official_Nb_ratio": 101.929004
+      }
+    ],
+    "S1X_mean_RMS": {
+      "nc_rms_legacy": 0.00041655749969696975,
+      "nc_rms_official": 0.0008200592735757577,
+      "floor_rms_legacy": 3.038389231913212,
+      "floor_rms_official": 6.0767789255577265
+    }
+  },
+  "source_hashes": {
+    "scripts/review_hs_storage_20261002.py": "4940c482421559c06e6901d3a5bf5d5d06d359a54303e301c2240f856b1f2530",
+    "scripts/run_hs_acceptance_v0_1.py": "eafc78e470d38f1a2d86f3d6417b27b5de2c0a37a71ec26c125bdabe4a07371a",
+    "scripts/sfcw_official_loader_v0_2.py": "650b0d143150efe0119ad4be1ebc93845f09a6f0707351a2e2df945e687b7593",
+    "artifacts/research_checks/2026-10-02_t3_ladder_carrierfix_v0_2_r1.json": "d48efa1492996910fb402d45fed1c178676a9bfee89e2337b923ad1bf4164c1a",
+    "artifacts/research_checks/2026-10-02_s1s3_refwindow_carrierfix_v0_2_r1.json": "6db092f704631abb2424dc359b7378830872d201addf81eeb38b13f3e7321725"
+  }
+}
