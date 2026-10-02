@@ -1,0 +1,57 @@
+{
+ "chain": "sfcw_official_loader_v0_2 (20-170 MHz, 501 pt, Hann, carrier 20 MHz)",
+ "envelope_convention": "official: 2*|complex_envelope|; differential = 2*|env1_c-env2_c|",
+ "supersedes": "v0.1 metrics used a re-Hilbert envelope; archived unchanged, do not mix",
+ "direct_env_peak": 4.28749404952118,
+ "direct_env_peak_ns": 3.32667997338656,
+ "ground_env_peak": 0.1262966720820151,
+ "ground_env_peak_ns": 99.8003992015968,
+ "interface_diff_env_peak": 0.0006060195407602472,
+ "interface_diff_env_peak_ns": 187.125748502994,
+ "interface_over_ground": 0.004798380913526428,
+ "interface_over_ground_dB": -46.378105581401854,
+ "interface_over_direct": 0.0001413458616526655,
+ "hs3_vs_hs1_rel_diff_window_local_DIAGNOSTIC_ONLY": {
+  "direct_ns": 9.771208751970869e-11,
+  "ground_ns": 4.171247780170807e-06,
+  "interface_ns": 8.040718606967288e-05
+ },
+ "hs3_vs_hs1_window_local_ill_conditioning_note": "interface-window denominator is the Hann-sidelobe noise floor (~5e-4), so the window-local ratio is dominated by floor jitter (8.0e-5) and is NOT used as the acceptance gate",
+ "hs3_vs_hs1_rel_diff_over_direct_peak": {
+  "direct_ns": 9.771208751970869e-11,
+  "ground_ns": 1.228724068139289e-07,
+  "interface_ns": 1.0550836305273929e-08
+ },
+ "hs3_vs_hs1_interface_window_abs_diff": 4.5236647876334e-08,
+ "hs3_vs_hs1_iface_diff_over_iface_echo": 7.464552680856619e-05,
+ "domain_control_threshold_over_direct_peak": 1e-05,
+ "domain_control_threshold_over_iface_echo": 0.01,
+ "gates": [
+  {
+   "gate": "hs3_vs_hs1 |e1-e3|/direct_peak [direct_ns] < 1e-05",
+   "value": 9.771208751970869e-11,
+   "pass": true
+  },
+  {
+   "gate": "hs3_vs_hs1 |e1-e3|/direct_peak [ground_ns] < 1e-05",
+   "value": 1.228724068139289e-07,
+   "pass": true
+  },
+  {
+   "gate": "hs3_vs_hs1 |e1-e3|/direct_peak [interface_ns] < 1e-05",
+   "value": 1.0550836305273929e-08,
+   "pass": true
+  },
+  {
+   "gate": "hs3_vs_hs1 interface-window diff < 1% of interface echo",
+   "value": 7.464552680856619e-05,
+   "pass": true
+  },
+  {
+   "gate": "interface echo present in window (diff peak > 1e-6)",
+   "value": 0.0006060195407602472,
+   "pass": true
+  }
+ ],
+ "verdict": "PASS"
+}

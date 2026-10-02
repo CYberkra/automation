@@ -10,14 +10,14 @@
 
 | 证据 | 来源脚本 | 失效范围 | 后继 |
 |---|---|---|---|
-| `2026-09-28_t3_damage_ladder_r1/r2.json` | `study_t3_damage_ladder.py` | 全部带符号指标（D/a/A/H/ρ/到时）；幅值/极性/删除/加噪档经 v0.2 复算**数值不变仍可引用**；移位档刻度作废 | `…_t3_ladder_carrierfix_v0_2`（开发）；v0_3 待全量重跑 |
+| `2026-09-28_t3_damage_ladder_r1/r2.json` | `study_t3_damage_ladder.py` | 全部带符号指标（D/a/A/H/ρ/到时）；**按字段分列**：幅值/极性/删除档 D、a、H、ρ 经 v0.2 复算不变仍可引用；**加噪 Nb 作废**（v0.2 实测六项全变，如 S2TZX +6 dB 档 4.960311→5.056014，独立审查复核 S2X/S2TZX/S3X 两档各变）；**到时诊断作废**；移位档刻度作废 | `…_t3_ladder_carrierfix_v0_2`（开发）；v0_3 待全量重跑 |
 | `2026-09-28_t3_operator_effects_r1/r2.json` | `study_t3_operator_effects.py` | 算子 D_e/Nb 绝对刻度；top-1 结构经 B2 间接复算稳定，完整排序以新版为准 | 待 v0_3 链重出 |
 | `2026-09-29_t3_operator_effects_rpca_r1/r2.json` | `study_t3_operator_effects_rpca.py` | 同上（RPCA 算子） | 同上 |
 | `2026-09-28_tolerance_sensitivity_r1/r2.json` | `study_tolerance_sensitivity.py` | 翻转率结论锚定在旧移位刻度上；τ_D 锚点需按官方表示重新登记（复审：2 样本 D=0.9557/0.9985/1.0106 仍全部挂，**无证据要求改阈值**） | 容差 v0.2 提案（待用户决策） |
 | `2026-09-28_reward_weights_r1/r2.json`、`2026-09-29_reward_weights_v0_2_r1/r2.json` | `study_reward_weights_v0_1.py` 等 | 排名演示基于旧刻度；dB 恒等式构造本身不受影响 | 同上 |
 | `2026-09-29_gain_ladder/gain_effects/gain_weights/clip_scale_r1/r2.json`（8 份） | `study_gain_*_v0_1.py`、`study_clip_scale_v0_1.py` | 增益/截幅全部带符号证据；**"2× 幅值在比值中抵消"不适用于载频变化，不可沿用**（复审 P2） | 待版本化重出 |
 | `2026-09-29_reward_protocol_t3_first_run_r1/r2.json` | `run_reward_protocol_t3_v0_1.py` | 奖励首跑绝对分值 | 待 v0_3 链重出 |
-| `2026-09-29_s1s3_ref_window_r1/r2.json` + `…_cache/` | `freeze_s1s3_reference_window_v0_1.py` | **仅 t_measured 登记列**作废；费马几何窗不受影响；冻结断言在官方表示下仍全过 | 契约 v0.2 更新（待用户决策） |
+| `2026-09-29_s1s3_ref_window_r1/r2.json` + `…_cache/` | `freeze_s1s3_reference_window_v0_1.py` | **t_measured 登记列、NC 与 floor 的绝对 RMS 均作废**（独立审查复算：S1X NC 均值 0.0004165575→0.0008200593，floor RMS 3.0384→6.0768，官方表示幅值×2 的直接后果）；费马几何窗不受影响；冻结断言（峰落窗内、NC 间隙为正）在官方表示下仍全过 | 契约 v0.2 更新（待用户决策） |
 | `2026-10-01_reward_protocol_b2_pilot_r1/r2.json` | `run_reward_protocol_b2_pilot_v0_1.py` | 绝对 R 刻度；top-1 与可行性经 v0.2 复算零翻转仍成立；完整排序以新版为准 | `…_b2_reward_carrierfix_v0_2`（开发） |
 
 ## B 类：使用旧表示的增广与诊断产物（归档）
