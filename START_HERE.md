@@ -1,5 +1,7 @@
 # 接续入口：无需聊天上下文
 
+**2026-10-02 SFCW 载频修复 v0.2（main，用户“修复问题”）**：[修复报告](docs/research/2026-10-02_sfcw_carrier_fix_v0_2.md)。审查分支 `codex/model-design-review-20261002`（独立、未合并）发现的 P1——旧加载器把带符号波形载频错用 95 MHz（应为官方起始频率 20 MHz，上移 +75 MHz 且幅值减半）——已修复：新模块 `scripts/sfcw_official_loader_v0_2.py` 一次加载双表示；t3 阶梯/S1S3 参考窗/B2 奖励三线开发侧重算完毕（r1/r2 字节一致、旧表示零不符复现归档）。结论：赢家与门控零翻转；移位类 D 刻度下移（2 样本骑 τ_D=0.95 边界）；实测峰全面向费马收敛（≤1.42 ns）；R 绝对刻度仅同表示可比。**待用户决策**：τ_D 契约版本升级、S1/S3 t_measured 登记列 v0.2、3D 标杆 SFCW 产品图按官方 501 点链重出（`plot_sfcw_bscan.py` 的 FFT 带通图降级为诊断）。冻结契约/脚本/输出未动，求解器未跑，测试族未碰。
+
 更新：2026-09-27。当前接续工作区为 `E:/automation_djh/automation_repo`（本机）；另一台电脑的历史工作区为 `D:/自动处理`，远端 `CYberkra/automation`。以本页当前状态为准；历史报告中的旧“下一步”不代表待办，历史快照仅供追溯，接续只按顶部唯一当前状态执行。
 
 **2026-10-02 交接（本机 E:/automation_djh，main `07c618e`）**：[交接文档](docs/research/2026-10-02_handoff.md)。3D 标杆批 benchmark3d_r2_co（39 例 = 3D 起伏基覆界面 13 道 + 2D-5cm 配对 13 + 2D-2.5cm 参照 13）已冻结、gate 已批准（用户 10-01 22:23 “确认” S1–S5，草案 `2026-10-01_3d_benchmark_design_draft.md`）；**唯一阻塞 = 主机尚未真正重启**（LastBootUpTime 仍 2026-10-01 22:34:15、pending.xml 存在、NVML 初始化失败；快速启动开启，必须开始菜单“重启”而非关机）。重启生效后按交接文档 §3 执行：nvidia-smi 验证 → 启动 vctip 看守器 → `run_benchmark3d_r2_gpu.cmd --execute --max-runs 1` 冒烟首道 → 用户过目 → 续跑其余 38 道。增广 v0.6 保持经验候选（未冻结、未验收）；功率口径 36 dBm。

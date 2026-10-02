@@ -2145,6 +2145,33 @@
    "tracked": [
     "artifacts/research_checks/2026-10-02_benchmark3d_r2_acceptance/"
    ]
+  },
+  {
+   "id": "2026-10-02_sfcw_carrierfix_t3_ladder_v0_2",
+   "status": "dev_side_recompute_complete",
+   "directory": "artifacts/research_checks/2026-10-02_t3_ladder_carrierfix_v0_2_{r1,r2}.json",
+   "solver_executed": "none (CPU post-processing of archived 2026-09-28 t3 h5)",
+   "report": "docs/research/2026-10-02_sfcw_carrier_fix_v0_2.md",
+   "key_numbers": "counterexample 80->80.1MHz official vs 155.1MHz legacy, amp ratio 2.000; legacy95==archived r1 (0 mismatches); shift_smp D: 1smp 0.862-0.891->0.496-0.532, 2smp 1.537-1.574->0.956-1.011 (straddles frozen tau_D=0.95), 4smp ->1.644-1.703; all other damage metrics bit-identical",
+   "notes": "r1/r2 byte-identical; frozen ladder outputs untouched; tau_D version upgrade is a pending user decision"
+  },
+  {
+   "id": "2026-10-02_sfcw_carrierfix_s1s3_refwindow_v0_2",
+   "status": "dev_side_recompute_complete",
+   "directory": "artifacts/research_checks/2026-10-02_s1s3_refwindow_carrierfix_v0_2_{r1,r2}.json",
+   "solver_executed": "none (CPU post-processing of archived 2026-09-29 s1s3 h5, 132 traces)",
+   "report": "docs/research/2026-10-02_sfcw_carrier_fix_v0_2.md",
+   "key_numbers": "legacy==frozen contract all 4 families; 99/132 measured peaks move <=4 samples (<=3.33ns); max|measured-Fermat| shrinks 2.385-3.623ns -> 0.649-1.417ns; freeze assertions still pass; abs RMS ratio 1.45-2.82 (2x amplitude + carrier phase)",
+   "notes": "r1/r2 byte-identical; contract windows stay geometry-anchored; t_measured column v0.2 update pending user decision"
+  },
+  {
+   "id": "2026-10-02_sfcw_carrierfix_b2_reward_v0_2",
+   "status": "dev_side_recompute_complete",
+   "directory": "artifacts/research_checks/2026-10-02_b2_reward_carrierfix_v0_2_{r1,r2}.json",
+   "solver_executed": "none (CPU re-scoring of 2026-10-01 B2 pilot inputs)",
+   "report": "docs/research/2026-10-02_sfcw_carrier_fix_v0_2.md",
+   "key_numbers": "legacy95==archived pilot r1 (0 mismatches); 0 feasibility flips, 0 selection flips (B7/B9 winners stable); D_e change <=0.003; B7 R: C3mX 30.0->38.9 dB, C1mX 52.4->68.1 dB; slope families +/-0.1-0.9 dB",
+   "notes": "r1/r2 byte-identical; rankings robust to carrier bug; absolute R scale valid only within one representation"
   }
  ],
  "schema": "research-artifact-registry/1",
