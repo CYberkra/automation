@@ -2289,6 +2289,22 @@
     "fig_hs4_col6_bscan_svd.png"
    ],
    "summary": "HS4 high-relief transect at x=1.625m (bi=6), 25 traces y=2.60..8.60m step 0.25m, offset 1.30m. Underlying interface relief 0.40m arch (8.85->9.25->9.00m, 11.3ns p2p). 25/25 GPU solves ~190s each, zero failure. After mean+rank1 SVD the interface event visibly arches following the binned-table predicted arrival curve -- morphology now resolvable. Axis convention confirmed: z0tab[bi,bj] bi=x, bj=y."
+  },
+  {
+   "id": "2026-10-02_HS4T2D_121trace_2d_transect",
+   "date": "2026-10-02",
+   "type": "simulation_batch",
+   "status": "validated",
+   "capsule": "artifacts/research_checks/2026-10-02_hs4t2d_transect",
+   "artifacts": [
+    "hs4t2d_t01..t121.in",
+    "hs4t2d_t01..t121.h5",
+    "hs4t2d_transect_table.npz",
+    "hs4t2d_bscan_official.npz",
+    "fig_hs4t2d_bscan_svd.png",
+    "fig_hs4t2d_vs_3d_t61.png"
+   ],
+   "summary": "2D fast-study transect of HS4 (invariant y, profile x = 3D bi=6 line, x=2.60..8.60m step 0.05m, 121 traces, offset 1.30m, Ey receiver). ~4-10s per trace (~20-50x faster than 3D). Kinematic check vs 3D col6_t13: ground 98.97 vs 102.30 ns, interface-region 183.8 vs 189.6 ns (systematic ~3-6 ns early, 2D spreading/line-source differences; morphology use only, amplitudes not cross-comparable; pml_cfs dropped to defaults). After mean+rank1 SVD the interface band visibly arches with the binned-table predicted curve. Envelope-MAX picking correlates poorly (sidelobe hopping); use envelope-rise first-arrival instead."
   }
  ],
  "schema": "research-artifact-registry/1",
