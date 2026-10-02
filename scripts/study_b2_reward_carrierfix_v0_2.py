@@ -11,6 +11,7 @@ recalibrate anything.
 No solver runs; no test-family data.
 """
 
+import argparse
 import hashlib
 import json
 import math
@@ -23,15 +24,18 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
 
 import sfcw_official_loader_v0_2 as L
+from sfcw_carrierfix_acceptance import (accept_b2, input_manifest, provenance,
+                                       require, sha256, write_new_pair)
 from research_operator_contract import (ConfigUnavailable, apply_configuration,
                                         local_mean_control)
 from study_t3_damage_ladder import (NC_WIN, fermat_times, event_mask)
 from run_reward_protocol_b2_pilot_v0_1 import (
-    CANDIDATES, LOCAL_MEAN_WIDTH, MOTHERS, interface_z, r_bg, load_contracts)
+    CANDIDATES, LOCAL_MEAN_WIDTH, MOTHERS, interface_z, r_bg, load_contracts,
+    TOL_C, TOL_SHA256, W2_C, W2_SHA256, W3_C, W3_SHA256)
 
 ARCH_R1 = ROOT / 'artifacts/research_checks/2026-10-01_reward_protocol_b2_pilot_r1.json'
-OUT_R1 = ROOT / 'artifacts/research_checks/2026-10-02_b2_reward_carrierfix_v0_2_r1.json'
-OUT_R2 = ROOT / 'artifacts/research_checks/2026-10-02_b2_reward_carrierfix_v0_2_r2.json'
+OUT_R1 = ROOT / 'artifacts/research_checks/2026-10-02_b2_reward_carrierfix_v0_3_r1.json'
+OUT_R2 = ROOT / 'artifacts/research_checks/2026-10-02_b2_reward_carrierfix_v0_3_r2.json'
 
 
 def run_family_rep(fam, mother, geo, date, tol, x, t):
@@ -81,10 +85,12 @@ def run_family_rep(fam, mother, geo, date, tol, x, t):
             'ranking': [r['config'] for r in ranking]}
 
 
-def build(tol):
+def build(tol, input_records, audited_inputs):
+    require(input_records is not None, 'B2 input manifest is required')
     fams = []
     for fam, mother, geo, date in MOTHERS:
-        t, s_off, s_leg = L.load_bscan_both(mother, date=date)
+        t, s_off, s_leg = L.load_bscan_both(mother, date=date,
+            input_records=input_records, audited_inputs=audited_inputs)
         reps = {}
         for rep, s in (('legacy95', s_leg), ('official20', s_off)):
             x = np.ascontiguousarray(s.T)
@@ -117,7 +123,9 @@ def build(tol):
         fams.append({'family': fam, 'mother': mother, 'archive_date': date,
                      'representations': reps, 'paired_delta': deltas,
                      'selection_flip': reps['legacy95']['selection']
-                     != reps['official20']['selection']})
+                     != reps['official20']['selection'],
+                     'ranking_changed': reps['legacy95']['ranking']
+                     != reps['official20']['ranking']})
         print(fam, 'done; selection legacy/official:',
               reps['legacy95']['selection'], '/',
               reps['official20']['selection'],
@@ -126,9 +134,28 @@ def build(tol):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--input-manifest', type=Path, required=True)
+    args = parser.parse_args()
+    ids = [f'{mother}-CO33-t{k + 1:02d}' for _, mother, _, _ in MOTHERS for k in range(33)]
+    manifest = input_manifest(args.input_manifest, ids)
+    for path, expected in ((TOL_C, TOL_SHA256), (W2_C, W2_SHA256), (W3_C, W3_SHA256)):
+        require(sha256(path) == expected, 'frozen reward contract SHA mismatch: ' + str(path))
     tol, formula = load_contracts()
+    archive = json.loads(ARCH_R1.read_text(encoding='utf-8'))
+    sources = [ARCH_R1, args.input_manifest,
+        ROOT / 'scripts/run_reward_protocol_b2_pilot_v0_1.py',
+        ROOT / 'scripts/study_t3_damage_ladder.py',
+        ROOT / 'scripts/research_operator_contract.py',
+        ROOT / 'scripts/sfcw_carrierfix_acceptance.py',
+        ROOT / 'configs/research/operator_catalogue_v0.2.json',
+        ROOT / 'configs/research/reward_tolerance_contract_v0.2.json',
+        ROOT / 'configs/research/reward_weights_contract_v0.2.json',
+        ROOT / 'configs/research/reward_weights_contract_v0.3.json']
+    inputs = []
+    results = build(tol, manifest, inputs)
     doc = {
-        'schema': 'reward_protocol_b2_carrierfix/1',
+        'schema': 'reward_protocol_b2_carrierfix/2',
         'date': '2026-10-02',
         'basis': 'model design review 2026-10-02 §2; dev-side recompute of '
                  'the 2026-10-01 B2 pilot baseline under both carriers; '
@@ -140,16 +167,16 @@ def main():
         'note': 'global amplitude (2x) cancels in every ratio/dB quantity; '
                 'only waveform shape (carrier) can move scores. No solver '
                 'runs; no test-family data.',
-        'results': build(tol),
+        'results': results,
+        'acceptance': accept_b2(results, archive),
+        'provenance': provenance(__file__, inputs, sources),
     }
-    text1 = json.dumps(doc, ensure_ascii=False, indent=1) + '\n'
-    doc2 = dict(doc, results=build(tol))
-    text2 = json.dumps(doc2, ensure_ascii=False, indent=1) + '\n'
-    assert text1 == text2, 'r1/r2 mismatch'
-    OUT_R1.parent.mkdir(parents=True, exist_ok=True)
-    OUT_R1.write_text(text1, encoding='utf-8', newline='\n')
-    OUT_R2.write_text(text2, encoding='utf-8', newline='\n')
-    print('sha256', hashlib.sha256(text1.encode('utf-8')).hexdigest()[:16])
+    inputs2 = []
+    results2 = build(tol, manifest, inputs2)
+    doc2 = dict(doc, results=results2, acceptance=accept_b2(results2, archive),
+                provenance=provenance(__file__, inputs2, sources))
+    write_new_pair(OUT_R1, OUT_R2, doc, doc2)
+    print('accepted B2 results:', len(results))
     print('wrote', OUT_R1.relative_to(ROOT), 'and', OUT_R2.relative_to(ROOT))
 
 

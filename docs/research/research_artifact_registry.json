@@ -2152,8 +2152,8 @@
    "directory": "artifacts/research_checks/2026-10-02_t3_ladder_carrierfix_v0_2_{r1,r2}.json",
    "solver_executed": "none (CPU post-processing of archived 2026-09-28 t3 h5)",
    "report": "docs/research/2026-10-02_sfcw_carrier_fix_v0_2.md",
-   "key_numbers": "counterexample 80->80.1MHz official vs 155.1MHz legacy, amp ratio 2.000; legacy95==archived r1 (0 mismatches); shift_smp D: 1smp 0.862-0.891->0.496-0.532, 2smp 1.537-1.574->0.956-1.011 (straddles frozen tau_D=0.95), 4smp ->1.644-1.703; all other damage metrics bit-identical",
-   "notes": "r1/r2 byte-identical; frozen ladder outputs untouched; tau_D version upgrade is a pending user decision"
+   "key_numbers": "counterexample 80->80.1MHz official vs 155.1MHz legacy, amp ratio 2.000; legacy95==archived r1 (0 mismatches); shift_smp D: 1smp 0.862-0.891->0.496-0.532, 2smp 1.537-1.574->0.956-1.011 (all exceed frozen tau_D=0.95; minimum margin 0.005661), 4smp ->1.644-1.703; NC noise Nb ratios and nonshift arrival diagnostics also change",
+   "notes": "r1/r2 byte-identical; frozen ladder outputs untouched; official-carrier sensitivity review remains pending; existing evidence does not require changing tau_D"
   },
   {
    "id": "2026-10-02_sfcw_carrierfix_s1s3_refwindow_v0_2",
@@ -2171,7 +2171,15 @@
    "solver_executed": "none (CPU re-scoring of 2026-10-01 B2 pilot inputs)",
    "report": "docs/research/2026-10-02_sfcw_carrier_fix_v0_2.md",
    "key_numbers": "legacy95==archived pilot r1 (0 mismatches); 0 feasibility flips, 0 selection flips (B7/B9 winners stable); D_e change <=0.003; B7 R: C3mX 30.0->38.9 dB, C1mX 52.4->68.1 dB; slope families +/-0.1-0.9 dB",
-   "notes": "r1/r2 byte-identical; rankings robust to carrier bug; absolute R scale valid only within one representation"
+   "notes": "r1/r2 byte-identical; top-1 and feasibility unchanged; S2X and S2TZX full rankings change; absolute R scale valid only within one representation"
+  },
+  {
+   "id": "2026-10-02_carrierfix_acceptance_repairs",
+   "status": "code_and_archive_acceptance_verified_full_raw_rerun_pending",
+   "report": "docs/research/2026-10-02_carrierfix_acceptance_repairs.md",
+   "checks": "artifacts/research_checks/2026-10-02_carrierfix_acceptance_checks.json",
+   "solver_executed": false,
+   "scope": "three review findings repaired; historical outputs and frozen contracts unchanged; full t3/S1S3/B2 H5 rerun unavailable on this host"
   }
  ],
  "schema": "research-artifact-registry/1",
