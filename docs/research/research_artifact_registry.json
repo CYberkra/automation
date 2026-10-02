@@ -2321,9 +2321,21 @@
     "fig_arch_traces_direct.png"
    ],
    "summary": "Decisive step-interface validation (left half cover 2.6m / right half 3.4m): same-trace xcorr plateaus -11.64 / +11.3 ns vs theory +/-11.6 ns — chain (2D build, SFCW chain, differencing) validated. ERRATUM: earlier theory-curve overlays (col6 25-trace, hs4t2d arch) had INVERTED relief sign: z0 is cover-bottom coordinate, larger z0 = thinner cover = EARLIER arrival; correct formula t = t0 - 2*(z0-9.0)/v. Arch-transect relief direction confirmed correct in diff traces (peak order matches), but magnitude damped ~7x: 15 m air standoff makes Fresnel footprint ~5 m radius, smoothing the 6 m arch. Step transition laterally displaced (~+0.9 m from midpoint prediction) — air-path refraction geometry."
-  }
- ],
- "schema": "research-artifact-registry/1",
+   },
+   {
+    "id": "2026-10-03_hs4_bscan_independent_review",
+    "date": "2026-10-03",
+    "type": "independent_review",
+    "status": "request_changes",
+    "reviewed_commit": "d6394b1",
+    "directory": "artifacts/research_checks/2026-10-03_hs4_bscan_review",
+    "report": "docs/research/2026-10-03_hs4_bscan_review.md",
+    "solver_executed": false,
+    "key_numbers": "591 manifest entries match; 280 archived traces rebuilt through pinned official SFCW code with exact saved signed arrays; arch2d ground/interface residual energy ratio 30.454968281211872; center official ground envelope peak 99.8003992015968 ns in all four groups; current HS acceptance exits 1 on list manifest; compatible-manifest HS3 polarity reversal still exits 0 with PASS",
+    "notes": "No solver, training or C5/C8 reads; input capsules unchanged. Missing paired 2D flat BG and xcorr/plot scripts prevent independent step/7x-smoothing validation. Preserve historical records; review is not a new GPU execution approval."
+   }
+  ],
+  "schema": "research-artifact-registry/1",
  "solver_execution_gate": "configs/research/gprmax_v4_execution_gate.json",
  "updated_date": "2026-10-02",
  "current_handoff": "START_HERE.md - batch2d_slope_t2 + _mt both completed (6+6). B-scan viewer: artifacts/local_checks/slope_t2_bscan_viewer.html via 127.0.0.1:8765. Dispersion measured-data research registered (West 2003 etc). Next candidates: T1/T3, 3D slope, tilt_target, dispersive TZ; G4 unchanged.",
