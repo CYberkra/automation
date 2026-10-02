@@ -1,3 +1,7 @@
+## 2026-10-02 存量大文件降级清理（用户"存量老 npz 你自己清理好"+"重要的保留、过时的清理"）
+
+按"冻结契约 SHA 内嵌 → 必须保留；未内嵌且 >10 MB → 降级 T2"核查全部 >5 MB 已追踪文件。**降级 33 件共 459.1 MB**：09-26 损伤阶梯 r1/r2 与 09-27 dev 阶梯 r1/r2 各 16 份 records.json（旧载频时代已归档证据）、22.5 MB 统一适配器 npz（可再生转储）——全部本地原地保留、逐件 SHA256 入 [降级清单](2026-10-02_large_legacy_demotion_manifest.json)（33/33 验证一致，磁盘上一字节未动，满足归档冻结要求）。**保留**：损伤阶梯 test 族 records.json（SHA 内嵌于 g4_s5_test_confirmation 等冻结契约，断不得）、21 个 MT33 母模型 H5（重跑需真实 GPU 成本）、r1/r2 成对 arrays.npz（<10 MB 复现性证据）。效果：未来克隆的追踪工作树减少约 437 MB records.json + 22.5 MB npz；git 历史包体积不变（改写历史需强推，未做也不建议）。规范文档 §7 已补记本次执行。台账条目 `2026-10-02_large_legacy_demotion`（157 条）。
+
 ## 2026-10-02 仿真产物长期存储规范 v0.1 生效（用户"有必要创建一个长期的存储的规范和方案吧"）
 
 用户指出 HS1/HS2/HS3 的输入、H5、验收脚本均未提交，要求建立长期存储规范。执行：[存储规范 v0.1](2026-10-02_artifact_storage_convention_v0_1.md)——三层模型：**T1 追踪层**（`artifacts/research_checks/<date>_<name>/`，git 追踪，≤10 MB/件，.in/小 H5/npz/metrics/图/manifest.json 构成自包含"实验胶囊"）、**T2 本地层**（`artifacts/simulations`、`verify_runs/` 等 gitignore 区，批量原始 H5 与 vtkhdf 大文件，必须能由 T1 的 .in+脚本重建）、**T3 远端层**（GitHub 随推送同步 T1）；提交前强制复现性自检（用归档副本重跑、manifest 无漂移、图目验）。首个执行案例：HS 批整体入轨 `artifacts/research_checks/2026-10-02_halfspace_standard_hs/`（3×.in + 3×.h5 + npz + metrics JSON + 验收图 + manifest 11 项 SHA256）；验收脚本实体化为 `scripts/run_hs_acceptance_v0_1.py`（此前是 heredoc 现场分析，规范明令禁止），用归档副本重跑全部数字复现一致。规范自身待办：T2 异地备份（本机 3.3 GB 批量 H5 单点）、manifest 自动校验脚本、公共绘图模块。台账条目 `2026-10-02_artifact_storage_convention_v0_1`（156 条）。

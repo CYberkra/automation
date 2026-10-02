@@ -2216,6 +2216,15 @@
    "report": "docs/research/2026-10-02_artifact_storage_convention_v0_1.md",
    "key_numbers": "3-tier storage model: T1 git-tracked evidence capsules (artifacts/research_checks/<date>_<name>/, <=10MB/file), T2 local-only bulk (artifacts/simulations, verify_runs), T3 GitHub remote; first executed case: 2026-10-02_halfspace_standard_hs (3x .in + 3x .h5 + npz + metrics + figure + manifest.json, 11 SHA256 entries); acceptance script scripts/run_hs_acceptance_v0_1.py replays all metrics byte-identical from archived copies",
    "notes": "user instruction: HS inputs/H5/acceptance scripts must be committed with a long-term storage convention; heredoc analysis banned from conclusions"
+  },
+  {
+   "id": "2026-10-02_large_legacy_demotion",
+   "status": "completed",
+   "directory": "docs/research/2026-10-02_large_legacy_demotion_manifest.json",
+   "solver_executed": "none",
+   "report": "docs/research/2026-10-02_artifact_storage_convention_v0_1.md",
+   "key_numbers": "demoted 33 files / 459.1 MB from git tracking to T2-local-in-place (16+16 damage_ladder records.json + 22.5MB unified-adapter npz); local files byte-untouched, 33/33 SHA256 verified against manifest; KEPT: test-family records (SHA embedded in frozen contracts), MT33 mother H5 (GPU regeneration cost), r1/r2 arrays.npz pairs (<10MB reproducibility evidence); git pack history unchanged (no history rewrite)",
+   "notes": "user rule: keep important, clean outdated; demotion not deletion; frozen-contract SHA chains verified intact"
   }
  ],
  "schema": "research-artifact-registry/1",
