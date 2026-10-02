@@ -2133,11 +2133,23 @@
    "training_executed": false,
    "g4_relieved": false,
    "tracked": true
+  },
+  {
+   "id": "2026-10-02_benchmark3d_r2_co",
+   "status": "executed_truthful_design_rejected",
+   "directory": "artifacts/simulations/2026-10-01_B3D5CM-C3mR2-BG-CO13-t01..t13",
+   "solver_executed": "gprMax v4 GPU double, 3D 13/13 completed (t11 restored after 03:00 kill), 2D-5cm t01-t10 completed (t11 burned), 2D-2.5cm unconsumed",
+   "report": "docs/research/2026-10-02_benchmark3d_r2_acceptance_verdict.md",
+   "key_numbers": "t07 rerun bit-exact (maxdiff 0); interface echo <=0.016 = 2.6% of surface bounce; relief signature <=5.4e-5; boundary reverberation |B-E|=0.19; surface-window trace modulation 46% mirror-symmetric",
+   "limitations": "batch production blocked: cover material too lossy (Debye 7.878/6.46ns + 3mS/m) buries interface echo 16-20 dB under surface coda; 12x12m domain + 15m air column too small for HORIPML-20 at grazing incidence",
+   "tracked": [
+    "artifacts/research_checks/2026-10-02_benchmark3d_r2_acceptance/"
+   ]
   }
  ],
  "schema": "research-artifact-registry/1",
  "solver_execution_gate": "configs/research/gprmax_v4_execution_gate.json",
- "updated_date": "2026-10-01",
+ "updated_date": "2026-10-02",
  "current_handoff": "START_HERE.md - batch2d_slope_t2 + _mt both completed (6+6). B-scan viewer: artifacts/local_checks/slope_t2_bscan_viewer.html via 127.0.0.1:8765. Dispersion measured-data research registered (West 2003 etc). Next candidates: T1/T3, 3D slope, tilt_target, dispersive TZ; G4 unchanged.",
  "t3_operator_effects_rpca_addendum": "docs/research/2026-09-29_rpca_effects_addendum.md",
  "operator_catalogue_v0_2": "configs/research/operator_catalogue_v0.2.json",
