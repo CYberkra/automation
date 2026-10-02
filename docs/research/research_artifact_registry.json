@@ -2305,6 +2305,22 @@
     "fig_hs4t2d_vs_3d_t61.png"
    ],
    "summary": "2D fast-study transect of HS4 (invariant y, profile x = 3D bi=6 line, x=2.60..8.60m step 0.05m, 121 traces, offset 1.30m, Ey receiver). ~4-10s per trace (~20-50x faster than 3D). Kinematic check vs 3D col6_t13: ground 98.97 vs 102.30 ns, interface-region 183.8 vs 189.6 ns (systematic ~3-6 ns early, 2D spreading/line-source differences; morphology use only, amplitudes not cross-comparable; pml_cfs dropped to defaults). After mean+rank1 SVD the interface band visibly arches with the binned-table predicted curve. Envelope-MAX picking correlates poorly (sidelobe hopping); use envelope-rise first-arrival instead."
+  },
+  {
+   "id": "2026-10-02_HS4T2D_step_validation_and_erratum",
+   "date": "2026-10-02",
+   "type": "validation",
+   "status": "validated",
+   "capsule": "artifacts/research_checks/2026-10-02_hs4t2d_transect",
+   "artifacts": [
+    "hs4t2ds_t01..t121.in",
+    "hs4t2ds_t01..t121.h5",
+    "hs4t2dstep_bscan_official.npz",
+    "fig_hs4t2d_step_test.png",
+    "fig_step_traces_direct.png",
+    "fig_arch_traces_direct.png"
+   ],
+   "summary": "Decisive step-interface validation (left half cover 2.6m / right half 3.4m): same-trace xcorr plateaus -11.64 / +11.3 ns vs theory +/-11.6 ns — chain (2D build, SFCW chain, differencing) validated. ERRATUM: earlier theory-curve overlays (col6 25-trace, hs4t2d arch) had INVERTED relief sign: z0 is cover-bottom coordinate, larger z0 = thinner cover = EARLIER arrival; correct formula t = t0 - 2*(z0-9.0)/v. Arch-transect relief direction confirmed correct in diff traces (peak order matches), but magnitude damped ~7x: 15 m air standoff makes Fresnel footprint ~5 m radius, smoothing the 6 m arch. Step transition laterally displaced (~+0.9 m from midpoint prediction) — air-path refraction geometry."
   }
  ],
  "schema": "research-artifact-registry/1",
