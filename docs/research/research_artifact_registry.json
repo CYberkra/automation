@@ -32,6 +32,21 @@
  ],
  "runs": [
   {
+   "id": "hs4_browser_geometry_20261003",
+   "directory": "artifacts/research_checks/2026-10-03_hs4_browser_geometry",
+   "report": "docs/research/2026-10-03_hs4_browser_model_viewers.md",
+   "export_script": "scripts/export_hs4_browser_geometry.py",
+   "verification_script": "scripts/check_hs4_browser_geometry.py",
+   "status": "input_geometry_export_verified_and_browser_import_tested",
+   "scope": "HS4 archived input boxes and COL6 H5 Position metadata; not solved material-grid or waveform acceptance",
+   "calls_solver": false,
+   "uses_field_data": false,
+   "outputs": ["hs4_interface.obj", "hs4_scene.obj", "hs4_scene.mtl", "hs4_interface.vtp"],
+   "verification": "verification.json; 2304 plateaus, 51 input identities, OBJ/VTP/CSV and solid volumes; six core outputs repeated byte-identically",
+   "browser_imports": ["https://3dviewer.net/", "https://kitware.github.io/glance/app/"],
+   "next": "Inspect input geometry and COL6 profile independently; solver-grid and physical waveform attribution remain pending numerical controls"
+  },
+  {
    "analysis_recompute": "results.json byte-identical across analysis_r1/analysis_r2",
    "analysis_script": "scripts/analyze_batch2d_fine2.py",
    "attempts": "one each, consumed, gate closed",
