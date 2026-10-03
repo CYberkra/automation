@@ -7,6 +7,10 @@
 *.jpg binary
 *.h5 binary
 *.vtkhdf binary
+# Preserve exact hashed solver logs for the bounded cause controls.
+artifacts/research_checks/2026-10-03_hs4t2d_cause_controls/**/*.log -whitespace
+artifacts/research_checks/2026-10-03_hs4t2d_source_controls/**/*.log -whitespace
+artifacts/research_checks/2026-10-03_hs4t2d_zfine_confirmation/**/*.log -whitespace
 # Preserve exact hashed V4 solver/failed-attempt logs for the relief study.
 artifacts/research_checks/2026-10-03_hs4t2d_relief08_raw/**/*.log -whitespace
 artifacts/research_checks/2026-10-03_hs4t2d_relief08_snapshot/*.log -whitespace

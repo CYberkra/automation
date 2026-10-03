@@ -32,6 +32,46 @@
  ],
  "runs": [
   {
+   "id": "hs4t2d_cause_diagnostic_20261003",
+   "report": "docs/research/2026-10-03_hs4t2d_cause_diagnostic.md",
+   "status": "completed_controlled_mechanism_evidence; full_spatial_convergence_and_physical_acceptance_not_certified",
+   "solver": "gprMax 4.0.0 / CUDA double",
+   "calls_solver": true,
+   "uses_field_data": false,
+   "new_traces": 101,
+   "raw_float64_traces_verified": 101,
+   "execution_time_actual_material_grids_verified": 101,
+   "portable_representative_grids": 17,
+   "stages": [
+    {
+     "control_directory": "artifacts/research_checks/2026-10-03_hs4t2d_cause_controls",
+     "analysis_directory": "artifacts/research_checks/2026-10-03_hs4t2d_cause_results",
+     "traces": 67,
+     "contract_sha256": "2aaa4521d50db25387d31e92928273c751f8e1283bda2e26808ae4a29733f76e"
+    },
+    {
+     "control_directory": "artifacts/research_checks/2026-10-03_hs4t2d_source_controls",
+     "analysis_directory": "artifacts/research_checks/2026-10-03_hs4t2d_cause_confirmation",
+     "traces": 32,
+     "contract_sha256": "1cb6e3061606ebf27df836fa2cbf43c931a4dbb79ac24b9af09e68d962a5b359"
+    },
+    {
+     "control_directory": "artifacts/research_checks/2026-10-03_hs4t2d_zfine_confirmation",
+     "analysis_directory": "artifacts/research_checks/2026-10-03_hs4t2d_zfine_results",
+     "traces": 2,
+     "contract_sha256": "c5d21d417483cf7a91f2fb66e9d118f2477339d6ea92bf618dbca351977cde80"
+    }
+   ],
+   "verified_mechanisms": [
+    "flat-reference horizontal echo subtraction",
+    "full-window display dynamic range",
+    "standoff/propagation condition shape effect",
+    "finite vertical-grid phase/timing sensitivity"
+   ],
+   "scope": "2D development diagnostics only; no 3D/field extrapolation, clean labels, G4 or historical acceptance changes",
+   "cpu_rebuild": "artifacts/research_checks/2026-10-03_hs4t2d_zfine_results/rebuild_verification.json"
+  },
+  {
    "id": "hs4t2d_relief08_snapshot_20261003",
    "report": "docs/research/2026-10-03_hs4t2d_relief08_comparison.md",
    "directory": "artifacts/research_checks/2026-10-03_hs4t2d_relief08_snapshot",

@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "calls_solver": false,
+  "comparison": "byte-identical core NPZ/JSON/PNG and original manifests from chained raw-H5 CPU rebuild",
+  "files": [
+    {
+      "file": "2026-10-03_hs4t2d_cause_results/controlled_bscan_shapes.png",
+      "sha256": "e45fa3112b8d55b61bcf971f05b6679bd3d45ea1709aec2a3c9f5c16fbda8b93"
+    },
+    {
+      "file": "2026-10-03_hs4t2d_cause_results/diagnostic_arrays.npz",
+      "sha256": "d453ee169bbd810459e85c2c5e42db21c54618ecb36a96beecb6730113a93aac"
+    },
+    {
+      "file": "2026-10-03_hs4t2d_cause_results/ray_and_processing_control.png",
+      "sha256": "af55bd232448ab95a8a056b8c8fc88ed30a50d7e681017bb6fb2141cbbef20be"
+    },
+    {
+      "file": "2026-10-03_hs4t2d_cause_results/results.json",
+      "sha256": "627377eac2ec5a1be5f335f1e8e589444107d5d23104256335cafcd02931d8dc"
+    },
+    {
+      "file": "2026-10-03_hs4t2d_cause_results/vertical_grid_center.png",
+      "sha256": "0086eb511d695642d4ba9cf9cad264f1d2a14770080a97f8a3c7cd4e7a2e2d41"
+    },
+    {
+      "file": "2026-10-03_hs4t2d_cause_confirmation/confirmation_arrays.npz",
+      "sha256": "cdb73b4e189902458e1def89022a5596e0fd57b2918d0b5335c67082859a2857"
+    },
+    {
+      "file": "2026-10-03_hs4t2d_cause_confirmation/geometry_height_grid_confirmation.png",
+      "sha256": "5fc3a438436922c1de90556393bc3f956231184405902bc288b2ec3e68faa7c5"
+    },
+    {
+      "file": "2026-10-03_hs4t2d_cause_confirmation/reference_subtraction_mechanism.png",
+      "sha256": "b06abc5f10a2fb1f6f03f2dcb0d840fa6f535bb4ddbf93324ceba5417876a5a1"
+    },
+    {
+      "file": "2026-10-03_hs4t2d_cause_confirmation/results.json",
+      "sha256": "9957a206c934475ed0b3257902bf18651ab6d7c72698889f5c59b72c5efcf234"
+    },
+    {
+      "file": "2026-10-03_hs4t2d_cause_confirmation/source_and_domain_center.png",
+      "sha256": "72d34d5a4fbc1e34388dff087ba82958599c313020d4cba6f788f7a23a06e33e"
+    },
+    {
+      "file": "2026-10-03_hs4t2d_zfine_results/grid_arrays.npz",
+      "sha256": "137c7100b36d4ebeb589d6da6ed288369767a6a339bb8ef4f662bf984bc8e195"
+    },
+    {
+      "file": "2026-10-03_hs4t2d_zfine_results/results.json",
+      "sha256": "e829191e32f7b9eeae7e5b926b4ba6d285441147ab2dedf3d4666c12dd1c0441"
+    },
+    {
+      "file": "2026-10-03_hs4t2d_zfine_results/three_level_vertical_grid.png",
+      "sha256": "fe0b43df8d9e2cc3a6e854dd92e53b30fdde65ccef3c9084a99d2a92e420ea8a"
+    }
+  ],
+  "note": "Execution-time absolute paths are retained as historical identities; analyses read inputs relative to their contract directories."
+}
