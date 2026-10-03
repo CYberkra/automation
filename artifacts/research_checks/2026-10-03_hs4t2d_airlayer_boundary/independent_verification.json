@@ -1,0 +1,4214 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "group": "g1_domain_12m",
+      "snapshots_found": 10,
+      "components_verified": 60,
+      "problems": [],
+      "snapshots": [
+        {
+          "file": "wave_040.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 16.90800858547625
+            },
+            "Ez": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.05851600194146027
+            },
+            "Hy": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.06670429386169477
+            }
+          },
+          "time_s": 3.9979191007907153e-08,
+          "magnetic_time_s": 3.992022464948841e-08,
+          "iteration": 339,
+          "shape_xyz": [
+            240,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 339,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_050.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 11.304707617630015
+            },
+            "Ez": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.037666404582474146
+            },
+            "Hy": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.04482237196683722
+            }
+          },
+          "time_s": 5.000347193909331e-08,
+          "magnetic_time_s": 4.994450558067457e-08,
+          "iteration": 424,
+          "shape_xyz": [
+            240,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 424,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_065.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 9.586359874362627
+            },
+            "Ez": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.03580072001215915
+            },
+            "Hy": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.04178856255581336
+            }
+          },
+          "time_s": 6.498092697745381e-08,
+          "magnetic_time_s": 6.492196061903507e-08,
+          "iteration": 551,
+          "shape_xyz": [
+            240,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 551,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_080.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 6.647498482330376
+            },
+            "Ez": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.029780543814700897
+            },
+            "Hy": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.031314973392391185
+            }
+          },
+          "time_s": 7.995838201581431e-08,
+          "magnetic_time_s": 7.989941565739556e-08,
+          "iteration": 678,
+          "shape_xyz": [
+            240,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 678,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_095.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 5.231187350275877
+            },
+            "Ez": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.023732549287185854
+            },
+            "Hy": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.028722394017144902
+            }
+          },
+          "time_s": 9.505376977101229e-08,
+          "magnetic_time_s": 9.499480341259355e-08,
+          "iteration": 806,
+          "shape_xyz": [
+            240,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 806,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_110.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 4.384716259215245
+            },
+            "Ez": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.020023521053882713
+            },
+            "Hy": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.024933505953405592
+            }
+          },
+          "time_s": 1.1003122480937278e-07,
+          "magnetic_time_s": 1.0997225845095404e-07,
+          "iteration": 933,
+          "shape_xyz": [
+            240,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 933,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_130.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 3.0604230598921713
+            },
+            "Ez": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.018628430536755718
+            },
+            "Hy": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.02052041070132376
+            }
+          },
+          "time_s": 1.2996185395490763e-07,
+          "magnetic_time_s": 1.2990288759648887e-07,
+          "iteration": 1102,
+          "shape_xyz": [
+            240,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 1102,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_145.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 2.3188940487322456
+            },
+            "Ez": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.017026468904016885
+            },
+            "Hy": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.016917085193817412
+            }
+          },
+          "time_s": 1.450572417101056e-07,
+          "magnetic_time_s": 1.4499827535168687e-07,
+          "iteration": 1230,
+          "shape_xyz": [
+            240,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 1230,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_175.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 1.5898508287488724
+            },
+            "Ez": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.015328389391344113
+            },
+            "Hy": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0143360670914623
+            }
+          },
+          "time_s": 1.7501215178682658e-07,
+          "magnetic_time_s": 1.7495318542840785e-07,
+          "iteration": 1484,
+          "shape_xyz": [
+            240,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 1484,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_220.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 1.0979212643784613
+            },
+            "Ez": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.013186345892815044
+            },
+            "Hy": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.012684938273260043
+            }
+          },
+          "time_s": 2.1994451690190808e-07,
+          "magnetic_time_s": 2.1988555054348934e-07,
+          "iteration": 1865,
+          "shape_xyz": [
+            240,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 1865,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        }
+      ]
+    },
+    {
+      "group": "g1_domain_18m",
+      "snapshots_found": 10,
+      "components_verified": 60,
+      "problems": [],
+      "snapshots": [
+        {
+          "file": "wave_040.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 57.762510611096445
+            },
+            "Ez": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.21683555316530162
+            },
+            "Hy": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.21683555316530162
+            }
+          },
+          "time_s": 3.9979191007907153e-08,
+          "magnetic_time_s": 3.992022464948841e-08,
+          "iteration": 339,
+          "shape_xyz": [
+            360,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 339,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_050.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 51.58062934501416
+            },
+            "Ez": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.19408704922091546
+            },
+            "Hy": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.1940870492209155
+            }
+          },
+          "time_s": 5.000347193909331e-08,
+          "magnetic_time_s": 4.994450558067457e-08,
+          "iteration": 424,
+          "shape_xyz": [
+            360,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 424,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_065.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 17.893272804330273
+            },
+            "Ez": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0639436463923897
+            },
+            "Hy": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.07092897181998697
+            }
+          },
+          "time_s": 6.498092697745381e-08,
+          "magnetic_time_s": 6.492196061903507e-08,
+          "iteration": 551,
+          "shape_xyz": [
+            360,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 551,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_080.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 10.463926127195563
+            },
+            "Ez": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.038027578350778024
+            },
+            "Hy": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.041382040561251346
+            }
+          },
+          "time_s": 7.995838201581431e-08,
+          "magnetic_time_s": 7.989941565739556e-08,
+          "iteration": 678,
+          "shape_xyz": [
+            360,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 678,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_095.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 6.4925427662445045
+            },
+            "Ez": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.026990602930512704
+            },
+            "Hy": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.02786197141320506
+            }
+          },
+          "time_s": 9.505376977101229e-08,
+          "magnetic_time_s": 9.499480341259355e-08,
+          "iteration": 806,
+          "shape_xyz": [
+            360,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 806,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_110.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 5.660931359437419
+            },
+            "Ez": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.023265726949900853
+            },
+            "Hy": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.024954502473957932
+            }
+          },
+          "time_s": 1.1003122480937278e-07,
+          "magnetic_time_s": 1.0997225845095404e-07,
+          "iteration": 933,
+          "shape_xyz": [
+            360,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 933,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_130.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 4.060636236826946
+            },
+            "Ez": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.019701775833434583
+            },
+            "Hy": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.020768465796336913
+            }
+          },
+          "time_s": 1.2996185395490763e-07,
+          "magnetic_time_s": 1.2990288759648887e-07,
+          "iteration": 1102,
+          "shape_xyz": [
+            360,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 1102,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_145.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 2.7441511286942766
+            },
+            "Ez": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.017172580950794887
+            },
+            "Hy": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.01660179675629088
+            }
+          },
+          "time_s": 1.450572417101056e-07,
+          "magnetic_time_s": 1.4499827535168687e-07,
+          "iteration": 1230,
+          "shape_xyz": [
+            360,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 1230,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_175.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 1.691514719531952
+            },
+            "Ez": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.014873390671597153
+            },
+            "Hy": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.01380100454888554
+            }
+          },
+          "time_s": 1.7501215178682658e-07,
+          "magnetic_time_s": 1.7495318542840785e-07,
+          "iteration": 1484,
+          "shape_xyz": [
+            360,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 1484,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_220.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 1.057780143440601
+            },
+            "Ez": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.012680877020111841
+            },
+            "Hy": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                360,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.01134712086853357
+            }
+          },
+          "time_s": 2.1994451690190808e-07,
+          "magnetic_time_s": 2.1988555054348934e-07,
+          "iteration": 1865,
+          "shape_xyz": [
+            360,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 1865,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        }
+      ]
+    },
+    {
+      "group": "g1_domain_24m",
+      "snapshots_found": 10,
+      "components_verified": 60,
+      "problems": [],
+      "snapshots": [
+        {
+          "file": "wave_040.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 57.762510611096445
+            },
+            "Ez": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.21683555316530162
+            },
+            "Hy": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.21683555316530162
+            }
+          },
+          "time_s": 3.9979191007907153e-08,
+          "magnetic_time_s": 3.992022464948841e-08,
+          "iteration": 339,
+          "shape_xyz": [
+            480,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 339,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_050.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 51.58062934501416
+            },
+            "Ez": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.19408704922091546
+            },
+            "Hy": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.1940870492209155
+            }
+          },
+          "time_s": 5.000347193909331e-08,
+          "magnetic_time_s": 4.994450558067457e-08,
+          "iteration": 424,
+          "shape_xyz": [
+            480,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 424,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_065.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 45.294647417839556
+            },
+            "Ez": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.1700322549066589
+            },
+            "Hy": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.1700322549066589
+            }
+          },
+          "time_s": 6.498092697745381e-08,
+          "magnetic_time_s": 6.492196061903507e-08,
+          "iteration": 551,
+          "shape_xyz": [
+            480,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 551,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_080.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 40.799106257822444
+            },
+            "Ez": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.15338260393416453
+            },
+            "Hy": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.15338260393416459
+            }
+          },
+          "time_s": 7.995838201581431e-08,
+          "magnetic_time_s": 7.989941565739556e-08,
+          "iteration": 678,
+          "shape_xyz": [
+            480,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 678,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_095.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 14.799111714227795
+            },
+            "Ez": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.053051077084346074
+            },
+            "Hy": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0585223860402288
+            }
+          },
+          "time_s": 9.505376977101229e-08,
+          "magnetic_time_s": 9.499480341259355e-08,
+          "iteration": 806,
+          "shape_xyz": [
+            480,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 806,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_110.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 5.651526444360325
+            },
+            "Ez": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0232909618003727
+            },
+            "Hy": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.024936496273819657
+            }
+          },
+          "time_s": 1.1003122480937278e-07,
+          "magnetic_time_s": 1.0997225845095404e-07,
+          "iteration": 933,
+          "shape_xyz": [
+            480,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 933,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_130.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 4.091140172753857
+            },
+            "Ez": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.020400530822622658
+            },
+            "Hy": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.019404313116765697
+            }
+          },
+          "time_s": 1.2996185395490763e-07,
+          "magnetic_time_s": 1.2990288759648887e-07,
+          "iteration": 1102,
+          "shape_xyz": [
+            480,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 1102,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_145.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 2.772497151825965
+            },
+            "Ez": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.017204982265498926
+            },
+            "Hy": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.01668767768106525
+            }
+          },
+          "time_s": 1.450572417101056e-07,
+          "magnetic_time_s": 1.4499827535168687e-07,
+          "iteration": 1230,
+          "shape_xyz": [
+            480,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 1230,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_175.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 1.6161283808507851
+            },
+            "Ez": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.014708957723125308
+            },
+            "Hy": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.013938045835511398
+            }
+          },
+          "time_s": 1.7501215178682658e-07,
+          "magnetic_time_s": 1.7495318542840785e-07,
+          "iteration": 1484,
+          "shape_xyz": [
+            480,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 1484,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_220.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 1.0631523491760622
+            },
+            "Ez": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.012584234043466506
+            },
+            "Hy": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                480,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.011424078693579604
+            }
+          },
+          "time_s": 2.1994451690190808e-07,
+          "magnetic_time_s": 2.1988555054348934e-07,
+          "iteration": 1865,
+          "shape_xyz": [
+            480,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 1865,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        }
+      ]
+    },
+    {
+      "group": "g2_pml_cfs_stronger",
+      "snapshots_found": 10,
+      "components_verified": 60,
+      "problems": [],
+      "snapshots": [
+        {
+          "file": "wave_040.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 41.33972393515285
+            },
+            "Ez": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.11221844722023602
+            },
+            "Hy": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.12364014443076282
+            }
+          },
+          "time_s": 3.9979191007907153e-08,
+          "magnetic_time_s": 3.992022464948841e-08,
+          "iteration": 339,
+          "shape_xyz": [
+            240,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 339,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_050.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 37.5586106765471
+            },
+            "Ez": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.09986124044369012
+            },
+            "Hy": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.10776734806776754
+            }
+          },
+          "time_s": 5.000347193909331e-08,
+          "magnetic_time_s": 4.994450558067457e-08,
+          "iteration": 424,
+          "shape_xyz": [
+            240,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 424,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_065.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 37.83322954542422
+            },
+            "Ez": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.10364027373421777
+            },
+            "Hy": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.13182734297467563
+            }
+          },
+          "time_s": 6.498092697745381e-08,
+          "magnetic_time_s": 6.492196061903507e-08,
+          "iteration": 551,
+          "shape_xyz": [
+            240,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 551,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_080.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 31.340687678620014
+            },
+            "Ez": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.09146695582159597
+            },
+            "Hy": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.11419772829582507
+            }
+          },
+          "time_s": 7.995838201581431e-08,
+          "magnetic_time_s": 7.989941565739556e-08,
+          "iteration": 678,
+          "shape_xyz": [
+            240,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 678,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_095.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 31.856503027850025
+            },
+            "Ez": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.08772932268323498
+            },
+            "Hy": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.07908089426385122
+            }
+          },
+          "time_s": 9.505376977101229e-08,
+          "magnetic_time_s": 9.499480341259355e-08,
+          "iteration": 806,
+          "shape_xyz": [
+            240,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 806,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_110.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 28.48219264880524
+            },
+            "Ez": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.08196350787716603
+            },
+            "Hy": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.09337387234764279
+            }
+          },
+          "time_s": 1.1003122480937278e-07,
+          "magnetic_time_s": 1.0997225845095404e-07,
+          "iteration": 933,
+          "shape_xyz": [
+            240,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 933,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_130.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 22.505489713763208
+            },
+            "Ez": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.06438850245611472
+            },
+            "Hy": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.07369363808211882
+            }
+          },
+          "time_s": 1.2996185395490763e-07,
+          "magnetic_time_s": 1.2990288759648887e-07,
+          "iteration": 1102,
+          "shape_xyz": [
+            240,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 1102,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_145.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 24.837348912847812
+            },
+            "Ez": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.08004777131320426
+            },
+            "Hy": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.06786645397316274
+            }
+          },
+          "time_s": 1.450572417101056e-07,
+          "magnetic_time_s": 1.4499827535168687e-07,
+          "iteration": 1230,
+          "shape_xyz": [
+            240,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 1230,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_175.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 22.034480736717615
+            },
+            "Ez": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.07318650017717926
+            },
+            "Hy": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0601665771413222
+            }
+          },
+          "time_s": 1.7501215178682658e-07,
+          "magnetic_time_s": 1.7495318542840785e-07,
+          "iteration": 1484,
+          "shape_xyz": [
+            240,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 1484,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_220.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 16.94403991394684
+            },
+            "Ez": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.06917888285075044
+            },
+            "Hy": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                240,
+                1,
+                660
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0633790518696016
+            }
+          },
+          "time_s": 2.1994451690190808e-07,
+          "magnetic_time_s": 2.1988555054348934e-07,
+          "iteration": 1865,
+          "shape_xyz": [
+            240,
+            1,
+            660
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "dt_cfl_s": 1.1793271683748422e-10,
+          "steps_at_stored_time": 1865,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        }
+      ]
+    },
+    {
+      "group": "g4_vertical_2p5cm",
+      "snapshots_found": 10,
+      "components_verified": 60,
+      "problems": [],
+      "snapshots": [
+        {
+          "file": "wave_040.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 82.40750411564062
+            },
+            "Ez": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.36465530469852314
+            },
+            "Hy": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.18362713269377395
+            }
+          },
+          "time_s": 3.9978738755992575e-08,
+          "magnetic_time_s": 3.994144515640676e-08,
+          "iteration": 536,
+          "shape_xyz": [
+            240,
+            1,
+            1320
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.025
+          ],
+          "dt_cfl_s": 7.458719917162793e-11,
+          "steps_at_stored_time": 536,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_050.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 38.577203564333935
+            },
+            "Ez": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.17500508731657344
+            },
+            "Hy": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0865181698273873
+            }
+          },
+          "time_s": 4.997342344499072e-08,
+          "magnetic_time_s": 4.99361298454049e-08,
+          "iteration": 670,
+          "shape_xyz": [
+            240,
+            1,
+            1320
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.025
+          ],
+          "dt_cfl_s": 7.458719917162793e-11,
+          "steps_at_stored_time": 670,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_065.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 19.48878378574689
+            },
+            "Ez": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.08460386553108962
+            },
+            "Hy": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.04797601291866919
+            }
+          },
+          "time_s": 6.496545047848794e-08,
+          "magnetic_time_s": 6.492815687890212e-08,
+          "iteration": 871,
+          "shape_xyz": [
+            240,
+            1,
+            1320
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.025
+          ],
+          "dt_cfl_s": 7.458719917162793e-11,
+          "steps_at_stored_time": 871,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_080.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 13.448116559189852
+            },
+            "Ez": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.062274805820789654
+            },
+            "Hy": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.032762170274271064
+            }
+          },
+          "time_s": 8.003206471115677e-08,
+          "magnetic_time_s": 7.999477111157095e-08,
+          "iteration": 1073,
+          "shape_xyz": [
+            240,
+            1,
+            1320
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.025
+          ],
+          "dt_cfl_s": 7.458719917162793e-11,
+          "steps_at_stored_time": 1073,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_095.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 10.522132356722008
+            },
+            "Ez": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.04730619268811945
+            },
+            "Hy": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.027265437583963287
+            }
+          },
+          "time_s": 9.502409174465398e-08,
+          "magnetic_time_s": 9.498679814506818e-08,
+          "iteration": 1274,
+          "shape_xyz": [
+            240,
+            1,
+            1320
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.025
+          ],
+          "dt_cfl_s": 7.458719917162793e-11,
+          "steps_at_stored_time": 1274,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_110.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 9.23055400452563
+            },
+            "Ez": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.041707965802573216
+            },
+            "Hy": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.023115619068411534
+            }
+          },
+          "time_s": 1.100161187781512e-07,
+          "magnetic_time_s": 1.099788251785654e-07,
+          "iteration": 1475,
+          "shape_xyz": [
+            240,
+            1,
+            1320
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.025
+          ],
+          "dt_cfl_s": 7.458719917162793e-11,
+          "steps_at_stored_time": 1475,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_130.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 4.149845868259775
+            },
+            "Ez": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.027023293397812898
+            },
+            "Hy": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.012328108183851135
+            }
+          },
+          "time_s": 1.3000548815614748e-07,
+          "magnetic_time_s": 1.2996819455656166e-07,
+          "iteration": 1743,
+          "shape_xyz": [
+            240,
+            1,
+            1320
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.025
+          ],
+          "dt_cfl_s": 7.458719917162793e-11,
+          "steps_at_stored_time": 1743,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_145.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 3.1375586008607277
+            },
+            "Ez": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.024594263794145716
+            },
+            "Hy": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.01046996775120227
+            }
+          },
+          "time_s": 1.449975151896447e-07,
+          "magnetic_time_s": 1.4496022159005888e-07,
+          "iteration": 1944,
+          "shape_xyz": [
+            240,
+            1,
+            1320
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.025
+          ],
+          "dt_cfl_s": 7.458719917162793e-11,
+          "steps_at_stored_time": 1944,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_175.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 1.9133881630926854
+            },
+            "Ez": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.021440748898437813
+            },
+            "Hy": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.008558449823474446
+            }
+          },
+          "time_s": 1.7498156925663912e-07,
+          "magnetic_time_s": 1.7494427565705333e-07,
+          "iteration": 2346,
+          "shape_xyz": [
+            240,
+            1,
+            1320
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.025
+          ],
+          "dt_cfl_s": 7.458719917162793e-11,
+          "steps_at_stored_time": 2346,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        },
+        {
+          "file": "wave_220.h5",
+          "components": {
+            "Ex": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Ey": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 1.2414231187975546
+            },
+            "Ez": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hx": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.018183527111944875
+            },
+            "Hy": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.0
+            },
+            "Hz": {
+              "shape": [
+                240,
+                1,
+                1320
+              ],
+              "dtype": "float64",
+              "all_finite": true,
+              "absmax": 0.00704249391268752
+            }
+          },
+          "time_s": 2.200322375563024e-07,
+          "magnetic_time_s": 2.199949439567166e-07,
+          "iteration": 2950,
+          "shape_xyz": [
+            240,
+            1,
+            1320
+          ],
+          "spacing_m": [
+            0.05,
+            0.05,
+            0.025
+          ],
+          "dt_cfl_s": 7.458719917162793e-11,
+          "steps_at_stored_time": 2950,
+          "time_stamp_consistent": true,
+          "magnetic_time_offset_s": 0.0,
+          "magnetic_time_consistent": true
+        }
+      ]
+    }
+  ],
+  "reproduction_check": {
+    "reference": "artifacts/research_checks/2026-10-03_hs4t2d_relief08_snapshot",
+    "candidate": "artifacts/research_checks/2026-10-03_hs4t2d_airlayer_boundary/g1_domain_12m",
+    "compared": true,
+    "reference_shape": [
+      5089
+    ],
+    "candidate_shape": [
+      5089
+    ],
+    "reference_dtype": "float64",
+    "candidate_dtype": "float64",
+    "max_abs_difference": 0.0,
+    "bit_identical": true,
+    "identical": true,
+    "reference_absmax": 409.68015864673583,
+    "candidate_absmax": 409.68015864673583
+  },
+  "scope": "Provenance, dtype, finiteness, time staggering and reproduction only. No physical acceptance, no boundary certification, no morphology closure, and no comparison against the archived domain-width numbers."
+}

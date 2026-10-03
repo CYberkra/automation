@@ -1,0 +1,76 @@
+{
+  "status": "COMPLETED",
+  "executed_on": "2026-10-03",
+  "contract": "artifacts/research_checks/2026-10-03_hs4t2d_airlayer_boundary/execution_contract.json",
+  "environment": {
+    "problem": "GPU solves were blocked by two independent faults.",
+    "fault_1": "The system CUDA toolkit is 13.3, whose nvcc lists only compute_100/103/110/120/121 (Blackwell). The GPU is an RTX 4090 Laptop with compute capability 8.9 (Ada), so -arch sm_89 was rejected before any field array was allocated.",
+    "fault_2": "nvcc also needs the MSVC host compiler. Without cl.exe it stops with \"Cannot find compiler 'cl.exe' in PATH\", and with cl.exe but no INCLUDE it fails on crtdefs.h -> corecrt.h not found.",
+    "fix": "A project-local CUDA 12.4.131 nvcc plus cudart was unpacked from NVIDIA redistributable archives into artifacts/local_checks/cuda12_toolkit/cuda12, and artifacts/local_checks/cuda12_toolkit/env.sh sets PATH, INCLUDE and LIB for the MSVC 14.44.35207 host toolchain and Windows SDK 10.0.26100.0. The system CUDA installation was not modified. PyCUDA's compile() defaults to nvcc=\"nvcc\" and resolves it from PATH, so PATH is what redirects the compiler; CUDA_PATH alone does not.",
+    "verification": "The 12 m reference group reproduces the archived 2026-10-03 snapshot run bit for bit (max absolute difference 0.0), so the environment change did not alter any numerical result."
+  },
+  "groups_executed": [
+    {
+      "group": "g1_domain_12m",
+      "variable": "reference at the original 12 m domain",
+      "elapsed_s": 261,
+      "snapshots": 10,
+      "grid": [240, 1, 660]
+    },
+    {
+      "group": "g1_domain_18m",
+      "variable": "#domain X = 18 m only; source, receiver and all 49 boxes byte-identical",
+      "elapsed_s": 255,
+      "snapshots": 10,
+      "grid": [360, 1, 660]
+    },
+    {
+      "group": "g1_domain_24m",
+      "variable": "#domain X = 24 m only",
+      "elapsed_s": 248,
+      "snapshots": 10,
+      "grid": [480, 1, 660]
+    },
+    {
+      "group": "g2_pml_cfs_stronger",
+      "variable": "#pml_cfs only; thickness held at 20 cells, geometry untouched",
+      "elapsed_s": 125,
+      "snapshots": 10,
+      "grid": [240, 1, 660]
+    },
+    {
+      "group": "g4_vertical_2p5cm",
+      "variable": "dz 0.05 -> 0.025 m with z coordinates scaled by 0.5; dx and dy unchanged",
+      "elapsed_s": 132,
+      "snapshots": 10,
+      "grid": [240, 1, 1320],
+      "note": "cover at 170 MHz goes from 8.31 to about 16.6 cells per wavelength, satisfying the guide minimum of 10."
+    },
+    {
+      "group": "g3_air_layer_render",
+      "new_solve": false,
+      "reuses": "g1_domain_12m",
+      "status": "rendering step not yet run"
+    }
+  ],
+  "defect_found_and_fixed_during_the_batch": {
+    "what": "The first two G4 runs wrote snapshots of 660 cells while the solver ran 1320.",
+    "cause": "The 7th to 9th parameters of #snapshot are the snapshot volume's own cell size. They were left at 0.05 while #dx_dy_dz declared dz = 0.025, and gprMax resolves the stored array shape from the snapshot line rather than from #domain.",
+    "detected_by": "scripts/check_airlayer_boundary_batch.py compared the snapshot shape against the nx_ny_nz recorded in profile.h5 and flagged the magnetic time stamp, which was off by exactly half a coarse dt.",
+    "fix": "prepare_airlayer_boundary_inputs.py now passes the refined dz into the snapshot line; the G4 input was regenerated and rerun from a cleaned directory.",
+    "lesson": "Snapshot volume parameters are independent of #domain and must be kept consistent with #dx_dy_dz. A stale output directory is not the cause; the first rerun reproduced the same 660 cells."
+  },
+  "verification": {
+    "script": "scripts/check_airlayer_boundary_batch.py",
+    "artifact": "artifacts/research_checks/2026-10-03_hs4t2d_airlayer_boundary/independent_verification.json",
+    "status": "PASS",
+    "coverage": "5 groups x 10 snapshots x 6 field components = 300 arrays, all float64 and finite",
+    "time_stamp_checks": "E at n*dt and H at (n-1/2)*dt verified against the stored iteration for every snapshot",
+    "reproduction_check": "g1_domain_12m centre trace is bit identical to the archived 2026-10-03 snapshot run, max absolute difference 0.0"
+  },
+  "not_done": [
+    "G3 air-layer rendering has not been run; it reuses g1_domain_12m and needs no new solve.",
+    "No morphology comparison, no boundary-absorption conclusion and no physical acceptance has been produced. Only provenance, dtype, time staggering and reproduction are certified."
+  ],
+  "scope": "Execution record. The hypothesis under test is boundary absorption sufficiency, not a physical lateral air-layer reflection; the cover layer spans the domain, which the gprMax guide treats as extending to infinity."
+}
