@@ -1,0 +1,145 @@
+{
+  "schema": "augment-v07-review/1",
+  "reviewed_commit": "18422a6686987086c3477466c1ea48999ffaeec6",
+  "scope": "source/committed metrics + synthetic control flow + pinned official flat H; no solver, training, field data or full augmentation rerun",
+  "archive_ratios_independently_recomputed": [
+    1.192689864560423,
+    0.9665592101155049,
+    0.843837040396264,
+    0.8810540397810515,
+    1.8194365391750742
+  ],
+  "windows_outside_declared_0_8_to_1_25": [
+    [
+      140,
+      200
+    ]
+  ],
+  "claimed_repairs_in_git": {
+    "plot_sfcw_bscan.py": {
+      "tracked_paths": [
+        "artifacts/research_checks/2026-10-02_benchmark3d_r2_acceptance/plot_sfcw_bscan.py"
+      ],
+      "changed_in_reviewed_commit": []
+    },
+    "render_sfcw_compare.py": {
+      "tracked_paths": [],
+      "changed_in_reviewed_commit": []
+    },
+    "render_v6_ringing.py": {
+      "tracked_paths": [],
+      "changed_in_reviewed_commit": []
+    },
+    "analyze_direct_fidelity.py": {
+      "tracked_paths": [
+        "scripts/analyze_direct_fidelity.py"
+      ],
+      "changed_in_reviewed_commit": []
+    }
+  },
+  "local_missing_full_rerun_inputs": {
+    "first_b2_h5_present": false,
+    "hardcoded_field_csv_present": false
+  },
+  "synthetic_main_probe": {
+    "kind": "synthetic main-path control-flow probe; not physical validation",
+    "actual_direct_fidelity": {
+      "corr_med": -0.9999999999999998,
+      "corr_min": -0.9999999999999998,
+      "peak_chg_max": 0.0,
+      "shift_max_ns": 0.0
+    },
+    "correlation_gate_failed": true,
+    "main_returned_normally": true,
+    "existing_output_overwritten": true,
+    "figure_save_calls_after_failed_gate": 2,
+    "stdout_finished_with_done": true,
+    "mocked": [
+      "input arrays, field calibration, augmentation operators",
+      "envelope/texture diagnostics, output destinations"
+    ],
+    "not_mocked": [
+      "direct_fidelity",
+      "main control flow",
+      "JSON serialization"
+    ]
+  },
+  "official_flat_response": [
+    {
+      "window": "rectangular",
+      "zero_pad_factor": 1,
+      "complex_envelope_abs_peak": 0.9999999999999998,
+      "official_real_bandpass_abs_peak": 1.9999999999999996
+    },
+    {
+      "window": "rectangular",
+      "zero_pad_factor": 8,
+      "complex_envelope_abs_peak": 0.9999999999999998,
+      "official_real_bandpass_abs_peak": 1.9999999999999996
+    },
+    {
+      "window": "hann",
+      "zero_pad_factor": 1,
+      "complex_envelope_abs_peak": 0.9999999999999998,
+      "official_real_bandpass_abs_peak": 1.9999999999999996
+    },
+    {
+      "window": "hann",
+      "zero_pad_factor": 8,
+      "complex_envelope_abs_peak": 0.9999999999999999,
+      "official_real_bandpass_abs_peak": 1.9999999999999998
+    }
+  ],
+  "provenance": [
+    {
+      "file": "scripts/augment_sim2real_v0_3.py",
+      "bytes": 7294,
+      "sha256": "95f2970cd1cc96c7c1bd40f391505d425db3dbac5241124292914b43e93f24b9"
+    },
+    {
+      "file": "scripts/augment_sim2real_v0_4.py",
+      "bytes": 5179,
+      "sha256": "af5ceb7714f9b55d4dedd837f88421afc2eb32717bbb08de6bde946d17e10b0f"
+    },
+    {
+      "file": "scripts/augment_sim2real_v0_5.py",
+      "bytes": 10526,
+      "sha256": "37dae304ae9b2364264fbc06ecd29d1eaacd01c8c3f5eb2789e9bbf752015a5d"
+    },
+    {
+      "file": "scripts/augment_sim2real_v0_6.py",
+      "bytes": 9451,
+      "sha256": "b9debec3bae0c971de44f7639ecf3606561127e372037cd329b4adcda6744e43"
+    },
+    {
+      "file": "scripts/augment_sim2real_v0_7.py",
+      "bytes": 7801,
+      "sha256": "6edd509f12d27252ebb85d61812b402cf6c36244fa21b719d728fe7a54c279b2"
+    },
+    {
+      "file": "scripts/sfcw_official_loader_v0_2.py",
+      "bytes": 5455,
+      "sha256": "650b0d143150efe0119ad4be1ebc93845f09a6f0707351a2e2df945e687b7593"
+    },
+    {
+      "file": "scripts/review_augment_v07_20261003.py",
+      "bytes": 8708,
+      "sha256": "070a751a89b7f42e510ae7c4d953c9fcdfae8798e6fc559b7f0423d35c025a02"
+    },
+    {
+      "file": "docs/research/augment_v07_metrics.json",
+      "bytes": 2154,
+      "sha256": "58dce88594f8b10218af88b4fe91ba48e7fb45385eeb02a287f81897cef79efe"
+    },
+    {
+      "file": "docs/research/2026-10-03_sfcw_chain_review_and_repairs.md",
+      "bytes": 6821,
+      "sha256": "80f578e8bff047282ddb304769a578063ab6e7da39111a4872039c938ce4ca8d"
+    },
+    {
+      "file": "artifacts/research_checks/2026-10-02_benchmark3d_r2_acceptance/plot_sfcw_bscan.py",
+      "bytes": 4135,
+      "sha256": "c8aa45d2c5b874a09a86684e5907266f18cb0c94cd39f8fbf6e2c13ab9baf355"
+    }
+  ]
+}

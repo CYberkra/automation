@@ -2217,6 +2217,8 @@
   {
    "id": "sim2real_augmentation_v0_7",
    "status": "delivered_pending_user_review",
+   "independent_review": "docs/research/2026-10-03_augment_v07_commit_review.md",
+   "independent_review_verdict": "request_changes; carrier migration valid, delivery/scientific claims/acceptance/provenance unresolved; full raw rerun unavailable",
    "record": "fig_augment_v07_bscan.png",
    "note": "augmentation v0.7 (augment_sim2real_v0_7.py, seed 20261001): v0.6 operator chain unchanged, sim input migrated to OFFICIAL 20 MHz carrier via sfcw_official_loader_v0_2.load_bscan_both (fixes legacy 95 MHz carrier bug convention in v0_3-v0_6 input: band was shifted to 95-245 MHz, 90-125 MHz calibration band mismatched vs real data); legacy path rerun same seed as continuity panel. Gates: direct corr_med 0.9950/min 0.9907, peak 0.00%, shift 0; diff_rms 0.163 vs measured 0.179; envelope profile 1.19/0.97/0.84/0.88/1.82x (t0+140~200ns tail window above 1.25 target, same known-item class as v0.6 1.73x, near display floor). Metrics: augment_v07_metrics.json; figs in artifacts/research_checks/2026-10-03_sim2real_augment_v07/. Review record: docs/research/2026-10-03_sfcw_chain_review_and_repairs.md",
    "solver_executed": false,
@@ -2479,6 +2481,19 @@
      "official_rebuild_traces": 280
     },
     "notes": "Normal HS acceptance passes unchanged thresholds; raw polarity/amplitude/shift mutations rejected. Legacy arrays, figures and summaries preserved. No solver/training/C5/C8 reads, frozen contracts/G4 unchanged."
+   },
+   {
+    "id": "augment_v07_commit_review",
+    "reviewed_commit": "18422a6686987086c3477466c1ea48999ffaeec6",
+    "status": "request_changes",
+    "record": "docs/research/2026-10-03_augment_v07_commit_review.md",
+    "evidence": "artifacts/research_checks/2026-10-03_augment_v07_commit_review/",
+    "scope": "CPU source/archive/synthetic review; no full augmentation rerun, solver, training or C5/C8 evaluation",
+    "solver_executed": false,
+    "training_executed": false,
+    "g4_relieved": false,
+    "hs4_physical_root_cause_resolved": false,
+    "tracked": true
    }
   ],
   "schema": "research-artifact-registry/1",
