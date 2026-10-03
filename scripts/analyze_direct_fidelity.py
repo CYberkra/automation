@@ -13,6 +13,12 @@
   - A→B：峰值变化率、到时漂移、直达窗波形相关系数（保真度）
 
 输出：终端统计 + fig_direct_fidelity.png
+
+注意（2026-10-03 审查登记）：仿真输入来自
+run_reward_protocol_b2_pilot_v0_1.load_bscan，即 legacy 95 MHz 载波重建
+（频带移位到 95–245 MHz 的已知 bug 口径）。本脚本的相对保真指标
+（相关/漂移/能量比）在同口径 A→B 对比下成立，但与实测 C 组的跨链比较
+带该载波偏差；官方 20 MHz 载波口径的增广链见 augment_sim2real_v0_7.py。
 """
 import sys
 from pathlib import Path
