@@ -1,0 +1,285 @@
+{
+  "status": "PASS",
+  "calls_solver": false,
+  "code_sha256": "979406bb7463b79a7cb668df344fa42f1f0f02f5e06ed4cc73547b58059f6dac",
+  "full_local": true,
+  "fresh_products_reused": true,
+  "checked_files": 35,
+  "byte_identical_files": 33,
+  "bounded_scalar_reduction_differences": [
+    {
+      "path": "/field_sampling_checks/high_rough/decimation/5/hann_complex_relative_L2",
+      "original": 2.445880441386766e-08,
+      "rebuilt": 2.4458804413867655e-08,
+      "absolute_difference": 6.617444900424222e-24,
+      "derived_reduction_bound": 7.836202734215379e-19
+    },
+    {
+      "path": "/field_sampling_checks/high_rough/decimation/10/hann_complex_relative_L2",
+      "original": 5.598566639043049e-08,
+      "rebuilt": 5.598566639043046e-08,
+      "absolute_difference": 2.6469779601696886e-23,
+      "derived_reduction_bound": 1.7936896040462988e-18
+    },
+    {
+      "path": "/field_sampling_checks/high_halfspace/decimation/5/hann_complex_relative_L2",
+      "original": 2.446655074744427e-08,
+      "rebuilt": 2.4466550747444275e-08,
+      "absolute_difference": 3.308722450212111e-24,
+      "derived_reduction_bound": 7.838684533379642e-19
+    },
+    {
+      "path": "/field_sampling_checks/high_halfspace/decimation/10/hann_complex_relative_L2",
+      "original": 5.5736563160355177e-08,
+      "rebuilt": 5.5736563160355163e-08,
+      "absolute_difference": 1.3234889800848443e-23,
+      "derived_reduction_bound": 1.7857087421055928e-18
+    },
+    {
+      "path": "/field_sampling_checks/low_rough/decimation/5/hann_complex_relative_L2",
+      "original": 2.7929012204473772e-08,
+      "rebuilt": 2.7929012204473782e-08,
+      "absolute_difference": 9.926167350636332e-24,
+      "derived_reduction_bound": 8.948000813831452e-19
+    },
+    {
+      "path": "/field_sampling_checks/low_rough/decimation/10/hann_complex_relative_L2",
+      "original": 5.1439855104573456e-08,
+      "rebuilt": 5.143985510457346e-08,
+      "absolute_difference": 6.617444900424222e-24,
+      "derived_reduction_bound": 1.6480492112261858e-18
+    },
+    {
+      "path": "/field_sampling_checks/low_halfspace/decimation/5/hann_complex_relative_L2",
+      "original": 2.796323814497621e-08,
+      "rebuilt": 2.7963238144976204e-08,
+      "absolute_difference": 6.617444900424222e-24,
+      "derived_reduction_bound": 8.958966247955214e-19
+    },
+    {
+      "path": "/field_sampling_checks/low_halfspace/decimation/10/hann_complex_relative_L2",
+      "original": 5.138186074831677e-08,
+      "rebuilt": 5.1381860748316755e-08,
+      "absolute_difference": 1.3234889800848443e-23,
+      "derived_reduction_bound": 1.6461911664690589e-18
+    }
+  ],
+  "norm_bound_derivation": {
+    "positive_squared_terms_N": 18036,
+    "binary64_eps": 2.220446049250313e-16,
+    "gamma_8N": 3.203837195644938e-11
+  },
+  "files": [
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_local_patch_results/localized_patch_bscan.png",
+      "original_sha256": "d21dceea61c33fa304becbe6dfd3697ce4f10446ae220753793cd85516731ca6",
+      "rebuilt_sha256": "d21dceea61c33fa304becbe6dfd3697ce4f10446ae220753793cd85516731ca6",
+      "mode": "BYTE_IDENTICAL"
+    },
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_local_patch_results/patch_arrays.npz",
+      "original_sha256": "a3e8f57cdbcacf2752f3cec412c673a709434d61d15e991f5a2f4b0a56c21964",
+      "rebuilt_sha256": "a3e8f57cdbcacf2752f3cec412c673a709434d61d15e991f5a2f4b0a56c21964",
+      "mode": "BYTE_IDENTICAL"
+    },
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_local_patch_results/patch_spatial_sensitivity.png",
+      "original_sha256": "db70f62fceac8c3667c63286c09c4441f035b81a9aab17b9678db111433de963",
+      "rebuilt_sha256": "db70f62fceac8c3667c63286c09c4441f035b81a9aab17b9678db111433de963",
+      "mode": "BYTE_IDENTICAL"
+    },
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_local_patch_results/summary.json",
+      "original_sha256": "bb83bff2adc2d8275010ca92663fee671cbe20fb3a83cae90a730a16fa550fea",
+      "rebuilt_sha256": "bb83bff2adc2d8275010ca92663fee671cbe20fb3a83cae90a730a16fa550fea",
+      "mode": "BYTE_IDENTICAL"
+    },
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_patch_refinement_results/refinement_arrays.npz",
+      "original_sha256": "afd880914a32f0a33c870013abe516a62f47b54d0e0d2ba545a8fdbfa134643f",
+      "rebuilt_sha256": "afd880914a32f0a33c870013abe516a62f47b54d0e0d2ba545a8fdbfa134643f",
+      "mode": "BYTE_IDENTICAL"
+    },
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_patch_refinement_results/regional_robustness.png",
+      "original_sha256": "a5157523f4f89fa72e4004f9ebfa68ff9511c0758f0ea15c540c1dc842ff5bbf",
+      "rebuilt_sha256": "a5157523f4f89fa72e4004f9ebfa68ff9511c0758f0ea15c540c1dc842ff5bbf",
+      "mode": "BYTE_IDENTICAL"
+    },
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_patch_refinement_results/summary.json",
+      "original_sha256": "767ca2ffccb4368b394dddf322414ab78728149a531fcf63b0315ade776404e5",
+      "rebuilt_sha256": "767ca2ffccb4368b394dddf322414ab78728149a531fcf63b0315ade776404e5",
+      "mode": "BYTE_IDENTICAL"
+    },
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_patch_finest_results/finest_arrays.npz",
+      "original_sha256": "6ccebad58b7544476ccb9461434ff25b83e86d45864c6e4729e3b5f721a8b030",
+      "rebuilt_sha256": "6ccebad58b7544476ccb9461434ff25b83e86d45864c6e4729e3b5f721a8b030",
+      "mode": "BYTE_IDENTICAL"
+    },
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_patch_finest_results/summary.json",
+      "original_sha256": "71050ac4f52d5f71748e9d301a0cf2749f6f4ce5158528b584f16f03b28aa7d1",
+      "rebuilt_sha256": "71050ac4f52d5f71748e9d301a0cf2749f6f4ce5158528b584f16f03b28aa7d1",
+      "mode": "BYTE_IDENTICAL"
+    },
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_patch_finest_results/three_grid_regional_check.png",
+      "original_sha256": "7dad036f12de27a53c01f00c8576041d1a19a640d9bec7a243e6032747c0ab89",
+      "rebuilt_sha256": "7dad036f12de27a53c01f00c8576041d1a19a640d9bec7a243e6032747c0ab89",
+      "mode": "BYTE_IDENTICAL"
+    },
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_height_wavefield_results/fields/band_frames.npz",
+      "original_sha256": "b76a94d255a5a2609a3553a68504768c01f4a5deea05c2c6be4294098a2b8626",
+      "rebuilt_sha256": "b76a94d255a5a2609a3553a68504768c01f4a5deea05c2c6be4294098a2b8626",
+      "mode": "BYTE_IDENTICAL"
+    },
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_height_wavefield_results/fields/high_halfspace_Ey.npy",
+      "original_sha256": "4fad94e1bad70ad68552ba75a4c9d495f840a8dd04fb7ca3302d84484207c1c7",
+      "rebuilt_sha256": "4fad94e1bad70ad68552ba75a4c9d495f840a8dd04fb7ca3302d84484207c1c7",
+      "mode": "BYTE_IDENTICAL"
+    },
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_height_wavefield_results/fields/high_halfspace_Hx.npy",
+      "original_sha256": "5048b3998b8b8703bb9ebaa6fb6a19501c47a9492d92d51ef541a5cc05d20ec1",
+      "rebuilt_sha256": "5048b3998b8b8703bb9ebaa6fb6a19501c47a9492d92d51ef541a5cc05d20ec1",
+      "mode": "BYTE_IDENTICAL"
+    },
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_height_wavefield_results/fields/high_halfspace_Hz.npy",
+      "original_sha256": "5197e5b5c2ad8fe7b81e0ff465fb69b28a7b01f88807c8202317d3778370e815",
+      "rebuilt_sha256": "5197e5b5c2ad8fe7b81e0ff465fb69b28a7b01f88807c8202317d3778370e815",
+      "mode": "BYTE_IDENTICAL"
+    },
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_height_wavefield_results/fields/high_rough_Ey.npy",
+      "original_sha256": "73afb2535bc88240200c4755ca76a9e707c0ead7f974c47ab9a0e97b42fd984d",
+      "rebuilt_sha256": "73afb2535bc88240200c4755ca76a9e707c0ead7f974c47ab9a0e97b42fd984d",
+      "mode": "BYTE_IDENTICAL"
+    },
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_height_wavefield_results/fields/high_rough_Hx.npy",
+      "original_sha256": "f2a9dbe9ef19322ec8310cc28a84c2d0149d074a63556310e0be6d80b79e3538",
+      "rebuilt_sha256": "f2a9dbe9ef19322ec8310cc28a84c2d0149d074a63556310e0be6d80b79e3538",
+      "mode": "BYTE_IDENTICAL"
+    },
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_height_wavefield_results/fields/high_rough_Hz.npy",
+      "original_sha256": "7eb3620a429df200bec9d4021e4a8c8aeedd95b7c22d6fa207ba1aac7e673603",
+      "rebuilt_sha256": "7eb3620a429df200bec9d4021e4a8c8aeedd95b7c22d6fa207ba1aac7e673603",
+      "mode": "BYTE_IDENTICAL"
+    },
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_height_wavefield_results/fields/low_halfspace_Ey.npy",
+      "original_sha256": "c7cc7e9edd5b2d0e51f09dafb4500a5d138a60cf8b8dd3fa9be99889fc6a365f",
+      "rebuilt_sha256": "c7cc7e9edd5b2d0e51f09dafb4500a5d138a60cf8b8dd3fa9be99889fc6a365f",
+      "mode": "BYTE_IDENTICAL"
+    },
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_height_wavefield_results/fields/low_halfspace_Hx.npy",
+      "original_sha256": "fa2d8370a140da2add98fb555c18523b778f159722ea931e0abe9d2d87f16793",
+      "rebuilt_sha256": "fa2d8370a140da2add98fb555c18523b778f159722ea931e0abe9d2d87f16793",
+      "mode": "BYTE_IDENTICAL"
+    },
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_height_wavefield_results/fields/low_halfspace_Hz.npy",
+      "original_sha256": "efcdad2bda9ee9047a3d4cc7976176193313e73465396bef5123f435817dbf91",
+      "rebuilt_sha256": "efcdad2bda9ee9047a3d4cc7976176193313e73465396bef5123f435817dbf91",
+      "mode": "BYTE_IDENTICAL"
+    },
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_height_wavefield_results/fields/low_rough_Ey.npy",
+      "original_sha256": "2c654d3f4e5e552d0a3f31828395df77c5b1c4a720d4d66419679ec67b3ef7b4",
+      "rebuilt_sha256": "2c654d3f4e5e552d0a3f31828395df77c5b1c4a720d4d66419679ec67b3ef7b4",
+      "mode": "BYTE_IDENTICAL"
+    },
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_height_wavefield_results/fields/low_rough_Hx.npy",
+      "original_sha256": "20349d08de95bf14b7b361a6c6a0253905df830931705a7f19e0dd3843d4965c",
+      "rebuilt_sha256": "20349d08de95bf14b7b361a6c6a0253905df830931705a7f19e0dd3843d4965c",
+      "mode": "BYTE_IDENTICAL"
+    },
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_height_wavefield_results/fields/low_rough_Hz.npy",
+      "original_sha256": "1366382b4c87f4453cdd92cf2cf317f16156f7fe54fe9759f81f2bbc68c53d51",
+      "rebuilt_sha256": "1366382b4c87f4453cdd92cf2cf317f16156f7fe54fe9759f81f2bbc68c53d51",
+      "mode": "BYTE_IDENTICAL"
+    },
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_height_wavefield_results/height_band_wavefield_atlas.png",
+      "original_sha256": "f9c3d3371e9f645396e12415e63865d6d8803306acebd9e7d36ca41429e6c1af",
+      "rebuilt_sha256": "f9c3d3371e9f645396e12415e63865d6d8803306acebd9e7d36ca41429e6c1af",
+      "mode": "BYTE_IDENTICAL"
+    },
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_height_wavefield_results/height_receiver_and_incidence.png",
+      "original_sha256": "67bcd40e5fcaee3c103c79f1d30c7f2c865e408984987e4b6dd583614a3b5f77",
+      "rebuilt_sha256": "67bcd40e5fcaee3c103c79f1d30c7f2c865e408984987e4b6dd583614a3b5f77",
+      "mode": "BYTE_IDENTICAL"
+    },
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_height_wavefield_results/summary.json",
+      "original_sha256": "4f3b61481c9b65ca56663e10a321c9d08dd5c30f036b653a1ab30e8c9723c63a",
+      "rebuilt_sha256": "fa696f72a08987f32616d021e7596438c54aaf2b9beb00e59901fb414619650a",
+      "mode": "ONLY_DECLARED_REDUCTION_SCALARS_DIFFER_WITHIN_DERIVED_BOUND"
+    },
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_height_wavefield_visual/band_difference.gif",
+      "original_sha256": "4a08b954cf06c63160c2dfbe429edadd5f8ab79c83b32be64672f51ade810600",
+      "rebuilt_sha256": "4a08b954cf06c63160c2dfbe429edadd5f8ab79c83b32be64672f51ade810600",
+      "mode": "BYTE_IDENTICAL"
+    },
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_height_wavefield_visual/band_difference_180ns.png",
+      "original_sha256": "bd3d894ca8c1ed379ccd02d307c7ff60386a47bef843b949f5bdad981a393ccd",
+      "rebuilt_sha256": "bd3d894ca8c1ed379ccd02d307c7ff60386a47bef843b949f5bdad981a393ccd",
+      "mode": "BYTE_IDENTICAL"
+    },
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_height_wavefield_visual/fixed_depth_incidence.png",
+      "original_sha256": "32882db2390ac7a1770428dfc1a6b8deb9bef100d23f6eb1bb466fd82e925325",
+      "rebuilt_sha256": "32882db2390ac7a1770428dfc1a6b8deb9bef100d23f6eb1bb466fd82e925325",
+      "mode": "BYTE_IDENTICAL"
+    },
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_height_wavefield_visual/raw_ricker_difference.gif",
+      "original_sha256": "f8a6a9970dda7fd57e0a62859b8faf082111aacebc685ce28eb03077307e03b4",
+      "rebuilt_sha256": "f8a6a9970dda7fd57e0a62859b8faf082111aacebc685ce28eb03077307e03b4",
+      "mode": "BYTE_IDENTICAL"
+    },
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_height_wavefield_visual/summary.json",
+      "original_sha256": "ff98703e8f493784298bf692d9f62df1a7c949ed3d88391f1c9a1d296c450b93",
+      "rebuilt_sha256": "6cf3234fed94b611443f84c90295048e28dd1ae61659c08f89135f83889fa895",
+      "mode": "IDENTICAL_EXCEPT_HASH_OF_VERIFIED_FRESH_INPUT_SUMMARY"
+    },
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_model_response_relation/model_and_causal_bscan.png",
+      "original_sha256": "64666652da590b7e1edf0ec00ab1d60bb471cb60fd8828871bcd39a59d78ef1c",
+      "rebuilt_sha256": "64666652da590b7e1edf0ec00ab1d60bb471cb60fd8828871bcd39a59d78ef1c",
+      "mode": "BYTE_IDENTICAL"
+    },
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_model_response_relation/summary.json",
+      "original_sha256": "832fe4350c2bcbebd40084aceae2baf9a44290c5666d9d1792184e3207b31676",
+      "rebuilt_sha256": "832fe4350c2bcbebd40084aceae2baf9a44290c5666d9d1792184e3207b31676",
+      "mode": "BYTE_IDENTICAL"
+    },
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_height_wavefield_continuation/independent_verification.json",
+      "original_sha256": "c9bb6c05d5499a2ff38a32d6d80f1cbec0ce637d4f5ce7d7004f6a913657af47",
+      "rebuilt_sha256": "c9bb6c05d5499a2ff38a32d6d80f1cbec0ce637d4f5ce7d7004f6a913657af47",
+      "mode": "BYTE_IDENTICAL"
+    },
+    {
+      "original": "artifacts/research_checks/2026-10-04_hs4_height_archive_verification/native_archive.json",
+      "original_sha256": "54a5c3c6ce160260acf650cd4fba9a28b46906f5d4c3730aadce21fc4bdfd14e",
+      "rebuilt_sha256": "54a5c3c6ce160260acf650cd4fba9a28b46906f5d4c3730aadce21fc4bdfd14e",
+      "mode": "BYTE_IDENTICAL"
+    }
+  ],
+  "scope": "Execution reproducibility only, not FDTD absolute error/physics. Only eight named metadata reductions may differ under derived binary64 bound. All saved scientific arrays/images require exact bytes. Full mode needs local ignored files; default archived receivers suffice."
+}

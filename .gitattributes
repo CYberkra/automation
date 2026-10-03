@@ -37,3 +37,8 @@ artifacts/research_checks/2026-09-24_M01_T800/*.log -whitespace
 artifacts/research_checks/2026-09-24_PEC_T800/*.log -whitespace
 
 artifacts/research_checks/2026-09-24_M01_fixedPML/*.log -whitespace
+# Preserve the original V4 stdout/stderr, including failed parser/audit logs.
+artifacts/research_checks/2026-10-04_hs4_height_wavefield_*/**/*.log -whitespace
+artifacts/research_checks/2026-10-04_hs4_local_patch_controls/**/*.log -whitespace
+artifacts/research_checks/2026-10-04_hs4_patch_refinement/**/*.log -whitespace
+artifacts/research_checks/2026-10-04_hs4_patch_finest/**/*.log -whitespace

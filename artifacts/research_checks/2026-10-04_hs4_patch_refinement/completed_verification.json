@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "contract_sha256": "f45630034136ba2b1b6d15651d567fb313437cf8e4efaa435a1bb870b53372c3",
+  "code_sha256": "c2c86100bf9c14cb867efb5e3ea3e532476196db5a1cddf51836004800a7d510",
+  "completed": true,
+  "groups": [
+    {
+      "group": "fine_crest",
+      "geometry_factor_check": "PASS",
+      "outputs": [
+        {
+          "file": "profile.h5",
+          "sha256": "5ec7923b0aaf265e0543ed2dd94ececae4db3982f02dacf563b380352ca11ceb",
+          "old_station_index": 61,
+          "geometry_file": "hs4t2d_geom.vtkhdf",
+          "geometry_sha256": "1a61b066758e87a6220fb843e207e0f2c26100ee95c865268c3ee731481c2587"
+        }
+      ]
+    },
+    {
+      "group": "fine_slope",
+      "geometry_factor_check": "PASS",
+      "outputs": [
+        {
+          "file": "profile.h5",
+          "sha256": "04693a81d6770148edd682956882f2e8f9967999bd3613dd56e4e5b2aff1bec4",
+          "old_station_index": 61,
+          "geometry_file": "hs4t2d_geom.vtkhdf",
+          "geometry_sha256": "1ea18fb4c74909ae483320dc41e9a736d0a1cfb0d0628f97806c7fcad3c6ffb7"
+        }
+      ]
+    },
+    {
+      "group": "reverse_crest",
+      "geometry_factor_check": "PASS",
+      "outputs": [
+        {
+          "file": "profile.h5",
+          "sha256": "8832ae00a4a8057c2e97f593cff79fe13c7a9722a6e941d921e1b56969433552",
+          "old_station_index": 61,
+          "geometry_file": "hs4t2d_geom.vtkhdf",
+          "geometry_sha256": "c4a6440e1698f978d0d45c0b86a6f303b8314aba8f1245ab5cb28c3048b5fc73"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "status": "COMPLETED_REGIONAL_ATTRIBUTION_ROBUSTNESS_NOT_FULL_CONVERGENCE",
+  "code_sha256": "51041fe4c3278b39f52643a5a9184dea094d767be62f6a5cb11bd6f5ed36b92e",
+  "contract_sha256": "f45630034136ba2b1b6d15651d567fb313437cf8e4efaa435a1bb870b53372c3",
+  "verification_sha256": "b1875c7e88ec7f7406a1d263cd67c1fe88d27d7b7ae11b34aad02f8d6297a8a8",
+  "patch_input_summary_sha256": "bb83bff2adc2d8275010ca92663fee671cbe20fb3a83cae90a730a16fa550fea",
+  "metrics": {
+    "crest": {
+      "early_complex_relative_L2": 0.22309509826833182,
+      "full_signed_relative_L2": 0.22476764101804395,
+      "early_coarse_change_norm": 0.15551349831007039,
+      "early_fine_change_norm": 0.15964847367360488
+    },
+    "slope": {
+      "early_complex_relative_L2": 0.26096595818020757,
+      "full_signed_relative_L2": 0.22743965150444098,
+      "early_coarse_change_norm": 0.017346138073560564,
+      "early_fine_change_norm": 0.02014884005311294
+    }
+  },
+  "centre_early_crest_to_slope_change_L2_ratio": {
+    "coarse": 8.965309606701915,
+    "fine": 7.923457293460406
+  },
+  "reverse_geometry_template_checks": {
+    "high_crest_pair": {
+      "lag_ns": -3.690000000000092,
+      "positive_real_amplitude": 0.4218610363381936,
+      "residual_relative_L2": 0.8235993980383871,
+      "scope": "fixed160-180ns composite-waveform fit over[-8,8]ns; not certified isolated-interface arrival"
+    },
+    "reverse_crest_pair": {
+      "lag_ns": 1.9099999999997888,
+      "positive_real_amplitude": 1.4956585366879878,
+      "residual_relative_L2": 0.2520919833187722,
+      "scope": "fixed160-180ns composite-waveform fit over[-8,8]ns; not certified isolated-interface arrival"
+    }
+  },
+  "scope": "Equal-area crest/slope controls retain regional dominance at finer1/60m centre. Reverse crest changes waveform in opposite fitted-delay direction. Fine test covers centre only; no absolute FDTD error bound/full spatial convergence, energy partition or3D truth."
+}

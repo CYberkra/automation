@@ -1,0 +1,88 @@
+{
+  "schema": "processing-algebra-checks/1",
+  "evidence_level": "algebra_and_deterministic_numeric_examples_only",
+  "physical_simulation": false,
+  "field_data_used": false,
+  "training_run": false,
+  "seed": 20260924,
+  "numpy_version": "2.5.3",
+  "script_sha256": "abb9f9d4b94437b2ec073ab0675ee8b386b559dce086e0426cd07cdb8723d323",
+  "roundoff_tolerance": 1e-12,
+  "tolerance_role": "floating_point_identity_checks_not_acceptance_thresholds",
+  "checks": [
+    {
+      "id": "C01_identity",
+      "passed": true,
+      "nrmse": 0.0
+    },
+    {
+      "id": "C02_mean_removes_constant_lateral_layer",
+      "passed": true,
+      "protected_layer_nrmse": 1.0
+    },
+    {
+      "id": "C03_zero_and_polarity_error",
+      "passed": true,
+      "zero_nrmse": 1.0,
+      "polarity_reversal_nrmse": 2.0
+    },
+    {
+      "id": "C04_one_sample_shift",
+      "passed": true,
+      "nrmse": 0.8037193729222909
+    },
+    {
+      "id": "C05_constant_gain_preserves_component_snr",
+      "passed": true,
+      "before_db": 16.281377373263425,
+      "after_db": 16.281377373263425,
+      "gain": 100
+    },
+    {
+      "id": "C06_fixed_shared_gain_mean_commute",
+      "passed": true,
+      "maximum_absolute_difference": 9.43689570931383e-16
+    },
+    {
+      "id": "C07_refitted_svd_order_changes_result",
+      "passed": true,
+      "background_then_gain": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          3.0
+        ]
+      ],
+      "gain_then_background": [
+        [
+          2.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "frobenius_difference": 3.605551275463989
+    },
+    {
+      "id": "C08_refitted_svd_is_not_additive",
+      "passed": true,
+      "frobenius_difference": 1.0
+    },
+    {
+      "id": "C09_known_attenuator_inverse_amplifies_added_noise",
+      "passed": true,
+      "noiseless_recovery_nrmse": 3.5026878765222193e-17,
+      "added_noise_l2_amplification": 7.997673288637586,
+      "maximum_inverse_gain": 20.085536923187668
+    },
+    {
+      "id": "C10_zero_reference_nrmse_undefined",
+      "passed": true
+    }
+  ]
+}

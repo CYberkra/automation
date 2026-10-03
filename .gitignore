@@ -79,3 +79,17 @@ Thumbs.db
 /artifacts/research_checks/2026-10-03_hs4t2d_airlayer_boundary/*/profile.h5
 /artifacts/research_checks/2026-10-03_hs4t2d_airlayer_boundary/*/*.vtkhdf
 /artifacts/research_checks/2026-10-03_hs4t2d_airlayer_boundary/*/cuda_cache.jsonl
+
+# Dense height wavefields remain local; full per-snapshot SHA-256 audit and
+# frozen inputs are archived. Keep native receivers and small final products.
+/artifacts/research_checks/2026-10-04_hs4_height_wavefield_continuation/*/profile_snaps/
+/artifacts/research_checks/2026-10-04_hs4_height_wavefield_results/fields/
+/artifacts/research_checks/2026-10-04_hs4_height_wavefield_pilot/*/cuda_cache.jsonl
+/artifacts/research_checks/2026-10-04_hs4_height_wavefield_continuation/*/cuda_cache.jsonl
+/artifacts/research_checks/2026-10-04_hs4_local_patch_controls/*/cuda_cache.jsonl
+/artifacts/research_checks/2026-10-04_hs4_patch_refinement/*/cuda_cache.jsonl
+/artifacts/research_checks/2026-10-04_hs4_patch_finest/*/cuda_cache.jsonl
+# Thirty repeated local-control material maps retain per-file hashes; keep
+# the first actual map of each of the five groups as a reviewable exemplar.
+/artifacts/research_checks/2026-10-04_hs4_local_patch_controls/*/hs4t2d_geom*.vtkhdf
+!/artifacts/research_checks/2026-10-04_hs4_local_patch_controls/*/hs4t2d_geom1.vtkhdf

@@ -38,13 +38,50 @@
  ],
  "runs": [
   {
+   "id": "hs4_height_wavefield_attribution_20261004",
+   "status": "COMPLETED_REGIONAL_CAUSAL_ATTRIBUTION_NOT_ABSOLUTE_GRID_OR_3D_ACCEPTANCE",
+   "report": "docs/research/2026-10-04_hs4_height_wavefield_findings.md",
+   "raw_studies": [
+    "artifacts/research_checks/2026-10-04_hs4_height_wavefield_pilot",
+    "artifacts/research_checks/2026-10-04_hs4_height_wavefield_continuation",
+    "artifacts/research_checks/2026-10-04_hs4_local_patch_controls",
+    "artifacts/research_checks/2026-10-04_hs4_patch_refinement",
+    "artifacts/research_checks/2026-10-04_hs4_patch_finest"
+   ],
+   "results": [
+    "artifacts/research_checks/2026-10-04_hs4_height_wavefield_results",
+    "artifacts/research_checks/2026-10-04_hs4_height_wavefield_visual",
+    "artifacts/research_checks/2026-10-04_hs4_local_patch_results",
+    "artifacts/research_checks/2026-10-04_hs4_patch_refinement_results",
+    "artifacts/research_checks/2026-10-04_hs4_patch_finest_results",
+    "artifacts/research_checks/2026-10-04_hs4_model_response_relation"
+   ],
+   "independent_native_audit": "artifacts/research_checks/2026-10-04_hs4_height_archive_verification/native_archive.json",
+   "rebuild_verification": "artifacts/research_checks/2026-10-04_hs4_height_archive_verification/rebuild_verification.json",
+   "new_successful_traces": 47,
+   "snapshots_six_components": 4072,
+   "raw_precision": "gprMax4.0.0 CUDA float64",
+   "centre_three_grid_early_crest_to_slope_change_L2_ratios": [
+    8.965309606701915,
+    7.923457293460406,
+    7.556107766894652
+   ],
+   "centre_latest_adjacent_signed_relative_L2": 0.07586442045431983,
+   "cpu_rebuild_checked_files": 35,
+   "cpu_rebuild_byte_identical_files": 33,
+   "reproduce": "D:/gprmax_v4_gpu_env/Scripts/python.exe scripts/rebuild_hs4_height_evidence_v0_2.py --out artifacts/local_checks/height_rebuild_new",
+   "calls_solver_for_rebuild": false,
+   "next": "Verify regional attribution/Git, then separately freeze resource-bounded precision or finite3D controls if needed. Same-session once-only continuation registered for2026-10-04T06:00:00+08:00. No retry of consumed attempts, no G4/training/field promotion."
+  },
+  {
    "id": "hs4t2d_height_snapshot_design_20261004",
    "status": "DESIGN_FEASIBILITY_ONLY_NOT_EXECUTION_CONTRACT",
    "report": "docs/research/2026-10-04_hs4t2d_height_snapshot_design.md",
    "evidence": "artifacts/research_checks/2026-10-04_hs4t2d_height_snapshot_design/feasibility.json",
    "reproduce": "D:/gprmax_v4_gpu_env/Scripts/python.exe scripts/audit_hs4t2d_height_snapshot_feasibility.py --out artifacts/local_checks/height_snapshot_feasibility_new.json",
    "calls_solver": false,
-   "next": "Prepare and freeze bounded matched-height continuous-wavefield pilot; validate source/temporal/spatial/EH/receiver closure before interface attribution."
+   "next": "Prepare and freeze bounded matched-height continuous-wavefield pilot; validate source/temporal/spatial/EH/receiver closure before interface attribution.",
+   "superseded_by": "hs4_height_wavefield_attribution_20261004"
   },
   {
    "id": "hs4t2d_joint_grid_20261004",
@@ -2605,8 +2642,8 @@
   ],
   "schema": "research-artifact-registry/1",
  "solver_execution_gate": "configs/research/gprmax_v4_execution_gate.json",
- "updated_date": "2026-10-03",
- "current_handoff": "START_HERE.md - batch2d_slope_t2 + _mt both completed (6+6). B-scan viewer: artifacts/local_checks/slope_t2_bscan_viewer.html via 127.0.0.1:8765. Dispersion measured-data research registered (West 2003 etc). Next candidates: T1/T3, 3D slope, tilt_target, dispersive TZ; G4 unchanged.",
+ "updated_date": "2026-10-04",
+ "current_handoff": "START_HERE.md - HS4 height wavefield/local controls completed47traces; high-altitude upper subsurface stripe has common-crest regional causal evidence. Centre grid residual remains7.586percent; no absolute/full-scan/3D/field acceptance. Same-session2026-10-04T06:00:00+08 continuation registered; G4 unchanged.",
  "t3_operator_effects_rpca_addendum": "docs/research/2026-09-29_rpca_effects_addendum.md",
  "operator_catalogue_v0_2": "configs/research/operator_catalogue_v0.2.json",
  "reward_weights_v0_2": "docs/research/2026-09-29_reward_weights_v0.2.md",

@@ -1,0 +1,51 @@
+{
+  "status": "COMPLETED_THREE_GRID_CENTRE_REGIONAL_CHECK_NOT_ABSOLUTE_CONVERGENCE",
+  "code_sha256": "ac163bc165d59b5b146bfcf93690b94d4eb90dc18ed088ce77075f6226d37ac8",
+  "verified_capsule_sha256": [
+    "6ee71c5f3edb0d4a39295f9d347a16b0b7889711aaf3c218b0314a565e1699e8",
+    "b1875c7e88ec7f7406a1d263cd67c1fe88d27d7b7ae11b34aad02f8d6297a8a8"
+  ],
+  "patch_results_sha256": "bb83bff2adc2d8275010ca92663fee671cbe20fb3a83cae90a730a16fa550fea",
+  "metrics": {
+    "2p5cm_to_1over60m": {
+      "base": {
+        "early_complex_relative_L2": 0.16471394389219124,
+        "full_signed_relative_L2": 0.1659554860944375,
+        "full_envelope_magnitude_relative_L2": 0.03966014607833455
+      },
+      "crest": {
+        "early_complex_relative_L2": 0.22309509826833182,
+        "full_signed_relative_L2": 0.22476764101804395,
+        "full_envelope_magnitude_relative_L2": 0.06465510155060651
+      },
+      "slope": {
+        "early_complex_relative_L2": 0.26096595818020757,
+        "full_signed_relative_L2": 0.22743965150444098,
+        "full_envelope_magnitude_relative_L2": 0.0679262033041921
+      }
+    },
+    "1over60m_to_1p25cm": {
+      "base": {
+        "early_complex_relative_L2": 0.07515648245267272,
+        "full_signed_relative_L2": 0.07586442045431983,
+        "full_envelope_magnitude_relative_L2": 0.016735945580401
+      },
+      "crest": {
+        "early_complex_relative_L2": 0.0991382020524985,
+        "full_signed_relative_L2": 0.09987086217707741,
+        "full_envelope_magnitude_relative_L2": 0.026576124253835997
+      },
+      "slope": {
+        "early_complex_relative_L2": 0.1100932920399047,
+        "full_signed_relative_L2": 0.10029844801886739,
+        "full_envelope_magnitude_relative_L2": 0.027554933158574012
+      }
+    }
+  },
+  "early_crest_to_slope_change_L2_ratio": {
+    "2p5cm": 8.965309606701915,
+    "1over60m": 7.923457293460406,
+    "1p25cm": 7.556107766894652
+  },
+  "scope": "Same geometry, physical PML and source; centre station only. Ratios are waveform-change sensitivity, not separated energy. No Richardson error budget, full-scan convergence, finite3D or field acceptance."
+}
