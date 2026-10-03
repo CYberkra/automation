@@ -1,0 +1,95 @@
+{
+  "check1_frequency_grid": {
+    "sim_window_ns": 600.0,
+    "intrinsic_df_MHz": 1.6666666666666667,
+    "requested_df_MHz": 0.3,
+    "oversampling_factor": 5.555555555555556,
+    "equivalent_independent_freqs": 90.0,
+    "verdict": "请求栅格比仿真窗能给的细 5.56倍；501 点非独立测量"
+  },
+  "check2_input_syntax": {
+    "box_format": "x0 y0 z0 x1 y1 z1 — 解析正确，无缝隙无重叠",
+    "box_count_2d": 49,
+    "cover_boxes_2d": 48,
+    "box_count_3d": 2305,
+    "cover_boxes_3d": 2304,
+    "pml_cells_2d": "20 0 20 20 0 20",
+    "pml_cells_3d": "20 20 20 20 20 20",
+    "pml_zero_is_legal": true,
+    "pml_zero_evidence": "gprMax/user_objects/cmds_singleuse.py:691 'requires the PML thickness to be zero or greater'",
+    "verdict": "语法与 PML 配置均合法"
+  },
+  "check3_material": {
+    "er0_declared": 18.017,
+    "er0_from_debye": 18.017,
+    "self_consistent": true,
+    "eps_at_20MHz": 13.991997239651557,
+    "eps_at_170MHz": 8.086775847898126,
+    "v_phase_20MHz_Mm_s": 78.9510552798439,
+    "v_phase_170MHz_Mm_s": 105.01034839791929,
+    "v_zero_freq_wrong_value_Mm_s": 70.62841556391199,
+    "debye_char_freq_MHz": 24.64957998542527,
+    "verdict": "材料自洽；但上一轮用零频速度算理论到时是错的"
+  },
+  "check4_numerics": {
+    "dx_dy_dz_m": 0.05,
+    "lambda_vacuum_at_170MHz_m": 1.7634850470588235,
+    "lambda_medium_at_170MHz_m": 0.46441797223437586,
+    "ppw_vacuum": 35.26970094117647,
+    "ppw_medium": 9.288359444687517,
+    "ppw_sufficient": false,
+    "courant_number": 0.7071067811865476,
+    "courant_vs_3d_limit": 1.224744871391589,
+    "courant_stable_3d": false,
+    "courant_note": "2D ny=1 时 gprMax 放宽约束，实测未见发散（末段/首段能量比 0.010），但晚期噪声为 3D 的约 60 倍",
+    "dt_s": 1.1793271683748422e-10,
+    "iterations_2d": 5089,
+    "window_actual_ns": 600.1595959859573,
+    "pml_cells": 20,
+    "pml_thickness_m": 1.0,
+    "medium_wavelength_at_95MHz_m": 0.8310637397878304,
+    "interface_box_width_m": 0.25,
+    "boxes_per_wavelength": 3.3242549591513217,
+    "verdict": "介质内 PPW=9.3（<10，偏低）；Courant=0.7071 为 3D 上限的 1.22 倍（实测未发散）；界面盒 0.25 m 仅 3.3 个介质波长（@95MHz），属亚波长结构"
+  },
+  "check5_2d3d_comparability": {
+    "items_compared": 10,
+    "items_identical": 1,
+    "shared": [
+      "收发偏移数值 1.3m",
+      "材料参数 rock/cover"
+    ],
+    "differing": [
+      "域: 12x0.05x33 (ny=1) vs 12x12x33",
+      "变化轴: 2D 沿 x 3.9-9.9m/121道/0.05m; 3D 沿 y 5.15-8.15m/13道/0.25m",
+      "界面起伏: 2D 0.40m(9级) vs 3D 0.80m(17级)",
+      "界面 z 范围: 2D 8.85-9.25m vs 3D 8.60-9.40m",
+      "源: (2.6,0.025,27)y极化 vs (6,3.85,27)x极化",
+      "接收器分量: Ey vs Ex",
+      "PML y: 0 层 vs 20 层",
+      "pml_cfs: 未指定 vs 已指定"
+    ],
+    "verdict": "两套独立几何，非同一模型的 2D/3D 实现；2D 结论不可直接外推到 3D"
+  },
+  "interface_recheck_dispersive": {
+    "theory_envelope_ns": [
+      152.44501898305856,
+      176.06567950912392
+    ],
+    "theory_envelope_old_nondispersive_ns": [
+      177.9,
+      185.0
+    ],
+    "observed_ns": [
+      171.32401862940787,
+      183.79906852960747
+    ],
+    "bias_mean_ns": 16.89726736085689,
+    "bias_std_ns": 2.4392586380379973,
+    "fraction_inside_envelope": 0.03305785123966942,
+    "model_z0_range_m": [
+      9.0,
+      9.25
+    ]
+  }
+}
