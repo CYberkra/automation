@@ -1,0 +1,135 @@
+{
+  "status": "COMPLETED",
+  "station_count": 1,
+  "new_traces": 2,
+  "studies": [
+    {
+      "directory": "D:\\\u81ea\u52a8\u5904\u7406\\artifacts\\research_checks\\2026-10-04_hs4t2d_joint_grid_centre",
+      "contract_sha256": "45e1804608395023cb2bbdde4e64e0b0591156576a7feb76cbb83bd9b45a4ae6",
+      "completed_verification_sha256": "1b4413070426e46924949f8f9090d2e12a56ff71086c66f71e5fa4cf45856004"
+    }
+  ],
+  "official_processing_sha256": "adad556f09140956f0ee19d3038430e06a9ae8be6a826dcad723096d99624a3b",
+  "code_sha256": "ddcaed07d1e1e878584c5d8a8b07c35a827a5df01dcd15dc99de26ff5c21386e",
+  "baseline_contract_sha256": "cf0fbb5818ab01c1944bfd8376cdbc4f6cc69294685c098c80525b6c168f09f8",
+  "source_audit": {
+    "centre_rough": {
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "spatial_scale": 0.05,
+      "dt_s": 5.896635841874211e-11,
+      "source_all501bins_valid": true,
+      "audit_sha256": "1cf3010c463da8a10d3a86c9789b7acb81c6662fa59cab4d7cc4ca250a592e03"
+    },
+    "centre_halfspace": {
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "spatial_scale": 0.05,
+      "dt_s": 5.896635841874211e-11,
+      "source_all501bins_valid": true,
+      "audit_sha256": "a982a5f815b9c39d54c615687a8e515c4ee0e75355102f2c7db78b97c558259e"
+    }
+  },
+  "fixed_windows_ns": {
+    "ground": [
+      85,
+      120
+    ],
+    "underground": [
+      160,
+      220
+    ]
+  },
+  "comparisons": {
+    "full_hann_complex_spectrum": {
+      "hann_weighted_complex_relative_L2": 0.6129674432244285,
+      "hann_weighted_amplitude_L2_ratio": 1.075710022877347,
+      "complex_coherence_real": 0.8280219245799517,
+      "complex_coherence_imag": 0.5290700382543446,
+      "relative_L2_by_trace": [
+        0.6129674432244285
+      ]
+    },
+    "ground": {
+      "signed_band": {
+        "relative_L2": 0.9219928890280819,
+        "relative_L2_by_trace": [
+          0.9219928890280819
+        ],
+        "reference_L2": 0.0001048249776793971,
+        "difference_L2": 9.664788401293153e-05,
+        "reference_peak_abs": 4.3259354929879934e-05,
+        "difference_peak_abs": 3.27362352534289e-05
+      },
+      "phase_aware_complex_envelope": {
+        "relative_L2": 0.9549304389225424,
+        "relative_L2_by_trace": [
+          0.9549304389225426
+        ],
+        "reference_L2": 7.219187251582604e-05,
+        "difference_L2": 6.893821650817799e-05,
+        "reference_peak_abs": 2.2568721427565102e-05,
+        "difference_peak_abs": 1.869259461435037e-05
+      },
+      "envelope_magnitude": {
+        "relative_L2": 0.6422528078111572,
+        "relative_L2_by_trace": [
+          0.6422528078111573
+        ],
+        "reference_L2": 0.00014438374503165208,
+        "difference_L2": 9.273086564886878e-05,
+        "reference_peak_abs": 4.5137442855130204e-05,
+        "difference_peak_abs": 3.442741328448084e-05
+      }
+    },
+    "underground": {
+      "signed_band": {
+        "relative_L2": 0.6129115016907872,
+        "relative_L2_by_trace": [
+          0.6129115016907875
+        ],
+        "reference_L2": 0.20695808987217681,
+        "difference_L2": 0.1268469936506128,
+        "reference_peak_abs": 0.052080332279953845,
+        "difference_peak_abs": 0.03175467611595794
+      },
+      "phase_aware_complex_envelope": {
+        "relative_L2": 0.6128940164460984,
+        "relative_L2_by_trace": [
+          0.6128940164460984
+        ],
+        "reference_L2": 0.1463457396982025,
+        "difference_L2": 0.08969442819340656,
+        "reference_peak_abs": 0.026951439036122557,
+        "difference_peak_abs": 0.016495224866417347
+      },
+      "envelope_magnitude": {
+        "relative_L2": 0.17120873278659002,
+        "relative_L2_by_trace": [
+          0.17120873278659
+        ],
+        "reference_L2": 0.292691479396405,
+        "difference_L2": 0.05011133728489082,
+        "reference_peak_abs": 0.053902878072245114,
+        "difference_peak_abs": 0.013183366500498818
+      }
+    }
+  },
+  "window_peak_diagnostic": {
+    "coarse": {
+      "times_ns": [
+        175.48236859614104
+      ],
+      "span_ns": 0.0,
+      "scope": "fixed-window envelope maxima may switch lobes; not certified interface arrival/path identity"
+    },
+    "fine": {
+      "times_ns": [
+        173.81902860944777
+      ],
+      "span_ns": 0.0,
+      "scope": "fixed-window envelope maxima may switch lobes; not certified interface arrival/path identity"
+    }
+  },
+  "scope": "Joint X/Z grid sensitivity at fixed15m geometry. Two resolutions do not prove complete convergence or a unique physical cause; maxima are not event labels."
+}

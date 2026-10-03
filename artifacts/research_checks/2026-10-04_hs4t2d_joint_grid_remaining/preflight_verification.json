@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "contract_sha256": "aec2e13b55b2074f4e51960cdcec51b3037755e886ebce168d4ec0d3d098f6b1",
+  "code_sha256": "91aa4a4d29af24805a4742e469415dd14997f922dcff0164b4e41b19ab8e7ab7",
+  "groups": {
+    "left_rough": {
+      "factors_preserved": "PASS",
+      "fine_equals_repeated_coarse_voxels": true,
+      "material_array_sha256": "160a0a24bb233fb66650012aa42b44b775e37465061b0ace2e62722928169bf9",
+      "actual_material_grids_verified": 0,
+      "geometry_exports": []
+    },
+    "left_halfspace": {
+      "factors_preserved": "PASS",
+      "fine_equals_repeated_coarse_voxels": true,
+      "material_array_sha256": "fb22c94f8e7d05f34f419ba8a3ed6031149eb25bd21503a005c86ae5601d34d2",
+      "actual_material_grids_verified": 0,
+      "geometry_exports": []
+    },
+    "right_rough": {
+      "factors_preserved": "PASS",
+      "fine_equals_repeated_coarse_voxels": true,
+      "material_array_sha256": "160a0a24bb233fb66650012aa42b44b775e37465061b0ace2e62722928169bf9",
+      "actual_material_grids_verified": 0,
+      "geometry_exports": []
+    },
+    "right_halfspace": {
+      "factors_preserved": "PASS",
+      "fine_equals_repeated_coarse_voxels": true,
+      "material_array_sha256": "fb22c94f8e7d05f34f419ba8a3ed6031149eb25bd21503a005c86ae5601d34d2",
+      "actual_material_grids_verified": 0,
+      "geometry_exports": []
+    }
+  },
+  "completed_outputs_checked": false,
+  "scope": "input invariants, voxel geometry, version/rawdtype/2D dt and actual positions; not full spatial convergence"
+}

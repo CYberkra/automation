@@ -38,6 +38,40 @@
  ],
  "runs": [
   {
+   "id": "hs4t2d_joint_grid_20261004",
+   "status": "COMPLETED_CONTROLLED_GRID_CHECK_NOT_FULL_CONVERGENCE_OR_EVENT_ATTRIBUTION",
+   "report": "docs/research/2026-10-04_hs4t2d_joint_grid_findings.md",
+   "design": "docs/research/2026-10-04_hs4t2d_joint_grid_design.md",
+   "raw_studies": [
+    "artifacts/research_checks/2026-10-04_hs4t2d_joint_grid_centre",
+    "artifacts/research_checks/2026-10-04_hs4t2d_joint_grid_remaining",
+    "artifacts/research_checks/2026-10-04_hs4t2d_joint_grid_third"
+   ],
+   "results": [
+    "artifacts/research_checks/2026-10-04_hs4t2d_joint_grid_centre_results",
+    "artifacts/research_checks/2026-10-04_hs4t2d_joint_grid_results",
+    "artifacts/research_checks/2026-10-04_hs4t2d_joint_grid_third_results"
+   ],
+   "rebuild_verification": "artifacts/research_checks/2026-10-04_hs4t2d_joint_grid_rebuild_verification/rebuild_verification.json",
+   "new_traces": 28,
+   "actual_material_grids_verified": 28,
+   "archived_representative_grids": 8,
+   "duplicate_geometry_local_only": 20,
+   "raw_precision": "gprMax4.0.0 CUDA float64",
+   "full13_signed_window_relative_L2_5cm_to_2p5cm": 0.6939473967904688,
+   "centre_signed_window_adjacent_relative_L2": [
+    0.6129115016907872,
+    0.1659554860944375
+   ],
+   "centre_envelope_magnitude_adjacent_relative_L2": [
+    0.17120873278659002,
+    0.03966014607833455
+   ],
+   "core_rebuild_files_byte_identical": 11,
+   "rebuild_manifests_byte_identical": 3,
+   "scope": "Fixed15m geometry/PML, joint-grid sensitivity and limited95MHz ray diagnostic. Coarse phases sensitive, refined upper stripe still flat. No absolute error, strongest-event identity,3D,field,training orG4 claim."
+  },
+  {
    "id": "hs4t2d_manual_boundary_20261003",
    "report": "docs/research/2026-10-03_hs4t2d_manual_and_boundary_findings.md",
    "status": "completed_PML_only_controls; full_cause_research_active",

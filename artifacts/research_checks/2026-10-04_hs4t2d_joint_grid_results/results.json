@@ -1,0 +1,280 @@
+{
+  "status": "COMPLETED",
+  "station_count": 13,
+  "new_traces": 26,
+  "studies": [
+    {
+      "directory": "D:\\\u81ea\u52a8\u5904\u7406\\artifacts\\research_checks\\2026-10-04_hs4t2d_joint_grid_centre",
+      "contract_sha256": "45e1804608395023cb2bbdde4e64e0b0591156576a7feb76cbb83bd9b45a4ae6",
+      "completed_verification_sha256": "1b4413070426e46924949f8f9090d2e12a56ff71086c66f71e5fa4cf45856004"
+    },
+    {
+      "directory": "D:\\\u81ea\u52a8\u5904\u7406\\artifacts\\research_checks\\2026-10-04_hs4t2d_joint_grid_remaining",
+      "contract_sha256": "aec2e13b55b2074f4e51960cdcec51b3037755e886ebce168d4ec0d3d098f6b1",
+      "completed_verification_sha256": "02a7a6588ebff113a146182c067fa5a4d8d47cfe734a68b0d7874e30f990b2a2"
+    }
+  ],
+  "official_processing_sha256": "adad556f09140956f0ee19d3038430e06a9ae8be6a826dcad723096d99624a3b",
+  "code_sha256": "ddcaed07d1e1e878584c5d8a8b07c35a827a5df01dcd15dc99de26ff5c21386e",
+  "baseline_contract_sha256": "cf0fbb5818ab01c1944bfd8376cdbc4f6cc69294685c098c80525b6c168f09f8",
+  "source_audit": {
+    "centre_rough": {
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "spatial_scale": 0.05,
+      "dt_s": 5.896635841874211e-11,
+      "source_all501bins_valid": true,
+      "audit_sha256": "1cf3010c463da8a10d3a86c9789b7acb81c6662fa59cab4d7cc4ca250a592e03"
+    },
+    "centre_halfspace": {
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "spatial_scale": 0.05,
+      "dt_s": 5.896635841874211e-11,
+      "source_all501bins_valid": true,
+      "audit_sha256": "a982a5f815b9c39d54c615687a8e515c4ee0e75355102f2c7db78b97c558259e"
+    },
+    "left_rough": {
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "spatial_scale": 0.05,
+      "dt_s": 5.896635841874211e-11,
+      "source_all501bins_valid": true,
+      "audit_sha256": "26ee0c1406b8d935bd2a120b515c4b2643c80c93e15508b46c48c9f5431c017f"
+    },
+    "left_halfspace": {
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "spatial_scale": 0.05,
+      "dt_s": 5.896635841874211e-11,
+      "source_all501bins_valid": true,
+      "audit_sha256": "914db1cdcf33cab3c251ce3efe4acd55e9694b57bd6e8d137568d3e706368ec6"
+    },
+    "right_rough": {
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "spatial_scale": 0.05,
+      "dt_s": 5.896635841874211e-11,
+      "source_all501bins_valid": true,
+      "audit_sha256": "dcf02a3a2f97de47101e61d2d66fc26a0a3ce7d0838e02ec3bfda0a7f38d8854"
+    },
+    "right_halfspace": {
+      "source_quantity": "electric_current",
+      "source_units": "A",
+      "spatial_scale": 0.05,
+      "dt_s": 5.896635841874211e-11,
+      "source_all501bins_valid": true,
+      "audit_sha256": "cbf810b6cb219eb520cc3da3c615dc33677df0676dbb4258edfce1b9bb13c1f1"
+    }
+  },
+  "fixed_windows_ns": {
+    "ground": [
+      85,
+      120
+    ],
+    "underground": [
+      160,
+      220
+    ]
+  },
+  "comparisons": {
+    "full_hann_complex_spectrum": {
+      "hann_weighted_complex_relative_L2": 0.6939960360043848,
+      "hann_weighted_amplitude_L2_ratio": 1.0786304332707957,
+      "complex_coherence_real": 0.779605813869113,
+      "complex_coherence_imag": 0.5611086395424595,
+      "relative_L2_by_trace": [
+        0.7027765166485884,
+        0.6836717785602102,
+        0.6556557653344015,
+        0.7177168027957636,
+        0.727822036311222,
+        0.6667012735743996,
+        0.6129674432244285,
+        0.600420734077185,
+        0.6379590317292959,
+        0.7236204305925975,
+        0.8485509516767632,
+        0.9614037386086091,
+        0.8717784964057805
+      ]
+    },
+    "ground": {
+      "signed_band": {
+        "relative_L2": 0.6704936043537869,
+        "relative_L2_by_trace": [
+          0.9980161872754452,
+          0.9294162737910061,
+          0.8078344530378375,
+          0.8301656492765095,
+          0.961476409067265,
+          1.0248130006835379,
+          0.9219928890280819,
+          0.6747353296168581,
+          0.34793881499085916,
+          0.2024581744912674,
+          0.5153430659979601,
+          0.6889572196521935,
+          0.6314660143747001
+        ],
+        "reference_L2": 0.00044807837266948487,
+        "difference_L2": 0.0003004336831241423,
+        "reference_peak_abs": 8.60923565393578e-05,
+        "difference_peak_abs": 4.586511502472317e-05
+      },
+      "phase_aware_complex_envelope": {
+        "relative_L2": 0.7101036160132663,
+        "relative_L2_by_trace": [
+          0.8918236826932384,
+          0.8547727817817313,
+          0.7688369938902635,
+          0.8160621368363495,
+          0.971888402335307,
+          1.0538417775214117,
+          0.9549304389225424,
+          0.7002664665913056,
+          0.36233605751065684,
+          0.21806178808700669,
+          0.5582796156032004,
+          0.7500454553560246,
+          0.6929728400082993
+        ],
+        "reference_L2": 0.00030004020756226567,
+        "difference_L2": 0.00021305963633933583,
+        "reference_peak_abs": 4.318469694561341e-05,
+        "difference_peak_abs": 2.53629965390361e-05
+      },
+      "envelope_magnitude": {
+        "relative_L2": 0.47437103166465705,
+        "relative_L2_by_trace": [
+          0.5842557442933249,
+          0.5545747608682455,
+          0.5053377995265258,
+          0.5413425013444606,
+          0.6416263410716659,
+          0.6941627852532728,
+          0.6422528078111572,
+          0.48160702283133017,
+          0.24620496448973064,
+          0.13501784013028822,
+          0.3815452200020039,
+          0.5056446385916609,
+          0.46174149016129096
+        ],
+        "reference_L2": 0.0006000804151245313,
+        "difference_L2": 0.0002846607656043796,
+        "reference_peak_abs": 8.636939389122682e-05,
+        "difference_peak_abs": 4.311395146417034e-05
+      }
+    },
+    "underground": {
+      "signed_band": {
+        "relative_L2": 0.6939473967904688,
+        "relative_L2_by_trace": [
+          0.702758235337926,
+          0.6836503905079618,
+          0.6556225907017342,
+          0.7177256812751053,
+          0.7278237035076763,
+          0.6666647253968248,
+          0.6129115016907875,
+          0.6003669532550189,
+          0.6379290665049003,
+          0.7236263834107807,
+          0.8485505359705307,
+          0.9613332646474754,
+          0.8714557642966791
+        ],
+        "reference_L2": 0.6250610007255406,
+        "difference_L2": 0.43375945428873425,
+        "reference_peak_abs": 0.08119779277979756,
+        "difference_peak_abs": 0.04872315276507709
+      },
+      "phase_aware_complex_envelope": {
+        "relative_L2": 0.693949412137957,
+        "relative_L2_by_trace": [
+          0.7027552388369147,
+          0.6836453031349375,
+          0.6556102587605507,
+          0.7176907336763217,
+          0.7277905945608988,
+          0.6666408853126831,
+          0.6128940164460984,
+          0.6003580951936803,
+          0.6379298363218683,
+          0.7236422403401936,
+          0.8486172062926398,
+          0.9615179073412222,
+          0.871761972038085
+        ],
+        "reference_L2": 0.44198516805644655,
+        "difference_L2": 0.30671534754646723,
+        "reference_peak_abs": 0.040757710683890745,
+        "difference_peak_abs": 0.026171946161736133
+      },
+      "envelope_magnitude": {
+        "relative_L2": 0.23857056045746944,
+        "relative_L2_by_trace": [
+          0.2549573171969743,
+          0.2577036261650413,
+          0.2795361127302373,
+          0.3252933049453471,
+          0.2367269185666357,
+          0.1943743878120117,
+          0.17120873278659,
+          0.17068384153829713,
+          0.1913801458101447,
+          0.2375539264556905,
+          0.3154105590351721,
+          0.354536493257547,
+          0.2629790704642537
+        ],
+        "reference_L2": 0.8839703361128931,
+        "difference_L2": 0.21088929851423055,
+        "reference_peak_abs": 0.08151542136778149,
+        "difference_peak_abs": 0.019363691438669964
+      }
+    }
+  },
+  "window_peak_diagnostic": {
+    "coarse": {
+      "times_ns": [
+        192.94743845642049,
+        192.94743845642049,
+        173.81902860944777,
+        173.81902860944777,
+        173.81902860944777,
+        174.65069860279442,
+        175.48236859614104,
+        177.14570858283435,
+        177.97737857618097,
+        178.8090485695276,
+        179.64071856287424,
+        203.7591483699268,
+        192.11576846307383
+      ],
+      "span_ns": 29.940119760479035,
+      "scope": "fixed-window envelope maxima may switch lobes; not certified interface arrival/path identity"
+    },
+    "fine": {
+      "times_ns": [
+        191.2840984697272,
+        191.2840984697272,
+        172.15568862275447,
+        172.15568862275447,
+        171.32401862940787,
+        172.15568862275447,
+        173.81902860944777,
+        174.65069860279442,
+        175.48236859614104,
+        175.48236859614104,
+        176.3140385894877,
+        169.66067864271457,
+        189.62075848303394
+      ],
+      "span_ns": 21.62341982701264,
+      "scope": "fixed-window envelope maxima may switch lobes; not certified interface arrival/path identity"
+    }
+  },
+  "scope": "Joint X/Z grid sensitivity at fixed15m geometry. Two resolutions do not prove complete convergence or a unique physical cause; maxima are not event labels."
+}
