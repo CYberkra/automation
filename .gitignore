@@ -71,3 +71,11 @@ Thumbs.db
 /artifacts/research_checks/2026-09-26_damage_ladder_r2_c07/records.json
 /artifacts/research_checks/2026-09-27_damage_ladder_dev_r2_c07/records.json
 /artifacts/research_checks/2026-09-27_sfcw_unified_dev_adapter_mt33_rerun/responses_and_reconstructions.npz
+
+# Air-layer/boundary batch 2026-10-03: wavefield snapshots are 549 MB and are
+# regenerable from the frozen inputs plus the recorded contract. Inputs,
+# contracts, verification JSON and scripts stay tracked.
+/artifacts/research_checks/2026-10-03_hs4t2d_airlayer_boundary/*/profile_snaps/
+/artifacts/research_checks/2026-10-03_hs4t2d_airlayer_boundary/*/profile.h5
+/artifacts/research_checks/2026-10-03_hs4t2d_airlayer_boundary/*/*.vtkhdf
+/artifacts/research_checks/2026-10-03_hs4t2d_airlayer_boundary/*/cuda_cache.jsonl

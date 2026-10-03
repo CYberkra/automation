@@ -1,0 +1,74 @@
+#title: HS4T2D G4 vertical grid 2.5 cm, boundary audit series
+#domain: 12 0.05 33
+#dx_dy_dz: 0.05 0.05 0.025
+#time_window: 600e-9
+#omp_threads: 8
+#pml_cells: 20 0 20 20 0 40
+#pml_formulation: HORIPML
+#waveform: impulse 1 1 impulse
+#hertzian_dipole: y 5.6 0.025 13.5 impulse
+#rx: 6.9 0.025 13.5 t61 Ey
+#material: 9 0.001 1 0 rock
+#material: 18.017 0.003 1 0 cover
+#add_dispersion_debye: 1 7.878 6.4567e-09 cover
+#box: 0 0 0 12 0.05 6 rock
+#box: 0 0 4.425 0.25 0.05 6 cover
+#box: 0.25 0 4.425 0.5 0.05 6 cover
+#box: 0.5 0 4.425 0.75 0.05 6 cover
+#box: 0.75 0 4.425 1 0.05 6 cover
+#box: 1 0 4.425 1.25 0.05 6 cover
+#box: 1.25 0 4.375 1.5 0.05 6 cover
+#box: 1.5 0 4.375 1.75 0.05 6 cover
+#box: 1.75 0 4.325 2 0.05 6 cover
+#box: 2 0 4.325 2.25 0.05 6 cover
+#box: 2.25 0 4.325 2.5 0.05 6 cover
+#box: 2.5 0 4.325 2.75 0.05 6 cover
+#box: 2.75 0 4.375 3 0.05 6 cover
+#box: 3 0 4.375 3.25 0.05 6 cover
+#box: 3.25 0 4.425 3.5 0.05 6 cover
+#box: 3.5 0 4.475 3.75 0.05 6 cover
+#box: 3.75 0 4.525 4 0.05 6 cover
+#box: 4 0 4.575 4.25 0.05 6 cover
+#box: 4.25 0 4.625 4.5 0.05 6 cover
+#box: 4.5 0 4.675 4.75 0.05 6 cover
+#box: 4.75 0 4.675 5 0.05 6 cover
+#box: 5 0 4.725 5.25 0.05 6 cover
+#box: 5.25 0 4.725 5.5 0.05 6 cover
+#box: 5.5 0 4.725 5.75 0.05 6 cover
+#box: 5.75 0 4.725 6 0.05 6 cover
+#box: 6 0 4.725 6.25 0.05 6 cover
+#box: 6.25 0 4.725 6.5 0.05 6 cover
+#box: 6.5 0 4.675 6.75 0.05 6 cover
+#box: 6.75 0 4.675 7 0.05 6 cover
+#box: 7 0 4.625 7.25 0.05 6 cover
+#box: 7.25 0 4.625 7.5 0.05 6 cover
+#box: 7.5 0 4.575 7.75 0.05 6 cover
+#box: 7.75 0 4.525 8 0.05 6 cover
+#box: 8 0 4.525 8.25 0.05 6 cover
+#box: 8.25 0 4.475 8.5 0.05 6 cover
+#box: 8.5 0 4.475 8.75 0.05 6 cover
+#box: 8.75 0 4.475 9 0.05 6 cover
+#box: 9 0 4.475 9.25 0.05 6 cover
+#box: 9.25 0 4.475 9.5 0.05 6 cover
+#box: 9.5 0 4.475 9.75 0.05 6 cover
+#box: 9.75 0 4.475 10 0.05 6 cover
+#box: 10 0 4.525 10.25 0.05 6 cover
+#box: 10.25 0 4.575 10.5 0.05 6 cover
+#box: 10.5 0 4.575 10.75 0.05 6 cover
+#box: 10.75 0 4.625 11 0.05 6 cover
+#box: 11 0 4.625 11.25 0.05 6 cover
+#box: 11.25 0 4.625 11.5 0.05 6 cover
+#box: 11.5 0 4.625 11.75 0.05 6 cover
+#box: 11.75 0 4.625 12 0.05 6 cover
+#geometry_view: 0 0 0 12 0.05 33 0.05 0.05 0.025 hs4t2d_geom_g4_zfine n
+
+#snapshot: 0 0 0 12 0.05 33 0.05 0.05 0.025 40e-9 wave_040.h5
+#snapshot: 0 0 0 12 0.05 33 0.05 0.05 0.025 50e-9 wave_050.h5
+#snapshot: 0 0 0 12 0.05 33 0.05 0.05 0.025 65e-9 wave_065.h5
+#snapshot: 0 0 0 12 0.05 33 0.05 0.05 0.025 80e-9 wave_080.h5
+#snapshot: 0 0 0 12 0.05 33 0.05 0.05 0.025 95e-9 wave_095.h5
+#snapshot: 0 0 0 12 0.05 33 0.05 0.05 0.025 110e-9 wave_110.h5
+#snapshot: 0 0 0 12 0.05 33 0.05 0.05 0.025 130e-9 wave_130.h5
+#snapshot: 0 0 0 12 0.05 33 0.05 0.05 0.025 145e-9 wave_145.h5
+#snapshot: 0 0 0 12 0.05 33 0.05 0.05 0.025 175e-9 wave_175.h5
+#snapshot: 0 0 0 12 0.05 33 0.05 0.05 0.025 220e-9 wave_220.h5
