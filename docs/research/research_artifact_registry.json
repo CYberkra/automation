@@ -1,4 +1,10 @@
 {
+ "model_design_review_2026_10_02": {
+  "report": "docs/research/2026-10-02_model_design_review.md",
+  "evidence": "artifacts/research_checks/2026-10-02_model_design_audit.json",
+  "reproduce": "python scripts/audit_model_design_20261002.py",
+  "scope": "read-only review of existing controls and contracts; no FDTD, training or test-family input"
+ },
  "current_protocol": "docs/research/2026-09-24_evaluation_and_labels_v0.2.md",
  "default_array_verification": {
   "calls_solver": false,
