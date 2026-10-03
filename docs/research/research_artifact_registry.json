@@ -2116,9 +2116,19 @@
   },
   {
    "id": "sim2real_augmentation_v0_6",
-   "status": "delivered_pending_user_review",
+   "status": "superseded_by_v0_7_carrier_convention",
    "record": "fig_augment_v06_bscan.png",
    "note": "augmentation v0.6 FINAL candidate (augment_sim2real_v0_6.py): direct match of visual quantity q = bandpass(90-125MHz) envelope median in t0+45~70ns / direct peak, calibrated on full Line9 (p25-75 0.053-0.091, median 0.0713); onset gate (c=0 before t0+12, Hann ramp t0+12~22) makes direct wave exactly lossless: corr_med 0.9956 (min 0.9904), peak change 0.00%, zero arrival shift; phase jitter delta=+-3.5ns (corr~3 traces) + amplitude jitter sigma=0.16 reproduces beaded texture (diff_rms 0.190 vs measured 0.179); envelope profile per t0-relative window 0.84-0.95x of measured in 45~140ns (25-45ns zone kept lower on purpose: instrument wavelet tail, known item, not faked); 140-200ns tail 1.73x but absolute 0.015 near display floor. Metrics: augment_v06_metrics.json; diagnostics diag_v04_display.py / diag_v04_t0rel.py.",
+   "solver_executed": false,
+   "training_executed": false,
+   "g4_relieved": false,
+   "tracked": true
+  },
+  {
+   "id": "sim2real_augmentation_v0_7",
+   "status": "delivered_pending_user_review",
+   "record": "fig_augment_v07_bscan.png",
+   "note": "augmentation v0.7 (augment_sim2real_v0_7.py, seed 20261001): v0.6 operator chain unchanged, sim input migrated to OFFICIAL 20 MHz carrier via sfcw_official_loader_v0_2.load_bscan_both (fixes legacy 95 MHz carrier bug convention in v0_3-v0_6 input: band was shifted to 95-245 MHz, 90-125 MHz calibration band mismatched vs real data); legacy path rerun same seed as continuity panel. Gates: direct corr_med 0.9950/min 0.9907, peak 0.00%, shift 0; diff_rms 0.163 vs measured 0.179; envelope profile 1.19/0.97/0.84/0.88/1.82x (t0+140~200ns tail window above 1.25 target, same known-item class as v0.6 1.73x, near display floor). Metrics: augment_v07_metrics.json; figs in artifacts/research_checks/2026-10-03_sim2real_augment_v07/. Review record: docs/research/2026-10-03_sfcw_chain_review_and_repairs.md",
    "solver_executed": false,
    "training_executed": false,
    "g4_relieved": false,
