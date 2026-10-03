@@ -1,0 +1,68 @@
+{
+  "3D": {
+    "traces": 13,
+    "component": "Ex",
+    "profile_axis": "y",
+    "axis_range_m": [
+      5.15,
+      8.15
+    ],
+    "axis_step_m": 0.25,
+    "time_window_ns": 3332.501663339987,
+    "sv1_fraction": 0.9999521696763275,
+    "sv2_over_sv1": 2.785675043437567e-05,
+    "ground_over_interface_energy": 0.0001448931314202928,
+    "residual_energy_by_window": {
+      "direct": 1.6718414811209854e-14,
+      "pre_ground": 4.5717043462856925e-14,
+      "ground": 1.7642427555110406e-10,
+      "intermediate": 2.4782935399244938e-11,
+      "interface": 1.2176165551930035e-06
+    },
+    "trace_corr_min": 0.9999999968981503,
+    "trace_corr_max": 0.9999999999680173,
+    "first_last_maxdiff_over_absmax": 7.315047818571554e-05,
+    "transverse_info_available": false,
+    "vlim_raw": 3.4156447140921977,
+    "vlim_residual": 0.00016391847357087843,
+    "raw_absmax": 4.241721130518847,
+    "theory_two_way_ns": {
+      "8.95": 290.25144959466706,
+      "9.0": 291.66731032439714,
+      "9.05": 293.0831710541273
+    }
+  },
+  "2D": {
+    "traces": 121,
+    "component": "Ey",
+    "profile_axis": "x",
+    "axis_range_m": [
+      3.9000000000000004,
+      9.9
+    ],
+    "axis_step_m": 0.05,
+    "time_window_ns": 3332.501663339987,
+    "sv1_fraction": 0.9954424499151175,
+    "sv2_over_sv1": 0.0025645709230590007,
+    "ground_over_interface_energy": 30.454968281211872,
+    "residual_energy_by_window": {
+      "direct": 1.5029124091241053,
+      "pre_ground": 0.0038812052786568766,
+      "ground": 172.89908704541773,
+      "intermediate": 0.4099475728088984,
+      "interface": 5.677204633704438
+    },
+    "trace_corr_min": 0.9999536081344857,
+    "trace_corr_max": 0.9999999996097042,
+    "first_last_maxdiff_over_absmax": 0.005523395914705544,
+    "transverse_info_available": true,
+    "vlim_raw": 150.24322320234404,
+    "vlim_residual": 0.9533147692226154,
+    "raw_absmax": 175.79816184893397,
+    "theory_two_way_ns": {
+      "8.95": 290.25144959466706,
+      "9.0": 291.66731032439714,
+      "9.05": 293.0831710541273
+    }
+  }
+}
