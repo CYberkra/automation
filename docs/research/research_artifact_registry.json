@@ -2268,7 +2268,7 @@
    "id": "2026-10-02_HS4_CO13_official_sfcw_bscan",
    "date": "2026-10-02",
    "type": "simulation_batch",
-   "status": "validated",
+   "status": "partial_validation",
    "capsule": "artifacts/research_checks/2026-10-02_halfspace_standard_hs",
    "artifacts": [
     "hs4_co13_t01..t13.in",
@@ -2276,7 +2276,15 @@
     "hs4_co13_bscan_official.npz",
     "fig_hs4_co13_bscan.png"
    ],
-   "summary": "HS4 rough-interface 13-trace common-offset line (Tx y=3.85+0.25k, offset 1.30m, x=6, z=27). 13/13 GPU solves (~190s each); two tool-window kills (t02, t04) were segment-boundary artifacts, t04 rerun ok. Official SFCW chain v0.2 -> B-scan triple view (raw 99.9% clip / AGC 20ns / per-trace norm). Direct wave ~3ns and ground reflection ~100ns uniform across all traces; interface echo at ~187ns only visible after AGC (real amplitude ~0.25% of ground reflection, -46dB class)."
+   "summary": "13 archived 3D Ex traces reconstruct exactly. Rank-1 residual is cross-trace variation, not a certified underground morphology. Only trace 7 matches HS1/HS2 acquisition coordinates; whole-line clean/reference and numerical controls remain incomplete.",
+   "historical_summary": "HS4 rough-interface 13-trace common-offset line (Tx y=3.85+0.25k, offset 1.30m, x=6, z=27). 13/13 GPU solves (~190s each); two tool-window kills (t02, t04) were segment-boundary artifacts, t04 rerun ok. Official SFCW chain v0.2 -> B-scan triple view (raw 99.9% clip / AGC 20ns / per-trace norm). Direct wave ~3ns and ground reflection ~100ns uniform across all traces; interface echo at ~187ns only visible after AGC (real amplitude ~0.25% of ground reflection, -46dB class).",
+   "validation_components": {
+    "solver_archive": "completed (historical record)",
+    "signed_official_rebuild": "exact; rechecked 2026-10-03",
+    "target_fidelity": "not_established",
+    "physical_attribution": "unverified"
+   },
+   "morphology_audit": "docs/research/2026-10-03_hs4_3d_shape_audit.md"
   },
   {
    "id": "2026-10-02_HS4_col6_25trace_highrelief_bscan",
@@ -2299,7 +2307,9 @@
     "physical_attribution": "unverified"
    },
    "current_diagnostic_figure": "artifacts/research_checks/2026-10-03_hs4_bscan_diagnostic_v02/col6_bscan_v0_2.png",
-   "repair_report": "docs/research/2026-10-03_hs4_bscan_repairs.md"
+   "repair_report": "docs/research/2026-10-03_hs4_bscan_repairs.md",
+   "morphology_audit": "docs/research/2026-10-03_hs4_3d_shape_audit.md",
+   "current_morphology_note": "3D shape is not certified: 16/25 official envelope picks lie at the 160-220ns window boundary; no COL6 trace exactly matches the HS1/HS2 reference coordinates. Actual x=1.60m lies 0.60m from x-PML inner edge, outside the existing central y-domain control coverage. Local-depth and full-field ray proxies are diagnostics only."
   },
   {
    "id": "2026-10-02_HS4T2D_121trace_2d_transect",
@@ -2379,6 +2389,36 @@
      "official_rebuild_traces": 280
     },
     "notes": "Normal HS acceptance passes unchanged thresholds; raw polarity/amplitude/shift mutations rejected. Legacy arrays, figures and summaries preserved. No solver/training/C5/C8 reads, frozen contracts/G4 unchanged."
+   },
+   {
+    "id": "2026-10-03_hs4_3d_shape_audit",
+    "date": "2026-10-03",
+    "type": "independent_morphology_audit",
+    "status": "morphology_not_established",
+    "reviewed_commit": "9daeeae",
+    "solver_executed": false,
+    "models_modified": false,
+    "report": "docs/research/2026-10-03_hs4_3d_shape_audit.md",
+    "directory": "artifacts/research_checks/2026-10-03_hs4_3d_shape_audit_v01",
+    "key_numbers": {
+     "col6": {
+      "reconstructed_traces": 25,
+      "raw_envelope_window_edge_count": 16,
+      "rank1_abs_peak_local_depth_correlation_DIAGNOSTIC_ONLY": 0.2582867152980946,
+      "rank1_template_local_depth_correlation_DIAGNOSTIC_ONLY": 0.6890123875624664,
+      "matched_reference_traces": []
+     },
+     "co13": {
+      "reconstructed_traces": 13,
+      "raw_envelope_window_edge_count": 0,
+      "rank1_abs_peak_local_depth_correlation_DIAGNOSTIC_ONLY": -0.02363360046979853,
+      "rank1_template_local_depth_correlation_DIAGNOSTIC_ONLY": 0.2047531287227768,
+      "matched_reference_traces": [
+       7
+      ]
+     }
+    },
+    "notes": "Input boxes agree with saved table and H5 grid is 240x240x660, float64 Ex. Geometry/text and exact reconstruction do not certify full-wave morphology or field representativeness. No C5/C8 evaluation, no new solver/training or G4 changes."
    }
   ],
   "schema": "research-artifact-registry/1",
