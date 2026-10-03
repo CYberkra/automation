@@ -6,6 +6,10 @@
 *.png binary
 *.jpg binary
 *.h5 binary
+*.vtkhdf binary
+# Preserve exact hashed V4 solver/failed-attempt logs for the relief study.
+artifacts/research_checks/2026-10-03_hs4t2d_relief08_raw/**/*.log -whitespace
+artifacts/research_checks/2026-10-03_hs4t2d_relief08_snapshot/*.log -whitespace
 # Preserve the hashed OBJ material writer's material-block separators.
 artifacts/research_checks/2026-10-03_hs4_browser_geometry/hs4_scene.mtl -whitespace
 # Preserve hashed Matplotlib SVG whitespace as emitted.
