@@ -38,6 +38,15 @@
  ],
  "runs": [
   {
+   "id": "hs4t2d_height_snapshot_design_20261004",
+   "status": "DESIGN_FEASIBILITY_ONLY_NOT_EXECUTION_CONTRACT",
+   "report": "docs/research/2026-10-04_hs4t2d_height_snapshot_design.md",
+   "evidence": "artifacts/research_checks/2026-10-04_hs4t2d_height_snapshot_design/feasibility.json",
+   "reproduce": "D:/gprmax_v4_gpu_env/Scripts/python.exe scripts/audit_hs4t2d_height_snapshot_feasibility.py --out artifacts/local_checks/height_snapshot_feasibility_new.json",
+   "calls_solver": false,
+   "next": "Prepare and freeze bounded matched-height continuous-wavefield pilot; validate source/temporal/spatial/EH/receiver closure before interface attribution."
+  },
+  {
    "id": "hs4t2d_joint_grid_20261004",
    "status": "COMPLETED_CONTROLLED_GRID_CHECK_NOT_FULL_CONVERGENCE_OR_EVENT_ATTRIBUTION",
    "report": "docs/research/2026-10-04_hs4t2d_joint_grid_findings.md",
