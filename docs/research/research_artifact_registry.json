@@ -38,6 +38,24 @@
  ],
  "runs": [
   {
+   "id": "hs4t2d_manual_boundary_20261003",
+   "report": "docs/research/2026-10-03_hs4t2d_manual_and_boundary_findings.md",
+   "status": "completed_PML_only_controls; full_cause_research_active",
+   "calls_solver": true,
+   "uses_field_data": false,
+   "solver": "gprMax4.0.0/CUDA double",
+   "traces": 32,
+   "all_actual_material_grids_verified": 32,
+   "portable_representative_grids": 8,
+   "control_directory": "artifacts/research_checks/2026-10-03_hs4t2d_boundary_controls",
+   "analysis_directory": "artifacts/research_checks/2026-10-03_hs4t2d_boundary_results_v0_2",
+   "manual_correction_directory": "artifacts/research_checks/2026-10-03_hs4t2d_manual_corrections",
+   "contract_sha256": "cf0fbb5818ab01c1944bfd8376cdbc4f6cc69294685c098c80525b6c168f09f8",
+   "independent_material_timing_checks": 9,
+   "scope": "fixed geometry native PML thickness sensitivity; raw/band domains separate; no boundary absolute error bound, spatial convergence or physical event identity",
+   "next": "actual15m standoff, X/Z joint refinement and credible spatial/path response, new bounded contract; G4 unchanged"
+  },
+  {
    "id": "hs4t2d_cause_diagnostic_20261003",
    "report": "docs/research/2026-10-03_hs4t2d_cause_diagnostic.md",
    "status": "completed_controlled_mechanism_evidence; full_spatial_convergence_and_physical_acceptance_not_certified",
