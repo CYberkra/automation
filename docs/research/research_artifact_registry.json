@@ -32,6 +32,96 @@
  ],
  "runs": [
   {
+   "id": "hs4t2d_cause_diagnostic_20261003",
+   "report": "docs/research/2026-10-03_hs4t2d_cause_diagnostic.md",
+   "status": "completed_controlled_mechanism_evidence; full_spatial_convergence_and_physical_acceptance_not_certified",
+   "solver": "gprMax 4.0.0 / CUDA double",
+   "calls_solver": true,
+   "uses_field_data": false,
+   "new_traces": 101,
+   "raw_float64_traces_verified": 101,
+   "execution_time_actual_material_grids_verified": 101,
+   "portable_representative_grids": 17,
+   "stages": [
+    {
+     "control_directory": "artifacts/research_checks/2026-10-03_hs4t2d_cause_controls",
+     "analysis_directory": "artifacts/research_checks/2026-10-03_hs4t2d_cause_results",
+     "traces": 67,
+     "contract_sha256": "2aaa4521d50db25387d31e92928273c751f8e1283bda2e26808ae4a29733f76e"
+    },
+    {
+     "control_directory": "artifacts/research_checks/2026-10-03_hs4t2d_source_controls",
+     "analysis_directory": "artifacts/research_checks/2026-10-03_hs4t2d_cause_confirmation",
+     "traces": 32,
+     "contract_sha256": "1cb6e3061606ebf27df836fa2cbf43c931a4dbb79ac24b9af09e68d962a5b359"
+    },
+    {
+     "control_directory": "artifacts/research_checks/2026-10-03_hs4t2d_zfine_confirmation",
+     "analysis_directory": "artifacts/research_checks/2026-10-03_hs4t2d_zfine_results",
+     "traces": 2,
+     "contract_sha256": "c5d21d417483cf7a91f2fb66e9d118f2477339d6ea92bf618dbca351977cde80"
+    }
+   ],
+   "verified_mechanisms": [
+    "flat-reference horizontal echo subtraction",
+    "full-window display dynamic range",
+    "standoff/propagation condition shape effect",
+    "finite vertical-grid phase/timing sensitivity"
+   ],
+   "scope": "2D development diagnostics only; no 3D/field extrapolation, clean labels, G4 or historical acceptance changes",
+   "cpu_rebuild": "artifacts/research_checks/2026-10-03_hs4t2d_zfine_results/rebuild_verification.json"
+  },
+  {
+   "id": "hs4t2d_relief08_snapshot_20261003",
+   "report": "docs/research/2026-10-03_hs4t2d_relief08_comparison.md",
+   "directory": "artifacts/research_checks/2026-10-03_hs4t2d_relief08_snapshot",
+   "visual_directory": "artifacts/research_checks/2026-10-03_hs4t2d_relief08_snapshot_visual",
+   "contract": "artifacts/research_checks/2026-10-03_hs4t2d_relief08_snapshot/execution_contract.json",
+   "contract_sha256": "fd41e66404fcae9580e8a98cdc5cd0e2e2a35ac65b395054cd1b2eb7a723c2f4",
+   "status": "completed_and_passive_observer_verified; SFCW_shape_root_cause_pending",
+   "solver": "gprMax 4.0.0 / CUDA double",
+   "calls_solver": true,
+   "uses_field_data": false,
+   "runs": 1,
+   "snapshots": 9,
+   "float64_finite_components_verified": 54,
+   "raw_receiver_bit_identical": true,
+   "scope": "broadband impulse instantaneous Ey animation; not a 20-170MHz field reconstruction or physical attribution"
+  },
+  {
+   "id": "hs4t2d_relief08_comparison_20261003",
+   "report": "docs/research/2026-10-03_hs4t2d_relief08_comparison.md",
+   "directory": "artifacts/research_checks/2026-10-03_hs4t2d_relief08_results",
+   "raw_directory": "artifacts/research_checks/2026-10-03_hs4t2d_relief08_raw",
+   "design_directory": "artifacts/research_checks/2026-10-03_hs4t2d_relief08_design",
+   "visual_directory": "artifacts/research_checks/2026-10-03_hs4t2d_relief08_visual_v0_2",
+   "contract": "artifacts/research_checks/2026-10-03_hs4t2d_relief08_design/execution_contract_cuda_cached_att4.json",
+   "contract_sha256": "1759e8e012d8ac263e829c9ac068d38822001c10acfb367d92b751ed53a742a9",
+   "status": "completed_and_numerically_reproduced_geometry_contrast; physical_shape_attribution_pending",
+   "solver": "gprMax 4.0.0 / CUDA double; raw Ey float64",
+   "calls_solver": true,
+   "uses_field_data": false,
+   "traces": 363,
+   "groups": ["baseline_0.4m", "relief2p0_0.8m", "flat_2.95m_depth"],
+   "verification": "363 H5 and actual material grids; baseline 121 raw traces exact; 7 cached/uncached raw traces exact; relocated archive processing outputs byte-identical",
+   "next": "Separate propagation, boundary and processing contributions; larger relief changed B-scan but did not establish a clear arch outline. No physical acceptance or training eligibility."
+  },
+  {
+   "id": "hs4_browser_geometry_20261003",
+   "directory": "artifacts/research_checks/2026-10-03_hs4_browser_geometry",
+   "report": "docs/research/2026-10-03_hs4_browser_model_viewers.md",
+   "export_script": "scripts/export_hs4_browser_geometry.py",
+   "verification_script": "scripts/check_hs4_browser_geometry.py",
+   "status": "input_geometry_export_verified_and_browser_import_tested",
+   "scope": "HS4 archived input boxes and COL6 H5 Position metadata; not solved material-grid or waveform acceptance",
+   "calls_solver": false,
+   "uses_field_data": false,
+   "outputs": ["hs4_interface.obj", "hs4_scene.obj", "hs4_scene.mtl", "hs4_interface.vtp"],
+   "verification": "verification.json; 2304 plateaus, 51 input identities, OBJ/VTP/CSV and solid volumes; six core outputs repeated byte-identically",
+   "browser_imports": ["https://3dviewer.net/", "https://kitware.github.io/glance/app/"],
+   "next": "Inspect input geometry and COL6 profile independently; solver-grid and physical waveform attribution remain pending numerical controls"
+  },
+  {
    "analysis_recompute": "results.json byte-identical across analysis_r1/analysis_r2",
    "analysis_script": "scripts/analyze_batch2d_fine2.py",
    "attempts": "one each, consumed, gate closed",

@@ -1,0 +1,2051 @@
+
+=== Electromagnetic modelling software based on the Finite-Difference Time-Domain (FDTD) method 
+
+    www.gprmax.com   __  __
+     __ _ _ __  _ __|  \/  | __ ___  __
+    / _` | '_ \| '__| |\/| |/ _` \ \/ /
+   | (_| | |_) | |  | |  | | (_| |>  <
+    \__, | .__/|_|  |_|  |_|\__,_/_/\_\\
+    |___/|_|
+                     v4.0.0 (Caol Ila)
+
+ Copyright (C) 2015-2026: The University of Edinburgh, United Kingdom
+
+ gprMax is free software: you can redistribute it and/or modify it under the
+  terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+ gprMax is distributed in the hope that it will be useful, but WITHOUT ANY
+  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+  A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ You should have received a copy of the GNU General Public License along with
+  gprMax.  If not, see www.gnu.org/licenses.
+
+DESKTOP-DGLCK4J | unknown unknown | unknown x unknown (8 cores, 16 cores with Hyper-Threading) | 15.8 GiB | Windows 11 (64-bit)
+|--->OpenMP: 8 threads
+|--->CUDA:
+     |--->Device 0: NVIDIA GeForce RTX 3060 Laptop GPU | 6.0 GiB
+Constants/variables used/available for Python scripting: {c: 299792458.0, current_model_run: 1, e0: 8.8541878188e-12, inputfile: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in, m0: 1.25663706127e-06, number_model_runs: 121, z0: 376.7303134118051}
+
+Model title: HS4T2D transect-2D fast study v0.1 (kinematic companion of HS4; invariant y; profile x = 3D bi=6 transect)
+Spatial discretisation: 0.05 x 0.05 x 0.05m
+Domain size: 12 x 0.05 x 33m (240 x 1 x 660 = 158400 cells)
+#domain: 12.0 0.05 33.0 detected a 2D model from a 1-cell-thick axis (legacy, implicit style) - consider declaring '#domain_mode: TM' explicitly with 'inf' on that axis in '#domain' instead, which also supports TE mode.
+Mode: 2D TMy
+Time step (at CFL limit): 1.17933e-10 secs
+Time window: 6e-07 secs (5089 iterations)
+Simulation will use 8 OpenMP threads
+PML thickness: x0=20, y0=0, z0=20, xmax=20, ymax=0, zmax=20
+Simple sources will step 0.05m, 0m, 0m for each model run.
+All receivers will step 0.05m, 0m, 0m for each model run.
+Waveform impulse of type impulse with maximum amplitude scaling 1, frequency 1Hz created.
+Hertzian dipole with polarity y at 2.6m, 0m, 27m, using waveform impulse created.
+Receiver at 3.9m, 0m, 27m with output component(s) Ey created.
+Material rock with eps_r=9, sigma=0.001 S/m; mu_r=1, sigma*=0 Ohm/m created.
+Material cover with eps_r=18.017, sigma=0.003 S/m; mu_r=1, sigma*=0 Ohm/m created.
+Debye disperion added to cover with delta_eps_r=7.88, and tau=6.457e-09 secs created.
+PML formulation set to HORIPML
+Geometry view from 0m, 0m, 0m, to 12m, 0.05m, 33m, discretisation 0.05m, 0.05m, 0.05m, with filename base hs4t2d_geom created.
+Box from 0m, 0m, 0m, to 12m, 0.05m, 12m of material(s) rock created, dielectric smoothing is on.
+Box from 0m, 0m, 8.85m, to 0.25m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 0.25m, 0m, 8.85m, to 0.5m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 0.5m, 0m, 8.85m, to 0.75m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 0.75m, 0m, 8.85m, to 1m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 1m, 0m, 8.85m, to 1.25m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 1.25m, 0m, 8.75m, to 1.5m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 1.5m, 0m, 8.75m, to 1.75m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 1.75m, 0m, 8.65m, to 2m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 2m, 0m, 8.65m, to 2.25m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 2.25m, 0m, 8.65m, to 2.5m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 2.5m, 0m, 8.65m, to 2.75m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 2.75m, 0m, 8.75m, to 3m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 3m, 0m, 8.75m, to 3.25m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 3.25m, 0m, 8.85m, to 3.5m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 3.5m, 0m, 8.95m, to 3.75m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 3.75m, 0m, 9.05m, to 4m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 4m, 0m, 9.15m, to 4.25m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 4.25m, 0m, 9.25m, to 4.5m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 4.5m, 0m, 9.35m, to 4.75m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 4.75m, 0m, 9.35m, to 5m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 5m, 0m, 9.45m, to 5.25m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 5.25m, 0m, 9.45m, to 5.5m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 5.5m, 0m, 9.45m, to 5.75m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 5.75m, 0m, 9.45m, to 6m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 6m, 0m, 9.45m, to 6.25m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 6.25m, 0m, 9.45m, to 6.5m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 6.5m, 0m, 9.35m, to 6.75m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 6.75m, 0m, 9.35m, to 7m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 7m, 0m, 9.25m, to 7.25m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 7.25m, 0m, 9.25m, to 7.5m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 7.5m, 0m, 9.15m, to 7.75m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 7.75m, 0m, 9.05m, to 8m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 8m, 0m, 9.05m, to 8.25m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 8.25m, 0m, 8.95m, to 8.5m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 8.5m, 0m, 8.95m, to 8.75m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 8.75m, 0m, 8.95m, to 9m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 9m, 0m, 8.95m, to 9.25m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 9.25m, 0m, 8.95m, to 9.5m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 9.5m, 0m, 8.95m, to 9.75m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 9.75m, 0m, 8.95m, to 10m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 10m, 0m, 9.05m, to 10.25m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 10.25m, 0m, 9.15m, to 10.5m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 10.5m, 0m, 9.15m, to 10.75m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 10.75m, 0m, 9.25m, to 11m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 11m, 0m, 9.25m, to 11.25m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 11.25m, 0m, 9.25m, to 11.5m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 11.5m, 0m, 9.25m, to 11.75m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+Box from 11.75m, 0m, 9.25m, to 12m, 0.05m, 12m of material(s) cover created, dielectric smoothing is off.
+
+--- Model 1/121, input file: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Memory required (estimated): ~42.0 MB [main_grid] + ~65.0 MB overhead = 107.0 MB
+
+PML boundaries [main_grid]: {formulation: HORIPML, order: 1, thickness (cells): x0: 20, y0: 0, z0: 20, xmax: 20, ymax: 0, zmax: 20}
+
+
+Materials [main_grid]:
+    |            |         |        | sigma | Delta | tau        | omega | delta | gamma |      | sigma*  | Dielectric 
+ ID | Name       | Type    | eps_r  | [S/m] | eps_r | [s]        | [Hz]  | [Hz]  | [Hz]  | mu_r | [Ohm/m] | smoothable 
+----+------------+---------+--------+-------+-------+------------+-------+-------+-------+------+---------+------------
+  0 | pec        | builtin | 1      | inf   |       |            |       |       |       | 1    | 0       | False      
+  1 | pmc        | builtin | 1      | 0     |       |            |       |       |       | 1    | inf     | False      
+  2 | free_space | builtin | 1      | 0     |       |            |       |       |       | 1    | 0       | True       
+  3 | rock       |         | 9      | 0.001 |       |            |       |       |       | 1    | 0       | True       
+  4 | cover      | debye   | 18.017 | 0.003 | 7.878 | 6.4567e-09 |       |       |       | 1    | 0       | False      
+
+Numerical dispersion analysis [main_grid] not carried out as impulse waveform used.
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 1/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile1.h5
+
+Memory used (estimated): ~145.4 MB host + ~1.1 GB device
+Time taken: 2.0179 seconds
+
+
+--- Model 2/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 2/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile2.h5
+
+Memory used (estimated): ~145.4 MB host + ~1.1 GB device
+Time taken: 1.7089 seconds
+
+
+--- Model 3/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 3/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile3.h5
+
+Memory used (estimated): ~146.2 MB host + ~1.1 GB device
+Time taken: 1.6917 seconds
+
+
+--- Model 4/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 4/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile4.h5
+
+Memory used (estimated): ~145.8 MB host + ~1.1 GB device
+Time taken: 1.8031 seconds
+
+
+--- Model 5/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 5/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile5.h5
+
+Memory used (estimated): ~145.6 MB host + ~1.1 GB device
+Time taken: 1.6745 seconds
+
+
+--- Model 6/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 6/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile6.h5
+
+Memory used (estimated): ~145.9 MB host + ~1.1 GB device
+Time taken: 1.6576 seconds
+
+
+--- Model 7/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 7/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile7.h5
+
+Memory used (estimated): ~145.7 MB host + ~1.1 GB device
+Time taken: 1.6526 seconds
+
+
+--- Model 8/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 8/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile8.h5
+
+Memory used (estimated): ~146.4 MB host + ~1.1 GB device
+Time taken: 1.6409 seconds
+
+
+--- Model 9/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 9/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile9.h5
+
+Memory used (estimated): ~146.0 MB host + ~1.1 GB device
+Time taken: 1.6240 seconds
+
+
+--- Model 10/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 10/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile10.h5
+
+Memory used (estimated): ~146.4 MB host + ~1.1 GB device
+Time taken: 1.6392 seconds
+
+
+--- Model 11/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 11/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile11.h5
+
+Memory used (estimated): ~145.8 MB host + ~1.1 GB device
+Time taken: 1.6382 seconds
+
+
+--- Model 12/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 12/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile12.h5
+
+Memory used (estimated): ~145.8 MB host + ~1.1 GB device
+Time taken: 1.7269 seconds
+
+
+--- Model 13/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 13/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile13.h5
+
+Memory used (estimated): ~145.8 MB host + ~1.1 GB device
+Time taken: 1.7223 seconds
+
+
+--- Model 14/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 14/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile14.h5
+
+Memory used (estimated): ~145.8 MB host + ~1.1 GB device
+Time taken: 1.6896 seconds
+
+
+--- Model 15/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 15/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile15.h5
+
+Memory used (estimated): ~145.7 MB host + ~1.1 GB device
+Time taken: 1.6539 seconds
+
+
+--- Model 16/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 16/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile16.h5
+
+Memory used (estimated): ~145.6 MB host + ~1.1 GB device
+Time taken: 1.6689 seconds
+
+
+--- Model 17/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 17/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile17.h5
+
+Memory used (estimated): ~145.9 MB host + ~1.1 GB device
+Time taken: 1.7257 seconds
+
+
+--- Model 18/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 18/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile18.h5
+
+Memory used (estimated): ~146.3 MB host + ~1.1 GB device
+Time taken: 1.7476 seconds
+
+
+--- Model 19/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 19/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile19.h5
+
+Memory used (estimated): ~146.0 MB host + ~1.1 GB device
+Time taken: 1.6920 seconds
+
+
+--- Model 20/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 20/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile20.h5
+
+Memory used (estimated): ~146.1 MB host + ~1.1 GB device
+Time taken: 1.6994 seconds
+
+
+--- Model 21/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 21/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile21.h5
+
+Memory used (estimated): ~146.0 MB host + ~1.1 GB device
+Time taken: 1.8182 seconds
+
+
+--- Model 22/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 22/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile22.h5
+
+Memory used (estimated): ~146.1 MB host + ~1.1 GB device
+Time taken: 1.7538 seconds
+
+
+--- Model 23/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 23/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile23.h5
+
+Memory used (estimated): ~146.2 MB host + ~1.1 GB device
+Time taken: 2.1211 seconds
+
+
+--- Model 24/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 24/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile24.h5
+
+Memory used (estimated): ~149.0 MB host + ~1.1 GB device
+Time taken: 1.9880 seconds
+
+
+--- Model 25/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 25/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile25.h5
+
+Memory used (estimated): ~146.3 MB host + ~1.1 GB device
+Time taken: 2.2706 seconds
+
+
+--- Model 26/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 26/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile26.h5
+
+Memory used (estimated): ~146.2 MB host + ~1.1 GB device
+Time taken: 2.0105 seconds
+
+
+--- Model 27/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 27/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile27.h5
+
+Memory used (estimated): ~146.1 MB host + ~1.1 GB device
+Time taken: 1.8438 seconds
+
+
+--- Model 28/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 28/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile28.h5
+
+Memory used (estimated): ~146.0 MB host + ~1.1 GB device
+Time taken: 1.8698 seconds
+
+
+--- Model 29/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 29/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile29.h5
+
+Memory used (estimated): ~148.9 MB host + ~1.1 GB device
+Time taken: 1.9369 seconds
+
+
+--- Model 30/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 30/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile30.h5
+
+Memory used (estimated): ~149.2 MB host + ~1.1 GB device
+Time taken: 1.8141 seconds
+
+
+--- Model 31/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 31/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile31.h5
+
+Memory used (estimated): ~149.1 MB host + ~1.1 GB device
+Time taken: 1.8475 seconds
+
+
+--- Model 32/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 32/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile32.h5
+
+Memory used (estimated): ~146.2 MB host + ~1.1 GB device
+Time taken: 1.7636 seconds
+
+
+--- Model 33/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 33/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile33.h5
+
+Memory used (estimated): ~148.9 MB host + ~1.1 GB device
+Time taken: 1.7569 seconds
+
+
+--- Model 34/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 34/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile34.h5
+
+Memory used (estimated): ~148.6 MB host + ~1.1 GB device
+Time taken: 1.7344 seconds
+
+
+--- Model 35/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 35/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile35.h5
+
+Memory used (estimated): ~145.9 MB host + ~1.1 GB device
+Time taken: 1.7499 seconds
+
+
+--- Model 36/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 36/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile36.h5
+
+Memory used (estimated): ~146.1 MB host + ~1.1 GB device
+Time taken: 1.8347 seconds
+
+
+--- Model 37/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 37/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile37.h5
+
+Memory used (estimated): ~149.3 MB host + ~1.1 GB device
+Time taken: 1.8661 seconds
+
+
+--- Model 38/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 38/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile38.h5
+
+Memory used (estimated): ~149.1 MB host + ~1.1 GB device
+Time taken: 2.0985 seconds
+
+
+--- Model 39/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 39/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile39.h5
+
+Memory used (estimated): ~148.3 MB host + ~1.1 GB device
+Time taken: 1.7893 seconds
+
+
+--- Model 40/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 40/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile40.h5
+
+Memory used (estimated): ~148.8 MB host + ~1.1 GB device
+Time taken: 1.8350 seconds
+
+
+--- Model 41/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 41/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile41.h5
+
+Memory used (estimated): ~146.0 MB host + ~1.1 GB device
+Time taken: 1.8207 seconds
+
+
+--- Model 42/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 42/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile42.h5
+
+Memory used (estimated): ~148.8 MB host + ~1.1 GB device
+Time taken: 1.7955 seconds
+
+
+--- Model 43/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 43/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile43.h5
+
+Memory used (estimated): ~149.1 MB host + ~1.1 GB device
+Time taken: 1.7888 seconds
+
+
+--- Model 44/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 44/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile44.h5
+
+Memory used (estimated): ~147.2 MB host + ~1.1 GB device
+Time taken: 1.8595 seconds
+
+
+--- Model 45/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 45/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile45.h5
+
+Memory used (estimated): ~146.3 MB host + ~1.1 GB device
+Time taken: 1.8485 seconds
+
+
+--- Model 46/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 46/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile46.h5
+
+Memory used (estimated): ~148.5 MB host + ~1.1 GB device
+Time taken: 1.9049 seconds
+
+
+--- Model 47/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 47/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile47.h5
+
+Memory used (estimated): ~154.3 MB host + ~1.1 GB device
+Time taken: 1.8734 seconds
+
+
+--- Model 48/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 48/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile48.h5
+
+Memory used (estimated): ~155.4 MB host + ~1.1 GB device
+Time taken: 1.9258 seconds
+
+
+--- Model 49/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 49/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile49.h5
+
+Memory used (estimated): ~156.4 MB host + ~1.1 GB device
+Time taken: 1.7938 seconds
+
+
+--- Model 50/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 50/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile50.h5
+
+Memory used (estimated): ~149.5 MB host + ~1.1 GB device
+Time taken: 1.7249 seconds
+
+
+--- Model 51/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 51/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile51.h5
+
+Memory used (estimated): ~148.5 MB host + ~1.1 GB device
+Time taken: 1.7690 seconds
+
+
+--- Model 52/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 52/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile52.h5
+
+Memory used (estimated): ~148.9 MB host + ~1.1 GB device
+Time taken: 1.7927 seconds
+
+
+--- Model 53/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 53/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile53.h5
+
+Memory used (estimated): ~149.3 MB host + ~1.1 GB device
+Time taken: 1.7854 seconds
+
+
+--- Model 54/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 54/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile54.h5
+
+Memory used (estimated): ~147.4 MB host + ~1.1 GB device
+Time taken: 1.7944 seconds
+
+
+--- Model 55/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 55/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile55.h5
+
+Memory used (estimated): ~148.3 MB host + ~1.1 GB device
+Time taken: 1.7783 seconds
+
+
+--- Model 56/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 56/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile56.h5
+
+Memory used (estimated): ~155.1 MB host + ~1.1 GB device
+Time taken: 1.9737 seconds
+
+
+--- Model 57/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 57/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile57.h5
+
+Memory used (estimated): ~156.0 MB host + ~1.1 GB device
+Time taken: 1.7947 seconds
+
+
+--- Model 58/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 58/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile58.h5
+
+Memory used (estimated): ~156.5 MB host + ~1.1 GB device
+Time taken: 1.7676 seconds
+
+
+--- Model 59/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 59/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile59.h5
+
+Memory used (estimated): ~156.7 MB host + ~1.1 GB device
+Time taken: 1.7610 seconds
+
+
+--- Model 60/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 60/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile60.h5
+
+Memory used (estimated): ~146.7 MB host + ~1.1 GB device
+Time taken: 1.8073 seconds
+
+
+--- Model 61/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 61/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile61.h5
+
+Memory used (estimated): ~154.4 MB host + ~1.1 GB device
+Time taken: 1.7516 seconds
+
+
+--- Model 62/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 62/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile62.h5
+
+Memory used (estimated): ~149.1 MB host + ~1.1 GB device
+Time taken: 1.9089 seconds
+
+
+--- Model 63/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 63/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile63.h5
+
+Memory used (estimated): ~154.6 MB host + ~1.1 GB device
+Time taken: 1.9312 seconds
+
+
+--- Model 64/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 64/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile64.h5
+
+Memory used (estimated): ~146.6 MB host + ~1.1 GB device
+Time taken: 1.8254 seconds
+
+
+--- Model 65/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 65/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile65.h5
+
+Memory used (estimated): ~153.9 MB host + ~1.1 GB device
+Time taken: 1.7847 seconds
+
+
+--- Model 66/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 66/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile66.h5
+
+Memory used (estimated): ~155.2 MB host + ~1.1 GB device
+Time taken: 1.7750 seconds
+
+
+--- Model 67/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 67/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile67.h5
+
+Memory used (estimated): ~155.8 MB host + ~1.1 GB device
+Time taken: 1.7772 seconds
+
+
+--- Model 68/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 68/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile68.h5
+
+Memory used (estimated): ~156.3 MB host + ~1.1 GB device
+Time taken: 2.0152 seconds
+
+
+--- Model 69/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 69/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile69.h5
+
+Memory used (estimated): ~148.2 MB host + ~1.1 GB device
+Time taken: 1.9343 seconds
+
+
+--- Model 70/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 70/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile70.h5
+
+Memory used (estimated): ~154.4 MB host + ~1.1 GB device
+Time taken: 2.1957 seconds
+
+
+--- Model 71/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 71/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile71.h5
+
+Memory used (estimated): ~145.9 MB host + ~1.1 GB device
+Time taken: 2.0158 seconds
+
+
+--- Model 72/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 72/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile72.h5
+
+Memory used (estimated): ~154.2 MB host + ~1.1 GB device
+Time taken: 1.8852 seconds
+
+
+--- Model 73/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 73/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile73.h5
+
+Memory used (estimated): ~155.8 MB host + ~1.1 GB device
+Time taken: 1.8463 seconds
+
+
+--- Model 74/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 74/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile74.h5
+
+Memory used (estimated): ~156.1 MB host + ~1.1 GB device
+Time taken: 1.7584 seconds
+
+
+--- Model 75/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 75/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile75.h5
+
+Memory used (estimated): ~156.3 MB host + ~1.1 GB device
+Time taken: 1.8461 seconds
+
+
+--- Model 76/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 76/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile76.h5
+
+Memory used (estimated): ~148.9 MB host + ~1.1 GB device
+Time taken: 1.8304 seconds
+
+
+--- Model 77/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 77/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile77.h5
+
+Memory used (estimated): ~154.6 MB host + ~1.1 GB device
+Time taken: 1.9059 seconds
+
+
+--- Model 78/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 78/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile78.h5
+
+Memory used (estimated): ~148.6 MB host + ~1.1 GB device
+Time taken: 1.8567 seconds
+
+
+--- Model 79/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 79/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile79.h5
+
+Memory used (estimated): ~145.9 MB host + ~1.1 GB device
+Time taken: 1.8690 seconds
+
+
+--- Model 80/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 80/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile80.h5
+
+Memory used (estimated): ~146.8 MB host + ~1.1 GB device
+Time taken: 2.0489 seconds
+
+
+--- Model 81/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 81/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile81.h5
+
+Memory used (estimated): ~154.5 MB host + ~1.1 GB device
+Time taken: 1.9102 seconds
+
+
+--- Model 82/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 82/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile82.h5
+
+Memory used (estimated): ~155.5 MB host + ~1.1 GB device
+Time taken: 1.7900 seconds
+
+
+--- Model 83/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 83/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile83.h5
+
+Memory used (estimated): ~146.7 MB host + ~1.1 GB device
+Time taken: 1.8284 seconds
+
+
+--- Model 84/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 84/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile84.h5
+
+Memory used (estimated): ~153.9 MB host + ~1.1 GB device
+Time taken: 1.7940 seconds
+
+
+--- Model 85/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 85/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile85.h5
+
+Memory used (estimated): ~155.6 MB host + ~1.1 GB device
+Time taken: 1.8303 seconds
+
+
+--- Model 86/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 86/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile86.h5
+
+Memory used (estimated): ~156.0 MB host + ~1.1 GB device
+Time taken: 2.0863 seconds
+
+
+--- Model 87/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 87/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile87.h5
+
+Memory used (estimated): ~148.2 MB host + ~1.1 GB device
+Time taken: 1.8577 seconds
+
+
+--- Model 88/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 88/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile88.h5
+
+Memory used (estimated): ~154.9 MB host + ~1.1 GB device
+Time taken: 1.8706 seconds
+
+
+--- Model 89/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 89/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile89.h5
+
+Memory used (estimated): ~155.5 MB host + ~1.1 GB device
+Time taken: 1.7890 seconds
+
+
+--- Model 90/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 90/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile90.h5
+
+Memory used (estimated): ~156.2 MB host + ~1.1 GB device
+Time taken: 1.7841 seconds
+
+
+--- Model 91/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 91/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile91.h5
+
+Memory used (estimated): ~156.4 MB host + ~1.1 GB device
+Time taken: 1.8512 seconds
+
+
+--- Model 92/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 92/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile92.h5
+
+Memory used (estimated): ~149.2 MB host + ~1.1 GB device
+Time taken: 1.8166 seconds
+
+
+--- Model 93/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 93/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile93.h5
+
+Memory used (estimated): ~154.6 MB host + ~1.1 GB device
+Time taken: 1.9235 seconds
+
+
+--- Model 94/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 94/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile94.h5
+
+Memory used (estimated): ~154.5 MB host + ~1.1 GB device
+Time taken: 1.8331 seconds
+
+
+--- Model 95/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 95/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile95.h5
+
+Memory used (estimated): ~155.8 MB host + ~1.1 GB device
+Time taken: 1.7888 seconds
+
+
+--- Model 96/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 96/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile96.h5
+
+Memory used (estimated): ~156.3 MB host + ~1.1 GB device
+Time taken: 1.9078 seconds
+
+
+--- Model 97/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 97/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile97.h5
+
+Memory used (estimated): ~147.5 MB host + ~1.1 GB device
+Time taken: 1.9087 seconds
+
+
+--- Model 98/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 98/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile98.h5
+
+Memory used (estimated): ~154.8 MB host + ~1.1 GB device
+Time taken: 1.8259 seconds
+
+
+--- Model 99/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 99/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile99.h5
+
+Memory used (estimated): ~155.6 MB host + ~1.1 GB device
+Time taken: 1.8327 seconds
+
+
+--- Model 100/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 100/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile100.h5
+
+Memory used (estimated): ~155.9 MB host + ~1.1 GB device
+Time taken: 1.9794 seconds
+
+
+--- Model 101/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 101/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile101.h5
+
+Memory used (estimated): ~156.4 MB host + ~1.1 GB device
+Time taken: 1.8978 seconds
+
+
+--- Model 102/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 102/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile102.h5
+
+Memory used (estimated): ~156.4 MB host + ~1.1 GB device
+Time taken: 1.8049 seconds
+
+
+--- Model 103/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 103/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile103.h5
+
+Memory used (estimated): ~136.4 MB host + ~1.1 GB device
+Time taken: 1.9985 seconds
+
+
+--- Model 104/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 104/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile104.h5
+
+Memory used (estimated): ~144.1 MB host + ~1.1 GB device
+Time taken: 1.8760 seconds
+
+
+--- Model 105/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 105/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile105.h5
+
+Memory used (estimated): ~150.4 MB host + ~1.1 GB device
+Time taken: 1.8255 seconds
+
+
+--- Model 106/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 106/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile106.h5
+
+Memory used (estimated): ~141.7 MB host + ~1.1 GB device
+Time taken: 2.0567 seconds
+
+
+--- Model 107/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 107/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile107.h5
+
+Memory used (estimated): ~149.1 MB host + ~1.1 GB device
+Time taken: 1.9693 seconds
+
+
+--- Model 108/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 108/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile108.h5
+
+Memory used (estimated): ~150.0 MB host + ~1.1 GB device
+Time taken: 2.3730 seconds
+
+
+--- Model 109/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 109/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile109.h5
+
+Memory used (estimated): ~150.5 MB host + ~1.1 GB device
+Time taken: 2.1538 seconds
+
+
+--- Model 110/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 110/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile110.h5
+
+Memory used (estimated): ~150.7 MB host + ~1.1 GB device
+Time taken: 2.0940 seconds
+
+
+--- Model 111/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 111/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile111.h5
+
+Memory used (estimated): ~142.9 MB host + ~1.1 GB device
+Time taken: 2.0216 seconds
+
+
+--- Model 112/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 112/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile112.h5
+
+Memory used (estimated): ~149.2 MB host + ~1.1 GB device
+Time taken: 1.8301 seconds
+
+
+--- Model 113/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 113/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile113.h5
+
+Memory used (estimated): ~150.0 MB host + ~1.1 GB device
+Time taken: 2.0893 seconds
+
+
+--- Model 114/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 114/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile114.h5
+
+Memory used (estimated): ~150.2 MB host + ~1.1 GB device
+Time taken: 1.9588 seconds
+
+
+--- Model 115/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 115/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile115.h5
+
+Memory used (estimated): ~150.6 MB host + ~1.1 GB device
+Time taken: 1.9159 seconds
+
+
+--- Model 116/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 116/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile116.h5
+
+Memory used (estimated): ~141.2 MB host + ~1.1 GB device
+Time taken: 1.8166 seconds
+
+
+--- Model 117/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 117/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile117.h5
+
+Memory used (estimated): ~148.7 MB host + ~1.1 GB device
+Time taken: 1.8022 seconds
+
+
+--- Model 118/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 118/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile118.h5
+
+Memory used (estimated): ~149.7 MB host + ~1.1 GB device
+Time taken: 1.8841 seconds
+
+
+--- Model 119/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 119/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile119.h5
+
+Memory used (estimated): ~150.1 MB host + ~1.1 GB device
+Time taken: 1.8111 seconds
+
+
+--- Model 120/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 120/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile120.h5
+
+Memory used (estimated): ~150.6 MB host + ~1.1 GB device
+Time taken: 1.8545 seconds
+
+
+--- Model 121/121, input file (not re-processed, i.e. geometry fixed): D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0\profile.in 
+
+
+Output directory: D:\自动处理\artifacts\simulations\2026-10-03_hs4t2d_relief08_cuda_cached_att4\relief2p0
+
+
+
+
+Model 121/121 solving on DESKTOP-DGLCK4J with CUDA backend using Device 0: NVIDIA GeForce RTX 3060 Laptop GPU
+
+Written output file: profile121.h5
+
+Memory used (estimated): ~140.9 MB host + ~1.1 GB device
+Time taken: 1.8084 seconds
+
+=== Simulation completed in 5 minutes and 6.0392 seconds =======================
+

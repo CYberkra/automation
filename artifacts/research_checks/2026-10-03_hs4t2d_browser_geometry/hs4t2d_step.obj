@@ -1,0 +1,31 @@
+# HS4 archived input geometry. Coordinates in metres; Z up.
+# No smoothing or exaggeration.
+mtllib hs4_scene.mtl
+o rock
+s off
+usemtl rock
+v 0 0.025 0
+v 6 0.025 0
+v 6 0.025 9.4
+v 0 0.025 9.4
+v 12 0.025 0
+v 12 0.025 8.6
+v 6 0.025 8.6
+f 1 2 3
+f 1 3 4
+f 2 5 6
+f 2 6 7
+o cover
+s off
+usemtl cover
+v 0 0.025 9.4
+v 6 0.025 9.4
+v 6 0.025 12
+v 0 0.025 12
+v 6 0.025 8.6
+v 12 0.025 8.6
+v 12 0.025 12
+f 8 9 10
+f 8 10 11
+f 12 13 14
+f 12 14 10

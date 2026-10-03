@@ -1,0 +1,270 @@
+{
+  "status": "COMPLETED",
+  "new_traces": 32,
+  "contract_sha256": "1cb6e3061606ebf27df836fa2cbf43c931a4dbb79ac24b9af09e68d962a5b359",
+  "first_results_manifest_sha256": "e550d2b176500e415e8925eebf4893f01187b33be2a342f2eb6c2b17e911690c",
+  "official_processing_sha256": "adad556f09140956f0ee19d3038430e06a9ae8be6a826dcad723096d99624a3b",
+  "source_audit": {
+    "ricker12_rough": {
+      "quantity": "electric_current",
+      "units": "A",
+      "spatial_scale": 0.05,
+      "source_all_501_bins_valid": true,
+      "source_spectrum_min_relative_db": -18.766825084427733
+    },
+    "ricker12_halfspace": {
+      "quantity": "electric_current",
+      "units": "A",
+      "spatial_scale": 0.05,
+      "source_all_501_bins_valid": true,
+      "source_spectrum_min_relative_db": -18.766825084427733
+    },
+    "ricker24_rough": {
+      "quantity": "electric_current",
+      "units": "A",
+      "spatial_scale": 0.05,
+      "source_all_501_bins_valid": true,
+      "source_spectrum_min_relative_db": -18.766825084427733
+    },
+    "ricker24_halfspace": {
+      "quantity": "electric_current",
+      "units": "A",
+      "spatial_scale": 0.05,
+      "source_all_501_bins_valid": true,
+      "source_spectrum_min_relative_db": -18.766825084427733
+    },
+    "ricker36_rough": {
+      "quantity": "electric_current",
+      "units": "A",
+      "spatial_scale": 0.05,
+      "source_all_501_bins_valid": true,
+      "source_spectrum_min_relative_db": -18.766825084427733
+    },
+    "ricker36_halfspace": {
+      "quantity": "electric_current",
+      "units": "A",
+      "spatial_scale": 0.05,
+      "source_all_501_bins_valid": true,
+      "source_spectrum_min_relative_db": -18.766825084427733
+    },
+    "zfine13_rough": {
+      "quantity": "electric_current",
+      "units": "A",
+      "spatial_scale": 0.05,
+      "source_all_501_bins_valid": true,
+      "source_spectrum_min_relative_db": -1.5429239464852607e-14
+    },
+    "zfine13_halfspace": {
+      "quantity": "electric_current",
+      "units": "A",
+      "spatial_scale": 0.05,
+      "source_all_501_bins_valid": true,
+      "source_spectrum_min_relative_db": -1.5429239464852607e-14
+    }
+  },
+  "comparisons": {
+    "source_impulse_to_ricker_center_spectral": {
+      "hann_weighted_complex_relative_L2": 1.7247234477688885e-06,
+      "hann_weighted_amplitude_L2_ratio": 0.9999999999970397,
+      "complex_coherence_real": 0.9999999999985129,
+      "complex_coherence_imag": 1.528694479348892e-13,
+      "relative_L2_by_trace": [
+        1.7247234477688885e-06
+      ]
+    },
+    "source_impulse_to_ricker_center_underground": {
+      "relative_L2": 4.526664938462359e-09,
+      "amplitude_L2_ratio": 1.0000000000090294,
+      "relative_L2_by_trace": [
+        4.526664938462358e-09
+      ]
+    },
+    "ricker_domain12_to24_center_spectral": {
+      "hann_weighted_complex_relative_L2": 0.9765269100294044,
+      "hann_weighted_amplitude_L2_ratio": 0.2252174266114614,
+      "complex_coherence_real": 0.215609610453143,
+      "complex_coherence_imag": 0.00203142898182849,
+      "relative_L2_by_trace": [
+        0.9765269100294042
+      ]
+    },
+    "ricker_domain24_to36_center_spectral": {
+      "hann_weighted_complex_relative_L2": 0.2237959901557332,
+      "hann_weighted_amplitude_L2_ratio": 0.9761445629774503,
+      "complex_coherence_real": 0.974637177108678,
+      "complex_coherence_imag": 0.001630093550224778,
+      "relative_L2_by_trace": [
+        0.22379599015573315
+      ]
+    },
+    "ricker_domain12_to24_center_underground": {
+      "relative_L2": 0.011765464822078268,
+      "amplitude_L2_ratio": 1.0004183948533298,
+      "relative_L2_by_trace": [
+        0.011765464822078268
+      ]
+    },
+    "ricker_domain24_to36_center_underground": {
+      "relative_L2": 0.01670419203042479,
+      "amplitude_L2_ratio": 1.000031639583599,
+      "relative_L2_by_trace": [
+        0.01670419203042479
+      ]
+    },
+    "impulse_domain12_to36_13stations_underground": {
+      "relative_L2": 0.07348900276544983,
+      "amplitude_L2_ratio": 0.9980723086954285,
+      "relative_L2_by_trace": [
+        0.058322044350333065,
+        0.046765885319017875,
+        0.04400115954430058,
+        0.0393796279397453,
+        0.027758749796631888,
+        0.020590287867378775,
+        0.01896204534224876,
+        0.024072099034199424,
+        0.03402266777108404,
+        0.05142745976718317,
+        0.09312147424696322,
+        0.18199156576444878,
+        0.3323843924199516
+      ]
+    },
+    "z_refinement_13stations_spectral": {
+      "hann_weighted_complex_relative_L2": 0.06931917581372113,
+      "hann_weighted_amplitude_L2_ratio": 0.9901230541904716,
+      "complex_coherence_real": 0.997622722722673,
+      "complex_coherence_imag": -0.03207132196972976,
+      "relative_L2_by_trace": [
+        0.06908252611519679,
+        0.07577126244900365,
+        0.07542602379162783,
+        0.10807132174591882,
+        0.18464101977549066,
+        0.14000930886396193,
+        0.13766950745249276,
+        0.18264976518202222,
+        0.12555355696991669,
+        0.0842664513771657,
+        0.06476766875651198,
+        0.049941007065580224,
+        0.04213853815885784
+      ]
+    },
+    "z_refinement_13stations_underground_signed": {
+      "relative_L2": 0.674146498824234,
+      "amplitude_L2_ratio": 1.074359383706198,
+      "relative_L2_by_trace": [
+        0.6832990557574071,
+        0.6670343898682426,
+        0.6453066937083001,
+        0.7054980486961702,
+        0.7128204865099899,
+        0.6535662708143546,
+        0.6003603776093462,
+        0.5841574326018592,
+        0.6163232897029097,
+        0.6976386654085026,
+        0.8106982880430976,
+        0.9024244232064768,
+        0.8219063096257546
+      ]
+    },
+    "z_refinement_13stations_underground_envelope": {
+      "relative_L2": 0.23350228964026354,
+      "amplitude_L2_ratio": 1.074340909943689,
+      "relative_L2_by_trace": [
+        0.25003829292239343,
+        0.25380301827803303,
+        0.2785220644591268,
+        0.3194234145074078,
+        0.23371577578397643,
+        0.19132567369465958,
+        0.1668189972683647,
+        0.16221502640171984,
+        0.1789155941224035,
+        0.22385870733514207,
+        0.2946122950840338,
+        0.31574826593968874,
+        0.3402785835206139
+      ]
+    }
+  },
+  "fine_center_replay_bit_identical": {
+    "rough": true,
+    "halfspace": true
+  },
+  "window_peak_diagnostic": {
+    "coarse15": {
+      "peak_time_ns": [
+        193.77910844976714,
+        192.94743845642049,
+        173.81902860944777,
+        173.81902860944777,
+        173.81902860944777,
+        174.65069860279442,
+        175.48236859614104,
+        177.14570858283435,
+        177.97737857618097,
+        178.8090485695276,
+        179.64071856287424,
+        181.30405854956754,
+        192.11576846307383
+      ],
+      "span_ns": 19.960079840319366,
+      "scope": "window maxima can switch lobes; not certified interface arrivals"
+    },
+    "fine15": {
+      "peak_time_ns": [
+        191.2840984697272,
+        191.2840984697272,
+        172.15568862275447,
+        171.32401862940787,
+        171.32401862940787,
+        172.15568862275447,
+        173.81902860944777,
+        174.65069860279442,
+        175.48236859614104,
+        175.48236859614104,
+        177.14570858283435,
+        169.66067864271457,
+        190.45242847638056
+      ],
+      "span_ns": 21.62341982701264,
+      "scope": "window maxima can switch lobes; not certified interface arrivals"
+    },
+    "low2_aligned": {
+      "peak_time_ns": [
+        179.64071856287424,
+        177.97737857618097,
+        176.3140385894877,
+        175.48236859614104,
+        174.65069860279442,
+        173.81902860944777,
+        173.81902860944777,
+        174.65069860279442,
+        176.3140385894877,
+        179.64071856287424,
+        187.95741849634067,
+        190.45242847638056,
+        183.79906852960747
+      ],
+      "span_ns": 16.63339986693279,
+      "scope": "window maxima can switch lobes; not certified interface arrivals"
+    }
+  },
+  "reference_algebra": {
+    "signed_complex_closure_max_abs": 3.0531133177191805e-16,
+    "flat_to_rough_contrast_window_squared_norm_ratio": 3.3435166983180262,
+    "reference_mechanism_shared_color_limit": 0.15161609761891373,
+    "scope": "exact contrast decomposition, not additive physical energy contributions"
+  },
+  "display_diagnostic": {
+    "raw_0_250ns_shared_scale": 175.79814626342346,
+    "underground_raw_window_peak": 0.08024828189839754,
+    "underground_peak_to_full_plot_scale_ratio": 0.00045647968197656694,
+    "scope": "display dynamic range only; not SNR or hardware sensitivity"
+  },
+  "code_sha256": "3275d0a8c0c7d7e9ef73826ac0c0a4d3f9b1f10d12d9cddc20d3ba95b1a53963",
+  "interpretation": "Evidence separates reference, propagation height, in-band source and vertical-grid effects. No 3D/field extrapolation or complete numerical convergence."
+}
