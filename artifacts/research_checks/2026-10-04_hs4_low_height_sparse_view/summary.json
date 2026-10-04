@@ -1,0 +1,127 @@
+{
+  "status": "COMPLETED_EXISTING_3_STATION_DISPLAY_NOT_FULL_SCAN",
+  "solver_executed": false,
+  "script_sha256": "860d71faffd7daf0302efe693c4976cc9123ce9c0bc4040ca15b5dc902485e6a",
+  "raw_files": [
+    {
+      "height_m": 2,
+      "station_index": 1,
+      "file": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/low_base/profile1.h5",
+      "sha256": "b06ce1125b23fdbbb9b421e49ef07ead4e582361e2680824307af4ef1c7533d0",
+      "tx_m": [
+        14.600000000000001,
+        0.0,
+        14.0
+      ],
+      "rx_m": [
+        15.9,
+        0.0,
+        14.0
+      ]
+    },
+    {
+      "height_m": 2,
+      "station_index": 61,
+      "file": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/low_base/profile2.h5",
+      "sha256": "8ecb02cae0357ca7f8e8190c6e4e6aaa31fc9a180f6e30e4fde184724ebc6d0a",
+      "tx_m": [
+        17.6,
+        0.0,
+        14.0
+      ],
+      "rx_m": [
+        18.900000000000002,
+        0.0,
+        14.0
+      ]
+    },
+    {
+      "height_m": 2,
+      "station_index": 121,
+      "file": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/low_base/profile3.h5",
+      "sha256": "b5d5a052561e51ec6fad29104a7add4621f9686c93c2fb4f52ed1b3b3d16f790",
+      "tx_m": [
+        20.6,
+        0.0,
+        14.0
+      ],
+      "rx_m": [
+        21.900000000000002,
+        0.0,
+        14.0
+      ]
+    },
+    {
+      "height_m": 15,
+      "station_index": 1,
+      "file": "artifacts/research_checks/2026-10-04_hs4t2d_joint_grid_remaining/left_rough/profile1.h5",
+      "sha256": "4b2cf1819317a50462991f89f8172e5bc8a59805c0ed2d26b68f3236536d59bd",
+      "tx_m": [
+        14.600000000000001,
+        0.0,
+        27.0
+      ],
+      "rx_m": [
+        15.9,
+        0.0,
+        27.0
+      ]
+    },
+    {
+      "height_m": 15,
+      "station_index": 61,
+      "file": "artifacts/research_checks/2026-10-04_hs4t2d_joint_grid_centre/centre_rough/profile.h5",
+      "sha256": "a8934a733c28266943f4352005a1a80f53482beedf6a2655f74b1fcb939e033f",
+      "tx_m": [
+        17.6,
+        0.0,
+        27.0
+      ],
+      "rx_m": [
+        18.900000000000002,
+        0.0,
+        27.0
+      ]
+    },
+    {
+      "height_m": 15,
+      "station_index": 121,
+      "file": "artifacts/research_checks/2026-10-04_hs4t2d_joint_grid_remaining/right_rough/profile6.h5",
+      "sha256": "fede83d01974daa2eb2a455a004ca6fc17613be3bbe7988a5c7fbf75eef851d7",
+      "tx_m": [
+        20.6,
+        0.0,
+        27.0
+      ],
+      "rx_m": [
+        21.900000000000002,
+        0.0,
+        27.0
+      ]
+    }
+  ],
+  "profile_sha256": "d24a32e6810faf7d544ce523eebebc671f36d540cce73737d39e368aecfbcdd8",
+  "low_cached_arrays_bitwise_equal": true,
+  "windows_ns": {
+    "2": [
+      55,
+      145
+    ],
+    "15": [
+      140,
+      230
+    ]
+  },
+  "color_norm": {
+    "type": "SymLog",
+    "shared": true,
+    "vmax": 0.2578473971995092,
+    "linthresh": 0.00025784739719950924
+  },
+  "column_display_width_m": 0.6,
+  "column_width_scope": "Drawing only, not antenna footprint or spatial sampling coverage.",
+  "processing": "Same501 source-normalized complex tones20-170MHz;200ns tail;Hann/8x; raw total response without background removal; physical reception time, no delay alignment.",
+  "image_sha256": "d28a6397cba31b74bfa303a6906c5b3f01d66b298757d08b1cfc84e6a6669d94",
+  "arrays_sha256": "9bab9d3ce14db86507e090a20a4f7bc13efa160c992c809560afdff742cd544e",
+  "limits": "Three stations cannot establish a continuous interface curve. Gray gaps are uncomputed. Raw response includes direct/surface/band sidelobes; this is not the matched whole-cover difference used for regional attribution. No migration, numerical convergence or real-antenna acceptance."
+}
