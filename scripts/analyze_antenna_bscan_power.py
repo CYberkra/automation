@@ -187,6 +187,11 @@ def main():
 
     a.out.mkdir(parents=True)
     fig.savefig(a.out / 'antenna_bscan_power_panels.png', dpi=150)
+    # grayscale variant (same data, same symlog scales; user 2026-10-05)
+    for ax in axes:
+        for coll in ax.collections:
+            coll.set_cmap('gray')
+    fig.savefig(a.out / 'antenna_bscan_power_panels_gray.png', dpi=150)
     summary = {'status': 'COMPLETED_DIAGNOSTIC_NOT_PHYSICAL_ACCEPTANCE',
                'code_sha256': sha256(__file__),
                'p2_batch': str(P2.relative_to(ROOT)),
