@@ -1,13 +1,9 @@
-"""Verify cover-to-air critical-angle angular filtering from the 8 m snapshots.
+"""Per-frequency air-cone diagnostic of archived 8 m Ey snapshots (CPU only).
 
-Pure array analysis of the verified capsule; no solver. Takes the
-interface-contrast (rough-halfspace) Ey along three snapshot rows (just below
-the surface in cover, mid-air, and just below the antenna), builds (x,t)
-gathers over the echo window, and compares their (f,kx) band spectra against
-the propagating cone kx <= 2*pi*f/v. kx is conserved across the horizontal
-surface, so components beyond the air cone are evanescent in air: they must
-vanish with height if the field is physical.
+Finite space/time windows give spectral leakage. |FFT(Ey)|^2 is a field
+statistic, not directional energy flux or a reflected-power fraction.
 """
+import argparse
 import json
 from pathlib import Path
 
@@ -17,90 +13,125 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
+from hs4_analysis_metrics import air_propagation_mask
+from hs_capsule_identity import sha256
+
 ROOT = Path(__file__).resolve().parents[1]
 CAP = ROOT/'artifacts/research_checks/2026-10-04_hs4_height8m_wavefield_c'
-OUT = ROOT/'artifacts/research_checks/2026-10-04_hs4_height8m_wavefield_analysis'
-C_AIR = 0.299792458e9     # m/s
-V_COVER = C_AIR/np.sqrt(18.017)  # low-frequency real-part estimate, m/s
-SIN_CRIT = V_COVER/C_AIR
+C_AIR = 299792458.0
 ROWS = {'cover_z11.975': 26, 'air_z16.025': 53, 'air_z19.925': 79}
-TWIN = (90.0, 170.0)              # ns, echo-crossing window
-FBAND = (60e6, 140e6)             # Hz, around the 95 MHz Ricker centre
-
-
-def frames(group):
-    out = []
-    for f in sorted((CAP/group).glob('profile_snaps/*.h5')):
-        with h5py.File(f) as h:
-            out.append((int(h.attrs['iteration']), f))
-    return out
+TWIN = (90.0, 170.0)
+FBAND = (60e6, 140e6)
 
 
 def main():
-    c = json.loads((CAP/'execution_contract.json').read_text('utf-8'))
-    dt = c['dt_s']
-    fr = frames('mid8_rough')
-    fh = frames('mid8_halfspace')
-    iters = np.array([i for i, _ in fr])
-    t = iters*dt*1e9
-    sel = (t >= TWIN[0]) & (t <= TWIN[1])
-    ts = t[sel]*1e-9
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument('--capsule', type=Path, default=CAP)
+    ap.add_argument('--out', type=Path, required=True)
+    args = ap.parse_args()
+    if args.out.exists():
+        raise ValueError('new analysis directory required; historical results must not be overwritten')
+    cp = args.capsule/'execution_contract.json'
+    c = json.loads(cp.read_text('utf-8'))
+    v = json.loads((args.capsule/'completed_verification.json').read_text('utf-8'))
+    if v['status'] != 'PASS' or not v['completed'] or v['contract_sha256'] != sha256(cp):
+        raise ValueError('completed capsule with matching contract required')
+    groups = {g['id']: g for g in v['groups']}
+    pair = [groups[k] for k in ('mid8_rough', 'mid8_halfspace')]
+    iterations = np.asarray(c['snapshot_iterations'])
+    for group in pair:
+        files = group['snapshots']
+        if [s['iteration'] for s in files] != iterations.tolist():
+            raise ValueError('archived snapshot timeline differs from contract')
+        missing = [s['file'] for s in files
+                   if not (args.capsule/group['id']/s['file']).is_file()]
+        if missing:
+            raise FileNotFoundError(f"{group['id']}: {len(missing)} original frames missing; "
+                                    'run on the machine retaining the frames; GIF is insufficient')
+        if sha256(args.capsule/group['id']/'profile.h5') != group['raw_sha256']:
+            raise ValueError('native receiver identity differs')
+    t_ns = iterations * c['dt_s'] * 1e9
+    selected = np.flatnonzero((t_ns >= TWIN[0]) & (t_ns <= TWIN[1]))
+    if len(selected) < 3 or not np.all(np.diff(iterations[selected]) == np.diff(iterations[selected])[0]):
+        raise ValueError('uniform selected time sampling required')
     gathers = {name: [] for name in ROWS}
-    fr_sel = [fr[i] for i in np.nonzero(sel)[0]]
-    fh_sel = [fh[i] for i in np.nonzero(sel)[0]]
-    for (_, pr), (_, ph) in zip(fr_sel, fh_sel):
-        with h5py.File(pr) as h1, h5py.File(ph) as h2:
-            d = h1['Ey'][:, 0, :] - h2['Ey'][:, 0, :]
+    for index in selected:
+        fields = []
+        for group in pair:
+            entry = group['snapshots'][index]
+            path = args.capsule/group['id']/entry['file']
+            if sha256(path) != entry['sha256']:
+                raise ValueError(f'snapshot identity differs: {path}')
+            with h5py.File(path) as h:
+                field = h['Ey'][:]
+                if (int(h.attrs['iteration']) != int(iterations[index])
+                        or float(h.attrs['time']) != iterations[index] * c['dt_s']
+                        or list(field.shape) != c['snapshot_shape_xyz']
+                        or field.dtype != np.float64 or not np.isfinite(field).all()):
+                    raise ValueError('snapshot metadata/shape/dtype/finite check failed')
+                fields.append(field[:, 0, :])
+        diff = fields[0] - fields[1]
         for name, iz in ROWS.items():
-            gathers[name].append(d[:, iz])
-    dx, dts = 0.15, ts[1]-ts[0]
-    taper = np.hanning(len(ts))[:, None]*np.hanning(60)[None, :]
-    freqs = np.fft.fftshift(np.fft.fftfreq(len(ts), d=dts))   # Hz
-    kxs = np.fft.fftshift(np.fft.fftfreq(60, d=dx))*2*np.pi  # rad/m
+            gathers[name].append(diff[:, iz])
+    spacing = np.asarray(c['snapshot_spacing_m'])
+    origin = np.asarray(c['snapshot_extent_m'][:3])
+    if not np.array_equal(spacing, [.15, .05, .15]) or not np.array_equal(origin, [13.5, 0., 8.]):
+        raise ValueError('this diagnostic requires the reviewed ROI/row layout')
+    ts = t_ns[selected] * 1e-9
+    nx = c['snapshot_shape_xyz'][0]
+    freqs = np.fft.fftshift(np.fft.fftfreq(len(ts), d=ts[1]-ts[0]))
+    kxs = np.fft.fftshift(np.fft.fftfreq(nx, d=spacing[0])) * 2*np.pi
     fsel = (freqs >= FBAND[0]) & (freqs <= FBAND[1])
-    fmid = 95e6
-    kx_cone_air = 2*np.pi*fmid/C_AIR
-    kx_cone_cover = 2*np.pi*fmid/V_COVER
-    in_air_cone = np.abs(kxs) <= kx_cone_air
-    spectra, powers, outside = {}, {}, {}
+    cone = air_propagation_mask(freqs[fsel], kxs)
+    taper = np.hanning(len(ts))[:, None] * np.hanning(nx)[None, :]
+    spectra, sums, outside, arrays = {}, {}, {}, {}
     for name in ROWS:
-        g = np.array(gathers[name])
-        f2 = np.fft.fftshift(np.fft.fft2(g*taper))
-        band = np.abs(f2[np.ix_(np.nonzero(fsel)[0])])**2
-        spectra[name] = np.log10(band.sum(axis=0) + 1e-300)
-        powers[name] = float(band.sum())
-        outside[name] = float(band[:, ~in_air_cone].sum())
+        g = np.asarray(gathers[name])
+        band = np.abs(np.fft.fftshift(np.fft.fft2(g*taper))[fsel])**2
+        spectra[name] = np.log10(np.maximum(band.sum(axis=0), 1e-300))
+        sums[name] = float(band.sum())
+        if sums[name] == 0:
+            raise ValueError('zero spectral-square denominator')
+        outside[name] = float(band[~cone].sum() / sums[name])
+        arrays[name + '_gather'] = g
+        arrays[name + '_field_spectral_square'] = band
     ref = 'cover_z11.975'
     result = {
-        'status': 'PASS',
-        'sin_critical': float(SIN_CRIT), 'critical_angle_deg': float(np.degrees(np.arcsin(SIN_CRIT))),
-        'v_cover_m_per_ns': float(V_COVER/1e9),
-        'kx_propagating_limit_air_95MHz_rad_per_m': float(kx_cone_air),
-        'kx_propagating_limit_cover_95MHz_rad_per_m': float(kx_cone_cover),
-        'band_power': powers,
-        'power_re_cover_dB': {k: float(10*np.log10(v/powers[ref])) for k, v in powers.items()},
-        'fraction_outside_air_cone': {k: float(outside[k]/powers[k]) for k in ROWS},
+        'status': 'COMPLETED_FIELD_SPECTRUM_DIAGNOSTIC',
+        'code_sha256': sha256(__file__), 'contract_sha256': sha256(cp),
+        'metrics_code_sha256': sha256(ROOT/'scripts/hs4_analysis_metrics.py'),
+        'selected_pairs_hash_verified': len(selected),
+        'selected_frequency_hz': freqs[fsel].tolist(),
+        'air_kx_limit_per_frequency_rad_per_m': (2*np.pi*freqs[fsel]/C_AIR).tolist(),
+        'field_spectral_square_sum': sums,
+        'field_spectral_square_relative_to_cover_dB':
+            {k: float(10*np.log10(value/sums[ref])) for k, value in sums.items()},
+        'field_spectral_square_fraction_outside_air_cone': outside,
         'window_ns': list(TWIN), 'fband_Hz': list(FBAND),
-        'rows_z_m': {k: 8+0.15*(v+0.5) for k, v in ROWS.items()},
-        'note': 'fraction_outside_air_cone must fall to ~0 at the air rows if the field is physical (evanescent high-kx decays with height); the cover-row value includes downgoing multiples and is the high-angle share present just below the surface.'}
+        'rows_z_m': {k: float(origin[2]+spacing[2]*(iz+.5)) for k, iz in ROWS.items()},
+        'direction_separated': False, 'energy_flux_computed': False,
+        'physical_attribution_certified': False,
+        'limitations': ['Finite time/space Hann windows cause leakage and censor the field.',
+                        'Same fixed time window samples different wave packets at different heights.',
+                        'Ey spectral-square fractions are not incident/reflected power percentages.',
+                        'No E/H directional decomposition or independent numerical-error budget.']}
+    args.out.mkdir(parents=True)
+    np.savez_compressed(args.out/'spectral_arrays.npz', time_ns=t_ns[selected],
+                        frequency_hz=freqs[fsel], kx_rad_per_m=kxs, air_cone=cone, **arrays)
     fig, ax = plt.subplots(figsize=(11, 5.5))
-    for name in ROWS:
-        p = spectra[name]
-        ax.plot(kxs, p - p.max(), label=name)
-    for k, col in [(kx_cone_air, 'r'), (kx_cone_cover, 'g')]:
-        ax.axvline(k, color=col, ls=':'); ax.axvline(-k, color=col, ls=':')
-    ax.annotate('air cone (95 MHz)', (kx_cone_air, -1), color='r', fontsize=8, rotation=90)
-    ax.annotate('cover limit', (kx_cone_cover, -1), color='g', fontsize=8, rotation=90)
-    ax.set_xlabel('kx (rad/m)'); ax.set_ylabel('log10 band-integrated |E(f,kx)|^2 (re row max)')
-    ax.grid(alpha=.3); ax.legend(); ax.set_xlim(-1.6*kx_cone_cover, 1.6*kx_cone_cover)
-    ax.set_title(f'Angular filter check, {TWIN[0]:.0f}-{TWIN[1]:.0f} ns: critical angle {np.degrees(np.arcsin(SIN_CRIT)):.1f} deg')
-    fig.tight_layout()
-    fig.savefig(OUT/'surface_refraction_filter.png', dpi=110)
-    plt.close(fig)
-    (OUT/'surface_refraction_summary.json').write_text(
-        json.dumps(result, indent=2, ensure_ascii=False, allow_nan=False)+'\n', encoding='utf-8')
-    print(json.dumps(result, indent=1))
+    for name, p in spectra.items():
+        ax.plot(kxs, p-p.max(), label=name)
+    for f in (FBAND[0], 95e6, FBAND[1]):
+        limit = 2*np.pi*f/C_AIR
+        ax.axvline(limit, ls=':', label=f'air limit at {f/1e6:g} MHz')
+        ax.axvline(-limit, ls=':')
+    ax.set(xlabel='kx (rad/m)', ylabel='log10 band-integrated |Ey|² (relative to row max)',
+           title='Finite-window field-spectrum diagnostic; fractions use per-frequency air limits')
+    ax.grid(alpha=.3); ax.legend(); fig.tight_layout()
+    fig.savefig(args.out/'surface_refraction_filter.png', dpi=110); plt.close(fig)
+    (args.out/'summary.json').write_text(json.dumps(result, indent=2, allow_nan=False)+'\n', encoding='utf-8')
+    print(json.dumps(result, indent=2))
 
 
-if __name__=='__main__':
+if __name__ == '__main__':
     main()

@@ -1,0 +1,825 @@
+{
+  "status": "COMPLETED_METRIC_SENSITIVITY_DIAGNOSTIC",
+  "input_arrays_sha256": "6b0c25a5b221f5e752cfdae0eabfcb0db42a6e82492db4724357f6be7e826c7f",
+  "code_sha256": "86e6c6a18b0fccc08c4837e865a2990ec97170bd854be8090fd71dff77a6114f",
+  "metrics_code_sha256": "225ba226cab3c30832b0f83e70df455652938b2b7879c34a574cf7580314523b",
+  "rows": [
+    {
+      "case": "eps6",
+      "metric_x_range_m": [
+        14.750000000000018,
+        21.000000000000107
+      ],
+      "metrics": {
+        "corr_full": 0.9396304924883792,
+        "rmse_m": 0.08047912527192251,
+        "mean_bias_m": 0.016749287419890443,
+        "lowpass_matched": {
+          "corr": 0.9437890554506575,
+          "rmse_m": 0.07555660388451649,
+          "relative_L2_error": 0.33087421390756705,
+          "amplitude_norm_ratio": 0.9584698802706224,
+          "signed_projection_gain": 0.9045933829785152,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "highpass_matched": {
+          "corr": 0.5926627039974544,
+          "rmse_m": 0.022080547658469934,
+          "relative_L2_error": 0.8968706925018903,
+          "amplitude_norm_ratio": 0.9871574692078363,
+          "signed_projection_gain": 0.585051414972,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "diagnostic_split_scale_m": 1.0,
+        "split_rule": "Same periodic FFT mask on truth and ridge; not a measured resolution bound.",
+        "window_boundary": "Finite interval treated as periodic; split sensitive to interval edges.",
+        "recoverability_certified": false
+      }
+    },
+    {
+      "case": "eps6",
+      "metric_x_range_m": [
+        14.750000000000018,
+        21.000000000000107
+      ],
+      "metrics": {
+        "corr_full": 0.9396304924883792,
+        "rmse_m": 0.08047912527192251,
+        "mean_bias_m": 0.016749287419890443,
+        "lowpass_matched": {
+          "corr": 0.9501910959598316,
+          "rmse_m": 0.07087655526553957,
+          "relative_L2_error": 0.31173440699210503,
+          "amplitude_norm_ratio": 0.9566299890374997,
+          "signed_projection_gain": 0.9089812977115838,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "highpass_matched": {
+          "corr": 0.47876367560580757,
+          "rmse_m": 0.03424711504857905,
+          "relative_L2_error": 1.0526822585838809,
+          "amplitude_norm_ratio": 1.0595860190266189,
+          "signed_projection_gain": 0.5072912970897093,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "diagnostic_split_scale_m": 1.577855042105263,
+        "split_rule": "Same periodic FFT mask on truth and ridge; not a measured resolution bound.",
+        "window_boundary": "Finite interval treated as periodic; split sensitive to interval edges.",
+        "recoverability_certified": false
+      }
+    },
+    {
+      "case": "eps6",
+      "metric_x_range_m": [
+        14.750000000000018,
+        21.000000000000107
+      ],
+      "metrics": {
+        "corr_full": 0.9396304924883792,
+        "rmse_m": 0.08047912527192251,
+        "mean_bias_m": 0.016749287419890443,
+        "lowpass_matched": {
+          "corr": 0.9501910959598316,
+          "rmse_m": 0.07087655526553957,
+          "relative_L2_error": 0.31173440699210503,
+          "amplitude_norm_ratio": 0.9566299890374997,
+          "signed_projection_gain": 0.9089812977115838,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "highpass_matched": {
+          "corr": 0.47876367560580757,
+          "rmse_m": 0.03424711504857905,
+          "relative_L2_error": 1.0526822585838809,
+          "amplitude_norm_ratio": 1.0595860190266189,
+          "signed_projection_gain": 0.5072912970897093,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "diagnostic_split_scale_m": 2.0,
+        "split_rule": "Same periodic FFT mask on truth and ridge; not a measured resolution bound.",
+        "window_boundary": "Finite interval treated as periodic; split sensitive to interval edges.",
+        "recoverability_certified": false
+      }
+    },
+    {
+      "case": "eps6",
+      "metric_x_range_m": [
+        15.250000000000025,
+        20.5000000000001
+      ],
+      "metrics": {
+        "corr_full": 0.9151280795239665,
+        "rmse_m": 0.0801381634661963,
+        "mean_bias_m": 0.00991060670844341,
+        "lowpass_matched": {
+          "corr": 0.921543781882502,
+          "rmse_m": 0.07612904660341466,
+          "relative_L2_error": 0.3996740618179613,
+          "amplitude_norm_ratio": 1.0163187660100246,
+          "signed_projection_gain": 0.9365822392270358,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "highpass_matched": {
+          "corr": 0.21401554823594476,
+          "rmse_m": 0.022984198521168356,
+          "relative_L2_error": 1.1606722829797107,
+          "amplitude_norm_ratio": 0.8408830010232669,
+          "signed_projection_gain": 0.1799620364662809,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "diagnostic_split_scale_m": 1.0,
+        "split_rule": "Same periodic FFT mask on truth and ridge; not a measured resolution bound.",
+        "window_boundary": "Finite interval treated as periodic; split sensitive to interval edges.",
+        "recoverability_certified": false
+      }
+    },
+    {
+      "case": "eps6",
+      "metric_x_range_m": [
+        15.250000000000025,
+        20.5000000000001
+      ],
+      "metrics": {
+        "corr_full": 0.9151280795239665,
+        "rmse_m": 0.0801381634661963,
+        "mean_bias_m": 0.00991060670844341,
+        "lowpass_matched": {
+          "corr": 0.9319469955607055,
+          "rmse_m": 0.0706949827652708,
+          "relative_L2_error": 0.371903978292072,
+          "amplitude_norm_ratio": 1.0146378149066013,
+          "signed_projection_gain": 0.9455886631844862,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "highpass_matched": {
+          "corr": -0.2129432283027828,
+          "rmse_m": 0.03641599278096677,
+          "relative_L2_error": 1.5671199028736615,
+          "amplitude_norm_ratio": 1.0122953641610541,
+          "signed_projection_gain": -0.215561442840396,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "diagnostic_split_scale_m": 1.577855042105263,
+        "split_rule": "Same periodic FFT mask on truth and ridge; not a measured resolution bound.",
+        "window_boundary": "Finite interval treated as periodic; split sensitive to interval edges.",
+        "recoverability_certified": false
+      }
+    },
+    {
+      "case": "eps6",
+      "metric_x_range_m": [
+        15.250000000000025,
+        20.5000000000001
+      ],
+      "metrics": {
+        "corr_full": 0.9151280795239665,
+        "rmse_m": 0.0801381634661963,
+        "mean_bias_m": 0.00991060670844341,
+        "lowpass_matched": {
+          "corr": 0.9330581835427556,
+          "rmse_m": 0.06983981744239333,
+          "relative_L2_error": 0.36900051453219124,
+          "amplitude_norm_ratio": 1.0152710389920627,
+          "signed_projection_gain": 0.9473069514455005,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "highpass_matched": {
+          "corr": 0.13911338487699426,
+          "rmse_m": 0.03803031709069136,
+          "relative_L2_error": 1.3030949185475653,
+          "amplitude_norm_ratio": 0.9861133261971934,
+          "signed_projection_gain": 0.1371815626796031,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "diagnostic_split_scale_m": 2.0,
+        "split_rule": "Same periodic FFT mask on truth and ridge; not a measured resolution bound.",
+        "window_boundary": "Finite interval treated as periodic; split sensitive to interval edges.",
+        "recoverability_certified": false
+      }
+    },
+    {
+      "case": "eps9",
+      "metric_x_range_m": [
+        14.750000000000018,
+        21.000000000000107
+      ],
+      "metrics": {
+        "corr_full": 0.9615678595684799,
+        "rmse_m": 0.06826467199979026,
+        "mean_bias_m": -0.0018851782306306378,
+        "lowpass_matched": {
+          "corr": 0.9650563188056934,
+          "rmse_m": 0.06448522268998677,
+          "relative_L2_error": 0.2823908999247144,
+          "amplitude_norm_ratio": 1.0703099117471482,
+          "signed_projection_gain": 1.032909343411949,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "highpass_matched": {
+          "corr": 0.7758479609295262,
+          "rmse_m": 0.022319668476492114,
+          "relative_L2_error": 0.9065833344602479,
+          "amplitude_norm_ratio": 1.4268728458606366,
+          "signed_projection_gain": 1.107036387966685,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "diagnostic_split_scale_m": 1.0,
+        "split_rule": "Same periodic FFT mask on truth and ridge; not a measured resolution bound.",
+        "window_boundary": "Finite interval treated as periodic; split sensitive to interval edges.",
+        "recoverability_certified": false
+      }
+    },
+    {
+      "case": "eps9",
+      "metric_x_range_m": [
+        14.750000000000018,
+        21.000000000000107
+      ],
+      "metrics": {
+        "corr_full": 0.9615678595684799,
+        "rmse_m": 0.06826467199979026,
+        "mean_bias_m": -0.0018851782306306378,
+        "lowpass_matched": {
+          "corr": 0.9700532469587173,
+          "rmse_m": 0.059104964596908914,
+          "relative_L2_error": 0.25995974296263646,
+          "amplitude_norm_ratio": 1.0626943279992056,
+          "signed_projection_gain": 1.0308700834002413,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "highpass_matched": {
+          "corr": 0.7508306088596314,
+          "rmse_m": 0.034104467541303835,
+          "relative_L2_error": 1.0482975826797398,
+          "amplitude_norm_ratio": 1.5648787800710842,
+          "signed_projection_gain": 1.1749588872322894,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "diagnostic_split_scale_m": 1.577855042105263,
+        "split_rule": "Same periodic FFT mask on truth and ridge; not a measured resolution bound.",
+        "window_boundary": "Finite interval treated as periodic; split sensitive to interval edges.",
+        "recoverability_certified": false
+      }
+    },
+    {
+      "case": "eps9",
+      "metric_x_range_m": [
+        14.750000000000018,
+        21.000000000000107
+      ],
+      "metrics": {
+        "corr_full": 0.9615678595684799,
+        "rmse_m": 0.06826467199979026,
+        "mean_bias_m": -0.0018851782306306378,
+        "lowpass_matched": {
+          "corr": 0.9700532469587173,
+          "rmse_m": 0.059104964596908914,
+          "relative_L2_error": 0.25995974296263646,
+          "amplitude_norm_ratio": 1.0626943279992056,
+          "signed_projection_gain": 1.0308700834002413,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "highpass_matched": {
+          "corr": 0.7508306088596314,
+          "rmse_m": 0.034104467541303835,
+          "relative_L2_error": 1.0482975826797398,
+          "amplitude_norm_ratio": 1.5648787800710842,
+          "signed_projection_gain": 1.1749588872322894,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "diagnostic_split_scale_m": 2.0,
+        "split_rule": "Same periodic FFT mask on truth and ridge; not a measured resolution bound.",
+        "window_boundary": "Finite interval treated as periodic; split sensitive to interval edges.",
+        "recoverability_certified": false
+      }
+    },
+    {
+      "case": "eps9",
+      "metric_x_range_m": [
+        15.250000000000025,
+        20.5000000000001
+      ],
+      "metrics": {
+        "corr_full": 0.9392710915029983,
+        "rmse_m": 0.07225549069370245,
+        "mean_bias_m": -0.0003983337239023607,
+        "lowpass_matched": {
+          "corr": 0.9443228926672983,
+          "rmse_m": 0.06926769467713069,
+          "relative_L2_error": 0.3636522736005662,
+          "amplitude_norm_ratio": 1.0992057571500897,
+          "signed_projection_gain": 1.0380051602285207,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "highpass_matched": {
+          "corr": 0.3234891782245271,
+          "rmse_m": 0.02055927381372994,
+          "relative_L2_error": 1.038216723189611,
+          "amplitude_norm_ratio": 0.7507352580648845,
+          "signed_projection_gain": 0.24285473169558774,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "diagnostic_split_scale_m": 1.0,
+        "split_rule": "Same periodic FFT mask on truth and ridge; not a measured resolution bound.",
+        "window_boundary": "Finite interval treated as periodic; split sensitive to interval edges.",
+        "recoverability_certified": false
+      }
+    },
+    {
+      "case": "eps9",
+      "metric_x_range_m": [
+        15.250000000000025,
+        20.5000000000001
+      ],
+      "metrics": {
+        "corr_full": 0.9392710915029983,
+        "rmse_m": 0.07225549069370245,
+        "mean_bias_m": -0.0003983337239023607,
+        "lowpass_matched": {
+          "corr": 0.9469957553542795,
+          "rmse_m": 0.06770877776273987,
+          "relative_L2_error": 0.35619449684097076,
+          "amplitude_norm_ratio": 1.1008641414471154,
+          "signed_projection_gain": 1.0425136691721513,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "highpass_matched": {
+          "corr": 0.22558638345870818,
+          "rmse_m": 0.025223375656482312,
+          "relative_L2_error": 1.0854586402925754,
+          "amplitude_norm_ratio": 0.7042404090218344,
+          "signed_projection_gain": 0.15886704695671702,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "diagnostic_split_scale_m": 1.577855042105263,
+        "split_rule": "Same periodic FFT mask on truth and ridge; not a measured resolution bound.",
+        "window_boundary": "Finite interval treated as periodic; split sensitive to interval edges.",
+        "recoverability_certified": false
+      }
+    },
+    {
+      "case": "eps9",
+      "metric_x_range_m": [
+        15.250000000000025,
+        20.5000000000001
+      ],
+      "metrics": {
+        "corr_full": 0.9392710915029983,
+        "rmse_m": 0.07225549069370245,
+        "mean_bias_m": -0.0003983337239023607,
+        "lowpass_matched": {
+          "corr": 0.9547685902813997,
+          "rmse_m": 0.06277444073761981,
+          "relative_L2_error": 0.33167041066163566,
+          "amplitude_norm_ratio": 1.1016982411228466,
+          "signed_projection_gain": 1.051866876592358,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "highpass_matched": {
+          "corr": 0.10778516424569712,
+          "rmse_m": 0.03577802196476461,
+          "relative_L2_error": 1.225920849063328,
+          "amplitude_norm_ratio": 0.8250714179823927,
+          "signed_projection_gain": 0.08893045830166242,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "diagnostic_split_scale_m": 2.0,
+        "split_rule": "Same periodic FFT mask on truth and ridge; not a measured resolution bound.",
+        "window_boundary": "Finite interval treated as periodic; split sensitive to interval edges.",
+        "recoverability_certified": false
+      }
+    },
+    {
+      "case": "eps18nd",
+      "metric_x_range_m": [
+        14.750000000000018,
+        21.000000000000107
+      ],
+      "metrics": {
+        "corr_full": 0.976524033596775,
+        "rmse_m": 0.06943070469190427,
+        "mean_bias_m": 0.0314970569443124,
+        "lowpass_matched": {
+          "corr": 0.9800241124247475,
+          "rmse_m": 0.05721173394332671,
+          "relative_L2_error": 0.2505391523912355,
+          "amplitude_norm_ratio": 1.1323957889753207,
+          "signed_projection_gain": 1.10977517800406,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "highpass_matched": {
+          "corr": 0.8096522751580133,
+          "rmse_m": 0.0235664095071599,
+          "relative_L2_error": 0.9572236314692139,
+          "amplitude_norm_ratio": 1.565836040728034,
+          "signed_projection_gain": 1.2677827128998684,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "diagnostic_split_scale_m": 1.0,
+        "split_rule": "Same periodic FFT mask on truth and ridge; not a measured resolution bound.",
+        "window_boundary": "Finite interval treated as periodic; split sensitive to interval edges.",
+        "recoverability_certified": false
+      }
+    },
+    {
+      "case": "eps18nd",
+      "metric_x_range_m": [
+        14.750000000000018,
+        21.000000000000107
+      ],
+      "metrics": {
+        "corr_full": 0.976524033596775,
+        "rmse_m": 0.06943070469190427,
+        "mean_bias_m": 0.0314970569443124,
+        "lowpass_matched": {
+          "corr": 0.9830848693944974,
+          "rmse_m": 0.05356401124883564,
+          "relative_L2_error": 0.23558911998778706,
+          "amplitude_norm_ratio": 1.1312675063295192,
+          "signed_projection_gain": 1.1121319687101945,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "highpass_matched": {
+          "corr": 0.7529957782688048,
+          "rmse_m": 0.03097506830978369,
+          "relative_L2_error": 0.9521066175028364,
+          "amplitude_norm_ratio": 1.441116155225726,
+          "signed_projection_gain": 1.085154380879943,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "diagnostic_split_scale_m": 1.577855042105263,
+        "split_rule": "Same periodic FFT mask on truth and ridge; not a measured resolution bound.",
+        "window_boundary": "Finite interval treated as periodic; split sensitive to interval edges.",
+        "recoverability_certified": false
+      }
+    },
+    {
+      "case": "eps18nd",
+      "metric_x_range_m": [
+        14.750000000000018,
+        21.000000000000107
+      ],
+      "metrics": {
+        "corr_full": 0.976524033596775,
+        "rmse_m": 0.06943070469190427,
+        "mean_bias_m": 0.0314970569443124,
+        "lowpass_matched": {
+          "corr": 0.9830848693944974,
+          "rmse_m": 0.05356401124883564,
+          "relative_L2_error": 0.23558911998778706,
+          "amplitude_norm_ratio": 1.1312675063295192,
+          "signed_projection_gain": 1.1121319687101945,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "highpass_matched": {
+          "corr": 0.7529957782688048,
+          "rmse_m": 0.03097506830978369,
+          "relative_L2_error": 0.9521066175028364,
+          "amplitude_norm_ratio": 1.441116155225726,
+          "signed_projection_gain": 1.085154380879943,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "diagnostic_split_scale_m": 2.0,
+        "split_rule": "Same periodic FFT mask on truth and ridge; not a measured resolution bound.",
+        "window_boundary": "Finite interval treated as periodic; split sensitive to interval edges.",
+        "recoverability_certified": false
+      }
+    },
+    {
+      "case": "eps18nd",
+      "metric_x_range_m": [
+        15.250000000000025,
+        20.5000000000001
+      ],
+      "metrics": {
+        "corr_full": 0.9680758699001737,
+        "rmse_m": 0.06866263607149845,
+        "mean_bias_m": 0.046995727639615625,
+        "lowpass_matched": {
+          "corr": 0.9709816917167489,
+          "rmse_m": 0.047621573279338934,
+          "relative_L2_error": 0.2500111123401535,
+          "amplitude_norm_ratio": 1.0438583130893173,
+          "signed_projection_gain": 1.0135673107560572,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "highpass_matched": {
+          "corr": 0.6633073675417142,
+          "rmse_m": 0.015431945253617876,
+          "relative_L2_error": 0.7792932658425402,
+          "amplitude_norm_ratio": 0.8807347301772628,
+          "signed_projection_gain": 0.5841978353764421,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "diagnostic_split_scale_m": 1.0,
+        "split_rule": "Same periodic FFT mask on truth and ridge; not a measured resolution bound.",
+        "window_boundary": "Finite interval treated as periodic; split sensitive to interval edges.",
+        "recoverability_certified": false
+      }
+    },
+    {
+      "case": "eps18nd",
+      "metric_x_range_m": [
+        15.250000000000025,
+        20.5000000000001
+      ],
+      "metrics": {
+        "corr_full": 0.9680758699001737,
+        "rmse_m": 0.06866263607149845,
+        "mean_bias_m": 0.046995727639615625,
+        "lowpass_matched": {
+          "corr": 0.9743842112434904,
+          "rmse_m": 0.04464678929727089,
+          "relative_L2_error": 0.23487265868292823,
+          "amplitude_norm_ratio": 1.04213195598371,
+          "signed_projection_gain": 1.0154369239428225,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "highpass_matched": {
+          "corr": 0.5491564915151783,
+          "rmse_m": 0.02264118771962296,
+          "relative_L2_error": 0.9743371851354452,
+          "amplitude_norm_ratio": 1.0500614750309374,
+          "signed_projection_gain": 0.5766480755032426,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "diagnostic_split_scale_m": 1.577855042105263,
+        "split_rule": "Same periodic FFT mask on truth and ridge; not a measured resolution bound.",
+        "window_boundary": "Finite interval treated as periodic; split sensitive to interval edges.",
+        "recoverability_certified": false
+      }
+    },
+    {
+      "case": "eps18nd",
+      "metric_x_range_m": [
+        15.250000000000025,
+        20.5000000000001
+      ],
+      "metrics": {
+        "corr_full": 0.9680758699001737,
+        "rmse_m": 0.06866263607149845,
+        "mean_bias_m": 0.046995727639615625,
+        "lowpass_matched": {
+          "corr": 0.9778080332047152,
+          "rmse_m": 0.041046276540005734,
+          "relative_L2_error": 0.2168690829609604,
+          "amplitude_norm_ratio": 1.0338504184501829,
+          "signed_projection_gain": 1.0109072442926454,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "highpass_matched": {
+          "corr": 0.6877748031648313,
+          "rmse_m": 0.028655930592313382,
+          "relative_L2_error": 0.981884990652242,
+          "amplitude_norm_ratio": 1.3489346285751291,
+          "signed_projection_gain": 0.927763248650484,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "diagnostic_split_scale_m": 2.0,
+        "split_rule": "Same periodic FFT mask on truth and ridge; not a measured resolution bound.",
+        "window_boundary": "Finite interval treated as periodic; split sensitive to interval edges.",
+        "recoverability_certified": false
+      }
+    },
+    {
+      "case": "eps18disp",
+      "metric_x_range_m": [
+        14.750000000000018,
+        21.000000000000107
+      ],
+      "metrics": {
+        "corr_full": 0.8431827286754796,
+        "rmse_m": 0.22088867381761068,
+        "mean_bias_m": 0.1791891368973808,
+        "lowpass_matched": {
+          "corr": 0.8472413316704526,
+          "rmse_m": 0.12738792582383196,
+          "relative_L2_error": 0.5578516986112628,
+          "amplitude_norm_ratio": 0.6768993470213566,
+          "signed_projection_gain": 0.5734971041772341,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "highpass_matched": {
+          "corr": 0.5505029596216598,
+          "rmse_m": 0.021339535917549755,
+          "relative_L2_error": 0.8667721766719998,
+          "amplitude_norm_ratio": 0.7836284940551985,
+          "signed_projection_gain": 0.4313898052212512,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "diagnostic_split_scale_m": 1.0,
+        "split_rule": "Same periodic FFT mask on truth and ridge; not a measured resolution bound.",
+        "window_boundary": "Finite interval treated as periodic; split sensitive to interval edges.",
+        "recoverability_certified": false
+      }
+    },
+    {
+      "case": "eps18disp",
+      "metric_x_range_m": [
+        14.750000000000018,
+        21.000000000000107
+      ],
+      "metrics": {
+        "corr_full": 0.8431827286754796,
+        "rmse_m": 0.22088867381761068,
+        "mean_bias_m": 0.1791891368973808,
+        "lowpass_matched": {
+          "corr": 0.8503303491283425,
+          "rmse_m": 0.1262557669289336,
+          "relative_L2_error": 0.5553072731239334,
+          "amplitude_norm_ratio": 0.6730512746918279,
+          "signed_projection_gain": 0.5723159253899779,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "highpass_matched": {
+          "corr": 0.6142506385112885,
+          "rmse_m": 0.027249601025727172,
+          "relative_L2_error": 0.8375938093641639,
+          "amplitude_norm_ratio": 0.8950837498010665,
+          "signed_projection_gain": 0.5498057648363837,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "diagnostic_split_scale_m": 1.577855042105263,
+        "split_rule": "Same periodic FFT mask on truth and ridge; not a measured resolution bound.",
+        "window_boundary": "Finite interval treated as periodic; split sensitive to interval edges.",
+        "recoverability_certified": false
+      }
+    },
+    {
+      "case": "eps18disp",
+      "metric_x_range_m": [
+        14.750000000000018,
+        21.000000000000107
+      ],
+      "metrics": {
+        "corr_full": 0.8431827286754796,
+        "rmse_m": 0.22088867381761068,
+        "mean_bias_m": 0.1791891368973808,
+        "lowpass_matched": {
+          "corr": 0.8503303491283425,
+          "rmse_m": 0.1262557669289336,
+          "relative_L2_error": 0.5553072731239334,
+          "amplitude_norm_ratio": 0.6730512746918279,
+          "signed_projection_gain": 0.5723159253899779,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "highpass_matched": {
+          "corr": 0.6142506385112885,
+          "rmse_m": 0.027249601025727172,
+          "relative_L2_error": 0.8375938093641639,
+          "amplitude_norm_ratio": 0.8950837498010665,
+          "signed_projection_gain": 0.5498057648363837,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "diagnostic_split_scale_m": 2.0,
+        "split_rule": "Same periodic FFT mask on truth and ridge; not a measured resolution bound.",
+        "window_boundary": "Finite interval treated as periodic; split sensitive to interval edges.",
+        "recoverability_certified": false
+      }
+    },
+    {
+      "case": "eps18disp",
+      "metric_x_range_m": [
+        15.250000000000025,
+        20.5000000000001
+      ],
+      "metrics": {
+        "corr_full": 0.7412471700123923,
+        "rmse_m": 0.21482607867778905,
+        "mean_bias_m": 0.16880626081912178,
+        "lowpass_matched": {
+          "corr": 0.7512531814764927,
+          "rmse_m": 0.13071668561299174,
+          "relative_L2_error": 0.6862567051244609,
+          "amplitude_norm_ratio": 0.5632914619513911,
+          "signed_projection_gain": 0.42317450288952724,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "highpass_matched": {
+          "corr": 0.07694758183487305,
+          "rmse_m": 0.023829361944805186,
+          "relative_L2_error": 1.203351942202983,
+          "amplitude_norm_ratio": 0.750725606969209,
+          "signed_projection_gain": 0.057766520077797916,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "diagnostic_split_scale_m": 1.0,
+        "split_rule": "Same periodic FFT mask on truth and ridge; not a measured resolution bound.",
+        "window_boundary": "Finite interval treated as periodic; split sensitive to interval edges.",
+        "recoverability_certified": false
+      }
+    },
+    {
+      "case": "eps18disp",
+      "metric_x_range_m": [
+        15.250000000000025,
+        20.5000000000001
+      ],
+      "metrics": {
+        "corr_full": 0.7412471700123923,
+        "rmse_m": 0.21482607867778905,
+        "mean_bias_m": 0.16880626081912178,
+        "lowpass_matched": {
+          "corr": 0.7547008953754776,
+          "rmse_m": 0.1300517109195654,
+          "relative_L2_error": 0.6841609797864927,
+          "amplitude_norm_ratio": 0.5606656208943643,
+          "signed_projection_gain": 0.4231348460952247,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "highpass_matched": {
+          "corr": 0.1926705156865213,
+          "rmse_m": 0.027225775934508138,
+          "relative_L2_error": 1.1716296077597628,
+          "amplitude_norm_ratio": 0.8328563210541551,
+          "signed_projection_gain": 0.160466856870283,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "diagnostic_split_scale_m": 1.577855042105263,
+        "split_rule": "Same periodic FFT mask on truth and ridge; not a measured resolution bound.",
+        "window_boundary": "Finite interval treated as periodic; split sensitive to interval edges.",
+        "recoverability_certified": false
+      }
+    },
+    {
+      "case": "eps18disp",
+      "metric_x_range_m": [
+        15.250000000000025,
+        20.5000000000001
+      ],
+      "metrics": {
+        "corr_full": 0.7412471700123923,
+        "rmse_m": 0.21482607867778905,
+        "mean_bias_m": 0.16880626081912178,
+        "lowpass_matched": {
+          "corr": 0.7773034730617971,
+          "rmse_m": 0.1266304770149859,
+          "relative_L2_error": 0.6690554598389188,
+          "amplitude_norm_ratio": 0.549628490742265,
+          "signed_projection_gain": 0.4272281347476766,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "highpass_matched": {
+          "corr": 0.08163880340081776,
+          "rmse_m": 0.040241926883530094,
+          "relative_L2_error": 1.3788749199602697,
+          "amplitude_norm_ratio": 1.0345086471445255,
+          "signed_projection_gain": 0.08445604806067793,
+          "numerical_error_budget": null,
+          "interpretation": "Diagnostic only; small components require a separate error budget."
+        },
+        "diagnostic_split_scale_m": 2.0,
+        "split_rule": "Same periodic FFT mask on truth and ridge; not a measured resolution bound.",
+        "window_boundary": "Finite interval treated as periodic; split sensitive to interval edges.",
+        "recoverability_certified": false
+      }
+    }
+  ],
+  "physical_resolution_bound_certified": false
+}

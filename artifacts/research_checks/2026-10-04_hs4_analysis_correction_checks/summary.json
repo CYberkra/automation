@@ -1,0 +1,30 @@
+{
+  "status": "COMPLETED_CPU_CORRECTIONS_WITH_EXTERNAL_FRAME_AND_RESOURCE_LIMITS",
+  "solver_executed": false,
+  "metric_counterexamples_passed": 12,
+  "existing_array_regression_passed": 182,
+  "surface_filter_missing_frame_rejection_checked": true,
+  "surface_filter_historical_overwrite_rejection_checked": true,
+  "historical_surface_summary_hash_unchanged": true,
+  "angular_raw_percentages_recomputed": false,
+  "missing_raw_frames_per_pair_member": 599,
+  "gprmax_version": "4.0.0",
+  "runtime_comparison_scope": "SAME_ARCHIVED_PACKAGE_FILES",
+  "observed_available_RAM_GiB_during_CPU_analysis": 1.0391311645507812,
+  "available_RAM_GiB_after_CPU_analysis": 3.0907669067382812,
+  "free_VRAM_GiB": 4.5556640625,
+  "centre1cm_required_available_RAM_GiB": 3.75,
+  "three_dimensional_centre_required_available_RAM_GiB": 8,
+  "recorded_compilers": {
+    "nvcc": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin\\nvcc.EXE",
+    "cl": null,
+    "gcc": null
+  },
+  "checks_scope": "Array counterexamples and CPU reconstruction only; no physical validation.",
+  "two_migration_paths_baseline_arrays_exact_equal": true,
+  "check_code_sha256": {
+    "check_hs4_analysis_metrics.py": "85fc0f2816ebdc90ed8f734c631144f04307068b0f8060812760f8a91431a6fc",
+    "hs4_analysis_metrics.py": "225ba226cab3c30832b0f83e70df455652938b2b7879c34a574cf7580314523b",
+    "analyze_hs4_height8m_surface_filter.py": "bcfbca39d545258d9b29a876064182a66ecff11b2bca0a83cffb603fe413c794"
+  }
+}

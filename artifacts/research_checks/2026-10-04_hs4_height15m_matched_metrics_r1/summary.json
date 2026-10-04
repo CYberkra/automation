@@ -1,0 +1,70 @@
+{
+  "status": "COMPLETED_MIGRATION_DIAGNOSTIC",
+  "code_sha256": "7831727784378c59b4228cd9ac801ad6be042b2339b65ff5eae8a58c667adeaf",
+  "metrics_code_sha256": "225ba226cab3c30832b0f83e70df455652938b2b7879c34a574cf7580314523b",
+  "time_offset_ns_median": -0.3627391798949873,
+  "time_offset_per_station_ns": [
+    -0.3627391798949873,
+    -0.3627391798949873,
+    -0.3627391798949873,
+    -0.3627391798949873,
+    -0.3627391798949873,
+    -0.3627391798949873,
+    -0.3627391798949873,
+    -0.3627391798949873,
+    -0.3627391798949873,
+    -0.3627391798949873,
+    -0.3627391798949873,
+    -0.3627391798949873,
+    -0.3627391798949873
+  ],
+  "chain_anchor_relative_L2": 0.0,
+  "diagnostic_split_scale_m": 1.577855042105263,
+  "metric_x_range_m": [
+    14.75,
+    21.0
+  ],
+  "ridge_vs_true_relief": {
+    "corr_full": 0.8431827286754796,
+    "rmse_m": 0.22088867381761068,
+    "mean_bias_m": 0.1791891368973808,
+    "lowpass_matched": {
+      "corr": 0.8503303491283425,
+      "rmse_m": 0.1262557669289336,
+      "relative_L2_error": 0.5553072731239334,
+      "amplitude_norm_ratio": 0.6730512746918279,
+      "signed_projection_gain": 0.5723159253899779,
+      "numerical_error_budget": null,
+      "interpretation": "Diagnostic only; small components require a separate error budget."
+    },
+    "highpass_matched": {
+      "corr": 0.6142506385112885,
+      "rmse_m": 0.027249601025727172,
+      "relative_L2_error": 0.8375938093641639,
+      "amplitude_norm_ratio": 0.8950837498010665,
+      "signed_projection_gain": 0.5498057648363837,
+      "numerical_error_budget": null,
+      "interpretation": "Diagnostic only; small components require a separate error budget."
+    },
+    "diagnostic_split_scale_m": 1.577855042105263,
+    "split_rule": "Same periodic FFT mask on truth and ridge; not a measured resolution bound.",
+    "window_boundary": "Finite interval treated as periodic; split sensitive to interval edges.",
+    "recoverability_certified": false
+  },
+  "template_scores": {
+    "true": 0.718277531196836,
+    "true_lowpass_gt_resolution_bound": 0.7133026617310807,
+    "flat_mean_depth": 0.5671245954082395,
+    "true_shifted_plus1m": 0.655239958110478,
+    "true_shifted_plus2m": 0.5179343103560566,
+    "flat_plus_highpass_only": 0.5659041264349371
+  },
+  "interface_band_image_energy": {
+    "rough": 260.1506820415771,
+    "halfspace": 2.5171045040528934,
+    "diff": 253.8575517619663
+  },
+  "diff_over_rough_band_energy": 0.9758096721860409,
+  "halfspace_over_diff_band_energy": 0.009915421016953231,
+  "notes": "Kirchhoff stack, 13 common-offset traces, two-layer Fermat times; no amplitude weighting, no clean-claim."
+}

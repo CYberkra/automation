@@ -5,9 +5,8 @@ migrate_hs4_height15m_diff_v0_1.py for each cover permittivity group of the
 frozen scan capsule (eps_r 6 / 9 / 18.017-non-dispersive) and for the archived
 dispersive eps_r=18.017 baseline, using identical grids, metrics and the
 official SFCW chain. Per-case cover velocity v=c/sqrt(eps_r); the lateral
-resolution bound c/(2f) is permittivity-independent by construction and is
-held fixed. Tests whether lower eps_r (larger critical angle, stronger
-transmission) improves recoverability while the resolution bound stays put.
+profile split scale c/(2f) is held fixed as a diagnostic choice. This is not
+an independently measured resolution bound or a test isolating critical angle.
 """
 import argparse
 import json
@@ -20,6 +19,7 @@ import numpy as np
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+from hs4_analysis_metrics import matched_profile_metrics, split_profile
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT/'scripts'))
@@ -30,7 +30,7 @@ SURFACE_Z = 12.0
 ANTENNA_Z = 27.0
 SRC_X0, RX_X0, STEP = 14.6, 15.9, 0.5
 F_GHZ = 0.095
-RES_BOUND_M = C_AIR/(2*F_GHZ)   # c/(2f): permittivity-independent
+PROFILE_SPLIT_SCALE_M = C_AIR/(2*F_GHZ)  # diagnostic scale, not a measured bound
 IMAGE_X = np.arange(13.5, 22.51, 0.05)
 IMAGE_Z = np.arange(8.2, 12.01, 0.025)
 METRIC_X = (14.75, 21.0)
@@ -129,14 +129,10 @@ def case_metrics(tag, eps, inputs, response, reconstruct_time_response):
         ridge[j] = float((zx*w).sum()/w.sum()) if w.sum() > 0 else float(zx[np.argmax(col)])
     rx_x = IMAGE_X[ix0:ix1+1]
     true = np.interp(rx_x, *interface_relief())
-    k = np.fft.fftfreq(len(true), d=float(np.mean(np.diff(rx_x))))
-    F = np.fft.fft(true-true.mean())
-    low = np.fft.ifft(F*(np.abs(k) <= 1/RES_BOUND_M)).real + true.mean()
-    high = (true-true.mean()) - (low-low.mean())
-
-    def corr(a, b):
-        a, b = a-a.mean(), b-b.mean()
-        return float((a*b).sum()/np.sqrt((a**2).sum()*(b**2).sum()))
+    spacing = float(np.mean(np.diff(rx_x)))
+    low_centered, high = split_profile(true, spacing, PROFILE_SPLIT_SCALE_M)
+    low = low_centered + true.mean()
+    profile_metrics = matched_profile_metrics(ridge, true, spacing, PROFILE_SPLIT_SCALE_M)
 
     env = diff_sub
     sigma = 0.185
@@ -173,13 +169,9 @@ def case_metrics(tag, eps, inputs, response, reconstruct_time_response):
         'cover_eps_r': eps, 'v_cover_m_per_ns': float(v_cover),
         'sin_critical': float(1/np.sqrt(eps)),
         'critical_angle_deg': float(np.degrees(np.arcsin(1/np.sqrt(eps)))),
-        'resolution_bound_m': float(RES_BOUND_M),
+        'diagnostic_split_scale_m': float(PROFILE_SPLIT_SCALE_M),
         'time_offset_ns_median': time_offset_ns,
-        'ridge_vs_true_relief': {
-            'corr_full': corr(ridge, true),
-            'corr_lowpass_gt_resolution_bound': corr(ridge, low),
-            'corr_highpass_lt_resolution_bound': corr(ridge, high),
-            'rmse_m': float(np.sqrt(np.mean((ridge-true)**2)))},
+        'ridge_vs_true_relief': profile_metrics,
         'template_scores': scores,
         'interface_band_image_energy': e,
         'halfspace_over_diff_band_energy': e['halfspace']/e['diff'],
@@ -228,16 +220,25 @@ def main():
                 raise ValueError('chain does not reproduce archived baseline')
             summary['chain_anchor_relative_L2'] = anchor
         results[tag], images[tag], ridges[tag] = summary, img, (ridge, rx_x, true, low)
-        print(tag, 'corr_low', round(summary['ridge_vs_true_relief']['corr_lowpass_gt_resolution_bound'], 3),
+        print(tag, 'corr_low', round(summary['ridge_vs_true_relief']['lowpass_matched']['corr'], 3),
               'tpl_true', round(summary['template_scores']['true'], 3),
               'echo dB', round(summary['echo_over_direct_dB_median'], 1), flush=True)
 
-    out = {'status': 'PASS', 'cases': results,
-           'resolution_bound_m': float(RES_BOUND_M),
-           'notes': 'Identical Kirchhoff stack per case; v=c/sqrt(eps_r); resolution bound c/(2f) held fixed; no amplitude weighting, no clean-claim.'}
+    out = {'status': 'COMPLETED_MIGRATION_DIAGNOSTIC', 'cases': results,
+           'code_sha256': sha256(__file__),
+           'metrics_code_sha256': sha256(ROOT/'scripts/hs4_analysis_metrics.py'),
+           'scan_contract_sha256': sha256(SCAN/'execution_contract.json'),
+           'diagnostic_split_scale_m': float(PROFILE_SPLIT_SCALE_M),
+           'notes': 'Identical Kirchhoff stack per case; v=c/sqrt(eps_r); matched profile splits; finite periodic interval; no physical resolution or recoverability certification.'}
     args.out.mkdir(parents=True)
     (args.out/'summary.json').write_text(json.dumps(out, indent=2, ensure_ascii=False, allow_nan=False)+'\n',
                                          encoding='utf-8')
+    saved = {'metric_x_m': rx_x, 'truth_z_m': true, 'image_x_m': IMAGE_X, 'image_z_m': IMAGE_Z}
+    for tag in results:
+        saved[tag+'_ridge_z_m'] = ridges[tag][0]
+        for role, img in images[tag].items():
+            saved[tag+'_'+role+'_image'] = img
+    np.savez_compressed(args.out/'migration_arrays.npz', **saved)
 
     fx, fz = interface_relief()
     fig, axes = plt.subplots(4, 1, figsize=(12, 13), sharex=True)
@@ -260,7 +261,7 @@ def main():
         ridge, rx_x, true, low = ridges[tag]
         ax.plot(rx_x, ridge, label=tag, lw=1.2)
     ax.plot(rx_x, true, 'k--', lw=1.4, label='true relief')
-    ax.plot(rx_x, low, 'k:', lw=1, label=f'true, scales > {RES_BOUND_M:.2f} m')
+    ax.plot(rx_x, low, 'k:', lw=1, label=f'true, diagnostic lowpass > {PROFILE_SPLIT_SCALE_M:.2f} m')
     ax.invert_yaxis(); ax.grid(alpha=.3); ax.legend(ncol=3, fontsize=8)
     ax.set_xlabel('x (m)'); ax.set_ylabel('z (m)')
     ax.set_title('diff-image ridge vs true relief, by cover permittivity')
@@ -272,7 +273,7 @@ def main():
     xs = [r['cover_eps_r'] for _, r in results.items()]
     labels = list(results)
     for ax, (title, getter) in zip(axes, [
-            ('corr vs >1.58 m relief', lambda r: r['ridge_vs_true_relief']['corr_lowpass_gt_resolution_bound']),
+            ('matched lowpass corr (diagnostic split)', lambda r: r['ridge_vs_true_relief']['lowpass_matched']['corr']),
             ('template score (true)', lambda r: r['template_scores']['true']),
             ('echo/direct (dB)', lambda r: r['echo_over_direct_dB_median'])]):
         ax.plot(xs, [getter(r) for r in results.values()], 'o-')
