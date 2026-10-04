@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "time_offset_ns_median": -0.3627391798949873,
+  "time_offset_per_station_ns": [
+    -0.3627391798949873,
+    -0.3627391798949873,
+    -0.3627391798949873,
+    -0.3627391798949873,
+    -0.3627391798949873,
+    -0.3627391798949873,
+    -0.3627391798949873,
+    -0.3627391798949873,
+    -0.3627391798949873,
+    -0.3627391798949873,
+    -0.3627391798949873,
+    -0.3627391798949873,
+    -0.3627391798949873
+  ],
+  "chain_anchor_relative_L2": 1.9773515967598964e-11,
+  "resolution_bound_m": 1.577855042105263,
+  "metric_x_range_m": [
+    14.75,
+    21.0
+  ],
+  "ridge_vs_true_relief": {
+    "corr_full": 0.8431827286755046,
+    "corr_lowpass_gt_resolution_bound": 0.8353403073040847,
+    "corr_highpass_lt_resolution_bound": 0.1148274505572683,
+    "rmse_m": 0.22088867381761965
+  },
+  "template_scores": {
+    "true": 0.7182775311968096,
+    "true_lowpass_gt_resolution_bound": 0.7133026617310668,
+    "flat_mean_depth": 0.5671245954081613,
+    "true_shifted_plus1m": 0.6552399581102966,
+    "true_shifted_plus2m": 0.5179343103560149,
+    "flat_plus_highpass_only": 0.5659041264348667
+  },
+  "interface_band_image_energy": {
+    "rough": 260.15068204159184,
+    "halfspace": 2.517104504049945,
+    "diff": 253.85755176197813
+  },
+  "diff_over_rough_band_energy": 0.9758096721860311,
+  "halfspace_over_diff_band_energy": 0.009915421016941156,
+  "notes": "Kirchhoff stack, 13 common-offset traces, two-layer Fermat times; no amplitude weighting, no clean-claim."
+}

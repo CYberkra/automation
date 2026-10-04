@@ -1,0 +1,128 @@
+{
+  "status": "PASS",
+  "cases": {
+    "eps6": {
+      "cover_eps_r": 6.0,
+      "v_cover_m_per_ns": 0.12238975847245946,
+      "sin_critical": 0.4082482904638631,
+      "critical_angle_deg": 24.094842552110705,
+      "resolution_bound_m": 1.577855042105263,
+      "time_offset_ns_median": -0.3627391798949873,
+      "ridge_vs_true_relief": {
+        "corr_full": 0.9396304924883502,
+        "corr_lowpass_gt_resolution_bound": 0.9384773983408776,
+        "corr_highpass_lt_resolution_bound": 0.07494369616895724,
+        "rmse_m": 0.08047912527193433
+      },
+      "template_scores": {
+        "true": 0.6879412659974385,
+        "true_lowpass_gt_resolution_bound": 0.6849070331985692,
+        "flat_mean_depth": 0.6075656344460376,
+        "true_shifted_plus1m": 0.6255904391386993,
+        "true_shifted_plus2m": 0.5309669246170244,
+        "flat_plus_highpass_only": 0.6038543955849245
+      },
+      "interface_band_image_energy": {
+        "rough": 18833.659358185778,
+        "halfspace": 23.821366969402355,
+        "diff": 18877.17035431109
+      },
+      "halfspace_over_diff_band_energy": 0.001261914075165515,
+      "echo_peak_time_ns_median": 151.7266779689835,
+      "echo_over_direct_dB_median": -51.926684170532724
+    },
+    "eps9": {
+      "cover_eps_r": 9.0,
+      "v_cover_m_per_ns": 0.09993081933333332,
+      "sin_critical": 0.3333333333333333,
+      "critical_angle_deg": 19.47122063449069,
+      "resolution_bound_m": 1.577855042105263,
+      "time_offset_ns_median": -0.3627391798949873,
+      "ridge_vs_true_relief": {
+        "corr_full": 0.961567859568327,
+        "corr_lowpass_gt_resolution_bound": 0.9492106030343658,
+        "corr_highpass_lt_resolution_bound": 0.15480683853560923,
+        "rmse_m": 0.06826467199988534
+      },
+      "template_scores": {
+        "true": 0.7072004674306486,
+        "true_lowpass_gt_resolution_bound": 0.7028048912192608,
+        "flat_mean_depth": 0.5749229574507813,
+        "true_shifted_plus1m": 0.6470715234303575,
+        "true_shifted_plus2m": 0.5391387441827811,
+        "flat_plus_highpass_only": 0.5719477954381371
+      },
+      "interface_band_image_energy": {
+        "rough": 216.2724907809955,
+        "halfspace": 11.043051749443233,
+        "diff": 220.6159966706541
+      },
+      "halfspace_over_diff_band_energy": 0.050055535029623524,
+      "echo_peak_time_ns_median": 162.5383878824898,
+      "echo_over_direct_dB_median": -70.66969347112047
+    },
+    "eps18nd": {
+      "cover_eps_r": 18.017,
+      "v_cover_m_per_ns": 0.07062841556391199,
+      "sin_critical": 0.23559103532855383,
+      "critical_angle_deg": 13.626464834466788,
+      "resolution_bound_m": 1.577855042105263,
+      "time_offset_ns_median": -0.3627391798949873,
+      "ridge_vs_true_relief": {
+        "corr_full": 0.9765240335967702,
+        "corr_lowpass_gt_resolution_bound": 0.9671486663359082,
+        "corr_highpass_lt_resolution_bound": 0.13503217620316074,
+        "rmse_m": 0.06943070469190728
+      },
+      "template_scores": {
+        "true": 0.7305356723548359,
+        "true_lowpass_gt_resolution_bound": 0.7238145974690298,
+        "flat_mean_depth": 0.5631182368525502,
+        "true_shifted_plus1m": 0.6736225508971448,
+        "true_shifted_plus2m": 0.5451245903543348,
+        "flat_plus_highpass_only": 0.5613582178571882
+      },
+      "interface_band_image_energy": {
+        "rough": 25576.623723221346,
+        "halfspace": 2.595617756522494,
+        "diff": 25554.57225602559
+      },
+      "halfspace_over_diff_band_energy": 0.00010157155950479528,
+      "echo_peak_time_ns_median": 193.31017763631547,
+      "echo_over_direct_dB_median": -50.32815988634734
+    },
+    "eps18disp": {
+      "cover_eps_r": 18.017,
+      "v_cover_m_per_ns": 0.07062841556391199,
+      "sin_critical": 0.23559103532855383,
+      "critical_angle_deg": 13.626464834466788,
+      "resolution_bound_m": 1.577855042105263,
+      "time_offset_ns_median": -0.3627391798949873,
+      "ridge_vs_true_relief": {
+        "corr_full": 0.8431827286755046,
+        "corr_lowpass_gt_resolution_bound": 0.8353403073040847,
+        "corr_highpass_lt_resolution_bound": 0.1148274505572683,
+        "rmse_m": 0.22088867381761965
+      },
+      "template_scores": {
+        "true": 0.7182775311968096,
+        "true_lowpass_gt_resolution_bound": 0.7133026617310668,
+        "flat_mean_depth": 0.5671245954081613,
+        "true_shifted_plus1m": 0.6552399581102966,
+        "true_shifted_plus2m": 0.5179343103560149,
+        "flat_plus_highpass_only": 0.5659041264348667
+      },
+      "interface_band_image_energy": {
+        "rough": 260.15068204159184,
+        "halfspace": 2.517104504049945,
+        "diff": 253.85755176197813
+      },
+      "halfspace_over_diff_band_energy": 0.009915421016941156,
+      "echo_peak_time_ns_median": 175.0134377826894,
+      "echo_over_direct_dB_median": -70.34307803561013,
+      "chain_anchor_relative_L2": 1.9773515967598964e-11
+    }
+  },
+  "resolution_bound_m": 1.577855042105263,
+  "notes": "Identical Kirchhoff stack per case; v=c/sqrt(eps_r); resolution bound c/(2f) held fixed; no amplitude weighting, no clean-claim."
+}

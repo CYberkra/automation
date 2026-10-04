@@ -108,3 +108,12 @@ Thumbs.db
 /artifacts/research_checks/2026-10-04_hs4_height8m_wavefield/*/cuda_cache.jsonl
 /artifacts/research_checks/2026-10-04_hs4_height8m_wavefield_b/*/cuda_cache.jsonl
 /artifacts/research_checks/2026-10-04_hs4_height8m_wavefield_c/*/cuda_cache.jsonl
+
+# Permittivity-scan capsule: vtkhdf geometry exports (~7.6 MB each, differing
+# only in embedded metadata) stay local; completed_verification.json records
+# per-group geometry sha256 and Material-array equality with the already
+# tracked centre_rough/centre_halfspace reference geometries. CUDA cache logs
+# stay local. Contracts, inputs, native H5, audit, logs and verification are
+# tracked.
+/artifacts/research_checks/2026-10-04_hs4_permittivity_scan/*/hs4t2d_geom*.vtkhdf
+/artifacts/research_checks/2026-10-04_hs4_permittivity_scan/*/cuda_cache.jsonl
