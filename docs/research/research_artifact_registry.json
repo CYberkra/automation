@@ -180,6 +180,37 @@
  ],
  "runs": [
   {
+   "id": "hs4_aperture_scan_20261005",
+   "status": "COMPLETED_DIAGNOSTIC_NOT_PHYSICAL_ACCEPTANCE",
+   "report": "docs/research/2026-10-05_hs4_aperture_scan_findings.md",
+   "scripts": [
+    "scripts/hs4_aperture_scan_v0_1.py",
+    "scripts/run_hs4_aperture_scan_v0_1.cmd",
+    "scripts/analyze_hs4_aperture_scan.py"
+   ],
+   "results": [
+    "artifacts/research_checks/2026-10-05_hs4_aperture_scan_r1",
+    "artifacts/research_checks/2026-10-05_hs4_aperture_scan_analysis_r1"
+   ],
+   "calls_solver": true,
+   "calls_training": false,
+   "key_numbers": {
+    "traces": 244,
+    "aperture_m": 30.65,
+    "pick_corr_6m_eps12": 0.003,
+    "pick_corr_30m_eps12": 0.587,
+    "pick_corr_6m_debye": 0.137,
+    "pick_corr_30m_debye": 0.606,
+    "relief_segment_detail_corr": [
+     0.252,
+     0.248
+    ],
+    "echo_over_direct_eps12_dB": -40.38,
+    "echo_over_direct_debye_dB": -61.47
+   },
+   "limits": "2D line source; 30m aperture is 1/7 of measured 216m; picks gated on known true relief; full-aperture correlation boosted by flat-segment structure; relief-segment detail corr ~0.25; no grid-convergence/3D/field claims."
+  },
+  {
    "id": "hs4_material_scan_20261005",
    "status": "COMPLETED_SITE_ADAPTATION_DIAGNOSTIC",
    "report": "docs/research/2026-10-05_hs4_material_scan_findings.md",

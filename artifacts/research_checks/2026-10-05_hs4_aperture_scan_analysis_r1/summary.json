@@ -1,0 +1,31 @@
+{
+  "status": "COMPLETED_DIAGNOSTIC_NOT_PHYSICAL_ACCEPTANCE",
+  "code_sha256": "35a5916de79c92c3c81851587fd4c566f472b6f22a0b158a3c1475e8aed4138a",
+  "capsule": "2026-10-05_hs4_aperture_scan_r1",
+  "n_stations": 61,
+  "aperture_m": 31.299999999999994,
+  "independent_dft_max_rel_l2": 8.798252456169946e-13,
+  "per_material": {
+    "eps12_s0.001": {
+      "cover_eps_r": 12.0,
+      "echo_over_direct_dB_median": -40.38182509608806,
+      "pick_corr_full_30m": 0.5870262148574538,
+      "pick_corr_central12m": 0.2637204546969424,
+      "pick_corr_central6m": 0.0030863242036424485,
+      "pick_corr_relief_segment": 0.25246412503930776,
+      "pick_rmse_ns_full": 4.853479547390057,
+      "flat_segment_pick_span_ns": 9.980039920159683
+    },
+    "eps18.017_s0.003_debye": {
+      "cover_eps_r": 18.017,
+      "echo_over_direct_dB_median": -61.46997010543646,
+      "pick_corr_full_30m": 0.6055900802494567,
+      "pick_corr_central12m": 0.2986156185654615,
+      "pick_corr_central6m": 0.13703000194492135,
+      "pick_corr_relief_segment": 0.24812006446516854,
+      "pick_rmse_ns_full": 6.167796610736088,
+      "flat_segment_pick_span_ns": 11.643379906852942
+    }
+  },
+  "limits": "2D line source; picks gated +/-25 ns on true relief; flat-segment pick span includes relief-edge transition stations; diagnostic, not physical acceptance."
+}
