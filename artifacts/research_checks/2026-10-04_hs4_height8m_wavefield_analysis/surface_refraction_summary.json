@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "sin_critical": 0.23559103532855383,
+  "critical_angle_deg": 13.626464834466788,
+  "v_cover_m_per_ns": 0.07062841556391199,
+  "kx_propagating_limit_air_95MHz_rad_per_m": 1.9910527708540977,
+  "kx_propagating_limit_cover_95MHz_rad_per_m": 8.451309567349995,
+  "band_power": {
+    "cover_z11.975": 1519.5312330904871,
+    "air_z16.025": 567.3591372563774,
+    "air_z19.925": 218.60442265717342
+  },
+  "power_re_cover_dB": {
+    "cover_z11.975": 0.0,
+    "air_z16.025": -4.278515776611009,
+    "air_z19.925": -8.420506871255032
+  },
+  "fraction_outside_air_cone": {
+    "cover_z11.975": 0.6146233390754122,
+    "air_z16.025": 0.03404362848774342,
+    "air_z19.925": 0.0019587892716535875
+  },
+  "window_ns": [
+    90.0,
+    170.0
+  ],
+  "fband_Hz": [
+    60000000.0,
+    140000000.0
+  ],
+  "rows_z_m": {
+    "cover_z11.975": 11.975,
+    "air_z16.025": 16.025,
+    "air_z19.925": 19.924999999999997
+  },
+  "note": "fraction_outside_air_cone must fall to ~0 at the air rows if the field is physical (evanescent high-kx decays with height); the cover-row value includes downgoing multiples and is the high-angle share present just below the surface."
+}

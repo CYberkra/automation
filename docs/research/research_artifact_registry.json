@@ -58,7 +58,8 @@
     "scripts/hs4_height8m_wavefield_v0_3.py",
     "scripts/run_hs4_height8m_wavefield_v0_2.cmd",
     "scripts/run_hs4_height8m_wavefield_v0_3.cmd",
-    "scripts/analyze_hs4_height8m_wavefield.py"
+    "scripts/analyze_hs4_height8m_wavefield.py",
+    "scripts/analyze_hs4_height8m_surface_filter.py"
    ],
    "results": [
     "artifacts/research_checks/2026-10-04_hs4_height8m_wavefield_c",
@@ -96,7 +97,17 @@
     "snapshot_probe_max_abs_difference": 0.0,
     "passive_receiver_bit_identical": true,
     "py_source_identity_match": "319/319",
-    "pyd_rebuilt_count": 25
+    "pyd_rebuilt_count": 25,
+    "surface_critical_angle_deg": 13.626464834466788,
+    "band_power_fraction_outside_air_cone": {
+     "cover_z11.975": 0.6146233390754122,
+     "air_z16.025": 0.03404362848774342,
+     "air_z19.925": 0.0019587892716535875
+    },
+    "air_power_re_cover_dB": {
+     "z16.025": -4.278515776611009,
+     "z19.925": -8.420506871255032
+    }
    },
    "limitations": "Single centre station, TM invariant-Y 2D, Ricker 95MHz; not 3D/finite-antenna/measurement performance. 15m/2m raw snapshot frames retained on previous machine only; cross-height comparison used native receiver H5. Footprint edges truncated by snapshot ROI.",
    "notes": "GPU env rebuilt locally (venv artifacts/local_checks/gprmax_v4_gpu_env, Py3.12.15, pycuda 2026.1, local wheel f16053e1...). NVML requires full inherited environment; two launcher-only failed attempts preserved, no solver attempt consumed there."
