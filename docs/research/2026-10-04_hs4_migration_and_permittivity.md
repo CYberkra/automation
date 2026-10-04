@@ -56,6 +56,17 @@
 - **各 εr 波场快照批**（胶囊 `2026-10-04_hs4_permittivity_wavefield`，脚本 `scripts/hs4_permittivity_wavefield_v0_1.py`）：15 m 航高、中心站位、ricker 95 MHz，快照 ROI/1.0024 ns 帧隔与 8m 批相同（599 帧/组），eps6/eps9/eps18nd × rough/halfspace 共 6 组，V4.0.0/CUDA double，探针/快照闭合 0.0、几何与已跟踪参考逐元素一致，验收 PASS。色散 15 m 属前机已消耗 attempt，不重跑；其波场参照用仓库已有 8m GIF。
 - **GIF**（`artifacts/research_checks/2026-10-04_hs4_permittivity_wavefield_visual/`，脚本 `scripts/plot_hs4_permittivity_wavefield_gif.py`）：`wavefield_15m_eps6.gif`（2.9 MB）、`wavefield_15m_eps9.gif`（2.5 MB）、`wavefield_15m_eps18nd.gif`（4.4 MB）；每条 300 帧（2.0049 ns 步进），三面板（rough Ey / rough−halfspace 差分场 / 差分 log10 包络），**三情形共用全局固定标尺**（rough ±356，diff ±11.9）可直接对比。快照帧与 vtkhdf/cuda_cache 留本机（.gitignore），帧哈希在 completed_verification.json。
 
+## D. 交叉审计修正（2026-10-04，对方 agent 推送后追加）
+
+另一 agent 对本单元（8b69ef9）做了独立复审与复算，以下修正已被我方核对接受，原文保留、结论以此为准：
+
+1. **"61.5% 带内功率在空气锥外"撤回**：旧角谱脚本对 60–170 MHz 统一用 95 MHz 固定传播锥阈值。逐频修正值（90–170 ns 窗，覆盖层行）为 **55.513%**，且窗口敏感（50.8–72.9%）；该统计是电场谱平方份额，不是法向能流、不能据此认定全反射比例或同心弧多次波来源。见 `2026-10-04_hs4_local_wavefield_validation_findings.md`、`2026-10-04_hs4_analysis_corrections.md`。
+2. **"1.58 m 硬上限、<1.58m 细节不可恢复（corr 0.115）"撤回**：c/(2f) 是预设诊断尺度而非独立测得的分辨率；且旧指标把整条山脊与真值高频分量直接相关（分频不匹配，完美重建也只有约 0.14）。同分频匹配后：原 Debye 情形高频 corr **0.614**（相对 L2 0.838，仍不能称保真恢复），四情形高频 corr 0.479–0.753，区间/尺度敏感（0.077–0.753）。正确表述："**1.58 m 以下尺度的恢复显著退化且幅度失真大，非物理硬零**"。
+3. **"色散是比临界角更大的退化源（20 dB）"归因修正**：旧去 Debye 实验同时改变了 V4 的界面平均（dispersive 材料默认不开界面平均，普通材料默认开），是复合混杂。受控实验（`2026-10-04_hs4_v4_factor_controls_findings.md`）显示**电导损耗是主导**：纯 σ 0.0131→0.003 S/m 使回波 +22.43 dB；95 MHz 复本构匹配下色散本身仅 −0.59 dB。应表述为"覆盖层电导损耗显著压弱回波并改变主峰权重"，不能笼统归给"色散"。
+4. **"13.6° 精确临界角"降级为无损等效近似**：18.017 是 Debye 高频极限实部，非全频带实部。
+5. **"网格/PML 因素已排除"降级**：1.25 cm 细化带符号波形差 24–32%（主要为相位/峰时，模值 6–9%），dt 减半仅 0.386%；PML 对照只支持"非主因"，不支持"零贡献"。
+6. 经受住审计的结论：大尺度形状可成像（审计接受为有价值的有限模型诊断）、界面回波强于无界面背景 +13~+20 dB、高空间频率份额随航高显著降低、未成像 B-scan 不是几何剖面、跨机构建逐比特复现。
+
 ## 复现入口
 
 - A：`artifacts/local_checks/hs4_budget_env/Scripts/python.exe scripts/migrate_hs4_height15m_diff_v0_1.py --out <新目录>`（输出目录必须不存在）。
