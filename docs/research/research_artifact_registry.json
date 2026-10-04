@@ -49,6 +49,33 @@
  ],
  "runs": [
   {
+   "id": "hs4_interface_echo_budget_20261004",
+   "status": "COMPLETED_VISIBILITY_BUDGET_NOT_DETECTABILITY_CLAIM",
+   "report": "docs/research/2026-10-04_hs4_interface_echo_budget.md",
+   "script": "scripts/analyze_hs4_interface_echo_budget.py",
+   "results": [
+    "artifacts/research_checks/2026-10-04_hs4_interface_echo_budget_r1",
+    "artifacts/research_checks/2026-10-04_hs4_interface_echo_budget_r2"
+   ],
+   "calls_solver": false,
+   "calls_training": false,
+   "key_numbers": {
+    "full_window_contrast_over_nointerface_background_dB_range": [12.978681935699473, 20.498557593926996],
+    "full_window_contrast_over_total_dB_range": [-0.22924685279286702, -0.04506655691839771],
+    "subsurface_window_signed_peak_over_full_record_peak_range": [0.0001526056261588217, 0.00047304748573338487],
+    "diff_common_mode_energy_share": 0.39324506290526795,
+    "rough_common_mode_energy_share": 0.40463836616238913,
+    "contrast_peak_time_span_ns": 21.62341982701264,
+    "contrast_peak_vs_local_cover_depth_correlation": 0.6125822243707666,
+    "low_centre_full_window_contrast_over_background_dB": 12.732670696638596,
+    "archived_baseline_anchor_relative_L2": 1.9773515967598964e-11
+   },
+   "r1_r2_byte_identical": true,
+   "inputs_identity_verified": "26 H5 vs capsule manifests + 2 H5 vs continuation independent_verification raw_sha256",
+   "reproduce": "artifacts/local_checks/hs4_budget_env/Scripts/python.exe scripts/analyze_hs4_interface_echo_budget.py --out artifacts/local_checks/echo_budget_new",
+   "scope": "CPU-only windowed waveform-norm budget on archived verified H5 (15m 13 stations + 2m centre). Ratios are not power shares, SNR or detectability. Interface echo dominates the subsurface window (~0 dB vs total in-window, +13..+20 dB over no-interface background); whole window is -66..-76 dB below the full-record peak; strongest lobes do not track local cover depth (corr 0.613). No imaging, no new solver runs, G4/frozen contracts unchanged."
+  },
+  {
    "id": "hs4_next_controls_and_continuation_failure_20261004",
    "status": "NEXT_CONTROL_DESIGN_NO_NEW_SOLVER_CONTINUATION_FAILED",
    "report": "docs/research/2026-10-04_hs4_next_controls.md",
