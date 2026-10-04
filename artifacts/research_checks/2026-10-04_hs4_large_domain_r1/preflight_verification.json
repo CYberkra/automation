@@ -1,0 +1,81 @@
+{
+  "status": "PASS",
+  "completed": false,
+  "contract_sha256": "562e21f49004847cb77334de577aa4457e908ccb0a89a371a3850d168c67324f",
+  "code_sha256": "8451fa8cba6d2bad9df6a6ffcfd93d146060f09666ac00320a5830d68f09faa7",
+  "groups": [
+    {
+      "id": "centre_rough",
+      "input_sha256": "386c2fa0c2cb38394b63f73e76c9488decd106edc4ebbc15b69a6202adf7d661",
+      "physical_factor_check": "PASS",
+      "full_material_array_sha256": "4b62679c9b5b9b6737102bb09e2501f745ecd274ced73e3fe62ad4c3bfe7841c",
+      "old_roi_exactly_preserved": true,
+      "new_cells": [
+        4320,
+        1,
+        1320
+      ]
+    },
+    {
+      "id": "centre_halfspace",
+      "input_sha256": "8d63af833e821e00575701b55e349ddd4a4e4898110ce7a06350eb513c7fc943",
+      "physical_factor_check": "PASS",
+      "full_material_array_sha256": "f363add8e65d9620187d413b880e97beb58e4d0769256d896a346461ed431c2e",
+      "old_roi_exactly_preserved": true,
+      "new_cells": [
+        4320,
+        1,
+        1320
+      ]
+    },
+    {
+      "id": "left_rough",
+      "input_sha256": "e3a0ab2c3185fbe8b0590d29bcfe0d64c16c4365f43da311e129acb02c34e199",
+      "physical_factor_check": "PASS",
+      "full_material_array_sha256": "4b62679c9b5b9b6737102bb09e2501f745ecd274ced73e3fe62ad4c3bfe7841c",
+      "old_roi_exactly_preserved": true,
+      "new_cells": [
+        4320,
+        1,
+        1320
+      ]
+    },
+    {
+      "id": "left_halfspace",
+      "input_sha256": "bde54b07d4bb5a66f837ae820a154980bc776bf606d216798c2b3ace48a97dd1",
+      "physical_factor_check": "PASS",
+      "full_material_array_sha256": "f363add8e65d9620187d413b880e97beb58e4d0769256d896a346461ed431c2e",
+      "old_roi_exactly_preserved": true,
+      "new_cells": [
+        4320,
+        1,
+        1320
+      ]
+    },
+    {
+      "id": "right_rough",
+      "input_sha256": "39690959b86bd5c49de60f9795dd48c7cc2636a4263050a52f9c76dfd358df0d",
+      "physical_factor_check": "PASS",
+      "full_material_array_sha256": "4b62679c9b5b9b6737102bb09e2501f745ecd274ced73e3fe62ad4c3bfe7841c",
+      "old_roi_exactly_preserved": true,
+      "new_cells": [
+        4320,
+        1,
+        1320
+      ]
+    },
+    {
+      "id": "right_halfspace",
+      "input_sha256": "8e688490d886c7c898089255083bfdda7a0c31e90fff5d4783b4a7e1083f8719",
+      "physical_factor_check": "PASS",
+      "full_material_array_sha256": "f363add8e65d9620187d413b880e97beb58e4d0769256d896a346461ed431c2e",
+      "old_roi_exactly_preserved": true,
+      "new_cells": [
+        4320,
+        1,
+        1320
+      ]
+    }
+  ],
+  "scope": "X-domain sensitivity only; unchanged top/bottom, grid and 2D line-source model."
+}

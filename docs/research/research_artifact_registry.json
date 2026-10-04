@@ -1,5 +1,25 @@
 {
-
+ "hs4_large_domain_2026_10_04": {
+  "report": "docs/research/2026-10-04_hs4_large_domain_status_and_task.md",
+  "plan": "docs/research/2026-10-04_hs4_large_domain_plan.md",
+  "status": "PREPARED_NOT_RUN_RESOURCE_PREFLIGHT_REJECTED",
+  "new_solver_cases": 0,
+  "planned_solver_cases": 6,
+  "domain_m": [
+   108,
+   0.05,
+   33
+  ],
+  "cell_count": 5702400,
+  "ready_capsule": "artifacts/research_checks/2026-10-04_hs4_large_domain_ready_r2",
+  "historical_rejection": "artifacts/research_checks/2026-10-04_hs4_large_domain_r1/capacity_rejection.json",
+  "execution_attempt_consumed": false,
+  "native_receiver_results_exist": false,
+  "physical_attribution_certified": false,
+  "grid_convergence_certified": false,
+  "full_bscan_executed": false,
+  "next_step": "When resources sufficient, run local ready_r2 or freeze fresh target-machine capsule; audit native results then run provided paired analysis."
+ },
  "hs4_v4_factor_controls_2026_10_04": {
   "report": "docs/research/2026-10-04_hs4_v4_factor_controls_findings.md",
   "pre_execution_plans": [
@@ -28,7 +48,6 @@
   "new_3d_solver_executed": false,
   "old_debye_removal_effect_interpretation": "Compound material and edge-averaging sensitivity; use new matched-edge controls for conductivity attribution."
  },
-
  "hs4_local_wavefield_validation_2026_10_04": {
   "report": "docs/research/2026-10-04_hs4_local_wavefield_validation_findings.md",
   "pre_execution_plan": "docs/research/2026-10-04_hs4_local_wavefield_validation_plan.md",
@@ -47,7 +66,6 @@
   "new_3d_solver_executed": false,
   "supersedes_pending_frame_and_recompute_status_of": "hs4_analysis_corrections_2026_10_04"
  },
-
  "hs4_analysis_corrections_2026_10_04": {
   "report": "docs/research/2026-10-04_hs4_analysis_corrections.md",
   "four_case_results": "artifacts/research_checks/2026-10-04_hs4_permittivity_matched_metrics_r1/summary.json",
