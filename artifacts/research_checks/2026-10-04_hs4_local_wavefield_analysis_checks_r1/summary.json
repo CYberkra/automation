@@ -1,0 +1,119 @@
+{
+  "status": "PASS",
+  "code_sha256": "0684fa8d43041773c273a0503c6ddcde3870766406b64ae6dbc2d5c45634c65d",
+  "solver_called_by_this_check": false,
+  "actual_completed_solver_cases": 3,
+  "case_runtime": [
+    {
+      "status": "COMPLETED",
+      "group": "mid8_rough",
+      "elapsed_s": 82.73399999993853,
+      "peak_owned_RSS_bytes": 1018679296,
+      "raw_sha256": "d7fcd5b76afc1c7e9adc06625e90fe82efe94c5cf4c89e1dd1aa25bfb75c1530"
+    },
+    {
+      "status": "COMPLETED",
+      "group": "mid8_halfspace",
+      "elapsed_s": 80.48499999986961,
+      "peak_owned_RSS_bytes": 1015619584,
+      "raw_sha256": "43e70c88be4e277b42cbfcc40da9e73b6e334fb8e36814d5afe1967ea3aeb244"
+    },
+    {
+      "status": "COMPLETED",
+      "group": "mid8_rough_passive",
+      "elapsed_s": 74.18700000015087,
+      "peak_owned_RSS_bytes": 783630336,
+      "raw_sha256": "d7fcd5b76afc1c7e9adc06625e90fe82efe94c5cf4c89e1dd1aa25bfb75c1530"
+    }
+  ],
+  "window_results": [
+    {
+      "analysis": "artifacts\\research_checks\\2026-10-04_hs4_local_aircone_r1",
+      "summary_sha256": "c8c11522ae9580362e2ff1a61f7b2d043fe540d683e9436928c9f7383e6f7e9c",
+      "arrays_sha256": "2594efa1117f7d14d92697114aa6f9775b7b09bd308979978ce9c1672f11c657",
+      "window_ns": [
+        90.0,
+        170.0
+      ],
+      "direct_DFT_vs_FFT_relative_L2": {
+        "cover_z11.975": 1.0369487007241959e-15,
+        "air_z16.025": 9.221615427036355e-16,
+        "air_z19.925": 1.1281349106943204e-15
+      },
+      "per_frequency_air_cone_fraction": {
+        "cover_z11.975": 0.5551326735717772,
+        "air_z16.025": 0.015497762082536656,
+        "air_z19.925": 0.002759569379365962
+      },
+      "fixed95MHz_fraction": {
+        "cover_z11.975": 0.6146233390754123,
+        "air_z16.025": 0.03404362848774342,
+        "air_z19.925": 0.0019587892716535897
+      }
+    },
+    {
+      "analysis": "artifacts\\research_checks\\2026-10-04_hs4_local_aircone_w80_180",
+      "summary_sha256": "5cbb05af13463abc4267ed176086fc0c9867d412403be4451dd3a1cbd34018f7",
+      "arrays_sha256": "e8c6774e8a2580827db78b8616e916a706b675fb651e40c09c70d71afb3fac73",
+      "window_ns": [
+        80.0,
+        180.0
+      ],
+      "direct_DFT_vs_FFT_relative_L2": {
+        "cover_z11.975": 9.655826207017958e-16,
+        "air_z16.025": 1.023013356683851e-15,
+        "air_z19.925": 1.148535741822031e-15
+      },
+      "per_frequency_air_cone_fraction": {
+        "cover_z11.975": 0.5080184020309804,
+        "air_z16.025": 0.012030512344604265,
+        "air_z19.925": 0.0014472778457128852
+      },
+      "fixed95MHz_fraction": {
+        "cover_z11.975": 0.6019014088655521,
+        "air_z16.025": 0.04912340209051127,
+        "air_z19.925": 0.004121747045401772
+      }
+    },
+    {
+      "analysis": "artifacts\\research_checks\\2026-10-04_hs4_local_aircone_w100_180",
+      "summary_sha256": "3715e657d73ddc89b770c064bb6d0c41d963ca5affed9941a70ea26931c654b0",
+      "arrays_sha256": "8edb2cf729ebb855e72a3b1e7b55071562fd0d040e552e3a536294bacfb88dcd",
+      "window_ns": [
+        100.0,
+        180.0
+      ],
+      "direct_DFT_vs_FFT_relative_L2": {
+        "cover_z11.975": 1.1076160700893079e-15,
+        "air_z16.025": 6.899325765978408e-16,
+        "air_z19.925": 7.515326145536984e-16
+      },
+      "per_frequency_air_cone_fraction": {
+        "cover_z11.975": 0.7291868886588478,
+        "air_z16.025": 0.035375813767130795,
+        "air_z19.925": 0.006550264103802185
+      },
+      "fixed95MHz_fraction": {
+        "cover_z11.975": 0.7764861023509861,
+        "air_z16.025": 0.07349204239644795,
+        "air_z19.925": 0.004617180837559832
+      }
+    }
+  ],
+  "invalid_window_rejections": [
+    [
+      "170",
+      "90"
+    ],
+    [
+      "nan",
+      "170"
+    ],
+    [
+      "-1",
+      "170"
+    ]
+  ],
+  "historical_overwrite_rejected": true,
+  "physical_attribution_certified": false
+}

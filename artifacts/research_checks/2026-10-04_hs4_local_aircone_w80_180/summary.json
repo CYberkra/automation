@@ -1,0 +1,64 @@
+{
+  "status": "COMPLETED_FIELD_SPECTRUM_DIAGNOSTIC",
+  "code_sha256": "596fc5b49f9447c93cd4618f335826e48a6caf961ea01bdbaddde57b9170c9b2",
+  "contract_sha256": "800a22796743f6c94d51538ee300a2283c25d05ebd26a942135c76c117f2dd82",
+  "metrics_code_sha256": "225ba226cab3c30832b0f83e70df455652938b2b7879c34a574cf7580314523b",
+  "selected_pairs_hash_verified": 100,
+  "selected_frequency_hz": [
+    69830445.17659824,
+    79806223.05896941,
+    89782000.94134058,
+    99757778.82371175,
+    109733556.70608294,
+    119709334.58845411,
+    129685112.47082528,
+    139660890.35319647
+  ],
+  "air_kx_limit_per_frequency_rad_per_m": [
+    1.4635379090404323,
+    1.6726147531890654,
+    1.8816915973376986,
+    2.0907684414863317,
+    2.2998452856349654,
+    2.508922129783598,
+    2.717998973932231,
+    2.9270758180808647
+  ],
+  "field_spectral_square_sum": {
+    "cover_z11.975": 2224.1237084694994,
+    "air_z16.025": 684.0553884837714,
+    "air_z19.925": 293.14735470621247
+  },
+  "field_spectral_square_relative_to_cover_dB": {
+    "cover_z11.975": 0.0,
+    "air_z16.025": -5.1206767127231325,
+    "air_z19.925": -8.800729600041151
+  },
+  "field_spectral_square_fraction_outside_air_cone": {
+    "cover_z11.975": 0.5080184020309803,
+    "air_z16.025": 0.012030512344604232,
+    "air_z19.925": 0.001447277845712881
+  },
+  "window_ns": [
+    80.0,
+    180.0
+  ],
+  "fband_Hz": [
+    60000000.0,
+    140000000.0
+  ],
+  "rows_z_m": {
+    "cover_z11.975": 11.975,
+    "air_z16.025": 16.025,
+    "air_z19.925": 19.924999999999997
+  },
+  "direction_separated": false,
+  "energy_flux_computed": false,
+  "physical_attribution_certified": false,
+  "limitations": [
+    "Finite time/space Hann windows cause leakage and censor the field.",
+    "Same fixed time window samples different wave packets at different heights.",
+    "Ey spectral-square fractions are not incident/reflected power percentages.",
+    "No E/H directional decomposition or independent numerical-error budget."
+  ]
+}

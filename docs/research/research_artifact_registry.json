@@ -1,5 +1,24 @@
 {
 
+ "hs4_local_wavefield_validation_2026_10_04": {
+  "report": "docs/research/2026-10-04_hs4_local_wavefield_validation_findings.md",
+  "pre_execution_plan": "docs/research/2026-10-04_hs4_local_wavefield_validation_plan.md",
+  "capsule": "artifacts/research_checks/2026-10-04_hs4_local_wavefield_validation_r1",
+  "comparison": "artifacts/research_checks/2026-10-04_hs4_local_wavefield_results_r1/summary.json",
+  "angular_analysis": "artifacts/research_checks/2026-10-04_hs4_local_aircone_r1/summary.json",
+  "independent_analysis_check": "artifacts/research_checks/2026-10-04_hs4_local_wavefield_analysis_checks_r1/summary.json",
+  "status": "COMPLETED_LOCAL_V4_DOUBLE_REPLAY_AND_WINDOW_SENSITIVITY",
+  "actual_solver_cases": 3,
+  "byte_identical_snapshot_files_to_reference": 1198,
+  "angular_raw_percentages_recomputed": true,
+  "dense_frames_available_on_this_machine": true,
+  "dense_frames_in_git": false,
+  "physical_attribution_certified": false,
+  "grid_convergence_certified": false,
+  "new_3d_solver_executed": false,
+  "supersedes_pending_frame_and_recompute_status_of": "hs4_analysis_corrections_2026_10_04"
+ },
+
  "hs4_analysis_corrections_2026_10_04": {
   "report": "docs/research/2026-10-04_hs4_analysis_corrections.md",
   "four_case_results": "artifacts/research_checks/2026-10-04_hs4_permittivity_matched_metrics_r1/summary.json",

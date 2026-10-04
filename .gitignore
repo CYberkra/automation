@@ -117,3 +117,8 @@ Thumbs.db
 # tracked.
 /artifacts/research_checks/2026-10-04_hs4_permittivity_scan/*/hs4t2d_geom*.vtkhdf
 /artifacts/research_checks/2026-10-04_hs4_permittivity_scan/*/cuda_cache.jsonl
+
+# Fresh local replay retains dense frames locally. Per-frame hashes, frozen
+# inputs, native H5, audited geometry, compact gathers and figures are tracked.
+/artifacts/research_checks/2026-10-04_hs4_local_wavefield_validation_r1/*/profile_snaps/
+/artifacts/research_checks/2026-10-04_hs4_local_wavefield_validation_r1/*/cuda_cache.jsonl

@@ -1,0 +1,57 @@
+{
+  "status": "COMPLETED_LOCAL_REPLAY_AND_WAVEFIELD_DIAGNOSTIC",
+  "code_sha256": "725793990e951299e546d46774a6d572babaf40ccb9d36e072f4fc0c80495171",
+  "contract_sha256": "800a22796743f6c94d51538ee300a2283c25d05ebd26a942135c76c117f2dd82",
+  "changed_binary_count": 25,
+  "receiver_comparison": {
+    "mid8_rough": {
+      "native_Ey_bit_equal": true,
+      "native_Ey_max_abs_difference": 0.0,
+      "native_Ey_relative_L2": 0.0,
+      "official501_response_relative_L2": 0.0,
+      "local_raw_sha256": "d7fcd5b76afc1c7e9adc06625e90fe82efe94c5cf4c89e1dd1aa25bfb75c1530",
+      "reference_raw_sha256": "d7fcd5b76afc1c7e9adc06625e90fe82efe94c5cf4c89e1dd1aa25bfb75c1530"
+    },
+    "mid8_halfspace": {
+      "native_Ey_bit_equal": true,
+      "native_Ey_max_abs_difference": 0.0,
+      "native_Ey_relative_L2": 0.0,
+      "official501_response_relative_L2": 0.0,
+      "local_raw_sha256": "43e70c88be4e277b42cbfcc40da9e73b6e334fb8e36814d5afe1967ea3aeb244",
+      "reference_raw_sha256": "43e70c88be4e277b42cbfcc40da9e73b6e334fb8e36814d5afe1967ea3aeb244"
+    },
+    "mid8_rough_passive": {
+      "native_Ey_bit_equal": true,
+      "native_Ey_max_abs_difference": 0.0,
+      "native_Ey_relative_L2": 0.0,
+      "official501_response_relative_L2": 0.0,
+      "local_raw_sha256": "d7fcd5b76afc1c7e9adc06625e90fe82efe94c5cf4c89e1dd1aa25bfb75c1530",
+      "reference_raw_sha256": "d7fcd5b76afc1c7e9adc06625e90fe82efe94c5cf4c89e1dd1aa25bfb75c1530"
+    }
+  },
+  "snapshot_file_byte_equal_count": {
+    "mid8_rough": 599,
+    "mid8_halfspace": 599
+  },
+  "snapshot_count_per_case": 599,
+  "spatial_band_Ey_square_peak_ns": {
+    "interface": 87.21124410131958,
+    "cover": 98.23795312562436,
+    "air_low": 131.3180801985387,
+    "antenna": 140.33993303660623
+  },
+  "contrast_official501_relative_L2": 0.0,
+  "contrast_complex_envelope_relative_L2_in_fixed_window": 0.0,
+  "comparison_window_ns": [
+    113.30102667225871,
+    173.30102667225873
+  ],
+  "passive_receiver_bit_identical": true,
+  "source_all501_valid": true,
+  "physical_attribution_certified": false,
+  "limitations": [
+    "NativeRicker spatialEy squared is not directional energy flux.",
+    "One centre station at8m; no new height/grid/3D acceptance.",
+    "Identical field files certify this replay, not continuum or field validity."
+  ]
+}

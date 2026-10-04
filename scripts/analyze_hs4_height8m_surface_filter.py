@@ -28,9 +28,13 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--capsule', type=Path, default=CAP)
     ap.add_argument('--out', type=Path, required=True)
+    ap.add_argument('--window-ns', type=float, nargs=2, default=TWIN)
     args = ap.parse_args()
     if args.out.exists():
         raise ValueError('new analysis directory required; historical results must not be overwritten')
+    window = tuple(args.window_ns)
+    if not np.isfinite(window).all() or window[0] < 0 or window[1] <= window[0]:
+        raise ValueError('finite increasing nonnegative time window required')
     cp = args.capsule/'execution_contract.json'
     c = json.loads(cp.read_text('utf-8'))
     v = json.loads((args.capsule/'completed_verification.json').read_text('utf-8'))
@@ -51,7 +55,7 @@ def main():
         if sha256(args.capsule/group['id']/'profile.h5') != group['raw_sha256']:
             raise ValueError('native receiver identity differs')
     t_ns = iterations * c['dt_s'] * 1e9
-    selected = np.flatnonzero((t_ns >= TWIN[0]) & (t_ns <= TWIN[1]))
+    selected = np.flatnonzero((t_ns >= window[0]) & (t_ns <= window[1]))
     if len(selected) < 3 or not np.all(np.diff(iterations[selected]) == np.diff(iterations[selected])[0]):
         raise ValueError('uniform selected time sampling required')
     gathers = {name: [] for name in ROWS}
@@ -107,7 +111,7 @@ def main():
         'field_spectral_square_relative_to_cover_dB':
             {k: float(10*np.log10(value/sums[ref])) for k, value in sums.items()},
         'field_spectral_square_fraction_outside_air_cone': outside,
-        'window_ns': list(TWIN), 'fband_Hz': list(FBAND),
+        'window_ns': list(window), 'fband_Hz': list(FBAND),
         'rows_z_m': {k: float(origin[2]+spacing[2]*(iz+.5)) for k, iz in ROWS.items()},
         'direction_separated': False, 'energy_flux_computed': False,
         'physical_attribution_certified': False,

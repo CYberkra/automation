@@ -1,0 +1,62 @@
+{
+  "status": "COMPLETED_FIELD_SPECTRUM_DIAGNOSTIC",
+  "code_sha256": "596fc5b49f9447c93cd4618f335826e48a6caf961ea01bdbaddde57b9170c9b2",
+  "contract_sha256": "800a22796743f6c94d51538ee300a2283c25d05ebd26a942135c76c117f2dd82",
+  "metrics_code_sha256": "225ba226cab3c30832b0f83e70df455652938b2b7879c34a574cf7580314523b",
+  "selected_pairs_hash_verified": 80,
+  "selected_frequency_hz": [
+    62348611.764819026,
+    74818334.11778283,
+    87288056.47074664,
+    99757778.82371044,
+    112227501.17667425,
+    124697223.52963805,
+    137166945.88260186
+  ],
+  "air_kx_limit_per_frequency_rad_per_m": [
+    1.30673027592894,
+    1.5680763311147283,
+    1.8294223863005163,
+    2.090768441486304,
+    2.352114496672092,
+    2.61346055185788,
+    2.874806607043668
+  ],
+  "field_spectral_square_sum": {
+    "cover_z11.975": 1519.5312330904871,
+    "air_z16.025": 567.3591372563774,
+    "air_z19.925": 218.60442265717342
+  },
+  "field_spectral_square_relative_to_cover_dB": {
+    "cover_z11.975": 0.0,
+    "air_z16.025": -4.278515776611009,
+    "air_z19.925": -8.420506871255032
+  },
+  "field_spectral_square_fraction_outside_air_cone": {
+    "cover_z11.975": 0.5551326735717772,
+    "air_z16.025": 0.015497762082536622,
+    "air_z19.925": 0.0027595693793659565
+  },
+  "window_ns": [
+    90.0,
+    170.0
+  ],
+  "fband_Hz": [
+    60000000.0,
+    140000000.0
+  ],
+  "rows_z_m": {
+    "cover_z11.975": 11.975,
+    "air_z16.025": 16.025,
+    "air_z19.925": 19.924999999999997
+  },
+  "direction_separated": false,
+  "energy_flux_computed": false,
+  "physical_attribution_certified": false,
+  "limitations": [
+    "Finite time/space Hann windows cause leakage and censor the field.",
+    "Same fixed time window samples different wave packets at different heights.",
+    "Ey spectral-square fractions are not incident/reflected power percentages.",
+    "No E/H directional decomposition or independent numerical-error budget."
+  ]
+}
