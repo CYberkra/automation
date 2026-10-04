@@ -1,0 +1,66 @@
+#title: HS4T2D transect-2D fast study v0.1 (kinematic companion of HS4; invariant y; profile x = 3D bi=6 transect)
+#domain: 108 0.05 33
+#dx_dy_dz: 0.025 0.05 0.025
+#time_window: 600e-9
+#omp_threads: 8
+#pml_cells: 80 0 40 80 0 40
+#pml_formulation: HORIPML
+#waveform: impulse 1 1 impulse
+#hertzian_dipole: y 56.1 0.025 27 impulse
+#rx: 57.4 0.025 27 t01 Ey
+#material: 9 0.001 1 0 rock
+#material: 18.017 0.003 1 0 cover
+#add_dispersion_debye: 1 7.878 6.4567e-09 cover
+#box: 0 0 0 108 0.05 12 rock
+#box: 48 0 8.85 48.25 0.05 12 cover
+#box: 48.25 0 8.85 48.5 0.05 12 cover
+#box: 48.5 0 8.85 48.75 0.05 12 cover
+#box: 48.75 0 8.85 49 0.05 12 cover
+#box: 49 0 8.85 49.25 0.05 12 cover
+#box: 49.25 0 8.75 49.5 0.05 12 cover
+#box: 49.5 0 8.75 49.75 0.05 12 cover
+#box: 49.75 0 8.65 50 0.05 12 cover
+#box: 50 0 8.65 50.25 0.05 12 cover
+#box: 50.25 0 8.65 50.5 0.05 12 cover
+#box: 50.5 0 8.65 50.75 0.05 12 cover
+#box: 50.75 0 8.75 51 0.05 12 cover
+#box: 51 0 8.75 51.25 0.05 12 cover
+#box: 51.25 0 8.85 51.5 0.05 12 cover
+#box: 51.5 0 8.95 51.75 0.05 12 cover
+#box: 51.75 0 9.05 52 0.05 12 cover
+#box: 52 0 9.15 52.25 0.05 12 cover
+#box: 52.25 0 9.25 52.5 0.05 12 cover
+#box: 52.5 0 9.35 52.75 0.05 12 cover
+#box: 52.75 0 9.35 53 0.05 12 cover
+#box: 53 0 9.45 53.25 0.05 12 cover
+#box: 53.25 0 9.45 53.5 0.05 12 cover
+#box: 53.5 0 9.45 53.75 0.05 12 cover
+#box: 53.75 0 9.45 54 0.05 12 cover
+#box: 54 0 9.45 54.25 0.05 12 cover
+#box: 54.25 0 9.45 54.5 0.05 12 cover
+#box: 54.5 0 9.35 54.75 0.05 12 cover
+#box: 54.75 0 9.35 55 0.05 12 cover
+#box: 55 0 9.25 55.25 0.05 12 cover
+#box: 55.25 0 9.25 55.5 0.05 12 cover
+#box: 55.5 0 9.15 55.75 0.05 12 cover
+#box: 55.75 0 9.05 56 0.05 12 cover
+#box: 56 0 9.05 56.25 0.05 12 cover
+#box: 56.25 0 8.95 56.5 0.05 12 cover
+#box: 56.5 0 8.95 56.75 0.05 12 cover
+#box: 56.75 0 8.95 57 0.05 12 cover
+#box: 57 0 8.95 57.25 0.05 12 cover
+#box: 57.25 0 8.95 57.5 0.05 12 cover
+#box: 57.5 0 8.95 57.75 0.05 12 cover
+#box: 57.75 0 8.95 58 0.05 12 cover
+#box: 58 0 9.05 58.25 0.05 12 cover
+#box: 58.25 0 9.15 58.5 0.05 12 cover
+#box: 58.5 0 9.15 58.75 0.05 12 cover
+#box: 58.75 0 9.25 59 0.05 12 cover
+#box: 59 0 9.25 59.25 0.05 12 cover
+#box: 59.25 0 9.25 59.5 0.05 12 cover
+#box: 59.5 0 9.25 59.75 0.05 12 cover
+#box: 59.75 0 9.25 60 0.05 12 cover
+#box: 0 0 8.85 48 0.05 12 cover
+#box: 60 0 9.25 108 0.05 12 cover
+#geometry_view: 0 0 0 36 0.05 33 0.025 0.05 0.025 hs4t2d_geom n
+#dispersive_averaging: n

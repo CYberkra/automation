@@ -126,6 +126,35 @@
  ],
  "runs": [
   {
+   "id": "hs4_large_domain_dense_bscan_20261004",
+   "status": "COMPLETED_26_TRACES_AFTER_R1_GEOMETRY_EXPORT_FAILURE_PRESERVED",
+   "report": "docs/research/2026-10-04_hs4_large_domain_dense_findings.md",
+   "scripts": [
+    "scripts/hs4_large_domain_dense.py",
+    "scripts/run_hs4_large_domain_dense.cmd",
+    "scripts/analyze_hs4_large_domain_dense.py"
+   ],
+   "results": [
+    "artifacts/research_checks/2026-10-04_hs4_large_domain_dense_r1",
+    "artifacts/research_checks/2026-10-04_hs4_large_domain_dense_r2",
+    "artifacts/research_checks/2026-10-04_hs4_large_domain_dense_results_r2"
+   ],
+   "calls_solver": true,
+   "calls_training": false,
+   "key_numbers": {
+    "stations": 13,
+    "traces": 26,
+    "worst_fixed_window_signed_relative_L2_all_stations": 7.4145461828588935e-09,
+    "peak_span_ns_both_domains": 21.62341982701264,
+    "r2_vs_r1_bitwise_equal": 26,
+    "independent_direct_DFT_max_relative_L2": 8.38163672989487e-13,
+    "sum_solver_elapsed_s_r2": 766.6,
+    "maximum_owned_RSS_GiB": 1.43
+   },
+   "failure_record": "r1: all 26 solves COMPLETED but final audit FAILED (geometry_view line left at 36m extent; export-scope bug only, physics correct, proven by r2 bitwise equality). Capsule preserved untouched.",
+   "limits": "13-station segment, not a full line; 2D line source; no grid-convergence/attribution/field claims."
+  },
+  {
    "id": "hs4_large_domain_108m_local_execution_20261004",
    "status": "COMPLETED_SIX_108M_TRACES_DIAGNOSTIC_NOT_PHYSICAL_ACCEPTANCE",
    "report": "docs/research/2026-10-04_hs4_large_domain_findings.md",

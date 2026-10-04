@@ -1,0 +1,1151 @@
+{
+ "status": "COMPLETED_DIAGNOSTIC_NOT_PHYSICAL_ACCEPTANCE",
+ "contract_sha256": "751c50e80b6a1fde1281cef54ae3785df1ccd23718707d74e3afd79488675ae2",
+ "code_sha256": "95b6bfcb1b98a7324052cbf2e9883fe31326c39014fbf1eba20c4c32bc13b391",
+ "verification_sha256": "bd5f67cafd38826884c3ffb074f35f0f9ba33d3b13c5bd8a19afca2113b8f7f5",
+ "completed_cases": 26,
+ "per_station_metrics": {
+  "s00": {
+   "contrast": {
+    "underground": {
+     "signed_waveform_relative_L2": 3.6881007509866565e-10,
+     "complex_envelope_relative_L2": 3.4401556265140347e-10,
+     "envelope_magnitude_relative_L2": 1.8826507665646166e-10,
+     "amplitude_norm_ratio": 0.9999999999910479,
+     "amplitude_norm_change_dB": -7.775661661093925e-11,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": 4.887493842705598e-11,
+     "reference_envelope_peak_ns": 191.2840984697272,
+     "candidate_envelope_peak_ns": 191.2840984697272,
+     "peak_shift_ns": 0.0
+    },
+    "early": {
+     "signed_waveform_relative_L2": 7.498879209052828e-10,
+     "complex_envelope_relative_L2": 6.998148749003995e-10,
+     "envelope_magnitude_relative_L2": 3.828171419906139e-10,
+     "amplitude_norm_ratio": 0.9999999999623174,
+     "amplitude_norm_change_dB": -3.2730720706635087e-10,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": 1.9066575935768814e-10,
+     "reference_envelope_peak_ns": 172.98735861610112,
+     "candidate_envelope_peak_ns": 172.98735861610112,
+     "peak_shift_ns": 0.0
+    },
+    "late": {
+     "signed_waveform_relative_L2": 1.3613052390697278e-11,
+     "complex_envelope_relative_L2": 1.3522400963671708e-11,
+     "envelope_magnitude_relative_L2": 9.704379321612715e-12,
+     "amplitude_norm_ratio": 1.000000000000189,
+     "amplitude_norm_change_dB": 1.6412853480735395e-12,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": 3.762385052372876e-12,
+     "reference_envelope_peak_ns": 191.2840984697272,
+     "candidate_envelope_peak_ns": 191.2840984697272,
+     "peak_shift_ns": 0.0
+    }
+   },
+   "total": {
+    "underground": {
+     "signed_waveform_relative_L2": 1.9191771248158583e-09,
+     "complex_envelope_relative_L2": 1.7915546484359625e-09,
+     "envelope_magnitude_relative_L2": 9.271410505638253e-10,
+     "amplitude_norm_ratio": 0.999999999855287,
+     "amplitude_norm_change_dB": -1.2569613153170306e-09,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": 2.017961974318145e-10,
+     "reference_envelope_peak_ns": 191.2840984697272,
+     "candidate_envelope_peak_ns": 191.2840984697272,
+     "peak_shift_ns": 0.0
+    },
+    "early": {
+     "signed_waveform_relative_L2": 3.879931072491149e-09,
+     "complex_envelope_relative_L2": 3.6240564412852036e-09,
+     "envelope_magnitude_relative_L2": 1.8713774942698133e-09,
+     "amplitude_norm_ratio": 0.999999999612022,
+     "amplitude_norm_change_dB": -3.3699339436335144e-09,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": 8.549565727437938e-10,
+     "reference_envelope_peak_ns": 172.15568862275447,
+     "candidate_envelope_peak_ns": 172.15568862275447,
+     "peak_shift_ns": 0.0
+    },
+    "late": {
+     "signed_waveform_relative_L2": 8.818821945079811e-11,
+     "complex_envelope_relative_L2": 8.849725057910194e-11,
+     "envelope_magnitude_relative_L2": 8.395071205019392e-11,
+     "amplitude_norm_ratio": 0.9999999999337715,
+     "amplitude_norm_change_dB": -5.752531566244811e-10,
+     "complex_coherence_real": 1.0000000000000002,
+     "complex_coherence_imag": -8.934154990756956e-12,
+     "reference_envelope_peak_ns": 191.2840984697272,
+     "candidate_envelope_peak_ns": 191.2840984697272,
+     "peak_shift_ns": 0.0
+    }
+   }
+  },
+  "s01": {
+   "contrast": {
+    "underground": {
+     "signed_waveform_relative_L2": 2.580692581437267e-10,
+     "complex_envelope_relative_L2": 2.944887763750757e-10,
+     "envelope_magnitude_relative_L2": 2.323336294268555e-10,
+     "amplitude_norm_ratio": 0.9999999999619023,
+     "amplitude_norm_change_dB": -3.309128274639302e-10,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": -4.2906375037734076e-13,
+     "reference_envelope_peak_ns": 191.2840984697272,
+     "candidate_envelope_peak_ns": 191.2840984697272,
+     "peak_shift_ns": 0.0
+    },
+    "early": {
+     "signed_waveform_relative_L2": 4.5435806135143245e-10,
+     "complex_envelope_relative_L2": 5.178374281543363e-10,
+     "envelope_magnitude_relative_L2": 4.086089027131619e-10,
+     "amplitude_norm_ratio": 0.9999999998912504,
+     "amplitude_norm_change_dB": -9.445867190368365e-10,
+     "complex_coherence_real": 1.0000000000000002,
+     "complex_coherence_imag": -9.017190593097671e-13,
+     "reference_envelope_peak_ns": 172.15568862275447,
+     "candidate_envelope_peak_ns": 172.15568862275447,
+     "peak_shift_ns": 0.0
+    },
+    "late": {
+     "signed_waveform_relative_L2": 9.278950783905629e-12,
+     "complex_envelope_relative_L2": 9.35957108920611e-12,
+     "envelope_magnitude_relative_L2": 5.332955702080819e-12,
+     "amplitude_norm_ratio": 0.9999999999956393,
+     "amplitude_norm_change_dB": -3.7876854231362594e-11,
+     "complex_coherence_real": 0.9999999999999998,
+     "complex_coherence_imag": -2.0334876486797046e-13,
+     "reference_envelope_peak_ns": 191.2840984697272,
+     "candidate_envelope_peak_ns": 191.2840984697272,
+     "peak_shift_ns": 0.0
+    }
+   },
+   "total": {
+    "underground": {
+     "signed_waveform_relative_L2": 1.32941769634919e-09,
+     "complex_envelope_relative_L2": 1.5189219735581706e-09,
+     "envelope_magnitude_relative_L2": 1.255692032138536e-09,
+     "amplitude_norm_ratio": 0.9999999998342848,
+     "amplitude_norm_change_dB": -1.4393841065206967e-09,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": 1.0556226861788842e-11,
+     "reference_envelope_peak_ns": 190.45242847638056,
+     "candidate_envelope_peak_ns": 190.45242847638056,
+     "peak_shift_ns": 0.0
+    },
+    "early": {
+     "signed_waveform_relative_L2": 2.316087716175578e-09,
+     "complex_envelope_relative_L2": 2.6451182285429443e-09,
+     "envelope_magnitude_relative_L2": 2.1861030215633746e-09,
+     "amplitude_norm_ratio": 0.9999999996421457,
+     "amplitude_norm_change_dB": -3.1082829720360374e-09,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": -3.105413427536384e-11,
+     "reference_envelope_peak_ns": 171.32401862940787,
+     "candidate_envelope_peak_ns": 171.32401862940787,
+     "peak_shift_ns": 0.0
+    },
+    "late": {
+     "signed_waveform_relative_L2": 1.0194735677030806e-10,
+     "complex_envelope_relative_L2": 1.0187512547372148e-10,
+     "envelope_magnitude_relative_L2": 9.170547929184117e-11,
+     "amplitude_norm_ratio": 0.9999999999283867,
+     "amplitude_norm_change_dB": -6.220249674104722e-10,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": 3.093534975478249e-11,
+     "reference_envelope_peak_ns": 190.45242847638056,
+     "candidate_envelope_peak_ns": 190.45242847638056,
+     "peak_shift_ns": 0.0
+    }
+   }
+  },
+  "s02": {
+   "contrast": {
+    "underground": {
+     "signed_waveform_relative_L2": 2.7665128314384564e-10,
+     "complex_envelope_relative_L2": 2.4222478801914563e-10,
+     "envelope_magnitude_relative_L2": 1.5680963832329425e-10,
+     "amplitude_norm_ratio": 0.9999999999937452,
+     "amplitude_norm_change_dB": -5.4328280810849e-11,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": -2.5780272967979547e-11,
+     "reference_envelope_peak_ns": 172.15568862275447,
+     "candidate_envelope_peak_ns": 172.15568862275447,
+     "peak_shift_ns": 0.0
+    },
+    "early": {
+     "signed_waveform_relative_L2": 3.6406215495736056e-10,
+     "complex_envelope_relative_L2": 3.17681040802652e-10,
+     "envelope_magnitude_relative_L2": 2.0567140607248705e-10,
+     "amplitude_norm_ratio": 0.9999999999882887,
+     "amplitude_norm_change_dB": -1.017230471374357e-10,
+     "complex_coherence_real": 1.0000000000000002,
+     "complex_coherence_imag": -4.062781406107007e-11,
+     "reference_envelope_peak_ns": 172.15568862275447,
+     "candidate_envelope_peak_ns": 172.15568862275447,
+     "peak_shift_ns": 0.0
+    },
+    "late": {
+     "signed_waveform_relative_L2": 1.3535110529261592e-11,
+     "complex_envelope_relative_L2": 1.3542591235168693e-11,
+     "envelope_magnitude_relative_L2": 8.318022547240883e-12,
+     "amplitude_norm_ratio": 1.0000000000012994,
+     "amplitude_norm_change_dB": 1.1286488668532338e-11,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": -5.225055627454285e-12,
+     "reference_envelope_peak_ns": 190.45242847638056,
+     "candidate_envelope_peak_ns": 190.45242847638056,
+     "peak_shift_ns": 0.0
+    }
+   },
+   "total": {
+    "underground": {
+     "signed_waveform_relative_L2": 1.2959741602092603e-09,
+     "complex_envelope_relative_L2": 1.125367433184425e-09,
+     "envelope_magnitude_relative_L2": 9.375891047869984e-10,
+     "amplitude_norm_ratio": 0.9999999999949927,
+     "amplitude_norm_change_dB": -4.349309739659525e-11,
+     "complex_coherence_real": 0.9999999999999999,
+     "complex_coherence_imag": 5.8099986408157284e-11,
+     "reference_envelope_peak_ns": 171.32401862940787,
+     "candidate_envelope_peak_ns": 171.32401862940787,
+     "peak_shift_ns": 0.0
+    },
+    "early": {
+     "signed_waveform_relative_L2": 1.6855434152263222e-09,
+     "complex_envelope_relative_L2": 1.456693235416025e-09,
+     "envelope_magnitude_relative_L2": 1.2146191514415595e-09,
+     "amplitude_norm_ratio": 1.0000000000294569,
+     "amplitude_norm_change_dB": 2.5585922073201594e-10,
+     "complex_coherence_real": 1.0000000000000002,
+     "complex_coherence_imag": 3.7584516842841976e-11,
+     "reference_envelope_peak_ns": 171.32401862940787,
+     "candidate_envelope_peak_ns": 171.32401862940787,
+     "peak_shift_ns": 0.0
+    },
+    "late": {
+     "signed_waveform_relative_L2": 1.8512473903504703e-10,
+     "complex_envelope_relative_L2": 1.8679676322136262e-10,
+     "envelope_magnitude_relative_L2": 1.440917265145978e-10,
+     "amplitude_norm_ratio": 0.9999999999453796,
+     "amplitude_norm_change_dB": -4.744269340254432e-10,
+     "complex_coherence_real": 0.9999999999999998,
+     "complex_coherence_imag": 8.76334654337879e-11,
+     "reference_envelope_peak_ns": 187.95741849634067,
+     "candidate_envelope_peak_ns": 187.95741849634067,
+     "peak_shift_ns": 0.0
+    }
+   }
+  },
+  "s03": {
+   "contrast": {
+    "underground": {
+     "signed_waveform_relative_L2": 1.264765140253388e-10,
+     "complex_envelope_relative_L2": 1.5425311630584507e-10,
+     "envelope_magnitude_relative_L2": 1.2072652109397271e-10,
+     "amplitude_norm_ratio": 1.0000000000115883,
+     "amplitude_norm_change_dB": 1.006545723033158e-10,
+     "complex_coherence_real": 0.9999999999999999,
+     "complex_coherence_imag": 6.814799403146693e-12,
+     "reference_envelope_peak_ns": 172.15568862275447,
+     "candidate_envelope_peak_ns": 172.15568862275447,
+     "peak_shift_ns": 0.0
+    },
+    "early": {
+     "signed_waveform_relative_L2": 1.4433515439467103e-10,
+     "complex_envelope_relative_L2": 1.7502956932974469e-10,
+     "envelope_magnitude_relative_L2": 1.370241952609948e-10,
+     "amplitude_norm_ratio": 1.000000000015803,
+     "amplitude_norm_change_dB": 1.372623715881103e-10,
+     "complex_coherence_real": 0.9999999999999998,
+     "complex_coherence_imag": 9.89946464983835e-12,
+     "reference_envelope_peak_ns": 172.15568862275447,
+     "candidate_envelope_peak_ns": 172.15568862275447,
+     "peak_shift_ns": 0.0
+    },
+    "late": {
+     "signed_waveform_relative_L2": 2.888759754566506e-11,
+     "complex_envelope_relative_L2": 2.9293347745627864e-11,
+     "envelope_magnitude_relative_L2": 2.217407763013505e-11,
+     "amplitude_norm_ratio": 0.9999999999974589,
+     "amplitude_norm_change_dB": -2.2071527054499677e-11,
+     "complex_coherence_real": 0.9999999999999998,
+     "complex_coherence_imag": -3.526579529112617e-12,
+     "reference_envelope_peak_ns": 184.6307385229541,
+     "candidate_envelope_peak_ns": 184.6307385229541,
+     "peak_shift_ns": 0.0
+    }
+   },
+   "total": {
+    "underground": {
+     "signed_waveform_relative_L2": 7.264508308351278e-10,
+     "complex_envelope_relative_L2": 8.294697397453531e-10,
+     "envelope_magnitude_relative_L2": 3.6781084304188413e-10,
+     "amplitude_norm_ratio": 1.0000000000242735,
+     "amplitude_norm_change_dB": 2.1083669997478562e-10,
+     "complex_coherence_real": 1.0000000000000002,
+     "complex_coherence_imag": 4.422650405921148e-11,
+     "reference_envelope_peak_ns": 171.32401862940787,
+     "candidate_envelope_peak_ns": 171.32401862940787,
+     "peak_shift_ns": 0.0
+    },
+    "early": {
+     "signed_waveform_relative_L2": 8.136426288459331e-10,
+     "complex_envelope_relative_L2": 9.252336963141418e-10,
+     "envelope_magnitude_relative_L2": 4.0059530226396515e-10,
+     "amplitude_norm_ratio": 1.000000000026089,
+     "amplitude_norm_change_dB": 2.266053827074679e-10,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": 1.0429427254441589e-10,
+     "reference_envelope_peak_ns": 171.32401862940787,
+     "candidate_envelope_peak_ns": 171.32401862940787,
+     "peak_shift_ns": 0.0
+    },
+    "late": {
+     "signed_waveform_relative_L2": 2.938976841439649e-10,
+     "complex_envelope_relative_L2": 2.9988460128682675e-10,
+     "envelope_magnitude_relative_L2": 2.1358984001418123e-10,
+     "amplitude_norm_ratio": 1.0000000000178122,
+     "amplitude_norm_change_dB": 1.5471477007749837e-10,
+     "complex_coherence_real": 1.0000000000000002,
+     "complex_coherence_imag": -1.6957070679492367e-10,
+     "reference_envelope_peak_ns": 185.4624085163007,
+     "candidate_envelope_peak_ns": 185.4624085163007,
+     "peak_shift_ns": 0.0
+    }
+   }
+  },
+  "s04": {
+   "contrast": {
+    "underground": {
+     "signed_waveform_relative_L2": 6.376110580330779e-11,
+     "complex_envelope_relative_L2": 5.8198584031763464e-11,
+     "envelope_magnitude_relative_L2": 2.8527782679686474e-11,
+     "amplitude_norm_ratio": 1.0000000000073754,
+     "amplitude_norm_change_dB": 6.406220225783172e-11,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": -1.6405186392393455e-14,
+     "reference_envelope_peak_ns": 171.32401862940787,
+     "candidate_envelope_peak_ns": 171.32401862940787,
+     "peak_shift_ns": 0.0
+    },
+    "early": {
+     "signed_waveform_relative_L2": 8.473254666910267e-11,
+     "complex_envelope_relative_L2": 7.644557026751236e-11,
+     "envelope_magnitude_relative_L2": 3.5970462983431355e-11,
+     "amplitude_norm_ratio": 1.0000000000039724,
+     "amplitude_norm_change_dB": 3.450363675320808e-11,
+     "complex_coherence_real": 1.0000000000000002,
+     "complex_coherence_imag": -1.5488142556965557e-14,
+     "reference_envelope_peak_ns": 171.32401862940787,
+     "candidate_envelope_peak_ns": 171.32401862940787,
+     "peak_shift_ns": 0.0
+    },
+    "late": {
+     "signed_waveform_relative_L2": 1.791387048723193e-11,
+     "complex_envelope_relative_L2": 1.7602568393552362e-11,
+     "envelope_magnitude_relative_L2": 1.4580143285597595e-11,
+     "amplitude_norm_ratio": 1.000000000011638,
+     "amplitude_norm_change_dB": 1.0108659100832665e-10,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": -1.7545768544636085e-14,
+     "reference_envelope_peak_ns": 186.29407850964736,
+     "candidate_envelope_peak_ns": 186.29407850964736,
+     "peak_shift_ns": 0.0
+    }
+   },
+   "total": {
+    "underground": {
+     "signed_waveform_relative_L2": 4.0421454905796194e-10,
+     "complex_envelope_relative_L2": 3.7497264386239013e-10,
+     "envelope_magnitude_relative_L2": 3.2745203765702123e-10,
+     "amplitude_norm_ratio": 1.0000000000560854,
+     "amplitude_norm_change_dB": 4.871512349199962e-10,
+     "complex_coherence_real": 1.0000000000000002,
+     "complex_coherence_imag": -3.6943617526559026e-11,
+     "reference_envelope_peak_ns": 171.32401862940787,
+     "candidate_envelope_peak_ns": 171.32401862940787,
+     "peak_shift_ns": 0.0
+    },
+    "early": {
+     "signed_waveform_relative_L2": 5.279520598930679e-10,
+     "complex_envelope_relative_L2": 4.819211540561722e-10,
+     "envelope_magnitude_relative_L2": 4.3295659160574454e-10,
+     "amplitude_norm_ratio": 1.0000000000735028,
+     "amplitude_norm_change_dB": 6.384368565180066e-10,
+     "complex_coherence_real": 1.0000000000000002,
+     "complex_coherence_imag": 2.7932902523109106e-11,
+     "reference_envelope_peak_ns": 171.32401862940787,
+     "candidate_envelope_peak_ns": 171.32401862940787,
+     "peak_shift_ns": 0.0
+    },
+    "late": {
+     "signed_waveform_relative_L2": 1.4449789960387842e-10,
+     "complex_envelope_relative_L2": 1.4661116871707357e-10,
+     "envelope_magnitude_relative_L2": 5.4349413153610925e-11,
+     "amplitude_norm_ratio": 1.0000000000334484,
+     "amplitude_norm_change_dB": 2.9052872180844927e-10,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": -1.2126404380101587e-10,
+     "reference_envelope_peak_ns": 186.29407850964736,
+     "candidate_envelope_peak_ns": 186.29407850964736,
+     "peak_shift_ns": 0.0
+    }
+   }
+  },
+  "s05": {
+   "contrast": {
+    "underground": {
+     "signed_waveform_relative_L2": 2.0304662073344703e-11,
+     "complex_envelope_relative_L2": 1.943503856841085e-11,
+     "envelope_magnitude_relative_L2": 1.649082338963209e-11,
+     "amplitude_norm_ratio": 1.0000000000085287,
+     "amplitude_norm_change_dB": 7.407963598030761e-11,
+     "complex_coherence_real": 0.9999999999999998,
+     "complex_coherence_imag": 2.2761688532387184e-12,
+     "reference_envelope_peak_ns": 172.15568862275447,
+     "candidate_envelope_peak_ns": 172.15568862275447,
+     "peak_shift_ns": 0.0
+    },
+    "early": {
+     "signed_waveform_relative_L2": 2.417018420353823e-11,
+     "complex_envelope_relative_L2": 2.2927828594331847e-11,
+     "envelope_magnitude_relative_L2": 1.9535759138797384e-11,
+     "amplitude_norm_ratio": 1.0000000000134335,
+     "amplitude_norm_change_dB": 1.166816947972309e-10,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": -9.232804137369595e-13,
+     "reference_envelope_peak_ns": 172.15568862275447,
+     "candidate_envelope_peak_ns": 172.15568862275447,
+     "peak_shift_ns": 0.0
+    },
+    "late": {
+     "signed_waveform_relative_L2": 1.6481273417279292e-11,
+     "complex_envelope_relative_L2": 1.608189159946238e-11,
+     "envelope_magnitude_relative_L2": 1.3551871331459369e-11,
+     "amplitude_norm_ratio": 1.0000000000045808,
+     "amplitude_norm_change_dB": 3.9788151269897497e-11,
+     "complex_coherence_real": 0.9999999999999998,
+     "complex_coherence_imag": 4.851281691270498e-12,
+     "reference_envelope_peak_ns": 187.95741849634067,
+     "candidate_envelope_peak_ns": 187.95741849634067,
+     "peak_shift_ns": 0.0
+    }
+   },
+   "total": {
+    "underground": {
+     "signed_waveform_relative_L2": 1.1881489749712806e-10,
+     "complex_envelope_relative_L2": 1.2682886443290514e-10,
+     "envelope_magnitude_relative_L2": 8.520709572168927e-11,
+     "amplitude_norm_ratio": 1.0000000000257898,
+     "amplitude_norm_change_dB": 2.2400748451264074e-10,
+     "complex_coherence_real": 0.9999999999999998,
+     "complex_coherence_imag": -4.79695280950338e-11,
+     "reference_envelope_peak_ns": 171.32401862940787,
+     "candidate_envelope_peak_ns": 171.32401862940787,
+     "peak_shift_ns": 0.0
+    },
+    "early": {
+     "signed_waveform_relative_L2": 1.2447251302794935e-10,
+     "complex_envelope_relative_L2": 1.412191107528318e-10,
+     "envelope_magnitude_relative_L2": 1.0756022510035503e-10,
+     "amplitude_norm_ratio": 1.0000000000227662,
+     "amplitude_norm_change_dB": 1.9774499028916611e-10,
+     "complex_coherence_real": 0.9999999999999999,
+     "complex_coherence_imag": 3.1814920417481023e-12,
+     "reference_envelope_peak_ns": 171.32401862940787,
+     "candidate_envelope_peak_ns": 171.32401862940787,
+     "peak_shift_ns": 0.0
+    },
+    "late": {
+     "signed_waveform_relative_L2": 1.1396621261368272e-10,
+     "complex_envelope_relative_L2": 1.1377794221882639e-10,
+     "envelope_magnitude_relative_L2": 6.12568901237921e-11,
+     "amplitude_norm_ratio": 1.0000000000282512,
+     "amplitude_norm_change_dB": 2.4538662444554945e-10,
+     "complex_coherence_real": 1.0000000000000002,
+     "complex_coherence_imag": -8.961065406380222e-11,
+     "reference_envelope_peak_ns": 191.2840984697272,
+     "candidate_envelope_peak_ns": 191.2840984697272,
+     "peak_shift_ns": 0.0
+    }
+   }
+  },
+  "s06": {
+   "contrast": {
+    "underground": {
+     "signed_waveform_relative_L2": 1.6599789788328922e-11,
+     "complex_envelope_relative_L2": 1.580121864757097e-11,
+     "envelope_magnitude_relative_L2": 1.1213696154207624e-11,
+     "amplitude_norm_ratio": 0.999999999998575,
+     "amplitude_norm_change_dB": -1.2377143033220259e-11,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": 5.3338817397088344e-12,
+     "reference_envelope_peak_ns": 173.81902860944777,
+     "candidate_envelope_peak_ns": 173.81902860944777,
+     "peak_shift_ns": 0.0
+    },
+    "early": {
+     "signed_waveform_relative_L2": 1.9737667872323864e-11,
+     "complex_envelope_relative_L2": 1.8684859967067776e-11,
+     "envelope_magnitude_relative_L2": 1.31080372656463e-11,
+     "amplitude_norm_ratio": 1.0000000000049738,
+     "amplitude_norm_change_dB": 4.320187050147982e-11,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": 5.345801788565549e-12,
+     "reference_envelope_peak_ns": 173.81902860944777,
+     "candidate_envelope_peak_ns": 173.81902860944777,
+     "peak_shift_ns": 0.0
+    },
+    "late": {
+     "signed_waveform_relative_L2": 1.30756023040588e-11,
+     "complex_envelope_relative_L2": 1.289361805297733e-11,
+     "envelope_magnitude_relative_L2": 9.332306166209677e-12,
+     "amplitude_norm_ratio": 0.9999999999932064,
+     "amplitude_norm_change_dB": -5.900816200606264e-11,
+     "complex_coherence_real": 0.9999999999999999,
+     "complex_coherence_imag": 5.323893082270079e-12,
+     "reference_envelope_peak_ns": 190.45242847638056,
+     "candidate_envelope_peak_ns": 190.45242847638056,
+     "peak_shift_ns": 0.0
+    }
+   },
+   "total": {
+    "underground": {
+     "signed_waveform_relative_L2": 1.0517215338502647e-10,
+     "complex_envelope_relative_L2": 1.124282853392744e-10,
+     "envelope_magnitude_relative_L2": 8.224907054726998e-11,
+     "amplitude_norm_ratio": 1.0000000000216862,
+     "amplitude_norm_change_dB": 1.8836401269474421e-10,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": -3.5520651964982355e-11,
+     "reference_envelope_peak_ns": 172.15568862275447,
+     "candidate_envelope_peak_ns": 172.15568862275447,
+     "peak_shift_ns": 0.0
+    },
+    "early": {
+     "signed_waveform_relative_L2": 1.0573650939497348e-10,
+     "complex_envelope_relative_L2": 1.2301967483931526e-10,
+     "envelope_magnitude_relative_L2": 9.169839535602108e-11,
+     "amplitude_norm_ratio": 1.0000000000112457,
+     "amplitude_norm_change_dB": 9.767865774156633e-11,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": -2.5330715241798107e-12,
+     "reference_envelope_peak_ns": 172.15568862275447,
+     "candidate_envelope_peak_ns": 172.15568862275447,
+     "peak_shift_ns": 0.0
+    },
+    "late": {
+     "signed_waveform_relative_L2": 1.0466161988656573e-10,
+     "complex_envelope_relative_L2": 1.0281678371550849e-10,
+     "envelope_magnitude_relative_L2": 7.349342146083714e-11,
+     "amplitude_norm_ratio": 1.0000000000303473,
+     "amplitude_norm_change_dB": 2.6359312701354205e-10,
+     "complex_coherence_real": 0.9999999999999999,
+     "complex_coherence_imag": -6.288766246996053e-11,
+     "reference_envelope_peak_ns": 192.11576846307383,
+     "candidate_envelope_peak_ns": 192.11576846307383,
+     "peak_shift_ns": 0.0
+    }
+   }
+  },
+  "s07": {
+   "contrast": {
+    "underground": {
+     "signed_waveform_relative_L2": 4.88377203007207e-11,
+     "complex_envelope_relative_L2": 4.527753853825167e-11,
+     "envelope_magnitude_relative_L2": 1.983357556230381e-11,
+     "amplitude_norm_ratio": 1.0000000000000604,
+     "amplitude_norm_change_dB": 5.245941418049723e-13,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": 1.3886887477670682e-12,
+     "reference_envelope_peak_ns": 174.65069860279442,
+     "candidate_envelope_peak_ns": 174.65069860279442,
+     "peak_shift_ns": 0.0
+    },
+    "early": {
+     "signed_waveform_relative_L2": 6.395474957683071e-11,
+     "complex_envelope_relative_L2": 6.114737203556777e-11,
+     "envelope_magnitude_relative_L2": 2.63428572734547e-11,
+     "amplitude_norm_ratio": 1.000000000002792,
+     "amplitude_norm_change_dB": 2.425090712884821e-11,
+     "complex_coherence_real": 0.9999999999999998,
+     "complex_coherence_imag": 4.116602104636524e-12,
+     "reference_envelope_peak_ns": 174.65069860279442,
+     "candidate_envelope_peak_ns": 174.65069860279442,
+     "peak_shift_ns": 0.0
+    },
+    "late": {
+     "signed_waveform_relative_L2": 1.5034992331640035e-11,
+     "complex_envelope_relative_L2": 1.4026124465883163e-11,
+     "envelope_magnitude_relative_L2": 7.971299441104458e-12,
+     "amplitude_norm_ratio": 0.9999999999970629,
+     "amplitude_norm_change_dB": -2.5511283127704675e-11,
+     "complex_coherence_real": 0.9999999999999999,
+     "complex_coherence_imag": -1.6047346374574828e-12,
+     "reference_envelope_peak_ns": 180.4723885562209,
+     "candidate_envelope_peak_ns": 180.4723885562209,
+     "peak_shift_ns": 0.0
+    }
+   },
+   "total": {
+    "underground": {
+     "signed_waveform_relative_L2": 3.2237282101621423e-10,
+     "complex_envelope_relative_L2": 2.995942360863539e-10,
+     "envelope_magnitude_relative_L2": 2.6455208273473287e-10,
+     "amplitude_norm_ratio": 1.0000000000440108,
+     "amplitude_norm_change_dB": 3.8227290831784266e-10,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": -5.396922439290923e-12,
+     "reference_envelope_peak_ns": 172.98735861610112,
+     "candidate_envelope_peak_ns": 172.98735861610112,
+     "peak_shift_ns": 0.0
+    },
+    "early": {
+     "signed_waveform_relative_L2": 4.235452869017801e-10,
+     "complex_envelope_relative_L2": 4.047700735217325e-10,
+     "envelope_magnitude_relative_L2": 3.5937913756527793e-10,
+     "amplitude_norm_ratio": 1.0000000000520395,
+     "amplitude_norm_change_dB": 4.520092133857611e-10,
+     "complex_coherence_real": 1.0000000000000002,
+     "complex_coherence_imag": 2.6589549196139035e-11,
+     "reference_envelope_peak_ns": 172.98735861610112,
+     "candidate_envelope_peak_ns": 172.98735861610112,
+     "peak_shift_ns": 0.0
+    },
+    "late": {
+     "signed_waveform_relative_L2": 1.0727657225027561e-10,
+     "complex_envelope_relative_L2": 1.0322045167099859e-10,
+     "envelope_magnitude_relative_L2": 8.254040544136472e-11,
+     "amplitude_norm_ratio": 1.0000000000354379,
+     "amplitude_norm_change_dB": 3.07809470008489e-10,
+     "complex_coherence_real": 1.0000000000000002,
+     "complex_coherence_imag": -3.95509420448621e-11,
+     "reference_envelope_peak_ns": 180.4723885562209,
+     "candidate_envelope_peak_ns": 180.4723885562209,
+     "peak_shift_ns": 0.0
+    }
+   }
+  },
+  "s08": {
+   "contrast": {
+    "underground": {
+     "signed_waveform_relative_L2": 8.530118724541359e-11,
+     "complex_envelope_relative_L2": 1.0413454365446857e-10,
+     "envelope_magnitude_relative_L2": 8.492848212881266e-11,
+     "amplitude_norm_ratio": 1.000000000006188,
+     "amplitude_norm_change_dB": 5.3747755675647714e-11,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": 2.4987452044167924e-12,
+     "reference_envelope_peak_ns": 175.48236859614104,
+     "candidate_envelope_peak_ns": 175.48236859614104,
+     "peak_shift_ns": 0.0
+    },
+    "early": {
+     "signed_waveform_relative_L2": 1.055617235836198e-10,
+     "complex_envelope_relative_L2": 1.3320821141072186e-10,
+     "envelope_magnitude_relative_L2": 1.087251061382427e-10,
+     "amplitude_norm_ratio": 1.0000000000158278,
+     "amplitude_norm_change_dB": 1.3747838094061483e-10,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": 3.4368899187336128e-12,
+     "reference_envelope_peak_ns": 175.48236859614104,
+     "candidate_envelope_peak_ns": 175.48236859614104,
+     "peak_shift_ns": 0.0
+    },
+    "late": {
+     "signed_waveform_relative_L2": 2.1788674665994218e-11,
+     "complex_envelope_relative_L2": 2.1024493129940285e-11,
+     "envelope_magnitude_relative_L2": 1.6312882507090524e-11,
+     "amplitude_norm_ratio": 0.9999999999916567,
+     "amplitude_norm_change_dB": -7.246920911178184e-11,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": 1.0845550833220795e-12,
+     "reference_envelope_peak_ns": 180.4723885562209,
+     "candidate_envelope_peak_ns": 180.4723885562209,
+     "peak_shift_ns": 0.0
+    }
+   },
+   "total": {
+    "underground": {
+     "signed_waveform_relative_L2": 5.120653979155618e-10,
+     "complex_envelope_relative_L2": 5.830633435781821e-10,
+     "envelope_magnitude_relative_L2": 2.5501535250460904e-10,
+     "amplitude_norm_ratio": 1.0000000000172533,
+     "amplitude_norm_change_dB": 1.4986034561095423e-10,
+     "complex_coherence_real": 0.9999999999999998,
+     "complex_coherence_imag": 5.1394909482259306e-11,
+     "reference_envelope_peak_ns": 172.98735861610112,
+     "candidate_envelope_peak_ns": 172.98735861610112,
+     "peak_shift_ns": 0.0
+    },
+    "early": {
+     "signed_waveform_relative_L2": 6.343165417694734e-10,
+     "complex_envelope_relative_L2": 7.471502651121565e-10,
+     "envelope_magnitude_relative_L2": 3.1635075722330856e-10,
+     "amplitude_norm_ratio": 1.0000000000178542,
+     "amplitude_norm_change_dB": 1.5507928585984902e-10,
+     "complex_coherence_real": 0.9999999999999998,
+     "complex_coherence_imag": 8.768613461902308e-11,
+     "reference_envelope_peak_ns": 172.98735861610112,
+     "candidate_envelope_peak_ns": 172.98735861610112,
+     "peak_shift_ns": 0.0
+    },
+    "late": {
+     "signed_waveform_relative_L2": 1.603649966751943e-10,
+     "complex_envelope_relative_L2": 1.514414488281899e-10,
+     "envelope_magnitude_relative_L2": 1.188763166871884e-10,
+     "amplitude_norm_ratio": 1.0000000000163807,
+     "amplitude_norm_change_dB": 1.4228073172397286e-10,
+     "complex_coherence_real": 1.0000000000000002,
+     "complex_coherence_imag": -1.3164630674027625e-12,
+     "reference_envelope_peak_ns": 180.4723885562209,
+     "candidate_envelope_peak_ns": 180.4723885562209,
+     "peak_shift_ns": 0.0
+    }
+   }
+  },
+  "s09": {
+   "contrast": {
+    "underground": {
+     "signed_waveform_relative_L2": 2.4046169265825873e-10,
+     "complex_envelope_relative_L2": 2.1192527337415475e-10,
+     "envelope_magnitude_relative_L2": 1.1936683224230452e-10,
+     "amplitude_norm_ratio": 1.0000000000126885,
+     "amplitude_norm_change_dB": 1.1021105749674288e-10,
+     "complex_coherence_real": 0.9999999999999998,
+     "complex_coherence_imag": -1.2448436980677334e-11,
+     "reference_envelope_peak_ns": 175.48236859614104,
+     "candidate_envelope_peak_ns": 175.48236859614104,
+     "peak_shift_ns": 0.0
+    },
+    "early": {
+     "signed_waveform_relative_L2": 2.920423664998704e-10,
+     "complex_envelope_relative_L2": 2.616591344796374e-10,
+     "envelope_magnitude_relative_L2": 1.4679861078176285e-10,
+     "amplitude_norm_ratio": 1.0000000000197453,
+     "amplitude_norm_change_dB": 1.715056399248089e-10,
+     "complex_coherence_real": 1.0000000000000002,
+     "complex_coherence_imag": -1.778271439648577e-11,
+     "reference_envelope_peak_ns": 175.48236859614104,
+     "candidate_envelope_peak_ns": 175.48236859614104,
+     "peak_shift_ns": 0.0
+    },
+    "late": {
+     "signed_waveform_relative_L2": 4.108501012860692e-11,
+     "complex_envelope_relative_L2": 3.930520473857672e-11,
+     "envelope_magnitude_relative_L2": 2.8367481720285976e-11,
+     "amplitude_norm_ratio": 0.9999999999996951,
+     "amplitude_norm_change_dB": -2.64804322315573e-12,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": -2.6265928412807712e-12,
+     "reference_envelope_peak_ns": 180.4723885562209,
+     "candidate_envelope_peak_ns": 180.4723885562209,
+     "peak_shift_ns": 0.0
+    }
+   },
+   "total": {
+    "underground": {
+     "signed_waveform_relative_L2": 1.1819106099079502e-09,
+     "complex_envelope_relative_L2": 1.0271896190939016e-09,
+     "envelope_magnitude_relative_L2": 8.306905754911215e-10,
+     "amplitude_norm_ratio": 1.0000000000537062,
+     "amplitude_norm_change_dB": 4.664856973128936e-10,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": 4.392591569476379e-11,
+     "reference_envelope_peak_ns": 172.98735861610112,
+     "candidate_envelope_peak_ns": 172.98735861610112,
+     "peak_shift_ns": 0.0
+    },
+    "early": {
+     "signed_waveform_relative_L2": 1.4442682730549833e-09,
+     "complex_envelope_relative_L2": 1.2763345321176432e-09,
+     "envelope_magnitude_relative_L2": 1.0337422107359952e-09,
+     "amplitude_norm_ratio": 1.000000000071686,
+     "amplitude_norm_change_dB": 6.226566018564741e-10,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": 6.990263310532129e-11,
+     "reference_envelope_peak_ns": 172.98735861610112,
+     "candidate_envelope_peak_ns": 172.98735861610112,
+     "peak_shift_ns": 0.0
+    },
+    "late": {
+     "signed_waveform_relative_L2": 1.9966490406932813e-10,
+     "complex_envelope_relative_L2": 1.9379075820865488e-10,
+     "envelope_magnitude_relative_L2": 1.3718202598199264e-10,
+     "amplitude_norm_ratio": 1.0000000000218272,
+     "amplitude_norm_change_dB": 1.8958870857724025e-10,
+     "complex_coherence_real": 0.9999999999999998,
+     "complex_coherence_imag": -2.1316495232468624e-12,
+     "reference_envelope_peak_ns": 180.4723885562209,
+     "candidate_envelope_peak_ns": 180.4723885562209,
+     "peak_shift_ns": 0.0
+    }
+   }
+  },
+  "s10": {
+   "contrast": {
+    "underground": {
+     "signed_waveform_relative_L2": 3.7252694108626844e-10,
+     "complex_envelope_relative_L2": 4.2536340021685617e-10,
+     "envelope_magnitude_relative_L2": 3.5669449235902065e-10,
+     "amplitude_norm_ratio": 0.9999999999321093,
+     "amplitude_norm_change_dB": -5.896910674546851e-10,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": -2.2447348451405803e-11,
+     "reference_envelope_peak_ns": 176.3140385894877,
+     "candidate_envelope_peak_ns": 176.3140385894877,
+     "peak_shift_ns": 0.0
+    },
+    "early": {
+     "signed_waveform_relative_L2": 4.756870414267612e-10,
+     "complex_envelope_relative_L2": 5.435422892749242e-10,
+     "envelope_magnitude_relative_L2": 4.5584563719052747e-10,
+     "amplitude_norm_ratio": 0.9999999998873026,
+     "amplitude_norm_change_dB": -9.788772394238014e-10,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": -3.6985996006374786e-11,
+     "reference_envelope_peak_ns": 176.3140385894877,
+     "candidate_envelope_peak_ns": 176.3140385894877,
+     "peak_shift_ns": 0.0
+    },
+    "late": {
+     "signed_waveform_relative_L2": 3.339319485385998e-11,
+     "complex_envelope_relative_L2": 3.343528799894519e-11,
+     "envelope_magnitude_relative_L2": 2.671546258392109e-11,
+     "amplitude_norm_ratio": 1.0000000000024731,
+     "amplitude_norm_change_dB": 2.1481358644914462e-11,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": 3.8395989783820755e-13,
+     "reference_envelope_peak_ns": 180.4723885562209,
+     "candidate_envelope_peak_ns": 180.4723885562209,
+     "peak_shift_ns": 0.0
+    }
+   },
+   "total": {
+    "underground": {
+     "signed_waveform_relative_L2": 2.0159254094135448e-09,
+     "complex_envelope_relative_L2": 2.3037795784416098e-09,
+     "envelope_magnitude_relative_L2": 1.7673338343672622e-09,
+     "amplitude_norm_ratio": 0.9999999997817909,
+     "amplitude_norm_change_dB": -1.895340312326348e-09,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": -1.363624237437887e-10,
+     "reference_envelope_peak_ns": 171.32401862940787,
+     "candidate_envelope_peak_ns": 171.32401862940787,
+     "peak_shift_ns": 0.0
+    },
+    "early": {
+     "signed_waveform_relative_L2": 2.5737279658468174e-09,
+     "complex_envelope_relative_L2": 2.949641517314579e-09,
+     "envelope_magnitude_relative_L2": 2.263623201972583e-09,
+     "amplitude_norm_ratio": 0.9999999996515817,
+     "amplitude_norm_change_dB": -3.0263228519697975e-09,
+     "complex_coherence_real": 0.9999999999999997,
+     "complex_coherence_imag": -2.5082938246883436e-10,
+     "reference_envelope_peak_ns": 171.32401862940787,
+     "candidate_envelope_peak_ns": 171.32401862940787,
+     "peak_shift_ns": 0.0
+    },
+    "late": {
+     "signed_waveform_relative_L2": 2.1019284719445959e-10,
+     "complex_envelope_relative_L2": 2.091731296535814e-10,
+     "envelope_magnitude_relative_L2": 1.414064153370523e-10,
+     "amplitude_norm_ratio": 0.9999999999837886,
+     "amplitude_norm_change_dB": -1.408101323397858e-10,
+     "complex_coherence_real": 1.0000000000000002,
+     "complex_coherence_imag": 4.121390018139447e-11,
+     "reference_envelope_peak_ns": 180.4723885562209,
+     "candidate_envelope_peak_ns": 180.4723885562209,
+     "peak_shift_ns": 0.0
+    }
+   }
+  },
+  "s11": {
+   "contrast": {
+    "underground": {
+     "signed_waveform_relative_L2": 8.444631060358661e-10,
+     "complex_envelope_relative_L2": 7.889008927428839e-10,
+     "envelope_magnitude_relative_L2": 4.0966613347638847e-10,
+     "amplitude_norm_ratio": 0.9999999998976847,
+     "amplitude_norm_change_dB": -8.886991207068427e-10,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": 2.0011790562274042e-10,
+     "reference_envelope_peak_ns": 169.66067864271457,
+     "candidate_envelope_peak_ns": 169.66067864271457,
+     "peak_shift_ns": 0.0
+    },
+    "early": {
+     "signed_waveform_relative_L2": 1.343096712637154e-09,
+     "complex_envelope_relative_L2": 1.2228222729567332e-09,
+     "envelope_magnitude_relative_L2": 6.340424099371112e-10,
+     "amplitude_norm_ratio": 0.9999999997778848,
+     "amplitude_norm_change_dB": -1.929268245589562e-09,
+     "complex_coherence_real": 0.9999999999999998,
+     "complex_coherence_imag": 4.808215538309284e-10,
+     "reference_envelope_peak_ns": 169.66067864271457,
+     "candidate_envelope_peak_ns": 169.66067864271457,
+     "peak_shift_ns": 0.0
+    },
+    "late": {
+     "signed_waveform_relative_L2": 4.0524756377086385e-11,
+     "complex_envelope_relative_L2": 4.148761949271469e-11,
+     "envelope_magnitude_relative_L2": 3.639363972612169e-11,
+     "amplitude_norm_ratio": 0.9999999999828612,
+     "amplitude_norm_change_dB": -1.488661239955063e-10,
+     "complex_coherence_real": 0.9999999999999999,
+     "complex_coherence_imag": 5.407155177774541e-13,
+     "reference_envelope_peak_ns": 202.09580838323353,
+     "candidate_envelope_peak_ns": 202.09580838323353,
+     "peak_shift_ns": 0.0
+    }
+   },
+   "total": {
+    "underground": {
+     "signed_waveform_relative_L2": 4.4263883791313415e-09,
+     "complex_envelope_relative_L2": 4.1352315975150805e-09,
+     "envelope_magnitude_relative_L2": 2.8262472809155654e-09,
+     "amplitude_norm_ratio": 0.9999999992151326,
+     "amplitude_norm_change_dB": -6.817271561392729e-09,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": 7.48144251810625e-10,
+     "reference_envelope_peak_ns": 169.66067864271457,
+     "candidate_envelope_peak_ns": 169.66067864271457,
+     "peak_shift_ns": 0.0
+    },
+    "early": {
+     "signed_waveform_relative_L2": 6.795134408331194e-09,
+     "complex_envelope_relative_L2": 6.238134834268404e-09,
+     "envelope_magnitude_relative_L2": 4.2619674098179795e-09,
+     "amplitude_norm_ratio": 0.9999999982518513,
+     "amplitude_norm_change_dB": -1.5184227012732743e-08,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": 1.779715894952951e-09,
+     "reference_envelope_peak_ns": 169.66067864271457,
+     "candidate_envelope_peak_ns": 169.66067864271457,
+     "peak_shift_ns": 0.0
+    },
+    "late": {
+     "signed_waveform_relative_L2": 2.3597526203426137e-10,
+     "complex_envelope_relative_L2": 2.4002619750931914e-10,
+     "envelope_magnitude_relative_L2": 1.9246208291012972e-10,
+     "amplitude_norm_ratio": 0.9999999999677046,
+     "amplitude_norm_change_dB": -2.805141810776819e-10,
+     "complex_coherence_real": 1.0000000000000002,
+     "complex_coherence_imag": -5.778028426088275e-11,
+     "reference_envelope_peak_ns": 201.2641383898869,
+     "candidate_envelope_peak_ns": 201.2641383898869,
+     "peak_shift_ns": 0.0
+    }
+   }
+  },
+  "s12": {
+   "contrast": {
+    "underground": {
+     "signed_waveform_relative_L2": 9.024083242035541e-10,
+     "complex_envelope_relative_L2": 9.40669471554906e-10,
+     "envelope_magnitude_relative_L2": 7.474892047425798e-10,
+     "amplitude_norm_ratio": 1.000000000176174,
+     "amplitude_norm_change_dB": 1.5302276109258257e-09,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": 1.703430915942816e-10,
+     "reference_envelope_peak_ns": 189.62075848303394,
+     "candidate_envelope_peak_ns": 189.62075848303394,
+     "peak_shift_ns": 0.0
+    },
+    "early": {
+     "signed_waveform_relative_L2": 1.4969288406364366e-09,
+     "complex_envelope_relative_L2": 1.5943274209397538e-09,
+     "envelope_magnitude_relative_L2": 1.2673444179075155e-09,
+     "amplitude_norm_ratio": 1.000000000501605,
+     "amplitude_norm_change_dB": 4.356885495133161e-09,
+     "complex_coherence_real": 1.0000000000000002,
+     "complex_coherence_imag": 4.992591384833652e-10,
+     "reference_envelope_peak_ns": 179.64071856287424,
+     "candidate_envelope_peak_ns": 179.64071856287424,
+     "peak_shift_ns": 0.0
+    },
+    "late": {
+     "signed_waveform_relative_L2": 3.9046941021276574e-11,
+     "complex_envelope_relative_L2": 3.898964581813785e-11,
+     "envelope_magnitude_relative_L2": 1.9275811473770913e-11,
+     "amplitude_norm_ratio": 1.0000000000026905,
+     "amplitude_norm_change_dB": 2.3369511824420923e-11,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": -4.998288805202149e-12,
+     "reference_envelope_peak_ns": 189.62075848303394,
+     "candidate_envelope_peak_ns": 189.62075848303394,
+     "peak_shift_ns": 0.0
+    }
+   },
+   "total": {
+    "underground": {
+     "signed_waveform_relative_L2": 4.760121290667295e-09,
+     "complex_envelope_relative_L2": 4.963029898034732e-09,
+     "envelope_magnitude_relative_L2": 3.3115830778668082e-09,
+     "amplitude_norm_ratio": 1.0000000008011922,
+     "amplitude_norm_change_dB": 6.959067230939088e-09,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": 1.1942895516807393e-09,
+     "reference_envelope_peak_ns": 168.82900864936792,
+     "candidate_envelope_peak_ns": 168.82900864936792,
+     "peak_shift_ns": 0.0
+    },
+    "early": {
+     "signed_waveform_relative_L2": 7.4145461828588935e-09,
+     "complex_envelope_relative_L2": 7.912912975347447e-09,
+     "envelope_magnitude_relative_L2": 5.280817153496778e-09,
+     "amplitude_norm_ratio": 1.0000000019977677,
+     "amplitude_norm_change_dB": 1.735238999944706e-08,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": 3.1946561390763986e-09,
+     "reference_envelope_peak_ns": 168.82900864936792,
+     "candidate_envelope_peak_ns": 168.82900864936792,
+     "peak_shift_ns": 0.0
+    },
+    "late": {
+     "signed_waveform_relative_L2": 2.4086254894637184e-10,
+     "complex_envelope_relative_L2": 2.4153560408730994e-10,
+     "envelope_magnitude_relative_L2": 1.402229441195352e-10,
+     "amplitude_norm_ratio": 1.0000000000270508,
+     "amplitude_norm_change_dB": 2.349603158774636e-10,
+     "complex_coherence_real": 1.0,
+     "complex_coherence_imag": -9.987557804150915e-11,
+     "reference_envelope_peak_ns": 190.45242847638056,
+     "candidate_envelope_peak_ns": 190.45242847638056,
+     "peak_shift_ns": 0.0
+    }
+   }
+  }
+ },
+ "worst_fixed_window_signed_relative_L2_all_stations": 7.4145461828588935e-09,
+ "contrast_envelope_peak_ns_per_station": {
+  "36m": [
+   191.2840984697272,
+   191.2840984697272,
+   172.15568862275447,
+   172.15568862275447,
+   171.32401862940787,
+   172.15568862275447,
+   173.81902860944777,
+   174.65069860279442,
+   175.48236859614104,
+   175.48236859614104,
+   176.3140385894877,
+   169.66067864271457,
+   189.62075848303394
+  ],
+  "108m": [
+   191.2840984697272,
+   191.2840984697272,
+   172.15568862275447,
+   172.15568862275447,
+   171.32401862940787,
+   172.15568862275447,
+   173.81902860944777,
+   174.65069860279442,
+   175.48236859614104,
+   175.48236859614104,
+   176.3140385894877,
+   169.66067864271457,
+   189.62075848303394
+  ]
+ },
+ "peak_span_ns": {
+  "36m": 21.62341982701264,
+  "108m": 21.62341982701264
+ },
+ "independent_direct_DFT_relative_L2": {
+  "36m_s00_rough": 8.112598419844593e-13,
+  "108m_s00_rough": 4.369348480719863e-13,
+  "36m_s00_halfspace": 8.041203123216474e-13,
+  "108m_s00_halfspace": 4.4326593683009287e-13,
+  "36m_s01_rough": 8.102893837469954e-13,
+  "108m_s01_rough": 4.592953863521003e-13,
+  "36m_s01_halfspace": 7.903586957980963e-13,
+  "108m_s01_halfspace": 4.582346915368929e-13,
+  "36m_s02_rough": 8.153778608301214e-13,
+  "108m_s02_rough": 4.566544384092866e-13,
+  "36m_s02_halfspace": 8.064413434450642e-13,
+  "108m_s02_halfspace": 4.547194984190293e-13,
+  "36m_s03_rough": 7.900211435403521e-13,
+  "108m_s03_rough": 4.1858602412224653e-13,
+  "36m_s03_halfspace": 7.872459926141421e-13,
+  "108m_s03_halfspace": 4.0598773086554875e-13,
+  "36m_s04_rough": 7.918055073700873e-13,
+  "108m_s04_rough": 4.667533270872526e-13,
+  "36m_s04_halfspace": 7.797912028907008e-13,
+  "108m_s04_halfspace": 4.594287593886333e-13,
+  "36m_s05_rough": 7.89182022867267e-13,
+  "108m_s05_rough": 4.904154806502666e-13,
+  "36m_s05_halfspace": 8.065460160064783e-13,
+  "108m_s05_halfspace": 4.757469506801089e-13,
+  "36m_s06_rough": 8.035774916605151e-13,
+  "108m_s06_rough": 4.848817459923044e-13,
+  "36m_s06_halfspace": 8.017088034298516e-13,
+  "108m_s06_halfspace": 4.837818171783956e-13,
+  "36m_s07_rough": 7.894128334011674e-13,
+  "108m_s07_rough": 4.669093242117424e-13,
+  "36m_s07_halfspace": 7.848945670610497e-13,
+  "108m_s07_halfspace": 4.590627692044054e-13,
+  "36m_s08_rough": 7.864624864786494e-13,
+  "108m_s08_rough": 4.0939402213014926e-13,
+  "36m_s08_halfspace": 7.88814689555443e-13,
+  "108m_s08_halfspace": 4.05652240699018e-13,
+  "36m_s09_rough": 7.991413169231666e-13,
+  "108m_s09_rough": 4.5189722594956915e-13,
+  "36m_s09_halfspace": 7.938291167228917e-13,
+  "108m_s09_halfspace": 4.605976125870538e-13,
+  "36m_s10_rough": 8.087377116668266e-13,
+  "108m_s10_rough": 4.57139395099532e-13,
+  "36m_s10_halfspace": 7.97698470137961e-13,
+  "108m_s10_halfspace": 4.624383286863882e-13,
+  "36m_s11_rough": 8.093128974908563e-13,
+  "108m_s11_rough": 4.44624922534461e-13,
+  "36m_s11_halfspace": 8.05051436914588e-13,
+  "108m_s11_halfspace": 4.45102068269868e-13,
+  "36m_s12_rough": 8.38163672989487e-13,
+  "108m_s12_rough": 4.801008345491735e-13,
+  "36m_s12_halfspace": 8.291574278653944e-13,
+  "108m_s12_halfspace": 4.70835071648661e-13
+ },
+ "sum_solver_elapsed_s": 766.6099999999988,
+ "maximum_owned_RSS_GiB": 1.4339027404785156,
+ "failed_attempt_bitwise_equal": {
+  "s00_rough": true,
+  "s00_halfspace": true,
+  "s01_rough": true,
+  "s01_halfspace": true,
+  "s02_rough": true,
+  "s02_halfspace": true,
+  "s03_rough": true,
+  "s03_halfspace": true,
+  "s04_rough": true,
+  "s04_halfspace": true,
+  "s05_rough": true,
+  "s05_halfspace": true,
+  "s06_rough": true,
+  "s06_halfspace": true,
+  "s07_rough": true,
+  "s07_halfspace": true,
+  "s08_rough": true,
+  "s08_halfspace": true,
+  "s09_rough": true,
+  "s09_halfspace": true,
+  "s10_rough": true,
+  "s10_halfspace": true,
+  "s11_rough": true,
+  "s11_halfspace": true,
+  "s12_rough": true,
+  "s12_halfspace": true
+ },
+ "figure_vmax": {
+  "total": 23.604064428212133,
+  "contrast": 0.08600551155492306
+ },
+ "physical_attribution_certified": false,
+ "grid_convergence_certified": false,
+ "scope": "Dense 13-station segment in enlarged X domain; 2D line source; unchanged top/bottom; no full-line/3D/field claims."
+}
