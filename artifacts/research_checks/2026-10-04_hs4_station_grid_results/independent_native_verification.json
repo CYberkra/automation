@@ -1,0 +1,128 @@
+{
+  "status": "PASS",
+  "completed": true,
+  "code_sha256": "bbb19e359eb6e195c1a28ab25b162b367241ab5d771ea627461d76d6cee8a90d",
+  "contract_sha256": "c08679d4977058f6220f68d129d6909412d31194b061e6db64b260a331aa13e0",
+  "groups": [
+    {
+      "id": "left_base",
+      "input_sha256": "7316ad97c9600eaef441aa373f7bae86a2a15c0bfd2c45cdce87b19250847622",
+      "native_grid_cells": [
+        2880,
+        1,
+        2640
+      ],
+      "physical_factor_check": "PASS",
+      "raw_sha256": "ab2853f8215082bc9d1905c3a92f23258e36bf5749d26b19321f6f7419387ec1",
+      "geometry_sha256": "e41c8eab4fcc07517f0eef5183a343abf68030960b72d0e960eb6d8d1c2d772d",
+      "dt_s": 2.9483179209371056e-11,
+      "iterations": 20352,
+      "dtype": "float64"
+    },
+    {
+      "id": "left_halfspace",
+      "input_sha256": "9b10bb7ef240a4c03a30ae9d8aa3b8b6451bc81d93c9b5090a9d9962da171ffe",
+      "native_grid_cells": [
+        2880,
+        1,
+        2640
+      ],
+      "physical_factor_check": "PASS",
+      "raw_sha256": "8ff069ac61d93922ee80f75c8cfeb805dc23bf5941980912b935a739c8f2fdd3",
+      "geometry_sha256": "16eaf31a2087840b2151745ed973667d4a877b23f893d30c3f88e18b7a28b9df",
+      "dt_s": 2.9483179209371056e-11,
+      "iterations": 20352,
+      "dtype": "float64"
+    },
+    {
+      "id": "left_crest",
+      "input_sha256": "7efdc74fe828db5626f87153f1c4e6046498175aa5cbf082830e11e627e1e48b",
+      "native_grid_cells": [
+        2880,
+        1,
+        2640
+      ],
+      "physical_factor_check": "PASS",
+      "raw_sha256": "534125a47a451a9f1cc143691fe90835122bf4b750c3218a08eaf485e2acf5e7",
+      "geometry_sha256": "2efdd0c8dac1e91c5a4fe9142759de7092013f52b20e28584486f20ef7f25e68",
+      "dt_s": 2.9483179209371056e-11,
+      "iterations": 20352,
+      "dtype": "float64"
+    },
+    {
+      "id": "left_slope",
+      "input_sha256": "7d29e47cd8c6bfc71beaeb721eb97590313637c6b1ce2bfe411dabce0650b0a6",
+      "native_grid_cells": [
+        2880,
+        1,
+        2640
+      ],
+      "physical_factor_check": "PASS",
+      "raw_sha256": "c97aa6fd110be793546cab1301fabd54fcea211a1f2e137679a4ec38ee26cadb",
+      "geometry_sha256": "48db650bfb0d0ddb43f3ff5491cbb6527ddcc64a4c89736962f5a2c1ff7ecb64",
+      "dt_s": 2.9483179209371056e-11,
+      "iterations": 20352,
+      "dtype": "float64"
+    },
+    {
+      "id": "right_base",
+      "input_sha256": "188d6980b2e094fb164a213d80a596d7b43c2f7c2efdea3ef3dc93ad94466a31",
+      "native_grid_cells": [
+        2880,
+        1,
+        2640
+      ],
+      "physical_factor_check": "PASS",
+      "raw_sha256": "0bd53d8ca5b127663484e2083c9f2d4dad47c015e1e4195137208db5278fbcf5",
+      "geometry_sha256": "d81aa6d8ff1c62b0e0c69cc3cd049ad0074fb861df701d1d53a1dfade3cc580c",
+      "dt_s": 2.9483179209371056e-11,
+      "iterations": 20352,
+      "dtype": "float64"
+    },
+    {
+      "id": "right_halfspace",
+      "input_sha256": "e200391c3489ae84b5a3f7b2d11e4f39a45c8776ac6c0c39697d7bff98beb92c",
+      "native_grid_cells": [
+        2880,
+        1,
+        2640
+      ],
+      "physical_factor_check": "PASS",
+      "raw_sha256": "cfa49d8c627545823341b7573c1d93a002a527271610eaf634a1c5143b4cfaf2",
+      "geometry_sha256": "22dae7462b3679c323f4678f8a638e4eb06016265cbef407f88dab5c504f3a28",
+      "dt_s": 2.9483179209371056e-11,
+      "iterations": 20352,
+      "dtype": "float64"
+    },
+    {
+      "id": "right_crest",
+      "input_sha256": "ab335942921757ff816054e51419e1197d77488ed99e19f48b28ed5246f49002",
+      "native_grid_cells": [
+        2880,
+        1,
+        2640
+      ],
+      "physical_factor_check": "PASS",
+      "raw_sha256": "4f526671a5077761bbba975a9c41090131cc94e9f0ff5f3ff25aae85924e744b",
+      "geometry_sha256": "14c07974611ca0578de2a33ebe13f1f0e2b16206229c4ad324fab02f16b89ab3",
+      "dt_s": 2.9483179209371056e-11,
+      "iterations": 20352,
+      "dtype": "float64"
+    },
+    {
+      "id": "right_slope",
+      "input_sha256": "49e515faa0df8be84024509a3670da37217ccc8ad99aa5655986a8f99c6487e1",
+      "native_grid_cells": [
+        2880,
+        1,
+        2640
+      ],
+      "physical_factor_check": "PASS",
+      "raw_sha256": "bde37a2036b83312372b48dea2246f4fb00c5e2719f1644e7ad54b167fb92486",
+      "geometry_sha256": "5f19cdbe933aa10c39485dbbd6030e6dff7bfc8c5dd3f9ce5dd18e1089a751fa",
+      "dt_s": 2.9483179209371056e-11,
+      "iterations": 20352,
+      "dtype": "float64"
+    }
+  ]
+}

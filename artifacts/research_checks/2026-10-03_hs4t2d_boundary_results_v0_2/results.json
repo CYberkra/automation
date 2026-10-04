@@ -1,0 +1,750 @@
+{
+  "status": "COMPLETED",
+  "new_traces": 32,
+  "contract_sha256": "cf0fbb5818ab01c1944bfd8376cdbc4f6cc69294685c098c80525b6c168f09f8",
+  "official_processing_sha256": "adad556f09140956f0ee19d3038430e06a9ae8be6a826dcad723096d99624a3b",
+  "code_sha256": "ee0828f3a8b73fc1959cbb7b2135f9a88bbba630763989a137a14d11e1787fe7",
+  "source_audit": {
+    "x40wide_rough": {
+      "quantity": "electric_current",
+      "units": "A",
+      "spatial_scale": 0.05,
+      "all501bins_valid": true
+    },
+    "x40wide_halfspace": {
+      "quantity": "electric_current",
+      "units": "A",
+      "spatial_scale": 0.05,
+      "all501bins_valid": true
+    },
+    "x60wide_rough": {
+      "quantity": "electric_current",
+      "units": "A",
+      "spatial_scale": 0.05,
+      "all501bins_valid": true
+    },
+    "x60wide_halfspace": {
+      "quantity": "electric_current",
+      "units": "A",
+      "spatial_scale": 0.05,
+      "all501bins_valid": true
+    },
+    "bottom40wide_rough": {
+      "quantity": "electric_current",
+      "units": "A",
+      "spatial_scale": 0.05,
+      "all501bins_valid": true
+    },
+    "bottom40wide_halfspace": {
+      "quantity": "electric_current",
+      "units": "A",
+      "spatial_scale": 0.05,
+      "all501bins_valid": true
+    },
+    "top40wide_rough": {
+      "quantity": "electric_current",
+      "units": "A",
+      "spatial_scale": 0.05,
+      "all501bins_valid": true
+    },
+    "top40wide_halfspace": {
+      "quantity": "electric_current",
+      "units": "A",
+      "spatial_scale": 0.05,
+      "all501bins_valid": true
+    }
+  },
+  "comparisons": {
+    "x40wide": {
+      "complex_spectral": {
+        "hann_weighted_complex_relative_L2": 0.05909122868577612,
+        "hann_weighted_amplitude_L2_ratio": 0.9980543616262567,
+        "complex_coherence_real": 0.9982526063043151,
+        "complex_coherence_imag": -0.0013868921301792118,
+        "relative_L2_by_trace": [
+          0.050516441743198005,
+          0.05083366001113572,
+          0.06593042055739938,
+          0.06678540675525742,
+          0.057067867548949366,
+          0.04342984364627862,
+          0.04049664951064366,
+          0.045446960097441196,
+          0.04729122874425857,
+          0.06116972075699458,
+          0.07943742797484735,
+          0.11864740852903419,
+          0.12613931560213462
+        ]
+      },
+      "raw_full_record": {
+        "relative_L2": 1.1901098228717486,
+        "amplitude_L2_ratio": 1.150873804790998,
+        "relative_L2_by_trace": [
+          1.1382078109296652,
+          1.1591374056845059,
+          1.2323009751455,
+          1.2476324988255654,
+          1.2661944493981043,
+          1.1453519566222914,
+          1.1445445557403793,
+          1.2646254379657629,
+          1.2461127707249633,
+          1.2302840133347395,
+          1.1563193675724088,
+          1.134778232824637,
+          1.1411447986025025
+        ],
+        "reference_L2": 111.468864261154,
+        "difference_L2": 132.66019030155698,
+        "reference_peak_abs": 3.2090847383185874,
+        "difference_peak_abs": 3.099655969749371
+      },
+      "ground": {
+        "signed_band": {
+          "relative_L2": 0.9888739829382889,
+          "amplitude_L2_ratio": 0.1521215422333596,
+          "relative_L2_by_trace": [
+            0.9986503951729844,
+            0.9929472988677834,
+            0.9970108218694993,
+            0.9928716172097167,
+            1.029572587792003,
+            0.9226086892324791,
+            0.9165529907877151,
+            1.0317311052951765,
+            0.989224689918159,
+            0.9830899846958981,
+            0.9741070434791478,
+            0.9809146353354897,
+            0.9702570455452096
+          ],
+          "reference_L2": 0.0029455287271681575,
+          "difference_L2": 0.002912756724293924,
+          "reference_peak_abs": 0.00039166483645330756,
+          "difference_peak_abs": 0.00041781351892520874
+        },
+        "complex_envelope": {
+          "relative_L2": 0.9896790068398399,
+          "amplitude_L2_ratio": 0.14652899397638974,
+          "relative_L2_by_trace": [
+            0.9977768439307001,
+            0.9928882553230962,
+            0.9969730981615827,
+            0.9927982541075735,
+            1.0248973739448974,
+            0.9269143283002399,
+            0.9235247116280534,
+            1.022563950288417,
+            0.9915779100301102,
+            0.9870083598588384,
+            0.9791496179705061,
+            0.9834370909194445,
+            0.9745096653369182
+          ],
+          "reference_L2": 0.002047650771495853,
+          "difference_L2": 0.002026516981888848,
+          "reference_peak_abs": 0.00020800332378032683,
+          "difference_peak_abs": 0.0002142487715855267
+        },
+        "raw_FDTD": {
+          "relative_L2": 1.2301965869057452,
+          "amplitude_L2_ratio": 0.880679845671125,
+          "relative_L2_by_trace": [
+            1.0998230510060951,
+            1.1183462303999794,
+            1.1361592187594507,
+            1.1391849878768836,
+            1.507793151184612,
+            1.7337127313683596,
+            1.7213403551633537,
+            1.4691309678988997,
+            1.1424570416935569,
+            1.138448987074581,
+            1.1206217160155028,
+            1.1020682234407921,
+            1.0846723161507634
+          ],
+          "reference_L2": 32.68210417215115,
+          "difference_L2": 40.205413005478356,
+          "reference_peak_abs": 1.7186663977091698,
+          "difference_peak_abs": 2.4501910834150094
+        }
+      },
+      "underground": {
+        "signed_band": {
+          "relative_L2": 0.02244443467560779,
+          "amplitude_L2_ratio": 0.999547396014987,
+          "relative_L2_by_trace": [
+            0.01573744626643087,
+            0.02003883659315986,
+            0.027781421824271794,
+            0.03205080829523571,
+            0.023813733029930888,
+            0.018072192086596144,
+            0.016598719602922366,
+            0.01861163488360674,
+            0.02204688374319901,
+            0.0250191214170046,
+            0.030381878240351143,
+            0.03598246733605346,
+            0.0333518192335059
+          ],
+          "reference_L2": 0.6253440339273002,
+          "difference_L2": 0.014035493319262352,
+          "reference_peak_abs": 0.08120609257593916,
+          "difference_peak_abs": 0.002304611288447505
+        },
+        "complex_envelope": {
+          "relative_L2": 0.022938649540616213,
+          "amplitude_L2_ratio": 0.9995367811966339,
+          "relative_L2_by_trace": [
+            0.01573770746367208,
+            0.01992762722665214,
+            0.028226375715857628,
+            0.03152533800233633,
+            0.025870923389549907,
+            0.019409487558152416,
+            0.017940622481437102,
+            0.02020830148466333,
+            0.021704326686633336,
+            0.025422900850481003,
+            0.03021564058840364,
+            0.03599162254495071,
+            0.03336251460950178
+          ],
+          "reference_L2": 0.4421899987785412,
+          "difference_L2": 0.010143241412346468,
+          "reference_peak_abs": 0.040760464309305126,
+          "difference_peak_abs": 0.0013457405912233994
+        },
+        "raw_FDTD": {
+          "relative_L2": 1.2945575199702328,
+          "amplitude_L2_ratio": 1.2046494330621693,
+          "relative_L2_by_trace": [
+            1.2907812146657325,
+            1.1446891541158368,
+            1.212365463408018,
+            1.4039900821842946,
+            1.6108929768693518,
+            1.2284344850002828,
+            1.2291123185872435,
+            1.6197346574956197,
+            1.4194167404071958,
+            1.2148958863243076,
+            1.140234243455226,
+            1.2864190207693065,
+            1.2888587179744637
+          ],
+          "reference_L2": 31.414191456879397,
+          "difference_L2": 40.66747778428787,
+          "reference_peak_abs": 1.7129818832306056,
+          "difference_peak_abs": 1.7983816164008264
+        }
+      },
+      "bottom_proxy": {
+        "signed_band": {
+          "relative_L2": 0.005748757329851795,
+          "amplitude_L2_ratio": 0.9999558383020973,
+          "relative_L2_by_trace": [
+            0.008311344578302772,
+            0.010051633620548535,
+            0.009794878331169645,
+            0.008167438065092255,
+            0.005924180295394996,
+            0.003915772965198063,
+            0.004763771488798106,
+            0.008984256040413228,
+            0.011437226860245803,
+            0.009181117491917525,
+            0.005821765094005065,
+            0.0036224456233820996,
+            0.0024869648255266587
+          ],
+          "reference_L2": 0.0002458492740671774,
+          "difference_L2": 1.4133278163324289e-06,
+          "reference_peak_abs": 6.236549181595374e-05,
+          "difference_peak_abs": 1.1657164492123888e-07
+        },
+        "complex_envelope": {
+          "relative_L2": 0.0059118687709696525,
+          "amplitude_L2_ratio": 0.9999464784601371,
+          "relative_L2_by_trace": [
+            0.007597365384240486,
+            0.009082303743224671,
+            0.008719748563072447,
+            0.007192210889343115,
+            0.005305877878217734,
+            0.003467108861940873,
+            0.00451211479895141,
+            0.00925282823301609,
+            0.010712607641428137,
+            0.008780107904557567,
+            0.00621732145133513,
+            0.004123294587448144,
+            0.0027487939767147237
+          ],
+          "reference_L2": 0.00016818192464990614,
+          "difference_L2": 9.942694681793513e-07,
+          "reference_peak_abs": 3.360255528357369e-05,
+          "difference_peak_abs": 6.413849453864724e-08
+        },
+        "raw_FDTD": {
+          "relative_L2": 1.1196556295766567,
+          "amplitude_L2_ratio": 1.106940084605158,
+          "relative_L2_by_trace": [
+            1.0813264053354736,
+            1.1024701283589926,
+            1.2292127880684809,
+            1.2271392417617397,
+            1.0221243777331877,
+            1.0701312913376744,
+            1.0693345280828943,
+            1.0187636034030358,
+            1.2210234542024523,
+            1.2235588778031001,
+            1.0970579255927,
+            1.076042991974757,
+            1.2157664223735305
+          ],
+          "reference_L2": 59.792364764993046,
+          "difference_L2": 66.94685781482539,
+          "reference_peak_abs": 1.9665215311063022,
+          "difference_peak_abs": 1.8474617587119102
+        }
+      }
+    },
+    "x60wide": {
+      "complex_spectral": {
+        "hann_weighted_complex_relative_L2": 0.04049922216200226,
+        "hann_weighted_amplitude_L2_ratio": 0.9989669983150778,
+        "complex_coherence_real": 0.9991795925661154,
+        "complex_coherence_imag": -0.0012744854518739002,
+        "relative_L2_by_trace": [
+          0.04049922216200225
+        ]
+      },
+      "raw_full_record": {
+        "relative_L2": 1.404844598848577,
+        "amplitude_L2_ratio": 1.138372823408947,
+        "relative_L2_by_trace": [
+          1.404844598848577
+        ],
+        "reference_L2": 34.076761763726424,
+        "difference_L2": 47.87255471002077,
+        "reference_peak_abs": 2.0528461131597453,
+        "difference_peak_abs": 2.6941138146491124
+      },
+      "ground": {
+        "signed_band": {
+          "relative_L2": 0.9165672756431704,
+          "amplitude_L2_ratio": 0.15845941384148884,
+          "relative_L2_by_trace": [
+            0.9165672756431702
+          ],
+          "reference_L2": 0.0006615053664510095,
+          "difference_L2": 0.0006063141715513388,
+          "reference_peak_abs": 0.0003245996301159902,
+          "difference_peak_abs": 0.00028643977436762947
+        },
+        "complex_envelope": {
+          "relative_L2": 0.9235399503097637,
+          "amplitude_L2_ratio": 0.16655514824939696,
+          "relative_L2_by_trace": [
+            0.9235399503097637
+          ],
+          "reference_L2": 0.00043343046078699136,
+          "difference_L2": 0.000400290346217956,
+          "reference_peak_abs": 0.00016283645778634372,
+          "difference_peak_abs": 0.00014967123320180103
+        },
+        "raw_FDTD": {
+          "relative_L2": 2.584013851311694,
+          "amplitude_L2_ratio": 1.8265482810711917,
+          "relative_L2_by_trace": [
+            2.5840138513116946
+          ],
+          "reference_L2": 6.002290992022841,
+          "difference_L2": 15.51000306299043,
+          "reference_peak_abs": 1.4275049507080606,
+          "difference_peak_abs": 2.6941138146491124
+        }
+      },
+      "underground": {
+        "signed_band": {
+          "relative_L2": 0.01659920619650649,
+          "amplitude_L2_ratio": 0.9999271270501416,
+          "relative_L2_by_trace": [
+            0.01659920619650649
+          ],
+          "reference_L2": 0.20697322902020837,
+          "difference_L2": 0.0034355913056631996,
+          "reference_peak_abs": 0.052126674138934834,
+          "difference_peak_abs": 0.0022658303798018227
+        },
+        "complex_envelope": {
+          "relative_L2": 0.017941747076315937,
+          "amplitude_L2_ratio": 0.9998643666156549,
+          "relative_L2_by_trace": [
+            0.017941747076315937
+          ],
+          "reference_L2": 0.1463656296584423,
+          "difference_L2": 0.002626055107997498,
+          "reference_peak_abs": 0.026964045347027895,
+          "difference_peak_abs": 0.0013386366338362526
+        },
+        "raw_FDTD": {
+          "relative_L2": 1.6488232151825826,
+          "amplitude_L2_ratio": 1.436932321275972,
+          "relative_L2_by_trace": [
+            1.6488232151825823
+          ],
+          "reference_L2": 9.445141603323322,
+          "difference_L2": 15.573368746246333,
+          "reference_peak_abs": 1.2518832450138113,
+          "difference_peak_abs": 2.1590875112932357
+        }
+      },
+      "bottom_proxy": {
+        "signed_band": {
+          "relative_L2": 0.004868040755158002,
+          "amplitude_L2_ratio": 1.0019641975425593,
+          "relative_L2_by_trace": [
+            0.004868040755158002
+          ],
+          "reference_L2": 3.563045271191531e-05,
+          "difference_L2": 1.7345049592633366e-07,
+          "reference_peak_abs": 9.049887983197699e-06,
+          "difference_peak_abs": 5.4660739616762456e-08
+        },
+        "complex_envelope": {
+          "relative_L2": 0.004618307802930071,
+          "amplitude_L2_ratio": 1.00161924054112,
+          "relative_L2_by_trace": [
+            0.004618307802930072
+          ],
+          "reference_L2": 2.5640843978942284e-05,
+          "difference_L2": 1.1841730982166168e-07,
+          "reference_peak_abs": 7.845073036084068e-06,
+          "difference_peak_abs": 2.8054246692618725e-08
+        },
+        "raw_FDTD": {
+          "relative_L2": 1.428432245652961,
+          "amplitude_L2_ratio": 1.0150776065904819,
+          "relative_L2_by_trace": [
+            1.428432245652961
+          ],
+          "reference_L2": 21.041887099886942,
+          "difference_L2": 30.056910042867575,
+          "reference_peak_abs": 1.9665215311063022,
+          "difference_peak_abs": 2.0004064649034285
+        }
+      }
+    },
+    "bottom40wide": {
+      "complex_spectral": {
+        "hann_weighted_complex_relative_L2": 6.484151155701301e-08,
+        "hann_weighted_amplitude_L2_ratio": 0.9999999999982436,
+        "complex_coherence_real": 0.999999999999998,
+        "complex_coherence_imag": 7.186418080185485e-13,
+        "relative_L2_by_trace": [
+          6.4841511557013e-08
+        ]
+      },
+      "raw_full_record": {
+        "relative_L2": 9.366976577658337e-11,
+        "amplitude_L2_ratio": 1.0000000000000138,
+        "relative_L2_by_trace": [
+          9.366976577658337e-11
+        ],
+        "reference_L2": 34.076761763726424,
+        "difference_L2": 3.191962292832686e-09,
+        "reference_peak_abs": 2.0528461131597453,
+        "difference_peak_abs": 2.657927211657807e-10
+      },
+      "ground": {
+        "signed_band": {
+          "relative_L2": 9.26768366518116e-10,
+          "amplitude_L2_ratio": 1.000000000017953,
+          "relative_L2_by_trace": [
+            9.26768366518116e-10
+          ],
+          "reference_L2": 0.0006615053664510095,
+          "difference_L2": 6.130622479087698e-13,
+          "reference_peak_abs": 0.0003245996301159902,
+          "difference_peak_abs": 2.125481594113937e-13
+        },
+        "complex_envelope": {
+          "relative_L2": 1.0381043296603992e-09,
+          "amplitude_L2_ratio": 1.0000000000271974,
+          "relative_L2_by_trace": [
+            1.0381043296603994e-09
+          ],
+          "reference_L2": 0.00043343046078699136,
+          "difference_L2": 4.4994603794967763e-13,
+          "reference_peak_abs": 0.00016283645778634372,
+          "difference_peak_abs": 1.1274782765994752e-13
+        },
+        "raw_FDTD": {
+          "relative_L2": 0.0,
+          "amplitude_L2_ratio": 1.0,
+          "relative_L2_by_trace": [
+            0.0
+          ],
+          "reference_L2": 6.002290992022841,
+          "difference_L2": 0.0,
+          "reference_peak_abs": 1.4275049507080606,
+          "difference_peak_abs": 0.0
+        }
+      },
+      "underground": {
+        "signed_band": {
+          "relative_L2": 1.1132415958290161e-11,
+          "amplitude_L2_ratio": 0.9999999999978187,
+          "relative_L2_by_trace": [
+            1.1132415958290161e-11
+          ],
+          "reference_L2": 0.20697322902020837,
+          "difference_L2": 2.304112077683412e-12,
+          "reference_peak_abs": 0.052126674138934834,
+          "difference_peak_abs": 6.595245183316223e-13
+        },
+        "complex_envelope": {
+          "relative_L2": 1.1119064471329583e-11,
+          "amplitude_L2_ratio": 0.999999999997821,
+          "relative_L2_by_trace": [
+            1.1119064471329585e-11
+          ],
+          "reference_L2": 0.1463656296584423,
+          "difference_L2": 1.6274488725589693e-12,
+          "reference_peak_abs": 0.026964045347027895,
+          "difference_peak_abs": 3.413795732911588e-13
+        },
+        "raw_FDTD": {
+          "relative_L2": 0.0,
+          "amplitude_L2_ratio": 1.0,
+          "relative_L2_by_trace": [
+            0.0
+          ],
+          "reference_L2": 9.445141603323322,
+          "difference_L2": 0.0,
+          "reference_peak_abs": 1.2518832450138113,
+          "difference_peak_abs": 0.0
+        }
+      },
+      "bottom_proxy": {
+        "signed_band": {
+          "relative_L2": 0.0003770750116143049,
+          "amplitude_L2_ratio": 1.0000103841254582,
+          "relative_L2_by_trace": [
+            0.0003770750116143049
+          ],
+          "reference_L2": 3.563045271191531e-05,
+          "difference_L2": 1.3435353370168406e-08,
+          "reference_peak_abs": 9.049887983197699e-06,
+          "difference_peak_abs": 4.7041436572882e-09
+        },
+        "complex_envelope": {
+          "relative_L2": 0.0003705115602852619,
+          "amplitude_L2_ratio": 1.0000100261529237,
+          "relative_L2_by_trace": [
+            0.0003705115602852619
+          ],
+          "reference_L2": 2.5640843978942284e-05,
+          "difference_L2": 9.500229109668869e-09,
+          "reference_peak_abs": 7.845073036084068e-06,
+          "difference_peak_abs": 2.3696941519728514e-09
+        },
+        "raw_FDTD": {
+          "relative_L2": 1.5072308195870301e-10,
+          "amplitude_L2_ratio": 0.9999999999999946,
+          "relative_L2_by_trace": [
+            1.5072308195870301e-10
+          ],
+          "reference_L2": 21.041887099886942,
+          "difference_L2": 3.1714980739220355e-09,
+          "reference_peak_abs": 1.9665215311063022,
+          "difference_peak_abs": 2.657927211657807e-10
+        }
+      }
+    },
+    "top40wide": {
+      "complex_spectral": {
+        "hann_weighted_complex_relative_L2": 2.706907003984122e-07,
+        "hann_weighted_amplitude_L2_ratio": 0.9999999950464101,
+        "complex_coherence_real": 0.9999999999999631,
+        "complex_coherence_imag": 1.8733479131958197e-09,
+        "relative_L2_by_trace": [
+          2.7069070039841216e-07
+        ]
+      },
+      "raw_full_record": {
+        "relative_L2": 0.6303328439067417,
+        "amplitude_L2_ratio": 0.8990820053918457,
+        "relative_L2_by_trace": [
+          0.6303328439067417
+        ],
+        "reference_L2": 34.076761763726424,
+        "difference_L2": 21.479702153662192,
+        "reference_peak_abs": 2.0528461131597453,
+        "difference_peak_abs": 1.7303117869861389
+      },
+      "ground": {
+        "signed_band": {
+          "relative_L2": 3.5122381032624958e-06,
+          "amplitude_L2_ratio": 1.0000009501648968,
+          "relative_L2_by_trace": [
+            3.5122381032624958e-06
+          ],
+          "reference_L2": 0.0006615053664510095,
+          "difference_L2": 2.3233643535618557e-09,
+          "reference_peak_abs": 0.0003245996301159902,
+          "difference_peak_abs": 1.757443410634399e-09
+        },
+        "complex_envelope": {
+          "relative_L2": 3.6806368084497805e-06,
+          "amplitude_L2_ratio": 1.0000003227994556,
+          "relative_L2_by_trace": [
+            3.6806368084497805e-06
+          ],
+          "reference_L2": 0.00043343046078699136,
+          "difference_L2": 1.5953001078759496e-09,
+          "reference_peak_abs": 0.00016283645778634372,
+          "difference_peak_abs": 9.306480681587343e-10
+        },
+        "raw_FDTD": {
+          "relative_L2": 0.27643230256302315,
+          "amplitude_L2_ratio": 0.9469453184482494,
+          "relative_L2_by_trace": [
+            0.2764323025630232
+          ],
+          "reference_L2": 6.002290992022841,
+          "difference_L2": 1.6592271195781665,
+          "reference_peak_abs": 1.4275049507080606,
+          "difference_peak_abs": 0.6257372001546102
+        }
+      },
+      "underground": {
+        "signed_band": {
+          "relative_L2": 2.36848768044164e-08,
+          "amplitude_L2_ratio": 0.9999999949091635,
+          "relative_L2_by_trace": [
+            2.3684876804416397e-08
+          ],
+          "reference_L2": 0.20697322902020837,
+          "difference_L2": 4.902135431155897e-09,
+          "reference_peak_abs": 0.052126674138934834,
+          "difference_peak_abs": 1.6837048079539063e-09
+        },
+        "complex_envelope": {
+          "relative_L2": 2.388303669294732e-08,
+          "amplitude_L2_ratio": 0.9999999949064222,
+          "relative_L2_by_trace": [
+            2.3883036692947322e-08
+          ],
+          "reference_L2": 0.1463656296584423,
+          "difference_L2": 3.4956557037189157e-09,
+          "reference_peak_abs": 0.026964045347027895,
+          "difference_peak_abs": 8.703350719448279e-10
+        },
+        "raw_FDTD": {
+          "relative_L2": 1.0398288964058047,
+          "amplitude_L2_ratio": 0.8349838052003189,
+          "relative_L2_by_trace": [
+            1.0398288964058047
+          ],
+          "reference_L2": 9.445141603323322,
+          "difference_L2": 9.821331169780242,
+          "reference_peak_abs": 1.2518832450138113,
+          "difference_peak_abs": 1.7303117869861389
+        }
+      },
+      "bottom_proxy": {
+        "signed_band": {
+          "relative_L2": 0.0010493679227499676,
+          "amplitude_L2_ratio": 0.9999856361207236,
+          "relative_L2_by_trace": [
+            0.0010493679227499676
+          ],
+          "reference_L2": 3.563045271191531e-05,
+          "difference_L2": 3.7389454148943515e-08,
+          "reference_peak_abs": 9.049887983197699e-06,
+          "difference_peak_abs": 1.5159916473084363e-08
+        },
+        "complex_envelope": {
+          "relative_L2": 0.001031113949756351,
+          "amplitude_L2_ratio": 0.9999849232973006,
+          "relative_L2_by_trace": [
+            0.001031113949756351
+          ],
+          "reference_L2": 2.5640843978942284e-05,
+          "difference_L2": 2.6438631910213526e-08,
+          "reference_peak_abs": 7.845073036084068e-06,
+          "difference_peak_abs": 7.60543166042768e-09
+        },
+        "raw_FDTD": {
+          "relative_L2": 0.523947460669637,
+          "amplitude_L2_ratio": 0.9140544588161512,
+          "relative_L2_by_trace": [
+            0.523947460669637
+          ],
+          "reference_L2": 21.041887099886942,
+          "difference_L2": 11.024843313682956,
+          "reference_peak_abs": 1.9665215311063022,
+          "difference_peak_abs": 1.1442959714157155
+        }
+      }
+    },
+    "x40_to_x60_center": {
+      "complex_spectral": {
+        "hann_weighted_complex_relative_L2": 4.626827754235585e-06,
+        "hann_weighted_amplitude_L2_ratio": 1.000000233066705,
+        "complex_coherence_real": 0.9999999999893232,
+        "complex_coherence_imag": -1.3716508367660998e-07,
+        "relative_L2_by_trace": [
+          4.626827754235584e-06
+        ]
+      },
+      "underground": {
+        "signed_band": {
+          "relative_L2": 2.324486054255812e-06,
+          "amplitude_L2_ratio": 1.0000002725106865,
+          "relative_L2_by_trace": [
+            2.3244860542558124e-06
+          ],
+          "reference_L2": 0.20695808987217681,
+          "difference_L2": 4.81071193723296e-07,
+          "reference_peak_abs": 0.052080332279953845,
+          "difference_peak_abs": 2.57871091187932e-07
+        },
+        "complex_envelope": {
+          "relative_L2": 2.4699654997977314e-06,
+          "amplitude_L2_ratio": 1.0000002589384391,
+          "relative_L2_by_trace": [
+            2.4699654997977314e-06
+          ],
+          "reference_L2": 0.1463457396982025,
+          "difference_L2": 3.614689280969394e-07,
+          "reference_peak_abs": 0.026951439036122557,
+          "difference_peak_abs": 1.6624250309735321e-07
+        }
+      }
+    }
+  },
+  "shared_side_bscan_limit": 0.08120609257593916,
+  "fixed_windows_ns": {
+    "ground": [
+      85,
+      120
+    ],
+    "underground": [
+      160,
+      220
+    ],
+    "bottom_proxy": [
+      300,
+      450
+    ]
+  },
+  "scope": "PML-only sensitivity in specified2D case/windows. No absolute boundary-error bound, spatial convergence, field claim or event-identity acceptance."
+}

@@ -1,0 +1,144 @@
+{
+  "status": "PREPARED_NOT_RUN",
+  "baseline_input": "artifacts\\research_checks\\2026-10-03_hs4t2d_airlayer_boundary\\baseline_profile.in",
+  "baseline_sha256": "6844434fec0d493974214f2fe5ccc003da29a76e55c24fd5a09d270d271c1293",
+  "two_dimensional": true,
+  "invariance": "Y is a single 0.05 m cell; source and receiver are Ey; 2D line source",
+  "cell_size_m": {
+    "x": 0.05,
+    "y": 0.05,
+    "z": 0.05
+  },
+  "snapshot_times_ns": [
+    40,
+    50,
+    65,
+    80,
+    95,
+    110,
+    130,
+    145,
+    175,
+    220
+  ],
+  "variants": [
+    {
+      "directory": "g1_domain_12m",
+      "note": "HS4T2D G1 domain X=12 m, 2D invariant-y; source and receiver unmoved; boundary-distance series",
+      "input": "artifacts\\research_checks\\2026-10-03_hs4t2d_airlayer_boundary\\g1_domain_12m\\profile.in",
+      "input_sha256": "fec927603726e3e135bc715ef26c31c8e4c943379471d09c9afd53b999255517",
+      "domain_x_m": 12.0,
+      "pml_cells": null,
+      "pml_cfs": null,
+      "snapshot_times_ns": [
+        40,
+        50,
+        65,
+        80,
+        95,
+        110,
+        130,
+        145,
+        175,
+        220
+      ],
+      "snapshot_count": 10
+    },
+    {
+      "directory": "g1_domain_18m",
+      "note": "HS4T2D G1 domain X=18 m, 2D invariant-y; source and receiver unmoved; boundary-distance series",
+      "input": "artifacts\\research_checks\\2026-10-03_hs4t2d_airlayer_boundary\\g1_domain_18m\\profile.in",
+      "input_sha256": "a267440d6c644c28deb8417d4fddfd25054d16002029fed824af37d648e19096",
+      "domain_x_m": 18.0,
+      "pml_cells": null,
+      "pml_cfs": null,
+      "snapshot_times_ns": [
+        40,
+        50,
+        65,
+        80,
+        95,
+        110,
+        130,
+        145,
+        175,
+        220
+      ],
+      "snapshot_count": 10
+    },
+    {
+      "directory": "g1_domain_24m",
+      "note": "HS4T2D G1 domain X=24 m, 2D invariant-y; source and receiver unmoved; boundary-distance series",
+      "input": "artifacts\\research_checks\\2026-10-03_hs4t2d_airlayer_boundary\\g1_domain_24m\\profile.in",
+      "input_sha256": "b14d225d4bae43e963dbafd2215e0f00f08c4c6aefff0b8bee6954b38359c2b1",
+      "domain_x_m": 24.0,
+      "pml_cells": null,
+      "pml_cfs": null,
+      "snapshot_times_ns": [
+        40,
+        50,
+        65,
+        80,
+        95,
+        110,
+        130,
+        145,
+        175,
+        220
+      ],
+      "snapshot_count": 10
+    },
+    {
+      "directory": "g2_pml_cfs_stronger",
+      "note": "HS4T2D G2 PML CFS strengthened, thickness fixed at 20 cells; geometry, source and receiver unchanged",
+      "input": "artifacts\\research_checks\\2026-10-03_hs4t2d_airlayer_boundary\\g2_pml_cfs_stronger\\profile.in",
+      "input_sha256": "1ff47f8215ed2f9470be29ee59176f6a4c760e6d1c639197d6b78674c4b5bc59",
+      "domain_x_m": 12.0,
+      "pml_cells": null,
+      "pml_cfs": "quartic forward 1 8 quartic forward 1 8 quartic forward 0.05 0.5",
+      "snapshot_times_ns": [
+        40,
+        50,
+        65,
+        80,
+        95,
+        110,
+        130,
+        145,
+        175,
+        220
+      ],
+      "snapshot_count": 10
+    },
+    {
+      "directory": "g3_air_layer_render",
+      "note": "no new solve: re-renders the g1_domain_12m snapshots with the air region (z > ground) isolated",
+      "input": null,
+      "input_sha256": null,
+      "reuses": "g1_domain_12m"
+    },
+    {
+      "directory": "g4_vertical_2p5cm",
+      "note": "vertical grid 0.05 -> 0.025 m; z coordinates scaled by 0.5; x/y unchanged",
+      "input": "artifacts\\research_checks\\2026-10-03_hs4t2d_airlayer_boundary\\g4_vertical_2p5cm\\profile.in",
+      "input_sha256": "76455660308352dec03c9ec9bb90560d2c2502cb25cc841a55150fd2a8004461",
+      "domain_x_m": 12.0,
+      "dz_m": 0.025,
+      "pml_cells": "20 0 20 20 0 40",
+      "snapshot_times_ns": [
+        40,
+        50,
+        65,
+        80,
+        95,
+        110,
+        130,
+        145,
+        175,
+        220
+      ],
+      "snapshot_count": 10
+    }
+  ],
+  "scope": "Input preparation only. No solver has been run and no field array exists yet. The air-layer hypothesis under test is boundary absorption sufficiency, not a physical lateral reflection: the cover layer spans the domain, which the gprMax guide treats as extending to infinity, so a truncation-based reflection is not expected by that convention."
+}

@@ -6,6 +6,18 @@
 *.png binary
 *.jpg binary
 *.h5 binary
+*.vtkhdf binary
+artifacts/research_checks/2026-10-03_hs4t2d_boundary_controls/**/*.log -whitespace
+artifacts/research_checks/2026-10-04_hs4t2d_joint_grid_*/**/*.log -whitespace
+# Preserve exact hashed solver logs for the bounded cause controls.
+artifacts/research_checks/2026-10-03_hs4t2d_cause_controls/**/*.log -whitespace
+artifacts/research_checks/2026-10-03_hs4t2d_source_controls/**/*.log -whitespace
+artifacts/research_checks/2026-10-03_hs4t2d_zfine_confirmation/**/*.log -whitespace
+# Preserve exact hashed V4 solver/failed-attempt logs for the relief study.
+artifacts/research_checks/2026-10-03_hs4t2d_relief08_raw/**/*.log -whitespace
+artifacts/research_checks/2026-10-03_hs4t2d_relief08_snapshot/*.log -whitespace
+# Preserve the hashed OBJ material writer's material-block separators.
+artifacts/research_checks/2026-10-03_hs4_browser_geometry/hs4_scene.mtl -whitespace
 # Preserve hashed Matplotlib SVG whitespace as emitted.
 artifacts/research_checks/2026-09-24_damage_pilot_r2/damage_pilot.svg -whitespace
 # Preserve the hashed original failed-build log, including pip whitespace.
@@ -25,3 +37,9 @@ artifacts/research_checks/2026-09-24_M01_T800/*.log -whitespace
 artifacts/research_checks/2026-09-24_PEC_T800/*.log -whitespace
 
 artifacts/research_checks/2026-09-24_M01_fixedPML/*.log -whitespace
+# Preserve the original V4 stdout/stderr, including failed parser/audit logs.
+artifacts/research_checks/2026-10-04_hs4_height_wavefield_*/**/*.log -whitespace
+artifacts/research_checks/2026-10-04_hs4_local_patch_controls/**/*.log -whitespace
+artifacts/research_checks/2026-10-04_hs4_patch_refinement/**/*.log -whitespace
+artifacts/research_checks/2026-10-04_hs4_patch_finest/**/*.log -whitespace
+artifacts/research_checks/2026-10-04_hs4_station_grid_endpoints/**/*.log -whitespace

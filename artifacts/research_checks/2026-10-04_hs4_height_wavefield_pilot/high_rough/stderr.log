@@ -1,0 +1,30 @@
+Traceback (most recent call last):
+  File "D:\自动处理\scripts\gprmax_cached_cuda_entry.py", line 47, in <module>
+    runpy.run_module('gprMax',run_name='__main__')
+  File "<frozen runpy>", line 229, in run_module
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\gprmax_v4_gpu_env\Lib\site-packages\gprMax\__main__.py", line 23, in <module>
+    gprMax.gprMax.cli()
+  File "D:\gprmax_v4_gpu_env\Lib\site-packages\gprMax\gprMax.py", line 372, in cli
+    results = run_main(args)
+              ^^^^^^^^^^^^^^
+  File "D:\gprmax_v4_gpu_env\Lib\site-packages\gprMax\gprMax.py", line 427, in run_main
+    results = context.run()
+              ^^^^^^^^^^^^^
+  File "D:\gprmax_v4_gpu_env\Lib\site-packages\gprMax\contexts.py", line 106, in run
+    self._run_model(i)
+  File "D:\gprmax_v4_gpu_env\Lib\site-packages\gprMax\contexts.py", line 130, in _run_model
+    scene = self._get_scene(model_num)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\gprmax_v4_gpu_env\Lib\site-packages\gprMax\contexts.py", line 175, in _get_scene
+    scene = parse_hash_commands(scene)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\gprmax_v4_gpu_env\Lib\site-packages\gprMax\hash_cmds_file.py", line 455, in parse_hash_commands
+    user_objs = get_user_objects(
+                ^^^^^^^^^^^^^^^^^
+  File "D:\gprmax_v4_gpu_env\Lib\site-packages\gprMax\hash_cmds_file.py", line 405, in get_user_objects
+    multiple_user_objs = process_multicmds(parsed_commands[1])
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\gprmax_v4_gpu_env\Lib\site-packages\gprMax\hash_cmds_multiuse.py", line 1000, in process_multicmds
+    raise ValueError
+ValueError

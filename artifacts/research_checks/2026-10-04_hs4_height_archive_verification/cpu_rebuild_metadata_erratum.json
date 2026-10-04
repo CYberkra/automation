@@ -1,0 +1,10 @@
+{
+  "status": "STRICT_BYTE_REBUILD_FAILED_THEN_SCALAR_REDUCTION_AUDIT_PASS",
+  "original_checker_code_sha256": "245573e61fbc12a94602c698eb9bbaf1f2d57726485a897026a386fe5478a10f",
+  "failed_on": "artifacts/research_checks/2026-10-04_hs4_height_wavefield_results/summary.json",
+  "error": "ValueError: byte mismatch on summary.json; scientific arrays and plots later compared exact",
+  "original_summary_sha256": "4f3b61481c9b65ca56663e10a321c9d08dd5c30f036b653a1ab30e8c9723c63a",
+  "fresh_summary_sha256": "fa696f72a08987f32616d021e7596438c54aaf2b9beb00e59901fb414619650a",
+  "followup_report_sha256": "335da07be1ddaf4c5c0bcbf4486ed538a7deddcab3ef39b97433a08eb8177ba8",
+  "fix": "New checker v0_2 permits only eight named positive-norm scalar reductions under gamma(8*501*36) binary64 budget and the verified fresh input-summary hash. Saved arrays, images and other metadata remain strict bytes. No solver retry or frozen output changes."
+}

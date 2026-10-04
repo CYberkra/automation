@@ -1,4 +1,21 @@
 {
+ "hs4_cross_pc_handoff": {
+  "report": "docs/research/2026-10-04_hs4_cross_pc_task.md",
+  "task": "artifacts/research_checks/2026-10-04_hs4_cross_pc_design_r1/task.json",
+  "completed_catalog": "artifacts/research_checks/2026-10-04_hs4_cross_pc_design_r1/completed_cases.json",
+  "runner": "scripts/hs4_cross_pc.py",
+  "analysis": "scripts/analyze_hs4_cross_pc.py",
+  "status": "ENDPOINT8_COMPLETE_CROSS_PC20_PREPARED_NOT_RUN",
+  "grid_convergence_certified": false,
+  "3d_solver_executed": false,
+  "g4_relieved": false
+ },
+ "model_design_review_2026_10_02": {
+  "report": "docs/research/2026-10-02_model_design_review.md",
+  "evidence": "artifacts/research_checks/2026-10-02_model_design_audit.json",
+  "reproduce": "python scripts/audit_model_design_20261002.py",
+  "scope": "read-only review of existing controls and contracts; no FDTD, training or test-family input"
+ },
  "current_protocol": "docs/research/2026-09-24_evaluation_and_labels_v0.2.md",
  "default_array_verification": {
   "calls_solver": false,
@@ -31,6 +48,204 @@
   "reference_state stays numerically_unresolved: no physical acceptance threshold, no training labels, no clean truth. Vertical refinement is done (ZFINE2 adjacent L2 66.6647% -> 17.2452% -> 4.1216%) and must not be re-planned as pending work."
  ],
  "runs": [
+  {
+   "id": "hs4_next_controls_and_continuation_failure_20261004",
+   "status": "NEXT_CONTROL_DESIGN_NO_NEW_SOLVER_CONTINUATION_FAILED",
+   "report": "docs/research/2026-10-04_hs4_next_controls.md",
+   "directory": "artifacts/research_checks/2026-10-04_hs4_continuation_failure",
+   "calls_solver": false,
+   "calls_training": false,
+   "scheduled_task_actual_status": "FAILED_WRITER_CONFLICT",
+   "next": "Bounded grid/station robustness preflight then matched3D reference and resource audit. Current1cm RAM budget insufficient; each future batch must freeze independently."
+  },
+  {
+   "id": "hs4_height_wavefield_attribution_20261004",
+   "status": "COMPLETED_REGIONAL_CAUSAL_ATTRIBUTION_NOT_ABSOLUTE_GRID_OR_3D_ACCEPTANCE",
+   "report": "docs/research/2026-10-04_hs4_height_wavefield_findings.md",
+   "raw_studies": [
+    "artifacts/research_checks/2026-10-04_hs4_height_wavefield_pilot",
+    "artifacts/research_checks/2026-10-04_hs4_height_wavefield_continuation",
+    "artifacts/research_checks/2026-10-04_hs4_local_patch_controls",
+    "artifacts/research_checks/2026-10-04_hs4_patch_refinement",
+    "artifacts/research_checks/2026-10-04_hs4_patch_finest"
+   ],
+   "results": [
+    "artifacts/research_checks/2026-10-04_hs4_height_wavefield_results",
+    "artifacts/research_checks/2026-10-04_hs4_height_wavefield_visual",
+    "artifacts/research_checks/2026-10-04_hs4_local_patch_results",
+    "artifacts/research_checks/2026-10-04_hs4_patch_refinement_results",
+    "artifacts/research_checks/2026-10-04_hs4_patch_finest_results",
+    "artifacts/research_checks/2026-10-04_hs4_model_response_relation"
+   ],
+   "independent_native_audit": "artifacts/research_checks/2026-10-04_hs4_height_archive_verification/native_archive.json",
+   "rebuild_verification": "artifacts/research_checks/2026-10-04_hs4_height_archive_verification/rebuild_verification.json",
+   "new_successful_traces": 47,
+   "snapshots_six_components": 4072,
+   "raw_precision": "gprMax4.0.0 CUDA float64",
+   "centre_three_grid_early_crest_to_slope_change_L2_ratios": [
+    8.965309606701915,
+    7.923457293460406,
+    7.556107766894652
+   ],
+   "centre_latest_adjacent_signed_relative_L2": 0.07586442045431983,
+   "cpu_rebuild_checked_files": 35,
+   "cpu_rebuild_byte_identical_files": 33,
+   "reproduce": "D:/gprmax_v4_gpu_env/Scripts/python.exe scripts/rebuild_hs4_height_evidence_v0_2.py --out artifacts/local_checks/height_rebuild_new",
+   "calls_solver_for_rebuild": false,
+   "next": "Verify regional attribution/Git, then separately freeze resource-bounded precision or finite3D controls if needed. Same-session once-only continuation registered for2026-10-04T06:00:00+08:00. No retry of consumed attempts, no G4/training/field promotion."
+  },
+  {
+   "id": "hs4t2d_height_snapshot_design_20261004",
+   "status": "DESIGN_FEASIBILITY_ONLY_NOT_EXECUTION_CONTRACT",
+   "report": "docs/research/2026-10-04_hs4t2d_height_snapshot_design.md",
+   "evidence": "artifacts/research_checks/2026-10-04_hs4t2d_height_snapshot_design/feasibility.json",
+   "reproduce": "D:/gprmax_v4_gpu_env/Scripts/python.exe scripts/audit_hs4t2d_height_snapshot_feasibility.py --out artifacts/local_checks/height_snapshot_feasibility_new.json",
+   "calls_solver": false,
+   "next": "Prepare and freeze bounded matched-height continuous-wavefield pilot; validate source/temporal/spatial/EH/receiver closure before interface attribution.",
+   "superseded_by": "hs4_height_wavefield_attribution_20261004"
+  },
+  {
+   "id": "hs4t2d_joint_grid_20261004",
+   "status": "COMPLETED_CONTROLLED_GRID_CHECK_NOT_FULL_CONVERGENCE_OR_EVENT_ATTRIBUTION",
+   "report": "docs/research/2026-10-04_hs4t2d_joint_grid_findings.md",
+   "design": "docs/research/2026-10-04_hs4t2d_joint_grid_design.md",
+   "raw_studies": [
+    "artifacts/research_checks/2026-10-04_hs4t2d_joint_grid_centre",
+    "artifacts/research_checks/2026-10-04_hs4t2d_joint_grid_remaining",
+    "artifacts/research_checks/2026-10-04_hs4t2d_joint_grid_third"
+   ],
+   "results": [
+    "artifacts/research_checks/2026-10-04_hs4t2d_joint_grid_centre_results",
+    "artifacts/research_checks/2026-10-04_hs4t2d_joint_grid_results",
+    "artifacts/research_checks/2026-10-04_hs4t2d_joint_grid_third_results"
+   ],
+   "rebuild_verification": "artifacts/research_checks/2026-10-04_hs4t2d_joint_grid_rebuild_verification/rebuild_verification.json",
+   "new_traces": 28,
+   "actual_material_grids_verified": 28,
+   "archived_representative_grids": 8,
+   "duplicate_geometry_local_only": 20,
+   "raw_precision": "gprMax4.0.0 CUDA float64",
+   "full13_signed_window_relative_L2_5cm_to_2p5cm": 0.6939473967904688,
+   "centre_signed_window_adjacent_relative_L2": [
+    0.6129115016907872,
+    0.1659554860944375
+   ],
+   "centre_envelope_magnitude_adjacent_relative_L2": [
+    0.17120873278659002,
+    0.03966014607833455
+   ],
+   "core_rebuild_files_byte_identical": 11,
+   "rebuild_manifests_byte_identical": 3,
+   "scope": "Fixed15m geometry/PML, joint-grid sensitivity and limited95MHz ray diagnostic. Coarse phases sensitive, refined upper stripe still flat. No absolute error, strongest-event identity,3D,field,training orG4 claim."
+  },
+  {
+   "id": "hs4t2d_manual_boundary_20261003",
+   "report": "docs/research/2026-10-03_hs4t2d_manual_and_boundary_findings.md",
+   "status": "completed_PML_only_controls; full_cause_research_active",
+   "calls_solver": true,
+   "uses_field_data": false,
+   "solver": "gprMax4.0.0/CUDA double",
+   "traces": 32,
+   "all_actual_material_grids_verified": 32,
+   "portable_representative_grids": 8,
+   "control_directory": "artifacts/research_checks/2026-10-03_hs4t2d_boundary_controls",
+   "analysis_directory": "artifacts/research_checks/2026-10-03_hs4t2d_boundary_results_v0_2",
+   "manual_correction_directory": "artifacts/research_checks/2026-10-03_hs4t2d_manual_corrections",
+   "contract_sha256": "cf0fbb5818ab01c1944bfd8376cdbc4f6cc69294685c098c80525b6c168f09f8",
+   "independent_material_timing_checks": 9,
+   "scope": "fixed geometry native PML thickness sensitivity; raw/band domains separate; no boundary absolute error bound, spatial convergence or physical event identity",
+   "next": "actual15m standoff, X/Z joint refinement and credible spatial/path response, new bounded contract; G4 unchanged"
+  },
+  {
+   "id": "hs4t2d_cause_diagnostic_20261003",
+   "report": "docs/research/2026-10-03_hs4t2d_cause_diagnostic.md",
+   "status": "completed_controlled_mechanism_evidence; full_spatial_convergence_and_physical_acceptance_not_certified",
+   "solver": "gprMax 4.0.0 / CUDA double",
+   "calls_solver": true,
+   "uses_field_data": false,
+   "new_traces": 101,
+   "raw_float64_traces_verified": 101,
+   "execution_time_actual_material_grids_verified": 101,
+   "portable_representative_grids": 17,
+   "stages": [
+    {
+     "control_directory": "artifacts/research_checks/2026-10-03_hs4t2d_cause_controls",
+     "analysis_directory": "artifacts/research_checks/2026-10-03_hs4t2d_cause_results",
+     "traces": 67,
+     "contract_sha256": "2aaa4521d50db25387d31e92928273c751f8e1283bda2e26808ae4a29733f76e"
+    },
+    {
+     "control_directory": "artifacts/research_checks/2026-10-03_hs4t2d_source_controls",
+     "analysis_directory": "artifacts/research_checks/2026-10-03_hs4t2d_cause_confirmation",
+     "traces": 32,
+     "contract_sha256": "1cb6e3061606ebf27df836fa2cbf43c931a4dbb79ac24b9af09e68d962a5b359"
+    },
+    {
+     "control_directory": "artifacts/research_checks/2026-10-03_hs4t2d_zfine_confirmation",
+     "analysis_directory": "artifacts/research_checks/2026-10-03_hs4t2d_zfine_results",
+     "traces": 2,
+     "contract_sha256": "c5d21d417483cf7a91f2fb66e9d118f2477339d6ea92bf618dbca351977cde80"
+    }
+   ],
+   "verified_mechanisms": [
+    "flat-reference horizontal echo subtraction",
+    "full-window display dynamic range",
+    "standoff/propagation condition shape effect",
+    "finite vertical-grid phase/timing sensitivity"
+   ],
+   "scope": "2D development diagnostics only; no 3D/field extrapolation, clean labels, G4 or historical acceptance changes",
+   "cpu_rebuild": "artifacts/research_checks/2026-10-03_hs4t2d_zfine_results/rebuild_verification.json"
+  },
+  {
+   "id": "hs4t2d_relief08_snapshot_20261003",
+   "report": "docs/research/2026-10-03_hs4t2d_relief08_comparison.md",
+   "directory": "artifacts/research_checks/2026-10-03_hs4t2d_relief08_snapshot",
+   "visual_directory": "artifacts/research_checks/2026-10-03_hs4t2d_relief08_snapshot_visual",
+   "contract": "artifacts/research_checks/2026-10-03_hs4t2d_relief08_snapshot/execution_contract.json",
+   "contract_sha256": "fd41e66404fcae9580e8a98cdc5cd0e2e2a35ac65b395054cd1b2eb7a723c2f4",
+   "status": "completed_and_passive_observer_verified; SFCW_shape_root_cause_pending",
+   "solver": "gprMax 4.0.0 / CUDA double",
+   "calls_solver": true,
+   "uses_field_data": false,
+   "runs": 1,
+   "snapshots": 9,
+   "float64_finite_components_verified": 54,
+   "raw_receiver_bit_identical": true,
+   "scope": "broadband impulse instantaneous Ey animation; not a 20-170MHz field reconstruction or physical attribution"
+  },
+  {
+   "id": "hs4t2d_relief08_comparison_20261003",
+   "report": "docs/research/2026-10-03_hs4t2d_relief08_comparison.md",
+   "directory": "artifacts/research_checks/2026-10-03_hs4t2d_relief08_results",
+   "raw_directory": "artifacts/research_checks/2026-10-03_hs4t2d_relief08_raw",
+   "design_directory": "artifacts/research_checks/2026-10-03_hs4t2d_relief08_design",
+   "visual_directory": "artifacts/research_checks/2026-10-03_hs4t2d_relief08_visual_v0_2",
+   "contract": "artifacts/research_checks/2026-10-03_hs4t2d_relief08_design/execution_contract_cuda_cached_att4.json",
+   "contract_sha256": "1759e8e012d8ac263e829c9ac068d38822001c10acfb367d92b751ed53a742a9",
+   "status": "completed_and_numerically_reproduced_geometry_contrast; physical_shape_attribution_pending",
+   "solver": "gprMax 4.0.0 / CUDA double; raw Ey float64",
+   "calls_solver": true,
+   "uses_field_data": false,
+   "traces": 363,
+   "groups": ["baseline_0.4m", "relief2p0_0.8m", "flat_2.95m_depth"],
+   "verification": "363 H5 and actual material grids; baseline 121 raw traces exact; 7 cached/uncached raw traces exact; relocated archive processing outputs byte-identical",
+   "next": "Separate propagation, boundary and processing contributions; larger relief changed B-scan but did not establish a clear arch outline. No physical acceptance or training eligibility."
+  },
+  {
+   "id": "hs4_browser_geometry_20261003",
+   "directory": "artifacts/research_checks/2026-10-03_hs4_browser_geometry",
+   "report": "docs/research/2026-10-03_hs4_browser_model_viewers.md",
+   "export_script": "scripts/export_hs4_browser_geometry.py",
+   "verification_script": "scripts/check_hs4_browser_geometry.py",
+   "status": "input_geometry_export_verified_and_browser_import_tested",
+   "scope": "HS4 archived input boxes and COL6 H5 Position metadata; not solved material-grid or waveform acceptance",
+   "calls_solver": false,
+   "uses_field_data": false,
+   "outputs": ["hs4_interface.obj", "hs4_scene.obj", "hs4_scene.mtl", "hs4_interface.vtp"],
+   "verification": "verification.json; 2304 plateaus, 51 input identities, OBJ/VTP/CSV and solid volumes; six core outputs repeated byte-identically",
+   "browser_imports": ["https://3dviewer.net/", "https://kitware.github.io/glance/app/"],
+   "next": "Inspect input geometry and COL6 profile independently; solver-grid and physical waveform attribution remain pending numerical controls"
+  },
   {
    "analysis_recompute": "results.json byte-identical across analysis_r1/analysis_r2",
    "analysis_script": "scripts/analyze_batch2d_fine2.py",
@@ -2127,6 +2342,8 @@
   {
    "id": "sim2real_augmentation_v0_7",
    "status": "delivered_pending_user_review",
+   "independent_review": "docs/research/2026-10-03_augment_v07_commit_review.md",
+   "independent_review_verdict": "request_changes; carrier migration valid, delivery/scientific claims/acceptance/provenance unresolved; full raw rerun unavailable",
    "record": "fig_augment_v07_bscan.png",
    "note": "augmentation v0.7 (augment_sim2real_v0_7.py, seed 20261001): v0.6 operator chain unchanged, sim input migrated to OFFICIAL 20 MHz carrier via sfcw_official_loader_v0_2.load_bscan_both (fixes legacy 95 MHz carrier bug convention in v0_3-v0_6 input: band was shifted to 95-245 MHz, 90-125 MHz calibration band mismatched vs real data); legacy path rerun same seed as continuity panel. Gates: direct corr_med 0.9950/min 0.9907, peak 0.00%, shift 0; diff_rms 0.163 vs measured 0.179; envelope profile 1.19/0.97/0.84/0.88/1.82x (t0+140~200ns tail window above 1.25 target, same known-item class as v0.6 1.73x, near display floor). Metrics: augment_v07_metrics.json; figs in artifacts/research_checks/2026-10-03_sim2real_augment_v07/. Review record: docs/research/2026-10-03_sfcw_chain_review_and_repairs.md",
    "solver_executed": false,
@@ -2278,7 +2495,7 @@
    "id": "2026-10-02_HS4_CO13_official_sfcw_bscan",
    "date": "2026-10-02",
    "type": "simulation_batch",
-   "status": "validated",
+   "status": "partial_validation",
    "capsule": "artifacts/research_checks/2026-10-02_halfspace_standard_hs",
    "artifacts": [
     "hs4_co13_t01..t13.in",
@@ -2286,7 +2503,15 @@
     "hs4_co13_bscan_official.npz",
     "fig_hs4_co13_bscan.png"
    ],
-   "summary": "HS4 rough-interface 13-trace common-offset line (Tx y=3.85+0.25k, offset 1.30m, x=6, z=27). 13/13 GPU solves (~190s each); two tool-window kills (t02, t04) were segment-boundary artifacts, t04 rerun ok. Official SFCW chain v0.2 -> B-scan triple view (raw 99.9% clip / AGC 20ns / per-trace norm). Direct wave ~3ns and ground reflection ~100ns uniform across all traces; interface echo at ~187ns only visible after AGC (real amplitude ~0.25% of ground reflection, -46dB class)."
+   "summary": "13 archived 3D Ex traces reconstruct exactly. Rank-1 residual is cross-trace variation, not a certified underground morphology. Only trace 7 matches HS1/HS2 acquisition coordinates; whole-line clean/reference and numerical controls remain incomplete.",
+   "historical_summary": "HS4 rough-interface 13-trace common-offset line (Tx y=3.85+0.25k, offset 1.30m, x=6, z=27). 13/13 GPU solves (~190s each); two tool-window kills (t02, t04) were segment-boundary artifacts, t04 rerun ok. Official SFCW chain v0.2 -> B-scan triple view (raw 99.9% clip / AGC 20ns / per-trace norm). Direct wave ~3ns and ground reflection ~100ns uniform across all traces; interface echo at ~187ns only visible after AGC (real amplitude ~0.25% of ground reflection, -46dB class).",
+   "validation_components": {
+    "solver_archive": "completed (historical record)",
+    "signed_official_rebuild": "exact; rechecked 2026-10-03",
+    "target_fidelity": "not_established",
+    "physical_attribution": "unverified"
+   },
+   "morphology_audit": "docs/research/2026-10-03_hs4_3d_shape_audit.md"
   },
   {
    "id": "2026-10-02_HS4_col6_25trace_highrelief_bscan",
@@ -2309,7 +2534,9 @@
     "physical_attribution": "unverified"
    },
    "current_diagnostic_figure": "artifacts/research_checks/2026-10-03_hs4_bscan_diagnostic_v02/col6_bscan_v0_2.png",
-   "repair_report": "docs/research/2026-10-03_hs4_bscan_repairs.md"
+   "repair_report": "docs/research/2026-10-03_hs4_bscan_repairs.md",
+   "morphology_audit": "docs/research/2026-10-03_hs4_3d_shape_audit.md",
+   "current_morphology_note": "3D shape is not certified: 16/25 official envelope picks lie at the 160-220ns window boundary; no COL6 trace exactly matches the HS1/HS2 reference coordinates. Actual x=1.60m lies 0.60m from x-PML inner edge, outside the existing central y-domain control coverage. Local-depth and full-field ray proxies are diagnostics only."
   },
   {
    "id": "2026-10-02_HS4T2D_121trace_2d_transect",
@@ -2389,12 +2616,73 @@
      "official_rebuild_traces": 280
     },
     "notes": "Normal HS acceptance passes unchanged thresholds; raw polarity/amplitude/shift mutations rejected. Legacy arrays, figures and summaries preserved. No solver/training/C5/C8 reads, frozen contracts/G4 unchanged."
+   },
+   {
+    "id": "2026-10-03_hs4_3d_shape_audit",
+    "date": "2026-10-03",
+    "type": "independent_morphology_audit",
+    "status": "morphology_not_established",
+    "reviewed_commit": "9daeeae",
+    "solver_executed": false,
+    "models_modified": false,
+    "report": "docs/research/2026-10-03_hs4_3d_shape_audit.md",
+    "directory": "artifacts/research_checks/2026-10-03_hs4_3d_shape_audit_v01",
+    "key_numbers": {
+     "col6": {
+      "reconstructed_traces": 25,
+      "raw_envelope_window_edge_count": 16,
+      "rank1_abs_peak_local_depth_correlation_DIAGNOSTIC_ONLY": 0.2582867152980946,
+      "rank1_template_local_depth_correlation_DIAGNOSTIC_ONLY": 0.6890123875624664,
+      "matched_reference_traces": []
+     },
+     "co13": {
+      "reconstructed_traces": 13,
+      "raw_envelope_window_edge_count": 0,
+      "rank1_abs_peak_local_depth_correlation_DIAGNOSTIC_ONLY": -0.02363360046979853,
+      "rank1_template_local_depth_correlation_DIAGNOSTIC_ONLY": 0.2047531287227768,
+      "matched_reference_traces": [
+       7
+      ]
+     }
+    },
+    "notes": "Input boxes agree with saved table and H5 grid is 240x240x660, float64 Ex. Geometry/text and exact reconstruction do not certify full-wave morphology or field representativeness. No C5/C8 evaluation, no new solver/training or G4 changes."
+   },
+   {
+    "id": "augment_v07_commit_review",
+    "reviewed_commit": "18422a6686987086c3477466c1ea48999ffaeec6",
+    "status": "request_changes",
+    "record": "docs/research/2026-10-03_augment_v07_commit_review.md",
+    "evidence": "artifacts/research_checks/2026-10-03_augment_v07_commit_review/",
+    "scope": "CPU source/archive/synthetic review; no full augmentation rerun, solver, training or C5/C8 evaluation",
+    "solver_executed": false,
+    "training_executed": false,
+    "g4_relieved": false,
+    "hs4_physical_root_cause_resolved": false,
+    "tracked": true
+   },
+   {
+    "directory": "artifacts/research_checks/2026-10-04_hs4_station_grid_endpoints",
+    "status": "COMPLETED_8_NATIVE_ENDPOINT_CONTROLS",
+    "report": "docs/research/2026-10-04_hs4_cross_pc_task.md",
+    "tracked": true,
+    "solver": "gprMax4.0.0 CUDA double",
+    "g4_relieved": false
+   },
+   {
+    "directory": "artifacts/research_checks/2026-10-04_hs4_station_grid_results",
+    "status": "COMPLETED_DIAGNOSTIC_NOT_PHYSICAL_ACCEPTANCE",
+    "tracked": true
+   },
+   {
+    "directory": "artifacts/research_checks/2026-10-04_hs4_cross_pc_design_r1",
+    "status": "PREPARED_NOT_RUN_20_TARGET_TASK_INPUTS",
+    "tracked": true
    }
   ],
   "schema": "research-artifact-registry/1",
  "solver_execution_gate": "configs/research/gprmax_v4_execution_gate.json",
- "updated_date": "2026-10-03",
- "current_handoff": "START_HERE.md - batch2d_slope_t2 + _mt both completed (6+6). B-scan viewer: artifacts/local_checks/slope_t2_bscan_viewer.html via 127.0.0.1:8765. Dispersion measured-data research registered (West 2003 etc). Next candidates: T1/T3, 3D slope, tilt_target, dispersive TZ; G4 unchanged.",
+ "updated_date": "2026-10-04",
+ "current_handoff": "START_HERE.md - HS4 endpoint8 complete and old47 preserved. Cross-PC20 input task prepared with portable freeze/run/audit/analysis, CPU10 and completed12 archive PASS.1cm/3D not run due resource floors; exact waveform convergence and equipment baseline unresolved. G4 unchanged;06:00 CLI continuation failed historically.",
  "t3_operator_effects_rpca_addendum": "docs/research/2026-09-29_rpca_effects_addendum.md",
  "operator_catalogue_v0_2": "configs/research/operator_catalogue_v0.2.json",
  "reward_weights_v0_2": "docs/research/2026-09-29_reward_weights_v0.2.md",

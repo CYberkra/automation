@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "contract_sha256": "bc165ef9929d243073a9a9796ab8807bdd9b45ba4d1d93582093db7f43ffccbc",
+  "code_sha256": "0ca0d4708e3291b45c332c61638504d7b45980a5e1f048a7a799af1630c72fec",
+  "groups": {
+    "centre_rough": {
+      "factors_preserved": "PASS",
+      "fine_equals_repeated_coarse_voxels": true,
+      "material_array_sha256": "008954b740754c025144a5d6de64abbb7df655df2c44cfa4758c491763f3b572",
+      "actual_material_grids_verified": 0,
+      "geometry_exports": []
+    },
+    "centre_halfspace": {
+      "factors_preserved": "PASS",
+      "fine_equals_repeated_coarse_voxels": true,
+      "material_array_sha256": "bf1569b399396450f0ddd293137c2e558504736c275b763cad83b5da582b30c3",
+      "actual_material_grids_verified": 0,
+      "geometry_exports": []
+    }
+  },
+  "completed_outputs_checked": false,
+  "scope": "input invariants, voxel geometry, version/rawdtype/2D dt and actual positions; not full spatial convergence"
+}

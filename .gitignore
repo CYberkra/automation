@@ -4,10 +4,6 @@
 
 # Public paper/data caches are recoverable using the tracked source ledgers.
 /artifacts/research_sources/
-# External literature search caches and PDF extractions (regenerable via scholar queries).
-/docs/research/literature/
-# Scratch notes from ad-hoc review passes.
-/docs/research/cb_scratch/
 # Fresh verification outputs; historical research_checks evidence stays tracked.
 /artifacts/local_checks/
 /artifacts/simulations/
@@ -75,3 +71,30 @@ Thumbs.db
 /artifacts/research_checks/2026-09-26_damage_ladder_r2_c07/records.json
 /artifacts/research_checks/2026-09-27_damage_ladder_dev_r2_c07/records.json
 /artifacts/research_checks/2026-09-27_sfcw_unified_dev_adapter_mt33_rerun/responses_and_reconstructions.npz
+
+# Air-layer/boundary batch 2026-10-03: wavefield snapshots are 549 MB and are
+# regenerable from the frozen inputs plus the recorded contract. Inputs,
+# contracts, verification JSON and scripts stay tracked.
+/artifacts/research_checks/2026-10-03_hs4t2d_airlayer_boundary/*/profile_snaps/
+/artifacts/research_checks/2026-10-03_hs4t2d_airlayer_boundary/*/profile.h5
+/artifacts/research_checks/2026-10-03_hs4t2d_airlayer_boundary/*/*.vtkhdf
+/artifacts/research_checks/2026-10-03_hs4t2d_airlayer_boundary/*/cuda_cache.jsonl
+
+# Dense height wavefields remain local; full per-snapshot SHA-256 audit and
+# frozen inputs are archived. Keep native receivers and small final products.
+/artifacts/research_checks/2026-10-04_hs4_height_wavefield_continuation/*/profile_snaps/
+/artifacts/research_checks/2026-10-04_hs4_height_wavefield_results/fields/
+/artifacts/research_checks/2026-10-04_hs4_height_wavefield_pilot/*/cuda_cache.jsonl
+/artifacts/research_checks/2026-10-04_hs4_height_wavefield_continuation/*/cuda_cache.jsonl
+/artifacts/research_checks/2026-10-04_hs4_local_patch_controls/*/cuda_cache.jsonl
+/artifacts/research_checks/2026-10-04_hs4_patch_refinement/*/cuda_cache.jsonl
+/artifacts/research_checks/2026-10-04_hs4_patch_finest/*/cuda_cache.jsonl
+# Thirty repeated local-control material maps retain per-file hashes; keep
+# the first actual map of each of the five groups as a reviewable exemplar.
+/artifacts/research_checks/2026-10-04_hs4_local_patch_controls/*/hs4t2d_geom*.vtkhdf
+!/artifacts/research_checks/2026-10-04_hs4_local_patch_controls/*/hs4t2d_geom1.vtkhdf
+
+# Endpoint material maps equal archived finest maps; full hashes and audits
+# stay tracked. Future target-machine capsules retain their own raw evidence.
+/artifacts/research_checks/2026-10-04_hs4_station_grid_endpoints/*/*.vtkhdf
+/artifacts/research_checks/2026-10-04_hs4_station_grid_endpoints/*/cuda_cache.jsonl

@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "contract_sha256": "f6f57cf62d305688f8475a420f109d6d60e8585f229edae41d4f17ae0869406b",
+  "code_sha256": "c1b03444893d0de69777be586fa14a830e55b42018be0174e6ff655923e7b825",
+  "completed": true,
+  "groups": [
+    {
+      "group": "base",
+      "geometry_factor_check": "PASS",
+      "outputs": [
+        {
+          "file": "profile.h5",
+          "sha256": "51909581bb846daac34e7a8bd77f9cda83aabd74af48315f50a2b15d425a0aae",
+          "old_station_index": 61,
+          "geometry_file": "hs4t2d_geom.vtkhdf",
+          "geometry_sha256": "d04f5f33159645a44b596beb64f61ccc375b659d1c9ec03e75de0d88bbee18fc"
+        }
+      ]
+    },
+    {
+      "group": "halfspace",
+      "geometry_factor_check": "PASS",
+      "outputs": [
+        {
+          "file": "profile.h5",
+          "sha256": "ae434df52bc9c70d8b41afba141ed798c742fbb20f779aea69720083f211c216",
+          "old_station_index": 61,
+          "geometry_file": "hs4t2d_geom.vtkhdf",
+          "geometry_sha256": "10b10d203cff70640444af61802dd5b7bb482f50782cdc81fdf7ba671d69241b"
+        }
+      ]
+    },
+    {
+      "group": "crest",
+      "geometry_factor_check": "PASS",
+      "outputs": [
+        {
+          "file": "profile.h5",
+          "sha256": "ca1fa2155d8b58a16d852f30a8e2a8a39ad5cc58a0f97d54a4ced90dc9e875cf",
+          "old_station_index": 61,
+          "geometry_file": "hs4t2d_geom.vtkhdf",
+          "geometry_sha256": "92aa1233f065e9496e11f6bc16d679a35d2e6dcecc80c2a83503ff8d66547e26"
+        }
+      ]
+    },
+    {
+      "group": "slope",
+      "geometry_factor_check": "PASS",
+      "outputs": [
+        {
+          "file": "profile.h5",
+          "sha256": "ab65ffd2fe0443f5da87ea7df9e0b552dce0a45da6531d00d7438de7501bee5f",
+          "old_station_index": 61,
+          "geometry_file": "hs4t2d_geom.vtkhdf",
+          "geometry_sha256": "1b4234115111455a16f8655bf39b04bf1cd693a61ab83b9c4e1e7342c7e59a92"
+        }
+      ]
+    }
+  ]
+}

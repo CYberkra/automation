@@ -57,16 +57,23 @@ def main():
     ap.add_argument('--x1', type=float, default=8.60)
     ap.add_argument('--step', type=float, default=0.05)
     ap.add_argument('--offset', type=float, default=1.30)
+    ap.add_argument('--flat', action='store_true',
+                    help='flat-interface BG companion: interface pinned to 9.0 m everywhere')
     args = ap.parse_args()
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=False)
     lines, prof = build_geometry()
+    if args.flat:
+        prof = np.full_like(prof, 9.0)
+        lines = ['#box: 0 0 0 12 0.05 12 rock', '#box: 0 0 9 12 0.05 12 cover',
+                 '#geometry_view: 0 0 0 12 0.05 33 0.05 0.05 0.05 hs4t2d_geom n']
     geom = '\n'.join(lines) + '\n'
     xs = np.round(np.arange(args.x0, args.x1 + 1e-9, args.step), 4)
+    prefix = 'hs4t2dbg_' if args.flat else 'hs4t2d_'
     for k, x in enumerate(xs):
         tag = f't{k + 1:02d}'
         txt = HEADER.format(tx=x, rx=x + args.offset, tag=tag) + geom
-        (out / f'hs4t2d_{tag}.in').write_text(txt, encoding='utf-8')
+        (out / f'{prefix}{tag}.in').write_text(txt, encoding='utf-8')
     np.savez(out / 'hs4t2d_transect_table.npz', prof_m=prof, bin_m=0.25,
              x0=args.x0, x1=args.x1, step=args.step, offset=args.offset,
              n_traces=len(xs))

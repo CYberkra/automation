@@ -1,0 +1,82 @@
+{
+  "status": "COMPLETED",
+  "contract_sha256": "c5d21d417483cf7a91f2fb66e9d118f2477339d6ea92bf618dbca351977cde80",
+  "new_traces": 2,
+  "comparisons": {
+    "Z5cm_to_Z2p5cm": {
+      "spectral": {
+        "hann_weighted_complex_relative_L2": 0.13766950745249285,
+        "hann_weighted_amplitude_L2_ratio": 0.9929137833103802,
+        "complex_coherence_real": 0.9904812083722828,
+        "complex_coherence_imag": -0.009592183725474643,
+        "relative_L2_by_trace": [
+          0.13766950745249282
+        ]
+      },
+      "signed_window": {
+        "relative_L2": 0.6003596293441626,
+        "amplitude_L2_ratio": 1.0734834600549898,
+        "relative_L2_by_trace": [
+          0.6003596293441625
+        ]
+      },
+      "envelope_window": {
+        "relative_L2": 0.1668165342673605,
+        "amplitude_L2_ratio": 1.0734469884404985,
+        "relative_L2_by_trace": [
+          0.16681653426736054
+        ]
+      }
+    },
+    "Z2p5cm_to_Z1p25cm": {
+      "spectral": {
+        "hann_weighted_complex_relative_L2": 0.060150300721349435,
+        "hann_weighted_amplitude_L2_ratio": 0.9990431678461467,
+        "complex_coherence_real": 0.9981896962686325,
+        "complex_coherence_imag": -0.00974178839531807,
+        "relative_L2_by_trace": [
+          0.060150300721349435
+        ]
+      },
+      "signed_window": {
+        "relative_L2": 0.2327852016213845,
+        "amplitude_L2_ratio": 1.0243774739438707,
+        "relative_L2_by_trace": [
+          0.23278520162138444
+        ]
+      },
+      "envelope_window": {
+        "relative_L2": 0.052800321329845905,
+        "amplitude_L2_ratio": 1.0243474253333942,
+        "relative_L2_by_trace": [
+          0.052800321329845905
+        ]
+      }
+    }
+  },
+  "processing_only_center_window": {
+    "no_tail_taper": {
+      "relative_L2": 3.28099326634567e-06,
+      "amplitude_L2_ratio": 1.0000000202046204,
+      "relative_L2_by_trace": [
+        3.28099326634567e-06
+      ]
+    },
+    "300ns_record_no_taper": {
+      "relative_L2": 0.00245475648002848,
+      "amplitude_L2_ratio": 0.9999928629566502,
+      "relative_L2_by_trace": [
+        0.00245475648002848
+      ]
+    }
+  },
+  "window_envelope_max_time_ns": {
+    "Z1p25cm": 172.88339986693282,
+    "Z5cm": 175.58632734530937,
+    "Z2p5cm": 173.5071523619428
+  },
+  "source_all_bins_valid": true,
+  "time_interpolation": "same official Hann/20-170MHz/501 bins; 64x padding diagnostic, not new bandwidth",
+  "interpretation": "Z sensitivity sequence only. X remains coarse; no complete spatial convergence or absolute interface-arrival acceptance.",
+  "code_sha256": "0515e5e74b68b5d516e70d3e580c76716fadd2bd5168541cca5807ac449b3997"
+}

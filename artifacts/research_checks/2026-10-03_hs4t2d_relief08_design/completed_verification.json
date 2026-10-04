@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "groups": {
+    "baseline": {
+      "raw_h5_verified": 121,
+      "actual_cell_material_grids_verified": 121,
+      "cells_per_grid": 158400,
+      "material_grid_mismatches": 0,
+      "version": "4.0.0",
+      "raw_dtype": "float64",
+      "archived_baseline_raw_max_abs_difference": 0.0
+    },
+    "relief2p0": {
+      "raw_h5_verified": 121,
+      "actual_cell_material_grids_verified": 121,
+      "cells_per_grid": 158400,
+      "material_grid_mismatches": 0,
+      "version": "4.0.0",
+      "raw_dtype": "float64",
+      "archived_baseline_raw_max_abs_difference": null
+    },
+    "flat": {
+      "raw_h5_verified": 121,
+      "actual_cell_material_grids_verified": 121,
+      "cells_per_grid": 158400,
+      "material_grid_mismatches": 0,
+      "version": "4.0.0",
+      "raw_dtype": "float64",
+      "archived_baseline_raw_max_abs_difference": null
+    }
+  },
+  "cache_uncached_raw_bit_identical_traces": 7,
+  "checker_sha256": "4797b97cfe1c9b56b018243f2ce44e32d2985324f862059e9736c79794287364",
+  "contract_sha256": "1759e8e012d8ac263e829c9ac068d38822001c10acfb367d92b751ed53a742a9",
+  "scope": "execution, actual cell material geometry and numerical reproducibility; not physical waveform validation"
+}

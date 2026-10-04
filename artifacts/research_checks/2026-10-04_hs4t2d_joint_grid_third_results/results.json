@@ -1,0 +1,298 @@
+{
+  "status": "COMPLETED",
+  "new_third_grid_traces": 2,
+  "scope": "Centre contraction and limited ray-geometry diagnostics; not full-space convergence or unique event attribution.",
+  "contract_sha256": "1e23ce35071134ac5cc54b2f0b406d9def90360986c6f5b54b8a3ad2bc8e6fd3",
+  "scan_manifest_sha256": "953b683801fe038dd69272ddc80d340aef9a924e4361dc5f0c0e71421a60cdbf",
+  "profile_sha256": "d24a32e6810faf7d544ce523eebebc671f36d540cce73737d39e368aecfbcdd8",
+  "official_processing_sha256": "adad556f09140956f0ee19d3038430e06a9ae8be6a826dcad723096d99624a3b",
+  "code_identities": {
+    "analyze_hs4t2d_joint_grid_third.py": "f722918fca43f15b77d1caac56abaf47ed1352798a02b91b5d44490118963824",
+    "analyze_hs4t2d_joint_grid.py": "ddcaed07d1e1e878584c5d8a8b07c35a827a5df01dcd15dc99de26ff5c21386e",
+    "hs4t2d_path_diagnostic.py": "84503d5331f062f0c2714008ac83da4aecd2475fbbd3149a5c75d6c2648b8c1f"
+  },
+  "source_audit": {
+    "centre_rough": {
+      "quantity": "electric_current",
+      "units": "A",
+      "spatial_scale": 0.05,
+      "dt_s": 3.9310905612494735e-11,
+      "all501source_bins_valid": true
+    },
+    "centre_halfspace": {
+      "quantity": "electric_current",
+      "units": "A",
+      "spatial_scale": 0.05,
+      "dt_s": 3.9310905612494735e-11,
+      "all501source_bins_valid": true
+    }
+  },
+  "comparisons": {
+    "5_to_2p5": {
+      "hann_complex_spectrum": {
+        "hann_weighted_complex_relative_L2": 0.6129674432244285,
+        "hann_weighted_amplitude_L2_ratio": 1.075710022877347,
+        "complex_coherence_real": 0.8280219245799517,
+        "complex_coherence_imag": 0.5290700382543446,
+        "relative_L2_by_trace": [
+          0.6129674432244285
+        ]
+      },
+      "signed_band": {
+        "relative_L2": 0.6129115016907872,
+        "relative_L2_by_trace": [
+          0.6129115016907875
+        ],
+        "reference_L2": 0.20695808987217681,
+        "difference_L2": 0.1268469936506128,
+        "reference_peak_abs": 0.052080332279953845,
+        "difference_peak_abs": 0.03175467611595794
+      },
+      "phase_aware_complex_envelope": {
+        "relative_L2": 0.6128940164460984,
+        "relative_L2_by_trace": [
+          0.6128940164460984
+        ],
+        "reference_L2": 0.1463457396982025,
+        "difference_L2": 0.08969442819340656,
+        "reference_peak_abs": 0.026951439036122557,
+        "difference_peak_abs": 0.016495224866417347
+      },
+      "envelope_magnitude": {
+        "relative_L2": 0.17120873278659002,
+        "relative_L2_by_trace": [
+          0.17120873278659
+        ],
+        "reference_L2": 0.292691479396405,
+        "difference_L2": 0.05011133728489082,
+        "reference_peak_abs": 0.053902878072245114,
+        "difference_peak_abs": 0.013183366500498818
+      }
+    },
+    "2p5_to_third": {
+      "hann_complex_spectrum": {
+        "hann_weighted_complex_relative_L2": 0.16600738615729482,
+        "hann_weighted_amplitude_L2_ratio": 1.0179147773997614,
+        "complex_coherence_real": 0.9866209266167294,
+        "complex_coherence_imag": 0.15727501544645767,
+        "relative_L2_by_trace": [
+          0.1660073861572948
+        ]
+      },
+      "signed_band": {
+        "relative_L2": 0.1659554860944375,
+        "relative_L2_by_trace": [
+          0.16595548609443755
+        ],
+        "reference_L2": 0.22263540887221284,
+        "difference_L2": 0.036947567501221926,
+        "reference_peak_abs": 0.057027582591621134,
+        "difference_peak_abs": 0.009369784076566393
+      },
+      "phase_aware_complex_envelope": {
+        "relative_L2": 0.16593127002968364,
+        "relative_L2_by_trace": [
+          0.16593127002968366
+        ],
+        "reference_L2": 0.15742680077906462,
+        "difference_L2": 0.026122028989980183,
+        "reference_peak_abs": 0.02858777373119199,
+        "difference_peak_abs": 0.004784700482637501
+      },
+      "envelope_magnitude": {
+        "relative_L2": 0.03966014607833455,
+        "relative_L2_by_trace": [
+          0.039660146078334554
+        ],
+        "reference_L2": 0.31485360155812925,
+        "difference_L2": 0.012487139831085148,
+        "reference_peak_abs": 0.05717554746238398,
+        "difference_peak_abs": 0.003298439224129951
+      }
+    }
+  },
+  "window_envelope_peak_ns": {
+    "coarse5cm": 175.48236859614104,
+    "fine2p5cm": 173.81902860944777,
+    "third1over60m": 172.98735861610112
+  },
+  "peak_scope": "160\u2013220ns sampled maxima, may switch lobes and limited by reconstruction time grid; not certified event arrival.",
+  "path_diagnostics_95MHz": {
+    "15": {
+      "phase_index_95MHz": 4.312399930744034,
+      "group_index_95MHz": 4.187646444866774,
+      "minimum_ray_phase_time_ns": [
+        174.18204592228088,
+        173.86074974458194,
+        173.64513669079267,
+        173.53583611838735,
+        173.52116548219624,
+        173.52116548219624,
+        173.52116548219624,
+        173.53583611838735,
+        173.64513669079264,
+        173.86074974458194,
+        174.18204592228088,
+        174.60809610217538,
+        175.13768411590104
+      ],
+      "minimum_ray_group_time_ns": [
+        172.05895558710617,
+        171.7380049181594,
+        171.52262534084045,
+        171.41344362335468,
+        171.3987889658521,
+        171.3987889658521,
+        171.3987889658521,
+        171.41344362335468,
+        171.52262534084045,
+        171.73800491815942,
+        172.05895558710617,
+        172.4845520069465,
+        173.01358288339938
+      ],
+      "minimum_ray_reflection_x_m": [
+        5.0125,
+        5.0125,
+        5.0125,
+        5.0125,
+        5.237500000000001,
+        5.737500000000001,
+        6.237500000000001,
+        6.487500000000001,
+        6.487500000000001,
+        6.487500000000001,
+        6.487500000000001,
+        6.487500000000001,
+        6.487500000000001
+      ],
+      "vertical_group_time_ns": [
+        188.07068389512546,
+        182.48328990555848,
+        176.89589591599153,
+        174.10219892120804,
+        171.30850192642455,
+        171.30850192642455,
+        171.30850192642455,
+        174.10219892120804,
+        176.89589591599153,
+        182.48328990555848,
+        185.27698690034197,
+        185.27698690034197,
+        185.27698690034197
+      ],
+      "scope": "earliest stationary-path diagnostic using 95MHz index and flat ground; not envelope-peak truth"
+    },
+    "2": {
+      "phase_index_95MHz": 4.312399930744034,
+      "group_index_95MHz": 4.187646444866774,
+      "minimum_ray_phase_time_ns": [
+        90.71324001304524,
+        89.08066594247077,
+        87.92760841401864,
+        87.32368067035267,
+        87.24157274961406,
+        87.24157274961406,
+        87.24157274961406,
+        87.32368067035267,
+        87.92760841401864,
+        89.08066594247077,
+        90.71324001304524,
+        92.740312884484,
+        95.07606052833951
+      ],
+      "minimum_ray_group_time_ns": [
+        88.57186998507285,
+        86.94601466451745,
+        85.79838643562056,
+        85.19754175977911,
+        85.11586607849149,
+        85.11586607849149,
+        85.11586607849149,
+        85.19754175977911,
+        85.79838643562056,
+        86.94601466451745,
+        88.57186998507285,
+        90.59202762982507,
+        92.92147280231558
+      ],
+      "minimum_ray_reflection_x_m": [
+        5.0125,
+        5.0125,
+        5.0125,
+        5.0125,
+        5.237500000000001,
+        5.737500000000001,
+        6.237500000000001,
+        6.487500000000001,
+        6.487500000000001,
+        6.487500000000001,
+        6.487500000000001,
+        6.487500000000001,
+        6.487500000000001
+      ],
+      "vertical_group_time_ns": [
+        101.34401914360592,
+        95.75662515403893,
+        90.16923116447197,
+        87.37553416968849,
+        84.58183717490502,
+        84.58183717490502,
+        84.58183717490502,
+        87.37553416968849,
+        90.16923116447197,
+        95.75662515403893,
+        98.55032214882246,
+        98.55032214882246,
+        98.55032214882246
+      ],
+      "scope": "earliest stationary-path diagnostic using 95MHz index and flat ground; not envelope-peak truth"
+    }
+  },
+  "path_span_diagnostics": {
+    "15": {
+      "minimum_ray_group_time_span_ns": 1.6147939175472743,
+      "vertical_group_time_span_ns": 16.7621819687009,
+      "minimum_ray_reflection_x_range_m": [
+        5.0125,
+        6.487500000000001
+      ]
+    },
+    "2": {
+      "minimum_ray_group_time_span_ns": 7.805606723824084,
+      "vertical_group_time_span_ns": 16.7621819687009,
+      "minimum_ray_reflection_x_range_m": [
+        5.0125,
+        6.487500000000001
+      ]
+    }
+  },
+  "exploratory_positive_lobe": {
+    "window_ns": [
+      160,
+      180
+    ],
+    "times_ns": [
+      168.82900864936792,
+      168.82900864936792,
+      167.9973386560213,
+      167.9973386560213,
+      167.9973386560213,
+      167.9973386560213,
+      178.8090485695276,
+      178.8090485695276,
+      177.97737857618097,
+      177.97737857618097,
+      177.14570858283435,
+      169.66067864271457,
+      170.49234863606122
+    ],
+    "span_ns": 10.811709913506292,
+    "scope": "post-scan observable, no physical event label or fitting/selection qualification"
+  },
+  "limitations": [
+    "Third grid covers centre only. Adjacent differences are not absolute error bounds.",
+    "Ray minima omit reflection strength, interference, finite-band phase and strong multiple scattering; do not identify the dominant B-scan event.",
+    "2D invariant line source is not a finite3D antenna. No3D/field/training validation."
+  ]
+}

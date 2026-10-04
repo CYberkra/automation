@@ -1,0 +1,71 @@
+{
+  "status": "DESIGN_FEASIBILITY_ONLY_NOT_EXECUTION_CONTRACT",
+  "calls_solver": false,
+  "script_sha256": "b8b2794e376fb42bc92849893d0a99babe381e7f7f616ce34c82a83f0f049e35",
+  "reference_raw": "artifacts/research_checks/2026-10-04_hs4t2d_joint_grid_centre/centre_rough/profile.h5",
+  "reference_raw_sha256": "a8934a733c28266943f4352005a1a80f53482beedf6a2655f74b1fcb939e033f",
+  "old_snapshot_contract_sha256": "fd41e66404fcae9580e8a98cdc5cd0e2e2a35ac65b395054cd1b2eb7a723c2f4",
+  "current_runtime_matches_old_frozen_snapshot_sources": {
+    "snapshots.py": "da4e4e85a0ae172e468cdb0c688c017402f9d4e11bcd0c8c625304ea42f3032c",
+    "updates/cuda_updates.py": "55fca5be1f5a8e40b0145028a873074cafa02139cfa3ca98ef013780bdef7dda",
+    "user_objects/cmds_output.py": "4ad7d004dab0609ae23c8358e52960226eb01c59a34c2d9f6638f3f8b75160e2",
+    "cuda_opencl/knl_snapshots.py": "e76bd37a94c5c2ca6dc3f6495cdd797115e83d1d5b9b015d33d89d708c4c86f9",
+    "utilities/host_info.py": "ccea2a43bf6daf220b2f553b1b72dcb527595ff3fa860c73c07a9f456102573f"
+  },
+  "fdtd_spacing_m": [
+    0.025,
+    0.05,
+    0.025
+  ],
+  "dt_s": 5.896635841874211e-11,
+  "native_iterations": 10177,
+  "snapshot_native_hop": 10,
+  "snapshot_period_ns": 0.5896635841874212,
+  "snapshot_temporal_nyquist_MHz": 847.9411200015328,
+  "snapshot_frames": 1018,
+  "first_E_time_ns": 0,
+  "last_E_time_ns": 599.6878651186072,
+  "extent_m": [
+    12,
+    0,
+    8,
+    24,
+    0.05,
+    28
+  ],
+  "output_spacing_m": [
+    0.1,
+    0.05,
+    0.1
+  ],
+  "output_shape_xyz": [
+    120,
+    1,
+    200
+  ],
+  "components_stored": [
+    "Ex",
+    "Ey",
+    "Ez",
+    "Hx",
+    "Hy",
+    "Hz"
+  ],
+  "six_field_frame_bytes": 1152000,
+  "six_field_history_bytes_per_trace": 1172736000,
+  "six_field_history_GiB_per_trace": 1.0921955108642578,
+  "four_trace_payload_GiB_excluding_HDF5_headers": 4.368782043457031,
+  "initial_plus_replacement_host_buffers_GiB": 2.1843910217285156,
+  "budget_scope": "Array payload estimate only, not measured process peak. Add native model, Python, receiver probes and file overhead. Serial traces; release one solver before next.",
+  "gpu_storage_scope": "Actual V4 CUDA buffers allocate all six fields. Auto gpu-to-cpu policy can use one GPU frame but retains host history; do not assume streaming to disk or a CLI flag.",
+  "required_pre_execution_checks": [
+    "Freeze new inputs, source/runtime/analysis identities, run count, resource limits and no-retry contract.",
+    "Use Ricker95 only after fine-grid full-complex transfer equivalence to archived impulse is checked; earlier source control was coarse.",
+    "Native receiver and co-located probe histories must test hop10 versus hop5/full-native spectra; Nyquist alone does not certify no aliasing.",
+    "Match snapshot cell-centre interpolation with native neighbouring E/H probes; do not compare an interpolated cell centre to an unrelated Yee receiver node.",
+    "Use separate native E/H time levels in DTFT; collocate time before Poynting direction diagnostics.",
+    "Reproduce current 501-tone source normalization, physical 200ns tail taper, Hann and carrier before receiver/B-scan attribution.",
+    "Minimum planned available host RAM 3.5GiB and free VRAM 3.5GiB; recheck live and verify actual peak in pilot.",
+    "ROI excludes outer PML and outside-profile propagation; absence of a visible return cannot exclude boundary reflections."
+  ]
+}

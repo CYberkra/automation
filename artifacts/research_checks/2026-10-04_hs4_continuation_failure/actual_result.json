@@ -1,0 +1,20 @@
+{
+  "thread_id": "01a0fb58-13ed-75d3-a25d-5e1c99219ff9",
+  "ended_utc": "2026-10-03T22:00:05.2423881Z",
+  "started_utc": "2026-10-03T22:00:02.1080633Z",
+  "error": "2026-10-03T22:00:03.665473Z ERROR codex_core::session::session: failed to initialize thread persistence: thread-store conflict: thread 01a0fb58-13ed-75d3-a25d-5e1c99219ff9 already has an active writer",
+  "requested_time": "2026-10-04T06:00:00+08:00",
+  "status": "FAILED",
+  "evidence_status": "ACTUAL_SCHEDULED_TRIGGER_CLI_WRITER_CONFLICT_NO_RESEARCH",
+  "last_task_result": 1,
+  "events_bytes": 0,
+  "final_output_exists": false,
+  "original_local_files_sha256": {
+    "continue.ps1": "82ab2a046a14e6be7a3ddd7505c8cf93bca754d8fa40af37f847eaea666e1e49",
+    "events.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prompt.txt": "6922e51e59e5f9ec2c126098f0c73fe054591a16d3d2ab4ca3ace4516cede5f9",
+    "registered_task.xml": "565ff4f0cde4cf7fad01da775a3a881b8652482db5a3ecb3bdc7e5b0c9f0646a",
+    "result.json": "7133ba5f236bf9707247d7683cf69f1b43acd14400665a80e7fb935e44aa141b",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

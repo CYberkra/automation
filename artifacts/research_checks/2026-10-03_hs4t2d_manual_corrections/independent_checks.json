@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "checks": [
+    "official501-point complex material crosscheck",
+    "static dielectric25.895",
+    "official water80.1 limit",
+    "nondispersive phase/group limit",
+    "independent two-leg timing",
+    "step-preserving actual bin-boundary samples",
+    "nonpositive/nonfinite frequency rejection",
+    "raw2D-CFL equality",
+    "no identity inference from correlation"
+  ],
+  "official_complex_epsilon_max_relative_difference": 7.712183518802051e-11,
+  "epsilon0_used": 8.8541878128e-12,
+  "official_epsilon0": 8.8541878188e-12,
+  "official_materials_py_sha256": "75f22bc9c9b7187723223ade373914a53959a67e6a0041890ea09640f6fa0a7e",
+  "calls_solver": false
+}

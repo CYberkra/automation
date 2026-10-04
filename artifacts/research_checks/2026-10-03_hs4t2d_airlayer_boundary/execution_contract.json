@@ -1,0 +1,101 @@
+{
+  "status": "FROZEN_APPROVED",
+  "approval_basis": "User 2026-10-03: read the official gprMax V4 manual, then run all four groups ('全跑，是2D的吧'), confirmed the series is 2D. Purpose is to test whether the unrecovered B-scan morphology is caused by insufficient boundary absorption in the air layer, as the user suspected, and to bring the vertical grid into compliance with the guide's minimum cells-per-wavelength.",
+  "two_dimensional": true,
+  "invariance": "Y is a single 0.05 m cell (invariant-y). Source and receiver are Ey. 2D line source, no 3D run.",
+  "solver": {
+    "package": "gprMax 4.0.0",
+    "python": "artifacts/local_checks/gprmax_v4_gpu_env/Scripts/python.exe",
+    "entry": "scripts/gprmax_cached_cuda_entry.py",
+    "device": "GPU 0, double precision",
+    "cubin_cache": "per-run cache reusing CUBIN only for identical source, architecture and compile options; each trace reinitialises the field state"
+  },
+  "manual_reference": {
+    "source": "https://docs.gprmax.com/en/latest/gprmodelling.html",
+    "read_on": "2026-10-03",
+    "version_note": "the live site documents 4.0.1; this run uses the fixed local 4.0.0 build and its own processing, no API upgrade",
+    "rules_applied": [
+      "sources and targets at least 15 cells from the ABCs",
+      "at least 15-20 cells of free space above a source",
+      "objects spanning the computational domain are assumed to extend to infinity, so their truncation is not itself a reflection source; only ABC imperfection produces boundary reflections",
+      "discretisation step at least 10 cells per shortest wavelength, 20 preferred",
+      "placing sources or outputs inside PML cells is incorrect modelling"
+    ]
+  },
+  "preflight_audit": {
+    "script": "scripts/audit_airlayer_pml_clearance.py",
+    "artifact": "artifacts/research_checks/2026-10-03_hs4t2d_airlayer_boundary/pml_clearance_audit.json",
+    "result": {
+      "source_to_pml_inner_x_min": "4.600 m / 92 cells PASS",
+      "source_to_pml_inner_x_max": "5.400 m / 108 cells PASS",
+      "nearest_receiver_to_pml_inner_x_max": "4.100 m / 82 cells PASS",
+      "air_above_source": "18.350 m / 367 cells PASS",
+      "geometry_spans_domain_x": "0.000 to 12.000 m in a 12 m domain PASS",
+      "cells_per_wavelength_cover_at_170MHz": "8.31 FAIL (guide minimum 10)",
+      "cells_per_wavelength_rock_at_170MHz": "11.76 PASS"
+    },
+    "consequence": "The 8.31 cells per wavelength failure is why G4 exists: without it, any morphology statement carries the vertical-grid sensitivity already measured at 67.41 percent for 5 to 2.5 cm."
+  },
+  "hypothesis_under_test": {
+    "user_hypothesis": "air-layer lateral reflection is affecting the received waveform",
+    "testable_form": "boundary absorption sufficiency, not a physical lateral reflection",
+    "reasoning": "The cover layer spans x=0 to 12 m in a 12 m domain. Under the gprMax convention, such an object extends to infinity and its truncation does not radiate; any boundary-borne wave must come from PML imperfection. This is a modelling convention, not a physical fact about the real site.",
+    "limit": "A positive result bounds the contribution of the numerical boundary under the gprMax convention. It cannot establish or exclude lateral reflection in a real finite air layer; that would need measured data or a different model."
+  },
+  "groups": [
+    {
+      "id": "G1",
+      "name": "domain width",
+      "variants": ["g1_domain_12m", "g1_domain_18m", "g1_domain_24m"],
+      "single_variable": "#domain X length",
+      "held_fixed": "source x=5.6 z=27, receiver x=6.9 z=27, all 49 boxes, materials, Debye, cell size, PML thickness 20 cells",
+      "verdict_rule": "If the centre-trace underground window barely changes across 12/18/24 m, the lateral-boundary hypothesis is rejected. Today's independent domain-width control measured 1.90 percent at the centre trace, so a result near that magnitude is a rejection, not a confirmation."
+    },
+    {
+      "id": "G2",
+      "name": "PML CFS stretching",
+      "variants": ["g2_pml_cfs_stronger"],
+      "single_variable": "#pml_cfs alpha/kappa/sigma profiles",
+      "held_fixed": "PML thickness 20 cells, geometry, source, receiver, cell size",
+      "rationale": "Thickness was deliberately NOT varied: changing thickness moves the geometric boundary and confounds absorption with layout. CFS parameters change absorption with zero geometric change.",
+      "syntax_note": "gprMax V4 #pml_cfs takes 12 or 13 parameters; the 12 form is used here. Verified against user_objects/cmds_multiuse.py::PMLCFS."
+    },
+    {
+      "id": "G3",
+      "name": "air layer isolated rendering",
+      "variants": ["g3_air_layer_render"],
+      "new_solve": false,
+      "reuses": "g1_domain_12m",
+      "single_variable": "rendering isolates z above the ground surface",
+      "rationale": "Lets a lateral air-layer mode be inspected directly instead of inferred from a full-domain plot."
+    },
+    {
+      "id": "G4",
+      "name": "vertical grid refinement",
+      "variants": ["g4_vertical_2p5cm"],
+      "single_variable": "dz 0.05 -> 0.025 m with all z coordinates scaled by 0.5",
+      "held_fixed": "dx and dy stay 0.05 m; x coordinates, source and receiver x unchanged; physical geometry preserved by scaling z",
+      "pml_note": "#pml_cells z0 and zmax raised to 40 so the PML keeps a 1 m physical thickness after dz halves",
+      "rationale": "Brings cover at 170 MHz from 8.31 to about 16.6 cells per wavelength, satisfying the guide minimum so morphology is not grid-sensitive."
+    }
+  ],
+  "snapshot_times_ns": [40, 50, 65, 80, 95, 110, 130, 145, 175, 220],
+  "snapshot_rationale": "65-130 ns covers the wavefront meeting the interface and the upward structure reported at 130 ns; 145 and 175 ns cover the period after the first interface reflection, which is where a boundary-returned wave would appear.",
+  "budget": {
+    "prior_single_snapshot_elapsed_s": 79.204,
+    "estimated_total_s": 1580,
+    "abort_rule": "Stop if a single group exceeds 45 minutes, matching the budget rule used by the earlier 0.8 m batch, and record the stop rather than relaxing the limit."
+  },
+  "constraints": [
+    "passive output only: no geometry, source, material or receiver change beyond the declared single variable per group",
+    "no measured data is read",
+    "no training and no C5/C8 evaluation",
+    "G4, old frozen contracts, G4 training gate and prior signed conclusions are unchanged",
+    "historical outputs are never overwritten; each group writes into its own directory"
+  ],
+  "acceptance": [
+    "every raw H5 is float64, finite, and matches its declared V4.0.0 provenance",
+    "the recorded centre trace of G1 12 m is compared against the archived snapshot trace to confirm the run reproduces a known result",
+    "no claim of physical acceptance, spatial convergence or morphology closure is made from this batch"
+  ]
+}

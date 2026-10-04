@@ -1,0 +1,41 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\自动处理\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\gprMax\__main__.py", line 23, in <module>
+    gprMax.gprMax.cli()
+  File "D:\自动处理\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\gprMax\gprMax.py", line 372, in cli
+    results = run_main(args)
+              ^^^^^^^^^^^^^^
+  File "D:\自动处理\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\gprMax\gprMax.py", line 427, in run_main
+    results = context.run()
+              ^^^^^^^^^^^^^
+  File "D:\自动处理\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\gprMax\contexts.py", line 106, in run
+    self._run_model(i)
+  File "D:\自动处理\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\gprMax\contexts.py", line 150, in _run_model
+    solver = create_solver(self.model)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\自动处理\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\gprMax\solvers.py", line 195, in create_solver
+    updates = CUDAUpdates(grid)
+              ^^^^^^^^^^^^^^^^^
+  File "D:\自动处理\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\gprMax\updates\cuda_updates.py", line 101, in __init__
+    self._initialise()
+  File "D:\自动处理\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\gprMax\updates\cuda_updates.py", line 142, in _initialise
+    self._set_field_knls()
+  File "D:\自动处理\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\gprMax\updates\cuda_updates.py", line 255, in _set_field_knls
+    knlE = self.source_module(bld, options=config.sim_config.devices["nvcc_opts"])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\自动处理\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\pycuda\compiler.py", line 348, in __init__
+    cubin = compile(
+            ^^^^^^^^
+  File "D:\自动处理\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\pycuda\compiler.py", line 295, in compile
+    return compile_plain(source, options, keep, nvcc, cache_dir, target)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\自动处理\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\pycuda\compiler.py", line 90, in compile_plain
+    checksum.update(preprocess_source(source, options, nvcc).encode("utf-8"))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\自动处理\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\pycuda\compiler.py", line 58, in preprocess_source
+    raise CompileError(
+pycuda.driver.CompileError: nvcc preprocessing of C:\Users\17844\AppData\Local\Temp\tmp3d755av2.cu failed
+[command: nvcc --preprocess -w -arch sm_86 -m64 -ID:\自动处理\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\pycuda\cuda C:\Users\17844\AppData\Local\Temp\tmp3d755av2.cu --compiler-options -EP]
+[stderr:
+b'tmp3d755av2.cu\r\n\xe8\x87\xaa\r\nc1xx: fatal error C1083: \xe6\x97\xa0\xe6\xb3\x95\xe6\x89\x93\xe5\xbc\x80\xe6\xba\x90\xe6\x96\x87\xe4\xbb\xb6: \xe2\x80\x9c\xe8\x87\xaa\xe2\x80\x9d: No such file or directory\r\n\xe5\x8a\xa8\r\nc1xx: fatal error C1083: \xe6\x97\xa0\xe6\xb3\x95\xe6\x89\x93\xe5\xbc\x80\xe6\xba\x90\xe6\x96\x87\xe4\xbb\xb6: \xe2\x80\x9c\xe5\x8a\xa8\xe2\x80\x9d: No such file or directory\r\n\xe5\xa4\x84\r\nc1xx: fatal error C1083: \xe6\x97\xa0\xe6\xb3\x95\xe6\x89\x93\xe5\xbc\x80\xe6\xba\x90\xe6\x96\x87\xe4\xbb\xb6: \xe2\x80\x9c\xe5\xa4\x84\xe2\x80\x9d: No such file or directory\r\nProgram\r\nc1xx: fatal error C1083: \xe6\x97\xa0\xe6\xb3\x95\xe6\x89\x93\xe5\xbc\x80\xe6\xba\x90\xe6\x96\x87\xe4\xbb\xb6: \xe2\x80\x9c\xe7\x90\x86/artifacts/local_checks/gprmax_v4_gpu_env/Lib/site-packages/pycuda/cuda -IC:\\Program\xe2\x80\x9d: No such file or directory\r\nNVIDIA\r\nc1xx: fatal error C1083: \xe6\x97\xa0\xe6\xb3\x95\xe6\x89\x93\xe5\xbc\x80\xe6\xba\x90\xe6\x96\x87\xe4\xbb\xb6: \xe2\x80\x9cFiles\\NVIDIA\xe2\x80\x9d: No such file or directory\r\nGPU\r\nc1xx: fatal error C1083: \xe6\x97\xa0\xe6\xb3\x95\xe6\x89\x93\xe5\xbc\x80\xe6\xba\x90\xe6\x96\x87\xe4\xbb\xb6: \xe2\x80\x9cGPU\xe2\x80\x9d: No such file or directory\r\nComputing\r\nc1xx: fatal error C1083: \xe6\x97\xa0\xe6\xb3\x95\xe6\x89\x93\xe5\xbc\x80\xe6\xba\x90\xe6\x96\x87\xe4\xbb\xb6: \xe2\x80\x9cComputing\xe2\x80\x9d: No such file or directory\r\ntmp3d755av2.cu \r\nc1xx: fatal error C1083: \xe6\x97\xa0\xe6\xb3\x95\xe6\x89\x93\xe5\xbc\x80\xe6\xba\x90\xe6\x96\x87\xe4\xbb\xb6: \xe2\x80\x9cToolkit\\CUDA\\v11.8\\bin/../include    -D__CUDACC_VER_MAJOR__=11 -D__CUDACC_VER_MINOR__=8 -D__CUDACC_VER_BUILD__=89 -D__CUDA_API_VER_MAJOR__=11 -D__CUDA_API_VER_MINOR__=8 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -FI cuda_runtime.h C:\\Users\\17844\\AppData\\Local\\Temp\\tmp3d755av2.cu \xe2\x80\x9d: No such file or directory\r\n']

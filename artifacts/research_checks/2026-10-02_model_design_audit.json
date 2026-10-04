@@ -1,0 +1,408 @@
+{
+  "controls": {
+    "A": {
+      "dt_s": 9.629166007732353e-11,
+      "dtype": "float64",
+      "fft_band_bin_count": 90,
+      "fft_spacing_MHz": 1.6661503898025307,
+      "independent_5point_inverse_relative_max_error": 1.256949497282742e-16,
+      "independent_8point_DFT_relative_max_error": 3.145968960256506e-14,
+      "input_sha256": "d624c78d1e22b74a962bbab68c17e90d41f184f687fbd38b0839aeccf23740a1",
+      "path": "artifacts/research_checks/2026-10-02_benchmark3d_r2_acceptance/ctl3dA_t07_asis.h5",
+      "receiver_time_offset_s": 0.0,
+      "samples": 6233,
+      "sha256": "efe3e29a2d2be1c090435e59427f9443cbbec84b17917f7f61dde3a35161ea13",
+      "source_time_offset_s": 4.814583003866176e-11,
+      "tail_last_10pct_energy_ratio": 0.00039944180871882785,
+      "tail_taper_60ns_hann_weighted_spectral_relative_L2": 0.16873729337033352,
+      "tail_taper_60ns_spectral_relative_L2": 0.23221074285008078
+    },
+    "B": {
+      "dt_s": 9.629166007732353e-11,
+      "dtype": "float64",
+      "fft_band_bin_count": 90,
+      "fft_spacing_MHz": 1.6661503898025307,
+      "independent_5point_inverse_relative_max_error": 1.1957187840870677e-16,
+      "independent_8point_DFT_relative_max_error": 3.1284090811361985e-14,
+      "input_sha256": "e551680616e9919d9eeab65b7f64b1a001eeceafa54b8d024115181de30568fb",
+      "path": "artifacts/research_checks/2026-10-02_benchmark3d_r2_acceptance/ctl3dB_t07_flat9p00.h5",
+      "receiver_time_offset_s": 0.0,
+      "samples": 6233,
+      "sha256": "c51b5f2faecf8f1def2c9a997c5ef64057e52b61358a7ec445a032f6b2b7fabe",
+      "source_time_offset_s": 4.814583003866176e-11,
+      "tail_last_10pct_energy_ratio": 0.0003993772850480897,
+      "tail_taper_60ns_hann_weighted_spectral_relative_L2": 0.168737233030606,
+      "tail_taper_60ns_spectral_relative_L2": 0.23221066056225012
+    },
+    "C2": {
+      "dt_s": 9.629166007732353e-11,
+      "dtype": "float64",
+      "fft_band_bin_count": 90,
+      "fft_spacing_MHz": 1.6661503898025307,
+      "independent_5point_inverse_relative_max_error": 1.2454054121115213e-16,
+      "independent_8point_DFT_relative_max_error": 3.1624829437132734e-14,
+      "input_sha256": "a718c4bb125a48746ead11fa9e74c926e4073751c6dbc2cb647436cd535062c6",
+      "path": "artifacts/research_checks/2026-10-02_benchmark3d_r2_acceptance/ctl3dC2_t07_rockonly.h5",
+      "receiver_time_offset_s": 0.0,
+      "samples": 6233,
+      "sha256": "f4151cf15c5ff9d6fd59c693122c9dc4efe55f7b5f442c554aa0e5940534eeb7",
+      "source_time_offset_s": 4.814583003866176e-11,
+      "tail_last_10pct_energy_ratio": 0.0003985701215139529,
+      "tail_taper_60ns_hann_weighted_spectral_relative_L2": 0.16883124915120967,
+      "tail_taper_60ns_spectral_relative_L2": 0.23220828092678267
+    },
+    "E": {
+      "dt_s": 9.629166007732353e-11,
+      "dtype": "float64",
+      "fft_band_bin_count": 90,
+      "fft_spacing_MHz": 1.6661503898025307,
+      "independent_5point_inverse_relative_max_error": 1.0967765277344365e-16,
+      "independent_8point_DFT_relative_max_error": 2.946237048009175e-14,
+      "input_sha256": "23bbe64f0cdc5717d2aedca5079581c6cad5988e131e4d801d1c5d73366e7471",
+      "path": "artifacts/research_checks/2026-10-02_benchmark3d_r2_acceptance/ctl3dE_t07_flat_bigy.h5",
+      "receiver_time_offset_s": 0.0,
+      "samples": 6233,
+      "sha256": "3f2a0deea4a854bc51dac493cc140985fceb8241ac58b80a9d0fbd81adb86d33",
+      "source_time_offset_s": 4.814583003866176e-11,
+      "tail_last_10pct_energy_ratio": 0.00024319792734743304,
+      "tail_taper_60ns_hann_weighted_spectral_relative_L2": 0.16855749211444446,
+      "tail_taper_60ns_spectral_relative_L2": 0.23212043519003675
+    }
+  },
+  "date": "2026-10-02",
+  "geometry": {
+    "2D_3D_profile_max_abs_m": 0.05000000000000071,
+    "2D_3D_profile_mismatch_bins": 10,
+    "PML_inner_faces_m": [
+      1,
+      11,
+      1,
+      11,
+      1,
+      32
+    ],
+    "control_E_changes": "y material extent [1,11] -> [1,15] AND domain 12 -> 16; Tx/Rx unchanged",
+    "ideal_stationary_correlation_1e_length_m": 2.5,
+    "interface_horizontal_tile_m": 0.25,
+    "kernel_note": "white-noise Gaussian smoothing gives C(r)=exp(-r^2/(4 sigma^2)); finite reflected realization still needs empirical ACF audit",
+    "kernel_sigma_m": 1.25,
+    "material_extent": "rock [1,11]x[1,11]x[1,12]; cover tiled inside same xy bounds; air elsewhere",
+    "profile_note": "3D averages 5x5 cells per tile; 2D averages only one x row, so dimension is not the sole changed factor",
+    "scan_length_m": 3.0,
+    "scan_length_over_declared_CL": 1.2,
+    "single_realization_seed": 20261002
+  },
+  "limitations": [
+    "only archived t07 controls available locally; full 13-trace delivered batch absent",
+    "new 501-tone products are audit diagnostics, not historical instrument calibration",
+    "B minus C changes the entire cover, including surface reflection; not a clean interface reference",
+    "B minus E changes material slab width AND PML position; not a PML-only control",
+    "raw and reconstructed amplitudes have different normalization; compare ratios within one representation"
+  ],
+  "materials": [
+    {
+      "attenuation_Np_m": 0.2848598829419614,
+      "attenuation_dB_m": 2.4742615055460013,
+      "cells_per_wavelength_5cm": 62.20161313628424,
+      "epsilon_real": 22.76757404615593,
+      "frequency_MHz": 20.0,
+      "phase_wavelength_m": 3.110080656814212,
+      "sigma_effective_S_m": 0.007288694962745765,
+      "two_way_3m_amplitude": 0.1810179108478074
+    },
+    {
+      "attenuation_Np_m": 0.3832985020862693,
+      "attenuation_dB_m": 3.3292884875569757,
+      "cells_per_wavelength_5cm": 43.039591753035936,
+      "epsilon_real": 21.19203398419438,
+      "frequency_MHz": 30.0,
+      "phase_wavelength_m": 2.151979587651797,
+      "sigma_effective_S_m": 0.009449261136673326,
+      "two_way_3m_amplitude": 0.10027979875573363
+    },
+    {
+      "attenuation_Np_m": 0.4508339178576575,
+      "attenuation_dB_m": 3.91589365560809,
+      "cells_per_wavelength_5cm": 33.127170912350344,
+      "epsilon_real": 20.18527461503532,
+      "frequency_MHz": 40.0,
+      "phase_wavelength_m": 1.6563585456175172,
+      "sigma_effective_S_m": 0.010829848206977103,
+      "two_way_3m_amplitude": 0.06687008932301995
+    },
+    {
+      "attenuation_Np_m": 0.4951446062530745,
+      "attenuation_dB_m": 4.300771404797372,
+      "cells_per_wavelength_5cm": 26.962568588825714,
+      "epsilon_real": 19.557315409438267,
+      "frequency_MHz": 50.0,
+      "phase_wavelength_m": 1.3481284294412859,
+      "sigma_effective_S_m": 0.011690979860164182,
+      "two_way_3m_amplitude": 0.05125881695990525
+    },
+    {
+      "attenuation_Np_m": 0.5731587364605628,
+      "attenuation_dB_m": 4.97839352998925,
+      "cells_per_wavelength_5cm": 14.6355168114756,
+      "epsilon_real": 18.513925652227428,
+      "frequency_MHz": 95.0,
+      "phase_wavelength_m": 0.7317758405737801,
+      "sigma_effective_S_m": 0.013121798834608794,
+      "two_way_3m_amplitude": 0.03209829329103075
+    },
+    {
+      "attenuation_Np_m": 0.5809525653429382,
+      "attenuation_dB_m": 5.046089867519527,
+      "cells_per_wavelength_5cm": 13.034748902750222,
+      "epsilon_real": 18.41401791689417,
+      "frequency_MHz": 107.0,
+      "phase_wavelength_m": 0.6517374451375111,
+      "sigma_effective_S_m": 0.013258804093114255,
+      "two_way_3m_amplitude": 0.030631836816097796
+    },
+    {
+      "attenuation_Np_m": 0.5995149475819808,
+      "attenuation_dB_m": 5.207320671067429,
+      "cells_per_wavelength_5cm": 8.265635325170534,
+      "epsilon_real": 18.17921877204275,
+      "frequency_MHz": 170.0,
+      "phase_wavelength_m": 0.4132817662585267,
+      "sigma_effective_S_m": 0.0135807883461846,
+      "two_way_3m_amplitude": 0.02740335890049961
+    }
+  ],
+  "official_processing_sha256": "adad556f09140956f0ee19d3038430e06a9ae8be6a826dcad723096d99624a3b",
+  "representations": {
+    "exact_501_tones_hann": {
+      "A_minus_B_interface_over_B_surface": 0.0064633997058619035,
+      "B_minus_C2_interface_over_B_surface": 0.007461524169172487,
+      "B_minus_E_interface_over_B_surface": 0.0015118812768380157,
+      "B_minus_E_over_A_minus_B_in_interface_window": 0.23391424724465562,
+      "peaks": {
+        "A": {
+          "direct": 2.143744826537864,
+          "interface": 0.00020319725616785558,
+          "late": 0.0007087930584679206,
+          "surface": 0.07890736666758248
+        },
+        "A_minus_B": {
+          "direct": 1.0657267043942114e-08,
+          "interface": 0.0005100092969926187,
+          "late": 0.00019889654367209522,
+          "surface": 3.577802672384833e-05
+        },
+        "B": {
+          "direct": 2.143744827765056,
+          "interface": 0.0006078793952098553,
+          "late": 0.0007454355559122532,
+          "surface": 0.07890728102890988
+        },
+        "B_minus_C2": {
+          "direct": 1.0402534628393275e-05,
+          "interface": 0.0005887685845208968,
+          "late": 0.02484648293508198,
+          "surface": 0.01764725943639132
+        },
+        "B_minus_E": {
+          "direct": 2.2578655419355363e-06,
+          "interface": 0.0001192984407938044,
+          "late": 0.00014590587855952357,
+          "surface": 0.007506655542031004
+        },
+        "C2": {
+          "direct": 2.143743488661221,
+          "interface": 0.0001246391090618587,
+          "late": 0.024813101153167916,
+          "surface": 0.06227008350339262
+        },
+        "E": {
+          "direct": 2.1437451028014554,
+          "interface": 0.0004923896740650715,
+          "late": 0.0006309716464782822,
+          "surface": 0.07478114895265749
+        }
+      }
+    },
+    "exact_501_tones_hann_60ns_taper": {
+      "A_minus_B_interface_over_B_surface": 0.00646338061159296,
+      "B_minus_C2_interface_over_B_surface": 0.007461508488146597,
+      "B_minus_E_interface_over_B_surface": 0.0015118816959819865,
+      "B_minus_E_over_A_minus_B_in_interface_window": 0.2339150031285825,
+      "peaks": {
+        "A": {
+          "direct": 2.1437452767643705,
+          "interface": 0.00020225814403555158,
+          "late": 0.0007146186248209003,
+          "surface": 0.07890759969678492
+        },
+        "A_minus_B": {
+          "direct": 1.0661454049545393e-08,
+          "interface": 0.0005100092964687678,
+          "late": 0.0001988965707132643,
+          "surface": 3.577802510071548e-05
+        },
+        "B": {
+          "direct": 2.1437452779915716,
+          "interface": 0.0006067203811192719,
+          "late": 0.0007403032681473034,
+          "surface": 0.07890751405758098
+        },
+        "B_minus_C2": {
+          "direct": 1.0402285957661192e-05,
+          "interface": 0.0005887690859191874,
+          "late": 0.02484648050770731,
+          "surface": 0.017647259023844872
+        },
+        "B_minus_E": {
+          "direct": 2.255484731064458e-06,
+          "interface": 0.00011929882617909798,
+          "late": 0.00014589239765677242,
+          "surface": 0.00750665768453292
+        },
+        "C2": {
+          "direct": 2.143743939013314,
+          "interface": 0.00012346433314019368,
+          "late": 0.02481107794652652,
+          "surface": 0.06227026718152218
+        },
+        "E": {
+          "direct": 2.1437455533475784,
+          "interface": 0.0004912563737255465,
+          "late": 0.0006373094125271979,
+          "surface": 0.07478110343132302
+        }
+      }
+    },
+    "fft_bandpass_approximation": {
+      "A_minus_B_interface_over_B_surface": 0.006459024652797191,
+      "B_minus_C2_interface_over_B_surface": 0.007431217038547277,
+      "B_minus_E_interface_over_B_surface": 0.0014885634741217553,
+      "B_minus_E_over_A_minus_B_in_interface_window": 0.23046257819702043,
+      "peaks": {
+        "A": {
+          "direct": 0.026772510451863317,
+          "interface": 2.6802519323399534e-06,
+          "late": 1.0533224857128992e-05,
+          "surface": 0.0011329899182015513
+        },
+        "A_minus_B": {
+          "direct": 1.2728775568124002e-07,
+          "interface": 7.318000324478743e-06,
+          "late": 2.888723460368628e-06,
+          "surface": 5.176559658733439e-07
+        },
+        "B": {
+          "direct": 0.026772522150981224,
+          "interface": 8.505649726956653e-06,
+          "late": 1.053546775484876e-05,
+          "surface": 0.0011329884491630725
+        },
+        "B_minus_C2": {
+          "direct": 7.602652838184448e-06,
+          "interface": 8.41948306789788e-06,
+          "late": 0.00035976089888485727,
+          "surface": 0.00025346118721818406
+        },
+        "B_minus_E": {
+          "direct": 0.00010972228568605964,
+          "interface": 1.6865252220260032e-06,
+          "late": 2.121061261047138e-06,
+          "surface": 0.00010772105006905697
+        },
+        "C2": {
+          "direct": 0.02677093676574487,
+          "interface": 1.572877621192579e-06,
+          "late": 0.0003594008040396346,
+          "surface": 0.0008942249234486477
+        },
+        "E": {
+          "direct": 0.026767457553195748,
+          "interface": 6.880687897680123e-06,
+          "late": 9.006252170511668e-06,
+          "surface": 0.0010761437249455703
+        }
+      }
+    },
+    "raw_impulse": {
+      "A_minus_B_interface_over_B_surface": 3.418361950862664e-05,
+      "B_minus_C2_interface_over_B_surface": 0.025662064043862693,
+      "B_minus_E_interface_over_B_surface": 0.3497944393216365,
+      "B_minus_E_over_A_minus_B_in_interface_window": 10232.808706326778,
+      "peaks": {
+        "A": {
+          "direct": 15.066364493675044,
+          "interface": 0.3553822320806848,
+          "late": 0.13158652987516473,
+          "surface": 0.629729539501986
+        },
+        "A_minus_B": {
+          "direct": 1.4862348490990217e-05,
+          "interface": 2.1526435009621573e-05,
+          "late": 5.511555507753235e-05,
+          "surface": 2.0595332882796074e-05
+        },
+        "B": {
+          "direct": 15.066364666238323,
+          "interface": 0.35538432143462045,
+          "late": 0.13158183631754083,
+          "surface": 0.6297295406119625
+        },
+        "B_minus_C2": {
+          "direct": 0.00012997170093385406,
+          "interface": 0.016160159801496415,
+          "late": 0.003093043557764199,
+          "surface": 0.04072883261515164
+        },
+        "B_minus_E": {
+          "direct": 0.1385360796794551,
+          "interface": 0.22027589158263317,
+          "late": 0.19476209533216912,
+          "surface": 0.17705807617195077
+        },
+        "C2": {
+          "direct": 15.066366401689187,
+          "interface": 0.35513787519435547,
+          "late": 0.13269815561775017,
+          "surface": 0.6461044848788299
+        },
+        "E": {
+          "direct": 15.063001008181326,
+          "interface": 0.3536246243886644,
+          "late": 0.1369575175245118,
+          "surface": 0.5235770728255047
+        }
+      }
+    }
+  },
+  "review_base_commit": "eb9d1fd",
+  "reviewed_source_sha256": {
+    "artifacts/research_checks/2026-10-02_benchmark3d_r2_acceptance/plot_sfcw_bscan.py": "c8aa45d2c5b874a09a86684e5907266f18cb0c94cd39f8fbf6e2c13ab9baf355",
+    "configs/research/task_definition_contract_v0.1.json": "cd7bc8ed1280ebe0bed514fb9ced867501cf49902c0f600eea17fde286810e97",
+    "scripts/augment_sim2real_v0_6.py": "b9debec3bae0c971de44f7639ecf3606561127e372037cd329b4adcda6744e43",
+    "scripts/freeze_benchmark3d_r2_co.py": "6d7a59e14b01a4ae98ddc8ce1d59344f6be4658e76cd72b2a69d545825f2d1b6",
+    "scripts/freeze_s1s3_reference_window_v0_1.py": "5a9feebcfa8d552b816659c21805662a9d88d8910a0c52a662295d013e3e6ecb",
+    "scripts/run_reward_protocol_b2_pilot_v0_1.py": "c618e7a6d1245b3d57ca400567cad8c4405960eed615a87fb4f78bcd7f0512df",
+    "scripts/study_t3_damage_ladder.py": "5399b81a90aa7f13fc43f8879330be989fd44e253dd66bd219c03e8bdd3c47fc"
+  },
+  "schema": "model-design-audit/1",
+  "signed_reconstruction": {
+    "affected_scripts": [
+      "study_t3_damage_ladder.py",
+      "run_reward_protocol_b2_pilot_v0_1.py",
+      "freeze_s1s3_reference_window_v0_1.py"
+    ],
+    "extra_frequency_shift_MHz": 75,
+    "legacy_band_MHz": [
+      95,
+      245
+    ],
+    "legacy_tone_MHz": 155,
+    "legacy_vs_official_half_relative_L2": 1.4139233430367464,
+    "note": "amplitude factor two can be a declared convention; the 75 MHz frequency displacement cannot",
+    "official_half_amplitude_relative_max_error": 1.77737016185571e-13,
+    "synthetic_tone_MHz": 80
+  },
+  "solver_runs": 0,
+  "test_families_read": [],
+  "training_runs": 0
+}

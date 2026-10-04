@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "groups": {
+    "z1p25_rough": {
+      "input_factor_and_invariants": "PASS",
+      "material_array_sha256": "3ce5cded01fc3ce59b9fe9597e58bb183546e01c4397aca0f455233e98db862b",
+      "actual_material_grids_verified": 1,
+      "geometry_exports": [
+        {
+          "file": "hs4t2d_geom.vtkhdf",
+          "sha256": "b81ac26285264fd5986cf19d36e5ce815033031227f64898fd9e3e19d69ea017"
+        }
+      ]
+    },
+    "z1p25_halfspace": {
+      "input_factor_and_invariants": "PASS",
+      "material_array_sha256": "f85a5e12fd4082401c8c815d4e38717f0dd640d12dd5b5499257ba1d6ea693f5",
+      "actual_material_grids_verified": 1,
+      "geometry_exports": [
+        {
+          "file": "hs4t2d_geom.vtkhdf",
+          "sha256": "ed858a6c9b857122ca58e6ebb0e40e46c377eef972a70b01141066d1fb65f141"
+        }
+      ]
+    }
+  },
+  "completed_outputs_checked": true,
+  "code_sha256": "744a9b43dcdd1b0741db625dd8c199a6487aa0bfc79e974a847f46593a92553c",
+  "contract_sha256": "c5d21d417483cf7a91f2fb66e9d118f2477339d6ea92bf618dbca351977cde80",
+  "scope": "control factors, execution and actual cell-material grid; not physical attribution"
+}

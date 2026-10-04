@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "solver_executed": false,
+  "checks": [
+    "relative design regenerates exactly",
+    "all20 input locations portable",
+    "3D actual grid X retained rather than nominal1.625",
+    "Xwide full original interior preserved by translation",
+    "existing design refuses overwrite",
+    "off-grid active source coordinate rejected",
+    "all4 archived float64 fields, poses, CFL and entire material maps independently audited",
+    "capacity rejection starts no solver and consumes no attempt",
+    "frozen input tampering rejected before launch",
+    "target replay mandatory before new stage"
+  ],
+  "count": 10,
+  "code_sha256": "62d5d60ffca4cf930a8b47add9a5773e51242861cd73b1ea21200c35e2af0130",
+  "runner_sha256": "2cb708720f80689ddc4100faf6f3700b5188105a4c2e8b166d2b31ffa413a6bd",
+  "design_sha256": "48c7ee692080bee0929aa487b00ae88ef355cbd6478f484665fc8970f6d27927",
+  "scope": "CPU portable-design and execution-guard checks using archived4 raw controls; not a new replay, simulation or physical validation."
+}

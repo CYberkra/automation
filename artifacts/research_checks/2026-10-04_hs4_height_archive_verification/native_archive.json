@@ -1,0 +1,732 @@
+{
+  "status": "PASS",
+  "code_sha256": "6b30efe7bdca7c501ad14ff27e2b7dc7a3c68be576ed641bd81b79d2834891e6",
+  "successful_raw_traces": 47,
+  "trace_rows": [
+    {
+      "capsule": "hs4_height_wavefield_pilot",
+      "group": "passive_reference",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_height_wavefield_pilot/passive_reference/profile.h5",
+      "raw_sha256": "f91f109ce0de5ba99f9d06dd687155a8d2d0cbf846ea5a374c7eb6da030f1428",
+      "input_sha256": "a392b7dc161061e6f811b13f6198c7bb4edf9b382272c2e234e90891153946a7",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_height_wavefield_pilot/passive_reference/hs4t2d_geom.vtkhdf",
+      "geometry_sha256": "36e7da40af24dc3a89a4c0b76fe4cbfe221b4b6eb656f00b7cd1b7d7e6c8281d",
+      "independent_material_array_sha256": "160a0a24bb233fb66650012aa42b44b775e37465061b0ace2e62722928169bf9",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_height_wavefield_continuation",
+      "group": "high_rough",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_height_wavefield_continuation/high_rough/profile.h5",
+      "raw_sha256": "da4168318f25e91c1af57761518eb406f11e96362f29a4d4c7e8e3b9d403f1e6",
+      "input_sha256": "864fde9cdd545792e99d5a9f587fd2b72758ac9cb3b9b82a298ceba4f5957048",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_height_wavefield_continuation/high_rough/hs4t2d_geom.vtkhdf",
+      "geometry_sha256": "ad16c80a2d1084e2e5d28567411864cd7185bf5f674345cafa459107e888d2af",
+      "independent_material_array_sha256": "160a0a24bb233fb66650012aa42b44b775e37465061b0ace2e62722928169bf9",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_height_wavefield_continuation",
+      "group": "high_halfspace",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_height_wavefield_continuation/high_halfspace/profile.h5",
+      "raw_sha256": "e1c4947236303f8a95420899918d9761ab62a5ef3a5aae8519e9630fc2d932bf",
+      "input_sha256": "a773b1c49c9fa0fbd303a02f79e9816fd81b6d7490a104404c754dd140acad81",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_height_wavefield_continuation/high_halfspace/hs4t2d_geom.vtkhdf",
+      "geometry_sha256": "05efad7ccaa420a0a20cb5c70c6c75a19faa92577cb7f7e79506311b0735bd04",
+      "independent_material_array_sha256": "fb22c94f8e7d05f34f419ba8a3ed6031149eb25bd21503a005c86ae5601d34d2",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_height_wavefield_continuation",
+      "group": "low_rough",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_height_wavefield_continuation/low_rough/profile.h5",
+      "raw_sha256": "4123506cf36e70b90b251256455eb80a9689c388e03971eb8b4c821e754f5166",
+      "input_sha256": "cd0d59384e7e9a2c48af7c16e2e2e485cc9fcd6481c18f8173642109a05be6d5",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_height_wavefield_continuation/low_rough/hs4t2d_geom.vtkhdf",
+      "geometry_sha256": "b496db0e34c23f69acc864943a12eb19e362afb811351b1cdf62d1658e35d356",
+      "independent_material_array_sha256": "160a0a24bb233fb66650012aa42b44b775e37465061b0ace2e62722928169bf9",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_height_wavefield_continuation",
+      "group": "low_halfspace",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_height_wavefield_continuation/low_halfspace/profile.h5",
+      "raw_sha256": "ac091f586a0d91d90a95c5173414d5e89c403f33519a426a3acaaf2c647b6098",
+      "input_sha256": "ecaca899fbf4b0e92c7026c95978a5836ffafafea3e833a58042f72e2a03fb33",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_height_wavefield_continuation/low_halfspace/hs4t2d_geom.vtkhdf",
+      "geometry_sha256": "f3e7e713ee100985a0079c8cbbc0b9446c35b3a792ff705d4fba9c8b6c77705e",
+      "independent_material_array_sha256": "fb22c94f8e7d05f34f419ba8a3ed6031149eb25bd21503a005c86ae5601d34d2",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "high_crest",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_crest/profile1.h5",
+      "raw_sha256": "4b7f1bf84f4ec9d92e25dd3276663c24b1a0627687d40de39c76fe9fa0d2573b",
+      "input_sha256": "4e1ce32e53c1ff6ed8474392969e85c9de807d4e46e8d75495a263921aab2fbd",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_crest/hs4t2d_geom1.vtkhdf",
+      "geometry_sha256": "d376fee1dcbe107176fbb87eed37ba377defaa28adcb8559a98c337190bce184",
+      "independent_material_array_sha256": "db93f9831843da79d238930fcde821a43816b0622e909d43e56d2d90ae505d41",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "high_crest",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_crest/profile10.h5",
+      "raw_sha256": "f6b4c8f223bfcd0dc09c50a20cb5a65ea7e437dcc11a89bc499e4e588725cb72",
+      "input_sha256": "4e1ce32e53c1ff6ed8474392969e85c9de807d4e46e8d75495a263921aab2fbd",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_crest/hs4t2d_geom10.vtkhdf",
+      "geometry_sha256": "1c262f0786d072d0908e3526aad63dc3f0378e70c3618a9ae3309f15347129e6",
+      "independent_material_array_sha256": "db93f9831843da79d238930fcde821a43816b0622e909d43e56d2d90ae505d41",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "high_crest",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_crest/profile11.h5",
+      "raw_sha256": "02fff9b9ae6a7862fdcf60e4748cc9c4ac9fd77c480f73d71d02a212f7521157",
+      "input_sha256": "4e1ce32e53c1ff6ed8474392969e85c9de807d4e46e8d75495a263921aab2fbd",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_crest/hs4t2d_geom11.vtkhdf",
+      "geometry_sha256": "c31d13d496c3f20724bb5502d1ef9c7390f6d4d99f093f0caa628860171fdd74",
+      "independent_material_array_sha256": "db93f9831843da79d238930fcde821a43816b0622e909d43e56d2d90ae505d41",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "high_crest",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_crest/profile12.h5",
+      "raw_sha256": "904e35ff3cab597eb82fb894136b600db425c6089a311526b321426f587f302b",
+      "input_sha256": "4e1ce32e53c1ff6ed8474392969e85c9de807d4e46e8d75495a263921aab2fbd",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_crest/hs4t2d_geom12.vtkhdf",
+      "geometry_sha256": "9c57ccef0bf1b3d48b0c1fc4cd70092285a6225d0d4f7e087d54b44060e3e7c5",
+      "independent_material_array_sha256": "db93f9831843da79d238930fcde821a43816b0622e909d43e56d2d90ae505d41",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "high_crest",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_crest/profile13.h5",
+      "raw_sha256": "f84e8bd58f8e665d9295c14698e8ed559435229b5e240f05bb2d0a8b9e35607a",
+      "input_sha256": "4e1ce32e53c1ff6ed8474392969e85c9de807d4e46e8d75495a263921aab2fbd",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_crest/hs4t2d_geom13.vtkhdf",
+      "geometry_sha256": "0595ee8bb6afda47286c8fa36ccf5e4399f9a6487ffe18af298669ca6eea9a55",
+      "independent_material_array_sha256": "db93f9831843da79d238930fcde821a43816b0622e909d43e56d2d90ae505d41",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "high_crest",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_crest/profile2.h5",
+      "raw_sha256": "15b1c8db01da829a1b8792b18cc52352b506fae6b1697237431b873684a79ac6",
+      "input_sha256": "4e1ce32e53c1ff6ed8474392969e85c9de807d4e46e8d75495a263921aab2fbd",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_crest/hs4t2d_geom2.vtkhdf",
+      "geometry_sha256": "a5693a6a346e3768a7bb61b0b37aaad6ce15bff310e29430ef16aa51307429b5",
+      "independent_material_array_sha256": "db93f9831843da79d238930fcde821a43816b0622e909d43e56d2d90ae505d41",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "high_crest",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_crest/profile3.h5",
+      "raw_sha256": "1b45dabb867b1f59fb7db5c84ef4a506841b17931d7e92b657bddafd9dab92b3",
+      "input_sha256": "4e1ce32e53c1ff6ed8474392969e85c9de807d4e46e8d75495a263921aab2fbd",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_crest/hs4t2d_geom3.vtkhdf",
+      "geometry_sha256": "3aa3b2a3ee47d7a74434eec9ef1fa392f70af9fba8d21c3a605f28665b1011ee",
+      "independent_material_array_sha256": "db93f9831843da79d238930fcde821a43816b0622e909d43e56d2d90ae505d41",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "high_crest",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_crest/profile4.h5",
+      "raw_sha256": "252ab726ffc46e8097b4ffeedf7eff9d7c52cd8b03b92d16a3598a05b69a2fb6",
+      "input_sha256": "4e1ce32e53c1ff6ed8474392969e85c9de807d4e46e8d75495a263921aab2fbd",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_crest/hs4t2d_geom4.vtkhdf",
+      "geometry_sha256": "cdd17e831d677f4fe552f91c7c96041f1597329e499c231c16e61023fbaed43f",
+      "independent_material_array_sha256": "db93f9831843da79d238930fcde821a43816b0622e909d43e56d2d90ae505d41",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "high_crest",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_crest/profile5.h5",
+      "raw_sha256": "bfd8ff298271e8d5e3c8a4780e8f049125b86e2169cece20e2dd608d537d19be",
+      "input_sha256": "4e1ce32e53c1ff6ed8474392969e85c9de807d4e46e8d75495a263921aab2fbd",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_crest/hs4t2d_geom5.vtkhdf",
+      "geometry_sha256": "8bed9ddcec4875f662ff82962f8601ea5f8f761dbe92dd42884073cc23027623",
+      "independent_material_array_sha256": "db93f9831843da79d238930fcde821a43816b0622e909d43e56d2d90ae505d41",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "high_crest",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_crest/profile6.h5",
+      "raw_sha256": "2be1d4d57fde26361839d2b1c3bb27047e94243ffb907802b64aa7f8cf20f351",
+      "input_sha256": "4e1ce32e53c1ff6ed8474392969e85c9de807d4e46e8d75495a263921aab2fbd",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_crest/hs4t2d_geom6.vtkhdf",
+      "geometry_sha256": "14a6b33bcfa48378fedc88a09103964ba2c0636ff855c59260b53eb35d39163a",
+      "independent_material_array_sha256": "db93f9831843da79d238930fcde821a43816b0622e909d43e56d2d90ae505d41",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "high_crest",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_crest/profile7.h5",
+      "raw_sha256": "1d5472402276339b86dfe756781d31f1b23cf4cdfbf8b302704de8ac859e8380",
+      "input_sha256": "4e1ce32e53c1ff6ed8474392969e85c9de807d4e46e8d75495a263921aab2fbd",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_crest/hs4t2d_geom7.vtkhdf",
+      "geometry_sha256": "3bd14737ffaed123ec52d24fbafc93cec69aed5a8f9c7cc2446a22dd5886fa96",
+      "independent_material_array_sha256": "db93f9831843da79d238930fcde821a43816b0622e909d43e56d2d90ae505d41",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "high_crest",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_crest/profile8.h5",
+      "raw_sha256": "23b3e34a60d18ca176ef5170716760691e5b1b6fc4b388c220d0b1789569ca71",
+      "input_sha256": "4e1ce32e53c1ff6ed8474392969e85c9de807d4e46e8d75495a263921aab2fbd",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_crest/hs4t2d_geom8.vtkhdf",
+      "geometry_sha256": "16d5e511af149d6143ed0c5dd92b056fb9cd5b238294c6c03420836f18077d7f",
+      "independent_material_array_sha256": "db93f9831843da79d238930fcde821a43816b0622e909d43e56d2d90ae505d41",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "high_crest",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_crest/profile9.h5",
+      "raw_sha256": "5123a45535d5466b5bb9f7fbadfe2b25d6f631f39c396f9f03d2ebe470ebad9e",
+      "input_sha256": "4e1ce32e53c1ff6ed8474392969e85c9de807d4e46e8d75495a263921aab2fbd",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_crest/hs4t2d_geom9.vtkhdf",
+      "geometry_sha256": "b0081d591b0523adc16ff009b3a767fd803eaf5056cd859288b5384b81bfa143",
+      "independent_material_array_sha256": "db93f9831843da79d238930fcde821a43816b0622e909d43e56d2d90ae505d41",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "high_slope",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_slope/profile1.h5",
+      "raw_sha256": "f76fc3304aa9865795ce4e8f70180c6e1664df0572d53f4bb46d572923abf46a",
+      "input_sha256": "98b77d12019be7a37d19dbdd497c6796e5bec26484175523101b5305b54c5923",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_slope/hs4t2d_geom1.vtkhdf",
+      "geometry_sha256": "83be29f793ca1cca9b79dc13920f841a02647d29176e5fe5e8685e26abaac1ea",
+      "independent_material_array_sha256": "f02171a2e4801c72901e0558811199606bdd66f2781e5c9eece6bd5e7d4e1f2a",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "high_slope",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_slope/profile10.h5",
+      "raw_sha256": "bddbb090fbc30f00ff59b9a3f169a36aca43e9423ecbdb07d502948fe927f2ee",
+      "input_sha256": "98b77d12019be7a37d19dbdd497c6796e5bec26484175523101b5305b54c5923",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_slope/hs4t2d_geom10.vtkhdf",
+      "geometry_sha256": "9b8bd2aaa59dce25cb2442307f80ae45843057c7869a32928e4d365ae79f511c",
+      "independent_material_array_sha256": "f02171a2e4801c72901e0558811199606bdd66f2781e5c9eece6bd5e7d4e1f2a",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "high_slope",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_slope/profile11.h5",
+      "raw_sha256": "17e6492e007e3831694a2f10252ecc30a46cfb6abe9f1484756bfc9bc987f8aa",
+      "input_sha256": "98b77d12019be7a37d19dbdd497c6796e5bec26484175523101b5305b54c5923",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_slope/hs4t2d_geom11.vtkhdf",
+      "geometry_sha256": "7cfe2a192102942c071c3076476b3e23ab9cae4d8b075552c20ec6bd293c87ec",
+      "independent_material_array_sha256": "f02171a2e4801c72901e0558811199606bdd66f2781e5c9eece6bd5e7d4e1f2a",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "high_slope",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_slope/profile12.h5",
+      "raw_sha256": "e7793e1db23f1fdc4a227f400c250950ecf53bb3022dc62835376af29b7974cd",
+      "input_sha256": "98b77d12019be7a37d19dbdd497c6796e5bec26484175523101b5305b54c5923",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_slope/hs4t2d_geom12.vtkhdf",
+      "geometry_sha256": "8c724bc41d2091a224801c38e11b982ddf73fdb0d8ffec0328a5b6047deeb2af",
+      "independent_material_array_sha256": "f02171a2e4801c72901e0558811199606bdd66f2781e5c9eece6bd5e7d4e1f2a",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "high_slope",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_slope/profile13.h5",
+      "raw_sha256": "dc25e0f918a24cc833622d6fd7c7f2c0d25cc53fabaec3c6a4f3fcd6e8b326d0",
+      "input_sha256": "98b77d12019be7a37d19dbdd497c6796e5bec26484175523101b5305b54c5923",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_slope/hs4t2d_geom13.vtkhdf",
+      "geometry_sha256": "2593c82062f99232506bf62455c37c63f82f20adc47b17c1dfd074066a346a86",
+      "independent_material_array_sha256": "f02171a2e4801c72901e0558811199606bdd66f2781e5c9eece6bd5e7d4e1f2a",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "high_slope",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_slope/profile2.h5",
+      "raw_sha256": "e85f37284fef9f72e6b201c61512781d493cd42a523fe2a25825f44189a7033c",
+      "input_sha256": "98b77d12019be7a37d19dbdd497c6796e5bec26484175523101b5305b54c5923",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_slope/hs4t2d_geom2.vtkhdf",
+      "geometry_sha256": "b5fa6c8d6d6f20139c2a14adcecd3deeab433cf6f0020800c6b93a258eaa3779",
+      "independent_material_array_sha256": "f02171a2e4801c72901e0558811199606bdd66f2781e5c9eece6bd5e7d4e1f2a",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "high_slope",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_slope/profile3.h5",
+      "raw_sha256": "f87507e99d6639733005b834a2c9e1b948b0d3f3e3073c499596078b62fb490c",
+      "input_sha256": "98b77d12019be7a37d19dbdd497c6796e5bec26484175523101b5305b54c5923",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_slope/hs4t2d_geom3.vtkhdf",
+      "geometry_sha256": "f222d6ce7167df66cebf81410605a2a3e253801c8ee21722063a615f14bf8dff",
+      "independent_material_array_sha256": "f02171a2e4801c72901e0558811199606bdd66f2781e5c9eece6bd5e7d4e1f2a",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "high_slope",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_slope/profile4.h5",
+      "raw_sha256": "a6839565c5263ad45003ff1d0e9fd349d9077f3ff5528d30c8fac4e3c8a005fe",
+      "input_sha256": "98b77d12019be7a37d19dbdd497c6796e5bec26484175523101b5305b54c5923",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_slope/hs4t2d_geom4.vtkhdf",
+      "geometry_sha256": "8404be636010d65e4faa5590c24b1691ad70948e3a50539f3c64b9eb5a59e910",
+      "independent_material_array_sha256": "f02171a2e4801c72901e0558811199606bdd66f2781e5c9eece6bd5e7d4e1f2a",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "high_slope",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_slope/profile5.h5",
+      "raw_sha256": "5f8d3f37df59af3e8a8671cc9c13482c22a3f00b70b7d848349f6aa44f8d8fef",
+      "input_sha256": "98b77d12019be7a37d19dbdd497c6796e5bec26484175523101b5305b54c5923",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_slope/hs4t2d_geom5.vtkhdf",
+      "geometry_sha256": "285af0c2677090ab011927f2d30409dab825f9d73b25beec9a444801b192de88",
+      "independent_material_array_sha256": "f02171a2e4801c72901e0558811199606bdd66f2781e5c9eece6bd5e7d4e1f2a",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "high_slope",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_slope/profile6.h5",
+      "raw_sha256": "c6f1399e1dc6d0ed6468c30a1eecdc679da65304ed90b58568320d48c127bc07",
+      "input_sha256": "98b77d12019be7a37d19dbdd497c6796e5bec26484175523101b5305b54c5923",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_slope/hs4t2d_geom6.vtkhdf",
+      "geometry_sha256": "5be40119f37abd772429d635851ea93f5c6368461b8dd3413538f9b8a0aca0ba",
+      "independent_material_array_sha256": "f02171a2e4801c72901e0558811199606bdd66f2781e5c9eece6bd5e7d4e1f2a",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "high_slope",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_slope/profile7.h5",
+      "raw_sha256": "b4e681e2b15fe226c69352ab9e6098489b1eb25ad184d88e7bcc1d1b67a38f59",
+      "input_sha256": "98b77d12019be7a37d19dbdd497c6796e5bec26484175523101b5305b54c5923",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_slope/hs4t2d_geom7.vtkhdf",
+      "geometry_sha256": "46b212f128f46d5d44b746ee3fec8f1e5b5c1a3f7ab020e6ff916d60f6695205",
+      "independent_material_array_sha256": "f02171a2e4801c72901e0558811199606bdd66f2781e5c9eece6bd5e7d4e1f2a",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "high_slope",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_slope/profile8.h5",
+      "raw_sha256": "56890a7c95af646ff2f0095ca0f038efd5688e239287fc0f45d5984ab29ca10e",
+      "input_sha256": "98b77d12019be7a37d19dbdd497c6796e5bec26484175523101b5305b54c5923",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_slope/hs4t2d_geom8.vtkhdf",
+      "geometry_sha256": "827fd405aa572c2f6ea52fab89e2a08df7bc04c5ed305585af57dc6f6e0d5cda",
+      "independent_material_array_sha256": "f02171a2e4801c72901e0558811199606bdd66f2781e5c9eece6bd5e7d4e1f2a",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "high_slope",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_slope/profile9.h5",
+      "raw_sha256": "c5c5e9fe2c7929373ceaf43c5ff5a990cf7293f59d332ea24c207c408b1b597f",
+      "input_sha256": "98b77d12019be7a37d19dbdd497c6796e5bec26484175523101b5305b54c5923",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/high_slope/hs4t2d_geom9.vtkhdf",
+      "geometry_sha256": "35e747261595fefec1697578b119f8dc1cfac0df396f774c6bd224aea921f949",
+      "independent_material_array_sha256": "f02171a2e4801c72901e0558811199606bdd66f2781e5c9eece6bd5e7d4e1f2a",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "low_base",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/low_base/profile1.h5",
+      "raw_sha256": "b06ce1125b23fdbbb9b421e49ef07ead4e582361e2680824307af4ef1c7533d0",
+      "input_sha256": "62da83fbaebc0372b832a5701e77c9f2eb3abc844b8b1ad49ee513ce8d597daa",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/low_base/hs4t2d_geom1.vtkhdf",
+      "geometry_sha256": "ffa69e57f684047baba50d0e0b917e938388b87460ba9dfe0820cedb8606fdb1",
+      "independent_material_array_sha256": "160a0a24bb233fb66650012aa42b44b775e37465061b0ace2e62722928169bf9",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "low_base",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/low_base/profile2.h5",
+      "raw_sha256": "8ecb02cae0357ca7f8e8190c6e4e6aaa31fc9a180f6e30e4fde184724ebc6d0a",
+      "input_sha256": "62da83fbaebc0372b832a5701e77c9f2eb3abc844b8b1ad49ee513ce8d597daa",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/low_base/hs4t2d_geom2.vtkhdf",
+      "geometry_sha256": "6731a1777988dd6daf2776a31b8bae415d5fbe47451df62924d9f36bac745f95",
+      "independent_material_array_sha256": "160a0a24bb233fb66650012aa42b44b775e37465061b0ace2e62722928169bf9",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "low_base",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/low_base/profile3.h5",
+      "raw_sha256": "b5d5a052561e51ec6fad29104a7add4621f9686c93c2fb4f52ed1b3b3d16f790",
+      "input_sha256": "62da83fbaebc0372b832a5701e77c9f2eb3abc844b8b1ad49ee513ce8d597daa",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/low_base/hs4t2d_geom3.vtkhdf",
+      "geometry_sha256": "73246be2e51265e3596e35d2911c28a9917f0aa01342df1506df8ca16f7fa877",
+      "independent_material_array_sha256": "160a0a24bb233fb66650012aa42b44b775e37465061b0ace2e62722928169bf9",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "low_crest",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/low_crest/profile1.h5",
+      "raw_sha256": "10759b4f97b5f5998305ac5394765877a906f7622e8301add3d2db06665c2036",
+      "input_sha256": "bc535296560767aa4606115c4210f282b426e3926e9c3b2bfe5fa2134c2fbb5c",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/low_crest/hs4t2d_geom1.vtkhdf",
+      "geometry_sha256": "ff7f071c2cac294f70646b8cd4aa57c8fba6cc9db69c89e09b915588339685ca",
+      "independent_material_array_sha256": "db93f9831843da79d238930fcde821a43816b0622e909d43e56d2d90ae505d41",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "low_crest",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/low_crest/profile2.h5",
+      "raw_sha256": "1d147861032a2debfcf71b507d691c3063416b718a42e0628e4935d12c6a5ee6",
+      "input_sha256": "bc535296560767aa4606115c4210f282b426e3926e9c3b2bfe5fa2134c2fbb5c",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/low_crest/hs4t2d_geom2.vtkhdf",
+      "geometry_sha256": "39b3db469dfe9394f6d045b801b54242c9709eace3d013f297213fe2b9f32ae9",
+      "independent_material_array_sha256": "db93f9831843da79d238930fcde821a43816b0622e909d43e56d2d90ae505d41",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "low_crest",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/low_crest/profile3.h5",
+      "raw_sha256": "59cf0419260e0056779b71fb304769be1680e06b045a4e47d69a9c121892d5f0",
+      "input_sha256": "bc535296560767aa4606115c4210f282b426e3926e9c3b2bfe5fa2134c2fbb5c",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/low_crest/hs4t2d_geom3.vtkhdf",
+      "geometry_sha256": "f6cb6cd7cf9d0dcb2ebe3b75d7d14977660b760b8db674079ea3aba1d48476fc",
+      "independent_material_array_sha256": "db93f9831843da79d238930fcde821a43816b0622e909d43e56d2d90ae505d41",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "low_slope",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/low_slope/profile1.h5",
+      "raw_sha256": "5d44c20060d0bfaad1f4a62f7a774d5c19147fa2484a5a0cc9e9b942c8afe49b",
+      "input_sha256": "bc2c91b012f154dd7132e175f5a964e1b495833cd023e57962830d6590a3603f",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/low_slope/hs4t2d_geom1.vtkhdf",
+      "geometry_sha256": "7fb0acc2d5e5bacc309ba797ddb977376ea1e48fc25b886ae36c808316e92c64",
+      "independent_material_array_sha256": "f02171a2e4801c72901e0558811199606bdd66f2781e5c9eece6bd5e7d4e1f2a",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "low_slope",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/low_slope/profile2.h5",
+      "raw_sha256": "9c128dc92577614c3a30b1cd5cc117e913e0ecdaf499cb8c133ad0fba3ac312d",
+      "input_sha256": "bc2c91b012f154dd7132e175f5a964e1b495833cd023e57962830d6590a3603f",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/low_slope/hs4t2d_geom2.vtkhdf",
+      "geometry_sha256": "5cd73023b981da8580a0cbb259b5a94accdc33b36262f5c1d2bab61e4002d876",
+      "independent_material_array_sha256": "f02171a2e4801c72901e0558811199606bdd66f2781e5c9eece6bd5e7d4e1f2a",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_local_patch_controls",
+      "group": "low_slope",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/low_slope/profile3.h5",
+      "raw_sha256": "32e58742f743ae99373fedd89afb4930dc7546f82d016077ccd87b48cf433978",
+      "input_sha256": "bc2c91b012f154dd7132e175f5a964e1b495833cd023e57962830d6590a3603f",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_local_patch_controls/low_slope/hs4t2d_geom3.vtkhdf",
+      "geometry_sha256": "6e6dce6ea6cf8fd284fe055d39125dd360777e562bede1e8c3a3304024d03d3d",
+      "independent_material_array_sha256": "f02171a2e4801c72901e0558811199606bdd66f2781e5c9eece6bd5e7d4e1f2a",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_patch_refinement",
+      "group": "fine_crest",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_patch_refinement/fine_crest/profile.h5",
+      "raw_sha256": "5ec7923b0aaf265e0543ed2dd94ececae4db3982f02dacf563b380352ca11ceb",
+      "input_sha256": "8cd5a4fd97aaa61121890769f3f9ee2c4609665a140d0f620db3392bd0efe5ce",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_patch_refinement/fine_crest/hs4t2d_geom.vtkhdf",
+      "geometry_sha256": "1a61b066758e87a6220fb843e207e0f2c26100ee95c865268c3ee731481c2587",
+      "independent_material_array_sha256": "302ed8f47f2db634698e2912ae83b72799c05a689764ce85b04bda4217193079",
+      "native_spacing_m": [
+        0.016666666666666666,
+        0.05,
+        0.016666666666666666
+      ]
+    },
+    {
+      "capsule": "hs4_patch_refinement",
+      "group": "fine_slope",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_patch_refinement/fine_slope/profile.h5",
+      "raw_sha256": "04693a81d6770148edd682956882f2e8f9967999bd3613dd56e4e5b2aff1bec4",
+      "input_sha256": "5b1fd34026ff38f2ac813da452b7c9d3b5f4c774c2011e3040413368bb58d9f2",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_patch_refinement/fine_slope/hs4t2d_geom.vtkhdf",
+      "geometry_sha256": "1ea18fb4c74909ae483320dc41e9a736d0a1cfb0d0628f97806c7fcad3c6ffb7",
+      "independent_material_array_sha256": "dcedf87d17cbc5aac4c91ed228a314d6df8d277b9d7e023741b0c02f16eaae97",
+      "native_spacing_m": [
+        0.016666666666666666,
+        0.05,
+        0.016666666666666666
+      ]
+    },
+    {
+      "capsule": "hs4_patch_refinement",
+      "group": "reverse_crest",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_patch_refinement/reverse_crest/profile.h5",
+      "raw_sha256": "8832ae00a4a8057c2e97f593cff79fe13c7a9722a6e941d921e1b56969433552",
+      "input_sha256": "21ad3343d33ad339c505f7bc479289a0b6d55be5cb3a18e6d910ca0dd0a40b55",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_patch_refinement/reverse_crest/hs4t2d_geom.vtkhdf",
+      "geometry_sha256": "c4a6440e1698f978d0d45c0b86a6f303b8314aba8f1245ab5cb28c3048b5fc73",
+      "independent_material_array_sha256": "5c09d2b361bd37b101a7de4742915315fc2f92c387216cbd0a0f66fab9ff7d74",
+      "native_spacing_m": [
+        0.025,
+        0.05,
+        0.025
+      ]
+    },
+    {
+      "capsule": "hs4_patch_finest",
+      "group": "base",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_patch_finest/base/profile.h5",
+      "raw_sha256": "51909581bb846daac34e7a8bd77f9cda83aabd74af48315f50a2b15d425a0aae",
+      "input_sha256": "514b1cfd4cc0fbe11689373384011065859e88a10fc800e5059baf2ed849d194",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_patch_finest/base/hs4t2d_geom.vtkhdf",
+      "geometry_sha256": "d04f5f33159645a44b596beb64f61ccc375b659d1c9ec03e75de0d88bbee18fc",
+      "independent_material_array_sha256": "811aa9162bd5fa86eff1aef78bd1ea5586607ec7f599e6652f7f15d0e347e929",
+      "native_spacing_m": [
+        0.0125,
+        0.05,
+        0.0125
+      ]
+    },
+    {
+      "capsule": "hs4_patch_finest",
+      "group": "halfspace",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_patch_finest/halfspace/profile.h5",
+      "raw_sha256": "ae434df52bc9c70d8b41afba141ed798c742fbb20f779aea69720083f211c216",
+      "input_sha256": "9243d41effba7ab0b3e6969020fc655afa372fd4b89fe2d5a97334a1fa871e75",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_patch_finest/halfspace/hs4t2d_geom.vtkhdf",
+      "geometry_sha256": "10b10d203cff70640444af61802dd5b7bb482f50782cdc81fdf7ba671d69241b",
+      "independent_material_array_sha256": "a557d796ea3f3cdfae8a161918f02ead06fec2d297b79776661661c89f7ae592",
+      "native_spacing_m": [
+        0.0125,
+        0.05,
+        0.0125
+      ]
+    },
+    {
+      "capsule": "hs4_patch_finest",
+      "group": "crest",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_patch_finest/crest/profile.h5",
+      "raw_sha256": "ca1fa2155d8b58a16d852f30a8e2a8a39ad5cc58a0f97d54a4ced90dc9e875cf",
+      "input_sha256": "9c05bc2c2e19255f6d9ddf620ae98c84d7a96b71a1463d3a3a8e3945d1903d35",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_patch_finest/crest/hs4t2d_geom.vtkhdf",
+      "geometry_sha256": "92aa1233f065e9496e11f6bc16d679a35d2e6dcecc80c2a83503ff8d66547e26",
+      "independent_material_array_sha256": "7ba47253c71018acb722ab410e61c8f7f2a2a482f04ac340001664dcb02bb773",
+      "native_spacing_m": [
+        0.0125,
+        0.05,
+        0.0125
+      ]
+    },
+    {
+      "capsule": "hs4_patch_finest",
+      "group": "slope",
+      "raw": "artifacts/research_checks/2026-10-04_hs4_patch_finest/slope/profile.h5",
+      "raw_sha256": "ab65ffd2fe0443f5da87ea7df9e0b552dce0a45da6531d00d7438de7501bee5f",
+      "input_sha256": "edc9d46327bedc2060922d9fd2f907af76babbc5c6b52eca7533b9a19dcc72f8",
+      "geometry": "artifacts/research_checks/2026-10-04_hs4_patch_finest/slope/hs4t2d_geom.vtkhdf",
+      "geometry_sha256": "1b4234115111455a16f8655bf39b04bf1cd693a61ab83b9c4e1e7342c7e59a92",
+      "independent_material_array_sha256": "26db0a33dd1d4b60a9979639d4144b18253079489b6f2b7d3a188a377feee834",
+      "native_spacing_m": [
+        0.0125,
+        0.05,
+        0.0125
+      ]
+    }
+  ],
+  "material_maps": {
+    "hs4_height_wavefield_pilot/passive_reference": "160a0a24bb233fb66650012aa42b44b775e37465061b0ace2e62722928169bf9",
+    "hs4_height_wavefield_continuation/high_rough": "160a0a24bb233fb66650012aa42b44b775e37465061b0ace2e62722928169bf9",
+    "hs4_height_wavefield_continuation/high_halfspace": "fb22c94f8e7d05f34f419ba8a3ed6031149eb25bd21503a005c86ae5601d34d2",
+    "hs4_height_wavefield_continuation/low_rough": "160a0a24bb233fb66650012aa42b44b775e37465061b0ace2e62722928169bf9",
+    "hs4_height_wavefield_continuation/low_halfspace": "fb22c94f8e7d05f34f419ba8a3ed6031149eb25bd21503a005c86ae5601d34d2",
+    "hs4_local_patch_controls/high_crest": "db93f9831843da79d238930fcde821a43816b0622e909d43e56d2d90ae505d41",
+    "hs4_local_patch_controls/high_slope": "f02171a2e4801c72901e0558811199606bdd66f2781e5c9eece6bd5e7d4e1f2a",
+    "hs4_local_patch_controls/low_base": "160a0a24bb233fb66650012aa42b44b775e37465061b0ace2e62722928169bf9",
+    "hs4_local_patch_controls/low_crest": "db93f9831843da79d238930fcde821a43816b0622e909d43e56d2d90ae505d41",
+    "hs4_local_patch_controls/low_slope": "f02171a2e4801c72901e0558811199606bdd66f2781e5c9eece6bd5e7d4e1f2a",
+    "hs4_patch_refinement/fine_crest": "302ed8f47f2db634698e2912ae83b72799c05a689764ce85b04bda4217193079",
+    "hs4_patch_refinement/fine_slope": "dcedf87d17cbc5aac4c91ed228a314d6df8d277b9d7e023741b0c02f16eaae97",
+    "hs4_patch_refinement/reverse_crest": "5c09d2b361bd37b101a7de4742915315fc2f92c387216cbd0a0f66fab9ff7d74",
+    "hs4_patch_finest/base": "811aa9162bd5fa86eff1aef78bd1ea5586607ec7f599e6652f7f15d0e347e929",
+    "hs4_patch_finest/halfspace": "a557d796ea3f3cdfae8a161918f02ead06fec2d297b79776661661c89f7ae592",
+    "hs4_patch_finest/crest": "7ba47253c71018acb722ab410e61c8f7f2a2a482f04ac340001664dcb02bb773",
+    "hs4_patch_finest/slope": "26db0a33dd1d4b60a9979639d4144b18253079489b6f2b7d3a188a377feee834"
+  },
+  "scope": "Independently rasterized all actual geometries and checked main source/receiver/grid/time/float64. Parser failure/unattempted groups are excluded from successful count. Snapshots have a separate full audit. Duplicate maps may remain local with per-file hashes."
+}

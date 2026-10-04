@@ -1,0 +1,829 @@
+{
+  "status": "PREPARED_NOT_RUN",
+  "solver_executed": false,
+  "generator_sha256": "2cb708720f80689ddc4100faf6f3700b5188105a4c2e8b166d2b31ffa413a6bd",
+  "stages": {
+    "replay": [
+      {
+        "id": "base",
+        "input": "replay/base/profile.in",
+        "input_sha256": "514b1cfd4cc0fbe11689373384011065859e88a10fc800e5059baf2ed849d194",
+        "source": "artifacts/research_checks/2026-10-04_hs4_patch_finest/base/profile.in",
+        "source_sha256": "514b1cfd4cc0fbe11689373384011065859e88a10fc800e5059baf2ed849d194",
+        "tx_m": [
+          17.6,
+          0.0,
+          27.0
+        ],
+        "rx_m": [
+          18.900000000000002,
+          0.0,
+          27.0
+        ],
+        "requested_tx_m": [
+          17.6,
+          0.025,
+          27.0
+        ],
+        "requested_rx_m": [
+          18.9,
+          0.025,
+          27.0
+        ],
+        "component": "Ey",
+        "spacing_m": [
+          0.0125,
+          0.05,
+          0.0125
+        ],
+        "cells": [
+          2880,
+          1,
+          2640
+        ],
+        "core_device_array_lower_bound_bytes": 1460874432
+      },
+      {
+        "id": "halfspace",
+        "input": "replay/halfspace/profile.in",
+        "input_sha256": "9243d41effba7ab0b3e6969020fc655afa372fd4b89fe2d5a97334a1fa871e75",
+        "source": "artifacts/research_checks/2026-10-04_hs4_patch_finest/halfspace/profile.in",
+        "source_sha256": "9243d41effba7ab0b3e6969020fc655afa372fd4b89fe2d5a97334a1fa871e75",
+        "tx_m": [
+          17.6,
+          0.0,
+          27.0
+        ],
+        "rx_m": [
+          18.900000000000002,
+          0.0,
+          27.0
+        ],
+        "requested_tx_m": [
+          17.6,
+          0.025,
+          27.0
+        ],
+        "requested_rx_m": [
+          18.9,
+          0.025,
+          27.0
+        ],
+        "component": "Ey",
+        "spacing_m": [
+          0.0125,
+          0.05,
+          0.0125
+        ],
+        "cells": [
+          2880,
+          1,
+          2640
+        ],
+        "core_device_array_lower_bound_bytes": 1460874432
+      },
+      {
+        "id": "crest",
+        "input": "replay/crest/profile.in",
+        "input_sha256": "9c05bc2c2e19255f6d9ddf620ae98c84d7a96b71a1463d3a3a8e3945d1903d35",
+        "source": "artifacts/research_checks/2026-10-04_hs4_patch_finest/crest/profile.in",
+        "source_sha256": "9c05bc2c2e19255f6d9ddf620ae98c84d7a96b71a1463d3a3a8e3945d1903d35",
+        "tx_m": [
+          17.6,
+          0.0,
+          27.0
+        ],
+        "rx_m": [
+          18.900000000000002,
+          0.0,
+          27.0
+        ],
+        "requested_tx_m": [
+          17.6,
+          0.025,
+          27.0
+        ],
+        "requested_rx_m": [
+          18.9,
+          0.025,
+          27.0
+        ],
+        "component": "Ey",
+        "spacing_m": [
+          0.0125,
+          0.05,
+          0.0125
+        ],
+        "cells": [
+          2880,
+          1,
+          2640
+        ],
+        "core_device_array_lower_bound_bytes": 1460874432
+      },
+      {
+        "id": "slope",
+        "input": "replay/slope/profile.in",
+        "input_sha256": "edc9d46327bedc2060922d9fd2f907af76babbc5c6b52eca7533b9a19dcc72f8",
+        "source": "artifacts/research_checks/2026-10-04_hs4_patch_finest/slope/profile.in",
+        "source_sha256": "edc9d46327bedc2060922d9fd2f907af76babbc5c6b52eca7533b9a19dcc72f8",
+        "tx_m": [
+          17.6,
+          0.0,
+          27.0
+        ],
+        "rx_m": [
+          18.900000000000002,
+          0.0,
+          27.0
+        ],
+        "requested_tx_m": [
+          17.6,
+          0.025,
+          27.0
+        ],
+        "requested_rx_m": [
+          18.9,
+          0.025,
+          27.0
+        ],
+        "component": "Ey",
+        "spacing_m": [
+          0.0125,
+          0.05,
+          0.0125
+        ],
+        "cells": [
+          2880,
+          1,
+          2640
+        ],
+        "core_device_array_lower_bound_bytes": 1460874432
+      }
+    ],
+    "centre1cm": [
+      {
+        "id": "base",
+        "input": "centre1cm/base/profile.in",
+        "input_sha256": "f580562840ccbbe791bf27351cfcea7d98a838dc50adb3c2b3a6d3e8ca28ed3b",
+        "source": "artifacts/research_checks/2026-10-04_hs4_patch_finest/base/profile.in",
+        "source_sha256": "514b1cfd4cc0fbe11689373384011065859e88a10fc800e5059baf2ed849d194",
+        "tx_m": [
+          17.6,
+          0.0,
+          27.0
+        ],
+        "rx_m": [
+          18.900000000000002,
+          0.0,
+          27.0
+        ],
+        "requested_tx_m": [
+          17.6,
+          0.025,
+          27.0
+        ],
+        "requested_rx_m": [
+          18.9,
+          0.025,
+          27.0
+        ],
+        "component": "Ey",
+        "spacing_m": [
+          0.01,
+          0.05,
+          0.01
+        ],
+        "cells": [
+          3600,
+          1,
+          3300
+        ],
+        "core_device_array_lower_bound_bytes": 2282284992
+      },
+      {
+        "id": "halfspace",
+        "input": "centre1cm/halfspace/profile.in",
+        "input_sha256": "5e125cfb9c155ace3c611b48b0a0890c85b4f994d2209a3d45470cb243a9483f",
+        "source": "artifacts/research_checks/2026-10-04_hs4_patch_finest/halfspace/profile.in",
+        "source_sha256": "9243d41effba7ab0b3e6969020fc655afa372fd4b89fe2d5a97334a1fa871e75",
+        "tx_m": [
+          17.6,
+          0.0,
+          27.0
+        ],
+        "rx_m": [
+          18.900000000000002,
+          0.0,
+          27.0
+        ],
+        "requested_tx_m": [
+          17.6,
+          0.025,
+          27.0
+        ],
+        "requested_rx_m": [
+          18.9,
+          0.025,
+          27.0
+        ],
+        "component": "Ey",
+        "spacing_m": [
+          0.01,
+          0.05,
+          0.01
+        ],
+        "cells": [
+          3600,
+          1,
+          3300
+        ],
+        "core_device_array_lower_bound_bytes": 2282284992
+      },
+      {
+        "id": "crest",
+        "input": "centre1cm/crest/profile.in",
+        "input_sha256": "019acb77abff8a8fc915e6c6adc53b4eedb7c7eb3e312b5e46e7ccf08b3025b0",
+        "source": "artifacts/research_checks/2026-10-04_hs4_patch_finest/crest/profile.in",
+        "source_sha256": "9c05bc2c2e19255f6d9ddf620ae98c84d7a96b71a1463d3a3a8e3945d1903d35",
+        "tx_m": [
+          17.6,
+          0.0,
+          27.0
+        ],
+        "rx_m": [
+          18.900000000000002,
+          0.0,
+          27.0
+        ],
+        "requested_tx_m": [
+          17.6,
+          0.025,
+          27.0
+        ],
+        "requested_rx_m": [
+          18.9,
+          0.025,
+          27.0
+        ],
+        "component": "Ey",
+        "spacing_m": [
+          0.01,
+          0.05,
+          0.01
+        ],
+        "cells": [
+          3600,
+          1,
+          3300
+        ],
+        "core_device_array_lower_bound_bytes": 2282284992
+      },
+      {
+        "id": "slope",
+        "input": "centre1cm/slope/profile.in",
+        "input_sha256": "b7dfc9750db247ae7dcea3630a06894274b0f095815e554137efb7d4a0d76c63",
+        "source": "artifacts/research_checks/2026-10-04_hs4_patch_finest/slope/profile.in",
+        "source_sha256": "edc9d46327bedc2060922d9fd2f907af76babbc5c6b52eca7533b9a19dcc72f8",
+        "tx_m": [
+          17.6,
+          0.0,
+          27.0
+        ],
+        "rx_m": [
+          18.900000000000002,
+          0.0,
+          27.0
+        ],
+        "requested_tx_m": [
+          17.6,
+          0.025,
+          27.0
+        ],
+        "requested_rx_m": [
+          18.9,
+          0.025,
+          27.0
+        ],
+        "component": "Ey",
+        "spacing_m": [
+          0.01,
+          0.05,
+          0.01
+        ],
+        "cells": [
+          3600,
+          1,
+          3300
+        ],
+        "core_device_array_lower_bound_bytes": 2282284992
+      }
+    ],
+    "3d-centre": [
+      {
+        "id": "centre_rough08",
+        "input": "3d-centre/centre_rough08/profile.in",
+        "input_sha256": "121774bb04affef1d0b7d3e23bbcb9521c6b6844f0928b38cdd0c8be56efbdf4",
+        "source": "artifacts/research_checks/2026-10-02_halfspace_standard_hs/hs4_col6_t13.in",
+        "source_sha256": "789d0409c6b5b2bdcd2462eff7b647576d4a96441cc77d0d4631ed70224c8dec",
+        "tx_m": [
+          1.6,
+          5.6000000000000005,
+          27.0
+        ],
+        "rx_m": [
+          1.6,
+          6.9,
+          27.0
+        ],
+        "requested_tx_m": [
+          1.6,
+          5.6,
+          27.0
+        ],
+        "requested_rx_m": [
+          1.6,
+          6.9,
+          27.0
+        ],
+        "component": "Ex",
+        "spacing_m": [
+          0.05,
+          0.05,
+          0.05
+        ],
+        "cells": [
+          240,
+          240,
+          660
+        ],
+        "core_device_array_lower_bound_bytes": 3685587936
+      },
+      {
+        "id": "centre_flat",
+        "input": "3d-centre/centre_flat/profile.in",
+        "input_sha256": "820cf85d798d38df0150afb735de0982d437b4b37d317ea6a0d4ec3f62b58b82",
+        "source": "artifacts/research_checks/2026-10-02_halfspace_standard_hs/hs4_col6_t13.in",
+        "source_sha256": "789d0409c6b5b2bdcd2462eff7b647576d4a96441cc77d0d4631ed70224c8dec",
+        "tx_m": [
+          1.6,
+          5.6000000000000005,
+          27.0
+        ],
+        "rx_m": [
+          1.6,
+          6.9,
+          27.0
+        ],
+        "requested_tx_m": [
+          1.6,
+          5.6,
+          27.0
+        ],
+        "requested_rx_m": [
+          1.6,
+          6.9,
+          27.0
+        ],
+        "component": "Ex",
+        "spacing_m": [
+          0.05,
+          0.05,
+          0.05
+        ],
+        "cells": [
+          240,
+          240,
+          660
+        ],
+        "core_device_array_lower_bound_bytes": 3685587936
+      },
+      {
+        "id": "centre_halfspace",
+        "input": "3d-centre/centre_halfspace/profile.in",
+        "input_sha256": "0773a6b49431ca558e648c9e3cc382e1f464acb366e671bbed462d8c6318b286",
+        "source": "artifacts/research_checks/2026-10-02_halfspace_standard_hs/hs4_col6_t13.in",
+        "source_sha256": "789d0409c6b5b2bdcd2462eff7b647576d4a96441cc77d0d4631ed70224c8dec",
+        "tx_m": [
+          1.6,
+          5.6000000000000005,
+          27.0
+        ],
+        "rx_m": [
+          1.6,
+          6.9,
+          27.0
+        ],
+        "requested_tx_m": [
+          1.6,
+          5.6,
+          27.0
+        ],
+        "requested_rx_m": [
+          1.6,
+          6.9,
+          27.0
+        ],
+        "component": "Ex",
+        "spacing_m": [
+          0.05,
+          0.05,
+          0.05
+        ],
+        "cells": [
+          240,
+          240,
+          660
+        ],
+        "core_device_array_lower_bound_bytes": 3685587936
+      }
+    ],
+    "3d-ends": [
+      {
+        "id": "left_rough08",
+        "input": "3d-ends/left_rough08/profile.in",
+        "input_sha256": "5479a791efb908c04f76fc0c8c3381502ee729afec8004b6a2ff78f4494e43c8",
+        "source": "artifacts/research_checks/2026-10-02_halfspace_standard_hs/hs4_col6_t13.in",
+        "source_sha256": "789d0409c6b5b2bdcd2462eff7b647576d4a96441cc77d0d4631ed70224c8dec",
+        "tx_m": [
+          1.6,
+          2.6,
+          27.0
+        ],
+        "rx_m": [
+          1.6,
+          3.9000000000000004,
+          27.0
+        ],
+        "requested_tx_m": [
+          1.6,
+          2.6,
+          27.0
+        ],
+        "requested_rx_m": [
+          1.6,
+          3.9,
+          27.0
+        ],
+        "component": "Ex",
+        "spacing_m": [
+          0.05,
+          0.05,
+          0.05
+        ],
+        "cells": [
+          240,
+          240,
+          660
+        ],
+        "core_device_array_lower_bound_bytes": 3685587936
+      },
+      {
+        "id": "left_flat",
+        "input": "3d-ends/left_flat/profile.in",
+        "input_sha256": "fd0946be93a7f707a14433c3262fb372bfa6adcdb683dce31113e59842d4a807",
+        "source": "artifacts/research_checks/2026-10-02_halfspace_standard_hs/hs4_col6_t13.in",
+        "source_sha256": "789d0409c6b5b2bdcd2462eff7b647576d4a96441cc77d0d4631ed70224c8dec",
+        "tx_m": [
+          1.6,
+          2.6,
+          27.0
+        ],
+        "rx_m": [
+          1.6,
+          3.9000000000000004,
+          27.0
+        ],
+        "requested_tx_m": [
+          1.6,
+          2.6,
+          27.0
+        ],
+        "requested_rx_m": [
+          1.6,
+          3.9,
+          27.0
+        ],
+        "component": "Ex",
+        "spacing_m": [
+          0.05,
+          0.05,
+          0.05
+        ],
+        "cells": [
+          240,
+          240,
+          660
+        ],
+        "core_device_array_lower_bound_bytes": 3685587936
+      },
+      {
+        "id": "left_halfspace",
+        "input": "3d-ends/left_halfspace/profile.in",
+        "input_sha256": "8d32290cc0294bcce69fd05e88c0d3e287dc772f7ddf2a628bb6449b5220ca11",
+        "source": "artifacts/research_checks/2026-10-02_halfspace_standard_hs/hs4_col6_t13.in",
+        "source_sha256": "789d0409c6b5b2bdcd2462eff7b647576d4a96441cc77d0d4631ed70224c8dec",
+        "tx_m": [
+          1.6,
+          2.6,
+          27.0
+        ],
+        "rx_m": [
+          1.6,
+          3.9000000000000004,
+          27.0
+        ],
+        "requested_tx_m": [
+          1.6,
+          2.6,
+          27.0
+        ],
+        "requested_rx_m": [
+          1.6,
+          3.9,
+          27.0
+        ],
+        "component": "Ex",
+        "spacing_m": [
+          0.05,
+          0.05,
+          0.05
+        ],
+        "cells": [
+          240,
+          240,
+          660
+        ],
+        "core_device_array_lower_bound_bytes": 3685587936
+      },
+      {
+        "id": "right_rough08",
+        "input": "3d-ends/right_rough08/profile.in",
+        "input_sha256": "e0b53acdcb3ced51f69e5da9b4ab544ff54650491abfd6cc3c6361ff3309a8bf",
+        "source": "artifacts/research_checks/2026-10-02_halfspace_standard_hs/hs4_col6_t13.in",
+        "source_sha256": "789d0409c6b5b2bdcd2462eff7b647576d4a96441cc77d0d4631ed70224c8dec",
+        "tx_m": [
+          1.6,
+          8.6,
+          27.0
+        ],
+        "rx_m": [
+          1.6,
+          9.9,
+          27.0
+        ],
+        "requested_tx_m": [
+          1.6,
+          8.6,
+          27.0
+        ],
+        "requested_rx_m": [
+          1.6,
+          9.9,
+          27.0
+        ],
+        "component": "Ex",
+        "spacing_m": [
+          0.05,
+          0.05,
+          0.05
+        ],
+        "cells": [
+          240,
+          240,
+          660
+        ],
+        "core_device_array_lower_bound_bytes": 3685587936
+      },
+      {
+        "id": "right_flat",
+        "input": "3d-ends/right_flat/profile.in",
+        "input_sha256": "d8395479f03e87b1f20c512f182320ba956c5fd6e29f7a7dc2260254afd0a868",
+        "source": "artifacts/research_checks/2026-10-02_halfspace_standard_hs/hs4_col6_t13.in",
+        "source_sha256": "789d0409c6b5b2bdcd2462eff7b647576d4a96441cc77d0d4631ed70224c8dec",
+        "tx_m": [
+          1.6,
+          8.6,
+          27.0
+        ],
+        "rx_m": [
+          1.6,
+          9.9,
+          27.0
+        ],
+        "requested_tx_m": [
+          1.6,
+          8.6,
+          27.0
+        ],
+        "requested_rx_m": [
+          1.6,
+          9.9,
+          27.0
+        ],
+        "component": "Ex",
+        "spacing_m": [
+          0.05,
+          0.05,
+          0.05
+        ],
+        "cells": [
+          240,
+          240,
+          660
+        ],
+        "core_device_array_lower_bound_bytes": 3685587936
+      },
+      {
+        "id": "right_halfspace",
+        "input": "3d-ends/right_halfspace/profile.in",
+        "input_sha256": "18058edc1c4b32f624c8b483f53fd729bc1b7f2272e4654bfc00fcdaff362580",
+        "source": "artifacts/research_checks/2026-10-02_halfspace_standard_hs/hs4_col6_t13.in",
+        "source_sha256": "789d0409c6b5b2bdcd2462eff7b647576d4a96441cc77d0d4631ed70224c8dec",
+        "tx_m": [
+          1.6,
+          8.6,
+          27.0
+        ],
+        "rx_m": [
+          1.6,
+          9.9,
+          27.0
+        ],
+        "requested_tx_m": [
+          1.6,
+          8.6,
+          27.0
+        ],
+        "requested_rx_m": [
+          1.6,
+          9.9,
+          27.0
+        ],
+        "component": "Ex",
+        "spacing_m": [
+          0.05,
+          0.05,
+          0.05
+        ],
+        "cells": [
+          240,
+          240,
+          660
+        ],
+        "core_device_array_lower_bound_bytes": 3685587936
+      }
+    ],
+    "3d-xwide-centre": [
+      {
+        "id": "centre_rough08",
+        "input": "3d-xwide-centre/centre_rough08/profile.in",
+        "input_sha256": "582797a50abe417b3d1e5e805a95fa1ac7db49ad40c2ea768d701d88931e8a4d",
+        "source": "artifacts/research_checks/2026-10-02_halfspace_standard_hs/hs4_col6_t13.in",
+        "source_sha256": "789d0409c6b5b2bdcd2462eff7b647576d4a96441cc77d0d4631ed70224c8dec",
+        "tx_m": [
+          3.6,
+          5.6000000000000005,
+          27.0
+        ],
+        "rx_m": [
+          3.6,
+          6.9,
+          27.0
+        ],
+        "requested_tx_m": [
+          3.6,
+          5.6,
+          27.0
+        ],
+        "requested_rx_m": [
+          3.6,
+          6.9,
+          27.0
+        ],
+        "component": "Ex",
+        "spacing_m": [
+          0.05,
+          0.05,
+          0.05
+        ],
+        "cells": [
+          320,
+          240,
+          660
+        ],
+        "core_device_array_lower_bound_bytes": 4909019616
+      },
+      {
+        "id": "centre_flat",
+        "input": "3d-xwide-centre/centre_flat/profile.in",
+        "input_sha256": "05e1892e0d78244db56633f650f6ec9246216f4ba5563553aff2e91f2942c4dd",
+        "source": "artifacts/research_checks/2026-10-02_halfspace_standard_hs/hs4_col6_t13.in",
+        "source_sha256": "789d0409c6b5b2bdcd2462eff7b647576d4a96441cc77d0d4631ed70224c8dec",
+        "tx_m": [
+          3.6,
+          5.6000000000000005,
+          27.0
+        ],
+        "rx_m": [
+          3.6,
+          6.9,
+          27.0
+        ],
+        "requested_tx_m": [
+          3.6,
+          5.6,
+          27.0
+        ],
+        "requested_rx_m": [
+          3.6,
+          6.9,
+          27.0
+        ],
+        "component": "Ex",
+        "spacing_m": [
+          0.05,
+          0.05,
+          0.05
+        ],
+        "cells": [
+          320,
+          240,
+          660
+        ],
+        "core_device_array_lower_bound_bytes": 4909019616
+      },
+      {
+        "id": "centre_halfspace",
+        "input": "3d-xwide-centre/centre_halfspace/profile.in",
+        "input_sha256": "b19568043b9b0ef0b9b39c389a2e2ab81ef8ddff42a160bb9ea5586b8299b104",
+        "source": "artifacts/research_checks/2026-10-02_halfspace_standard_hs/hs4_col6_t13.in",
+        "source_sha256": "789d0409c6b5b2bdcd2462eff7b647576d4a96441cc77d0d4631ed70224c8dec",
+        "tx_m": [
+          3.6,
+          5.6000000000000005,
+          27.0
+        ],
+        "rx_m": [
+          3.6,
+          6.9,
+          27.0
+        ],
+        "requested_tx_m": [
+          3.6,
+          5.6,
+          27.0
+        ],
+        "requested_rx_m": [
+          3.6,
+          6.9,
+          27.0
+        ],
+        "component": "Ex",
+        "spacing_m": [
+          0.05,
+          0.05,
+          0.05
+        ],
+        "cells": [
+          320,
+          240,
+          660
+        ],
+        "core_device_array_lower_bound_bytes": 4909019616
+      }
+    ]
+  },
+  "3d_bin6_relief_m": 0.7999999999999989,
+  "3d_global_z_range_m": [
+    8.15,
+    9.75
+  ],
+  "3d_global_relief_m": 1.5999999999999996,
+  "3d_polarization": "ideal x electric point dipole; Ex receiver; inline baseline along scan Y",
+  "equipment_mismatch": "Project instrument baseline is cross-track; this inherited inline setup is a mechanism control, not verified equipment model.",
+  "geometry": "2*(archived Z-9.05)+9.05; full 48x48 surface; bin6 equals executed2D0.8m transect. Xwide translates entire original interior+2m and continues edge profiles into both new margins.",
+  "resource_floors_GiB": {
+    "replay": [
+      2.25,
+      3.5
+    ],
+    "centre1cm": [
+      3.75,
+      4.3
+    ],
+    "3d-centre": [
+      8,
+      5
+    ],
+    "3d-ends": [
+      8,
+      5
+    ],
+    "3d-xwide-centre": [
+      10,
+      6.5
+    ]
+  },
+  "processing": "native source normalization,501tones20-170MHz,200ns tail,Hann/8x; complex difference before magnitude; fixed160-180/180-220/160-220ns. No imaging or training."
+}
