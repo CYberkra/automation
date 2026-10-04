@@ -29,3 +29,7 @@
 ## 边界与不做的事
 
 三站不是完整 B-scan；顶/底边界未远移；二维线源不等于三维有限天线；不认证网格收敛、材料真实性、物理归因或实测性能。旧 15 道因素结论不被替代。G4/训练/保留实测/首版范围不变。vtkhdf(~22MB×6）与 cuda_cache 留本机（既有 `*hs4_large_domain*` 通配规则覆盖），哈希台账在 `completed_verification.json`。
+
+## 附图
+
+`large_domain_sparse_bscan.png`(`scripts/plot_hs4_large_domain_sparse_bscan.py` 从归档数组经同一源归一化链重建，重建前校验数组与胶囊原始 H5 一致 ≤1e-9)：稀疏三锚点视图，未计算区域置灰、不插值；总响应与界面对比各自四板共享固定 symlog 标尺（total 2.36e+01、contrast 8.60e-02)。36m 与 108m 板内波形目视不可区分，与 ≤2.2e-8 的定量结果一致；该图是稀疏锚点展示，不是完整 B-scan。
