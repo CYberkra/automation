@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "inputs": {
+    "8m_contract_sha256": "ee16525d70b2e36daa0d030bd0eb36af633b1e034bfa7f60bffac4e5755abb4c",
+    "heights_contract_sha256": "9ba271e8a943236b95476d80e90d8c7d13960fccbc2effc4e32dfd318bec653f",
+    "note": "15m/2m raw snapshot frames no longer on this machine (previous-machine retention); cross-height comparison uses surviving native receiver H5 only."
+  },
+  "frame_interval_ns": 1.002428093118624,
+  "frame_count": 599,
+  "interface_footprint_8m": {
+    "x_min_m": 13.575,
+    "x_max_m": 22.424999999999997,
+    "width_m": 8.849999999999998
+  },
+  "band_peaks_8m_ns": {
+    "interface": 87.21124410131958,
+    "cover": 98.23795312562436,
+    "air_low": 131.3180801985387,
+    "antenna": 140.33993303660623
+  },
+  "global_diff_abs_max": 4.1448960748815145,
+  "band_first_above_floor_ns": {
+    "interface": 60.14568558711695,
+    "cover": 64.15539795959141,
+    "air_low": 92.22338456691266,
+    "antenna": 92.22338456691266
+  },
+  "predicted_vertical_interface_arrival_ns": 138.32189901550933,
+  "height_2m_receiver": {
+    "rough_full_record_peak": 91.02699313905951,
+    "diff_peak_100_220ns": 0.14483353238614796,
+    "diff_over_full_peak_dB": -55.96602148277608,
+    "echo_envelope_peak_ns": 101.54006919707392,
+    "echo_envelope_peak_amplitude": 0.14483353238614796
+  },
+  "height_8m_receiver": {
+    "rough_full_record_peak": 90.9767878227633,
+    "diff_peak_100_220ns": 0.04808893845758399,
+    "diff_over_full_peak_dB": -65.53770817052524,
+    "echo_envelope_peak_ns": 138.68887500088144,
+    "echo_envelope_peak_amplitude": 0.04808893845758399
+  },
+  "height_15m_receiver": {
+    "rough_full_record_peak": 90.9767878227633,
+    "diff_peak_100_220ns": 0.02705961426262064,
+    "diff_over_full_peak_dB": -70.53217994894864,
+    "echo_envelope_peak_ns": 185.74402901903764,
+    "echo_envelope_peak_amplitude": 0.02705961426262064
+  },
+  "expected_two_way_shift_per_7m_ns": 46.69897332774129
+}

@@ -98,3 +98,13 @@ Thumbs.db
 # stay tracked. Future target-machine capsules retain their own raw evidence.
 /artifacts/research_checks/2026-10-04_hs4_station_grid_endpoints/*/*.vtkhdf
 /artifacts/research_checks/2026-10-04_hs4_station_grid_endpoints/*/cuda_cache.jsonl
+
+# 8 m dense wavefield capsule: 599-frame snapshots (2 x 0.215 GiB) and CUDA
+# cache logs stay local; contracts, inputs, native H5, geometry, logs,
+# verification and the analysis capsule stay tracked.
+/artifacts/research_checks/2026-10-04_hs4_height8m_wavefield/*/profile_snaps/
+/artifacts/research_checks/2026-10-04_hs4_height8m_wavefield_b/*/profile_snaps/
+/artifacts/research_checks/2026-10-04_hs4_height8m_wavefield_c/*/profile_snaps/
+/artifacts/research_checks/2026-10-04_hs4_height8m_wavefield/*/cuda_cache.jsonl
+/artifacts/research_checks/2026-10-04_hs4_height8m_wavefield_b/*/cuda_cache.jsonl
+/artifacts/research_checks/2026-10-04_hs4_height8m_wavefield_c/*/cuda_cache.jsonl
