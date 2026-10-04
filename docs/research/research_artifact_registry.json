@@ -133,6 +133,29 @@
  ],
  "runs": [
   {
+   "id": "hs4_power_budget_20261005",
+   "status": "COMPLETED_DIAGNOSTIC_NOT_PHYSICAL_ACCEPTANCE",
+   "report": "docs/research/2026-10-05_hs4_power_budget.md",
+   "scripts": [
+    "scripts/analyze_hs4_power_budget.py"
+   ],
+   "results": [
+    "artifacts/research_checks/2026-10-05_hs4_power_budget_r1"
+   ],
+   "calls_solver": false,
+   "calls_training": false,
+   "key_numbers": {
+    "echo_over_direct_dB_ground": -19.49,
+    "echo_over_direct_dB_2m": -56.04,
+    "echo_over_direct_dB_8m": -65.85,
+    "echo_over_direct_dB_15m": -70.07,
+    "min_dynamic_range_dB_at_36dBm_all_heights": 60.0,
+    "min_power_dBm_at_D100_all_heights": 10.0,
+    "independent_direct_DFT_max_relative_L2": 4.904154806502666e-13
+   },
+   "limits": "Declared noise model (flat per-bin WGN, receiver-dominated floor), not measured hardware noise; no new solver runs; coherent direct/surface-wave domination in raw B-scan is power-invariant; 2D line source; no field claims."
+  },
+  {
    "id": "hs4_ground_gpr_dense_20261004",
    "status": "COMPLETED_DIAGNOSTIC_NOT_PHYSICAL_ACCEPTANCE",
    "report": "docs/research/2026-10-04_hs4_ground_gpr_findings.md",
