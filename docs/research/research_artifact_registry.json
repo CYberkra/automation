@@ -64,7 +64,8 @@
    "results": [
     "artifacts/research_checks/2026-10-04_hs4_height8m_wavefield_c",
     "artifacts/research_checks/2026-10-04_hs4_height8m_wavefield_analysis",
-    "artifacts/local_checks/2026-10-04_cuda_double_check"
+    "artifacts/local_checks/2026-10-04_cuda_double_check",
+    "artifacts/research_checks/2026-10-04_hs4_height8m_wavefield_visual"
    ],
    "failed_launcher_only_capsules": [
     "artifacts/research_checks/2026-10-04_hs4_height8m_wavefield",
@@ -110,7 +111,7 @@
     }
    },
    "limitations": "Single centre station, TM invariant-Y 2D, Ricker 95MHz; not 3D/finite-antenna/measurement performance. 15m/2m raw snapshot frames retained on previous machine only; cross-height comparison used native receiver H5. Footprint edges truncated by snapshot ROI.",
-   "notes": "GPU env rebuilt locally (venv artifacts/local_checks/gprmax_v4_gpu_env, Py3.12.15, pycuda 2026.1, local wheel f16053e1...). NVML requires full inherited environment; two launcher-only failed attempts preserved, no solver attempt consumed there."
+   "notes": "GPU env rebuilt locally (venv artifacts/local_checks/gprmax_v4_gpu_env, Py3.12.15, pycuda 2026.1, local wheel f16053e1...). NVML requires full inherited environment; two launcher-only failed attempts preserved, no solver attempt consumed there. Wavefield GIF (300 frames x 2.0049 ns, 3.3 MB) is tracked in git for cross-machine review; raw 599-frame snapshots remain local-only."
   },
   {
    "id": "hs4_interface_echo_budget_20261004",
