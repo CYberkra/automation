@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "completed": false,
+  "contract_sha256": "cdfdca06186bd3967e24ca2bf798c8989e6fb8a7da63f5b2cf1677e9800c5f2b",
+  "code_sha256": "e61af990812e9a2cb3dc5b845fc0974d9272ac8147514e7a88f0f2eb2f64ad2a",
+  "carrier_complex_permittivity_matching_error": 0.0,
+  "groups": [
+    {
+      "id": "matched95_centre_rough",
+      "physical_factor_check": "PASS",
+      "input_sha256": "f582972cb6d328f5da5ae3bd54f5c7b4367358ce4c496718799e4d0c3e303551"
+    },
+    {
+      "id": "matched95_centre_halfspace",
+      "physical_factor_check": "PASS",
+      "input_sha256": "ccebf6fed576503bf67d882414882aa36a01e3b1a2a088965e076c439cbf5698"
+    },
+    {
+      "id": "low_sigma_centre_rough",
+      "physical_factor_check": "PASS",
+      "input_sha256": "6b1933a553ae4dd3db1ad8647c402f5a73c41b2349ea36b00e0fb72a06617819"
+    },
+    {
+      "id": "low_sigma_centre_halfspace",
+      "physical_factor_check": "PASS",
+      "input_sha256": "2c97a839506c9247954d9ef7fefb7b4083a56a0c5dbed34d2bd5a09ebb106ec5"
+    }
+  ],
+  "scope": "Matched-carrier numerical material controls, not field material truth."
+}

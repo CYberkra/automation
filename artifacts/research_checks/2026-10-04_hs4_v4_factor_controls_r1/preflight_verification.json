@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "completed": false,
+  "contract_sha256": "19305c76da665488bf14ccdc3ca94d7d44448a24a758fd75893c32b12da95140",
+  "code_sha256": "377c3350627bb0d33c9b46aa98a639283b6deb90343e83ded8924de5bcd0fef4",
+  "groups": [
+    {
+      "id": "averaging_y_left_rough",
+      "input_sha256": "eb33a8e335750de0a7e9ee321971ed27a186a979515c717cd511cb67309a5d7c",
+      "physical_factor_check": "PASS"
+    },
+    {
+      "id": "averaging_y_left_halfspace",
+      "input_sha256": "fb7d8a1a96058dd95e93df193ba0ccf8d657bc643c992be852e908f1c6fa5025",
+      "physical_factor_check": "PASS"
+    },
+    {
+      "id": "averaging_y_centre_rough",
+      "input_sha256": "42054eb06223ec245eff1308a6bb5f996c4f487c3d02d141c185794eb643f0b1",
+      "physical_factor_check": "PASS"
+    },
+    {
+      "id": "averaging_y_centre_halfspace",
+      "input_sha256": "456ef096da09940d59d5365e561a5435655fa8529a174eec0a2d81a5dfb5d975",
+      "physical_factor_check": "PASS"
+    },
+    {
+      "id": "averaging_y_right_rough",
+      "input_sha256": "a2225d41e909fa06411201a3019eb9a13eb252111a6906c055ff25ed49e6402a",
+      "physical_factor_check": "PASS"
+    },
+    {
+      "id": "averaging_y_right_halfspace",
+      "input_sha256": "7f650bf8413238ab4566aea9e686431879d536557dc1c9410c2203ccbb8b1b4f",
+      "physical_factor_check": "PASS"
+    },
+    {
+      "id": "dt_half_centre_rough",
+      "input_sha256": "ba9887f63c6b7e4a55ea8b66f2720c108626126c6f6957c860c54cdc41a0f71c",
+      "physical_factor_check": "PASS"
+    },
+    {
+      "id": "dt_half_centre_halfspace",
+      "input_sha256": "6a45bde9c9534bd27584d93f8ee53ae0877962ed1951addfecdf389f9b9deb3f",
+      "physical_factor_check": "PASS"
+    },
+    {
+      "id": "flat_left_rough",
+      "input_sha256": "9eab9bb6d621e0085bea1ef87a7765ed2a39bbda51df1ea45ebf54be0fe2b417",
+      "physical_factor_check": "PASS"
+    },
+    {
+      "id": "flat_centre_rough",
+      "input_sha256": "6568efce618dd76f85cae4c45f9e0599c590cd06b9af35c2684ac38b59c0b656",
+      "physical_factor_check": "PASS"
+    },
+    {
+      "id": "flat_right_rough",
+      "input_sha256": "9cec75a4b08862cd7b3a55722b4c2cb2807e8b057c375292ebdb5bf791a8eea1",
+      "physical_factor_check": "PASS"
+    }
+  ],
+  "scope": "Controlled discrete numerical/geometry diagnostic; no continuum or 3D certification."
+}

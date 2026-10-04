@@ -1,0 +1,323 @@
+{
+  "status": "COMPLETED_CPU_WINDOW_SENSITIVITY",
+  "code_sha256": "f38d24ac5e34cde4544aa90e46d6cf83edec3e754cb20812ab352e31a2140da9",
+  "contract_sha256": "cdfdca06186bd3967e24ca2bf798c8989e6fb8a7da63f5b2cf1677e9800c5f2b",
+  "solver_called": false,
+  "variants": {
+    "tail200_hann": {
+      "conductivity_comparison": {
+        "underground": {
+          "signed_waveform_relative_L2": 12.271703472744544,
+          "complex_envelope_relative_L2": 12.271626844007429,
+          "envelope_magnitude_relative_L2": 12.258377080052696,
+          "amplitude_norm_ratio": 13.221741851296965,
+          "amplitude_norm_change_dB": 22.42577346997387,
+          "complex_coherence_real": 0.9537938521050402,
+          "complex_coherence_imag": 0.14870351247423427,
+          "reference_envelope_peak_ns": 174.65069860279442,
+          "candidate_envelope_peak_ns": 195.4424484364604,
+          "peak_shift_ns": 20.79174983366599
+        },
+        "early": {
+          "signed_waveform_relative_L2": 8.613730169878055,
+          "complex_envelope_relative_L2": 8.541873717637694,
+          "envelope_magnitude_relative_L2": 8.529287238974169,
+          "amplitude_norm_ratio": 9.528120331488061,
+          "amplitude_norm_change_dB": 19.580144665068037,
+          "complex_coherence_real": 0.9876801398617059,
+          "complex_coherence_imag": 0.14917274844982892,
+          "reference_envelope_peak_ns": 174.65069860279442,
+          "candidate_envelope_peak_ns": 175.48236859614104,
+          "peak_shift_ns": 0.8316699933466225
+        },
+        "late": {
+          "signed_waveform_relative_L2": 14.467601468435172,
+          "complex_envelope_relative_L2": 14.272749756920044,
+          "envelope_magnitude_relative_L2": 14.258716526381008,
+          "amplitude_norm_ratio": 15.241797523126403,
+          "amplitude_norm_change_dB": 23.660723760465743,
+          "complex_coherence_real": 0.971047085076656,
+          "complex_coherence_imag": 0.15345256910045438,
+          "reference_envelope_peak_ns": 193.77910844976714,
+          "candidate_envelope_peak_ns": 195.4424484364604,
+          "peak_shift_ns": 1.6633399866932734
+        }
+      },
+      "spectrum_comparison": {
+        "underground": {
+          "signed_waveform_relative_L2": 0.2312986896816272,
+          "complex_envelope_relative_L2": 0.23121739568974334,
+          "envelope_magnitude_relative_L2": 0.16261261811229644,
+          "amplitude_norm_ratio": 0.9346268554977525,
+          "amplitude_norm_change_dB": -0.5872348829489314,
+          "complex_coherence_real": 0.9736858427734565,
+          "complex_coherence_imag": 0.12039946948000653,
+          "reference_envelope_peak_ns": 173.81902860944777,
+          "candidate_envelope_peak_ns": 174.65069860279442,
+          "peak_shift_ns": 0.8316699933466509
+        },
+        "early": {
+          "signed_waveform_relative_L2": 0.1870035340104111,
+          "complex_envelope_relative_L2": 0.2035258243863594,
+          "envelope_magnitude_relative_L2": 0.15202665342554614,
+          "amplitude_norm_ratio": 0.8819753362967403,
+          "amplitude_norm_change_dB": -1.0908711876129027,
+          "complex_coherence_real": 0.9844139972976355,
+          "complex_coherence_imag": 0.06350727998868423,
+          "reference_envelope_peak_ns": 173.81902860944777,
+          "candidate_envelope_peak_ns": 174.65069860279442,
+          "peak_shift_ns": 0.8316699933466509
+        },
+        "late": {
+          "signed_waveform_relative_L2": 0.2655064905707208,
+          "complex_envelope_relative_L2": 0.25211460626567406,
+          "envelope_magnitude_relative_L2": 0.17098922962204038,
+          "amplitude_norm_ratio": 0.9766132841772895,
+          "amplitude_norm_change_dB": -0.2055474522429886,
+          "complex_coherence_real": 0.9677380815741166,
+          "complex_coherence_imag": 0.1637753466788187,
+          "reference_envelope_peak_ns": 190.45242847638056,
+          "candidate_envelope_peak_ns": 193.77910844976714,
+          "peak_shift_ns": 3.3266799733865753
+        }
+      }
+    },
+    "tail100_hann": {
+      "conductivity_comparison": {
+        "underground": {
+          "signed_waveform_relative_L2": 12.271703472686637,
+          "complex_envelope_relative_L2": 12.271626843955374,
+          "envelope_magnitude_relative_L2": 12.25837708000112,
+          "amplitude_norm_ratio": 13.221741851244618,
+          "amplitude_norm_change_dB": 22.425773469939486,
+          "complex_coherence_real": 0.9537938521047873,
+          "complex_coherence_imag": 0.14870351247517455,
+          "reference_envelope_peak_ns": 174.65069860279442,
+          "candidate_envelope_peak_ns": 195.4424484364604,
+          "peak_shift_ns": 20.79174983366599
+        },
+        "early": {
+          "signed_waveform_relative_L2": 8.613730170515177,
+          "complex_envelope_relative_L2": 8.541873717906284,
+          "envelope_magnitude_relative_L2": 8.529287239231625,
+          "amplitude_norm_ratio": 9.52812033173299,
+          "amplitude_norm_change_dB": 19.580144665291314,
+          "complex_coherence_real": 0.987680139840456,
+          "complex_coherence_imag": 0.14917274853699036,
+          "reference_envelope_peak_ns": 174.65069860279442,
+          "candidate_envelope_peak_ns": 175.48236859614104,
+          "peak_shift_ns": 0.8316699933466225
+        },
+        "late": {
+          "signed_waveform_relative_L2": 14.467601467779016,
+          "complex_envelope_relative_L2": 14.27274975677463,
+          "envelope_magnitude_relative_L2": 14.258716526240894,
+          "amplitude_norm_ratio": 15.241797522985664,
+          "amplitude_norm_change_dB": 23.66072376038554,
+          "complex_coherence_real": 0.9710470850810501,
+          "complex_coherence_imag": 0.15345256906398635,
+          "reference_envelope_peak_ns": 193.77910844976714,
+          "candidate_envelope_peak_ns": 195.4424484364604,
+          "peak_shift_ns": 1.6633399866932734
+        }
+      },
+      "spectrum_comparison": {
+        "underground": {
+          "signed_waveform_relative_L2": 0.2312986896886143,
+          "complex_envelope_relative_L2": 0.23121739570067076,
+          "envelope_magnitude_relative_L2": 0.16261261813159622,
+          "amplitude_norm_ratio": 0.9346268555031441,
+          "amplitude_norm_change_dB": -0.5872348828988252,
+          "complex_coherence_real": 0.9736858427705278,
+          "complex_coherence_imag": 0.12039946948261708,
+          "reference_envelope_peak_ns": 173.81902860944777,
+          "candidate_envelope_peak_ns": 174.65069860279442,
+          "peak_shift_ns": 0.8316699933466509
+        },
+        "early": {
+          "signed_waveform_relative_L2": 0.1870035339572396,
+          "complex_envelope_relative_L2": 0.20352582428912297,
+          "envelope_magnitude_relative_L2": 0.15202665344643052,
+          "amplitude_norm_ratio": 0.8819753363682779,
+          "amplitude_norm_change_dB": -1.090871186908385,
+          "complex_coherence_real": 0.9844139973117652,
+          "complex_coherence_imag": 0.06350727992350047,
+          "reference_envelope_peak_ns": 173.81902860944777,
+          "candidate_envelope_peak_ns": 174.65069860279442,
+          "peak_shift_ns": 0.8316699933466509
+        },
+        "late": {
+          "signed_waveform_relative_L2": 0.265506490610762,
+          "complex_envelope_relative_L2": 0.2521146063448801,
+          "envelope_magnitude_relative_L2": 0.17098922963814236,
+          "amplitude_norm_ratio": 0.9766132841221546,
+          "amplitude_norm_change_dB": -0.20554745273335223,
+          "complex_coherence_real": 0.9677380815531684,
+          "complex_coherence_imag": 0.16377534672705166,
+          "reference_envelope_peak_ns": 190.45242847638056,
+          "candidate_envelope_peak_ns": 193.77910844976714,
+          "peak_shift_ns": 3.3266799733865753
+        }
+      }
+    },
+    "tail0_hann": {
+      "conductivity_comparison": {
+        "underground": {
+          "signed_waveform_relative_L2": 12.27170372505604,
+          "complex_envelope_relative_L2": 12.271627077306505,
+          "envelope_magnitude_relative_L2": 12.258377290493979,
+          "amplitude_norm_ratio": 13.221742092629244,
+          "amplitude_norm_change_dB": 22.425773628514673,
+          "complex_coherence_real": 0.9537938594938311,
+          "complex_coherence_imag": 0.1487035080005231,
+          "reference_envelope_peak_ns": 174.65069860279442,
+          "candidate_envelope_peak_ns": 195.4424484364604,
+          "peak_shift_ns": 20.79174983366599
+        },
+        "early": {
+          "signed_waveform_relative_L2": 8.613723992234757,
+          "complex_envelope_relative_L2": 8.541866670330462,
+          "envelope_magnitude_relative_L2": 8.52928018897447,
+          "amplitude_norm_ratio": 9.528113380739613,
+          "amplitude_norm_change_dB": 19.580138328723212,
+          "complex_coherence_real": 0.9876802274715302,
+          "complex_coherence_imag": 0.14917283612313878,
+          "reference_envelope_peak_ns": 174.65069860279442,
+          "candidate_envelope_peak_ns": 175.48236859614104,
+          "peak_shift_ns": 0.8316699933466225
+        },
+        "late": {
+          "signed_waveform_relative_L2": 14.467609970055214,
+          "complex_envelope_relative_L2": 14.272758271498603,
+          "envelope_magnitude_relative_L2": 14.258725005207523,
+          "amplitude_norm_ratio": 15.241806211785324,
+          "amplitude_norm_change_dB": 23.660728711896887,
+          "complex_coherence_real": 0.9710472469495679,
+          "complex_coherence_imag": 0.15345255763712232,
+          "reference_envelope_peak_ns": 193.77910844976714,
+          "candidate_envelope_peak_ns": 195.4424484364604,
+          "peak_shift_ns": 1.6633399866932734
+        }
+      },
+      "spectrum_comparison": {
+        "underground": {
+          "signed_waveform_relative_L2": 0.2312986978579115,
+          "complex_envelope_relative_L2": 0.2312174040242581,
+          "envelope_magnitude_relative_L2": 0.16261273531507328,
+          "amplitude_norm_ratio": 0.9346268648597602,
+          "amplitude_norm_change_dB": -0.5872347959437646,
+          "complex_coherence_real": 0.9736858403203329,
+          "complex_coherence_imag": 0.12039947314989258,
+          "reference_envelope_peak_ns": 173.81902860944777,
+          "candidate_envelope_peak_ns": 174.65069860279442,
+          "peak_shift_ns": 0.8316699933466509
+        },
+        "early": {
+          "signed_waveform_relative_L2": 0.1870034256498655,
+          "complex_envelope_relative_L2": 0.20352567721082832,
+          "envelope_magnitude_relative_L2": 0.15202643321040354,
+          "amplitude_norm_ratio": 0.8819754656232959,
+          "amplitude_norm_change_dB": -1.0908699139762597,
+          "complex_coherence_real": 0.9844140162391825,
+          "complex_coherence_imag": 0.06350745050043376,
+          "reference_envelope_peak_ns": 173.81902860944777,
+          "candidate_envelope_peak_ns": 174.65069860279442,
+          "peak_shift_ns": 0.8316699933466509
+        },
+        "late": {
+          "signed_waveform_relative_L2": 0.2655066468274349,
+          "complex_envelope_relative_L2": 0.2521147721229176,
+          "envelope_magnitude_relative_L2": 0.17098962012644262,
+          "amplitude_norm_ratio": 0.9766133095628254,
+          "amplitude_norm_change_dB": -0.20554722646686624,
+          "complex_coherence_real": 0.967738038988433,
+          "complex_coherence_imag": 0.16377534108270245,
+          "reference_envelope_peak_ns": 190.45242847638056,
+          "candidate_envelope_peak_ns": 193.77910844976714,
+          "peak_shift_ns": 3.3266799733865753
+        }
+      }
+    },
+    "tail200_rectangular": {
+      "conductivity_comparison": {
+        "underground": {
+          "signed_waveform_relative_L2": 11.61662613885637,
+          "complex_envelope_relative_L2": 11.616188089129503,
+          "envelope_magnitude_relative_L2": 11.592870605576216,
+          "amplitude_norm_ratio": 12.553024558410975,
+          "amplitude_norm_change_dB": 21.974967569361713,
+          "complex_coherence_real": 0.9417092961151549,
+          "complex_coherence_imag": 0.18876954993250852,
+          "reference_envelope_peak_ns": 172.98735861610112,
+          "candidate_envelope_peak_ns": 197.10578842315368,
+          "peak_shift_ns": 24.118429807052564
+        },
+        "early": {
+          "signed_waveform_relative_L2": 8.36081690818701,
+          "complex_envelope_relative_L2": 8.312828649427036,
+          "envelope_magnitude_relative_L2": 8.292992347924548,
+          "amplitude_norm_ratio": 9.29198072545956,
+          "amplitude_norm_change_dB": 19.362166005269003,
+          "complex_coherence_real": 0.9813723352657415,
+          "complex_coherence_imag": 0.18286142349927625,
+          "reference_envelope_peak_ns": 172.98735861610112,
+          "candidate_envelope_peak_ns": 172.98735861610112,
+          "peak_shift_ns": 0.0
+        },
+        "late": {
+          "signed_waveform_relative_L2": 13.87550430533894,
+          "complex_envelope_relative_L2": 13.812935548625042,
+          "envelope_magnitude_relative_L2": 13.786816525214185,
+          "amplitude_norm_ratio": 14.765702251367395,
+          "amplitude_norm_change_dB": 23.385082133561657,
+          "complex_coherence_real": 0.9558900086500342,
+          "complex_coherence_imag": 0.19901241034510933,
+          "reference_envelope_peak_ns": 184.6307385229541,
+          "candidate_envelope_peak_ns": 197.10578842315368,
+          "peak_shift_ns": 12.475049900199593
+        }
+      },
+      "spectrum_comparison": {
+        "underground": {
+          "signed_waveform_relative_L2": 0.42141603274534417,
+          "complex_envelope_relative_L2": 0.4177339449404626,
+          "envelope_magnitude_relative_L2": 0.28270290649749036,
+          "amplitude_norm_ratio": 0.9353912262553616,
+          "amplitude_norm_change_dB": -0.5801341597231027,
+          "complex_coherence_real": 0.9089539487169424,
+          "complex_coherence_imag": 0.019970102478334764,
+          "reference_envelope_peak_ns": 170.49234863606122,
+          "candidate_envelope_peak_ns": 172.98735861610112,
+          "peak_shift_ns": 2.495009980039896
+        },
+        "early": {
+          "signed_waveform_relative_L2": 0.39994206318940684,
+          "complex_envelope_relative_L2": 0.39886746079238095,
+          "envelope_magnitude_relative_L2": 0.30471600836521223,
+          "amplitude_norm_ratio": 0.9414368330893742,
+          "amplitude_norm_change_dB": -0.524176284290578,
+          "complex_coherence_real": 0.9173255170771601,
+          "complex_coherence_imag": -0.050449673160234666,
+          "reference_envelope_peak_ns": 170.49234863606122,
+          "candidate_envelope_peak_ns": 172.98735861610112,
+          "peak_shift_ns": 2.495009980039896
+        },
+        "late": {
+          "signed_waveform_relative_L2": 0.43994816830193784,
+          "complex_envelope_relative_L2": 0.43274527260009854,
+          "envelope_magnitude_relative_L2": 0.26306932888347817,
+          "amplitude_norm_ratio": 0.9303516466640742,
+          "amplitude_norm_change_dB": -0.6270573871887296,
+          "complex_coherence_real": 0.901963102613181,
+          "complex_coherence_imag": 0.07902080968298104,
+          "reference_envelope_peak_ns": 183.79906852960747,
+          "candidate_envelope_peak_ns": 184.6307385229541,
+          "peak_shift_ns": 0.8316699933466225
+        }
+      }
+    }
+  },
+  "production_parameters_changed": false,
+  "physical_attribution_certified": false,
+  "scope": "Checks whether material-effect conclusion depends on tail/window; no adaptive tuning or instrument-window certification."
+}

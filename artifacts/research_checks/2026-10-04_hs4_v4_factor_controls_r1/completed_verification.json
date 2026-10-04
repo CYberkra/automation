@@ -1,0 +1,130 @@
+{
+  "status": "PASS",
+  "completed": true,
+  "contract_sha256": "19305c76da665488bf14ccdc3ca94d7d44448a24a758fd75893c32b12da95140",
+  "code_sha256": "377c3350627bb0d33c9b46aa98a639283b6deb90343e83ded8924de5bcd0fef4",
+  "groups": [
+    {
+      "id": "averaging_y_left_rough",
+      "input_sha256": "eb33a8e335750de0a7e9ee321971ed27a186a979515c717cd511cb67309a5d7c",
+      "physical_factor_check": "PASS",
+      "raw_sha256": "f12f69c0f09e95501ef0d89a5ecb4b858dd4732b6d50956ee45acc4b0bae0fc3",
+      "geometry_sha256": "1ececcf0c181c4793d5b31c4a01ac5cb7cf8a89210266fb449a4dfdc7b4e2b05",
+      "dt_s": 5.896635841874211e-11,
+      "iterations": 10177,
+      "dtype": "float64",
+      "bulk_material_matches_independent_csv": true
+    },
+    {
+      "id": "averaging_y_left_halfspace",
+      "input_sha256": "fb7d8a1a96058dd95e93df193ba0ccf8d657bc643c992be852e908f1c6fa5025",
+      "physical_factor_check": "PASS",
+      "raw_sha256": "c678b9953ed35a8bf74de1c6a538d06b040eebf2d6664d38e7a08fdd84006eb3",
+      "geometry_sha256": "3f542d2548ecf88fd032f7e4ec013d99dcc2ff4cab6c61a2ab32275677f93a9b",
+      "dt_s": 5.896635841874211e-11,
+      "iterations": 10177,
+      "dtype": "float64",
+      "bulk_material_matches_independent_csv": true
+    },
+    {
+      "id": "averaging_y_centre_rough",
+      "input_sha256": "42054eb06223ec245eff1308a6bb5f996c4f487c3d02d141c185794eb643f0b1",
+      "physical_factor_check": "PASS",
+      "raw_sha256": "7b0cf783e16314ccdc2a641615c76dc14224e2617a7c7c9b648960a7b30a6198",
+      "geometry_sha256": "f8956444129a03aae98ea8fd9aa079514490dff4f29361f02b66d85c5fbdb172",
+      "dt_s": 5.896635841874211e-11,
+      "iterations": 10177,
+      "dtype": "float64",
+      "bulk_material_matches_independent_csv": true
+    },
+    {
+      "id": "averaging_y_centre_halfspace",
+      "input_sha256": "456ef096da09940d59d5365e561a5435655fa8529a174eec0a2d81a5dfb5d975",
+      "physical_factor_check": "PASS",
+      "raw_sha256": "dce78137e44553789fa8980823aa6780f4c75cc60c66ff35bd7eb57cc5381019",
+      "geometry_sha256": "8d4aedfe76892df23fd149a6e185bf4b77a8f577b5c74a16fb9840af052c6df7",
+      "dt_s": 5.896635841874211e-11,
+      "iterations": 10177,
+      "dtype": "float64",
+      "bulk_material_matches_independent_csv": true
+    },
+    {
+      "id": "averaging_y_right_rough",
+      "input_sha256": "a2225d41e909fa06411201a3019eb9a13eb252111a6906c055ff25ed49e6402a",
+      "physical_factor_check": "PASS",
+      "raw_sha256": "5f81a5e38cf4dd5bc12d8a4d7cbdfc24b5d92c3d1bb5dbb0cfba58c36f2a7a73",
+      "geometry_sha256": "334546e6b815d3d3cbd10342f280a95e30e7ce00acc302566e5a6390c3662c94",
+      "dt_s": 5.896635841874211e-11,
+      "iterations": 10177,
+      "dtype": "float64",
+      "bulk_material_matches_independent_csv": true
+    },
+    {
+      "id": "averaging_y_right_halfspace",
+      "input_sha256": "7f650bf8413238ab4566aea9e686431879d536557dc1c9410c2203ccbb8b1b4f",
+      "physical_factor_check": "PASS",
+      "raw_sha256": "4bd4a2d90624893649d06fdd1a159ac16a070478e33df188c389f15cd1942f8e",
+      "geometry_sha256": "8d3207fe56a26506c2a67e97cc37ebeb22ea7eb187c0e10b22f10adaa01f51fd",
+      "dt_s": 5.896635841874211e-11,
+      "iterations": 10177,
+      "dtype": "float64",
+      "bulk_material_matches_independent_csv": true
+    },
+    {
+      "id": "dt_half_centre_rough",
+      "input_sha256": "ba9887f63c6b7e4a55ea8b66f2720c108626126c6f6957c860c54cdc41a0f71c",
+      "physical_factor_check": "PASS",
+      "raw_sha256": "fcb8e5d76955211e52d81605628ff049c9453f47592a8f767fd86beb87afd24b",
+      "geometry_sha256": "60b1dcd099226de586dddc5f482c2d80cebe17b82892e8b21146629eaaeaa5a4",
+      "dt_s": 2.9483179209371056e-11,
+      "iterations": 20352,
+      "dtype": "float64",
+      "bulk_material_matches_independent_csv": true
+    },
+    {
+      "id": "dt_half_centre_halfspace",
+      "input_sha256": "6a45bde9c9534bd27584d93f8ee53ae0877962ed1951addfecdf389f9b9deb3f",
+      "physical_factor_check": "PASS",
+      "raw_sha256": "39e5204c019b72915cfb4c53cd76cd553f4ba614708fa38833425dcbf061025e",
+      "geometry_sha256": "c89c2e5c063cff7590a36512c186a37fae5c7f399cde1fc5e0a44d18e2214b88",
+      "dt_s": 2.9483179209371056e-11,
+      "iterations": 20352,
+      "dtype": "float64",
+      "bulk_material_matches_independent_csv": true
+    },
+    {
+      "id": "flat_left_rough",
+      "input_sha256": "9eab9bb6d621e0085bea1ef87a7765ed2a39bbda51df1ea45ebf54be0fe2b417",
+      "physical_factor_check": "PASS",
+      "raw_sha256": "a3dbe49aac9f07a1d7d723e66a63360c190706cb400a297a4952cefd3ca6b880",
+      "geometry_sha256": "5b1481006823209f5bf26aee31ba7db1c4440a31340d32de2634756d33dbc71b",
+      "dt_s": 5.896635841874211e-11,
+      "iterations": 10177,
+      "dtype": "float64",
+      "bulk_material_matches_independent_csv": true
+    },
+    {
+      "id": "flat_centre_rough",
+      "input_sha256": "6568efce618dd76f85cae4c45f9e0599c590cd06b9af35c2684ac38b59c0b656",
+      "physical_factor_check": "PASS",
+      "raw_sha256": "54ed8318992e5b92c97da3cd9dc3aba74f9afe98b1ec205983e7e3e25605cd4a",
+      "geometry_sha256": "f68ba33e04c2f6e9f00b638fc01d74fb69b118ca4b02a6e965fbf167ce66e37f",
+      "dt_s": 5.896635841874211e-11,
+      "iterations": 10177,
+      "dtype": "float64",
+      "bulk_material_matches_independent_csv": true
+    },
+    {
+      "id": "flat_right_rough",
+      "input_sha256": "9cec75a4b08862cd7b3a55722b4c2cb2807e8b057c375292ebdb5bf791a8eea1",
+      "physical_factor_check": "PASS",
+      "raw_sha256": "8fa141584c4501296e0b18c17604ee006f643ccd3978df920f48e338f32d4a3e",
+      "geometry_sha256": "9253a53f3e806eeece7ef945f8e03ac796d8e3bab2290dc44d6eb00a0ed00033",
+      "dt_s": 5.896635841874211e-11,
+      "iterations": 10177,
+      "dtype": "float64",
+      "bulk_material_matches_independent_csv": true
+    }
+  ],
+  "scope": "Controlled discrete numerical/geometry diagnostic; no continuum or 3D certification."
+}

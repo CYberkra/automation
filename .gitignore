@@ -122,3 +122,11 @@ Thumbs.db
 # inputs, native H5, audited geometry, compact gathers and figures are tracked.
 /artifacts/research_checks/2026-10-04_hs4_local_wavefield_validation_r1/*/profile_snaps/
 /artifacts/research_checks/2026-10-04_hs4_local_wavefield_validation_r1/*/cuda_cache.jsonl
+
+# V4 factor controls: full bulk-cell audits/hash records stay tracked. Keep
+# one actual flat-reference material map; repeated invariant maps remain local.
+/artifacts/research_checks/2026-10-04_hs4_v4_factor_controls_r1/*/cuda_cache.jsonl
+/artifacts/research_checks/2026-10-04_hs4_v4_factor_controls_r1/*/hs4t2d_geom.vtkhdf
+!/artifacts/research_checks/2026-10-04_hs4_v4_factor_controls_r1/flat_centre_rough/hs4t2d_geom.vtkhdf
+/artifacts/research_checks/2026-10-04_hs4_v4_material_controls_r1/*/cuda_cache.jsonl
+/artifacts/research_checks/2026-10-04_hs4_v4_material_controls_r1/*/hs4t2d_geom.vtkhdf

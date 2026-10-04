@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "checks": 2,
+  "code_sha256": "804c63aa6ae30a46371c05da34a4e4030942e154488fcb0b49a43c21adde0d42",
+  "metric_code_sha256": "4b82c50f1505bdaf27addc86bff262634483eb93815acdeb69b7a9e63e2040a2",
+  "polarity_reversal": {
+    "signed_waveform_relative_L2": 2.0,
+    "complex_envelope_relative_L2": 2.0,
+    "envelope_magnitude_relative_L2": 0.0,
+    "amplitude_norm_ratio": 1.0,
+    "amplitude_norm_change_dB": 0.0,
+    "complex_coherence_real": -0.9999999999999999,
+    "complex_coherence_imag": 0.0,
+    "reference_envelope_peak_ns": 190.0,
+    "candidate_envelope_peak_ns": 190.0,
+    "peak_shift_ns": 0.0
+  },
+  "doubled_amplitude": {
+    "signed_waveform_relative_L2": 1.0,
+    "complex_envelope_relative_L2": 1.0,
+    "envelope_magnitude_relative_L2": 1.0,
+    "amplitude_norm_ratio": 2.0,
+    "amplitude_norm_change_dB": 6.020599913279624,
+    "complex_coherence_real": 0.9999999999999999,
+    "complex_coherence_imag": 0.0,
+    "reference_envelope_peak_ns": 190.0,
+    "candidate_envelope_peak_ns": 190.0,
+    "peak_shift_ns": 0.0
+  },
+  "solver_called": false,
+  "scope": "Array counterexamples only, no physical validation."
+}

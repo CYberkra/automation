@@ -1,0 +1,146 @@
+{
+  "status": "COMPLETED_MATCHED_EDGE_POLICY_MATERIAL_DIAGNOSTIC",
+  "code_sha256": "cdb0f3bbb5a51ee22bc68530334d6ee385d440f9e299abd741cf3d94e0ded416",
+  "contract_sha256": "cdfdca06186bd3967e24ca2bf798c8989e6fb8a7da63f5b2cf1677e9800c5f2b",
+  "completed_cases": 4,
+  "constant_eps_real": 18.513925652227428,
+  "constant_sigma_equivalent95_S_per_m": 0.013121798841467785,
+  "matched95_complex_permittivity_error": 0.0,
+  "fixed_window_comparisons": {
+    "debye_vs_matched95": {
+      "underground": {
+        "signed_waveform_relative_L2": 0.2312986896816272,
+        "complex_envelope_relative_L2": 0.23121739568974334,
+        "envelope_magnitude_relative_L2": 0.16261261811229644,
+        "amplitude_norm_ratio": 0.9346268554977525,
+        "amplitude_norm_change_dB": -0.5872348829489314,
+        "complex_coherence_real": 0.9736858427734565,
+        "complex_coherence_imag": 0.12039946948000653,
+        "reference_envelope_peak_ns": 173.81902860944777,
+        "candidate_envelope_peak_ns": 174.65069860279442,
+        "peak_shift_ns": 0.8316699933466509
+      },
+      "early": {
+        "signed_waveform_relative_L2": 0.1870035340104111,
+        "complex_envelope_relative_L2": 0.2035258243863594,
+        "envelope_magnitude_relative_L2": 0.15202665342554614,
+        "amplitude_norm_ratio": 0.8819753362967403,
+        "amplitude_norm_change_dB": -1.0908711876129027,
+        "complex_coherence_real": 0.9844139972976355,
+        "complex_coherence_imag": 0.06350727998868423,
+        "reference_envelope_peak_ns": 173.81902860944777,
+        "candidate_envelope_peak_ns": 174.65069860279442,
+        "peak_shift_ns": 0.8316699933466509
+      },
+      "late": {
+        "signed_waveform_relative_L2": 0.2655064905707208,
+        "complex_envelope_relative_L2": 0.25211460626567406,
+        "envelope_magnitude_relative_L2": 0.17098922962204038,
+        "amplitude_norm_ratio": 0.9766132841772895,
+        "amplitude_norm_change_dB": -0.2055474522429886,
+        "complex_coherence_real": 0.9677380815741166,
+        "complex_coherence_imag": 0.1637753466788187,
+        "reference_envelope_peak_ns": 190.45242847638056,
+        "candidate_envelope_peak_ns": 193.77910844976714,
+        "peak_shift_ns": 3.3266799733865753
+      }
+    },
+    "matched95_vs_low_sigma": {
+      "underground": {
+        "signed_waveform_relative_L2": 12.271703472744544,
+        "complex_envelope_relative_L2": 12.271626844007429,
+        "envelope_magnitude_relative_L2": 12.258377080052696,
+        "amplitude_norm_ratio": 13.221741851296965,
+        "amplitude_norm_change_dB": 22.42577346997387,
+        "complex_coherence_real": 0.9537938521050402,
+        "complex_coherence_imag": 0.14870351247423427,
+        "reference_envelope_peak_ns": 174.65069860279442,
+        "candidate_envelope_peak_ns": 195.4424484364604,
+        "peak_shift_ns": 20.79174983366599
+      },
+      "early": {
+        "signed_waveform_relative_L2": 8.613730169878055,
+        "complex_envelope_relative_L2": 8.541873717637694,
+        "envelope_magnitude_relative_L2": 8.529287238974169,
+        "amplitude_norm_ratio": 9.528120331488061,
+        "amplitude_norm_change_dB": 19.580144665068037,
+        "complex_coherence_real": 0.9876801398617059,
+        "complex_coherence_imag": 0.14917274844982892,
+        "reference_envelope_peak_ns": 174.65069860279442,
+        "candidate_envelope_peak_ns": 175.48236859614104,
+        "peak_shift_ns": 0.8316699933466225
+      },
+      "late": {
+        "signed_waveform_relative_L2": 14.467601468435172,
+        "complex_envelope_relative_L2": 14.272749756920044,
+        "envelope_magnitude_relative_L2": 14.258716526381008,
+        "amplitude_norm_ratio": 15.241797523126403,
+        "amplitude_norm_change_dB": 23.660723760465743,
+        "complex_coherence_real": 0.971047085076656,
+        "complex_coherence_imag": 0.15345256910045438,
+        "reference_envelope_peak_ns": 193.77910844976714,
+        "candidate_envelope_peak_ns": 195.4424484364604,
+        "peak_shift_ns": 1.6633399866932734
+      }
+    },
+    "debye_vs_low_sigma": {
+      "underground": {
+        "signed_waveform_relative_L2": 11.480510746225239,
+        "complex_envelope_relative_L2": 11.480541123783416,
+        "envelope_magnitude_relative_L2": 11.438470061315615,
+        "amplitude_norm_ratio": 12.357395010680714,
+        "amplitude_norm_change_dB": 21.838538587024942,
+        "complex_coherence_real": 0.8862056661692779,
+        "complex_coherence_imag": 0.25002806822120766,
+        "reference_envelope_peak_ns": 173.81902860944777,
+        "candidate_envelope_peak_ns": 195.4424484364604,
+        "peak_shift_ns": 21.62341982701264
+      },
+      "early": {
+        "signed_waveform_relative_L2": 7.592058895598574,
+        "complex_envelope_relative_L2": 7.450760095097042,
+        "envelope_magnitude_relative_L2": 7.414585394448296,
+        "amplitude_norm_ratio": 8.403567133639992,
+        "amplitude_norm_change_dB": 18.489273477455132,
+        "complex_coherence_real": 0.9582903497272021,
+        "complex_coherence_imag": 0.21422838688782725,
+        "reference_envelope_peak_ns": 173.81902860944777,
+        "candidate_envelope_peak_ns": 175.48236859614104,
+        "peak_shift_ns": 1.6633399866932734
+      },
+      "late": {
+        "signed_waveform_relative_L2": 14.135923982617149,
+        "complex_envelope_relative_L2": 13.993142618196748,
+        "envelope_magnitude_relative_L2": 13.945823940438148,
+        "amplitude_norm_ratio": 14.885341935825753,
+        "amplitude_norm_change_dB": 23.455176308222754,
+        "complex_coherence_real": 0.899051037209977,
+        "complex_coherence_imag": 0.28024159007285376,
+        "reference_envelope_peak_ns": 190.45242847638056,
+        "candidate_envelope_peak_ns": 195.4424484364604,
+        "peak_shift_ns": 4.990019960079849
+      }
+    }
+  },
+  "visibility_diagnostic": {
+    "debye_n": {
+      "interface_event_over_full_total_peak": 0.00031380841292145316,
+      "interface_event_over_full_total_peak_dB": -70.06670835096715
+    },
+    "matched95": {
+      "interface_event_over_full_total_peak": 0.00028994411855743377,
+      "interface_event_over_full_total_peak_dB": -70.75371392758646
+    },
+    "low_sigma": {
+      "interface_event_over_full_total_peak": 0.004348979026873857,
+      "interface_event_over_full_total_peak_dB": -47.23225373464415
+    }
+  },
+  "source_all501_valid": true,
+  "physical_attribution_certified": false,
+  "limitations": [
+    "Matching complex epsilon at one carrier is not full-band equivalence.",
+    "Changing conductivity alters propagation and reflection, not recoverable time gain alone.",
+    "One ideal line-source 2D centre station; no 3D/field/model-selection claim."
+  ]
+}

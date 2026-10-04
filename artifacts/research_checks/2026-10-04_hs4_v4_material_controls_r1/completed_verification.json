@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "completed": true,
+  "contract_sha256": "cdfdca06186bd3967e24ca2bf798c8989e6fb8a7da63f5b2cf1677e9800c5f2b",
+  "code_sha256": "e61af990812e9a2cb3dc5b845fc0974d9272ac8147514e7a88f0f2eb2f64ad2a",
+  "carrier_complex_permittivity_matching_error": 0.0,
+  "groups": [
+    {
+      "id": "matched95_centre_rough",
+      "physical_factor_check": "PASS",
+      "input_sha256": "f582972cb6d328f5da5ae3bd54f5c7b4367358ce4c496718799e4d0c3e303551",
+      "raw_sha256": "fc85aac7eff6ce452a23d87dd48bc9f54855df536c975d4ed69f57c89b646733",
+      "geometry_sha256": "60b1dcd099226de586dddc5f482c2d80cebe17b82892e8b21146629eaaeaa5a4",
+      "dtype": "float64",
+      "dt_s": 5.896635841874211e-11,
+      "samples": 10177
+    },
+    {
+      "id": "matched95_centre_halfspace",
+      "physical_factor_check": "PASS",
+      "input_sha256": "ccebf6fed576503bf67d882414882aa36a01e3b1a2a088965e076c439cbf5698",
+      "raw_sha256": "d4411c75b8e289ba1b1a408027e91abdbaa8fbbfcb5360f325459e86e01bfb0b",
+      "geometry_sha256": "c89c2e5c063cff7590a36512c186a37fae5c7f399cde1fc5e0a44d18e2214b88",
+      "dtype": "float64",
+      "dt_s": 5.896635841874211e-11,
+      "samples": 10177
+    },
+    {
+      "id": "low_sigma_centre_rough",
+      "physical_factor_check": "PASS",
+      "input_sha256": "6b1933a553ae4dd3db1ad8647c402f5a73c41b2349ea36b00e0fb72a06617819",
+      "raw_sha256": "dfea3b8dd4575862776385c0a3dd9d7ae58bc5edc742ea2f28a13556b15fbdcc",
+      "geometry_sha256": "60b1dcd099226de586dddc5f482c2d80cebe17b82892e8b21146629eaaeaa5a4",
+      "dtype": "float64",
+      "dt_s": 5.896635841874211e-11,
+      "samples": 10177
+    },
+    {
+      "id": "low_sigma_centre_halfspace",
+      "physical_factor_check": "PASS",
+      "input_sha256": "2c97a839506c9247954d9ef7fefb7b4083a56a0c5dbed34d2bd5a09ebb106ec5",
+      "raw_sha256": "297c93729aff184601b3f2e13eb43a173c9c3a0a31484a88046a7e55a4a16dca",
+      "geometry_sha256": "c89c2e5c063cff7590a36512c186a37fae5c7f399cde1fc5e0a44d18e2214b88",
+      "dtype": "float64",
+      "dt_s": 5.896635841874211e-11,
+      "samples": 10177
+    }
+  ],
+  "scope": "Matched-carrier numerical material controls, not field material truth."
+}

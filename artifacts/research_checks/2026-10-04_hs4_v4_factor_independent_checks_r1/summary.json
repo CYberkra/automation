@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "code_sha256": "aeeea96310788d435db451a522cd611be187f3e6a1bad66deeda21a0c0818a07",
+  "solver_called": false,
+  "studies": [
+    {
+      "study": "factor_controls",
+      "completed_solver_cases": 11,
+      "contract_sha256": "19305c76da665488bf14ccdc3ca94d7d44448a24a758fd75893c32b12da95140",
+      "summary_sha256": "d27bd2bacff583f1a407c97120d99835e03e711ce2a2af19af76b867637e6cb1",
+      "native_staggered_direct_DFT_relative_L2_by_case": {
+        "averaging_y_left_rough": 8.113124482602153e-13,
+        "averaging_y_left_halfspace": 8.065510744410239e-13,
+        "averaging_y_centre_rough": 8.084266853159717e-13,
+        "averaging_y_centre_halfspace": 8.044062277114597e-13,
+        "averaging_y_right_rough": 8.307807027586575e-13,
+        "averaging_y_right_halfspace": 8.085042122019548e-13,
+        "dt_half_centre_rough": 3.6367202810054053e-13,
+        "dt_half_centre_halfspace": 3.64068611353427e-13,
+        "flat_left_rough": 8.188277706695457e-13,
+        "flat_centre_rough": 8.018035383615005e-13,
+        "flat_right_rough": 8.417817728879383e-13
+      },
+      "flat_three_station_translation_signed_relative_L2_to_centre": {
+        "left": 2.7056997444086506e-10,
+        "right": 2.876755045838681e-10
+      },
+      "maximum_independent_signed_metric_absolute_difference": 4.440892098500626e-16
+    },
+    {
+      "study": "material_controls",
+      "completed_solver_cases": 4,
+      "contract_sha256": "cdfdca06186bd3967e24ca2bf798c8989e6fb8a7da63f5b2cf1677e9800c5f2b",
+      "summary_sha256": "9327b8d6f9d34b82d5e91ebadc19faae10377e8b668964bc146aab7c3fc4332e",
+      "native_staggered_direct_DFT_relative_L2_by_case": {
+        "matched95_centre_rough": 8.15483152826002e-13,
+        "matched95_centre_halfspace": 7.872145963207895e-13,
+        "low_sigma_centre_rough": 8.242069189620326e-13,
+        "low_sigma_centre_halfspace": 7.949175257806342e-13
+      },
+      "flat_three_station_translation_signed_relative_L2_to_centre": {},
+      "maximum_independent_signed_metric_absolute_difference": 1.7763568394002505e-15
+    }
+  ],
+  "physical_attribution_certified": false,
+  "scope": "Independent processing/identity checks, not FDTD continuum or field truth."
+}

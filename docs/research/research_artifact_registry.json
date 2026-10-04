@@ -1,5 +1,34 @@
 {
 
+ "hs4_v4_factor_controls_2026_10_04": {
+  "report": "docs/research/2026-10-04_hs4_v4_factor_controls_findings.md",
+  "pre_execution_plans": [
+   "docs/research/2026-10-04_hs4_v4_factor_controls_plan.md",
+   "docs/research/2026-10-04_hs4_v4_material_controls_plan.md"
+  ],
+  "capsules": [
+   "artifacts/research_checks/2026-10-04_hs4_v4_factor_controls_r1",
+   "artifacts/research_checks/2026-10-04_hs4_v4_material_controls_r1"
+  ],
+  "results": [
+   "artifacts/research_checks/2026-10-04_hs4_v4_factor_controls_results_r1/summary.json",
+   "artifacts/research_checks/2026-10-04_hs4_v4_material_controls_results_r1/summary.json",
+   "artifacts/research_checks/2026-10-04_hs4_v4_window_sensitivity_r1/summary.json"
+  ],
+  "independent_checks": "artifacts/research_checks/2026-10-04_hs4_v4_factor_independent_checks_r1/summary.json",
+  "phase_gain_counterexamples": "artifacts/research_checks/2026-10-04_hs4_v4_factor_metric_guards_r1/summary.json",
+  "status": "COMPLETED_15_LOCAL_V4_DOUBLE_CAUSAL_FACTOR_CONTROLS",
+  "new_solver_cases": 15,
+  "fixed_sigma_effect_dB_centre_window160_220ns": 22.42577346997387,
+  "centre_dt_half_signed_waveform_change": 0.0038604899928046076,
+  "matched_planar_station_count": 3,
+  "full_planar_scan_completed": false,
+  "physical_attribution_certified": false,
+  "grid_convergence_certified": false,
+  "new_3d_solver_executed": false,
+  "old_debye_removal_effect_interpretation": "Compound material and edge-averaging sensitivity; use new matched-edge controls for conductivity attribution."
+ },
+
  "hs4_local_wavefield_validation_2026_10_04": {
   "report": "docs/research/2026-10-04_hs4_local_wavefield_validation_findings.md",
   "pre_execution_plan": "docs/research/2026-10-04_hs4_local_wavefield_validation_plan.md",
