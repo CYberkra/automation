@@ -170,3 +170,12 @@ Thumbs.db
 /artifacts/research_checks/target_hs4_3d-xwide-centre_r1/*/*.vtkhdf
 /artifacts/research_checks/target_hs4_3d-xwide-centre_r1/*/cuda_cache.jsonl
 /artifacts/research_checks/2026-10-05_antenna_gssi400x4_p1b/*.vtkhdf
+
+# 2026-10-05 material-scan and aperture-scan capsules: per-trace geometry exports
+# (7.3 MB x 260 / ~57 MB x 244) and CUDA cache logs stay local; SHA-256 ledgers
+# live in each capsule's completed_verification.json. Contracts/inputs/native H5/
+# logs/audit and analysis results are tracked.
+/artifacts/research_checks/2026-10-05_hs4_material_scan_r1/*/hs4t2d_geom*.vtkhdf
+/artifacts/research_checks/2026-10-05_hs4_material_scan_r1/*/cuda_cache.jsonl
+/artifacts/research_checks/2026-10-05_hs4_aperture_scan_r1/*/hs4t2d_geom*.vtkhdf
+/artifacts/research_checks/2026-10-05_hs4_aperture_scan_r1/*/cuda_cache.jsonl

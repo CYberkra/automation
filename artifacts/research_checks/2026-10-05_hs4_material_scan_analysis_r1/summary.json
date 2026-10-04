@@ -1,0 +1,1142 @@
+{
+  "status": "COMPLETED_DIAGNOSTIC_NOT_PHYSICAL_ACCEPTANCE",
+  "code_sha256": "81730e27c2ba7cbec63fb025ea2165fa3c1f8d07dda258d18f2268d18097018b",
+  "capsule": "2026-10-05_hs4_material_scan_r1",
+  "independent_dft_max_rel_l2": 9.970322198951551e-13,
+  "real_anchors": {
+    "direct_peak_ns": 15.399999999999999,
+    "ground_bounce_db": -19.846934575696675,
+    "interface_band_db_mean": -60.37724735003199,
+    "late_peak_over_early_peak_db_median": -26.649701395259008
+  },
+  "per_material": {
+    "eps9_s0.0005": {
+      "cover_eps_r": 9.0,
+      "cover_sigma": 0.0005,
+      "debye": false,
+      "degenerate_zero_contrast": false,
+      "echo_over_direct_dB_median": -71.94619585030084,
+      "echo_over_surface_dB_median": -55.099025404909774,
+      "contrast_floor_over_echo_dB_worst": -38.3053713792429,
+      "relief_pick_corr": 0.007670354916731732,
+      "alpha_Np_per_m": 0.03139419280566667,
+      "two_way_conductive_dB_at_model_cover": 1.5396298968141426,
+      "extrapolated_echo_over_direct_dB_at_real_depth": {
+        "13m": -77.49641479712675,
+        "18.5m": -80.49596623097447
+      },
+      "decay_db": {
+        "surface": -16.847170970703417,
+        "echo": -74.23979610500037
+      },
+      "per_station": [
+        {
+          "station_index": 1,
+          "echo_over_direct_dB": -72.10188630715885,
+          "echo_over_surface_dB": -55.254709999534356,
+          "contrast_floor_over_echo_dB": -41.954431537171175,
+          "pick_ns": 118.92880904856953
+        },
+        {
+          "station_index": 11,
+          "echo_over_direct_dB": -74.40384395377981,
+          "echo_over_surface_dB": -57.55666848585519,
+          "contrast_floor_over_echo_dB": -40.54745408617687,
+          "pick_ns": 118.92880904856953
+        },
+        {
+          "station_index": 21,
+          "echo_over_direct_dB": -70.76136615771895,
+          "echo_over_surface_dB": -53.914192634880365,
+          "contrast_floor_over_echo_dB": -50.689976261692934,
+          "pick_ns": 122.25548902195608
+        },
+        {
+          "station_index": 31,
+          "echo_over_direct_dB": -69.17260180278313,
+          "echo_over_surface_dB": -52.32543069853798,
+          "contrast_floor_over_echo_dB": -51.68514910521942,
+          "pick_ns": 122.25548902195608
+        },
+        {
+          "station_index": 41,
+          "echo_over_direct_dB": -74.19163507823191,
+          "echo_over_surface_dB": -57.34446324747351,
+          "contrast_floor_over_echo_dB": -48.1019128952693,
+          "pick_ns": 121.42381902860946
+        },
+        {
+          "station_index": 51,
+          "echo_over_direct_dB": -74.64834610907954,
+          "echo_over_surface_dB": -57.80117321597597,
+          "contrast_floor_over_echo_dB": -48.175299658928424,
+          "pick_ns": 104.79041916167664
+        },
+        {
+          "station_index": 61,
+          "echo_over_direct_dB": -71.94619585030084,
+          "echo_over_surface_dB": -55.099025404909774,
+          "contrast_floor_over_echo_dB": -49.16161711804291,
+          "pick_ns": 118.09713905522288
+        },
+        {
+          "station_index": 71,
+          "echo_over_direct_dB": -70.85486000164474,
+          "echo_over_surface_dB": -54.00769172721715,
+          "contrast_floor_over_echo_dB": -48.88957792347435,
+          "pick_ns": 114.77045908183632
+        },
+        {
+          "station_index": 81,
+          "echo_over_direct_dB": -70.44569756790048,
+          "echo_over_surface_dB": -53.59852817708238,
+          "contrast_floor_over_echo_dB": -49.81638030446782,
+          "pick_ns": 114.77045908183632
+        },
+        {
+          "station_index": 91,
+          "echo_over_direct_dB": -71.04137887200915,
+          "echo_over_surface_dB": -54.19420829030593,
+          "contrast_floor_over_echo_dB": -44.06947295079312,
+          "pick_ns": 115.60212907518297
+        },
+        {
+          "station_index": 101,
+          "echo_over_direct_dB": -71.99019898198357,
+          "echo_over_surface_dB": -55.14302875057477,
+          "contrast_floor_over_echo_dB": -39.63417592601537,
+          "pick_ns": 115.60212907518297
+        },
+        {
+          "station_index": 111,
+          "echo_over_direct_dB": -72.57147682012737,
+          "echo_over_surface_dB": -55.72430837873719,
+          "contrast_floor_over_echo_dB": -38.3053713792429,
+          "pick_ns": 115.60212907518297
+        },
+        {
+          "station_index": 121,
+          "echo_over_direct_dB": -71.32958749849486,
+          "echo_over_surface_dB": -54.48242337097726,
+          "contrast_floor_over_echo_dB": -40.515839152201394,
+          "pick_ns": 109.78043912175649
+        }
+      ]
+    },
+    "eps9_s0.001": {
+      "cover_eps_r": 9.0,
+      "cover_sigma": 0.001,
+      "debye": false,
+      "degenerate_zero_contrast": true,
+      "echo_over_direct_dB_median": null,
+      "echo_over_surface_dB_median": null,
+      "contrast_floor_over_echo_dB_worst": null,
+      "relief_pick_corr": null,
+      "alpha_Np_per_m": 0.06278838561133333,
+      "two_way_conductive_dB_at_model_cover": 3.0792597936282853,
+      "extrapolated_echo_over_direct_dB_at_real_depth": null,
+      "decay_db": {
+        "surface": -16.846165657019196,
+        "echo": -80.15266076967708
+      },
+      "per_station": [
+        {
+          "station_index": 1,
+          "echo_over_direct_dB": null,
+          "echo_over_surface_dB": null,
+          "contrast_floor_over_echo_dB": null,
+          "pick_ns": 93.14703925482368
+        },
+        {
+          "station_index": 11,
+          "echo_over_direct_dB": null,
+          "echo_over_surface_dB": null,
+          "contrast_floor_over_echo_dB": null,
+          "pick_ns": 88.98868928809048
+        },
+        {
+          "station_index": 21,
+          "echo_over_direct_dB": null,
+          "echo_over_surface_dB": null,
+          "contrast_floor_over_echo_dB": null,
+          "pick_ns": 84.83033932135729
+        },
+        {
+          "station_index": 31,
+          "echo_over_direct_dB": null,
+          "echo_over_surface_dB": null,
+          "contrast_floor_over_echo_dB": null,
+          "pick_ns": 82.33532934131738
+        },
+        {
+          "station_index": 41,
+          "echo_over_direct_dB": null,
+          "echo_over_surface_dB": null,
+          "contrast_floor_over_echo_dB": null,
+          "pick_ns": 79.84031936127744
+        },
+        {
+          "station_index": 51,
+          "echo_over_direct_dB": null,
+          "echo_over_surface_dB": null,
+          "contrast_floor_over_echo_dB": null,
+          "pick_ns": 79.84031936127744
+        },
+        {
+          "station_index": 61,
+          "echo_over_direct_dB": null,
+          "echo_over_surface_dB": null,
+          "contrast_floor_over_echo_dB": null,
+          "pick_ns": 79.84031936127744
+        },
+        {
+          "station_index": 71,
+          "echo_over_direct_dB": null,
+          "echo_over_surface_dB": null,
+          "contrast_floor_over_echo_dB": null,
+          "pick_ns": 82.33532934131738
+        },
+        {
+          "station_index": 81,
+          "echo_over_direct_dB": null,
+          "echo_over_surface_dB": null,
+          "contrast_floor_over_echo_dB": null,
+          "pick_ns": 83.99866932801065
+        },
+        {
+          "station_index": 91,
+          "echo_over_direct_dB": null,
+          "echo_over_surface_dB": null,
+          "contrast_floor_over_echo_dB": null,
+          "pick_ns": 87.32534930139721
+        },
+        {
+          "station_index": 101,
+          "echo_over_direct_dB": null,
+          "echo_over_surface_dB": null,
+          "contrast_floor_over_echo_dB": null,
+          "pick_ns": 88.98868928809048
+        },
+        {
+          "station_index": 111,
+          "echo_over_direct_dB": null,
+          "echo_over_surface_dB": null,
+          "contrast_floor_over_echo_dB": null,
+          "pick_ns": 89.82035928143712
+        },
+        {
+          "station_index": 121,
+          "echo_over_direct_dB": null,
+          "echo_over_surface_dB": null,
+          "contrast_floor_over_echo_dB": null,
+          "pick_ns": 89.82035928143712
+        }
+      ]
+    },
+    "eps9_s0.003": {
+      "cover_eps_r": 9.0,
+      "cover_sigma": 0.003,
+      "debye": false,
+      "degenerate_zero_contrast": false,
+      "echo_over_direct_dB_median": -68.016395483126,
+      "echo_over_surface_dB_median": -51.181132834226105,
+      "contrast_floor_over_echo_dB_worst": -37.76526596892349,
+      "relief_pick_corr": 0.15484673831479467,
+      "alpha_Np_per_m": 0.188365156834,
+      "two_way_conductive_dB_at_model_cover": 9.237779380884856,
+      "extrapolated_echo_over_direct_dB_at_real_depth": {
+        "13m": -101.31770916408149,
+        "18.5m": -119.31501776716779
+      },
+      "decay_db": {
+        "surface": -16.835261397574442,
+        "echo": -69.84901563680067
+      },
+      "per_station": [
+        {
+          "station_index": 1,
+          "echo_over_direct_dB": -68.9791770778971,
+          "echo_over_surface_dB": -52.14392452907748,
+          "contrast_floor_over_echo_dB": -40.675801924295584,
+          "pick_ns": 118.92880904856953
+        },
+        {
+          "station_index": 11,
+          "echo_over_direct_dB": -70.12097094368075,
+          "echo_over_surface_dB": -53.28571703872158,
+          "contrast_floor_over_echo_dB": -40.21987037060984,
+          "pick_ns": 105.62208915502329
+        },
+        {
+          "station_index": 21,
+          "echo_over_direct_dB": -67.4104170918481,
+          "echo_over_surface_dB": -50.57515978638011,
+          "contrast_floor_over_echo_dB": -49.42534990164866,
+          "pick_ns": 122.25548902195608
+        },
+        {
+          "station_index": 31,
+          "echo_over_direct_dB": -65.7107267196509,
+          "echo_over_surface_dB": -48.875465221514595,
+          "contrast_floor_over_echo_dB": -50.61364958928726,
+          "pick_ns": 122.25548902195608
+        },
+        {
+          "station_index": 41,
+          "echo_over_direct_dB": -69.6655747439293,
+          "echo_over_surface_dB": -52.83031415922075,
+          "contrast_floor_over_echo_dB": -48.13317432669837,
+          "pick_ns": 104.79041916167664
+        },
+        {
+          "station_index": 51,
+          "echo_over_direct_dB": -69.60748642402302,
+          "echo_over_surface_dB": -52.772227478056465,
+          "contrast_floor_over_echo_dB": -48.649370744271785,
+          "pick_ns": 104.79041916167664
+        },
+        {
+          "station_index": 61,
+          "echo_over_direct_dB": -68.016395483126,
+          "echo_over_surface_dB": -51.181132834226105,
+          "contrast_floor_over_echo_dB": -48.66909157168186,
+          "pick_ns": 117.26546906187625
+        },
+        {
+          "station_index": 71,
+          "echo_over_direct_dB": -66.7312872011067,
+          "echo_over_surface_dB": -49.89602129461357,
+          "contrast_floor_over_echo_dB": -48.54471899635784,
+          "pick_ns": 113.93878908848968
+        },
+        {
+          "station_index": 81,
+          "echo_over_direct_dB": -66.41042602172617,
+          "echo_over_surface_dB": -49.575162092672656,
+          "contrast_floor_over_echo_dB": -49.3718483546902,
+          "pick_ns": 113.93878908848968
+        },
+        {
+          "station_index": 91,
+          "echo_over_direct_dB": -67.20307657397743,
+          "echo_over_surface_dB": -50.36781500977203,
+          "contrast_floor_over_echo_dB": -43.56797628586456,
+          "pick_ns": 115.60212907518297
+        },
+        {
+          "station_index": 101,
+          "echo_over_direct_dB": -68.28410023932123,
+          "echo_over_surface_dB": -51.44883837862352,
+          "contrast_floor_over_echo_dB": -38.989706931001756,
+          "pick_ns": 115.60212907518297
+        },
+        {
+          "station_index": 111,
+          "echo_over_direct_dB": -68.88932034848948,
+          "echo_over_surface_dB": -52.05405526495318,
+          "contrast_floor_over_echo_dB": -37.76526596892349,
+          "pick_ns": 115.60212907518297
+        },
+        {
+          "station_index": 121,
+          "echo_over_direct_dB": -66.77581139478298,
+          "echo_over_surface_dB": -49.94053900724133,
+          "contrast_floor_over_echo_dB": -41.073798197894654,
+          "pick_ns": 108.94876912840985
+        }
+      ]
+    },
+    "eps12_s0.0005": {
+      "cover_eps_r": 12.0,
+      "cover_sigma": 0.0005,
+      "debye": false,
+      "degenerate_zero_contrast": false,
+      "echo_over_direct_dB_median": -44.342849987492,
+      "echo_over_surface_dB_median": -28.347644218497198,
+      "contrast_floor_over_echo_dB_worst": -37.947212603636366,
+      "relief_pick_corr": -0.01423279059900957,
+      "alpha_Np_per_m": 0.027188168501014,
+      "two_way_conductive_dB_at_model_cover": 1.3333586030670619,
+      "extrapolated_echo_over_direct_dB_at_real_depth": {
+        "13m": -49.149480592008956,
+        "18.5m": -51.74716833367912
+      },
+      "decay_db": {
+        "surface": -15.995228691487462,
+        "echo": -48.133477760228935
+      },
+      "per_station": [
+        {
+          "station_index": 1,
+          "echo_over_direct_dB": -44.35855447721829,
+          "echo_over_surface_dB": -28.36334377748432,
+          "contrast_floor_over_echo_dB": -37.947212603636366,
+          "pick_ns": 129.74051896207584
+        },
+        {
+          "station_index": 11,
+          "echo_over_direct_dB": -47.01644145669469,
+          "echo_over_surface_dB": -31.0212576027902,
+          "contrast_floor_over_echo_dB": -43.88033183048221,
+          "pick_ns": 128.9088489687292
+        },
+        {
+          "station_index": 21,
+          "echo_over_direct_dB": -41.76495800860309,
+          "echo_over_surface_dB": -25.769809493395236,
+          "contrast_floor_over_echo_dB": -50.38390528124825,
+          "pick_ns": 132.23552894211576
+        },
+        {
+          "station_index": 31,
+          "echo_over_direct_dB": -42.117396307984336,
+          "echo_over_surface_dB": -26.12221629119469,
+          "contrast_floor_over_echo_dB": -54.212907277147984,
+          "pick_ns": 132.23552894211576
+        },
+        {
+          "station_index": 41,
+          "echo_over_direct_dB": -47.65303006184885,
+          "echo_over_surface_dB": -31.65774638976034,
+          "contrast_floor_over_echo_dB": -49.61984417333733,
+          "pick_ns": 112.27544910179641
+        },
+        {
+          "station_index": 51,
+          "echo_over_direct_dB": -45.76438341665665,
+          "echo_over_surface_dB": -29.769087287579595,
+          "contrast_floor_over_echo_dB": -52.35894707589094,
+          "pick_ns": 128.9088489687292
+        },
+        {
+          "station_index": 61,
+          "echo_over_direct_dB": -43.495105344044944,
+          "echo_over_surface_dB": -27.499888425385755,
+          "contrast_floor_over_echo_dB": -54.32394750631153,
+          "pick_ns": 129.74051896207584
+        },
+        {
+          "station_index": 71,
+          "echo_over_direct_dB": -43.71978643985476,
+          "echo_over_surface_dB": -27.724588974249468,
+          "contrast_floor_over_echo_dB": -52.94487776599735,
+          "pick_ns": 124.75049900199602
+        },
+        {
+          "station_index": 81,
+          "echo_over_direct_dB": -42.7365232217836,
+          "echo_over_surface_dB": -26.741289439103348,
+          "contrast_floor_over_echo_dB": -54.77074259033528,
+          "pick_ns": 123.08715901530273
+        },
+        {
+          "station_index": 91,
+          "echo_over_direct_dB": -42.935315993540314,
+          "echo_over_surface_dB": -26.9401002135889,
+          "contrast_floor_over_echo_dB": -48.13223496413212,
+          "pick_ns": 122.25548902195608
+        },
+        {
+          "station_index": 101,
+          "echo_over_direct_dB": -44.342849987492,
+          "echo_over_surface_dB": -28.347644218497198,
+          "contrast_floor_over_echo_dB": -45.278996154925466,
+          "pick_ns": 123.91882900864937
+        },
+        {
+          "station_index": 111,
+          "echo_over_direct_dB": -46.448740632866716,
+          "echo_over_surface_dB": -30.453460886957394,
+          "contrast_floor_over_echo_dB": -44.85956657531563,
+          "pick_ns": 125.58216899534264
+        },
+        {
+          "station_index": 121,
+          "echo_over_direct_dB": -47.596222373726256,
+          "echo_over_surface_dB": -31.600901731091287,
+          "contrast_floor_over_echo_dB": -38.78615352609946,
+          "pick_ns": 114.77045908183632
+        }
+      ]
+    },
+    "eps12_s0.001": {
+      "cover_eps_r": 12.0,
+      "cover_sigma": 0.001,
+      "debye": false,
+      "degenerate_zero_contrast": false,
+      "echo_over_direct_dB_median": -45.75866153076931,
+      "echo_over_surface_dB_median": -29.76391304881913,
+      "contrast_floor_over_echo_dB_worst": -37.44348648414554,
+      "relief_pick_corr": 0.0030863242036424485,
+      "alpha_Np_per_m": 0.054376337002028,
+      "two_way_conductive_dB_at_model_cover": 2.6667172061341238,
+      "extrapolated_echo_over_direct_dB_at_real_depth": {
+        "13m": -55.37192273980322,
+        "18.5m": -60.56729822314354
+      },
+      "decay_db": {
+        "surface": -15.994766882244896,
+        "echo": -49.437547765549205
+      },
+      "per_station": [
+        {
+          "station_index": 1,
+          "echo_over_direct_dB": -45.91434917035536,
+          "echo_over_surface_dB": -29.919598799312247,
+          "contrast_floor_over_echo_dB": -37.44348648414554,
+          "pick_ns": 129.74051896207584
+        },
+        {
+          "station_index": 11,
+          "echo_over_direct_dB": -48.58956391090146,
+          "echo_over_surface_dB": -32.594836480960495,
+          "contrast_floor_over_echo_dB": -43.49718559407087,
+          "pick_ns": 128.9088489687292
+        },
+        {
+          "station_index": 21,
+          "echo_over_direct_dB": -43.27360602218771,
+          "echo_over_surface_dB": -27.278908117051266,
+          "contrast_floor_over_echo_dB": -49.96363379222856,
+          "pick_ns": 132.23552894211576
+        },
+        {
+          "station_index": 31,
+          "echo_over_direct_dB": -43.61579623152784,
+          "echo_over_surface_dB": -27.62107155920374,
+          "contrast_floor_over_echo_dB": -53.94931356362383,
+          "pick_ns": 132.23552894211576
+        },
+        {
+          "station_index": 41,
+          "echo_over_direct_dB": -48.862499364982085,
+          "echo_over_surface_dB": -32.86768651539154,
+          "contrast_floor_over_echo_dB": -49.57904405694401,
+          "pick_ns": 112.27544910179641
+        },
+        {
+          "station_index": 51,
+          "echo_over_direct_dB": -47.19574119955101,
+          "echo_over_surface_dB": -31.200917134239788,
+          "contrast_floor_over_echo_dB": -52.083072253877695,
+          "pick_ns": 128.9088489687292
+        },
+        {
+          "station_index": 61,
+          "echo_over_direct_dB": -44.94276467483577,
+          "echo_over_surface_dB": -28.948007175269986,
+          "contrast_floor_over_echo_dB": -54.01714915618718,
+          "pick_ns": 128.9088489687292
+        },
+        {
+          "station_index": 71,
+          "echo_over_direct_dB": -45.12226985760074,
+          "echo_over_surface_dB": -29.127528826250693,
+          "contrast_floor_over_echo_dB": -52.67247205700169,
+          "pick_ns": 124.75049900199602
+        },
+        {
+          "station_index": 81,
+          "echo_over_direct_dB": -44.11613680873779,
+          "echo_over_surface_dB": -28.121365668067547,
+          "contrast_floor_over_echo_dB": -54.507570359867536,
+          "pick_ns": 122.25548902195608
+        },
+        {
+          "station_index": 91,
+          "echo_over_direct_dB": -44.30777072610687,
+          "echo_over_surface_dB": -28.313014836549208,
+          "contrast_floor_over_echo_dB": -47.82813212557099,
+          "pick_ns": 122.25548902195608
+        },
+        {
+          "station_index": 101,
+          "echo_over_direct_dB": -45.75866153076931,
+          "echo_over_surface_dB": -29.76391304881913,
+          "contrast_floor_over_echo_dB": -44.92121816877845,
+          "pick_ns": 123.91882900864937
+        },
+        {
+          "station_index": 111,
+          "echo_over_direct_dB": -47.915355574318156,
+          "echo_over_surface_dB": -31.920543778918162,
+          "contrast_floor_over_echo_dB": -44.4364214898206,
+          "pick_ns": 125.58216899534264
+        },
+        {
+          "station_index": 121,
+          "echo_over_direct_dB": -48.81722967639995,
+          "echo_over_surface_dB": -32.82238333765615,
+          "contrast_floor_over_echo_dB": -38.695142965242255,
+          "pick_ns": 114.77045908183632
+        }
+      ]
+    },
+    "eps12_s0.003": {
+      "cover_eps_r": 12.0,
+      "cover_sigma": 0.003,
+      "debye": false,
+      "degenerate_zero_contrast": false,
+      "echo_over_direct_dB_median": -51.278351035233825,
+      "echo_over_surface_dB_median": -35.28863770813535,
+      "contrast_floor_over_echo_dB_worst": -35.44223695593462,
+      "relief_pick_corr": -0.15873554966519438,
+      "alpha_Np_per_m": 0.16312901100608398,
+      "two_way_conductive_dB_at_model_cover": 8.00015161840237,
+      "extrapolated_echo_over_direct_dB_at_real_depth": {
+        "13m": -80.11813466233555,
+        "18.5m": -95.70426111235652
+      },
+      "decay_db": {
+        "surface": -15.989720336960298,
+        "echo": -54.55278838279283
+      },
+      "per_station": [
+        {
+          "station_index": 1,
+          "echo_over_direct_dB": -52.052955155636376,
+          "echo_over_surface_dB": -36.06324598171204,
+          "contrast_floor_over_echo_dB": -35.44223695593462,
+          "pick_ns": 128.9088489687292
+        },
+        {
+          "station_index": 11,
+          "echo_over_direct_dB": -53.51714692304435,
+          "echo_over_surface_dB": -37.52745018784362,
+          "contrast_floor_over_echo_dB": -43.04530149968707,
+          "pick_ns": 113.10711909514305
+        },
+        {
+          "station_index": 21,
+          "echo_over_direct_dB": -49.19758597213842,
+          "echo_over_surface_dB": -33.207903689283064,
+          "contrast_floor_over_echo_dB": -48.36877004260334,
+          "pick_ns": 132.23552894211576
+        },
+        {
+          "station_index": 31,
+          "echo_over_direct_dB": -49.5045042970349,
+          "echo_over_surface_dB": -33.5148080552659,
+          "contrast_floor_over_echo_dB": -52.53643530125616,
+          "pick_ns": 132.23552894211576
+        },
+        {
+          "station_index": 41,
+          "echo_over_direct_dB": -53.600718443064046,
+          "echo_over_surface_dB": -37.610975849233405,
+          "contrast_floor_over_echo_dB": -49.22669539003755,
+          "pick_ns": 112.27544910179641
+        },
+        {
+          "station_index": 51,
+          "echo_over_direct_dB": -52.82366188186185,
+          "echo_over_surface_dB": -36.8339120222726,
+          "contrast_floor_over_echo_dB": -50.84162381898284,
+          "pick_ns": 128.07717897538257
+        },
+        {
+          "station_index": 61,
+          "echo_over_direct_dB": -50.62802121369619,
+          "echo_over_surface_dB": -34.63830462772777,
+          "contrast_floor_over_echo_dB": -52.68796013295595,
+          "pick_ns": 128.9088489687292
+        },
+        {
+          "station_index": 71,
+          "echo_over_direct_dB": -50.61326532424111,
+          "echo_over_surface_dB": -34.62355725206102,
+          "contrast_floor_over_echo_dB": -51.53646837750661,
+          "pick_ns": 123.91882900864937
+        },
+        {
+          "station_index": 81,
+          "echo_over_direct_dB": -49.509059011481824,
+          "echo_over_surface_dB": -33.51933664510257,
+          "contrast_floor_over_echo_dB": -53.36260826984762,
+          "pick_ns": 122.25548902195608
+        },
+        {
+          "station_index": 91,
+          "echo_over_direct_dB": -49.67867268531256,
+          "echo_over_surface_dB": -33.68895798581019,
+          "contrast_floor_over_echo_dB": -46.53921624214162,
+          "pick_ns": 121.42381902860946
+        },
+        {
+          "station_index": 101,
+          "echo_over_direct_dB": -51.278351035233825,
+          "echo_over_surface_dB": -35.28863770813535,
+          "contrast_floor_over_echo_dB": -43.485386992274016,
+          "pick_ns": 123.08715901530273
+        },
+        {
+          "station_index": 111,
+          "echo_over_direct_dB": -53.66769574824797,
+          "echo_over_surface_dB": -37.67794825219391,
+          "contrast_floor_over_echo_dB": -42.52235910546644,
+          "pick_ns": 125.58216899534264
+        },
+        {
+          "station_index": 121,
+          "echo_over_direct_dB": -53.578936557005775,
+          "echo_over_surface_dB": -37.58917161045223,
+          "contrast_floor_over_echo_dB": -38.29648444711396,
+          "pick_ns": 114.77045908183632
+        }
+      ]
+    },
+    "eps18.017_s0.0005": {
+      "cover_eps_r": 18.017,
+      "cover_sigma": 0.0005,
+      "debye": false,
+      "degenerate_zero_contrast": false,
+      "echo_over_direct_dB_median": -39.649461351824435,
+      "echo_over_surface_dB_median": -24.635186508667797,
+      "contrast_floor_over_echo_dB_worst": -33.97362840222189,
+      "relief_pick_corr": 0.1497755216467059,
+      "alpha_Np_per_m": 0.02218857115917374,
+      "two_way_conductive_dB_at_model_cover": 1.0881690042397152,
+      "extrapolated_echo_over_direct_dB_at_real_depth": {
+        "13m": -43.57220683577305,
+        "18.5m": -45.69220911923735
+      },
+      "decay_db": {
+        "surface": -15.014298044153975,
+        "echo": -43.36319411998607
+      },
+      "per_station": [
+        {
+          "station_index": 1,
+          "echo_over_direct_dB": -40.765895077740595,
+          "echo_over_surface_dB": -25.75153074092635,
+          "contrast_floor_over_echo_dB": -33.97362840222189,
+          "pick_ns": 143.87890884896873
+        },
+        {
+          "station_index": 11,
+          "echo_over_direct_dB": -37.4326648118212,
+          "echo_over_surface_dB": -22.41837269626857,
+          "contrast_floor_over_echo_dB": -44.147157232441,
+          "pick_ns": 149.7005988023952
+        },
+        {
+          "station_index": 21,
+          "echo_over_direct_dB": -34.63870323934591,
+          "echo_over_surface_dB": -19.62444694144019,
+          "contrast_floor_over_echo_dB": -51.88448207690242,
+          "pick_ns": 148.86892880904855
+        },
+        {
+          "station_index": 31,
+          "echo_over_direct_dB": -39.649461351824435,
+          "echo_over_surface_dB": -24.635186508667797,
+          "contrast_floor_over_echo_dB": -53.31471391282506,
+          "pick_ns": 148.86892880904855
+        },
+        {
+          "station_index": 41,
+          "echo_over_direct_dB": -41.93691010777918,
+          "echo_over_surface_dB": -26.922646753213918,
+          "contrast_floor_over_echo_dB": -49.772845247655354,
+          "pick_ns": 125.58216899534264
+        },
+        {
+          "station_index": 51,
+          "echo_over_direct_dB": -38.14266612078315,
+          "echo_over_surface_dB": -23.128434810108352,
+          "contrast_floor_over_echo_dB": -52.92333030854324,
+          "pick_ns": 148.03725881570193
+        },
+        {
+          "station_index": 61,
+          "echo_over_direct_dB": -39.27309194244215,
+          "echo_over_surface_dB": -24.258889681727833,
+          "contrast_floor_over_echo_dB": -50.94170937302428,
+          "pick_ns": 143.87890884896873
+        },
+        {
+          "station_index": 71,
+          "echo_over_direct_dB": -39.041842892826956,
+          "echo_over_surface_dB": -24.02763644853559,
+          "contrast_floor_over_echo_dB": -50.73352054226899,
+          "pick_ns": 141.3838988689288
+        },
+        {
+          "station_index": 81,
+          "echo_over_direct_dB": -39.37326911741212,
+          "echo_over_surface_dB": -24.35900162799044,
+          "contrast_floor_over_echo_dB": -49.358088538075286,
+          "pick_ns": 140.55222887558216
+        },
+        {
+          "station_index": 91,
+          "echo_over_direct_dB": -40.251315841521375,
+          "echo_over_surface_dB": -25.236985223207462,
+          "contrast_floor_over_echo_dB": -45.36517190477049,
+          "pick_ns": 131.40385894876914
+        },
+        {
+          "station_index": 101,
+          "echo_over_direct_dB": -41.62237470198957,
+          "echo_over_surface_dB": -26.607985025125345,
+          "contrast_floor_over_echo_dB": -40.59419805098003,
+          "pick_ns": 141.3838988689288
+        },
+        {
+          "station_index": 111,
+          "echo_over_direct_dB": -42.24015722014698,
+          "echo_over_surface_dB": -27.22572548298768,
+          "contrast_floor_over_echo_dB": -35.37740899249255,
+          "pick_ns": 143.04723885562208
+        },
+        {
+          "station_index": 121,
+          "echo_over_direct_dB": -41.77976248711034,
+          "echo_over_surface_dB": -26.765398394742462,
+          "contrast_floor_over_echo_dB": -41.19096272616318,
+          "pick_ns": 143.04723885562208
+        }
+      ]
+    },
+    "eps18.017_s0.001": {
+      "cover_eps_r": 18.017,
+      "cover_sigma": 0.001,
+      "debye": false,
+      "degenerate_zero_contrast": false,
+      "echo_over_direct_dB_median": -40.87200653334009,
+      "echo_over_surface_dB_median": -25.857879153834862,
+      "contrast_floor_over_echo_dB_worst": -33.692336817901044,
+      "relief_pick_corr": 0.1497755216467059,
+      "alpha_Np_per_m": 0.04437714231834748,
+      "two_way_conductive_dB_at_model_cover": 2.1763380084794304,
+      "extrapolated_echo_over_direct_dB_at_real_depth": {
+        "13m": -48.717497501237325,
+        "18.5m": -52.95750206816592
+      },
+      "decay_db": {
+        "surface": -15.014147709317395,
+        "echo": -44.43003085516528
+      },
+      "per_station": [
+        {
+          "station_index": 1,
+          "echo_over_direct_dB": -42.020322120695795,
+          "echo_over_surface_dB": -27.00611467336699,
+          "contrast_floor_over_echo_dB": -33.692336817901044,
+          "pick_ns": 143.87890884896873
+        },
+        {
+          "station_index": 11,
+          "echo_over_direct_dB": -38.67120284552257,
+          "echo_over_surface_dB": -23.65705918548421,
+          "contrast_floor_over_echo_dB": -43.86844487682973,
+          "pick_ns": 149.7005988023952
+        },
+        {
+          "station_index": 21,
+          "echo_over_direct_dB": -35.855859542160815,
+          "echo_over_surface_dB": -20.841747879565343,
+          "contrast_floor_over_echo_dB": -51.61368604736634,
+          "pick_ns": 148.86892880904855
+        },
+        {
+          "station_index": 31,
+          "echo_over_direct_dB": -40.87200653334009,
+          "echo_over_surface_dB": -25.857879153834862,
+          "contrast_floor_over_echo_dB": -53.05801086409683,
+          "pick_ns": 148.86892880904855
+        },
+        {
+          "station_index": 41,
+          "echo_over_direct_dB": -42.918054334315265,
+          "echo_over_surface_dB": -27.90393763464332,
+          "contrast_floor_over_echo_dB": -49.7532538971827,
+          "pick_ns": 125.58216899534264
+        },
+        {
+          "station_index": 51,
+          "echo_over_direct_dB": -39.34825996286116,
+          "echo_over_surface_dB": -24.33417143458457,
+          "contrast_floor_over_echo_dB": -52.69090796180908,
+          "pick_ns": 148.03725881570193
+        },
+        {
+          "station_index": 61,
+          "echo_over_direct_dB": -40.43332277608801,
+          "echo_over_surface_dB": -25.419259233316826,
+          "contrast_floor_over_echo_dB": -50.795292357542905,
+          "pick_ns": 143.87890884896873
+        },
+        {
+          "station_index": 71,
+          "echo_over_direct_dB": -40.19232358460983,
+          "echo_over_surface_dB": -25.17825649227195,
+          "contrast_floor_over_echo_dB": -50.58921794928918,
+          "pick_ns": 141.3838988689288
+        },
+        {
+          "station_index": 81,
+          "echo_over_direct_dB": -40.52816299790064,
+          "echo_over_surface_dB": -25.51404303518115,
+          "contrast_floor_over_echo_dB": -49.127450215684334,
+          "pick_ns": 140.55222887558216
+        },
+        {
+          "station_index": 91,
+          "echo_over_direct_dB": -41.27645726005812,
+          "echo_over_surface_dB": -26.262281411483993,
+          "contrast_floor_over_echo_dB": -45.29497967819963,
+          "pick_ns": 131.40385894876914
+        },
+        {
+          "station_index": 101,
+          "echo_over_direct_dB": -42.829914180569034,
+          "echo_over_surface_dB": -27.815685517963505,
+          "contrast_floor_over_echo_dB": -40.395955476616564,
+          "pick_ns": 141.3838988689288
+        },
+        {
+          "station_index": 111,
+          "echo_over_direct_dB": -43.46680648287319,
+          "echo_over_surface_dB": -28.452541470610655,
+          "contrast_floor_over_echo_dB": -35.147450406678075,
+          "pick_ns": 143.04723885562208
+        },
+        {
+          "station_index": 121,
+          "echo_over_direct_dB": -42.996689624795785,
+          "echo_over_surface_dB": -27.982484899409744,
+          "contrast_floor_over_echo_dB": -40.980014822815754,
+          "pick_ns": 143.04723885562208
+        }
+      ]
+    },
+    "eps18.017_s0.003": {
+      "cover_eps_r": 18.017,
+      "cover_sigma": 0.003,
+      "debye": false,
+      "degenerate_zero_contrast": false,
+      "echo_over_direct_dB_median": -45.344810270097646,
+      "echo_over_surface_dB_median": -30.33236083331233,
+      "contrast_floor_over_echo_dB_worst": -33.12358714888967,
+      "relief_pick_corr": -0.1987931844099601,
+      "alpha_Np_per_m": 0.13313142695504246,
+      "two_way_conductive_dB_at_model_cover": 6.5290140254382925,
+      "extrapolated_echo_over_direct_dB_at_real_depth": {
+        "13m": -68.88128317378937,
+        "18.5m": -81.60129687457513
+      },
+      "decay_db": {
+        "surface": -15.012433787000958,
+        "echo": -48.68278640666954
+      },
+      "per_station": [
+        {
+          "station_index": 1,
+          "echo_over_direct_dB": -46.457309520537315,
+          "echo_over_surface_dB": -31.444836397926604,
+          "contrast_floor_over_echo_dB": -33.12358714888967,
+          "pick_ns": 128.07717897538257
+        },
+        {
+          "station_index": 11,
+          "echo_over_direct_dB": -43.60445518448137,
+          "echo_over_surface_dB": -28.59202090448558,
+          "contrast_floor_over_echo_dB": -42.758802268430216,
+          "pick_ns": 149.7005988023952
+        },
+        {
+          "station_index": 21,
+          "echo_over_direct_dB": -40.70872750205137,
+          "echo_over_surface_dB": -25.6963136302055,
+          "contrast_floor_over_echo_dB": -50.51596453022163,
+          "pick_ns": 148.86892880904855
+        },
+        {
+          "station_index": 31,
+          "echo_over_direct_dB": -45.741894343163445,
+          "echo_over_surface_dB": -30.729472505322413,
+          "contrast_floor_over_echo_dB": -51.97063872576174,
+          "pick_ns": 148.86892880904855
+        },
+        {
+          "station_index": 41,
+          "echo_over_direct_dB": -46.83301286551423,
+          "echo_over_surface_dB": -31.820598743965736,
+          "contrast_floor_over_echo_dB": -49.65618171898754,
+          "pick_ns": 125.58216899534264
+        },
+        {
+          "station_index": 51,
+          "echo_over_direct_dB": -44.13252827855588,
+          "echo_over_surface_dB": -29.120131036624763,
+          "contrast_floor_over_echo_dB": -51.7758861959539,
+          "pick_ns": 147.20558882235528
+        },
+        {
+          "station_index": 61,
+          "echo_over_direct_dB": -45.0298531446522,
+          "echo_over_surface_dB": -30.017469636417488,
+          "contrast_floor_over_echo_dB": -50.21501644534736,
+          "pick_ns": 143.04723885562208
+        },
+        {
+          "station_index": 71,
+          "echo_over_direct_dB": -44.774647104874894,
+          "echo_over_surface_dB": -29.762261773621255,
+          "contrast_floor_over_echo_dB": -49.991984433021514,
+          "pick_ns": 140.55222887558216
+        },
+        {
+          "station_index": 81,
+          "echo_over_direct_dB": -45.13484196381367,
+          "echo_over_surface_dB": -30.122426826196698,
+          "contrast_floor_over_echo_dB": -48.20979885541014,
+          "pick_ns": 140.55222887558216
+        },
+        {
+          "station_index": 91,
+          "echo_over_direct_dB": -45.344810270097646,
+          "echo_over_surface_dB": -30.33236083331233,
+          "contrast_floor_over_echo_dB": -45.01137240987998,
+          "pick_ns": 130.5721889554225
+        },
+        {
+          "station_index": 101,
+          "echo_over_direct_dB": -47.05772119213031,
+          "echo_over_surface_dB": -32.045238164007486,
+          "contrast_floor_over_echo_dB": -40.16824131869746,
+          "pick_ns": 130.5721889554225
+        },
+        {
+          "station_index": 111,
+          "echo_over_direct_dB": -48.36824708393302,
+          "echo_over_surface_dB": -33.35574388980175,
+          "contrast_floor_over_echo_dB": -34.206571638095156,
+          "pick_ns": 143.04723885562208
+        },
+        {
+          "station_index": 121,
+          "echo_over_direct_dB": -47.85518766067706,
+          "echo_over_surface_dB": -32.84272254051437,
+          "contrast_floor_over_echo_dB": -40.08393579411241,
+          "pick_ns": 143.04723885562208
+        }
+      ]
+    },
+    "eps18.017_s0.003_debye": {
+      "cover_eps_r": 18.017,
+      "cover_sigma": 0.003,
+      "debye": true,
+      "degenerate_zero_contrast": false,
+      "echo_over_direct_dB_median": -65.61359283031243,
+      "echo_over_surface_dB_median": -50.762581596280086,
+      "contrast_floor_over_echo_dB_worst": -29.326321857480153,
+      "relief_pick_corr": 0.13703000194492135,
+      "alpha_Np_per_m": 0.13313142695504246,
+      "two_way_conductive_dB_at_model_cover": 6.5290140254382925,
+      "extrapolated_echo_over_direct_dB_at_real_depth": {
+        "13m": -89.15006573400414,
+        "18.5m": -101.87007943478991
+      },
+      "decay_db": {
+        "surface": -14.851008525661966,
+        "echo": -69.2108418289508
+      },
+      "per_station": [
+        {
+          "station_index": 1,
+          "echo_over_direct_dB": -65.60489109113011,
+          "echo_over_surface_dB": -50.75387682139532,
+          "contrast_floor_over_echo_dB": -30.284687551111027,
+          "pick_ns": 127.24550898203593
+        },
+        {
+          "station_index": 11,
+          "echo_over_direct_dB": -65.45568178161369,
+          "echo_over_surface_dB": -50.60466744248021,
+          "contrast_floor_over_echo_dB": -40.81361280672388,
+          "pick_ns": 126.41383898868929
+        },
+        {
+          "station_index": 21,
+          "echo_over_direct_dB": -63.71121597982443,
+          "echo_over_surface_dB": -48.86020369832528,
+          "contrast_floor_over_echo_dB": -44.15420139043828,
+          "pick_ns": 148.03725881570193
+        },
+        {
+          "station_index": 31,
+          "echo_over_direct_dB": -65.48918802659938,
+          "echo_over_surface_dB": -50.638176040765536,
+          "contrast_floor_over_echo_dB": -47.805426760649596,
+          "pick_ns": 125.58216899534264
+        },
+        {
+          "station_index": 41,
+          "echo_over_direct_dB": -65.61359283031243,
+          "echo_over_surface_dB": -50.762581596280086,
+          "contrast_floor_over_echo_dB": -47.14054712938221,
+          "pick_ns": 124.75049900199602
+        },
+        {
+          "station_index": 51,
+          "echo_over_direct_dB": -65.73029495136856,
+          "echo_over_surface_dB": -50.879286394931384,
+          "contrast_floor_over_echo_dB": -46.30958709629289,
+          "pick_ns": 124.75049900199602
+        },
+        {
+          "station_index": 61,
+          "echo_over_direct_dB": -65.85134235913598,
+          "echo_over_surface_dB": -51.00033534492613,
+          "contrast_floor_over_echo_dB": -45.70696219445995,
+          "pick_ns": 124.75049900199602
+        },
+        {
+          "station_index": 71,
+          "echo_over_direct_dB": -65.92480075606937,
+          "echo_over_surface_dB": -51.07379329698874,
+          "contrast_floor_over_echo_dB": -45.07696901623244,
+          "pick_ns": 125.58216899534264
+        },
+        {
+          "station_index": 81,
+          "echo_over_direct_dB": -65.4850753445275,
+          "echo_over_surface_dB": -50.634067890140756,
+          "contrast_floor_over_echo_dB": -44.83782905281843,
+          "pick_ns": 127.24550898203593
+        },
+        {
+          "station_index": 91,
+          "echo_over_direct_dB": -65.06162916977839,
+          "echo_over_surface_dB": -50.210622702859176,
+          "contrast_floor_over_echo_dB": -39.23189116492222,
+          "pick_ns": 129.74051896207584
+        },
+        {
+          "station_index": 101,
+          "echo_over_direct_dB": -67.08742753704485,
+          "echo_over_surface_dB": -52.23642197552798,
+          "contrast_floor_over_echo_dB": -35.49001758796818,
+          "pick_ns": 128.9088489687292
+        },
+        {
+          "station_index": 111,
+          "echo_over_direct_dB": -70.95250711879527,
+          "echo_over_surface_dB": -56.101503872534025,
+          "contrast_floor_over_echo_dB": -29.326321857480153,
+          "pick_ns": 124.75049900199602
+        },
+        {
+          "station_index": 121,
+          "echo_over_direct_dB": -67.87291007169677,
+          "echo_over_surface_dB": -53.02190910712596,
+          "contrast_floor_over_echo_dB": -32.95673781610479,
+          "pick_ns": 128.9088489687292
+        }
+      ]
+    }
+  },
+  "limits": "2D line source; contrast floor probed in surface->echo gap; extrapolation uses band-centre conductive alpha only (no Debye tail, 2D spreading); real anchors from a single CSV; site-adaptation diagnostic, not blind-test performance."
+}

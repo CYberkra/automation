@@ -180,6 +180,32 @@
  ],
  "runs": [
   {
+   "id": "hs4_material_scan_20261005",
+   "status": "COMPLETED_SITE_ADAPTATION_DIAGNOSTIC",
+   "report": "docs/research/2026-10-05_hs4_material_scan_findings.md",
+   "scripts": [
+    "scripts/hs4_material_scan_v0_1.py",
+    "scripts/run_hs4_material_scan_v0_1.cmd",
+    "scripts/analyze_hs4_material_scan.py"
+   ],
+   "results": [
+    "artifacts/research_checks/2026-10-05_hs4_material_scan_r1",
+    "artifacts/research_checks/2026-10-05_hs4_material_scan_analysis_r1"
+   ],
+   "calls_solver": true,
+   "calls_training": false,
+   "key_numbers": {
+    "traces": 260,
+    "debye_dispersion_penalty_dB": 20.27,
+    "echo_over_direct_dB_archived_recipe_at_3m": -65.61,
+    "echo_over_direct_dB_eps12_s0.001_extrap_18p5m": -60.57,
+    "real_interface_band_mean_dB": -60.38,
+    "negative_control_eps9_s0.001": "contrast identically zero",
+    "independent_dft_max_rel_l2": 9.970322198951551e-13
+   },
+   "limits": "2D line source; single 3m-cover relief model; band-centre conductive extrapolation; real anchors from one CSV (Line9, 36 dBm); site-adaptation diagnostic, not blind-test performance; no grid-convergence/3D claims."
+  },
+  {
    "id": "real_vs_sim_dynamic_range_20261005",
    "status": "COMPLETED_DIAGNOSTIC_NOT_PHYSICAL_ACCEPTANCE",
    "report": "docs/research/2026-10-05_real_vs_sim_dynamic_range.md",
