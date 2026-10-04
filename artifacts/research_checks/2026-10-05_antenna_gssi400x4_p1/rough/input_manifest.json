@@ -1,0 +1,196 @@
+{
+ "role": "rough",
+ "station_k": 6,
+ "station_x_abs": 18.25,
+ "shifts": {
+  "x": 11.6,
+  "z": 6.0
+ },
+ "domain_m": [
+  12.0,
+  3.2,
+  24.0
+ ],
+ "dl_m": 0.04,
+ "pml_cells": [
+  50,
+  10,
+  25,
+  50,
+  10,
+  25
+ ],
+ "time_window_s": 6e-07,
+ "ground_z_abs": 12.0,
+ "skid_z_abs": 27.0,
+ "antenna_anchor_shifted": [
+  6.65,
+  1.6,
+  21.0
+ ],
+ "antenna_case_m": [
+  1.2,
+  1.2,
+  0.712
+ ],
+ "materials": {
+  "rock": {
+   "er": 9,
+   "se": 0.001,
+   "mr": 1,
+   "sm": 0,
+   "id": "rock"
+  },
+  "cover": {
+   "er": 18.017,
+   "se": 0.003,
+   "mr": 1,
+   "sm": 0,
+   "id": "cover"
+  },
+  "debye": {
+   "poles": 1,
+   "er_delta": [
+    7.878
+   ],
+   "tau": [
+    6.4567e-09
+   ],
+   "material_ids": [
+    "cover"
+   ]
+  }
+ },
+ "n_subsurface_boxes": 600,
+ "subsurface_boxes_sha256_merkle": "e12901b3cd178b33abe08e437bc4105d2b9a28f65821d48e9581b4eb76385fa8",
+ "coarse_adapt_log": [
+  {
+   "action": "drop",
+   "type": "Box",
+   "material": "pcb",
+   "p1": [
+    6.178000000000001,
+    1.112,
+    21.032
+   ],
+   "p2": [
+    6.482,
+    2.08,
+    21.04
+   ],
+   "reason": "sub-cell pcb sheet (8 mm) not representable"
+  },
+  {
+   "action": "drop",
+   "type": "Box",
+   "material": "pcb",
+   "p1": [
+    6.8260000000000005,
+    1.112,
+    21.032
+   ],
+   "p2": [
+    7.130000000000001,
+    2.08,
+    21.04
+   ],
+   "reason": "sub-cell pcb sheet (8 mm) not representable"
+  },
+  {
+   "action": "drop",
+   "type": "Edge",
+   "material": "pec",
+   "p1": [
+    6.978000000000001,
+    1.584,
+    21.032
+   ],
+   "p2": [
+    6.978000000000001,
+    1.592,
+    21.032
+   ],
+   "reason": "sub-cell feed pin; feed is the voltage source point"
+  },
+  {
+   "action": "drop",
+   "type": "Edge",
+   "material": "pec",
+   "p1": [
+    6.978000000000001,
+    1.6,
+    21.032
+   ],
+   "p2": [
+    6.978000000000001,
+    1.608,
+    21.032
+   ],
+   "reason": "sub-cell feed pin; feed is the voltage source point"
+  },
+  {
+   "action": "drop",
+   "type": "Edge",
+   "material": "pec",
+   "p1": [
+    6.33,
+    1.584,
+    21.032
+   ],
+   "p2": [
+    6.33,
+    1.592,
+    21.032
+   ],
+   "reason": "sub-cell feed pin; feed is the voltage source point"
+  },
+  {
+   "action": "drop",
+   "type": "Edge",
+   "material": "pec",
+   "p1": [
+    6.33,
+    1.6,
+    21.032
+   ],
+   "p2": [
+    6.33,
+    1.608,
+    21.032
+   ],
+   "reason": "sub-cell feed pin; feed is the voltage source point"
+  },
+  {
+   "action": "thicken",
+   "type": "Box",
+   "material": "pec",
+   "p1": [
+    6.65,
+    1.008,
+    21.04
+   ],
+   "p2": [
+    6.658,
+    2.192,
+    21.48
+   ],
+   "axes": [
+    0
+   ],
+   "new_p1": [
+    6.634,
+    1.008,
+    21.04
+   ],
+   "new_p2": [
+    6.6739999999999995,
+    2.192,
+    21.48
+   ],
+   "reason": "sub-cell axis thickened to one cell"
+  }
+ ],
+ "script_sha256": "086928fe25512bec8a6c1a9649a36a750479844b9e64b868f65dc478431c5494",
+ "antenna_module_sha256": "4413674da023ee43e74cbedb93798233d52ef01fe94571465c1fe7a49e12ff3b",
+ "relief_source": "artifacts/research_checks/2026-10-04_hs4t2d_joint_grid_centre/centre_rough/profile.in"
+}

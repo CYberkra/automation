@@ -1,0 +1,64 @@
+{
+ "h5_sha256": "b3ea1e15a133304204cb26ce9e7420336068557ae0002ba3edec517426bea64a",
+ "attrs": {
+  "Iterations": 1300,
+  "dt": 7.703332806185881e-11,
+  "dx_dy_dz": [
+   0.04,
+   0.04,
+   0.04
+  ],
+  "gprMax": "4.0.0",
+  "nx_ny_nz": [
+   60,
+   60,
+   40
+  ]
+ },
+ "groups": [
+  "ports",
+  "rxs",
+  "srcs"
+ ],
+ "srcs": [
+  "src1"
+ ],
+ "srcs/src1": {
+  "subgroups": [
+   "excitation"
+  ],
+  "attrs": {
+   "GridPosition": "[22 30 11]",
+   "ID": "VoltageSource(22,30,11)",
+   "Polarisation": "y",
+   "Position": "[0.88 1.2  0.44]",
+   "Type": "VoltageSource"
+  },
+  "excitation_attrs": {
+   "DrivingQuantity": "generator_voltage",
+   "Polarisation": "y",
+   "Resistance": 257.97407389585214,
+   "SampleInterval": 7.703332806185881e-11,
+   "SchemaVersion": "1",
+   "SourceStartTime": 0.0,
+   "SourceStopTime": 1e-07,
+   "SourceType": "VoltageSource",
+   "SpatialScale": 1.0,
+   "TimeSampleOffset": 3.851666403092941e-11,
+   "Units": "V",
+   "UpdateLattice": "electric_half_step",
+   "WaveformAmplitude": 1.0,
+   "WaveformEvaluationTimeOffset": 3.851666403092941e-11,
+   "WaveformFrequency": 100000000.0,
+   "WaveformID": "hs4_impulse",
+   "WaveformType": "impulse"
+  },
+  "excitation_samples": 1300
+ },
+ "rx_dtype": "float64",
+ "rx_finite": true,
+ "rx_len": 1300,
+ "rx_peak_time_ns": 6.008599588824987,
+ "rx_peak_abs": 0.008748808606502189,
+ "rx_time_below_10pct_ns": 7.549266150062164
+}

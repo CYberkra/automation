@@ -1,0 +1,127 @@
+[
+ {
+  "action": "drop",
+  "type": "Box",
+  "material": "pcb",
+  "p1": [
+   0.728,
+   0.712,
+   0.43200000000000005
+  ],
+  "p2": [
+   1.032,
+   1.6800000000000002,
+   0.44
+  ],
+  "reason": "sub-cell pcb sheet (8 mm) not representable"
+ },
+ {
+  "action": "drop",
+  "type": "Box",
+  "material": "pcb",
+  "p1": [
+   1.376,
+   0.712,
+   0.43200000000000005
+  ],
+  "p2": [
+   1.6800000000000002,
+   1.6800000000000002,
+   0.44
+  ],
+  "reason": "sub-cell pcb sheet (8 mm) not representable"
+ },
+ {
+  "action": "drop",
+  "type": "Edge",
+  "material": "pec",
+  "p1": [
+   1.528,
+   1.184,
+   0.43200000000000005
+  ],
+  "p2": [
+   1.528,
+   1.192,
+   0.43200000000000005
+  ],
+  "reason": "sub-cell feed pin; feed is the voltage source point"
+ },
+ {
+  "action": "drop",
+  "type": "Edge",
+  "material": "pec",
+  "p1": [
+   1.528,
+   1.2,
+   0.43200000000000005
+  ],
+  "p2": [
+   1.528,
+   1.208,
+   0.43200000000000005
+  ],
+  "reason": "sub-cell feed pin; feed is the voltage source point"
+ },
+ {
+  "action": "drop",
+  "type": "Edge",
+  "material": "pec",
+  "p1": [
+   0.88,
+   1.184,
+   0.43200000000000005
+  ],
+  "p2": [
+   0.88,
+   1.192,
+   0.43200000000000005
+  ],
+  "reason": "sub-cell feed pin; feed is the voltage source point"
+ },
+ {
+  "action": "drop",
+  "type": "Edge",
+  "material": "pec",
+  "p1": [
+   0.88,
+   1.2,
+   0.43200000000000005
+  ],
+  "p2": [
+   0.88,
+   1.208,
+   0.43200000000000005
+  ],
+  "reason": "sub-cell feed pin; feed is the voltage source point"
+ },
+ {
+  "action": "thicken",
+  "type": "Box",
+  "material": "pec",
+  "p1": [
+   1.2,
+   0.608,
+   0.44
+  ],
+  "p2": [
+   1.208,
+   1.7919999999999998,
+   0.88
+  ],
+  "axes": [
+   0
+  ],
+  "new_p1": [
+   1.184,
+   0.608,
+   0.44
+  ],
+  "new_p2": [
+   1.224,
+   1.7919999999999998,
+   0.88
+  ],
+  "reason": "sub-cell axis thickened to one cell"
+ }
+]

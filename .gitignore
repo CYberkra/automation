@@ -38,6 +38,9 @@ Thumbs.db
 ~$*
 
 # Demoted large legacy evidence (see docs/research/2026-10-02_large_legacy_demotion_manifest.json); files stay local in place.
+# 2026-10-05 3D antenna batches: ~57 MB vtkhdf geometry volumes stay local (user: oversized files cannot be pushed).
+/artifacts/research_checks/2026-10-05_antenna_gssi400x4_p1/*/p1_*_geom.vtkhdf
+/artifacts/research_checks/2026-10-05_antenna_gssi400x4_p2/*/p2_*_geom.vtkhdf
 /artifacts/research_checks/2026-09-26_damage_ladder_r1_c00/records.json
 /artifacts/research_checks/2026-09-27_damage_ladder_dev_r1_c00/records.json
 /artifacts/research_checks/2026-09-26_damage_ladder_r2_c00/records.json
@@ -166,3 +169,4 @@ Thumbs.db
 /artifacts/research_checks/target_hs4_3d-ends_r1/*/cuda_cache.jsonl
 /artifacts/research_checks/target_hs4_3d-xwide-centre_r1/*/*.vtkhdf
 /artifacts/research_checks/target_hs4_3d-xwide-centre_r1/*/cuda_cache.jsonl
+/artifacts/research_checks/2026-10-05_antenna_gssi400x4_p1b/*.vtkhdf

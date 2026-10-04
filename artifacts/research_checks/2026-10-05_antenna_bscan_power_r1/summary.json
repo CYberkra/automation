@@ -1,0 +1,69 @@
+{
+ "status": "COMPLETED_DIAGNOSTIC_NOT_PHYSICAL_ACCEPTANCE",
+ "code_sha256": "4229fed7cc03e077fcd5238dcdb5e07d5c0be6d7d5b627de782821c00682094e",
+ "p2_batch": "artifacts\\research_checks\\2026-10-05_antenna_gssi400x4_p2",
+ "sfcw_chain": {
+  "freqs": "20-170 MHz, 501 bins",
+  "tail_taper": 0.2,
+  "window": "hann",
+  "zero_pad_factor": 8
+ },
+ "noise_model": {
+  "same_as": "analyze_hs4_power_budget.py",
+  "D_ref_dB_at_36dBm": 100.0,
+  "seed": 20261005
+ },
+ "range_gate_ns": [
+  120.0,
+  140.0
+ ],
+ "range_gate_reason": "cross-scene subtraction floor at direct/surface-wave times (see 2026-10-05_cross_scene_subtraction_floor.md); causal floor for relief influence ~118 ns",
+ "powers": {
+  "37dBm": "5W",
+  "43dBm": "20W"
+ },
+ "echo_over_direct_dB_per_station": [
+  -73.6088024181274,
+  -72.35899068716245,
+  -74.4854124307021,
+  -75.98739429574582,
+  -75.95706272737243,
+  -75.25761149835103,
+  -75.58670510202258,
+  -76.5622274785153,
+  -75.90239294378512,
+  -73.69891127184465,
+  -74.44102840483362,
+  -75.30277929860473,
+  -73.68235462938834
+ ],
+ "margins_centre_station": {
+  "P37": {
+   "d_eff": 101.0,
+   "noise_rms_median": 1.711912706935458e-07,
+   "margin_dB": 38.94310373214736
+  },
+  "P43": {
+   "d_eff": 107.0,
+   "noise_rms_median": 7.993765326091736e-08,
+   "margin_dB": 45.55770815383517
+  }
+ },
+ "relief_two_way_ns": [
+  190.89149394259556,
+  185.0015133069184,
+  179.56460810475483,
+  175.20375705718624,
+  172.37203559772604,
+  172.37203559772604,
+  172.37203559772604,
+  175.20375705718624,
+  178.03547851664638,
+  182.39632956421497,
+  185.0015133069184,
+  186.53064289502692,
+  186.53064289502692
+ ],
+ "physical_attribution_certified": false,
+ "scope": "Antenna is an ASSUMED x4-scaled design on a coarse 4 cm grid (thin details quantized); noise floor declared, not measured; no field claims."
+}

@@ -1,4 +1,34 @@
 {
+ "gssi400x4_antenna_batches_2026_10_05": {
+  "report": "docs/research/2026-10-05_real_antenna_findings.md",
+  "floor_note": "docs/research/2026-10-05_cross_scene_subtraction_floor.md",
+  "plan": "docs/research/2026-10-05_real_antenna_sfcw_plan.md",
+  "status": "COMPLETED_DIAGNOSTIC_NOT_PHYSICAL_ACCEPTANCE",
+  "calls_solver": true,
+  "calls_training": false,
+  "capsules": [
+   "artifacts/research_checks/2026-10-05_antenna_gssi400x4_p0",
+   "artifacts/research_checks/2026-10-05_antenna_gssi400x4_p1",
+   "artifacts/research_checks/2026-10-05_antenna_gssi400x4_p1b",
+   "artifacts/research_checks/2026-10-05_antenna_gssi400x4_p2",
+   "artifacts/research_checks/2026-10-05_antenna_bscan_power_r1"
+  ],
+  "new_solver_cases": 30,
+  "solver": "gprMax 4.0.0 GPU double (RTX 4090 Laptop), Python API scenes",
+  "antenna": "gprMax built-in GSSI-400 x4 EM-similitude scaled, ASSUMED design; coarse_adapt log per manifest",
+  "key_numbers": {
+   "p0_s11_band_db": [-4.13, -3.35],
+   "p2_traces": 26,
+   "p2_solve_seconds_per_trace": 91,
+   "echo_over_direct_dB_gated_range": [-76.6, -72.4],
+   "power_margin_dB_5W": 38.9,
+   "power_margin_dB_20W": 45.6,
+   "contrast_floor_at_surface_time_dB": -44.4
+  },
+  "local_only_large_files": "4 x ~57 MB vtkhdf geometry volumes (gitignored by user size constraint)",
+  "physical_attribution_certified": false,
+  "grid_convergence_certified": false
+ },
  "uav_gpr_airborne_litscan_2026_10_04": {
   "report": "docs/research/2026-10-04_uav_gpr_airborne_literature_and_manual.md",
   "ledger": "docs/research/2026-10-04_uav_gpr_litscan_ledger.json",
