@@ -17,10 +17,16 @@
   "solver": "gprMax 4.0.0 GPU double (RTX 4090 Laptop), Python API scenes",
   "antenna": "gprMax built-in GSSI-400 x4 EM-similitude scaled, ASSUMED design; coarse_adapt log per manifest",
   "key_numbers": {
-   "p0_s11_band_db": [-4.13, -3.35],
+   "p0_s11_band_db": [
+    -4.13,
+    -3.35
+   ],
    "p2_traces": 26,
    "p2_solve_seconds_per_trace": 91,
-   "echo_over_direct_dB_gated_range": [-76.6, -72.4],
+   "echo_over_direct_dB_gated_range": [
+    -76.6,
+    -72.4
+   ],
    "power_margin_dB_5W": 38.9,
    "power_margin_dB_20W": 45.6,
    "contrast_floor_at_surface_time_dB": -44.4
@@ -29,11 +35,13 @@
   "background_suppression_2026_10_05": {
    "script": "scripts/analyze_antenna_bscan_background.py",
    "results": "artifacts/research_checks/2026-10-05_antenna_bscan_background_r1",
-   "key_numbers": {"svd_rank2_residual_0_140ns": 1.53e-05,
-                   "svd_rank2_relief_corr_median": 0.541,
-                   "svd_rank3_note": "gap 5.3e-05 near tie, relief corr drops to 0.248 (signal damage)",
-                   "rpca_lam1_residual": 0.544,
-                   "halfspace_control_relief_rms": 3.42e-08}
+   "key_numbers": {
+    "svd_rank2_residual_0_140ns": 1.53e-05,
+    "svd_rank2_relief_corr_median": 0.541,
+    "svd_rank3_note": "gap 5.3e-05 near tie, relief corr drops to 0.248 (signal damage)",
+    "rpca_lam1_residual": 0.544,
+    "halfspace_control_relief_rms": 3.42e-08
+   }
   },
   "physical_attribution_certified": false,
   "grid_convergence_certified": false
@@ -171,6 +179,34 @@
   "reference_state stays numerically_unresolved: no physical acceptance threshold, no training labels, no clean truth. Vertical refinement is done (ZFINE2 adjacent L2 66.6647% -> 17.2452% -> 4.1216%) and must not be re-planned as pending work."
  ],
  "runs": [
+  {
+   "id": "real_vs_sim_dynamic_range_20261005",
+   "status": "COMPLETED_DIAGNOSTIC_NOT_PHYSICAL_ACCEPTANCE",
+   "report": "docs/research/2026-10-05_real_vs_sim_dynamic_range.md",
+   "scripts": [
+    "artifacts/research_checks/2026-10-05_real_vs_sim_dynamic_range/analyze_real_dynamic_range.py"
+   ],
+   "results": [
+    "artifacts/research_checks/2026-10-05_real_vs_sim_dynamic_range"
+   ],
+   "calls_solver": false,
+   "calls_training": false,
+   "key_numbers": {
+    "real_altitude_median_m": 9.05,
+    "real_aperture_m": 216.2,
+    "real_direct_peak_ns": 15.4,
+    "real_ground_bounce_vs_direct_dB": -19.85,
+    "real_late_peak_vs_early_peak_dB_median": -26.65,
+    "real_rms_400_700_vs_0_100_dB": -48.78,
+    "sim_2d_8m_echo_over_direct_dB": -65.85,
+    "sim_antenna_15m_echo_over_direct_dB": [
+     -76.6,
+     -72.4
+    ],
+    "gap_dB_approx": "30-45"
+   },
+   "limits": "Single file Line9(36) single power; real CSV is device-chain processed export (calibration/gating unknown), absolute dB baseline not directly comparable to raw total-field sims; attenuation-slope inversion of sigma not unique; interface band identification interpretive; no solver runs; no field claims."
+  },
   {
    "id": "hs4_power_budget_20261005",
    "status": "COMPLETED_DIAGNOSTIC_NOT_PHYSICAL_ACCEPTANCE",
