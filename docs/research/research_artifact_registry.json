@@ -38,6 +38,16 @@
  ],
  "runs": [
   {
+   "id": "hs4_next_controls_and_continuation_failure_20261004",
+   "status": "NEXT_CONTROL_DESIGN_NO_NEW_SOLVER_CONTINUATION_FAILED",
+   "report": "docs/research/2026-10-04_hs4_next_controls.md",
+   "directory": "artifacts/research_checks/2026-10-04_hs4_continuation_failure",
+   "calls_solver": false,
+   "calls_training": false,
+   "scheduled_task_actual_status": "FAILED_WRITER_CONFLICT",
+   "next": "Bounded grid/station robustness preflight then matched3D reference and resource audit. Current1cm RAM budget insufficient; each future batch must freeze independently."
+  },
+  {
    "id": "hs4_height_wavefield_attribution_20261004",
    "status": "COMPLETED_REGIONAL_CAUSAL_ATTRIBUTION_NOT_ABSOLUTE_GRID_OR_3D_ACCEPTANCE",
    "report": "docs/research/2026-10-04_hs4_height_wavefield_findings.md",
@@ -2643,7 +2653,7 @@
   "schema": "research-artifact-registry/1",
  "solver_execution_gate": "configs/research/gprmax_v4_execution_gate.json",
  "updated_date": "2026-10-04",
- "current_handoff": "START_HERE.md - HS4 height wavefield/local controls completed47traces; high-altitude upper subsurface stripe has common-crest regional causal evidence. Centre grid residual remains7.586percent; no absolute/full-scan/3D/field acceptance. Same-session2026-10-04T06:00:00+08 continuation registered; G4 unchanged.",
+ "current_handoff": "START_HERE.md - HS4 regional attribution47traces retained. Next: native-grid/station robustness and matched3D reference/resource audit. 06:00 same-session continuation actually failed due active-writer conflict; current session resumes. 1cm pilot not run due RAM budget. G4 unchanged.",
  "t3_operator_effects_rpca_addendum": "docs/research/2026-09-29_rpca_effects_addendum.md",
  "operator_catalogue_v0_2": "configs/research/operator_catalogue_v0.2.json",
  "reward_weights_v0_2": "docs/research/2026-09-29_reward_weights_v0.2.md",
