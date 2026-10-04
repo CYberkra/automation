@@ -1,0 +1,111 @@
+{
+  "status": "PASS",
+  "completed": true,
+  "contract_sha256": "72227f68f303c163b70861a10b2fe8a07320762a3db8e19aa79a4a23694698f5",
+  "code_sha256": "3d20d20a302a6ecb19cb366a7eba40e834ba4c6010eb4199becca52a05a8546f",
+  "groups": [
+    {
+      "id": "centre_rough",
+      "input_sha256": "386c2fa0c2cb38394b63f73e76c9488decd106edc4ebbc15b69a6202adf7d661",
+      "physical_factor_check": "PASS",
+      "full_material_array_sha256": "4b62679c9b5b9b6737102bb09e2501f745ecd274ced73e3fe62ad4c3bfe7841c",
+      "old_roi_exactly_preserved": true,
+      "new_cells": [
+        4320,
+        1,
+        1320
+      ],
+      "raw_sha256": "4d1c984e34b0ba2512f3b4b8190515028b1c346f1e64b0a2874411f83df89635",
+      "geometry_sha256": "f6f23471b07f85bda0a8eb787b2cbf450df2448db3c40e92f118f05a34fe0b09",
+      "dtype": "float64",
+      "dt_s": 5.896635841874211e-11,
+      "iterations": 10177
+    },
+    {
+      "id": "centre_halfspace",
+      "input_sha256": "8d63af833e821e00575701b55e349ddd4a4e4898110ce7a06350eb513c7fc943",
+      "physical_factor_check": "PASS",
+      "full_material_array_sha256": "f363add8e65d9620187d413b880e97beb58e4d0769256d896a346461ed431c2e",
+      "old_roi_exactly_preserved": true,
+      "new_cells": [
+        4320,
+        1,
+        1320
+      ],
+      "raw_sha256": "612fa3ec0ad926bd380565b64649d1afcb5296142e81cabc17acbed89b6f6d72",
+      "geometry_sha256": "821b54e9cef5c2c0a6ba8576ef84dd322eac11651b48018bb75d744544c990d6",
+      "dtype": "float64",
+      "dt_s": 5.896635841874211e-11,
+      "iterations": 10177
+    },
+    {
+      "id": "left_rough",
+      "input_sha256": "e3a0ab2c3185fbe8b0590d29bcfe0d64c16c4365f43da311e129acb02c34e199",
+      "physical_factor_check": "PASS",
+      "full_material_array_sha256": "4b62679c9b5b9b6737102bb09e2501f745ecd274ced73e3fe62ad4c3bfe7841c",
+      "old_roi_exactly_preserved": true,
+      "new_cells": [
+        4320,
+        1,
+        1320
+      ],
+      "raw_sha256": "9dfd3bbabadd69a3e8598e17702f84b8ca0df601c11eeb66b40680afc97af162",
+      "geometry_sha256": "44bb5c5183bffb6c000c2059ecddc746542bdf135a6c41224e6ca7294cc70252",
+      "dtype": "float64",
+      "dt_s": 5.896635841874211e-11,
+      "iterations": 10177
+    },
+    {
+      "id": "left_halfspace",
+      "input_sha256": "bde54b07d4bb5a66f837ae820a154980bc776bf606d216798c2b3ace48a97dd1",
+      "physical_factor_check": "PASS",
+      "full_material_array_sha256": "f363add8e65d9620187d413b880e97beb58e4d0769256d896a346461ed431c2e",
+      "old_roi_exactly_preserved": true,
+      "new_cells": [
+        4320,
+        1,
+        1320
+      ],
+      "raw_sha256": "08acf65df3f79303b3bcb38ebf2fdd4a978c7480142e24a3c76c33dd49fb34da",
+      "geometry_sha256": "0e9d9b8133660c590cc3c1840fafe32b88438f7abd65d5eda21fccf056dac66d",
+      "dtype": "float64",
+      "dt_s": 5.896635841874211e-11,
+      "iterations": 10177
+    },
+    {
+      "id": "right_rough",
+      "input_sha256": "39690959b86bd5c49de60f9795dd48c7cc2636a4263050a52f9c76dfd358df0d",
+      "physical_factor_check": "PASS",
+      "full_material_array_sha256": "4b62679c9b5b9b6737102bb09e2501f745ecd274ced73e3fe62ad4c3bfe7841c",
+      "old_roi_exactly_preserved": true,
+      "new_cells": [
+        4320,
+        1,
+        1320
+      ],
+      "raw_sha256": "fdc345867ae6ffc105b6bdc995d07a36867ad7d45a2ab0cea727f27febfdb67b",
+      "geometry_sha256": "bd69586efebbc6057c1561fd422c0f7106453b606782d197db07d0e360a01238",
+      "dtype": "float64",
+      "dt_s": 5.896635841874211e-11,
+      "iterations": 10177
+    },
+    {
+      "id": "right_halfspace",
+      "input_sha256": "8e688490d886c7c898089255083bfdda7a0c31e90fff5d4783b4a7e1083f8719",
+      "physical_factor_check": "PASS",
+      "full_material_array_sha256": "f363add8e65d9620187d413b880e97beb58e4d0769256d896a346461ed431c2e",
+      "old_roi_exactly_preserved": true,
+      "new_cells": [
+        4320,
+        1,
+        1320
+      ],
+      "raw_sha256": "69e78f9d26330aca82b5ea789e297cdb1c73584c0452a27095e19291fa4b0d95",
+      "geometry_sha256": "ca136716f3f1c0c449f48d6ec8333b8e6c2e090ebcb2ac431e24a5dc089beeae",
+      "dtype": "float64",
+      "dt_s": 5.896635841874211e-11,
+      "iterations": 10177
+    }
+  ],
+  "scope": "X-domain sensitivity only; unchanged top/bottom, grid and 2D line-source model."
+}

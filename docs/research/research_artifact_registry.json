@@ -126,6 +126,38 @@
  ],
  "runs": [
   {
+   "id": "hs4_large_domain_108m_local_execution_20261004",
+   "status": "COMPLETED_SIX_108M_TRACES_DIAGNOSTIC_NOT_PHYSICAL_ACCEPTANCE",
+   "report": "docs/research/2026-10-04_hs4_large_domain_findings.md",
+   "scripts": [
+    "scripts/hs4_large_domain_controls.py",
+    "scripts/run_hs4_large_domain_controls.cmd",
+    "scripts/analyze_hs4_large_domain_controls.py"
+   ],
+   "results": [
+    "artifacts/research_checks/2026-10-04_hs4_large_domain_target_r1",
+    "artifacts/research_checks/2026-10-04_hs4_large_domain_target_results_r1"
+   ],
+   "calls_solver": true,
+   "calls_training": false,
+   "key_numbers": {
+    "traces": 6,
+    "sum_solver_elapsed_s": 176.578,
+    "maximum_owned_RSS_GiB": 1.4572029113769531,
+    "bandlimited_interface_window_max_relative_L2": 1.5943274209397538e-09,
+    "bandlimited_total_window_max_relative_L2": 2.1782496265150785e-08,
+    "envelope_peak_shift_ns": 0.0,
+    "three_station_span_ns_36m_and_108m": 17.465069860279442,
+    "raw_broadband_interface_relative_L2_underground_160_220ns": [
+     0.99999864627484,
+     0.9999985127998328,
+     0.9999981051609441
+    ],
+    "independent_direct_DFT_max_relative_L2": 8.38163672989487e-13
+   },
+   "limits": "X36->108m only, 3 stations not full B-scan, 2D line source, top/bottom unchanged; no grid convergence/physical attribution/field claims. vtkhdf/cuda_cache local; hashes in completed_verification.json."
+  },
+  {
    "id": "hs4_cross_pc_local_execution_20261004",
    "status": "COMPLETED_FIVE_STAGES_20_TRACES_DIAGNOSTIC_NOT_PHYSICAL_ACCEPTANCE",
    "report": "docs/research/2026-10-04_hs4_cross_pc_local_execution.md",
