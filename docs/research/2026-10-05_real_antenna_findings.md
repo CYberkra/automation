@@ -26,6 +26,16 @@
 - `artifacts/research_checks/2026-10-05_antenna_bscan_power_r1/`（图板+包络图+summary.json)
 - 脚本：`scripts/antenna_gssi400_x4.py`、`p0_…`、`p1_…`、`p1b_…`、`p2_…`、`analyze_antenna_bscan_power.py` 及对应 cmd 包装器。
 
+## 背景抑制（2026-10-05 追加，用户"做个背景抑制呢")
+
+脚本 `scripts/analyze_antenna_bscan_background.py`，结果 `artifacts/research_checks/2026-10-05_antenna_bscan_background_r1/`（图 `background_suppression.png`/`_gray.png` + summary.json)。对 P2 总场 rough B-scan（声明窗 0–300 ns,[sample, trace],SFCW real bandpass）应用冻结算子目录的背景算子，对照参考为门后 rough−halfspace contrast（带数值底警告），负控为 halfspace 上加 SVD rank-2。
+
+- **直达+地表波在该窗内几乎是秩 2 结构**：相对奇异值 1 / 9.2e-3 / 1.0e-4。mean×1.0 与 SVD rank-1 把 0–140ns 能量压到 0.92–0.94%(−40dB);**SVD rank-2 压到 1.5e-5(−96dB)** 且秩 2/3 截断间隙（9.0e-3）可分辨；rank-3 的截断间隙（5.3e-5）接近数值并列，且界面窗相关降到 0.248——**rank-3 开始吃信号，不要用**。
+- 界面窗（±25ns 沿真实起伏）与门后 contrast 参考的逐站相关：median 0.54–0.56(mean1.0 / svd1 / svd2 相近），逐站 −0.09~0.80，相对 L2 0.62–1.22——**部分对齐**，剩余偏差来自参考数值底、压制伪影及多次反射残留，机制级不裁决。
+- RPCA(λ=λ0）残留 54% 早窗能量（rank_L=6)，对本数据不如直接 SVD rank-2；不作首选。
+- 负控：halfspace 上 SVD rank-2 后界面窗残余 RMS 3.4e-8——**没有界面时不会凭空造出界面**，压制不引入假阳性。
+- 声明：去除分量是"相干水平分量（直达+地表波）"，不是已认证噪声；若真实界面完全水平等时，这些算子同样会把它去掉——本场景界面起伏随站位移动所以幸存。
+
 ## 下一步建议（待用户决定）
 
 1. 天线失配（S11≈−3.5 dB）主导振铃与多次反射：若要做"真实天线"结论，需要按实际设备的天线模型或至少加匹配段；当前 ×4 缩放假定设计只能给机制级结论。

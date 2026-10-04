@@ -26,6 +26,15 @@
    "contrast_floor_at_surface_time_dB": -44.4
   },
   "local_only_large_files": "4 x ~57 MB vtkhdf geometry volumes (gitignored by user size constraint)",
+  "background_suppression_2026_10_05": {
+   "script": "scripts/analyze_antenna_bscan_background.py",
+   "results": "artifacts/research_checks/2026-10-05_antenna_bscan_background_r1",
+   "key_numbers": {"svd_rank2_residual_0_140ns": 1.53e-05,
+                   "svd_rank2_relief_corr_median": 0.541,
+                   "svd_rank3_note": "gap 5.3e-05 near tie, relief corr drops to 0.248 (signal damage)",
+                   "rpca_lam1_residual": 0.544,
+                   "halfspace_control_relief_rms": 3.42e-08}
+  },
   "physical_attribution_certified": false,
   "grid_convergence_certified": false
  },
