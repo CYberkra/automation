@@ -1,0 +1,83 @@
+
+=== Electromagnetic modelling software based on the Finite-Difference Time-Domain (FDTD) method 
+
+    www.gprmax.com   __  __
+     __ _ _ __  _ __|  \/  | __ ___  __
+    / _` | '_ \| '__| |\/| |/ _` \ \/ /
+   | (_| | |_) | |  | |  | | (_| |>  <
+    \__, | .__/|_|  |_|  |_|\__,_/_/\_\\
+    |___/|_|
+                     v4.0.0 (Caol Ila)
+
+ Copyright (C) 2015-2026: The University of Edinburgh, United Kingdom
+
+ gprMax is free software: you can redistribute it and/or modify it under the
+  terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+ gprMax is distributed in the hope that it will be useful, but WITHOUT ANY
+  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+  A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ You should have received a copy of the GNU General Public License along with
+  gprMax.  If not, see www.gnu.org/licenses.
+
+LAPTOP-83GRKUNE | unknown unknown | unknown x unknown (16 cores, 32 cores with Hyper-Threading) | 63.2 GiB | Windows 11 (64-bit)
+|--->OpenMP: 16 threads
+|--->CUDA:
+     |--->Device 0: NVIDIA GeForce RTX 4090 Laptop GPU | 16.0 GiB
+Constants/variables used/available for Python scripting: {c: 299792458.0, current_model_run: 1, e0: 8.8541878188e-12, inputfile: E:\automation_djh\artifacts\research_checks\target_hs4_3d-centre_cont_r1\centre_flat\profile.in, m0: 1.25663706127e-06, number_model_runs: 1, z0: 376.7303134118051}
+
+Model title: HS4 rough-interface half-space standard piece v0.1 (natural-morphology interface, edge-controlled continuation, materials through PML); frozen numerics identical to B3D5CM-t07 / HS1-HS3
+Spatial discretisation: 0.05 x 0.05 x 0.05m
+Requested domain mode: 3D
+Domain size: 12 x 12 x 33m (240 x 240 x 660 = 3.8016e+07 cells)
+Mode: 3D
+Time step (at CFL limit): 9.62917e-11 secs
+Time window: 6e-07 secs (6233 iterations)
+Simulation will use 8 OpenMP threads
+PML thickness: x0=20, y0=20, z0=20, xmax=20, ymax=20, zmax=20
+Waveform impulse of type impulse with maximum amplitude scaling 1, frequency 1Hz created.
+Hertzian dipole with polarity x at 1.6m, 5.6m, 27m, using waveform impulse created.
+Receiver at 1.6m, 6.9m, 27m with output component(s) Ex created.
+Material rock with eps_r=9, sigma=0.001 S/m; mu_r=1, sigma*=0 Ohm/m created.
+Material cover with eps_r=18.017, sigma=0.003 S/m; mu_r=1, sigma*=0 Ohm/m created.
+Debye disperion added to cover with delta_eps_r=7.88, and tau=6.457e-09 secs created.
+PML formulation set to HORIPML
+global PML configuration CFS parameters: alpha (scaling: constant, scaling direction: forward, min: 0, max: 0), kappa (scaling: constant, scaling direction: forward, min: 1, max: 1), sigma (scaling: quartic, scaling direction: forward, min: 0, max: 0.21235349838321013) created.
+Geometry view from 0m, 0m, 0m, to 12m, 12m, 33m, discretisation 0.05m, 0.05m, 0.05m, with filename base hs4_geom created.
+Box from 0m, 0m, 0m, to 12m, 12m, 12m of material(s) rock created, dielectric smoothing is on.
+Box from 0m, 0m, 9.05m, to 12m, 12m, 12m of material(s) cover created, dielectric smoothing is off.
+
+--- Model 1/1, input file: E:\automation_djh\artifacts\research_checks\target_hs4_3d-centre_cont_r1\centre_flat\profile.in 
+
+
+Memory required (estimated): ~5.5 GB [main_grid] + ~65.0 MB overhead = 5.6 GB
+
+PML boundaries [main_grid]: {formulation: HORIPML, order: 1, thickness (cells): 20}
+
+
+Materials [main_grid]:
+    |            |         |        | sigma | Delta | tau        | omega | delta | gamma |      | sigma*  | Dielectric 
+ ID | Name       | Type    | eps_r  | [S/m] | eps_r | [s]        | [Hz]  | [Hz]  | [Hz]  | mu_r | [Ohm/m] | smoothable 
+----+------------+---------+--------+-------+-------+------------+-------+-------+-------+------+---------+------------
+  0 | pec        | builtin | 1      | inf   |       |            |       |       |       | 1    | 0       | False      
+  1 | pmc        | builtin | 1      | 0     |       |            |       |       |       | 1    | inf     | False      
+  2 | free_space | builtin | 1      | 0     |       |            |       |       |       | 1    | 0       | True       
+  3 | rock       |         | 9      | 0.001 |       |            |       |       |       | 1    | 0       | True       
+  4 | cover      | debye   | 18.017 | 0.003 | 7.878 | 6.4567e-09 |       |       |       | 1    | 0       | False      
+
+Numerical dispersion analysis [main_grid] not carried out as impulse waveform used.
+Output directory: E:\automation_djh\artifacts\research_checks\target_hs4_3d-centre_cont_r1\centre_flat
+
+
+
+
+Model 1/1 solving on LAPTOP-83GRKUNE with CUDA backend using Device 0: NVIDIA GeForce RTX 4090 Laptop GPU
+
+Written output file: profile.h5
+
+Memory used (estimated): ~5.1 GB host + ~5.6 GB device
+Time taken: 3 minutes and 0.4597 seconds
+
+=== Simulation completed in 3 minutes and 7.8451 seconds =======================
+

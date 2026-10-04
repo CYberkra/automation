@@ -143,3 +143,21 @@ Thumbs.db
 /artifacts/research_checks/2026-10-04_hs4_permittivity_wavefield/*/profile_snaps/
 /artifacts/research_checks/2026-10-04_hs4_permittivity_wavefield/*/hs4t2d_geom*.vtkhdf
 /artifacts/research_checks/2026-10-04_hs4_permittivity_wavefield/*/cuda_cache.jsonl
+
+# 2026-10-04 cross-PC target capsules: regenerable geometry exports (2D ~30 MB,
+# 3D ~146 MB each) and CUDA cache logs stay local; SHA-256 ledgers live in each
+# capsule's completed_verification.json. Contracts/inputs/native H5/logs/audit
+# and analysis results are tracked.
+/artifacts/research_checks/target_hs4_replay_r1/*/*.vtkhdf
+/artifacts/research_checks/target_hs4_replay_r1/*/cuda_cache.jsonl
+/artifacts/research_checks/target_hs4_centre1cm_r1/*/*.vtkhdf
+/artifacts/research_checks/target_hs4_centre1cm_r1/*/cuda_cache.jsonl
+/artifacts/research_checks/target_hs4_3d-centre_r1/*/*.vtkhdf
+/artifacts/research_checks/target_hs4_3d-centre_r1/*/cuda_cache.jsonl
+/artifacts/research_checks/target_hs4_3d-centre_cont_r1/*/*.vtkhdf
+/artifacts/research_checks/target_hs4_3d-centre_cont_r1/*/cuda_cache.jsonl
+/artifacts/research_checks/target_hs4_3d-centre_merged_r1/*/*.vtkhdf
+/artifacts/research_checks/target_hs4_3d-ends_r1/*/*.vtkhdf
+/artifacts/research_checks/target_hs4_3d-ends_r1/*/cuda_cache.jsonl
+/artifacts/research_checks/target_hs4_3d-xwide-centre_r1/*/*.vtkhdf
+/artifacts/research_checks/target_hs4_3d-xwide-centre_r1/*/cuda_cache.jsonl

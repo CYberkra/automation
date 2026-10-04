@@ -126,6 +126,62 @@
  ],
  "runs": [
   {
+   "id": "hs4_cross_pc_local_execution_20261004",
+   "status": "COMPLETED_FIVE_STAGES_20_TRACES_DIAGNOSTIC_NOT_PHYSICAL_ACCEPTANCE",
+   "report": "docs/research/2026-10-04_hs4_cross_pc_local_execution.md",
+   "scripts": [
+    "scripts/hs4_cross_pc.py",
+    "scripts/run_hs4_cross_pc.cmd",
+    "scripts/analyze_hs4_cross_pc.py",
+    "scripts/freeze_hs4_cross_pc_continuation.py",
+    "scripts/compare_hs4_xwide_windows.py"
+   ],
+   "results": [
+    "artifacts/research_checks/target_hs4_replay_r1",
+    "artifacts/research_checks/target_hs4_replay_results_r1",
+    "artifacts/research_checks/target_hs4_centre1cm_r1",
+    "artifacts/research_checks/target_hs4_centre1cm_results_r1",
+    "artifacts/research_checks/target_hs4_3d-centre_r1",
+    "artifacts/research_checks/target_hs4_3d-centre_cont_r1",
+    "artifacts/research_checks/target_hs4_3d-centre_merged_r1",
+    "artifacts/research_checks/target_hs4_3d-centre_results_r1",
+    "artifacts/research_checks/target_hs4_3d-ends_r1",
+    "artifacts/research_checks/target_hs4_3d-ends_results_r1",
+    "artifacts/research_checks/target_hs4_3d-xwide-centre_r1",
+    "artifacts/research_checks/target_hs4_3d-xwide-centre_results_r1"
+   ],
+   "calls_solver": true,
+   "calls_training": false,
+   "key_numbers": {
+    "replay_native_receiver_bitwise_equal": 4,
+    "replay_full501_complex_relative_L2": 0.0,
+    "replay_crest_to_slope_early_L2_ratio": 7.5561,
+    "centre1cm_base_early_signed_relative_L2_vs_1p67cm_archive": 0.04101713473731621,
+    "centre1cm_crest_to_slope_early_L2_ratio": 7.374955810661655,
+    "grid_sequence_signed_early_base": [
+     "5cm_to_2p5cm:0.61291",
+     "2p5cm_to_1p67cm:0.16596",
+     "1p67cm_to_1cm:0.04102"
+    ],
+    "xwide_full501_complex_relative_L2": [
+     0.0008691296302071996,
+     0.0008685988475858259,
+     0.000868579846679524
+    ],
+    "xwide_boundary_contribution_rough_minus_flat_full_signed": 0.016392943499388538,
+    "xwide_boundary_contribution_raw_rough_full_signed": 0.6473626204193113,
+    "traces": {
+     "replay": 4,
+     "centre1cm": 4,
+     "3d-centre": 3,
+     "3d-ends": 6,
+     "3d-xwide-centre": 3
+    }
+   },
+   "limits": "Diagnostic evidence only: no absolute convergence, unique attribution, cross-track/finite-antenna or field acceptance. vtkhdf/cuda_cache stay local with hashes in completed_verification.json.",
+   "interruption_handling": "3d-centre r1 interrupted by host exit after centre_rough08; preserved; bounded continuation contract (2 traces) via freeze_hs4_cross_pc_continuation.py; merged analysis capsule re-audited PASS."
+  },
+  {
    "id": "hs4_permittivity_visuals_20261004",
    "status": "COMPLETED_BSCANS_AND_PER_EPS_WAVEFIELD_GIFS",
    "report": "docs/research/2026-10-04_hs4_migration_and_permittivity.md",

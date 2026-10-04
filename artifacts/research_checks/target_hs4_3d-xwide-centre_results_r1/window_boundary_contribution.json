@@ -1,0 +1,64 @@
+{
+  "status": "COMPLETED_DIAGNOSTIC_NOT_PHYSICAL_ACCEPTANCE",
+  "base_results": "artifacts\\research_checks\\target_hs4_3d-centre_results_r1",
+  "xwide_results": "artifacts\\research_checks\\target_hs4_3d-xwide-centre_results_r1",
+  "windows_ns": {
+    "early": [
+      160.0,
+      180.0
+    ],
+    "later": [
+      180.0,
+      220.0
+    ],
+    "full": [
+      160.0,
+      220.0
+    ]
+  },
+  "products": {
+    "centre_rough_minus_flat": {
+      "early": {
+        "signed_relative_L2": 0.0024766805837264337,
+        "complex_relative_L2": 0.0026873087836661014
+      },
+      "later": {
+        "signed_relative_L2": 0.017615275994204607,
+        "complex_relative_L2": 0.01816887023032186
+      },
+      "full": {
+        "signed_relative_L2": 0.016392943499388538,
+        "complex_relative_L2": 0.01725166331963589
+      }
+    },
+    "centre_rough_minus_halfspace": {
+      "early": {
+        "signed_relative_L2": 0.007122788672978693,
+        "complex_relative_L2": 0.006851360671240825
+      },
+      "later": {
+        "signed_relative_L2": 0.021403342003695872,
+        "complex_relative_L2": 0.023390497563003355
+      },
+      "full": {
+        "signed_relative_L2": 0.020041552583646077,
+        "complex_relative_L2": 0.021957005036817412
+      }
+    },
+    "centre_raw_rough": {
+      "early": {
+        "signed_relative_L2": 0.8547511900627852,
+        "complex_relative_L2": 0.8641668068350624
+      },
+      "later": {
+        "signed_relative_L2": 0.24006432584318446,
+        "complex_relative_L2": 0.28144781028765137
+      },
+      "full": {
+        "signed_relative_L2": 0.6473626204193113,
+        "complex_relative_L2": 0.6431509979549466
+      }
+    }
+  },
+  "code_sha256": "5486b9b0894fa4c3a36d89c6f5cc5c776fcc80bf11deebe2507c74d36ad0f967"
+}

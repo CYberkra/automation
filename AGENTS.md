@@ -83,6 +83,7 @@
 - `scripts/research_operator_contract.py`、`scripts/check_operator_contract.py` 与 `configs/research/operator_catalogue_v0.1.json`：27 项配置研究实现及反例；只接构造的稠密浮点数组，带无效掩码的输入仅允许全 identity，未接入实测或求解器。
 - `scripts/research_evaluation_contract.py`、`scripts/check_evaluation_labels.py`：带符号指标与区间约束/偏序标签研究实现；参考来源、ROI 与数值可信度由调用者独立声明，不自动从波形推断。不能将数组夹具阈值当物理验收标准。
 - `scripts/research_error_budget.py`、`scripts/check_error_budget.py`、`scripts/study_error_budget_restoration.py` 与 `configs/research/error_budget_contract_v0.1.json`：算子链输出误差预算证书（精确构造/fsum 精确重算/Wedin–Davis–Kahan 摄动界/三角不等式），用于在有依据时恢复方向诊断余弦；FDTD 来源一律缺失（`fdtd_numerically_unresolved`）。预算只认证数值可辨识性，不是物理阈值或训练标签。
+- `scripts/freeze_hs4_cross_pc_continuation.py`：跨机任务被宿主中断后的有界续跑契约冻结与字节核验合并分析视图（保留原胶囊、只补未完成组、audit 复验）；`scripts/compare_hs4_xwide_windows.py`：3d-xwide 固定窗边界贡献报告数值生成。跨机五阶段执行记录见 `docs/research/2026-10-04_hs4_cross_pc_local_execution.md`。
 - `configs/research_automation.json`：已禁用的备用调度记录；用户管理实际任务，不再维护备用触发器。
 - 未来需要时再建立 `src/`、`tests/`、`experiments/`；不要宣称这些模块已经存在。
 
