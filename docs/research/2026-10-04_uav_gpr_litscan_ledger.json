@@ -1,0 +1,111 @@
+{
+ "ledger_id": "uav_gpr_airborne_litscan_2026_10_04",
+ "date": "2026-10-04",
+ "purpose": "用户发起：地面耦合正常而 UAV 机载回波异常，调研 gprMax 官方手册机载指引与已发表 UAV-GPR 工作，评估模型可借鉴性",
+ "method": "本地 V4.0.0 手册/示例全文检索（只读）+ WebSearch/FetchURL 在线检索；摘要/元数据级为主，一篇本地全文此前已读；未跑新仿真、未解除任何门禁",
+ "report": "docs/research/2026-10-04_uav_gpr_airborne_literature_and_manual.md",
+ "sources": [
+  {
+   "kind": "manual",
+   "ref": "gprMax V4.0.0 local docs (gprmodelling.rst, comparisons_analytical.rst, inc_SFCW.rst, input_hash_cmds.rst, accelerators.rst)",
+   "path": "E:/gprMax-v.4.0.0/gprMax-v.4.0.0/docs/source/",
+   "read_level": "full_text_local_source"
+  },
+  {
+   "kind": "paper",
+   "title": "Deep-Penetrating Uncrewed Aerial Vehicle-Based Ground-Penetrating Radar for Landslide Surveys",
+   "authors": "W Wang, T Li, N Yu, S Gao, W Zhang, C Huang, L Yuan",
+   "year": 2026,
+   "venue": "IEEE Geoscience and Remote Sensing Magazine",
+   "url": "local PDF (temporary product/) + prior reading doc 2026-09-26_wang2026_uav_gpr_landslide_reading.md",
+   "read_level": "body_read_previously"
+  },
+  {
+   "kind": "abstract",
+   "title": "Identification of the Sliding Surface of a Dormant Landslide Using UAV-Borne Low-Frequency GPR: The Melizzano Case Study",
+   "authors": "NA Famiglietti et al.",
+   "year": 2026,
+   "venue": "EGU26-6892",
+   "url": "https://meetingorganizer.copernicus.org/EGU26/EGU26-6892.html?pdf",
+   "read_level": "abstract_full"
+  },
+  {
+   "kind": "dataset",
+   "title": "Low-Frequency GPR Dataset Acquired via Ground-Based and UAV Platforms",
+   "authors": "INGV/UNISA",
+   "year": 2026,
+   "venue": "Zenodo",
+   "url": "https://zenodo.org/records/18769571",
+   "read_level": "description_page_full"
+  },
+  {
+   "kind": "paper",
+   "title": "Surface Reflection Suppression Method for Air-Coupled SFCW GPR Systems",
+   "year": 2025,
+   "venue": "Remote Sensing 17(10):1668",
+   "url": "https://www.mdpi.com/2072-4292/17/10/1668",
+   "read_level": "search_snippet_only_fulltext_blocked"
+  },
+  {
+   "kind": "paper",
+   "title": "Airborne GPR+magnetometer landmine detection modelled with gprMax (SVD + Kirchhoff migration chain)",
+   "year": 2023,
+   "venue": "Remote Sensing 15(15):3813",
+   "url": "https://www.mdpi.com/2072-4292/15/15/3813",
+   "read_level": "search_snippet_only_fulltext_blocked"
+  },
+  {
+   "kind": "review",
+   "title": "An Overview on Down-Looking UAV-Based GPR Systems",
+   "authors": "Noviello et al.",
+   "year": 2022,
+   "venue": "CNR iris",
+   "url": "https://iris.cnr.it/retrieve/754abb04-4aa2-4df0-bebf-18a6e2fb2496/prod_470681-doc_190984.pdf",
+   "read_level": "metadata_only"
+  },
+  {
+   "kind": "preprint",
+   "title": "Drone-mounted GPR surveying: antenna height effects at 1 GHz",
+   "authors": "Booth et al.",
+   "year": 2021,
+   "venue": "EarthArXiv",
+   "url": "https://eartharxiv.org/repository/object/2663/download/6930/",
+   "read_level": "metadata_only"
+  },
+  {
+   "kind": "vendor_claim",
+   "title": "SPH Engineering GPR integration pages (penetration halves airborne; low stable altitude required)",
+   "url": "https://www.sphengineering.com/integrated-systems/technologies/gpr",
+   "read_level": "page_full_non_peer_reviewed"
+  },
+  {
+   "kind": "paper",
+   "title": "Multi-height UAV GPR soil moisture inversion (reflection amplitude ~ 1/H)",
+   "authors": "Cheng et al.",
+   "venue": "Lancaster author copy",
+   "url": "https://www.research.lancs.ac.uk/portal/services/downloadRegister/372063064/Cheng_et_al_author_copy_.pdf",
+   "read_level": "search_snippet_and_formula_fragment"
+  },
+  {
+   "kind": "thesis",
+   "title": "gprMax 3D airborne model (0.7 m air layer, 0.02 m grid, PML)",
+   "venue": "University of Bonn bonndoc",
+   "url": "https://bonndoc.ulb.uni-bonn.de/xmlui/bitstream/handle/20.500.11811/9580/6508.pdf",
+   "read_level": "search_snippet_only"
+  },
+  {
+   "kind": "paper",
+   "title": "Antenna height effects on near-surface detection (simulation vs clay measurements)",
+   "authors": "Gao et al.",
+   "year": 2019,
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6339086/",
+   "read_level": "abstract_only"
+  }
+ ],
+ "gaps": [
+  "RS 2025 surface-reflection suppression and RS 2023 landmine papers: full text blocked by anti-scraping, only snippets read",
+  "Noviello 2022 review and Booth 2021 preprint not opened beyond metadata",
+  "No published gprMax airborne example models antenna attitude/swing - identified as a literature gap (our inference)"
+ ],
+ "verdict": "published record consistent with our simulation: low-frequency UAV-GPR either flies ~1 m AGL for coupling (INGV 20-140 MHz) or relies on migration imaging rather than raw B-scans (Wang 2026, 5-20 m AGL same band); our 48.8 dB dynamic-range penalty at 15 m is physics, not a model defect; solver-side airborne modelling is officially validated (Smith finite-height dipole, RMS <= 0.271%)"
+}
