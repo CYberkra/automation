@@ -49,6 +49,88 @@
  ],
  "runs": [
   {
+   "id": "hs4_migration_diagnostic_20261004",
+   "status": "COMPLETED_KIRCHHOFF_RECOVERS_LARGE_SCALE_RELIEF",
+   "report": "docs/research/2026-10-04_hs4_migration_and_permittivity.md",
+   "scripts": [
+    "scripts/migrate_hs4_height15m_diff_v0_1.py"
+   ],
+   "results": [
+    "artifacts/research_checks/2026-10-04_hs4_migration_diagnostic"
+   ],
+   "calls_solver": false,
+   "calls_training": false,
+   "key_numbers": {
+    "stations": 13,
+    "antenna_height_m": 15,
+    "time_offset_ns_median": -0.3627391798949873,
+    "chain_anchor_relative_L2": 1.9773515967598964e-11,
+    "resolution_bound_m": 1.577855042105263,
+    "ridge_corr_full": 0.8431827286755046,
+    "ridge_corr_lowpass": 0.8353403073040847,
+    "ridge_corr_highpass": 0.1148274505572683,
+    "ridge_rmse_m": 0.22088867381761965,
+    "template_true": 0.7182775311968096,
+    "template_flat": 0.5671245954081613,
+    "halfspace_over_diff_band_energy": 0.009915421016941156
+   },
+   "scope": "2D TM simulation diagnostic only; Kirchhoff migration used as diagnostic, no imaging module added to v1 scope; no 3D/field claim"
+  },
+  {
+   "id": "hs4_permittivity_scan_20261004",
+   "status": "COMPLETED_18GROUPS_78TRACES_VERIFIED",
+   "report": "docs/research/2026-10-04_hs4_migration_and_permittivity.md",
+   "scripts": [
+    "scripts/hs4_permittivity_scan_v0_1.py",
+    "scripts/run_hs4_permittivity_scan_v0_1.cmd",
+    "scripts/migrate_hs4_permittivity_scan_v0_1.py"
+   ],
+   "results": [
+    "artifacts/research_checks/2026-10-04_hs4_permittivity_scan",
+    "artifacts/research_checks/2026-10-04_hs4_permittivity_migration"
+   ],
+   "calls_solver": true,
+   "calls_training": false,
+   "key_numbers": {
+    "groups": 18,
+    "traces": 78,
+    "cover_eps_r": [
+     6,
+     9,
+     18.017
+    ],
+    "all_nondispersive_cover": true,
+    "critical_angle_deg": [
+     24.1,
+     19.5,
+     13.6
+    ],
+    "corr_lowpass": {
+     "eps6": 0.938,
+     "eps9": 0.949,
+     "eps18nd": 0.967,
+     "eps18disp": 0.835
+    },
+    "corr_highpass_max": 0.155,
+    "rmse_m": {
+     "eps6": 0.08,
+     "eps9": 0.068,
+     "eps18nd": 0.069,
+     "eps18disp": 0.221
+    },
+    "echo_over_direct_dB": {
+     "eps6": -51.9,
+     "eps9": -70.7,
+     "eps18nd": -50.3,
+     "eps18disp": -70.3
+    },
+    "resolution_bound_m": 1.577855042105263,
+    "dispersion_cost": "eps18nd vs eps18disp: echo +20 dB, corr_lowpass 0.967 vs 0.835"
+   },
+   "process_note": "Frozen check required a trailing overall COMPLETED event that run() wrote only after check; in-run final verification raised FAILED after all 18 solver groups had succeeded. Check logic fixed (per-group event audit), standalone re-verification PASS, remediation event appended to execution.jsonl. Preflight and completed verifications carry different code_sha256 for this reason; contract and inputs unchanged.",
+   "scope": "2D TM simulation; eps9 cover nearly matches rock eps_r=9 so interface contrast nearly vanishes by design; cover permittivity is a site property, not a design lever; no 3D/field claim"
+  },
+  {
    "id": "hs4_height8m_wavefield_20261004",
    "status": "COMPLETED_8M_DENSE_WAVEFIELD_ECHO_CHAIN_VISIBLE",
    "report": "docs/research/2026-10-04_hs4_height8m_wavefield.md",
