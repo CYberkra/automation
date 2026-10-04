@@ -126,6 +126,36 @@
  ],
  "runs": [
   {
+   "id": "hs4_ground_gpr_dense_20261004",
+   "status": "COMPLETED_DIAGNOSTIC_NOT_PHYSICAL_ACCEPTANCE",
+   "report": "docs/research/2026-10-04_hs4_ground_gpr_findings.md",
+   "scripts": [
+    "scripts/hs4_ground_gpr_dense.py",
+    "scripts/run_hs4_ground_gpr_dense.cmd",
+    "scripts/analyze_hs4_ground_gpr_dense.py"
+   ],
+   "results": [
+    "artifacts/research_checks/2026-10-04_hs4_ground_gpr_r1",
+    "artifacts/research_checks/2026-10-04_hs4_ground_gpr_results_r1"
+   ],
+   "calls_solver": true,
+   "calls_training": false,
+   "key_numbers": {
+    "stations": 13,
+    "traces": 26,
+    "factor": "antenna z 27 -> 12.025 m only; archived 36 m model otherwise byte-identical inputs",
+    "peak_time_vs_relief_pearson_ground": 0.9358477456618962,
+    "peak_time_vs_relief_pearson_15m": 0.6651597973994052,
+    "contrast_amplitude_gain_ground_over_15m_dB": 22.23959630759182,
+    "dynamic_range_total_over_contrast_dB_ground": 15.245921471521681,
+    "dynamic_range_total_over_contrast_dB_15m": 48.76921016083635,
+    "independent_direct_DFT_max_relative_L2": 8.38163672989487e-13,
+    "sum_solver_elapsed_s": 327.48499999999876,
+    "maximum_owned_RSS_GiB": 0.6657943725585938
+   },
+   "limits": "Antenna-height factor control; 13-station segment; 2D line source; ground antenna is a Hertzian dipole one grid step above the surface, not a real ground-coupling model; no grid-convergence/attribution/field claims. vtkhdf/cuda_cache local."
+  },
+  {
    "id": "hs4_large_domain_dense_bscan_20261004",
    "status": "COMPLETED_26_TRACES_AFTER_R1_GEOMETRY_EXPORT_FAILURE_PRESERVED",
    "report": "docs/research/2026-10-04_hs4_large_domain_dense_findings.md",

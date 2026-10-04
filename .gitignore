@@ -138,6 +138,11 @@ Thumbs.db
 /artifacts/research_checks/*hs4_large_domain*/*/hs4t2d_geom.vtkhdf
 /artifacts/research_checks/*hs4_large_domain*/*/cuda_cache.jsonl
 
+# Ground-coupled control capsule: regenerable geometry exports and CUDA cache
+# stay local; frozen inputs, receiver H5, verification and figures go to Git.
+/artifacts/research_checks/*hs4_ground_gpr*/*/hs4t2d_geom.vtkhdf
+/artifacts/research_checks/*hs4_ground_gpr*/*/cuda_cache.jsonl
+
 # Per-eps 15 m wavefield capsule: 599-frame snapshots (~0.215 GiB/group) and
 # vtkhdf/cuda_cache stay local; frame hashes in completed_verification.json.
 /artifacts/research_checks/2026-10-04_hs4_permittivity_wavefield/*/profile_snaps/
