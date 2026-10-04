@@ -48,9 +48,18 @@
 - 不可行的方向：指望改变覆盖层 εr（场地属性不可选）；指望加大孔径恢复亚临界角细节（孔径只改善已透射锥内的聚焦，锥外分量仍困在覆盖层混响里）。
 - 下一步候选（未冻结）：把迁移速度模型做成随深度/色散修正的版本并量化深度偏差收敛；或在保留实测数据介入前，用本扫描框架评估增益补偿对 −70 dB 级回波的可恢复余量。
 
+## C. 可视化产物（2026-10-04 追加，用户要求"看各个 B-scan、波场快照"）
+
+- **四情形 B-scan**（`artifacts/research_checks/2026-10-04_hs4_permittivity_bscans/`，脚本 `scripts/plot_hs4_permittivity_bscans.py`，纯 CPU 复用已验收 H5）：
+  - `bscans_by_eps.png`：rough/halfspace/diff 三行共用固定标尺（±176/±176/±1.13）。rough/halfspace 行只见 ~100 ns 地表反射，地下全淹没；diff 行只有 eps6、eps18nd 条带可见且贴真实起伏双程时曲线。
+  - `bscans_by_eps_selfnorm_dB.png`：各面板自归一 dB 包络（仅显示用，峰值已标注）。四种情形 diff 条带均跟随真实起伏曲线；峰值 eps18nd 1.13 > eps6 0.62 ≫ eps18disp 0.086 ≈ eps9 0.084。
+- **各 εr 波场快照批**（胶囊 `2026-10-04_hs4_permittivity_wavefield`，脚本 `scripts/hs4_permittivity_wavefield_v0_1.py`）：15 m 航高、中心站位、ricker 95 MHz，快照 ROI/1.0024 ns 帧隔与 8m 批相同（599 帧/组），eps6/eps9/eps18nd × rough/halfspace 共 6 组，V4.0.0/CUDA double，探针/快照闭合 0.0、几何与已跟踪参考逐元素一致，验收 PASS。色散 15 m 属前机已消耗 attempt，不重跑；其波场参照用仓库已有 8m GIF。
+- **GIF**（`artifacts/research_checks/2026-10-04_hs4_permittivity_wavefield_visual/`，脚本 `scripts/plot_hs4_permittivity_wavefield_gif.py`）：`wavefield_15m_eps6.gif`（2.9 MB）、`wavefield_15m_eps9.gif`（2.5 MB）、`wavefield_15m_eps18nd.gif`（4.4 MB）；每条 300 帧（2.0049 ns 步进），三面板（rough Ey / rough−halfspace 差分场 / 差分 log10 包络），**三情形共用全局固定标尺**（rough ±356，diff ±11.9）可直接对比。快照帧与 vtkhdf/cuda_cache 留本机（.gitignore），帧哈希在 completed_verification.json。
+
 ## 复现入口
 
 - A：`artifacts/local_checks/hs4_budget_env/Scripts/python.exe scripts/migrate_hs4_height15m_diff_v0_1.py --out <新目录>`（输出目录必须不存在）。
 - B 分析：同环境 `scripts/migrate_hs4_permittivity_scan_v0_1.py --out <新目录>`（要求扫描胶囊 completed_verification.json PASS）。
+- C：同环境 `scripts/plot_hs4_permittivity_bscans.py --out <新目录>`；GIF 渲染 `scripts/plot_hs4_permittivity_wavefield_gif.py`（固定输出目录，需波场胶囊验收 PASS）。
 - 182 项数组回归于本单元完成后复跑 PASS（`artifacts/local_checks/20261004T060039Z-83ec97b4`）。
 - 求解环境纪律不变：.bat 内部设 env、完整继承环境启动（NVML 在剥离环境下不可初始化）、GPU 锁、单次 attempt、失败胶囊保留。

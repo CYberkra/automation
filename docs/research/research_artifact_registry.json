@@ -126,6 +126,51 @@
  ],
  "runs": [
   {
+   "id": "hs4_permittivity_visuals_20261004",
+   "status": "COMPLETED_BSCANS_AND_PER_EPS_WAVEFIELD_GIFS",
+   "report": "docs/research/2026-10-04_hs4_migration_and_permittivity.md",
+   "scripts": [
+    "scripts/plot_hs4_permittivity_bscans.py",
+    "scripts/hs4_permittivity_wavefield_v0_1.py",
+    "scripts/run_hs4_permittivity_wavefield_v0_1.cmd",
+    "scripts/plot_hs4_permittivity_wavefield_gif.py"
+   ],
+   "results": [
+    "artifacts/research_checks/2026-10-04_hs4_permittivity_bscans",
+    "artifacts/research_checks/2026-10-04_hs4_permittivity_wavefield",
+    "artifacts/research_checks/2026-10-04_hs4_permittivity_wavefield_visual"
+   ],
+   "calls_solver": true,
+   "calls_training": false,
+   "key_numbers": {
+    "bscan_cases": 4,
+    "bscan_diff_panel_peaks": {
+     "eps6": 0.618,
+     "eps9": 0.0841,
+     "eps18nd": 1.13,
+     "eps18disp": 0.086
+    },
+    "wavefield_groups": 6,
+    "snapshot_frames_per_group": 599,
+    "snapshot_probe_closure_max_abs": {
+     "Ey": 0.0,
+     "Hx": 0.0,
+     "Hz": 0.0
+    },
+    "gif_bytes": {
+     "eps6": 2921357,
+     "eps9": 2509897,
+     "eps18nd": 4385450
+    },
+    "gif_shared_scales": {
+     "rough_peak": 355.7246668051635,
+     "diff_peak": 11.897553933151647
+    }
+   },
+   "process_note": "Dispersive 15 m snapshots not re-run (consumed by heights-continuation capsule on previous machine); dispersive wavefield reference is the tracked 8 m GIF. Snapshot frames/vtkhdf/cuda_cache stay local; hashes in completed_verification.json.",
+   "scope": "Visualisation of verified 2D TM evidence; no new physics claim; no 3D/field claim"
+  },
+  {
    "id": "hs4_migration_diagnostic_20261004",
    "status": "COMPLETED_KIRCHHOFF_RECOVERS_LARGE_SCALE_RELIEF",
    "report": "docs/research/2026-10-04_hs4_migration_and_permittivity.md",
