@@ -1,4 +1,16 @@
 {
+ "cover_low_loss_design_review_2026_10_05": {
+  "report": "docs/research/2026-10-05_cover_low_loss_design_review.md",
+  "script": "scripts/review_cover_low_loss_design.py",
+  "results": "artifacts/research_checks/2026-10-05_cover_low_loss_design_review_r2",
+  "status": "ANALYTICALLY_REVIEWED_CANDIDATE_NOT_EXECUTION_CONTRACT",
+  "calls_solver": false,
+  "calls_training": false,
+  "field_fitted": false,
+  "candidate_role": "Low-loss weak-dispersion mechanism baseline, not calibrated field material",
+  "material_parameters": {"epsilon_infinity": 11, "sigma_S_m": 0.001, "delta_epsilon": 0.5, "tau_s": 6.4567e-9},
+  "next_step": "New bounded complete-record matched pairs and adjacent single-factor material controls; preserve 2.5cm mesh and historical contracts."
+ },
  "line9_legacy_uav_review_2026_10_05": {
   "report": "docs/research/2026-10-05_line9_legacy_uav_review.md",
   "preview_script": "scripts/preview_legacy_geometry_h5.py",

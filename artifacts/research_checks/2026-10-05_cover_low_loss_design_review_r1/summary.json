@@ -1,0 +1,131 @@
+{
+  "status": "ANALYTICALLY_REVIEWED_CANDIDATE_NOT_EXECUTION_CONTRACT",
+  "calls_solver": false,
+  "calls_training": false,
+  "field_fitted": false,
+  "recommended_role": "Low-loss weak-dispersion mechanism control; not measured field material",
+  "candidate": {
+    "epsilon_infinity": 11.0,
+    "sigma_S_m": 0.001,
+    "delta_epsilon": 0.5,
+    "tau_s": 6.4567e-09
+  },
+  "historical": {
+    "epsilon_infinity": 18.017,
+    "sigma_S_m": 0.003,
+    "delta_epsilon": 7.878,
+    "tau_s": 6.4567e-09
+  },
+  "bedrock": {
+    "epsilon_r": 9,
+    "sigma_S_m": 0.001
+  },
+  "epsilon_static_dielectric_part": 11.5,
+  "debye_only_loss_peak_MHz": 24.64957998542527,
+  "table": [
+    {
+      "frequency_Hz": 20000000.0,
+      "epsilon_real": 11.301508888433354,
+      "epsilon_loss": 1.1433913051649802,
+      "phase_refractive_index": 3.3660592586335674,
+      "wavelength_m": 4.453166670061819,
+      "amplitude_1_e_length_m": 14.046486515015582,
+      "two_way_absorption_dB": -22.87959457084559,
+      "old_two_way_absorption_dB": -91.54767568016567,
+      "normal_interface_abs_reflection": 0.05689990479482786,
+      "normal_interface_reflection_dB": -24.897769205355345,
+      "old_normal_interface_reflection_dB": -12.379324872527345,
+      "normal_surface_reflection_dB": -5.305526662634249,
+      "old_normal_surface_reflection_dB": -3.5809145345645996,
+      "absorption_improvement_dB": 68.66808110932008,
+      "interface_change_dB": -12.518444332828,
+      "absorption_plus_interface_gain_dB": 56.14963677649209,
+      "bulk_two_way_group_delay_ns": 410.27446049603464
+    },
+    {
+      "frequency_Hz": 40000000.0,
+      "epsilon_real": 11.137615804457687,
+      "epsilon_loss": 0.6726930446453957,
+      "phase_refractive_index": 3.338826730565647,
+      "wavelength_m": 2.2447440537683327,
+      "amplitude_1_e_length_m": 11.840983703654192,
+      "two_way_absorption_dB": -27.141150148633958,
+      "old_two_way_absorption_dB": -144.88806523068035,
+      "normal_interface_abs_reflection": 0.05343279186820732,
+      "normal_interface_reflection_dB": -25.443842665965818,
+      "old_normal_interface_reflection_dB": -13.517118781111188,
+      "normal_surface_reflection_dB": -5.361776113616596,
+      "old_normal_surface_reflection_dB": -3.8446019984919104,
+      "absorption_improvement_dB": 117.7469150820464,
+      "interface_change_dB": -11.926723884854626,
+      "absorption_plus_interface_gain_dB": 105.82019119719178,
+      "bulk_two_way_group_delay_ns": 408.0839207420477
+    },
+    {
+      "frequency_Hz": 95000000.0,
+      "epsilon_real": 11.031538820273383,
+      "epsilon_loss": 0.31076289360083703,
+      "phase_refractive_index": 3.32170543023156,
+      "wavelength_m": 0.9500270720846363,
+      "amplitude_1_e_length_m": 10.736906836491878,
+      "two_way_absorption_dB": -29.932076481853098,
+      "old_two_way_absorption_dB": -184.20056058119104,
+      "normal_interface_abs_reflection": 0.05091469929264792,
+      "normal_interface_reflection_dB": -25.863136337517165,
+      "old_normal_interface_reflection_dB": -14.766810405903259,
+      "normal_surface_reflection_dB": -5.395707049554992,
+      "old_normal_surface_reflection_dB": -4.083016030373651,
+      "absorption_improvement_dB": 154.26848409933794,
+      "interface_change_dB": -11.096325931613908,
+      "absorption_plus_interface_gain_dB": 143.17215816772404,
+      "bulk_two_way_group_delay_ns": 408.78564468311635
+    },
+    {
+      "frequency_Hz": 170000000.0,
+      "epsilon_real": 11.010295682409415,
+      "epsilon_loss": 0.17674181951764006,
+      "phase_refractive_index": 3.3182834297144606,
+      "wavelength_m": 0.531444972803475,
+      "amplitude_1_e_length_m": 10.538918974018276,
+      "two_way_absorption_dB": -30.494391066171314,
+      "old_two_way_absorption_dB": -192.67086480069838,
+      "normal_interface_abs_reflection": 0.05038532366293982,
+      "normal_interface_reflection_dB": -25.95391894585292,
+      "old_normal_interface_reflection_dB": -15.113701419364025,
+      "normal_surface_reflection_dB": -5.40248435131478,
+      "old_normal_surface_reflection_dB": -4.141180083267655,
+      "absorption_improvement_dB": 162.17647373452706,
+      "interface_change_dB": -10.84021752648889,
+      "absorption_plus_interface_gain_dB": 151.33625620803818,
+      "bulk_two_way_group_delay_ns": 409.13731307023136
+    }
+  ],
+  "full_band_group_delay_range_ns": [
+    408.0763461112199,
+    410.27446049603464
+  ],
+  "two_way_absorption_spectral_spread_dB": 7.614796495325724,
+  "mesh_initial_diagnostics": [
+    {
+      "spacing_m": 0.025,
+      "air_CFL_2D_dt_s": 5.89663584187421e-11,
+      "cells_per_wavelength_at170": 21.257798912139,
+      "estimated_unwrapped_37m_phase_error_at170_deg": 87.95409189640488,
+      "scope": "Lossless axial Yee illustration; ignores discrete Debye/loss, interfaces, angles; not measured FDTD error"
+    },
+    {
+      "spacing_m": 0.05,
+      "air_CFL_2D_dt_s": 1.179327168374842e-10,
+      "cells_per_wavelength_at170": 10.6288994560695,
+      "estimated_unwrapped_37m_phase_error_at170_deg": 362.734647380369,
+      "scope": "Lossless axial Yee illustration; ignores discrete Debye/loss, interfaces, angles; not measured FDTD error"
+    }
+  ],
+  "checks": {
+    "native_V4_calculate_er_relative_L2": 3.077640546473239e-18,
+    "group_delay_finite_difference_max_relative_error": 3.0398350503446636e-10
+  },
+  "gain_scope": "Frequency-specific bulk absorption plus single normal-incidence interface; no transmission/spreading/antenna/direct/background/processing gains",
+  "sign_convention": "exp(+j omega t), epsilon=real-j*loss, field propagation=exp(-j k L)",
+  "code_sha256": "bae88292a7fce743f0625c40ec7f315c1cc2267c5ac21137a4b6c508636ecc61"
+}
