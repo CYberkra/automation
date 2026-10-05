@@ -1,0 +1,385 @@
+{
+  "ledger_id": "airborne_gprmax_literature_2026_10_06_r1",
+  "date": "2026-10-06",
+  "source_git_base": "530f9da",
+  "report": "docs/research/2026-10-06_airborne_gprmax_literature_review.md",
+  "method": "targeted primary-paper review; not a systematic or exhaustive review",
+  "paper_pdf_downloads": 9,
+  "sources": [
+    {
+      "id": "edemsky2021",
+      "url": "https://mdpi-res.com/d_attachment/remotesensing/remotesensing-13-00667/article_deploy/remotesensing-13-00667.pdf",
+      "resolved_url": "https://mdpi-res.com/d_attachment/remotesensing/remotesensing-13-00667/article_deploy/remotesensing-13-00667.pdf",
+      "sha256": "e6488fb3f70a19562ff0e8855e396f2763bcc5390f33cfeda80544b371168a3f",
+      "pages": 12,
+      "bytes": 2176764,
+      "status": "PDF_EXTRACTED",
+      "doi": "10.3390/rs13040667",
+      "primary_url": "https://doi.org/10.3390/rs13040667",
+      "solver": "gprMax 2D; version not stated",
+      "role": "airborne crane control, later helicopter; not UAV",
+      "simulation_agl_m_minmax": [
+        0,
+        20
+      ],
+      "field_height_not_substituted": true,
+      "excitation": "25 MHz Gaussian derivative",
+      "read_scope": "Sections 2-3 and 5; PDF physical pp.4-7,10-11; Figure 4 inspected visually",
+      "read_level": "relevant_sections_not_full_paper_read",
+      "results_author_reported_not_reproduced": true,
+      "dataset_url": null,
+      "ready_to_run_public_model_verified": false
+    },
+    {
+      "id": "lee2023",
+      "url": "https://mdpi-res.com/d_attachment/remotesensing/remotesensing-15-03813/article_deploy/remotesensing-15-03813.pdf",
+      "resolved_url": "https://mdpi-res.com/d_attachment/remotesensing/remotesensing-15-03813/article_deploy/remotesensing-15-03813.pdf",
+      "sha256": "a7faac23152d2ba77903510ee6244a71f7a3c3374b185cb03b013acd80ae2066",
+      "pages": 20,
+      "bytes": 2069157,
+      "status": "PDF_EXTRACTED",
+      "doi": "10.3390/rs15153813",
+      "primary_url": "https://doi.org/10.3390/rs15153813",
+      "solver": "gprMax; ideal Hertzian dipole; version not asserted",
+      "role": "UAV design, near-surface mines",
+      "simulation_agl_m_minmax": [
+        1,
+        1
+      ],
+      "field_height_not_substituted": true,
+      "excitation": "1.5 GHz Ricker; Tx/Rx 0.04m",
+      "read_scope": "Sections 2.1 and 3.1; PDF physical pp.9-11 and19; Figure5 processing stages",
+      "read_level": "relevant_sections_not_full_paper_read",
+      "results_author_reported_not_reproduced": true,
+      "dataset_url": null,
+      "ready_to_run_public_model_verified": false
+    },
+    {
+      "id": "booth2022",
+      "url": "https://eprints.whiterose.ac.uk/189221/3/GEO-2021-0602%20-%20resubmission.pdf",
+      "resolved_url": "https://eprints.whiterose.ac.uk/id/eprint/189221/3/GEO-2021-0602%20-%20resubmission.pdf",
+      "sha256": "8e56c250775e0f62155e082eaba0b249cab68945ebe718c4c99380d0514d5e61",
+      "pages": 30,
+      "bytes": 554616,
+      "status": "PDF_EXTRACTED",
+      "doi": "10.1190/geo2021-0602.1",
+      "primary_url": "https://doi.org/10.1190/geo2021-0602.1",
+      "solver": "gprMax 3D; y-continuous structure; version not stated",
+      "role": "UAV geometry proxy; field height-adjustable frame",
+      "simulation_agl_m_minmax": [
+        0,
+        0.6
+      ],
+      "field_height_not_substituted": true,
+      "excitation": "1 GHz",
+      "read_scope": "Accepted author manuscript: PDF physical pp.2-8,11-13,16-20,22; Methods/Results FDTD, field and Discussion; Figshare metadata",
+      "read_level": "relevant_sections_not_full_paper_read",
+      "results_author_reported_not_reproduced": true,
+      "dataset_url": "https://doi.org/10.6084/m9.figshare.16573025.v1",
+      "ready_to_run_public_model_verified": false
+    },
+    {
+      "id": "cheng2023",
+      "url": "https://eprints.lancs.ac.uk/id/eprint/184954/1/Cheng_et_al_author_copy_.pdf",
+      "resolved_url": "https://eprints.lancs.ac.uk/id/eprint/184954/1/Cheng_et_al_author_copy_.pdf",
+      "sha256": "e6b6f708135448db752ea6014919b22fc382b51cbd0a993dc5a8a9c850c810fd",
+      "pages": 44,
+      "bytes": 2609960,
+      "status": "PDF_EXTRACTED",
+      "doi": "10.1029/2022WR032621",
+      "primary_url": "https://doi.org/10.1029/2022WR032621",
+      "solver": "gprMax 3D; built-in MALA 1.2 GHz",
+      "role": "true UAV field; simulation lower height",
+      "simulation_agl_m_minmax": [
+        0.3,
+        2.0
+      ],
+      "field_height_not_substituted": true,
+      "excitation": "simulation 1.2 GHz; field 250 MHz",
+      "read_scope": "Publisher HTML Sections 3,4.1-4.2,5.3-5.4,6 and data availability; author PDF physical pp.12-14,31,34-35",
+      "read_level": "relevant_sections_not_full_paper_read",
+      "results_author_reported_not_reproduced": true,
+      "dataset_url": "https://doi.org/10.6084/m9.figshare.21892263",
+      "ready_to_run_public_model_verified": false
+    },
+    {
+      "id": "chi2024",
+      "url": "https://mdpi-res.com/d_attachment/remotesensing/remotesensing-16-04174/article_deploy/remotesensing-16-04174.pdf",
+      "resolved_url": "https://mdpi-res.com/d_attachment/remotesensing/remotesensing-16-04174/article_deploy/remotesensing-16-04174.pdf",
+      "sha256": "c6d009e143890138f5c9a975e21999d25e17a141e2301f46c5815dad19de1264",
+      "pages": 21,
+      "bytes": 10698658,
+      "status": "PDF_EXTRACTED",
+      "doi": "10.3390/rs16224174",
+      "primary_url": "https://doi.org/10.3390/rs16224174",
+      "solver": "author high-order FDTD(2,4), NOT gprMax",
+      "role": "related airborne FDTD",
+      "simulation_agl_m_minmax": [
+        2.5,
+        3.6
+      ],
+      "field_height_not_substituted": true,
+      "excitation": "96 MHz validation; 200 MHz later target scene",
+      "read_scope": "Sections 2.1,2.3,3.1,4-5; PDF physical pp.3,5,7,10,17,19-20; own solver attribution",
+      "read_level": "relevant_sections_not_full_paper_read",
+      "results_author_reported_not_reproduced": true,
+      "dataset_url": null,
+      "ready_to_run_public_model_verified": false
+    },
+    {
+      "id": "civil2025",
+      "url": "https://mdpi-res.com/d_attachment/aerospace/aerospace-12-00686/article_deploy/aerospace-12-00686.pdf",
+      "resolved_url": "https://mdpi-res.com/d_attachment/aerospace/aerospace-12-00686/article_deploy/aerospace-12-00686.pdf",
+      "sha256": "cddffa5446e50ee8a107e1be35a1308e9a7b29f00da89164cafe092e0485b0de",
+      "pages": 31,
+      "bytes": 18759966,
+      "status": "PDF_EXTRACTED",
+      "doi": "10.3390/aerospace12080686",
+      "primary_url": "https://doi.org/10.3390/aerospace12080686",
+      "solver": "gprMax 3.1.7; finite horn feed voltage",
+      "role": "UAV infrastructure design; shallow concrete",
+      "simulation_agl_m_minmax": [
+        0.512,
+        0.512
+      ],
+      "field_height_not_substituted": true,
+      "excitation": "GHz Gaussian UWB",
+      "read_scope": "Sections 4-5; PDF physical pp.11-15,25; Figures14-16 and22; data on request",
+      "read_level": "relevant_sections_not_full_paper_read",
+      "results_author_reported_not_reproduced": true,
+      "dataset_url": null,
+      "ready_to_run_public_model_verified": false
+    },
+    {
+      "id": "airobsim2020",
+      "url": "https://mdpi-res.com/d_attachment/sensors/sensors-20-05223/article_deploy/sensors-20-05223.pdf",
+      "sha256": "3ac6e267d4c84f27161588a6dc3328adc8bd12848371bea739d320680a65c50b",
+      "pages": 20,
+      "status": "PDF_EXTRACTED",
+      "doi": "10.3390/s20185223",
+      "primary_url": "https://doi.org/10.3390/s20185223",
+      "solver": "gprMax + Gazebo/Unity; version not stated",
+      "role": "UAV robot simulator, GPR AGL unverified",
+      "simulation_agl_m_minmax": null,
+      "field_height_not_substituted": true,
+      "excitation": "800 MHz",
+      "read_scope": "PDF physical pp.6,14,16; GPR setup and cross-platform limitations; average robot flight height not GPR AGL",
+      "read_level": "relevant_sections_not_full_paper_read",
+      "results_author_reported_not_reproduced": true,
+      "dataset_url": null,
+      "ready_to_run_public_model_verified": false
+    },
+    {
+      "id": "downlook2021",
+      "url": "https://mdpi-res.com/d_attachment/remotesensing/remotesensing-13-04897/article_deploy/remotesensing-13-04897.pdf",
+      "sha256": "c3a796386baf7d12d569a34ad5273216299488af4848c329697a05bac02abeb6",
+      "pages": 19,
+      "status": "PDF_EXTRACTED",
+      "doi": "10.3390/rs13234897",
+      "primary_url": "https://doi.org/10.3390/rs13234897",
+      "solver": "gprMax 3D only Section5; Section4 analytic PSF",
+      "role": "UAV down-looking numerical design, ground-surface block",
+      "simulation_agl_m_minmax": [
+        2.5,
+        2.5
+      ],
+      "field_height_not_substituted": true,
+      "excitation": "4 GHz; useful3.5-4.5 GHz",
+      "read_scope": "Sections4-6; PDF physical pp.7,12,16-19; Section4 15m PSF distinguished from Section5 2.5m gprMax",
+      "read_level": "relevant_sections_not_full_paper_read",
+      "results_author_reported_not_reproduced": true,
+      "dataset_url": null,
+      "ready_to_run_public_model_verified": false
+    },
+    {
+      "id": "subgrid2025",
+      "url": "https://mdpi-res.com/d_attachment/remotesensing/remotesensing-17-01107/article_deploy/remotesensing-17-01107.pdf",
+      "sha256": "4cf153dd4e7add8f5d2911ea8248cfbf8d0dce4bde950b390634e920e35f39f0",
+      "pages": 30,
+      "status": "PDF_EXTRACTED",
+      "doi": "10.3390/rs17061107",
+      "primary_url": "https://doi.org/10.3390/rs17061107",
+      "solver": "author C++20 subgridding FDTD(2,4), NOT gprMax",
+      "role": "related low-frequency high airborne model",
+      "simulation_agl_m_minmax": [
+        1.8,
+        14.4
+      ],
+      "field_height_not_substituted": true,
+      "excitation": "96.6 MHz two-layer;49MHz deep-water stability case",
+      "read_scope": "Sections3,3.1,3.4; PDF physical pp.12-15,21-22,28; Figure9-10 visually inspected; Figure18-19 relevant captions",
+      "read_level": "relevant_sections_not_full_paper_read",
+      "results_author_reported_not_reproduced": true,
+      "dataset_url": null,
+      "ready_to_run_public_model_verified": false
+    },
+    {
+      "id": "cheng2025",
+      "doi": "10.1029/2024WR039519",
+      "primary_url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024WR039519",
+      "solver": "gprMax GSSI400MHz; version not asserted",
+      "simulation_agl_m_minmax": null,
+      "domain_m": [
+        2,
+        2,
+        2
+      ],
+      "excitation": "400 MHz finite antenna",
+      "read_level": "publisher_html_relevant_sections",
+      "read_scope": "Section5.2(3), Figure17, conclusions and data availability",
+      "finding": "Slope correction tested in 18 cases; author explicitly calls for field validation",
+      "dataset_url": "https://doi.org/10.6084/m9.figshare.29205452.v2",
+      "ready_to_run_public_model_verified": false
+    },
+    {
+      "id": "wang2026_prior",
+      "doi": "10.1109/MGRS.2026.3702334",
+      "primary_url": "https://ieeexplore.ieee.org/document/11589569/",
+      "code_url": "https://codeocean.com/capsule/5192589/tree",
+      "read_level": "prior_repository_reading_records_only_this_round",
+      "current_original_available": false,
+      "historical_simulation_agl_m": 5,
+      "solver": "NOT_REVERIFIED_DO_NOT_ASSERT_GPRMAX",
+      "access_results": {
+        "doi_redirect_http_status": 202,
+        "doi_response_bytes": 0,
+        "codeocean_http_status": 403
+      },
+      "historical_sha256": "1aaa254b56e27b236e4702be5d86bc282ee75b57bcb946d7161f164861b950d0",
+      "historical_evidence": "docs/research/2026-09-27_sfcw_manual_literature_ledger.json:P3",
+      "ready_to_run_public_model_verified": false
+    }
+  ],
+  "public_model_repositories": [
+    {
+      "repository": "p4tr1ckc4rs0n/gprLearn",
+      "tree_commit": "bc2626fce687fe1c22edbd2c3fca200b07248ec3",
+      "input_paths": [],
+      "input_cache_identities": [],
+      "simulation_several_meter_agl_verified": false,
+      "submodules_recursively_reviewed": false
+    },
+    {
+      "repository": "Mh-Magdy/GPR_Modeling_Simulation",
+      "tree_commit": "2caefb584fb0f0ea00f90ad6b8afd0808c606d79",
+      "input_paths": [
+        "models/model1.in",
+        "models/model2.in",
+        "models/model3.in"
+      ],
+      "input_cache_identities": [
+        {
+          "file": "GPR_Modeling_Simulation_models_model1.in",
+          "sha256": "6f28673ceb92741e4015e8597d9202d7705f5f06b91e47c624fbd1e94a40d919"
+        },
+        {
+          "file": "GPR_Modeling_Simulation_models_model2.in",
+          "sha256": "06810fdb9254e4604a35bbd3a72bdff17598a42a8ec7e665303be096a3bc0566"
+        },
+        {
+          "file": "GPR_Modeling_Simulation_models_model3.in",
+          "sha256": "dcfbad5e0353625d9288169c3625dfdfde975bd7c3e6aaa7e616c28a5b6661a5"
+        }
+      ],
+      "simulation_several_meter_agl_verified": false,
+      "submodules_recursively_reviewed": false
+    }
+  ],
+  "datasets_metadata": [
+    {
+      "article_id": 21892263,
+      "title": "Original data for the UAV-GPR method",
+      "version": 1,
+      "url": "https://figshare.com/articles/dataset/Original_data_for_the_UAV-GPR_method/21892263",
+      "metadata_only": true,
+      "archive_contents_verified": false,
+      "files": [
+        {
+          "name": "Original data.rar",
+          "size": 2555796803,
+          "download_url": "https://ndownloader.figshare.com/files/38829297"
+        }
+      ]
+    },
+    {
+      "article_id": 29205452,
+      "title": "Original data for \"Combined measurement of soil permittivity and electrical conductivity using UAV-based ground penetrating radar\"",
+      "version": 2,
+      "url": "https://figshare.com/articles/dataset/Original_data_for_Combined_measurement_of_soil_permittivity_and_electrical_conductivity_using_UAV-based_ground_penetrating_radar_/29205452",
+      "metadata_only": true,
+      "archive_contents_verified": false,
+      "files": [
+        {
+          "name": "material.rar",
+          "size": 305939070,
+          "download_url": "https://ndownloader.figshare.com/files/55017902"
+        }
+      ]
+    },
+    {
+      "article_id": 16573025,
+      "title": "Profiles of Ground-Penetrating Radar data simulating a drone-mounted acquisition",
+      "version": 1,
+      "url": "https://figshare.com/articles/dataset/Profiles_of_Ground-Penetrating_Radar_data_simulating_a_drone-mounted_acquisition/16573025",
+      "metadata_only": true,
+      "archive_contents_verified": false,
+      "files": [
+        {
+          "name": "Drone-based GPR - data archive.7z",
+          "size": 6128054,
+          "download_url": "https://ndownloader.figshare.com/files/30663254"
+        }
+      ]
+    }
+  ],
+  "local_code_read": [
+    {
+      "path": "scripts\\hs4_slope_bscan_fine2m_v0_1.py",
+      "sha256": "73aea6bebaff3e1ad278ca6cfc110e4e22a811bce38afa287ade12300623ae53",
+      "scope": "recipe geometry/source or HertzianDipole additive update; source read only, solver not run",
+      "frozen_previous_solver_identity_certified": false
+    },
+    {
+      "path": "scripts\\hs4_slope_bscan_v0_1.py",
+      "sha256": "684eb722d02cd28c6e5fd20de775b049210f9aeae458c01722b8b40e103eb82b",
+      "scope": "recipe geometry/source or HertzianDipole additive update; source read only, solver not run",
+      "frozen_previous_solver_identity_certified": false
+    },
+    {
+      "path": "D:\\gprMax-v.4.0.0\\gprMax\\sources.py",
+      "sha256": "f110fac160e7257d303586a9371b4ace718358f2ebe335e3ad700a3a5edf14fc",
+      "scope": "recipe geometry/source or HertzianDipole additive update; source read only, solver not run",
+      "frozen_previous_solver_identity_certified": false
+    }
+  ],
+  "manual": {
+    "url": "https://docs.gprmax.com/en/latest/sources_ports.html",
+    "online_version_seen": "4.0.1",
+    "scope": "source/port distinction; Hertzian impressed current and receiver field; not certification of frozen V4.0.0 runs"
+  },
+  "excluded_or_partial": [
+    {
+      "url": "https://publications.cnr.it/api/v1/documents/download/185185",
+      "status": "404",
+      "note": "Catapano2015 forward-looking3.5/4.5m seen in search-index excerpt only; not promoted to full-text evidence"
+    }
+  ],
+  "limitations": [
+    "No new solver or training; no reproduction of author numerical results",
+    "No several-metre low-frequency deep-strata ready-to-run gprMax public input package verified in this search",
+    "UAV operational height, numerical AGL, aircraft rigging length and domain size kept separate",
+    "No identified unique field-gap cause; early rings not proven finite-antenna air-gap multiples"
+  ],
+  "queries": [
+    "gprMax UAV antenna height simulation",
+    "gprMax airborne height radar simulation",
+    "Airborne Ground Penetrating Radar Field Test gprMax",
+    "Drone-mounted GPR surveying flight height gprMax",
+    "gprMax UAV 3 m /5 m /8 m simulation",
+    "gprMax UAV github model",
+    "Modeling and Implementation of a Joint Airborne GPR height",
+    "Research on Airborne GPR Imaging Technology Complex Terrain gprMax",
+    "A Three-Dimensional FDTD(2,4) Subgridding Algorithm 14.4",
+    "Deep-Penetrating Uncrewed 3702334"
+  ]
+}
