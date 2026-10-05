@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "contract_sha256": "19d07bec6c7c690927b56f9c8269cff8af7d2d523bd2138bf3a3e395e92f6383",
+  "analysis_code_sha256": "51fc1ef1b15bee5e0e64afc8df8d628ce72163b1a2199bf28e08a75ec821b755",
+  "independent_DFT_relative_L2_max": 1.3441725819903132e-13,
+  "rows": [
+    {
+      "case": "depth3",
+      "depth_m": 3.0,
+      "isolated_over_fullcover_per_station_median": 0.0009299437465282097,
+      "isolated_over_fullcover_per_station_minmax": [
+        0.0009299437460936716,
+        0.0009299437468958486
+      ],
+      "predicted_arrival_ns": 139.48545336362767,
+      "isolated_peak_ns_median": 153.66633003924196,
+      "isolated_peak_ns_span": [
+        153.66633003924196,
+        153.66633003924196
+      ]
+    },
+    {
+      "case": "depth10",
+      "depth_m": 10.0,
+      "isolated_over_fullcover_per_station_median": 3.6623311203492307e-06,
+      "isolated_over_fullcover_per_station_minmax": [
+        3.6623310699117632e-06,
+        3.6623312612684454e-06
+      ],
+      "predicted_arrival_ns": 340.42091567144877,
+      "isolated_peak_ns_median": 385.58101770015463,
+      "isolated_peak_ns_span": [
+        385.5220513417359,
+        385.58101770015463
+      ]
+    },
+    {
+      "case": "depth18_5",
+      "depth_m": 18.5,
+      "isolated_over_fullcover_per_station_median": 8.828055445827646e-08,
+      "isolated_over_fullcover_per_station_minmax": [
+        8.828044331801821e-08,
+        8.828087781477813e-08
+      ],
+      "predicted_arrival_ns": 584.4139770452316,
+      "isolated_peak_ns_median": 627.7558517259286,
+      "isolated_peak_ns_span": [
+        627.6379190090911,
+        627.7558517259286
+      ]
+    }
+  ],
+  "isolation_definition": "interface = flat-interface case minus shared full-cover background (declared target/background pair)",
+  "display_note": "row3 per-panel self-normalized dB envelope is declared display enhancement, not amplitude fidelity",
+  "scope": "2D line-source B-scan mechanism screening; depths are mechanism points, not Line9 truth."
+}

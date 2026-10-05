@@ -1,0 +1,15 @@
+#title: 2D depth B-scan v0.1; depth3; tx=15; 8m altitude
+#domain: 36 0.05 31.5
+#dx_dy_dz: 0.025 0.05 0.025
+#time_window: 650e-9
+#omp_threads: 2
+#pml_cells: 80 0 40 80 0 40
+#pml_formulation: HORIPML
+#waveform: ricker 40 100e6 pulse
+#hertzian_dipole: y 15 0.025 29.5 pulse
+#rx: 16.3 0.025 29.5 r1 Ey
+#material: 9 0.001 1 0 rock
+#material: 18.017 0.003 1 0 cover
+#add_dispersion_debye: 1 7.878 6.4567e-09 cover
+#box: 0 0 0 36 0.05 18.5 rock
+#box: 0 0 18.5 36 0.05 21.5 cover
