@@ -1,0 +1,712 @@
+{
+  "status": "FROZEN_APPROVED",
+  "approval_basis": "User: 不必，我们现在不考虑这个单因素，我们需要的是先做出好的样本再消融。只跑一个 (2026-10-05); single fine-grid 2 m AGL gentle-slope terrain-following B-scan with ideal + catalogue-operator background removal and dense wavefield snapshots; no c2/f8 intermediates.",
+  "python": "E:\\automation_djh\\artifacts\\local_checks\\gprmax_v4_gpu_env2\\Scripts\\python.exe",
+  "source_identities": {
+    "__init__.py": "7e78489b2f15bc006c9bb7d18e17bb8e09e8b91cf4f3a483e8339ee9713cefb9",
+    "sources.py": "f110fac160e7257d303586a9371b4ace718358f2ebe335e3ad700a3a5edf14fc",
+    "fields_outputs.py": "7aca799e424ce4162d2547a3763424f762be690c9870f948f6b7f522a27f10bd",
+    "model.py": "3826f1b448a3f465c5273fc9b283fcca2c2e13e81618bc8aaf6c2c0424a0b8a8",
+    "waveforms.py": "ca79340903a25bd370d6149ff23b985c73ccb7b754fd73c8e70cc7b292ec9bcc",
+    "cuda_opencl/knl_fields_updates.py": "f109dd1f58314820a1ded5bf95b6ce8a97cf628015ed77d9b260ebc390fd3fd6",
+    "cuda_opencl/knl_source_updates.py": "27b444919df2884a1cddb5811a4aa8960bd6c47edccf2816853f03f1b8a1d537",
+    "cuda_opencl/knl_pml_updates_electric_HORIPML.py": "6f1d6cf7e33bb541754b0e67ba91a4922d63f494e20efba3b8d88610ad25245d",
+    "cuda_opencl/knl_pml_updates_magnetic_HORIPML.py": "b1d59e70d7a3d5240d546fcc713abfc37c4657575ddb88ae3522a3984bedd498",
+    "toolboxes/SFCW/processing.py": "adad556f09140956f0ee19d3038430e06a9ae8be6a826dcad723096d99624a3b",
+    "cython/eigenmode_dft.cp312-win_amd64.pyd": "6f0a1ede273533f2a0445e02beed6e24106c2e94196c5b1f1e4512b894e03e2d",
+    "cython/eigenmode_source.cp312-win_amd64.pyd": "07e46a7724303074635262505a1b7ce0f44fc93ee17931311bf940f7bf84b558",
+    "cython/fields_updates_dispersive.cp312-win_amd64.pyd": "e3745606f042fec0bd4b53bbb1e00e8033ff33e46f91d1b93ae7214e5e7309d4",
+    "cython/fields_updates_hsg.cp312-win_amd64.pyd": "fcc3770ca490d5ba734878145b863f6148dae8f2b15423d9b44cd11734e9b9b7",
+    "cython/fields_updates_normal.cp312-win_amd64.pyd": "1055afd50126f28a33849eb24442c93b33f2317d398583ce06ede542731a4cf0",
+    "cython/fractals_generate.cp312-win_amd64.pyd": "9b9fb23bbec19bd9600279646244c546f73b3a4fd005cb5f27146a4c5f44af5a",
+    "cython/geometry_outputs.cp312-win_amd64.pyd": "469dd0971fca926d7697e1e5307c967f5000aabb7e74ac4c81c71b474c722776",
+    "cython/geometry_primitives.cp312-win_amd64.pyd": "b46a760d38382bf180165429e20089fa067e99148f3f9bb769baed33e73eb047",
+    "cython/impedance_surface.cp312-win_amd64.pyd": "c3b852a44298085150d3a23dc84ade508c392c3dade855ac0675eafc6f37f503",
+    "cython/network_port.cp312-win_amd64.pyd": "8cf5b8b34e634dd3354788a585f7ec32c9b1e7c97f22948b58b09c4ccd30e609",
+    "cython/ntff.cp312-win_amd64.pyd": "2dfbf3ef36725fec07e35d56416f4e6adca6593ef394d2d16391722201437766",
+    "cython/plane_wave.cp312-win_amd64.pyd": "cd46c2c48a299570dc1411a20576c4ad4c14ea5ea62524e6559a35dbdc339e96",
+    "cython/pml_build.cp312-win_amd64.pyd": "525e2f9ec9ca07e01ea002e613f03bf9b4a84130993cc6f9ee2b5d6e7a98e695",
+    "cython/pml_updates_electric_HORIPML.cp312-win_amd64.pyd": "029fa0430595ccf698032848286191541ce83949a9ad1cc0ef84789810138723",
+    "cython/pml_updates_electric_MRIPML.cp312-win_amd64.pyd": "f1439cd016ba203fe0be816d69d1f670364db8a430b1071e087e6a786b233bac",
+    "cython/pml_updates_magnetic_HORIPML.cp312-win_amd64.pyd": "f0dfcc00fcf1d529fac0875f7dc12a9655941ab0167418ebb85c4967cfa636ce",
+    "cython/pml_updates_magnetic_MRIPML.cp312-win_amd64.pyd": "9e0330e1e2cf32869186e4cb1444a243edd5e67525ea42575b3618a87a4b1c02",
+    "cython/sar_averaging.cp312-win_amd64.pyd": "6333b194385d6afbeb75f445626a6c8cd7653b7c64f4fe51c6ed5c3e761705bb",
+    "cython/snapshots.cp312-win_amd64.pyd": "8e9a6683cd0e0b7b13ec501f1c1da913a66fdaa41d7a22519c6c5525616e181e",
+    "cython/symmetry_boundaries.cp312-win_amd64.pyd": "ca5c6634c56b55a36f380002573fd4fa87b10424316c1eb42ba7583e8b4fc7f8",
+    "cython/symmetry_boundaries_dispersive.cp312-win_amd64.pyd": "101c6a7d1559e992ebf5c43df5addc94c57807ed60f98d824bffe5d07d72a738",
+    "cython/symmetry_boundaries_dispersive_complex.cp312-win_amd64.pyd": "ff0b8a372ef67273200b9609419d86a6e55a753189f82d271162194619781f19",
+    "cython/virtual_waveguide.cp312-win_amd64.pyd": "501c665eede1269cff66dc61c9d149c2d97be7e7d19ea0dec1ebf502172c820b",
+    "cython/yee_cell_build.cp312-win_amd64.pyd": "a5f56d8a0e6aa18f42dd5f7be1fcd1877937a711cebeb915ff310b4d57dc206c",
+    "cython/yee_cell_setget_rigid.cp312-win_amd64.pyd": "c9cfdb13e08857b51b51ccfa769e2155f44e01ac938f644655c0fc1f2c76b7ab"
+  },
+  "code_identities": {
+    "E:\\automation_djh\\scripts\\hs4_slope_bscan_fine2m_v0_1.py": "73aea6bebaff3e1ad278ca6cfc110e4e22a811bce38afa287ade12300623ae53",
+    "E:\\automation_djh\\scripts\\run_slope_bscan_fine2m_4090.cmd": "379fa62db71da844fa3b15334249841bd04aa790b0433420e29cd6e5b9d9bfb7",
+    "E:\\automation_djh\\scripts\\hs4_station_grid_controls.py": "bbb19e359eb6e195c1a28ab25b162b367241ab5d771ea627461d76d6cee8a90d",
+    "E:\\automation_djh\\scripts\\gprmax_cached_cuda_entry.py": "f069b6f099f3bcf4ebcc79f1ea2543b0743c7c5501ab050563ca454bc2758b5a"
+  },
+  "groups": [
+    {
+      "id": "slope_rough_s00",
+      "input": "E:\\automation_djh\\artifacts\\research_checks\\2026-10-05_slope_bscan_2d_fine2m_r1\\slope_rough_s00\\profile.in",
+      "input_sha256": "aa9f8e3dfbf48333cd939d507482cb6a05ca0e54f6198e67a8852ef61ccba3a9",
+      "case": "slope_rough",
+      "station_index": 0,
+      "tx_x_m": 15.0,
+      "spacing_m": 0.0125,
+      "tx_m": [
+        15.0,
+        0.025,
+        23.0
+      ],
+      "receivers_m": [
+        [
+          16.3,
+          0.025,
+          23.0
+        ]
+      ]
+    },
+    {
+      "id": "slope_rough_s01",
+      "input": "E:\\automation_djh\\artifacts\\research_checks\\2026-10-05_slope_bscan_2d_fine2m_r1\\slope_rough_s01\\profile.in",
+      "input_sha256": "1b1c9e39e00366fa31541c507d9d047fcef8f223afbd3df4805d2fecf4010635",
+      "case": "slope_rough",
+      "station_index": 1,
+      "tx_x_m": 15.5,
+      "spacing_m": 0.0125,
+      "tx_m": [
+        15.5,
+        0.025,
+        22.9125
+      ],
+      "receivers_m": [
+        [
+          16.8,
+          0.025,
+          22.9125
+        ]
+      ]
+    },
+    {
+      "id": "slope_rough_s02",
+      "input": "E:\\automation_djh\\artifacts\\research_checks\\2026-10-05_slope_bscan_2d_fine2m_r1\\slope_rough_s02\\profile.in",
+      "input_sha256": "eb904221a95395e4c5c7fb98c1775eb3d3a3424dd44d057052e8e62e6f0b0227",
+      "case": "slope_rough",
+      "station_index": 2,
+      "tx_x_m": 16.0,
+      "spacing_m": 0.0125,
+      "tx_m": [
+        16.0,
+        0.025,
+        22.837500000000002
+      ],
+      "receivers_m": [
+        [
+          17.3,
+          0.025,
+          22.837500000000002
+        ]
+      ]
+    },
+    {
+      "id": "slope_rough_s03",
+      "input": "E:\\automation_djh\\artifacts\\research_checks\\2026-10-05_slope_bscan_2d_fine2m_r1\\slope_rough_s03\\profile.in",
+      "input_sha256": "79668e5aeb99b35d763140c3ea44db54679475b15ee08f70a8a4ee4845d22aa4",
+      "case": "slope_rough",
+      "station_index": 3,
+      "tx_x_m": 16.5,
+      "spacing_m": 0.0125,
+      "tx_m": [
+        16.5,
+        0.025,
+        22.75
+      ],
+      "receivers_m": [
+        [
+          17.8,
+          0.025,
+          22.75
+        ]
+      ]
+    },
+    {
+      "id": "slope_rough_s04",
+      "input": "E:\\automation_djh\\artifacts\\research_checks\\2026-10-05_slope_bscan_2d_fine2m_r1\\slope_rough_s04\\profile.in",
+      "input_sha256": "ecee69b9e900e1b574b0b712321f76f00424cfce005aa41585dd81cc5e4352ed",
+      "case": "slope_rough",
+      "station_index": 4,
+      "tx_x_m": 17.0,
+      "spacing_m": 0.0125,
+      "tx_m": [
+        17.0,
+        0.025,
+        22.6625
+      ],
+      "receivers_m": [
+        [
+          18.3,
+          0.025,
+          22.6625
+        ]
+      ]
+    },
+    {
+      "id": "slope_rough_s05",
+      "input": "E:\\automation_djh\\artifacts\\research_checks\\2026-10-05_slope_bscan_2d_fine2m_r1\\slope_rough_s05\\profile.in",
+      "input_sha256": "73bd00e9e9fe4507f3d0aa827394b862748067e2a6d53894ca9d7bf57497fb42",
+      "case": "slope_rough",
+      "station_index": 5,
+      "tx_x_m": 17.5,
+      "spacing_m": 0.0125,
+      "tx_m": [
+        17.5,
+        0.025,
+        22.587500000000002
+      ],
+      "receivers_m": [
+        [
+          18.8,
+          0.025,
+          22.587500000000002
+        ]
+      ]
+    },
+    {
+      "id": "slope_rough_s06",
+      "input": "E:\\automation_djh\\artifacts\\research_checks\\2026-10-05_slope_bscan_2d_fine2m_r1\\slope_rough_s06\\profile.in",
+      "input_sha256": "05c19e95cdbeb1c703abe3ac936091e8d7b0f10d524e6302b61c7abed4b191b5",
+      "case": "slope_rough",
+      "station_index": 6,
+      "tx_x_m": 18.0,
+      "spacing_m": 0.0125,
+      "tx_m": [
+        18.0,
+        0.025,
+        22.5
+      ],
+      "receivers_m": [
+        [
+          19.3,
+          0.025,
+          22.5
+        ]
+      ]
+    },
+    {
+      "id": "slope_rough_s07",
+      "input": "E:\\automation_djh\\artifacts\\research_checks\\2026-10-05_slope_bscan_2d_fine2m_r1\\slope_rough_s07\\profile.in",
+      "input_sha256": "2d703915e4e8e4b4b5ade1bbdf9c9de84a4c558795fb388fbb3a6c92b8a45620",
+      "case": "slope_rough",
+      "station_index": 7,
+      "tx_x_m": 18.5,
+      "spacing_m": 0.0125,
+      "tx_m": [
+        18.5,
+        0.025,
+        22.4125
+      ],
+      "receivers_m": [
+        [
+          19.8,
+          0.025,
+          22.4125
+        ]
+      ]
+    },
+    {
+      "id": "slope_rough_s08",
+      "input": "E:\\automation_djh\\artifacts\\research_checks\\2026-10-05_slope_bscan_2d_fine2m_r1\\slope_rough_s08\\profile.in",
+      "input_sha256": "4ab64572ae6f1507164473f2d034f15d23eea8c8a60d8714b34420adda4c16ac",
+      "case": "slope_rough",
+      "station_index": 8,
+      "tx_x_m": 19.0,
+      "spacing_m": 0.0125,
+      "tx_m": [
+        19.0,
+        0.025,
+        22.337500000000002
+      ],
+      "receivers_m": [
+        [
+          20.3,
+          0.025,
+          22.337500000000002
+        ]
+      ]
+    },
+    {
+      "id": "slope_rough_s09",
+      "input": "E:\\automation_djh\\artifacts\\research_checks\\2026-10-05_slope_bscan_2d_fine2m_r1\\slope_rough_s09\\profile.in",
+      "input_sha256": "0c8e49f1e4deb47cafce0823c9fd7809a20d6356ac2c404758e329ee14ffa869",
+      "case": "slope_rough",
+      "station_index": 9,
+      "tx_x_m": 19.5,
+      "spacing_m": 0.0125,
+      "tx_m": [
+        19.5,
+        0.025,
+        22.25
+      ],
+      "receivers_m": [
+        [
+          20.8,
+          0.025,
+          22.25
+        ]
+      ]
+    },
+    {
+      "id": "slope_rough_s10",
+      "input": "E:\\automation_djh\\artifacts\\research_checks\\2026-10-05_slope_bscan_2d_fine2m_r1\\slope_rough_s10\\profile.in",
+      "input_sha256": "78a31167631374b7ff08bf49e56472f4d36eac85d70912de340a674802cb78e2",
+      "case": "slope_rough",
+      "station_index": 10,
+      "tx_x_m": 20.0,
+      "spacing_m": 0.0125,
+      "tx_m": [
+        20.0,
+        0.025,
+        22.1625
+      ],
+      "receivers_m": [
+        [
+          21.3,
+          0.025,
+          22.1625
+        ]
+      ]
+    },
+    {
+      "id": "slope_rough_s11",
+      "input": "E:\\automation_djh\\artifacts\\research_checks\\2026-10-05_slope_bscan_2d_fine2m_r1\\slope_rough_s11\\profile.in",
+      "input_sha256": "16f040c52037f58cc92408ee7a7a923b873290e8081e1bf03f10a71f89b2d8fd",
+      "case": "slope_rough",
+      "station_index": 11,
+      "tx_x_m": 20.5,
+      "spacing_m": 0.0125,
+      "tx_m": [
+        20.5,
+        0.025,
+        22.087500000000002
+      ],
+      "receivers_m": [
+        [
+          21.8,
+          0.025,
+          22.087500000000002
+        ]
+      ]
+    },
+    {
+      "id": "slope_rough_s12",
+      "input": "E:\\automation_djh\\artifacts\\research_checks\\2026-10-05_slope_bscan_2d_fine2m_r1\\slope_rough_s12\\profile.in",
+      "input_sha256": "80a81be2d784cd756691fe6b04f5eaf41d4d65c29a5093f8e08a08c15ce6c9be",
+      "case": "slope_rough",
+      "station_index": 12,
+      "tx_x_m": 21.0,
+      "spacing_m": 0.0125,
+      "tx_m": [
+        21.0,
+        0.025,
+        22.0
+      ],
+      "receivers_m": [
+        [
+          22.3,
+          0.025,
+          22.0
+        ]
+      ]
+    },
+    {
+      "id": "slope_fullcover_s00",
+      "input": "E:\\automation_djh\\artifacts\\research_checks\\2026-10-05_slope_bscan_2d_fine2m_r1\\slope_fullcover_s00\\profile.in",
+      "input_sha256": "164e80dd28cb65ad8e1d51808a953ab04f5d20d30036a60187954ae35750f5c8",
+      "case": "slope_fullcover",
+      "station_index": 0,
+      "tx_x_m": 15.0,
+      "spacing_m": 0.0125,
+      "tx_m": [
+        15.0,
+        0.025,
+        23.0
+      ],
+      "receivers_m": [
+        [
+          16.3,
+          0.025,
+          23.0
+        ]
+      ]
+    },
+    {
+      "id": "slope_fullcover_s01",
+      "input": "E:\\automation_djh\\artifacts\\research_checks\\2026-10-05_slope_bscan_2d_fine2m_r1\\slope_fullcover_s01\\profile.in",
+      "input_sha256": "47e9804614b521abeb55eb62d81ad454d66fbcb6ebab91b18dfc8fa3b3839fcd",
+      "case": "slope_fullcover",
+      "station_index": 1,
+      "tx_x_m": 15.5,
+      "spacing_m": 0.0125,
+      "tx_m": [
+        15.5,
+        0.025,
+        22.9125
+      ],
+      "receivers_m": [
+        [
+          16.8,
+          0.025,
+          22.9125
+        ]
+      ]
+    },
+    {
+      "id": "slope_fullcover_s02",
+      "input": "E:\\automation_djh\\artifacts\\research_checks\\2026-10-05_slope_bscan_2d_fine2m_r1\\slope_fullcover_s02\\profile.in",
+      "input_sha256": "33b9344d446fab14b7e9fb80e9827e59a08d0a71919fca8b28068fd91b15088b",
+      "case": "slope_fullcover",
+      "station_index": 2,
+      "tx_x_m": 16.0,
+      "spacing_m": 0.0125,
+      "tx_m": [
+        16.0,
+        0.025,
+        22.837500000000002
+      ],
+      "receivers_m": [
+        [
+          17.3,
+          0.025,
+          22.837500000000002
+        ]
+      ]
+    },
+    {
+      "id": "slope_fullcover_s03",
+      "input": "E:\\automation_djh\\artifacts\\research_checks\\2026-10-05_slope_bscan_2d_fine2m_r1\\slope_fullcover_s03\\profile.in",
+      "input_sha256": "c26c05aaddb6a3088b1e1b16a29abb38fe0c376ba0961ca9130688f8831ddf31",
+      "case": "slope_fullcover",
+      "station_index": 3,
+      "tx_x_m": 16.5,
+      "spacing_m": 0.0125,
+      "tx_m": [
+        16.5,
+        0.025,
+        22.75
+      ],
+      "receivers_m": [
+        [
+          17.8,
+          0.025,
+          22.75
+        ]
+      ]
+    },
+    {
+      "id": "slope_fullcover_s04",
+      "input": "E:\\automation_djh\\artifacts\\research_checks\\2026-10-05_slope_bscan_2d_fine2m_r1\\slope_fullcover_s04\\profile.in",
+      "input_sha256": "d0f5728190c4b7a1649bd5f91ff26c9385eab5db22dbf9531600768d51468300",
+      "case": "slope_fullcover",
+      "station_index": 4,
+      "tx_x_m": 17.0,
+      "spacing_m": 0.0125,
+      "tx_m": [
+        17.0,
+        0.025,
+        22.6625
+      ],
+      "receivers_m": [
+        [
+          18.3,
+          0.025,
+          22.6625
+        ]
+      ]
+    },
+    {
+      "id": "slope_fullcover_s05",
+      "input": "E:\\automation_djh\\artifacts\\research_checks\\2026-10-05_slope_bscan_2d_fine2m_r1\\slope_fullcover_s05\\profile.in",
+      "input_sha256": "ae87ead426a504bb1d3d8ec1b6f5db20b93e64bbdf95aaa4da35afa5d89028dc",
+      "case": "slope_fullcover",
+      "station_index": 5,
+      "tx_x_m": 17.5,
+      "spacing_m": 0.0125,
+      "tx_m": [
+        17.5,
+        0.025,
+        22.587500000000002
+      ],
+      "receivers_m": [
+        [
+          18.8,
+          0.025,
+          22.587500000000002
+        ]
+      ]
+    },
+    {
+      "id": "slope_fullcover_s06",
+      "input": "E:\\automation_djh\\artifacts\\research_checks\\2026-10-05_slope_bscan_2d_fine2m_r1\\slope_fullcover_s06\\profile.in",
+      "input_sha256": "4390b332d4309432d8ea5c6f0564b75ff3ec350c697f179fca27ecbdad381b42",
+      "case": "slope_fullcover",
+      "station_index": 6,
+      "tx_x_m": 18.0,
+      "spacing_m": 0.0125,
+      "tx_m": [
+        18.0,
+        0.025,
+        22.5
+      ],
+      "receivers_m": [
+        [
+          19.3,
+          0.025,
+          22.5
+        ]
+      ]
+    },
+    {
+      "id": "slope_fullcover_s07",
+      "input": "E:\\automation_djh\\artifacts\\research_checks\\2026-10-05_slope_bscan_2d_fine2m_r1\\slope_fullcover_s07\\profile.in",
+      "input_sha256": "470e2e3a763a7459c3c961a35c939aad2fe6ee832339eab77143a16c1aafe86e",
+      "case": "slope_fullcover",
+      "station_index": 7,
+      "tx_x_m": 18.5,
+      "spacing_m": 0.0125,
+      "tx_m": [
+        18.5,
+        0.025,
+        22.4125
+      ],
+      "receivers_m": [
+        [
+          19.8,
+          0.025,
+          22.4125
+        ]
+      ]
+    },
+    {
+      "id": "slope_fullcover_s08",
+      "input": "E:\\automation_djh\\artifacts\\research_checks\\2026-10-05_slope_bscan_2d_fine2m_r1\\slope_fullcover_s08\\profile.in",
+      "input_sha256": "7777a515574e89247d048e4820a06e59a81fa09e5ff644bb709b46b8c314ef5d",
+      "case": "slope_fullcover",
+      "station_index": 8,
+      "tx_x_m": 19.0,
+      "spacing_m": 0.0125,
+      "tx_m": [
+        19.0,
+        0.025,
+        22.337500000000002
+      ],
+      "receivers_m": [
+        [
+          20.3,
+          0.025,
+          22.337500000000002
+        ]
+      ]
+    },
+    {
+      "id": "slope_fullcover_s09",
+      "input": "E:\\automation_djh\\artifacts\\research_checks\\2026-10-05_slope_bscan_2d_fine2m_r1\\slope_fullcover_s09\\profile.in",
+      "input_sha256": "dff3f73a36e4a35252ed7d04a57c1900dd120d490ee69d9149c2f1418619eca5",
+      "case": "slope_fullcover",
+      "station_index": 9,
+      "tx_x_m": 19.5,
+      "spacing_m": 0.0125,
+      "tx_m": [
+        19.5,
+        0.025,
+        22.25
+      ],
+      "receivers_m": [
+        [
+          20.8,
+          0.025,
+          22.25
+        ]
+      ]
+    },
+    {
+      "id": "slope_fullcover_s10",
+      "input": "E:\\automation_djh\\artifacts\\research_checks\\2026-10-05_slope_bscan_2d_fine2m_r1\\slope_fullcover_s10\\profile.in",
+      "input_sha256": "cb10522fe7a1527f39e3344461b449e930c19460f033d31328eb33377c8b7660",
+      "case": "slope_fullcover",
+      "station_index": 10,
+      "tx_x_m": 20.0,
+      "spacing_m": 0.0125,
+      "tx_m": [
+        20.0,
+        0.025,
+        22.1625
+      ],
+      "receivers_m": [
+        [
+          21.3,
+          0.025,
+          22.1625
+        ]
+      ]
+    },
+    {
+      "id": "slope_fullcover_s11",
+      "input": "E:\\automation_djh\\artifacts\\research_checks\\2026-10-05_slope_bscan_2d_fine2m_r1\\slope_fullcover_s11\\profile.in",
+      "input_sha256": "93169752bde7f5cab3cb0cb41cc3e1643d7ddada13c909e50ca46f83d18fe68d",
+      "case": "slope_fullcover",
+      "station_index": 11,
+      "tx_x_m": 20.5,
+      "spacing_m": 0.0125,
+      "tx_m": [
+        20.5,
+        0.025,
+        22.087500000000002
+      ],
+      "receivers_m": [
+        [
+          21.8,
+          0.025,
+          22.087500000000002
+        ]
+      ]
+    },
+    {
+      "id": "slope_fullcover_s12",
+      "input": "E:\\automation_djh\\artifacts\\research_checks\\2026-10-05_slope_bscan_2d_fine2m_r1\\slope_fullcover_s12\\profile.in",
+      "input_sha256": "6327e270e5f8064237a0497fb42296cc6df0d3afedf9c807d1e2b3b9ba15f2dc",
+      "case": "slope_fullcover",
+      "station_index": 12,
+      "tx_x_m": 21.0,
+      "spacing_m": 0.0125,
+      "tx_m": [
+        21.0,
+        0.025,
+        22.0
+      ],
+      "receivers_m": [
+        [
+          22.3,
+          0.025,
+          22.0
+        ]
+      ]
+    }
+  ],
+  "max_runs": 26,
+  "no_retry": true,
+  "min_available_RAM_GiB": 4.0,
+  "min_free_VRAM_GiB": 2.0,
+  "max_owned_RSS_GiB": 8.0,
+  "min_system_available_during_run_GiB": 1.0,
+  "max_group_wall_s": 300,
+  "max_batch_wall_s": 7800,
+  "gpu_lock": "artifacts/local_checks/hs4_gpu_exclusive.lock",
+  "stage": "round7_slope_bscan_2d_fine2m",
+  "parent_batch": "2026-10-05_slope_bscan_2d_r1 (coarse dl0.025 + 8 m AGL; reused as the coarse/tall comparison cell, no rerun)",
+  "geometry": {
+    "domain_m": [
+      36.0,
+      0.05,
+      31.5
+    ],
+    "dx_dy_dz_m": [
+      0.0125,
+      0.05,
+      0.0125
+    ],
+    "pml_cells": [
+      160,
+      0,
+      80,
+      160,
+      0,
+      80
+    ],
+    "surface": {
+      "left_flat_z_m": 21.5,
+      "drop_m": 2.0,
+      "slope_interval_m": [
+        12.0,
+        24.0
+      ],
+      "right_flat_z_m": 19.5
+    },
+    "interface": {
+      "left_trend_z_m": 19.5,
+      "drop_m": 1.0,
+      "trend_interval_m": [
+        12.0,
+        24.0
+      ],
+      "relief": "archived 48x0.25m columns, mean removed, edge values extended; quantized to 0.0125 m",
+      "relief_source": "E:\\automation_djh\\artifacts\\research_checks\\2026-10-05_hs4_material_scan_r1\\eps18.017_s0.003_debye_rough\\profile.in",
+      "relief_source_sha256": "220e28b7b362b9cde5b369349a580873f5077b1116dc16a00bc49e5f887903f5",
+      "relief_range_m": [
+        -0.41666666666666785,
+        0.3833333333333311
+      ]
+    },
+    "cover_thickness_m": [
+      0.8125,
+      2.275
+    ],
+    "stations_tx_x_m": [
+      15.0,
+      15.5,
+      16.0,
+      16.5,
+      17.0,
+      17.5,
+      18.0,
+      18.5,
+      19.0,
+      19.5,
+      20.0,
+      20.5,
+      21.0
+    ],
+    "baseline_m": 1.3,
+    "agl_m": 2.0,
+    "antenna_z_m": [
+      23.0,
+      22.9125,
+      22.837500000000002,
+      22.75,
+      22.6625,
+      22.587500000000002,
+      22.5,
+      22.4125,
+      22.337500000000002,
+      22.25,
+      22.1625,
+      22.087500000000002,
+      22.0
+    ],
+    "snapshot": {
+      "group": "slope_rough_s06",
+      "region_m": [
+        8.0,
+        0.0,
+        14.0,
+        28.1,
+        0.05,
+        31.4
+      ],
+      "step_m": [
+        0.15,
+        0.05,
+        0.15
+      ],
+      "iteration_step": 34,
+      "count": 200
+    }
+  },
+  "materials": {
+    "cover": "eps_inf 11, sigma 0.001, Debye dE 0.5 tau 6.4567ns (user-frozen default 2026-10-05)",
+    "rock": "eps 9, sigma 0.001 (unchanged)"
+  },
+  "source": "100MHz Ricker actual-source deconvolution; amp*dl=1Am; 2D y-invariant TM line-source family, not finite 3D",
+  "processing": "native signed B-scans; ideal background = slope_rough minus slope_fullcover (declared pair); catalogue mean/SVD operators applied in analysis; t^2 declared analysis gain labelled non-amplitude",
+  "scope_note": "single synthetic gentle-slope mechanism model, fine grid + 2 m AGL sample production (ablation deferred per user), not Yingshan site adaptation"
+}

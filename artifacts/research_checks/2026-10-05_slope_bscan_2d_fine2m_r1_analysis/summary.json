@@ -1,0 +1,113 @@
+{
+  "status": "PASS",
+  "contract_sha256": "29d54c48f2341905ec39ad76c67f10a8e7266149dfc7416fba2ea41d20d1bab6",
+  "analysis_code_sha256": "2108fe72690361f6380c8776bf0b36987df276e601847e11d10bef9cf1028c06",
+  "independent_DFT_relative_L2_max": 1.4514262503387376e-13,
+  "metrics": {
+    "predicted_interface_ns_per_station": [
+      59.0431003376237,
+      53.780614312991865,
+      48.51812828836001,
+      42.97866931506333,
+      39.931966879750156,
+      39.10104803375565,
+      37.99315623909631,
+      39.37802098242048,
+      40.76288572574465,
+      41.87077752040399,
+      43.25564226372816,
+      44.64050700705233,
+      43.532615212393
+    ],
+    "cover_thickness_m_per_station": [
+      2.0625,
+      1.8250000000000002,
+      1.5875000000000001,
+      1.3375000000000001,
+      1.2000000000000002,
+      1.1625,
+      1.1125,
+      1.175,
+      1.2375,
+      1.2875,
+      1.35,
+      1.4125,
+      1.3625
+    ],
+    "ideal_window_rms_per_station": [
+      14.814639084396594,
+      18.700143989680463,
+      21.524736693939747,
+      18.837816489270235,
+      9.726317289999868,
+      8.687403433598366,
+      7.457619184215637,
+      9.28379255982147,
+      14.548574440282575,
+      15.059920803305578,
+      16.261425341167943,
+      30.335794502601257,
+      10.604358986974617
+    ],
+    "total_window_rms_over_ideal_median": 4.31268497847283,
+    "mean_full_window_rms_over_ideal_median": 0.9254268058255835,
+    "mean_full_window_corr_with_ideal_median": 0.8129040117215862,
+    "svd_rank2_window_rms_over_ideal_median": 0.6565454524061687,
+    "svd_rank2_window_corr_with_ideal_median": 0.4556525077549021
+  },
+  "operator_diagnostics": {
+    "mean_full": {
+      "config_id": "B3_G1_BG",
+      "diagnostics": [
+        {
+          "kind": "mean",
+          "lambda": 1.0
+        },
+        {
+          "kind": "fixed_shared_gain",
+          "end_gain": 1,
+          "axis": 0
+        }
+      ]
+    },
+    "svd_rank2": {
+      "config_id": "B5_G1_BG",
+      "diagnostics": [
+        {
+          "kind": "svd",
+          "k": 2,
+          "effective_k": 2,
+          "relative_singular_values": [
+            1.0,
+            0.008320614894985298,
+            0.005032832024505638,
+            0.0035325417654179757,
+            0.002946982140021493,
+            0.0021791412588964354,
+            0.0013009422062391749,
+            0.0010539018868745106,
+            0.0008266858619817183,
+            0.000744238461123995,
+            0.0006252622365846434,
+            0.0004801118301849572,
+            0.0003677593777239817
+          ],
+          "cutoff_gap_relative_to_s1": 0.00328778287047966,
+          "gap_rtol": 1e-08,
+          "numerical_rank_floor": 1.5065726444163374e-12,
+          "status": "ok"
+        },
+        {
+          "kind": "fixed_shared_gain",
+          "end_gain": 1,
+          "axis": 0
+        }
+      ]
+    }
+  },
+  "gain_declaration": "g(t)=(t/1ns)^2 applied to ideal background-removed B-scan; analysis display product, not amplitude fidelity",
+  "isolation_definition": "ideal = slope_rough minus slope_fullcover (declared target/background pair, same terrain)",
+  "gif_frames": 200,
+  "gif_bytes": 6363652,
+  "scope": "single 2D synthetic gentle-slope mechanism model; fine grid dl0.0125; terrain-following 2 m AGL; not site adaptation"
+}

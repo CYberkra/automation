@@ -1,0 +1,244 @@
+
+=== Electromagnetic modelling software based on the Finite-Difference Time-Domain (FDTD) method 
+
+    www.gprmax.com   __  __
+     __ _ _ __  _ __|  \/  | __ ___  __
+    / _` | '_ \| '__| |\/| |/ _` \ \/ /
+   | (_| | |_) | |  | |  | | (_| |>  <
+    \__, | .__/|_|  |_|  |_|\__,_/_/\_\\
+    |___/|_|
+                     v4.0.0 (Caol Ila)
+
+ Copyright (C) 2015-2026: The University of Edinburgh, United Kingdom
+
+ gprMax is free software: you can redistribute it and/or modify it under the
+  terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+ gprMax is distributed in the hope that it will be useful, but WITHOUT ANY
+  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+  A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ You should have received a copy of the GNU General Public License along with
+  gprMax.  If not, see www.gnu.org/licenses.
+
+LAPTOP-83GRKUNE | unknown unknown | unknown x unknown (16 cores, 32 cores with Hyper-Threading) | 63.2 GiB | Windows 11 (64-bit)
+|--->OpenMP: 16 threads
+|--->CUDA:
+     |--->Device 0: NVIDIA GeForce RTX 4090 Laptop GPU | 16.0 GiB
+Constants/variables used/available for Python scripting: {c: 299792458.0, current_model_run: 1, e0: 8.8541878188e-12, inputfile: E:\automation_djh\artifacts\research_checks\2026-10-05_slope_bscan_2d_fine2m_r1\slope_fullcover_s04\profile.in, m0: 1.25663706127e-06, number_model_runs: 1, z0: 376.7303134118051}
+
+Model title: 2D gentle-slope B-scan v0.1 fine grid; slope_fullcover; tx=17; terrain-follow 2m AGL
+Spatial discretisation: 0.0125 x 0.05 x 0.0125m
+Domain size: 36 x 0.05 x 31.5m (2880 x 1 x 2520 = 7.2576e+06 cells)
+#domain: 36.0 0.05 31.5 detected a 2D model from a 1-cell-thick axis (legacy, implicit style) - consider declaring '#domain_mode: TM' explicitly with 'inf' on that axis in '#domain' instead, which also supports TE mode.
+Mode: 2D TMy
+Time step (at CFL limit): 2.94832e-11 secs
+Time window: 2e-07 secs (6785 iterations)
+Simulation will use 2 OpenMP threads
+PML thickness: x0=160, y0=0, z0=80, xmax=160, ymax=0, zmax=80
+Waveform pulse of type ricker with maximum amplitude scaling 80, frequency 1e+08Hz created.
+Hertzian dipole with polarity y at 17m, 0m, 22.6625m, using waveform pulse created.
+Receiver at 18.3m, 0m, 22.6625m with output component(s) Ey created.
+Material rock with eps_r=9, sigma=0.001 S/m; mu_r=1, sigma*=0 Ohm/m created.
+Material cover with eps_r=11, sigma=0.001 S/m; mu_r=1, sigma*=0 Ohm/m created.
+Debye disperion added to cover with delta_eps_r=0.50, and tau=6.457e-09 secs created.
+PML formulation set to HORIPML
+Box from 0m, 0m, 0m, to 12.0375m, 0.05m, 21.5m of material(s) cover created, dielectric smoothing is off.
+Box from 12.0375m, 0m, 0m, to 12.1125m, 0.05m, 21.4875m of material(s) cover created, dielectric smoothing is off.
+Box from 12.1125m, 0m, 0m, to 12.1875m, 0.05m, 21.475m of material(s) cover created, dielectric smoothing is off.
+Box from 12.1875m, 0m, 0m, to 12.2625m, 0.05m, 21.4625m of material(s) cover created, dielectric smoothing is off.
+Box from 12.2625m, 0m, 0m, to 12.3375m, 0.05m, 21.45m of material(s) cover created, dielectric smoothing is off.
+Box from 12.3375m, 0m, 0m, to 12.4125m, 0.05m, 21.4375m of material(s) cover created, dielectric smoothing is off.
+Box from 12.4125m, 0m, 0m, to 12.4875m, 0.05m, 21.425m of material(s) cover created, dielectric smoothing is off.
+Box from 12.4875m, 0m, 0m, to 12.5625m, 0.05m, 21.4125m of material(s) cover created, dielectric smoothing is off.
+Box from 12.5625m, 0m, 0m, to 12.6375m, 0.05m, 21.4m of material(s) cover created, dielectric smoothing is off.
+Box from 12.6375m, 0m, 0m, to 12.7125m, 0.05m, 21.3875m of material(s) cover created, dielectric smoothing is off.
+Box from 12.7125m, 0m, 0m, to 12.7875m, 0.05m, 21.375m of material(s) cover created, dielectric smoothing is off.
+Box from 12.7875m, 0m, 0m, to 12.8625m, 0.05m, 21.3625m of material(s) cover created, dielectric smoothing is off.
+Box from 12.8625m, 0m, 0m, to 12.9375m, 0.05m, 21.35m of material(s) cover created, dielectric smoothing is off.
+Box from 12.9375m, 0m, 0m, to 13.0125m, 0.05m, 21.3375m of material(s) cover created, dielectric smoothing is off.
+Box from 13.0125m, 0m, 0m, to 13.0875m, 0.05m, 21.325m of material(s) cover created, dielectric smoothing is off.
+Box from 13.0875m, 0m, 0m, to 13.1625m, 0.05m, 21.3125m of material(s) cover created, dielectric smoothing is off.
+Box from 13.1625m, 0m, 0m, to 13.2375m, 0.05m, 21.3m of material(s) cover created, dielectric smoothing is off.
+Box from 13.2375m, 0m, 0m, to 13.3125m, 0.05m, 21.2875m of material(s) cover created, dielectric smoothing is off.
+Box from 13.3125m, 0m, 0m, to 13.3875m, 0.05m, 21.275m of material(s) cover created, dielectric smoothing is off.
+Box from 13.3875m, 0m, 0m, to 13.4625m, 0.05m, 21.2625m of material(s) cover created, dielectric smoothing is off.
+Box from 13.4625m, 0m, 0m, to 13.5375m, 0.05m, 21.25m of material(s) cover created, dielectric smoothing is off.
+Box from 13.5375m, 0m, 0m, to 13.6125m, 0.05m, 21.2375m of material(s) cover created, dielectric smoothing is off.
+Box from 13.6125m, 0m, 0m, to 13.6875m, 0.05m, 21.225m of material(s) cover created, dielectric smoothing is off.
+Box from 13.6875m, 0m, 0m, to 13.7625m, 0.05m, 21.2125m of material(s) cover created, dielectric smoothing is off.
+Box from 13.7625m, 0m, 0m, to 13.8375m, 0.05m, 21.2m of material(s) cover created, dielectric smoothing is off.
+Box from 13.8375m, 0m, 0m, to 13.9125m, 0.05m, 21.1875m of material(s) cover created, dielectric smoothing is off.
+Box from 13.9125m, 0m, 0m, to 13.9875m, 0.05m, 21.175m of material(s) cover created, dielectric smoothing is off.
+Box from 13.9875m, 0m, 0m, to 14.0625m, 0.05m, 21.1625m of material(s) cover created, dielectric smoothing is off.
+Box from 14.0625m, 0m, 0m, to 14.1375m, 0.05m, 21.15m of material(s) cover created, dielectric smoothing is off.
+Box from 14.1375m, 0m, 0m, to 14.2125m, 0.05m, 21.1375m of material(s) cover created, dielectric smoothing is off.
+Box from 14.2125m, 0m, 0m, to 14.2875m, 0.05m, 21.125m of material(s) cover created, dielectric smoothing is off.
+Box from 14.2875m, 0m, 0m, to 14.3625m, 0.05m, 21.1125m of material(s) cover created, dielectric smoothing is off.
+Box from 14.3625m, 0m, 0m, to 14.4375m, 0.05m, 21.1m of material(s) cover created, dielectric smoothing is off.
+Box from 14.4375m, 0m, 0m, to 14.5125m, 0.05m, 21.0875m of material(s) cover created, dielectric smoothing is off.
+Box from 14.5125m, 0m, 0m, to 14.5875m, 0.05m, 21.075m of material(s) cover created, dielectric smoothing is off.
+Box from 14.5875m, 0m, 0m, to 14.6625m, 0.05m, 21.0625m of material(s) cover created, dielectric smoothing is off.
+Box from 14.6625m, 0m, 0m, to 14.7375m, 0.05m, 21.05m of material(s) cover created, dielectric smoothing is off.
+Box from 14.7375m, 0m, 0m, to 14.8125m, 0.05m, 21.0375m of material(s) cover created, dielectric smoothing is off.
+Box from 14.8125m, 0m, 0m, to 14.8875m, 0.05m, 21.025m of material(s) cover created, dielectric smoothing is off.
+Box from 14.8875m, 0m, 0m, to 14.9625m, 0.05m, 21.0125m of material(s) cover created, dielectric smoothing is off.
+Box from 14.9625m, 0m, 0m, to 15.0375m, 0.05m, 21m of material(s) cover created, dielectric smoothing is off.
+Box from 15.0375m, 0m, 0m, to 15.1125m, 0.05m, 20.9875m of material(s) cover created, dielectric smoothing is off.
+Box from 15.1125m, 0m, 0m, to 15.1875m, 0.05m, 20.975m of material(s) cover created, dielectric smoothing is off.
+Box from 15.1875m, 0m, 0m, to 15.2625m, 0.05m, 20.9625m of material(s) cover created, dielectric smoothing is off.
+Box from 15.2625m, 0m, 0m, to 15.3375m, 0.05m, 20.95m of material(s) cover created, dielectric smoothing is off.
+Box from 15.3375m, 0m, 0m, to 15.4125m, 0.05m, 20.9375m of material(s) cover created, dielectric smoothing is off.
+Box from 15.4125m, 0m, 0m, to 15.4875m, 0.05m, 20.925m of material(s) cover created, dielectric smoothing is off.
+Box from 15.4875m, 0m, 0m, to 15.5625m, 0.05m, 20.9125m of material(s) cover created, dielectric smoothing is off.
+Box from 15.5625m, 0m, 0m, to 15.6375m, 0.05m, 20.9m of material(s) cover created, dielectric smoothing is off.
+Box from 15.6375m, 0m, 0m, to 15.7125m, 0.05m, 20.8875m of material(s) cover created, dielectric smoothing is off.
+Box from 15.7125m, 0m, 0m, to 15.7875m, 0.05m, 20.875m of material(s) cover created, dielectric smoothing is off.
+Box from 15.7875m, 0m, 0m, to 15.8625m, 0.05m, 20.8625m of material(s) cover created, dielectric smoothing is off.
+Box from 15.8625m, 0m, 0m, to 15.9375m, 0.05m, 20.85m of material(s) cover created, dielectric smoothing is off.
+Box from 15.9375m, 0m, 0m, to 16.0125m, 0.05m, 20.8375m of material(s) cover created, dielectric smoothing is off.
+Box from 16.0125m, 0m, 0m, to 16.0875m, 0.05m, 20.825m of material(s) cover created, dielectric smoothing is off.
+Box from 16.0875m, 0m, 0m, to 16.1625m, 0.05m, 20.8125m of material(s) cover created, dielectric smoothing is off.
+Box from 16.1625m, 0m, 0m, to 16.2375m, 0.05m, 20.8m of material(s) cover created, dielectric smoothing is off.
+Box from 16.2375m, 0m, 0m, to 16.3125m, 0.05m, 20.7875m of material(s) cover created, dielectric smoothing is off.
+Box from 16.3125m, 0m, 0m, to 16.3875m, 0.05m, 20.775m of material(s) cover created, dielectric smoothing is off.
+Box from 16.3875m, 0m, 0m, to 16.4625m, 0.05m, 20.7625m of material(s) cover created, dielectric smoothing is off.
+Box from 16.4625m, 0m, 0m, to 16.5375m, 0.05m, 20.75m of material(s) cover created, dielectric smoothing is off.
+Box from 16.5375m, 0m, 0m, to 16.6125m, 0.05m, 20.7375m of material(s) cover created, dielectric smoothing is off.
+Box from 16.6125m, 0m, 0m, to 16.6875m, 0.05m, 20.725m of material(s) cover created, dielectric smoothing is off.
+Box from 16.6875m, 0m, 0m, to 16.7625m, 0.05m, 20.7125m of material(s) cover created, dielectric smoothing is off.
+Box from 16.7625m, 0m, 0m, to 16.8375m, 0.05m, 20.7m of material(s) cover created, dielectric smoothing is off.
+Box from 16.8375m, 0m, 0m, to 16.9125m, 0.05m, 20.6875m of material(s) cover created, dielectric smoothing is off.
+Box from 16.9125m, 0m, 0m, to 16.9875m, 0.05m, 20.675m of material(s) cover created, dielectric smoothing is off.
+Box from 16.9875m, 0m, 0m, to 17.0625m, 0.05m, 20.6625m of material(s) cover created, dielectric smoothing is off.
+Box from 17.0625m, 0m, 0m, to 17.1375m, 0.05m, 20.65m of material(s) cover created, dielectric smoothing is off.
+Box from 17.1375m, 0m, 0m, to 17.2125m, 0.05m, 20.6375m of material(s) cover created, dielectric smoothing is off.
+Box from 17.2125m, 0m, 0m, to 17.2875m, 0.05m, 20.625m of material(s) cover created, dielectric smoothing is off.
+Box from 17.2875m, 0m, 0m, to 17.3625m, 0.05m, 20.6125m of material(s) cover created, dielectric smoothing is off.
+Box from 17.3625m, 0m, 0m, to 17.4375m, 0.05m, 20.6m of material(s) cover created, dielectric smoothing is off.
+Box from 17.4375m, 0m, 0m, to 17.5125m, 0.05m, 20.5875m of material(s) cover created, dielectric smoothing is off.
+Box from 17.5125m, 0m, 0m, to 17.5875m, 0.05m, 20.575m of material(s) cover created, dielectric smoothing is off.
+Box from 17.5875m, 0m, 0m, to 17.6625m, 0.05m, 20.5625m of material(s) cover created, dielectric smoothing is off.
+Box from 17.6625m, 0m, 0m, to 17.7375m, 0.05m, 20.55m of material(s) cover created, dielectric smoothing is off.
+Box from 17.7375m, 0m, 0m, to 17.8125m, 0.05m, 20.5375m of material(s) cover created, dielectric smoothing is off.
+Box from 17.8125m, 0m, 0m, to 17.8875m, 0.05m, 20.525m of material(s) cover created, dielectric smoothing is off.
+Box from 17.8875m, 0m, 0m, to 17.9625m, 0.05m, 20.5125m of material(s) cover created, dielectric smoothing is off.
+Box from 17.9625m, 0m, 0m, to 18.0375m, 0.05m, 20.5m of material(s) cover created, dielectric smoothing is off.
+Box from 18.0375m, 0m, 0m, to 18.1125m, 0.05m, 20.4875m of material(s) cover created, dielectric smoothing is off.
+Box from 18.1125m, 0m, 0m, to 18.1875m, 0.05m, 20.475m of material(s) cover created, dielectric smoothing is off.
+Box from 18.1875m, 0m, 0m, to 18.2625m, 0.05m, 20.4625m of material(s) cover created, dielectric smoothing is off.
+Box from 18.2625m, 0m, 0m, to 18.3375m, 0.05m, 20.45m of material(s) cover created, dielectric smoothing is off.
+Box from 18.3375m, 0m, 0m, to 18.4125m, 0.05m, 20.4375m of material(s) cover created, dielectric smoothing is off.
+Box from 18.4125m, 0m, 0m, to 18.4875m, 0.05m, 20.425m of material(s) cover created, dielectric smoothing is off.
+Box from 18.4875m, 0m, 0m, to 18.5625m, 0.05m, 20.4125m of material(s) cover created, dielectric smoothing is off.
+Box from 18.5625m, 0m, 0m, to 18.6375m, 0.05m, 20.4m of material(s) cover created, dielectric smoothing is off.
+Box from 18.6375m, 0m, 0m, to 18.7125m, 0.05m, 20.3875m of material(s) cover created, dielectric smoothing is off.
+Box from 18.7125m, 0m, 0m, to 18.7875m, 0.05m, 20.375m of material(s) cover created, dielectric smoothing is off.
+Box from 18.7875m, 0m, 0m, to 18.8625m, 0.05m, 20.3625m of material(s) cover created, dielectric smoothing is off.
+Box from 18.8625m, 0m, 0m, to 18.9375m, 0.05m, 20.35m of material(s) cover created, dielectric smoothing is off.
+Box from 18.9375m, 0m, 0m, to 19.0125m, 0.05m, 20.3375m of material(s) cover created, dielectric smoothing is off.
+Box from 19.0125m, 0m, 0m, to 19.0875m, 0.05m, 20.325m of material(s) cover created, dielectric smoothing is off.
+Box from 19.0875m, 0m, 0m, to 19.1625m, 0.05m, 20.3125m of material(s) cover created, dielectric smoothing is off.
+Box from 19.1625m, 0m, 0m, to 19.2375m, 0.05m, 20.3m of material(s) cover created, dielectric smoothing is off.
+Box from 19.2375m, 0m, 0m, to 19.3125m, 0.05m, 20.2875m of material(s) cover created, dielectric smoothing is off.
+Box from 19.3125m, 0m, 0m, to 19.3875m, 0.05m, 20.275m of material(s) cover created, dielectric smoothing is off.
+Box from 19.3875m, 0m, 0m, to 19.4625m, 0.05m, 20.2625m of material(s) cover created, dielectric smoothing is off.
+Box from 19.4625m, 0m, 0m, to 19.5375m, 0.05m, 20.25m of material(s) cover created, dielectric smoothing is off.
+Box from 19.5375m, 0m, 0m, to 19.6125m, 0.05m, 20.2375m of material(s) cover created, dielectric smoothing is off.
+Box from 19.6125m, 0m, 0m, to 19.6875m, 0.05m, 20.225m of material(s) cover created, dielectric smoothing is off.
+Box from 19.6875m, 0m, 0m, to 19.7625m, 0.05m, 20.2125m of material(s) cover created, dielectric smoothing is off.
+Box from 19.7625m, 0m, 0m, to 19.8375m, 0.05m, 20.2m of material(s) cover created, dielectric smoothing is off.
+Box from 19.8375m, 0m, 0m, to 19.9125m, 0.05m, 20.1875m of material(s) cover created, dielectric smoothing is off.
+Box from 19.9125m, 0m, 0m, to 19.9875m, 0.05m, 20.175m of material(s) cover created, dielectric smoothing is off.
+Box from 19.9875m, 0m, 0m, to 20.0625m, 0.05m, 20.1625m of material(s) cover created, dielectric smoothing is off.
+Box from 20.0625m, 0m, 0m, to 20.1375m, 0.05m, 20.15m of material(s) cover created, dielectric smoothing is off.
+Box from 20.1375m, 0m, 0m, to 20.2125m, 0.05m, 20.1375m of material(s) cover created, dielectric smoothing is off.
+Box from 20.2125m, 0m, 0m, to 20.2875m, 0.05m, 20.125m of material(s) cover created, dielectric smoothing is off.
+Box from 20.2875m, 0m, 0m, to 20.3625m, 0.05m, 20.1125m of material(s) cover created, dielectric smoothing is off.
+Box from 20.3625m, 0m, 0m, to 20.4375m, 0.05m, 20.1m of material(s) cover created, dielectric smoothing is off.
+Box from 20.4375m, 0m, 0m, to 20.5125m, 0.05m, 20.0875m of material(s) cover created, dielectric smoothing is off.
+Box from 20.5125m, 0m, 0m, to 20.5875m, 0.05m, 20.075m of material(s) cover created, dielectric smoothing is off.
+Box from 20.5875m, 0m, 0m, to 20.6625m, 0.05m, 20.0625m of material(s) cover created, dielectric smoothing is off.
+Box from 20.6625m, 0m, 0m, to 20.7375m, 0.05m, 20.05m of material(s) cover created, dielectric smoothing is off.
+Box from 20.7375m, 0m, 0m, to 20.8125m, 0.05m, 20.0375m of material(s) cover created, dielectric smoothing is off.
+Box from 20.8125m, 0m, 0m, to 20.8875m, 0.05m, 20.025m of material(s) cover created, dielectric smoothing is off.
+Box from 20.8875m, 0m, 0m, to 20.9625m, 0.05m, 20.0125m of material(s) cover created, dielectric smoothing is off.
+Box from 20.9625m, 0m, 0m, to 21.0375m, 0.05m, 20m of material(s) cover created, dielectric smoothing is off.
+Box from 21.0375m, 0m, 0m, to 21.1125m, 0.05m, 19.9875m of material(s) cover created, dielectric smoothing is off.
+Box from 21.1125m, 0m, 0m, to 21.1875m, 0.05m, 19.975m of material(s) cover created, dielectric smoothing is off.
+Box from 21.1875m, 0m, 0m, to 21.2625m, 0.05m, 19.9625m of material(s) cover created, dielectric smoothing is off.
+Box from 21.2625m, 0m, 0m, to 21.3375m, 0.05m, 19.95m of material(s) cover created, dielectric smoothing is off.
+Box from 21.3375m, 0m, 0m, to 21.4125m, 0.05m, 19.9375m of material(s) cover created, dielectric smoothing is off.
+Box from 21.4125m, 0m, 0m, to 21.4875m, 0.05m, 19.925m of material(s) cover created, dielectric smoothing is off.
+Box from 21.4875m, 0m, 0m, to 21.5625m, 0.05m, 19.9125m of material(s) cover created, dielectric smoothing is off.
+Box from 21.5625m, 0m, 0m, to 21.6375m, 0.05m, 19.9m of material(s) cover created, dielectric smoothing is off.
+Box from 21.6375m, 0m, 0m, to 21.7125m, 0.05m, 19.8875m of material(s) cover created, dielectric smoothing is off.
+Box from 21.7125m, 0m, 0m, to 21.7875m, 0.05m, 19.875m of material(s) cover created, dielectric smoothing is off.
+Box from 21.7875m, 0m, 0m, to 21.8625m, 0.05m, 19.8625m of material(s) cover created, dielectric smoothing is off.
+Box from 21.8625m, 0m, 0m, to 21.9375m, 0.05m, 19.85m of material(s) cover created, dielectric smoothing is off.
+Box from 21.9375m, 0m, 0m, to 22.0125m, 0.05m, 19.8375m of material(s) cover created, dielectric smoothing is off.
+Box from 22.0125m, 0m, 0m, to 22.0875m, 0.05m, 19.825m of material(s) cover created, dielectric smoothing is off.
+Box from 22.0875m, 0m, 0m, to 22.1625m, 0.05m, 19.8125m of material(s) cover created, dielectric smoothing is off.
+Box from 22.1625m, 0m, 0m, to 22.2375m, 0.05m, 19.8m of material(s) cover created, dielectric smoothing is off.
+Box from 22.2375m, 0m, 0m, to 22.3125m, 0.05m, 19.7875m of material(s) cover created, dielectric smoothing is off.
+Box from 22.3125m, 0m, 0m, to 22.3875m, 0.05m, 19.775m of material(s) cover created, dielectric smoothing is off.
+Box from 22.3875m, 0m, 0m, to 22.4625m, 0.05m, 19.7625m of material(s) cover created, dielectric smoothing is off.
+Box from 22.4625m, 0m, 0m, to 22.5375m, 0.05m, 19.75m of material(s) cover created, dielectric smoothing is off.
+Box from 22.5375m, 0m, 0m, to 22.6125m, 0.05m, 19.7375m of material(s) cover created, dielectric smoothing is off.
+Box from 22.6125m, 0m, 0m, to 22.6875m, 0.05m, 19.725m of material(s) cover created, dielectric smoothing is off.
+Box from 22.6875m, 0m, 0m, to 22.7625m, 0.05m, 19.7125m of material(s) cover created, dielectric smoothing is off.
+Box from 22.7625m, 0m, 0m, to 22.8375m, 0.05m, 19.7m of material(s) cover created, dielectric smoothing is off.
+Box from 22.8375m, 0m, 0m, to 22.9125m, 0.05m, 19.6875m of material(s) cover created, dielectric smoothing is off.
+Box from 22.9125m, 0m, 0m, to 22.9875m, 0.05m, 19.675m of material(s) cover created, dielectric smoothing is off.
+Box from 22.9875m, 0m, 0m, to 23.0625m, 0.05m, 19.6625m of material(s) cover created, dielectric smoothing is off.
+Box from 23.0625m, 0m, 0m, to 23.1375m, 0.05m, 19.65m of material(s) cover created, dielectric smoothing is off.
+Box from 23.1375m, 0m, 0m, to 23.2125m, 0.05m, 19.6375m of material(s) cover created, dielectric smoothing is off.
+Box from 23.2125m, 0m, 0m, to 23.2875m, 0.05m, 19.625m of material(s) cover created, dielectric smoothing is off.
+Box from 23.2875m, 0m, 0m, to 23.3625m, 0.05m, 19.6125m of material(s) cover created, dielectric smoothing is off.
+Box from 23.3625m, 0m, 0m, to 23.4375m, 0.05m, 19.6m of material(s) cover created, dielectric smoothing is off.
+Box from 23.4375m, 0m, 0m, to 23.5125m, 0.05m, 19.5875m of material(s) cover created, dielectric smoothing is off.
+Box from 23.5125m, 0m, 0m, to 23.5875m, 0.05m, 19.575m of material(s) cover created, dielectric smoothing is off.
+Box from 23.5875m, 0m, 0m, to 23.6625m, 0.05m, 19.5625m of material(s) cover created, dielectric smoothing is off.
+Box from 23.6625m, 0m, 0m, to 23.7375m, 0.05m, 19.55m of material(s) cover created, dielectric smoothing is off.
+Box from 23.7375m, 0m, 0m, to 23.8125m, 0.05m, 19.5375m of material(s) cover created, dielectric smoothing is off.
+Box from 23.8125m, 0m, 0m, to 23.8875m, 0.05m, 19.525m of material(s) cover created, dielectric smoothing is off.
+Box from 23.8875m, 0m, 0m, to 23.9625m, 0.05m, 19.5125m of material(s) cover created, dielectric smoothing is off.
+Box from 23.9625m, 0m, 0m, to 36m, 0.05m, 19.5m of material(s) cover created, dielectric smoothing is off.
+
+--- Model 1/1, input file: E:\automation_djh\artifacts\research_checks\2026-10-05_slope_bscan_2d_fine2m_r1\slope_fullcover_s04\profile.in 
+
+
+Memory required (estimated): ~1.9 GB [main_grid] + ~65.0 MB overhead = 2.0 GB
+
+PML boundaries [main_grid]: {formulation: HORIPML, order: 1, thickness (cells): x0: 160, y0: 0, z0: 80, xmax: 160, ymax: 0, zmax: 80}
+
+
+Materials [main_grid]:
+    |            |         |       | sigma | Delta | tau        | omega | delta | gamma |      | sigma*  | Dielectric 
+ ID | Name       | Type    | eps_r | [S/m] | eps_r | [s]        | [Hz]  | [Hz]  | [Hz]  | mu_r | [Ohm/m] | smoothable 
+----+------------+---------+-------+-------+-------+------------+-------+-------+-------+------+---------+------------
+  0 | pec        | builtin | 1     | inf   |       |            |       |       |       | 1    | 0       | False      
+  1 | pmc        | builtin | 1     | 0     |       |            |       |       |       | 1    | inf     | False      
+  2 | free_space | builtin | 1     | 0     |       |            |       |       |       | 1    | 0       | True       
+  3 | rock       |         | 9     | 0.001 |       |            |       |       |       | 1    | 0       | True       
+  4 | cover      | debye   | 11    | 0.001 | 0.5   | 6.4567e-09 |       |       |       | 1    | 0       | False      
+
+Spatial-resolution analysis [main_grid]: minimum 25.6 cells per phase wavelength in 'cover', at 2.82794e+08 Hz.
+[main_grid] continuum phase velocity 9.03743e+07 m/s, wavelength 0.319576 m at that limiting frequency.
+[main_grid] minimum 1/e amplitude attenuation length: 838 cells in 'cover' at 2.82794e+08 Hz. Attenuation resolution is separate from phase-wavelength sampling.
+Lossless numerical dispersion estimate [main_grid]: grid-axis phase-velocity error -0.01% in 'free_space' at 2.82794e+08 Hz. Propagation axis: x. This is a homogeneous bulk estimate, not an interface or stability guarantee.
+Numerical dispersion analysis [main_grid]: lossy, dispersive or anisotropic materials: numerical phase-error estimate unavailable.
+Output directory: E:\automation_djh\artifacts\research_checks\2026-10-05_slope_bscan_2d_fine2m_r1\slope_fullcover_s04
+
+
+
+
+Model 1/1 solving on LAPTOP-83GRKUNE with CUDA backend using Device 0: NVIDIA GeForce RTX 4090 Laptop GPU
+
+Written output file: profile.h5
+
+Memory used (estimated): ~1.7 GB host + ~2.9 GB device
+Time taken: 18.2284 seconds
+
+=== Simulation completed in 22.5144 seconds ====================================
+
