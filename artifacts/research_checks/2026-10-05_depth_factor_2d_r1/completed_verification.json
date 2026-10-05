@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "completed": true,
+  "contract_sha256": "36b77c0d4207f3aeb038ea522aaac7d10e228e856e69400eeef139122d8c6b96",
+  "code_sha256": "ebf59e0e0f588c504f1ef68b0bf32620840a629eadd829fc5bee8596a5697f81",
+  "groups": [
+    {
+      "id": "fullcover",
+      "input_sha256": "2c336f04c3d2dc69951e2e9f1aef9cee85a9c0a4231ebd3d20839945d9b6e89b",
+      "dx_m": 0.025,
+      "interface_depth_m": null,
+      "source_current_moment_amplitude_Am": 1.0,
+      "raw_sha256": "94c465efc684f419167d477469df0ed6995c63699d883cf079dd23f6d3ec1327",
+      "dt_s": 5.896635841874211e-11,
+      "iterations": 11025,
+      "dtype": "float64"
+    },
+    {
+      "id": "depth3",
+      "input_sha256": "66be292ba99799de7486316bc5d8e6be4e083e42319f13f3790fb1e78c8d5ca6",
+      "dx_m": 0.025,
+      "interface_depth_m": 3.0,
+      "source_current_moment_amplitude_Am": 1.0,
+      "raw_sha256": "1f3f931943bbf6f00d084c9e528faf97951681f105456efba2873405fdf9fb24",
+      "dt_s": 5.896635841874211e-11,
+      "iterations": 11025,
+      "dtype": "float64"
+    },
+    {
+      "id": "depth10",
+      "input_sha256": "a0397017c70ec53936d6fd50143b6a9a5cb29f998a0a6ee81f00c2a85cd7275c",
+      "dx_m": 0.025,
+      "interface_depth_m": 10.0,
+      "source_current_moment_amplitude_Am": 1.0,
+      "raw_sha256": "f767317c45b3a77de12ae8045d1aba713a41547ee942737f0c7eb8c5ae17db3b",
+      "dt_s": 5.896635841874211e-11,
+      "iterations": 11025,
+      "dtype": "float64"
+    },
+    {
+      "id": "depth18_5",
+      "input_sha256": "6edda02ed8488a848664fef1032c89a20ba0ca064ab454dccf20e19a94458831",
+      "dx_m": 0.025,
+      "interface_depth_m": 18.5,
+      "source_current_moment_amplitude_Am": 1.0,
+      "raw_sha256": "0af2d31e7554719cec9de0a954cf94ecd1646ec915d2e711bb2cdfc4d37d81d1",
+      "dt_s": 5.896635841874211e-11,
+      "iterations": 11025,
+      "dtype": "float64"
+    }
+  ],
+  "scope": "Native execution identity; depth physics analysed separately against analytic extrapolation."
+}

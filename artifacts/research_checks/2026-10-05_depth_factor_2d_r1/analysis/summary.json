@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "contract_sha256": "36b77c0d4207f3aeb038ea522aaac7d10e228e856e69400eeef139122d8c6b96",
+  "analysis_code_sha256": "b1953c30777f4004eefddf0123091b3694eb3646ef6935650ae60018bcc3e808",
+  "rows": [
+    {
+      "case": "depth3",
+      "depth_m": 3.0,
+      "isolated_over_fullcover_band_L2": 0.0012136742167381065,
+      "isolated_over_depth3_band": 1.0,
+      "mono95_extrapolation_factor": 1.0,
+      "mono95_vs_fullforward_dB": 0.0,
+      "spectral_extrapolation_relative_L2_error": 0.0,
+      "spectral_extrapolation_max_phase_deg": 4.1403165451963e-15,
+      "predicted_arrival_ns": 139.48545336362767,
+      "isolated_peak_ns": 153.66633003924196,
+      "arrival_residual_ns": 14.180876675614286,
+      "window_tail_rms_over_peak": 1.705321547090054e-09
+    },
+    {
+      "case": "depth10",
+      "depth_m": 10.0,
+      "isolated_over_fullcover_band_L2": 7.058422114827744e-06,
+      "isolated_over_depth3_band": 0.005815746942205042,
+      "mono95_extrapolation_factor": 0.00032743456988700205,
+      "mono95_vs_fullforward_dB": -24.9896194315235,
+      "spectral_extrapolation_relative_L2_error": 1.2675436566357032,
+      "spectral_extrapolation_max_phase_deg": 179.14550264806107,
+      "predicted_arrival_ns": 340.42091567144877,
+      "isolated_peak_ns": 351.5574288925405,
+      "arrival_residual_ns": 11.136513221091718,
+      "window_tail_rms_over_peak": 2.330503198425475e-09
+    },
+    {
+      "case": "depth18_5",
+      "depth_m": 18.5,
+      "isolated_over_fullcover_band_L2": 1.2343231690548235e-07,
+      "isolated_over_depth3_band": 0.00010170135873630186,
+      "mono95_extrapolation_factor": 1.920834862743705e-08,
+      "mono95_vs_fullforward_dB": -74.47673451378353,
+      "spectral_extrapolation_relative_L2_error": 0.9842457355571674,
+      "spectral_extrapolation_max_phase_deg": 179.4604886384953,
+      "predicted_arrival_ns": 584.4139770452316,
+      "isolated_peak_ns": 624.3947692960602,
+      "arrival_residual_ns": 39.980792250828586,
+      "window_tail_rms_over_peak": 1.9563739765975324e-08
+    }
+  ],
+  "isolation_definition": "interface response = flat-interface case minus shared full-cover background (declared target/background pair, not a universal clean reference)",
+  "scope": "2D line-source mechanism screening; depths are mechanism points, not Line9 truth; not 3D absolute amplitude or field validation."
+}
