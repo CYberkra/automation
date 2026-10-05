@@ -1,0 +1,93 @@
+#title: 3D layout/pol control v0.1; rough cross y-pol; centre station; 8m altitude
+#domain: 10 10 16
+#dx_dy_dz: 0.025 0.025 0.025
+#time_window: 200e-9
+#omp_threads: 2
+#pml_cells: 40
+#pml_formulation: HORIPML
+#waveform: ricker 40 100e6 pulse
+#hertzian_dipole: y 5 4.35 14 pulse
+#rx: 5 5.65 14 r1 Ex Ey Ez
+#material: 9 0.001 1 0 rock
+#material: 18.017 0.003 1 0 cover
+#add_dispersion_debye: 1 7.878 6.4567e-09 cover
+#box: 0 0 0 0.25 10 2.85 rock
+#box: 0 0 2.85 0.25 10 6 cover
+#box: 0.25 0 0 0.5 10 2.85 rock
+#box: 0.25 0 2.85 0.5 10 6 cover
+#box: 0.5 0 0 0.75 10 2.85 rock
+#box: 0.5 0 2.85 0.75 10 6 cover
+#box: 0.75 0 0 1 10 2.75 rock
+#box: 0.75 0 2.75 1 10 6 cover
+#box: 1 0 0 1.25 10 2.75 rock
+#box: 1 0 2.75 1.25 10 6 cover
+#box: 1.25 0 0 1.5 10 2.65 rock
+#box: 1.25 0 2.65 1.5 10 6 cover
+#box: 1.5 0 0 1.75 10 2.65 rock
+#box: 1.5 0 2.65 1.75 10 6 cover
+#box: 1.75 0 0 2 10 2.65 rock
+#box: 1.75 0 2.65 2 10 6 cover
+#box: 2 0 0 2.25 10 2.65 rock
+#box: 2 0 2.65 2.25 10 6 cover
+#box: 2.25 0 0 2.5 10 2.75 rock
+#box: 2.25 0 2.75 2.5 10 6 cover
+#box: 2.5 0 0 2.75 10 2.75 rock
+#box: 2.5 0 2.75 2.75 10 6 cover
+#box: 2.75 0 0 3 10 2.85 rock
+#box: 2.75 0 2.85 3 10 6 cover
+#box: 3 0 0 3.25 10 2.95 rock
+#box: 3 0 2.95 3.25 10 6 cover
+#box: 3.25 0 0 3.5 10 3.05 rock
+#box: 3.25 0 3.05 3.5 10 6 cover
+#box: 3.5 0 0 3.75 10 3.15 rock
+#box: 3.5 0 3.15 3.75 10 6 cover
+#box: 3.75 0 0 4 10 3.25 rock
+#box: 3.75 0 3.25 4 10 6 cover
+#box: 4 0 0 4.25 10 3.35 rock
+#box: 4 0 3.35 4.25 10 6 cover
+#box: 4.25 0 0 4.5 10 3.35 rock
+#box: 4.25 0 3.35 4.5 10 6 cover
+#box: 4.5 0 0 4.75 10 3.45 rock
+#box: 4.5 0 3.45 4.75 10 6 cover
+#box: 4.75 0 0 5 10 3.45 rock
+#box: 4.75 0 3.45 5 10 6 cover
+#box: 5 0 0 5.25 10 3.45 rock
+#box: 5 0 3.45 5.25 10 6 cover
+#box: 5.25 0 0 5.5 10 3.45 rock
+#box: 5.25 0 3.45 5.5 10 6 cover
+#box: 5.5 0 0 5.75 10 3.45 rock
+#box: 5.5 0 3.45 5.75 10 6 cover
+#box: 5.75 0 0 6 10 3.45 rock
+#box: 5.75 0 3.45 6 10 6 cover
+#box: 6 0 0 6.25 10 3.35 rock
+#box: 6 0 3.35 6.25 10 6 cover
+#box: 6.25 0 0 6.5 10 3.35 rock
+#box: 6.25 0 3.35 6.5 10 6 cover
+#box: 6.5 0 0 6.75 10 3.25 rock
+#box: 6.5 0 3.25 6.75 10 6 cover
+#box: 6.75 0 0 7 10 3.25 rock
+#box: 6.75 0 3.25 7 10 6 cover
+#box: 7 0 0 7.25 10 3.15 rock
+#box: 7 0 3.15 7.25 10 6 cover
+#box: 7.25 0 0 7.5 10 3.05 rock
+#box: 7.25 0 3.05 7.5 10 6 cover
+#box: 7.5 0 0 7.75 10 3.05 rock
+#box: 7.5 0 3.05 7.75 10 6 cover
+#box: 7.75 0 0 8 10 2.95 rock
+#box: 7.75 0 2.95 8 10 6 cover
+#box: 8 0 0 8.25 10 2.95 rock
+#box: 8 0 2.95 8.25 10 6 cover
+#box: 8.25 0 0 8.5 10 2.95 rock
+#box: 8.25 0 2.95 8.5 10 6 cover
+#box: 8.5 0 0 8.75 10 2.95 rock
+#box: 8.5 0 2.95 8.75 10 6 cover
+#box: 8.75 0 0 9 10 2.95 rock
+#box: 8.75 0 2.95 9 10 6 cover
+#box: 9 0 0 9.25 10 2.95 rock
+#box: 9 0 2.95 9.25 10 6 cover
+#box: 9.25 0 0 9.5 10 2.95 rock
+#box: 9.25 0 2.95 9.5 10 6 cover
+#box: 9.5 0 0 9.75 10 3.05 rock
+#box: 9.5 0 3.05 9.75 10 6 cover
+#box: 9.75 0 0 10 10 3.15 rock
+#box: 9.75 0 3.15 10 10 6 cover

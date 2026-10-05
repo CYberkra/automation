@@ -1,0 +1,580 @@
+{
+  "status": "PASS",
+  "contract_sha256": "eed1d3082f16282896be410ad6dea5cce8968d561ef447117b34c45a17b3baad",
+  "analysis_code_sha256": "4e5251ebb32026c2c75c217af63177e7f61ed85bea4edc98c3dc6975ee6ece86",
+  "declared_windows_ns": {
+    "pre_arrival": [
+      0.0,
+      4.0
+    ],
+    "direct": [
+      3.0,
+      9.0
+    ],
+    "surface": [
+      46.0,
+      62.0
+    ],
+    "interface": [
+      120.0,
+      160.0
+    ]
+  },
+  "predicted_arrivals_ns": {
+    "direct": 4.336333237575976,
+    "surface": 53.37025523170433,
+    "interface": 138.0545070283256
+  },
+  "metrics": [
+    {
+      "case": "fullcover_inline_x",
+      "scenario": "fullcover",
+      "layout": "inline",
+      "polarisation": "x",
+      "raw_sha256": "538de662893cf400354a6853fb09aac5124523e0e6b9b3b98f04be9c553fbb17",
+      "windows": {
+        "pre_arrival": {
+          "peak": 5.202961694808503e-07,
+          "rms": 6.819839735648791e-08
+        },
+        "direct": {
+          "peak": 0.08852614800050286,
+          "rms": 0.020295713446647053
+        },
+        "surface": {
+          "peak": 0.633901882764245,
+          "rms": 0.15057603012931506
+        },
+        "interface": {
+          "peak": 7.444758164735218e-07,
+          "rms": 2.091950622525043e-07
+        }
+      },
+      "copolar_spectrum_peak": 73.79482477390232,
+      "independent_DFT_relative_L2": 1.529472636511567e-12
+    },
+    {
+      "case": "fullcover_inline_y",
+      "scenario": "fullcover",
+      "layout": "inline",
+      "polarisation": "y",
+      "raw_sha256": "f8e23a9b13487177350ed75c72259600f1486229601ed1010cc44caaaa67de4d",
+      "windows": {
+        "pre_arrival": {
+          "peak": 1.7816661408860482e-06,
+          "rms": 2.0298960340451867e-07
+        },
+        "direct": {
+          "peak": 0.32432481776288913,
+          "rms": 0.07681725341398427
+        },
+        "surface": {
+          "peak": 0.6401559623639629,
+          "rms": 0.15203316809378922
+        },
+        "interface": {
+          "peak": 1.0459568102433122e-06,
+          "rms": 5.230999364090396e-07
+        }
+      },
+      "copolar_spectrum_peak": 82.28669062058636,
+      "independent_DFT_relative_L2": 1.740566716497818e-12
+    },
+    {
+      "case": "fullcover_cross_x",
+      "scenario": "fullcover",
+      "layout": "cross",
+      "polarisation": "x",
+      "raw_sha256": "9750212bd5e506cb6041733f58f248e6dea339812b4af5cc595b9540fdc22de8",
+      "windows": {
+        "pre_arrival": {
+          "peak": 1.7816661408860486e-06,
+          "rms": 2.0298960340451872e-07
+        },
+        "direct": {
+          "peak": 0.3243248177628891,
+          "rms": 0.07681725341398425
+        },
+        "surface": {
+          "peak": 0.6401559623640414,
+          "rms": 0.15203316809378178
+        },
+        "interface": {
+          "peak": 1.0459568146416356e-06,
+          "rms": 5.230999237599453e-07
+        }
+      },
+      "copolar_spectrum_peak": 82.28669062058636,
+      "independent_DFT_relative_L2": 1.740775770474034e-12
+    },
+    {
+      "case": "fullcover_cross_y",
+      "scenario": "fullcover",
+      "layout": "cross",
+      "polarisation": "y",
+      "raw_sha256": "dfc6f2999a0da75ab6cf3d2a8da5b84c6cda49a86e8c4497a8bd31e557b08520",
+      "windows": {
+        "pre_arrival": {
+          "peak": 5.202961694808503e-07,
+          "rms": 6.819839735648791e-08
+        },
+        "direct": {
+          "peak": 0.08852614800050286,
+          "rms": 0.020295713446647053
+        },
+        "surface": {
+          "peak": 0.6339018827640636,
+          "rms": 0.15057603012932155
+        },
+        "interface": {
+          "peak": 7.444758497075181e-07,
+          "rms": 2.091950499106149e-07
+        }
+      },
+      "copolar_spectrum_peak": 73.79482477390194,
+      "independent_DFT_relative_L2": 1.529489664887281e-12
+    },
+    {
+      "case": "flat_inline_x",
+      "scenario": "flat",
+      "layout": "inline",
+      "polarisation": "x",
+      "raw_sha256": "eefc026618ac2618a9c33c7ac7a893b8abc94f3cb7b1887f460c60acc1b66154",
+      "windows": {
+        "pre_arrival": {
+          "peak": 5.202961694808503e-07,
+          "rms": 6.819839735648791e-08
+        },
+        "direct": {
+          "peak": 0.08852614800050286,
+          "rms": 0.020295713446647053
+        },
+        "surface": {
+          "peak": 0.6339019168216089,
+          "rms": 0.15057603034368156
+        },
+        "interface": {
+          "peak": 0.013548977999866655,
+          "rms": 0.0037240827557660687
+        }
+      },
+      "copolar_spectrum_peak": 73.81286298088759,
+      "independent_DFT_relative_L2": 1.5361938321548469e-12
+    },
+    {
+      "case": "flat_inline_y",
+      "scenario": "flat",
+      "layout": "inline",
+      "polarisation": "y",
+      "raw_sha256": "67be74d5fc80f388dcfcd46e8c163e41eb8e7d17a88625344659ae1635342384",
+      "windows": {
+        "pre_arrival": {
+          "peak": 1.7816661408860482e-06,
+          "rms": 2.0298960340451867e-07
+        },
+        "direct": {
+          "peak": 0.32432481776288913,
+          "rms": 0.07681725341398427
+        },
+        "surface": {
+          "peak": 0.6401559963306007,
+          "rms": 0.15203316833459599
+        },
+        "interface": {
+          "peak": 0.013591247428170966,
+          "rms": 0.0037356880879533877
+        }
+      },
+      "copolar_spectrum_peak": 82.2941921401004,
+      "independent_DFT_relative_L2": 1.7454742704873431e-12
+    },
+    {
+      "case": "flat_cross_x",
+      "scenario": "flat",
+      "layout": "cross",
+      "polarisation": "x",
+      "raw_sha256": "ba7b442c256c34a877965993da811556b718359eb3ba99f34a78441a9bf40a67",
+      "windows": {
+        "pre_arrival": {
+          "peak": 1.7816661408860486e-06,
+          "rms": 2.0298960340451872e-07
+        },
+        "direct": {
+          "peak": 0.3243248177628891,
+          "rms": 0.07681725341398425
+        },
+        "surface": {
+          "peak": 0.6401559963306314,
+          "rms": 0.152033168334589
+        },
+        "interface": {
+          "peak": 0.013591247428069398,
+          "rms": 0.0037356880879531587
+        }
+      },
+      "copolar_spectrum_peak": 82.29419214010039,
+      "independent_DFT_relative_L2": 1.7454206370297383e-12
+    },
+    {
+      "case": "flat_cross_y",
+      "scenario": "flat",
+      "layout": "cross",
+      "polarisation": "y",
+      "raw_sha256": "5a19e81f2ad50330c384995e3f9c4d75317024300f0e65e3a3f0b9143d117f95",
+      "windows": {
+        "pre_arrival": {
+          "peak": 5.202961694808503e-07,
+          "rms": 6.819839735648791e-08
+        },
+        "direct": {
+          "peak": 0.08852614800050286,
+          "rms": 0.020295713446647053
+        },
+        "surface": {
+          "peak": 0.6339019168214595,
+          "rms": 0.15057603034368958
+        },
+        "interface": {
+          "peak": 0.013548977999841522,
+          "rms": 0.00372408275576639
+        }
+      },
+      "copolar_spectrum_peak": 73.81286298088703,
+      "independent_DFT_relative_L2": 1.5366112942291153e-12
+    },
+    {
+      "case": "rough_inline_x",
+      "scenario": "rough",
+      "layout": "inline",
+      "polarisation": "x",
+      "raw_sha256": "aed22efc23a397768fafbc4485f149e9cc6d2feebd3a542dc73019a5a43a9aab",
+      "windows": {
+        "pre_arrival": {
+          "peak": 5.202961694808503e-07,
+          "rms": 6.819839735648791e-08
+        },
+        "direct": {
+          "peak": 0.08852614800050286,
+          "rms": 0.020295713446647053
+        },
+        "surface": {
+          "peak": 0.6339019157180577,
+          "rms": 0.15057603033680822
+        },
+        "interface": {
+          "peak": 0.007423764208801315,
+          "rms": 0.0020468997867100756
+        }
+      },
+      "copolar_spectrum_peak": 73.79825943706972,
+      "independent_DFT_relative_L2": 1.5339620500041505e-12
+    },
+    {
+      "case": "rough_inline_y",
+      "scenario": "rough",
+      "layout": "inline",
+      "polarisation": "y",
+      "raw_sha256": "0e488c683047f362a79c85399ba9f4d8d094a2fc4e982f4fce22332087d08420",
+      "windows": {
+        "pre_arrival": {
+          "peak": 1.7816661408860482e-06,
+          "rms": 2.0298960340451867e-07
+        },
+        "direct": {
+          "peak": 0.32432481776288913,
+          "rms": 0.07681725341398427
+        },
+        "surface": {
+          "peak": 0.6401559952012291,
+          "rms": 0.15203316832699165
+        },
+        "interface": {
+          "peak": 0.007058096858939016,
+          "rms": 0.0019370610170626054
+        }
+      },
+      "copolar_spectrum_peak": 82.29111608558367,
+      "independent_DFT_relative_L2": 1.7431343603123154e-12
+    },
+    {
+      "case": "rough_cross_x",
+      "scenario": "rough",
+      "layout": "cross",
+      "polarisation": "x",
+      "raw_sha256": "8a4d66ac948ebd4190d732fea2625e5a26d96820d094dc7c108314b4f0f9b242",
+      "windows": {
+        "pre_arrival": {
+          "peak": 1.7816661408860486e-06,
+          "rms": 2.0298960340451872e-07
+        },
+        "direct": {
+          "peak": 0.3243248177628891,
+          "rms": 0.07681725341398425
+        },
+        "surface": {
+          "peak": 0.6401559954374217,
+          "rms": 0.15203316832805366
+        },
+        "interface": {
+          "peak": 0.007466072267441157,
+          "rms": 0.0020579931908345397
+        }
+      },
+      "copolar_spectrum_peak": 82.2922481212988,
+      "independent_DFT_relative_L2": 1.7434319692847e-12
+    },
+    {
+      "case": "rough_cross_y",
+      "scenario": "rough",
+      "layout": "cross",
+      "polarisation": "y",
+      "raw_sha256": "7fb8b0c0152e30cca5c809556774193bc15f7606f155ac3ad7b4ffa315b867fd",
+      "windows": {
+        "pre_arrival": {
+          "peak": 5.202961694808503e-07,
+          "rms": 6.819839735648791e-08
+        },
+        "direct": {
+          "peak": 0.08852614800050286,
+          "rms": 0.020295713446647053
+        },
+        "surface": {
+          "peak": 0.6339019159319638,
+          "rms": 0.1505760303377904
+        },
+        "interface": {
+          "peak": 0.00705360636612621,
+          "rms": 0.001935345968850618
+        }
+      },
+      "copolar_spectrum_peak": 73.79699268412269,
+      "independent_DFT_relative_L2": 1.5338844378435749e-12
+    }
+  ],
+  "batch_floor": {
+    "max_pre_arrival_cross_scene_over_direct": 0.0,
+    "detail": [
+      {
+        "combo": "cross_x",
+        "pair": "fullcover-rough",
+        "pre_arrival_maxdiff_over_direct_peak": 0.0,
+        "cross_scene_total_relative_L2_post46ns": 0.002948845890631901
+      },
+      {
+        "combo": "cross_x",
+        "pair": "flat-fullcover",
+        "pre_arrival_maxdiff_over_direct_peak": 0.0,
+        "cross_scene_total_relative_L2_post46ns": 0.00498206543513174
+      },
+      {
+        "combo": "cross_x",
+        "pair": "flat-rough",
+        "pre_arrival_maxdiff_over_direct_peak": 0.0,
+        "cross_scene_total_relative_L2_post46ns": 0.00568447134284229
+      },
+      {
+        "combo": "cross_y",
+        "pair": "fullcover-rough",
+        "pre_arrival_maxdiff_over_direct_peak": 0.0,
+        "cross_scene_total_relative_L2_post46ns": 0.002846087464394009
+      },
+      {
+        "combo": "cross_y",
+        "pair": "flat-fullcover",
+        "pre_arrival_maxdiff_over_direct_peak": 0.0,
+        "cross_scene_total_relative_L2_post46ns": 0.00501442465551055
+      },
+      {
+        "combo": "cross_y",
+        "pair": "flat-rough",
+        "pre_arrival_maxdiff_over_direct_peak": 0.0,
+        "cross_scene_total_relative_L2_post46ns": 0.005641358497503466
+      },
+      {
+        "combo": "inline_x",
+        "pair": "fullcover-rough",
+        "pre_arrival_maxdiff_over_direct_peak": 0.0,
+        "cross_scene_total_relative_L2_post46ns": 0.0029625796784737857
+      },
+      {
+        "combo": "inline_x",
+        "pair": "flat-fullcover",
+        "pre_arrival_maxdiff_over_direct_peak": 0.0,
+        "cross_scene_total_relative_L2_post46ns": 0.005014424655510561
+      },
+      {
+        "combo": "inline_x",
+        "pair": "flat-rough",
+        "pre_arrival_maxdiff_over_direct_peak": 0.0,
+        "cross_scene_total_relative_L2_post46ns": 0.005718364352318596
+      },
+      {
+        "combo": "inline_y",
+        "pair": "fullcover-rough",
+        "pre_arrival_maxdiff_over_direct_peak": 0.0,
+        "cross_scene_total_relative_L2_post46ns": 0.00282286672447549
+      },
+      {
+        "combo": "inline_y",
+        "pair": "flat-fullcover",
+        "pre_arrival_maxdiff_over_direct_peak": 0.0,
+        "cross_scene_total_relative_L2_post46ns": 0.004982065435131746
+      },
+      {
+        "combo": "inline_y",
+        "pair": "flat-rough",
+        "pre_arrival_maxdiff_over_direct_peak": 0.0,
+        "cross_scene_total_relative_L2_post46ns": 0.005602319802006503
+      }
+    ]
+  },
+  "layout_effect": [
+    {
+      "scenario": "fullcover",
+      "polarisation": "x",
+      "pair": "cross-inline",
+      "copolar_spectrum_relative_L2": 1.40199477131634,
+      "ascan_relative_L2": 1.280270486460114,
+      "ascan_relative_L2_post46ns": 0.009566150816783867,
+      "exceeds_batch_floor": true
+    },
+    {
+      "scenario": "flat",
+      "polarisation": "x",
+      "pair": "cross-inline",
+      "copolar_spectrum_relative_L2": 1.4020004904027887,
+      "ascan_relative_L2": 1.280270441590486,
+      "ascan_relative_L2_post46ns": 0.009566029730828169,
+      "exceeds_batch_floor": true
+    },
+    {
+      "scenario": "rough",
+      "polarisation": "x",
+      "pair": "cross-inline",
+      "copolar_spectrum_relative_L2": 1.4019975177880917,
+      "ascan_relative_L2": 1.280270470674147,
+      "ascan_relative_L2_post46ns": 0.009566140928105368,
+      "exceeds_batch_floor": true
+    },
+    {
+      "scenario": "fullcover",
+      "polarisation": "y",
+      "pair": "cross-inline",
+      "copolar_spectrum_relative_L2": 1.615579217762405,
+      "ascan_relative_L2": 1.7123551026986334,
+      "ascan_relative_L2_post46ns": 0.009658262694946837,
+      "exceeds_batch_floor": true
+    },
+    {
+      "scenario": "flat",
+      "polarisation": "y",
+      "pair": "cross-inline",
+      "copolar_spectrum_relative_L2": 1.6155755588637752,
+      "ascan_relative_L2": 1.7123549958904838,
+      "ascan_relative_L2_post46ns": 0.00965813874378423,
+      "exceeds_batch_floor": true
+    },
+    {
+      "scenario": "rough",
+      "polarisation": "y",
+      "pair": "cross-inline",
+      "copolar_spectrum_relative_L2": 1.6155772140441684,
+      "ascan_relative_L2": 1.7123550680431774,
+      "ascan_relative_L2_post46ns": 0.009658243275522341,
+      "exceeds_batch_floor": true
+    },
+    {
+      "scenario": "fullcover",
+      "polarisation": "x",
+      "pair": "inline-cross",
+      "copolar_spectrum_relative_L2": 1.6155792177624047,
+      "ascan_relative_L2": 1.7123551026986334,
+      "ascan_relative_L2_post46ns": 0.009658262694946847,
+      "exceeds_batch_floor": true
+    },
+    {
+      "scenario": "flat",
+      "polarisation": "x",
+      "pair": "inline-cross",
+      "copolar_spectrum_relative_L2": 1.6155755588637746,
+      "ascan_relative_L2": 1.7123549958904838,
+      "ascan_relative_L2_post46ns": 0.009658138743784237,
+      "exceeds_batch_floor": true
+    },
+    {
+      "scenario": "rough",
+      "polarisation": "x",
+      "pair": "inline-cross",
+      "copolar_spectrum_relative_L2": 1.6155761107373157,
+      "ascan_relative_L2": 1.712355065181786,
+      "ascan_relative_L2_post46ns": 0.009658252182712507,
+      "exceeds_batch_floor": true
+    },
+    {
+      "scenario": "fullcover",
+      "polarisation": "y",
+      "pair": "inline-cross",
+      "copolar_spectrum_relative_L2": 1.4019947713163403,
+      "ascan_relative_L2": 1.2802704864601142,
+      "ascan_relative_L2_post46ns": 0.009566150816783858,
+      "exceeds_batch_floor": true
+    },
+    {
+      "scenario": "flat",
+      "polarisation": "y",
+      "pair": "inline-cross",
+      "copolar_spectrum_relative_L2": 1.4020004904027892,
+      "ascan_relative_L2": 1.2802704415904862,
+      "ascan_relative_L2_post46ns": 0.00956602973082816,
+      "exceeds_batch_floor": true
+    },
+    {
+      "scenario": "rough",
+      "polarisation": "y",
+      "pair": "inline-cross",
+      "copolar_spectrum_relative_L2": 1.4019971970828524,
+      "ascan_relative_L2": 1.2802704719837508,
+      "ascan_relative_L2_post46ns": 0.009566132346296358,
+      "exceeds_batch_floor": true
+    }
+  ],
+  "polarization_observation": [
+    {
+      "scenario": "fullcover",
+      "layout": "inline",
+      "direct_peak_x_over_y": 0.27295520771778714,
+      "surface_peak_ratio_x_over_y": 1.9545278315015806
+    },
+    {
+      "scenario": "fullcover",
+      "layout": "cross",
+      "direct_peak_x_over_y": 3.66360476636854,
+      "surface_peak_ratio_x_over_y": 7.2312641724838755
+    },
+    {
+      "scenario": "flat",
+      "layout": "inline",
+      "direct_peak_x_over_y": 0.27295520771778714,
+      "surface_peak_ratio_x_over_y": 1.9545279365116262
+    },
+    {
+      "scenario": "flat",
+      "layout": "cross",
+      "direct_peak_x_over_y": 3.66360476636854,
+      "surface_peak_ratio_x_over_y": 7.231264556173787
+    },
+    {
+      "scenario": "rough",
+      "layout": "inline",
+      "direct_peak_x_over_y": 0.27295520771778714,
+      "surface_peak_ratio_x_over_y": 1.954527933109015
+    },
+    {
+      "scenario": "rough",
+      "layout": "cross",
+      "direct_peak_x_over_y": 3.66360476636854,
+      "surface_peak_ratio_x_over_y": 7.231264546084005
+    }
+  ],
+  "scope": "Single centre station, ideal dipole; layout factors from 3D internal comparison only; not antenna, aperture or field validation."
+}

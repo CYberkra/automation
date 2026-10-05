@@ -1,0 +1,15 @@
+#title: 3D layout/pol control v0.1; flat cross x-pol; centre station; 8m altitude
+#domain: 10 10 16
+#dx_dy_dz: 0.025 0.025 0.025
+#time_window: 200e-9
+#omp_threads: 2
+#pml_cells: 40
+#pml_formulation: HORIPML
+#waveform: ricker 40 100e6 pulse
+#hertzian_dipole: x 5 4.35 14 pulse
+#rx: 5 5.65 14 r1 Ex Ey Ez
+#material: 9 0.001 1 0 rock
+#material: 18.017 0.003 1 0 cover
+#add_dispersion_debye: 1 7.878 6.4567e-09 cover
+#box: 0 0 0 10 10 3.05 rock
+#box: 0 0 3.05 10 10 6 cover
