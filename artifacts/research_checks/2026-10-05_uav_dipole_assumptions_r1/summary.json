@@ -1,0 +1,49 @@
+{
+  "status": "PASS_ANALYTIC_SANITY_CHECK_NOT_FDTD_VALIDATION",
+  "code_sha256": "0f868a91f917d5f34022a1cf7317f26ce45e0fcd292def607470eb6a2665e8b5",
+  "baseline_m": 1.3,
+  "frequency_rows": [
+    {
+      "frequency_MHz": 20.0,
+      "r_over_wavelength": 0.08672666475151952,
+      "kr": 0.5449197057074372,
+      "axial_over_broadside_dB": 8.166738821070439
+    },
+    {
+      "frequency_MHz": 50.0,
+      "r_over_wavelength": 0.2168166618787988,
+      "kr": 1.362299264268593,
+      "axial_over_broadside_dB": 6.447730558933649
+    },
+    {
+      "frequency_MHz": 95.0,
+      "r_over_wavelength": 0.41195165756971786,
+      "kr": 2.5883686021103274,
+      "axial_over_broadside_dB": -1.0459635559236196
+    },
+    {
+      "frequency_MHz": 170.0,
+      "r_over_wavelength": 0.7371766503879161,
+      "kr": 4.631817498513217,
+      "axial_over_broadside_dB": -6.8991550188702995
+    }
+  ],
+  "fixed_current_radiated_power_170_over20_dB": 18.588378514285854,
+  "equal_radiated_power_current_170_over20_dB": -18.588378514285854,
+  "source": "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/d3be4ea78b036a6362230fb41780cf54_MIT6_013S09_notes.pdf",
+  "source_section": "10.2.1 exact electric field and 10.2.13 radiated power",
+  "asymptotic_checks": {
+    "static_ratio_2": true,
+    "far_ratio_2_over_kr": true
+  },
+  "scope": "Homogeneous air, ideal 3D infinitesimal dipole, same co-polar field component; no ground/antenna/port.",
+  "limits": [
+    "No source strength or spectral weighting correction inferred for the actual UAV.",
+    "These 3D power relations are not 2D line-source power calibration.",
+    "Axial far-field radiation null does not mean zero near-field coupling.",
+    "No confirmation that layout is the main B-scan cause."
+  ],
+  "solver_called": false,
+  "field_data_read": false,
+  "training_called": false
+}

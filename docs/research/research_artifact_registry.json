@@ -1,4 +1,15 @@
 {
+ "uav_model_assumption_review_2026_10_05": {
+  "report": "docs/research/2026-10-05_uav_model_assumption_review.md",
+  "results": "artifacts/research_checks/2026-10-05_uav_dipole_assumptions_r1",
+  "script": "scripts/check_uav_dipole_assumptions.py",
+  "status": "ANALYTIC_SANITY_CHECK_AND_INFERENCE_CORRECTION_NOT_FDTD_VALIDATION",
+  "calls_solver": false,
+  "calls_training": false,
+  "new_field_data_available": false,
+  "physical_attribution_certified": false,
+  "next_step": "Validate the local forward model against free-space exact fields and appropriate layered-medium references before layout/depth controls."
+ },
  "sim2real_next_step_design_2026_10_05": {
   "report": "docs/research/2026-10-05_sim2real_next_step_design.md",
   "status": "DESIGN_ONLY_NOT_EXECUTION_CONTRACT",
