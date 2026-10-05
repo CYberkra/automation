@@ -7,9 +7,10 @@ Reads the completed 2026-10-05_hs4_material_scan_r1 capsule (20 groups x 13 trac
 - real-data anchors recomputed from the CSV: direct peak 15.4 ns, ground bounce at
   ~60 ns, interface band 400-500 ns, late-peak/early-peak ratio;
 - depth extrapolation (DECLARED MODEL): conductive two-way loss alpha=sigma*eta/2 at
-  95 MHz applied to real cover thickness candidates {13, 18.5} m, predicting which
-  material reproduces the measured ~-27 dB late-peak level. 2D line-source spreading
-  differs from 3D; extrapolation is indicative only.
+  95 MHz applied to assumed cover thickness candidates {13, 18.5} m. This is not a
+  full-depth forward run or field material calibration. The historical ~-27 dB
+  late peak was an FFT endpoint artifact; the guarded diagnostic is ~-52.6 dB.
+  Field stripe means and simulated contrast peaks are different observables.
 Outputs summary.json + figures into a fresh result directory.
 """
 import argparse
@@ -32,6 +33,7 @@ from analyze_hs4_height_wavefield import response
 from check_hs4_v4_factor_evidence import direct_response
 from plot_hs4_permittivity_bscans import C_AIR, SURFACE_Z, interface_relief
 from sfcw_official_loader_v0_2 import verify_official_runtime
+from field_profile_metrics import late_peak_metrics
 from gprMax.toolboxes.SFCW.processing import reconstruct_time_response
 
 CHECKS = ROOT / 'artifacts/research_checks'
@@ -57,12 +59,15 @@ def ratio_db(num, den):
     return float(20*np.log10(num/den))
 
 
-def real_anchors():
-    with open(REAL_CSV, encoding='utf-8') as f:
+def real_anchors(csv_path=None):
+    csv_path = REAL_CSV if csv_path is None else Path(csv_path)
+    with open(csv_path, encoding='utf-8') as f:
         hdr = [f.readline() for _ in range(4)]
     ns = int(hdr[0].split('=')[1].split(',')[0]); T = float(hdr[1].split('=')[1].split(',')[0])
     nt = int(hdr[2].split('=')[1].split(',')[0])
-    d = np.loadtxt(REAL_CSV, delimiter=',', skiprows=4)
+    d = np.loadtxt(csv_path, delimiter=',', skiprows=4)
+    if d.shape != (nt*ns, 5) or not np.isfinite(d).all():
+        raise ValueError('finite five-column stacked field payload required')
     amp = d[:, 3].reshape(nt, ns).T
     t = np.linspace(0, T, ns)
     from scipy.signal import hilbert
@@ -71,13 +76,17 @@ def real_anchors():
     mdb = 20*np.log10(mean_env/mean_env.max())
     def at(tt):
         return float(mdb[np.argmin(np.abs(t-tt))])
-    late_peak = np.max(env[t >= 300], axis=0)
-    early_peak = np.max(env[t < 150], axis=0)
+    # Whole-record FFT Hilbert envelopes wrap strong early samples into the
+    # end of the record. Historical >=300ns max picked that endpoint artifact.
+    late = late_peak_metrics(env, t, late_stop_ns=T-50.)
     return {'t_ns': t, 'mean_db': mdb,
             'direct_peak_ns': float(t[np.argmax(mean_env)]),
             'ground_bounce_db': at(60.0),
             'interface_band_db_mean': float(np.mean(mdb[(t >= 400) & (t <= 500)])),
-            'late_peak_over_early_peak_db_median': float(np.median(20*np.log10(late_peak/early_peak)))}
+            'late_peak_over_early_peak_db_median': late['median_dB'],
+            'late_peak_window_ns': late['late_window_ns'],
+            'late_peak_endpoint_guard_ns': late['endpoint_guard_ns'],
+            'anchor_scope': 'Unpadded Hilbert interior-window diagnostic; no calibrated scene/instrument equivalence. Historical unrestricted endpoint ratio invalid.'}
 
 
 def main():

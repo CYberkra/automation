@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "focused_metric_checks": {
+    "status": "PASS",
+    "known_late_pulse_dB": -60.0,
+    "endpoint_outlier_excluded": true,
+    "sign_scale_invariant": true,
+    "invalid_inputs_rejected": 4,
+    "early_only_fft_endpoint_counterexample": true,
+    "solver_called": false
+  },
+  "syntax_compile": "PASS",
+  "git_diff_check": "PASS",
+  "field_source_unchanged": true,
+  "audit_code_matches_summary": true,
+  "registry_summary_matches": true,
+  "field_plots_gitignored": true,
+  "script_sha256": {
+    "field_profile_metrics.py": "49cc94dd0bfdf1881131258be8941872b167ddeb9b3b68296b193c023bbaf3de",
+    "check_field_profile_metrics.py": "9aef20c950a010e0f1dcccfdb5d64a1f568647c90b116affc9f2542177ea92f7",
+    "audit_line9_sim2real_v0_2.py": "3316c0837495eaa9b5ae7d4bb78b6f225a77e066ba2b2df7faf1269088860f2e",
+    "analyze_hs4_material_scan.py": "1aa2787af06186570dd44c0ada423c3aeeac537ae08d628c8327830dfb287150"
+  },
+  "summary_sha256": "bab6a67e3ab1f3e991bf94d033751b9c8c87a84a06e294d238e74262f7c7f1a8",
+  "local_plots_sha256": {
+    "endpoint_artifact.png": "125c69b39e8d56746039daba5f64c7a9ecfa659affc1ba4409b9d0711a52fd30",
+    "field_vs_model_scope.png": "094dbbe047768f4817ed7e6bde788255fd5cac573ec788e8b30216cafbab3b01"
+  },
+  "check_runner_sha256": "1685a53ffad522383d2b4e36ca95d200db17765d5c792b4f3f4b2f6c1297843c",
+  "solver_called": false,
+  "training_called": false,
+  "physical_validation": false
+}

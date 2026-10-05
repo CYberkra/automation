@@ -1,0 +1,258 @@
+{
+  "status": "COMPLETED_COMPARISON_AUDIT_NOT_PHYSICAL_CALIBRATION",
+  "solver_called": false,
+  "training_called": false,
+  "field_parameters_fitted": false,
+  "code_sha256": "3316c0837495eaa9b5ae7d4bb78b6f225a77e066ba2b2df7faf1269088860f2e",
+  "field_csv": {
+    "file_name": "Line9origin(36).csv",
+    "sha256": "655f72f99de4cbcb22b1b9be64dc8ebdf2f156accbe9b27729c6862f6b1e172d",
+    "shape_sample_trace": [
+      501,
+      2378
+    ],
+    "time_window_ns": 700.0,
+    "nominal_trace_spacing_m": 0.09093,
+    "nominal_station_span_m": 216.14060999999998,
+    "declared_height_median_m": 9.050410644,
+    "declared_height_minmax_m": [
+      8.163180059,
+      12.65209272
+    ],
+    "traces_with_within_trace_height_change": 0,
+    "time_axis_scope": "Inclusive endpoint is a provisional display convention; original time vector unavailable.",
+    "upstream_processing": "UNKNOWN; Preprocessed directory name is not evidence of gain/background subtraction.",
+    "peak_metrics": {
+      "historical_unbounded_hilbert": {
+        "median_dB": -26.649701395259008,
+        "fraction_at_last_sample": 0.9894869638351556,
+        "fraction_in_last50ns": 1.0
+      },
+      "hilbert_guard50ns": {
+        "median_dB": -52.55015338734853,
+        "p05_p95_dB": [
+          -55.84199916492978,
+          -46.907522807178175
+        ],
+        "median_peak_time_ns": 417.2,
+        "early_window_ns": [
+          0.0,
+          150.0
+        ],
+        "late_window_ns": [
+          300.0,
+          650.0
+        ],
+        "endpoint_guard_ns": 50.0
+      },
+      "hilbert_guard100ns": {
+        "median_dB": -52.554377676335534,
+        "p05_p95_dB": [
+          -55.97764822436868,
+          -47.41722171892976
+        ],
+        "median_peak_time_ns": 414.4,
+        "early_window_ns": [
+          0.0,
+          150.0
+        ],
+        "late_window_ns": [
+          300.0,
+          600.0
+        ],
+        "endpoint_guard_ns": 100.0
+      },
+      "raw_abs_guard50ns": {
+        "median_dB": -52.872849066444346,
+        "p05_p95_dB": [
+          -56.497888123207495,
+          -47.05690122825705
+        ],
+        "median_peak_time_ns": 415.79999999999995,
+        "early_window_ns": [
+          0.0,
+          150.0
+        ],
+        "late_window_ns": [
+          300.0,
+          650.0
+        ],
+        "endpoint_guard_ns": 50.0
+      },
+      "reflect_pad100_guard50ns": {
+        "median_dB": -52.71133789535388,
+        "p05_p95_dB": [
+          -56.19049764034113,
+          -47.08693224870728
+        ],
+        "median_peak_time_ns": 414.4,
+        "early_window_ns": [
+          0.0,
+          150.0
+        ],
+        "late_window_ns": [
+          300.0,
+          650.0
+        ],
+        "endpoint_guard_ns": 50.0
+      },
+      "reflect_pad501_guard50ns": {
+        "median_dB": -52.481188318701776,
+        "p05_p95_dB": [
+          -55.947670662700794,
+          -46.92289189420705
+        ],
+        "median_peak_time_ns": 414.4,
+        "early_window_ns": [
+          0.0,
+          150.0
+        ],
+        "late_window_ns": [
+          300.0,
+          650.0
+        ],
+        "endpoint_guard_ns": 50.0
+      },
+      "reflect_pad1002_guard50ns": {
+        "median_dB": -52.43505405218549,
+        "p05_p95_dB": [
+          -55.81453486304038,
+          -46.92818728158997
+        ],
+        "median_peak_time_ns": 413.0,
+        "early_window_ns": [
+          0.0,
+          150.0
+        ],
+        "late_window_ns": [
+          300.0,
+          650.0
+        ],
+        "endpoint_guard_ns": 50.0
+      },
+      "raw_abs_exclusive_axis_guard50ns": {
+        "median_dB": -52.872849066444346,
+        "p05_p95_dB": [
+          -56.497888123207495,
+          -47.05690122825705
+        ],
+        "median_peak_time_ns": 414.97005988023955,
+        "early_window_ns": [
+          0.0,
+          150.0
+        ],
+        "late_window_ns": [
+          300.0,
+          650.0
+        ],
+        "endpoint_guard_ns": 48.60279441117768
+      }
+    },
+    "interface_band_anchors": {
+      "old_unpadded": {
+        "whole_profile_mean_envelope_peak_ns": 15.399999999999999,
+        "mean_log_mean_envelope_in400_500ns_dB": -60.37724735003199,
+        "definition": "Mean across times of log(mean across traces); not a per-trace target peak or clean interface response."
+      },
+      "reflect_pad1002": {
+        "whole_profile_mean_envelope_peak_ns": 15.399999999999999,
+        "mean_log_mean_envelope_in400_500ns_dB": -60.45129618902524,
+        "definition": "Mean across times of log(mean across traces); not a per-trace target peak or clean interface response."
+      }
+    }
+  },
+  "simulation": {
+    "contract_sha256": "5c0227e2ee6dd8d21421e49566ec69707868bdb4922fcbc6b799ae3176bd4912",
+    "raw_identities": {
+      "de7.878_tau6.4567_s0.003/rough/profile1.h5": "26293d113f3b6e61099668ad0f70cd6abde725ff8b83514948b10489a3b6e636",
+      "de7.878_tau6.4567_s0.003/rough/profile2.h5": "3bd85386e2ea8c23ad42988d514160a9333e3ec2d303c516dc43b00d9bb4885c",
+      "de7.878_tau6.4567_s0.003/rough/profile3.h5": "b7c14686399b86e4ed04255338d600afe7c554a7df1726f81ed97d7f6b18ea23",
+      "de7.878_tau6.4567_s0.003/rough/profile4.h5": "283a71c21288906354fb7996c22ebf0e4af8936366a3b96b9e011ed4764b2c03",
+      "de7.878_tau6.4567_s0.003/rough/profile5.h5": "86ef55eefa986b7d3678255c745e9645907b06e9170901abe9cdb14cd3c4801d",
+      "de7.878_tau6.4567_s0.003/rough/profile6.h5": "6381fc79085bfcdcb35bdecb56f3f4da766017d0b1c86fbb8c6d2afe7ba34e0a",
+      "de7.878_tau6.4567_s0.003/rough/profile7.h5": "7c44471ab30eb5778764d628391d2920cfa1a0babea8a9da7734585563b08739",
+      "de7.878_tau6.4567_s0.003/rough/profile8.h5": "59f958a6bd812b62bf71dbb9e6d6ecaca10a55e9b1fd582d5a0fbcaca7373c3a",
+      "de7.878_tau6.4567_s0.003/rough/profile9.h5": "e14e08e9b602097c573a73af8f5e792f3e34afdd89ef9da087b311f805bb8bda",
+      "de7.878_tau6.4567_s0.003/rough/profile10.h5": "a3d047d8b679dbea77dd4bcad425c33d9cf4d8e6cf27439e806ee25c932f99a3",
+      "de7.878_tau6.4567_s0.003/rough/profile11.h5": "38564de4987ef8a9cd4c582290766cba5b04f10d81cf95bf85d7a1da4b7b5e4a",
+      "de7.878_tau6.4567_s0.003/rough/profile12.h5": "d5beb906e9e2e63221a983217c57f1921a8dcd7c55e655a37082e140435432e2",
+      "de7.878_tau6.4567_s0.003/rough/profile13.h5": "75b1341d2563c9cd66b2b7f036aafe75bd7a4e84aa51142df28bf30f09f2bf5d",
+      "de7.878_tau6.4567_s0.003/halfspace/profile1.h5": "73e6ec604c4ce203bbf1cbf100765f90dd601b29f4e0777ba2ba4df94c6182a5",
+      "de7.878_tau6.4567_s0.003/halfspace/profile2.h5": "8c042728ebdb47816dce66615a1b3d0313903ff96453c3d0f43b661b5968ec60",
+      "de7.878_tau6.4567_s0.003/halfspace/profile3.h5": "cfc385b8a11522b8b21f1ede2394d014a07ecfc1b2d438c90038f437bf97b311",
+      "de7.878_tau6.4567_s0.003/halfspace/profile4.h5": "a7cb7f5a122827134c86f24979df0e01ca5d8b4cc4641bb8e68923f21d1be2a7",
+      "de7.878_tau6.4567_s0.003/halfspace/profile5.h5": "6294629f343fba53d09070210ec1d33c596233e2f4d19902579be077c885e83c",
+      "de7.878_tau6.4567_s0.003/halfspace/profile6.h5": "6220827dc435dbb4c1171541afcdebd4f73a207095859db0dedba0c05a458e5f",
+      "de7.878_tau6.4567_s0.003/halfspace/profile7.h5": "c42013d92eee6f8c8b388ffca492eeb129d2bcda775199265cb8809dd4cf23e3",
+      "de7.878_tau6.4567_s0.003/halfspace/profile8.h5": "2ea7d2c3dcca4f4e56f088967838ff94014cd087ecb3832420d1fc26a94e00df",
+      "de7.878_tau6.4567_s0.003/halfspace/profile9.h5": "d6843aefc2f7ac1f388713411d17373b42dcd38b0ad3132dd43927af09038889",
+      "de7.878_tau6.4567_s0.003/halfspace/profile10.h5": "6bdebb6b3abb1e9f738b8e07ebe8cb8fab787e996a5bffed383e1fa1535602cf",
+      "de7.878_tau6.4567_s0.003/halfspace/profile11.h5": "c03eae2b2ea898a34b0274aa9ddc07f6b14e8ab2922970641021b32e3e377b9c",
+      "de7.878_tau6.4567_s0.003/halfspace/profile12.h5": "40b3eab09360f81197f947e37470e03cb549a5a44315ef699a3032daca416700",
+      "de7.878_tau6.4567_s0.003/halfspace/profile13.h5": "70d081157066ad9084080c1d59fa28aaa9d31d9345402897455f8609e33a3ef8",
+      "de0.5_tau6.4567/rough/profile1.h5": "97015d59de032d3da497f1513a280caa165254dd4b0ee75fc8ef708fb13be080",
+      "de0.5_tau6.4567/rough/profile2.h5": "9b73055954a774c7e07a7783fd0afe9105cdaa8a737348c9b5d0ad7cf371f789",
+      "de0.5_tau6.4567/rough/profile3.h5": "a8c869b560a1b70346c21bbe59f3b5adc07a748dfbd2efe77610fe492e0e7471",
+      "de0.5_tau6.4567/rough/profile4.h5": "a484fb5a54ae049202ced333ed4956250794dea613b080c732e8fc7856204ae0",
+      "de0.5_tau6.4567/rough/profile5.h5": "e3641db4131bf72557d758cc87d9a0003c693ba04c8b30aef6c788009ebd45f3",
+      "de0.5_tau6.4567/rough/profile6.h5": "631f4206aacf129623349939a0db0d05c8198f5fa79610d89fe1faf2e74332b5",
+      "de0.5_tau6.4567/rough/profile7.h5": "9c0af3c042540fb3354b6eac688d084e056552e62af9485ebbbc6ca804ed1248",
+      "de0.5_tau6.4567/rough/profile8.h5": "24c09eca313879fe90ca13f351de5eb493a6f9dc57020ff6c7a8d01f0dc207eb",
+      "de0.5_tau6.4567/rough/profile9.h5": "7f546a40a7e80b3381080f3ba672a1b47452a5f957beb68f9a7acfd87dd40fe9",
+      "de0.5_tau6.4567/rough/profile10.h5": "f7491aadf4a75f62e0d2685cd6f7429116ac141645e2694f907a370068039fbe",
+      "de0.5_tau6.4567/rough/profile11.h5": "d59dc6725ca2c02a405a98a3653694b50f0775feb00964a266e9b4d465ba6498",
+      "de0.5_tau6.4567/rough/profile12.h5": "e92b1e21f8b3eef9da94c255019dc43a83319cbe29c600b2483f59cad81cee5b",
+      "de0.5_tau6.4567/rough/profile13.h5": "423b3f4574805a0d73208b2abc8170123624be859a913b771c5b54784070707c",
+      "de0.5_tau6.4567/halfspace/profile1.h5": "d58ce1fa5f0889fc075021e43fa8788f91c5009af1c5df9e274e1985a168dd1b",
+      "de0.5_tau6.4567/halfspace/profile2.h5": "3f6a83702dceffadf94273c21adba078e306c2844dca2c434745c4bae94c187b",
+      "de0.5_tau6.4567/halfspace/profile3.h5": "58588559772b155af874b60002414f9cbc57daf7ffc2409b72ffef0694548d58",
+      "de0.5_tau6.4567/halfspace/profile4.h5": "74a5c7b069454352aa1337f7c6249a30497de85f4251818f4b1a272860651476",
+      "de0.5_tau6.4567/halfspace/profile5.h5": "52f932d18cbb8700030128f39ce670ffceaf55b1bd89434af4b60a3304da6f0b",
+      "de0.5_tau6.4567/halfspace/profile6.h5": "e0035fbfb45208d6c0136775db5f9564e06b7b46681eda81ccad4e0cf876b9d5",
+      "de0.5_tau6.4567/halfspace/profile7.h5": "73c0de282fa6988773e5a94bfe8c7b145ea6f2f7e115d4799a39f4e3ed2ef92b",
+      "de0.5_tau6.4567/halfspace/profile8.h5": "8ef6de9ebde4a56562b12c7913c787f8a8ba5f37da068d216e20be6b044eccff",
+      "de0.5_tau6.4567/halfspace/profile9.h5": "20ec272f2efafcf31486d665b16be6e548387bb158a5dbb64613b6c1abd66343",
+      "de0.5_tau6.4567/halfspace/profile10.h5": "adc91ab3b8783994e24802eaa818f4edb2e390b8fd3284a1dcb5e248c9394d76",
+      "de0.5_tau6.4567/halfspace/profile11.h5": "ec1bc0d088746a25843e7d4505102a8dcc850a13fc45a36f5ecce0b3b864f5ac",
+      "de0.5_tau6.4567/halfspace/profile12.h5": "270279822688f2ffe311e807b9a5695794275d31573692a09102b25f507837f4",
+      "de0.5_tau6.4567/halfspace/profile13.h5": "df4e20e0b361872910934b068394dadb082d7d1916cd5b73ef74e922f00e9df2"
+    },
+    "independent_direct_DFT_max_relative_L2": 9.763775453565519e-13,
+    "material_changes": "Candidate changes BOTH sigma .003->.001 and Delta7.878->.5; no unique fitted field material.",
+    "geometry": "8m altitude; flat ground; approx3m cover;0.8m basement relief;13 stations over6m;2D line source.",
+    "observable": "Ey/current ((V/m)/A), not measured port S21; actual-source50120-170MHz,200ns tail,Hann/8x.",
+    "scope": "No newly simulated18.5m depth. No measured gain/port calibration/antenna validation."
+  },
+  "common_station_aperture_check": {
+    "old13_stations_in_new61": true,
+    "matched_interface_window_ns": [
+      80,
+      220
+    ],
+    "signed_relative_L2_by_station": {
+      "0": 2.0305957847514336e-09,
+      "1": 1.7234839432448047e-09,
+      "2": 1.3960736462300487e-09,
+      "3": 2.2187752267193886e-09,
+      "4": 2.842612647033535e-09,
+      "5": 1.1112496103888793e-09,
+      "6": 1.095935613645981e-09,
+      "7": 2.2650158151539066e-09,
+      "8": 1.891065878931082e-09,
+      "9": 1.5671206858701753e-09,
+      "10": 2.06195988795319e-09,
+      "11": 3.0310428185210578e-09,
+      "12": 2.445638226796461e-09
+    },
+    "maximum": 3.0310428185210578e-09,
+    "interpretation": "Wider sampling adds stations; it does not physically change the common un-imaged traces. Full-span correlation includes added flat flanks."
+  },
+  "live_anchor_helper_late_peak_db": -52.55015338734853,
+  "retracted_claim": "Measured late peak -26.6dB and the 30-45dB sim/field gap inferred from it: dominated by FFT Hilbert endpoint artifact.",
+  "limits": [
+    "No unique material inversion from amplitude anchors.",
+    "Field total stripe mean and simulated ideal contrast peak are different estimators.",
+    "CSV is time_real; no second IFFT or frequency reconstruction applied.",
+    "No hardware-calibrated correspondence or known site geometry."
+  ]
+}
