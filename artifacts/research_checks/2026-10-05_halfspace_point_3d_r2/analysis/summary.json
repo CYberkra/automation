@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "contract_sha256": "00bb590913a6da8a890b9276c8f8efb2266f9041e0a7b1111a4ea0564703f0e6",
+  "analysis_code_sha256": "06309184c55fca896b112b4f9665d66ecc5525390feed1d268a2474b258b9592",
+  "reference_code_sha256": "6a84380b4a4e4f53cc23ff8a5e2f60055b6f0748b3ad08af9797811915bd6551",
+  "reference_selftest": "PASS",
+  "metrics": [
+    {
+      "case": "halfspace",
+      "raw_sha256": "37fbb215164123d695ac3328f19078da908e686166aa189fb609a45471bfa5f2",
+      "complex_relative_L2_to_reference": 0.003836334460819885,
+      "maximum_phase_error_deg": 0.463003094149295,
+      "magnitude_error_dB_minmax": [
+        -0.07374942736877646,
+        0.061372690171008853
+      ],
+      "independent_DFT_relative_L2": 1.5292212900917432e-12,
+      "passes_declared_diagnostic": true
+    },
+    {
+      "case": "freespace",
+      "raw_sha256": "bf0b9dbe4920a4e6705789268a7d9b4ef6605e21901c62ad23bca0630b6516f9",
+      "complex_relative_L2_to_reference": 0.0006703272475427914,
+      "maximum_phase_error_deg": 0.0340714258904891,
+      "magnitude_error_dB_minmax": [
+        -0.0032440714889167633,
+        0.0072921466579913
+      ],
+      "independent_DFT_relative_L2": 8.040616915072667e-13,
+      "passes_declared_diagnostic": true
+    }
+  ],
+  "reflection_isolation": {
+    "fdtd_isolated_reflection_vs_sommerfeld_relative_L2": 0.06266904651945937,
+    "fdtd_isolated_reflection_vs_sommerfeld_max_phase_deg": 4.398300439460143,
+    "reflection_over_direct_median_dB": -24.359691162944458
+  },
+  "scope": "Half-space continuum agreement within declared finite-grid diagnostic limits; not antenna, aperture or field validation."
+}

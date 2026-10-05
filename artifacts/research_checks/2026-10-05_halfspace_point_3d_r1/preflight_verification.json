@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "completed": false,
+  "contract_sha256": "9e38afb83582d5a5ef55989e61972e32b93d036a6c498ba6be85462e0a58a16a",
+  "code_sha256": "4542ec8f8bbfe0210c713aa48bfefce6699846b40d5f08a4874924154afb2b18",
+  "groups": [
+    {
+      "id": "halfspace",
+      "input_sha256": "6fab56bc6300ff1644d46b0a7ddddd8691483d3da4c138c473bb5cf6060e1c3b",
+      "dl_m": 0.025,
+      "surface_z_m": 3.0,
+      "source_current_moment_amplitude_Am": 1.0,
+      "material": "archived_cover_eps18.017_s0.003_debye"
+    },
+    {
+      "id": "freespace",
+      "input_sha256": "509d34656f161ae63c0a7482bdd576a3c1beebfc93d2e3d77e4a5d7ebf740771",
+      "dl_m": 0.025,
+      "surface_z_m": null,
+      "source_current_moment_amplitude_Am": 1.0,
+      "material": "air"
+    }
+  ],
+  "scope": "Native execution identity; half-space physics checked separately against Sommerfeld reference."
+}

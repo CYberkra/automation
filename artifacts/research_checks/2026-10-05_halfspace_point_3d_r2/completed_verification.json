@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "completed": true,
+  "contract_sha256": "00bb590913a6da8a890b9276c8f8efb2266f9041e0a7b1111a4ea0564703f0e6",
+  "code_sha256": "330cf8f3596fce8c816ff406c885316e4a8d44df3a281cf7a8f8a14ffde1d6c4",
+  "groups": [
+    {
+      "id": "halfspace",
+      "input_sha256": "6fab56bc6300ff1644d46b0a7ddddd8691483d3da4c138c473bb5cf6060e1c3b",
+      "dl_m": 0.025,
+      "surface_z_m": 3.0,
+      "source_current_moment_amplitude_Am": 1.0,
+      "material": "archived_cover_eps18.017_s0.003_debye",
+      "raw_sha256": "37fbb215164123d695ac3328f19078da908e686166aa189fb609a45471bfa5f2",
+      "dt_s": 4.814583003866176e-11,
+      "iterations": 4156,
+      "dtype": "float64"
+    },
+    {
+      "id": "freespace",
+      "input_sha256": "509d34656f161ae63c0a7482bdd576a3c1beebfc93d2e3d77e4a5d7ebf740771",
+      "dl_m": 0.025,
+      "surface_z_m": null,
+      "source_current_moment_amplitude_Am": 1.0,
+      "material": "air",
+      "raw_sha256": "bf0b9dbe4920a4e6705789268a7d9b4ef6605e21901c62ad23bca0630b6516f9",
+      "dt_s": 4.814583003866176e-11,
+      "iterations": 4156,
+      "dtype": "float64"
+    }
+  ],
+  "scope": "Native execution identity; half-space physics checked separately against Sommerfeld reference."
+}

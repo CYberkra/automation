@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "code_sha256": "6a84380b4a4e4f53cc23ff8a5e2f60055b6f0748b3ad08af9797811915bd6551",
+  "k_norm_form": "-omega*mu0/(8*pi), per frequency (analytic Weyl normalization)",
+  "direct_spectral_vs_dipole_field_rel": {
+    "f20MHz_z16m": 3.2222987546979996e-07,
+    "f20MHz_z8m": 3.339019250830261e-07,
+    "f20MHz_z3m": 4.916938887431983e-07,
+    "f95MHz_z16m": 1.951526651446537e-07,
+    "f95MHz_z8m": 1.3859992678825824e-07,
+    "f95MHz_z3m": 1.5464750431313267e-07,
+    "f170MHz_z16m": 1.004870421018652e-07,
+    "f170MHz_z8m": 5.978151158385577e-08,
+    "f170MHz_z3m": 5.5397913281150266e-08
+  },
+  "eps1_reflected_over_direct_max": 1.1778215440011477e-12,
+  "pec_vs_negative_image_relL2": 2.22315653588333e-07,
+  "tolerances": {
+    "direct": 1e-06,
+    "eps1": 1e-06,
+    "pec": 0.001
+  },
+  "convention": "e^{+i wt}; spatial exp(-i k r); lossy eps = eps1 - i*eps2",
+  "scope": "Independent quasi-analytic reference for x-HED over half-space, co-pol Ex at phi=0."
+}

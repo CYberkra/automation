@@ -1,0 +1,107 @@
+{
+  "status": "FROZEN_APPROVED",
+  "approval_basis": "User: 跑，你去跑完 (2026-10-05); prior autonomous authorization persists.",
+  "python": "E:\\automation_djh\\artifacts\\local_checks\\gprmax_v4_gpu_env2\\Scripts\\python.exe",
+  "source_identities": {
+    "__init__.py": "7e78489b2f15bc006c9bb7d18e17bb8e09e8b91cf4f3a483e8339ee9713cefb9",
+    "sources.py": "f110fac160e7257d303586a9371b4ace718358f2ebe335e3ad700a3a5edf14fc",
+    "fields_outputs.py": "7aca799e424ce4162d2547a3763424f762be690c9870f948f6b7f522a27f10bd",
+    "model.py": "3826f1b448a3f465c5273fc9b283fcca2c2e13e81618bc8aaf6c2c0424a0b8a8",
+    "waveforms.py": "ca79340903a25bd370d6149ff23b985c73ccb7b754fd73c8e70cc7b292ec9bcc",
+    "cuda_opencl/knl_fields_updates.py": "f109dd1f58314820a1ded5bf95b6ce8a97cf628015ed77d9b260ebc390fd3fd6",
+    "cuda_opencl/knl_source_updates.py": "27b444919df2884a1cddb5811a4aa8960bd6c47edccf2816853f03f1b8a1d537",
+    "cuda_opencl/knl_pml_updates_electric_HORIPML.py": "6f1d6cf7e33bb541754b0e67ba91a4922d63f494e20efba3b8d88610ad25245d",
+    "cuda_opencl/knl_pml_updates_magnetic_HORIPML.py": "b1d59e70d7a3d5240d546fcc713abfc37c4657575ddb88ae3522a3984bedd498",
+    "toolboxes/SFCW/processing.py": "adad556f09140956f0ee19d3038430e06a9ae8be6a826dcad723096d99624a3b",
+    "cython/eigenmode_dft.cp312-win_amd64.pyd": "6f0a1ede273533f2a0445e02beed6e24106c2e94196c5b1f1e4512b894e03e2d",
+    "cython/eigenmode_source.cp312-win_amd64.pyd": "07e46a7724303074635262505a1b7ce0f44fc93ee17931311bf940f7bf84b558",
+    "cython/fields_updates_dispersive.cp312-win_amd64.pyd": "e3745606f042fec0bd4b53bbb1e00e8033ff33e46f91d1b93ae7214e5e7309d4",
+    "cython/fields_updates_hsg.cp312-win_amd64.pyd": "fcc3770ca490d5ba734878145b863f6148dae8f2b15423d9b44cd11734e9b9b7",
+    "cython/fields_updates_normal.cp312-win_amd64.pyd": "1055afd50126f28a33849eb24442c93b33f2317d398583ce06ede542731a4cf0",
+    "cython/fractals_generate.cp312-win_amd64.pyd": "9b9fb23bbec19bd9600279646244c546f73b3a4fd005cb5f27146a4c5f44af5a",
+    "cython/geometry_outputs.cp312-win_amd64.pyd": "469dd0971fca926d7697e1e5307c967f5000aabb7e74ac4c81c71b474c722776",
+    "cython/geometry_primitives.cp312-win_amd64.pyd": "b46a760d38382bf180165429e20089fa067e99148f3f9bb769baed33e73eb047",
+    "cython/impedance_surface.cp312-win_amd64.pyd": "c3b852a44298085150d3a23dc84ade508c392c3dade855ac0675eafc6f37f503",
+    "cython/network_port.cp312-win_amd64.pyd": "8cf5b8b34e634dd3354788a585f7ec32c9b1e7c97f22948b58b09c4ccd30e609",
+    "cython/ntff.cp312-win_amd64.pyd": "2dfbf3ef36725fec07e35d56416f4e6adca6593ef394d2d16391722201437766",
+    "cython/plane_wave.cp312-win_amd64.pyd": "cd46c2c48a299570dc1411a20576c4ad4c14ea5ea62524e6559a35dbdc339e96",
+    "cython/pml_build.cp312-win_amd64.pyd": "525e2f9ec9ca07e01ea002e613f03bf9b4a84130993cc6f9ee2b5d6e7a98e695",
+    "cython/pml_updates_electric_HORIPML.cp312-win_amd64.pyd": "029fa0430595ccf698032848286191541ce83949a9ad1cc0ef84789810138723",
+    "cython/pml_updates_electric_MRIPML.cp312-win_amd64.pyd": "f1439cd016ba203fe0be816d69d1f670364db8a430b1071e087e6a786b233bac",
+    "cython/pml_updates_magnetic_HORIPML.cp312-win_amd64.pyd": "f0dfcc00fcf1d529fac0875f7dc12a9655941ab0167418ebb85c4967cfa636ce",
+    "cython/pml_updates_magnetic_MRIPML.cp312-win_amd64.pyd": "9e0330e1e2cf32869186e4cb1444a243edd5e67525ea42575b3618a87a4b1c02",
+    "cython/sar_averaging.cp312-win_amd64.pyd": "6333b194385d6afbeb75f445626a6c8cd7653b7c64f4fe51c6ed5c3e761705bb",
+    "cython/snapshots.cp312-win_amd64.pyd": "8e9a6683cd0e0b7b13ec501f1c1da913a66fdaa41d7a22519c6c5525616e181e",
+    "cython/symmetry_boundaries.cp312-win_amd64.pyd": "ca5c6634c56b55a36f380002573fd4fa87b10424316c1eb42ba7583e8b4fc7f8",
+    "cython/symmetry_boundaries_dispersive.cp312-win_amd64.pyd": "101c6a7d1559e992ebf5c43df5addc94c57807ed60f98d824bffe5d07d72a738",
+    "cython/symmetry_boundaries_dispersive_complex.cp312-win_amd64.pyd": "ff0b8a372ef67273200b9609419d86a6e55a753189f82d271162194619781f19",
+    "cython/virtual_waveguide.cp312-win_amd64.pyd": "501c665eede1269cff66dc61c9d149c2d97be7e7d19ea0dec1ebf502172c820b",
+    "cython/yee_cell_build.cp312-win_amd64.pyd": "a5f56d8a0e6aa18f42dd5f7be1fcd1877937a711cebeb915ff310b4d57dc206c",
+    "cython/yee_cell_setget_rigid.cp312-win_amd64.pyd": "c9cfdb13e08857b51b51ccfa769e2155f44e01ac938f644655c0fc1f2c76b7ab"
+  },
+  "code_identities": {
+    "E:\\automation_djh\\scripts\\hs4_halfspace_point_v0_1.py": "4542ec8f8bbfe0210c713aa48bfefce6699846b40d5f08a4874924154afb2b18",
+    "E:\\automation_djh\\scripts\\run_halfspace_point_4090.cmd": "8d54e85815b97bf1793ebbabb4e0553f5d7612505597a808d0fd76749a68a279",
+    "E:\\automation_djh\\scripts\\hs4_station_grid_controls.py": "bbb19e359eb6e195c1a28ab25b162b367241ab5d771ea627461d76d6cee8a90d",
+    "E:\\automation_djh\\scripts\\gprmax_cached_cuda_entry.py": "f069b6f099f3bcf4ebcc79f1ea2543b0743c7c5501ab050563ca454bc2758b5a"
+  },
+  "groups": [
+    {
+      "id": "halfspace",
+      "input": "E:\\automation_djh\\artifacts\\research_checks\\2026-10-05_halfspace_point_3d_r1\\halfspace\\profile.in",
+      "input_sha256": "6fab56bc6300ff1644d46b0a7ddddd8691483d3da4c138c473bb5cf6060e1c3b",
+      "spacing_m": 0.025,
+      "polarisation": "x",
+      "tx_m": [
+        6.0,
+        6.0,
+        11.0
+      ],
+      "receivers_m": [
+        [
+          7.3,
+          6.0,
+          11.0
+        ]
+      ]
+    },
+    {
+      "id": "freespace",
+      "input": "E:\\automation_djh\\artifacts\\research_checks\\2026-10-05_halfspace_point_3d_r1\\freespace\\profile.in",
+      "input_sha256": "509d34656f161ae63c0a7482bdd576a3c1beebfc93d2e3d77e4a5d7ebf740771",
+      "spacing_m": 0.025,
+      "polarisation": "x",
+      "tx_m": [
+        6.0,
+        6.0,
+        11.0
+      ],
+      "receivers_m": [
+        [
+          7.3,
+          6.0,
+          11.0
+        ]
+      ]
+    }
+  ],
+  "max_runs": 2,
+  "no_retry": true,
+  "min_available_RAM_GiB": 4.0,
+  "min_free_VRAM_GiB": 11.0,
+  "max_owned_RSS_GiB": 12.0,
+  "min_system_available_during_run_GiB": 1.0,
+  "max_group_wall_s": 2400,
+  "max_batch_wall_s": 5400,
+  "gpu_lock": "artifacts/local_checks/hs4_gpu_exclusive.lock",
+  "stage": "round2_half_space_sommerfeld_validation",
+  "geometry": "12x12x13m; surface z=3m; cover z 0..3m; tx/rx 8m altitude; baseline 1.3m inline-x; 40-cell HORIPML all faces; tx 1m clear of top PML",
+  "source": "100MHz Ricker actual-source deconvolution; amp*dl=1Am; ideal x-Hertzian, not a UAV hardware model",
+  "processing": "complex501 tones20-170MHz, tail20ns, co-polar Ex/(I*dl), no empirical phase/amplitude fit",
+  "reference": "scripts/green_halfspace_hed_v0_1.py Sommerfeld integrals (selftest PASS 2026-10-05) + FDTD-validated free-space dipole_field",
+  "diagnostic_tolerances": {
+    "complex_band_relative_L2": 0.05,
+    "maximum_phase_error_deg": 5.0
+  },
+  "tolerance_scope": "Predeclared engineering diagnostic; not field or high-precision certification."
+}
