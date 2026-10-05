@@ -41,3 +41,7 @@
 
 - 仿真：`scripts/hs4_slope_bscan_fine2m_v0_1.py` + `scripts/run_slope_bscan_fine2m_4090.cmd`。
 - 分析：`scripts/analyze_slope_bscan_fine2m_v0_1.py --study artifacts/research_checks/2026-10-05_slope_bscan_2d_fine2m_r1 --out <新目录>`。
+
+## 追加：加时窗快照伴生批 snaps260（2026-10-05 同日）
+
+用户"波场快照能否再往后加几十帧，我想看回波穿透地表后的画面"。新冻 `2026-10-05_slope_fine2m_snaps260_r1`：**仅中心站位（tx=18 m）单道重跑，时窗 200→260 ns、快照 200→260 帧**，其余全部与 fine2m 批一致。40 s 完成，验收 PASS（260 帧迭代号/形状/有限性）。**重叠帧审计：前 200 帧与 fine2m 批逐位一致（0/200 不匹配）**——加时窗不改变已有演化。新 GIF（260 帧，7.7 MB）在 `2026-10-05_slope_fine2m_snaps260_r1_analysis/slope_wavefield.gif`：新增 200–260 ns 段可见回波穿出地表后的晚期演化——覆盖层内残余混响逐渐衰减、空气中多次回弹环消亡，t≈230 ns 包络仅余界面以上覆盖层内的弱条纹干涉。脚本 `scripts/hs4_slope_fine2m_snaps260_v0_1.py` + `scripts/run_slope_fine2m_snaps260_4090.cmd`。快照帧留本机（.gitignore）。
