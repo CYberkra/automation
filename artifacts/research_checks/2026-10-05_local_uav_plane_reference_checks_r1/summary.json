@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "checks": {
+    "halfspace_energy_balance_max_error": 4.440892098500626e-16,
+    "slab_energy_balance_max_error": 8.881784197001252e-16,
+    "halfspace_surface_polarity_error": 1.1186042360948406e-16,
+    "halfspace_known_transmission_delay_error": 3.582620203339212e-15,
+    "conductive_lossy_flux_minmax": [
+      0.7211726071080686,
+      0.7902066067291027
+    ],
+    "debye_lossy_flux_minmax": [
+      0.5037519368588674,
+      0.6971688736328858
+    ]
+  },
+  "lossless_Yee_grid_predictions": {
+    "0.05": {
+      "four_metre_epsilon9_minus_air_phase_error_at170MHz_deg": -27.910619013123604,
+      "half_cell_air_reflection_location_phase_at170MHz_deg": 10.207061313063454
+    },
+    "0.025": {
+      "four_metre_epsilon9_minus_air_phase_error_at170MHz_deg": -6.804054731514329,
+      "half_cell_air_reflection_location_phase_at170MHz_deg": 5.103530656531727
+    },
+    "0.0125": {
+      "four_metre_epsilon9_minus_air_phase_error_at170MHz_deg": -1.6905943585396082,
+      "half_cell_air_reflection_location_phase_at170MHz_deg": 2.5517653282658634
+    }
+  },
+  "scope": "Analytic reference identities and precomputed grid-phase prediction, not native convergence proof",
+  "code_sha256": "2426e89985b8b16308c54e217a5fb10333057419248b1506350d579ff9fae6dc",
+  "reference_code_sha256": "26ba9a7b6e163b22e61106304f7a92c9d117729d5542c13fae0ebca6b4f2a2f3"
+}

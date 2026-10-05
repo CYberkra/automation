@@ -1,0 +1,152 @@
+{
+  "status": "PASS_LOCAL_PLANE_GRID_DIAGNOSTIC",
+  "domain_change_complex_relative_L2": {
+    "halfspace_reflection": 1.5667890628600424e-15,
+    "halfspace_transmission": 1.0278733439830503e-15,
+    "slab_reflection": 1.3452873413276092e-15,
+    "slab_transmission": 8.425271664508738e-16,
+    "conductive_reflection": 1.5528080791194463e-15,
+    "conductive_transmission": 6.913785028557442e-16,
+    "debye_reflection": 1.9984855218138727e-15,
+    "debye_transmission": 8.867867502572098e-16
+  },
+  "coarse_metrics": [
+    {
+      "case": "halfspace",
+      "observation": "reflection",
+      "complex_relative_L2": 0.10385548584798213,
+      "maximum_phase_error_deg": 9.130401805917206,
+      "passes_declared_diagnostic": false
+    },
+    {
+      "case": "halfspace",
+      "observation": "transmission",
+      "complex_relative_L2": 0.2975604995873809,
+      "maximum_phase_error_deg": 38.29204211651658,
+      "passes_declared_diagnostic": false
+    },
+    {
+      "case": "slab",
+      "observation": "reflection",
+      "complex_relative_L2": 0.12217687166690223,
+      "maximum_phase_error_deg": 29.29919678822734,
+      "passes_declared_diagnostic": false
+    },
+    {
+      "case": "slab",
+      "observation": "transmission",
+      "complex_relative_L2": 0.2184531256651874,
+      "maximum_phase_error_deg": 30.676094841810265,
+      "passes_declared_diagnostic": false
+    },
+    {
+      "case": "conductive",
+      "observation": "reflection",
+      "complex_relative_L2": 0.11349915931635014,
+      "maximum_phase_error_deg": 20.305716779240402,
+      "passes_declared_diagnostic": false
+    },
+    {
+      "case": "conductive",
+      "observation": "transmission",
+      "complex_relative_L2": 0.21369864860616586,
+      "maximum_phase_error_deg": 29.179803300167062,
+      "passes_declared_diagnostic": false
+    },
+    {
+      "case": "debye",
+      "observation": "reflection",
+      "complex_relative_L2": 0.10709510132439415,
+      "maximum_phase_error_deg": 14.508200023248333,
+      "passes_declared_diagnostic": false
+    },
+    {
+      "case": "debye",
+      "observation": "transmission",
+      "complex_relative_L2": 0.20479842552615185,
+      "maximum_phase_error_deg": 27.970065125726723,
+      "passes_declared_diagnostic": false
+    }
+  ],
+  "fine_metrics": [
+    {
+      "case": "halfspace",
+      "observation": "reflection",
+      "complex_relative_L2": 0.026946722506349805,
+      "maximum_phase_error_deg": 2.4843708807292626,
+      "passes_declared_diagnostic": true
+    },
+    {
+      "case": "halfspace",
+      "observation": "transmission",
+      "complex_relative_L2": 0.038579895090774106,
+      "maximum_phase_error_deg": 4.245002304982275,
+      "passes_declared_diagnostic": true
+    },
+    {
+      "case": "slab",
+      "observation": "reflection",
+      "complex_relative_L2": 0.026093757778283017,
+      "maximum_phase_error_deg": 3.778853689742165,
+      "passes_declared_diagnostic": true
+    },
+    {
+      "case": "slab",
+      "observation": "transmission",
+      "complex_relative_L2": 0.02348273792856203,
+      "maximum_phase_error_deg": 2.8303822577101867,
+      "passes_declared_diagnostic": true
+    },
+    {
+      "case": "conductive",
+      "observation": "reflection",
+      "complex_relative_L2": 0.026520558274518304,
+      "maximum_phase_error_deg": 3.171974817899225,
+      "passes_declared_diagnostic": true
+    },
+    {
+      "case": "conductive",
+      "observation": "transmission",
+      "complex_relative_L2": 0.023233687154693726,
+      "maximum_phase_error_deg": 2.745839076205397,
+      "passes_declared_diagnostic": true
+    },
+    {
+      "case": "debye",
+      "observation": "reflection",
+      "complex_relative_L2": 0.026625512082928512,
+      "maximum_phase_error_deg": 2.7928226023751668,
+      "passes_declared_diagnostic": true
+    },
+    {
+      "case": "debye",
+      "observation": "transmission",
+      "complex_relative_L2": 0.022489246503169646,
+      "maximum_phase_error_deg": 2.6771769060682598,
+      "passes_declared_diagnostic": true
+    }
+  ],
+  "prediction_maximum_phase_residual_deg": {
+    "5cm_reflection": 0.00677706956473223,
+    "5cm_transmission": 0.17436179032952026,
+    "1.25cm_reflection": 0.00010608649708743201,
+    "1.25cm_transmission": 0.002642618176802891
+  },
+  "identities": {
+    "plane_r5": {
+      "contract_sha256": "dfb58845ffd6b1282c897a46ecff758aaee832f5fe434616e4b281a4efc9e2b6",
+      "analysis_sha256": "b54028fba5ffd4753dfc531ca8205729a18fc5b71b7d5e5dc0909e79ccaceae2"
+    },
+    "plane_domain_r7": {
+      "contract_sha256": "9559431699c7438bd2f9e86bf2523dda0647e7f54908c8eb5d33920d7936ac97",
+      "analysis_sha256": "0093b666cd69d4d8df00d1a62ae76e6d8fa05d5dc6a8173cabbe822ead2a57f3"
+    },
+    "plane_fine_r6": {
+      "contract_sha256": "c33d1f9f4c784d8a6bf703547666f4032d2551faa4088700fe2595ac701046e0",
+      "analysis_sha256": "eb05951ea94570c87904e02f756ba0ced889c2ed5644e7f7c51992c9ff3d2110"
+    }
+  },
+  "code_sha256": "d0c08e89b5d4f8b14c90104403a3d7a6e1f14917a704b95957c0497803c5ce59",
+  "prediction": "1D lossless Yee dispersion plus half-cell dielectric-step position; parameters from grid only",
+  "scope": "Normal-incidence plane check only; no historical UAV B-scan root-cause or 3D convergence certification"
+}

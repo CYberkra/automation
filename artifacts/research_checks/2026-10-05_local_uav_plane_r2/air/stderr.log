@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\自动处理\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\gprMax\__main__.py", line 23, in <module>
+    gprMax.gprMax.cli()
+  File "D:\自动处理\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\gprMax\gprMax.py", line 372, in cli
+    results = run_main(args)
+              ^^^^^^^^^^^^^^
+  File "D:\自动处理\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\gprMax\gprMax.py", line 427, in run_main
+    results = context.run()
+              ^^^^^^^^^^^^^
+  File "D:\自动处理\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\gprMax\contexts.py", line 106, in run
+    self._run_model(i)
+  File "D:\自动处理\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\gprMax\contexts.py", line 134, in _run_model
+    scene.create_internal_objects(self.model)
+  File "D:\自动处理\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\gprMax\scene.py", line 358, in create_internal_objects
+    self.process_multi_use_objects(model)
+  File "D:\自动处理\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\gprMax\scene.py", line 211, in process_multi_use_objects
+    self.build_grid_objects(self.grid_objects, model.G)
+  File "D:\自动处理\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\gprMax\scene.py", line 122, in build_grid_objects
+    grid_user_object.build(grid)
+  File "D:\自动处理\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\gprMax\user_objects\cmds_multiuse.py", line 5297, in build
+    raise ValueError
+ValueError

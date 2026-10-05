@@ -1,0 +1,85 @@
+
+=== Electromagnetic modelling software based on the Finite-Difference Time-Domain (FDTD) method 
+
+    www.gprmax.com   __  __
+     __ _ _ __  _ __|  \/  | __ ___  __
+    / _` | '_ \| '__| |\/| |/ _` \ \/ /
+   | (_| | |_) | |  | |  | | (_| |>  <
+    \__, | .__/|_|  |_|  |_|\__,_/_/\_\\
+    |___/|_|
+                     v4.0.0 (Caol Ila)
+
+ Copyright (C) 2015-2026: The University of Edinburgh, United Kingdom
+
+ gprMax is free software: you can redistribute it and/or modify it under the
+  terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+ gprMax is distributed in the hope that it will be useful, but WITHOUT ANY
+  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+  A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ You should have received a copy of the GNU General Public License along with
+  gprMax.  If not, see www.gnu.org/licenses.
+
+DESKTOP-DGLCK4J | unknown unknown | unknown x unknown (8 cores, 16 cores with Hyper-Threading) | 15.8 GiB | Windows 11 (64-bit)
+|--->OpenMP: 8 threads
+Constants/variables used/available for Python scripting: {c: 299792458.0, current_model_run: 1, e0: 8.8541878188e-12, inputfile: D:\自动处理\artifacts\research_checks\2026-10-05_local_uav_plane_domain_r7\slab.in, m0: 1.25663706127e-06, number_model_runs: 1, z0: 376.7303134118051}
+
+Model title: Normal-incidence Fresnel/slab diagnostic; no antenna port
+Spatial discretisation: 0.05 x 0.05 x 0.05m
+Domain size: 2 x 0.05 x 24m (40 x 1 x 480 = 19200 cells)
+#domain: 2.0 0.05 24.0 detected a 2D model from a 1-cell-thick axis (legacy, implicit style) - consider declaring '#domain_mode: TM' explicitly with 'inf' on that axis in '#domain' instead, which also supports TE mode.
+Mode: 2D TMy
+Time step (at CFL limit): 1.17933e-10 secs
+Time window: 3e-07 secs (2545 iterations)
+Simulation will use 2 OpenMP threads
+PML thickness: x0=5, y0=0, z0=20, xmax=5, ymax=0, zmax=20
+Waveform pulse of type ricker with maximum amplitude scaling 1, frequency 1e+08Hz created.
+Receiver at 1m, 0m, 8m with output component(s) Ex, Ey, Ez created.
+Receiver at 0.9m, 0m, 8m with output component(s) Ex, Ey, Ez created.
+Receiver at 1m, 0m, 16m with output component(s) Ex, Ey, Ez created.
+Material cover with eps_r=9, sigma=0 S/m; mu_r=1, sigma*=0 Ohm/m created.
+Material rock with eps_r=4, sigma=0 S/m; mu_r=1, sigma*=0 Ohm/m created.
+PML formulation set to HORIPML
+Discrete Plane Wave within the TFSF Box spanning from (0.5, inf, 3.0) m to (1.5, inf, 22.0) m, normally propagating in the z direction  with theta 0.0 degrees, phi 0.0 degrees and polarisation angle psi 0.0 degrees  using waveform pulse created.
+Box from 0m, 0m, 12m, to 2m, 0.05m, 24m of material(s) cover created, dielectric smoothing is off.
+Box from 0m, 0m, 15m, to 2m, 0.05m, 24m of material(s) rock created, dielectric smoothing is off.
+
+--- Model 1/1, input file: D:\自动处理\artifacts\research_checks\2026-10-05_local_uav_plane_domain_r7\slab.in 
+
+
+Memory required (estimated): ~4.3 MB [main_grid] + ~65.0 MB overhead = 69.3 MB
+
+PML boundaries [main_grid]: {formulation: HORIPML, order: 1, thickness (cells): x0: 5, y0: 0, z0: 20, xmax: 5, ymax: 0, zmax: 20}
+
+Building PML boundaries [main_grid]:   0%|               | 0/4 [00:00<?, ?it/s]Building PML boundaries [main_grid]: 100%|█████| 4/4 [00:00<00:00, 1892.74it/s]
+Building Yee cells [main_grid]:   0%|                    | 0/2 [00:00<?, ?it/s]Building Yee cells [main_grid]: 100%|███████████| 2/2 [00:00<00:00, 789.22it/s]
+
+Materials [main_grid]:
+    |            |         |       | sigma |      | sigma*  | Dielectric 
+ ID | Name       | Type    | eps_r | [S/m] | mu_r | [Ohm/m] | smoothable 
+----+------------+---------+-------+-------+------+---------+------------
+  0 | pec        | builtin | 1     | inf   | 1    | 0       | False      
+  1 | pmc        | builtin | 1     | 0     | 1    | inf     | False      
+  2 | free_space | builtin | 1     | 0     | 1    | 0       | True       
+  3 | cover      |         | 9     | 0     | 1    | 0       | True       
+  4 | rock       |         | 4     | 0     | 1    | 0       | True       
+
+Discrete Plane Wave has been initialized with field projections (Ex, Ey, Ez, Hx, Hy, Hz) = (0.0000, -1.0000, 0.0000, 0.0027, 0.0000, 0.0000) , grid origin = (0, 0, 0) and 1D vector length = 526 cells.
+Spatial-resolution analysis [main_grid]: minimum 7.07 cells per phase wavelength in 'cover', at 2.82647e+08 Hz.
+[main_grid] continuum phase velocity 9.99308e+07 m/s, wavelength 0.353553 m at that limiting frequency.
+Lossless numerical dispersion estimate [main_grid]: grid-axis phase-velocity error -3.31% in 'cover' at 2.82647e+08 Hz. Propagation axis: x. This is a homogeneous bulk estimate, not an interface or stability guarantee.
+Output directory: D:\自动处理\artifacts\research_checks\2026-10-05_local_uav_plane_domain_r7
+
+
+
+Model 1/1 on DESKTOP-DGLCK4J with OpenMP backend using 2 thread(s)
+|--->:   0%|                                          | 0/2545 [00:00<?, ?it/s]|--->:   8%|██▎                           | 192/2545 [00:00<00:01, 1901.70it/s]|--->:  17%|█████▏                        | 445/2545 [00:00<00:00, 2265.57it/s]|--->:  26%|███████▉                      | 672/2545 [00:00<00:00, 2261.46it/s]|--->:  36%|██████████▋                   | 910/2545 [00:00<00:00, 2299.31it/s]|--->:  45%|█████████████                | 1144/2545 [00:00<00:00, 2307.47it/s]|--->:  55%|███████████████▊             | 1392/2545 [00:00<00:00, 2360.66it/s]|--->:  64%|██████████████████▌          | 1634/2545 [00:00<00:00, 2378.09it/s]|--->:  74%|█████████████████████▎       | 1873/2545 [00:00<00:00, 2376.88it/s]|--->:  84%|████████████████████████▎    | 2129/2545 [00:00<00:00, 2427.55it/s]|--->:  93%|███████████████████████████  | 2372/2545 [00:01<00:00, 2240.87it/s]|--->: 100%|█████████████████████████████| 2545/2545 [00:01<00:00, 2250.73it/s]
+
+Written output file: slab.h5
+
+Memory used (estimated): ~96.2 MB
+Time taken: 1.1311 seconds
+
+=== Simulation completed in 1.2359 seconds =====================================
+

@@ -1,0 +1,116 @@
+{
+  "status": "PASS",
+  "contract_sha256": "196e169ca86fc4707a1d9012686fd4ea040ae477b2b67cabad6eed79b939b32e",
+  "analysis_code_sha256": "220cddf048ba4fcd378f1de09728b61799115544e01d66c5a64b1bf15c685e38",
+  "metrics": [
+    {
+      "case": "d0.1_x_forward",
+      "receiver": 1,
+      "raw_sha256": "097d1f87174b035daff4ef63ac6fdb50651501aa5626f565f7cd846484c477db",
+      "complex_relative_L2_to_continuum": 0.011102113854779584,
+      "maximum_phase_error_deg": 0.5634831121480731,
+      "magnitude_error_dB_minmax": [
+        -0.05638852843052823,
+        0.12020575455825105
+      ],
+      "independent_DFT_relative_L2": 2.2176891424287758e-13,
+      "passes_declared_diagnostic": true
+    },
+    {
+      "case": "d0.1_x_forward",
+      "receiver": 2,
+      "raw_sha256": "097d1f87174b035daff4ef63ac6fdb50651501aa5626f565f7cd846484c477db",
+      "complex_relative_L2_to_continuum": 0.006448930508170087,
+      "maximum_phase_error_deg": 0.4760163771576228,
+      "magnitude_error_dB_minmax": [
+        0.027510988241267655,
+        0.14970256172758487
+      ],
+      "independent_DFT_relative_L2": 3.8626202027849655e-13,
+      "passes_declared_diagnostic": true
+    },
+    {
+      "case": "d0.1_x_forward",
+      "receiver": 3,
+      "raw_sha256": "097d1f87174b035daff4ef63ac6fdb50651501aa5626f565f7cd846484c477db",
+      "complex_relative_L2_to_continuum": 0.01110253967297588,
+      "maximum_phase_error_deg": 0.5634861609217268,
+      "magnitude_error_dB_minmax": [
+        -0.05638608807595425,
+        0.12020493028693882
+      ],
+      "independent_DFT_relative_L2": 2.2176640663344324e-13,
+      "passes_declared_diagnostic": true
+    },
+    {
+      "case": "d0.1_x_forward",
+      "receiver": 4,
+      "raw_sha256": "097d1f87174b035daff4ef63ac6fdb50651501aa5626f565f7cd846484c477db",
+      "complex_relative_L2_to_continuum": 0.006448967441595116,
+      "maximum_phase_error_deg": 0.47600522244154264,
+      "magnitude_error_dB_minmax": [
+        0.027498351739216373,
+        0.1496158361432404
+      ],
+      "independent_DFT_relative_L2": 3.861185149048829e-13,
+      "passes_declared_diagnostic": true
+    },
+    {
+      "case": "d0.1_y_forward",
+      "receiver": 1,
+      "raw_sha256": "f692b54a22bacab62bcdfec180e5d649315f17f50c2cd3a8ed27128b6b121b52",
+      "complex_relative_L2_to_continuum": 0.006448930508169863,
+      "maximum_phase_error_deg": 0.4760163771576238,
+      "magnitude_error_dB_minmax": [
+        0.027510988241271503,
+        0.14970256172756022
+      ],
+      "independent_DFT_relative_L2": 3.86264930748324e-13,
+      "passes_declared_diagnostic": true
+    },
+    {
+      "case": "d0.1_y_forward",
+      "receiver": 2,
+      "raw_sha256": "f692b54a22bacab62bcdfec180e5d649315f17f50c2cd3a8ed27128b6b121b52",
+      "complex_relative_L2_to_continuum": 0.011102113854779626,
+      "maximum_phase_error_deg": 0.5634831121480586,
+      "magnitude_error_dB_minmax": [
+        -0.056388528430531146,
+        0.12020575455824535
+      ],
+      "independent_DFT_relative_L2": 2.2184392039235083e-13,
+      "passes_declared_diagnostic": true
+    },
+    {
+      "case": "d0.1_y_forward",
+      "receiver": 3,
+      "raw_sha256": "f692b54a22bacab62bcdfec180e5d649315f17f50c2cd3a8ed27128b6b121b52",
+      "complex_relative_L2_to_continuum": 0.006448967441595034,
+      "maximum_phase_error_deg": 0.47600522244154264,
+      "magnitude_error_dB_minmax": [
+        0.027498351739216373,
+        0.14961583614321766
+      ],
+      "independent_DFT_relative_L2": 3.861344183891641e-13,
+      "passes_declared_diagnostic": true
+    },
+    {
+      "case": "d0.1_y_forward",
+      "receiver": 4,
+      "raw_sha256": "f692b54a22bacab62bcdfec180e5d649315f17f50c2cd3a8ed27128b6b121b52",
+      "complex_relative_L2_to_continuum": 0.011102539672975819,
+      "maximum_phase_error_deg": 0.5634861609217268,
+      "magnitude_error_dB_minmax": [
+        -0.05638608807595522,
+        0.12020493028693312
+      ],
+      "independent_DFT_relative_L2": 2.2144266671578712e-13,
+      "passes_declared_diagnostic": true
+    }
+  ],
+  "symmetry_reciprocity_relative_L2": {
+    "d0.1_axial": 4.647082599486979e-16,
+    "d0.1_broadside": 6.459915259309028e-16
+  },
+  "scope": "Continuum agreement within declared finite-grid diagnostic limits; not antenna, ground or field validation."
+}

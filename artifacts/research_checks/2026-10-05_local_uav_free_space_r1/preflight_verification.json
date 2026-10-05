@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "completed": false,
+  "contract_sha256": "6b137f8757fbdc34ce970b1d0b02b093d5a2185e35bd6084763800a6227421cc",
+  "code_sha256": "f5a9cb7cd0b121eba1125dfb10ab024c279dc0cc603119730cfac3ef3b34be3a",
+  "groups": [
+    {
+      "id": "d0.1_x_forward",
+      "input_sha256": "762430a4b26f3d5150ae71b5d1dd9933234c64ed1bd2f886fd388cdebc1f3752",
+      "declared_air_only": true,
+      "source_current_moment_amplitude_Am": 1.0,
+      "dl_m": 0.1,
+      "polarisation": "x"
+    },
+    {
+      "id": "d0.1_y_forward",
+      "input_sha256": "467159d55d055405a53ac3dffb95eb2db2265b105af9db56d1eb720017273554",
+      "declared_air_only": true,
+      "source_current_moment_amplitude_Am": 1.0,
+      "dl_m": 0.1,
+      "polarisation": "y"
+    },
+    {
+      "id": "d0.05_x_forward",
+      "input_sha256": "bcef3a3eee92ebc6d2fdf1f546c1639f79b8f9f1a4a512615c1a3a30d75799d1",
+      "declared_air_only": true,
+      "source_current_moment_amplitude_Am": 1.0,
+      "dl_m": 0.05,
+      "polarisation": "x"
+    },
+    {
+      "id": "d0.05_y_forward",
+      "input_sha256": "aafe7fc4d7e1841266c5c1db0e277693f864334534930a8552abfc76e4592154",
+      "declared_air_only": true,
+      "source_current_moment_amplitude_Am": 1.0,
+      "dl_m": 0.05,
+      "polarisation": "y"
+    },
+    {
+      "id": "d0.05_y_reverse_x",
+      "input_sha256": "777f9dc4085c9e7b7b15ccdab79643cac0a072ce36e2e2422561d59acdfb106d",
+      "declared_air_only": true,
+      "source_current_moment_amplitude_Am": 1.0,
+      "dl_m": 0.05,
+      "polarisation": "y"
+    },
+    {
+      "id": "d0.05_y_reverse_y",
+      "input_sha256": "0457f2d1ed9e9a9094bdb62a68e862c5248f166b4a0f37fb14f4434184b7c5a1",
+      "declared_air_only": true,
+      "source_current_moment_amplitude_Am": 1.0,
+      "dl_m": 0.05,
+      "polarisation": "y"
+    }
+  ],
+  "scope": "Native execution identity; continuum agreement checked separately."
+}

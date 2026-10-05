@@ -1,0 +1,57 @@
+{
+  "status": "NATIVE_COMPLETED_BUT_PHYSICALLY_INVALID_CONFIGURATION",
+  "reason": "psi90 excites Ex with incompatible symmetry faces and TFSF on domain faces; fields grow to >1e70 V/m from unit source",
+  "native": [
+    {
+      "id": "air",
+      "raw_sha256": "9ebb9f99ff14b183e5999cd33803584abcecb09e07edaf894c1fdfacbe402abc",
+      "peak_fields_V_per_m": {
+        "Ex": 4.6477039885079376e+70,
+        "Ey": 5.985622745755317e+70,
+        "Ez": 1.8154263388433e+70
+      },
+      "dtype": "float64"
+    },
+    {
+      "id": "halfspace",
+      "raw_sha256": "479c67f52b75bce4c62841e083ac3429d1e9426ca3eaf899541ee65ceedafd29",
+      "peak_fields_V_per_m": {
+        "Ex": 1.9801733526515342e+70,
+        "Ey": 3.293653026103078e+70,
+        "Ez": 3.587045547306154e+70
+      },
+      "dtype": "float64"
+    },
+    {
+      "id": "slab",
+      "raw_sha256": "2cecf4b2ac7930f745fbc5d582413d412209d53f0810d6381a0f1aa72771785d",
+      "peak_fields_V_per_m": {
+        "Ex": 3.1589364512766844e+70,
+        "Ey": 4.689635464727068e+70,
+        "Ez": 2.1984363287156316e+70
+      },
+      "dtype": "float64"
+    },
+    {
+      "id": "conductive",
+      "raw_sha256": "fc43289866da2b9a0b50d8c96268d040319b167a46c20f0934c62ca35bd3f499",
+      "peak_fields_V_per_m": {
+        "Ex": 1.473844946867365e+70,
+        "Ey": 2.2097293900303235e+70,
+        "Ez": 1.6219423398725543e+70
+      },
+      "dtype": "float64"
+    },
+    {
+      "id": "debye",
+      "raw_sha256": "bfed95767832acbeadb9409df26eaf6164839a84c8a80095f20c3ce09a9cc6d9",
+      "peak_fields_V_per_m": {
+        "Ex": 5.0326921506501434e+70,
+        "Ey": 3.94376509752289e+70,
+        "Ez": 2.0916354639009822e+70
+      },
+      "dtype": "float64"
+    }
+  ],
+  "scope": "Failed auxiliary input only; not evidence that historical dipole UAV model is unstable"
+}

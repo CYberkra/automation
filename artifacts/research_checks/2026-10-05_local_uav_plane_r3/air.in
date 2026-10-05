@@ -1,0 +1,16 @@
+#title: Normal-incidence Fresnel/slab diagnostic; no antenna port
+#domain: 0.4 0.4 24
+#dx_dy_dz: 0.05 0.05 0.05
+#time_window: 300e-9
+#omp_threads: 2
+#pml_cells: 0 0 20 0 0 20
+#pml_formulation: HORIPML
+#symmetry_boundary: x0 pmc
+#symmetry_boundary: xmax pmc
+#symmetry_boundary: y0 pec
+#symmetry_boundary: ymax pec
+#waveform: ricker 1 100e6 pulse
+#plane_wave_axial: 0 0 3 0.4 0.4 22 90 z pulse
+#rx: 0.2 0.2 8 upper Ex Ey Ez
+#rx: 0.1 0.2 8 transverse Ex Ey Ez
+#rx: 0.2 0.2 16 lower Ex Ey Ez

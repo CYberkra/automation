@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\自动处理\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\gprMax\__main__.py", line 23, in <module>
+    gprMax.gprMax.cli()
+  File "D:\自动处理\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\gprMax\gprMax.py", line 372, in cli
+    results = run_main(args)
+              ^^^^^^^^^^^^^^
+  File "D:\自动处理\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\gprMax\gprMax.py", line 427, in run_main
+    results = context.run()
+              ^^^^^^^^^^^^^
+  File "D:\自动处理\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\gprMax\contexts.py", line 106, in run
+    self._run_model(i)
+  File "D:\自动处理\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\gprMax\contexts.py", line 147, in _run_model
+    self.model.build()
+  File "D:\自动处理\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\gprMax\model.py", line 402, in build
+    self.build_geometry()
+  File "D:\自动处理\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\gprMax\model.py", line 569, in build_geometry
+    grid.build()
+  File "D:\自动处理\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\gprMax\grid\fdtd_grid.py", line 410, in build
+    self._DPW__source_grid_init()
+  File "D:\自动处理\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\gprMax\grid\fdtd_grid.py", line 1337, in _DPW__source_grid_init
+    dpw.grid_init(self)
+  File "D:\自动处理\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\gprMax\sources.py", line 5201, in grid_init
+    self._validate_2d_projections()
+  File "D:\自动处理\artifacts\local_checks\gprmax_v4_gpu_env\Lib\site-packages\gprMax\sources.py", line 5034, in _validate_2d_projections
+    raise ValueError
+ValueError

@@ -1,0 +1,88 @@
+
+=== Electromagnetic modelling software based on the Finite-Difference Time-Domain (FDTD) method 
+
+    www.gprmax.com   __  __
+     __ _ _ __  _ __|  \/  | __ ___  __
+    / _` | '_ \| '__| |\/| |/ _` \ \/ /
+   | (_| | |_) | |  | |  | | (_| |>  <
+    \__, | .__/|_|  |_|  |_|\__,_/_/\_\\
+    |___/|_|
+                     v4.0.0 (Caol Ila)
+
+ Copyright (C) 2015-2026: The University of Edinburgh, United Kingdom
+
+ gprMax is free software: you can redistribute it and/or modify it under the
+  terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+ gprMax is distributed in the hope that it will be useful, but WITHOUT ANY
+  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+  A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ You should have received a copy of the GNU General Public License along with
+  gprMax.  If not, see www.gnu.org/licenses.
+
+DESKTOP-DGLCK4J | unknown unknown | unknown x unknown (8 cores, 16 cores with Hyper-Threading) | 15.8 GiB | Windows 11 (64-bit)
+|--->OpenMP: 8 threads
+Constants/variables used/available for Python scripting: {c: 299792458.0, current_model_run: 1, e0: 8.8541878188e-12, inputfile: D:\自动处理\artifacts\research_checks\2026-10-05_local_uav_plane_r5\debye.in, m0: 1.25663706127e-06, number_model_runs: 1, z0: 376.7303134118051}
+
+Model title: Normal-incidence Fresnel/slab diagnostic; no antenna port
+Spatial discretisation: 0.05 x 0.05 x 0.05m
+Domain size: 12 x 0.05 x 24m (240 x 1 x 480 = 115200 cells)
+#domain: 12.0 0.05 24.0 detected a 2D model from a 1-cell-thick axis (legacy, implicit style) - consider declaring '#domain_mode: TM' explicitly with 'inf' on that axis in '#domain' instead, which also supports TE mode.
+Mode: 2D TMy
+Time step (at CFL limit): 1.17933e-10 secs
+Time window: 3e-07 secs (2545 iterations)
+Simulation will use 2 OpenMP threads
+PML thickness: x0=20, y0=0, z0=20, xmax=20, ymax=0, zmax=20
+Waveform pulse of type ricker with maximum amplitude scaling 1, frequency 1e+08Hz created.
+Receiver at 6m, 0m, 8m with output component(s) Ex, Ey, Ez created.
+Receiver at 5.9m, 0m, 8m with output component(s) Ex, Ey, Ez created.
+Receiver at 6m, 0m, 16m with output component(s) Ex, Ey, Ez created.
+Material cover with eps_r=9, sigma=0.001 S/m; mu_r=1, sigma*=0 Ohm/m created.
+Material rock with eps_r=4, sigma=0 S/m; mu_r=1, sigma*=0 Ohm/m created.
+Debye disperion added to cover with delta_eps_r=1.00, and tau=6.000e-09 secs created.
+PML formulation set to HORIPML
+Discrete Plane Wave within the TFSF Box spanning from (2.0, inf, 3.0) m to (10.0, inf, 22.0) m, normally propagating in the z direction  with theta 0.0 degrees, phi 0.0 degrees and polarisation angle psi 0.0 degrees  using waveform pulse created.
+Box from 0m, 0m, 12m, to 12m, 0.05m, 24m of material(s) cover created, dielectric smoothing is off.
+Box from 0m, 0m, 15m, to 12m, 0.05m, 24m of material(s) rock created, dielectric smoothing is off.
+
+--- Model 1/1, input file: D:\自动处理\artifacts\research_checks\2026-10-05_local_uav_plane_r5\debye.in 
+
+
+Memory required (estimated): ~30.6 MB [main_grid] + ~65.0 MB overhead = 95.6 MB
+
+PML boundaries [main_grid]: {formulation: HORIPML, order: 1, thickness (cells): x0: 20, y0: 0, z0: 20, xmax: 20, ymax: 0, zmax: 20}
+
+Building PML boundaries [main_grid]:   0%|               | 0/4 [00:00<?, ?it/s]Building PML boundaries [main_grid]: 100%|█████| 4/4 [00:00<00:00, 1469.24it/s]
+Building Yee cells [main_grid]:   0%|                    | 0/2 [00:00<?, ?it/s]Building Yee cells [main_grid]: 100%|███████████| 2/2 [00:00<00:00, 133.26it/s]
+
+Materials [main_grid]:
+    |            |         |       | sigma | Delta | tau   | omega | delta | gamma |      | sigma*  | Dielectric 
+ ID | Name       | Type    | eps_r | [S/m] | eps_r | [s]   | [Hz]  | [Hz]  | [Hz]  | mu_r | [Ohm/m] | smoothable 
+----+------------+---------+-------+-------+-------+-------+-------+-------+-------+------+---------+------------
+  0 | pec        | builtin | 1     | inf   |       |       |       |       |       | 1    | 0       | False      
+  1 | pmc        | builtin | 1     | 0     |       |       |       |       |       | 1    | inf     | False      
+  2 | free_space | builtin | 1     | 0     |       |       |       |       |       | 1    | 0       | True       
+  3 | cover      | debye   | 9     | 0.001 | 1     | 6e-09 |       |       |       | 1    | 0       | False      
+  4 | rock       |         | 4     | 0     |       |       |       |       |       | 1    | 0       | True       
+
+Discrete Plane Wave has been initialized with field projections (Ex, Ey, Ez, Hx, Hy, Hz) = (0.0000, -1.0000, 0.0000, 0.0027, 0.0000, 0.0000) , grid origin = (0, 0, 0) and 1D vector length = 526 cells.
+Spatial-resolution analysis [main_grid]: minimum 7.07 cells per phase wavelength in 'cover', at 2.82647e+08 Hz.
+[main_grid] continuum phase velocity 9.98786e+07 m/s, wavelength 0.353369 m at that limiting frequency.
+[main_grid] minimum 1/e amplitude attenuation length: 129 cells in 'cover' at 2.82647e+08 Hz. Attenuation resolution is separate from phase-wavelength sampling.
+Lossless numerical dispersion estimate [main_grid]: grid-axis phase-velocity error -1.31% in 'rock' at 2.82647e+08 Hz. Propagation axis: x. This is a homogeneous bulk estimate, not an interface or stability guarantee.
+Numerical dispersion analysis [main_grid]: lossy, dispersive or anisotropic materials: numerical phase-error estimate unavailable.
+Output directory: D:\自动处理\artifacts\research_checks\2026-10-05_local_uav_plane_r5
+
+
+
+Model 1/1 on DESKTOP-DGLCK4J with OpenMP backend using 2 thread(s)
+|--->:   0%|                                          | 0/2545 [00:00<?, ?it/s]|--->:   1%|▏                               | 19/2545 [00:00<00:13, 182.03it/s]|--->:   2%|▋                               | 59/2545 [00:00<00:08, 305.69it/s]|--->:   4%|█▏                              | 96/2545 [00:00<00:07, 332.13it/s]|--->:   5%|█▌                             | 133/2545 [00:00<00:06, 346.81it/s]|--->:   7%|██                             | 173/2545 [00:00<00:06, 363.04it/s]|--->:   8%|██▌                            | 210/2545 [00:00<00:08, 273.06it/s]|--->:   9%|██▉                            | 241/2545 [00:00<00:08, 276.03it/s]|--->:  11%|███▎                           | 271/2545 [00:00<00:08, 276.62it/s]|--->:  12%|███▋                           | 304/2545 [00:01<00:07, 289.24it/s]|--->:  13%|████                           | 335/2545 [00:01<00:08, 253.38it/s]|--->:  15%|████▌                          | 371/2545 [00:01<00:07, 279.91it/s]|--->:  16%|████▉                          | 401/2545 [00:01<00:07, 272.30it/s]|--->:  17%|█████▎                         | 435/2545 [00:01<00:07, 288.31it/s]|--->:  18%|█████▋                         | 465/2545 [00:01<00:07, 290.75it/s]|--->:  19%|██████                         | 495/2545 [00:01<00:07, 286.95it/s]|--->:  21%|██████▍                        | 525/2545 [00:01<00:08, 251.91it/s]|--->:  22%|██████▋                        | 552/2545 [00:01<00:08, 246.97it/s]|--->:  23%|███████▏                       | 588/2545 [00:02<00:07, 276.02it/s]|--->:  25%|███████▋                       | 629/2545 [00:02<00:06, 310.80it/s]|--->:  27%|████████▏                      | 676/2545 [00:02<00:05, 351.99it/s]|--->:  28%|████████▋                      | 713/2545 [00:02<00:05, 327.16it/s]|--->:  30%|█████████▏                     | 751/2545 [00:02<00:05, 339.33it/s]|--->:  31%|█████████▌                     | 786/2545 [00:02<00:05, 303.14it/s]|--->:  32%|█████████▉                     | 818/2545 [00:02<00:07, 245.75it/s]|--->:  33%|██████████▎                    | 845/2545 [00:02<00:07, 236.61it/s]|--->:  34%|██████████▋                    | 876/2545 [00:03<00:06, 252.28it/s]|--->:  35%|██████████▉                    | 903/2545 [00:03<00:06, 251.84it/s]|--->:  37%|███████████▍                   | 934/2545 [00:03<00:06, 265.20it/s]|--->:  38%|███████████▋                   | 962/2545 [00:03<00:05, 268.78it/s]|--->:  39%|████████████                   | 992/2545 [00:03<00:05, 276.38it/s]|--->:  40%|████████████                  | 1028/2545 [00:03<00:05, 299.12it/s]|--->:  42%|████████████▌                 | 1070/2545 [00:03<00:04, 331.48it/s]|--->:  43%|█████████████                 | 1104/2545 [00:03<00:04, 318.10it/s]|--->:  45%|█████████████▍                | 1137/2545 [00:03<00:04, 320.07it/s]|--->:  46%|█████████████▉                | 1180/2545 [00:04<00:03, 349.51it/s]|--->:  48%|██████████████▎               | 1216/2545 [00:04<00:04, 331.14it/s]|--->:  49%|██████████████▋               | 1250/2545 [00:04<00:04, 317.31it/s]|--->:  51%|███████████████▏              | 1288/2545 [00:04<00:03, 333.29it/s]|--->:  52%|███████████████▋              | 1329/2545 [00:04<00:03, 353.32it/s]|--->:  54%|████████████████▏             | 1370/2545 [00:04<00:03, 367.80it/s]|--->:  55%|████████████████▌             | 1408/2545 [00:04<00:03, 286.80it/s]|--->:  57%|████████████████▉             | 1440/2545 [00:04<00:03, 293.84it/s]|--->:  58%|█████████████████▎            | 1472/2545 [00:05<00:03, 289.50it/s]|--->:  59%|█████████████████▊            | 1510/2545 [00:05<00:03, 312.17it/s]|--->:  61%|██████████████████▏           | 1544/2545 [00:05<00:03, 312.97it/s]|--->:  62%|██████████████████▌           | 1577/2545 [00:05<00:03, 254.17it/s]|--->:  64%|███████████████████           | 1619/2545 [00:05<00:03, 291.35it/s]|--->:  65%|███████████████████▍          | 1651/2545 [00:05<00:04, 190.59it/s]|--->:  66%|███████████████████▊          | 1677/2545 [00:05<00:04, 190.31it/s]|--->:  67%|████████████████████          | 1701/2545 [00:06<00:04, 178.59it/s]|--->:  68%|████████████████████▎         | 1727/2545 [00:06<00:04, 193.90it/s]|--->:  69%|████████████████████▋         | 1752/2545 [00:06<00:03, 205.39it/s]|--->:  70%|█████████████████████▏        | 1793/2545 [00:06<00:02, 254.50it/s]|--->:  72%|█████████████████████▋        | 1835/2545 [00:06<00:02, 295.62it/s]|--->:  74%|██████████████████████▏       | 1878/2545 [00:06<00:02, 330.04it/s]|--->:  75%|██████████████████████▌       | 1914/2545 [00:06<00:02, 298.23it/s]|--->:  76%|██████████████████████▉       | 1946/2545 [00:06<00:02, 251.44it/s]|--->:  78%|███████████████████████▎      | 1974/2545 [00:07<00:02, 255.91it/s]|--->:  79%|███████████████████████▌      | 2002/2545 [00:07<00:02, 225.60it/s]|--->:  80%|███████████████████████▉      | 2027/2545 [00:07<00:02, 192.39it/s]|--->:  81%|████████████████████████▏     | 2049/2545 [00:07<00:02, 178.50it/s]|--->:  81%|████████████████████████▍     | 2069/2545 [00:07<00:02, 163.36it/s]|--->:  82%|████████████████████████▌     | 2089/2545 [00:07<00:02, 171.15it/s]|--->:  83%|████████████████████████▉     | 2115/2545 [00:07<00:02, 189.96it/s]|--->:  84%|█████████████████████████▎    | 2144/2545 [00:08<00:01, 213.57it/s]|--->:  85%|█████████████████████████▋    | 2174/2545 [00:08<00:01, 234.04it/s]|--->:  87%|█████████████████████████▉    | 2204/2545 [00:08<00:01, 250.36it/s]|--->:  88%|██████████████████████████▍   | 2241/2545 [00:08<00:01, 282.60it/s]|--->:  89%|██████████████████████████▊   | 2271/2545 [00:08<00:01, 265.53it/s]|--->:  90%|███████████████████████████▏  | 2303/2545 [00:08<00:00, 280.10it/s]|--->:  92%|███████████████████████████▌  | 2339/2545 [00:08<00:00, 300.07it/s]|--->:  93%|███████████████████████████▉  | 2372/2545 [00:08<00:00, 306.88it/s]|--->:  95%|████████████████████████████▍ | 2416/2545 [00:08<00:00, 343.74it/s]|--->:  96%|████████████████████████████▉ | 2451/2545 [00:09<00:00, 298.61it/s]|--->:  98%|█████████████████████████████▎| 2483/2545 [00:09<00:00, 295.73it/s]|--->:  99%|█████████████████████████████▋| 2514/2545 [00:09<00:00, 260.11it/s]|--->: 100%|██████████████████████████████| 2545/2545 [00:09<00:00, 269.72it/s]|--->: 100%|██████████████████████████████| 2545/2545 [00:09<00:00, 270.53it/s]
+
+Written output file: debye.h5
+
+Memory used (estimated): ~115.3 MB
+Time taken: 9.4075 seconds
+
+=== Simulation completed in 9.5868 seconds =====================================
+

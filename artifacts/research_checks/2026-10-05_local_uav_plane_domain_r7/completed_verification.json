@@ -1,0 +1,161 @@
+{
+  "status": "PASS",
+  "contract_sha256": "9559431699c7438bd2f9e86bf2523dda0647e7f54908c8eb5d33920d7936ac97",
+  "groups": [
+    {
+      "case": "air",
+      "raw_sha256": "dadb53a20efb388221b95eb15c66ad1496fe71531e6fafb00f497d2e659e6351",
+      "supervision": {
+        "reason": "completed",
+        "exit_code": 0,
+        "wall_s": 3.875,
+        "peak_job_commit_bytes": 170975232,
+        "observed_output_bytes": 6284,
+        "memory_cap_bytes": 858993459,
+        "wall_cap_s": 180,
+        "output_cap_bytes": 20971520,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "output_semantics": "polled file bytes; overshoot possible",
+        "active_job_processes_at_stop": 0,
+        "total_job_processes": 3,
+        "waited_for_descendants": false,
+        "completion_semantics": "root exit zero and job empty; application must propagate child failures",
+        "child_exit_codes_collected": false,
+        "command": [
+          "D:\\自动处理\\artifacts\\local_checks\\gprmax_v4_gpu_env\\Scripts\\python.exe",
+          "-m",
+          "gprMax",
+          "D:\\自动处理\\artifacts\\research_checks\\2026-10-05_local_uav_plane_domain_r7\\air.in",
+          "-cpu_precision",
+          "double"
+        ]
+      },
+      "dtype": "float64",
+      "input_sha256": "9ed623230e62d9e573be2271068551f3337b8f6625097f1a06008efcb5f1b3ef"
+    },
+    {
+      "case": "halfspace",
+      "raw_sha256": "0e6f530cbfdb09fcd2695b200de49d6036e777734de648aad1daf555612e1aa2",
+      "supervision": {
+        "reason": "completed",
+        "exit_code": 0,
+        "wall_s": 4.703999999910593,
+        "peak_job_commit_bytes": 171139072,
+        "observed_output_bytes": 7047,
+        "memory_cap_bytes": 858993459,
+        "wall_cap_s": 180,
+        "output_cap_bytes": 20971520,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "output_semantics": "polled file bytes; overshoot possible",
+        "active_job_processes_at_stop": 0,
+        "total_job_processes": 3,
+        "waited_for_descendants": false,
+        "completion_semantics": "root exit zero and job empty; application must propagate child failures",
+        "child_exit_codes_collected": false,
+        "command": [
+          "D:\\自动处理\\artifacts\\local_checks\\gprmax_v4_gpu_env\\Scripts\\python.exe",
+          "-m",
+          "gprMax",
+          "D:\\自动处理\\artifacts\\research_checks\\2026-10-05_local_uav_plane_domain_r7\\halfspace.in",
+          "-cpu_precision",
+          "double"
+        ]
+      },
+      "dtype": "float64",
+      "input_sha256": "51f7ef346833d3531793b68c0bcf46ed0e504b3d65b49164e0b51e75fd8d184d"
+    },
+    {
+      "case": "slab",
+      "raw_sha256": "9432db036511b36f14ef20222636723e262435e18b9185d9b0ad209bfc13dad3",
+      "supervision": {
+        "reason": "completed",
+        "exit_code": 0,
+        "wall_s": 4.4850000001024455,
+        "peak_job_commit_bytes": 171040768,
+        "observed_output_bytes": 6888,
+        "memory_cap_bytes": 858993459,
+        "wall_cap_s": 180,
+        "output_cap_bytes": 20971520,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "output_semantics": "polled file bytes; overshoot possible",
+        "active_job_processes_at_stop": 0,
+        "total_job_processes": 3,
+        "waited_for_descendants": false,
+        "completion_semantics": "root exit zero and job empty; application must propagate child failures",
+        "child_exit_codes_collected": false,
+        "command": [
+          "D:\\自动处理\\artifacts\\local_checks\\gprmax_v4_gpu_env\\Scripts\\python.exe",
+          "-m",
+          "gprMax",
+          "D:\\自动处理\\artifacts\\research_checks\\2026-10-05_local_uav_plane_domain_r7\\slab.in",
+          "-cpu_precision",
+          "double"
+        ]
+      },
+      "dtype": "float64",
+      "input_sha256": "8cacd4708e845ee6846524de34dd986ca5fff5e6ad14e1274b7f4e153a9add46"
+    },
+    {
+      "case": "conductive",
+      "raw_sha256": "31293ec5167e1b4c063d6684e3530444aece47700dfaca68dc1a1c583d7f08cf",
+      "supervision": {
+        "reason": "completed",
+        "exit_code": 0,
+        "wall_s": 7.375,
+        "peak_job_commit_bytes": 170868736,
+        "observed_output_bytes": 8189,
+        "memory_cap_bytes": 858993459,
+        "wall_cap_s": 180,
+        "output_cap_bytes": 20971520,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "output_semantics": "polled file bytes; overshoot possible",
+        "active_job_processes_at_stop": 0,
+        "total_job_processes": 3,
+        "waited_for_descendants": false,
+        "completion_semantics": "root exit zero and job empty; application must propagate child failures",
+        "child_exit_codes_collected": false,
+        "command": [
+          "D:\\自动处理\\artifacts\\local_checks\\gprmax_v4_gpu_env\\Scripts\\python.exe",
+          "-m",
+          "gprMax",
+          "D:\\自动处理\\artifacts\\research_checks\\2026-10-05_local_uav_plane_domain_r7\\conductive.in",
+          "-cpu_precision",
+          "double"
+        ]
+      },
+      "dtype": "float64",
+      "input_sha256": "e2db30f3d00e73ec85865b7b073b44ce5731c636c4962946af96f40086e5e967"
+    },
+    {
+      "case": "debye",
+      "raw_sha256": "2c6611726b836cf324cb2cc66c1a1590d4145ce689b0932ba6d205ce6b702bba",
+      "supervision": {
+        "reason": "completed",
+        "exit_code": 0,
+        "wall_s": 8.25,
+        "peak_job_commit_bytes": 172093440,
+        "observed_output_bytes": 9107,
+        "memory_cap_bytes": 858993459,
+        "wall_cap_s": 180,
+        "output_cap_bytes": 20971520,
+        "memory_semantics": "Windows job committed memory, not RSS",
+        "output_semantics": "polled file bytes; overshoot possible",
+        "active_job_processes_at_stop": 0,
+        "total_job_processes": 3,
+        "waited_for_descendants": false,
+        "completion_semantics": "root exit zero and job empty; application must propagate child failures",
+        "child_exit_codes_collected": false,
+        "command": [
+          "D:\\自动处理\\artifacts\\local_checks\\gprmax_v4_gpu_env\\Scripts\\python.exe",
+          "-m",
+          "gprMax",
+          "D:\\自动处理\\artifacts\\research_checks\\2026-10-05_local_uav_plane_domain_r7\\debye.in",
+          "-cpu_precision",
+          "double"
+        ]
+      },
+      "dtype": "float64",
+      "input_sha256": "48d9d28bdb34ff184a1e176164aa356e522f69078bdb270bc023a2758a13ce10"
+    }
+  ]
+}

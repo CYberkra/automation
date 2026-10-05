@@ -1,4 +1,21 @@
 {
+ "local_uav_benchmark_2026_10_05": {
+  "report": "docs/research/2026-10-05_local_uav_benchmark_findings.md",
+  "archive": "artifacts/research_checks/2026-10-05_local_uav_benchmark_archive_r1",
+  "grid_comparison": "artifacts/research_checks/2026-10-05_local_uav_grid_comparison_r1",
+  "status": "COMPLETED_LOCAL_LIGHTWEIGHT_CHECKS_FULL_3D_UNFINISHED",
+  "calls_solver": true,
+  "calls_training": false,
+  "native_H5_count_including_invalid": 22,
+  "valid_native_H5_count": 17,
+  "free_space_basic_complex_diagnostic": "PASS",
+  "free_space_refinement_and_reciprocity": "PREPARED_NOT_RUN_RESOURCE_PREFLIGHT_REJECTED",
+  "normal_incidence_plane_fine_diagnostic": "PASS_8_ITEMS_NOT_SUSPENDED_POINT_SOURCE_CERTIFICATION",
+  "full_suspended_source_layout_relief_depth_controls": "NOT_EXECUTED",
+  "field_fitted": false,
+  "physical_attribution_certified": false,
+  "next_step": "Independent layered Green-function reference and bounded single finite-height point-source validation before the 12-case layout/depth controls."
+ },
  "uav_model_assumption_review_2026_10_05": {
   "report": "docs/research/2026-10-05_uav_model_assumption_review.md",
   "results": "artifacts/research_checks/2026-10-05_uav_dipole_assumptions_r1",

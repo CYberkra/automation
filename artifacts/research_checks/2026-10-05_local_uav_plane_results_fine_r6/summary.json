@@ -1,0 +1,80 @@
+{
+  "status": "PASS",
+  "metrics": [
+    {
+      "case": "halfspace",
+      "observation": "reflection",
+      "complex_relative_L2": 0.026946722506349805,
+      "maximum_phase_error_deg": 2.4843708807292626,
+      "passes_declared_diagnostic": true
+    },
+    {
+      "case": "halfspace",
+      "observation": "transmission",
+      "complex_relative_L2": 0.038579895090774106,
+      "maximum_phase_error_deg": 4.245002304982275,
+      "passes_declared_diagnostic": true
+    },
+    {
+      "case": "slab",
+      "observation": "reflection",
+      "complex_relative_L2": 0.026093757778283017,
+      "maximum_phase_error_deg": 3.778853689742165,
+      "passes_declared_diagnostic": true
+    },
+    {
+      "case": "slab",
+      "observation": "transmission",
+      "complex_relative_L2": 0.02348273792856203,
+      "maximum_phase_error_deg": 2.8303822577101867,
+      "passes_declared_diagnostic": true
+    },
+    {
+      "case": "conductive",
+      "observation": "reflection",
+      "complex_relative_L2": 0.026520558274518304,
+      "maximum_phase_error_deg": 3.171974817899225,
+      "passes_declared_diagnostic": true
+    },
+    {
+      "case": "conductive",
+      "observation": "transmission",
+      "complex_relative_L2": 0.023233687154693726,
+      "maximum_phase_error_deg": 2.745839076205397,
+      "passes_declared_diagnostic": true
+    },
+    {
+      "case": "debye",
+      "observation": "reflection",
+      "complex_relative_L2": 0.026625512082928512,
+      "maximum_phase_error_deg": 2.7928226023751668,
+      "passes_declared_diagnostic": true
+    },
+    {
+      "case": "debye",
+      "observation": "transmission",
+      "complex_relative_L2": 0.022489246503169646,
+      "maximum_phase_error_deg": 2.6771769060682598,
+      "passes_declared_diagnostic": true
+    }
+  ],
+  "transverse_uniformity_relative_L2": {
+    "air": 1.7517272309041375e-16,
+    "halfspace": 1.598621969464379e-16,
+    "slab": 1.864823127712499e-16,
+    "conductive": 1.6611764486071298e-16,
+    "debye": 1.74207815297654e-16
+  },
+  "maximum_independent_DFT_error": 1.7128374143761423e-12,
+  "raw_identities": {
+    "air": "c28d6e34e431c31d280677de7febdceca758fad95e9a2422a5c4cb2037b0a461",
+    "halfspace": "445859e92d3fa772b0a6ac78b203b496d7432ea58080834c2863023cf18580d8",
+    "slab": "9819c795214627e26c6630c3b73c2ca6b014d35816d2c52158e153f669355f95",
+    "conductive": "f24e64e74704ea01cd78fc262ab708ae055306b01ae3a9ab6f1aacbeb4581b4c",
+    "debye": "247197aae088ae04b2295d3c1bb33939e055ca81cc0079869a6841508e332037"
+  },
+  "contract_sha256": "c33d1f9f4c784d8a6bf703547666f4032d2551faa4088700fe2595ac701046e0",
+  "analysis_code_sha256": "26ba9a7b6e163b22e61106304f7a92c9d117729d5542c13fae0ebca6b4f2a2f3",
+  "scope": "Normal incidence only; not suspended source, cross-track layout, antenna or field validation",
+  "fit_parameters": false
+}

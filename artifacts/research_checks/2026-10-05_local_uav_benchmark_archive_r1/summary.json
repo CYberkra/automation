@@ -1,0 +1,372 @@
+{
+  "status": "COMPLETED_LOCAL_LIGHTWEIGHT_CHECKS_FULL_3D_UNFINISHED",
+  "capsules": [
+    {
+      "capsule": "artifacts/research_checks/2026-10-05_local_uav_free_space_r1",
+      "contract_sha256": "6b137f8757fbdc34ce970b1d0b02b093d5a2185e35bd6084763800a6227421cc",
+      "native": [],
+      "status": "PREPARED_NOT_RUN_RESOURCE_PREFLIGHT_REJECTED"
+    },
+    {
+      "capsule": "artifacts/research_checks/2026-10-05_local_uav_free_space_coarse_r2",
+      "contract_sha256": "196e169ca86fc4707a1d9012686fd4ea040ae477b2b67cabad6eed79b939b32e",
+      "native": [
+        {
+          "id": "d0.1_x_forward",
+          "raw_sha256": "097d1f87174b035daff4ef63ac6fdb50651501aa5626f565f7cd846484c477db",
+          "peak_fields_V_per_m": {
+            "Ex": 37.159758145213104,
+            "Ey": 2.8696163561317016,
+            "Ez": 2.869616355667108
+          },
+          "dtype": "float64"
+        },
+        {
+          "id": "d0.1_y_forward",
+          "raw_sha256": "f692b54a22bacab62bcdfec180e5d649315f17f50c2cd3a8ed27128b6b121b52",
+          "peak_fields_V_per_m": {
+            "Ex": 2.372866922751089,
+            "Ey": 50.2036118156099,
+            "Ez": 0.1007780781657735
+          },
+          "dtype": "float64"
+        }
+      ],
+      "status": "NATIVE_EXECUTION_IDENTITY_PASS_SEE_SEPARATE_ANALYTIC_DIAGNOSTIC"
+    },
+    {
+      "capsule": "artifacts/research_checks/2026-10-05_local_uav_free_space_fine_r3",
+      "contract_sha256": "e559fd033a811e15f7d047a3ea60d6c825deb998a84c07853cf119c882a56bd3",
+      "native": [],
+      "status": "PREPARED_NOT_RUN_RESOURCE_PREFLIGHT_REJECTED"
+    },
+    {
+      "capsule": "artifacts/research_checks/2026-10-05_local_uav_plane_r1",
+      "contract_sha256": "28f5cea29eb92f15735e8db1544b8ad10b08153d0a23759c72aef376c04b6a5a",
+      "native": [],
+      "status": "FAILED_INITIALISATION",
+      "reason": "OpenBLAS allocation under job commit cap; fixed by explicit thread environment"
+    },
+    {
+      "capsule": "artifacts/research_checks/2026-10-05_local_uav_plane_r2",
+      "contract_sha256": "5231e9cd3d70ef094e1a33daf62781520ebd48371ea2407e643b311412b53f45",
+      "native": [],
+      "status": "FAILED_INITIALISATION",
+      "reason": "Installed V4 rejects symmetry boundary in 2D"
+    },
+    {
+      "capsule": "artifacts/research_checks/2026-10-05_local_uav_plane_r3",
+      "contract_sha256": "d26508a672eb62353db514a845d31a7469e63dca867922c665e963baf9de67d5",
+      "native": [
+        {
+          "id": "air",
+          "raw_sha256": "9ebb9f99ff14b183e5999cd33803584abcecb09e07edaf894c1fdfacbe402abc",
+          "peak_fields_V_per_m": {
+            "Ex": 4.6477039885079376e+70,
+            "Ey": 5.985622745755317e+70,
+            "Ez": 1.8154263388433e+70
+          },
+          "dtype": "float64"
+        },
+        {
+          "id": "halfspace",
+          "raw_sha256": "479c67f52b75bce4c62841e083ac3429d1e9426ca3eaf899541ee65ceedafd29",
+          "peak_fields_V_per_m": {
+            "Ex": 1.9801733526515342e+70,
+            "Ey": 3.293653026103078e+70,
+            "Ez": 3.587045547306154e+70
+          },
+          "dtype": "float64"
+        },
+        {
+          "id": "slab",
+          "raw_sha256": "2cecf4b2ac7930f745fbc5d582413d412209d53f0810d6381a0f1aa72771785d",
+          "peak_fields_V_per_m": {
+            "Ex": 3.1589364512766844e+70,
+            "Ey": 4.689635464727068e+70,
+            "Ez": 2.1984363287156316e+70
+          },
+          "dtype": "float64"
+        },
+        {
+          "id": "conductive",
+          "raw_sha256": "fc43289866da2b9a0b50d8c96268d040319b167a46c20f0934c62ca35bd3f499",
+          "peak_fields_V_per_m": {
+            "Ex": 1.473844946867365e+70,
+            "Ey": 2.2097293900303235e+70,
+            "Ez": 1.6219423398725543e+70
+          },
+          "dtype": "float64"
+        },
+        {
+          "id": "debye",
+          "raw_sha256": "bfed95767832acbeadb9409df26eaf6164839a84c8a80095f20c3ce09a9cc6d9",
+          "peak_fields_V_per_m": {
+            "Ex": 5.0326921506501434e+70,
+            "Ey": 3.94376509752289e+70,
+            "Ez": 2.0916354639009822e+70
+          },
+          "dtype": "float64"
+        }
+      ],
+      "status": "NATIVE_COMPLETED_BUT_PHYSICALLY_INVALID_CONFIGURATION",
+      "reason": "psi90 excites Ex with incompatible symmetry faces and TFSF on domain faces; fields grow to >1e70 V/m from unit source"
+    },
+    {
+      "capsule": "artifacts/research_checks/2026-10-05_local_uav_plane_r4",
+      "contract_sha256": "51c38f5e173832456e47416dfbb08de8892e1aa54d7505ff8a7c8d78fd932713",
+      "native": [],
+      "status": "FAILED_INITIALISATION",
+      "reason": "psi90 projects onto dead Ex/Hy in TMy; psi0 required for Ey/Hx"
+    },
+    {
+      "capsule": "artifacts/research_checks/2026-10-05_local_uav_plane_r5",
+      "contract_sha256": "dfb58845ffd6b1282c897a46ecff758aaee832f5fe434616e4b281a4efc9e2b6",
+      "native": [
+        {
+          "id": "air",
+          "raw_sha256": "1aa34093252e7382445e780c6f2d520aab81b139d4cbf54e22ef03e2701dfab8",
+          "peak_fields_V_per_m": {
+            "Ex": 0.0,
+            "Ey": 0.9995830180974123,
+            "Ez": 0.0
+          },
+          "dtype": "float64"
+        },
+        {
+          "id": "halfspace",
+          "raw_sha256": "7dd1525878ed6897a8e788f27b48d73c80c9fd196462ec09d3aee0129fdaf855",
+          "peak_fields_V_per_m": {
+            "Ex": 0.0,
+            "Ey": 0.9995830180974123,
+            "Ez": 0.0
+          },
+          "dtype": "float64"
+        },
+        {
+          "id": "slab",
+          "raw_sha256": "655c0d2365bde2bc2ce9daa0ce8ec25b9fe18df545a0aab81ce490faa10d48ed",
+          "peak_fields_V_per_m": {
+            "Ex": 0.0,
+            "Ey": 0.9995830180974123,
+            "Ez": 0.0
+          },
+          "dtype": "float64"
+        },
+        {
+          "id": "conductive",
+          "raw_sha256": "50206e9092ccc57ea7dfa2994f7622073efd7214dc6ce1d71173c8418692ddcb",
+          "peak_fields_V_per_m": {
+            "Ex": 0.0,
+            "Ey": 0.9995830180974123,
+            "Ez": 0.0
+          },
+          "dtype": "float64"
+        },
+        {
+          "id": "debye",
+          "raw_sha256": "6f7573d3a4c7f8185bc174f46fb5d0dd96c4e1132395d0808a08258b9248fcab",
+          "peak_fields_V_per_m": {
+            "Ex": 0.0,
+            "Ey": 0.9995830180974123,
+            "Ez": 0.0
+          },
+          "dtype": "float64"
+        }
+      ],
+      "status": "NATIVE_EXECUTION_IDENTITY_PASS_SEE_SEPARATE_ANALYTIC_DIAGNOSTIC",
+      "completed_wall_s_sum": 63.625,
+      "peak_job_commit_bytes": 193847296
+    },
+    {
+      "capsule": "artifacts/research_checks/2026-10-05_local_uav_plane_fine_r6",
+      "contract_sha256": "c33d1f9f4c784d8a6bf703547666f4032d2551faa4088700fe2595ac701046e0",
+      "native": [
+        {
+          "id": "air",
+          "raw_sha256": "c28d6e34e431c31d280677de7febdceca758fad95e9a2422a5c4cb2037b0a461",
+          "peak_fields_V_per_m": {
+            "Ex": 0.0,
+            "Ey": 0.9999938135632774,
+            "Ez": 0.0
+          },
+          "dtype": "float64"
+        },
+        {
+          "id": "halfspace",
+          "raw_sha256": "445859e92d3fa772b0a6ac78b203b496d7432ea58080834c2863023cf18580d8",
+          "peak_fields_V_per_m": {
+            "Ex": 0.0,
+            "Ey": 0.9999938135632773,
+            "Ez": 0.0
+          },
+          "dtype": "float64"
+        },
+        {
+          "id": "slab",
+          "raw_sha256": "9819c795214627e26c6630c3b73c2ca6b014d35816d2c52158e153f669355f95",
+          "peak_fields_V_per_m": {
+            "Ex": 0.0,
+            "Ey": 0.9999938135632795,
+            "Ez": 0.0
+          },
+          "dtype": "float64"
+        },
+        {
+          "id": "conductive",
+          "raw_sha256": "f24e64e74704ea01cd78fc262ab708ae055306b01ae3a9ab6f1aacbeb4581b4c",
+          "peak_fields_V_per_m": {
+            "Ex": 0.0,
+            "Ey": 0.9999938135632795,
+            "Ez": 0.0
+          },
+          "dtype": "float64"
+        },
+        {
+          "id": "debye",
+          "raw_sha256": "247197aae088ae04b2295d3c1bb33939e055ca81cc0079869a6841508e332037",
+          "peak_fields_V_per_m": {
+            "Ex": 0.0,
+            "Ey": 0.9999938135632795,
+            "Ez": 0.0
+          },
+          "dtype": "float64"
+        }
+      ],
+      "status": "NATIVE_EXECUTION_IDENTITY_PASS_SEE_SEPARATE_ANALYTIC_DIAGNOSTIC",
+      "completed_wall_s_sum": 503.5010000001639,
+      "peak_job_commit_bytes": 240082944
+    },
+    {
+      "capsule": "artifacts/research_checks/2026-10-05_local_uav_plane_domain_r7",
+      "contract_sha256": "9559431699c7438bd2f9e86bf2523dda0647e7f54908c8eb5d33920d7936ac97",
+      "native": [
+        {
+          "id": "air",
+          "raw_sha256": "dadb53a20efb388221b95eb15c66ad1496fe71531e6fafb00f497d2e659e6351",
+          "peak_fields_V_per_m": {
+            "Ex": 0.0,
+            "Ey": 0.9995830180974116,
+            "Ez": 0.0
+          },
+          "dtype": "float64"
+        },
+        {
+          "id": "halfspace",
+          "raw_sha256": "0e6f530cbfdb09fcd2695b200de49d6036e777734de648aad1daf555612e1aa2",
+          "peak_fields_V_per_m": {
+            "Ex": 0.0,
+            "Ey": 0.9995830180974135,
+            "Ez": 0.0
+          },
+          "dtype": "float64"
+        },
+        {
+          "id": "slab",
+          "raw_sha256": "9432db036511b36f14ef20222636723e262435e18b9185d9b0ad209bfc13dad3",
+          "peak_fields_V_per_m": {
+            "Ex": 0.0,
+            "Ey": 0.9995830180974121,
+            "Ez": 0.0
+          },
+          "dtype": "float64"
+        },
+        {
+          "id": "conductive",
+          "raw_sha256": "31293ec5167e1b4c063d6684e3530444aece47700dfaca68dc1a1c583d7f08cf",
+          "peak_fields_V_per_m": {
+            "Ex": 0.0,
+            "Ey": 0.9995830180974121,
+            "Ez": 0.0
+          },
+          "dtype": "float64"
+        },
+        {
+          "id": "debye",
+          "raw_sha256": "2c6611726b836cf324cb2cc66c1a1590d4145ce689b0932ba6d205ce6b702bba",
+          "peak_fields_V_per_m": {
+            "Ex": 0.0,
+            "Ey": 0.9995830180974121,
+            "Ez": 0.0
+          },
+          "dtype": "float64"
+        }
+      ],
+      "status": "NATIVE_EXECUTION_IDENTITY_PASS_SEE_SEPARATE_ANALYTIC_DIAGNOSTIC",
+      "completed_wall_s_sum": 28.68900000001304,
+      "peak_job_commit_bytes": 172093440
+    }
+  ],
+  "native_H5_count_including_invalid": 22,
+  "valid_native_H5_count": 17,
+  "successful_GPU_group_wall_s": [
+    141.34400000004098,
+    68.4069999998901
+  ],
+  "GPU_peak_owned_RSS_bytes": 415289344,
+  "successful_CPU_group_wall_s_sum": 595.815000000177,
+  "analyses": {
+    "free_space_coarse_results_r2": {
+      "path": "artifacts/research_checks/2026-10-05_local_uav_free_space_coarse_results_r2/summary.json",
+      "sha256": "679e03e4ffda78c5c82ee320b8f49b99146eee73555293c6c15dc3b9c7476fd4",
+      "status": "PASS"
+    },
+    "plane_results_r5": {
+      "path": "artifacts/research_checks/2026-10-05_local_uav_plane_results_r5/summary.json",
+      "sha256": "b54028fba5ffd4753dfc531ca8205729a18fc5b71b7d5e5dc0909e79ccaceae2",
+      "status": "DIAGNOSTIC_FAILED"
+    },
+    "plane_results_fine_r6": {
+      "path": "artifacts/research_checks/2026-10-05_local_uav_plane_results_fine_r6/summary.json",
+      "sha256": "eb05951ea94570c87904e02f756ba0ced889c2ed5644e7f7c51992c9ff3d2110",
+      "status": "PASS"
+    },
+    "plane_results_domain_r7": {
+      "path": "artifacts/research_checks/2026-10-05_local_uav_plane_results_domain_r7/summary.json",
+      "sha256": "0093b666cd69d4d8df00d1a62ae76e6d8fa05d5dc6a8173cabbe822ead2a57f3",
+      "status": "DIAGNOSTIC_FAILED"
+    },
+    "observation_r1": {
+      "path": "artifacts/research_checks/2026-10-05_local_uav_observation_r1/summary.json",
+      "sha256": "8ec0d8dc4be8739f56eee35ba403ef5682880241b8b637d8121ae109b01e9a9c",
+      "status": "COMPLETED_DECLARED_MECHANISM_SENSITIVITY"
+    },
+    "plane_reference_checks_r1": {
+      "path": "artifacts/research_checks/2026-10-05_local_uav_plane_reference_checks_r1/summary.json",
+      "sha256": "b234f66fbc62230e8aed42f6433afdb75bcbb501b056a14beb534cc167b0ba1d",
+      "status": "PASS"
+    },
+    "grid_comparison_r1": {
+      "path": "artifacts/research_checks/2026-10-05_local_uav_grid_comparison_r1/summary.json",
+      "sha256": "623f7e212a2e6b6ca2df706134b383a2d8773298560a05dc7cec054b9a632406",
+      "status": "PASS_LOCAL_PLANE_GRID_DIAGNOSTIC"
+    }
+  },
+  "resource_estimate": {
+    "status": "RESOURCE_ESTIMATE_ONLY_NOT_FROZEN_SOLVER_INPUTS",
+    "illustrative_domain_m": [
+      16,
+      16,
+      24
+    ],
+    "spacing_m": [
+      0.05,
+      0.05,
+      0.05
+    ],
+    "cells": 49152000,
+    "host_basic_array_lower_bound_bytes": 4620288000,
+    "device_fields_and_ID_lower_bound_bytes": 3538944000,
+    "excluded": "PML histories, dispersive states, boundary-grid enlargement, Python/CUDA context, construction intermediates",
+    "domain_converged": false,
+    "current_followup_snapshot": {
+      "available_RAM_bytes": 1841074176,
+      "utc": "2026-10-05T06:36:59.268812+00:00"
+    },
+    "snapshot_scope": "End-of-unit observation; not original preflight-rejection snapshot",
+    "conclusion": "Full finite-height layered Green-function and 12-case layout/depth controls not executed; native air refinement resource-rejected"
+  },
+  "calls_training": false,
+  "field_fitted": false,
+  "code_sha256": "75a578d66b66aa71c95812171058968dc5c400f1c7f8f7edb39354f6ae0d88a6"
+}

@@ -1,0 +1,25 @@
+{
+  "reason": "nonzero_exit",
+  "exit_code": 1,
+  "wall_s": 1.0780000002123415,
+  "peak_job_commit_bytes": 677531648,
+  "observed_output_bytes": 389,
+  "memory_cap_bytes": 644245094,
+  "wall_cap_s": 180,
+  "output_cap_bytes": 20971520,
+  "memory_semantics": "Windows job committed memory, not RSS",
+  "output_semantics": "polled file bytes; overshoot possible",
+  "active_job_processes_at_stop": 0,
+  "total_job_processes": 3,
+  "waited_for_descendants": false,
+  "completion_semantics": "root exit zero and job empty; application must propagate child failures",
+  "child_exit_codes_collected": false,
+  "command": [
+    "D:\\\u81ea\u52a8\u5904\u7406\\artifacts\\local_checks\\gprmax_v4_gpu_env\\Scripts\\python.exe",
+    "-m",
+    "gprMax",
+    "D:\\\u81ea\u52a8\u5904\u7406\\artifacts\\research_checks\\2026-10-05_local_uav_plane_r1\\air.in",
+    "-cpu_precision",
+    "double"
+  ]
+}

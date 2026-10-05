@@ -1,0 +1,87 @@
+
+=== Electromagnetic modelling software based on the Finite-Difference Time-Domain (FDTD) method 
+
+    www.gprmax.com   __  __
+     __ _ _ __  _ __|  \/  | __ ___  __
+    / _` | '_ \| '__| |\/| |/ _` \ \/ /
+   | (_| | |_) | |  | |  | | (_| |>  <
+    \__, | .__/|_|  |_|  |_|\__,_/_/\_\\
+    |___/|_|
+                     v4.0.0 (Caol Ila)
+
+ Copyright (C) 2015-2026: The University of Edinburgh, United Kingdom
+
+ gprMax is free software: you can redistribute it and/or modify it under the
+  terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+ gprMax is distributed in the hope that it will be useful, but WITHOUT ANY
+  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+  A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ You should have received a copy of the GNU General Public License along with
+  gprMax.  If not, see www.gnu.org/licenses.
+
+DESKTOP-DGLCK4J | unknown unknown | unknown x unknown (8 cores, 16 cores with Hyper-Threading) | 15.8 GiB | Windows 11 (64-bit)
+|--->OpenMP: 8 threads
+Constants/variables used/available for Python scripting: {c: 299792458.0, current_model_run: 1, e0: 8.8541878188e-12, inputfile: D:\自动处理\artifacts\research_checks\2026-10-05_local_uav_plane_r5\conductive.in, m0: 1.25663706127e-06, number_model_runs: 1, z0: 376.7303134118051}
+
+Model title: Normal-incidence Fresnel/slab diagnostic; no antenna port
+Spatial discretisation: 0.05 x 0.05 x 0.05m
+Domain size: 12 x 0.05 x 24m (240 x 1 x 480 = 115200 cells)
+#domain: 12.0 0.05 24.0 detected a 2D model from a 1-cell-thick axis (legacy, implicit style) - consider declaring '#domain_mode: TM' explicitly with 'inf' on that axis in '#domain' instead, which also supports TE mode.
+Mode: 2D TMy
+Time step (at CFL limit): 1.17933e-10 secs
+Time window: 3e-07 secs (2545 iterations)
+Simulation will use 2 OpenMP threads
+PML thickness: x0=20, y0=0, z0=20, xmax=20, ymax=0, zmax=20
+Waveform pulse of type ricker with maximum amplitude scaling 1, frequency 1e+08Hz created.
+Receiver at 6m, 0m, 8m with output component(s) Ex, Ey, Ez created.
+Receiver at 5.9m, 0m, 8m with output component(s) Ex, Ey, Ez created.
+Receiver at 6m, 0m, 16m with output component(s) Ex, Ey, Ez created.
+Material cover with eps_r=9, sigma=0.001 S/m; mu_r=1, sigma*=0 Ohm/m created.
+Material rock with eps_r=4, sigma=0 S/m; mu_r=1, sigma*=0 Ohm/m created.
+PML formulation set to HORIPML
+Discrete Plane Wave within the TFSF Box spanning from (2.0, inf, 3.0) m to (10.0, inf, 22.0) m, normally propagating in the z direction  with theta 0.0 degrees, phi 0.0 degrees and polarisation angle psi 0.0 degrees  using waveform pulse created.
+Box from 0m, 0m, 12m, to 12m, 0.05m, 24m of material(s) cover created, dielectric smoothing is off.
+Box from 0m, 0m, 15m, to 12m, 0.05m, 24m of material(s) rock created, dielectric smoothing is off.
+
+--- Model 1/1, input file: D:\自动处理\artifacts\research_checks\2026-10-05_local_uav_plane_r5\conductive.in 
+
+
+Memory required (estimated): ~25.0 MB [main_grid] + ~65.0 MB overhead = 90.0 MB
+
+PML boundaries [main_grid]: {formulation: HORIPML, order: 1, thickness (cells): x0: 20, y0: 0, z0: 20, xmax: 20, ymax: 0, zmax: 20}
+
+Building PML boundaries [main_grid]:   0%|               | 0/4 [00:00<?, ?it/s]Building PML boundaries [main_grid]: 100%|█████| 4/4 [00:00<00:00, 2002.53it/s]
+Building Yee cells [main_grid]:   0%|                    | 0/2 [00:00<?, ?it/s]Building Yee cells [main_grid]: 100%|███████████| 2/2 [00:00<00:00, 222.20it/s]
+
+Materials [main_grid]:
+    |            |         |       | sigma |      | sigma*  | Dielectric 
+ ID | Name       | Type    | eps_r | [S/m] | mu_r | [Ohm/m] | smoothable 
+----+------------+---------+-------+-------+------+---------+------------
+  0 | pec        | builtin | 1     | inf   | 1    | 0       | False      
+  1 | pmc        | builtin | 1     | 0     | 1    | inf     | False      
+  2 | free_space | builtin | 1     | 0     | 1    | 0       | True       
+  3 | cover      |         | 9     | 0.001 | 1    | 0       | True       
+  4 | rock       |         | 4     | 0     | 1    | 0       | True       
+
+Discrete Plane Wave has been initialized with field projections (Ex, Ey, Ez, Hx, Hy, Hz) = (0.0000, -1.0000, 0.0000, 0.0027, 0.0000, 0.0000) , grid origin = (0, 0, 0) and 1D vector length = 526 cells.
+Spatial-resolution analysis [main_grid]: minimum 7.07 cells per phase wavelength in 'cover', at 2.82647e+08 Hz.
+[main_grid] continuum phase velocity 9.99302e+07 m/s, wavelength 0.353551 m at that limiting frequency.
+[main_grid] minimum 1/e amplitude attenuation length: 319 cells in 'cover' at 2.82647e+08 Hz. Attenuation resolution is separate from phase-wavelength sampling.
+Lossless numerical dispersion estimate [main_grid]: grid-axis phase-velocity error -1.31% in 'rock' at 2.82647e+08 Hz. Propagation axis: x. This is a homogeneous bulk estimate, not an interface or stability guarantee.
+Numerical dispersion analysis [main_grid]: lossy, dispersive or anisotropic materials: numerical phase-error estimate unavailable.
+Output directory: D:\自动处理\artifacts\research_checks\2026-10-05_local_uav_plane_r5
+
+
+
+Model 1/1 on DESKTOP-DGLCK4J with OpenMP backend using 2 thread(s)
+|--->:   0%|                                          | 0/2545 [00:00<?, ?it/s]|--->:   1%|▎                               | 25/2545 [00:00<00:10, 237.45it/s]|--->:   2%|▌                               | 49/2545 [00:00<00:10, 236.20it/s]|--->:   4%|█▎                             | 104/2545 [00:00<00:06, 370.82it/s]|--->:   6%|█▋                             | 142/2545 [00:00<00:08, 279.41it/s]|--->:   7%|██                             | 174/2545 [00:00<00:08, 289.71it/s]|--->:   8%|██▍                            | 205/2545 [00:00<00:08, 272.38it/s]|--->:   9%|██▊                            | 234/2545 [00:00<00:08, 273.28it/s]|--->:  10%|███▎                           | 267/2545 [00:00<00:07, 288.48it/s]|--->:  12%|███▊                           | 310/2545 [00:01<00:06, 327.50it/s]|--->:  14%|████▎                          | 355/2545 [00:01<00:06, 362.26it/s]|--->:  15%|████▊                          | 393/2545 [00:01<00:06, 333.16it/s]|--->:  17%|█████▏                         | 428/2545 [00:01<00:06, 319.81it/s]|--->:  18%|█████▋                         | 470/2545 [00:01<00:06, 341.86it/s]|--->:  20%|██████▏                        | 505/2545 [00:01<00:08, 253.72it/s]|--->:  21%|██████▌                        | 534/2545 [00:01<00:08, 244.35it/s]|--->:  22%|██████▊                        | 562/2545 [00:01<00:07, 251.82it/s]|--->:  23%|███████▎                       | 596/2545 [00:02<00:07, 271.53it/s]|--->:  25%|███████▌                       | 625/2545 [00:02<00:07, 270.81it/s]|--->:  26%|███████▉                       | 654/2545 [00:02<00:07, 254.11it/s]|--->:  27%|████████▍                      | 695/2545 [00:02<00:06, 293.17it/s]|--->:  29%|████████▉                      | 732/2545 [00:02<00:05, 313.76it/s]|--->:  30%|█████████▎                     | 765/2545 [00:02<00:05, 314.53it/s]|--->:  31%|█████████▊                     | 801/2545 [00:02<00:05, 324.43it/s]|--->:  33%|██████████▎                    | 843/2545 [00:02<00:04, 350.68it/s]|--->:  35%|██████████▋                    | 880/2545 [00:02<00:04, 353.86it/s]|--->:  36%|███████████▏                   | 916/2545 [00:03<00:05, 323.09it/s]|--->:  37%|███████████▌                   | 950/2545 [00:03<00:04, 319.27it/s]|--->:  39%|███████████▉                   | 984/2545 [00:03<00:04, 323.30it/s]|--->:  40%|████████████▏                 | 1030/2545 [00:03<00:04, 358.93it/s]|--->:  42%|████████████▋                 | 1074/2545 [00:03<00:03, 379.76it/s]|--->:  44%|█████████████                 | 1113/2545 [00:03<00:04, 348.20it/s]|--->:  45%|█████████████▋                | 1157/2545 [00:03<00:03, 371.21it/s]|--->:  47%|██████████████                | 1195/2545 [00:03<00:05, 266.94it/s]|--->:  48%|██████████████▌               | 1232/2545 [00:04<00:04, 288.88it/s]|--->:  50%|██████████████▉               | 1265/2545 [00:04<00:04, 263.89it/s]|--->:  51%|███████████████▎              | 1301/2545 [00:04<00:04, 286.10it/s]|--->:  53%|███████████████▊              | 1344/2545 [00:04<00:03, 319.58it/s]|--->:  54%|████████████████▎             | 1379/2545 [00:04<00:04, 291.46it/s]|--->:  55%|████████████████▋             | 1411/2545 [00:04<00:04, 245.68it/s]|--->:  57%|████████████████▉             | 1439/2545 [00:04<00:04, 251.70it/s]|--->:  58%|█████████████████▍            | 1480/2545 [00:04<00:03, 289.37it/s]|--->:  60%|█████████████████▊            | 1516/2545 [00:05<00:03, 305.95it/s]|--->:  61%|██████████████████▎           | 1554/2545 [00:05<00:03, 323.35it/s]|--->:  63%|██████████████████▊           | 1595/2545 [00:05<00:02, 346.65it/s]|--->:  65%|███████████████████▍          | 1653/2545 [00:05<00:02, 410.67it/s]|--->:  67%|███████████████████▉          | 1696/2545 [00:05<00:02, 327.48it/s]|--->:  68%|████████████████████▍         | 1733/2545 [00:05<00:02, 305.24it/s]|--->:  69%|████████████████████▊         | 1767/2545 [00:05<00:02, 285.33it/s]|--->:  71%|█████████████████████▏        | 1798/2545 [00:06<00:04, 160.29it/s]|--->:  72%|█████████████████████▍        | 1822/2545 [00:06<00:04, 164.30it/s]|--->:  72%|█████████████████████▋        | 1844/2545 [00:06<00:04, 171.39it/s]|--->:  74%|██████████████████████        | 1871/2545 [00:06<00:03, 189.92it/s]|--->:  76%|██████████████████████▋       | 1922/2545 [00:06<00:02, 258.28it/s]|--->:  77%|███████████████████████▏      | 1964/2545 [00:06<00:01, 295.71it/s]|--->:  79%|███████████████████████▋      | 2012/2545 [00:06<00:01, 341.76it/s]|--->:  81%|████████████████████████▏     | 2052/2545 [00:07<00:01, 356.81it/s]|--->:  82%|████████████████████████▋     | 2091/2545 [00:07<00:01, 340.14it/s]|--->:  84%|█████████████████████████▏    | 2133/2545 [00:07<00:01, 359.28it/s]|--->:  86%|█████████████████████████▋    | 2182/2545 [00:07<00:00, 394.16it/s]|--->:  88%|██████████████████████████▍   | 2238/2545 [00:07<00:00, 440.22it/s]|--->:  90%|██████████████████████████▉   | 2284/2545 [00:07<00:00, 393.16it/s]|--->:  91%|███████████████████████████▍  | 2326/2545 [00:07<00:00, 399.09it/s]|--->:  93%|███████████████████████████▉  | 2368/2545 [00:07<00:00, 337.57it/s]|--->:  95%|████████████████████████████▍ | 2410/2545 [00:07<00:00, 356.59it/s]|--->:  97%|████████████████████████████▉ | 2457/2545 [00:08<00:00, 383.90it/s]|--->:  98%|█████████████████████████████▍| 2498/2545 [00:08<00:00, 275.53it/s]|--->: 100%|██████████████████████████████| 2545/2545 [00:08<00:00, 301.96it/s]
+
+Written output file: conductive.h5
+
+Memory used (estimated): ~112.7 MB
+Time taken: 8.4284 seconds
+
+=== Simulation completed in 8.5745 seconds =====================================
+

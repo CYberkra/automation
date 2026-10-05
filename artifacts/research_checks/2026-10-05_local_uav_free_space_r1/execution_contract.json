@@ -1,0 +1,247 @@
+{
+  "status": "FROZEN_APPROVED",
+  "approval_basis": "User: 若是本地方便快速跑完就本地做完吧 (2026-10-05)",
+  "python": "D:\\自动处理\\artifacts\\local_checks\\gprmax_v4_gpu_env\\Scripts\\python.exe",
+  "source_identities": {
+    "__init__.py": "7e78489b2f15bc006c9bb7d18e17bb8e09e8b91cf4f3a483e8339ee9713cefb9",
+    "sources.py": "f110fac160e7257d303586a9371b4ace718358f2ebe335e3ad700a3a5edf14fc",
+    "fields_outputs.py": "7aca799e424ce4162d2547a3763424f762be690c9870f948f6b7f522a27f10bd",
+    "model.py": "3826f1b448a3f465c5273fc9b283fcca2c2e13e81618bc8aaf6c2c0424a0b8a8",
+    "waveforms.py": "ca79340903a25bd370d6149ff23b985c73ccb7b754fd73c8e70cc7b292ec9bcc",
+    "cuda_opencl/knl_fields_updates.py": "f109dd1f58314820a1ded5bf95b6ce8a97cf628015ed77d9b260ebc390fd3fd6",
+    "cuda_opencl/knl_source_updates.py": "27b444919df2884a1cddb5811a4aa8960bd6c47edccf2816853f03f1b8a1d537",
+    "cuda_opencl/knl_pml_updates_electric_HORIPML.py": "6f1d6cf7e33bb541754b0e67ba91a4922d63f494e20efba3b8d88610ad25245d",
+    "cuda_opencl/knl_pml_updates_magnetic_HORIPML.py": "b1d59e70d7a3d5240d546fcc713abfc37c4657575ddb88ae3522a3984bedd498",
+    "toolboxes/SFCW/processing.py": "adad556f09140956f0ee19d3038430e06a9ae8be6a826dcad723096d99624a3b",
+    "cython/eigenmode_dft.cp312-win_amd64.pyd": "86c8896beac169f29c4d4f9db566e5c849cd470ee5dd8562ee9436890ce10f08",
+    "cython/eigenmode_source.cp312-win_amd64.pyd": "b1e8da65ff1eddf54b0bf47664891a0e4f8ec4eb7f047ee43da9d27b4d274f41",
+    "cython/fields_updates_dispersive.cp312-win_amd64.pyd": "121ae85e903c7d1ff446911ce8aab71c4e8defa63ba367ce43bef792274a3915",
+    "cython/fields_updates_hsg.cp312-win_amd64.pyd": "c20d4695f0832b4980128713fa31791150ffb2ba377c2e107b0b80654e7ebcab",
+    "cython/fields_updates_normal.cp312-win_amd64.pyd": "b08d9d6e8a24c01ad8ca5f8d3510078bcf42441942e63ba55ca35494e78dae14",
+    "cython/fractals_generate.cp312-win_amd64.pyd": "38354493ea2b0e0c4bbdf6e773be84814f779ab05dc61d3b50a4814149a0b07d",
+    "cython/geometry_outputs.cp312-win_amd64.pyd": "b5efb0efe1b190cd5c50652007c45df1b7c84c85e3e9a1bcb7e502c665ada520",
+    "cython/geometry_primitives.cp312-win_amd64.pyd": "625b6eba6c08b5ae8b84238fee40137aa1605b4c853bee2d1a925461e082b0e9",
+    "cython/impedance_surface.cp312-win_amd64.pyd": "8c66dfd76f1c466599419fa2b4b07c8d82b0dba60e26d32d771ea375985bddf0",
+    "cython/network_port.cp312-win_amd64.pyd": "1cf84a2f7fec59699e66d0e8b749b7c78479e6112bd1556c71ddfbda6f7bfe4a",
+    "cython/ntff.cp312-win_amd64.pyd": "10f570ebbef990de40b6159c9baa3d0428403e136c6ad3a3a14e1dad5ee61306",
+    "cython/plane_wave.cp312-win_amd64.pyd": "f564200f579ab6e868732851906724f8a1ae9255c3095688aca68d4cd936c809",
+    "cython/pml_build.cp312-win_amd64.pyd": "59229516d8cd73f7968a3cbb6449a7f0d08a7bf2620f945c127c85c91f988cd0",
+    "cython/pml_updates_electric_HORIPML.cp312-win_amd64.pyd": "d8f859cb5c4800ccd9025140adf6f9c1111527c62f94d19fe8cd9daba9f6862f",
+    "cython/pml_updates_electric_MRIPML.cp312-win_amd64.pyd": "28d166f16d97a9b2b4b3962d412c0308961034e4086e481d76fdf3362abd872e",
+    "cython/pml_updates_magnetic_HORIPML.cp312-win_amd64.pyd": "2629c9a79259165299307475cf90e976843806be6c389f395824c58389beb081",
+    "cython/pml_updates_magnetic_MRIPML.cp312-win_amd64.pyd": "136035fa85b3f3cb0c78e51d36f280176aa4930a545619120895b902937c47ae",
+    "cython/sar_averaging.cp312-win_amd64.pyd": "f8705154b9c9d5da89c4f520d53804d71d5ea26ae0351e943a4decaaa98ecd69",
+    "cython/snapshots.cp312-win_amd64.pyd": "eb38fd7486ea29fe4df2bd28557985c5bdd19bd98666f6a612d518e39bae1e49",
+    "cython/symmetry_boundaries.cp312-win_amd64.pyd": "a6edd99f9d64697205fe2a3e0d04ed9e7283aec85113467444cae0bad4d68695",
+    "cython/symmetry_boundaries_dispersive.cp312-win_amd64.pyd": "df1078a8f9f8f09014493f41c953149dd7b0f42cc43d77ef88fd0c0b28d05e6c",
+    "cython/symmetry_boundaries_dispersive_complex.cp312-win_amd64.pyd": "4f3a57325b0f812cf7d77b4ff4aa4918e423730a749546b5a36f527d03d55215",
+    "cython/virtual_waveguide.cp312-win_amd64.pyd": "8493f796c53ea5e4aa675d10f872e49ae3d5ac51e8ba7a5dd27b7fe87c6acdd4",
+    "cython/yee_cell_build.cp312-win_amd64.pyd": "1dbfb0df87b90bbd7b50c33b863eb3fcb7ec58d1f87d1968167fc150ce952337",
+    "cython/yee_cell_setget_rigid.cp312-win_amd64.pyd": "113ba8ce0e822e77d76e4a59b37bc8cf8c465d08ff125be3357e7a8375635ff3"
+  },
+  "code_identities": {
+    "D:\\自动处理\\scripts\\uav_local_benchmark.py": "f5a9cb7cd0b121eba1125dfb10ab024c279dc0cc603119730cfac3ef3b34be3a",
+    "D:\\自动处理\\scripts\\run_uav_local_benchmark.cmd": "19198a31f1f7c52fd065969600c264da6a713cc884ac5e53047ebd1ce89fdb7f",
+    "D:\\自动处理\\scripts\\hs4_station_grid_controls.py": "bbb19e359eb6e195c1a28ab25b162b367241ab5d771ea627461d76d6cee8a90d",
+    "D:\\自动处理\\scripts\\gprmax_cached_cuda_entry.py": "f069b6f099f3bcf4ebcc79f1ea2543b0743c7c5501ab050563ca454bc2758b5a"
+  },
+  "groups": [
+    {
+      "id": "d0.1_x_forward",
+      "input": "D:\\自动处理\\artifacts\\research_checks\\2026-10-05_local_uav_free_space_r1\\d0.1_x_forward\\profile.in",
+      "input_sha256": "762430a4b26f3d5150ae71b5d1dd9933234c64ed1bd2f886fd388cdebc1f3752",
+      "spacing_m": 0.1,
+      "polarisation": "x",
+      "direction": "forward",
+      "tx_m": [
+        3.4,
+        3.4,
+        4.0
+      ],
+      "receivers_m": [
+        [
+          4.7,
+          3.4,
+          4.0
+        ],
+        [
+          3.4,
+          4.7,
+          4.0
+        ],
+        [
+          2.0999999999999996,
+          3.4,
+          4.0
+        ],
+        [
+          3.4,
+          2.0999999999999996,
+          4.0
+        ]
+      ]
+    },
+    {
+      "id": "d0.1_y_forward",
+      "input": "D:\\自动处理\\artifacts\\research_checks\\2026-10-05_local_uav_free_space_r1\\d0.1_y_forward\\profile.in",
+      "input_sha256": "467159d55d055405a53ac3dffb95eb2db2265b105af9db56d1eb720017273554",
+      "spacing_m": 0.1,
+      "polarisation": "y",
+      "direction": "forward",
+      "tx_m": [
+        3.4,
+        3.4,
+        4.0
+      ],
+      "receivers_m": [
+        [
+          4.7,
+          3.4,
+          4.0
+        ],
+        [
+          3.4,
+          4.7,
+          4.0
+        ],
+        [
+          2.0999999999999996,
+          3.4,
+          4.0
+        ],
+        [
+          3.4,
+          2.0999999999999996,
+          4.0
+        ]
+      ]
+    },
+    {
+      "id": "d0.05_x_forward",
+      "input": "D:\\自动处理\\artifacts\\research_checks\\2026-10-05_local_uav_free_space_r1\\d0.05_x_forward\\profile.in",
+      "input_sha256": "bcef3a3eee92ebc6d2fdf1f546c1639f79b8f9f1a4a512615c1a3a30d75799d1",
+      "spacing_m": 0.05,
+      "polarisation": "x",
+      "direction": "forward",
+      "tx_m": [
+        3.4,
+        3.4,
+        4.0
+      ],
+      "receivers_m": [
+        [
+          4.7,
+          3.4,
+          4.0
+        ],
+        [
+          3.4,
+          4.7,
+          4.0
+        ],
+        [
+          2.0999999999999996,
+          3.4,
+          4.0
+        ],
+        [
+          3.4,
+          2.0999999999999996,
+          4.0
+        ]
+      ]
+    },
+    {
+      "id": "d0.05_y_forward",
+      "input": "D:\\自动处理\\artifacts\\research_checks\\2026-10-05_local_uav_free_space_r1\\d0.05_y_forward\\profile.in",
+      "input_sha256": "aafe7fc4d7e1841266c5c1db0e277693f864334534930a8552abfc76e4592154",
+      "spacing_m": 0.05,
+      "polarisation": "y",
+      "direction": "forward",
+      "tx_m": [
+        3.4,
+        3.4,
+        4.0
+      ],
+      "receivers_m": [
+        [
+          4.7,
+          3.4,
+          4.0
+        ],
+        [
+          3.4,
+          4.7,
+          4.0
+        ],
+        [
+          2.0999999999999996,
+          3.4,
+          4.0
+        ],
+        [
+          3.4,
+          2.0999999999999996,
+          4.0
+        ]
+      ]
+    },
+    {
+      "id": "d0.05_y_reverse_x",
+      "input": "D:\\自动处理\\artifacts\\research_checks\\2026-10-05_local_uav_free_space_r1\\d0.05_y_reverse_x\\profile.in",
+      "input_sha256": "777f9dc4085c9e7b7b15ccdab79643cac0a072ce36e2e2422561d59acdfb106d",
+      "spacing_m": 0.05,
+      "polarisation": "y",
+      "direction": "reverse_x",
+      "tx_m": [
+        4.7,
+        3.4,
+        4.0
+      ],
+      "receivers_m": [
+        [
+          3.4,
+          3.4,
+          4.0
+        ]
+      ]
+    },
+    {
+      "id": "d0.05_y_reverse_y",
+      "input": "D:\\自动处理\\artifacts\\research_checks\\2026-10-05_local_uav_free_space_r1\\d0.05_y_reverse_y\\profile.in",
+      "input_sha256": "0457f2d1ed9e9a9094bdb62a68e862c5248f166b4a0f37fb14f4434184b7c5a1",
+      "spacing_m": 0.05,
+      "polarisation": "y",
+      "direction": "reverse_y",
+      "tx_m": [
+        3.4,
+        4.7,
+        4.0
+      ],
+      "receivers_m": [
+        [
+          3.4,
+          3.4,
+          4.0
+        ]
+      ]
+    }
+  ],
+  "max_runs": 6,
+  "no_retry": true,
+  "min_available_RAM_GiB": 1.6,
+  "min_free_VRAM_GiB": 1.5,
+  "max_owned_RSS_GiB": 1.6,
+  "min_system_available_during_run_GiB": 0.25,
+  "max_group_wall_s": 240,
+  "max_batch_wall_s": 1200,
+  "gpu_lock": "artifacts/local_checks/hs4_gpu_exclusive.lock",
+  "stage": "round1_free_space_analytic_dipole",
+  "source": "100MHz Ricker actual-source deconvolution; amp*dl=1Am",
+  "processing": "complex501 tones20-170MHz, tail20ns, co-polar continuum E/(I*dl), no empirical phase/amplitude fit",
+  "diagnostic_tolerances": {
+    "complex_band_relative_L2": 0.05,
+    "maximum_phase_error_deg": 5.0
+  },
+  "tolerance_scope": "Predeclared engineering diagnostic; not field or high-precision certification."
+}

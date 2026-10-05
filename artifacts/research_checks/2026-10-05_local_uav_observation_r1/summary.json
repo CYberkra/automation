@@ -1,0 +1,31 @@
+{
+  "status": "COMPLETED_DECLARED_MECHANISM_SENSITIVITY",
+  "metrics": {
+    "current_moment": {
+      "axial_to_broadside_band_energy_amplitude_dB": -1.1891448696984661,
+      "relative_peaks_shared_current_reference": {
+        "broadside": 1.0,
+        "axial": 0.8907112504151927
+      }
+    },
+    "radiated_power": {
+      "axial_to_broadside_band_energy_amplitude_dB": 0.12481098919387852,
+      "relative_peaks_shared_current_reference": {
+        "broadside": 0.9929398240796996,
+        "axial": 0.9960963109860825
+      }
+    }
+  },
+  "native_raw_sha256": "f692b54a22bacab62bcdfec180e5d649315f17f50c2cd3a8ed27128b6b121b52",
+  "analysis_code_sha256": "8cf3e96c852f022ffcace5a57bb7dc597decc37e855cf82ff83d50254670a407",
+  "transfer_code_sha256": "220cddf048ba4fcd378f1de09728b61799115544e01d66c5a64b1bf15c685e38",
+  "source_weights": {
+    "current_moment": "1",
+    "radiated_power": "95MHz/f"
+  },
+  "spectral_window": "Hann501;20-170MHz;df0.3MHz",
+  "same_shared_display_scale": true,
+  "calls_solver": false,
+  "field_fitted": false,
+  "scope": "Air-only current-moment/radiated-power hypothesis sensitivity; not port model, relief, deep-layer or field validation"
+}
