@@ -1,0 +1,353 @@
+
+=== Electromagnetic modelling software based on the Finite-Difference Time-Domain (FDTD) method 
+
+    www.gprmax.com   __  __
+     __ _ _ __  _ __|  \/  | __ ___  __
+    / _` | '_ \| '__| |\/| |/ _` \ \/ /
+   | (_| | |_) | |  | |  | | (_| |>  <
+    \__, | .__/|_|  |_|  |_|\__,_/_/\_\\
+    |___/|_|
+                     v4.0.0 (Caol Ila)
+
+ Copyright (C) 2015-2026: The University of Edinburgh, United Kingdom
+
+ gprMax is free software: you can redistribute it and/or modify it under the
+  terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+ gprMax is distributed in the hope that it will be useful, but WITHOUT ANY
+  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+  A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ You should have received a copy of the GNU General Public License along with
+  gprMax.  If not, see www.gnu.org/licenses.
+
+LAPTOP-83GRKUNE | unknown unknown | unknown x unknown (16 cores, 32 cores with Hyper-Threading) | 63.2 GiB | Windows 11 (64-bit)
+|--->OpenMP: 16 threads
+|--->CUDA:
+     |--->Device 0: NVIDIA GeForce RTX 4090 Laptop GPU | 16.0 GiB
+Constants/variables used/available for Python scripting: {c: 299792458.0, current_model_run: 1, e0: 8.8541878188e-12, inputfile: E:\automation_djh\artifacts\research_checks\2026-10-05_slope_bscan_2d_r1\slope_rough_s00\profile.in, m0: 1.25663706127e-06, number_model_runs: 1, z0: 376.7303134118051}
+
+Model title: 2D gentle-slope B-scan v0.1; slope_rough; tx=15; terrain-follow 8m AGL
+Spatial discretisation: 0.025 x 0.05 x 0.025m
+Domain size: 36 x 0.05 x 31.5m (1440 x 1 x 1260 = 1.8144e+06 cells)
+#domain: 36.0 0.05 31.5 detected a 2D model from a 1-cell-thick axis (legacy, implicit style) - consider declaring '#domain_mode: TM' explicitly with 'inf' on that axis in '#domain' instead, which also supports TE mode.
+Mode: 2D TMy
+Time step (at CFL limit): 5.89664e-11 secs
+Time window: 2e-07 secs (3393 iterations)
+Simulation will use 2 OpenMP threads
+PML thickness: x0=80, y0=0, z0=40, xmax=80, ymax=0, zmax=40
+Waveform pulse of type ricker with maximum amplitude scaling 40, frequency 1e+08Hz created.
+Hertzian dipole with polarity y at 15m, 0m, 29m, using waveform pulse created.
+Receiver at 16.3m, 0m, 29m with output component(s) Ey created.
+Material rock with eps_r=9, sigma=0.001 S/m; mu_r=1, sigma*=0 Ohm/m created.
+Material cover with eps_r=11, sigma=0.001 S/m; mu_r=1, sigma*=0 Ohm/m created.
+Debye disperion added to cover with delta_eps_r=0.50, and tau=6.457e-09 secs created.
+PML formulation set to HORIPML
+Box from 0m, 0m, 0m, to 12.075m, 0.05m, 19.275m of material(s) rock created, dielectric smoothing is on.
+Box from 0m, 0m, 19.275m, to 12.075m, 0.05m, 21.5m of material(s) cover created, dielectric smoothing is off.
+Box from 12.075m, 0m, 0m, to 12.225m, 0.05m, 19.275m of material(s) rock created, dielectric smoothing is on.
+Box from 12.075m, 0m, 19.275m, to 12.225m, 0.05m, 21.475m of material(s) cover created, dielectric smoothing is off.
+Box from 12.225m, 0m, 0m, to 12.25m, 0.05m, 19.275m of material(s) rock created, dielectric smoothing is on.
+Box from 12.225m, 0m, 19.275m, to 12.25m, 0.05m, 21.45m of material(s) cover created, dielectric smoothing is off.
+Box from 12.25m, 0m, 0m, to 12.375m, 0.05m, 19.25m of material(s) rock created, dielectric smoothing is on.
+Box from 12.25m, 0m, 19.25m, to 12.375m, 0.05m, 21.45m of material(s) cover created, dielectric smoothing is off.
+Box from 12.375m, 0m, 0m, to 12.525m, 0.05m, 19.25m of material(s) rock created, dielectric smoothing is on.
+Box from 12.375m, 0m, 19.25m, to 12.525m, 0.05m, 21.425m of material(s) cover created, dielectric smoothing is off.
+Box from 12.525m, 0m, 0m, to 12.55m, 0.05m, 19.25m of material(s) rock created, dielectric smoothing is on.
+Box from 12.525m, 0m, 19.25m, to 12.55m, 0.05m, 21.4m of material(s) cover created, dielectric smoothing is off.
+Box from 12.55m, 0m, 0m, to 12.675m, 0.05m, 19.225m of material(s) rock created, dielectric smoothing is on.
+Box from 12.55m, 0m, 19.225m, to 12.675m, 0.05m, 21.4m of material(s) cover created, dielectric smoothing is off.
+Box from 12.675m, 0m, 0m, to 12.825m, 0.05m, 19.225m of material(s) rock created, dielectric smoothing is on.
+Box from 12.675m, 0m, 19.225m, to 12.825m, 0.05m, 21.375m of material(s) cover created, dielectric smoothing is off.
+Box from 12.825m, 0m, 0m, to 12.85m, 0.05m, 19.225m of material(s) rock created, dielectric smoothing is on.
+Box from 12.825m, 0m, 19.225m, to 12.85m, 0.05m, 21.35m of material(s) cover created, dielectric smoothing is off.
+Box from 12.85m, 0m, 0m, to 12.975m, 0.05m, 19.2m of material(s) rock created, dielectric smoothing is on.
+Box from 12.85m, 0m, 19.2m, to 12.975m, 0.05m, 21.35m of material(s) cover created, dielectric smoothing is off.
+Box from 12.975m, 0m, 0m, to 13.125m, 0.05m, 19.2m of material(s) rock created, dielectric smoothing is on.
+Box from 12.975m, 0m, 19.2m, to 13.125m, 0.05m, 21.325m of material(s) cover created, dielectric smoothing is off.
+Box from 13.125m, 0m, 0m, to 13.15m, 0.05m, 19.2m of material(s) rock created, dielectric smoothing is on.
+Box from 13.125m, 0m, 19.2m, to 13.15m, 0.05m, 21.3m of material(s) cover created, dielectric smoothing is off.
+Box from 13.15m, 0m, 0m, to 13.25m, 0.05m, 19.175m of material(s) rock created, dielectric smoothing is on.
+Box from 13.15m, 0m, 19.175m, to 13.25m, 0.05m, 21.3m of material(s) cover created, dielectric smoothing is off.
+Box from 13.25m, 0m, 0m, to 13.275m, 0.05m, 19.075m of material(s) rock created, dielectric smoothing is on.
+Box from 13.25m, 0m, 19.075m, to 13.275m, 0.05m, 21.3m of material(s) cover created, dielectric smoothing is off.
+Box from 13.275m, 0m, 0m, to 13.425m, 0.05m, 19.075m of material(s) rock created, dielectric smoothing is on.
+Box from 13.275m, 0m, 19.075m, to 13.425m, 0.05m, 21.275m of material(s) cover created, dielectric smoothing is off.
+Box from 13.425m, 0m, 0m, to 13.45m, 0.05m, 19.075m of material(s) rock created, dielectric smoothing is on.
+Box from 13.425m, 0m, 19.075m, to 13.45m, 0.05m, 21.25m of material(s) cover created, dielectric smoothing is off.
+Box from 13.45m, 0m, 0m, to 13.575m, 0.05m, 19.05m of material(s) rock created, dielectric smoothing is on.
+Box from 13.45m, 0m, 19.05m, to 13.575m, 0.05m, 21.25m of material(s) cover created, dielectric smoothing is off.
+Box from 13.575m, 0m, 0m, to 13.725m, 0.05m, 19.05m of material(s) rock created, dielectric smoothing is on.
+Box from 13.575m, 0m, 19.05m, to 13.725m, 0.05m, 21.225m of material(s) cover created, dielectric smoothing is off.
+Box from 13.725m, 0m, 0m, to 13.75m, 0.05m, 19.05m of material(s) rock created, dielectric smoothing is on.
+Box from 13.725m, 0m, 19.05m, to 13.75m, 0.05m, 21.2m of material(s) cover created, dielectric smoothing is off.
+Box from 13.75m, 0m, 0m, to 13.875m, 0.05m, 18.925m of material(s) rock created, dielectric smoothing is on.
+Box from 13.75m, 0m, 18.925m, to 13.875m, 0.05m, 21.2m of material(s) cover created, dielectric smoothing is off.
+Box from 13.875m, 0m, 0m, to 14.025m, 0.05m, 18.925m of material(s) rock created, dielectric smoothing is on.
+Box from 13.875m, 0m, 18.925m, to 14.025m, 0.05m, 21.175m of material(s) cover created, dielectric smoothing is off.
+Box from 14.025m, 0m, 0m, to 14.05m, 0.05m, 18.925m of material(s) rock created, dielectric smoothing is on.
+Box from 14.025m, 0m, 18.925m, to 14.05m, 0.05m, 21.15m of material(s) cover created, dielectric smoothing is off.
+Box from 14.05m, 0m, 0m, to 14.175m, 0.05m, 18.9m of material(s) rock created, dielectric smoothing is on.
+Box from 14.05m, 0m, 18.9m, to 14.175m, 0.05m, 21.15m of material(s) cover created, dielectric smoothing is off.
+Box from 14.175m, 0m, 0m, to 14.325m, 0.05m, 18.9m of material(s) rock created, dielectric smoothing is on.
+Box from 14.175m, 0m, 18.9m, to 14.325m, 0.05m, 21.125m of material(s) cover created, dielectric smoothing is off.
+Box from 14.325m, 0m, 0m, to 14.35m, 0.05m, 18.9m of material(s) rock created, dielectric smoothing is on.
+Box from 14.325m, 0m, 18.9m, to 14.35m, 0.05m, 21.1m of material(s) cover created, dielectric smoothing is off.
+Box from 14.35m, 0m, 0m, to 14.475m, 0.05m, 18.875m of material(s) rock created, dielectric smoothing is on.
+Box from 14.35m, 0m, 18.875m, to 14.475m, 0.05m, 21.1m of material(s) cover created, dielectric smoothing is off.
+Box from 14.475m, 0m, 0m, to 14.625m, 0.05m, 18.875m of material(s) rock created, dielectric smoothing is on.
+Box from 14.475m, 0m, 18.875m, to 14.625m, 0.05m, 21.075m of material(s) cover created, dielectric smoothing is off.
+Box from 14.625m, 0m, 0m, to 14.65m, 0.05m, 18.875m of material(s) rock created, dielectric smoothing is on.
+Box from 14.625m, 0m, 18.875m, to 14.65m, 0.05m, 21.05m of material(s) cover created, dielectric smoothing is off.
+Box from 14.65m, 0m, 0m, to 14.75m, 0.05m, 18.85m of material(s) rock created, dielectric smoothing is on.
+Box from 14.65m, 0m, 18.85m, to 14.75m, 0.05m, 21.05m of material(s) cover created, dielectric smoothing is off.
+Box from 14.75m, 0m, 0m, to 14.775m, 0.05m, 18.95m of material(s) rock created, dielectric smoothing is on.
+Box from 14.75m, 0m, 18.95m, to 14.775m, 0.05m, 21.05m of material(s) cover created, dielectric smoothing is off.
+Box from 14.775m, 0m, 0m, to 14.925m, 0.05m, 18.95m of material(s) rock created, dielectric smoothing is on.
+Box from 14.775m, 0m, 18.95m, to 14.925m, 0.05m, 21.025m of material(s) cover created, dielectric smoothing is off.
+Box from 14.925m, 0m, 0m, to 14.95m, 0.05m, 18.95m of material(s) rock created, dielectric smoothing is on.
+Box from 14.925m, 0m, 18.95m, to 14.95m, 0.05m, 21m of material(s) cover created, dielectric smoothing is off.
+Box from 14.95m, 0m, 0m, to 15.075m, 0.05m, 18.925m of material(s) rock created, dielectric smoothing is on.
+Box from 14.95m, 0m, 18.925m, to 15.075m, 0.05m, 21m of material(s) cover created, dielectric smoothing is off.
+Box from 15.075m, 0m, 0m, to 15.225m, 0.05m, 18.925m of material(s) rock created, dielectric smoothing is on.
+Box from 15.075m, 0m, 18.925m, to 15.225m, 0.05m, 20.975m of material(s) cover created, dielectric smoothing is off.
+Box from 15.225m, 0m, 0m, to 15.25m, 0.05m, 18.925m of material(s) rock created, dielectric smoothing is on.
+Box from 15.225m, 0m, 18.925m, to 15.25m, 0.05m, 20.95m of material(s) cover created, dielectric smoothing is off.
+Box from 15.25m, 0m, 0m, to 15.375m, 0.05m, 19m of material(s) rock created, dielectric smoothing is on.
+Box from 15.25m, 0m, 19m, to 15.375m, 0.05m, 20.95m of material(s) cover created, dielectric smoothing is off.
+Box from 15.375m, 0m, 0m, to 15.5m, 0.05m, 19m of material(s) rock created, dielectric smoothing is on.
+Box from 15.375m, 0m, 19m, to 15.5m, 0.05m, 20.925m of material(s) cover created, dielectric smoothing is off.
+Box from 15.5m, 0m, 0m, to 15.525m, 0.05m, 19.1m of material(s) rock created, dielectric smoothing is on.
+Box from 15.5m, 0m, 19.1m, to 15.525m, 0.05m, 20.925m of material(s) cover created, dielectric smoothing is off.
+Box from 15.525m, 0m, 0m, to 15.55m, 0.05m, 19.1m of material(s) rock created, dielectric smoothing is on.
+Box from 15.525m, 0m, 19.1m, to 15.55m, 0.05m, 20.9m of material(s) cover created, dielectric smoothing is off.
+Box from 15.55m, 0m, 0m, to 15.675m, 0.05m, 19.075m of material(s) rock created, dielectric smoothing is on.
+Box from 15.55m, 0m, 19.075m, to 15.675m, 0.05m, 20.9m of material(s) cover created, dielectric smoothing is off.
+Box from 15.675m, 0m, 0m, to 15.75m, 0.05m, 19.075m of material(s) rock created, dielectric smoothing is on.
+Box from 15.675m, 0m, 19.075m, to 15.75m, 0.05m, 20.875m of material(s) cover created, dielectric smoothing is off.
+Box from 15.75m, 0m, 0m, to 15.825m, 0.05m, 19.175m of material(s) rock created, dielectric smoothing is on.
+Box from 15.75m, 0m, 19.175m, to 15.825m, 0.05m, 20.875m of material(s) cover created, dielectric smoothing is off.
+Box from 15.825m, 0m, 0m, to 15.85m, 0.05m, 19.175m of material(s) rock created, dielectric smoothing is on.
+Box from 15.825m, 0m, 19.175m, to 15.85m, 0.05m, 20.85m of material(s) cover created, dielectric smoothing is off.
+Box from 15.85m, 0m, 0m, to 15.975m, 0.05m, 19.15m of material(s) rock created, dielectric smoothing is on.
+Box from 15.85m, 0m, 19.15m, to 15.975m, 0.05m, 20.85m of material(s) cover created, dielectric smoothing is off.
+Box from 15.975m, 0m, 0m, to 16m, 0.05m, 19.15m of material(s) rock created, dielectric smoothing is on.
+Box from 15.975m, 0m, 19.15m, to 16m, 0.05m, 20.825m of material(s) cover created, dielectric smoothing is off.
+Box from 16m, 0m, 0m, to 16.125m, 0.05m, 19.25m of material(s) rock created, dielectric smoothing is on.
+Box from 16m, 0m, 19.25m, to 16.125m, 0.05m, 20.825m of material(s) cover created, dielectric smoothing is off.
+Box from 16.125m, 0m, 0m, to 16.15m, 0.05m, 19.25m of material(s) rock created, dielectric smoothing is on.
+Box from 16.125m, 0m, 19.25m, to 16.15m, 0.05m, 20.8m of material(s) cover created, dielectric smoothing is off.
+Box from 16.15m, 0m, 0m, to 16.25m, 0.05m, 19.225m of material(s) rock created, dielectric smoothing is on.
+Box from 16.15m, 0m, 19.225m, to 16.25m, 0.05m, 20.8m of material(s) cover created, dielectric smoothing is off.
+Box from 16.25m, 0m, 0m, to 16.275m, 0.05m, 19.325m of material(s) rock created, dielectric smoothing is on.
+Box from 16.25m, 0m, 19.325m, to 16.275m, 0.05m, 20.8m of material(s) cover created, dielectric smoothing is off.
+Box from 16.275m, 0m, 0m, to 16.425m, 0.05m, 19.325m of material(s) rock created, dielectric smoothing is on.
+Box from 16.275m, 0m, 19.325m, to 16.425m, 0.05m, 20.775m of material(s) cover created, dielectric smoothing is off.
+Box from 16.425m, 0m, 0m, to 16.45m, 0.05m, 19.325m of material(s) rock created, dielectric smoothing is on.
+Box from 16.425m, 0m, 19.325m, to 16.45m, 0.05m, 20.75m of material(s) cover created, dielectric smoothing is off.
+Box from 16.45m, 0m, 0m, to 16.5m, 0.05m, 19.3m of material(s) rock created, dielectric smoothing is on.
+Box from 16.45m, 0m, 19.3m, to 16.5m, 0.05m, 20.75m of material(s) cover created, dielectric smoothing is off.
+Box from 16.5m, 0m, 0m, to 16.575m, 0.05m, 19.4m of material(s) rock created, dielectric smoothing is on.
+Box from 16.5m, 0m, 19.4m, to 16.575m, 0.05m, 20.75m of material(s) cover created, dielectric smoothing is off.
+Box from 16.575m, 0m, 0m, to 16.725m, 0.05m, 19.4m of material(s) rock created, dielectric smoothing is on.
+Box from 16.575m, 0m, 19.4m, to 16.725m, 0.05m, 20.725m of material(s) cover created, dielectric smoothing is off.
+Box from 16.725m, 0m, 0m, to 16.75m, 0.05m, 19.4m of material(s) rock created, dielectric smoothing is on.
+Box from 16.725m, 0m, 19.4m, to 16.75m, 0.05m, 20.7m of material(s) cover created, dielectric smoothing is off.
+Box from 16.75m, 0m, 0m, to 16.875m, 0.05m, 19.375m of material(s) rock created, dielectric smoothing is on.
+Box from 16.75m, 0m, 19.375m, to 16.875m, 0.05m, 20.7m of material(s) cover created, dielectric smoothing is off.
+Box from 16.875m, 0m, 0m, to 17m, 0.05m, 19.375m of material(s) rock created, dielectric smoothing is on.
+Box from 16.875m, 0m, 19.375m, to 17m, 0.05m, 20.675m of material(s) cover created, dielectric smoothing is off.
+Box from 17m, 0m, 0m, to 17.025m, 0.05m, 19.475m of material(s) rock created, dielectric smoothing is on.
+Box from 17m, 0m, 19.475m, to 17.025m, 0.05m, 20.675m of material(s) cover created, dielectric smoothing is off.
+Box from 17.025m, 0m, 0m, to 17.05m, 0.05m, 19.475m of material(s) rock created, dielectric smoothing is on.
+Box from 17.025m, 0m, 19.475m, to 17.05m, 0.05m, 20.65m of material(s) cover created, dielectric smoothing is off.
+Box from 17.05m, 0m, 0m, to 17.175m, 0.05m, 19.45m of material(s) rock created, dielectric smoothing is on.
+Box from 17.05m, 0m, 19.45m, to 17.175m, 0.05m, 20.65m of material(s) cover created, dielectric smoothing is off.
+Box from 17.175m, 0m, 0m, to 17.325m, 0.05m, 19.45m of material(s) rock created, dielectric smoothing is on.
+Box from 17.175m, 0m, 19.45m, to 17.325m, 0.05m, 20.625m of material(s) cover created, dielectric smoothing is off.
+Box from 17.325m, 0m, 0m, to 17.35m, 0.05m, 19.45m of material(s) rock created, dielectric smoothing is on.
+Box from 17.325m, 0m, 19.45m, to 17.35m, 0.05m, 20.6m of material(s) cover created, dielectric smoothing is off.
+Box from 17.35m, 0m, 0m, to 17.475m, 0.05m, 19.425m of material(s) rock created, dielectric smoothing is on.
+Box from 17.35m, 0m, 19.425m, to 17.475m, 0.05m, 20.6m of material(s) cover created, dielectric smoothing is off.
+Box from 17.475m, 0m, 0m, to 17.625m, 0.05m, 19.425m of material(s) rock created, dielectric smoothing is on.
+Box from 17.475m, 0m, 19.425m, to 17.625m, 0.05m, 20.575m of material(s) cover created, dielectric smoothing is off.
+Box from 17.625m, 0m, 0m, to 17.65m, 0.05m, 19.425m of material(s) rock created, dielectric smoothing is on.
+Box from 17.625m, 0m, 19.425m, to 17.65m, 0.05m, 20.55m of material(s) cover created, dielectric smoothing is off.
+Box from 17.65m, 0m, 0m, to 17.775m, 0.05m, 19.4m of material(s) rock created, dielectric smoothing is on.
+Box from 17.65m, 0m, 19.4m, to 17.775m, 0.05m, 20.55m of material(s) cover created, dielectric smoothing is off.
+Box from 17.775m, 0m, 0m, to 17.925m, 0.05m, 19.4m of material(s) rock created, dielectric smoothing is on.
+Box from 17.775m, 0m, 19.4m, to 17.925m, 0.05m, 20.525m of material(s) cover created, dielectric smoothing is off.
+Box from 17.925m, 0m, 0m, to 17.95m, 0.05m, 19.4m of material(s) rock created, dielectric smoothing is on.
+Box from 17.925m, 0m, 19.4m, to 17.95m, 0.05m, 20.5m of material(s) cover created, dielectric smoothing is off.
+Box from 17.95m, 0m, 0m, to 18.075m, 0.05m, 19.375m of material(s) rock created, dielectric smoothing is on.
+Box from 17.95m, 0m, 19.375m, to 18.075m, 0.05m, 20.5m of material(s) cover created, dielectric smoothing is off.
+Box from 18.075m, 0m, 0m, to 18.225m, 0.05m, 19.375m of material(s) rock created, dielectric smoothing is on.
+Box from 18.075m, 0m, 19.375m, to 18.225m, 0.05m, 20.475m of material(s) cover created, dielectric smoothing is off.
+Box from 18.225m, 0m, 0m, to 18.25m, 0.05m, 19.375m of material(s) rock created, dielectric smoothing is on.
+Box from 18.225m, 0m, 19.375m, to 18.25m, 0.05m, 20.45m of material(s) cover created, dielectric smoothing is off.
+Box from 18.25m, 0m, 0m, to 18.375m, 0.05m, 19.35m of material(s) rock created, dielectric smoothing is on.
+Box from 18.25m, 0m, 19.35m, to 18.375m, 0.05m, 20.45m of material(s) cover created, dielectric smoothing is off.
+Box from 18.375m, 0m, 0m, to 18.5m, 0.05m, 19.35m of material(s) rock created, dielectric smoothing is on.
+Box from 18.375m, 0m, 19.35m, to 18.5m, 0.05m, 20.425m of material(s) cover created, dielectric smoothing is off.
+Box from 18.5m, 0m, 0m, to 18.525m, 0.05m, 19.25m of material(s) rock created, dielectric smoothing is on.
+Box from 18.5m, 0m, 19.25m, to 18.525m, 0.05m, 20.425m of material(s) cover created, dielectric smoothing is off.
+Box from 18.525m, 0m, 0m, to 18.55m, 0.05m, 19.25m of material(s) rock created, dielectric smoothing is on.
+Box from 18.525m, 0m, 19.25m, to 18.55m, 0.05m, 20.4m of material(s) cover created, dielectric smoothing is off.
+Box from 18.55m, 0m, 0m, to 18.675m, 0.05m, 19.225m of material(s) rock created, dielectric smoothing is on.
+Box from 18.55m, 0m, 19.225m, to 18.675m, 0.05m, 20.4m of material(s) cover created, dielectric smoothing is off.
+Box from 18.675m, 0m, 0m, to 18.825m, 0.05m, 19.225m of material(s) rock created, dielectric smoothing is on.
+Box from 18.675m, 0m, 19.225m, to 18.825m, 0.05m, 20.375m of material(s) cover created, dielectric smoothing is off.
+Box from 18.825m, 0m, 0m, to 18.85m, 0.05m, 19.225m of material(s) rock created, dielectric smoothing is on.
+Box from 18.825m, 0m, 19.225m, to 18.85m, 0.05m, 20.35m of material(s) cover created, dielectric smoothing is off.
+Box from 18.85m, 0m, 0m, to 18.975m, 0.05m, 19.2m of material(s) rock created, dielectric smoothing is on.
+Box from 18.85m, 0m, 19.2m, to 18.975m, 0.05m, 20.35m of material(s) cover created, dielectric smoothing is off.
+Box from 18.975m, 0m, 0m, to 19m, 0.05m, 19.2m of material(s) rock created, dielectric smoothing is on.
+Box from 18.975m, 0m, 19.2m, to 19m, 0.05m, 20.325m of material(s) cover created, dielectric smoothing is off.
+Box from 19m, 0m, 0m, to 19.125m, 0.05m, 19.1m of material(s) rock created, dielectric smoothing is on.
+Box from 19m, 0m, 19.1m, to 19.125m, 0.05m, 20.325m of material(s) cover created, dielectric smoothing is off.
+Box from 19.125m, 0m, 0m, to 19.15m, 0.05m, 19.1m of material(s) rock created, dielectric smoothing is on.
+Box from 19.125m, 0m, 19.1m, to 19.15m, 0.05m, 20.3m of material(s) cover created, dielectric smoothing is off.
+Box from 19.15m, 0m, 0m, to 19.275m, 0.05m, 19.075m of material(s) rock created, dielectric smoothing is on.
+Box from 19.15m, 0m, 19.075m, to 19.275m, 0.05m, 20.3m of material(s) cover created, dielectric smoothing is off.
+Box from 19.275m, 0m, 0m, to 19.425m, 0.05m, 19.075m of material(s) rock created, dielectric smoothing is on.
+Box from 19.275m, 0m, 19.075m, to 19.425m, 0.05m, 20.275m of material(s) cover created, dielectric smoothing is off.
+Box from 19.425m, 0m, 0m, to 19.45m, 0.05m, 19.075m of material(s) rock created, dielectric smoothing is on.
+Box from 19.425m, 0m, 19.075m, to 19.45m, 0.05m, 20.25m of material(s) cover created, dielectric smoothing is off.
+Box from 19.45m, 0m, 0m, to 19.5m, 0.05m, 19.05m of material(s) rock created, dielectric smoothing is on.
+Box from 19.45m, 0m, 19.05m, to 19.5m, 0.05m, 20.25m of material(s) cover created, dielectric smoothing is off.
+Box from 19.5m, 0m, 0m, to 19.575m, 0.05m, 18.95m of material(s) rock created, dielectric smoothing is on.
+Box from 19.5m, 0m, 18.95m, to 19.575m, 0.05m, 20.25m of material(s) cover created, dielectric smoothing is off.
+Box from 19.575m, 0m, 0m, to 19.725m, 0.05m, 18.95m of material(s) rock created, dielectric smoothing is on.
+Box from 19.575m, 0m, 18.95m, to 19.725m, 0.05m, 20.225m of material(s) cover created, dielectric smoothing is off.
+Box from 19.725m, 0m, 0m, to 19.75m, 0.05m, 18.95m of material(s) rock created, dielectric smoothing is on.
+Box from 19.725m, 0m, 18.95m, to 19.75m, 0.05m, 20.2m of material(s) cover created, dielectric smoothing is off.
+Box from 19.75m, 0m, 0m, to 19.875m, 0.05m, 18.825m of material(s) rock created, dielectric smoothing is on.
+Box from 19.75m, 0m, 18.825m, to 19.875m, 0.05m, 20.2m of material(s) cover created, dielectric smoothing is off.
+Box from 19.875m, 0m, 0m, to 20.025m, 0.05m, 18.825m of material(s) rock created, dielectric smoothing is on.
+Box from 19.875m, 0m, 18.825m, to 20.025m, 0.05m, 20.175m of material(s) cover created, dielectric smoothing is off.
+Box from 20.025m, 0m, 0m, to 20.05m, 0.05m, 18.825m of material(s) rock created, dielectric smoothing is on.
+Box from 20.025m, 0m, 18.825m, to 20.05m, 0.05m, 20.15m of material(s) cover created, dielectric smoothing is off.
+Box from 20.05m, 0m, 0m, to 20.175m, 0.05m, 18.8m of material(s) rock created, dielectric smoothing is on.
+Box from 20.05m, 0m, 18.8m, to 20.175m, 0.05m, 20.15m of material(s) cover created, dielectric smoothing is off.
+Box from 20.175m, 0m, 0m, to 20.25m, 0.05m, 18.8m of material(s) rock created, dielectric smoothing is on.
+Box from 20.175m, 0m, 18.8m, to 20.25m, 0.05m, 20.125m of material(s) cover created, dielectric smoothing is off.
+Box from 20.25m, 0m, 0m, to 20.325m, 0.05m, 18.7m of material(s) rock created, dielectric smoothing is on.
+Box from 20.25m, 0m, 18.7m, to 20.325m, 0.05m, 20.125m of material(s) cover created, dielectric smoothing is off.
+Box from 20.325m, 0m, 0m, to 20.35m, 0.05m, 18.7m of material(s) rock created, dielectric smoothing is on.
+Box from 20.325m, 0m, 18.7m, to 20.35m, 0.05m, 20.1m of material(s) cover created, dielectric smoothing is off.
+Box from 20.35m, 0m, 0m, to 20.475m, 0.05m, 18.675m of material(s) rock created, dielectric smoothing is on.
+Box from 20.35m, 0m, 18.675m, to 20.475m, 0.05m, 20.1m of material(s) cover created, dielectric smoothing is off.
+Box from 20.475m, 0m, 0m, to 20.625m, 0.05m, 18.675m of material(s) rock created, dielectric smoothing is on.
+Box from 20.475m, 0m, 18.675m, to 20.625m, 0.05m, 20.075m of material(s) cover created, dielectric smoothing is off.
+Box from 20.625m, 0m, 0m, to 20.65m, 0.05m, 18.675m of material(s) rock created, dielectric smoothing is on.
+Box from 20.625m, 0m, 18.675m, to 20.65m, 0.05m, 20.05m of material(s) cover created, dielectric smoothing is off.
+Box from 20.65m, 0m, 0m, to 20.775m, 0.05m, 18.65m of material(s) rock created, dielectric smoothing is on.
+Box from 20.65m, 0m, 18.65m, to 20.775m, 0.05m, 20.05m of material(s) cover created, dielectric smoothing is off.
+Box from 20.775m, 0m, 0m, to 20.925m, 0.05m, 18.65m of material(s) rock created, dielectric smoothing is on.
+Box from 20.775m, 0m, 18.65m, to 20.925m, 0.05m, 20.025m of material(s) cover created, dielectric smoothing is off.
+Box from 20.925m, 0m, 0m, to 20.95m, 0.05m, 18.65m of material(s) rock created, dielectric smoothing is on.
+Box from 20.925m, 0m, 18.65m, to 20.95m, 0.05m, 20m of material(s) cover created, dielectric smoothing is off.
+Box from 20.95m, 0m, 0m, to 21.075m, 0.05m, 18.625m of material(s) rock created, dielectric smoothing is on.
+Box from 20.95m, 0m, 18.625m, to 21.075m, 0.05m, 20m of material(s) cover created, dielectric smoothing is off.
+Box from 21.075m, 0m, 0m, to 21.225m, 0.05m, 18.625m of material(s) rock created, dielectric smoothing is on.
+Box from 21.075m, 0m, 18.625m, to 21.225m, 0.05m, 19.975m of material(s) cover created, dielectric smoothing is off.
+Box from 21.225m, 0m, 0m, to 21.25m, 0.05m, 18.625m of material(s) rock created, dielectric smoothing is on.
+Box from 21.225m, 0m, 18.625m, to 21.25m, 0.05m, 19.95m of material(s) cover created, dielectric smoothing is off.
+Box from 21.25m, 0m, 0m, to 21.375m, 0.05m, 18.6m of material(s) rock created, dielectric smoothing is on.
+Box from 21.25m, 0m, 18.6m, to 21.375m, 0.05m, 19.95m of material(s) cover created, dielectric smoothing is off.
+Box from 21.375m, 0m, 0m, to 21.525m, 0.05m, 18.6m of material(s) rock created, dielectric smoothing is on.
+Box from 21.375m, 0m, 18.6m, to 21.525m, 0.05m, 19.925m of material(s) cover created, dielectric smoothing is off.
+Box from 21.525m, 0m, 0m, to 21.55m, 0.05m, 18.6m of material(s) rock created, dielectric smoothing is on.
+Box from 21.525m, 0m, 18.6m, to 21.55m, 0.05m, 19.9m of material(s) cover created, dielectric smoothing is off.
+Box from 21.55m, 0m, 0m, to 21.675m, 0.05m, 18.575m of material(s) rock created, dielectric smoothing is on.
+Box from 21.55m, 0m, 18.575m, to 21.675m, 0.05m, 19.9m of material(s) cover created, dielectric smoothing is off.
+Box from 21.675m, 0m, 0m, to 21.825m, 0.05m, 18.575m of material(s) rock created, dielectric smoothing is on.
+Box from 21.675m, 0m, 18.575m, to 21.825m, 0.05m, 19.875m of material(s) cover created, dielectric smoothing is off.
+Box from 21.825m, 0m, 0m, to 21.85m, 0.05m, 18.575m of material(s) rock created, dielectric smoothing is on.
+Box from 21.825m, 0m, 18.575m, to 21.85m, 0.05m, 19.85m of material(s) cover created, dielectric smoothing is off.
+Box from 21.85m, 0m, 0m, to 21.975m, 0.05m, 18.55m of material(s) rock created, dielectric smoothing is on.
+Box from 21.85m, 0m, 18.55m, to 21.975m, 0.05m, 19.85m of material(s) cover created, dielectric smoothing is off.
+Box from 21.975m, 0m, 0m, to 22m, 0.05m, 18.55m of material(s) rock created, dielectric smoothing is on.
+Box from 21.975m, 0m, 18.55m, to 22m, 0.05m, 19.825m of material(s) cover created, dielectric smoothing is off.
+Box from 22m, 0m, 0m, to 22.125m, 0.05m, 18.65m of material(s) rock created, dielectric smoothing is on.
+Box from 22m, 0m, 18.65m, to 22.125m, 0.05m, 19.825m of material(s) cover created, dielectric smoothing is off.
+Box from 22.125m, 0m, 0m, to 22.15m, 0.05m, 18.65m of material(s) rock created, dielectric smoothing is on.
+Box from 22.125m, 0m, 18.65m, to 22.15m, 0.05m, 19.8m of material(s) cover created, dielectric smoothing is off.
+Box from 22.15m, 0m, 0m, to 22.25m, 0.05m, 18.625m of material(s) rock created, dielectric smoothing is on.
+Box from 22.15m, 0m, 18.625m, to 22.25m, 0.05m, 19.8m of material(s) cover created, dielectric smoothing is off.
+Box from 22.25m, 0m, 0m, to 22.275m, 0.05m, 18.725m of material(s) rock created, dielectric smoothing is on.
+Box from 22.25m, 0m, 18.725m, to 22.275m, 0.05m, 19.8m of material(s) cover created, dielectric smoothing is off.
+Box from 22.275m, 0m, 0m, to 22.425m, 0.05m, 18.725m of material(s) rock created, dielectric smoothing is on.
+Box from 22.275m, 0m, 18.725m, to 22.425m, 0.05m, 19.775m of material(s) cover created, dielectric smoothing is off.
+Box from 22.425m, 0m, 0m, to 22.45m, 0.05m, 18.725m of material(s) rock created, dielectric smoothing is on.
+Box from 22.425m, 0m, 18.725m, to 22.45m, 0.05m, 19.75m of material(s) cover created, dielectric smoothing is off.
+Box from 22.45m, 0m, 0m, to 22.575m, 0.05m, 18.7m of material(s) rock created, dielectric smoothing is on.
+Box from 22.45m, 0m, 18.7m, to 22.575m, 0.05m, 19.75m of material(s) cover created, dielectric smoothing is off.
+Box from 22.575m, 0m, 0m, to 22.725m, 0.05m, 18.7m of material(s) rock created, dielectric smoothing is on.
+Box from 22.575m, 0m, 18.7m, to 22.725m, 0.05m, 19.725m of material(s) cover created, dielectric smoothing is off.
+Box from 22.725m, 0m, 0m, to 22.75m, 0.05m, 18.7m of material(s) rock created, dielectric smoothing is on.
+Box from 22.725m, 0m, 18.7m, to 22.75m, 0.05m, 19.7m of material(s) cover created, dielectric smoothing is off.
+Box from 22.75m, 0m, 0m, to 22.875m, 0.05m, 18.775m of material(s) rock created, dielectric smoothing is on.
+Box from 22.75m, 0m, 18.775m, to 22.875m, 0.05m, 19.7m of material(s) cover created, dielectric smoothing is off.
+Box from 22.875m, 0m, 0m, to 23.025m, 0.05m, 18.775m of material(s) rock created, dielectric smoothing is on.
+Box from 22.875m, 0m, 18.775m, to 23.025m, 0.05m, 19.675m of material(s) cover created, dielectric smoothing is off.
+Box from 23.025m, 0m, 0m, to 23.05m, 0.05m, 18.775m of material(s) rock created, dielectric smoothing is on.
+Box from 23.025m, 0m, 18.775m, to 23.05m, 0.05m, 19.65m of material(s) cover created, dielectric smoothing is off.
+Box from 23.05m, 0m, 0m, to 23.175m, 0.05m, 18.75m of material(s) rock created, dielectric smoothing is on.
+Box from 23.05m, 0m, 18.75m, to 23.175m, 0.05m, 19.65m of material(s) cover created, dielectric smoothing is off.
+Box from 23.175m, 0m, 0m, to 23.325m, 0.05m, 18.75m of material(s) rock created, dielectric smoothing is on.
+Box from 23.175m, 0m, 18.75m, to 23.325m, 0.05m, 19.625m of material(s) cover created, dielectric smoothing is off.
+Box from 23.325m, 0m, 0m, to 23.35m, 0.05m, 18.75m of material(s) rock created, dielectric smoothing is on.
+Box from 23.325m, 0m, 18.75m, to 23.35m, 0.05m, 19.6m of material(s) cover created, dielectric smoothing is off.
+Box from 23.35m, 0m, 0m, to 23.475m, 0.05m, 18.725m of material(s) rock created, dielectric smoothing is on.
+Box from 23.35m, 0m, 18.725m, to 23.475m, 0.05m, 19.6m of material(s) cover created, dielectric smoothing is off.
+Box from 23.475m, 0m, 0m, to 23.625m, 0.05m, 18.725m of material(s) rock created, dielectric smoothing is on.
+Box from 23.475m, 0m, 18.725m, to 23.625m, 0.05m, 19.575m of material(s) cover created, dielectric smoothing is off.
+Box from 23.625m, 0m, 0m, to 23.65m, 0.05m, 18.725m of material(s) rock created, dielectric smoothing is on.
+Box from 23.625m, 0m, 18.725m, to 23.65m, 0.05m, 19.55m of material(s) cover created, dielectric smoothing is off.
+Box from 23.65m, 0m, 0m, to 23.775m, 0.05m, 18.7m of material(s) rock created, dielectric smoothing is on.
+Box from 23.65m, 0m, 18.7m, to 23.775m, 0.05m, 19.55m of material(s) cover created, dielectric smoothing is off.
+Box from 23.775m, 0m, 0m, to 23.925m, 0.05m, 18.7m of material(s) rock created, dielectric smoothing is on.
+Box from 23.775m, 0m, 18.7m, to 23.925m, 0.05m, 19.525m of material(s) cover created, dielectric smoothing is off.
+Box from 23.925m, 0m, 0m, to 23.95m, 0.05m, 18.7m of material(s) rock created, dielectric smoothing is on.
+Box from 23.925m, 0m, 18.7m, to 23.95m, 0.05m, 19.5m of material(s) cover created, dielectric smoothing is off.
+Box from 23.95m, 0m, 0m, to 36m, 0.05m, 18.675m of material(s) rock created, dielectric smoothing is on.
+Box from 23.95m, 0m, 18.675m, to 36m, 0.05m, 19.5m of material(s) cover created, dielectric smoothing is off.
+
+--- Model 1/1, input file: E:\automation_djh\artifacts\research_checks\2026-10-05_slope_bscan_2d_r1\slope_rough_s00\profile.in 
+
+
+Memory required (estimated): ~477.9 MB [main_grid] + ~65.0 MB overhead = 542.9 MB
+
+PML boundaries [main_grid]: {formulation: HORIPML, order: 1, thickness (cells): x0: 80, y0: 0, z0: 40, xmax: 80, ymax: 0, zmax: 40}
+
+
+Materials [main_grid]:
+    |            |         |       | sigma | Delta | tau        | omega | delta | gamma |      | sigma*  | Dielectric 
+ ID | Name       | Type    | eps_r | [S/m] | eps_r | [s]        | [Hz]  | [Hz]  | [Hz]  | mu_r | [Ohm/m] | smoothable 
+----+------------+---------+-------+-------+-------+------------+-------+-------+-------+------+---------+------------
+  0 | pec        | builtin | 1     | inf   |       |            |       |       |       | 1    | 0       | False      
+  1 | pmc        | builtin | 1     | 0     |       |            |       |       |       | 1    | inf     | False      
+  2 | free_space | builtin | 1     | 0     |       |            |       |       |       | 1    | 0       | True       
+  3 | rock       |         | 9     | 0.001 |       |            |       |       |       | 1    | 0       | True       
+  4 | cover      | debye   | 11    | 0.001 | 0.5   | 6.4567e-09 |       |       |       | 1    | 0       | False      
+
+Spatial-resolution analysis [main_grid]: minimum 12.8 cells per phase wavelength in 'cover', at 2.82942e+08 Hz.
+[main_grid] continuum phase velocity 9.03743e+07 m/s, wavelength 0.31941 m at that limiting frequency.
+[main_grid] minimum 1/e amplitude attenuation length: 419 cells in 'cover' at 2.82942e+08 Hz. Attenuation resolution is separate from phase-wavelength sampling.
+Lossless numerical dispersion estimate [main_grid]: grid-axis phase-velocity error -0.05% in 'free_space' at 2.82942e+08 Hz. Propagation axis: x. This is a homogeneous bulk estimate, not an interface or stability guarantee.
+Numerical dispersion analysis [main_grid]: lossy, dispersive or anisotropic materials: numerical phase-error estimate unavailable.
+Output directory: E:\automation_djh\artifacts\research_checks\2026-10-05_slope_bscan_2d_r1\slope_rough_s00
+
+
+
+
+Model 1/1 solving on LAPTOP-83GRKUNE with CUDA backend using Device 0: NVIDIA GeForce RTX 4090 Laptop GPU
+
+Written output file: profile.h5
+
+Memory used (estimated): ~520.5 MB host + ~1.7 GB device
+Time taken: 2.0258 seconds
+
+=== Simulation completed in 6.5045 seconds =====================================
+
