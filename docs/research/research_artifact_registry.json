@@ -180,6 +180,35 @@
  ],
  "runs": [
   {
+   "id": "hs4_debye_scan_20261005",
+   "status": "COMPLETED_SITE_ADAPTATION_DIAGNOSTIC",
+   "report": "docs/research/2026-10-05_hs4_debye_scan_findings.md",
+   "scripts": [
+    "scripts/hs4_debye_scan_v0_1.py",
+    "scripts/run_hs4_debye_scan_v0_1.cmd",
+    "scripts/analyze_hs4_debye_scan.py"
+   ],
+   "results": [
+    "artifacts/research_checks/2026-10-05_hs4_debye_scan_r1",
+    "artifacts/research_checks/2026-10-05_hs4_debye_scan_analysis_r1"
+   ],
+   "calls_solver": true,
+   "calls_training": false,
+   "key_numbers": {
+    "traces": 338,
+    "independent_dft_max_rel_l2": 9.906010580137904e-13,
+    "real_anchor_interface_band_dB": -60.37724735003199,
+    "de0.5_tau6.4567_extrap18.5_dB": -61.64,
+    "de0.5_tau6.4567_e_over_d_3m_dB": -42.32,
+    "de0.5_tau6.4567_tw18.5_dB": 22.8,
+    "de1_tau6.4567_extrap18.5_dB": -70.37,
+    "de2_tau6.4567_extrap18.5_dB": -87.35,
+    "anchor_de7.878_tau6.4567_s0.003_e_over_d_3m_dB": -65.61,
+    "anchor_extrap18.5_dB": -213.1
+   },
+   "limits": "2D line source; single model; in-band mean attenuation extrapolation (no dispersion tail integration, no 2D spreading/3D); real anchor from single file single power, total-field band-mean vs sim difference-peak metric offset by constant; de0.5_tau6.4567 is a real-data-compatible diagnostic recipe, not site material calibration; eps_s=18.017 and sigma=0.001 fixed, no joint eps_r x dEps scan."
+  },
+  {
    "id": "hs4_aperture_scan_20261005",
    "status": "COMPLETED_DIAGNOSTIC_NOT_PHYSICAL_ACCEPTANCE",
    "report": "docs/research/2026-10-05_hs4_aperture_scan_findings.md",
