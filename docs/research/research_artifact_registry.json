@@ -1,4 +1,13 @@
 {
+ "line9_legacy_uav_review_2026_10_05": {
+  "report": "docs/research/2026-10-05_line9_legacy_uav_review.md",
+  "status": "READ_ONLY_NOT_EXECUTED_NOT_A_MATCHED_UAV_PACKAGE",
+  "calls_solver": false,
+  "original_files_modified": false,
+  "source_relative_height_m": null,
+  "private_geometry_uploaded": false,
+  "key_finding": "impulse2.in references png_color.h5, not the provided unified_geometry.h5; its 2m vertical domain is not an 8-15m UAV altitude scenario."
+ },
  "sim2real_observation_audit_2026_10_05": {
   "report": "docs/research/2026-10-05_sim2real_observation_audit.md",
   "script": "scripts/audit_sim2real_observation_v0_1.py",
