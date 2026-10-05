@@ -116,22 +116,26 @@ def main():
 
     # ---- fig 2: aperture comparison at 30 m ----
     x30 = 38.6 + 0.5*np.arange(61)
-    t30, tot30_d, _ = load_bscan(APX, 'eps18.017_s0.003_debye', 61)
-    _, tot30_l, _ = load_bscan(APX, 'eps12_s0.001', 61)
+    t30, tot30_d, con30_d = load_bscan(APX, 'eps18.017_s0.003_debye', 61)
+    _, tot30_l, con30_l = load_bscan(APX, 'eps12_s0.001', 61)
     r30_d = relief_tw(x30 + RX_OFFSET/2, 18.017)
     r30_l = relief_tw(x30 + RX_OFFSET/2, 12.0)
-    fig, axes = plt.subplots(2, 1, figsize=(13, 9), layout='constrained')
-    panel(axes[0], tot30_l, t30, x30, r30_l, '低损耗配方 εr=12, σ=0.001（总场，30 m 孔径）',
+    fig, axes = plt.subplots(2, 2, figsize=(15, 9), layout='constrained')
+    panel(axes[0, 0], tot30_l, t30, x30, r30_l, '低损耗配方（总场，30 m 孔径）',
           '界面条带横跨全孔径、贴红线：形状相关0.59【好】（6m孔径时仅0.003）', 'green')
-    panel(axes[1], tot30_d, t30, x30, r30_d, '归档湿黏土配方（总场，30 m 孔径）',
+    panel(axes[0, 1], tot30_d, t30, x30, r30_d, '归档湿黏土配方（总场，30 m 孔径）',
           '孔径救不了过损耗材料：仍淹没【差】', 'red')
-    for ax in axes:
+    panel(axes[1, 0], con30_l, t30, x30, r30_l, '低损耗配方（去除背景后）',
+          '条带贴红线+下方多次波纹理；平段平、起伏段可辨', 'green')
+    panel(axes[1, 1], con30_d, t30, x30, r30_d, '归档湿黏土配方（去除背景后）',
+          '差分后条带可见但弱（比左图低21dB）', 'red')
+    for ax in axes.flat:
         ax.set_xlim(38, 70.4)
-    fig.colorbar(axes[0].images[0], ax=axes, shrink=0.85,
+    fig.colorbar(axes[0, 0].images[0], ax=axes, shrink=0.85,
                  label='回波强度 (dB，各图相对自身最大值)')
     fig.suptitle('图2  孔径对比（30 m 孔径、8 m 航高；蓝虚线间为起伏段，两侧为平界面）：孔径决定"看不看得清形状"',
                  fontsize=15, fontweight='bold')
-    for ax in axes:
+    for ax in axes.flat:
         ax.axvline(48, color='b', ls=':', lw=1.2)
         ax.axvline(60, color='b', ls=':', lw=1.2)
     fig.savefig(a.out/'fig2_aperture_30m.png', dpi=140)
