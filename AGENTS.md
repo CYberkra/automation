@@ -14,7 +14,7 @@
 - 新会话先读 [START_HERE.md](START_HERE.md)、[持久决策](docs/research/decision_log.md)和[产物索引](docs/research/research_artifact_registry.json)，不要重做已完成的损伤阶梯首版。
 - 用户确认雷达为SFCW 20–170MHz、步长0.3MHz；均匀且含端点时推导501频点。项目为约20m浅层非显性滑坡，地下0–20m是当前解释。地表可以是粉质粘土，基岩一般为砂岩；具体电性/厚度未知。设备频率向量和旧CSV处理链仍未核验，背景见 `configs/research/project_context_v1.json`。
 - 使用用户提供的 gprMax V4.0.0。**用户明确要求仿真前先敲定方案**；执行记录 `configs/research/gprmax_v4_execution_gate.json` 当前为 false，不能从“继续研究”推断放行，含求解的官方示例/测试/benchmark亦同。
-- 本地 V4 实际根为 `E:\gprMax-v.4.0.0\gprMax-v.4.0.0`；旧名为gprmax的环境是V3.1.6/Python3.10，V4源码要求3.11–3.13，运行就绪尚未验证。
+- 本地 V4 实际根为 `E:\gprMax-v.4.0.0\gprMax-v.4.0.0`；旧名为gprmax的环境是V3.1.6/Python3.10，V4源码要求3.11–3.13。**当前本机可用 V4 运行时为 `artifacts/local_checks/gprmax_v4_gpu_env2`（conda Python 3.12.14 于 `artifacts/local_checks/py312conda` 重建；2026-10-05 组织 WDAC/Smart App Control 策略按哈希封禁了旧 uv Python 3.12.15 与旧 venv 的 virtual_waveguide.pyd，详见 [环境事故记录](docs/research/2026-10-05_local_uav_free_space_fine_4090_findings.md)；新 virtual_waveguide.pyd 为同源重编，新哈希记录于新契约，旧哈希保留为历史）。GPU 求解包装器须用带 `E:\msvc2022bt` vcvars64 + `C:\cuda133` 的 cmd（如 `scripts/run_uav_local_benchmark_4090.cmd`）。**
 - 用户授权主动归档和 Git 提交/同步；每单元记录证据、限制、失败、下一步并验证远端。凭据不进入仓库。
 - 默认纯数组验证已扩至136项；历史64项及曾经的cycle05待办保留为历史事实。
 

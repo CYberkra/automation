@@ -1,0 +1,144 @@
+{
+  "status": "PASS",
+  "contract_sha256": "e425ded66337007480a44ff7aa781dc6a474718eaec9dc21aa1a852e727cf3fa",
+  "analysis_code_sha256": "220cddf048ba4fcd378f1de09728b61799115544e01d66c5a64b1bf15c685e38",
+  "metrics": [
+    {
+      "case": "d0.05_x_forward",
+      "receiver": 1,
+      "raw_sha256": "53c4b1a863a24e41f4f3ea2b5f32fdbec4d8c84a5ab40299bdd18d660e5589cb",
+      "complex_relative_L2_to_continuum": 0.002699080536354068,
+      "maximum_phase_error_deg": 0.1371560797750696,
+      "magnitude_error_dB_minmax": [
+        -0.013189058161210307,
+        0.029332411799710634
+      ],
+      "independent_DFT_relative_L2": 1.40044626412435e-13,
+      "passes_declared_diagnostic": true
+    },
+    {
+      "case": "d0.05_x_forward",
+      "receiver": 2,
+      "raw_sha256": "53c4b1a863a24e41f4f3ea2b5f32fdbec4d8c84a5ab40299bdd18d660e5589cb",
+      "complex_relative_L2_to_continuum": 0.0015912291252796673,
+      "maximum_phase_error_deg": 0.1174809652666129,
+      "magnitude_error_dB_minmax": [
+        0.007013073274703942,
+        0.036527137722855804
+      ],
+      "independent_DFT_relative_L2": 2.425510593674096e-13,
+      "passes_declared_diagnostic": true
+    },
+    {
+      "case": "d0.05_x_forward",
+      "receiver": 3,
+      "raw_sha256": "53c4b1a863a24e41f4f3ea2b5f32fdbec4d8c84a5ab40299bdd18d660e5589cb",
+      "complex_relative_L2_to_continuum": 0.0026990806328866185,
+      "maximum_phase_error_deg": 0.1371561821980946,
+      "magnitude_error_dB_minmax": [
+        -0.013188996551024132,
+        0.029332412073248357
+      ],
+      "independent_DFT_relative_L2": 1.4049324583688732e-13,
+      "passes_declared_diagnostic": true
+    },
+    {
+      "case": "d0.05_x_forward",
+      "receiver": 4,
+      "raw_sha256": "53c4b1a863a24e41f4f3ea2b5f32fdbec4d8c84a5ab40299bdd18d660e5589cb",
+      "complex_relative_L2_to_continuum": 0.0015912357556183197,
+      "maximum_phase_error_deg": 0.11748172428131946,
+      "magnitude_error_dB_minmax": [
+        0.007012832221459064,
+        0.036527142535290776
+      ],
+      "independent_DFT_relative_L2": 2.431557269019678e-13,
+      "passes_declared_diagnostic": true
+    },
+    {
+      "case": "d0.05_y_forward",
+      "receiver": 1,
+      "raw_sha256": "2d5f9a79461732a1c0549d5df300d0f5fe1df4bb8a5c5c2dd01e82be84de0f21",
+      "complex_relative_L2_to_continuum": 0.0015912291252797041,
+      "maximum_phase_error_deg": 0.11748096526660531,
+      "magnitude_error_dB_minmax": [
+        0.007013073274707796,
+        0.03652713772286156
+      ],
+      "independent_DFT_relative_L2": 2.430967374129507e-13,
+      "passes_declared_diagnostic": true
+    },
+    {
+      "case": "d0.05_y_forward",
+      "receiver": 2,
+      "raw_sha256": "2d5f9a79461732a1c0549d5df300d0f5fe1df4bb8a5c5c2dd01e82be84de0f21",
+      "complex_relative_L2_to_continuum": 0.0026990805363538675,
+      "maximum_phase_error_deg": 0.13715607977507935,
+      "magnitude_error_dB_minmax": [
+        -0.013189058161211274,
+        0.029332411799702945
+      ],
+      "independent_DFT_relative_L2": 1.4065110339391508e-13,
+      "passes_declared_diagnostic": true
+    },
+    {
+      "case": "d0.05_y_forward",
+      "receiver": 3,
+      "raw_sha256": "2d5f9a79461732a1c0549d5df300d0f5fe1df4bb8a5c5c2dd01e82be84de0f21",
+      "complex_relative_L2_to_continuum": 0.0015912357556183982,
+      "maximum_phase_error_deg": 0.11748172428133072,
+      "magnitude_error_dB_minmax": [
+        0.00701283222146099,
+        0.036527142535311904
+      ],
+      "independent_DFT_relative_L2": 2.4310562453603085e-13,
+      "passes_declared_diagnostic": true
+    },
+    {
+      "case": "d0.05_y_forward",
+      "receiver": 4,
+      "raw_sha256": "2d5f9a79461732a1c0549d5df300d0f5fe1df4bb8a5c5c2dd01e82be84de0f21",
+      "complex_relative_L2_to_continuum": 0.002699080632886602,
+      "maximum_phase_error_deg": 0.13715618219808973,
+      "magnitude_error_dB_minmax": [
+        -0.013188996551021235,
+        0.029332412073242588
+      ],
+      "independent_DFT_relative_L2": 1.4074861627992425e-13,
+      "passes_declared_diagnostic": true
+    },
+    {
+      "case": "d0.05_y_reverse_x",
+      "receiver": 1,
+      "raw_sha256": "4ecb635776b39f14de5e90090796d9a0297270a638254bdbc35df645a4fb4af9",
+      "complex_relative_L2_to_continuum": 0.0015912291252801378,
+      "maximum_phase_error_deg": 0.11748096526661918,
+      "magnitude_error_dB_minmax": [
+        0.007013073274702015,
+        0.03652713772292302
+      ],
+      "independent_DFT_relative_L2": 2.4222847153098964e-13,
+      "passes_declared_diagnostic": true
+    },
+    {
+      "case": "d0.05_y_reverse_y",
+      "receiver": 1,
+      "raw_sha256": "b400004d57ae7371c4e1c65131a74af8239333e46c0e3b78f996997dc7d5dd28",
+      "complex_relative_L2_to_continuum": 0.0026990805363541212,
+      "maximum_phase_error_deg": 0.13715607977506472,
+      "magnitude_error_dB_minmax": [
+        -0.013189058161203547,
+        0.02933241179972601
+      ],
+      "independent_DFT_relative_L2": 1.409355200983789e-13,
+      "passes_declared_diagnostic": true
+    }
+  ],
+  "symmetry_reciprocity_relative_L2": {
+    "d0.05_axial": 6.343694737700373e-16,
+    "d0.05_broadside": 7.578356558823661e-16,
+    "reverse_x_reciprocity": 1.5018191198530027e-15,
+    "reverse_y_reciprocity": 1.1788650201221777e-15
+  },
+  "scope": "Continuum agreement within declared finite-grid diagnostic limits; not antenna, ground or field validation."
+}

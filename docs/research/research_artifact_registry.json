@@ -51,7 +51,7 @@
   "field_late_peak_guarded_median_dB": -52.55015338734853,
   "historical_endpoint_selected_fraction": 0.9894869638351556,
   "retracted_claim": "Unbounded Hilbert late peak -26.6dB and inferred 30-45dB field/simulation gap",
-  "common_station_signed_interface_relative_L2_max": 3.0310428185210578e-9,
+  "common_station_signed_interface_relative_L2_max": 3.0310428185210578e-09,
   "independent_actual_source_direct_DFT_relative_L2_max": 9.763775453565519e-13,
   "local_only_field_plots": "artifacts/local_checks/2026-10-05_line9_sim2real_comparison_audit_r1",
   "physical_attribution_certified": false,
@@ -238,6 +238,38 @@
   "reference_state stays numerically_unresolved: no physical acceptance threshold, no training labels, no clean truth. Vertical refinement is done (ZFINE2 adjacent L2 66.6647% -> 17.2452% -> 4.1216%) and must not be re-planned as pending work."
  ],
  "runs": [
+  {
+   "id": "local_uav_free_space_fine_4090_20261005",
+   "status": "COMPLETED_CHAIN_SELF_CHECK",
+   "report": "docs/research/2026-10-05_local_uav_free_space_fine_4090_findings.md",
+   "scripts": [
+    "scripts/uav_local_benchmark.py",
+    "scripts/run_uav_local_benchmark_4090.cmd",
+    "scripts/analyze_uav_local_free_space.py",
+    "scripts/plot_uav_free_space_fine_4090.py"
+   ],
+   "results": [
+    "artifacts/research_checks/2026-10-05_local_uav_free_space_fine_4090_r3",
+    "artifacts/research_checks/2026-10-05_local_uav_free_space_fine_4090_r3_analysis",
+    "artifacts/research_checks/2026-10-05_local_uav_free_space_fine_4090_r3_report"
+   ],
+   "calls_solver": true,
+   "calls_training": false,
+   "key_numbers": {
+    "traces": 4,
+    "grid_m": 0.05,
+    "complex_relative_L2_to_continuum_minmax": [
+     0.001591,
+     0.002699
+    ],
+    "max_phase_error_deg": 0.137,
+    "reciprocity_max": 1.51e-15,
+    "independent_dft_max": 2.43e-13,
+    "recompiled_pyd_old_sha256": "e0660c2ff10fa4d62c0550046c4a5e5a9c2ad3a05886bc5f50b45ff7904b6099",
+    "recompiled_pyd_new_sha256": "501c665eede1269cff66dc61c9d149c2d97be7e7d19ea0dec1ebf502172c820b"
+   },
+   "limits": "Air-domain point-dipole continuum self-check only; does not certify elevated point source layout, halfspace/layered media, full 3D layout/relief/depth, or field agreement. WDAC hash-block incident documented in report."
+  },
   {
    "id": "hs4_debye_scan_20261005",
    "status": "COMPLETED_SITE_ADAPTATION_DIAGNOSTIC",

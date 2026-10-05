@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "completed": true,
+  "contract_sha256": "e425ded66337007480a44ff7aa781dc6a474718eaec9dc21aa1a852e727cf3fa",
+  "code_sha256": "adf78a4f6c6cc2d5b49c4e58a3fdb86af99be4fd71cf51dd01dc6c9902e4aa73",
+  "groups": [
+    {
+      "id": "d0.05_x_forward",
+      "input_sha256": "bcef3a3eee92ebc6d2fdf1f546c1639f79b8f9f1a4a512615c1a3a30d75799d1",
+      "declared_air_only": true,
+      "source_current_moment_amplitude_Am": 1.0,
+      "dl_m": 0.05,
+      "polarisation": "x",
+      "raw_sha256": "53c4b1a863a24e41f4f3ea2b5f32fdbec4d8c84a5ab40299bdd18d660e5589cb",
+      "dt_s": 9.629166007732353e-11,
+      "iterations": 1040,
+      "dtype": "float64",
+      "receivers": 4
+    },
+    {
+      "id": "d0.05_y_forward",
+      "input_sha256": "aafe7fc4d7e1841266c5c1db0e277693f864334534930a8552abfc76e4592154",
+      "declared_air_only": true,
+      "source_current_moment_amplitude_Am": 1.0,
+      "dl_m": 0.05,
+      "polarisation": "y",
+      "raw_sha256": "2d5f9a79461732a1c0549d5df300d0f5fe1df4bb8a5c5c2dd01e82be84de0f21",
+      "dt_s": 9.629166007732353e-11,
+      "iterations": 1040,
+      "dtype": "float64",
+      "receivers": 4
+    },
+    {
+      "id": "d0.05_y_reverse_x",
+      "input_sha256": "777f9dc4085c9e7b7b15ccdab79643cac0a072ce36e2e2422561d59acdfb106d",
+      "declared_air_only": true,
+      "source_current_moment_amplitude_Am": 1.0,
+      "dl_m": 0.05,
+      "polarisation": "y",
+      "raw_sha256": "4ecb635776b39f14de5e90090796d9a0297270a638254bdbc35df645a4fb4af9",
+      "dt_s": 9.629166007732353e-11,
+      "iterations": 1040,
+      "dtype": "float64",
+      "receivers": 1
+    },
+    {
+      "id": "d0.05_y_reverse_y",
+      "input_sha256": "0457f2d1ed9e9a9094bdb62a68e862c5248f166b4a0f37fb14f4434184b7c5a1",
+      "declared_air_only": true,
+      "source_current_moment_amplitude_Am": 1.0,
+      "dl_m": 0.05,
+      "polarisation": "y",
+      "raw_sha256": "b400004d57ae7371c4e1c65131a74af8239333e46c0e3b78f996997dc7d5dd28",
+      "dt_s": 9.629166007732353e-11,
+      "iterations": 1040,
+      "dtype": "float64",
+      "receivers": 1
+    }
+  ],
+  "scope": "Native execution identity; continuum agreement checked separately."
+}
