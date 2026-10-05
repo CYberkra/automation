@@ -1,4 +1,19 @@
 {
+ "slope_fine2m_sfcw_reconstruction_2026_10_06": {
+  "report": "docs/research/2026-10-06_slope_fine2m_sfcw_reconstruction.md",
+  "script": "scripts/reconstruct_slope_fine2m_sfcw_v0_1.py",
+  "checker": "scripts/check_slope_fine2m_sfcw_v0_1.py",
+  "results": "artifacts/research_checks/2026-10-06_slope_fine2m_sfcw_r2",
+  "failed_attempt": "artifacts/research_checks/2026-10-06_slope_fine2m_sfcw_r1/failure.json",
+  "status": "COMPLETED_SFCW_PROCESSING_NOT_FIELD_VALIDATION",
+  "source_git_base": "eaa6429",
+  "native_traces_reused": 26,
+  "windows": ["rectangular", "hann"],
+  "calls_solver": false,
+  "calls_training": false,
+  "field_fitted": false,
+  "notes": "Actual y source length 0.05m and source delay used; shared gray scales; no gain; source-normalized field is not port S21."
+ },
  "airborne_gprmax_literature_2026_10_06": {
   "report": "docs/research/2026-10-06_airborne_gprmax_literature_review.md",
   "ledger": "docs/research/2026-10-06_airborne_gprmax_literature_ledger.json",

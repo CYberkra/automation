@@ -1,0 +1,39 @@
+{
+  "status": "PASS_SAVED_PRODUCT_INDEPENDENT_TONE_SUM",
+  "checks": {
+    "rectangular_slope_rough": {
+      "real_tone_sum_relative_L2": 1.2158218489903774e-14,
+      "complex_tone_sum_relative_L2": 2.0336462954863185e-14
+    },
+    "rectangular_slope_fullcover": {
+      "real_tone_sum_relative_L2": 1.2151511477041282e-14,
+      "complex_tone_sum_relative_L2": 2.0321546102827998e-14
+    },
+    "rectangular_ideal": {
+      "real_tone_sum_relative_L2": 9.14001355889871e-15,
+      "complex_tone_sum_relative_L2": 9.003056249407136e-15
+    },
+    "hann_slope_rough": {
+      "real_tone_sum_relative_L2": 1.0047336016762446e-14,
+      "complex_tone_sum_relative_L2": 1.340064620726679e-14
+    },
+    "hann_slope_fullcover": {
+      "real_tone_sum_relative_L2": 1.0050645929658897e-14,
+      "complex_tone_sum_relative_L2": 1.3407733019377091e-14
+    },
+    "hann_ideal": {
+      "real_tone_sum_relative_L2": 7.321680696195445e-15,
+      "complex_tone_sum_relative_L2": 7.289088385685595e-15
+    },
+    "negative_control_95MHz_carrier_relative_L2": 1.4158135465785686
+  },
+  "checker_sha256": "228f212469febf3e4b22dcb645f2230b7c30af4455d43f98eac6144bbbd63a82",
+  "summary_sha256": "6e9b5c614b83f3be8fc280e85ff7c8d716d2b7a58d9e8dd6c38cfcbebac2c70e",
+  "all_13_stations_checked": true,
+  "tested_delay_samples_per_station": 328,
+  "source_code_sha256": {
+    "hs4_slope_bscan_fine2m_v0_1.py": "73aea6bebaff3e1ad278ca6cfc110e4e22a811bce38afa287ade12300623ae53",
+    "research_operator_contract.py": "eb7b0f114c3e488d944a5158106545f4d86f445279872311a800f87b0e2612d4"
+  },
+  "scope": "Processing arithmetic/phase/amplitude validation only, not FDTD convergence or field validation"
+}
