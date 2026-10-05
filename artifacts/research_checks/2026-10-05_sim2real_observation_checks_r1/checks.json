@@ -1,0 +1,40 @@
+{
+  "status": "PASS_ARRAY_COUNTEREXAMPLES_NOT_FDTD_VALIDATION",
+  "checks": [
+    {
+      "name": "actual_clock_half_step_phase",
+      "status": "PASS"
+    },
+    {
+      "name": "native_y_length_not_x_spacing",
+      "status": "PASS"
+    },
+    {
+      "name": "target_tail_uses_own_peak",
+      "status": "PASS"
+    },
+    {
+      "name": "tiny_total_tail_does_not_hide_open_target_tail",
+      "status": "PASS"
+    },
+    {
+      "name": "attenuation_only_can_match_magnitude_but_fail_phase",
+      "status": "PASS"
+    },
+    {
+      "name": "complex_propagation_includes_delay",
+      "status": "PASS"
+    },
+    {
+      "name": "receiver_taper_changes_real_late_response",
+      "status": "PASS"
+    },
+    {
+      "name": "existing_audit_output_refused",
+      "status": "PASS"
+    }
+  ],
+  "calls_solver": false,
+  "calls_training": false,
+  "code_sha256": "754c892b298b5fa6e726cf8915f34125e6f64eb4651484a2f18d42ff784d3ec1"
+}

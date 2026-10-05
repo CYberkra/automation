@@ -1,4 +1,30 @@
 {
+ "sim2real_observation_audit_2026_10_05": {
+  "report": "docs/research/2026-10-05_sim2real_observation_audit.md",
+  "script": "scripts/audit_sim2real_observation_v0_1.py",
+  "results": "artifacts/research_checks/2026-10-05_sim2real_observation_audit_r1",
+  "checks_script": "scripts/check_sim2real_observation_audit.py",
+  "checks": "artifacts/research_checks/2026-10-05_sim2real_observation_checks_r1/checks.json",
+  "status": "COMPLETED_READ_ONLY_OBSERVATION_AUDIT_NOT_PHYSICAL_ATTRIBUTION",
+  "source_git_base": "fd0af55",
+  "existing_native_H5_verified": 70,
+  "new_solver_cases": 0,
+  "calls_solver": false,
+  "calls_training": false,
+  "field_fitted": false,
+  "physical_attribution_certified": false,
+  "key_corrections": [
+   "Historical 52-trace images are raw Ricker, not SFCW time reconstructions",
+   "18.5m isolated target has open tail; 20ns taper changes its complex band response by 40.60%",
+   "Old complex depth extrapolation omitted propagation phase",
+   "Layout event windows omitted source delay; surface polarization ratio used the wrong denominator",
+   "Native 2D polarized current length is .05m, not the old .025m divisor",
+   "Halfspace isolated reflection fails the same 5% L2 gate; total-field PASS remains scoped"
+  ],
+  "target_layout_complex_difference_range_percent": [0.311, 0.995],
+  "counterexample_checks_passed": 8,
+  "next_step": "Propose a newly frozen background plus 18.5m pair with longer native records before more batch/3D expansion; no new solver execution in this unit."
+ },
  "local_uav_benchmark_2026_10_05": {
   "report": "docs/research/2026-10-05_local_uav_benchmark_findings.md",
   "archive": "artifacts/research_checks/2026-10-05_local_uav_benchmark_archive_r1",
