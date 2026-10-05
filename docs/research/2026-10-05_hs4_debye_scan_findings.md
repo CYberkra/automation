@@ -5,6 +5,7 @@
 - 性质：**场地适配诊断**（对齐实测 Line9 衰减锚点），非盲测性能结论，非场地材料标定。
 - 批次：`artifacts/research_checks/2026-10-05_hs4_debye_scan_r1`（26 组 × 13 道 = 338 道，V4.0.0/CUDA float64，全部验收 PASS，独立 DFT 复算 ≤9.91e-13；脚本 `scripts/hs4_debye_scan_v0_1.py`，包装器 `scripts/run_hs4_debye_scan_v0_1.cmd`）
 - 分析：`scripts/analyze_hs4_debye_scan.py` → `artifacts/research_checks/2026-10-05_hs4_debye_scan_analysis_r1/`（summary.json、debye_scan_vs_anchor.png）
+- B-scan 可视化报告：`scripts/plot_hs4_debye_bscans.py` → `artifacts/research_checks/2026-10-05_hs4_debye_scan_bscan_r1/debye_bscans.png`（六代表配方 × 原始总场/配对差分，差分行跨列同一标尺 −70~−30 dB 相对直达波，红线=真实起伏双程时；Δε=0.5/τ=6.46ns 条带明亮沿红线，归档配方列沉入标尺下限）
 
 ## 设计
 
