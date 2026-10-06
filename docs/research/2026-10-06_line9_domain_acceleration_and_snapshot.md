@@ -28,7 +28,7 @@
 
 新私有准备包`artifacts/local_checks/2026-10-06_line9_large_snapshot_prepared_r3`，参考`full2d_pilot_0`。原始输入按字节保留，**仅追加**599条快照命令，不改变求解网格或物理因素。保存整域400×75m、间隔34个原生时间步（约2.005ns），从0到约1198ns；保存间距XYZ=0.2/0.2/0.025m，每帧2000×375×1。原生H5仍输出完整FP64 Ez与源samples。
 
-安装V4的hash快照语法只接受11参数，默认六分量；其CUDA `dtoh_snapshot_array`即使最终只查看Ez也保留六个host数组。因此预算按**六分量**约20.08GiB历史计算，不误按一分量估计。V4的`utilities.host_info.mem_check_device_snaps`在不含快照的模型能装入显存时，自动设置内部`snapsgpu2cpu=True`，使GPU只持有一帧约36MB附加缓存；无需命令行选项或修改求解器。最低可用RAM约40GiB、空闲VRAM约11.7GiB、额外磁盘约26.1GiB，最终以生成snapshot_plan为准；监督器自有RSS上限40GiB、剩余系统RAM下限1.5GiB、单道/全批60min、no_retry。重启后只读预检为可用RAM53.52GiB、空闲显存15104MiB、E盘空闲1362.96GiB，实际freeze/run再次核查。共享GPU锁沿用原`E:\automation_djh\artifacts\local_checks\hs4_gpu_exclusive.lock`。
+安装V4的hash快照语法只接受11参数，默认六分量；其CUDA `dtoh_snapshot_array`即使最终只查看Ez也保留六个host数组。因此预算按**六分量**约20.08GiB历史计算，不误按一分量估计。V4的`utilities.host_info.mem_check_device_snaps`在不含快照的模型能装入显存时，自动设置内部`snapsgpu2cpu=True`，使GPU只持有一帧约36MB附加缓存；无需命令行选项。实际r2发现检查发生在`initialise_snapfields()`之前，`nbytes=0`漏计快照，故原生自动机制未触发；资源监督器停止批次，未生成接收输出。新r3入口只在原生容量检查期间补入由真实GridView尺寸/dtype/分量推导的nbytes，随后恢复零值供原生初始化；不修改安装目录，不修改场更新或快照内核。最低可用RAM约40GiB、空闲VRAM约11.7GiB、额外磁盘约26.1GiB，最终以生成snapshot_plan为准；监督器自有RSS上限40GiB、剩余系统RAM下限1.5GiB、单道/全批60min、no_retry。重启后只读预检为可用RAM53.52GiB、空闲显存15104MiB、E盘空闲1362.96GiB，实际freeze/run再次核查。共享GPU锁沿用原`E:\automation_djh\artifacts\local_checks\hs4_gpu_exclusive.lock`。
 
 首次快照胶囊`line9_large_snapshot_rog_r1`使用了V4不存在的`-snapsgpu2cpu`命令行选项，argparse退出，未加载模型、未执行FDTD、没有原始输出。失败契约、源码worktree与日志保留；新启动必须使用独立worktree和新r2胶囊，不能原地重试。该错误不代表模型或容量失败。
 
@@ -38,7 +38,7 @@
 
 ## 复现入口与已做检查
 
-`scripts/prepare_line9_domain_acceleration.py`只准备精确切片；`scripts/line9_large_domain_snapshot.py`分prepare/freeze/run/verify；`scripts/analyze_line9_large_wavefield.py`核查后生成实际GIF和SFCW报告。监督器拒绝附加求解参数，快照转存使用冻结版本V4的原生自动机制；SFCW分析器支持快照审核及正确的一站留白图。**不要把新监督器/分析代码覆盖到旧冻结worktree，旧源码哈希必须保留。**
+`scripts/prepare_line9_domain_acceleration.py`只准备精确切片；`scripts/line9_large_domain_snapshot.py`分prepare/freeze/run/verify；`scripts/analyze_line9_large_wavefield.py`核查后生成实际GIF和SFCW报告。监督器拒绝附加求解参数，快照转存使用原生V4自动机制，`gprmax_snapshot_cuda_entry.py`修正该机制之前的延迟数组容量估计并记录实际转存策略；SFCW分析器支持快照审核及正确的一站留白图。**不要把新监督器/分析代码覆盖到旧冻结worktree，旧源码哈希必须保留。**
 
 检查见[准备和回归证据](../../artifacts/research_checks/2026-10-06_line9_domain_acceleration_r1/)：10个切片完整体素、材料键、空气收发点及坐标平移核对通过，V4原生命令均解析；599帧命令解析与内存/磁盘计算完成；原生/SFCW数组回归与5项被动观测、错误极性、FP32快照、E/H半步、违规输入修改的反例通过。均为准备/数组证据，不是缩域回波质量签认或已完成大域快照。
 
@@ -53,3 +53,7 @@ scripts/run_line9_2d_v4.cmd scripts/analyze_line9_large_wavefield.py --study art
 ```
 
 先完成本次大域快照，再决定缩域对照；99站/391站和3D没有追加启动。未经新的缩域执行契约，不用完整400m运行器直接跑这些不同形状输入。
+
+## r2容量保护与r3修正
+
+r2契约SHA-256为`e3480f1772d1247421dd8150bb6653e65606e439b9ead04c7c0a5e2d0b848016`。日志原生容量估计12.7GB漏掉了约20.08GiB快照历史；监督器以resource/wall guard停止，仅保留输入、编译缓存与日志，没有完整接收输出。旧监督器失败事件未记录触发瞬间RSS，不能补造实际峰值。源码调用顺序及nbytes状态确认漏计路径；r3新入口不放宽40GiB RSS限制，另增加GUARD_STOP的实际RSS、可用RAM及耗时记录。原生大小推导与恢复（含异常路径）纯检查通过；真实运行后还须检查snapshot_storage.json和接收信号逐点一致。保留r1/r2契约和worktree，新r3单独冻结。

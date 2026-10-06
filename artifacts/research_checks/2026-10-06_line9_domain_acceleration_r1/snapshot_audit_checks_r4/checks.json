@@ -1,0 +1,14 @@
+{
+  "status": "PASS_SYNTHETIC_AUDIT_NOT_FDTD",
+  "calls_solver": false,
+  "checks": [
+    "identical native receiver and source accepted",
+    "receiver polarity change rejected",
+    "native float32 snapshot rejected",
+    "incorrect magnetic half-step rejected",
+    "physical input change beyond observer append rejected"
+  ],
+  "scope": "Snapshot-specific checks only; base native dtype/time tests are separate.",
+  "script_sha256": "268331f78528caa9621dc3e0d4abefa72b833299f0b8db83b89b07be9b26fdc1",
+  "snapshot_auditor_sha256": "8e8d6d55070d01e986a5b080b1de501ca98ecc6fca372dc1b1490d8143025ec4"
+}

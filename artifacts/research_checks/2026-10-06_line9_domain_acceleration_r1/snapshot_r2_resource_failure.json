@@ -1,0 +1,11 @@
+{
+  "status": "FAILED_RESOURCE_GUARD_NO_COMPLETED_OUTPUT",
+  "capsule": "line9_large_snapshot_rog_r2",
+  "contract_sha256": "e3480f1772d1247421dd8150bb6653e65606e439b9ead04c7c0a5e2d0b848016",
+  "execution_log_sha256": "ff8d98ffdd829365227364ed58559978bdc21d137cdbf211f615c1a31aa35850",
+  "stdout_sha256": "b7cd5273bcac615eca1b6c1d06b308ed9b96fe7564172e08ed4954ce6d4aa092",
+  "raw_output_exists": false,
+  "failure": "owned solver resource/wall guard; trigger-time RSS not recorded by old supervisor",
+  "source_diagnosis": "Native memory check precedes snapshot field initialization; zero nbytes fails to select streaming",
+  "recovery": "Correct lazy nbytes only during native memory check; preserve r2; fresh r3 attempt; same resource limits"
+}

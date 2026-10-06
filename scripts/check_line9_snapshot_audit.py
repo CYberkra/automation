@@ -45,6 +45,8 @@ def check(out):
             h.attrs['origin'] = [0., 0., 0.]
             h.attrs['dx_dy_dz'] = wave.SPACING
         contract = root/'audit_contract.json'
+        save_json(root/'snapshot_storage.json', dict(native_gpu_to_host_streaming=True,
+            snapshot_count=1, snapshot_history_bytes=2*3*6*8))
         save_json(contract, dict(groups=[dict(input=str(input_path))],
             passive_reference_input=str(original), passive_reference_input_sha256=digest(original),
             passive_reference_raw=str(reference), passive_reference_raw_sha256=digest(reference),

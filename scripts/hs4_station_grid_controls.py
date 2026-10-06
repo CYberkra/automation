@@ -159,7 +159,10 @@ def run(path):
                 extra=c.get('additional_solver_args',[])
                 if extra != []:
                     raise ValueError('Unsupported additional solver arguments')
-                command=[sys.executable,str(ROOT/'scripts/gprmax_cached_cuda_entry.py'),str(p),'-gpu','0','-gpu_precision','double','--hide-progress-bars',*extra]
+                entry=c.get('solver_entrypoint','gprmax_cached_cuda_entry.py')
+                if entry not in ('gprmax_cached_cuda_entry.py','gprmax_snapshot_cuda_entry.py'):
+                    raise ValueError('Unsupported solver entrypoint')
+                command=[sys.executable,str(ROOT/'scripts'/entry),str(p),'-gpu','0','-gpu_precision','double','--hide-progress-bars',*extra]
                 env=os.environ.copy(); env['HS4_CUDA_CACHE_LOG']=str(p.parent/'cuda_cache.jsonl')
                 event({'status':'STARTED','group':g['id'],'command':command,**resources})
                 with (p.parent/'stdout.log').open('xb') as out,(p.parent/'stderr.log').open('xb') as err:
@@ -174,6 +177,9 @@ def run(path):
                             peak=max(peak,rss)
                         except psutil.NoSuchProcess: pass
                         if time.monotonic()-start>c['max_group_wall_s'] or time.monotonic()-start_batch>c['max_batch_wall_s'] or peak>c['max_owned_RSS_GiB']*2**30 or psutil.virtual_memory().available<c['min_system_available_during_run_GiB']*2**30:
+                            event({'status':'GUARD_STOP','group':g['id'],'elapsed_s':time.monotonic()-start,
+                                'peak_owned_RSS_bytes':peak,'available_RAM_bytes':psutil.virtual_memory().available,
+                                'max_owned_RSS_GiB':c['max_owned_RSS_GiB']})
                             terminate_owned_tree(process); raise RuntimeError('owned solver resource/wall guard')
                         time.sleep(.5)
                     if process.returncode: raise RuntimeError('solver failed; preserve attempt')

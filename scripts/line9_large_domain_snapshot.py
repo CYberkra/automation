@@ -90,6 +90,10 @@ def audit(path, completed=False):
     if p.read_bytes() != expected:
         raise ValueError('Observer changed original input bytes beyond snapshot append')
     if completed:
+        storage_path = p.parent/'snapshot_storage.json'
+        storage = json.loads(storage_path.read_text('utf-8'))
+        if storage['native_gpu_to_host_streaming'] is not True or storage['snapshot_count'] != len(c['snapshot_iterations']) or storage['snapshot_history_bytes'] != int(np.prod(SHAPE))*6*8*len(c['snapshot_iterations']):
+            raise ValueError('Snapshot storage policy or native shape differs from frozen budget')
         with h5py.File(p.with_suffix('.h5')) as h, h5py.File(c['passive_reference_raw']) as ref:
             for name in ['rxs/rx1/Ez', 'srcs/src1/excitation/samples']:
                 np.testing.assert_array_equal(h[name][:], ref[name][:])
@@ -112,7 +116,8 @@ def audit(path, completed=False):
                     if v.dtype != np.float64 or list(v.shape) != SHAPE or not np.isfinite(v[:]).all():
                         raise ValueError('Invalid native snapshot field')
             rows.append(dict(file=str(file.resolve()), sha256=digest(file), iteration=j))
-        result.update(snapshot_count=len(files), snapshots=rows, passive_receiver_bit_identical=True)
+        result.update(snapshot_count=len(files), snapshots=rows, passive_receiver_bit_identical=True,
+                      snapshot_storage_sha256=digest(storage_path), snapshot_storage=storage)
     return result
 
 
@@ -166,11 +171,12 @@ def freeze(prepared, out, pilots):
     group = copy.deepcopy(original_group)
     group.update(input=str(destination.resolve()), input_sha256=digest(destination))
     sources = ['line9_large_domain_snapshot.py', 'run_line9_2d_first.py', 'hs4_station_grid_controls.py',
-        'gprmax_cached_cuda_entry.py', 'hs_capsule_identity.py', 'build_pdf_profile_geometry.py',
+        'gprmax_cached_cuda_entry.py', 'gprmax_snapshot_cuda_entry.py', 'hs_capsule_identity.py', 'build_pdf_profile_geometry.py',
         'analyze_line9_2d_sfcw.py', 'run_line9_2d_v4.cmd', 'analyze_line9_large_wavefield.py']
     c.update(stage='snapshot', approval_basis=plan['approval_basis'], groups=[group], max_runs=1,
         reuse={}, hardware_at_freeze=hardware, additional_solver_args=[],
-        snapshot_storage_policy='Native V4 utilities.host_info.mem_check_device_snaps automatically enables GPU-to-host streaming when the non-snapshot model fits device memory; no CLI option or solver patch',
+        solver_entrypoint='gprmax_snapshot_cuda_entry.py',
+        snapshot_storage_policy='Process-local lazy nbytes accounting correction before native V4 memory check; restored before allocation; native GPU-to-host streaming and field kernels unchanged',
         code_identities={str(ROOT/'scripts'/n): digest(ROOT/'scripts'/n) for n in sources},
         file_identities={str(p.resolve()): digest(p) for p in out.rglob('*') if p.is_file()},
         passive_reference_input=original_group['input'], passive_reference_input_sha256=original_group['input_sha256'],
