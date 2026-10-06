@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "calls_solver": false,
+  "checks": [
+    "Native source/grid/time invariants accepted",
+    "shape change rejected",
+    "time change rejected",
+    "Source polarity change rejected",
+    "Original FP32 trace rejected"
+  ],
+  "scope": "Synthetic native HDF5 rejection only; not domain equivalence or physical validation"
+}
