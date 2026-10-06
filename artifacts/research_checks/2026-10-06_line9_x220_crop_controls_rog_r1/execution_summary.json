@@ -1,0 +1,66 @@
+{
+  "status": "COMPLETED_TWO_NATIVE_WIDTH_CONTROLS",
+  "contract_sha256": "dc31b2fd1f6c3f08dcc62a7a09ee01c64bbaaa3aa250a7f4e547f0d40261458c",
+  "verification_sha256": "5deff39dcb53c7a5ff3927af624b69bca19eef7f73946d066a62b4758de57f28",
+  "execution": [
+    {
+      "status": "STARTED",
+      "contract_sha256": "dc31b2fd1f6c3f08dcc62a7a09ee01c64bbaaa3aa250a7f4e547f0d40261458c",
+      "unix_s": 1791281944.5928423,
+      "runner_pid": 4380,
+      "available_RAM_bytes": 56703037440,
+      "free_VRAM_bytes": 15983443968
+    },
+    {
+      "status": "STARTED",
+      "group": "w200_full2d_pilot_0",
+      "command": [
+        "E:\\automation_djh\\artifacts\\local_checks\\gprmax_v4_gpu_env2\\Scripts\\python.exe",
+        "E:\\line9_rog_crop_controls_20261006\\scripts\\gprmax_cached_cuda_entry.py",
+        "E:\\line9_rog_crop_controls_20261006\\artifacts\\local_checks\\line9_x220_crop_controls_rog_r1\\cases\\w200_full2d_pilot_0\\profile.in",
+        "-gpu",
+        "0",
+        "-gpu_precision",
+        "double",
+        "--hide-progress-bars"
+      ],
+      "available_RAM_bytes": 56702803968,
+      "free_VRAM_bytes": 15983443968
+    },
+    {
+      "status": "COMPLETED",
+      "group": "w200_full2d_pilot_0",
+      "elapsed_s": 326.78099999999995,
+      "peak_owned_RSS_bytes": 5550018560,
+      "raw_sha256": "b586e244bbb6a8c81f74fbecdc29eac48895d0960b045f1475f82e3b4a4f5937"
+    },
+    {
+      "status": "STARTED",
+      "group": "w160_full2d_pilot_0",
+      "command": [
+        "E:\\automation_djh\\artifacts\\local_checks\\gprmax_v4_gpu_env2\\Scripts\\python.exe",
+        "E:\\line9_rog_crop_controls_20261006\\scripts\\gprmax_cached_cuda_entry.py",
+        "E:\\line9_rog_crop_controls_20261006\\artifacts\\local_checks\\line9_x220_crop_controls_rog_r1\\cases\\w160_full2d_pilot_0\\profile.in",
+        "-gpu",
+        "0",
+        "-gpu_precision",
+        "double",
+        "--hide-progress-bars"
+      ],
+      "available_RAM_bytes": 56689635328,
+      "free_VRAM_bytes": 15982395392
+    },
+    {
+      "status": "COMPLETED",
+      "group": "w160_full2d_pilot_0",
+      "elapsed_s": 275.922,
+      "peak_owned_RSS_bytes": 4477067264,
+      "raw_sha256": "47cabf4d370b72c842ed1b8fa9de708fb8c811d69e0c7dcd3601cb1cb6eec189"
+    },
+    {
+      "status": "COMPLETED",
+      "traces": 2,
+      "verification_sha256": "5deff39dcb53c7a5ff3927af624b69bca19eef7f73946d066a62b4758de57f28"
+    }
+  ]
+}

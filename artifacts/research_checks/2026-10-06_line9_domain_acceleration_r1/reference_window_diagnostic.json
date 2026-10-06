@@ -1,0 +1,62 @@
+{
+  "status": "READONLY_FULL400_X220_DIAGNOSTIC",
+  "calls_solver": false,
+  "raw_sha256": "2b9af6e225437d9516d6bdf8b358bd09a224729cead0e39b3560442ded2e7689",
+  "record_tail": {
+    "independent_DFT_relative_L2": 1.5472155915566752e-13,
+    "source_length_m": 0.025,
+    "source_time_offset_s": 2.9483179209371056e-11,
+    "receiver_time_offset_s": 0.0,
+    "sampled_peak_current_moment_Am": 0.9998851790028754,
+    "source_min_over_max_spectrum": 0.10446806642546505,
+    "last20ns_peak_over_record_peak": 8.065552984833187e-07,
+    "last20ns_RMS_over_record_peak": 4.5878366214102885e-07,
+    "last_sample_over_record_peak": 6.118674310296962e-07,
+    "last20ns_taper_relative_spectral_change": 6.720287779216304e-07
+  },
+  "windows": [
+    {
+      "window_ns": [
+        0,
+        100
+      ],
+      "peak_V_m": 3738.2080563168065,
+      "RMS_V_m": 676.4371805931071,
+      "peak_over_full_record": 1.0
+    },
+    {
+      "window_ns": [
+        100,
+        300
+      ],
+      "peak_V_m": 425.30436070740694,
+      "RMS_V_m": 53.93945177375983,
+      "peak_over_full_record": 0.11377225512869184
+    },
+    {
+      "window_ns": [
+        300,
+        600
+      ],
+      "peak_V_m": 0.6064236987691802,
+      "RMS_V_m": 0.06226348247383439,
+      "peak_over_full_record": 0.00016222309984711747
+    },
+    {
+      "window_ns": [
+        600,
+        1200
+      ],
+      "peak_V_m": 0.05406960994334481,
+      "RMS_V_m": 0.004754492172519454,
+      "peak_over_full_record": 1.4464045106311895e-05
+    }
+  ],
+  "cropped_side_PML_air_image_path_time_ns": {
+    "200": 653.785626588378,
+    "160": 520.3599885091172
+  },
+  "full_top_PML_air_image_path_time_ns": 137.99690138048274,
+  "full_right_PML_air_image_path_time_ns": 853.9240837072692,
+  "scope": "Window amplitudes do not classify geological versus boundary paths. Image-path estimates exclude source delay and do not prove actual reflection or its amplitude. Deep weak windows must be compared separately; global norm dominated by direct coupling."
+}

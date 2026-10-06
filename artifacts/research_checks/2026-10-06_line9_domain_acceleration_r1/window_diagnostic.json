@@ -1,0 +1,28 @@
+{
+  "status": "SAME_COMPLEX_SPECTRUM_TWO_WINDOWS",
+  "calls_solver": false,
+  "verified_arrays_sha256": "39d6fee105814e99cefced1184043049bb097721396d55445bee9b37b5236aee",
+  "windows": [
+    {
+      "window_ns": [
+        150,
+        600
+      ],
+      "rectangular_signed_peak": 92.4468414306304,
+      "Hann_signed_peak": 10.556419366751046,
+      "rectangular_over_Hann_peak": 8.757405159727261,
+      "peak_ratio_db": 18.847508854524506
+    },
+    {
+      "window_ns": [
+        600,
+        1200
+      ],
+      "rectangular_signed_peak": 23.394192044774645,
+      "Hann_signed_peak": 0.09737469589982822,
+      "rectangular_over_Hann_peak": 240.24919234500956,
+      "peak_ratio_db": 47.613238727170014
+    }
+  ],
+  "scope": "Windows are controlled processing changes on identical raw data and501 complex tones. Ratios quantify displayed peak response, not SNR, target preservation or PML attribution. Hann also changes resolution and spectrum weighting; no claim of matching unknown instrument window."
+}

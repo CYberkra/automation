@@ -1,0 +1,48 @@
+{
+  "status": "PASS_PROCESSING_IDENTITIES_NOT_PHYSICAL_ACCEPTANCE",
+  "stage": "snapshot",
+  "calls_solver": false,
+  "contract_sha256": "7624f3a4f2f3dc76a32ec7112a8c3f167cac47cecf681c40f3686c43ce461ff3",
+  "completed_verification_sha256": "a5ea25351dde2fe6be6283070e742966da7fee72d16d5306ca45076a7f983082",
+  "task_sha256": "fbab7d0ce6cf7f6375640e9f5ffb0195c548043d58b95f54d0c28c9599ed24f3",
+  "script_sha256": "8c1fc27cab5f89a92dbddb24fa98dfd42e4418d8cff6828a67af6da886d8a412",
+  "official_processing_sha256": "adad556f09140956f0ee19d3038430e06a9ae8be6a826dcad723096d99624a3b",
+  "trace_count": 1,
+  "frequency_count": 501,
+  "source_moment_normalisation": true,
+  "windows": [
+    "rectangular",
+    "hann"
+  ],
+  "gain": false,
+  "background_removal": false,
+  "extra_time_shift_s": 0,
+  "tail_taper_fraction_primary": 0,
+  "independent_inverse_relative_L2": {
+    "rectangular": 7.242082520971701e-14,
+    "hann": 2.8307103942987406e-14
+  },
+  "records": [
+    {
+      "id": "full2d_pilot_0",
+      "s": 0,
+      "x": 220,
+      "raw": "E:\\line9_rog_snapshot_accounted_20261006\\artifacts\\local_checks\\line9_large_snapshot_rog_r3\\cases\\full2d_pilot_0\\profile.h5",
+      "sha": "2b9af6e225437d9516d6bdf8b358bd09a224729cead0e39b3560442ded2e7689",
+      "reused": false,
+      "independent_DFT_relative_L2": 1.5472155915566752e-13,
+      "source_length_m": 0.025,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "receiver_time_offset_s": 0.0,
+      "sampled_peak_current_moment_Am": 0.9998851790028754,
+      "source_min_over_max_spectrum": 0.10446806642546505,
+      "last20ns_peak_over_record_peak": 8.065552984833187e-07,
+      "last20ns_RMS_over_record_peak": 4.5878366214102885e-07,
+      "last_sample_over_record_peak": 6.118674310296962e-07,
+      "last20ns_taper_relative_spectral_change": 6.720287779216304e-07
+    }
+  ],
+  "NPZ_sha256": "39d6fee105814e99cefced1184043049bb097721396d55445bee9b37b5236aee",
+  "PNG_sha256": "47228abbe3f446ad9782a661c0d56efbe57064abc03ec503f35471f8b7b0f18a",
+  "limits": "Native and transform consistency only. Tail diagnostics do not prove unrecorded late paths absent.2m spacing is coarse morphology, no spatial-Nyquist/mesh/PML acceptance."
+}

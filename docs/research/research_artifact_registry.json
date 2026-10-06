@@ -3601,12 +3601,21 @@
   "notes": "15m midpoint AGL;2D along-track surrogate vs3D cross-track1.3m; geometry/material/coordinate checks only. Target-machine-specific capacity/runtime/execution contract required."
  },
  "line9_domain_acceleration_and_snapshot_2026_10_06":{
-  "report": "docs/research/2026-10-06_line9_domain_acceleration_and_snapshot.md",
+  "report": "docs/research/2026-10-06_line9_full_snapshot_and_crop_findings.md",
   "results": "artifacts/research_checks/2026-10-06_line9_domain_acceleration_r1",
-  "status": "EXACT_CROPS_AND_SNAPSHOT_PREPARED_NOT_SIMULATED_OLD_BATCH_INTERRUPTED",
-  "calls_solver": false,
+  "status": "COMPLETED_FULL_DOMAIN_SNAPSHOT_AND_X220_CROP_CONTROLS_NO_WHOLE_LINE_EQUIVALENCE",
+  "calls_solver": true,
   "calls_training": false,
-  "notes": "200/160m exact crops retain original grid/physics; quality equivalence untested. User requested one full-domain snapshot. Reuse recorded completed X220 reference only; old attempt was interrupted by shutdown, never retry it."
+  "notes": "200m native first600ns agrees at X220;160m weak300–600ns changes;both late600–1200ns change. Do not replace400m baseline/shorten1200ns/launch99. Crop also removes outer geological scattering, not isolated PML test. Rectangular versus Hann changes late ringing; instrument export window unknown. r1 CLI andr2 capacity failures preserved; lazy memory accounting correction only, native field kernels unchanged.",
+  "preparation_report": "docs/research/2026-10-06_line9_domain_acceleration_and_snapshot.md",
+  "snapshot_results": "artifacts/research_checks/2026-10-06_line9_large_snapshot_rog_r3",
+  "crop_results": "artifacts/research_checks/2026-10-06_line9_x220_crop_controls_rog_r1",
+  "completed_native_new_runs": 3,
+  "reused_native_reference_traces": 1,
+  "native_snapshot_count": 599,
+  "GIF_frames": 201,
+  "passive_receiver_bit_identical": true,
+  "full_line_domain_equivalence_released": false
  },
  "line9_rog_pilot_launch_2026_10_06":{
   "report": "docs/research/2026-10-06_line9_2d_first_run_task.md",

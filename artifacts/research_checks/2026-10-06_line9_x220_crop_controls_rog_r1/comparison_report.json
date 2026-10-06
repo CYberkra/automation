@@ -1,0 +1,203 @@
+{
+  "status": "COMPLETED_X220_CONTROL_NOT_WHOLE_LINE_ACCEPTANCE",
+  "calls_solver": false,
+  "contract_sha256": "dc31b2fd1f6c3f08dcc62a7a09ee01c64bbaaa3aa250a7f4e547f0d40261458c",
+  "records": [
+    {
+      "independent_DFT_relative_L2": 1.5472155915566752e-13,
+      "source_length_m": 0.025,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "receiver_time_offset_s": 0.0,
+      "sampled_peak_current_moment_Am": 0.9998851790028754,
+      "source_min_over_max_spectrum": 0.10446806642546505,
+      "last20ns_peak_over_record_peak": 8.065552984833187e-07,
+      "last20ns_RMS_over_record_peak": 4.5878366214102885e-07,
+      "last_sample_over_record_peak": 6.118674310296962e-07,
+      "last20ns_taper_relative_spectral_change": 6.720287779216304e-07
+    },
+    {
+      "independent_DFT_relative_L2": 1.5456347370786147e-13,
+      "source_length_m": 0.025,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "receiver_time_offset_s": 0.0,
+      "sampled_peak_current_moment_Am": 0.9998851790028754,
+      "source_min_over_max_spectrum": 0.10446806642546505,
+      "last20ns_peak_over_record_peak": 3.243071801118626e-09,
+      "last20ns_RMS_over_record_peak": 2.137254495808979e-09,
+      "last_sample_over_record_peak": 3.076276244276828e-09,
+      "last20ns_taper_relative_spectral_change": 2.2971050277014746e-10
+    },
+    {
+      "independent_DFT_relative_L2": 1.5477884695132287e-13,
+      "source_length_m": 0.025,
+      "source_time_offset_s": 2.9483179209371056e-11,
+      "receiver_time_offset_s": 0.0,
+      "sampled_peak_current_moment_Am": 0.9998851790028754,
+      "source_min_over_max_spectrum": 0.10446806642546505,
+      "last20ns_peak_over_record_peak": 2.44647094511226e-09,
+      "last20ns_RMS_over_record_peak": 1.3192917172993359e-09,
+      "last_sample_over_record_peak": 7.148536275665324e-10,
+      "last20ns_taper_relative_spectral_change": 1.4709119880834978e-10
+    }
+  ],
+  "windows": [
+    {
+      "window_ns": [
+        0,
+        100
+      ],
+      "comparisons": [
+        {
+          "width_m": 200,
+          "native": {
+            "relative_L2": 0.0,
+            "residual_peak": 0.0,
+            "reference_peak": 3738.2080563168065,
+            "residual_peak_over_local_reference_peak": 0.0
+          },
+          "Hann_SFCW": {
+            "relative_L2": 5.605826307832049e-12,
+            "residual_peak": 1.9927426819776883e-08,
+            "reference_peak": 7028.3072791596105,
+            "residual_peak_over_local_reference_peak": 2.8353095600794006e-12
+          }
+        },
+        {
+          "width_m": 160,
+          "native": {
+            "relative_L2": 0.0,
+            "residual_peak": 0.0,
+            "reference_peak": 3738.2080563168065,
+            "residual_peak_over_local_reference_peak": 0.0
+          },
+          "Hann_SFCW": {
+            "relative_L2": 3.294590136590327e-11,
+            "residual_peak": 1.1931547305721324e-07,
+            "reference_peak": 7028.3072791596105,
+            "residual_peak_over_local_reference_peak": 1.6976416698656357e-11
+          }
+        }
+      ]
+    },
+    {
+      "window_ns": [
+        100,
+        300
+      ],
+      "comparisons": [
+        {
+          "width_m": 200,
+          "native": {
+            "relative_L2": 0.0,
+            "residual_peak": 0.0,
+            "reference_peak": 425.30436070740694,
+            "residual_peak_over_local_reference_peak": 0.0
+          },
+          "Hann_SFCW": {
+            "relative_L2": 2.563253451090555e-10,
+            "residual_peak": 7.072003436331409e-08,
+            "reference_peak": 672.4708902984693,
+            "residual_peak_over_local_reference_peak": 1.0516445452668699e-10
+          }
+        },
+        {
+          "width_m": 160,
+          "native": {
+            "relative_L2": 0.0,
+            "residual_peak": 0.0,
+            "reference_peak": 425.30436070740694,
+            "residual_peak_over_local_reference_peak": 0.0
+          },
+          "Hann_SFCW": {
+            "relative_L2": 2.1827855308793912e-09,
+            "residual_peak": 6.977466244823156e-07,
+            "reference_peak": 672.4708902984693,
+            "residual_peak_over_local_reference_peak": 1.0375863618016654e-09
+          }
+        }
+      ]
+    },
+    {
+      "window_ns": [
+        300,
+        600
+      ],
+      "comparisons": [
+        {
+          "width_m": 200,
+          "native": {
+            "relative_L2": 0.0,
+            "residual_peak": 0.0,
+            "reference_peak": 0.6064236987691802,
+            "residual_peak_over_local_reference_peak": 0.0
+          },
+          "Hann_SFCW": {
+            "relative_L2": 6.53866324220396e-06,
+            "residual_peak": 7.1634082579527525e-06,
+            "reference_peak": 1.0871417805125736,
+            "residual_peak_over_local_reference_peak": 6.589212544637275e-06
+          }
+        },
+        {
+          "width_m": 160,
+          "native": {
+            "relative_L2": 0.08776151860207287,
+            "residual_peak": 0.0462581546819516,
+            "reference_peak": 0.6064236987691802,
+            "residual_peak_over_local_reference_peak": 0.07628025549766418
+          },
+          "Hann_SFCW": {
+            "relative_L2": 0.09333864601650355,
+            "residual_peak": 0.09871816884284643,
+            "reference_peak": 1.0871417805125736,
+            "residual_peak_over_local_reference_peak": 0.0908052386656523
+          }
+        }
+      ]
+    },
+    {
+      "window_ns": [
+        600,
+        1200
+      ],
+      "comparisons": [
+        {
+          "width_m": 200,
+          "native": {
+            "relative_L2": 0.5479260182318858,
+            "residual_peak": 0.019334876760051096,
+            "reference_peak": 0.05406960994334481,
+            "residual_peak_over_local_reference_peak": 0.3575923107326011
+          },
+          "Hann_SFCW": {
+            "relative_L2": 0.6782458978593019,
+            "residual_peak": 0.041739462784925074,
+            "reference_peak": 0.09737469589982822,
+            "residual_peak_over_local_reference_peak": 0.42864793978780175
+          }
+        },
+        {
+          "width_m": 160,
+          "native": {
+            "relative_L2": 0.5217247607712711,
+            "residual_peak": 0.01897209213144746,
+            "reference_peak": 0.05406960994334481,
+            "residual_peak_over_local_reference_peak": 0.3508827260142396
+          },
+          "Hann_SFCW": {
+            "relative_L2": 0.5683859117585497,
+            "residual_peak": 0.04013045219396637,
+            "reference_peak": 0.09737469589982822,
+            "residual_peak_over_local_reference_peak": 0.4121240310239281
+          }
+        }
+      ]
+    }
+  ],
+  "complex501_relative_L2": [
+    8.998407809609332e-06,
+    1.655417530798473e-05
+  ],
+  "arrays_sha256": "ae895129b86c00c973a4559632b260a57ad69317ee82daa94fdb0091b7ef044f",
+  "limitations": "One X220 station only. Threshold not declared; late/weak windows separately reported. No automatic 99/391-trace promotion. Shared scales and signed complex phase retained."
+}
