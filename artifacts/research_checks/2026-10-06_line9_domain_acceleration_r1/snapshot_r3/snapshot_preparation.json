@@ -1,0 +1,32 @@
+{
+  "status": "PREPARED_NOT_RUN",
+  "calls_solver": false,
+  "input_sha256": "7a6af37e59413cd31762a76d71bc84ff98387732392a80910e1e625420e48a9c",
+  "source_input_sha256": "ee90bcf8517358c5bb8e2e3f9c18d410c995a04e182544fa04036aa3aab78ff7",
+  "package_manifest_sha256": "ef1b49955ff74df341c744b05bbda698af72fe4a2a3f02ef59a6445fa54e9cde",
+  "task_sha256": "fbab7d0ce6cf7f6375640e9f5ffb0195c548043d58b95f54d0c28c9599ed24f3",
+  "snapshot_shape": [
+    2000,
+    375,
+    1
+  ],
+  "snapshot_spacing_m": [
+    0.2,
+    0.2,
+    0.025
+  ],
+  "dt_s": 5.89663584187421e-11,
+  "native_iterations": 20352,
+  "snapshot_period_s": 2.0048561862372313e-09,
+  "six_field_history_bytes": 21564000000,
+  "six_field_GPU_single_buffer_bytes": 36000000,
+  "minimum_available_RAM_bytes": 43002155386,
+  "minimum_free_VRAM_bytes": 12569213562,
+  "minimum_free_disk_bytes": 28019825472,
+  "native_command_parser_count": 610,
+  "passive_receiver_equivalence": "NOT_TESTED",
+  "approval_basis": "User: 大域的等会再跑一个带波场快照的版本",
+  "scope": "One full400x75m replay atX220; native2.5cm grid unchanged; snapshot0.2m/~2ns is visualization sampling, not solver coarsening or a full-source-spectrum phase certificate.",
+  "snapshot_count": 599,
+  "script_sha256": "74314807d29af69c57cb3674a9aa3d7a4917b65bb5cb51385618d8f72588bbb6"
+}

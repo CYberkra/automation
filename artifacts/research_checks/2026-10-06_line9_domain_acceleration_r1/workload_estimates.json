@@ -1,0 +1,32 @@
+{
+  "status": "PREPARED_NOT_RUN_NOT_QUALITY_ACCEPTED",
+  "reference_elapsed_s": 631.1710000000021,
+  "reference_elapsed_source_sha256": "1f6ce8e2187104bd9b4bd1a917a9b1f4481a57ec2453c4da0a594fb1e66fb980",
+  "reference_cells": 48000000,
+  "candidates": [
+    {
+      "width_m": 200,
+      "cells": 24000000,
+      "work_fraction": 0.5,
+      "ideal_work_speedup": 2.0,
+      "extrapolated_seconds_per_trace": 315.58550000000105,
+      "extrapolated_99_trace_hours": 8.678601250000028
+    },
+    {
+      "width_m": 160,
+      "cells": 19200000,
+      "work_fraction": 0.4,
+      "ideal_work_speedup": 2.5,
+      "extrapolated_seconds_per_trace": 252.46840000000083,
+      "extrapolated_99_trace_hours": 6.942881000000023
+    }
+  ],
+  "grid_changed": false,
+  "material_changed": false,
+  "time_window_changed": false,
+  "precision_changed": false,
+  "SFCW_tone_count": 501,
+  "quality_acceptance": "REQUIRES_COMPLEX_RESPONSE_AND_WEAK_WINDOW_BOUNDARY_COMPARISON",
+  "snapshot_user_authorized": true,
+  "remote_condition": "User powered off then rebooted; latest new SSH timed out. Prior attempt preserved; new execution must recheck completed groups and freeze anew."
+}

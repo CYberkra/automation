@@ -3600,6 +3600,14 @@
   "role": "Line9 site adaptation; not independent blind validation",
   "notes": "15m midpoint AGL;2D along-track surrogate vs3D cross-track1.3m; geometry/material/coordinate checks only. Target-machine-specific capacity/runtime/execution contract required."
  },
+ "line9_domain_acceleration_and_snapshot_2026_10_06":{
+  "report": "docs/research/2026-10-06_line9_domain_acceleration_and_snapshot.md",
+  "results": "artifacts/research_checks/2026-10-06_line9_domain_acceleration_r1",
+  "status": "EXACT_CROPS_AND_SNAPSHOT_PREPARED_NOT_SIMULATED_OLD_BATCH_INTERRUPTED",
+  "calls_solver": false,
+  "calls_training": false,
+  "notes": "200/160m exact crops retain original grid/physics; quality equivalence untested. User requested one full-domain snapshot. Reuse recorded completed X220 reference only; old attempt was interrupted by shutdown, never retry it."
+ },
  "line9_rog_pilot_launch_2026_10_06":{
   "report": "docs/research/2026-10-06_line9_2d_first_run_task.md",
   "results": "artifacts/research_checks/2026-10-06_line9_2d_first_run_planning_r1/rog_launch_status.json",

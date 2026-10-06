@@ -58,7 +58,11 @@ def main(study,out):
     if out.exists(): raise ValueError('Fresh analysis output required')
     if digest(Path(sf.__file__))!=PROCESSING_SHA: raise ValueError('Reviewed V4 SFCW implementation required')
     path=study/'execution_contract.json';c=json.loads(path.read_text('utf-8'))
-    current=runner.audit(path,True)
+    if c['stage']=='snapshot':
+        from line9_large_domain_snapshot import audit as snapshot_audit
+        current=snapshot_audit(path,True)
+    else:
+        current=runner.audit(path,True)
     stored=json.loads((study/'completed_verification.json').read_text('utf-8'))
     if current!=stored: raise ValueError('Completed native verification changed')
     rows=[]
@@ -116,10 +120,10 @@ def main(study,out):
         visible=t<=1200;scale=float(np.max(abs(v[visible]))) if i==0 else float(sfcw_scale)
         tv=t[visible];vv=v[visible]
         time_edges=np.r_[tv[0]-(tv[1]-tv[0])/2,(tv[:-1]+tv[1:])/2,tv[-1]+(tv[-1]-tv[-2])/2]
-        if c['stage']=='pilots':
+        if c['stage']!='preview':
             for j,s in enumerate(positions):
                 axes[i].pcolormesh([s-.25,s+.25],time_edges,vv[:,j:j+1],cmap='gray',vmin=-scale,vmax=scale,rasterized=True)
-            label+='；5站，白色间隔未计算'
+            label+=f'；{len(positions)}站，白色间隔未计算'
         else:
             edges=np.r_[0,(positions[:-1]+positions[1:])/2,195]
             axes[i].pcolormesh(edges,time_edges,vv,cmap='gray',vmin=-scale,vmax=scale,rasterized=True)
