@@ -3532,8 +3532,19 @@
   }
  ],
  "schema": "research-artifact-registry/1",
+ "mudstone_material_design_2026_10_06": {
+  "report": "docs/research/2026-10-06_mudstone_electrical_design.md",
+  "sources": "docs/research/2026-10-06_mudstone_electrical_sources.json",
+  "material_design": "configs/research/mudstone_design_v0_1.json",
+  "acquisition_selection": "configs/research/line9_acquisition_design_v0_1.json",
+  "analytic_evidence": "artifacts/research_checks/2026-10-06_mudstone_design_r1/summary.json",
+  "status": "FIXED_RESEARCH_INITIAL_MATERIAL_NOT_SITE_CALIBRATION",
+  "calls_solver": false,
+  "calls_training": false,
+  "site_role": "Line9 site adaptation, not independent blind validation"
+ },
  "solver_execution_gate": "configs/research/gprmax_v4_execution_gate.json",
- "updated_date": "2026-10-04",
+ "updated_date": "2026-10-06",
  "current_handoff": "START_HERE.md - HS4 endpoint8 complete and old47 preserved. Cross-PC20 input task prepared with portable freeze/run/audit/analysis, CPU10 and completed12 archive PASS.1cm/3D not run due resource floors; exact waveform convergence and equipment baseline unresolved. G4 unchanged;06:00 CLI continuation failed historically.",
  "t3_operator_effects_rpca_addendum": "docs/research/2026-09-29_rpca_effects_addendum.md",
  "operator_catalogue_v0_2": "configs/research/operator_catalogue_v0.2.json",

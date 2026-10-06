@@ -1,0 +1,20 @@
+{
+  "status": "PASS_INDEPENDENT_SCALAR_AUDIT",
+  "calls_solver": false,
+  "calls_training": false,
+  "points": 24,
+  "epsilon0_F_m": 8.8541878188e-12,
+  "max_absolute_scalar_difference": 7.105427357601002e-15,
+  "relative_tolerance": 1e-13,
+  "absolute_tolerance": 1e-13,
+  "checks": [
+    "source_and_script_hash_identity",
+    "24_scalar_complex_spectra_absorption_effective_conductivity",
+    "independent_center_span_derivation",
+    "material_command_numeric_roundtrip",
+    "195m_acquisition_direction_and_unset_station_grid",
+    "existing_geometry_hash_unchanged",
+    "refuse_overwrite_preserves_evidence"
+  ],
+  "summary_sha256": "7d4a9a32dfb5518ff5a7cce95b0bd034d2db65ea0f36821663d7102d5bfa7f4e"
+}

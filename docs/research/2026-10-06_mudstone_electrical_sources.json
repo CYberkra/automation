@@ -1,0 +1,85 @@
+{
+  "schema": "material-source-reading-ledger/1",
+  "date": "2026-10-06",
+  "public_pdf_cache_ignored": "artifacts/research_sources/2026-10-06_mudstone_electrical_r1/",
+  "scope": "Mudstone and explicitly labelled clay-rock/shale analogues for20-170MHz; primary sources; no site spectrum obtained",
+  "search_route": "agent-reach/Exa via mcporter, followed by publisher and public repository reading; search snippets alone not used as numeric parameter tables",
+  "sources": [
+    {
+      "id": "romhild2019",
+      "title": "Anisotropic complex electrical conductivity of black shale and mudstone from the Moffat Shale Group (Ireland)",
+      "doi": "10.1002/nsg.12073",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/nsg.12073",
+      "reading_scope": "Online relevant geological setting, electrical definitions, Materials and methods, Tables1/2, SIP measurements and mudstone discussion; not whole-paper reproduction",
+      "frequency_measurement_hz": [0.0001, 100000],
+      "frequency_decomposition_mudstone_upper_hz": 1000,
+      "sample_state": "Intact oriented ordinary mudstone plugs vacuum-saturated48h with degassed NaCl solution, equilibrated at least24h; black shale and crushed samples excluded from default conductivity range",
+      "intact_mudstone_DC_S_m": {"LA-36-s":0.000815,"LA-39-h":0.00173,"LA-39-v":0.000490,"OL-09-h":0.00883,"OL-09-v":0.00171,"OL-18-h":0.00834,"OL-18-v":0.00194},
+      "adopted_part": "DC conductivity order of magnitude and anisotropy warning only;3mS/m is our choice within these analogues",
+      "not_adopted": "The SIP relaxation times are not MHz dielectric Debye poles; no20-170MHz permittivity was inferred; NaCl saturation is not a site state"
+    },
+    {
+      "id": "wagner2013",
+      "title": "Dielectric relaxation behavior of Callovo-Oxfordian clay rock: A hydraulic-mechanical-electromagnetic coupling approach",
+      "doi": "10.1002/jgrb.50343",
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/jgrb.50343",
+      "pdf_url": "https://d-nb.info/113155387X/34",
+      "pdf_sha256": "149888ddd6e38c669c1b27455d6dd4f213353b215d4b3923c7e695243ba619e1",
+      "reading_scope": "Abstract and relevant sections3/4: specimen conditioning, coaxial inversion, Eq33, Fig4, Table4 and relaxation interpretation; PDF printed4733-4738 inspected in relevant portions, Eq33/Table4 visually checked; not whole-paper reproduction",
+      "frequency_measurement_hz": [1000000, 10000000000],
+      "sample": "French Bure Callovo-Oxfordian clay rock, varied saturation0.16 to almost1; intact and disturbed samples; not site red mudstone",
+      "secondary_relaxation_tau_ns": [7.6,20.8],
+      "model": "Generalized fractional relaxation: delta/((j*omega*tau)^a+(j*omega*tau)^b), plus apparent DC term",
+      "table4_intermediate_state": {"theta_m3_m3":0.066,"porosity":0.144,"saturation":0.458,"epsilon_infinity":1.73,"secondary_delta":20.1,"secondary_tau_ns":7.6,"one_minus_a_secondary":0.234},
+      "adopted_part": "Supports explicitly representing clay-rock dispersion/loss and using a nanosecond-scale research pole;8ns is our simplification",
+      "not_adopted": "No GDR spectrum reconstruction or single-Debye fit claimed. Source amplitudes/exponents and apparent DC term are not copied into gprMax Debye. Centre12/span3 are not source measurements. Table4 epsilon_S is the free-water-term static quantity, not20MHz effective permittivity."
+    },
+    {
+      "id": "fam1998",
+      "title": "High-frequency complex permittivity of shales (0.02-1.30GHz)",
+      "doi": "10.1139/t98-014",
+      "url": "https://cdnsciencepub.com/doi/10.1139/t98-014",
+      "reading_scope": "Primary publisher abstract/metadata exposed in search; publisher fulltext inaccessible during this review; no numeric spectrum or parameter table obtained",
+      "sample": "Queenston, Mancos and Pierre shales; preserved specimens, bedding direction studied",
+      "frequency_measurement_hz": [20000000,1300000000],
+      "adopted_part": "Evidence that shale measurements can cover the complete project band and depend on specimen and bedding; no values or Debye parameters adopted",
+      "metadata_correction": "Secondary ResearchGate DOI/date were inconsistent; use publisher DOI t98-014 and1998 journal year"
+    },
+    {
+      "id": "bassett1976",
+      "title": "Study to determine dielectric properties of sandstone, shale, coal, and slate",
+      "report": "NASA-CR-149991, September1976",
+      "url": "https://ntrs.nasa.gov/citations/19760025659",
+      "pdf_url": "https://ntrs.nasa.gov/api/citations/19760025659/downloads/19760025659.pdf",
+      "pdf_sha256": "dd78279a233379f3043f5a2517e056769591ab8e50b57819815996598b854d7d",
+      "reading_scope": "Report scope and measurement preparation, TableI shale rows visually checked; no full experiment reproduction",
+      "sample_state": "As received; moisture not quantified for shale. Wet/dry conditioning in later tables concerns coal, not shale",
+      "frequency_samples_hz": [1000000,10000000,100000000,1000000000,2000000000,10000000000],
+      "shale_100MHz_epsilon_real": [4.03,4.83,3.48],
+      "shale_100MHz_tan_delta": [0.16,0.17,0.13],
+      "adopted_part": "Counterexample to treating lithology as a unique epsilon or requiring all mudstone/shale to exceed sandstone; measurements not used to certify our centre12",
+      "not_adopted": "Conductivity derived from tan_delta would be effective total loss, not independently measured DC conductivity"
+    },
+    {
+      "id": "sweeney2007",
+      "title": "A Study of the Dielectric Properties of Dry and Saturated Green River Oil Shale",
+      "url": "https://www.osti.gov/servlets/purl/919595",
+      "pdf_sha256": "ee503114aeeb4715b5b16b817501724dd97b2d89671abbfc274461ef150b1df5",
+      "reading_scope": "Report introduction, material/state description and prior-work Table1 excerpts; not all34pages read",
+      "role": "Excluded from default: organic oil shale differs from the project ordinary mudstone; prior-work Table1 is not a new measurement table"
+    },
+    {
+      "id": "iodp338_c0002",
+      "url": "https://publications.iodp.org/proceedings/338/103/103_8.htm",
+      "reading_scope": "Methods and electrical-properties paragraphs on cuttings preparation; no numeric fit adopted",
+      "role": "Excluded from default: seawater-washed marine cuttings/pastes differ from intact terrestrial mudstone; dielectric-derived resistivity is not automatically DC"
+    },
+    {
+      "id": "geosciences2026_16_99",
+      "url": "https://www.mdpi.com/2076-3263/16/3/99",
+      "reading_scope": "Simulation material table excerpt only",
+      "role": "Excluded: mudstone500S/m in rendered table has unresolved unit/value issue; no silent rescaling or adoption as measured conductivity"
+    }
+  ],
+  "site_limit": "No measured spectrum for this site's mudstone obtained. Exact water state, mineralogy, salinity, anisotropy and weathering-to-electricity mapping remain unknown. Literature analogues do not calibrate Line9."
+}

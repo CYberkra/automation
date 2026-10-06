@@ -20,6 +20,16 @@
     "tx_rx_baseline_orientation": "cross-track: left/right relative to flight direction",
     "baseline_orientation_original_wording": "对于飞行方向左右排列"
   },
+  "line9_profile_acquisition_selection": {
+    "contract": "configs/research/line9_acquisition_design_v0_1.json",
+    "profile_x_range_m": [25, 220],
+    "start_profile_x_m": 220,
+    "end_profile_x_m": 25,
+    "length_m": 195,
+    "selection_user_confirmed": true,
+    "stations_and_height_for_this_batch_fixed": false,
+    "scope": "Site-adaptation profile selection, not verified field CSV direction or solver execution authorization"
+  },
   "interpretation_pending_confirmation": {
     "target_depth_range_m": [
       0,

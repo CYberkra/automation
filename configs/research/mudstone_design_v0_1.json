@@ -1,0 +1,53 @@
+{
+  "schema": "research-material-design/1",
+  "id": "mudstone_center12_span3_tau8ns_sigma3mS_v0_1",
+  "date": "2026-10-06",
+  "status": "FIXED_RESEARCH_INITIAL_MATERIAL_NOT_SITE_MEASUREMENT_OR_FIT",
+  "authorization_original": "现在我们敲定泥岩电性吧，调研一下",
+  "report": "docs/research/2026-10-06_mudstone_electrical_design.md",
+  "sources": "docs/research/2026-10-06_mudstone_electrical_sources.json",
+  "companion_material_design": "configs/research/material_design_cover_rock_v0_1.json",
+  "acquisition_design": "configs/research/line9_acquisition_design_v0_1.json",
+  "calls_solver": false,
+  "calls_training": false,
+  "site_materials_fitted": false,
+  "execution_contract": null,
+  "effective_permittivity_convention": "exp(+j*omega*t); epsilon_eff=epsilon_infinity+sum(delta/(1+j*omega*tau))-j*sigma_DC/(omega*epsilon0)",
+  "band_hz": {"min": 20000000, "max": 170000000, "center": 95000000, "step": 300000, "count": 501},
+  "materials": {
+    "mudstone": {
+      "geological_role": "Mudstone lithology in the profile; strong/medium weathering are not assigned different electrical properties without evidence",
+      "epsilon_infinity": 11.739510249300162,
+      "sigma_DC_S_m": 0.003,
+      "mu_r": 1.0,
+      "sigma_magnetic": 0.0,
+      "debye": [{"delta_epsilon": 6.200368247790598, "tau_s": 8e-9}],
+      "target_center_epsilon_real": 12.0,
+      "target_band_endpoint_difference": 3.0,
+      "anisotropy_model": "isotropic research simplification, not evidence of isotropic mudstone",
+      "moisture_vol_fraction": null,
+      "saturation": null,
+      "pore_water_conductivity_S_m": null,
+      "clay_mineralogy": null,
+      "provenance": {
+        "epsilon_center_and_span": "Explicit design choices for a moderately dispersive comparison, not values fitted to the literature or Line9 radar",
+        "tau": "8ns is a simplified research timescale within the 7.6-20.8ns secondary-relaxation times in Wagner2013 clay rock; source is fractional GDR, not single Debye",
+        "sigma_DC": "3mS/m is a research choice within 0.49-8.83mS/m intact ordinary mudstone results in Romhild2019 Table2; NaCl-saturated analogues, not a site calibration"
+      }
+    }
+  },
+  "diagnostic_variants_not_solver_batches": {
+    "mudstone_sigma1mS": {"base": "mudstone", "sigma_DC_S_m": 0.001, "purpose": "Change DC loss only; not a certified dry state"},
+    "mudstone_sigma9mS": {"base": "mudstone", "sigma_DC_S_m": 0.009, "purpose": "Change DC loss only; not a certified wet state or full uncertainty bound"},
+    "mudstone_nondispersive": {"epsilon_infinity": 12.0, "sigma_DC_S_m": 0.003, "mu_r": 1.0, "sigma_magnetic": 0.0, "debye": [], "purpose": "Matched centre real permittivity but different polarization loss; constitutive diagnostic, not physical clean truth"}
+  },
+  "limitations": [
+    "No retrieved complex spectrum directly characterizes the site mudstone; no field-data fitting was performed",
+    "Centre12/span3 are not measured mudstone bounds; the centre ordering cover/mudstone/sandstone is an assumption",
+    "The conductivity variants do not cover uncertain permittivity, dispersion shape, fractures, weathering or bedding anisotropy",
+    "The existing low-loss cover recipe is still uncalibrated; assigning this mudstone does not certify the complete geological model",
+    "Positive single-Debye parameters support passive continuum dispersion, not FDTD convergence or radar detectability",
+    "Do not add effective MHz conductivity inferred from total epsilon loss on top of this Debye polarization loss",
+    "Existing H5 geometry/material packages remain historical; no material file is overwritten by this design"
+  ]
+}

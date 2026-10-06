@@ -1,0 +1,349 @@
+{
+  "status": "PASS_ANALYTIC_RESEARCH_DESIGN_NOT_SOLVER_OR_SITE_VALIDATION",
+  "calls_solver": false,
+  "calls_training": false,
+  "gprMax_version": "4.0.0",
+  "input_sha256": {
+    "configs\\research\\mudstone_design_v0_1.json": "956b76adbd1fe242c7d84b9fcc81394d986bac4c62f981753156b26df1b6bea0",
+    "configs\\research\\line9_acquisition_design_v0_1.json": "fb7ce6aa9dbf565b362218aa58fde9be36a6f5452c9b027200bf440ffa4d8641",
+    "configs\\research\\material_design_cover_rock_v0_1.json": "ac2dcd0f08221f8128460ccd76197f30945da796baaf302f0832c2f75cd5f770"
+  },
+  "script_sha256": "7fbaca5617de7cfee061fe8e07dd7948933243467ca6a12b5dd8b444a613daa4",
+  "shared_epsilon_script_sha256": "888a7a6a5718f49ac809e6aa6833c521908b78615ba16488aab3086d26b2774d",
+  "local_materials_py_sha256": "75f22bc9c9b7187723223ade373914a53959a67e6a0041890ea09640f6fa0a7e",
+  "checks": {
+    "cover": {
+      "native_relative_L2": 3.077640546473239e-18,
+      "independent_alpha_max_absolute_error": 4.163336342344337e-17
+    },
+    "rock": {
+      "native_relative_L2": 1.5683819901294145e-17,
+      "independent_alpha_max_absolute_error": 1.6653345369377348e-16
+    },
+    "mudstone": {
+      "native_relative_L2": 1.895860782770752e-17,
+      "independent_alpha_max_absolute_error": 2.220446049250313e-16
+    },
+    "mudstone_sigma1mS": {
+      "native_relative_L2": 1.6078030176830864e-17,
+      "independent_alpha_max_absolute_error": 1.6653345369377348e-16
+    },
+    "mudstone_sigma9mS": {
+      "native_relative_L2": 3.144093753465859e-17,
+      "independent_alpha_max_absolute_error": 3.3306690738754696e-16
+    },
+    "mudstone_nondispersive": {
+      "native_relative_L2": 6.0004471680769596e-18,
+      "independent_alpha_max_absolute_error": 8.326672684688674e-17
+    }
+  },
+  "table": {
+    "cover": [
+      {
+        "frequency_MHz": 20,
+        "epsilon_real": 11.301508888433354,
+        "epsilon_loss": 1.1433913051649802,
+        "sigma_effective_S_m": 0.0012721943999525248,
+        "alpha_Np_m": 0.0711921802602386,
+        "amplitude_1_e_m": 14.046486515015582,
+        "absorption_roundtrip_2_8m_layer_dB": -3.4628575566685216,
+        "absorption_roundtrip_1_7m_layer_dB": -2.1024492308344596
+      },
+      {
+        "frequency_MHz": 40,
+        "epsilon_real": 11.137615804457687,
+        "epsilon_loss": 0.6726930446453957,
+        "sigma_effective_S_m": 0.0014969439078625897,
+        "alpha_Np_m": 0.08445244289048337,
+        "amplitude_1_e_m": 11.840983703654192,
+        "absorption_roundtrip_2_8m_layer_dB": -4.10784975222568,
+        "absorption_roundtrip_1_7m_layer_dB": -2.4940516352798774
+      },
+      {
+        "frequency_MHz": 95,
+        "epsilon_real": 11.031538820273383,
+        "epsilon_loss": 0.310762893600837,
+        "sigma_effective_S_m": 0.0016424091673945028,
+        "alpha_Np_m": 0.0931366933911792,
+        "amplitude_1_e_m": 10.736906836491878,
+        "absorption_roundtrip_2_8m_layer_dB": -4.530260224280468,
+        "absorption_roundtrip_1_7m_layer_dB": -2.7505151361702844
+      },
+      {
+        "frequency_MHz": 170,
+        "epsilon_real": 11.010295682409415,
+        "epsilon_loss": 0.17674181951764006,
+        "sigma_effective_S_m": 0.001671540261065919,
+        "alpha_Np_m": 0.09488639228229309,
+        "amplitude_1_e_m": 10.538918974018276,
+        "absorption_roundtrip_2_8m_layer_dB": -4.615367296501605,
+        "absorption_roundtrip_1_7m_layer_dB": -2.802187287161688
+      }
+    ],
+    "rock": [
+      {
+        "frequency_MHz": 20,
+        "epsilon_real": 10.390579458153649,
+        "epsilon_loss": 2.1588429158184117,
+        "sigma_effective_S_m": 0.0024020366916163273,
+        "alpha_Np_m": 0.13962202070859342,
+        "amplitude_1_e_m": 7.162194007255564,
+        "absorption_roundtrip_2_8m_layer_dB": -6.79135219234345,
+        "absorption_roundtrip_1_7m_layer_dB": -4.123320973922809
+      },
+      {
+        "frequency_MHz": 40,
+        "epsilon_real": 9.546388257761139,
+        "epsilon_loss": 1.5996454208358901,
+        "sigma_effective_S_m": 0.0035596911347921785,
+        "alpha_Np_m": 0.21626431767369356,
+        "amplitude_1_e_m": 4.62397130861334,
+        "absorption_roundtrip_2_8m_layer_dB": -10.519308777404783,
+        "absorption_roundtrip_1_7m_layer_dB": -6.3867231862814755
+      },
+      {
+        "frequency_MHz": 95,
+        "epsilon_real": 9.0,
+        "epsilon_loss": 0.815305872591747,
+        "sigma_effective_S_m": 0.004308963093564312,
+        "alpha_Np_m": 0.27027629247240575,
+        "amplitude_1_e_m": 3.6999175578897523,
+        "absorption_roundtrip_2_8m_layer_dB": -13.146504269923941,
+        "absorption_roundtrip_1_7m_layer_dB": -7.981806163882393
+      },
+      {
+        "frequency_MHz": 170,
+        "epsilon_real": 8.890579458153649,
+        "epsilon_loss": 0.47147781349709494,
+        "sigma_effective_S_m": 0.004459013433326489,
+        "alpha_Np_m": 0.2815929695958063,
+        "amplitude_1_e_m": 3.5512250232503413,
+        "absorption_roundtrip_2_8m_layer_dB": -13.696958557879388,
+        "absorption_roundtrip_1_7m_layer_dB": -8.3160105529982
+      }
+    ],
+    "mudstone": [
+      {
+        "frequency_MHz": 20,
+        "epsilon_real": 14.823277183363622,
+        "epsilon_loss": 5.796406190391044,
+        "sigma_effective_S_m": 0.006449371673507362,
+        "alpha_Np_m": 0.3098733255960212,
+        "amplitude_1_e_m": 3.227125142432202,
+        "absorption_roundtrip_2_8m_layer_dB": -15.072542844280507,
+        "absorption_roundtrip_1_7m_layer_dB": -9.151186726884593
+      },
+      {
+        "frequency_MHz": 40,
+        "epsilon_real": 12.969110175860052,
+        "epsilon_loss": 3.8203901094520862,
+        "sigma_effective_S_m": 0.008501514539989732,
+        "alpha_Np_m": 0.4400249856829217,
+        "amplitude_1_e_m": 2.2725982217759597,
+        "absorption_roundtrip_2_8m_layer_dB": -21.403247396344828,
+        "absorption_roundtrip_1_7m_layer_dB": -12.994828776352216
+      },
+      {
+        "frequency_MHz": 95,
+        "epsilon_real": 12.0,
+        "epsilon_loss": 1.8115309340966461,
+        "sigma_effective_S_m": 0.009574099979261633,
+        "alpha_Np_m": 0.5191360574112633,
+        "amplitude_1_e_m": 1.926277294215749,
+        "absorption_roundtrip_2_8m_layer_dB": -25.25128761016079,
+        "absorption_roundtrip_1_7m_layer_dB": -15.331138906169052
+      },
+      {
+        "frequency_MHz": 170,
+        "epsilon_real": 11.823277183363624,
+        "epsilon_loss": 1.0330072203957743,
+        "sigma_effective_S_m": 0.009769692105557361,
+        "alpha_Np_m": 0.534686585728381,
+        "amplitude_1_e_m": 1.870254513001747,
+        "absorption_roundtrip_2_8m_layer_dB": -26.007680577706893,
+        "absorption_roundtrip_1_7m_layer_dB": -15.790377493607755
+      }
+    ],
+    "mudstone_sigma1mS": [
+      {
+        "frequency_MHz": 20,
+        "epsilon_real": 14.823277183363622,
+        "epsilon_loss": 3.9988958331568845,
+        "sigma_effective_S_m": 0.004449371673507362,
+        "alpha_Np_m": 0.21576450125246757,
+        "amplitude_1_e_m": 4.634682694304254,
+        "absorption_roundtrip_2_8m_layer_dB": -10.494997215870038,
+        "absorption_roundtrip_1_7m_layer_dB": -6.371962595349666
+      },
+      {
+        "frequency_MHz": 40,
+        "epsilon_real": 12.969110175860052,
+        "epsilon_loss": 2.921634930835006,
+        "sigma_effective_S_m": 0.006501514539989731,
+        "alpha_Np_m": 0.3379527562775922,
+        "amplitude_1_e_m": 2.9589934729770526,
+        "absorption_roundtrip_2_8m_layer_dB": -16.438353925879515,
+        "absorption_roundtrip_1_7m_layer_dB": -9.98042916928399
+      },
+      {
+        "frequency_MHz": 95,
+        "epsilon_real": 12.0,
+        "epsilon_loss": 1.4331077009947175,
+        "sigma_effective_S_m": 0.007574099979261632,
+        "alpha_Np_m": 0.41112210243206804,
+        "amplitude_1_e_m": 2.432367401519687,
+        "absorption_roundtrip_2_8m_layer_dB": -19.997382773167583,
+        "absorption_roundtrip_1_7m_layer_dB": -12.141268112280319
+      },
+      {
+        "frequency_MHz": 170,
+        "epsilon_real": 11.823277183363624,
+        "epsilon_loss": 0.8215354136623436,
+        "sigma_effective_S_m": 0.00776969210555736,
+        "alpha_Np_m": 0.4253768153035418,
+        "amplitude_1_e_m": 2.350856849794262,
+        "absorption_roundtrip_2_8m_layer_dB": -20.690746004981573,
+        "absorption_roundtrip_1_7m_layer_dB": -12.562238645881669
+      }
+    ],
+    "mudstone_sigma9mS": [
+      {
+        "frequency_MHz": 20,
+        "epsilon_real": 14.823277183363622,
+        "epsilon_loss": 11.188937262093523,
+        "sigma_effective_S_m": 0.012449371673507362,
+        "alpha_Np_m": 0.5738785689447932,
+        "amplitude_1_e_m": 1.7425289148516705,
+        "absorption_roundtrip_2_8m_layer_dB": -27.91401712682895,
+        "absorption_roundtrip_1_7m_layer_dB": -16.947796112717576
+      },
+      {
+        "frequency_MHz": 40,
+        "epsilon_real": 12.969110175860052,
+        "epsilon_loss": 6.5166556453033255,
+        "sigma_effective_S_m": 0.01450151453998973,
+        "alpha_Np_m": 0.7368747909351229,
+        "amplitude_1_e_m": 1.3570826581419089,
+        "absorption_roundtrip_2_8m_layer_dB": -35.842313422354444,
+        "absorption_roundtrip_1_7m_layer_dB": -21.761404577858055
+      },
+      {
+        "frequency_MHz": 95,
+        "epsilon_real": 12.0,
+        "epsilon_loss": 2.9468006334024306,
+        "sigma_effective_S_m": 0.01557409997926163,
+        "alpha_Np_m": 0.8406416268364103,
+        "amplitude_1_e_m": 1.1895675494482751,
+        "absorption_roundtrip_2_8m_layer_dB": -40.88963421684126,
+        "absorption_roundtrip_1_7m_layer_dB": -24.825849345939332
+      },
+      {
+        "frequency_MHz": 170,
+        "epsilon_real": 11.823277183363624,
+        "epsilon_loss": 1.6674226405960657,
+        "sigma_effective_S_m": 0.01576969210555736,
+        "alpha_Np_m": 0.8617535828741685,
+        "amplitude_1_e_m": 1.160424534197751,
+        "absorption_roundtrip_2_8m_layer_dB": -41.916540489892085,
+        "absorption_roundtrip_1_7m_layer_dB": -25.449328154577337
+      }
+    ],
+    "mudstone_nondispersive": [
+      {
+        "frequency_MHz": 20,
+        "epsilon_real": 12.0,
+        "epsilon_loss": 2.6962655358512397,
+        "sigma_effective_S_m": 0.003,
+        "alpha_Np_m": 0.16212164723779918,
+        "amplitude_1_e_m": 6.168207744232979,
+        "absorption_roundtrip_2_8m_layer_dB": -7.8857561207534745,
+        "absorption_roundtrip_1_7m_layer_dB": -4.787780501886038
+      },
+      {
+        "frequency_MHz": 40,
+        "epsilon_real": 12.0,
+        "epsilon_loss": 1.3481327679256199,
+        "sigma_effective_S_m": 0.003,
+        "alpha_Np_m": 0.16287305973494037,
+        "amplitude_1_e_m": 6.139750807330568,
+        "absorption_roundtrip_2_8m_layer_dB": -7.92230556248133,
+        "absorption_roundtrip_1_7m_layer_dB": -4.8099712343636645
+      },
+      {
+        "frequency_MHz": 95,
+        "epsilon_real": 12.0,
+        "epsilon_loss": 0.5676348496528926,
+        "sigma_effective_S_m": 0.0030000000000000005,
+        "alpha_Np_m": 0.16308342903621686,
+        "amplitude_1_e_m": 6.131830842101832,
+        "absorption_roundtrip_2_8m_layer_dB": -7.932538131872427,
+        "absorption_roundtrip_1_7m_layer_dB": -4.816183865779688
+      },
+      {
+        "frequency_MHz": 170,
+        "epsilon_real": 12.0,
+        "epsilon_loss": 0.31720771010014587,
+        "sigma_effective_S_m": 0.003,
+        "alpha_Np_m": 0.1631147668459635,
+        "amplitude_1_e_m": 6.130652787214197,
+        "absorption_roundtrip_2_8m_layer_dB": -7.93406243371139,
+        "absorption_roundtrip_1_7m_layer_dB": -4.8171093347533445
+      }
+    ]
+  },
+  "local_normal_reflection": {
+    "cover_to_mudstone": {
+      "abs_R": [
+        0.10822690257495961,
+        0.07419152226887778,
+        0.0385980803414525,
+        0.025819886640339556
+      ],
+      "phase_deg": [
+        141.34480209172077,
+        130.43923454109427,
+        128.01648958739094,
+        136.50926017633472
+      ],
+      "definition": "Electric-field Fresnel reflection at local normal incidence; not Bscan SNR or a power transmission ratio"
+    },
+    "mudstone_to_rock": {
+      "abs_R": [
+        0.10936725733634452,
+        0.08862412900723546,
+        0.07507031732802258,
+        0.07225227178770106
+      ],
+      "phase_deg": [
+        -22.339756250626046,
+        -19.72572046185171,
+        -11.364196045013605,
+        -6.754661768588408
+      ],
+      "definition": "Electric-field Fresnel reflection at local normal incidence; not Bscan SNR or a power transmission ratio"
+    }
+  },
+  "acquisition": {
+    "length_m": 195,
+    "profile_x_m": [
+      220.0,
+      196.705832087,
+      25.0
+    ],
+    "distance_s_m": [
+      0.0,
+      23.294167912999995,
+      195.0
+    ]
+  },
+  "thickness_path_scope": "2.8m and1.7m are single borehole layer illustrations, not constant layer thickness along the survey; absorption only, no geometrical spreading or interface transmission",
+  "limitations": [
+    "No retrieved complex spectrum directly characterizes the site mudstone; no field-data fitting was performed",
+    "Centre12/span3 are not measured mudstone bounds; the centre ordering cover/mudstone/sandstone is an assumption",
+    "The conductivity variants do not cover uncertain permittivity, dispersion shape, fractures, weathering or bedding anisotropy",
+    "The existing low-loss cover recipe is still uncalibrated; assigning this mudstone does not certify the complete geological model",
+    "Positive single-Debye parameters support passive continuum dispersion, not FDTD convergence or radar detectability",
+    "Do not add effective MHz conductivity inferred from total epsilon loss on top of this Debye polarization loss",
+    "Existing H5 geometry/material packages remain historical; no material file is overwritten by this design"
+  ]
+}
