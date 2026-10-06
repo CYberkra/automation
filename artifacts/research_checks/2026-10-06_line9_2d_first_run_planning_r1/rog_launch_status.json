@@ -1,0 +1,80 @@
+{
+  "observed_UTC": "2026-10-06T09:24:12.8303829Z",
+  "status": "PILOTS_RUNNING_NOT_COMPLETED",
+  "completed_groups": 1,
+  "planned_groups": 5,
+  "contract_sha256": "07e8dd45542b22c4ff895e6c4e91c9ee8fb9e4add9fa4c8fc77e25558479fbca",
+  "task_sha256": "fbab7d0ce6cf7f6375640e9f5ffb0195c548043d58b95f54d0c28c9599ed24f3",
+  "hardware_at_freeze": {
+    "gpu": "NVIDIA GeForce RTX 4090 Laptop GPU",
+    "gpu_uuid": "GPU-71eb4696-9c70-4549-bbef-ec8dc276a4a8",
+    "driver_version": "610.88",
+    "total_VRAM_bytes": 17171480576,
+    "free_VRAM_bytes": 14862516224,
+    "available_RAM_bytes": 52429545472,
+    "total_RAM_bytes": 67871469568
+  },
+  "toolchain": {
+    "nvcc_version": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2026 NVIDIA Corporation\nBuilt on Tue_Jun__9_14:30:19_Pacific_Daylight_Time_2026\nCuda compilation tools, release 13.3, V13.3.73\nBuild cuda_13.3.r13.3/compiler.38244171_0\n",
+    "MSVC_version": "鐢ㄦ硶: cl [ 閫夐」... ] 鏂囦欢鍚?.. [ /link 閾炬帴閫夐」... ]\n鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.44.35228 鐗圽n鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€俓n\n",
+    "binary_sha256": {
+      "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v13.3\\bin\\nvcc.exe": "92d993c6e7025e1597d0d895e65e8658f5f1d41576a477656647a7eece2cd35f",
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe": "88c8344236a27a6e727e0a8edc49aaa2690bdc7a9464b9d18cc7abe70a9f1c0d",
+      "E:\\automation_djh\\artifacts\\local_checks\\gprmax_v4_gpu_env2\\Scripts\\python.exe": "3d10dd80f627883cafb06973b9f421d3cb76d3363a71096997d64f8c45b226ed"
+    }
+  },
+  "gpu_lock": "E:\\automation_djh\\artifacts\\local_checks\\hs4_gpu_exclusive.lock",
+  "native_execution_events": [
+    {
+      "status": "STARTED",
+      "contract_sha256": "07e8dd45542b22c4ff895e6c4e91c9ee8fb9e4add9fa4c8fc77e25558479fbca",
+      "unix_s": 1791277963.7183862,
+      "runner_pid": 37136,
+      "available_RAM_bytes": 52474638336,
+      "free_VRAM_bytes": 14862516224
+    },
+    {
+      "status": "STARTED",
+      "group": "full2d_pilot_0",
+      "command": [
+        "E:\\automation_djh\\artifacts\\local_checks\\gprmax_v4_gpu_env2\\Scripts\\python.exe",
+        "E:\\line9_rog_first_20261006\\scripts\\gprmax_cached_cuda_entry.py",
+        "E:\\line9_rog_first_20261006\\artifacts\\local_checks\\line9_2d_pilots_rog_r1\\cases\\full2d_pilot_0\\profile.in",
+        "-gpu",
+        "0",
+        "-gpu_precision",
+        "double",
+        "--hide-progress-bars"
+      ],
+      "available_RAM_bytes": 52470439936,
+      "free_VRAM_bytes": 14862516224
+    },
+    {
+      "status": "COMPLETED",
+      "group": "full2d_pilot_0",
+      "elapsed_s": 631.1710000000021,
+      "peak_owned_RSS_bytes": 10739511296,
+      "raw_sha256": "2b9af6e225437d9516d6bdf8b358bd09a224729cead0e39b3560442ded2e7689"
+    },
+    {
+      "status": "STARTED",
+      "group": "full2d_pilot_1",
+      "command": [
+        "E:\\automation_djh\\artifacts\\local_checks\\gprmax_v4_gpu_env2\\Scripts\\python.exe",
+        "E:\\line9_rog_first_20261006\\scripts\\gprmax_cached_cuda_entry.py",
+        "E:\\line9_rog_first_20261006\\artifacts\\local_checks\\line9_2d_pilots_rog_r1\\cases\\full2d_pilot_1\\profile.in",
+        "-gpu",
+        "0",
+        "-gpu_precision",
+        "double",
+        "--hide-progress-bars"
+      ],
+      "available_RAM_bytes": 52439617536,
+      "free_VRAM_bytes": 14846787584
+    }
+  ],
+  "source_git_revision": "055576d852b3aa3397bc25a82bc3fa98bca14969",
+  "calls_solver": true,
+  "calls_training": false,
+  "limitations": "Started full-domain pilots only; no completed native audit or B-scan yet. No preview approval."
+}

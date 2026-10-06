@@ -3600,6 +3600,15 @@
   "role": "Line9 site adaptation; not independent blind validation",
   "notes": "15m midpoint AGL;2D along-track surrogate vs3D cross-track1.3m; geometry/material/coordinate checks only. Target-machine-specific capacity/runtime/execution contract required."
  },
+ "line9_rog_pilot_launch_2026_10_06":{
+  "report": "docs/research/2026-10-06_line9_2d_first_run_task.md",
+  "results": "artifacts/research_checks/2026-10-06_line9_2d_first_run_planning_r1/rog_launch_status.json",
+  "contract_checks": "artifacts/research_checks/2026-10-06_line9_2d_first_run_planning_r1/rog_contract_checks_r1.json",
+  "status": "REMOTE_PILOTS_STARTED_NOT_COMPLETED_AT_SNAPSHOT",
+  "calls_solver": true,
+  "calls_training": false,
+  "notes": "Private package verified; existing V4/4090 Laptop runtime; independent worktree, shared GPU lock. Review real completion and SFCW panels before 97-station continuation; no preview approval yet."
+ },
  "line9_2d_first_run_task_2026_10_06":{
   "report": "docs/research/2026-10-06_line9_2d_first_run_task.md",
   "task": "configs/research/line9_2d_first_run_task_v0_1.json",
