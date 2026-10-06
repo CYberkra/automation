@@ -89,8 +89,10 @@ SFCW交付 `sfcw_arrays.npz`、analysis_report.json、**中文标注三行灰度
 
 ```powershell
 $env:GPRMAX_PYTHON = 'E:\automation_djh\artifacts\local_checks\gprmax_v4_gpu_env2\Scripts\python.exe'
-$env:GPRMAX_VCVARS = 'E:\msvc2022bt\VC\Auxiliary\Build\vcvars64.bat'
-$env:GPRMAX_CUDA_BIN = 'C:\cuda133\bin\x64'
+$env:GPRMAX_VCVARS = 'C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build\vcvars64.bat'
+$env:GPRMAX_CUDA_BIN = 'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.3\bin'
+# 独立worktree接续同一GPU时，冻结到既有监督器的同一个锁；普通单目录可不设。
+$env:GPRMAX_GPU_LOCK = 'E:\automation_djh\artifacts\local_checks\hs4_gpu_exclusive.lock'
 $line9Package = 'E:\automation_djh\artifacts\local_checks\2026-10-06_line9_material_model_r1'
 $line9Pilots = 'E:\automation_djh\artifacts\local_checks\line9_2d_pilots_target_r1'
 $line9Preview = 'E:\automation_djh\artifacts\local_checks\line9_2d_preview_target_r1'
@@ -108,3 +110,11 @@ scripts/run_line9_2d_v4.cmd scripts/analyze_line9_2d_sfcw.py --study "$line9Prev
 ```
 
 脚本拒绝覆盖已有胶囊/分析结果，监督器拒绝已消费attempt。当前对新执行器/处理器完成的是数组/HDF5合约检查（包含FP32拒绝、错误时钟/极化拒绝、半步相位及电流元归一化、独立逆变换），不是GPU求解复现。实际第一次原生求解/性能/尾端验收由目标机完成。
+
+## 8. ROG远端启动记录
+
+2026-10-06用户完成SSH服务、密钥授权与防火墙配置后，客户端核对服务器指纹并实际登录成功。远端为4090 Laptop 16GiB、63.21GiB RAM；启动前空闲显存约13.84GiB、可用RAM约49GiB，容量线通过。模型ZIP传输后SHA-256复验一致。既有`E:\automation_djh`保留原分支和未跟踪工作，在`E:\line9_rog_first_20261006`建立独立worktree；运行时仍使用既有V4环境。
+
+旧`E:\msvc2022bt`和`C:\cuda133`为junction，SSH下拒绝遍历，改用上方真实安装路径。首次freeze因`cl`中文版本输出按GBK解码失败，在胶囊创建和求解前退出；版本日志读取改为显式UTF-8并容许替换无法解码的展示字符，编译器二进制哈希仍逐字节记录，科学数组与源码身份不改变。独立worktree新增`GPRMAX_GPU_LOCK`以冻结到同机既有共享锁。
+
+目标机修复后复跑[数组/HDF5检查](../../artifacts/research_checks/2026-10-06_line9_2d_first_run_planning_r1/rog_contract_checks_r1.json)通过，半步相位相对L2约9.82e-13；5站胶囊freeze通过，`line9_2d_pilots_rog_r1`已启动。这里只确认启动，不声称5站完成或物理验收通过；最终结果应另附当批中文可视化报告。

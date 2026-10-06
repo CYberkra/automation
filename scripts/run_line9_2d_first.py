@@ -2,6 +2,7 @@
 import argparse
 import importlib.util
 import json
+import os
 import shutil
 import subprocess
 import sys
@@ -94,8 +95,8 @@ def freeze(package,out,stage,pilots=None):
     if sys.platform!='win32': raise ValueError('Use a separately frozen Linux supervisor; this runner is Windows')
     nvcc=shutil.which('nvcc');cl=shutil.which('cl')
     if nvcc is None or cl is None: raise ValueError('Verified CUDA/MSVC compiler environment required')
-    nvcc_version=subprocess.check_output([nvcc,'--version'],text=True)
-    cl_version=subprocess.run([cl],capture_output=True,text=True)
+    nvcc_version=subprocess.check_output([nvcc,'--version'],text=True,encoding='utf-8',errors='replace')
+    cl_version=subprocess.run([cl],capture_output=True,text=True,encoding='utf-8',errors='replace')
     toolchain=dict(nvcc_version=nvcc_version,MSVC_version=cl_version.stdout+cl_version.stderr,
         binary_sha256={str(Path(p).resolve()):digest(Path(p)) for p in [nvcc,cl,sys.executable]})
     manifest_path=package/'manifest.json'
@@ -155,7 +156,7 @@ def freeze(package,out,stage,pilots=None):
         min_free_VRAM_GiB=task['limits']['min_free_VRAM_bytes']/2**30,
         max_owned_RSS_GiB=24,min_system_available_during_run_GiB=1.5,
         max_group_wall_s=3600,max_batch_wall_s=18000 if stage=='pilots' else 172800,
-        gpu_lock='artifacts/local_checks/hs4_gpu_exclusive.lock',hardware_at_freeze=hardware,
+        gpu_lock=str(Path(os.environ.get('GPRMAX_GPU_LOCK',ROOT/'artifacts/local_checks/hs4_gpu_exclusive.lock')).resolve()),hardware_at_freeze=hardware,
         toolchain=toolchain,
         reuse=reuse,private_scope='Input capsule contains site-derived geometry; do not upload to Git',
         no_3d=True,expected_preview_total=99 if stage=='preview' else None)
