@@ -1,0 +1,26 @@
+{
+  "status": "PASS_ARRAY_HDF5_CONTRACT_NOT_FDTD",
+  "calls_solver": false,
+  "checks": [
+    "99coarse endpoints/order/nonuniform final interval",
+    "97remaining +2reused",
+    "501 exact tones retained",
+    "float32 rejected before conversion",
+    "wrong dt rejected",
+    "wrong polarization rejected",
+    "half-step origin and current-element normalization",
+    "two complex inverse sums",
+    "signed bandpass convention"
+  ],
+  "spectral_phase_relative_L2": 9.821126544986582e-13,
+  "inverse_relative_L2": {
+    "rectangular": 1.4173074304592974e-12,
+    "hann": 1.833612899528577e-12
+  },
+  "independent_DFT_relative_L2": 1.0183860740209316e-12,
+  "code_sha256": {
+    "run_line9_2d_first.py": "9d087d0d23746f8f7fa2f38a479562803d036572d7d77e61a41eec17c3619b57",
+    "analyze_line9_2d_sfcw.py": "d090166c0b8e8ff0f9dbc36f621054718631d10347a4e4c34c930a3b7d988b94",
+    "check_line9_2d_first_run.py": "5a7a89de419c5ad4bbe9a8a39b7695492cd0459e1ef93695959474f393a1722c"
+  }
+}

@@ -3599,5 +3599,31 @@
   "geometry_count": 9,
   "role": "Line9 site adaptation; not independent blind validation",
   "notes": "15m midpoint AGL;2D along-track surrogate vs3D cross-track1.3m; geometry/material/coordinate checks only. Target-machine-specific capacity/runtime/execution contract required."
+ },
+ "line9_2d_first_run_task_2026_10_06":{
+  "report": "docs/research/2026-10-06_line9_2d_first_run_task.md",
+  "task": "configs/research/line9_2d_first_run_task_v0_1.json",
+  "results": "artifacts/research_checks/2026-10-06_line9_2d_first_run_planning_r1",
+  "scripts": [
+   "scripts/plan_line9_2d_first_run.py",
+   "scripts/run_line9_2d_first.py",
+   "scripts/run_line9_2d_v4.cmd",
+   "scripts/analyze_line9_2d_sfcw.py",
+   "scripts/check_line9_2d_first_run.py"
+  ],
+  "status": "TASK_READY_TARGET_MACHINE_LOCAL_CAPACITY_REJECTED_NO_FDTD",
+  "source_git_base": "1dcc67b",
+  "calls_solver": false,
+  "calls_training": false,
+  "preview_stations": 99,
+  "new_preview_solves_after_pilots": 97,
+  "total_unique_initial_solves": 102,
+  "frequency_tones": 501,
+  "grid_and_physical_factors_changed": false,
+  "station_spacing_m": 2,
+  "final_station_interval_m": 1,
+  "ETA_reference": "4090 Laptop; cell-iteration extrapolation only, not measured desktop4090/4090D",
+  "requires_private_model_transfer": true,
+  "notes": "5pilot review then97remaining; nativeFP64 and complex source-normalized rect/Hann SFCW; no gain/background/3D/full391 first batch."
  }
 }

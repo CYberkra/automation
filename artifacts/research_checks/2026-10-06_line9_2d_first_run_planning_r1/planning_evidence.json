@@ -1,0 +1,28 @@
+{
+  "task_sha256": "fbab7d0ce6cf7f6375640e9f5ffb0195c548043d58b95f54d0c28c9599ed24f3",
+  "calls_solver": false,
+  "script_sha256": "47a8934f730ffcd56037d36792cf8173b9333c7b0e4261da48abe06c193f9292",
+  "schedule_checks": "PASS99 preview +5pilots -2reused=102 unique",
+  "estimated_cost": {
+    "status": "COMPUTE_WORK_EXTRAPOLATION_NOT_MEASURED_NEW_MODEL",
+    "reference_gpu": "NVIDIA GeForce RTX 4090 Laptop GPU",
+    "reference_completed_traces": 26,
+    "reference_median_wall_s": 23.952999999994063,
+    "reference_cells": 7257600,
+    "reference_iterations": 6785,
+    "new_cells": 48000000,
+    "new_CFL_dt_s": 5.89663584187421e-11,
+    "new_initial_iterations": 20352,
+    "cell_iteration_ratio": 19.838345556842242,
+    "nominal_seconds_per_new_trace": 475.18789112292444,
+    "nominal_full391_hours": 51.61068484140652,
+    "nominal_preview99_hours": 13.067667005880422,
+    "nominal_preview_with_pilots102_hours": 13.463656915149526,
+    "uncertainty": "Cell-iteration scaling only; different material count/PML/import costs and GPU clocks. Desktop4090/4090D may be faster but no measured conversion factor. Replace with this model pilot timings.",
+    "source_sha256": {
+      "artifacts\\research_checks\\2026-10-05_slope_bscan_2d_fine2m_r1\\execution.jsonl": "86cc88a1123f2beb6890ab13cad4ee9ed8ef21899646e74c7f5ecb87a48d2609",
+      "artifacts\\research_checks\\2026-10-05_slope_bscan_2d_fine2m_r1\\completed_verification.json": "f6089ad9f48a0ec31bd4f7185d0c56dc85a50c3d693ab931fdc3d71a2e6a526c",
+      "artifacts\\research_checks\\2026-10-05_slope_bscan_2d_fine2m_r1\\slope_rough_s01\\stdout.log": "39a02e5ac08745e6307c623cbd5bfdba0a4a41c3e060a402ce91aec5c4267716"
+    }
+  }
+}
