@@ -1,5 +1,7 @@
 # 接续入口：无需聊天上下文
 
+**2026-10-06 基覆材料实测色散来源（当前）**：[研究与频谱重建](docs/research/2026-10-06_measured_dielectric_spectra_review.md)及[来源台账](docs/research/2026-10-06_measured_dielectric_sources.json)。当前覆盖层单极Debye、基岩固定εr9/σ.001，界面复反射已经随频率变化；当前配方是设计假设非现场拟合。定位567组矿质土三极Debye参数集（20MHz–3GHz，含粉壤土；xlsx需IEEE DataPort订阅，尚未取得）；砂岩Bore2025出版社参数表已取得并按式23重建501点，SS-A01两种状态ε′约7.675→6.271/8.496→7.138。第三状态原表时间超声明拟合边界，仅诊断；不擅改。开放纯黏土S2P需夹具反演，不是直接ε。r2频谱、共同色号图、特例和独立标量复算/哈希/拒覆写PASS；只重建作者拟合模型，无新Debye拟合、求解、训练或材料替换。下一步先做可用砂岩带限代理拟合，再取得覆盖层文件；不宣称材料为唯一根因。
+
 **2026-10-06 最新缓坡2m批已转SFCW（当前）**：[结果与复现](docs/research/2026-10-06_slope_fine2m_sfcw_reconstruction.md)。26道既有native，官方Y/X按实际y电流元0.05m归一化，20–170MHz／0.3MHz／501点，矩形与Hann两版灰度；14.137ns源延迟由复谱相除去除，无增益。Hann均值道相关0.906、SVD相关0.414，矩形总场仍有强振铃；旧Ricker图不能作SFCW效果，输出RMS比不能称残留噪声比。源峰电流矩实际4Am，旧1Am声明及0.0125m归一化口径纠正，历史契约保留。哈希、DFT／逆变换与13站×328延迟点独立复数求和通过，仅认证处理链。r1摘要序列化失败另记，r2为完成产物 `2026-10-06_slope_fine2m_sfcw_r2`。现场窗未知，浅层点/线源非端口S21；无新求解／训练，G4不变。
 
 **2026-10-06 高航高 gprMax 文献／公开模型复核（当前）**：[报告](docs/research/2026-10-06_airborne_gprmax_literature_review.md)与[台账](docs/research/2026-10-06_airborne_gprmax_literature_ledger.json)。核查9份公开PDF相关章节及Cheng2025在线正文：Edemsky2021为25MHz、0–20m吊车航空gprMax2D；Catapano2021为2.5m／4GHz下视gprMax3D，15m仅解析PSF例；Cheng2023实测5/10/15m而仿真≤2m，Lee2023为1m。非gprMax的Mao2025自编FDTD做到14.4m／49MHz／地下水深10.08m，不能据航高判定无地下回波。公开仓库实际输入多为贴地，未核验到本项目频段／航高／深层的完整公开gprMax包；Wang旧原文当前缺失、Code Ocean403，软件归属及代码未新认证。**解释纠正：fine2m模型只有Hertzian线源与场探针，没有实体天线；旧“天线↔地表多次弹跳”撤回确定归因，环纹身份待核查。2m与8m同时改网格，改善不可全归航高。** 无新求解／训练／实测调参；下一单元建议先统一SFCW观测域及事件身份，需要因果拆分时另冻一个中间条件。

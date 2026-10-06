@@ -1,4 +1,19 @@
 {
+ "measured_dielectric_sources_2026_10_06": {
+  "report": "docs/research/2026-10-06_measured_dielectric_spectra_review.md",
+  "ledger": "docs/research/2026-10-06_measured_dielectric_sources.json",
+  "script": "scripts/review_measured_rock_spectra_v0_1.py",
+  "results": "artifacts/research_checks/2026-10-06_measured_rock_spectra_r2",
+  "draft_plot": "artifacts/research_checks/2026-10-06_measured_rock_spectra_r1",
+  "status": "COMPLETED_SOURCE_REVIEW_PUBLISHED_FIT_RECONSTRUCTION_NOT_RAW_OR_SITE_FIT",
+  "source_git_base": "8e8a387",
+  "calls_solver": false,
+  "calls_training": false,
+  "frozen_materials_changed": false,
+  "cover_parameter_files_obtained": false,
+  "cover_data_access": "IEEE DataPort subscription required",
+  "new_Debye_parameters_fitted": false
+ },
  "slope_fine2m_sfcw_reconstruction_2026_10_06": {
   "report": "docs/research/2026-10-06_slope_fine2m_sfcw_reconstruction.md",
   "script": "scripts/reconstruct_slope_fine2m_sfcw_v0_1.py",

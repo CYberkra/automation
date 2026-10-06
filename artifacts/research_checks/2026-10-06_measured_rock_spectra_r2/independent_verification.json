@@ -1,0 +1,47 @@
+{
+  "status": "PASS_ANALYTICAL_RECONSTRUCTION_ONLY",
+  "scalar_cmath_points": 1503,
+  "max_complex_relative_difference": 3.7646390960499806e-16,
+  "overwrite_refusal_preserved_outputs": true,
+  "r1_r2_spectra_byte_equal": true,
+  "source_cache_hash_checks": [
+    {
+      "source": "M01",
+      "path": "artifacts/research_sources/2026-10-06_measured_materials/rock_download.pdf",
+      "sha256": "9c4318f9839c57f60354e7858a1c17b4052c8e74e6920e7a2ef94d86ff437f11",
+      "matches": true
+    },
+    {
+      "source": "M04",
+      "path": "artifacts/research_sources/2026-09-24_cycle02/R13_Schmidt2026.pdf",
+      "sha256": "fcbe891fc67a22dafc6410a1d58fce35db20d394bff7044fad965d95eca19330",
+      "matches": true
+    },
+    {
+      "source": "M04",
+      "path": "artifacts/research_sources/2026-09-24_cycle02/R13_VNA_Spectra.zip",
+      "sha256": "d61b0f2ff5a3c75918be5b69a5d61c99e1cf9d1b85538509ccce7e182b9f708a",
+      "matches": true
+    },
+    {
+      "source": "M05",
+      "path": "artifacts/research_sources/2026-09-24_cycle02/R11_GonzalezTeruel2020.pdf",
+      "sha256": "8271d8793f21681fa74aca3b5f702642f9b87d9f51958f49ce0782382f8227db",
+      "matches": true
+    },
+    {
+      "source": "M06",
+      "path": "artifacts/research_sources/2026-09-24_cycle02/R12_GonzalezTeruel2022.pdf",
+      "sha256": "fb732234a11da970321f56743f7c7429987d68b6127cbe1b4e9f82332d7897db",
+      "matches": true
+    }
+  ],
+  "final_product_hashes": {
+    "published_rock_spectra.png": "7d1d266622e90a23b277c06e4f62ba4023a5692663b9a839161cd3f48a8655a2",
+    "spectra.csv": "fcfd5c93d5da26a1c09fad3bd8be79f58c9dd1b70af5b2f46faf5fea7c8a4527",
+    "summary.json": "9b5683a26d6753264d27be522302f983034c99055530a057d0bee0e5617b40ae"
+  },
+  "pdf_table3_visually_checked": true,
+  "calls_solver": false,
+  "raw_measurement_refit": false
+}

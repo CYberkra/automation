@@ -1,0 +1,94 @@
+{
+  "review_date": "2026-10-06",
+  "source_git_base": "8e8a387",
+  "scope": "Published measured complex dielectric spectra and fitted parameters for mineral cover soils and sandstone, emphasizing 20-170MHz",
+  "calls_solver": false,
+  "calls_training": false,
+  "site_materials_fitted": false,
+  "published_rock_parameters_SI": [
+    {"id":"SS-A01_theta1", "theta_vol_percent":6.68, "epsilon_infinity":4, "delta_P1":1.8, "tau_P1_s":3.2e-12, "delta_P2":38.4, "tau_P2_s":4e-7, "c_P2":0.63, "m_P3":0.8, "tau_P3_s":1e-5, "c_P3":0.18, "sigma0_S_m":2.78e-6, "published_fullband_RMS_percent":13, "source":"M01 Table3; Eq23", "candidate_status":"published_curve_reconstruction_only"},
+    {"id":"SS-A01_theta2", "theta_vol_percent":10.72, "epsilon_infinity":4, "delta_P1":2.7, "tau_P1_s":3.4e-12, "delta_P2":32.2, "tau_P2_s":3e-7, "c_P2":0.64, "m_P3":0.8, "tau_P3_s":1e-5, "c_P3":0.19, "sigma0_S_m":8.81e-6, "published_fullband_RMS_percent":11.1, "source":"M01 Table3; Eq23", "candidate_status":"published_curve_reconstruction_only"},
+    {"id":"SS-A01_theta3", "theta_vol_percent":15.28, "epsilon_infinity":3.9, "delta_P1":4.2, "tau_P1_s":3.6e-12, "delta_P2":116, "tau_P2_s":9.7e-6, "c_P2":0.49, "m_P3":0.8, "tau_P3_s":0.0133, "c_P3":0.41, "sigma0_S_m":0.000178, "published_fullband_RMS_percent":10.7, "source":"M01 Table3; Eq23", "candidate_status":"diagnostic_only_parameter_bound_inconsistency", "issue":"Published tau_P3=13.3ms exceeds the table caption's 0.01-1ms bound; retained verbatim, not clipped."}
+  ],
+  "sources": [
+    {
+      "id":"M01", "title":"Coaxial method to investigate broadband dielectric properties of rocks over the 5 Hz to 3 GHz frequency range", "authors":"Bore et al.", "year":2025,
+      "doi":"10.1016/j.jrmge.2025.04.024", "url":"https://www.jrmge.cn/abstract-2142.html", "pdf_url":"https://www.jrmge.cn/download-2142.html",
+      "reading_scope":"Publisher full PDF available; related sections read: PDF pp4-5,7-10,14 (methods/effective permittivity, samples, Tables1-3, Eq23, conclusions). Not a complete full-paper reading.",
+      "cache":"artifacts/research_sources/2026-10-06_measured_materials/rock_download.pdf", "sha256":"9c4318f9839c57f60354e7858a1c17b4052c8e74e6920e7a2ef94d86ff437f11",
+      "measured_band":"GP 5Hz-30MHz plus VNA 1MHz-3GHz", "material":"Intact sandstone, basalt, granite, dry and three water states; not our site",
+      "available":"Verified published CPCM parameter table; raw measurement files not verified obtainable",
+      "adoption":"Reconstruct SS-A01 curves; later approximate complex 20-170MHz spectrum with admissible multipole Debye; do not call this a raw-data refit",
+      "limitations":["Wet SS-A01 full-band author RMS 10.7-13%; no band-specific confidence interval", "Dry sandstone effective-loss cross-method discrepancy 60.1-123.9%", "SS-A01 theta3 tau_P3 violates stated table bound; diagnostic only", "SS-A02 author's RMS contains 138% for middle water state; do not silently correct it", "P1 is picosecond water pole; numerical time-step/implementation needs checking"]
+    },
+    {
+      "id":"M02", "title":"Three-pole Debye model parameters of soil dielectric permittivity spectra", "authors":"Szypłowska et al.", "year":2023,
+      "doi":"10.21227/qrdw-kw76", "url":"https://ieee-dataport.org/documents/three-pole-debye-model-parameters-soil-dielectric-permittivity-spectra",
+      "reading_scope":"Official dataset page retrieved through DOI with Python urllib HTTP200; abstract, file inventory, instructions and access notice read; spreadsheets not obtained",
+      "cache":"artifacts/research_sources/2026-10-06_measured_materials/soil_debye_dataset_page.html",
+      "measured_band":"20MHz-3GHz", "material":"Loamy sand, sandy loam, silt loam; 567 measured-spectrum fits, varying moisture/salinity/temperature",
+      "available":"TableD1.xlsx 378.17KB: parameters, standard errors, RMSE, sample metadata; D2-dens.xlsx 25.88KB: densities. Files listed, not downloaded.",
+      "access_status":"Subscription Required / Not logged in / LOGIN TO ACCESS DATASET FILES",
+      "adoption":"First-priority cover parameter source, especially silt-loam rows386-574, when legitimately accessible; distinguish fitted spectra from raw observations",
+      "limitations":["Soil bulk sigma differs from moistening solution conductivity", "No parameter numbers copied from inaccessible files", "Agricultural disturbed mineral samples are not site calibration", "Web tool robots block is separate from successful normal public page retrieval; no access control bypass"]
+    },
+    {
+      "id":"M03", "title":"Correcting the moisture-permittivity conversion functions for selected soil-specific properties in the 20 MHz-3 GHz frequency range for accurate soil moisture measurement", "authors":"Szypłowska et al.", "year":2026,
+      "doi":"10.1016/j.measurement.2025.118808", "url":"https://www.sciencedirect.com/science/article/pii/S0263224125021670",
+      "reading_scope":"Publisher indexed online excerpts: abstract, sections2.1-2.2, Eq5, Table1, data availability, reference29. Full PDF not acquired.",
+      "available":"SetA 567 spectra with public dataset reference M02; SetB120, SetC158; whole article data on request",
+      "adoption":"Measurement/reconstruction and three-pole-plus-bulk-DC fitting method; A1 silt loam 13.4% sand/76.5% silt/10.1% clay is closer than pure bentonite",
+      "limitations":["DOI says2025 but issue date Jan15,2026", "Reference29 provides fit parameters, not proven raw epsilon CSV access", "Read scope is relevant indexed sections, not full paper"]
+    },
+    {
+      "id":"M04", "title":"Broadband Dielectric Analysis of Clays: Impact of Cation Exchange Capacity, Water Content, and Porosity", "authors":"Schmidt et al.", "year":2026,
+      "doi":"10.1029/2025JB031945", "url":"https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2025JB031945",
+      "data_url":"https://zenodo.org/records/15473270", "pdf_url":"https://publikationen.bibliothek.kit.edu/1000191439/177575548",
+      "reading_scope":"Existing archived full PDF and prior ledger reread, related sections3.3-3.5/PDF pp14-15; current official Zenodo inventory verified; no new fixture inversion",
+      "pdf_cache":"artifacts/research_sources/2026-09-24_cycle02/R13_Schmidt2026.pdf", "pdf_sha256":"fcbe891fc67a22dafc6410a1d58fce35db20d394bff7044fad965d95eca19330",
+      "data_cache":"artifacts/research_sources/2026-09-24_cycle02/R13_VNA_Spectra.zip", "data_sha256":"d61b0f2ff5a3c75918be5b69a5d61c99e1cf9d1b85538509ccce7e182b9f708a",
+      "available":"Open S-parameter files: prior audit15 S2P,1601 frequencies,351 points20-170MHz; actual grid300kHz-5GHz. No direct material epsilon columns.",
+      "adoption":"Measured high-dispersion/loss stress cases, conditional calibrated fixture inversion using BJI plus uncertainty",
+      "limitations":["Nearly saturated pure clays not site silty clay", "S21 is not epsilon", "Metadata nominal band must not override raw grid", "Inversion not completed; no bulk material parameters derived here"]
+    },
+    {
+      "id":"M05", "title":"Dielectric Spectroscopy and Application of Mixing Models Describing Dielectric Dispersion in Clay Minerals and Clayey Soils", "authors":"Gonzalez-Teruel et al.", "year":2020,
+      "doi":"10.3390/s20226678", "url":"https://www.mdpi.com/1424-8220/20/22/6678", "pdf_url":"https://nora.nerc.ac.uk/id/eprint/529217/1/N529217JA.pdf",
+      "reading_scope":"Existing archived full PDF, related specimen/method/model sections PDF pp5-6,8,14; supplementary inventory checked, not full paper reread",
+      "cache":"artifacts/research_sources/2026-09-24_cycle02/R11_GonzalezTeruel2020.pdf", "sha256":"8271d8793f21681fa74aca3b5f702642f9b87d9f51958f49ce0782382f8227db",
+      "available":"Measured mineral soils and pure clays1MHz-6GHz, plotted complex spectra; downloadable raw epsilon table not verified",
+      "adoption":"Cover soil mechanism and material variability; not a ready CSV-fit claim"
+    },
+    {
+      "id":"M06", "title":"Measurement of the broadband complex permittivity of soils in the frequency domain with a low-cost Vector Network Analyzer and an Open-Ended coaxial probe", "authors":"Gonzalez-Teruel et al.", "year":2022,
+      "doi":"10.1016/j.compag.2022.106847", "url":"https://doi.org/10.1016/j.compag.2022.106847", "pdf_url":"https://nora.nerc.ac.uk/532422/1/N532422JA.pdf",
+      "reading_scope":"Prior archived ledger/relevant measurement-limit passages; not full current reread", "cache":"artifacts/research_sources/2026-09-24_cycle02/R12_GonzalezTeruel2022.pdf", "sha256":"fb732234a11da970321f56743f7c7429987d68b6127cbe1b4e9f82332d7897db",
+      "adoption":"Practical probe range50-700MHz, does not certify20-50MHz merely because instrument starts1MHz"
+    },
+    {
+      "id":"M07", "title":"Radar frequency dielectric dispersion in sandstone: Implications for determination of moisture and clay content", "authors":"West et al.", "year":2003,
+      "doi":"10.1029/2001WR000923", "url":"https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2001WR000923",
+      "reading_scope":"Online relevant methods, results and discussion sections3,5-6; not entire paper",
+      "available":"Measured Sherwood sandstone75-1000MHz with water/clay conditions; raw files not verified",
+      "adoption":"Clay-poor/dry weak dispersion is conditional; clay-rich wet sandstone can be strongly frequency dependent",
+      "limitations":["20-75MHz extrapolation outside actual reliable measurements", "Not evidence for universal epsilon9/sigma.001"]
+    },
+    {
+      "id":"M08", "title":"Conductive silver fabric as a shorting calibration standard for dielectric coaxial probes", "authors":"Gonzalez-Teruel et al.", "year":2025,
+      "doi":"10.1016/j.measurement.2024.116482", "url":"https://nora.nerc.ac.uk/id/eprint/538612/",
+      "data_url":"https://data.mendeley.com/datasets/cvjkkns97g/1", "data_doi":"10.17632/cvjkkns97g.1",
+      "reading_scope":"NERC abstract/metadata and official Mendeley dataset description; paper full text not acquired; API download enumeration403",
+      "available":"Dataset description: raw reflection2MHz-6GHz for calibration liquids/shorts and wet silt-loam; estimated dielectric spectrum explicitly for isopropanol",
+      "adoption":"Secondary cover measurement route only after calibration inversion and valid-band checks",
+      "limitations":["Do not call isopropanol estimated epsilon a soil epsilon dataset", "Dataset files not downloaded this turn"]
+    },
+    {
+      "id":"M09", "title":"Ultra-broad-band electrical spectroscopy of soils and sediments-a combined permittivity and conductivity model", "authors":"Loewer et al.", "year":2017,
+      "doi":"10.1093/gji/ggx242", "url":"https://academic.oup.com/gji/article/210/3/1360/3861100",
+      "reading_scope":"Online relevant theory2.1-2.3, materials3.1, measurement3.2; parameter table not audited, Python fulltext download403",
+      "available":"Measured loess silty clay/laterite/humus/saturated OBS sandstone; HF1MHz-10GHz plus LF SIP; fitted CPCM",
+      "adoption":"Both effective conductivity and permittivity contribute to total epsilon; do not duplicate DC loss in a later Debye fit",
+      "limitations":["Different LF/HF cells and independently checked compatibility", "No new parameters copied from unaudited tables"]
+    }
+  ]
+}
