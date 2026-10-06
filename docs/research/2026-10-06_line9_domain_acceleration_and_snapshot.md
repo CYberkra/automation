@@ -28,7 +28,9 @@
 
 新私有准备包`artifacts/local_checks/2026-10-06_line9_large_snapshot_prepared_r3`，参考`full2d_pilot_0`。原始输入按字节保留，**仅追加**599条快照命令，不改变求解网格或物理因素。保存整域400×75m、间隔34个原生时间步（约2.005ns），从0到约1198ns；保存间距XYZ=0.2/0.2/0.025m，每帧2000×375×1。原生H5仍输出完整FP64 Ez与源samples。
 
-安装V4的hash快照语法只接受11参数，默认六分量；其CUDA `dtoh_snapshot_array`即使最终只查看Ez也保留六个host数组。因此预算按**六分量**约20.08GiB历史计算，不误按一分量估计；`-snapsgpu2cpu`使GPU只持有一帧约36MB附加缓存。最低可用RAM约40GiB、空闲VRAM约11.7GiB、额外磁盘约26.1GiB，最终以生成snapshot_plan为准；监督器自有RSS上限40GiB、剩余系统RAM下限1.5GiB、单道/全批60min、no_retry。重启后只读预检为可用RAM53.52GiB、空闲显存15104MiB、E盘空闲1362.96GiB，实际freeze/run再次核查。共享GPU锁沿用原`E:\automation_djh\artifacts\local_checks\hs4_gpu_exclusive.lock`。
+安装V4的hash快照语法只接受11参数，默认六分量；其CUDA `dtoh_snapshot_array`即使最终只查看Ez也保留六个host数组。因此预算按**六分量**约20.08GiB历史计算，不误按一分量估计。V4的`utilities.host_info.mem_check_device_snaps`在不含快照的模型能装入显存时，自动设置内部`snapsgpu2cpu=True`，使GPU只持有一帧约36MB附加缓存；无需命令行选项或修改求解器。最低可用RAM约40GiB、空闲VRAM约11.7GiB、额外磁盘约26.1GiB，最终以生成snapshot_plan为准；监督器自有RSS上限40GiB、剩余系统RAM下限1.5GiB、单道/全批60min、no_retry。重启后只读预检为可用RAM53.52GiB、空闲显存15104MiB、E盘空闲1362.96GiB，实际freeze/run再次核查。共享GPU锁沿用原`E:\automation_djh\artifacts\local_checks\hs4_gpu_exclusive.lock`。
+
+首次快照胶囊`line9_large_snapshot_rog_r1`使用了V4不存在的`-snapsgpu2cpu`命令行选项，argparse退出，未加载模型、未执行FDTD、没有原始输出。失败契约、源码worktree与日志保留；新启动必须使用独立worktree和新r2胶囊，不能原地重试。该错误不代表模型或容量失败。
 
 快照20cm/约2ns仅为保存采样，2.5cm FDTD求解不变。图用于传播路径与大尺度波前诊断，不能认证源全部高频分量/精细地下相位；GIF再隔3帧播放，必须标注动画采样。灰度单站B-scan保留未计算区域；GIF标原始Ricker瞬时总场、共享SymLog色标、真实地表/岩性接触线、收发位置和时间，不能把瞬时绝对值称解析包络，不能把脉冲波场称SFCW波场。实际回波身份仍需路径与对照证据，不能仅据动画颜色判断“PML反弹”。
 
@@ -36,7 +38,7 @@
 
 ## 复现入口与已做检查
 
-`scripts/prepare_line9_domain_acceleration.py`只准备精确切片；`scripts/line9_large_domain_snapshot.py`分prepare/freeze/run/verify；`scripts/analyze_line9_large_wavefield.py`核查后生成实际GIF和SFCW报告。现有监督器新增唯一允许的可选参数`-snapsgpu2cpu`，默认命令不变；SFCW分析器支持快照审核及正确的一站留白图。**不要把新监督器/分析代码覆盖到旧冻结worktree，旧源码哈希必须保留。**
+`scripts/prepare_line9_domain_acceleration.py`只准备精确切片；`scripts/line9_large_domain_snapshot.py`分prepare/freeze/run/verify；`scripts/analyze_line9_large_wavefield.py`核查后生成实际GIF和SFCW报告。监督器拒绝附加求解参数，快照转存使用冻结版本V4的原生自动机制；SFCW分析器支持快照审核及正确的一站留白图。**不要把新监督器/分析代码覆盖到旧冻结worktree，旧源码哈希必须保留。**
 
 检查见[准备和回归证据](../../artifacts/research_checks/2026-10-06_line9_domain_acceleration_r1/)：10个切片完整体素、材料键、空气收发点及坐标平移核对通过，V4原生命令均解析；599帧命令解析与内存/磁盘计算完成；原生/SFCW数组回归与5项被动观测、错误极性、FP32快照、E/H半步、违规输入修改的反例通过。均为准备/数组证据，不是缩域回波质量签认或已完成大域快照。
 

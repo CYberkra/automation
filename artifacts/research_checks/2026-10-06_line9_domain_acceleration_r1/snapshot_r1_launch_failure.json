@@ -1,0 +1,11 @@
+{
+  "status": "FAILED_ARGUMENT_PARSING_NO_FDTD",
+  "capsule": "line9_large_snapshot_rog_r1",
+  "contract_sha256": "108cbf41f67c95306cde4f82a4c06db818fc0efd72115a12d6e6cb8c087c4d73",
+  "execution_log_sha256": "062a9f183208e642310de5367ee7e45971bd4bc942c837c735a25fa355583802",
+  "stderr_sha256": "4e2b9ee80cda3fc8c047345cc57207137f62046bd657cbe52eb6ecadc1fa494b",
+  "failure": "V4.0.0 argparse rejected unsupported -snapsgpu2cpu",
+  "raw_output_exists": false,
+  "recovery": "Preserve r1 and its worktree; fresh r2 contract uses native automatic streaming",
+  "calls_solver_before_model_load": false
+}

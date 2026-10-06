@@ -157,7 +157,7 @@ def run(path):
             for g in c['groups']:
                 resources=live_resources(c); p=Path(g['input'])
                 extra=c.get('additional_solver_args',[])
-                if extra not in ([],['-snapsgpu2cpu']):
+                if extra != []:
                     raise ValueError('Unsupported additional solver arguments')
                 command=[sys.executable,str(ROOT/'scripts/gprmax_cached_cuda_entry.py'),str(p),'-gpu','0','-gpu_precision','double','--hide-progress-bars',*extra]
                 env=os.environ.copy(); env['HS4_CUDA_CACHE_LOG']=str(p.parent/'cuda_cache.jsonl')

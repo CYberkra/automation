@@ -169,7 +169,8 @@ def freeze(prepared, out, pilots):
         'gprmax_cached_cuda_entry.py', 'hs_capsule_identity.py', 'build_pdf_profile_geometry.py',
         'analyze_line9_2d_sfcw.py', 'run_line9_2d_v4.cmd', 'analyze_line9_large_wavefield.py']
     c.update(stage='snapshot', approval_basis=plan['approval_basis'], groups=[group], max_runs=1,
-        reuse={}, hardware_at_freeze=hardware, additional_solver_args=['-snapsgpu2cpu'],
+        reuse={}, hardware_at_freeze=hardware, additional_solver_args=[],
+        snapshot_storage_policy='Native V4 utilities.host_info.mem_check_device_snaps automatically enables GPU-to-host streaming when the non-snapshot model fits device memory; no CLI option or solver patch',
         code_identities={str(ROOT/'scripts'/n): digest(ROOT/'scripts'/n) for n in sources},
         file_identities={str(p.resolve()): digest(p) for p in out.rglob('*') if p.is_file()},
         passive_reference_input=original_group['input'], passive_reference_input_sha256=original_group['input_sha256'],

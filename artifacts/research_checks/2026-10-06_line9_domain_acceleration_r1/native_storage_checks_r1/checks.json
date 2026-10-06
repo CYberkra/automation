@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "calls_solver": false,
+  "native_version": "4.0.0",
+  "native_memory_source_sha256": "ccea2a43bf6daf220b2f553b1b72dcb527595ff3fa860c73c07a9f456102573f",
+  "checks": [
+    "Native V4 enables streaming when non-snapshot arrays fit device",
+    "Native V4 does not enable streaming for an oversized non-snapshot model",
+    "Native CLI exposes GPU precision and has no legacy snapshot flag"
+  ],
+  "scope": "Actual installed memory-selection function and CLI only; mocked capacity, no allocation/FDTD"
+}
