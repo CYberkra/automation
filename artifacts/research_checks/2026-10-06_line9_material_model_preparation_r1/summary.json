@@ -1,0 +1,391 @@
+{
+  "status": "PREPARED_VERIFIED_ARCHIVED_NOT_SIMULATED",
+  "calls_solver": false,
+  "calls_training": false,
+  "independent_verification": {
+    "status": "PASS_INDEPENDENT_MODEL_AUDIT_NOT_FDTD_VALIDATION",
+    "calls_solver": false,
+    "calls_training": false,
+    "manifest_sha256": "ef1b49955ff74df341c744b05bbda698af72fe4a2a3f02ef59a6445fa54e9cde",
+    "material_database_sha256": "940dc7bc3cd74b332fb85f608b301bd9fe387c081394c2931c89b90e3b6495ac",
+    "script_sha256": "72651b8b1f0e6bfca71c0258f5137b4d4a9383005f35f72290a12a8cad6617e1",
+    "native_geometry_sha256": {
+      "full2d": "9f94ff6a1cc767e66d0f5b5569fb34ae860fe591b22a0fa7d6343f0899e57372",
+      "local2d_0": "936eea7674478fb2cddd84db474bba85735104bffff0a17819680c45bcaa3be6",
+      "local3d_0": "cba773be0bab1a313751dd7697d42f2788c5df5f31c3e47b3313f99920289a2f",
+      "local2d_1": "4f5808204ac3e230f2672d4c127c6af0c5a614a7984f055ef57eed1a06634c5d",
+      "local3d_1": "0045a3386aeebecc18fa0dfaf0426cb7ab4c04bcf111d06aa339934d3c34a130",
+      "local2d_2": "ae61a0a0ac5f3a200edcf592d58dbbd78a57bad2743579c4d5221a9104960cbf",
+      "local3d_2": "ef5d7e9dbd2164cf7c0143f67ac58f1ff0b8ac9b046c96e40573ef236cda8e89",
+      "local3d_wide_0": "355da145b764430aee5e5074eae107bb90b063bfc8477dd19878f0ce8821d459",
+      "local3d_wide_1": "78182789f03cb4ccd5f6c20ed4d736fe42557135487eb9f6d27d24a7695d0525"
+    },
+    "input_count": 407,
+    "full2d_station_count": 391,
+    "geometry_count": 9,
+    "all_four_materials_assigned": true,
+    "maximum_baseline_absolute_error_m": 4.551914400963142e-14,
+    "maximum_midpoint_AGL_quantisation_error_m": 0.022270271919921925,
+    "maximum_borehole_interface_absolute_error_m": 0.015000000000032543,
+    "matched_local2d_and_three_local3d_cross_sections_equal": true,
+    "checks": [
+      "geometry/material/input identities",
+      "all407 native air Tx/Rx pairs",
+      "195m reverse acquisition",
+      "along/cross1.3m baselines",
+      "borehole ordering/depths",
+      "matched local2D/3D extrusions"
+    ],
+    "resource_preflight_sha256": "c73cc4916ce9c6c364d2de1b49cd53adbdde0ce88be512685cc0727907111749"
+  },
+  "resource_preflight": {
+    "status": "PREPARED_NOT_RUN_RESOURCE_PREFLIGHT_REJECTED",
+    "manifest_sha256": "ef1b49955ff74df341c744b05bbda698af72fe4a2a3f02ef59a6445fa54e9cde",
+    "calls_solver": false,
+    "calls_training": false,
+    "observed": {
+      "available_RAM_bytes": 2720305152,
+      "total_RAM_bytes": 16964685824,
+      "gpu_name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+      "total_VRAM_bytes": 6442450944,
+      "free_VRAM_bytes": 3610247168
+    },
+    "records": {
+      "full2d": {
+        "required_available_RAM_bytes": 14968955386,
+        "required_free_VRAM_bytes": 12522413562,
+        "passes_available_RAM": false,
+        "passes_free_VRAM": false
+      },
+      "local2d_0": {
+        "required_available_RAM_bytes": 1811411194,
+        "required_free_VRAM_bytes": 717077370,
+        "passes_available_RAM": true,
+        "passes_free_VRAM": true
+      },
+      "local3d_0": {
+        "required_available_RAM_bytes": 54834425789,
+        "required_free_VRAM_bytes": 43876523965,
+        "passes_available_RAM": false,
+        "passes_free_VRAM": false
+      },
+      "local2d_1": {
+        "required_available_RAM_bytes": 1811411194,
+        "required_free_VRAM_bytes": 717077370,
+        "passes_available_RAM": true,
+        "passes_free_VRAM": true
+      },
+      "local3d_1": {
+        "required_available_RAM_bytes": 54834425789,
+        "required_free_VRAM_bytes": 43876523965,
+        "passes_available_RAM": false,
+        "passes_free_VRAM": false
+      },
+      "local2d_2": {
+        "required_available_RAM_bytes": 1811411194,
+        "required_free_VRAM_bytes": 717077370,
+        "passes_available_RAM": true,
+        "passes_free_VRAM": true
+      },
+      "local3d_2": {
+        "required_available_RAM_bytes": 54834425789,
+        "required_free_VRAM_bytes": 43876523965,
+        "passes_available_RAM": false,
+        "passes_free_VRAM": false
+      },
+      "local3d_wide_0": {
+        "required_available_RAM_bytes": 81401280701,
+        "required_free_VRAM_bytes": 65501298877,
+        "passes_available_RAM": false,
+        "passes_free_VRAM": false
+      },
+      "local3d_wide_1": {
+        "required_available_RAM_bytes": 81401280701,
+        "required_free_VRAM_bytes": 65501298877,
+        "passes_available_RAM": false,
+        "passes_free_VRAM": false
+      }
+    },
+    "estimation_scope": "Lower bound from installed array shapes, fields float64, IDs uint32, rigid int8, real Debye histories float64; excludes PML, import temporaries and backend workspaces",
+    "full2d_capacity_pass": false,
+    "all_local3d_capacity_pass": false,
+    "note": "Local2D fit does not authorize replacing the full model with a cropped domain. Recheck target machine and freeze execution separately. No process was terminated."
+  },
+  "geometry_resources": {
+    "full2d": {
+      "shape_nxyz": [
+        16000,
+        3000,
+        1
+      ],
+      "grid_xyz_m": [
+        0.025,
+        0.025,
+        0.025
+      ],
+      "cells": 48000000,
+      "file_bytes": 2464659,
+      "host_primary_array_lower_bytes": 10275648192,
+      "device_primary_array_lower_bytes": 9219648192,
+      "required_available_RAM_bytes": 14968955386,
+      "required_free_VRAM_bytes": 12522413562,
+      "passes_available_RAM": false,
+      "passes_free_VRAM": false
+    },
+    "local2d_0": {
+      "shape_nxyz": [
+        480,
+        1500,
+        1
+      ],
+      "grid_xyz_m": [
+        0.05,
+        0.05,
+        0.05
+      ],
+      "cells": 720000,
+      "file_bytes": 53244,
+      "host_primary_array_lower_bytes": 154460352,
+      "device_primary_array_lower_bytes": 138620352,
+      "required_available_RAM_bytes": 1811411194,
+      "required_free_VRAM_bytes": 717077370,
+      "passes_available_RAM": true,
+      "passes_free_VRAM": true
+    },
+    "local3d_0": {
+      "shape_nxyz": [
+        480,
+        1500,
+        480
+      ],
+      "grid_xyz_m": [
+        0.05,
+        0.05,
+        0.05
+      ],
+      "cells": 345600000,
+      "file_bytes": 3823685,
+      "host_primary_array_lower_bytes": 40941394656,
+      "device_primary_array_lower_bytes": 33338194656,
+      "required_available_RAM_bytes": 54834425789,
+      "required_free_VRAM_bytes": 43876523965,
+      "passes_available_RAM": false,
+      "passes_free_VRAM": false
+    },
+    "local2d_1": {
+      "shape_nxyz": [
+        480,
+        1500,
+        1
+      ],
+      "grid_xyz_m": [
+        0.05,
+        0.05,
+        0.05
+      ],
+      "cells": 720000,
+      "file_bytes": 53374,
+      "host_primary_array_lower_bytes": 154460352,
+      "device_primary_array_lower_bytes": 138620352,
+      "required_available_RAM_bytes": 1811411194,
+      "required_free_VRAM_bytes": 717077370,
+      "passes_available_RAM": true,
+      "passes_free_VRAM": true
+    },
+    "local3d_1": {
+      "shape_nxyz": [
+        480,
+        1500,
+        480
+      ],
+      "grid_xyz_m": [
+        0.05,
+        0.05,
+        0.05
+      ],
+      "cells": 345600000,
+      "file_bytes": 3826910,
+      "host_primary_array_lower_bytes": 40941394656,
+      "device_primary_array_lower_bytes": 33338194656,
+      "required_available_RAM_bytes": 54834425789,
+      "required_free_VRAM_bytes": 43876523965,
+      "passes_available_RAM": false,
+      "passes_free_VRAM": false
+    },
+    "local2d_2": {
+      "shape_nxyz": [
+        480,
+        1500,
+        1
+      ],
+      "grid_xyz_m": [
+        0.05,
+        0.05,
+        0.05
+      ],
+      "cells": 720000,
+      "file_bytes": 54706,
+      "host_primary_array_lower_bytes": 154460352,
+      "device_primary_array_lower_bytes": 138620352,
+      "required_available_RAM_bytes": 1811411194,
+      "required_free_VRAM_bytes": 717077370,
+      "passes_available_RAM": true,
+      "passes_free_VRAM": true
+    },
+    "local3d_2": {
+      "shape_nxyz": [
+        480,
+        1500,
+        480
+      ],
+      "grid_xyz_m": [
+        0.05,
+        0.05,
+        0.05
+      ],
+      "cells": 345600000,
+      "file_bytes": 3827495,
+      "host_primary_array_lower_bytes": 40941394656,
+      "device_primary_array_lower_bytes": 33338194656,
+      "required_available_RAM_bytes": 54834425789,
+      "required_free_VRAM_bytes": 43876523965,
+      "passes_available_RAM": false,
+      "passes_free_VRAM": false
+    },
+    "local3d_wide_0": {
+      "shape_nxyz": [
+        720,
+        1500,
+        480
+      ],
+      "grid_xyz_m": [
+        0.05,
+        0.05,
+        0.05
+      ],
+      "cells": 518400000,
+      "file_bytes": 5734635,
+      "host_primary_array_lower_bytes": 61377436896,
+      "device_primary_array_lower_bytes": 49972636896,
+      "required_available_RAM_bytes": 81401280701,
+      "required_free_VRAM_bytes": 65501298877,
+      "passes_available_RAM": false,
+      "passes_free_VRAM": false
+    },
+    "local3d_wide_1": {
+      "shape_nxyz": [
+        480,
+        1500,
+        720
+      ],
+      "grid_xyz_m": [
+        0.05,
+        0.05,
+        0.05
+      ],
+      "cells": 518400000,
+      "file_bytes": 5893364,
+      "host_primary_array_lower_bytes": 61377436896,
+      "device_primary_array_lower_bytes": 49972636896,
+      "required_available_RAM_bytes": 81401280701,
+      "required_free_VRAM_bytes": 65501298877,
+      "passes_available_RAM": false,
+      "passes_free_VRAM": false
+    }
+  },
+  "preview_validation": {
+    "status": "PASS_PHYSICAL_COORDINATE_PREVIEW",
+    "calls_solver": false,
+    "manifest_sha256": "ef1b49955ff74df341c744b05bbda698af72fe4a2a3f02ef59a6445fa54e9cde",
+    "script_sha256": "47afb73755c331c3babd78d34189ebc5c14e0256ebec24a13e97f394e147a22f",
+    "png_sha256": "185888c00886c3d4925faf30a166ff2deb924caafd4eea229d517566fb9b430c",
+    "vtk": [
+      {
+        "file": "model_view_2d.vti",
+        "sha256": "9ca519cf89b07ad91e9f84ac39040041929630f6f088689c0526f6c3ad79a7d9",
+        "display_spacing_xyz_m": [
+          0.1,
+          0.1,
+          0.025
+        ],
+        "native_geometry_sha256": "9f94ff6a1cc767e66d0f5b5569fb34ae860fe591b22a0fa7d6343f0899e57372",
+        "bounds": [
+          -50.0,
+          350.0,
+          405.0,
+          480.0,
+          0.0,
+          0.025
+        ],
+        "scope": "Coarser display grid evaluated from the same reviewed contacts; not solver voxel grid"
+      },
+      {
+        "file": "model_view_local3d.vti",
+        "sha256": "8ec14461c6ce7fb6715ca742abf3e2e058438c2c9c3137b00699cf38b4dfde73",
+        "display_spacing_xyz_m": [
+          0.2,
+          0.2,
+          0.2
+        ],
+        "native_geometry_sha256": "0045a3386aeebecc18fa0dfaf0426cb7ab4c04bcf111d06aa339934d3c34a130",
+        "bounds": [
+          184.75,
+          208.75,
+          405.0,
+          480.0,
+          0.0,
+          24.0
+        ],
+        "scope": "Coarser display grid evaluated from the same reviewed contacts; not solver voxel grid"
+      }
+    ],
+    "vertical_exaggeration": 1,
+    "source_midpoint_trajectory": true,
+    "antenna_model": false,
+    "note": "Upper view X increases; lower view follows acquisition X decreases.3D preview is local invariant extrusion near ZK08. Display meshes are coarser than native solver geometries."
+  },
+  "installed_native_sources_sha256": {
+    "D:\\gprmax_v4_gpu_env\\Lib\\site-packages\\gprMax\\grid\\fdtd_grid.py": "29e25a95b50962dac8abc6f0d820daab3351b5162844c7c86d379c8074fed3a5",
+    "D:\\gprmax_v4_gpu_env\\Lib\\site-packages\\gprMax\\config.py": "60db44f5c31d80fc6848f608d5830339096024d2a97f5665722b27588264f5e1"
+  },
+  "original_source_files_verified_unchanged": true,
+  "overwrite_refusal_checks": {
+    "Refuse to overwrite model package": true,
+    "Refuse to overwrite verification": true
+  },
+  "archive": {
+    "filename": "2026-10-06_line9_material_model_r1_portable.zip",
+    "sha256": "c0ca87b431b48538cf8baa728483a8d6cc69de1a5165c8f5c70cf950aadd925b",
+    "bytes": 1997674,
+    "file_count": 442,
+    "CRC_and_every_entry_SHA256_verified": true,
+    "scope": "Private local archive; contains PDF-derived geology; do not upload"
+  },
+  "preview_files_sha256": {
+    "model_2d.pvsm": "0c233f3c5378b19c4de4d84e5ce1d79b4533beb2219e268bf3148a01de857a75",
+    "model_2d_r2.pvsm": "d7a0203ee8147e17f2634881e550e5925e7d5dddd22c53597ffccd7a1496d3ce",
+    "model_3d.pvsm": "309720aa0e38540a6fd2bfbfa9ec35d4931edea76fc2f473b8335931933e7bc7",
+    "model_3d_r2.pvsm": "aaef28eb0ccf66f880ebbdd4ca8f6565f2fbc867952237e3ccf069a5fdd073a0",
+    "model_acquisition.png": "185888c00886c3d4925faf30a166ff2deb924caafd4eea229d517566fb9b430c",
+    "model_view_2d.vti": "9ca519cf89b07ad91e9f84ac39040041929630f6f088689c0526f6c3ad79a7d9",
+    "model_view_local3d.vti": "8ec14461c6ce7fb6715ca742abf3e2e058438c2c9c3137b00699cf38b4dfde73",
+    "paraview_2d.png": "f1ceb0e9b31306361ba555e551b9ce2f8d84560411f920b98a3d4bcc3ec09b91",
+    "paraview_2d_r2.png": "fe1288f784d6cda4f13e27086adec5123bc5ecce7d147b776cbc2fe607db02a1",
+    "paraview_3d.png": "d7d26ae64fe55e24902b0918c8455bd85ec043bf393270739bff486305819b30",
+    "paraview_3d_r2.png": "489f62c1d053bc1bfa4b465df1ad0291e15011002ad7fc9fb964a1fac1402664"
+  },
+  "reproducibility_script_sha256": {
+    "prepare_line9_material_model.py": "64d2d3ba063c31f0489d5bac05cc17822fe010b0526bf9178c825cbdcdd16b99",
+    "audit_line9_material_model.py": "72651b8b1f0e6bfca71c0258f5137b4d4a9383005f35f72290a12a8cad6617e1",
+    "preview_line9_material_model.py": "47afb73755c331c3babd78d34189ebc5c14e0256ebec24a13e97f394e147a22f",
+    "view_line9_material_model_paraview.py": "7fe6027166c3437e1f38c0005aec358139c30ea601caf6fbfdd56079b061fc4a",
+    "build_pdf_profile_geometry.py": "fa0816ee01ba639c596f19cc47c5c64a58308f1f165d5957f36b8527fac6fd16",
+    "archive_line9_material_model.py": "d570d4a6b96cfd42f4ce026bcf24f11f25d135610f7ca068ccc877d55215b1ce"
+  },
+  "public_scope": "Aggregate counts, hardware requirements and identities only; native model and figures stay private",
+  "limitations": [
+    "No native FDTD results or B-scan",
+    "No mesh/boundary/physical validation",
+    "Target-machine capacity and execution contract must be checked separately"
+  ]
+}

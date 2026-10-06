@@ -3575,5 +3575,29 @@
  "b2_pilot_co_contract": "configs/research/batch2d_b2_pilot_co/",
  "b2_pilot_freeze_script": "scripts/freeze_batch2d_b2_pilot_co.py",
  "b2_pilot_co_run": "artifacts/research_checks/2026-10-01_b2_pilot_run.log",
- "b2_pilot_co_run_status": "completed_396of396_exit0; NC-BG bitwise 4/4 pairs x 33 traces; h5 396/396; wall 3.35 h; vctip drain watcher used (operational only)"
+ "b2_pilot_co_run_status": "completed_396of396_exit0; NC-BG bitwise 4/4 pairs x 33 traces; h5 396/396; wall 3.35 h; vctip drain watcher used (operational only)",
+ "line9_material_model_preparation_2026_10_06":{
+  "report": "docs/research/2026-10-06_line9_material_model_preparation.md",
+  "plan": "configs/research/line9_model_plan_v0_1.json",
+  "scripts": [
+   "scripts/prepare_line9_material_model.py",
+   "scripts/audit_line9_material_model.py",
+   "scripts/preview_line9_material_model.py",
+   "scripts/view_line9_material_model_paraview.py",
+   "scripts/archive_line9_material_model.py"
+  ],
+  "results": "artifacts/research_checks/2026-10-06_line9_material_model_preparation_r1/summary.json",
+  "private_package": "artifacts/local_checks/2026-10-06_line9_material_model_r1",
+  "private_archive": "artifacts/local_checks/2026-10-06_line9_material_model_r1_portable.zip",
+  "status": "PREPARED_VERIFIED_ARCHIVED_NOT_SIMULATED_RESOURCE_PREFLIGHT_REJECTED",
+  "source_git_base": "f2a77f8",
+  "calls_solver": false,
+  "calls_training": false,
+  "old_source_unchanged": true,
+  "full2d_station_count": 391,
+  "parsed_inputs": 407,
+  "geometry_count": 9,
+  "role": "Line9 site adaptation; not independent blind validation",
+  "notes": "15m midpoint AGL;2D along-track surrogate vs3D cross-track1.3m; geometry/material/coordinate checks only. Target-machine-specific capacity/runtime/execution contract required."
+ }
 }
