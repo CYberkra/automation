@@ -147,6 +147,14 @@ def run(path):
     log=path.parent/'execution.jsonl'
     if log.exists() or any(Path(g['input']).with_suffix('.h5').exists() for g in c['groups']): raise ValueError('attempt consumed; no retry')
     first_resources=live_resources(c)  # No attempt consumed when preflight alone rejects.
+    def check_cancellation():
+        if c.get('cancel_file') and Path(c['cancel_file']).exists():
+            raise RuntimeError('USER_CANCEL_REQUESTED')
+        if c.get('lease_file'):
+            lease=Path(c['lease_file'])
+            if not lease.exists() or time.time()-lease.stat().st_mtime>c['max_lease_age_s']:
+                raise RuntimeError('SESSION_LEASE_EXPIRED')
+    check_cancellation()
     with (ROOT/c['gpu_lock']).open('a+b') as lock:
         lock.seek(0); msvcrt.locking(lock.fileno(),msvcrt.LK_NBLCK,1)
         def event(value):
@@ -155,6 +163,7 @@ def run(path):
         event({'status':'STARTED','contract_sha256':sha256(path),'unix_s':time.time(),'runner_pid':os.getpid(),**first_resources})
         try:
             for g in c['groups']:
+                check_cancellation()
                 resources=live_resources(c); p=Path(g['input'])
                 extra=c.get('additional_solver_args',[])
                 if extra != []:
@@ -169,6 +178,7 @@ def run(path):
                     process=subprocess.Popen(command,cwd=p.parent,env=env,stdout=out,stderr=err)
                     start=time.monotonic(); peak=0
                     while process.poll() is None:
+                        check_cancellation()
                         try:
                             parent=psutil.Process(process.pid); rss=0
                             for owned in [parent]+parent.children(recursive=True):
@@ -186,6 +196,8 @@ def run(path):
                 event({'status':'COMPLETED','group':g['id'],'elapsed_s':time.monotonic()-start,'peak_owned_RSS_bytes':peak,'raw_sha256':sha256(p.with_suffix('.h5'))})
                 print('Completed',g['id'],flush=True)
                 process=None
+                hook=globals().get('group_completed_hook')
+                if hook is not None: hook(g)
             verification=audit(path,True)
             save(path.parent/'completed_verification.json',verification)
             event({'status':'COMPLETED','traces':len(c['groups']),'verification_sha256':sha256(path.parent/'completed_verification.json')})

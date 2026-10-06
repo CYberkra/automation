@@ -54,28 +54,40 @@ def process_trace(raw):
         last20ns_taper_relative_spectral_change=relative(tapered.response/source.spatial_scale,product.response))
 
 
-def main(study,out):
+def main(study,out,partial=False):
     if out.exists(): raise ValueError('Fresh analysis output required')
     if digest(Path(sf.__file__))!=PROCESSING_SHA: raise ValueError('Reviewed V4 SFCW implementation required')
     path=study/'execution_contract.json';c=json.loads(path.read_text('utf-8'))
-    if c['stage']=='snapshot':
+    if partial:
+        if c['stage']!='continuation': raise ValueError('Partial analysis only for explicitly approved continuation')
+        events=[json.loads(line) for line in (study/'execution.jsonl').read_text('utf-8').splitlines()]
+        completed={e['group']:e['raw_sha256'] for e in events if e['status']=='COMPLETED' and 'group' in e}
+        current=runner.audit(path,True,group_ids=set(completed))
+        for r in current['groups']:
+            if r['raw_sha256']!=completed[r['id']]: raise ValueError('Completed event raw identity changed')
+    elif c['stage']=='snapshot':
         from line9_large_domain_snapshot import audit as snapshot_audit
         current=snapshot_audit(path,True)
     else:
         current=runner.audit(path,True)
-    stored=json.loads((study/'completed_verification.json').read_text('utf-8'))
-    if current!=stored: raise ValueError('Completed native verification changed')
+    if not partial:
+        stored=json.loads((study/'completed_verification.json').read_text('utf-8'))
+        if current!=stored: raise ValueError('Completed native verification changed')
     rows=[]
-    for g,r in zip(c['groups'],current['groups']):
+    by_id={g['id']:g for g in c['groups']}
+    for r in current['groups']:
+        g=by_id[r['id']]
         rows.append(dict(id=g['id'],s=g['acquisition_s_m'],x=g['profile_x_m'],
                          raw=r['raw_path'],sha=r['raw_sha256'],reused=False))
-    if c['stage']=='preview':
+    if c['stage'] in ('preview','continuation'):
         task=json.loads(runner.TASK.read_text('utf-8'))
         for name,item in c['reuse'].items():
             if digest(Path(item['raw_path']))!=item['raw_sha256']: raise ValueError('Reused output changed')
             index=int(name.rsplit('s',1)[1]);s=index*.5
             rows.append(dict(id=name,s=s,x=220-s,raw=item['raw_path'],sha=item['raw_sha256'],reused=True))
-        if set(r['id'] for r in rows)!=set(task['acquisition']['preview_ids']): raise ValueError('Incomplete99-station preview')
+        actual=set(r['id'] for r in rows);expected=set(task['acquisition']['preview_ids'])
+        if not actual<=expected or len(actual)!=len(rows): raise ValueError('Unexpected or duplicate scan station')
+        if not partial and actual!=expected: raise ValueError('Incomplete99-station preview')
     rows.sort(key=lambda r:r['s'])
     spectra=[];raws=[];records=[];reference_time=None
     for row in rows:
@@ -120,7 +132,7 @@ def main(study,out):
         visible=t<=1200;scale=float(np.max(abs(v[visible]))) if i==0 else float(sfcw_scale)
         tv=t[visible];vv=v[visible]
         time_edges=np.r_[tv[0]-(tv[1]-tv[0])/2,(tv[:-1]+tv[1:])/2,tv[-1]+(tv[-1]-tv[-2])/2]
-        if c['stage']!='preview':
+        if c['stage'] not in ('preview','continuation') or partial:
             for j,s in enumerate(positions):
                 axes[i].pcolormesh([s-.25,s+.25],time_edges,vv[:,j:j+1],cmap='gray',vmin=-scale,vmax=scale,rasterized=True)
             label+=f'；{len(positions)}站，白色间隔未计算'
@@ -138,7 +150,7 @@ def main(study,out):
     fig.suptitle('九号线四材料：15m离地；2D沿线1.3m代理；网格2.5cm\n灰度为带符号数据，共享SFCW色标；材料是研究假设，未认证现场效果')
     fig.savefig(out/'line9_sfcw_panels.png',dpi=140);plt.close(fig)
     report=dict(status='PASS_PROCESSING_IDENTITIES_NOT_PHYSICAL_ACCEPTANCE',stage=c['stage'],
-        calls_solver=False,contract_sha256=digest(path),completed_verification_sha256=digest(study/'completed_verification.json'),
+        calls_solver=False,contract_sha256=digest(path),completed_verification_sha256=None if partial else digest(study/'completed_verification.json'),partial=partial,
         task_sha256=c['task_sha256'],script_sha256=digest(Path(__file__)),official_processing_sha256=PROCESSING_SHA,
         trace_count=len(rows),frequency_count=501,source_moment_normalisation=True,
         windows=['rectangular','hann'],gain=False,background_removal=False,extra_time_shift_s=0,
@@ -157,4 +169,5 @@ def main(study,out):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--study',type=Path,required=True)
-    p.add_argument('--out',type=Path,required=True);a=p.parse_args();main(a.study.resolve(),a.out.resolve())
+    p.add_argument('--out',type=Path,required=True);p.add_argument('--partial',action='store_true')
+    a=p.parse_args();main(a.study.resolve(),a.out.resolve(),partial=a.partial)

@@ -47,10 +47,11 @@ def check_files(contract):
         if digest(Path(name))!=value: raise ValueError('Compiler/Python binary changed')
 
 
-def audit(path,completed=False):
+def audit(path,completed=False,group_ids=None):
     c=json.loads(path.read_text('utf-8'));check_files(c)
     rows=[]
     for g in c['groups']:
+        if group_ids is not None and g['id'] not in group_ids: continue
         p=Path(g['input'])
         if digest(p)!=g['input_sha256']: raise ValueError('Frozen input changed')
         record=dict(id=g['id'],profile_x_m=g['profile_x_m'],acquisition_s_m=g['acquisition_s_m'],
@@ -82,12 +83,14 @@ def audit(path,completed=False):
             record.update(raw_sha256=digest(raw),raw_path=str(raw.resolve()),dt_s=dt,
                 iterations=iterations,dtype='float64')
         rows.append(record)
+    if group_ids is not None and {r['id'] for r in rows}!=set(group_ids):
+        raise ValueError('Unknown requested audit group')
     return dict(status='PASS',completed=completed,contract_sha256=digest(path),
         task_sha256=c['task_sha256'],stage=c['stage'],groups=rows,
         scope='Native execution/input identity only; not physics or record-tail acceptance')
 
 
-def freeze(package,out,stage,pilots=None):
+def freeze(package,out,stage,pilots=None,station_ids=None):
     import gprMax
     if gprMax.__version__!='4.0.0' or out.exists(): raise ValueError('V4.0.0 and fresh capsule required')
     task=json.loads(TASK.read_text('utf-8'))
@@ -109,6 +112,10 @@ def freeze(package,out,stage,pilots=None):
         if digest(native/relative)!=expected:
             raise ValueError('Array allocator/config differs from resource model; re-audit before solving')
     ids=task['acquisition']['pilot_ids'] if stage=='pilots' else task['acquisition']['preview_pending_ids']
+    if stage=='continuation':
+        if not station_ids or len(set(station_ids))!=len(station_ids) or not set(station_ids)<=set(task['acquisition']['preview_ids']):
+            raise ValueError('Continuation requires unique approved coarse-scan station IDs')
+        ids=station_ids
     reuse={}
     if stage=='preview':
         if pilots is None: raise ValueError('Pilot capsule required')
