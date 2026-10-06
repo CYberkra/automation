@@ -1,4 +1,19 @@
 {
+ "cover_rock_material_design_2026_10_06": {
+  "report": "docs/research/2026-10-06_cover_rock_material_design.md",
+  "design": "configs/research/material_design_cover_rock_v0_1.json",
+  "script": "scripts/review_material_design_v0_1.py",
+  "results": "artifacts/research_checks/2026-10-06_material_design_cover_rock_r1",
+  "status": "FIXED_RESEARCH_MATERIALS_NOT_SITE_CALIBRATION_OR_EXECUTION_CONTRACT",
+  "source_git_base": "b9ad907",
+  "calls_solver": false,
+  "calls_training": false,
+  "historical_inputs_changed": false,
+  "cover_unchanged": true,
+  "cover_lithology_user_confirmed": true,
+  "rock_center_epsilon_real": 9,
+  "rock_endpoint_span": 1.5
+ },
  "measured_dielectric_sources_2026_10_06": {
   "report": "docs/research/2026-10-06_measured_dielectric_spectra_review.md",
   "ledger": "docs/research/2026-10-06_measured_dielectric_sources.json",

@@ -1,0 +1,138 @@
+{
+  "status": "PASS_FIXED_MATERIAL_DESIGN_NOT_SOLVER_OR_SITE_VALIDATION",
+  "calls_solver": false,
+  "calls_training": false,
+  "gprMax_version": "4.0.0",
+  "parameters_sha256": "ac2dcd0f08221f8128460ccd76197f30945da796baaf302f0832c2f75cd5f770",
+  "script_sha256": "888a7a6a5718f49ac809e6aa6833c521908b78615ba16488aab3086d26b2774d",
+  "local_materials_py_sha256": "75f22bc9c9b7187723223ade373914a53959a67e6a0041890ea09640f6fa0a7e",
+  "checks": {
+    "cover": {
+      "native_calculate_er_relative_L2": 3.077640546473239e-18
+    },
+    "rock": {
+      "native_calculate_er_relative_L2": 1.5683819901294145e-17
+    },
+    "stadler2024_moist_silty_clay": {
+      "native_calculate_er_relative_L2": 7.659103225098219e-17
+    }
+  },
+  "center_span_absolute_tolerance": 1e-12,
+  "table": {
+    "cover": [
+      {
+        "frequency_MHz": 20,
+        "epsilon_real": 11.301508888433354,
+        "epsilon_loss": 1.1433913051649802,
+        "alpha_Np_m": 0.0711921802602386,
+        "amplitude_1_e_m": 14.046486515015582,
+        "absorption_37m_dB": -22.87959457084559
+      },
+      {
+        "frequency_MHz": 40,
+        "epsilon_real": 11.137615804457687,
+        "epsilon_loss": 0.6726930446453957,
+        "alpha_Np_m": 0.08445244289048337,
+        "amplitude_1_e_m": 11.840983703654192,
+        "absorption_37m_dB": -27.141150148633958
+      },
+      {
+        "frequency_MHz": 95,
+        "epsilon_real": 11.031538820273383,
+        "epsilon_loss": 0.31076289360083703,
+        "alpha_Np_m": 0.09313669339117922,
+        "amplitude_1_e_m": 10.736906836491878,
+        "absorption_37m_dB": -29.932076481853098
+      },
+      {
+        "frequency_MHz": 170,
+        "epsilon_real": 11.010295682409415,
+        "epsilon_loss": 0.17674181951764006,
+        "alpha_Np_m": 0.09488639228229309,
+        "amplitude_1_e_m": 10.538918974018276,
+        "absorption_37m_dB": -30.494391066171314
+      }
+    ],
+    "rock": [
+      {
+        "frequency_MHz": 20,
+        "epsilon_real": 10.390579458153649,
+        "epsilon_loss": 2.1588429158184117,
+        "alpha_Np_m": 0.13962202070859342,
+        "amplitude_1_e_m": 7.162194007255564,
+        "absorption_37m_dB": -44.87143412798351
+      },
+      {
+        "frequency_MHz": 40,
+        "epsilon_real": 9.546388257761139,
+        "epsilon_loss": 1.5996454208358901,
+        "alpha_Np_m": 0.21626431767369356,
+        "amplitude_1_e_m": 4.62397130861334,
+        "absorption_37m_dB": -69.50257585071017
+      },
+      {
+        "frequency_MHz": 95,
+        "epsilon_real": 9.0,
+        "epsilon_loss": 0.8153058725917471,
+        "alpha_Np_m": 0.2702762924724058,
+        "amplitude_1_e_m": 3.699917557889752,
+        "absorption_37m_dB": -86.86083178342606
+      },
+      {
+        "frequency_MHz": 170,
+        "epsilon_real": 8.890579458153649,
+        "epsilon_loss": 0.47147781349709494,
+        "alpha_Np_m": 0.2815929695958063,
+        "amplitude_1_e_m": 3.5512250232503413,
+        "absorption_37m_dB": -90.49776190027453
+      }
+    ],
+    "stadler2024_moist_silty_clay": [
+      {
+        "frequency_MHz": 20,
+        "epsilon_real": 20.221954241954442,
+        "epsilon_loss": 33.772275168296346,
+        "alpha_Np_m": 1.2967729551785556,
+        "amplitude_1_e_m": 0.7711450150210047,
+        "absorption_37m_dB": -416.7541906494104
+      },
+      {
+        "frequency_MHz": 40,
+        "epsilon_real": 15.382829678608877,
+        "epsilon_loss": 20.57628841598305,
+        "alpha_Np_m": 1.9032238583478203,
+        "amplitude_1_e_m": 0.5254242666273086,
+        "absorption_37m_dB": -611.654118435235
+      },
+      {
+        "frequency_MHz": 95,
+        "epsilon_real": 11.490179330221924,
+        "epsilon_loss": 10.14722820064405,
+        "alpha_Np_m": 2.758603169216285,
+        "amplitude_1_e_m": 0.3625023023097949,
+        "absorption_37m_dB": -886.5541392720764
+      },
+      {
+        "frequency_MHz": 170,
+        "epsilon_real": 10.548751245857689,
+        "epsilon_loss": 6.221470431499505,
+        "alpha_Np_m": 3.282929618774117,
+        "amplitude_1_e_m": 0.3046059818892527,
+        "absorption_37m_dB": -1055.0610812536552
+      }
+    ]
+  },
+  "local_normal_cover_rock_abs_R": [
+    0.031073586246840035,
+    0.04427481005584015,
+    0.05228417982838067,
+    0.05388768689701217
+  ],
+  "local_normal_cover_rock_R_phase_deg": [
+    56.81223838583315,
+    36.59929057327445,
+    17.25352006594912,
+    9.837405980027665
+  ],
+  "scope": "Continuum analytic frequency response only; no FDTD constitutive-update convergence certification"
+}

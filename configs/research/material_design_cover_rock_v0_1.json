@@ -1,0 +1,68 @@
+{
+  "schema": "research-material-design/1",
+  "id": "cover11_rock9_disp15_v0_1",
+  "date": "2026-10-06",
+  "status": "FIXED_RESEARCH_MATERIALS_NOT_SITE_CALIBRATION",
+  "source_git_base": "b9ad907",
+  "authorization": "User: settle the parameters and review cover identified as silty clay; material design only",
+  "calls_solver": false,
+  "calls_training": false,
+  "execution_contract": null,
+  "site_materials_fitted": false,
+  "effective_permittivity_convention": "exp(+j*omega*t); epsilon_eff=epsilon_infinity+sum(delta/(1+j*omega*tau))-j*sigma_DC/(omega*epsilon0)",
+  "band_hz": {"min": 20000000, "max": 170000000, "center": 95000000, "step": 300000, "count": 501},
+  "materials": {
+    "cover": {
+      "geological_role": "User confirmed Chinese engineering lithology: 粉质黏土",
+      "electrical_role": "Retained low-loss weak-dispersion research hypothesis; not a verified representative silty-clay spectrum",
+      "epsilon_infinity": 11.0,
+      "sigma_DC_S_m": 0.001,
+      "mu_r": 1.0,
+      "sigma_magnetic": 0.0,
+      "debye": [{"delta_epsilon": 0.5, "tau_s": 6.4567e-9}],
+      "provenance": "User designed and adopted 2026-10-05 cover recipe; kept identical to executed fine2m baseline",
+      "moisture_vol_fraction": null,
+      "CEC": null,
+      "clay_mineralogy": null
+    },
+    "rock": {
+      "geological_role": "Sandstone bedrock research assumption",
+      "electrical_role": "Designed dispersive candidate: epsilon_real(95MHz)=9, epsilon_real(20MHz)-epsilon_real(170MHz)=1.5",
+      "epsilon_infinity": 8.837547784813761,
+      "sigma_DC_S_m": 0.001,
+      "mu_r": 1.0,
+      "sigma_magnetic": 0.0,
+      "debye": [{"delta_epsilon": 2.575432653759346, "tau_s": 6.4567e-9}],
+      "target_center_epsilon_real": 9.0,
+      "target_band_endpoint_difference": 1.5,
+      "provenance": "User's center/span choice; tau inherited as an explicit design convention, not derived from sandstone measurements",
+      "tau_rationale": "Keep prior proposed pole time and locate polarization-loss peak near low band edge; two real-part constraints do not determine tau uniquely"
+    }
+  },
+  "literature_controls_not_adopted": {
+    "stadler2024_moist_silty_clay": {
+      "doi": "10.1002/nsg.12282",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/nsg.12282",
+      "reading_scope": "Online relevant methods: test-site silty-clay description, subsurface characterization, Eq1 and Table1; no full-paper reproduction",
+      "measurement_band_hz": [1000000, 10000000000],
+      "sample": "Danube southern Germany loess; smectite/quartz; 19vol% water; CEC14-15meq/100g; not our site",
+      "epsilon_infinity": 3.83,
+      "sigma_DC_S_m": 0.03,
+      "debye": [{"delta_epsilon": 14.53, "tau_s": 5.37e-9}, {"delta_epsilon": 2.74, "tau_s": 2e-10}, {"delta_epsilon": 3.67, "tau_s": 7.95e-12}],
+      "role": "Measured-spectrum fitted high-loss example; retained for analytic comparison, not the main cover recipe or an executable solver input"
+    }
+  },
+  "controlled_comparison": {
+    "baseline_input": "artifacts/research_checks/2026-10-05_slope_bscan_2d_fine2m_r1/slope_rough_s00/profile.in",
+    "new_independent_variable": "Bedrock constitutive dispersion (epsilon_infinity and delta chosen jointly with fixed sigma and tau)",
+    "unchanged_for_a_future_control": ["cover parameters", "geometry", "source/receiver", "height", "mesh", "PML physical thickness", "precision", "record window", "source waveform", "SFCW frequency grid and window"],
+    "note": "Both target/background sides of a future matched pair must cite the same material design; previously executed inputs and outputs remain historical"
+  },
+  "limitations": [
+    "Chinese engineering 粉质黏土 classification is not a one-to-one USDA silt-loam or silty-clay texture identification",
+    "Lithology name alone does not determine complex permittivity, moisture, bulk conductivity or relaxation strength",
+    "Constant sigma_DC does not make losses unchanged when Debye dispersion is added",
+    "No claim that adding bedrock dispersion improves Bscan or identifies the sim-to-field discrepancy",
+    "A separate complete execution contract and appropriate numerical/resource verification are required before a solver run"
+  ]
+}
