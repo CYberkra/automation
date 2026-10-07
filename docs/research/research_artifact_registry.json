@@ -1,4 +1,36 @@
 {
+ "line9_corrected_processing_layer_evidence_2026_10_08": {
+  "report": "docs/research/2026-10-08_line9_corrected_processing_and_layer_evidence.md",
+  "scripts": [
+   "scripts/reprocess_line9_result_packages.py",
+   "scripts/diagnose_line9_layer_kinematics.py",
+   "scripts/check_line9_corrected_products.py",
+   "scripts/diagnose_line9_cover_reverberation.py",
+   "scripts/check_line9_reprocessing_guards.py"
+  ],
+  "results": [
+   "artifacts/research_checks/2026-10-08_line9_corrected_products_r3",
+   "artifacts/research_checks/2026-10-08_line9_layer_kinematics_r1",
+   "artifacts/research_checks/2026-10-08_line9_corrected_independent_r2",
+   "artifacts/research_checks/2026-10-08_line9_cover_reverberation_r1",
+   "artifacts/research_checks/2026-10-08_line9_reprocessing_guards_r1"
+  ],
+  "source_git_base": "5f27370",
+  "calls_solver": false,
+  "calls_training": false,
+  "native_traces_reused": 406,
+  "previous_total_428_corrected_as_documentation_arithmetic_error": true,
+  "status": "CORRECTED_SFCW_DELIVERABLES_AND_MODEL_INFORMED_1M_LAYER_AGREEMENT_NOT_PHYSICAL_CERTIFICATION",
+  "pkg3_basal_complex_correlation_hann": 0.9795181357993882,
+  "pkg3_basal_complex_correlation_blackman": 0.9846231486726823,
+  "pkg3_flat_trajectory_control_complex_correlation": 0.004495580332235813,
+  "pkg3_reversed_trajectory_control_complex_correlation": 0.014750694172719446,
+  "native_dtype": "float32",
+  "historical_inputs_changed": false,
+  "higher_altitude_cases_resolved": false,
+  "matched_target_ablation_completed": false,
+  "private_numeric_products": "artifacts/local_checks/2026-10-08_line9_corrected_products_r3"
+ },
  "line9_time_origin_continuation_2026_10_08": {
   "report": "docs/research/2026-10-08_line9_time_origin_continuation.md",
   "results": [
@@ -13,7 +45,7 @@
   "status": "NATIVE_TIME_PARTITION_AND_ARTIFICIAL_ECHO_CHECK_NOT_PHYSICAL_TARGET_CERTIFICATION",
   "calls_solver": false,
   "calls_training": false,
-  "native_traces_reused": 428,
+  "native_traces_reused": 406,
   "historical_inputs_changed": false,
   "actual_deep_interface_certified": false,
   "injected_echo_is_real_FDTD": false
@@ -29,7 +61,7 @@
   "status": "POSTPROCESSING_ERRORS_AND_MASKING_COUNTEREXAMPLE_NOT_DEEP_TARGET_RECOVERY",
   "calls_solver": false,
   "calls_training": false,
-  "native_traces_reused": 428,
+  "native_traces_reused": 406,
   "historical_inputs_changed": false,
   "known_echo_fixture_is_FDTD": false,
   "actual_deep_interface_certified": false
@@ -42,7 +74,7 @@
   "status": "LOCAL_PLANE_WAVE_BUDGET_NOT_FULL_WAVE_DETECTION",
   "calls_solver": false,
   "calls_training": false,
-  "native_traces_reused": 428,
+  "native_traces_reused": 406,
   "historical_inputs_changed": false
  },
  "line9_three_packages_review_2026_10_07": {
@@ -53,7 +85,7 @@
    "scripts/analyze_line9_early_time_leakage.py"
   ],
   "source_git_base": "830d403",
-  "status": "AUDITED_428_NATIVE_TRACES_EARLY_FIELD_LEAKAGE_DIAGNOSIS_NOT_DEEP_INTERFACE_DETECTION",
+  "status": "AUDITED_406_NATIVE_TRACES_EARLY_FIELD_LEAKAGE_DIAGNOSIS_NOT_DEEP_INTERFACE_DETECTION",
   "calls_solver": false,
   "calls_training": false,
   "native_precision": "float32",

@@ -1,0 +1,130 @@
+{
+  "calls_solver": false,
+  "calls_training": false,
+  "script_sha256": "8ed1e18593ced0fdc68b356c7e652592809c366a372c3de15d9d39c9e43b05b1",
+  "products_report_sha256": "80eaeb99ac22d2dd359912dc0868d6b2eae67b1fd7f5025c77f7434658c02c0c",
+  "kinematics_sha256": "e282200d7e233e3361c011f4a350f961a9875b8fcd6d418c063bbfde43294994",
+  "packages": [
+    {
+      "package": "line9_pkg1_v5_d02m_194st",
+      "deliverable_sha256": "3b62680aa6e04991634fbddbf057d1cd9d937b6334b1a2eb9a1b16911a854d0e",
+      "checks": [
+        {
+          "station": "full2d_r0001",
+          "independent_all501_DFT_relative_L2": 4.975729984028027e-13
+        },
+        {
+          "station": "full2d_r0098",
+          "independent_all501_DFT_relative_L2": 7.580771544085083e-13
+        },
+        {
+          "station": "full2d_r0194",
+          "independent_all501_DFT_relative_L2": 1.961941114235624e-12
+        }
+      ],
+      "basal_diagnostics": {
+        "hann": {
+          "complex_correlation": 0.5580420987998433,
+          "explicit_inverse_relative_L2": 1.5033074593634777e-10,
+          "peak_ns_endpoints": [
+            375.08316699933465,
+            336.8263473053892
+          ],
+          "first_half_fit_second_half_relative_L2": 1.748343707330083,
+          "second_half_complex_correlation": 0.3689883465643338
+        },
+        "blackman": {
+          "complex_correlation": 0.5773045276962667,
+          "explicit_inverse_relative_L2": 1.537496144004055e-10,
+          "peak_ns_endpoints": [
+            375.08316699933465,
+            336.8263473053892
+          ],
+          "first_half_fit_second_half_relative_L2": 1.9059440230876656,
+          "second_half_complex_correlation": 0.380531498802366
+        }
+      }
+    },
+    {
+      "package": "line9_pkg2_x160-110_agl35_142st",
+      "deliverable_sha256": "c7785588b5b22c81f0133bb527e5dc431d4ded0e0641ea8d3f7527a9cad08362",
+      "checks": [
+        {
+          "station": "full2d_c0001",
+          "independent_all501_DFT_relative_L2": 1.0522071341787658e-12
+        },
+        {
+          "station": "full2d_c0072",
+          "independent_all501_DFT_relative_L2": 1.099970222814179e-12
+        },
+        {
+          "station": "full2d_c0142",
+          "independent_all501_DFT_relative_L2": 1.722394126397391e-12
+        }
+      ],
+      "basal_diagnostics": {
+        "hann": {
+          "complex_correlation": 0.49554453616403576,
+          "explicit_inverse_relative_L2": 1.83583574501129e-12,
+          "peak_ns_endpoints": [
+            346.80638722554886,
+            284.43113772455087
+          ],
+          "first_half_fit_second_half_relative_L2": 1.1518336123972994,
+          "second_half_complex_correlation": 0.5097022943396683
+        },
+        "blackman": {
+          "complex_correlation": 0.5057429479384968,
+          "explicit_inverse_relative_L2": 1.74230724268209e-12,
+          "peak_ns_endpoints": [
+            346.80638722554886,
+            284.43113772455087
+          ],
+          "first_half_fit_second_half_relative_L2": 1.1719468094507661,
+          "second_half_complex_correlation": 0.5215147420547042
+        }
+      }
+    },
+    {
+      "package": "line9_pkg3_x160-120_agl1_70st",
+      "deliverable_sha256": "d676788e9bbe09ae71630814635304b69fb3705ac4c2fd641c7405cdd2ad59eb",
+      "checks": [
+        {
+          "station": "full2d_g0001",
+          "independent_all501_DFT_relative_L2": 1.5803493107669418e-13
+        },
+        {
+          "station": "full2d_g0036",
+          "independent_all501_DFT_relative_L2": 2.0147037112762988e-13
+        },
+        {
+          "station": "full2d_g0070",
+          "independent_all501_DFT_relative_L2": 1.9187402685755091e-13
+        }
+      ],
+      "basal_diagnostics": {
+        "hann": {
+          "complex_correlation": 0.9795181357993866,
+          "explicit_inverse_relative_L2": 6.479051500324972e-12,
+          "peak_ns_endpoints": [
+            286.09447771124417,
+            255.32268795741848
+          ],
+          "first_half_fit_second_half_relative_L2": 0.21406319693734194,
+          "second_half_complex_correlation": 0.9801142321324938
+        },
+        "blackman": {
+          "complex_correlation": 0.9846231486726823,
+          "explicit_inverse_relative_L2": 6.2437587327400325e-12,
+          "peak_ns_endpoints": [
+            286.09447771124417,
+            255.32268795741848
+          ],
+          "first_half_fit_second_half_relative_L2": 0.19169700149339242,
+          "second_half_complex_correlation": 0.9848157787822681
+        }
+      }
+    }
+  ],
+  "limits": "Exact output consistency and geometry-informed waveform agreement only; not blind detection, numerical convergence, target ablation, true SNR or field validation. First-half fit validation holds out station coefficients, not geology/model development."
+}

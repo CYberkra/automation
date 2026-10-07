@@ -1,0 +1,87 @@
+{
+  "calls_solver": false,
+  "calls_training": false,
+  "script_sha256": "2c4c8f1bdc3b98122c1358890953a77a2b027c3323ea2f99152c062058430db5",
+  "official_processing_sha256": "adad556f09140956f0ee19d3038430e06a9ae8be6a826dcad723096d99624a3b",
+  "frequency_MHz": [
+    20.0,
+    170.0
+  ],
+  "step_MHz": 0.3,
+  "frequency_count": 501,
+  "primary_window": "hann",
+  "diagnostic_windows": [
+    "gaussian",
+    "blackman"
+  ],
+  "no_background_removal": true,
+  "no_AGC": true,
+  "no_trace_normalisation": true,
+  "no_time_partition": true,
+  "no_tail_taper": true,
+  "no_layer_guided_signal_extraction": true,
+  "no_extra_time_shift": true,
+  "packages": [
+    {
+      "package": "line9_pkg1_v5_d02m_194st",
+      "native_count": 194,
+      "planned_count": 966,
+      "native_dtype": "float32",
+      "native_hashes_verified": true,
+      "audit_sha256": "ac166173fc8466a7896b217e6c4ce2dea7a37a89d72df5e752fe4fd58a2ac3ac",
+      "private_hdf5_path": "D:\\自动处理\\artifacts\\local_checks\\2026-10-08_line9_corrected_products_r3\\line9_pkg1_v5_d02m_194st_corrected_sfcw.h5",
+      "private_hdf5_sha256": "3b62680aa6e04991634fbddbf057d1cd9d937b6334b1a2eb9a1b16911a854d0e",
+      "plot_sha256": "1f668cd8f2138d8a62ce41d096f89e08a6fdd9ac1adc155832656cb55229deff",
+      "global_gaussian_reference": 3635.9505771034023,
+      "independent_DFT_relative_L2": 9.233105149350765e-13,
+      "independent_inverse_relative_L2": {
+        "hann": 2.249737397073952e-14,
+        "gaussian": 2.2554423140309102e-14,
+        "blackman": 2.208484638014894e-14
+      },
+      "manifest_sha256": "0acefb76d3983238753cceab9d600a7ce26567e60787fe25fe08331286b084e6",
+      "manifest_x_minus_native_x_m": 0.0
+    },
+    {
+      "package": "line9_pkg2_x160-110_agl35_142st",
+      "native_count": 142,
+      "planned_count": 251,
+      "native_dtype": "float32",
+      "native_hashes_verified": true,
+      "audit_sha256": "2d312b79ea795a59cd5b9d3276da0fa21330b41dc317ca19e3aaca8e3047fb1b",
+      "private_hdf5_path": "D:\\自动处理\\artifacts\\local_checks\\2026-10-08_line9_corrected_products_r3\\line9_pkg2_x160-110_agl35_142st_corrected_sfcw.h5",
+      "private_hdf5_sha256": "c7785588b5b22c81f0133bb527e5dc431d4ded0e0641ea8d3f7527a9cad08362",
+      "plot_sha256": "196b4f62d5c3046ea94fe107e733312e7b16ddc9fba315111fcfcdf52f996919",
+      "global_gaussian_reference": 3638.4190537254203,
+      "independent_DFT_relative_L2": 1.1079018116539285e-12,
+      "independent_inverse_relative_L2": {
+        "hann": 2.0666173243104877e-14,
+        "gaussian": 2.0790039826692596e-14,
+        "blackman": 1.9952044398238872e-14
+      },
+      "manifest_sha256": "40fc8323da4a1bbabad40a59eec3b16655ee2d45a9defd95c9b018cd8431846e",
+      "manifest_x_minus_native_x_m": 80.0
+    },
+    {
+      "package": "line9_pkg3_x160-120_agl1_70st",
+      "native_count": 70,
+      "planned_count": 201,
+      "native_dtype": "float32",
+      "native_hashes_verified": true,
+      "audit_sha256": "e2737bc930e7a698d69d46ec24985e9e8ebf83e690397ac39c43c90acaf5617c",
+      "private_hdf5_path": "D:\\自动处理\\artifacts\\local_checks\\2026-10-08_line9_corrected_products_r3\\line9_pkg3_x160-120_agl1_70st_corrected_sfcw.h5",
+      "private_hdf5_sha256": "d676788e9bbe09ae71630814635304b69fb3705ac4c2fd641c7405cdd2ad59eb",
+      "plot_sha256": "ab14e575129b1b0bf63f8fe3349bcce7ffe91a595e3dde5c47f252e1f723941f",
+      "global_gaussian_reference": 4597.6874646546985,
+      "independent_DFT_relative_L2": 1.3322762661041485e-13,
+      "independent_inverse_relative_L2": {
+        "hann": 2.3917871138806405e-14,
+        "gaussian": 2.4060876422698034e-14,
+        "blackman": 2.2212687985184804e-14
+      },
+      "manifest_sha256": "e57f23066dd23d7cf2d78a30d8a71dbd72ceac07585a0ab9e63380acd726fc49",
+      "manifest_x_minus_native_x_m": 0.0
+    }
+  ],
+  "limits": "Preserves complex numerical data, not a physical validation or target recovery certificate. Hann/Blackman are explicit diagnostic processing choices, not verified instrument settings. Private originals unchanged; no FP32-to-FP64 solver upgrade."
+}

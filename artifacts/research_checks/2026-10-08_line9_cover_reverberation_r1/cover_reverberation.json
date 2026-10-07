@@ -1,0 +1,104 @@
+{
+  "calls_solver": false,
+  "calls_training": false,
+  "script_sha256": "5b734d37bea6bfd33e5763cbe4ebfd0817ab1bf4557c5e298d94d0a22049fdac",
+  "packages": [
+    {
+      "package": "line9_pkg1_v5_d02m_194st",
+      "audit_sha256": "ac166173fc8466a7896b217e6c4ce2dea7a37a89d72df5e752fe4fd58a2ac3ac",
+      "cache_sha256": "2ffab677af3cdaee9762406595d9331ec36f85c90d6159c56fafd1d74863771b",
+      "geometric_series_relative_L2_max": 1.9386385139898536e-16,
+      "windows": {
+        "hann": {
+          "predicted_peak_ns_endpoints": [
+            378.40984697272125,
+            292.7478376580173
+          ],
+          "complex_correlation": 0.48588014759054243,
+          "actual_minus_predicted_peak_ns_percentile0_50_100": [
+            -11.643379906853,
+            -1.6633399866933019,
+            9.148369926813018
+          ]
+        },
+        "blackman": {
+          "predicted_peak_ns_endpoints": [
+            378.40984697272125,
+            292.7478376580173
+          ],
+          "complex_correlation": 0.42073029193885214,
+          "actual_minus_predicted_peak_ns_percentile0_50_100": [
+            -11.643379906853,
+            -1.6633399866933019,
+            9.980039920159697
+          ]
+        }
+      }
+    },
+    {
+      "package": "line9_pkg2_x160-110_agl35_142st",
+      "audit_sha256": "2d312b79ea795a59cd5b9d3276da0fa21330b41dc317ca19e3aaca8e3047fb1b",
+      "cache_sha256": "4c43bc2f8417f00deaee49b628686106d9aa0edd80497f0ae85ad7395a5653c5",
+      "geometric_series_relative_L2_max": 2.0207016850199982e-16,
+      "windows": {
+        "hann": {
+          "predicted_peak_ns_endpoints": [
+            388.3898868928809,
+            375.08316699933465
+          ],
+          "complex_correlation": 0.40942216105328394,
+          "actual_minus_predicted_peak_ns_percentile0_50_100": [
+            -11.643379906853,
+            0.8316699933466225,
+            11.643379906853
+          ]
+        },
+        "blackman": {
+          "predicted_peak_ns_endpoints": [
+            388.3898868928809,
+            375.08316699933465
+          ],
+          "complex_correlation": 0.40902264002689376,
+          "actual_minus_predicted_peak_ns_percentile0_50_100": [
+            -11.643379906853,
+            0.8316699933466225,
+            11.643379906853
+          ]
+        }
+      }
+    },
+    {
+      "package": "line9_pkg3_x160-120_agl1_70st",
+      "audit_sha256": "e2737bc930e7a698d69d46ec24985e9e8ebf83e690397ac39c43c90acaf5617c",
+      "cache_sha256": "19bd46ba11ec7a42aa327efdb0ddbe2d0dd218ecd05d28c757f962d161296249",
+      "geometric_series_relative_L2_max": 1.8639521719055548e-16,
+      "windows": {
+        "hann": {
+          "predicted_peak_ns_endpoints": [
+            327.6779773785762,
+            330.1729873586161
+          ],
+          "complex_correlation": 0.49136585425643775,
+          "actual_minus_predicted_peak_ns_percentile0_50_100": [
+            -4.158349966733226,
+            2.4950099800399244,
+            11.643379906853
+          ]
+        },
+        "blackman": {
+          "predicted_peak_ns_endpoints": [
+            326.8463073852295,
+            330.1729873586161
+          ],
+          "complex_correlation": 0.4874367049896865,
+          "actual_minus_predicted_peak_ns_percentile0_50_100": [
+            -1.663339986693245,
+            3.32667997338649,
+            11.643379906853
+          ]
+        }
+      }
+    }
+  ],
+  "conclusion": "Cover second-bounce arrivals can approach apparent deep ridges, but complex correlations are only about0.41-0.49. Timing proximity alone does not certify this as the dominant cause. No envelope subtraction or demultiple operation applied. This is a local plane-wave hypothesis, not a matched physical ablation or PML attribution."
+}

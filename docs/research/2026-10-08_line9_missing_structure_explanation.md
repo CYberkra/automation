@@ -1,6 +1,6 @@
 # 为什么三个 B-scan 没有呈现预期地层脉络
 
-日期：2026-10-08。基线c7b3c06。仅复用三个结果包及428道审计，不新增求解、不修改原材料/几何、不训练。前序完整波形证据见[三个包复审](2026-10-07_line9_three_packages_review.md)。
+日期：2026-10-08。基线c7b3c06。仅复用三个结果包及406道审计，不新增求解、不修改原材料/几何、不训练。前序完整波形证据见[三个包复审](2026-10-07_line9_three_packages_review.md)。
 
 ## 判断
 
@@ -58,7 +58,7 @@ FP32弱场可信度、侧向/顶部PML、二维线源与实际有方向性且有
 
 ## 复现
 
-脚本：[explain_line9_visibility_budget.py](../../scripts/explain_line9_visibility_budget.py)。输出：[visibility_budget.json](../../artifacts/research_checks/2026-10-08_line9_visibility_budget_r1/visibility_budget.json)，含材料/旧审计哈希、20/40/95/170MHz预算及实际高程/层厚/到时范围。按实际界面重建的428道95MHz吸收与前序独立存档值核对通过。新结果是解析诊断，不是新的全波仿真证据。
+脚本：[explain_line9_visibility_budget.py](../../scripts/explain_line9_visibility_budget.py)。输出：[visibility_budget.json](../../artifacts/research_checks/2026-10-08_line9_visibility_budget_r1/visibility_budget.json)，含材料/旧审计哈希、20/40/95/170MHz预算及实际高程/层厚/到时范围。按实际界面重建的406道95MHz吸收与前序独立存档值核对通过。新结果是解析诊断，不是新的全波仿真证据。
 
 ```powershell
 D:\gprmax_v4_gpu_env\Scripts\python.exe scripts/explain_line9_visibility_budget.py --root artifacts/local_checks/2026-10-07_line9_three_packages_review_r1 --review artifacts/research_checks/2026-10-07_line9_three_packages_review_r3 --out artifacts/local_checks/line9_visibility_budget_reproduce
