@@ -1,4 +1,20 @@
 {
+ "line9_postprocessing_audit_2026_10_08": {
+  "report": "docs/research/2026-10-08_line9_postprocessing_audit.md",
+  "results": "artifacts/research_checks/2026-10-08_line9_postprocessing_audit_r1",
+  "scripts": [
+   "scripts/audit_line9_postprocessing.py",
+   "scripts/check_line9_postprocessing_known_echo.py"
+  ],
+  "source_git_base": "158ba85",
+  "status": "POSTPROCESSING_ERRORS_AND_MASKING_COUNTEREXAMPLE_NOT_DEEP_TARGET_RECOVERY",
+  "calls_solver": false,
+  "calls_training": false,
+  "native_traces_reused": 428,
+  "historical_inputs_changed": false,
+  "known_echo_fixture_is_FDTD": false,
+  "actual_deep_interface_certified": false
+ },
  "line9_visibility_budget_2026_10_08": {
   "report": "docs/research/2026-10-08_line9_missing_structure_explanation.md",
   "script": "scripts/explain_line9_visibility_budget.py",

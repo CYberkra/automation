@@ -1,0 +1,322 @@
+{
+  "calls_solver": false,
+  "calls_training": false,
+  "script_sha256": "8be216398675bfea6d010cb2d58f3a7067d6bfa38658655191dff5d3b75264f7",
+  "official_processing_sha256": "adad556f09140956f0ee19d3038430e06a9ae8be6a826dcad723096d99624a3b",
+  "self_checks": {
+    "gaussian": {
+      "direct_sum_relative_L2": 2.7307582323472752e-12,
+      "peak_ns": 280.2727877578177,
+      "padding_shared_sample_relative_L2": 7.068577952267209e-16
+    },
+    "hann": {
+      "direct_sum_relative_L2": 8.976208649739915e-12,
+      "peak_ns": 280.2727877578177,
+      "padding_shared_sample_relative_L2": 7.398521062938218e-16
+    },
+    "cosine_edges_5pct": {
+      "direct_sum_relative_L2": 2.0661006199120166e-13,
+      "peak_ns": 280.2727877578177,
+      "padding_shared_sample_relative_L2": 7.109789976599139e-16
+    },
+    "low_band_legacy_amplitude_factor": 67,
+    "low_band_legacy_amplitude_offset_dB": 36.52149605401653,
+    "horizontal_layer_magnitude_division_display_dB": [
+      0.0,
+      0.0
+    ],
+    "horizontal_layer_mean_subtraction_erases_layer": true,
+    "magnitude_demultiple_phase_counterexample": {
+      "primary": 1.0,
+      "multiple_amplitude": 0.5,
+      "opposite_phase_total_magnitude": 0.5,
+      "subtract_multiple_magnitude_then_clip": 0.0,
+      "true_primary_magnitude": 1.0
+    }
+  },
+  "packages": [
+    {
+      "package": "line9_pkg1_v5_d02m_194st",
+      "audit_sha256": "ac166173fc8466a7896b217e6c4ce2dea7a37a89d72df5e752fe4fd58a2ac3ac",
+      "actual_traces": 194,
+      "full_frequency_count": 501,
+      "sample_time_ns": 0.83166999334664,
+      "period_ns": 3333.3333333333335,
+      "tail_taper_starts_at_nominal_ns": 1000,
+      "processing_variants": {
+        "original_gaussian": {
+          "cover_base": {
+            "complex_relative_change_from_no_tail_gaussian": 0.0006539765979244847,
+            "amplitude_RMS_over_global_reference_dB": -55.743287504954104
+          },
+          "basal_sand": {
+            "complex_relative_change_from_no_tail_gaussian": 0.002974918473707107,
+            "amplitude_RMS_over_global_reference_dB": -67.75927104683967
+          }
+        },
+        "no_tail_gaussian": {
+          "cover_base": {
+            "complex_relative_change_from_no_tail_gaussian": 0.0,
+            "amplitude_RMS_over_global_reference_dB": -55.7435258556772
+          },
+          "basal_sand": {
+            "complex_relative_change_from_no_tail_gaussian": 0.0,
+            "amplitude_RMS_over_global_reference_dB": -67.76124916449518
+          }
+        },
+        "no_tail_hann": {
+          "cover_base": {
+            "complex_relative_change_from_no_tail_gaussian": 0.4642268292441026,
+            "amplitude_RMS_over_global_reference_dB": -56.61711599103341
+          },
+          "basal_sand": {
+            "complex_relative_change_from_no_tail_gaussian": 1.003269677182954,
+            "amplitude_RMS_over_global_reference_dB": -103.04427450901406
+          }
+        },
+        "no_tail_cosine_edges_5pct": {
+          "cover_base": {
+            "complex_relative_change_from_no_tail_gaussian": 0.8773270395560969,
+            "amplitude_RMS_over_global_reference_dB": -57.12601732940013
+          },
+          "basal_sand": {
+            "complex_relative_change_from_no_tail_gaussian": 1.24626971988723,
+            "amplitude_RMS_over_global_reference_dB": -79.39199331169388
+          }
+        },
+        "late_only_gaussian": {
+          "cover_base": {
+            "complex_relative_change_from_no_tail_gaussian": 0.45952571817028054,
+            "amplitude_RMS_over_global_reference_dB": -56.7697234868528
+          },
+          "basal_sand": {
+            "complex_relative_change_from_no_tail_gaussian": 0.9997285900373193,
+            "amplitude_RMS_over_global_reference_dB": -102.64275095051566
+          }
+        },
+        "complex_mean_removed_gaussian": {
+          "cover_base": {
+            "complex_relative_change_from_no_tail_gaussian": 0.5759257411665415,
+            "amplitude_RMS_over_global_reference_dB": -58.38652681630717
+          },
+          "basal_sand": {
+            "complex_relative_change_from_no_tail_gaussian": 0.9998322975884449,
+            "amplitude_RMS_over_global_reference_dB": -104.52562411910156
+          }
+        }
+      },
+      "group5_dropped_station_count": 4,
+      "group5_stack_metrics": {
+        "cover_base": {
+          "coherent_over_mean_magnitude_dB_percentile10_50_90": [
+            -0.8443242036333984,
+            -0.014381497682983874,
+            -0.0007525543553833847
+          ]
+        },
+        "basal_sand": {
+          "coherent_over_mean_magnitude_dB_percentile10_50_90": [
+            -0.0002566001020619994,
+            -9.133674141139779e-05,
+            -3.243176697529768e-05
+          ]
+        }
+      },
+      "native_bipolar_4percent_clip_basal_peak_as_fraction_of_colour_full_scale_percentile10_50_90": [
+        0.1005731925368309,
+        0.1591973602771759,
+        0.3230477392673493
+      ],
+      "private_complex_cache_file": "2026-10-08_line9_postprocessing_cache_r1/line9_pkg1_v5_d02m_194st.npz"
+    },
+    {
+      "package": "line9_pkg2_x160-110_agl35_142st",
+      "audit_sha256": "2d312b79ea795a59cd5b9d3276da0fa21330b41dc317ca19e3aaca8e3047fb1b",
+      "actual_traces": 142,
+      "full_frequency_count": 501,
+      "sample_time_ns": 0.83166999334664,
+      "period_ns": 3333.3333333333335,
+      "tail_taper_starts_at_nominal_ns": 600,
+      "processing_variants": {
+        "original_gaussian": {
+          "cover_base": {
+            "complex_relative_change_from_no_tail_gaussian": 0.002322848759224963,
+            "amplitude_RMS_over_global_reference_dB": -55.45844431762217
+          },
+          "basal_sand": {
+            "complex_relative_change_from_no_tail_gaussian": 0.010427291894195945,
+            "amplitude_RMS_over_global_reference_dB": -67.06957797546308
+          }
+        },
+        "no_tail_gaussian": {
+          "cover_base": {
+            "complex_relative_change_from_no_tail_gaussian": 0.0,
+            "amplitude_RMS_over_global_reference_dB": -55.455315239542756
+          },
+          "basal_sand": {
+            "complex_relative_change_from_no_tail_gaussian": 0.0,
+            "amplitude_RMS_over_global_reference_dB": -67.03423835356985
+          }
+        },
+        "no_tail_hann": {
+          "cover_base": {
+            "complex_relative_change_from_no_tail_gaussian": 0.353625240009056,
+            "amplitude_RMS_over_global_reference_dB": -55.867565662469005
+          },
+          "basal_sand": {
+            "complex_relative_change_from_no_tail_gaussian": 0.9851728018485838,
+            "amplitude_RMS_over_global_reference_dB": -81.12677191566291
+          }
+        },
+        "no_tail_cosine_edges_5pct": {
+          "cover_base": {
+            "complex_relative_change_from_no_tail_gaussian": 0.7875902480060345,
+            "amplitude_RMS_over_global_reference_dB": -56.72964847301895
+          },
+          "basal_sand": {
+            "complex_relative_change_from_no_tail_gaussian": 1.1608470162638733,
+            "amplitude_RMS_over_global_reference_dB": -74.9741236104008
+          }
+        },
+        "late_only_gaussian": {
+          "cover_base": {
+            "complex_relative_change_from_no_tail_gaussian": 0.3517393701931806,
+            "amplitude_RMS_over_global_reference_dB": -56.025855094468554
+          },
+          "basal_sand": {
+            "complex_relative_change_from_no_tail_gaussian": 0.9754494164284514,
+            "amplitude_RMS_over_global_reference_dB": -81.20969965802104
+          }
+        },
+        "complex_mean_removed_gaussian": {
+          "cover_base": {
+            "complex_relative_change_from_no_tail_gaussian": 0.4767512135428363,
+            "amplitude_RMS_over_global_reference_dB": -56.67577190889733
+          },
+          "basal_sand": {
+            "complex_relative_change_from_no_tail_gaussian": 0.9613134016703744,
+            "amplitude_RMS_over_global_reference_dB": -79.23914242494851
+          }
+        }
+      },
+      "group5_dropped_station_count": 2,
+      "group5_stack_metrics": {
+        "cover_base": {
+          "coherent_over_mean_magnitude_dB_percentile10_50_90": [
+            -0.41430045022808365,
+            -0.045168939420183504,
+            -0.0034180671325619335
+          ]
+        },
+        "basal_sand": {
+          "coherent_over_mean_magnitude_dB_percentile10_50_90": [
+            -0.052847576657558924,
+            -0.004759582207647886,
+            -0.0003419985426590066
+          ]
+        }
+      },
+      "native_bipolar_4percent_clip_basal_peak_as_fraction_of_colour_full_scale_percentile10_50_90": [
+        0.23819136023521426,
+        0.35540811717510223,
+        0.463034400343895
+      ],
+      "private_complex_cache_file": "2026-10-08_line9_postprocessing_cache_r1/line9_pkg2_x160-110_agl35_142st.npz"
+    },
+    {
+      "package": "line9_pkg3_x160-120_agl1_70st",
+      "audit_sha256": "e2737bc930e7a698d69d46ec24985e9e8ebf83e690397ac39c43c90acaf5617c",
+      "actual_traces": 70,
+      "full_frequency_count": 501,
+      "sample_time_ns": 0.83166999334664,
+      "period_ns": 3333.3333333333335,
+      "tail_taper_starts_at_nominal_ns": 600,
+      "processing_variants": {
+        "original_gaussian": {
+          "cover_base": {
+            "complex_relative_change_from_no_tail_gaussian": 0.00014038520819083345,
+            "amplitude_RMS_over_global_reference_dB": -52.276078518544864
+          },
+          "basal_sand": {
+            "complex_relative_change_from_no_tail_gaussian": 0.0007643220777982274,
+            "amplitude_RMS_over_global_reference_dB": -65.60407173762637
+          }
+        },
+        "no_tail_gaussian": {
+          "cover_base": {
+            "complex_relative_change_from_no_tail_gaussian": 0.0,
+            "amplitude_RMS_over_global_reference_dB": -52.27587713829401
+          },
+          "basal_sand": {
+            "complex_relative_change_from_no_tail_gaussian": 0.0,
+            "amplitude_RMS_over_global_reference_dB": -65.60110748421178
+          }
+        },
+        "no_tail_hann": {
+          "cover_base": {
+            "complex_relative_change_from_no_tail_gaussian": 0.3501516378782768,
+            "amplitude_RMS_over_global_reference_dB": -52.683541395436215
+          },
+          "basal_sand": {
+            "complex_relative_change_from_no_tail_gaussian": 0.9985371245202201,
+            "amplitude_RMS_over_global_reference_dB": -83.54183403756055
+          }
+        },
+        "no_tail_cosine_edges_5pct": {
+          "cover_base": {
+            "complex_relative_change_from_no_tail_gaussian": 1.0830325688602789,
+            "amplitude_RMS_over_global_reference_dB": -51.83741420219641
+          },
+          "basal_sand": {
+            "complex_relative_change_from_no_tail_gaussian": 1.7146445193592634,
+            "amplitude_RMS_over_global_reference_dB": -67.9774487178037
+          }
+        },
+        "late_only_gaussian": {
+          "cover_base": {
+            "complex_relative_change_from_no_tail_gaussian": 0.34758807093574917,
+            "amplitude_RMS_over_global_reference_dB": -52.84185723841192
+          },
+          "basal_sand": {
+            "complex_relative_change_from_no_tail_gaussian": 0.9903267396368259,
+            "amplitude_RMS_over_global_reference_dB": -83.50508128093936
+          }
+        },
+        "complex_mean_removed_gaussian": {
+          "cover_base": {
+            "complex_relative_change_from_no_tail_gaussian": 0.7534616763055674,
+            "amplitude_RMS_over_global_reference_dB": -55.912094702972716
+          },
+          "basal_sand": {
+            "complex_relative_change_from_no_tail_gaussian": 0.9911288188566147,
+            "amplitude_RMS_over_global_reference_dB": -83.61641171656537
+          }
+        }
+      },
+      "group5_dropped_station_count": 0,
+      "group5_stack_metrics": {
+        "cover_base": {
+          "coherent_over_mean_magnitude_dB_percentile10_50_90": [
+            -0.4673489444372363,
+            -0.013345838535087928,
+            -0.0014779958559726308
+          ]
+        },
+        "basal_sand": {
+          "coherent_over_mean_magnitude_dB_percentile10_50_90": [
+            -0.015894080686724602,
+            -0.0025189913307602707,
+            -0.0004267424675950727
+          ]
+        }
+      },
+      "native_bipolar_4percent_clip_basal_peak_as_fraction_of_colour_full_scale_percentile10_50_90": [
+        0.09747322201728821,
+        0.14631617814302444,
+        0.21708265990018846
+      ],
+      "private_complex_cache_file": "2026-10-08_line9_postprocessing_cache_r1/line9_pkg3_x160-120_agl1_70st.npz"
+    }
+  ],
+  "limits": "Processing diagnostics only. No matched target/background, no true SNR or interface recovery certification. Early removal and mean subtraction may remove genuine responses; frequency weights are exploratory, not verified device settings."
+}

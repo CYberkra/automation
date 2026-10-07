@@ -1,0 +1,332 @@
+{
+  "scope": "Bundled script source; presence does not prove each script was used for every packaged figure. Original scripts not changed or executed.",
+  "files": [
+    {
+      "package": "line9_pkg1_v5_d02m_194st",
+      "script": "plot_bscan_agl1.py",
+      "sha256": "70b854d99ca48253022b6cc38e91600b0e5b8e0eb425e0c3adba3434f5506ced",
+      "hits": [
+        {
+          "finding": "low_band_missing_count_normalisation",
+          "line": 108,
+          "source": "ee.append(np.abs(np.fft.ifft(buf) * rsel.size * 8))"
+        }
+      ]
+    },
+    {
+      "package": "line9_pkg1_v5_d02m_194st",
+      "script": "plot_bscan_bipolar.py",
+      "sha256": "5ddf7f09068bb743c4e967b351504613ad67c66557d6013fc0bfea5bf729f81a",
+      "hits": [
+        {
+          "finding": "raw_Ez_as_bipolar",
+          "line": 34,
+          "source": "CLIP_FRAC = 0.04           # saturate at 4% of the global peak"
+        },
+        {
+          "finding": "raw_Ez_as_bipolar",
+          "line": 71,
+          "source": "col = ez[keep][::DECIM]"
+        }
+      ]
+    },
+    {
+      "package": "line9_pkg1_v5_d02m_194st",
+      "script": "plot_bscan_compact.py",
+      "sha256": "2864b65c27f4c63d2ff9f9749fa584d4eab64e15622d90446f079bf2feefa51b",
+      "hits": [
+        {
+          "finding": "low_band_missing_count_normalisation",
+          "line": 108,
+          "source": "ee.append(np.abs(np.fft.ifft(buf) * rsel.size * 8))"
+        },
+        {
+          "finding": "wrong_local_coordinate",
+          "line": 121,
+          "source": "xi = int(round((xx + 80.0) / gl))      # local x -> model x -> index"
+        }
+      ]
+    },
+    {
+      "package": "line9_pkg1_v5_d02m_194st",
+      "script": "plot_bscan_deep_enhance.py",
+      "sha256": "176d82a071ff1eb67acc6dc4dfa7ce23b3e4c0f34a090e4081ac417d6881a9e1",
+      "hits": [
+        {
+          "finding": "magnitude_demultiple_clipping",
+          "line": 125,
+          "source": "mag_dm = np.clip(mag - r_est * shifted, 0, None)"
+        },
+        {
+          "finding": "low_band_missing_count_normalisation",
+          "line": 142,
+          "source": "sig = np.fft.ifft(buf) * count"
+        },
+        {
+          "finding": "hardcoded_recovery_claim",
+          "line": 179,
+          "source": "(db_lf, t_lf, f\"B 低频子带重建 {args.f_lo/1e6:.0f}–{args.f_hi/1e6:.0f} MHz + AGC（375 ns 对比度 +4.7 dB）\"),"
+        }
+      ]
+    },
+    {
+      "package": "line9_pkg1_v5_d02m_194st",
+      "script": "plot_bscan_progress.py",
+      "sha256": "1d3fbf84bfff0e3be04e8e9f3ba7fbf731085772d3db1e8fad4b59cdf28e84c0",
+      "hits": [
+        {
+          "finding": "raw_Ez_as_bipolar",
+          "line": 67,
+          "source": "col = ez[keep][::DECIM]"
+        }
+      ]
+    },
+    {
+      "package": "line9_pkg1_v5_d02m_194st",
+      "script": "plot_bscan_sfcw.py",
+      "sha256": "6f188681038c6e6dda8bc74342a73dc23241faa98c7de40f55c9933091f0eac1",
+      "hits": [
+        {
+          "finding": "mislabelled_window",
+          "line": 83,
+          "source": "ax1.set_title(\"SFCW 带限双极响应（official toolbox · hann 窗 · 20–170 MHz）\""
+        },
+        {
+          "finding": "hardcoded_recovery_claim",
+          "line": 96,
+          "source": "f\"（gaussian 窗·官方默认，深部信号已恢复）\", fontsize=13)"
+        }
+      ]
+    },
+    {
+      "package": "line9_pkg1_v5_d02m_194st",
+      "script": "plot_bscan_stacked_bs.py",
+      "sha256": "4c01b39a44b9d30cd1ed722cba017a4518aa18964325748f6345eaf0b207fe95",
+      "hits": [
+        {
+          "finding": "magnitude_ratio_background",
+          "line": 110,
+          "source": "db_bs = 20 * np.log10(np.maximum(mag_s / np.maximum(bg, 1e-30), 1e-3))"
+        }
+      ]
+    },
+    {
+      "package": "line9_pkg2_x160-110_agl35_142st",
+      "script": "plot_bscan_agl1.py",
+      "sha256": "70b854d99ca48253022b6cc38e91600b0e5b8e0eb425e0c3adba3434f5506ced",
+      "hits": [
+        {
+          "finding": "low_band_missing_count_normalisation",
+          "line": 108,
+          "source": "ee.append(np.abs(np.fft.ifft(buf) * rsel.size * 8))"
+        }
+      ]
+    },
+    {
+      "package": "line9_pkg2_x160-110_agl35_142st",
+      "script": "plot_bscan_bipolar.py",
+      "sha256": "5ddf7f09068bb743c4e967b351504613ad67c66557d6013fc0bfea5bf729f81a",
+      "hits": [
+        {
+          "finding": "raw_Ez_as_bipolar",
+          "line": 34,
+          "source": "CLIP_FRAC = 0.04           # saturate at 4% of the global peak"
+        },
+        {
+          "finding": "raw_Ez_as_bipolar",
+          "line": 71,
+          "source": "col = ez[keep][::DECIM]"
+        }
+      ]
+    },
+    {
+      "package": "line9_pkg2_x160-110_agl35_142st",
+      "script": "plot_bscan_compact.py",
+      "sha256": "2864b65c27f4c63d2ff9f9749fa584d4eab64e15622d90446f079bf2feefa51b",
+      "hits": [
+        {
+          "finding": "low_band_missing_count_normalisation",
+          "line": 108,
+          "source": "ee.append(np.abs(np.fft.ifft(buf) * rsel.size * 8))"
+        },
+        {
+          "finding": "wrong_local_coordinate",
+          "line": 121,
+          "source": "xi = int(round((xx + 80.0) / gl))      # local x -> model x -> index"
+        }
+      ]
+    },
+    {
+      "package": "line9_pkg2_x160-110_agl35_142st",
+      "script": "plot_bscan_deep_enhance.py",
+      "sha256": "176d82a071ff1eb67acc6dc4dfa7ce23b3e4c0f34a090e4081ac417d6881a9e1",
+      "hits": [
+        {
+          "finding": "magnitude_demultiple_clipping",
+          "line": 125,
+          "source": "mag_dm = np.clip(mag - r_est * shifted, 0, None)"
+        },
+        {
+          "finding": "low_band_missing_count_normalisation",
+          "line": 142,
+          "source": "sig = np.fft.ifft(buf) * count"
+        },
+        {
+          "finding": "hardcoded_recovery_claim",
+          "line": 179,
+          "source": "(db_lf, t_lf, f\"B 低频子带重建 {args.f_lo/1e6:.0f}–{args.f_hi/1e6:.0f} MHz + AGC（375 ns 对比度 +4.7 dB）\"),"
+        }
+      ]
+    },
+    {
+      "package": "line9_pkg2_x160-110_agl35_142st",
+      "script": "plot_bscan_progress.py",
+      "sha256": "1d3fbf84bfff0e3be04e8e9f3ba7fbf731085772d3db1e8fad4b59cdf28e84c0",
+      "hits": [
+        {
+          "finding": "raw_Ez_as_bipolar",
+          "line": 67,
+          "source": "col = ez[keep][::DECIM]"
+        }
+      ]
+    },
+    {
+      "package": "line9_pkg2_x160-110_agl35_142st",
+      "script": "plot_bscan_sfcw.py",
+      "sha256": "6f188681038c6e6dda8bc74342a73dc23241faa98c7de40f55c9933091f0eac1",
+      "hits": [
+        {
+          "finding": "mislabelled_window",
+          "line": 83,
+          "source": "ax1.set_title(\"SFCW 带限双极响应（official toolbox · hann 窗 · 20–170 MHz）\""
+        },
+        {
+          "finding": "hardcoded_recovery_claim",
+          "line": 96,
+          "source": "f\"（gaussian 窗·官方默认，深部信号已恢复）\", fontsize=13)"
+        }
+      ]
+    },
+    {
+      "package": "line9_pkg2_x160-110_agl35_142st",
+      "script": "plot_bscan_stacked_bs.py",
+      "sha256": "4c01b39a44b9d30cd1ed722cba017a4518aa18964325748f6345eaf0b207fe95",
+      "hits": [
+        {
+          "finding": "magnitude_ratio_background",
+          "line": 110,
+          "source": "db_bs = 20 * np.log10(np.maximum(mag_s / np.maximum(bg, 1e-30), 1e-3))"
+        }
+      ]
+    },
+    {
+      "package": "line9_pkg3_x160-120_agl1_70st",
+      "script": "plot_bscan_agl1.py",
+      "sha256": "70b854d99ca48253022b6cc38e91600b0e5b8e0eb425e0c3adba3434f5506ced",
+      "hits": [
+        {
+          "finding": "low_band_missing_count_normalisation",
+          "line": 108,
+          "source": "ee.append(np.abs(np.fft.ifft(buf) * rsel.size * 8))"
+        }
+      ]
+    },
+    {
+      "package": "line9_pkg3_x160-120_agl1_70st",
+      "script": "plot_bscan_bipolar.py",
+      "sha256": "5ddf7f09068bb743c4e967b351504613ad67c66557d6013fc0bfea5bf729f81a",
+      "hits": [
+        {
+          "finding": "raw_Ez_as_bipolar",
+          "line": 34,
+          "source": "CLIP_FRAC = 0.04           # saturate at 4% of the global peak"
+        },
+        {
+          "finding": "raw_Ez_as_bipolar",
+          "line": 71,
+          "source": "col = ez[keep][::DECIM]"
+        }
+      ]
+    },
+    {
+      "package": "line9_pkg3_x160-120_agl1_70st",
+      "script": "plot_bscan_compact.py",
+      "sha256": "2864b65c27f4c63d2ff9f9749fa584d4eab64e15622d90446f079bf2feefa51b",
+      "hits": [
+        {
+          "finding": "low_band_missing_count_normalisation",
+          "line": 108,
+          "source": "ee.append(np.abs(np.fft.ifft(buf) * rsel.size * 8))"
+        },
+        {
+          "finding": "wrong_local_coordinate",
+          "line": 121,
+          "source": "xi = int(round((xx + 80.0) / gl))      # local x -> model x -> index"
+        }
+      ]
+    },
+    {
+      "package": "line9_pkg3_x160-120_agl1_70st",
+      "script": "plot_bscan_deep_enhance.py",
+      "sha256": "176d82a071ff1eb67acc6dc4dfa7ce23b3e4c0f34a090e4081ac417d6881a9e1",
+      "hits": [
+        {
+          "finding": "magnitude_demultiple_clipping",
+          "line": 125,
+          "source": "mag_dm = np.clip(mag - r_est * shifted, 0, None)"
+        },
+        {
+          "finding": "low_band_missing_count_normalisation",
+          "line": 142,
+          "source": "sig = np.fft.ifft(buf) * count"
+        },
+        {
+          "finding": "hardcoded_recovery_claim",
+          "line": 179,
+          "source": "(db_lf, t_lf, f\"B 低频子带重建 {args.f_lo/1e6:.0f}–{args.f_hi/1e6:.0f} MHz + AGC（375 ns 对比度 +4.7 dB）\"),"
+        }
+      ]
+    },
+    {
+      "package": "line9_pkg3_x160-120_agl1_70st",
+      "script": "plot_bscan_progress.py",
+      "sha256": "1d3fbf84bfff0e3be04e8e9f3ba7fbf731085772d3db1e8fad4b59cdf28e84c0",
+      "hits": [
+        {
+          "finding": "raw_Ez_as_bipolar",
+          "line": 67,
+          "source": "col = ez[keep][::DECIM]"
+        }
+      ]
+    },
+    {
+      "package": "line9_pkg3_x160-120_agl1_70st",
+      "script": "plot_bscan_sfcw.py",
+      "sha256": "6f188681038c6e6dda8bc74342a73dc23241faa98c7de40f55c9933091f0eac1",
+      "hits": [
+        {
+          "finding": "mislabelled_window",
+          "line": 83,
+          "source": "ax1.set_title(\"SFCW 带限双极响应（official toolbox · hann 窗 · 20–170 MHz）\""
+        },
+        {
+          "finding": "hardcoded_recovery_claim",
+          "line": 96,
+          "source": "f\"（gaussian 窗·官方默认，深部信号已恢复）\", fontsize=13)"
+        }
+      ]
+    },
+    {
+      "package": "line9_pkg3_x160-120_agl1_70st",
+      "script": "plot_bscan_stacked_bs.py",
+      "sha256": "4c01b39a44b9d30cd1ed722cba017a4518aa18964325748f6345eaf0b207fe95",
+      "hits": [
+        {
+          "finding": "magnitude_ratio_background",
+          "line": 110,
+          "source": "db_bs = 20 * np.log10(np.maximum(mag_s / np.maximum(bg, 1e-30), 1e-3))"
+        }
+      ]
+    }
+  ]
+}

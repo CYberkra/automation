@@ -1,0 +1,32 @@
+{
+  "calls_solver": false,
+  "calls_training": false,
+  "script_sha256": "1518e4523fbcac9bb991f15ec784ebc4e120868e664603249409cad067847df8",
+  "reconstruction_script_sha256": "8be216398675bfea6d010cb2d58f3a7067d6bfa38658655191dff5d3b75264f7",
+  "declared_echo_amplitudes": [
+    1.0,
+    0.3,
+    0.0001
+  ],
+  "early_delays_ns": [
+    4.3,
+    8.0
+  ],
+  "target_delay_limits_ns": [
+    258.0,
+    290.0
+  ],
+  "results": {
+    "gaussian": {
+      "isolated_target_max_delay_error_ns": 0.41094622349502197,
+      "exact_complex_difference_relative_L2": 4.560970466798102e-12,
+      "early_leakage_over_target_near_true_interface_complex_L2": 7.671409395686617
+    },
+    "hann": {
+      "isolated_target_max_delay_error_ns": 0.41094622349502197,
+      "exact_complex_difference_relative_L2": 4.69940810091554e-12,
+      "early_leakage_over_target_near_true_interface_complex_L2": 0.05286986657299744
+    }
+  },
+  "limits": "Array-only assumed echoes. Demonstrates masking by finite-band reconstruction, not actual physical target detection or a recovered gprMax waveform."
+}
