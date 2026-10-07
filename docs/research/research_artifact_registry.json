@@ -1,4 +1,23 @@
 {
+ "line9_time_origin_continuation_2026_10_08": {
+  "report": "docs/research/2026-10-08_line9_time_origin_continuation.md",
+  "results": [
+   "artifacts/research_checks/2026-10-08_line9_native_time_origin_r1",
+   "artifacts/research_checks/2026-10-08_line9_low_band_origin_r1"
+  ],
+  "scripts": [
+   "scripts/trace_line9_time_origin.py",
+   "scripts/trace_line9_low_band_origin.py"
+  ],
+  "source_git_base": "d42a097",
+  "status": "NATIVE_TIME_PARTITION_AND_ARTIFICIAL_ECHO_CHECK_NOT_PHYSICAL_TARGET_CERTIFICATION",
+  "calls_solver": false,
+  "calls_training": false,
+  "native_traces_reused": 428,
+  "historical_inputs_changed": false,
+  "actual_deep_interface_certified": false,
+  "injected_echo_is_real_FDTD": false
+ },
  "line9_postprocessing_audit_2026_10_08": {
   "report": "docs/research/2026-10-08_line9_postprocessing_audit.md",
   "results": "artifacts/research_checks/2026-10-08_line9_postprocessing_audit_r1",

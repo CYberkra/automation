@@ -1,0 +1,125 @@
+{
+  "calls_solver": false,
+  "calls_training": false,
+  "script_sha256": "046c34ace9bd5759c493e5a50a3889c2352abf4afb2b6d07916260dc54f2680d",
+  "partition_helper_sha256": "666299744ddf57bc0e3b7d59dc48f1e5f05a33d99c2cf9526b8862acb3ee8a77",
+  "frequency_count": 67,
+  "realized_band_Hz": [
+    20000000.0,
+    39800000.0
+  ],
+  "findings": [
+    {
+      "package": "line9_pkg1_v5_d02m_194st",
+      "audit_sha256": "ac166173fc8466a7896b217e6c4ce2dea7a37a89d72df5e752fe4fd58a2ac3ac",
+      "private_cache_sha256": "2ffab677af3cdaee9762406595d9331ec36f85c90d6159c56fafd1d74863771b",
+      "partitions": {
+        "10": {
+          "spectrum_closure_relative_L2": 1.953598695154036e-14,
+          "windows": {
+            "gaussian": {
+              "shallow120_240_over_after120_complex_L2": 0.2206745421644075,
+              "shallow120_240_with_after120_complex_correlation": 0.2552209763989957,
+              "after240_over_after120_complex_L2": 0.9823129225941155
+            },
+            "hann": {
+              "shallow120_240_over_after120_complex_L2": 0.4898372670687629,
+              "shallow120_240_with_after120_complex_correlation": 0.36223698159408013,
+              "after240_over_after120_complex_L2": 0.9953629888495242
+            }
+          }
+        },
+        "20": {
+          "spectrum_closure_relative_L2": 1.9433297329304077e-14,
+          "windows": {
+            "gaussian": {
+              "shallow120_240_over_after120_complex_L2": 0.22008304659079175,
+              "shallow120_240_with_after120_complex_correlation": 0.2651126897038712,
+              "after240_over_after120_complex_L2": 0.9799399525565408
+            },
+            "hann": {
+              "shallow120_240_over_after120_complex_L2": 0.49124828075423693,
+              "shallow120_240_with_after120_complex_correlation": 0.36190199551462127,
+              "after240_over_after120_complex_L2": 0.997423356365312
+            }
+          }
+        }
+      }
+    },
+    {
+      "package": "line9_pkg2_x160-110_agl35_142st",
+      "audit_sha256": "2d312b79ea795a59cd5b9d3276da0fa21330b41dc317ca19e3aaca8e3047fb1b",
+      "private_cache_sha256": "4c43bc2f8417f00deaee49b628686106d9aa0edd80497f0ae85ad7395a5653c5",
+      "partitions": {
+        "10": {
+          "spectrum_closure_relative_L2": 1.6771870033020735e-14,
+          "windows": {
+            "gaussian": {
+              "shallow120_240_over_after120_complex_L2": 0.4674726699035703,
+              "shallow120_240_with_after120_complex_correlation": 0.39621592061768224,
+              "after240_over_after120_complex_L2": 0.9319385156309041
+            },
+            "hann": {
+              "shallow120_240_over_after120_complex_L2": 0.47186019845032906,
+              "shallow120_240_with_after120_complex_correlation": 0.4136721784071167,
+              "after240_over_after120_complex_L2": 0.9247669644717266
+            }
+          }
+        },
+        "20": {
+          "spectrum_closure_relative_L2": 1.688943533761187e-14,
+          "windows": {
+            "gaussian": {
+              "shallow120_240_over_after120_complex_L2": 0.4610270742458995,
+              "shallow120_240_with_after120_complex_correlation": 0.4055279475113195,
+              "after240_over_after120_complex_L2": 0.9265861798901813
+            },
+            "hann": {
+              "shallow120_240_over_after120_complex_L2": 0.4663009420050965,
+              "shallow120_240_with_after120_complex_correlation": 0.4197129920092572,
+              "after240_over_after120_complex_L2": 0.921138144449587
+            }
+          }
+        }
+      }
+    },
+    {
+      "package": "line9_pkg3_x160-120_agl1_70st",
+      "audit_sha256": "e2737bc930e7a698d69d46ec24985e9e8ebf83e690397ac39c43c90acaf5617c",
+      "private_cache_sha256": "19bd46ba11ec7a42aa327efdb0ddbe2d0dd218ecd05d28c757f962d161296249",
+      "partitions": {
+        "10": {
+          "spectrum_closure_relative_L2": 2.460175633075415e-14,
+          "windows": {
+            "gaussian": {
+              "shallow120_240_over_after120_complex_L2": 0.8251273111432761,
+              "shallow120_240_with_after120_complex_correlation": 0.9537971223514399,
+              "after240_over_after120_complex_L2": 0.37800412293773195
+            },
+            "hann": {
+              "shallow120_240_over_after120_complex_L2": 0.8145305198614354,
+              "shallow120_240_with_after120_complex_correlation": 0.947956657034739,
+              "after240_over_after120_complex_L2": 0.38032922568529814
+            }
+          }
+        },
+        "20": {
+          "spectrum_closure_relative_L2": 2.4655948247168956e-14,
+          "windows": {
+            "gaussian": {
+              "shallow120_240_over_after120_complex_L2": 0.7982006153627936,
+              "shallow120_240_with_after120_complex_correlation": 0.9689783156025101,
+              "after240_over_after120_complex_L2": 0.3482709253115433
+            },
+            "hann": {
+              "shallow120_240_over_after120_complex_L2": 0.7940136778404928,
+              "shallow120_240_with_after120_complex_correlation": 0.9648415006679754,
+              "after240_over_after120_complex_L2": 0.3494382799188977
+            }
+          }
+        }
+      }
+    }
+  ],
+  "limits": "Model-informed approximate basal timing gate. Time partitions alter spectra and are not geological ablations. Correlations are not energy fractions; ratios can exceed1. The120-240ns interval may contain shallow reflections and other paths, not a pure material response."
+}

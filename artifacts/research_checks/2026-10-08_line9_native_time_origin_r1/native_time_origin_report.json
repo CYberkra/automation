@@ -1,0 +1,1467 @@
+{
+  "calls_solver": false,
+  "calls_training": false,
+  "script_sha256": "666299744ddf57bc0e3b7d59dc48f1e5f05a33d99c2cf9526b8862acb3ee8a77",
+  "processing_helper_sha256": "8be216398675bfea6d010cb2d58f3a7067d6bfa38658655191dff5d3b75264f7",
+  "findings": [
+    {
+      "package": "line9_pkg1_v5_d02m_194st",
+      "native_count": 194,
+      "audit_sha256": "ac166173fc8466a7896b217e6c4ce2dea7a37a89d72df5e752fe4fd58a2ac3ac",
+      "private_cache_sha256": "2ffab677af3cdaee9762406595d9331ec36f85c90d6159c56fafd1d74863771b",
+      "full_spectrum_cache_relative_L2": 0.0,
+      "partitions": {
+        "10": {
+          "spectrum_closure_relative_L2": 6.935674078704786e-15,
+          "windows": {
+            "gaussian": {
+              "time_closure_relative_L2": 6.92943268654817e-15,
+              "components": [
+                {
+                  "native_interval": "0–120ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.459551619880183,
+                      "component_full_complex_correlation": 0.4587440380685947,
+                      "component_RMS_over_gaussian_global_reference_dB": -62.49683982980953
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.999768459249879,
+                      "component_full_complex_correlation": 0.9998391456189162,
+                      "component_RMS_over_gaussian_global_reference_dB": -67.76326053476352
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 1.0002678702093026,
+                      "component_full_complex_correlation": 0.9999512347404909,
+                      "component_RMS_over_gaussian_global_reference_dB": -68.3829464680541
+                    }
+                  }
+                },
+                {
+                  "native_interval": "120–240ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.8885818794209749,
+                      "component_full_complex_correlation": 0.8881946333252665,
+                      "component_RMS_over_gaussian_global_reference_dB": -56.76957680447011
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.005456742367841039,
+                      "component_full_complex_correlation": 0.21903088342166357,
+                      "component_RMS_over_gaussian_global_reference_dB": -113.02258017080506
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.005263659109135582,
+                      "component_full_complex_correlation": 0.2426172024658612,
+                      "component_RMS_over_gaussian_global_reference_dB": -113.95951774233828
+                    }
+                  }
+                },
+                {
+                  "native_interval": "240–400ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.0002120961293073628,
+                      "component_full_complex_correlation": 0.10814247121645772,
+                      "component_RMS_over_gaussian_global_reference_dB": -129.21287099885774
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.016789710430178295,
+                      "component_full_complex_correlation": 0.04491815499273766,
+                      "component_RMS_over_gaussian_global_reference_dB": -103.26038504478383
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.00880950063454013,
+                      "component_full_complex_correlation": 0.020550923334664545,
+                      "component_RMS_over_gaussian_global_reference_dB": -109.48624702395011
+                    }
+                  }
+                },
+                {
+                  "native_interval": "400–600ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 2.159506792265648e-05,
+                      "component_full_complex_correlation": 0.11227627179710963,
+                      "component_RMS_over_gaussian_global_reference_dB": -149.05643436836016
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.0008404861275199154,
+                      "component_full_complex_correlation": 0.04084194161811334,
+                      "component_RMS_over_gaussian_global_reference_dB": -129.27063817106205
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.004628142445275003,
+                      "component_full_complex_correlation": 0.012866544643086376,
+                      "component_RMS_over_gaussian_global_reference_dB": -115.07713850296399
+                    }
+                  }
+                },
+                {
+                  "native_interval": "600ns–记录末",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.0006538420784082576,
+                      "component_full_complex_correlation": 0.052698527876144895,
+                      "component_RMS_over_gaussian_global_reference_dB": -119.43406852704378
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.002974036511109866,
+                      "component_full_complex_correlation": 0.09926036198057775,
+                      "component_RMS_over_gaussian_global_reference_dB": -118.29432324677371
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.003337470779036011,
+                      "component_full_complex_correlation": 0.09511480059663933,
+                      "component_RMS_over_gaussian_global_reference_dB": -117.91692340840028
+                    }
+                  }
+                }
+              ]
+            },
+            "hann": {
+              "time_closure_relative_L2": 6.9308628355096304e-15,
+              "components": [
+                {
+                  "native_interval": "0–120ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.007294978554019409,
+                      "component_full_complex_correlation": 0.006006234063848173,
+                      "component_RMS_over_gaussian_global_reference_dB": -99.35663560142609
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.22435939916589578,
+                      "component_full_complex_correlation": 0.21199575992271336,
+                      "component_RMS_over_gaussian_global_reference_dB": -116.02538914303159
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.42829564149979926,
+                      "component_full_complex_correlation": 0.4272616758031054,
+                      "component_RMS_over_gaussian_global_reference_dB": -117.19946540664671
+                    }
+                  }
+                },
+                {
+                  "native_interval": "120–240ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.9999849505722687,
+                      "component_full_complex_correlation": 0.999973378265543,
+                      "component_RMS_over_gaussian_global_reference_dB": -56.617246709685425
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.006137921185827424,
+                      "component_full_complex_correlation": 0.08233865660204556,
+                      "component_RMS_over_gaussian_global_reference_dB": -147.2838483578246
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.015116924537756284,
+                      "component_full_complex_correlation": 0.09877576038557855,
+                      "component_RMS_over_gaussian_global_reference_dB": -146.24506960160875
+                    }
+                  }
+                },
+                {
+                  "native_interval": "240–400ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.0002652615320640824,
+                      "component_full_complex_correlation": 0.06003652503200308,
+                      "component_RMS_over_gaussian_global_reference_dB": -128.14363051823292
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.9837465018278119,
+                      "component_full_complex_correlation": 0.9734578964167552,
+                      "component_RMS_over_gaussian_global_reference_dB": -103.18661048837211
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 1.050068828997117,
+                      "component_full_complex_correlation": 0.7714789410173074,
+                      "component_RMS_over_gaussian_global_reference_dB": -109.40998316890563
+                    }
+                  }
+                },
+                {
+                  "native_interval": "400–600ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 3.08500451434685e-07,
+                      "component_full_complex_correlation": 0.015884650952200107,
+                      "component_RMS_over_gaussian_global_reference_dB": -186.8319999134084
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.07221704766684668,
+                      "component_full_complex_correlation": 0.07772395204040086,
+                      "component_RMS_over_gaussian_global_reference_dB": -125.8714799111651
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.5472433773693407,
+                      "component_full_complex_correlation": 0.017951063408329037,
+                      "component_RMS_over_gaussian_global_reference_dB": -115.07072821356974
+                    }
+                  }
+                },
+                {
+                  "native_interval": "600ns–记录末",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 2.919054855452923e-07,
+                      "component_full_complex_correlation": 0.006896808572199477,
+                      "component_RMS_over_gaussian_global_reference_dB": -187.31227086279313
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.00010964799533148774,
+                      "component_full_complex_correlation": 0.026961664342688454,
+                      "component_RMS_over_gaussian_global_reference_dB": -182.24426058936913
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.00030637409895306015,
+                      "component_full_complex_correlation": 0.04347499107356917,
+                      "component_RMS_over_gaussian_global_reference_dB": -180.10929756407538
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "20": {
+          "spectrum_closure_relative_L2": 6.943446145113919e-15,
+          "windows": {
+            "gaussian": {
+              "time_closure_relative_L2": 6.979740309659519e-15,
+              "components": [
+                {
+                  "native_interval": "0–120ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.4595576828005534,
+                      "component_full_complex_correlation": 0.45874392820037047,
+                      "component_RMS_over_gaussian_global_reference_dB": -62.496725236567855
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.9997757225403457,
+                      "component_full_complex_correlation": 0.9998391935034993,
+                      "component_RMS_over_gaussian_global_reference_dB": -67.76319743224248
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 1.000274719059693,
+                      "component_full_complex_correlation": 0.9999512230739835,
+                      "component_RMS_over_gaussian_global_reference_dB": -68.38288699582995
+                    }
+                  }
+                },
+                {
+                  "native_interval": "120–240ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.888583968280408,
+                      "component_full_complex_correlation": 0.8881916186852901,
+                      "component_RMS_over_gaussian_global_reference_dB": -56.769556385889004
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.005458333291671357,
+                      "component_full_complex_correlation": 0.2203100066831223,
+                      "component_RMS_over_gaussian_global_reference_dB": -113.02004815190905
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.005267732641331371,
+                      "component_full_complex_correlation": 0.24381872870759685,
+                      "component_RMS_over_gaussian_global_reference_dB": -113.95279835449426
+                    }
+                  }
+                },
+                {
+                  "native_interval": "240–400ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.00023283158391431276,
+                      "component_full_complex_correlation": 0.14136572120709825,
+                      "component_RMS_over_gaussian_global_reference_dB": -128.40268800370478
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.016838704482745857,
+                      "component_full_complex_correlation": 0.04670426130996077,
+                      "component_RMS_over_gaussian_global_reference_dB": -103.23507566069745
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.007711806717185064,
+                      "component_full_complex_correlation": 0.02268715490185953,
+                      "component_RMS_over_gaussian_global_reference_dB": -110.64215012341887
+                    }
+                  }
+                },
+                {
+                  "native_interval": "400–600ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 1.963581388604118e-05,
+                      "component_full_complex_correlation": 0.11110470702521474,
+                      "component_RMS_over_gaussian_global_reference_dB": -149.88254771412034
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.001070569231327151,
+                      "component_full_complex_correlation": 0.20909281677468716,
+                      "component_RMS_over_gaussian_global_reference_dB": -127.16895401659114
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.0017371306447337383,
+                      "component_full_complex_correlation": 0.03124121327923355,
+                      "component_RMS_over_gaussian_global_reference_dB": -123.58862321260327
+                    }
+                  }
+                },
+                {
+                  "native_interval": "600ns–记录末",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.0006538601220950948,
+                      "component_full_complex_correlation": 0.05273242974409149,
+                      "component_RMS_over_gaussian_global_reference_dB": -119.43382883107557
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.002974155328404205,
+                      "component_full_complex_correlation": 0.09936328300288422,
+                      "component_RMS_over_gaussian_global_reference_dB": -118.29397623916748
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.003337649707949193,
+                      "component_full_complex_correlation": 0.09522685694897257,
+                      "component_RMS_over_gaussian_global_reference_dB": -117.91645775184881
+                    }
+                  }
+                }
+              ]
+            },
+            "hann": {
+              "time_closure_relative_L2": 6.977934361066547e-15,
+              "components": [
+                {
+                  "native_interval": "0–120ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.007295545463310233,
+                      "component_full_complex_correlation": 0.006016746226144811,
+                      "component_RMS_over_gaussian_global_reference_dB": -99.35596062751407
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.22436221290885255,
+                      "component_full_complex_correlation": 0.21199010814834687,
+                      "component_RMS_over_gaussian_global_reference_dB": -116.02528021196994
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.42830135410865483,
+                      "component_full_complex_correlation": 0.4272616085063135,
+                      "component_RMS_over_gaussian_global_reference_dB": -117.1993495549911
+                    }
+                  }
+                },
+                {
+                  "native_interval": "120–240ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.999975521750564,
+                      "component_full_complex_correlation": 0.9999733856294855,
+                      "component_RMS_over_gaussian_global_reference_dB": -56.61732860900881
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.006135603775451199,
+                      "component_full_complex_correlation": 0.08243261741361613,
+                      "component_RMS_over_gaussian_global_reference_dB": -147.28712838879807
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.015124912907068725,
+                      "component_full_complex_correlation": 0.09860280914743684,
+                      "component_RMS_over_gaussian_global_reference_dB": -146.2404808529273
+                    }
+                  }
+                },
+                {
+                  "native_interval": "240–400ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.0003497763344607504,
+                      "component_full_complex_correlation": 0.07613019855792295,
+                      "component_RMS_over_gaussian_global_reference_dB": -125.74130754745944
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.9794082905072792,
+                      "component_full_complex_correlation": 0.9747184846258344,
+                      "component_RMS_over_gaussian_global_reference_dB": -103.22499899063402
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.9096120241218951,
+                      "component_full_complex_correlation": 0.8861274251489076,
+                      "component_RMS_over_gaussian_global_reference_dB": -110.6572146513431
+                    }
+                  }
+                },
+                {
+                  "native_interval": "400–600ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 2.8084646120325175e-07,
+                      "component_full_complex_correlation": 0.016075160894910952,
+                      "component_RMS_over_gaussian_global_reference_dB": -187.64773687237204
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.06524610308116642,
+                      "component_full_complex_correlation": 0.17547565546689334,
+                      "component_RMS_over_gaussian_global_reference_dB": -126.753182950765
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.17996125094319965,
+                      "component_full_complex_correlation": 0.07789303055077242,
+                      "component_RMS_over_gaussian_global_reference_dB": -124.73075843682389
+                    }
+                  }
+                },
+                {
+                  "native_interval": "600ns–记录末",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 2.9189610586677513e-07,
+                      "component_full_complex_correlation": 0.0069136101749491955,
+                      "component_RMS_over_gaussian_global_reference_dB": -187.31254996738497
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.00010958937363324366,
+                      "component_full_complex_correlation": 0.02699505677896898,
+                      "component_RMS_over_gaussian_global_reference_dB": -182.24890561513172
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.00030502831873589086,
+                      "component_full_complex_correlation": 0.042637581725115815,
+                      "component_RMS_over_gaussian_global_reference_dB": -180.1475352843837
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      "known_echo_injections": [
+        {
+          "known_echo_amplitude_dB_over_gaussian_reference": -70.0,
+          "windows": {
+            "gaussian": {
+              "known_difference_relative_L2": 1.6906206087952845e-12,
+              "max_known_delay_error_ns": 0.4105471435962613,
+              "actual_total_over_known_echo_complex_L2": 1.8728167198881183
+            },
+            "hann": {
+              "known_difference_relative_L2": 1.6829049226388685e-12,
+              "max_known_delay_error_ns": 0.4105471435962613,
+              "actual_total_over_known_echo_complex_L2": 0.031618943032046175
+            }
+          }
+        },
+        {
+          "known_echo_amplitude_dB_over_gaussian_reference": -80.0,
+          "windows": {
+            "gaussian": {
+              "known_difference_relative_L2": 5.342589869216491e-12,
+              "max_known_delay_error_ns": 0.4105471435962613,
+              "actual_total_over_known_echo_complex_L2": 5.922366474892018
+            },
+            "hann": {
+              "known_difference_relative_L2": 5.319248305966111e-12,
+              "max_known_delay_error_ns": 0.4105471435962613,
+              "actual_total_over_known_echo_complex_L2": 0.09998787718837619
+            }
+          }
+        },
+        {
+          "known_echo_amplitude_dB_over_gaussian_reference": -90.0,
+          "windows": {
+            "gaussian": {
+              "known_difference_relative_L2": 1.6868607394311498e-11,
+              "max_known_delay_error_ns": 0.4105471435962613,
+              "actual_total_over_known_echo_complex_L2": 18.728167198881184
+            },
+            "hann": {
+              "known_difference_relative_L2": 1.6817241113292948e-11,
+              "max_known_delay_error_ns": 0.4105471435962613,
+              "actual_total_over_known_echo_complex_L2": 0.31618943032046154
+            }
+          }
+        }
+      ]
+    },
+    {
+      "package": "line9_pkg2_x160-110_agl35_142st",
+      "native_count": 142,
+      "audit_sha256": "2d312b79ea795a59cd5b9d3276da0fa21330b41dc317ca19e3aaca8e3047fb1b",
+      "private_cache_sha256": "4c43bc2f8417f00deaee49b628686106d9aa0edd80497f0ae85ad7395a5653c5",
+      "full_spectrum_cache_relative_L2": 0.0,
+      "partitions": {
+        "10": {
+          "spectrum_closure_relative_L2": 6.1136948215179704e-15,
+          "windows": {
+            "gaussian": {
+              "time_closure_relative_L2": 6.155461093428759e-15,
+              "components": [
+                {
+                  "native_interval": "0–120ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.35172983370238475,
+                      "component_full_complex_correlation": 0.35089058251216604,
+                      "component_RMS_over_gaussian_global_reference_dB": -64.53113110534406
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.9754250221220179,
+                      "component_full_complex_correlation": 0.980715876048826,
+                      "component_RMS_over_gaussian_global_reference_dB": -67.2503605105353
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.9910946080035682,
+                      "component_full_complex_correlation": 0.9972132799019844,
+                      "component_RMS_over_gaussian_global_reference_dB": -69.14735408386055
+                    }
+                  }
+                },
+                {
+                  "native_interval": "120–240ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.8412843213295798,
+                      "component_full_complex_correlation": 0.9030741556845291,
+                      "component_RMS_over_gaussian_global_reference_dB": -56.95645933508046
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.00820951587767746,
+                      "component_full_complex_correlation": 0.10370098986328379,
+                      "component_RMS_over_gaussian_global_reference_dB": -108.74788741057807
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.005200975670290083,
+                      "component_full_complex_correlation": 0.06689658695056722,
+                      "component_RMS_over_gaussian_global_reference_dB": -114.74795990786502
+                    }
+                  }
+                },
+                {
+                  "native_interval": "240–400ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.25933029749006076,
+                      "component_full_complex_correlation": 0.45511427548887656,
+                      "component_RMS_over_gaussian_global_reference_dB": -67.17825007468451
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.19542311641903815,
+                      "component_full_complex_correlation": 0.19976662262208017,
+                      "component_RMS_over_gaussian_global_reference_dB": -81.21471965931963
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.07177594665696699,
+                      "component_full_complex_correlation": 0.06867387381791883,
+                      "component_RMS_over_gaussian_global_reference_dB": -91.950077768814
+                    }
+                  }
+                },
+                {
+                  "native_interval": "400–600ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 1.7786710196229393e-05,
+                      "component_full_complex_correlation": 0.0652383758258684,
+                      "component_RMS_over_gaussian_global_reference_dB": -150.45340265869072
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.00016630338861017824,
+                      "component_full_complex_correlation": 0.21086456815355578,
+                      "component_RMS_over_gaussian_global_reference_dB": -142.61621638304496
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.01307459271778501,
+                      "component_full_complex_correlation": 0.014000069036345488,
+                      "component_RMS_over_gaussian_global_reference_dB": -106.74109296783317
+                    }
+                  }
+                },
+                {
+                  "native_interval": "600ns–记录末",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.002323056948499086,
+                      "component_full_complex_correlation": 0.15970181598471303,
+                      "component_RMS_over_gaussian_global_reference_dB": -108.13411811098746
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.01042833446171169,
+                      "component_full_complex_correlation": 0.40464920478895033,
+                      "component_RMS_over_gaussian_global_reference_dB": -106.66993932185187
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.016053385057827954,
+                      "component_full_complex_correlation": 0.41804169006201414,
+                      "component_RMS_over_gaussian_global_reference_dB": -104.95832389477599
+                    }
+                  }
+                }
+              ]
+            },
+            "hann": {
+              "time_closure_relative_L2": 6.1549136488947954e-15,
+              "components": [
+                {
+                  "native_interval": "0–120ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.003782472044178781,
+                      "component_full_complex_correlation": 0.001295976011403852,
+                      "component_RMS_over_gaussian_global_reference_dB": -104.31205112475095
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.02669656801077583,
+                      "component_full_complex_correlation": 0.026048564829126524,
+                      "component_RMS_over_gaussian_global_reference_dB": -112.59766323502568
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.04772773938461847,
+                      "component_full_complex_correlation": 0.048292433482080316,
+                      "component_RMS_over_gaussian_global_reference_dB": -118.06507055690156
+                    }
+                  }
+                },
+                {
+                  "native_interval": "120–240ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.8987241674399465,
+                      "component_full_complex_correlation": 0.963361686898738,
+                      "component_RMS_over_gaussian_global_reference_dB": -56.79503725472298
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.006081683203536797,
+                      "component_full_complex_correlation": 0.04863865460169092,
+                      "component_RMS_over_gaussian_global_reference_dB": -125.44629603797206
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.0025792868855036336,
+                      "component_full_complex_correlation": 0.01502991015523137,
+                      "component_RMS_over_gaussian_global_reference_dB": -143.41049484933032
+                    }
+                  }
+                },
+                {
+                  "native_interval": "240–400ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.2767456337923629,
+                      "component_full_complex_correlation": 0.491744244290655,
+                      "component_RMS_over_gaussian_global_reference_dB": -67.0259501073954
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.9994721225976722,
+                      "component_full_complex_correlation": 0.9995974073568171,
+                      "component_RMS_over_gaussian_global_reference_dB": -81.13135821112935
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.9819791640438437,
+                      "component_full_complex_correlation": 0.982720020775876,
+                      "component_RMS_over_gaussian_global_reference_dB": -91.79844239080592
+                    }
+                  }
+                },
+                {
+                  "native_interval": "400–600ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 2.7544189398159294e-07,
+                      "component_full_complex_correlation": 0.011497867643581806,
+                      "component_RMS_over_gaussian_global_reference_dB": -187.06696574279408
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 8.751483151176518e-05,
+                      "component_full_complex_correlation": 0.025663521658451954,
+                      "component_RMS_over_gaussian_global_reference_dB": -162.28513869570247
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.17880573881781284,
+                      "component_full_complex_correlation": 0.18276261161041218,
+                      "component_RMS_over_gaussian_global_reference_dB": -106.59285877883016
+                    }
+                  }
+                },
+                {
+                  "native_interval": "600ns–记录末",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 3.6517462317806758e-06,
+                      "component_full_complex_correlation": 0.009272320787102151,
+                      "component_RMS_over_gaussian_global_reference_dB": -164.61755386664012
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.00011723581103352926,
+                      "component_full_complex_correlation": 0.024170541044560134,
+                      "component_RMS_over_gaussian_global_reference_dB": -159.74556607132857
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.0008170170169544129,
+                      "component_full_complex_correlation": 0.019242803842213167,
+                      "component_RMS_over_gaussian_global_reference_dB": -153.39586580488356
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "20": {
+          "spectrum_closure_relative_L2": 6.160994569975631e-15,
+          "windows": {
+            "gaussian": {
+              "time_closure_relative_L2": 6.209482987226043e-15,
+              "components": [
+                {
+                  "native_interval": "0–120ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.3517310785704517,
+                      "component_full_complex_correlation": 0.3508898865283883,
+                      "component_RMS_over_gaussian_global_reference_dB": -64.53110036365976
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.9754274087204513,
+                      "component_full_complex_correlation": 0.9807155796750957,
+                      "component_RMS_over_gaussian_global_reference_dB": -67.25033925856332
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.991097533082909,
+                      "component_full_complex_correlation": 0.9972131426532619,
+                      "component_RMS_over_gaussian_global_reference_dB": -69.14732844869047
+                    }
+                  }
+                },
+                {
+                  "native_interval": "120–240ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.7904400204426872,
+                      "component_full_complex_correlation": 0.9052972681300024,
+                      "component_RMS_over_gaussian_global_reference_dB": -57.49793682512191
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.007714161219221141,
+                      "component_full_complex_correlation": 0.12996153873077224,
+                      "component_RMS_over_gaussian_global_reference_dB": -109.28846413357746
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.004862595860918335,
+                      "component_full_complex_correlation": 0.09208587052547527,
+                      "component_RMS_over_gaussian_global_reference_dB": -115.33229283016172
+                    }
+                  }
+                },
+                {
+                  "native_interval": "240–400ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.2699042315853763,
+                      "component_full_complex_correlation": 0.5980273476798313,
+                      "component_RMS_over_gaussian_global_reference_dB": -66.83112136910363
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.19542040939471922,
+                      "component_full_complex_correlation": 0.19946574359632277,
+                      "component_RMS_over_gaussian_global_reference_dB": -81.21483997813229
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.07173320411580425,
+                      "component_full_complex_correlation": 0.06781542051025745,
+                      "component_RMS_over_gaussian_global_reference_dB": -91.95525175255467
+                    }
+                  }
+                },
+                {
+                  "native_interval": "400–600ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 1.8256008073703977e-05,
+                      "component_full_complex_correlation": 0.06589147617460919,
+                      "component_RMS_over_gaussian_global_reference_dB": -150.22719885673186
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.00017312978160056658,
+                      "component_full_complex_correlation": 0.2068477832668221,
+                      "component_RMS_over_gaussian_global_reference_dB": -142.26680273005627
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.012878577370913668,
+                      "component_full_complex_correlation": 0.014159489047812602,
+                      "component_RMS_over_gaussian_global_reference_dB": -106.87229852295756
+                    }
+                  }
+                },
+                {
+                  "native_interval": "600ns–记录末",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.002323030050247694,
+                      "component_full_complex_correlation": 0.15969693886579517,
+                      "component_RMS_over_gaussian_global_reference_dB": -108.1342186838967
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.010428195193419072,
+                      "component_full_complex_correlation": 0.40463164190669226,
+                      "component_RMS_over_gaussian_global_reference_dB": -106.67005532092168
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.016053024725725923,
+                      "component_full_complex_correlation": 0.41802597437501277,
+                      "component_RMS_over_gaussian_global_reference_dB": -104.95851885926393
+                    }
+                  }
+                }
+              ]
+            },
+            "hann": {
+              "time_closure_relative_L2": 6.206598345811756e-15,
+              "components": [
+                {
+                  "native_interval": "0–120ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.003782552538207101,
+                      "component_full_complex_correlation": 0.0012940703989312138,
+                      "component_RMS_over_gaussian_global_reference_dB": -104.31186628404384
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.02669677450969275,
+                      "component_full_complex_correlation": 0.02604976996117105,
+                      "component_RMS_over_gaussian_global_reference_dB": -112.59759604961573
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.047728179312781074,
+                      "component_full_complex_correlation": 0.048290240606384184,
+                      "component_RMS_over_gaussian_global_reference_dB": -118.06499049549686
+                    }
+                  }
+                },
+                {
+                  "native_interval": "120–240ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.8444115706304243,
+                      "component_full_complex_correlation": 0.9653579050767019,
+                      "component_RMS_over_gaussian_global_reference_dB": -57.33648214970649
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.005797782446605113,
+                      "component_full_complex_correlation": 0.048199086335556564,
+                      "component_RMS_over_gaussian_global_reference_dB": -125.86153361460569
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.0023994980970079892,
+                      "component_full_complex_correlation": 0.017204459680347717,
+                      "component_RMS_over_gaussian_global_reference_dB": -144.0380796516702
+                    }
+                  }
+                },
+                {
+                  "native_interval": "240–400ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.2881332460653062,
+                      "component_full_complex_correlation": 0.6447173691217997,
+                      "component_RMS_over_gaussian_global_reference_dB": -66.67569822336667
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.9994903902702699,
+                      "component_full_complex_correlation": 0.9995994579138417,
+                      "component_RMS_over_gaussian_global_reference_dB": -81.13119945778894
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.98136510964596,
+                      "component_full_complex_correlation": 0.9832041546036876,
+                      "component_RMS_over_gaussian_global_reference_dB": -91.8038755784309
+                    }
+                  }
+                },
+                {
+                  "native_interval": "400–600ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 2.8346790735828934e-07,
+                      "component_full_complex_correlation": 0.0101595920118486,
+                      "component_RMS_over_gaussian_global_reference_dB": -186.81748770978797
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 9.773297737839568e-05,
+                      "component_full_complex_correlation": 0.02481183350212088,
+                      "component_RMS_over_gaussian_global_reference_dB": -161.325949325643
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.176122692804121,
+                      "component_full_complex_correlation": 0.18624625749517665,
+                      "component_RMS_over_gaussian_global_reference_dB": -106.72418150994206
+                    }
+                  }
+                },
+                {
+                  "native_interval": "600ns–记录末",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 3.6517727682825704e-06,
+                      "component_full_complex_correlation": 0.00927271397359222,
+                      "component_RMS_over_gaussian_global_reference_dB": -164.61749074826474
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.00011723717295991172,
+                      "component_full_complex_correlation": 0.02416599429736387,
+                      "component_RMS_over_gaussian_global_reference_dB": -159.74546516808547
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.0008169894978191218,
+                      "component_full_complex_correlation": 0.019254153547000386,
+                      "component_RMS_over_gaussian_global_reference_dB": -153.39615837185917
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      "known_echo_injections": [
+        {
+          "known_echo_amplitude_dB_over_gaussian_reference": -70.0,
+          "windows": {
+            "gaussian": {
+              "known_difference_relative_L2": 1.6794012964295866e-12,
+              "max_known_delay_error_ns": 0.4108572360916014,
+              "actual_total_over_known_echo_complex_L2": 2.03611394116898
+            },
+            "hann": {
+              "known_difference_relative_L2": 1.6804404948649223e-12,
+              "max_known_delay_error_ns": 0.4108572360916014,
+              "actual_total_over_known_echo_complex_L2": 0.39425551425777816
+            }
+          }
+        },
+        {
+          "known_echo_amplitude_dB_over_gaussian_reference": -80.0,
+          "windows": {
+            "gaussian": {
+              "known_difference_relative_L2": 5.2974306623314175e-12,
+              "max_known_delay_error_ns": 0.4108572360916014,
+              "actual_total_over_known_echo_complex_L2": 6.438757629716057
+            },
+            "hann": {
+              "known_difference_relative_L2": 5.306487218189296e-12,
+              "max_known_delay_error_ns": 0.4108572360916014,
+              "actual_total_over_known_echo_complex_L2": 1.2467454051355673
+            }
+          }
+        },
+        {
+          "known_echo_amplitude_dB_over_gaussian_reference": -90.0,
+          "windows": {
+            "gaussian": {
+              "known_difference_relative_L2": 1.6818877185086012e-11,
+              "max_known_delay_error_ns": 0.4108572360916014,
+              "actual_total_over_known_echo_complex_L2": 20.361139411689802
+            },
+            "hann": {
+              "known_difference_relative_L2": 1.682268337358868e-11,
+              "max_known_delay_error_ns": 0.4108572360916014,
+              "actual_total_over_known_echo_complex_L2": 3.9425551425777825
+            }
+          }
+        }
+      ]
+    },
+    {
+      "package": "line9_pkg3_x160-120_agl1_70st",
+      "native_count": 70,
+      "audit_sha256": "e2737bc930e7a698d69d46ec24985e9e8ebf83e690397ac39c43c90acaf5617c",
+      "private_cache_sha256": "19bd46ba11ec7a42aa327efdb0ddbe2d0dd218ecd05d28c757f962d161296249",
+      "full_spectrum_cache_relative_L2": 0.0,
+      "partitions": {
+        "10": {
+          "spectrum_closure_relative_L2": 4.966013636016234e-15,
+          "windows": {
+            "gaussian": {
+              "time_closure_relative_L2": 5.0314469449464165e-15,
+              "components": [
+                {
+                  "native_interval": "0–120ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.34763502632266097,
+                      "component_full_complex_correlation": 0.3495278041689377,
+                      "component_RMS_over_gaussian_global_reference_dB": -61.453406582974885
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.9904163615223839,
+                      "component_full_complex_correlation": 0.9918934151835984,
+                      "component_RMS_over_gaussian_global_reference_dB": -65.68475135997619
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.9988053502559762,
+                      "component_full_complex_correlation": 0.9997349816095022,
+                      "component_RMS_over_gaussian_global_reference_dB": -68.88138316321866
+                    }
+                  }
+                },
+                {
+                  "native_interval": "120–240ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.9369283443087512,
+                      "component_full_complex_correlation": 0.9375972757772845,
+                      "component_RMS_over_gaussian_global_reference_dB": -52.84174958652099
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.015550893147992418,
+                      "component_full_complex_correlation": 0.23269712957477257,
+                      "component_RMS_over_gaussian_global_reference_dB": -101.76600073836246
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.009080041662265982,
+                      "component_full_complex_correlation": 0.23617677404125736,
+                      "component_RMS_over_gaussian_global_reference_dB": -109.70924353996838
+                    }
+                  }
+                },
+                {
+                  "native_interval": "240–400ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.0003049160202949598,
+                      "component_full_complex_correlation": 0.05438637655732944,
+                      "component_RMS_over_gaussian_global_reference_dB": -122.59227228214927
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.12512820480963627,
+                      "component_full_complex_correlation": 0.12980830629530352,
+                      "component_RMS_over_gaussian_global_reference_dB": -83.6540032068013
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.021283560993143706,
+                      "component_full_complex_correlation": 0.020276691083500463,
+                      "component_RMS_over_gaussian_global_reference_dB": -102.31011451745373
+                    }
+                  }
+                },
+                {
+                  "native_interval": "400–600ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 4.511781963866234e-06,
+                      "component_full_complex_correlation": 0.029710395595074216,
+                      "component_RMS_over_gaussian_global_reference_dB": -159.188915062484
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 3.956616736094869e-05,
+                      "component_full_complex_correlation": 0.07202853078611547,
+                      "component_RMS_over_gaussian_global_reference_dB": -153.65462781050883
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.0038865248517273372,
+                      "component_full_complex_correlation": 0.005930905084357908,
+                      "component_RMS_over_gaussian_global_reference_dB": -117.07977138278298
+                    }
+                  }
+                },
+                {
+                  "native_interval": "600ns–记录末",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.00014050105958704603,
+                      "component_full_complex_correlation": 0.16646181181474887,
+                      "component_RMS_over_gaussian_global_reference_dB": -129.3222851486931
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.0007650187093560444,
+                      "component_full_complex_correlation": 0.4523162362016893,
+                      "component_RMS_over_gaussian_global_reference_dB": -127.92766635576083
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.0015039669645035578,
+                      "component_full_complex_correlation": 0.44340824750495333,
+                      "component_RMS_over_gaussian_global_reference_dB": -125.32623442758305
+                    }
+                  }
+                }
+              ]
+            },
+            "hann": {
+              "time_closure_relative_L2": 5.031559188960192e-15,
+              "components": [
+                {
+                  "native_interval": "0–120ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.006976666068202897,
+                      "component_full_complex_correlation": 0.003235715817488129,
+                      "component_RMS_over_gaussian_global_reference_dB": -95.81058266813798
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.05513959609753534,
+                      "component_full_complex_correlation": 0.05216538801069412,
+                      "component_RMS_over_gaussian_global_reference_dB": -108.71256242684957
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.16050600820559788,
+                      "component_full_complex_correlation": 0.1613934349481959,
+                      "component_RMS_over_gaussian_global_reference_dB": -117.91653379391951
+                    }
+                  }
+                },
+                {
+                  "native_interval": "120–240ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 1.0000441238445144,
+                      "component_full_complex_correlation": 0.9999756458106198,
+                      "component_RMS_over_gaussian_global_reference_dB": -52.68315814904745
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.01750323759218584,
+                      "component_full_complex_correlation": 0.1258504902074466,
+                      "component_RMS_over_gaussian_global_reference_dB": -118.67946627712385
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.00720234966324227,
+                      "component_full_complex_correlation": 0.011932981923080814,
+                      "component_RMS_over_gaussian_global_reference_dB": -144.87687563505602
+                    }
+                  }
+                },
+                {
+                  "native_interval": "240–400ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 2.8852841846130764e-05,
+                      "component_full_complex_correlation": 0.02157903143276387,
+                      "component_RMS_over_gaussian_global_reference_dB": -143.4797694911401
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 1.0009158047138675,
+                      "component_full_complex_correlation": 0.998273702739208,
+                      "component_RMS_over_gaussian_global_reference_dB": -83.53388309908391
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.9817394323880856,
+                      "component_full_complex_correlation": 0.9709299169774712,
+                      "component_RMS_over_gaussian_global_reference_dB": -102.1864349699303
+                    }
+                  }
+                },
+                {
+                  "native_interval": "400–600ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 4.940275741481347e-08,
+                      "component_full_complex_correlation": 0.01893518453573378,
+                      "component_RMS_over_gaussian_global_reference_dB": -198.8085176005191
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 1.061111967071973e-05,
+                      "component_full_complex_correlation": 0.060217750576498745,
+                      "component_RMS_over_gaussian_global_reference_dB": -183.02660978807452
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.1775023903306366,
+                      "component_full_complex_correlation": 0.11721729259465624,
+                      "component_RMS_over_gaussian_global_reference_dB": -117.04227555599115
+                    }
+                  }
+                },
+                {
+                  "native_interval": "600ns–记录末",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 1.7544438273436057e-07,
+                      "component_full_complex_correlation": 0.0034680132147488648,
+                      "component_RMS_over_gaussian_global_reference_dB": -187.8007520391953
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 1.0521536358507333e-05,
+                      "component_full_complex_correlation": 0.033115958757497524,
+                      "component_RMS_over_gaussian_global_reference_dB": -183.10025083188134
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.00025655583727377185,
+                      "component_full_complex_correlation": 0.06452492634081057,
+                      "component_RMS_over_gaussian_global_reference_dB": -173.84272166553126
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "20": {
+          "spectrum_closure_relative_L2": 4.97832167807824e-15,
+          "windows": {
+            "gaussian": {
+              "time_closure_relative_L2": 5.10643517131265e-15,
+              "components": [
+                {
+                  "native_interval": "0–120ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.3476430324130638,
+                      "component_full_complex_correlation": 0.34953008922188733,
+                      "component_RMS_over_gaussian_global_reference_dB": -61.453206547847074
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.9904234186502321,
+                      "component_full_complex_correlation": 0.9918928184374529,
+                      "component_RMS_over_gaussian_global_reference_dB": -65.68468946962619
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.9988104369793893,
+                      "component_full_complex_correlation": 0.9997348315077987,
+                      "component_RMS_over_gaussian_global_reference_dB": -68.8813389277671
+                    }
+                  }
+                },
+                {
+                  "native_interval": "120–240ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.9369283535514347,
+                      "component_full_complex_correlation": 0.937594841014301,
+                      "component_RMS_over_gaussian_global_reference_dB": -52.84174950083575
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.015458518860788585,
+                      "component_full_complex_correlation": 0.23636870624116554,
+                      "component_RMS_over_gaussian_global_reference_dB": -101.81774988066606
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.009057712277932431,
+                      "component_full_complex_correlation": 0.23910230884155764,
+                      "component_RMS_over_gaussian_global_reference_dB": -109.73062994388928
+                    }
+                  }
+                },
+                {
+                  "native_interval": "240–400ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.0002839052739523532,
+                      "component_full_complex_correlation": 0.05345142789175659,
+                      "component_RMS_over_gaussian_global_reference_dB": -123.21240793327667
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.1251340512198046,
+                      "component_full_complex_correlation": 0.12997118813801736,
+                      "component_RMS_over_gaussian_global_reference_dB": -83.65359738233288
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.021144908296439446,
+                      "component_full_complex_correlation": 0.020796018659441706,
+                      "component_RMS_over_gaussian_global_reference_dB": -102.36688424442633
+                    }
+                  }
+                },
+                {
+                  "native_interval": "400–600ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 4.397640520326664e-06,
+                      "component_full_complex_correlation": 0.02864804968457318,
+                      "component_RMS_over_gaussian_global_reference_dB": -159.41148262606248
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 3.863151160456661e-05,
+                      "component_full_complex_correlation": 0.06457983668988863,
+                      "component_RMS_over_gaussian_global_reference_dB": -153.86227344625544
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.0032486544681564187,
+                      "component_full_complex_correlation": 0.006782579498446882,
+                      "component_RMS_over_gaussian_global_reference_dB": -118.63692993268764
+                    }
+                  }
+                },
+                {
+                  "native_interval": "600ns–记录末",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.00014048124434633624,
+                      "component_full_complex_correlation": 0.16647086599996486,
+                      "component_RMS_over_gaussian_global_reference_dB": -129.3235102293607
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.0007648897295881278,
+                      "component_full_complex_correlation": 0.4524666121734651,
+                      "component_RMS_over_gaussian_global_reference_dB": -127.92913089311979
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.0015035507176711317,
+                      "component_full_complex_correlation": 0.4436434746384654,
+                      "component_RMS_over_gaussian_global_reference_dB": -125.32863871873195
+                    }
+                  }
+                }
+              ]
+            },
+            "hann": {
+              "time_closure_relative_L2": 5.10573081424827e-15,
+              "components": [
+                {
+                  "native_interval": "0–120ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 0.006979534765518431,
+                      "component_full_complex_correlation": 0.003091806936787951,
+                      "component_RMS_over_gaussian_global_reference_dB": -95.807011898566
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.05514054087293887,
+                      "component_full_complex_correlation": 0.052172775092185764,
+                      "component_RMS_over_gaussian_global_reference_dB": -108.71241360195484
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.1605077603257763,
+                      "component_full_complex_correlation": 0.16139060961230253,
+                      "component_RMS_over_gaussian_global_reference_dB": -117.9164389772855
+                    }
+                  }
+                },
+                {
+                  "native_interval": "120–240ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 1.0000434299109755,
+                      "component_full_complex_correlation": 0.9999756258989272,
+                      "component_RMS_over_gaussian_global_reference_dB": -52.68316417621374
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 0.017032529957362666,
+                      "component_full_complex_correlation": 0.12314745856715242,
+                      "component_RMS_over_gaussian_global_reference_dB": -118.91625080829577
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.007099384923225046,
+                      "component_full_complex_correlation": 0.012567847991107769,
+                      "component_RMS_over_gaussian_global_reference_dB": -145.00194519432534
+                    }
+                  }
+                },
+                {
+                  "native_interval": "240–400ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 2.775692790185881e-05,
+                      "component_full_complex_correlation": 0.021138127546299075,
+                      "component_RMS_over_gaussian_global_reference_dB": -143.81611344875776
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 1.0008313517389167,
+                      "component_full_complex_correlation": 0.9982900164218793,
+                      "component_RMS_over_gaussian_global_reference_dB": -83.53461600805106
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.9753061481356061,
+                      "component_full_complex_correlation": 0.9759047130545572,
+                      "component_RMS_over_gaussian_global_reference_dB": -102.24354043426854
+                    }
+                  }
+                },
+                {
+                  "native_interval": "400–600ns",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 4.76003171339884e-08,
+                      "component_full_complex_correlation": 0.01918789464733941,
+                      "component_RMS_over_gaussian_global_reference_dB": -199.131344471664
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 1.0361944084466864e-05,
+                      "component_full_complex_correlation": 0.06022879307785561,
+                      "component_RMS_over_gaussian_global_reference_dB": -183.2330091495538
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.14735862500300886,
+                      "component_full_complex_correlation": 0.15081761130094118,
+                      "component_RMS_over_gaussian_global_reference_dB": -118.6588484631033
+                    }
+                  }
+                },
+                {
+                  "native_interval": "600ns–记录末",
+                  "scopes": {
+                    "cover_pm10ns": {
+                      "component_over_full_complex_L2": 1.754231284519563e-07,
+                      "component_full_complex_correlation": 0.0034479198268420885,
+                      "component_RMS_over_gaussian_global_reference_dB": -187.80180435863576
+                    },
+                    "basal_pm10ns": {
+                      "component_over_full_complex_L2": 1.051919516809368e-05,
+                      "component_full_complex_correlation": 0.033037454431741636,
+                      "component_RMS_over_gaussian_global_reference_dB": -183.10218378004072
+                    },
+                    "old_320_497ns": {
+                      "component_over_full_complex_L2": 0.0002560058003740842,
+                      "component_full_complex_correlation": 0.06485885601060717,
+                      "component_RMS_over_gaussian_global_reference_dB": -173.8613635664873
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      "known_echo_injections": [
+        {
+          "known_echo_amplitude_dB_over_gaussian_reference": -70.0,
+          "windows": {
+            "gaussian": {
+              "known_difference_relative_L2": 1.7226786740007357e-12,
+              "max_known_delay_error_ns": 0.3955454821663693,
+              "actual_total_over_known_echo_complex_L2": 2.3994503040613915
+            },
+            "hann": {
+              "known_difference_relative_L2": 1.7238202232981815e-12,
+              "max_known_delay_error_ns": 0.3955454821663693,
+              "actual_total_over_known_echo_complex_L2": 0.2983177274899543
+            }
+          }
+        },
+        {
+          "known_echo_amplitude_dB_over_gaussian_reference": -80.0,
+          "windows": {
+            "gaussian": {
+              "known_difference_relative_L2": 5.457636787869356e-12,
+              "max_known_delay_error_ns": 0.3955454821663693,
+              "actual_total_over_known_echo_complex_L2": 7.587728093217562
+            },
+            "hann": {
+              "known_difference_relative_L2": 5.427375094800937e-12,
+              "max_known_delay_error_ns": 0.3955454821663693,
+              "actual_total_over_known_echo_complex_L2": 0.943363485273681
+            }
+          }
+        },
+        {
+          "known_echo_amplitude_dB_over_gaussian_reference": -90.0,
+          "windows": {
+            "gaussian": {
+              "known_difference_relative_L2": 1.7189720647807082e-11,
+              "max_known_delay_error_ns": 0.3955454821663693,
+              "actual_total_over_known_echo_complex_L2": 23.994503040613907
+            },
+            "hann": {
+              "known_difference_relative_L2": 1.7132807584243126e-11,
+              "max_known_delay_error_ns": 0.3955454821663693,
+              "actual_total_over_known_echo_complex_L2": 2.983177274899543
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "limits": "Time partitions are linear diagnostic components with spectral changes at their transitions, not physical target ablations. L2 ratios can exceed1 by coherent cancellation. Injected echoes are known artificial signals, not real geology or FDTD results. True-interface timing uses approximate95MHz phase-ray curves."
+}
