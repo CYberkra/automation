@@ -1,4 +1,25 @@
 {
+ "line9_three_packages_review_2026_10_07": {
+  "report": "docs/research/2026-10-07_line9_three_packages_review.md",
+  "results": "artifacts/research_checks/2026-10-07_line9_three_packages_review_r3",
+  "scripts": [
+   "scripts/review_line9_result_packages.py",
+   "scripts/analyze_line9_early_time_leakage.py"
+  ],
+  "source_git_base": "830d403",
+  "status": "AUDITED_428_NATIVE_TRACES_EARLY_FIELD_LEAKAGE_DIAGNOSIS_NOT_DEEP_INTERFACE_DETECTION",
+  "calls_solver": false,
+  "calls_training": false,
+  "native_precision": "float32",
+  "completed_traces": [
+   194,
+   142,
+   70
+  ],
+  "original_inputs_changed": false,
+  "geological_ablation_available": false,
+  "height_comparison_single_factor": false
+ },
  "cover_rock_material_design_2026_10_06": {
   "report": "docs/research/2026-10-06_cover_rock_material_design.md",
   "design": "configs/research/material_design_cover_rock_v0_1.json",

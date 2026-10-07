@@ -1,0 +1,304 @@
+{
+  "status": "AUDITED_RECONSTRUCTION_NOT_INTERFACE_DETECTION",
+  "calls_solver": false,
+  "packages": [
+    {
+      "package": "line9_pkg1_v5_d02m_194st",
+      "raw_count": 194,
+      "planned_count": 966,
+      "recorded_completed_count": 194,
+      "coverage_chainage_m": [
+        218.0,
+        179.4
+      ],
+      "native_dtype": "float32",
+      "domain_m": [
+        210.0,
+        42.5
+      ],
+      "native_record_ns": 1200.0243601798206,
+      "cell_count": 14280000,
+      "dt_s": 5.896635841874211e-11,
+      "iterations": 20352,
+      "source": "impulse40A on first half-step; z Hertzian0.025m",
+      "geometry_sha256": "f948ae805077ea74612aa7e4bd46252a23ea0f7c973841657e5a4cc911a4868c",
+      "materials_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "geometry_ranges": {
+        "surface": {
+          "depth_m": [
+            0.0,
+            0.0
+          ],
+          "time95_ns": [
+            53.463012289422934,
+            53.62924653541064
+          ]
+        },
+        "cover_base": {
+          "depth_m": [
+            5.425000000000001,
+            7.3500000000000005
+          ],
+          "time95_ns": [
+            173.73459245877032,
+            216.3843835217329
+          ]
+        },
+        "first_sand": {
+          "depth_m": [
+            12.700000000000001,
+            14.475000000000001
+          ],
+          "time95_ns": [
+            342.3093408617719,
+            381.4858546695503
+          ]
+        },
+        "basal_sand": {
+          "depth_m": [
+            12.700000000000001,
+            14.475000000000001
+          ],
+          "time95_ns": [
+            342.3093408617719,
+            381.4858546695503
+          ]
+        }
+      },
+      "midpoint_agl_m": [
+        7.987499999999997,
+        8.012500000000006
+      ],
+      "top_buffer_to_pml_m": [
+        0.3999999999999986,
+        2.0249999999999986
+      ],
+      "closest_side_air_path_ns": [
+        66.71302751686407,
+        324.2243434292181
+      ],
+      "packaged_truncated_sample_count": 20351,
+      "packaged_taper_ns": 200.01388775637324,
+      "package_reproduction_relative_L2": 4.97442677701476e-16,
+      "independent_7_frequency_all_trace_DFT_L2": 4.884007183065004e-13,
+      "independent_inverse_L2": {
+        "gaussian": 2.2556382324108692e-14,
+        "hann": 2.249674715808736e-14,
+        "rectangular": 4.14756274474595e-14
+      },
+      "packaged_inverse_L2": 5.262796175025121e-16,
+      "taper_sensitivity_complex_L2": {
+        "100_300ns": 0.00104898091265585,
+        "300_600ns": 0.003774671660156123,
+        "600_800ns": 0.008550053799025988
+      },
+      "logged_seconds_median": 206.8,
+      "logged_seconds_sum": 40918.4,
+      "gate_contrast_proxy_median_db": {
+        "cover_base": 5.785644320730046,
+        "first_sand": -0.07715039886356041,
+        "basal_sand": -0.07715039886356041
+      }
+    },
+    {
+      "package": "line9_pkg2_x160-110_agl35_142st",
+      "raw_count": 142,
+      "planned_count": 251,
+      "recorded_completed_count": 142,
+      "coverage_chainage_m": [
+        180.65,
+        152.45
+      ],
+      "native_dtype": "float32",
+      "domain_m": [
+        110.0,
+        40.0
+      ],
+      "native_record_ns": 800.055551025493,
+      "cell_count": 7040000,
+      "dt_s": 5.896635841874211e-11,
+      "iterations": 13569,
+      "source": "impulse40A on first half-step; z Hertzian0.025m",
+      "geometry_sha256": "a3e9368f763ed4d37f00505d1217d1e0fbdf054aacd480fb1e2db9ea40e323a8",
+      "materials_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "geometry_ranges": {
+        "surface": {
+          "depth_m": [
+            0.0,
+            0.0
+          ],
+          "time95_ns": [
+            68.1851029127334,
+            83.5036923511914
+          ]
+        },
+        "cover_base": {
+          "depth_m": [
+            6.45,
+            7.3500000000000005
+          ],
+          "time95_ns": [
+            226.4207809558175,
+            237.8702841497354
+          ]
+        },
+        "first_sand": {
+          "depth_m": [
+            6.45,
+            8.575000000000001
+          ],
+          "time95_ns": [
+            226.4207809558175,
+            259.52503290093154
+          ]
+        },
+        "basal_sand": {
+          "depth_m": [
+            9.075000000000001,
+            12.825000000000001
+          ],
+          "time95_ns": [
+            286.8887504244129,
+            350.86409699581674
+          ]
+        }
+      },
+      "midpoint_agl_m": [
+        10.2,
+        12.5
+      ],
+      "top_buffer_to_pml_m": [
+        3.0,
+        3.0
+      ],
+      "closest_side_air_path_ns": [
+        182.45956007338913,
+        353.244376814843
+      ],
+      "packaged_truncated_sample_count": 13569,
+      "packaged_taper_ns": 200.01388775637324,
+      "package_reproduction_relative_L2": 4.593807268159996e-16,
+      "independent_7_frequency_all_trace_DFT_L2": 8.053979113907188e-13,
+      "independent_inverse_L2": {
+        "gaussian": 2.0791087476164822e-14,
+        "hann": 2.0663464278938567e-14,
+        "rectangular": 4.1430410734664225e-14
+      },
+      "packaged_inverse_L2": 5.268345352577122e-16,
+      "taper_sensitivity_complex_L2": {
+        "100_300ns": 0.0035986158250495186,
+        "300_600ns": 0.020404117425155622,
+        "600_800ns": 0.9917899174103004
+      },
+      "logged_seconds_median": 129.0,
+      "logged_seconds_sum": 18566.0,
+      "gate_contrast_proxy_median_db": {
+        "cover_base": 6.760999324619519,
+        "first_sand": 5.712386301504515,
+        "basal_sand": -0.1326481232989592
+      }
+    },
+    {
+      "package": "line9_pkg3_x160-120_agl1_70st",
+      "raw_count": 70,
+      "planned_count": 201,
+      "recorded_completed_count": 70,
+      "coverage_chainage_m": [
+        180.65,
+        166.85
+      ],
+      "native_dtype": "float32",
+      "domain_m": [
+        120.0,
+        40.0
+      ],
+      "native_record_ns": 800.055551025493,
+      "cell_count": 7680000,
+      "dt_s": 5.896635841874211e-11,
+      "iterations": 13569,
+      "source": "impulse40A on first half-step; z Hertzian0.025m",
+      "geometry_sha256": "2174d9146bea964ffbaed23bff45ced37ce7695fe0b8a7d082111ad046d710f2",
+      "materials_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "geometry_ranges": {
+        "surface": {
+          "depth_m": [
+            0.0,
+            0.0
+          ],
+          "time95_ns": [
+            7.886957093597458,
+            8.026792155547286
+          ]
+        },
+        "cover_base": {
+          "depth_m": [
+            7.25,
+            7.3500000000000005
+          ],
+          "time95_ns": [
+            167.7725968649461,
+            170.06621094716027
+          ]
+        },
+        "first_sand": {
+          "depth_m": [
+            7.375,
+            8.575000000000001
+          ],
+          "time95_ns": [
+            170.50666317317575,
+            198.4331739871769
+          ]
+        },
+        "basal_sand": {
+          "depth_m": [
+            11.4,
+            12.825000000000001
+          ],
+          "time95_ns": [
+            257.9336881841209,
+            289.67616290951185
+          ]
+        }
+      },
+      "midpoint_agl_m": [
+        0.9874999999999972,
+        1.0125000000000028
+      ],
+      "top_buffer_to_pml_m": [
+        12.174999999999997,
+        12.899999999999999
+      ],
+      "closest_side_air_path_ns": [
+        249.1724349302983,
+        341.2361610933686
+      ],
+      "packaged_truncated_sample_count": 13569,
+      "packaged_taper_ns": 200.01388775637324,
+      "package_reproduction_relative_L2": 4.606655386834598e-16,
+      "independent_7_frequency_all_trace_DFT_L2": 1.1643945578283621e-13,
+      "independent_inverse_L2": {
+        "gaussian": 2.40663359528556e-14,
+        "hann": 2.3918698740405132e-14,
+        "rectangular": 5.499461257883506e-14
+      },
+      "packaged_inverse_L2": 5.2845388443938e-16,
+      "taper_sensitivity_complex_L2": {
+        "100_300ns": 0.00030477863146809273,
+        "300_600ns": 0.0019170396420006206,
+        "600_800ns": 0.7086567064965019
+      },
+      "logged_seconds_median": 143.65,
+      "logged_seconds_sum": 10457.5,
+      "gate_contrast_proxy_median_db": {
+        "cover_base": 6.293709228174642,
+        "first_sand": 5.345133016106001,
+        "basal_sand": -0.19828678461302712
+      }
+    }
+  ],
+  "input_inventory_sha256": "1d06d4e535a4912fdb268911aa8c7a6e53ba92311c242e63b5f3c5d9a55f9509",
+  "script_sha256": "9cdfb474111ecde38252935920bc7c882ad381606206e3acf216930b4194c274",
+  "official_processing_sha256": "adad556f09140956f0ee19d3038430e06a9ae8be6a826dcad723096d99624a3b",
+  "limits": "FP32 only. Model-informed95MHz local horizontal-layer phase-ray curves are approximate, not full dispersive waveform arrival truth. Local gate contrast is not SNR/detection or physical validation. Height controls also change right domain boundary."
+}
