@@ -1,0 +1,37 @@
+{
+  "calls_solver": false,
+  "calls_training": false,
+  "script_sha256": "541d377d21c5b403e60026823d755c8feb6d252220693ddb5f18f064194fa836",
+  "reports_sha256": {
+    "artifacts\\research_checks\\2026-10-08_line9_height_pair_r2\\height_pair.json": "708c48bc794f090cd490b8b654c400974c8e9d4f08df11345ba03bc623ca06d7",
+    "artifacts\\research_checks\\2026-10-08_line9_refracted_paths_r1\\refracted_paths.json": "568d450c92c005a5e7f8229068cdc00dfa88a1c146ad6fd6b2735f1fa07e28e6",
+    "artifacts\\research_checks\\2026-10-08_line9_refracted_paths_r2\\refracted_paths.json": "472823d681734319a79453aa7fa078c3ae267c633a8d27f3c94de4c3af008f80",
+    "artifacts\\research_checks\\2026-10-08_line9_layer_stack_r2\\layer_stack.json": "a4f13e81d34be770dfd95a4314267f1ee33a9c10ca0c31a450c46833eb423dbd"
+  },
+  "native_hashes_unchanged_count": 406,
+  "source_hashes_match": true,
+  "independent_hann_basal_pair_global_correlation": 0.5890025950632811,
+  "independent_shallow_fit_deep_relative_L2": 1.012176898368881,
+  "independent_shallow_fit_deep_correlation": 0.5849973258497961,
+  "ray_curve_sensitivity": [
+    {
+      "package": "line9_pkg1_v5_d02m_194st",
+      "number_of_paths": 9,
+      "max_time_change_ns": 0.7822969976729723,
+      "largest_converged_start_time_spread_ns": 22.786951882911296
+    },
+    {
+      "package": "line9_pkg2_x160-110_agl35_142st",
+      "number_of_paths": 70,
+      "max_time_change_ns": 1.343185987613026,
+      "largest_converged_start_time_spread_ns": 8.722828215745778
+    },
+    {
+      "package": "line9_pkg3_x160-120_agl1_70st",
+      "number_of_paths": 70,
+      "max_time_change_ns": 1.0496450830078743,
+      "largest_converged_start_time_spread_ns": 31.85187345445769
+    }
+  ],
+  "limits": "Artifact/math verification only, not FDTD convergence, global ray optimality or independent physical attribution."
+}

@@ -1,4 +1,31 @@
 {
+ "line9_height_paths_and_stack_2026_10_08": {
+  "report": "docs/research/2026-10-08_line9_height_paths_and_stack.md",
+  "scripts": [
+   "scripts/diagnose_line9_refracted_paths.py",
+   "scripts/diagnose_line9_height_pair.py",
+   "scripts/diagnose_line9_layer_stack.py",
+   "scripts/check_line9_height_hypotheses.py"
+  ],
+  "results": [
+   "artifacts/research_checks/2026-10-08_line9_refracted_paths_r1",
+   "artifacts/research_checks/2026-10-08_line9_refracted_paths_r2",
+   "artifacts/research_checks/2026-10-08_line9_height_pair_r2",
+   "artifacts/research_checks/2026-10-08_line9_layer_stack_r2",
+   "artifacts/research_checks/2026-10-08_line9_height_hypotheses_checks_r1"
+  ],
+  "source_git_base": "d2fbf2896cda132b1fabb825d2ce2462e267a350",
+  "calls_solver": false,
+  "calls_training": false,
+  "native_traces_reused": 406,
+  "height_pair_stations": 70,
+  "ray_selected_station_counts": [9, 70, 70],
+  "height_is_only_changed_condition": false,
+  "historical_inputs_changed": false,
+  "status": "PARTIAL_PATH_AND_INTERNAL_REFLECTION_EVIDENCE_HIGH_ALTITUDE_NOT_RESOLVED",
+  "production_data_changed_by_model": false,
+  "higher_altitude_cases_resolved": false
+ },
  "line9_corrected_processing_layer_evidence_2026_10_08": {
   "report": "docs/research/2026-10-08_line9_corrected_processing_and_layer_evidence.md",
   "scripts": [

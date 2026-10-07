@@ -1,0 +1,290 @@
+{
+  "calls_solver": false,
+  "calls_training": false,
+  "script_sha256": "e24da6229e7d89cbde5ed307ed4f25420cccd7ba83894a7504c3d8f6a556c199",
+  "self_checks": {
+    "slab_complex_max_error": 0.0,
+    "single_reflection_max_error": 6.9172245974343585e-15,
+    "equal_media_max_reflection": 0.0,
+    "halfspace_max_error": 0.0
+  },
+  "packages": [
+    {
+      "package": "line9_pkg1_v5_d02m_194st",
+      "audit_sha256": "ac166173fc8466a7896b217e6c4ce2dea7a37a89d72df5e752fe4fd58a2ac3ac",
+      "cache_sha256": "2ffab677af3cdaee9762406595d9331ec36f85c90d6159c56fafd1d74863771b",
+      "interfaces": {
+        "cover_base_hann": {
+          "single_target_primary_complex_correlation": 0.6731207901491588,
+          "sum_all_primaries_complex_correlation": 0.673420193618857,
+          "full_stack_complex_correlation": 0.6734201838925498,
+          "multiple_only_proxy_complex_correlation": 0.004609621281763849,
+          "multiple_over_full_proxy_norm": 1.8539345765771058e-06,
+          "gate": "Existing primary-predicted +-12ns, not fitted to observations"
+        },
+        "first_sand_hann": {
+          "single_target_primary_complex_correlation": 0.5580420987998378,
+          "sum_all_primaries_complex_correlation": 0.5751626205540592,
+          "full_stack_complex_correlation": 0.7344269776645813,
+          "multiple_only_proxy_complex_correlation": 0.6970807628391501,
+          "multiple_over_full_proxy_norm": 0.8713045868786177,
+          "gate": "Existing primary-predicted +-12ns, not fitted to observations"
+        },
+        "basal_sand_hann": {
+          "single_target_primary_complex_correlation": 0.5580420987998378,
+          "sum_all_primaries_complex_correlation": 0.5751626205540592,
+          "full_stack_complex_correlation": 0.7344269776645813,
+          "multiple_only_proxy_complex_correlation": 0.6970807628391501,
+          "multiple_over_full_proxy_norm": 0.8713045868786177,
+          "gate": "Existing primary-predicted +-12ns, not fitted to observations",
+          "first_half_fit_second_half_test": {
+            "sum_all_primaries": {
+              "global_coefficient": [
+                -3432.690314524769,
+                -1195.4998920301007
+              ],
+              "complex_correlation": 0.3767206206832298,
+              "relative_L2": 1.7769522790218741
+            },
+            "full_stack": {
+              "global_coefficient": [
+                -533.8026376578601,
+                -510.2664104333449
+              ],
+              "complex_correlation": 0.35534158697843493,
+              "relative_L2": 1.236732552224933
+            }
+          }
+        },
+        "cover_base_blackman": {
+          "single_target_primary_complex_correlation": 0.6701312842799172,
+          "sum_all_primaries_complex_correlation": 0.6706454070673609,
+          "full_stack_complex_correlation": 0.6706454064137454,
+          "multiple_only_proxy_complex_correlation": 0.0056858372659805015,
+          "multiple_over_full_proxy_norm": 7.489639989521309e-07,
+          "gate": "Existing primary-predicted +-12ns, not fitted to observations"
+        },
+        "first_sand_blackman": {
+          "single_target_primary_complex_correlation": 0.5773045276962696,
+          "sum_all_primaries_complex_correlation": 0.5814877536351647,
+          "full_stack_complex_correlation": 0.7397468034558857,
+          "multiple_only_proxy_complex_correlation": 0.7058050790417583,
+          "multiple_over_full_proxy_norm": 0.8724624094473801,
+          "gate": "Existing primary-predicted +-12ns, not fitted to observations"
+        },
+        "basal_sand_blackman": {
+          "single_target_primary_complex_correlation": 0.5773045276962696,
+          "sum_all_primaries_complex_correlation": 0.5814877536351647,
+          "full_stack_complex_correlation": 0.7397468034558857,
+          "multiple_only_proxy_complex_correlation": 0.7058050790417583,
+          "multiple_over_full_proxy_norm": 0.8724624094473801,
+          "gate": "Existing primary-predicted +-12ns, not fitted to observations",
+          "first_half_fit_second_half_test": {
+            "sum_all_primaries": {
+              "global_coefficient": [
+                -3671.4372865778664,
+                -858.1084369135605
+              ],
+              "complex_correlation": 0.38226333156798736,
+              "relative_L2": 1.913429457530561
+            },
+            "full_stack": {
+              "global_coefficient": [
+                -556.1491535385918,
+                -522.1488311968792
+              ],
+              "complex_correlation": 0.36598406425644425,
+              "relative_L2": 1.298672912948912
+            }
+          }
+        }
+      },
+      "independent_admittance_relative_L2_max": 2.7675824515020193e-16
+    },
+    {
+      "package": "line9_pkg2_x160-110_agl35_142st",
+      "audit_sha256": "2d312b79ea795a59cd5b9d3276da0fa21330b41dc317ca19e3aaca8e3047fb1b",
+      "cache_sha256": "4c43bc2f8417f00deaee49b628686106d9aa0edd80497f0ae85ad7395a5653c5",
+      "interfaces": {
+        "cover_base_hann": {
+          "single_target_primary_complex_correlation": 0.7087130279189675,
+          "sum_all_primaries_complex_correlation": 0.7521438903534414,
+          "full_stack_complex_correlation": 0.7522040808902856,
+          "multiple_only_proxy_complex_correlation": 0.08993513458839573,
+          "multiple_over_full_proxy_norm": 0.00152103550394879,
+          "gate": "Existing primary-predicted +-12ns, not fitted to observations"
+        },
+        "first_sand_hann": {
+          "single_target_primary_complex_correlation": 0.6108932471519543,
+          "sum_all_primaries_complex_correlation": 0.7189382035629002,
+          "full_stack_complex_correlation": 0.719003450489097,
+          "multiple_only_proxy_complex_correlation": 0.09150219707901519,
+          "multiple_over_full_proxy_norm": 0.0016611699649625633,
+          "gate": "Existing primary-predicted +-12ns, not fitted to observations"
+        },
+        "basal_sand_hann": {
+          "single_target_primary_complex_correlation": 0.49554453616406324,
+          "sum_all_primaries_complex_correlation": 0.4948598869281553,
+          "full_stack_complex_correlation": 0.49538601546305705,
+          "multiple_only_proxy_complex_correlation": 0.09953837342595562,
+          "multiple_over_full_proxy_norm": 0.007740625831646166,
+          "gate": "Existing primary-predicted +-12ns, not fitted to observations",
+          "first_half_fit_second_half_test": {
+            "sum_all_primaries": {
+              "global_coefficient": [
+                714.182392459085,
+                -314.0555322847074
+              ],
+              "complex_correlation": 0.5094987545532038,
+              "relative_L2": 1.1524920515191956
+            },
+            "full_stack": {
+              "global_coefficient": [
+                716.882425664971,
+                -315.36562053759235
+              ],
+              "complex_correlation": 0.5098434187142038,
+              "relative_L2": 1.1544142027642463
+            }
+          }
+        },
+        "cover_base_blackman": {
+          "single_target_primary_complex_correlation": 0.7104513154246667,
+          "sum_all_primaries_complex_correlation": 0.752764771923247,
+          "full_stack_complex_correlation": 0.7528143794400527,
+          "multiple_only_proxy_complex_correlation": 0.09953509108673562,
+          "multiple_over_full_proxy_norm": 0.0014975247819746743,
+          "gate": "Existing primary-predicted +-12ns, not fitted to observations"
+        },
+        "first_sand_blackman": {
+          "single_target_primary_complex_correlation": 0.6175788365778564,
+          "sum_all_primaries_complex_correlation": 0.721059456492672,
+          "full_stack_complex_correlation": 0.72111722337667,
+          "multiple_only_proxy_complex_correlation": 0.09873020733123375,
+          "multiple_over_full_proxy_norm": 0.001624504000190701,
+          "gate": "Existing primary-predicted +-12ns, not fitted to observations"
+        },
+        "basal_sand_blackman": {
+          "single_target_primary_complex_correlation": 0.5057429479385305,
+          "sum_all_primaries_complex_correlation": 0.504859754872807,
+          "full_stack_complex_correlation": 0.5053723720394543,
+          "multiple_only_proxy_complex_correlation": 0.08132913991556626,
+          "multiple_over_full_proxy_norm": 0.007666712120798964,
+          "gate": "Existing primary-predicted +-12ns, not fitted to observations",
+          "first_half_fit_second_half_test": {
+            "sum_all_primaries": {
+              "global_coefficient": [
+                756.3628893596854,
+                -295.88169302012403
+              ],
+              "complex_correlation": 0.5208675954347044,
+              "relative_L2": 1.1732385093014916
+            },
+            "full_stack": {
+              "global_coefficient": [
+                759.5749245939196,
+                -297.7158869539
+              ],
+              "complex_correlation": 0.5212053472182411,
+              "relative_L2": 1.175728540871031
+            }
+          }
+        }
+      },
+      "independent_admittance_relative_L2_max": 2.7882950671920685e-16
+    },
+    {
+      "package": "line9_pkg3_x160-120_agl1_70st",
+      "audit_sha256": "e2737bc930e7a698d69d46ec24985e9e8ebf83e690397ac39c43c90acaf5617c",
+      "cache_sha256": "19bd46ba11ec7a42aa327efdb0ddbe2d0dd218ecd05d28c757f962d161296249",
+      "interfaces": {
+        "cover_base_hann": {
+          "single_target_primary_complex_correlation": 0.7396365280753946,
+          "sum_all_primaries_complex_correlation": 0.9775424535336156,
+          "full_stack_complex_correlation": 0.9776102809045886,
+          "multiple_only_proxy_complex_correlation": 0.15767378632996157,
+          "multiple_over_full_proxy_norm": 0.0014662780256356782,
+          "gate": "Existing primary-predicted +-12ns, not fitted to observations"
+        },
+        "first_sand_hann": {
+          "single_target_primary_complex_correlation": 0.8250670021929557,
+          "sum_all_primaries_complex_correlation": 0.9766637042000966,
+          "full_stack_complex_correlation": 0.9767466421405291,
+          "multiple_only_proxy_complex_correlation": 0.10258589842832234,
+          "multiple_over_full_proxy_norm": 0.0018498171940927787,
+          "gate": "Existing primary-predicted +-12ns, not fitted to observations"
+        },
+        "basal_sand_hann": {
+          "single_target_primary_complex_correlation": 0.9795181357993882,
+          "sum_all_primaries_complex_correlation": 0.9736471643738442,
+          "full_stack_complex_correlation": 0.9732090748549451,
+          "multiple_only_proxy_complex_correlation": 0.11248455686186307,
+          "multiple_over_full_proxy_norm": 0.019123535333246504,
+          "gate": "Existing primary-predicted +-12ns, not fitted to observations",
+          "first_half_fit_second_half_test": {
+            "sum_all_primaries": {
+              "global_coefficient": [
+                -92.57865678985851,
+                -1346.9547313046141
+              ],
+              "complex_correlation": 0.9742083261359265,
+              "relative_L2": 0.23939662511355767
+            },
+            "full_stack": {
+              "global_coefficient": [
+                -84.2740172358661,
+                -1347.0690942322994
+              ],
+              "complex_correlation": 0.9732161022930534,
+              "relative_L2": 0.2412850021540429
+            }
+          }
+        },
+        "cover_base_blackman": {
+          "single_target_primary_complex_correlation": 0.7425136525434711,
+          "sum_all_primaries_complex_correlation": 0.9813119540690177,
+          "full_stack_complex_correlation": 0.9813772411986779,
+          "multiple_only_proxy_complex_correlation": 0.14972662271583573,
+          "multiple_over_full_proxy_norm": 0.001417430973965824,
+          "gate": "Existing primary-predicted +-12ns, not fitted to observations"
+        },
+        "first_sand_blackman": {
+          "single_target_primary_complex_correlation": 0.8289608935434706,
+          "sum_all_primaries_complex_correlation": 0.9803427989833513,
+          "full_stack_complex_correlation": 0.9804223430192007,
+          "multiple_only_proxy_complex_correlation": 0.10426953416945281,
+          "multiple_over_full_proxy_norm": 0.0017711062471831966,
+          "gate": "Existing primary-predicted +-12ns, not fitted to observations"
+        },
+        "basal_sand_blackman": {
+          "single_target_primary_complex_correlation": 0.984623148672684,
+          "sum_all_primaries_complex_correlation": 0.9804083483237321,
+          "full_stack_complex_correlation": 0.9798983146518683,
+          "multiple_only_proxy_complex_correlation": 0.16520308374490925,
+          "multiple_over_full_proxy_norm": 0.018798308292690497,
+          "gate": "Existing primary-predicted +-12ns, not fitted to observations",
+          "first_half_fit_second_half_test": {
+            "sum_all_primaries": {
+              "global_coefficient": [
+                -69.64420684500078,
+                -1382.7535150503563
+              ],
+              "complex_correlation": 0.9803587156920394,
+              "relative_L2": 0.2115490893410064
+            },
+            "full_stack": {
+              "global_coefficient": [
+                -61.39230748614931,
+                -1380.3215005496772
+              ],
+              "complex_correlation": 0.9793836443875104,
+              "relative_L2": 0.21403590198880154
+            }
+          }
+        }
+      },
+      "independent_admittance_relative_L2_max": 2.7928642653150023e-16
+    }
+  ],
+  "limits": "All internal reflections and transmission factors for a local 1D normal-incidence stack, not the 2D Green function. No lateral scattering, slope, diffraction, spreading, air/PML echoes, numerical precision or target-ablation certificate. A model-only norm ratio is not an observed energy fraction. No removal of any observed component, model-guided filtering, imaging or additional FDTD."
+}
