@@ -1,0 +1,620 @@
+{
+  "status": "PREPARED_APPROVED_PREBATCH_ONLY",
+  "groups": [
+    {
+      "id": "base_H0",
+      "input": "base_H0/cases/base_H0/profile.in",
+      "input_sha256": "6f80790bffda24bfbea6ecac9bc6b69c229e02c20ffcd2728b2f1ac3e12e3857",
+      "geometry": "base_H0/geometries/full2d_compact.h5",
+      "geometry_sha256": "c1e308ff73119f2c366d42efcf3526646d5fe8e76c6a692a7113a5b1148985a6",
+      "material": "base_H0/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "fd87d9736294ffe6ae94e9a589a5b2cbebb4b935b15ba3c60ab736c6775543f5",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        199.35,
+        40.125,
+        0.0
+      ],
+      "rx_m": [
+        200.65,
+        40.175000000000004,
+        0.0
+      ],
+      "expected_samples": 20352,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 1200.0,
+      "source_type": "ricker",
+      "source_frequency_Hz": 100000000.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 40.0,
+      "source_band_min_over_max": 0.1044680664254774,
+      "station_id": "full2d_r0141",
+      "chainage_m": 220.0,
+      "input_tx_m": [
+        169.35000000000002,
+        38.95,
+        0.0125
+      ],
+      "input_rx_m": [
+        170.65,
+        39.025000000000006,
+        0.0125
+      ],
+      "basal_gate_ns": [
+        350.6081170991351,
+        374.6081170991351
+      ],
+      "wide_gate_ns": [
+        302.6081170991351,
+        422.6081170991351
+      ],
+      "factor": "base",
+      "role": "H0"
+    },
+    {
+      "id": "base_H1",
+      "input": "base_H1/cases/base_H1/profile.in",
+      "input_sha256": "aba6e976244e3b32b6581501ffee7596c4d6908e9f9a34b02b1cf1bb0589011e",
+      "geometry": "base_H1/geometries/full2d_compact.h5",
+      "geometry_sha256": "f948ae805077ea74612aa7e4bd46252a23ea0f7c973841657e5a4cc911a4868c",
+      "material": "base_H1/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "fd87d9736294ffe6ae94e9a589a5b2cbebb4b935b15ba3c60ab736c6775543f5",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        199.35,
+        40.125,
+        0.0
+      ],
+      "rx_m": [
+        200.65,
+        40.175000000000004,
+        0.0
+      ],
+      "expected_samples": 20352,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 1200.0,
+      "source_type": "ricker",
+      "source_frequency_Hz": 100000000.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 40.0,
+      "source_band_min_over_max": 0.1044680664254774,
+      "station_id": "full2d_r0141",
+      "chainage_m": 220.0,
+      "input_tx_m": [
+        169.35000000000002,
+        38.95,
+        0.0125
+      ],
+      "input_rx_m": [
+        170.65,
+        39.025000000000006,
+        0.0125
+      ],
+      "basal_gate_ns": [
+        350.6081170991351,
+        374.6081170991351
+      ],
+      "wide_gate_ns": [
+        302.6081170991351,
+        422.6081170991351
+      ],
+      "factor": "base",
+      "role": "H1"
+    },
+    {
+      "id": "top20_H0",
+      "input": "top20_H0/cases/top20_H0/profile.in",
+      "input_sha256": "b48c2180cbac227d0f6e8ac0e8825b55814cdfff9a07c07159452d1e31b64e86",
+      "geometry": "top20_H0/geometries/full2d_compact.h5",
+      "geometry_sha256": "043e1c6f183f0995ea61324049f2f5c9a7df0f743ae554c1e8d52094aabb4d1c",
+      "material": "top20_H0/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "fd87d9736294ffe6ae94e9a589a5b2cbebb4b935b15ba3c60ab736c6775543f5",
+      "native_shape": [
+        8400,
+        2500,
+        1
+      ],
+      "tx_m": [
+        199.35,
+        40.125,
+        0.0
+      ],
+      "rx_m": [
+        200.65,
+        40.175000000000004,
+        0.0
+      ],
+      "expected_samples": 20352,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 1200.0,
+      "source_type": "ricker",
+      "source_frequency_Hz": 100000000.0,
+      "domain_height_m": 62.5,
+      "source_amplitude_A": 40.0,
+      "source_band_min_over_max": 0.1044680664254774,
+      "station_id": "full2d_r0141",
+      "chainage_m": 220.0,
+      "input_tx_m": [
+        169.35000000000002,
+        38.95,
+        0.0125
+      ],
+      "input_rx_m": [
+        170.65,
+        39.025000000000006,
+        0.0125
+      ],
+      "basal_gate_ns": [
+        350.6081170991351,
+        374.6081170991351
+      ],
+      "wide_gate_ns": [
+        302.6081170991351,
+        422.6081170991351
+      ],
+      "factor": "top20",
+      "role": "H0"
+    },
+    {
+      "id": "top20_H1",
+      "input": "top20_H1/cases/top20_H1/profile.in",
+      "input_sha256": "44c9f0dac7358435ce29335b1a474e41d3edb02ba851602162bada9dcfde58d4",
+      "geometry": "top20_H1/geometries/full2d_compact.h5",
+      "geometry_sha256": "8de38fb004be635fa2b1be17a6b3bbc68072c31e4ead65f5c2701ae07130024a",
+      "material": "top20_H1/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "fd87d9736294ffe6ae94e9a589a5b2cbebb4b935b15ba3c60ab736c6775543f5",
+      "native_shape": [
+        8400,
+        2500,
+        1
+      ],
+      "tx_m": [
+        199.35,
+        40.125,
+        0.0
+      ],
+      "rx_m": [
+        200.65,
+        40.175000000000004,
+        0.0
+      ],
+      "expected_samples": 20352,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 1200.0,
+      "source_type": "ricker",
+      "source_frequency_Hz": 100000000.0,
+      "domain_height_m": 62.5,
+      "source_amplitude_A": 40.0,
+      "source_band_min_over_max": 0.1044680664254774,
+      "station_id": "full2d_r0141",
+      "chainage_m": 220.0,
+      "input_tx_m": [
+        169.35000000000002,
+        38.95,
+        0.0125
+      ],
+      "input_rx_m": [
+        170.65,
+        39.025000000000006,
+        0.0125
+      ],
+      "basal_gate_ns": [
+        350.6081170991351,
+        374.6081170991351
+      ],
+      "wide_gate_ns": [
+        302.6081170991351,
+        422.6081170991351
+      ],
+      "factor": "top20",
+      "role": "H1"
+    },
+    {
+      "id": "right40_H0",
+      "input": "right40_H0/cases/right40_H0/profile.in",
+      "input_sha256": "84948890c6f939fbf1142590f17180a0c5b260d7b3fddb8937f3b4d003e33fd8",
+      "geometry": "right40_H0/geometries/full2d_compact.h5",
+      "geometry_sha256": "bf39d843ced6c24e475f6b2f9409426e34e6bc73ab3fd751cc4811aea7ac6e3f",
+      "material": "right40_H0/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "fd87d9736294ffe6ae94e9a589a5b2cbebb4b935b15ba3c60ab736c6775543f5",
+      "native_shape": [
+        10000,
+        1700,
+        1
+      ],
+      "tx_m": [
+        199.35,
+        40.125,
+        0.0
+      ],
+      "rx_m": [
+        200.65,
+        40.175000000000004,
+        0.0
+      ],
+      "expected_samples": 20352,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 1200.0,
+      "source_type": "ricker",
+      "source_frequency_Hz": 100000000.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 40.0,
+      "source_band_min_over_max": 0.1044680664254774,
+      "station_id": "full2d_r0141",
+      "chainage_m": 220.0,
+      "input_tx_m": [
+        169.35000000000002,
+        38.95,
+        0.0125
+      ],
+      "input_rx_m": [
+        170.65,
+        39.025000000000006,
+        0.0125
+      ],
+      "basal_gate_ns": [
+        350.6081170991351,
+        374.6081170991351
+      ],
+      "wide_gate_ns": [
+        302.6081170991351,
+        422.6081170991351
+      ],
+      "factor": "right40",
+      "role": "H0"
+    },
+    {
+      "id": "right40_H1",
+      "input": "right40_H1/cases/right40_H1/profile.in",
+      "input_sha256": "0ddb0a05a6927f68932e1187935e069d32bfdeec341effc9af4430c6e4c18d31",
+      "geometry": "right40_H1/geometries/full2d_compact.h5",
+      "geometry_sha256": "38136a10fe2f9a6462886009fbdc87817cbed1f4f3f62b5bbfb64f2956ef45cb",
+      "material": "right40_H1/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "fd87d9736294ffe6ae94e9a589a5b2cbebb4b935b15ba3c60ab736c6775543f5",
+      "native_shape": [
+        10000,
+        1700,
+        1
+      ],
+      "tx_m": [
+        199.35,
+        40.125,
+        0.0
+      ],
+      "rx_m": [
+        200.65,
+        40.175000000000004,
+        0.0
+      ],
+      "expected_samples": 20352,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 1200.0,
+      "source_type": "ricker",
+      "source_frequency_Hz": 100000000.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 40.0,
+      "source_band_min_over_max": 0.1044680664254774,
+      "station_id": "full2d_r0141",
+      "chainage_m": 220.0,
+      "input_tx_m": [
+        169.35000000000002,
+        38.95,
+        0.0125
+      ],
+      "input_rx_m": [
+        170.65,
+        39.025000000000006,
+        0.0125
+      ],
+      "basal_gate_ns": [
+        350.6081170991351,
+        374.6081170991351
+      ],
+      "wide_gate_ns": [
+        302.6081170991351,
+        422.6081170991351
+      ],
+      "factor": "right40",
+      "role": "H1"
+    }
+  ],
+  "reused": [],
+  "station": {
+    "chainage_m": 220.0,
+    "tx_m": [
+      199.35,
+      40.125,
+      0.0125
+    ],
+    "rx_m": [
+      200.65,
+      40.175000000000004,
+      0.0125
+    ],
+    "geometry": {
+      "midpoint_agl_m": 8.000000000000007,
+      "surface_y_m": 32.15,
+      "boundaries": [
+        {
+          "y_m": 32.15,
+          "depth_m": 0.0,
+          "above": 0,
+          "below": 1,
+          "time95_ns": 53.546128986553036,
+          "vertical_absorption95_db": -0.0
+        },
+        {
+          "y_m": 24.8,
+          "depth_m": 7.3500000000000005,
+          "above": 1,
+          "below": 2,
+          "time95_ns": 216.3843835217329,
+          "vertical_absorption95_db": -11.89193309364178
+        },
+        {
+          "y_m": 17.675,
+          "depth_m": 14.475000000000001,
+          "above": 2,
+          "below": 3,
+          "time95_ns": 381.024737182555,
+          "vertical_absorption95_db": -18.33547574409877
+        }
+      ],
+      "surface": {
+        "y_m": 32.15,
+        "depth_m": 0.0,
+        "above": 0,
+        "below": 1,
+        "time95_ns": 53.546128986553036,
+        "vertical_absorption95_db": -0.0
+      },
+      "cover_base": {
+        "y_m": 24.8,
+        "depth_m": 7.3500000000000005,
+        "above": 1,
+        "below": 2,
+        "time95_ns": 216.3843835217329,
+        "vertical_absorption95_db": -11.89193309364178
+      },
+      "first_sand": {
+        "y_m": 17.675,
+        "depth_m": 14.475000000000001,
+        "above": 2,
+        "below": 3,
+        "time95_ns": 381.024737182555,
+        "vertical_absorption95_db": -18.33547574409877
+      },
+      "basal_sand": {
+        "y_m": 17.675,
+        "depth_m": 14.475000000000001,
+        "above": 2,
+        "below": 3,
+        "time95_ns": 381.024737182555,
+        "vertical_absorption95_db": -18.33547574409877
+      }
+    },
+    "template_peak_ns": 380.9048569527611,
+    "basal_gate_ns": [
+      368.9048569527611,
+      392.9048569527611
+    ],
+    "wide_gate_ns": [
+      320.9048569527611,
+      440.9048569527611
+    ],
+    "regular_line_station": true
+  },
+  "dt_s": 5.896635841874211e-11,
+  "parent_manifest_sha256": "873fa3e1cbd7b46f8bc4f43942120044300fe9441183a2b0f828eb812bc4ebb4",
+  "baseline_sources": {
+    "low_H0": {
+      "parent": "D:\\自动处理\\artifacts\\local_checks\\2026-10-08_v401_spatial_prepared_r1",
+      "group": {
+        "id": "full2d_r0141_H0",
+        "input": "full2d_r0141_H0/cases/full2d_r0141/profile.in",
+        "input_sha256": "53dbbfd70a916dc5c6bad194430f5160463560826e7e16b2c92e176dd2cfec6e",
+        "geometry": "full2d_r0141_H0/geometries/full2d_compact.h5",
+        "geometry_sha256": "c1e308ff73119f2c366d42efcf3526646d5fe8e76c6a692a7113a5b1148985a6",
+        "material": "full2d_r0141_H0/geometries/line9_research_materials_v1_smoothed.json",
+        "material_sha256": "fd87d9736294ffe6ae94e9a589a5b2cbebb4b935b15ba3c60ab736c6775543f5",
+        "native_shape": [
+          8400,
+          1700,
+          1
+        ],
+        "tx_m": [
+          169.35000000000002,
+          38.95,
+          0.0
+        ],
+        "rx_m": [
+          170.65,
+          39.025000000000006,
+          0.0
+        ],
+        "expected_samples": 20352,
+        "dt_s": 5.896635841874211e-11,
+        "time_window_ns": 1200.0,
+        "source_type": "ricker",
+        "source_frequency_Hz": 100000000.0,
+        "domain_height_m": 42.5,
+        "source_amplitude_A": 40.0,
+        "source_band_min_over_max": 0.1044680664254774,
+        "station_id": "full2d_r0141",
+        "chainage_m": 190.0,
+        "input_tx_m": [
+          169.35000000000002,
+          38.95,
+          0.0125
+        ],
+        "input_rx_m": [
+          170.65,
+          39.025000000000006,
+          0.0125
+        ],
+        "basal_gate_ns": [
+          350.6081170991351,
+          374.6081170991351
+        ],
+        "wide_gate_ns": [
+          302.6081170991351,
+          422.6081170991351
+        ]
+      }
+    },
+    "low_H1": {
+      "parent": "D:\\自动处理\\artifacts\\local_checks\\2026-10-08_v401_spatial_prepared_r1",
+      "group": {
+        "id": "full2d_r0141_H1",
+        "input": "full2d_r0141_H1/cases/full2d_r0141/profile.in",
+        "input_sha256": "3151e39e18e15e5bdb54dca3be031bb1d1464c04e9db15bb2dc61d0b421db517",
+        "geometry": "full2d_r0141_H1/geometries/full2d_compact.h5",
+        "geometry_sha256": "f948ae805077ea74612aa7e4bd46252a23ea0f7c973841657e5a4cc911a4868c",
+        "material": "full2d_r0141_H1/geometries/line9_research_materials_v1_smoothed.json",
+        "material_sha256": "fd87d9736294ffe6ae94e9a589a5b2cbebb4b935b15ba3c60ab736c6775543f5",
+        "native_shape": [
+          8400,
+          1700,
+          1
+        ],
+        "tx_m": [
+          169.35000000000002,
+          38.95,
+          0.0
+        ],
+        "rx_m": [
+          170.65,
+          39.025000000000006,
+          0.0
+        ],
+        "expected_samples": 20352,
+        "dt_s": 5.896635841874211e-11,
+        "time_window_ns": 1200.0,
+        "source_type": "ricker",
+        "source_frequency_Hz": 100000000.0,
+        "domain_height_m": 42.5,
+        "source_amplitude_A": 40.0,
+        "source_band_min_over_max": 0.1044680664254774,
+        "station_id": "full2d_r0141",
+        "chainage_m": 190.0,
+        "input_tx_m": [
+          169.35000000000002,
+          38.95,
+          0.0125
+        ],
+        "input_rx_m": [
+          170.65,
+          39.025000000000006,
+          0.0125
+        ],
+        "basal_gate_ns": [
+          350.6081170991351,
+          374.6081170991351
+        ],
+        "wide_gate_ns": [
+          302.6081170991351,
+          422.6081170991351
+        ]
+      }
+    },
+    "high_H1": {
+      "parent": "D:\\自动处理\\artifacts\\local_checks\\2026-10-08_v401_nonflat_material_prepared_r1",
+      "group": {
+        "id": "baseline_H1",
+        "input": "baseline_H1/cases/full2d_r0098/profile.in",
+        "input_sha256": "b36ad56cfb331593f7aa80377f9694aa069fb50d5c6da74387f1898080de5d0d",
+        "geometry": "baseline_H1/geometries/full2d_compact.h5",
+        "geometry_sha256": "f948ae805077ea74612aa7e4bd46252a23ea0f7c973841657e5a4cc911a4868c",
+        "material": "baseline_H1/geometries/line9_research_materials_v1_smoothed.json",
+        "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+        "native_shape": [
+          8400,
+          1700,
+          1
+        ],
+        "tx_m": [
+          177.95000000000002,
+          39.375,
+          0.0
+        ],
+        "rx_m": [
+          179.25,
+          39.425000000000004,
+          0.0
+        ],
+        "expected_samples": 20352,
+        "dt_s": 5.896635841874211e-11,
+        "time_window_ns": 1200.0,
+        "source_type": "ricker",
+        "source_frequency_Hz": 100000000.0,
+        "domain_height_m": 42.5,
+        "source_amplitude_A": 40.0,
+        "source_band_min_over_max": 0.1044680664254774
+      }
+    },
+    "high_H0": {
+      "parent": "D:\\自动处理\\artifacts\\local_checks\\2026-10-08_line9_v5_source_flat_prepared_r1",
+      "group": {
+        "id": "nonflat_ricker_H0",
+        "input": "nonflat_ricker_H0/cases/full2d_r0098/profile.in",
+        "input_sha256": "0f0c233d70be1738935805b81ed37cdf3e89fa4a8adccf6d6d40560283122d17",
+        "geometry": "nonflat_ricker_H0/geometries/full2d_compact.h5",
+        "geometry_sha256": "c1e308ff73119f2c366d42efcf3526646d5fe8e76c6a692a7113a5b1148985a6",
+        "material": "nonflat_ricker_H0/geometries/line9_research_materials_v1_smoothed.json",
+        "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+        "native_shape": [
+          8400,
+          1700,
+          1
+        ],
+        "tx_m": [
+          177.95000000000002,
+          39.375,
+          0.0
+        ],
+        "rx_m": [
+          179.25,
+          39.425000000000004,
+          0.0
+        ],
+        "expected_samples": 20352,
+        "dt_s": 5.896635841874211e-11,
+        "time_window_ns": 1200.0,
+        "source_type": "ricker",
+        "source_frequency_Hz": 100000000.0,
+        "domain_height_m": 42.5,
+        "source_amplitude_A": 40.0,
+        "source_band_min_over_max": 0.1044680664254774
+      }
+    }
+  },
+  "generator_sha256": "3e75dfabf905a05eecc4bcb0ff1856867771fc2f1f1a1b77799164080998b968",
+  "approval_basis": "User authorizes diagnostic line then asks resolve outstanding issues before bulk execution. Six bounded220m low-loss top/right boundary pairs; bulk remains gated.",
+  "gates_ns": {
+    "basal": [
+      368.9048569527611,
+      392.9048569527611
+    ],
+    "deep": [
+      180.0,
+      450.0
+    ],
+    "early": [
+      0.0,
+      120.0
+    ],
+    "late": [
+      450.0,
+      1100.0
+    ]
+  },
+  "limits": "Worst-clearance single-site finite extension sensitivity, not global convergence/PML-only attribution; right extension also adds exterior geology. No joint extension/finite3D/field certification. Original48 bulk attempts not started."
+}
