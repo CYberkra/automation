@@ -1,0 +1,48 @@
+{
+  "status": "PASS_INDEPENDENT_NATIVE_DIRECT_DFT_DIRECT_INVERSE_INPUTS",
+  "script_sha256": "f518314ad9389e62d3c7adf75017d789ac74e0f53c6b759ddc366b57b7461cd7",
+  "analysis_sha256": "b65707df81d4d2cfe7e247ab1820446abb6c3d8ba72a06cbb4c9e9551fe1b72b",
+  "contract_sha256": "9d4aa37663945f24b4e996332ca7c05be040e926123f8fdc0ec554b9dd1d7317",
+  "independent_DFT_relative_L2": [
+    1.0524900604351755e-13,
+    1.0552683906995665e-13,
+    4.309903976645885e-12,
+    1.0523390533777241e-13,
+    1.0554198188844336e-13,
+    4.342832075788431e-12,
+    1.0522465959962956e-13,
+    1.0548010391757465e-13,
+    4.313534036264485e-12
+  ],
+  "direct_inverse_checks": {
+    "hann": {
+      "basal": {
+        "max_scaled_metric_error": 1.063473115993363e-11
+      },
+      "deep": {
+        "max_scaled_metric_error": 8.891776204222879e-13
+      },
+      "early": {
+        "max_scaled_metric_error": 1.474340850793343e-09
+      },
+      "late": {
+        "max_scaled_metric_error": 9.849538719353124e-12
+      }
+    },
+    "blackman": {
+      "basal": {
+        "max_scaled_metric_error": 9.72410997210349e-12
+      },
+      "deep": {
+        "max_scaled_metric_error": 8.658629369051596e-13
+      },
+      "early": {
+        "max_scaled_metric_error": 2.548939670443673e-09
+      },
+      "late": {
+        "max_scaled_metric_error": 1.7982632743995808e-11
+      }
+    }
+  },
+  "limits": "Arithmetic/source/input identity only, not complete FDTD error budget or field validation."
+}
