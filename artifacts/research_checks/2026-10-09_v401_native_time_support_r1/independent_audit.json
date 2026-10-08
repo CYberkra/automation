@@ -1,0 +1,14 @@
+{
+  "status": "PASS_INDEPENDENT_RAW_TIME_PARTITION_DFT_INVERSE",
+  "auditor_sha256": "ae9ad644edfe58b63befb3a563ca14d12dccfaf08b5501e25af5fa66bcf53fac",
+  "analysis_sha256": "cc64a5305541ad119536836fb2de673d6e47bb347cacbdae4e1c032620f68490",
+  "numerical_sha256": "fd3505ceaf4c5d1b52d116ce3016d513eea4392554068d6bbed56ad49a4b0458",
+  "raw_partition_DFT_relative_L2_max": 2.28915237562432e-16,
+  "metric_scaled_error_max": 1.0050886511958623e-10,
+  "scalar_checks": {
+    "hann": 36,
+    "blackman": 36
+  },
+  "strict_support_checks": true,
+  "limits": "Verifies native-time linear accounting and exact frequency/time conventions, not path identity or a production suppression method."
+}

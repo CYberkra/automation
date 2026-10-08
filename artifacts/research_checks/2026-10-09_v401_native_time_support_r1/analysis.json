@@ -1,0 +1,254 @@
+{
+  "status": "EXPLORATORY_LINEAR_NATIVE_TIME_SUPPORT_NOT_PATH_IDENTIFICATION",
+  "script_sha256": "e81c2f386c2c4a6eac5dbfb8af9f4b4d0406db75b8b41fd685b014b5a84186b6",
+  "analysis_sha256": "53e5b4bbddfd5fb5ae8a7a206e51c1db93b03c8409d453e0fbd64ff95cf2683a",
+  "independent_analysis_audit_sha256": "be325a8f8aae79a6c6ce5fedf17239bbe5ec27fda171676ec7815ef7d49fa7a9",
+  "manifest_sha256": "a5da3b5eacce651ff737a9cbb7a798632e3052c8edeabacecd6b45895afe05cb",
+  "response_sha256": "a4a714da4caf8fa7fa0e8f9fa9948f067c1d3a958a83edd4438f205510b54b91",
+  "numerical_sha256": "fd3505ceaf4c5d1b52d116ce3016d513eea4392554068d6bbed56ad49a4b0458",
+  "split_centers_native_ns": [
+    240.0,
+    260.0,
+    280.0
+  ],
+  "transition_width_ns": 20.0,
+  "basal_common_gate_ns": [
+    345.6180971390552,
+    374.6081170991351
+  ],
+  "source_time_offsets_retained": true,
+  "full_source_used_for_all_parts": true,
+  "native": [
+    {
+      "id": "high_x19000_H0",
+      "native_sha256": "87075c0bbc8ea419b0d0d49047c0c59712ed8180c94cf0885030e2b39caff331",
+      "source_abs_peak_ns": 14.122442841288736,
+      "raw_partition_closure_max": 2.7755575615628914e-17
+    },
+    {
+      "id": "high_x19000_H1",
+      "native_sha256": "243234a2c637239bac951b88056979b34d7f89ca8b7c75480d8eb1612f915f03",
+      "source_abs_peak_ns": 14.122442841288736,
+      "raw_partition_closure_max": 2.7755575615628914e-17
+    },
+    {
+      "id": "low_x19000_H0",
+      "native_sha256": "57b9c072b713b98f345aaf838118a81edc4d84a457ad12e0c38dcb847d73ef8e",
+      "source_abs_peak_ns": 14.122442841288736,
+      "raw_partition_closure_max": 1.3877787807814457e-17
+    },
+    {
+      "id": "low_x19000_H1",
+      "native_sha256": "5449438e5f2c73c885c6a89ae8b9ea5973ba94772225d29f5270cd2e7b236f71",
+      "source_abs_peak_ns": 14.122442841288736,
+      "raw_partition_closure_max": 1.3877787807814457e-17
+    }
+  ],
+  "spectral_closure_relative_L2": [
+    1.0497100306504294e-13,
+    1.0498238091441208e-13,
+    1.049600896173193e-13,
+    1.0516224048232675e-13
+  ],
+  "metrics": {
+    "hann": [
+      {
+        "id": "high_x19000_H0",
+        "split_center_native_ns": 240.0,
+        "early_over_total_L2": 0.9670055322757618,
+        "late_over_total_L2": 0.324750700229485,
+        "early_late_normalized_real_inner_product": -0.06458296569444173,
+        "closure_over_total_L2": 2.045813275906955e-11
+      },
+      {
+        "id": "high_x19000_H0",
+        "split_center_native_ns": 260.0,
+        "early_over_total_L2": 0.9673411366890945,
+        "late_over_total_L2": 0.3241907866293065,
+        "early_late_normalized_real_inner_product": -0.06512777288017396,
+        "closure_over_total_L2": 1.8057685428480984e-11
+      },
+      {
+        "id": "high_x19000_H0",
+        "split_center_native_ns": 280.0,
+        "early_over_total_L2": 0.9673169383114091,
+        "late_over_total_L2": 0.3242548949920397,
+        "early_late_normalized_real_inner_product": -0.06510816469245771,
+        "closure_over_total_L2": 2.03062586441259e-11
+      },
+      {
+        "id": "high_x19000_H1",
+        "split_center_native_ns": 240.0,
+        "early_over_total_L2": 0.7383389152375428,
+        "late_over_total_L2": 0.6972755851069534,
+        "early_late_normalized_real_inner_product": -0.030435150561536593,
+        "closure_over_total_L2": 1.5268870455133287e-11
+      },
+      {
+        "id": "high_x19000_H1",
+        "split_center_native_ns": 260.0,
+        "early_over_total_L2": 0.7385951596297788,
+        "late_over_total_L2": 0.6972261536633213,
+        "early_late_normalized_real_inner_product": -0.030727275911411656,
+        "closure_over_total_L2": 1.3812748742078068e-11
+      },
+      {
+        "id": "high_x19000_H1",
+        "split_center_native_ns": 280.0,
+        "early_over_total_L2": 0.738585895634511,
+        "late_over_total_L2": 0.6972383707395379,
+        "early_late_normalized_real_inner_product": -0.030730377156182893,
+        "closure_over_total_L2": 1.0899375056080206e-11
+      },
+      {
+        "id": "low_x19000_H0",
+        "split_center_native_ns": 240.0,
+        "early_over_total_L2": 1.0049598565263733,
+        "late_over_total_L2": 0.2505356883780692,
+        "early_late_normalized_real_inner_product": -0.14439775320671663,
+        "closure_over_total_L2": 2.069654800490431e-11
+      },
+      {
+        "id": "low_x19000_H0",
+        "split_center_native_ns": 260.0,
+        "early_over_total_L2": 1.004986094163005,
+        "late_over_total_L2": 0.25056611616491,
+        "early_late_normalized_real_inner_product": -0.14451143573380584,
+        "closure_over_total_L2": 2.216852144116507e-11
+      },
+      {
+        "id": "low_x19000_H0",
+        "split_center_native_ns": 280.0,
+        "early_over_total_L2": 1.004936839193408,
+        "late_over_total_L2": 0.2506806851957397,
+        "early_late_normalized_real_inner_product": -0.14436995955894377,
+        "closure_over_total_L2": 2.115110145152481e-11
+      },
+      {
+        "id": "low_x19000_H1",
+        "split_center_native_ns": 240.0,
+        "early_over_total_L2": 0.0016841737987463258,
+        "late_over_total_L2": 0.999996218995941,
+        "early_late_normalized_real_inner_product": 0.0014029323406296995,
+        "closure_over_total_L2": 3.3662615796825987e-12
+      },
+      {
+        "id": "low_x19000_H1",
+        "split_center_native_ns": 260.0,
+        "early_over_total_L2": 0.0016842177690585157,
+        "late_over_total_L2": 0.9999962206266023,
+        "early_late_normalized_real_inner_product": 0.0014018835395744908,
+        "closure_over_total_L2": 3.367660716172005e-12
+      },
+      {
+        "id": "low_x19000_H1",
+        "split_center_native_ns": 280.0,
+        "early_over_total_L2": 0.00168415735815193,
+        "late_over_total_L2": 0.9999962191883592,
+        "early_late_normalized_real_inner_product": 0.001402848226450126,
+        "closure_over_total_L2": 3.3611140675727177e-12
+      }
+    ],
+    "blackman": [
+      {
+        "id": "high_x19000_H0",
+        "split_center_native_ns": 240.0,
+        "early_over_total_L2": 0.8760794549518296,
+        "late_over_total_L2": 0.5896195953542681,
+        "early_late_normalized_real_inner_product": -0.11147582316391849,
+        "closure_over_total_L2": 4.2794057604223104e-11
+      },
+      {
+        "id": "high_x19000_H0",
+        "split_center_native_ns": 260.0,
+        "early_over_total_L2": 0.8763806504259215,
+        "late_over_total_L2": 0.589436032431322,
+        "early_late_normalized_real_inner_product": -0.11177362817759759,
+        "closure_over_total_L2": 3.8048568728204466e-11
+      },
+      {
+        "id": "high_x19000_H0",
+        "split_center_native_ns": 280.0,
+        "early_over_total_L2": 0.8763612694340256,
+        "late_over_total_L2": 0.5894879127555533,
+        "early_late_normalized_real_inner_product": -0.11179258181191386,
+        "closure_over_total_L2": 4.99754266262934e-11
+      },
+      {
+        "id": "high_x19000_H1",
+        "split_center_native_ns": 240.0,
+        "early_over_total_L2": 0.42191599765593046,
+        "late_over_total_L2": 0.9209222109886801,
+        "early_late_normalized_real_inner_product": -0.033600187759678886,
+        "closure_over_total_L2": 1.920359553214185e-11
+      },
+      {
+        "id": "high_x19000_H1",
+        "split_center_native_ns": 260.0,
+        "early_over_total_L2": 0.42206105202955424,
+        "late_over_total_L2": 0.9209314046118884,
+        "early_late_normalized_real_inner_product": -0.03376756854471653,
+        "closure_over_total_L2": 2.0809577979344075e-11
+      },
+      {
+        "id": "high_x19000_H1",
+        "split_center_native_ns": 280.0,
+        "early_over_total_L2": 0.4220568492141141,
+        "late_over_total_L2": 0.9209416059257143,
+        "early_late_normalized_real_inner_product": -0.03378713746423484,
+        "closure_over_total_L2": 1.2625928321245017e-11
+      },
+      {
+        "id": "low_x19000_H0",
+        "split_center_native_ns": 240.0,
+        "early_over_total_L2": 0.9524918736355806,
+        "late_over_total_L2": 0.5188259613629642,
+        "early_late_normalized_real_inner_product": -0.17849977307987086,
+        "closure_over_total_L2": 4.585846990319871e-11
+      },
+      {
+        "id": "low_x19000_H0",
+        "split_center_native_ns": 260.0,
+        "early_over_total_L2": 0.9525168549719546,
+        "late_over_total_L2": 0.518844585044724,
+        "early_late_normalized_real_inner_product": -0.17855638372022228,
+        "closure_over_total_L2": 5.895499952862631e-11
+      },
+      {
+        "id": "low_x19000_H0",
+        "split_center_native_ns": 280.0,
+        "early_over_total_L2": 0.9524728315468145,
+        "late_over_total_L2": 0.5189276708263836,
+        "early_late_normalized_real_inner_product": -0.1785384338958075,
+        "closure_over_total_L2": 3.958815739691483e-11
+      },
+      {
+        "id": "low_x19000_H1",
+        "split_center_native_ns": 240.0,
+        "early_over_total_L2": 0.000671591321398616,
+        "late_over_total_L2": 1.0000065946242862,
+        "early_late_normalized_real_inner_product": -0.010155166544364219,
+        "closure_over_total_L2": 3.287306778995072e-12
+      },
+      {
+        "id": "low_x19000_H1",
+        "split_center_native_ns": 260.0,
+        "early_over_total_L2": 0.0006716089353133007,
+        "late_over_total_L2": 1.0000065954391202,
+        "early_late_normalized_real_inner_product": -0.0101561310737504,
+        "closure_over_total_L2": 3.2883362096124453e-12
+      },
+      {
+        "id": "low_x19000_H1",
+        "split_center_native_ns": 280.0,
+        "early_over_total_L2": 0.0006715864986213138,
+        "late_over_total_L2": 1.0000065964433937,
+        "early_late_normalized_real_inner_product": -0.010157943302512186,
+        "closure_over_total_L2": 3.2873193429439892e-12
+      }
+    ]
+  },
+  "new_solves": 0,
+  "production_data_changed": false,
+  "limits": "Exploratory receiver-time partition, not physical component separation or a proposed cleaning operator. Late-native support can contain true geology,multiples,lateral paths,boundary effects or numerical errors. Early support can contain multiple events. Source deconvolution and finite-band tails retained. L2 ratios are not additive energy fractions; no field validation."
+}

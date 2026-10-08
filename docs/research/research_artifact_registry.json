@@ -1,4 +1,20 @@
 {
+ "line9_native_time_support_2026_10_09": {
+  "report": "docs/research/2026-10-09_native_time_support_findings.md",
+  "partial_results": "artifacts/research_checks/2026-10-09_v401_dense_loss_partial_r2",
+  "time_support": "artifacts/research_checks/2026-10-09_v401_native_time_support_r1",
+  "four_bands": "artifacts/research_checks/2026-10-09_v401_early_bands_r1",
+  "status": "CPU_AUDITED_EARLY_TAILS_AND_LATE_NATIVE_BRANCH_DIFFERENT_WINDOWS_GPU_RUNNING",
+  "public_completed_new": 6,
+  "public_reused": 2,
+  "new_solves_for_analysis": 0,
+  "time_partition_scalar_checks": 72,
+  "four_band_scalar_checks": 224,
+  "goal_complete": false,
+  "physical_path_certified": false,
+  "production_data_changed": false,
+  "limits": "Native time partition,not energy fractions,pure physical components or field validation; about330ns strong packet has late native support."
+ },
  "line9_dense_loss_line_started_2026_10_09": {
   "report": "docs/research/2026-10-09_dense_loss_line_progress.md",
   "results": "artifacts/research_checks/2026-10-09_v401_dense_loss_partial_r1",
