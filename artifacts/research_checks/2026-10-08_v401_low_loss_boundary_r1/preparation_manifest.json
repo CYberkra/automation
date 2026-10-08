@@ -1,0 +1,324 @@
+{
+  "status": "PREPARED_APPROVED_NOT_RUN",
+  "approval_basis": "Persistent user goal research fully; standing autonomous SSH simulation authorization. Four low-loss v5 boundary controls frozen before solving, reuse completed baseline pair.",
+  "groups": [
+    {
+      "id": "sides40_H0",
+      "input": "sides40_H0/cases/full2d_r0098/profile.in",
+      "input_sha256": "dc9a8cdba4a186d3f500c8cd6ebd24594dc942751083acc9e06699aed9354b47",
+      "geometry": "sides40_H0/geometries/full2d_compact.h5",
+      "geometry_sha256": "118465db16276e0dd59d87250902954f23a51675db9bcd4a7c91fd231ce7c5ac",
+      "material": "sides40_H0/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "fd87d9736294ffe6ae94e9a589a5b2cbebb4b935b15ba3c60ab736c6775543f5",
+      "native_shape": [
+        11600,
+        1700,
+        1
+      ],
+      "tx_m": [
+        217.95000000000002,
+        39.375,
+        0.0
+      ],
+      "rx_m": [
+        219.25,
+        39.425000000000004,
+        0.0
+      ],
+      "expected_samples": 20352,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 1200.0,
+      "source_type": "ricker",
+      "source_frequency_Hz": 100000000.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 40.0,
+      "source_band_min_over_max": 0.1044680664254774,
+      "translation_m": [
+        40.0,
+        0.0,
+        0
+      ]
+    },
+    {
+      "id": "sides40_H1",
+      "input": "sides40_H1/cases/full2d_r0098/profile.in",
+      "input_sha256": "887e76aa785759fbd673b5b10d5e2c9454e82bac9c1233e4d9c8d47b378616e2",
+      "geometry": "sides40_H1/geometries/full2d_compact.h5",
+      "geometry_sha256": "6339e1e759c31ad96bb148b55b1cc7e506d5d7f6624dfc1d6c093d05dab64100",
+      "material": "sides40_H1/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "fd87d9736294ffe6ae94e9a589a5b2cbebb4b935b15ba3c60ab736c6775543f5",
+      "native_shape": [
+        11600,
+        1700,
+        1
+      ],
+      "tx_m": [
+        217.95000000000002,
+        39.375,
+        0.0
+      ],
+      "rx_m": [
+        219.25,
+        39.425000000000004,
+        0.0
+      ],
+      "expected_samples": 20352,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 1200.0,
+      "source_type": "ricker",
+      "source_frequency_Hz": 100000000.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 40.0,
+      "source_band_min_over_max": 0.1044680664254774,
+      "translation_m": [
+        40.0,
+        0.0,
+        0
+      ]
+    },
+    {
+      "id": "bottom20_H0",
+      "input": "bottom20_H0/cases/full2d_r0098/profile.in",
+      "input_sha256": "7b51afc6f3c7962ad418f3a16484c567f5d73e5f7c8bfc7fc31b9a97688fbe8b",
+      "geometry": "bottom20_H0/geometries/full2d_compact.h5",
+      "geometry_sha256": "653837b63acbe199724576f4f6834cf8312159ee43e80a1e4c7f33c34b459bf6",
+      "material": "bottom20_H0/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "fd87d9736294ffe6ae94e9a589a5b2cbebb4b935b15ba3c60ab736c6775543f5",
+      "native_shape": [
+        8400,
+        2500,
+        1
+      ],
+      "tx_m": [
+        177.95000000000002,
+        59.375,
+        0.0
+      ],
+      "rx_m": [
+        179.25,
+        59.425000000000004,
+        0.0
+      ],
+      "expected_samples": 20352,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 1200.0,
+      "source_type": "ricker",
+      "source_frequency_Hz": 100000000.0,
+      "domain_height_m": 62.5,
+      "source_amplitude_A": 40.0,
+      "source_band_min_over_max": 0.1044680664254774,
+      "translation_m": [
+        0.0,
+        20.0,
+        0
+      ]
+    },
+    {
+      "id": "bottom20_H1",
+      "input": "bottom20_H1/cases/full2d_r0098/profile.in",
+      "input_sha256": "f2b7a8da2bf3c6a340c109f636e979597906971032e5a4272c7666552b63b27e",
+      "geometry": "bottom20_H1/geometries/full2d_compact.h5",
+      "geometry_sha256": "6cf181071b2bee94b41bb28f1f97c6b9ad429c40493eb1e3570af833a6fa44d3",
+      "material": "bottom20_H1/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "fd87d9736294ffe6ae94e9a589a5b2cbebb4b935b15ba3c60ab736c6775543f5",
+      "native_shape": [
+        8400,
+        2500,
+        1
+      ],
+      "tx_m": [
+        177.95000000000002,
+        59.375,
+        0.0
+      ],
+      "rx_m": [
+        179.25,
+        59.425000000000004,
+        0.0
+      ],
+      "expected_samples": 20352,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 1200.0,
+      "source_type": "ricker",
+      "source_frequency_Hz": 100000000.0,
+      "domain_height_m": 62.5,
+      "source_amplitude_A": 40.0,
+      "source_band_min_over_max": 0.1044680664254774,
+      "translation_m": [
+        0.0,
+        20.0,
+        0
+      ]
+    }
+  ],
+  "parent_manifest_sha256": "7bf8e5cd96cfad96596eaa2e75f710d8503b654f76dc2641f37b0c4382ac3068",
+  "reference_impulse_H0_sha256": "ecd0efb0dd92f86a0bf66bca88b72e697630801fb4d315a2b931b5222ae72dcd",
+  "script_sha256": "c258fe2f6e4e9c0330307867183f7331bfe40086ff4c5e42bfe12bf596bb0954",
+  "flat_column_index": 7144,
+  "flat_interfaces_y_m": [
+    17.1,
+    24.1,
+    31.4
+  ],
+  "geometry_diagnostic": {
+    "midpoint_agl_m": 8.000000000000004,
+    "surface_y_m": 31.400000000000002,
+    "boundaries": [
+      {
+        "y_m": 31.400000000000002,
+        "depth_m": 0.0,
+        "above": 0,
+        "below": 1,
+        "time95_ns": 53.54612898655299,
+        "vertical_absorption95_db": -0.0
+      },
+      {
+        "y_m": 24.1,
+        "depth_m": 7.300000000000001,
+        "above": 1,
+        "below": 2,
+        "time95_ns": 215.2765849032508,
+        "vertical_absorption95_db": -11.811035589603401
+      },
+      {
+        "y_m": 17.1,
+        "depth_m": 14.3,
+        "above": 2,
+        "below": 3,
+        "time95_ns": 377.4814114026756,
+        "vertical_absorption95_db": -74.93925462833475
+      }
+    ],
+    "surface": {
+      "y_m": 31.400000000000002,
+      "depth_m": 0.0,
+      "above": 0,
+      "below": 1,
+      "time95_ns": 53.54612898655299,
+      "vertical_absorption95_db": -0.0
+    },
+    "cover_base": {
+      "y_m": 24.1,
+      "depth_m": 7.300000000000001,
+      "above": 1,
+      "below": 2,
+      "time95_ns": 215.2765849032508,
+      "vertical_absorption95_db": -11.811035589603401
+    },
+    "first_sand": {
+      "y_m": 17.1,
+      "depth_m": 14.3,
+      "above": 2,
+      "below": 3,
+      "time95_ns": 377.4814114026756,
+      "vertical_absorption95_db": -74.93925462833475
+    },
+    "basal_sand": {
+      "y_m": 17.1,
+      "depth_m": 14.3,
+      "above": 2,
+      "below": 3,
+      "time95_ns": 377.4814114026756,
+      "vertical_absorption95_db": -74.93925462833475
+    }
+  },
+  "dt_s": 5.896635841874211e-11,
+  "expected_samples": 20352,
+  "basal_gate_ns": [
+    359.7564870259481,
+    383.7564870259481
+  ],
+  "deep_gate_ns": [
+    300.0,
+    450.0
+  ],
+  "early_gate_ns": [
+    0.0,
+    120.0
+  ],
+  "snapshot_count": 0,
+  "invariants": "Exact original interior voxels,material JSON,2.5cm,1200ns,dt,FP64,40A/100MHz Ricker,AGL8m,Tx/Rx relative to geology,HORIPML80,averaging and exact501-tone SFCW.",
+  "processing": "Exact501tones20-170MHz/.3MHz,actual-source/Yee-time/spatial normalization,Hann+Blackman,noAGC/tail taper/time alignment/amplitude or phase fit.",
+  "limits": "One low-loss counterfactual station. Extensions change outside continuation together with PML distance; finite sensitivity only, not PML-only mechanism or global convergence certificate. No joint control, whole-line,3D,field or production material validation.",
+  "generator_sha256": "67486cf437196038cde6404e8e09ca388a87667db6708b8132fe8d57966647c2",
+  "pair_manifest_sha256": "2e2f78767290f72921ce584a5af88f3fe212c1e40ce329e8806d0fdbf3edf45c",
+  "diagnostic": "Same span0.3/DC0.0003 low-loss spectrum; independent sides+40m and bottom+20m controls; no joint extension in this batch.",
+  "reference_verification_sha256": "dc07fdbf50e4e34af988e33e9954b0becbbc9b291e6d7ae78b236a782fc1f6b2",
+  "reused": [
+    {
+      "id": "base_H0",
+      "path": "reused/base_H0.h5",
+      "native_sha256": "f9c6de5717ed931e4943ec879521fddd4f487c67d4fd72a8118563d4b53e5ccb",
+      "parent_group": {
+        "id": "span03_dc0003_H0",
+        "input": "span03_dc0003_H0/cases/full2d_r0098/profile.in",
+        "input_sha256": "e64f5c2c0578bbfd357d575e62736b63000264b151ad067a0f2b734c52171c94",
+        "geometry": "span03_dc0003_H0/geometries/full2d_compact.h5",
+        "geometry_sha256": "c1e308ff73119f2c366d42efcf3526646d5fe8e76c6a692a7113a5b1148985a6",
+        "material": "span03_dc0003_H0/geometries/line9_research_materials_v1_smoothed.json",
+        "material_sha256": "fd87d9736294ffe6ae94e9a589a5b2cbebb4b935b15ba3c60ab736c6775543f5",
+        "native_shape": [
+          8400,
+          1700,
+          1
+        ],
+        "tx_m": [
+          177.95000000000002,
+          39.375,
+          0.0
+        ],
+        "rx_m": [
+          179.25,
+          39.425000000000004,
+          0.0
+        ],
+        "expected_samples": 20352,
+        "dt_s": 5.896635841874211e-11,
+        "time_window_ns": 1200.0,
+        "source_type": "ricker",
+        "source_frequency_Hz": 100000000.0,
+        "domain_height_m": 42.5,
+        "source_amplitude_A": 40.0,
+        "source_band_min_over_max": 0.1044680664254774
+      }
+    },
+    {
+      "id": "base_H1",
+      "path": "reused/base_H1.h5",
+      "native_sha256": "91892657408594b89b029c7184be51104d6c0422c8b48028bab297e6b4a8b06d",
+      "parent_group": {
+        "id": "span03_dc0003_H1",
+        "input": "span03_dc0003_H1/cases/full2d_r0098/profile.in",
+        "input_sha256": "6bd5a750d1e95d90614814ff3375fe8c2d442f23fa9f08c1cffef5b1faf8163b",
+        "geometry": "span03_dc0003_H1/geometries/full2d_compact.h5",
+        "geometry_sha256": "f948ae805077ea74612aa7e4bd46252a23ea0f7c973841657e5a4cc911a4868c",
+        "material": "span03_dc0003_H1/geometries/line9_research_materials_v1_smoothed.json",
+        "material_sha256": "fd87d9736294ffe6ae94e9a589a5b2cbebb4b935b15ba3c60ab736c6775543f5",
+        "native_shape": [
+          8400,
+          1700,
+          1
+        ],
+        "tx_m": [
+          177.95000000000002,
+          39.375,
+          0.0
+        ],
+        "rx_m": [
+          179.25,
+          39.425000000000004,
+          0.0
+        ],
+        "expected_samples": 20352,
+        "dt_s": 5.896635841874211e-11,
+        "time_window_ns": 1200.0,
+        "source_type": "ricker",
+        "source_frequency_Hz": 100000000.0,
+        "domain_height_m": 42.5,
+        "source_amplitude_A": 40.0,
+        "source_band_min_over_max": 0.1044680664254774
+      }
+    }
+  ],
+  "reference_contract_sha256": "f32d4f242cd51b68a4c4ce618c3d4da5e3465c354ea07bd36002152e7e32ac36"
+}

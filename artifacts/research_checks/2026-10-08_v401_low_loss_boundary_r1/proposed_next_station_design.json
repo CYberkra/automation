@@ -1,0 +1,303 @@
+{
+  "status": "GEOMETRY_ONLY_NEXT_STATION_DESIGN_NOT_EXECUTION_CONTRACT",
+  "script_sha256": "b21f5816cc3096e4a3672a5a73a50f8494261f47f6d4cc92840d0b28cbed7dc1",
+  "geometry_sha256": "f948ae805077ea74612aa7e4bd46252a23ea0f7c973841657e5a4cc911a4868c",
+  "material_sha256": "fd87d9736294ffe6ae94e9a589a5b2cbebb4b935b15ba3c60ab736c6775543f5",
+  "planned_station_manifest_sha256": "0acefb76d3983238753cceab9d600a7ce26567e60787fe25fe08331286b084e6",
+  "parent_manifest_sha256": "7bf8e5cd96cfad96596eaa2e75f710d8503b654f76dc2641f37b0c4382ac3068",
+  "stations": [
+    {
+      "id": "full2d_r0141",
+      "chainage_m": 190.0,
+      "tx_m": [
+        169.35000000000002,
+        38.95,
+        0.0125
+      ],
+      "rx_m": [
+        170.65,
+        39.025000000000006,
+        0.0125
+      ],
+      "cover_thickness_m": 6.575,
+      "mud_thickness_m": 7.1000000000000005,
+      "basal_depth_m": 13.675,
+      "geometry": {
+        "midpoint_agl_m": 7.987500000000004,
+        "surface_y_m": 31.0,
+        "boundaries": [
+          {
+            "y_m": 31.0,
+            "depth_m": 0.0,
+            "above": 0,
+            "below": 1,
+            "time95_ns": 53.463012289422984,
+            "vertical_absorption95_db": -0.0
+          },
+          {
+            "y_m": 24.425,
+            "depth_m": 6.575,
+            "above": 1,
+            "below": 2,
+            "time95_ns": 199.13035910254007,
+            "vertical_absorption95_db": -10.638021781046898
+          },
+          {
+            "y_m": 17.325,
+            "depth_m": 13.675,
+            "above": 2,
+            "below": 3,
+            "time95_ns": 363.19196805713955,
+            "vertical_absorption95_db": -17.05895550992334
+          }
+        ],
+        "surface": {
+          "y_m": 31.0,
+          "depth_m": 0.0,
+          "above": 0,
+          "below": 1,
+          "time95_ns": 53.463012289422984,
+          "vertical_absorption95_db": -0.0
+        },
+        "cover_base": {
+          "y_m": 24.425,
+          "depth_m": 6.575,
+          "above": 1,
+          "below": 2,
+          "time95_ns": 199.13035910254007,
+          "vertical_absorption95_db": -10.638021781046898
+        },
+        "first_sand": {
+          "y_m": 17.325,
+          "depth_m": 13.675,
+          "above": 2,
+          "below": 3,
+          "time95_ns": 363.19196805713955,
+          "vertical_absorption95_db": -17.05895550992334
+        },
+        "basal_sand": {
+          "y_m": 17.325,
+          "depth_m": 13.675,
+          "above": 2,
+          "below": 3,
+          "time95_ns": 363.19196805713955,
+          "vertical_absorption95_db": -17.05895550992334
+        }
+      },
+      "basal_template_peak_ns": 362.6081170991351,
+      "proposed_basal_gate_ns": [
+        350.6081170991351,
+        374.6081170991351
+      ],
+      "proposed_wide_gate_ns": [
+        302.6081170991351,
+        422.6081170991351
+      ],
+      "min_side_PML_clearance_m": 37.349999999999994,
+      "min_top_PML_clearance_m": 1.4749999999999943
+    },
+    {
+      "id": "full2d_r0191",
+      "chainage_m": 180.0,
+      "tx_m": [
+        159.35000000000002,
+        38.45,
+        0.0125
+      ],
+      "rx_m": [
+        160.65,
+        38.525000000000006,
+        0.0125
+      ],
+      "cover_thickness_m": 5.4750000000000005,
+      "mud_thickness_m": 7.2749999999999995,
+      "basal_depth_m": 12.75,
+      "geometry": {
+        "midpoint_agl_m": 8.012500000000003,
+        "surface_y_m": 30.475,
+        "boundaries": [
+          {
+            "y_m": 30.475,
+            "depth_m": 0.0,
+            "above": 0,
+            "below": 1,
+            "time95_ns": 53.6292465354106,
+            "vertical_absorption95_db": -0.0
+          },
+          {
+            "y_m": 25.0,
+            "depth_m": 5.4750000000000005,
+            "above": 1,
+            "below": 2,
+            "time95_ns": 174.92556926790596,
+            "vertical_absorption95_db": -8.858276692202551
+          },
+          {
+            "y_m": 17.725,
+            "depth_m": 12.75,
+            "above": 2,
+            "below": 3,
+            "time95_ns": 343.0296223252973,
+            "vertical_absorption95_db": -15.437472872142848
+          }
+        ],
+        "surface": {
+          "y_m": 30.475,
+          "depth_m": 0.0,
+          "above": 0,
+          "below": 1,
+          "time95_ns": 53.6292465354106,
+          "vertical_absorption95_db": -0.0
+        },
+        "cover_base": {
+          "y_m": 25.0,
+          "depth_m": 5.4750000000000005,
+          "above": 1,
+          "below": 2,
+          "time95_ns": 174.92556926790596,
+          "vertical_absorption95_db": -8.858276692202551
+        },
+        "first_sand": {
+          "y_m": 17.725,
+          "depth_m": 12.75,
+          "above": 2,
+          "below": 3,
+          "time95_ns": 343.0296223252973,
+          "vertical_absorption95_db": -15.437472872142848
+        },
+        "basal_sand": {
+          "y_m": 17.725,
+          "depth_m": 12.75,
+          "above": 2,
+          "below": 3,
+          "time95_ns": 343.0296223252973,
+          "vertical_absorption95_db": -15.437472872142848
+        }
+      },
+      "basal_template_peak_ns": 342.64803725881575,
+      "proposed_basal_gate_ns": [
+        330.64803725881575,
+        354.64803725881575
+      ],
+      "proposed_wide_gate_ns": [
+        282.64803725881575,
+        402.64803725881575
+      ],
+      "min_side_PML_clearance_m": 47.349999999999994,
+      "min_top_PML_clearance_m": 1.9749999999999943
+    },
+    {
+      "id": "full2d_r0359",
+      "chainage_m": 146.4,
+      "tx_m": [
+        125.75,
+        36.725,
+        0.0125
+      ],
+      "rx_m": [
+        127.05000000000001,
+        36.800000000000004,
+        0.0125
+      ],
+      "cover_thickness_m": 2.725,
+      "mud_thickness_m": 6.550000000000001,
+      "basal_depth_m": 9.275,
+      "geometry": {
+        "midpoint_agl_m": 7.987500000000001,
+        "surface_y_m": 28.775000000000002,
+        "boundaries": [
+          {
+            "y_m": 28.775000000000002,
+            "depth_m": 0.0,
+            "above": 0,
+            "below": 1,
+            "time95_ns": 53.46301228942297,
+            "vertical_absorption95_db": -0.0
+          },
+          {
+            "y_m": 26.05,
+            "depth_m": 2.725,
+            "above": 1,
+            "below": 2,
+            "time95_ns": 113.83276180328082,
+            "vertical_absorption95_db": -4.40891397009168
+          },
+          {
+            "y_m": 19.5,
+            "depth_m": 9.275,
+            "above": 2,
+            "below": 3,
+            "time95_ns": 265.17939100251897,
+            "vertical_absorption95_db": -10.332451424196002
+          }
+        ],
+        "surface": {
+          "y_m": 28.775000000000002,
+          "depth_m": 0.0,
+          "above": 0,
+          "below": 1,
+          "time95_ns": 53.46301228942297,
+          "vertical_absorption95_db": -0.0
+        },
+        "cover_base": {
+          "y_m": 26.05,
+          "depth_m": 2.725,
+          "above": 1,
+          "below": 2,
+          "time95_ns": 113.83276180328082,
+          "vertical_absorption95_db": -4.40891397009168
+        },
+        "first_sand": {
+          "y_m": 19.5,
+          "depth_m": 9.275,
+          "above": 2,
+          "below": 3,
+          "time95_ns": 265.17939100251897,
+          "vertical_absorption95_db": -10.332451424196002
+        },
+        "basal_sand": {
+          "y_m": 19.5,
+          "depth_m": 9.275,
+          "above": 2,
+          "below": 3,
+          "time95_ns": 265.17939100251897,
+          "vertical_absorption95_db": -10.332451424196002
+        }
+      },
+      "basal_template_peak_ns": 265.3027278775782,
+      "proposed_basal_gate_ns": [
+        253.3027278775782,
+        277.3027278775782
+      ],
+      "proposed_wide_gate_ns": [
+        205.3027278775782,
+        325.3027278775782
+      ],
+      "min_side_PML_clearance_m": 80.94999999999999,
+      "min_top_PML_clearance_m": 3.6999999999999957
+    }
+  ],
+  "new_solves_started": 0,
+  "proposed_new_pairs": 3,
+  "proposed_reused_station_chainage_m": 198.6,
+  "proposed_new_native": 6,
+  "solver_version": "4.0.1",
+  "precision": "native_float64",
+  "source": "40A/100MHz Ricker",
+  "domain_m": [
+    210,
+    42.5,
+    0.025
+  ],
+  "spacing_m": [
+    0.025,
+    0.025,
+    0.025
+  ],
+  "time_window_ns": 1200,
+  "source_antenna_model": "2D z-electric line-source field proxy, not actual 3D antenna or port S21",
+  "material_status": "Reuse span0.3/DC0.0003 counterfactual, no new fitting or production replacement",
+  "processing": "Exact501tones20-170MHz/.3MHz,actual-source/Yee offsets,.025m reference,Hann+Blackman,complex H1-H0,noAGC/fit",
+  "prerequisite": "Review current low-loss boundary outputs; generate inputs, independently audit and freeze new bounded execution before solving. This document cannot launch a solver.",
+  "limits": "Three geometry-chosen sites plus existing reference. Original planned points are not completed simulations. Local template windows are model-informed, not an observed-event truth or separability criterion. New sites have farther PML clearance, which is not a convergence proof."
+}

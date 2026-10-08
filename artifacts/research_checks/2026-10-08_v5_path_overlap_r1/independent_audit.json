@@ -1,0 +1,18 @@
+{
+  "status": "PASS_INDEPENDENT_TRANSMISSION_SNELL_ROOT_BULK_ROOT_DIRECT_INVERSE",
+  "script_sha256": "ced032d6e9d0c0af6a25d360e751c982dc74dc68e8f60c4e6fb69a61e55a22f0",
+  "analysis_sha256": "8562938d692cf6c277c8d7ab2f0771925b92a2d067c622992b32594433de4337",
+  "peak_time_max_absolute_error_ns": {
+    "hann": {
+      "continuum": 0.0,
+      "bulk_Yee": 0.0
+    },
+    "blackman": {
+      "continuum": 0.0,
+      "bulk_Yee": 0.0
+    }
+  },
+  "bulk_sine_root_relative_error_max": 1.4971778812271082e-16,
+  "station_count": 194,
+  "limits": "Audits approximate path mathematics, not real event identity or validity of the local-plane approximation in nonflat geometry. No new FDTD."
+}

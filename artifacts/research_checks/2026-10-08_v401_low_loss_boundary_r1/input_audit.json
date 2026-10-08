@@ -1,0 +1,52 @@
+{
+  "status": "PASS_INDEPENDENT_ORIGINAL_INTERIOR_EXTERIOR_MATERIAL_COORDINATES",
+  "script_sha256": "e8fea63bcdf01c96b3c042695b229d3230d9d055a5de3e16c1d0e82e1ed421c4",
+  "manifest_sha256": "73f046161cf77b7cf12674351c936308d8ef5aa5ca991dc702a6e24aaa123c5e",
+  "groups": [
+    {
+      "id": "sides40_H0",
+      "interior_exact": true,
+      "exterior_edge_continuation_exact": true,
+      "native_shape": [
+        11600,
+        1700,
+        1
+      ],
+      "material_sha256": "fd87d9736294ffe6ae94e9a589a5b2cbebb4b935b15ba3c60ab736c6775543f5"
+    },
+    {
+      "id": "sides40_H1",
+      "interior_exact": true,
+      "exterior_edge_continuation_exact": true,
+      "native_shape": [
+        11600,
+        1700,
+        1
+      ],
+      "material_sha256": "fd87d9736294ffe6ae94e9a589a5b2cbebb4b935b15ba3c60ab736c6775543f5"
+    },
+    {
+      "id": "bottom20_H0",
+      "interior_exact": true,
+      "exterior_edge_continuation_exact": true,
+      "native_shape": [
+        8400,
+        2500,
+        1
+      ],
+      "material_sha256": "fd87d9736294ffe6ae94e9a589a5b2cbebb4b935b15ba3c60ab736c6775543f5"
+    },
+    {
+      "id": "bottom20_H1",
+      "interior_exact": true,
+      "exterior_edge_continuation_exact": true,
+      "native_shape": [
+        8400,
+        2500,
+        1
+      ],
+      "material_sha256": "fd87d9736294ffe6ae94e9a589a5b2cbebb4b935b15ba3c60ab736c6775543f5"
+    }
+  ],
+  "limits": "One low-loss counterfactual station. Extensions change outside continuation together with PML distance; finite sensitivity only, not PML-only mechanism or global convergence certificate. No joint control, whole-line,3D,field or production material validation."
+}

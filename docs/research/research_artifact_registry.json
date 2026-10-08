@@ -1,4 +1,37 @@
 {
+ "line9_v401_low_loss_boundaries_2026_10_08": {
+  "report": "docs/research/2026-10-08_low_loss_boundary_controls.md",
+  "results": "artifacts/research_checks/2026-10-08_v401_low_loss_boundary_r1",
+  "scripts": ["scripts/line9_v401_low_loss_boundaries.py", "scripts/audit_line9_low_loss_boundary_inputs.py", "scripts/analyze_line9_low_loss_boundaries.py", "scripts/audit_line9_low_loss_boundary_results.py"],
+  "status": "FOUR_NEW_FP64_TWO_REUSED_SIDE_BOTTOM_MAIN_GATE_STABLE_LATE_SIDE_SENSITIVE_INDEPENDENT_AUDIT_PASS",
+  "solver_version": "4.0.1",
+  "solver_started": 4,
+  "solver_completed": 4,
+  "reused_native": 2,
+  "Hann_basal_delta_relative_L2_side": 0.000008283879566773895,
+  "Hann_basal_delta_relative_L2_bottom": 0.0000029327227061807965,
+  "Hann_late_delta_relative_L2_side": 0.037998634091920114,
+  "whole_line_resolved": false,
+  "field_validated": false,
+  "production_materials_changed": false,
+  "next_station_design": "artifacts/research_checks/2026-10-08_v401_low_loss_boundary_r1/proposed_next_station_design.json",
+  "next_station_status": "GEOMETRY_ONLY_THREE_PAIRS_NOT_FROZEN_NOT_STARTED",
+  "next_station_script": "scripts/design_line9_v5_spatial_pairs.py"
+ },
+ "line9_v5_path_overlap_2026_10_08": {
+  "report": "docs/research/2026-10-08_low_loss_boundary_controls.md",
+  "results": "artifacts/research_checks/2026-10-08_v5_path_overlap_r1",
+  "scripts": ["scripts/diagnose_line9_v5_path_overlap.py", "scripts/audit_line9_v5_path_overlap.py"],
+  "status": "OFFLINE_194_TRACE_MODEL_INFORMED_PATH_TIME_OVERLAY_INDEPENDENT_MATH_AUDIT_PASS_NOT_EVENT_ATTRIBUTION",
+  "calls_solver": false,
+  "new_solves": 0,
+  "original_solver_version": "4.0.0",
+  "original_native_precision": "float32",
+  "native_count": 194,
+  "completed_chainage_m": [218.0,179.4],
+  "whole_line_resolved": false,
+  "field_validated": false
+ },
  "line9_v401_polarization_dc_factorial_2026_10_08": {
   "report": "docs/research/2026-10-08_mudstone_polarization_dc_factorial.md",
   "results": "artifacts/research_checks/2026-10-08_v401_polarization_dc_r1",
