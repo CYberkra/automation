@@ -1,0 +1,130 @@
+{
+  "status": "PREPARED_NOT_RUN",
+  "calls_solver": false,
+  "self_checks": {
+    "preserve_sandstone_interbeds": true,
+    "reject_missing_basal_contact": true
+  },
+  "source_git_base": "4e34d180e7027bb22a862d6f7df9e34a7a0c33ed",
+  "approval_basis": "User: 通过ssh连接我们那个机器然后开跑吧; two single-station FP64 controls with equal sparse snapshots.",
+  "source_audit_sha256": "2d312b79ea795a59cd5b9d3276da0fa21330b41dc317ca19e3aaca8e3047fb1b",
+  "source_input_sha256": "390e18d77d68159ac40a705642f69b6331e8a0b3ac57d5c526ecc634c490a3d0",
+  "source_native_sha256": "4eecd9339747849ea98206ba8fb055b76bdbba975a2def673dc060f1a472a5d0",
+  "geometry_original_sha256": "a3e9368f763ed4d37f00505d1217d1e0fbdf054aacd480fb1e2db9ea40e323a8",
+  "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+  "script_sha256": "6247baaf30eb58a9f8631f6801afdf437f1d95b02154ea6d3f78f49e86dff42a",
+  "source_package": "line9_pkg2_x160-110_agl35_142st",
+  "station_id": "full2d_c0008",
+  "chainage_m": 179.25,
+  "midpoint_agl_m": 10.274999999999999,
+  "groups": [
+    {
+      "id": "H1",
+      "input": "H1/cases/full2d_c0008/profile.in",
+      "input_sha256": "f5f8cb9c4f071150ea0c26d579bd62ed5e8cc6ac6c253ef624c357515525d0be",
+      "geometry": "H1/geometries/full2d_compact.h5",
+      "geometry_sha256": "a3e9368f763ed4d37f00505d1217d1e0fbdf054aacd480fb1e2db9ea40e323a8",
+      "material": "H1/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "tx_m": [
+        78.60000000000001,
+        35.0,
+        0.0
+      ],
+      "rx_m": [
+        79.9,
+        35.0,
+        0.0
+      ]
+    },
+    {
+      "id": "H0",
+      "input": "H0/cases/full2d_c0008/profile.in",
+      "input_sha256": "f5f8cb9c4f071150ea0c26d579bd62ed5e8cc6ac6c253ef624c357515525d0be",
+      "geometry": "H0/geometries/full2d_compact.h5",
+      "geometry_sha256": "ad3517b243ba67386622da7e1de57cb3d7046243eb0d8fb197c8fb2b558e979b",
+      "material": "H0/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "tx_m": [
+        78.60000000000001,
+        35.0,
+        0.0
+      ],
+      "rx_m": [
+        79.9,
+        35.0,
+        0.0
+      ]
+    }
+  ],
+  "dt_s": 5.896635841874211e-11,
+  "iterations": 13569,
+  "domain_m": [
+    110.0,
+    40.0,
+    0.025
+  ],
+  "native_shape": [
+    4400,
+    1600,
+    1
+  ],
+  "spacing_m": [
+    0.025,
+    0.025,
+    0.025
+  ],
+  "pml_cells": [
+    80,
+    80,
+    0,
+    80,
+    80,
+    0
+  ],
+  "pml": "HORIPML",
+  "source": "z Hertzian first-half-step 40A impulse, frequency label 1Hz, spatial scale .025m",
+  "receiver": "Ez",
+  "precision": "native float64 required",
+  "time_window_s": 8e-07,
+  "snapshot_shape": [
+    1100,
+    400,
+    1
+  ],
+  "snapshot_spacing_m": [
+    0.1,
+    0.1,
+    0.025
+  ],
+  "snapshot_six_field_history_bytes_per_solve": 5406720000,
+  "snapshot_fields": [
+    "Ex",
+    "Ey",
+    "Ez",
+    "Hx",
+    "Hy",
+    "Hz"
+  ],
+  "native_parser_counts": [
+    269,
+    269
+  ],
+  "changed_voxel_count": 2341672,
+  "changed_mask_sha256": "2949069b428afccdac14970f769b29bae05231bbf45523b40b0446d1896b7276",
+  "change": "Only bottom-edge-connected material ID3 sandstone -> ID2 mudstone; all overlying interbeds retained, including side/bottom PML continuation of that region.",
+  "invariant_inputs_identical_except_external_geometry": true,
+  "processing": {
+    "frequency_start_Hz": 20000000.0,
+    "frequency_step_Hz": 300000.0,
+    "frequency_count": 501,
+    "frequency_stop_Hz": 170000000.0,
+    "window": "hann",
+    "zero_pad_factor": 8,
+    "tail_taper": false,
+    "background": "H1-H0 in complex domain only",
+    "AGC": false,
+    "per_trace_normalisation": false
+  },
+  "limitations": "This ablation includes propagation/interactions and changed lower PML material continuation; not a pure reflection separation or PML-amplitude control. Sparse pulse snapshots do not certify complete source-spectrum phase."
+}
