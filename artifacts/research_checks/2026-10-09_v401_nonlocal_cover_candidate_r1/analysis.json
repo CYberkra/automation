@@ -1,0 +1,894 @@
+{
+  "status": "EXPLORATORY_NONLOCAL_COVER_DOUBLE_TRIP_NOT_CAUSAL_CERTIFICATION",
+  "script_sha256": "3827b57ec6506ea84713214ee68c0c68334399fdfe77671118910a65d23c924b",
+  "geometry_sha256": "f948ae805077ea74612aa7e4bd46252a23ea0f7c973841657e5a4cc911a4868c",
+  "material_sha256": {
+    "high": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+    "low": "fd87d9736294ffe6ae94e9a589a5b2cbebb4b935b15ba3c60ab736c6775543f5"
+  },
+  "manifest_sha256": "a5da3b5eacce651ff737a9cbb7a798632e3052c8edeabacecd6b45895afe05cb",
+  "analysis_sha256": "0799e6cd0daf67c257476b91eb0d1dc2c882fae948b1679833f46993ee297631",
+  "input_audit_sha256": "d97715cb46d34c81699749bfafb8a5b3f22b64b856254c8e249da63ef96f347b",
+  "response_sha256": "3667754775601018467c0527390d9ec16773257bd863d379909d6de622fd2008",
+  "numerical_sha256": "0d6ff7b10bb5f1f11eeb6f94bb17eb27a7babf9282c5033e7708191760e5f9f6",
+  "helper_sha256": {
+    "diagnose_line9_refracted_paths.py": "b9f44ceb2813cfa99fe0740f28f5c57e4ce9aafe83d271960e90c628fcf0a607",
+    "diagnose_line9_v5_planar_green.py": "1346a83749dfed867ac43fca931a33ee5fcf458ae168cde805a35e509e33d40f",
+    "review_line9_result_packages.py": "9cdfb474111ecde38252935920bc7c882ad381606206e3acf216930b4194c274"
+  },
+  "station": {
+    "chainage_m": 190.0,
+    "tx_m": [
+      169.35,
+      38.95,
+      0.0125
+    ],
+    "rx_m": [
+      170.65,
+      39.025000000000006,
+      0.0125
+    ],
+    "geometry": {
+      "low": {
+        "midpoint_agl_m": 7.987500000000004,
+        "surface_y_m": 31.0,
+        "boundaries": [
+          {
+            "y_m": 31.0,
+            "depth_m": 0.0,
+            "above": 0,
+            "below": 1,
+            "time95_ns": 53.463012289423,
+            "vertical_absorption95_db": -0.0
+          },
+          {
+            "y_m": 24.425,
+            "depth_m": 6.575,
+            "above": 1,
+            "below": 2,
+            "time95_ns": 199.13035910254007,
+            "vertical_absorption95_db": -10.638021781046898
+          },
+          {
+            "y_m": 17.325,
+            "depth_m": 13.675,
+            "above": 2,
+            "below": 3,
+            "time95_ns": 363.19196805713955,
+            "vertical_absorption95_db": -17.05895550992334
+          }
+        ],
+        "surface": {
+          "y_m": 31.0,
+          "depth_m": 0.0,
+          "above": 0,
+          "below": 1,
+          "time95_ns": 53.463012289423,
+          "vertical_absorption95_db": -0.0
+        },
+        "cover_base": {
+          "y_m": 24.425,
+          "depth_m": 6.575,
+          "above": 1,
+          "below": 2,
+          "time95_ns": 199.13035910254007,
+          "vertical_absorption95_db": -10.638021781046898
+        },
+        "first_sand": {
+          "y_m": 17.325,
+          "depth_m": 13.675,
+          "above": 2,
+          "below": 3,
+          "time95_ns": 363.19196805713955,
+          "vertical_absorption95_db": -17.05895550992334
+        },
+        "basal_sand": {
+          "y_m": 17.325,
+          "depth_m": 13.675,
+          "above": 2,
+          "below": 3,
+          "time95_ns": 363.19196805713955,
+          "vertical_absorption95_db": -17.05895550992334
+        }
+      },
+      "high": {
+        "midpoint_agl_m": 7.987500000000004,
+        "surface_y_m": 31.0,
+        "boundaries": [
+          {
+            "y_m": 31.0,
+            "depth_m": 0.0,
+            "above": 0,
+            "below": 1,
+            "time95_ns": 53.463012289423,
+            "vertical_absorption95_db": -0.0
+          },
+          {
+            "y_m": 24.425,
+            "depth_m": 6.575,
+            "above": 1,
+            "below": 2,
+            "time95_ns": 199.13035910254007,
+            "vertical_absorption95_db": -10.638021781046898
+          },
+          {
+            "y_m": 17.325,
+            "depth_m": 13.675,
+            "above": 2,
+            "below": 3,
+            "time95_ns": 363.65146985958825,
+            "vertical_absorption95_db": -74.66807252033156
+          }
+        ],
+        "surface": {
+          "y_m": 31.0,
+          "depth_m": 0.0,
+          "above": 0,
+          "below": 1,
+          "time95_ns": 53.463012289423,
+          "vertical_absorption95_db": -0.0
+        },
+        "cover_base": {
+          "y_m": 24.425,
+          "depth_m": 6.575,
+          "above": 1,
+          "below": 2,
+          "time95_ns": 199.13035910254007,
+          "vertical_absorption95_db": -10.638021781046898
+        },
+        "first_sand": {
+          "y_m": 17.325,
+          "depth_m": 13.675,
+          "above": 2,
+          "below": 3,
+          "time95_ns": 363.65146985958825,
+          "vertical_absorption95_db": -74.66807252033156
+        },
+        "basal_sand": {
+          "y_m": 17.325,
+          "depth_m": 13.675,
+          "above": 2,
+          "below": 3,
+          "time95_ns": 363.65146985958825,
+          "vertical_absorption95_db": -74.66807252033156
+        }
+      }
+    },
+    "templates": {
+      "low": {
+        "peak_ns": 362.6081170991351,
+        "basal_gate_ns": [
+          350.6081170991351,
+          374.6081170991351
+        ],
+        "wide_gate_ns": [
+          302.6081170991351,
+          422.6081170991351
+        ]
+      },
+      "high": {
+        "peak_ns": 357.6180971390552,
+        "basal_gate_ns": [
+          345.6180971390552,
+          369.6180971390552
+        ],
+        "wide_gate_ns": [
+          297.6180971390552,
+          417.6180971390552
+        ]
+      }
+    }
+  },
+  "flat_check": {
+    "flat_double_cover_trip_phase_time_error_ns": 5.002220859751105e-12
+  },
+  "rays": [
+    {
+      "stride": 8,
+      "interface_sample_spacing_m": 0.2,
+      "crossing_interval_m": [
+        2.0,
+        207.97500000000002
+      ],
+      "trials": [
+        {
+          "start_shift_m": -10.0,
+          "optimizer_success": true,
+          "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "phase_time95_ns": 328.861878065808,
+          "nodes_xy_m": [
+            [
+              169.35,
+              38.95
+            ],
+            [
+              160.3889058520118,
+              30.5
+            ],
+            [
+              159.19999999946694,
+              25.05
+            ],
+            [
+              159.21738924131265,
+              30.450000000000003
+            ],
+            [
+              159.2008072940247,
+              25.049899088246914
+            ],
+            [
+              160.38330991385956,
+              30.5
+            ],
+            [
+              170.65,
+              39.025000000000006
+            ]
+          ],
+          "segment_materials": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "path_length_by_material_m": [
+            25.661488404216716,
+            21.955234711627703,
+            0.0,
+            0.0
+          ],
+          "wrong_material_length_outside_contact_band_m": 0.0,
+          "near_contact_unresolved_length_m": 0.5740914287761619,
+          "geometry_check": "NO_OUTSIDE_BAND_MISMATCH",
+          "spectral_column": 0
+        },
+        {
+          "start_shift_m": -5.0,
+          "optimizer_success": true,
+          "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "phase_time95_ns": 330.9964933080351,
+          "nodes_xy_m": [
+            [
+              169.35,
+              38.95
+            ],
+            [
+              165.7999999925164,
+              30.775000000000002
+            ],
+            [
+              165.1999999931388,
+              24.700000000000003
+            ],
+            [
+              165.20010685280474,
+              30.75
+            ],
+            [
+              165.1999999928896,
+              24.700000000000003
+            ],
+            [
+              165.799999998937,
+              30.775000000000002
+            ],
+            [
+              170.65,
+              39.025000000000006
+            ]
+          ],
+          "segment_materials": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "path_length_by_material_m": [
+            18.482531525474933,
+            24.309115449495426,
+            0.0,
+            0.0
+          ],
+          "wrong_material_length_outside_contact_band_m": 0.0,
+          "near_contact_unresolved_length_m": 0.5242078051122508,
+          "geometry_check": "NO_OUTSIDE_BAND_MISMATCH",
+          "spectral_column": 1
+        },
+        {
+          "start_shift_m": 0.0,
+          "optimizer_success": true,
+          "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "phase_time95_ns": 342.832825589241,
+          "nodes_xy_m": [
+            [
+              169.35,
+              38.95
+            ],
+            [
+              169.49376599931435,
+              30.975
+            ],
+            [
+              169.52917285338046,
+              24.450000000000003
+            ],
+            [
+              169.56458197959512,
+              30.975
+            ],
+            [
+              169.59999999098224,
+              24.450000000000003
+            ],
+            [
+              169.79999971743638,
+              30.975
+            ],
+            [
+              170.65,
+              39.025000000000006
+            ]
+          ],
+          "segment_materials": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "path_length_by_material_m": [
+            16.071047151250664,
+            26.10335267121552,
+            0.0,
+            0.0
+          ],
+          "wrong_material_length_outside_contact_band_m": 0.0,
+          "near_contact_unresolved_length_m": 0.4991839304248864,
+          "geometry_check": "NO_OUTSIDE_BAND_MISMATCH",
+          "spectral_column": 2
+        },
+        {
+          "start_shift_m": 5.0,
+          "optimizer_success": true,
+          "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "phase_time95_ns": 328.6746256898833,
+          "nodes_xy_m": [
+            [
+              169.35,
+              38.95
+            ],
+            [
+              159.3999999917447,
+              30.450000000000003
+            ],
+            [
+              158.39999999605297,
+              25.1
+            ],
+            [
+              157.99999999963288,
+              30.375
+            ],
+            [
+              158.39999999368817,
+              25.1
+            ],
+            [
+              159.39999997855804,
+              30.450000000000003
+            ],
+            [
+              170.65,
+              39.025000000000006
+            ]
+          ],
+          "segment_materials": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "path_length_by_material_m": [
+            27.231775577880015,
+            21.46559947518997,
+            0.0,
+            0.0
+          ],
+          "wrong_material_length_outside_contact_band_m": 0.0,
+          "near_contact_unresolved_length_m": 0.5868185455104563,
+          "geometry_check": "NO_OUTSIDE_BAND_MISMATCH",
+          "spectral_column": 3
+        },
+        {
+          "start_shift_m": 10.0,
+          "optimizer_success": true,
+          "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "phase_time95_ns": 330.86861584679485,
+          "nodes_xy_m": [
+            [
+              169.35,
+              38.95
+            ],
+            [
+              165.3999999951962,
+              30.75
+            ],
+            [
+              164.79999999550174,
+              24.725
+            ],
+            [
+              164.79999999728375,
+              30.725
+            ],
+            [
+              165.5950424639453,
+              24.675
+            ],
+            [
+              166.39999964509116,
+              30.8
+            ],
+            [
+              170.65,
+              39.025000000000006
+            ]
+          ],
+          "segment_materials": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "path_length_by_material_m": [
+            18.35992401589767,
+            24.334485191912165,
+            0.0,
+            0.0
+          ],
+          "wrong_material_length_outside_contact_band_m": 0.0,
+          "near_contact_unresolved_length_m": 0.5244396736891547,
+          "geometry_check": "NO_OUTSIDE_BAND_MISMATCH",
+          "spectral_column": 4
+        }
+      ],
+      "best_geometry_only_index": 3,
+      "successful_valid_time_range_ns": [
+        328.6746256898833,
+        342.832825589241
+      ]
+    },
+    {
+      "stride": 4,
+      "interface_sample_spacing_m": 0.1,
+      "crossing_interval_m": [
+        2.0,
+        207.97500000000002
+      ],
+      "trials": [
+        {
+          "start_shift_m": -10.0,
+          "optimizer_success": true,
+          "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "phase_time95_ns": 328.05144175257317,
+          "nodes_xy_m": [
+            [
+              169.35,
+              38.95
+            ],
+            [
+              160.99999999699946,
+              30.525000000000002
+            ],
+            [
+              160.49773392322754,
+              24.975
+            ],
+            [
+              159.99999999425472,
+              30.475
+            ],
+            [
+              160.49999999168745,
+              24.975
+            ],
+            [
+              161.49999999192872,
+              30.55
+            ],
+            [
+              170.65,
+              39.025000000000006
+            ]
+          ],
+          "segment_materials": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "path_length_by_material_m": [
+            24.33372821627922,
+            22.281813186548245,
+            0.0,
+            0.0
+          ],
+          "wrong_material_length_outside_contact_band_m": 0.0,
+          "near_contact_unresolved_length_m": 0.5871466681266599,
+          "geometry_check": "NO_OUTSIDE_BAND_MISMATCH",
+          "spectral_column": 5
+        },
+        {
+          "start_shift_m": -5.0,
+          "optimizer_success": true,
+          "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "phase_time95_ns": 330.69746538536623,
+          "nodes_xy_m": [
+            [
+              169.35,
+              38.95
+            ],
+            [
+              165.89999998666823,
+              30.775000000000002
+            ],
+            [
+              165.29999998917629,
+              24.700000000000003
+            ],
+            [
+              165.29997111552936,
+              30.75
+            ],
+            [
+              165.2999999865254,
+              24.700000000000003
+            ],
+            [
+              165.89999999510198,
+              30.775000000000002
+            ],
+            [
+              170.65,
+              39.025000000000006
+            ]
+          ],
+          "segment_materials": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "path_length_by_material_m": [
+            18.392885215129148,
+            24.30911544780902,
+            0.0,
+            0.0
+          ],
+          "wrong_material_length_outside_contact_band_m": 0.0,
+          "near_contact_unresolved_length_m": 0.5242801939393776,
+          "geometry_check": "NO_OUTSIDE_BAND_MISMATCH",
+          "spectral_column": 6
+        },
+        {
+          "start_shift_m": 0.0,
+          "optimizer_success": true,
+          "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "phase_time95_ns": 344.6155263075314,
+          "nodes_xy_m": [
+            [
+              169.35,
+              38.95
+            ],
+            [
+              169.7803800675627,
+              30.975
+            ],
+            [
+              169.8866503916316,
+              24.425
+            ],
+            [
+              169.99332552028739,
+              31.0
+            ],
+            [
+              170.09999999830904,
+              24.425
+            ],
+            [
+              170.20869995961064,
+              31.0
+            ],
+            [
+              170.65,
+              39.025000000000006
+            ]
+          ],
+          "segment_materials": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "path_length_by_material_m": [
+            16.023729066183165,
+            26.278491113651565,
+            0.0,
+            0.0
+          ],
+          "wrong_material_length_outside_contact_band_m": 0.0,
+          "near_contact_unresolved_length_m": 0.4992853685851083,
+          "geometry_check": "NO_OUTSIDE_BAND_MISMATCH",
+          "spectral_column": 7
+        },
+        {
+          "start_shift_m": 5.0,
+          "optimizer_success": true,
+          "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "phase_time95_ns": 341.0896139266661,
+          "nodes_xy_m": [
+            [
+              169.35,
+              38.95
+            ],
+            [
+              169.2999997713905,
+              30.950000000000003
+            ],
+            [
+              169.29999978534195,
+              24.475
+            ],
+            [
+              169.299996588431,
+              30.950000000000003
+            ],
+            [
+              169.29999999027976,
+              24.475
+            ],
+            [
+              169.5623055444447,
+              30.975
+            ],
+            [
+              170.65,
+              39.025000000000006
+            ]
+          ],
+          "segment_materials": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "path_length_by_material_m": [
+            16.123307068929122,
+            25.930290478046906,
+            0.0,
+            0.0
+          ],
+          "wrong_material_length_outside_contact_band_m": 0.0,
+          "near_contact_unresolved_length_m": 0.4992228548286735,
+          "geometry_check": "NO_OUTSIDE_BAND_MISMATCH",
+          "spectral_column": 8
+        },
+        {
+          "start_shift_m": 10.0,
+          "optimizer_success": true,
+          "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "phase_time95_ns": 331.6726141167544,
+          "nodes_xy_m": [
+            [
+              169.35,
+              38.95
+            ],
+            [
+              165.89999999992708,
+              30.775000000000002
+            ],
+            [
+              165.79999996538425,
+              24.675
+            ],
+            [
+              165.89999991151984,
+              30.775000000000002
+            ],
+            [
+              166.199999987689,
+              24.650000000000002
+            ],
+            [
+              166.89999994610082,
+              30.825000000000003
+            ],
+            [
+              170.65,
+              39.025000000000006
+            ]
+          ],
+          "segment_materials": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "path_length_by_material_m": [
+            17.889958742029933,
+            24.548531231327832,
+            0.0,
+            0.0
+          ],
+          "wrong_material_length_outside_contact_band_m": 0.0,
+          "near_contact_unresolved_length_m": 0.5242961555121924,
+          "geometry_check": "NO_OUTSIDE_BAND_MISMATCH",
+          "spectral_column": 9
+        }
+      ],
+      "best_geometry_only_index": 0,
+      "successful_valid_time_range_ns": [
+        328.05144175257317,
+        344.6155263075314
+      ]
+    }
+  ],
+  "quadrature_256_512_relative_L2": [
+    [
+      2.895688224380886e-14,
+      1.0770600878609079e-14,
+      8.762903495677399e-15,
+      3.2402168913724246e-11,
+      2.2946221892115965e-12
+    ],
+    [
+      2.895688224380886e-14,
+      1.34266973456168e-14,
+      1.6555728900753832e-14,
+      9.419933157411542e-10,
+      1.8093890728051533e-14
+    ]
+  ],
+  "metrics": {
+    "hann": {
+      "high": {
+        "native_H0_peak_ns": 330.1729873586161,
+        "planar_H0_peak_ns": 341.81636726546907,
+        "planar_cover_twice_peak_ns": 343.47970725216237,
+        "planar_H0_unfitted_relative_L2": 1.1985859357169544,
+        "planar_H0_complex_correlation": 0.20171570037187433,
+        "ray_peak_ns_by_stride_and_start": [
+          [
+            327.6779773785762,
+            330.1729873586161,
+            341.81636726546907,
+            327.6779773785762,
+            330.1729873586161
+          ],
+          [
+            326.8463073852295,
+            329.3413173652695,
+            343.47970725216237,
+            340.15302727877577,
+            331.00465735196275
+          ]
+        ],
+        "geometry_selected_ray_peak_ns": [
+          327.6779773785762,
+          326.8463073852295
+        ]
+      },
+      "low": {
+        "native_H0_peak_ns": 324.3512974051896,
+        "planar_H0_peak_ns": 342.64803725881575,
+        "planar_cover_twice_peak_ns": 344.31137724550894,
+        "planar_H0_unfitted_relative_L2": 0.7223559120126188,
+        "planar_H0_complex_correlation": 0.714733089513993,
+        "ray_peak_ns_by_stride_and_start": [
+          [
+            328.5096473719228,
+            331.00465735196275,
+            342.64803725881575,
+            328.5096473719228,
+            331.00465735196275
+          ],
+          [
+            327.6779773785762,
+            330.1729873586161,
+            344.31137724550894,
+            340.98469727212245,
+            331.83632734530937
+          ]
+        ],
+        "geometry_selected_ray_peak_ns": [
+          328.5096473719228,
+          327.6779773785762
+        ]
+      }
+    },
+    "blackman": {
+      "high": {
+        "native_H0_peak_ns": 328.5096473719228,
+        "planar_H0_peak_ns": 342.64803725881575,
+        "planar_cover_twice_peak_ns": 343.47970725216237,
+        "planar_H0_unfitted_relative_L2": 1.363313275109496,
+        "planar_H0_complex_correlation": 0.12287816214313883,
+        "ray_peak_ns_by_stride_and_start": [
+          [
+            327.6779773785762,
+            330.1729873586161,
+            341.81636726546907,
+            327.6779773785762,
+            330.1729873586161
+          ],
+          [
+            326.8463073852295,
+            329.3413173652695,
+            343.47970725216237,
+            340.15302727877577,
+            331.00465735196275
+          ]
+        ],
+        "geometry_selected_ray_peak_ns": [
+          327.6779773785762,
+          326.8463073852295
+        ]
+      },
+      "low": {
+        "native_H0_peak_ns": 325.1829673985363,
+        "planar_H0_peak_ns": 343.47970725216237,
+        "planar_cover_twice_peak_ns": 344.31137724550894,
+        "planar_H0_unfitted_relative_L2": 1.1025132467330754,
+        "planar_H0_complex_correlation": 0.2532486207324742,
+        "ray_peak_ns_by_stride_and_start": [
+          [
+            328.5096473719228,
+            331.00465735196275,
+            342.64803725881575,
+            328.5096473719228,
+            331.00465735196275
+          ],
+          [
+            327.6779773785762,
+            330.1729873586161,
+            344.31137724550894,
+            340.98469727212245,
+            331.83632734530937
+          ]
+        ],
+        "geometry_selected_ray_peak_ns": [
+          328.5096473719228,
+          327.6779773785762
+        ]
+      }
+    }
+  },
+  "native_identities": {
+    "high_x19000_H0": "87075c0bbc8ea419b0d0d49047c0c59712ed8180c94cf0885030e2b39caff331",
+    "low_x19000_H0": "57b9c072b713b98f345aaf838118a81edc4d84a457ad12e0c38dcb847d73ef8e"
+  },
+  "new_solves": 0,
+  "selection": "Best phase95 optical length among fixed five starts and valid sampled paths; never closest observed arrival.",
+  "limits": "Posthoc exploratory local planar and real-index ray proxies. Five-start local minima are not global minimum/stationary-branch proof. Two-cell contact ambiguity,linear interface interpolation,normal Fresnel coefficients,no ray spreading/diffraction/frequency-dependent bending. Matching time does not identify an observed path; no ray amplitude calibration,physical error budget or field/whole-line/finite3D validation. No production changes."
+}

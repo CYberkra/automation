@@ -1,0 +1,13 @@
+{
+  "status": "PASS_INDEPENDENT_LENGTH_MATERIAL_RAY_INVERSE_ADAPTIVE_PLANAR",
+  "auditor_sha256": "ef72145b6ef90f54838785d41925fff759bdba43096b4f1edae8d56491861ec3",
+  "analysis_sha256": "31609a8a8ece906677386d8387a45f1cfdc0704f1c623294fbbf8fbe17e39867",
+  "optical_phase_time_error_ns_max": 5.684341886080802e-14,
+  "independent_ray_spectrum_relative_L2_max": 3.2868599770766004e-16,
+  "metric_scalar_checks": 60,
+  "adaptive_planar_relative_error_max": 7.872854908995121e-10,
+  "input_admittance_reflection_absolute_error_max": 5.661048867003676e-16,
+  "optimizer_independently_certified": false,
+  "physical_path_certified": false,
+  "limits": "Verifies reported arithmetic/material/planar integration, not optimizer uniqueness,global stationary ray,contact interpolation or observed path identity. Independent planar audit uses continuum interfaces; no FDTD agreement implied."
+}
