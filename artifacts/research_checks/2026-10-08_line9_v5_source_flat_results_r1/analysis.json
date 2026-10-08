@@ -1,0 +1,409 @@
+{
+  "script_sha256": "d32f13be58df713a569033e1ea427259dd6e21d1526e47a6818a13a5c9680759",
+  "contract_sha256": "c12116168874c1f98c31a1b9199eb25d86f36e1ea8f48085cb5ea2e91e1752c2",
+  "verification_sha256": "c4d12a1a540be606c0ea6e434b510399537a7e923afffba407fe4be53eabf467",
+  "prepared_manifest_sha256": "d430fa9f98955bf6c6577e3042c4cd6f824912c5dce5f95143f74cebb20a216c",
+  "prior_verification_sha256": "c1668f51d0a3bdea84a7d5f0a6c8fc93c6e251f603bbe59b0a2411860629ddc0",
+  "native_sha256": [
+    "140b216725531aba8613d3f502e53db2d53e20b31479064b19e69adb848012b2",
+    "ecd0efb0dd92f86a0bf66bca88b72e697630801fb4d315a2b931b5222ae72dcd",
+    "94ea166414ca2923498ab27f10694dd4ddb7daa6d1d5d52080622926fe39be37",
+    "f02b7470d90ed40d76af8fbd3c38ad1e5a6859b9971893deadb201509fc79fa2",
+    "4459aafcb3b716dfa131e7b306cf879b7c43771912b5020be30e72de4b19550b"
+  ],
+  "columns": [
+    "nonflat_impulse_H1",
+    "nonflat_impulse_H0",
+    "nonflat_ricker_H0",
+    "flat_ricker_H0",
+    "flat_ricker_H1",
+    "nonflat_impulse_delta",
+    "flat_ricker_delta",
+    "source_change_H0",
+    "geometry_change_H0"
+  ],
+  "numerical_sha256": "f3a9dac16cc1c2e2051c658ddf599ff2f71a8e90f847f0334ddb48c875c6fd3e",
+  "planar_numerical_sha256": "36e9e03830b0953ab177778dc8d96f09b7564312b88c1b03a7f5d02cc7278a95",
+  "tones": 501,
+  "frequency_MHz": [
+    20,
+    170
+  ],
+  "step_MHz": 0.3,
+  "AGC": false,
+  "tail_taper": false,
+  "native_convolution_relative_L2": 1.0982721375026488e-14,
+  "independent_DFT_relative_L2": [
+    7.230104389586867e-13,
+    7.193145612746581e-13,
+    1.0709317228848093e-13,
+    1.0699745769254785e-13,
+    1.0686590044767145e-13
+  ],
+  "independent_inverse_relative_L2": {
+    "hann": 1.962122577991902e-14,
+    "blackman": 2.3206774245383196e-14
+  },
+  "metrics": {
+    "hann": {
+      "basal": {
+        "gate_ns": [
+          359.7564870259481,
+          383.7564870259481
+        ],
+        "source_change_over_nonflat_H0": 0.00016626357415569634,
+        "source_change_over_nonflat_delta": 0.0005578684031401586,
+        "geometry_change_over_nonflat_H0": 0.9656422303981927,
+        "flat_H0_over_nonflat_H0": 0.8741124952706245,
+        "flat_H0_over_flat_delta": 4.291658521168774,
+        "flat_delta_over_nonflat_delta": 0.6834271876095659,
+        "flat_vs_nonflat_delta": {
+          "unfitted_relative_L2": 0.4995168223338313,
+          "actual_over_model_L2": 0.6834271876095659,
+          "inner_phase_deg": 6.9312264934940675,
+          "complex_correlation": 0.9953312164143735
+        },
+        "flat_delta_vs_planar": {
+          "unfitted_relative_L2": 0.270942501842972,
+          "actual_over_model_L2": 0.9659052911893796,
+          "inner_phase_deg": -12.279875038743182,
+          "complex_correlation": 0.987747593350522
+        },
+        "flat_H0_vs_planar": {
+          "unfitted_relative_L2": 0.20072533036056328,
+          "actual_over_model_L2": 0.9783688733935796,
+          "inner_phase_deg": -9.12097488251442,
+          "complex_correlation": 0.9930863025654009
+        },
+        "nonflat_H0_vs_planar": {
+          "unfitted_relative_L2": 0.9894932235391712,
+          "actual_over_model_L2": 1.1192711220661336,
+          "inner_phase_deg": 3.129972978965144,
+          "complex_correlation": 0.45910230993808226
+        },
+        "flat_H0_peak_ns": 376.74650698602795,
+        "flat_delta_peak_ns": 373.4198270126414,
+        "flat_H0_vs_cover_twice": {
+          "unfitted_relative_L2": 0.3173606065838745,
+          "actual_over_model_L2": 1.0048598666800068,
+          "inner_phase_deg": -9.297109866180957,
+          "complex_correlation": 0.9620456977058706
+        },
+        "flat_H0_minus_other_planar_components_vs_cover_twice": {
+          "unfitted_relative_L2": 0.2066073124739081,
+          "actual_over_model_L2": 0.9762521291732511,
+          "inner_phase_deg": -9.439906245077559,
+          "complex_correlation": 0.9928980672136349
+        }
+      },
+      "deep": {
+        "gate_ns": [
+          300.0,
+          450.0
+        ],
+        "source_change_over_nonflat_H0": 0.0003708906060345828,
+        "source_change_over_nonflat_delta": 0.0014433034821765638,
+        "geometry_change_over_nonflat_H0": 0.8558381821742783,
+        "flat_H0_over_nonflat_H0": 0.8958035049211541,
+        "flat_H0_over_flat_delta": 5.1041078314540895,
+        "flat_delta_over_nonflat_delta": 0.6830252507242713,
+        "flat_vs_nonflat_delta": {
+          "unfitted_relative_L2": 0.5013498628342651,
+          "actual_over_model_L2": 0.6830252507242713,
+          "inner_phase_deg": 6.970471565207071,
+          "complex_correlation": 0.9950649059919122
+        },
+        "flat_delta_vs_planar": {
+          "unfitted_relative_L2": 0.2727420609464092,
+          "actual_over_model_L2": 0.9673337508014683,
+          "inner_phase_deg": -12.295754200266467,
+          "complex_correlation": 0.9872178730283078
+        },
+        "flat_H0_vs_planar": {
+          "unfitted_relative_L2": 0.171517669195036,
+          "actual_over_model_L2": 0.9878962348349318,
+          "inner_phase_deg": -6.100891237982607,
+          "complex_correlation": 0.9911566515530854
+        },
+        "nonflat_H0_vs_planar": {
+          "unfitted_relative_L2": 0.8765846366262884,
+          "actual_over_model_L2": 1.1028046099483428,
+          "inner_phase_deg": 4.4540146472709905,
+          "complex_correlation": 0.5828541303156431
+        }
+      },
+      "early": {
+        "gate_ns": [
+          0.0,
+          120.0
+        ],
+        "source_change_over_nonflat_H0": 1.530547237156371e-09,
+        "source_change_over_nonflat_delta": 5.254580233428949,
+        "geometry_change_over_nonflat_H0": 0.006536974363246964,
+        "flat_H0_over_nonflat_H0": 1.0000835530713303,
+        "flat_H0_over_flat_delta": 4327538874.925272,
+        "flat_delta_over_nonflat_delta": 0.7933897716106325,
+        "flat_vs_nonflat_delta": {
+          "unfitted_relative_L2": 0.5211072247310788,
+          "actual_over_model_L2": 0.7933897716106325,
+          "inner_phase_deg": -9.03022933277237,
+          "complex_correlation": 0.9307141503084031
+        },
+        "flat_delta_vs_planar": {
+          "unfitted_relative_L2": 0.06718056394539997,
+          "actual_over_model_L2": 0.9991144372552548,
+          "inner_phase_deg": -0.2709445004294,
+          "complex_correlation": 0.9977569327676565
+        },
+        "flat_H0_vs_planar": {
+          "unfitted_relative_L2": 0.0005849565945238755,
+          "actual_over_model_L2": 1.0001214263331109,
+          "inner_phase_deg": -0.0076101914398071634,
+          "complex_correlation": 0.9999998450843585
+        },
+        "nonflat_H0_vs_planar": {
+          "unfitted_relative_L2": 0.006229202834725048,
+          "actual_over_model_L2": 1.0000378700976176,
+          "inner_phase_deg": 0.05160366680309707,
+          "complex_correlation": 0.9999810040793152
+        }
+      },
+      "late": {
+        "gate_ns": [
+          1000,
+          1200
+        ],
+        "source_change_over_nonflat_H0": 0.9999987223490392,
+        "source_change_over_nonflat_delta": 25.63662999975221,
+        "geometry_change_over_nonflat_H0": 0.3836910024746665,
+        "flat_H0_over_nonflat_H0": 0.9377212879496949,
+        "flat_H0_over_flat_delta": 9192.552193661888,
+        "flat_delta_over_nonflat_delta": 8.875793130102165e-08,
+        "flat_vs_nonflat_delta": {
+          "unfitted_relative_L2": 11266598.804370638,
+          "actual_over_model_L2": 8.875793130102165e-08,
+          "inner_phase_deg": -123.40120790313102,
+          "complex_correlation": 0.0547367516033201
+        },
+        "flat_delta_vs_planar": {
+          "unfitted_relative_L2": 0.2699889363874016,
+          "actual_over_model_L2": 1.0340317534472874,
+          "inner_phase_deg": -0.5624156517623238,
+          "complex_correlation": 0.9629190431170898
+        },
+        "flat_H0_vs_planar": {
+          "unfitted_relative_L2": 0.00129541607446969,
+          "actual_over_model_L2": 1.0007263617518956,
+          "inner_phase_deg": -0.05906234947342509,
+          "complex_correlation": 0.999999955256076
+        },
+        "nonflat_H0_vs_planar": {
+          "unfitted_relative_L2": 0.38364249994698807,
+          "actual_over_model_L2": 1.0671895526014556,
+          "inner_phase_deg": 0.31653645487183785,
+          "complex_correlation": 0.923593883881741
+        }
+      }
+    },
+    "blackman": {
+      "basal": {
+        "gate_ns": [
+          359.7564870259481,
+          383.7564870259481
+        ],
+        "source_change_over_nonflat_H0": 7.555587931025174e-05,
+        "source_change_over_nonflat_delta": 0.00022936667641124882,
+        "geometry_change_over_nonflat_H0": 0.9231374997914185,
+        "flat_H0_over_nonflat_H0": 0.917067615778449,
+        "flat_H0_over_flat_delta": 4.0904804831042325,
+        "flat_delta_over_nonflat_delta": 0.6806014690112818,
+        "flat_vs_nonflat_delta": {
+          "unfitted_relative_L2": 0.5046385339253384,
+          "actual_over_model_L2": 0.6806014690112818,
+          "inner_phase_deg": 7.561035428364569,
+          "complex_correlation": 0.9969522951364385
+        },
+        "flat_delta_vs_planar": {
+          "unfitted_relative_L2": 0.26118034330434403,
+          "actual_over_model_L2": 0.963579652237938,
+          "inner_phase_deg": -12.617962769086349,
+          "complex_correlation": 0.9917759646019655
+        },
+        "flat_H0_vs_planar": {
+          "unfitted_relative_L2": 0.20917372362417422,
+          "actual_over_model_L2": 0.9702833532299356,
+          "inner_phase_deg": -10.212782386526136,
+          "complex_correlation": 0.9949929366505792
+        },
+        "nonflat_H0_vs_planar": {
+          "unfitted_relative_L2": 0.9745695698163978,
+          "actual_over_model_L2": 1.0580281503085405,
+          "inner_phase_deg": -19.253367782074026,
+          "complex_correlation": 0.5287122803975677
+        },
+        "flat_H0_peak_ns": 376.74650698602795,
+        "flat_delta_peak_ns": 373.4198270126414,
+        "flat_H0_vs_cover_twice": {
+          "unfitted_relative_L2": 0.23110366185033634,
+          "actual_over_model_L2": 0.9757598061264451,
+          "inner_phase_deg": -10.017484285600876,
+          "complex_correlation": 0.9893265247246577
+        },
+        "flat_H0_minus_other_planar_components_vs_cover_twice": {
+          "unfitted_relative_L2": 0.21028822712946782,
+          "actual_over_model_L2": 0.9705883909735512,
+          "inner_phase_deg": -10.243378953959542,
+          "complex_correlation": 0.9948418984591109
+        }
+      },
+      "deep": {
+        "gate_ns": [
+          300.0,
+          450.0
+        ],
+        "source_change_over_nonflat_H0": 0.00018174824183427724,
+        "source_change_over_nonflat_delta": 0.0005920239556260822,
+        "geometry_change_over_nonflat_H0": 0.8947548370402107,
+        "flat_H0_over_nonflat_H0": 0.8988733816498653,
+        "flat_H0_over_flat_delta": 4.312438571088683,
+        "flat_delta_over_nonflat_delta": 0.678972537403121,
+        "flat_vs_nonflat_delta": {
+          "unfitted_relative_L2": 0.5091731278437979,
+          "actual_over_model_L2": 0.678972537403121,
+          "inner_phase_deg": 7.603062625606329,
+          "complex_correlation": 0.9966407916357805
+        },
+        "flat_delta_vs_planar": {
+          "unfitted_relative_L2": 0.2628555794015795,
+          "actual_over_model_L2": 0.9660717842219181,
+          "inner_phase_deg": -12.62351262253774,
+          "complex_correlation": 0.991181009974785
+        },
+        "flat_H0_vs_planar": {
+          "unfitted_relative_L2": 0.20305285014769744,
+          "actual_over_model_L2": 0.9812778324764462,
+          "inner_phase_deg": -9.274749510089197,
+          "complex_correlation": 0.9929300690484353
+        },
+        "nonflat_H0_vs_planar": {
+          "unfitted_relative_L2": 0.9388188512761517,
+          "actual_over_model_L2": 1.0916752598406343,
+          "inner_phase_deg": -13.796993149648717,
+          "complex_correlation": 0.5382898520432176
+        }
+      },
+      "early": {
+        "gate_ns": [
+          0.0,
+          120.0
+        ],
+        "source_change_over_nonflat_H0": 6.23160516818783e-10,
+        "source_change_over_nonflat_delta": 5.294739536709816,
+        "geometry_change_over_nonflat_H0": 0.00656423794503164,
+        "flat_H0_over_nonflat_H0": 1.0000930437544306,
+        "flat_H0_over_flat_delta": 10655739829.470554,
+        "flat_delta_over_nonflat_delta": 0.7974463420561808,
+        "flat_vs_nonflat_delta": {
+          "unfitted_relative_L2": 0.5104027689410948,
+          "actual_over_model_L2": 0.7974463420561808,
+          "inner_phase_deg": -9.081433980326427,
+          "complex_correlation": 0.933554945736833
+        },
+        "flat_delta_vs_planar": {
+          "unfitted_relative_L2": 0.06717265320814361,
+          "actual_over_model_L2": 0.999112634575291,
+          "inner_phase_deg": -0.27091551182770324,
+          "complex_correlation": 0.9977574669996055
+        },
+        "flat_H0_vs_planar": {
+          "unfitted_relative_L2": 0.0005499850172045835,
+          "actual_over_model_L2": 1.0001161615371637,
+          "inner_phase_deg": -0.006866149749691566,
+          "complex_correlation": 0.9999998626670822
+        },
+        "nonflat_H0_vs_planar": {
+          "unfitted_relative_L2": 0.0062836683883222095,
+          "actual_over_model_L2": 1.0000231156319679,
+          "inner_phase_deg": 0.054012713127550814,
+          "complex_correlation": 0.9999807018993352
+        }
+      },
+      "late": {
+        "gate_ns": [
+          1000,
+          1200
+        ],
+        "source_change_over_nonflat_H0": 0.9999993110633421,
+        "source_change_over_nonflat_delta": 25.63748658262221,
+        "geometry_change_over_nonflat_H0": 0.718000441457121,
+        "flat_H0_over_nonflat_H0": 0.7174472667366839,
+        "flat_H0_over_flat_delta": 8153.141518251337,
+        "flat_delta_over_nonflat_delta": 3.977236500696262e-08,
+        "flat_vs_nonflat_delta": {
+          "unfitted_relative_L2": 25143086.045683682,
+          "actual_over_model_L2": 3.977236500696262e-08,
+          "inner_phase_deg": -7.123855366855791,
+          "complex_correlation": 0.11122674412959067
+        },
+        "flat_delta_vs_planar": {
+          "unfitted_relative_L2": 0.5193620763920721,
+          "actual_over_model_L2": 1.1662796619753115,
+          "inner_phase_deg": -0.5297006496306675,
+          "complex_correlation": 0.8545956237834439
+        },
+        "flat_H0_vs_planar": {
+          "unfitted_relative_L2": 0.0013070237451990312,
+          "actual_over_model_L2": 1.000726391837121,
+          "inner_phase_deg": -0.059064253145883545,
+          "complex_correlation": 0.9999999401970187
+        },
+        "nonflat_H0_vs_planar": {
+          "unfitted_relative_L2": 0.7179759692436118,
+          "actual_over_model_L2": 1.3948431309647815,
+          "inner_phase_deg": 0.1516881938645103,
+          "complex_correlation": 0.6963737657388337
+        }
+      }
+    }
+  },
+  "frequency_comparison": {
+    "frequency_MHz": [
+      20.0,
+      44.9,
+      95.0,
+      145.1,
+      170.0
+    ],
+    "flat_bottom_over_planar_complex_ratio_real": [
+      0.9986846831150265,
+      0.9920996606791413,
+      0.9411024060636756,
+      0.6493674311499866,
+      0.26968415129869217
+    ],
+    "flat_bottom_over_planar_complex_ratio_imag": [
+      -0.002354342637715054,
+      -0.02395064124556384,
+      -0.21130107036582313,
+      -0.6473846505194468,
+      -0.8446063045362332
+    ],
+    "amplitude_ratio": [
+      0.998687458225954,
+      0.9923887191699335,
+      0.9645319492046812,
+      0.9169432623486139,
+      0.8866168006100766
+    ],
+    "phase_deg": [
+      -0.13507130834943182,
+      -1.3829297787026238,
+      -12.654479809275507,
+      -44.91239275810546,
+      -72.29163372087878
+    ],
+    "note": "Pointwise diagnostic, no fitted amplitude/phase/delay applied. Tiny spectral model values may be sensitive."
+  },
+  "limits": "Single selected v5 station. Planar geometry is a controlled different model, not corrected field truth or nonflat grid convergence. Comparison with continuum Green function still includes finite-domain,grid and interface-averaging effects. No field/3D/whole-line certification.",
+  "extra_limits": "Early/late bottom-difference denominators can be tiny; ratios are not physical energy fractions or certified error floors. Nonflat basal pair retains impulse source; source-only control is H0."
+}

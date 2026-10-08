@@ -1,0 +1,74 @@
+{
+  "status": "UNFITTED_BULK_YEE_PROPAGATION_DIAGNOSTIC_NOT_MESH_CONVERGENCE",
+  "script_sha256": "af3664e121e0685743e90c8561a33a8862227288aa52351b555c9906a4c87928",
+  "source_numerical_sha256": "f3a9dac16cc1c2e2051c658ddf599ff2f71a8e90f847f0334ddb48c875c6fd3e",
+  "prepared_manifest_sha256": "d430fa9f98955bf6c6577e3042c4cd6f824912c5dce5f95143f74cebb20a216c",
+  "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+  "numerical_sha256": "a6ece93d252b4038e31587ef4ce74b948832e8cb402277ba0bfba3abd5524ae8",
+  "independent_complex_root_relative_error_max": 1.7554947103729163e-16,
+  "magic_timestep_check": true,
+  "half_mesh_bulk_error_decreases": true,
+  "phase_residual_max_deg": 0.32993002504169716,
+  "complex_ratio_residual_relative_L2": 0.006703765802173296,
+  "metrics": {
+    "hann": {
+      "original_unfitted_relative_L2": 0.270942501842972,
+      "predicted_unfitted_relative_L2": 0.004602803351847413
+    },
+    "blackman": {
+      "original_unfitted_relative_L2": 0.26118034330434403,
+      "predicted_unfitted_relative_L2": 0.004607793986661221
+    }
+  },
+  "selected": {
+    "frequency_MHz": [
+      20.0,
+      44.9,
+      95.0,
+      145.1,
+      170.0
+    ],
+    "observed_phase_deg": [
+      -0.13507130834943182,
+      -1.3829297787026238,
+      -12.654479809275507,
+      -44.91239275810546,
+      -72.29163372087878
+    ],
+    "predicted_phase_deg": [
+      -0.13871744472476005,
+      -1.3921763055140817,
+      -12.655360341547757,
+      -44.91005797954017,
+      -72.29997229646736
+    ],
+    "observed_amplitude_ratio": [
+      0.998687458225954,
+      0.9923887191699335,
+      0.9645319492046812,
+      0.9169432623486139,
+      0.8866168006100766
+    ],
+    "predicted_amplitude_ratio": [
+      0.9989466182088838,
+      0.9934224676767224,
+      0.9690055249056077,
+      0.9279692987055955,
+      0.9018359751911538
+    ],
+    "half_mesh_predicted_phase_deg": [
+      -0.03467582975588122,
+      -0.3478648275617999,
+      -3.156434758043249,
+      -11.165825062153862,
+      -17.938319848163697
+    ]
+  },
+  "method": "k_grid=2/dl*asin(n(omega)*dl/(c*dt)*sin(omega*dt/2)); factor=exp(-i*sum[(k_grid-k_cont)*two-way-layer-length]). Normal-incidence propagation approximation, zero fitted coefficients. Input n is continuum Debye+DC conductivity, not the complete discrete constitutive model.",
+  "source_reading": "Schneider Understanding FDTD, sections7.3-7.4, printedpp163-166, Eqs7.19-7.40; lossless homogeneous derivation. Complex continuum-index substitution and layered phase accumulation are our diagnostic extension, not claimed exact discrete Debye/slab theory.",
+  "sources": [
+    "https://eecs.wsu.edu/~schneidj/ufdtd/ufdtd.pdf",
+    "https://docs.gprmax.com/en/latest/gprmodelling.html"
+  ],
+  "limits": "Posthoc mechanism diagnostic with prior geometric/material parameters; no data-fit correction or production output change. Planar finite-domain2D pair only, no nonflat phase correction, mesh-refined FDTD or field/3D certification. Small remaining error does not certify an FDTD error floor."
+}

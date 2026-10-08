@@ -1,4 +1,33 @@
 {
+ "line9_v5_source_flat_2026_10_08": {
+  "report": "docs/research/2026-10-08_line9_v5_source_flat_controls.md",
+  "results": "artifacts/research_checks/2026-10-08_line9_v5_source_flat_results_r1",
+  "preparation": "artifacts/research_checks/2026-10-08_line9_v5_source_flat_prepare_r1",
+  "scripts": [
+   "scripts/line9_v5_source_flat_controls.py",
+   "scripts/analyze_line9_v5_source_flat_controls.py",
+   "scripts/audit_line9_v5_source_flat_delivery.py"
+  ],
+  "status": "THREE_FP64_COMPLETE_SOURCE_MAIN_GATE_STABLE_PLANAR_H0_STRONG_UNFITTED_GRID_PHASE_DISAGREEMENT_IDENTIFIED",
+  "solver_started": 3,
+  "solver_completed": 3,
+  "whole_line_resolved": false,
+  "field_validated": false
+ },
+ "line9_v5_grid_phase_2026_10_08": {
+  "report": "docs/research/2026-10-08_line9_v5_source_flat_controls.md",
+  "results": "artifacts/research_checks/2026-10-08_line9_v5_grid_phase_r1",
+  "scripts": [
+   "scripts/diagnose_line9_v5_grid_phase.py",
+   "scripts/audit_line9_v5_grid_phase.py"
+  ],
+  "status": "UNFITTED_YEE_PROPAGATION_PREDICTS_PLANAR_BASAL_PHASE_INDEPENDENTLY_AUDITED_NOT_FDTD_REFINEMENT",
+  "fitted_parameters": 0,
+  "production_data_changed": false,
+  "refined_grid_FDTD_executed": false,
+  "whole_line_resolved": false,
+  "field_validated": false
+ },
  "line9_v5_pair_2026_10_08": {
   "report": "docs/research/2026-10-08_line9_v5_pair_and_planar_diagnostic.md",
   "results": "artifacts/research_checks/2026-10-08_line9_v5_pair_results_r1",

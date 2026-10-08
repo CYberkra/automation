@@ -1,0 +1,65 @@
+{
+  "status": "PASS_THREE_NATIVE_GEOMETRY_EVENTS_DIRECT_CONVOLUTION_DFT_AND_INVERSE_NOT_FIELD_CERTIFICATION",
+  "audit_script_sha256": "9c989d671bd929643fbb0b734308edce3c073c2485467937541fdbb7c8fac548",
+  "solver_started": 3,
+  "solver_completed": 3,
+  "flat_basal_changed_voxels": 5745600,
+  "independent_DFT_relative_L2": [
+    1.3363312126272024e-13,
+    1.340929098914694e-13,
+    1.3392245550473387e-13
+  ],
+  "independent_direct_convolution_relative_L2": 5.6048106908246996e-11,
+  "independent_inverse_relative_L2": {
+    "hann": 5.553479004010534e-14,
+    "blackman": 3.422665608553787e-14
+  },
+  "model_metric_inverse_roundoff_bounds": {
+    "hann": {
+      "basal_flat_delta_vs_planar": 3.093348920216673e-14,
+      "basal_flat_H0_vs_planar": 1.266873954742914e-10,
+      "deep_flat_delta_vs_planar": 3.111103868557932e-14,
+      "deep_flat_H0_vs_planar": 2.3896612937067973e-10,
+      "early_flat_delta_vs_planar": 2.5805173352516816e-12,
+      "early_flat_H0_vs_planar": 1.4944704957607453e-14,
+      "late_flat_delta_vs_planar": 8.205837896307627e-10,
+      "late_flat_H0_vs_planar": 3.0762436980234775e-08
+    },
+    "blackman": {
+      "basal_flat_delta_vs_planar": 3.072268259638166e-14,
+      "basal_flat_H0_vs_planar": 1.1978041584412612e-10,
+      "deep_flat_delta_vs_planar": 3.09701680619377e-14,
+      "deep_flat_H0_vs_planar": 2.77964525284194e-10,
+      "early_flat_delta_vs_planar": 6.624277325043178e-12,
+      "early_flat_H0_vs_planar": 1.492265828586039e-14,
+      "late_flat_delta_vs_planar": 1.8394796800066271e-09,
+      "late_flat_H0_vs_planar": 7.855763480871064e-08
+    }
+  },
+  "completed_models": [
+    {
+      "id": "nonflat_ricker_H0",
+      "elapsed_s": 222.40599999998813,
+      "peak_owned_RSS_GiB": 3.824901580810547,
+      "native_sha256": "94ea166414ca2923498ab27f10694dd4ddb7daa6d1d5d52080622926fe39be37"
+    },
+    {
+      "id": "flat_ricker_H0",
+      "elapsed_s": 230.09400000001187,
+      "peak_owned_RSS_GiB": 3.8663291931152344,
+      "native_sha256": "f02b7470d90ed40d76af8fbd3c38ad1e5a6859b9971893deadb201509fc79fa2"
+    },
+    {
+      "id": "flat_ricker_H1",
+      "elapsed_s": 230.1720000000205,
+      "peak_owned_RSS_GiB": 3.8502578735351562,
+      "native_sha256": "4459aafcb3b716dfa131e7b306cf879b7c43771912b5020be30e72de4b19550b"
+    }
+  ],
+  "plot_sha256": {
+    "v5_flat_unfitted_planar.png": "336aaa0018ba5156f4b35a7dd184ccb12813de20aa6de7e9a11c35cef9188385",
+    "v5_native_convolution.png": "df77e6fb0df8bf09807226bcff6bd22de9a907c7c139f5d44f1dd11234f4feaf",
+    "v5_source_flat_blackman_gray.png": "003fa3bf2cd57e90350ff7bfee13c4f4a8bf6ca5800009b073cf5a3c70488e7f",
+    "v5_source_flat_hann_gray.png": "5d58d96ae2ccf09d2389154f8fdfcebcd51e3835ff9ddd8192305fd87129e749"
+  }
+}
