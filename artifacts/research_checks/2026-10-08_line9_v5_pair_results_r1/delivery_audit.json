@@ -1,0 +1,53 @@
+{
+  "status": "PASS_FOUR_NATIVE_GEOMETRY_EVENTS_DIRECT_DFT_AND_INDEPENDENT_INVERSE_NOT_WHOLE_LINE_CERTIFICATION",
+  "audit_script_sha256": "501ce3a8ace2e64d2dcd6637779c3eef134d467af510929d5c8bb3e0f1227df0",
+  "solver_started": 5,
+  "solver_completed": 4,
+  "reused_completed_models": 1,
+  "preserved_failed_geometry_attempts": 1,
+  "independent_DFT_relative_L2": [
+    4.401666526181063e-13,
+    4.4254207624356264e-13,
+    1.6083944339378938e-12,
+    1.5873566364395077e-12
+  ],
+  "independent_inverse_relative_L2": {
+    "hann": 9.573322094585273e-15,
+    "blackman": 9.928916571788043e-15
+  },
+  "basal_changed_voxels": 5606675,
+  "top_added_air_rows": 800,
+  "completed_models": [
+    {
+      "id": "base_H1",
+      "elapsed_s": 228.51499999998487,
+      "peak_owned_RSS_GiB": 3.8541908264160156,
+      "native_sha256": "140b216725531aba8613d3f502e53db2d53e20b31479064b19e69adb848012b2"
+    },
+    {
+      "id": "base_H0",
+      "elapsed_s": 228.54699999999139,
+      "peak_owned_RSS_GiB": 3.8586387634277344,
+      "native_sha256": "ecd0efb0dd92f86a0bf66bca88b72e697630801fb4d315a2b931b5222ae72dcd"
+    },
+    {
+      "id": "top20_H1",
+      "elapsed_s": 323.5469999999914,
+      "peak_owned_RSS_GiB": 5.5005645751953125,
+      "native_sha256": "6e4354b5e237319d6191068ca8a2b4ced65ef930a47f83356f39e8e19921d678"
+    },
+    {
+      "id": "top20_H0",
+      "elapsed_s": 325.4530000000086,
+      "peak_owned_RSS_GiB": 5.488903045654297,
+      "native_sha256": "f7ef8dbc86269f176d8edaf778b4131158957c2d1c36a1bf44a6436f5a3294ad"
+    }
+  ],
+  "plot_sha256": {
+    "existing_v5_bscan_station.png": "e94e7aaba8bf3ee3c4554484a247915b4094fbe744579b7f62d54d09a96ddafc",
+    "v5_pair_blackman_gray.png": "264b198ee55fdf5ed8c3c094c8a104f958d34babd3b405b71012c01ae7154755",
+    "v5_pair_hann_gray.png": "8f811dc55ab52e2a924489ce4fd381a6ac9df7e4aa413281063af393553e4dd9",
+    "v5_planar_observed.png": "16f1f4dc89ccd16b131a08ccca5ece576b175d7779e8347a8da740e807817d2f",
+    "v5_template_shapes.png": "a0118790e3804fa3f916be4a8c025142a9bc7437fff1bcb68b6c2caaa95727c5"
+  }
+}

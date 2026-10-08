@@ -1,4 +1,34 @@
 {
+ "line9_v5_pair_2026_10_08": {
+  "report": "docs/research/2026-10-08_line9_v5_pair_and_planar_diagnostic.md",
+  "results": "artifacts/research_checks/2026-10-08_line9_v5_pair_results_r1",
+  "preparation": "artifacts/research_checks/2026-10-08_line9_v5_pair_prepare_r3",
+  "historical_incomplete_metadata_preparation": "artifacts/research_checks/2026-10-08_line9_v5_pair_prepare_r2",
+  "scripts": [
+   "scripts/line9_v5_pair_controls.py",
+   "scripts/analyze_line9_v5_pair_controls.py",
+   "scripts/audit_line9_v5_pair_delivery.py"
+  ],
+  "status": "FOUR_FP64_COMPLETE_BASAL_PRESENT_TOP_DISTANCE_SMALL_H0_CAUSE_AND_UNFITTED_PLANAR_DISAGREEMENT_UNRESOLVED",
+  "solver_started": 5,
+  "solver_completed": 4,
+  "preserved_geometry_import_failures": 1,
+  "reused_completed_models": 1,
+  "whole_line_resolved": false,
+  "field_validated": false
+ },
+ "line9_v5_planar_green_2026_10_08": {
+  "report": "docs/research/2026-10-08_line9_v5_pair_and_planar_diagnostic.md",
+  "results": "artifacts/research_checks/2026-10-08_line9_v5_planar_green_r1",
+  "scripts": [
+   "scripts/diagnose_line9_v5_planar_green.py",
+   "scripts/audit_line9_v5_planar_green.py"
+  ],
+  "status": "PLANAR_2D_LINE_SOURCE_MATH_AND_INDEPENDENT_QUADRATURE_AUDITED_NOT_NONFLAT_FDTD_AGREEMENT",
+  "no_amplitude_phase_delay_fitting": true,
+  "analytic_model_only": true,
+  "field_validated": false
+ },
  "line9_dense_interbed_wavefield_2026_10_08": {
   "report": "docs/research/2026-10-08_line9_dense_interbed_wavefield_plan.md",
   "results": "artifacts/research_checks/2026-10-08_line9_interbed_wavefield_results_r2",

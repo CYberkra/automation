@@ -1,0 +1,90 @@
+{
+  "status": "ANALYTIC_PLANAR_2D_COMPONENT_DIAGNOSTIC_NOT_NONFLAT_FDTD_CAUSAL_CERTIFICATION",
+  "script_sha256": "1346a83749dfed867ac43fca931a33ee5fcf458ae168cde805a35e509e33d40f",
+  "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+  "prepared_manifest_sha256": "2e2f78767290f72921ce584a5af88f3fe212c1e40ce329e8806d0fdbf3edf45c",
+  "numerical_sha256": "36e9e03830b0953ab177778dc8d96f09b7564312b88c1b03a7f5d02cc7278a95",
+  "tests": {
+    "image_line_source_relative_L2": 5.620965442815018e-15,
+    "equal_media_zero_reflection": true,
+    "slab_closed_form_max_error": 1.1102230246251565e-16
+  },
+  "quadrature_256_512_relative_L2_by_reflected_component": [
+    2.893899863639977e-14,
+    1.0785184644311593e-14,
+    8.902193972636748e-15,
+    4.4769906950193965e-11,
+    2.1037033855395237e-12
+  ],
+  "metrics": {
+    "hann": {
+      "direct_air": {
+        "gate_L2_over_bottom": 0.8920598416006245,
+        "gate_peak_ns": 360.9447771124418
+      },
+      "surface": {
+        "gate_L2_over_bottom": 0.20660128522318566,
+        "gate_peak_ns": 363.4397870924817
+      },
+      "cover_once": {
+        "gate_L2_over_bottom": 0.028881898523806723,
+        "gate_peak_ns": 365.103127079175
+      },
+      "cover_twice": {
+        "gate_L2_over_bottom": 4.125287327148245,
+        "gate_peak_ns": 375.91483699268133
+      },
+      "cover_higher": {
+        "gate_L2_over_bottom": 6.619934140970962e-06,
+        "gate_peak_ns": 383.39986693280105
+      },
+      "bottom_contrast": {
+        "gate_L2_over_bottom": 1.0,
+        "gate_peak_ns": 371.7564870259481
+      },
+      "total_H0_over_bottom": 4.236986464211966
+    },
+    "blackman": {
+      "direct_air": {
+        "gate_L2_over_bottom": 0.3668819249949713,
+        "gate_peak_ns": 360.9447771124418
+      },
+      "surface": {
+        "gate_L2_over_bottom": 0.08492015952545438,
+        "gate_peak_ns": 363.4397870924817
+      },
+      "cover_once": {
+        "gate_L2_over_bottom": 0.011776891328397592,
+        "gate_peak_ns": 365.103127079175
+      },
+      "cover_twice": {
+        "gate_L2_over_bottom": 4.039420087452223,
+        "gate_peak_ns": 375.91483699268133
+      },
+      "cover_higher": {
+        "gate_L2_over_bottom": 2.7057879758566905e-06,
+        "gate_peak_ns": 383.39986693280105
+      },
+      "bottom_contrast": {
+        "gate_L2_over_bottom": 1.0,
+        "gate_peak_ns": 371.7564870259481
+      },
+      "total_H0_over_bottom": 4.062219297357769
+    }
+  },
+  "source_heights_m": [
+    7.974999999999998,
+    8.025000000000002
+  ],
+  "horizontal_offset_m": 1.299999999999983,
+  "cover_thickness_m": 7.300000000000001,
+  "mud_thickness_m": 7.0,
+  "convention": "exp(+iwt),outgoingImky<=0,scalarEz invariantz; TE relative to y-normal interfaces; ideal line current, not3Dpoint dipole/portS21. NativeSFCWunits E/(I*.025m).",
+  "method": "2D Fourier/angular spectrum derived from Helmholtz source equation and Ez/dEzdy continuity. Propagating q=k0sin(theta),evanescent q=k0cosh(u). No ray-only or single-angle approximation; integration tail exponent36.",
+  "source_reading": "Chew Purdue Lecture35 sections35.1-35.2 angular-spectrum method; Lambot2007 sections1-2 global reflection recursion. Both sources discuss3D; scalar2D specialization derived here, not claimed copied from them.",
+  "sources": [
+    "https://engineering.purdue.edu/wcchew/ece604f20/Lecture%20Notes/Lect35.pdf",
+    "https://doi.org/10.1029/2007GL031459"
+  ],
+  "limits": "Planar local-column medium, infinite horizontal extent and exact constitutive continuum, not the actual nonflat voxel model. Quadrature checks do not prove FDTD agreement, material/site accuracy or weak-target error floor. Cover_twice is an analytic path term, not an observed event label."
+}

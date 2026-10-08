@@ -1,0 +1,29 @@
+Traceback (most recent call last):
+  File "E:\line9_basal_pair_20261008_r1\v5_pair_r1\scripts\gprmax_cached_cuda_entry.py", line 47, in <module>
+    runpy.run_module('gprMax',run_name='__main__')
+  File "<frozen runpy>", line 229, in run_module
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\automation_djh\artifacts\local_checks\gprmax_v4_gpu_env2\Lib\site-packages\gprMax\__main__.py", line 23, in <module>
+    gprMax.gprMax.cli()
+  File "E:\automation_djh\artifacts\local_checks\gprmax_v4_gpu_env2\Lib\site-packages\gprMax\gprMax.py", line 372, in cli
+    results = run_main(args)
+              ^^^^^^^^^^^^^^
+  File "E:\automation_djh\artifacts\local_checks\gprmax_v4_gpu_env2\Lib\site-packages\gprMax\gprMax.py", line 427, in run_main
+    results = context.run()
+              ^^^^^^^^^^^^^
+  File "E:\automation_djh\artifacts\local_checks\gprmax_v4_gpu_env2\Lib\site-packages\gprMax\contexts.py", line 106, in run
+    self._run_model(i)
+  File "E:\automation_djh\artifacts\local_checks\gprmax_v4_gpu_env2\Lib\site-packages\gprMax\contexts.py", line 134, in _run_model
+    scene.create_internal_objects(self.model)
+  File "E:\automation_djh\artifacts\local_checks\gprmax_v4_gpu_env2\Lib\site-packages\gprMax\scene.py", line 371, in create_internal_objects
+    self.process_geometry_objects(self.geometry_objects, model.G)
+  File "E:\automation_djh\artifacts\local_checks\gprmax_v4_gpu_env2\Lib\site-packages\gprMax\scene.py", line 228, in process_geometry_objects
+    self.build_grid_objects(objects_to_be_built, grid)
+  File "E:\automation_djh\artifacts\local_checks\gprmax_v4_gpu_env2\Lib\site-packages\gprMax\scene.py", line 122, in build_grid_objects
+    grid_user_object.build(grid)
+  File "E:\automation_djh\artifacts\local_checks\gprmax_v4_gpu_env2\Lib\site-packages\gprMax\user_objects\cmds_geometry\geometry_objects_read.py", line 145, in build
+    material_id_map, material_description = self._build_database_material_map(
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\automation_djh\artifacts\local_checks\gprmax_v4_gpu_env2\Lib\site-packages\gprMax\user_objects\cmds_geometry\geometry_objects_read.py", line 247, in _build_database_material_map
+    raise _legacy_conversion_error(geofile)
+ValueError: GeometryObjectsRead requires keyed HDF5 geometry and a JSON material database. Legacy text material files are no longer accepted by the simulator. Convert the original pair first: python -m gprMax.toolboxes.MaterialDatabase convert-geometry '..\..\geometries\full2d_compact.h5' materials.txt. Use the converted HDF5 file and the printed database name in geometry_objects_read (API: material_database=...). The converter leaves the source files unchanged.

@@ -1,0 +1,198 @@
+{
+  "script_sha256": "559b63bdf1a43c3b6d94703e21290d99550ddeafb05e97e1febbc67468fad328",
+  "contract_sha256": "0e6618da5e524a0acb8ad1390583f526a32d70b69c64f8aa53d9cb78dcd58ac8",
+  "verification_sha256": "c1668f51d0a3bdea84a7d5f0a6c8fc93c6e251f603bbe59b0a2411860629ddc0",
+  "numerical_sha256": "055ba09fb88c88a3bda2abe1664bf74b08bfab42474286922c1d18db50f6ff97",
+  "columns": [
+    "base_H1",
+    "base_H0",
+    "top20_H1",
+    "top20_H0",
+    "old_FP32",
+    "base_delta",
+    "top20_delta",
+    "FP64_minus_FP32",
+    "top20_minus_base_H1",
+    "top20_minus_base_H0",
+    "top20_minus_base_delta"
+  ],
+  "native_sha256": [
+    "140b216725531aba8613d3f502e53db2d53e20b31479064b19e69adb848012b2",
+    "ecd0efb0dd92f86a0bf66bca88b72e697630801fb4d315a2b931b5222ae72dcd",
+    "6e4354b5e237319d6191068ca8a2b4ced65ef930a47f83356f39e8e19921d678",
+    "f7ef8dbc86269f176d8edaf778b4131158957c2d1c36a1bf44a6436f5a3294ad",
+    "b3d8d4a0a8e27482f2b2d2dc0a68a31d898c8a3dd6c5994ae88674000b6ff31c"
+  ],
+  "tones": 501,
+  "frequency_MHz": [
+    20,
+    170
+  ],
+  "step_MHz": 0.3,
+  "AGC": false,
+  "tail_taper": false,
+  "independent_DFT_relative_L2": [
+    4.656182733643668e-13,
+    4.648099565252704e-13,
+    1.2218185267357586e-12,
+    1.2110599978862636e-12,
+    4.5253267647698583e-13
+  ],
+  "independent_inverse_relative_L2": {
+    "hann": 3.393457143050029e-14,
+    "blackman": 3.4419504724231085e-14
+  },
+  "independent_stack_admittance_relative_L2": 2.63100780450882e-16,
+  "metrics": {
+    "hann": {
+      "basal": {
+        "gate_ns": [
+          359.7564870259481,
+          383.7564870259481
+        ],
+        "base_H0_over_delta": 3.355325458225424,
+        "base_delta_over_H1": 0.28030060141280544,
+        "top20_H0_over_delta": 3.3646715541149743,
+        "base_H0_delta_phase_deg": 78.92826418772098,
+        "FP64_minus_FP32_over_base_delta": 0.04668583381870826,
+        "FP64_minus_FP32_over_base_H1": 0.013086067296842216,
+        "top20_H1_change_over_base_H1": 0.004942923381535457,
+        "top20_H0_change_over_base_H0": 0.005464666868943279,
+        "top20_H1_change_over_base_delta": 0.017634365950774025,
+        "top20_H0_change_over_base_delta": 0.018335735866086403,
+        "top20_delta_change_over_base_delta": 0.0009045687592921833,
+        "delta_top_base_correlation": 0.9999996205815209,
+        "base_H1_primary_correlation": 0.24184888867605814,
+        "base_delta_primary_correlation": 0.9577146427410718,
+        "top20_delta_primary_correlation": 0.9578438818773264,
+        "base_delta_full_stack_contrast_correlation": 0.9597791931240377,
+        "base_H0_multiple_proxy_correlation": 0.37180749729658924,
+        "base_delta_peak_ns": 373.4198270126414,
+        "top20_delta_peak_ns": 373.4198270126414,
+        "base_H0_peak_ns": 379.2415169660679,
+        "multiple_proxy_peak_ns": 375.91483699268133,
+        "planar_bottom_unfitted_relative_L2": 0.4545357244464493,
+        "actual_bottom_over_planar_L2": 1.4133258212448965,
+        "planar_bottom_inner_phase_deg": -19.496372971415845,
+        "planar_bottom_correlation": 0.9700606275094443,
+        "planar_H0_unfitted_relative_L2": 0.9895187984717372,
+        "planar_H0_correlation": 0.4590883561369981,
+        "planar_cover_twice_H0_correlation": 0.41118859234036675
+      },
+      "deep": {
+        "gate_ns": [
+          300.0,
+          450.0
+        ],
+        "base_H0_over_delta": 3.891453325302034,
+        "base_delta_over_H1": 0.24575352788644828,
+        "top20_H0_over_delta": 3.900053016359787,
+        "base_H0_delta_phase_deg": 80.08367738447761,
+        "FP64_minus_FP32_over_base_delta": 0.14398921174517076,
+        "FP64_minus_FP32_over_base_H1": 0.03538585676396453,
+        "top20_H1_change_over_base_H1": 0.004838667605414742,
+        "top20_H0_change_over_base_H0": 0.00526665911982844,
+        "top20_H1_change_over_base_delta": 0.01968910740378252,
+        "top20_H0_change_over_base_delta": 0.020494958145088664,
+        "top20_delta_change_over_base_delta": 0.00102943930928607,
+        "delta_top_base_correlation": 0.9999994966689348
+      },
+      "early": {
+        "gate_ns": [
+          0.0,
+          120.0
+        ],
+        "base_H0_over_delta": 3433138230.4746895,
+        "base_delta_over_H1": 2.91278688148168e-10,
+        "top20_H0_over_delta": 3169209942.7230697,
+        "base_H0_delta_phase_deg": 136.2484761190361,
+        "FP64_minus_FP32_over_base_delta": 8863.65504028582,
+        "FP64_minus_FP32_over_base_H1": 2.581793812332351e-06,
+        "top20_H1_change_over_base_H1": 4.31147911322216e-09,
+        "top20_H0_change_over_base_H0": 4.274851937891812e-09,
+        "top20_H1_change_over_base_delta": 14.801903773437042,
+        "top20_H0_change_over_base_delta": 14.676157617595194,
+        "top20_delta_change_over_base_delta": 0.12986707160749292,
+        "delta_top_base_correlation": 0.9962890906902981
+      }
+    },
+    "blackman": {
+      "basal": {
+        "gate_ns": [
+          359.7564870259481,
+          383.7564870259481
+        ],
+        "base_H0_over_delta": 3.0357224150540376,
+        "base_delta_over_H1": 0.30947929693540893,
+        "top20_H0_over_delta": 3.046583758296985,
+        "base_H0_delta_phase_deg": 86.20212665148333,
+        "FP64_minus_FP32_over_base_delta": 0.04822738086526133,
+        "FP64_minus_FP32_over_base_H1": 0.01492537592321727,
+        "top20_H1_change_over_base_H1": 0.005408947776778113,
+        "top20_H0_change_over_base_H0": 0.005990688291928474,
+        "top20_H1_change_over_base_delta": 0.01747757549645399,
+        "top20_H0_change_over_base_delta": 0.01818606672940905,
+        "top20_delta_change_over_base_delta": 0.0009069793695278994,
+        "delta_top_base_correlation": 0.9999996736819532,
+        "base_H1_primary_correlation": 0.47143981299596377,
+        "base_delta_primary_correlation": 0.9727046032557054,
+        "top20_delta_primary_correlation": 0.9728290846200591,
+        "base_delta_full_stack_contrast_correlation": 0.9741070699820269,
+        "base_H0_multiple_proxy_correlation": 0.443053314355435,
+        "base_delta_peak_ns": 373.4198270126414,
+        "top20_delta_peak_ns": 373.4198270126414,
+        "base_H0_peak_ns": 379.2415169660679,
+        "multiple_proxy_peak_ns": 375.91483699268133,
+        "planar_bottom_unfitted_relative_L2": 0.4485715138130546,
+        "actual_bottom_over_planar_L2": 1.4157766271614753,
+        "planar_bottom_inner_phase_deg": -20.384347172048702,
+        "planar_bottom_correlation": 0.9799818544320611,
+        "planar_H0_unfitted_relative_L2": 0.9745755947265053,
+        "planar_H0_correlation": 0.5287117838795834,
+        "planar_cover_twice_H0_correlation": 0.513336722570165
+      },
+      "deep": {
+        "gate_ns": [
+          300.0,
+          450.0
+        ],
+        "base_H0_over_delta": 3.257384773856052,
+        "base_delta_over_H1": 0.29042365894411387,
+        "top20_H0_over_delta": 3.2686315627652407,
+        "base_H0_delta_phase_deg": 85.97637952796241,
+        "FP64_minus_FP32_over_base_delta": 0.1543672904020499,
+        "FP64_minus_FP32_over_base_H1": 0.04483191329985192,
+        "top20_H1_change_over_base_H1": 0.005707623687637997,
+        "top20_H0_change_over_base_H0": 0.006291035370647944,
+        "top20_H1_change_over_base_delta": 0.01965275042807829,
+        "top20_H0_change_over_base_delta": 0.020492322828138478,
+        "top20_delta_change_over_base_delta": 0.0010512464882792476,
+        "delta_top_base_correlation": 0.9999995283746137
+      },
+      "early": {
+        "gate_ns": [
+          0.0,
+          120.0
+        ],
+        "base_H0_over_delta": 8496590194.352032,
+        "base_delta_over_H1": 1.1769427230543742e-10,
+        "top20_H0_over_delta": 7835952059.393202,
+        "base_H0_delta_phase_deg": 141.48181607517307,
+        "FP64_minus_FP32_over_base_delta": 20889.966613775465,
+        "FP64_minus_FP32_over_base_H1": 2.458629419093186e-06,
+        "top20_H1_change_over_base_H1": 1.7536813852754587e-09,
+        "top20_H0_change_over_base_H0": 1.7387140363334075e-09,
+        "top20_H1_change_over_base_delta": 14.900312062122666,
+        "top20_H0_change_over_base_delta": 14.773140631892673,
+        "top20_delta_change_over_base_delta": 0.13113094939267422,
+        "delta_top_base_correlation": 0.9962515388618431
+      }
+    }
+  },
+  "basal_template_peak_ns": 371.7564870259481,
+  "limits": "One v5 station, not the v3 interbed model. Basal replacement changes interactions and lower PML continuation; top extension moves only upper PML. Not a pure reflection/field clean or whole-line/3D/real-antenna validation.",
+  "extra_limits": "FP64-FP32 is a total-field precision diagnostic, not paired FP32 difference error. Normal-incidence1D stack lacks2D spreading/lateral geometry. No inferred physical error floor/unique mechanism from correlation alone.",
+  "planar_numerical_sha256": "36e9e03830b0953ab177778dc8d96f09b7564312b88c1b03a7f5d02cc7278a95",
+  "existing_cache_sha256": "2ffab677af3cdaee9762406595d9331ec36f85c90d6159c56fafd1d74863771b",
+  "existing_review_sha256": "ac166173fc8466a7896b217e6c4ce2dea7a37a89d72df5e752fe4fd58a2ac3ac"
+}

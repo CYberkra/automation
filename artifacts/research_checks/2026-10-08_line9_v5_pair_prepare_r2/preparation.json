@@ -1,0 +1,232 @@
+{
+  "status": "PREPARED_APPROVED_NOT_RUN",
+  "approval_basis": "Standing user autonomous research and SSH simulation authorization; goal 研究明白. Four bounded controls, no whole-line run.",
+  "groups": [
+    {
+      "id": "base_H1",
+      "input": "base_H1/cases/full2d_r0098/profile.in",
+      "input_sha256": "173f00e059e81417644e466c98daa18541110ff507ce883636435e5ca7ebbf6e",
+      "geometry": "base_H1/geometries/full2d_compact.h5",
+      "geometry_sha256": "f948ae805077ea74612aa7e4bd46252a23ea0f7c973841657e5a4cc911a4868c",
+      "material": "base_H1/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        177.95000000000002,
+        39.375,
+        0.0
+      ],
+      "rx_m": [
+        179.25,
+        39.425000000000004,
+        0.0
+      ],
+      "expected_samples": 20352,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 1200.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5
+    },
+    {
+      "id": "base_H0",
+      "input": "base_H0/cases/full2d_r0098/profile.in",
+      "input_sha256": "173f00e059e81417644e466c98daa18541110ff507ce883636435e5ca7ebbf6e",
+      "geometry": "base_H0/geometries/full2d_compact.h5",
+      "geometry_sha256": "129c23bce4b901719c4a7ac0eaee8e7e70c823a56e78eb5a0727c9e87cb98480",
+      "material": "base_H0/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        177.95000000000002,
+        39.375,
+        0.0
+      ],
+      "rx_m": [
+        179.25,
+        39.425000000000004,
+        0.0
+      ],
+      "expected_samples": 20352,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 1200.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5
+    },
+    {
+      "id": "top20_H1",
+      "input": "top20_H1/cases/full2d_r0098/profile.in",
+      "input_sha256": "9d85552e2a7dfc0d3d7efadf9a927d0f44e581a42f53628e07d068fbf3f2fa17",
+      "geometry": "top20_H1/geometries/full2d_compact.h5",
+      "geometry_sha256": "603546a546231fd89e917b4b61c2d5733dcafa1413d41ff119a802581e26f11b",
+      "material": "top20_H1/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "native_shape": [
+        8400,
+        2500,
+        1
+      ],
+      "tx_m": [
+        177.95000000000002,
+        39.375,
+        0.0
+      ],
+      "rx_m": [
+        179.25,
+        39.425000000000004,
+        0.0
+      ],
+      "expected_samples": 20352,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 1200.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 62.5
+    },
+    {
+      "id": "top20_H0",
+      "input": "top20_H0/cases/full2d_r0098/profile.in",
+      "input_sha256": "9d85552e2a7dfc0d3d7efadf9a927d0f44e581a42f53628e07d068fbf3f2fa17",
+      "geometry": "top20_H0/geometries/full2d_compact.h5",
+      "geometry_sha256": "8294fb9041ebb5cd55d0046fcd88250daefea479659320da42205045051548ee",
+      "material": "top20_H0/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "native_shape": [
+        8400,
+        2500,
+        1
+      ],
+      "tx_m": [
+        177.95000000000002,
+        39.375,
+        0.0
+      ],
+      "rx_m": [
+        179.25,
+        39.425000000000004,
+        0.0
+      ],
+      "expected_samples": 20352,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 1200.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 62.5
+    }
+  ],
+  "source_review_sha256": "ac166173fc8466a7896b217e6c4ce2dea7a37a89d72df5e752fe4fd58a2ac3ac",
+  "source_package": "line9_pkg1_v5_d02m_194st",
+  "station_id": "full2d_r0098",
+  "profile_midpoint_m": 198.6,
+  "geometry_diagnostic": {
+    "midpoint_agl_m": 8.000000000000004,
+    "surface_y_m": 31.400000000000002,
+    "boundaries": [
+      {
+        "y_m": 31.400000000000002,
+        "depth_m": 0.0,
+        "above": 0,
+        "below": 1,
+        "time95_ns": 53.54612898655299,
+        "vertical_absorption95_db": -0.0
+      },
+      {
+        "y_m": 24.1,
+        "depth_m": 7.300000000000001,
+        "above": 1,
+        "below": 2,
+        "time95_ns": 215.2765849032508,
+        "vertical_absorption95_db": -11.811035589603401
+      },
+      {
+        "y_m": 17.1,
+        "depth_m": 14.3,
+        "above": 2,
+        "below": 3,
+        "time95_ns": 377.4814114026756,
+        "vertical_absorption95_db": -74.93925462833475
+      }
+    ],
+    "surface": {
+      "y_m": 31.400000000000002,
+      "depth_m": 0.0,
+      "above": 0,
+      "below": 1,
+      "time95_ns": 53.54612898655299,
+      "vertical_absorption95_db": -0.0
+    },
+    "cover_base": {
+      "y_m": 24.1,
+      "depth_m": 7.300000000000001,
+      "above": 1,
+      "below": 2,
+      "time95_ns": 215.2765849032508,
+      "vertical_absorption95_db": -11.811035589603401
+    },
+    "first_sand": {
+      "y_m": 17.1,
+      "depth_m": 14.3,
+      "above": 2,
+      "below": 3,
+      "time95_ns": 377.4814114026756,
+      "vertical_absorption95_db": -74.93925462833475
+    },
+    "basal_sand": {
+      "y_m": 17.1,
+      "depth_m": 14.3,
+      "above": 2,
+      "below": 3,
+      "time95_ns": 377.4814114026756,
+      "vertical_absorption95_db": -74.93925462833475
+    }
+  },
+  "source_native_fp32_sha256": "b3d8d4a0a8e27482f2b2d2dc0a68a31d898c8a3dd6c5994ae88674000b6ff31c",
+  "original_geometry_sha256": "f948ae805077ea74612aa7e4bd46252a23ea0f7c973841657e5a4cc911a4868c",
+  "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+  "script_sha256": "c299cd8ad58fc4881929d2cffd66a42bf2bd7553ae63e581bf93ec2d0c90824d",
+  "source_input_sha256": "173f00e059e81417644e466c98daa18541110ff507ce883636435e5ca7ebbf6e",
+  "dt_s": 5.896635841874211e-11,
+  "expected_samples": 20352,
+  "basal_template_peak_ns": 371.7564870259481,
+  "basal_gate_ns": [
+    359.7564870259481,
+    383.7564870259481
+  ],
+  "early_gate_ns": [
+    0.0,
+    120.0
+  ],
+  "deep_gate_ns": [
+    300.0,
+    450.0
+  ],
+  "spacing_m": [
+    0.025,
+    0.025,
+    0.025
+  ],
+  "pml_cells": [
+    80,
+    80,
+    0,
+    80,
+    80,
+    0
+  ],
+  "pml": "HORIPML",
+  "changed_basal_voxels": 5606675,
+  "retained_interbed_sand_voxels": 0,
+  "snapshot_count": 0,
+  "invariants": "Original210x42.5m v5,2.5cm,1200ns,40A impulse,TMz,source/rx/native timing,materials,interface averaging; FP64 required in all4. Basal connectedID3->ID2 only. Top20adds800air rows above original domain; positions and all original interior voxels unchanged.",
+  "processing": "Exact501tones20-170MHz/0.3MHz; actual source/time/spatial scale .025m; no tail taper,AGC,shift,phase/amplitude fit. Hann/Blackman and complex differences.",
+  "limits": "One v5 station, not the v3 interbed model. Basal replacement changes interactions and lower PML continuation; top extension moves only upper PML. Not a pure reflection/field clean or whole-line/3D/real-antenna validation."
+}

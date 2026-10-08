@@ -1,0 +1,52 @@
+{
+  "status": "PASS_INDEPENDENT_ADAPTIVE_QUADRATURE_AND_ADMITTANCE_NOT_FDTD_AGREEMENT",
+  "audit_script_sha256": "681e76b7107d9d8710e8f78a4701f219372464e66b947ff459dbc4880ec6295d",
+  "selected_frequency_Hz": [
+    20000000.0,
+    44900000.0,
+    95000000.0,
+    145100000.0,
+    170000000.0
+  ],
+  "adaptive_vs_gauss_relative_error_by_component": [
+    [
+      1.9272597939435537e-14,
+      5.244498633748004e-15,
+      7.600747430118386e-15,
+      6.499802948685756e-12,
+      2.2393792163293114e-13
+    ],
+    [
+      8.353521170491008e-15,
+      6.434229425292966e-15,
+      8.790477109056293e-15,
+      2.972493731108595e-11,
+      1.7203784242236048e-12
+    ],
+    [
+      3.600403691752422e-14,
+      1.0490702161604557e-14,
+      1.0811536200442787e-14,
+      1.6469630672302545e-10,
+      4.887774868950796e-12
+    ],
+    [
+      2.6734023830281847e-14,
+      2.093218383151455e-14,
+      4.5439423596212006e-14,
+      9.481316848043468e-10,
+      4.816366763811617e-12
+    ],
+    [
+      1.567454924901039e-14,
+      2.07351876689609e-14,
+      2.400124689755036e-14,
+      1.0788724113006482e-09,
+      1.3746175594599677e-11
+    ]
+  ],
+  "reflection_admittance_absolute_error_max": 5.578801654593729e-16,
+  "finite_tail_exponent_main": 36,
+  "finite_tail_exponent_independent": 40,
+  "note": "Only analytic planar model audited. Especially tiny higher-order component has its own relative quadrature error; no field-case or material validation implied."
+}

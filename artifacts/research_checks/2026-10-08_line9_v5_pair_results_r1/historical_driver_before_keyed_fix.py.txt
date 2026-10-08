@@ -1,0 +1,112 @@
+"""Bounded FP64 baseline/top-distance basal pair for the separate Line9 v5 model."""
+import argparse
+import json
+from pathlib import Path
+import shutil
+
+import h5py
+import numpy as np
+import line9_basal_pair as pair
+import line9_boundary_controls as boundary
+import hs4_station_grid_controls as supervisor
+
+
+def prepare(source,review,out,evidence):
+    assert not out.exists() and not evidence.exists(),'Fresh package/evidence required'
+    r=json.loads(review.read_text('utf-8'));assert r['package']=='line9_pkg1_v5_d02m_194st'
+    row=next(x for x in r['records'] if x['id']=='full2d_r0098')
+    raw=source/'cases'/row['id']/'profile.h5';card=raw.with_suffix('.in')
+    geo=source/'geometries/full2d_compact.h5';db=source/'geometries/line9_research_materials_v1_smoothed.json'
+    for p,digest in [(raw,row['native_sha256']),(card,row['input_sha256']),(geo,r['geometry_sha256']),(db,r['materials_sha256'])]:assert pair.sha(p)==digest
+    with h5py.File(raw) as h:
+        assert h['rxs/rx1/Ez'].dtype==np.float32
+        dt=float(h.attrs['dt']);n=int(h.attrs['Iterations']);tx=h['srcs/src1'].attrs['Position'].tolist();rx=h['rxs/rx1'].attrs['Position'].tolist()
+        np.testing.assert_array_equal(h.attrs['nx_ny_nz'],[8400,1700,1]);assert n==20352
+    with h5py.File(geo) as h:data=h['data'][:];attrs=dict(h.attrs)
+    mask=pair.basal_mask(data);changed=data.copy();changed[mask]=2
+    np.testing.assert_array_equal(data[~mask],changed[~mask]);assert np.all(changed[mask]==2)
+    from diagnose_line9_layer_kinematics import primary_paths
+    from audit_line9_postprocessing import FREQ,inverse,weights
+    materials=json.loads(db.read_text('utf-8'))['materials']
+    paths=primary_paths(row['geometry'],materials);template=paths[row['geometry']['boundaries'].index(row['geometry']['basal_sand'])]
+    z,t=inverse(template,FREQ,weights('hann',501));center=float(t[np.argmax(abs(z))]*1e9)
+    original=card.read_bytes();assert original.count(b'#domain: 210 42.5 inf')==1 and b'#snapshot:' not in original
+    out.mkdir(parents=True);shutil.copyfile(raw,out/'reference_fp32.h5');groups=[]
+    for name,height,base in [('base_H1',42.5,data),('base_H0',42.5,changed),('top20_H1',62.5,data),('top20_H0',62.5,changed)]:
+        root=out/name;gp=root/'geometries';gp.mkdir(parents=True);p=root/'cases/full2d_r0098/profile.in';p.parent.mkdir(parents=True)
+        shutil.copyfile(db,gp/db.name)
+        if height==42.5 and name.endswith('H1'):shutil.copyfile(geo,gp/geo.name)
+        else:
+            new=np.pad(base,((0,0),(0,round((height-42.5)/.025)),(0,0)),constant_values=0)
+            with h5py.File(gp/geo.name,'x') as h:
+                for key,value in attrs.items():h.attrs[key]=value
+                h.create_dataset('data',data=new,compression='gzip',compression_opts=4)
+                h.attrs['shape_nxyz']=new.shape
+            np.testing.assert_array_equal(new[:,:1700],base);assert np.all(new[:,1700:]==0)
+        p.write_bytes(original if height==42.5 else original.replace(b'#domain: 210 42.5 inf',b'#domain: 210 62.5 inf'))
+        groups.append(dict(id=name,input=p.relative_to(out).as_posix(),input_sha256=pair.sha(p),geometry=(gp/geo.name).relative_to(out).as_posix(),geometry_sha256=pair.sha(gp/geo.name),material=(gp/db.name).relative_to(out).as_posix(),material_sha256=pair.sha(db),
+            native_shape=[8400,round(height/.025),1],tx_m=tx,rx_m=rx,expected_samples=n,dt_s=dt,time_window_ns=1200.,source_type='impulse',source_frequency_Hz=1.,domain_height_m=height))
+    from gprMax.hash_cmds_file import get_user_objects
+    for g in groups:
+        p=out/g['input'];get_user_objects(p.read_text('utf-8').splitlines(),input_dir=p.parent)
+    m=dict(status='PREPARED_APPROVED_NOT_RUN',approval_basis='Standing user autonomous research and SSH simulation authorization; goal 研究明白. Four bounded controls, no whole-line run.',
+        groups=groups,source_review_sha256=pair.sha(review),source_package=r['package'],station_id=row['id'],profile_midpoint_m=row['chainage_m'],geometry_diagnostic=row['geometry'],
+        source_native_fp32_sha256=pair.sha(raw),original_geometry_sha256=pair.sha(geo),material_sha256=pair.sha(db),script_sha256=pair.sha(__file__),
+        source_input_sha256=pair.sha(card),dt_s=dt,expected_samples=n,basal_template_peak_ns=center,basal_gate_ns=[center-12,center+12],
+        early_gate_ns=[0.,120.],deep_gate_ns=[300.,450.],spacing_m=[.025]*3,pml_cells=[80,80,0,80,80,0],pml='HORIPML',
+        changed_basal_voxels=int(mask.sum()),retained_interbed_sand_voxels=int(((data==3)&~mask).sum()),snapshot_count=0,
+        invariants='Original210x42.5m v5,2.5cm,1200ns,40A impulse,TMz,source/rx/native timing,materials,interface averaging; FP64 required in all4. Basal connectedID3->ID2 only. Top20adds800air rows above original domain; positions and all original interior voxels unchanged.',
+        processing='Exact501tones20-170MHz/0.3MHz; actual source/time/spatial scale .025m; no tail taper,AGC,shift,phase/amplitude fit. Hann/Blackman and complex differences.',
+        limits='One v5 station, not the v3 interbed model. Basal replacement changes interactions and lower PML continuation; top extension moves only upper PML. Not a pure reflection/field clean or whole-line/3D/real-antenna validation.')
+    pair.save(out/'manifest.json',m);evidence.mkdir(parents=True);pair.save(evidence/'preparation.json',m)
+    import matplotlib
+    matplotlib.use('Agg')
+    import matplotlib.pyplot as plt
+    from matplotlib.colors import ListedColormap
+    plt.rcParams['font.sans-serif']=['Microsoft YaHei','SimHei','DejaVu Sans'];plt.rcParams['axes.unicode_minus']=False
+    fig,axes=plt.subplots(1,2,figsize=(14,5),layout='constrained')
+    for ax,values,label in zip(axes,[data,changed],['原H1：保留底砂','H0：仅底连通砂岩→泥岩']):
+        im=ax.imshow(values[::4,::4,0].T,origin='lower',extent=[0,210,0,42.5],aspect='equal',cmap=ListedColormap(['#deeff8','#d5b577','#a599a6','#ead67b']),vmin=-.5,vmax=3.5)
+        ax.scatter([tx[0],rx[0]],[tx[1],rx[1]],s=18,c=['red','blue']);ax.axhline(40.5,color='red',ls='--',lw=.7)
+        ax.set(xlabel='模型local x / m',ylabel='模型y / m',title=label)
+    cb=fig.colorbar(im,ax=axes,ticks=[0,1,2,3],shrink=.6);cb.ax.set_yticklabels(['空气','粉质黏土','泥岩','砂岩'])
+    fig.suptitle('v5第98道 / 剖面198.6m / AGL8m；红虚线原顶PML内缘；另各加20m空气，不改地下，尚未求解')
+    fig.savefig(evidence/'geometry_pair.png',dpi=140);plt.close(fig)
+    print(json.dumps(dict(basal_gate_ns=m['basal_gate_ns'],changed_voxels=m['changed_basal_voxels'],retained_interbed_sand_voxels=m['retained_interbed_sand_voxels'])))
+
+
+def audit(path,completed=False):
+    c=json.loads(path.read_text('utf-8'));pair.check_files(c);m=c['study_manifest'];rows=[]
+    with h5py.File(Path(c['package'])/'reference_fp32.h5') as ref:
+        for g in c['groups']:
+            row=dict(id=g['id'],input_sha256=pair.sha(g['input']))
+            if completed:
+                p=Path(g['input']).with_suffix('.h5')
+                with h5py.File(p) as h:
+                    assert str(h.attrs['gprMax'])=='4.0.0'
+                    for key in ['dt','Iterations','dx_dy_dz']:np.testing.assert_array_equal(h.attrs[key],ref.attrs[key])
+                    np.testing.assert_array_equal(h.attrs['nx_ny_nz'],g['native_shape'])
+                    x=h['rxs/rx1/Ez'][:];s=h['srcs/src1/excitation/samples'][:]
+                    assert x.dtype==s.dtype==np.float64 and x.shape==s.shape==(g['expected_samples'],) and np.isfinite(x).all() and np.isfinite(s).all()
+                    np.testing.assert_array_equal(s,ref['srcs/src1/excitation/samples'][:].astype(np.float64))
+                    for key in ref['srcs/src1/excitation'].attrs:np.testing.assert_array_equal(h['srcs/src1/excitation'].attrs[key],ref['srcs/src1/excitation'].attrs[key])
+                    for key,pos in [('srcs/src1',g['tx_m']),('rxs/rx1',g['rx_m'])]:np.testing.assert_allclose(h[key].attrs['Position'],pos,atol=1e-12,rtol=0)
+                row.update(native_path=str(p),native_sha256=pair.sha(p),dtype=str(x.dtype),dt_s=g['dt_s'],samples=len(x))
+            rows.append(row)
+    return dict(status='PASS_V5_NATIVE_IDENTITY_NOT_CAUSAL_OR_PHYSICAL_CLASSIFICATION',completed=completed,contract_sha256=pair.sha(path),groups=rows)
+
+
+def freeze(package,out,parent):
+    boundary.audit=audit;boundary.freeze(package,out,parent)
+    p=out/'execution_contract.json';c=json.loads(p.read_text('utf-8'));c['code_identities'][str(Path(__file__).resolve())]=pair.sha(__file__)
+    pair.save(p,c);pair.save(out/'preflight_verification.json',audit(p));print(json.dumps(dict(final_contract_sha256=pair.sha(p),groups=len(c['groups']))))
+
+
+if __name__=='__main__':
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('action',choices=['prepare','freeze','run','verify'])
+    for key in ['source','review','out','evidence','package','parent']:p.add_argument('--'+key,type=Path)
+    a=p.parse_args()
+    if a.action=='prepare':prepare(a.source,a.review,a.out,a.evidence)
+    elif a.action=='freeze':freeze(a.package.resolve(),a.out.resolve(),a.parent.resolve())
+    elif a.action=='run':supervisor.audit=audit;supervisor.run(a.out/'execution_contract.json')
+    else:print(json.dumps(audit(a.out/'execution_contract.json',True)))
