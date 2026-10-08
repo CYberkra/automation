@@ -1,4 +1,62 @@
 {
+ "line9_v401_low_loss_spatial_pairs_2026_10_08": {
+   "report": "docs/research/2026-10-08_low_loss_spatial_pairs.md",
+   "results": "artifacts/research_checks/2026-10-08_v401_spatial_pairs_r2",
+   "scripts": [
+     "scripts/line9_v401_spatial_pairs.py",
+     "scripts/audit_line9_spatial_inputs.py",
+     "scripts/analyze_line9_spatial_pairs.py",
+     "scripts/audit_line9_spatial_results.py"
+   ],
+   "protocol": "configs/research/line9_v401_spatial_diagnostic_v1.json",
+   "status": "SIX_NEW_FP64_TWO_REUSED_FOUR_STATION_FOLLOWING_INDEPENDENT_AUDIT_PASS_1464_LOCAL_RESIDUAL_REMAINS",
+   "solver_version": "4.0.1",
+   "solver_started": 6,
+   "solver_completed": 6,
+   "failed": 0,
+   "reused_native": 2,
+   "elapsed_solver_s": 1330.2990000000282,
+   "chainage_m": [
+     198.6,
+     190.0,
+     180.0,
+     146.4
+   ],
+   "H1_and_delta_peak_ns": [
+     378.40984697272125,
+     361.7764471057884,
+     341.81636726546907,
+     260.3127079174983
+   ],
+   "local_template_residual_ns": [
+     1.6633399866933019,
+     -0.8316699933466793,
+     -0.8316699933466793,
+     -4.990019960079906
+   ],
+   "sparse_positions_total": 262,
+   "sparse_positions_completed": 4,
+   "whole_line_resolved": false,
+   "field_validated": false,
+   "production_materials_changed": false,
+   "next": "Original high-loss strong stripe and independently constrained nonlocal/multiple path attribution"
+ },
+ "line9_spatial_off_nadir_posthoc_2026_10_08": {
+   "report": "docs/research/2026-10-08_low_loss_spatial_pairs.md",
+   "results": "artifacts/research_checks/2026-10-08_v401_spatial_pairs_r2/posthoc_ray_followup.json",
+   "script": "scripts/diagnose_line9_spatial_ray_followup.py",
+   "status": "POSTHOC_CPU_CANDIDATE_OFF_NADIR_MATH_CHECKED_NOT_UNIQUE_PHYSICAL_ATTRIBUTION",
+   "selected_after_observing_residual": true,
+   "new_solves": 0,
+   "reflection_offset_from_midpoint_m": [
+     3.114668361584023,
+     3.2999999980606844
+   ],
+   "candidate_peak_ns": 259.4810379241517,
+   "actual_peak_ns": 260.3127079174983,
+   "unique_physical_attribution": false,
+   "field_validated": false
+ },
  "line9_v401_low_loss_boundaries_2026_10_08": {
   "report": "docs/research/2026-10-08_low_loss_boundary_controls.md",
   "results": "artifacts/research_checks/2026-10-08_v401_low_loss_boundary_r1",

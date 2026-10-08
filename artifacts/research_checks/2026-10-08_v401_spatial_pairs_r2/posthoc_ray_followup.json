@@ -1,0 +1,179 @@
+{
+  "status": "POSTHOC_EXPLORATORY_1464_OFF_NADIR_PATH_NOT_UNIQUE_PHYSICAL_ATTRIBUTION",
+  "script_sha256": "f6648b975f2a00bfef7a0ab2648d18b27d2980db3215b84669f351d9a3e65f67",
+  "ray_helper_sha256": "b9f44ceb2813cfa99fe0740f28f5c57e4ce9aafe83d271960e90c628fcf0a607",
+  "analysis_sha256": "43a14a95e549a4050b655b3bfe5e240d1fc63c4a590ba1ead3bb39d92edf26a5",
+  "package_manifest_sha256": "611d9c7debce2fec4b7fa21d422f216c91329e6918a72100e2a621e660744a47",
+  "selected_after_observing_residual": true,
+  "new_solves": 0,
+  "fit_to_field_data": false,
+  "flat_and_inclined_ray_checks": {
+    "flat_layer_phase_time_error_ns": 3.694822225952521e-13,
+    "inclined_mirror_phase_time_error_ns": 2.842170943040401e-14
+  },
+  "results": [
+    {
+      "stride": 8,
+      "path": {
+        "phase_time95_ns": 259.85532992824744,
+        "nodes_xy_m": [
+          [
+            125.75,
+            36.725
+          ],
+          [
+            128.2000015186904,
+            28.8500001898363
+          ],
+          [
+            128.58176725112082,
+            26.272720906390106
+          ],
+          [
+            129.51466836158403,
+            19.939333545198007
+          ],
+          [
+            128.86086958764938,
+            26.30760869845617
+          ],
+          [
+            128.59999999274956,
+            28.875
+          ],
+          [
+            127.05000000000001,
+            36.800000000000004
+          ]
+        ],
+        "reflection_offset_from_midpoint_m": 3.114668361584023,
+        "path_length_by_material_m": [
+          16.3224652333357,
+          5.1860114426772626,
+          12.803474623161765,
+          0.0
+        ],
+        "segment_materials": [
+          0,
+          1,
+          2,
+          2,
+          1,
+          0
+        ],
+        "successful_starts": 5,
+        "best_minus_worst_converged_time_ns": -0.14026669854979446,
+        "crossing_x_interval_m": [
+          2.0,
+          207.97500000000002
+        ],
+        "wrong_material_length_outside_contact_band_m": 0.0,
+        "near_contact_unresolved_length_m": 0.4990337033978063,
+        "geometry_check": "NO_OUTSIDE_BAND_MISMATCH",
+        "boundary_curve_sample_spacing_m": 0.2
+      },
+      "independent_spectrum_relative_L2": 2.2126807731818705e-14,
+      "windows": {
+        "hann": {
+          "local_peak_ns": 265.3027278775782,
+          "ray_peak_ns": 259.4810379241517,
+          "native_delta_peak_ns": 260.3127079174983,
+          "actual_minus_local_ns": -4.990019960079906,
+          "actual_minus_ray_ns": 0.8316699933466225,
+          "independent_direct_inverse_peak_error_ns": 0.0
+        },
+        "blackman": {
+          "local_peak_ns": 265.3027278775782,
+          "ray_peak_ns": 259.4810379241517,
+          "native_delta_peak_ns": 260.3127079174983,
+          "actual_minus_local_ns": -4.990019960079906,
+          "actual_minus_ray_ns": 0.8316699933466225,
+          "independent_direct_inverse_peak_error_ns": 0.0
+        }
+      }
+    },
+    {
+      "stride": 4,
+      "path": {
+        "phase_time95_ns": 259.6031953018972,
+        "nodes_xy_m": [
+          [
+            125.75,
+            36.725
+          ],
+          [
+            128.69999979987256,
+            28.875
+          ],
+          [
+            128.9766940402878,
+            26.319173510071955
+          ],
+          [
+            129.6999999980607,
+            19.97499999951517
+          ],
+          [
+            129.2000000948201,
+            26.325000023705023
+          ],
+          [
+            129.01261236980494,
+            28.900000000000002
+          ],
+          [
+            127.05000000000001,
+            36.800000000000004
+          ]
+        ],
+        "reflection_offset_from_midpoint_m": 3.2999999980606844,
+        "path_length_by_material_m": [
+          16.526138208329414,
+          5.1525696011745765,
+          12.75492746252868,
+          0.0
+        ],
+        "segment_materials": [
+          0,
+          1,
+          2,
+          2,
+          1,
+          0
+        ],
+        "successful_starts": 5,
+        "best_minus_worst_converged_time_ns": -4.847389218875662,
+        "crossing_x_interval_m": [
+          2.0,
+          207.97500000000002
+        ],
+        "wrong_material_length_outside_contact_band_m": 0.0,
+        "near_contact_unresolved_length_m": 0.4994272608454725,
+        "geometry_check": "NO_OUTSIDE_BAND_MISMATCH",
+        "boundary_curve_sample_spacing_m": 0.1
+      },
+      "independent_spectrum_relative_L2": 2.2704136391561865e-14,
+      "windows": {
+        "hann": {
+          "local_peak_ns": 265.3027278775782,
+          "ray_peak_ns": 259.4810379241517,
+          "native_delta_peak_ns": 260.3127079174983,
+          "actual_minus_local_ns": -4.990019960079906,
+          "actual_minus_ray_ns": 0.8316699933466225,
+          "independent_direct_inverse_peak_error_ns": 0.0
+        },
+        "blackman": {
+          "local_peak_ns": 265.3027278775782,
+          "ray_peak_ns": 259.4810379241517,
+          "native_delta_peak_ns": 260.3127079174983,
+          "actual_minus_local_ns": -4.990019960079906,
+          "actual_minus_ray_ns": 0.8316699933466225,
+          "independent_direct_inverse_peak_error_ns": 0.0
+        }
+      }
+    }
+  ],
+  "limits": "Uses existing five-start phase95 Fermat optimizer and piecewise-linear sampled interfaces. Not independent optimizer/global minimum proof. Multi-start spread, unresolved two-cell contact band, oblique coefficients, spreading, diffraction and full discrete interfaces remain. Only mathematical spectra/length/inverse consistency audited; does not independently certify actual peak path or field model. Original FDTD and predeclared metrics unchanged.",
+  "figure_sha256": "d833c7cc81a7641a8f70c65b69142a84e1811db0c056a6970c47c2fc1376b696",
+  "numerical_sha256": "bcca1cc25a09aeb6d6e70369bf6048a85bf06c4fd8b5f3cb32910deb0bad112f"
+}

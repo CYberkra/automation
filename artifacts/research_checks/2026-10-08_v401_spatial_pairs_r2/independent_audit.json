@@ -1,0 +1,157 @@
+{
+  "status": "PASS_INDEPENDENT_NATIVE_VOXELS_DIRECT_DFT_SNELL_FRESNEL_DIRECT_INVERSE_SPARSE_MASK",
+  "script_sha256": "a8a2dcfe3e2dcff287697f943765b6ccc70886a822cc1400a387fa79f33a58b3",
+  "input_audit": {
+    "status": "PASS_INDEPENDENT_SIX_STATION_CARDS_MAPS_MATERIALS_VOXEL_DEPTHS",
+    "script_sha256": "e40254cf97d5bbcd02ccb900cc4d708cf26cc8e777b7b5eb15459bc66369d37f",
+    "manifest_sha256": "611d9c7debce2fec4b7fa21d422f216c91329e6918a72100e2a621e660744a47",
+    "bottom_replacement_voxels": 5606675,
+    "groups": [
+      {
+        "id": "full2d_r0141_H0",
+        "chainage_m": 190.0,
+        "midpoint_AGL_m": 7.987499999999997,
+        "geometry_byte_identical": true,
+        "material_byte_identical": true,
+        "cover_m": 6.574999999999999,
+        "mud_m": 7.100000000000001
+      },
+      {
+        "id": "full2d_r0141_H1",
+        "chainage_m": 190.0,
+        "midpoint_AGL_m": 7.987499999999997,
+        "geometry_byte_identical": true,
+        "material_byte_identical": true,
+        "cover_m": 6.574999999999999,
+        "mud_m": 7.100000000000001
+      },
+      {
+        "id": "full2d_r0191_H0",
+        "chainage_m": 180.0,
+        "midpoint_AGL_m": 8.012499999999996,
+        "geometry_byte_identical": true,
+        "material_byte_identical": true,
+        "cover_m": 5.475000000000001,
+        "mud_m": 7.274999999999999
+      },
+      {
+        "id": "full2d_r0191_H1",
+        "chainage_m": 180.0,
+        "midpoint_AGL_m": 8.012499999999996,
+        "geometry_byte_identical": true,
+        "material_byte_identical": true,
+        "cover_m": 5.475000000000001,
+        "mud_m": 7.274999999999999
+      },
+      {
+        "id": "full2d_r0359_H0",
+        "chainage_m": 146.4,
+        "midpoint_AGL_m": 7.987500000000001,
+        "geometry_byte_identical": true,
+        "material_byte_identical": true,
+        "cover_m": 2.7250000000000014,
+        "mud_m": 6.550000000000001
+      },
+      {
+        "id": "full2d_r0359_H1",
+        "chainage_m": 146.4,
+        "midpoint_AGL_m": 7.987500000000001,
+        "geometry_byte_identical": true,
+        "material_byte_identical": true,
+        "cover_m": 2.7250000000000014,
+        "mud_m": 6.550000000000001
+      }
+    ],
+    "limits": "Input integrity and voxel geometry audit, not FDTD or field validation."
+  },
+  "analysis_sha256": "43a14a95e549a4050b655b3bfe5e240d1fc63c4a590ba1ead3bb39d92edf26a5",
+  "contract_sha256": "2f3de5dd5377ff5c1a1317ff3db510e4d908b2297383b60a866fea2864fce427",
+  "independent_DFT_relative_L2": [
+    1.0546745794482816e-13,
+    1.0574091443041666e-13,
+    4.311799915975137e-12,
+    1.0495158431288147e-13,
+    1.0514110840679113e-13,
+    4.126150940495094e-12,
+    1.0526602181728603e-13,
+    1.055697315437452e-13,
+    3.799089423023323e-12,
+    1.0507506675464985e-13,
+    1.0510225597245941e-13,
+    2.7951503541242705e-12
+  ],
+  "independent_template_relative_L2": 3.0688253561262214e-14,
+  "direct_inverse_checks": {
+    "hann": [
+      {
+        "chainage_m": 198.6,
+        "max_scaled_metric_error": 3.8426553605752645e-12
+      },
+      {
+        "chainage_m": 190.0,
+        "max_scaled_metric_error": 3.2783133631397336e-12
+      },
+      {
+        "chainage_m": 180.0,
+        "max_scaled_metric_error": 3.0830623488893054e-12
+      },
+      {
+        "chainage_m": 146.4,
+        "max_scaled_metric_error": 2.305947193879943e-12
+      }
+    ],
+    "blackman": [
+      {
+        "chainage_m": 198.6,
+        "max_scaled_metric_error": 3.380896302505878e-12
+      },
+      {
+        "chainage_m": 190.0,
+        "max_scaled_metric_error": 3.2284380954994335e-12
+      },
+      {
+        "chainage_m": 180.0,
+        "max_scaled_metric_error": 3.0480611556115716e-12
+      },
+      {
+        "chainage_m": 146.4,
+        "max_scaled_metric_error": 2.2823556041756625e-12
+      }
+    ]
+  },
+  "native": [
+    {
+      "id": "anchor_H0",
+      "native_sha256": "f9c6de5717ed931e4943ec879521fddd4f487c67d4fd72a8118563d4b53e5ccb"
+    },
+    {
+      "id": "anchor_H1",
+      "native_sha256": "91892657408594b89b029c7184be51104d6c0422c8b48028bab297e6b4a8b06d"
+    },
+    {
+      "id": "full2d_r0141_H0",
+      "native_sha256": "57b9c072b713b98f345aaf838118a81edc4d84a457ad12e0c38dcb847d73ef8e"
+    },
+    {
+      "id": "full2d_r0141_H1",
+      "native_sha256": "5449438e5f2c73c885c6a89ae8b9ea5973ba94772225d29f5270cd2e7b236f71"
+    },
+    {
+      "id": "full2d_r0191_H0",
+      "native_sha256": "bd8c43fce2225ef6e54b8c5380c7252ff7b0aad05b37a2484af9201d6383837f"
+    },
+    {
+      "id": "full2d_r0191_H1",
+      "native_sha256": "6bf2e48c48a59018d43f23c498eac6522eb948768636d340d623a5c75481d210"
+    },
+    {
+      "id": "full2d_r0359_H0",
+      "native_sha256": "b7e80d977a30c979882080937ec29ed562cc7b8cc416156d2d23f10f392e0eee"
+    },
+    {
+      "id": "full2d_r0359_H1",
+      "native_sha256": "246f186ae9861915c831ee03c87c3d7f91fe08863934f25ac2ae353ba2aeef5e"
+    }
+  ],
+  "limits": "Data, approximate template mathematics and processing audit; not independent physical applicability, full line, finite3D or field calibration."
+}

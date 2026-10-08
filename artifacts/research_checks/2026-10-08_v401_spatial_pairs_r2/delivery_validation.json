@@ -1,0 +1,26 @@
+{
+  "status": "PASS_PUBLIC_HASH_BINDINGS_COMPILE_EIGHT_FIGURES_REGISTRY_DERIVED",
+  "scripts_compiled": [
+    "line9_v401_spatial_pairs.py",
+    "audit_line9_spatial_inputs.py",
+    "analyze_line9_spatial_pairs.py",
+    "audit_line9_spatial_results.py",
+    "diagnose_line9_spatial_ray_followup.py"
+  ],
+  "public_json_count_before_delivery": 10,
+  "figure_sha256": {
+    "spatial_pairs_blackman_envelopes.png": "8bb036be572f7aab7725a16219815f0bb1e29d5d70a0c07f6fc7085a7c6c28d7",
+    "spatial_pairs_blackman_sparse_bscan.png": "a0681f9ca13e8a89db77cf59104c05c507a029aa7f4b420ce8a2e785189ecb95",
+    "spatial_pairs_blackman_station_gray.png": "3e7fdfc34cb10f670440c5f9e38581e301633bcdad36d9bf1e446e799e8dddab",
+    "spatial_pairs_geometry_stations.png": "05f2983abf2ab60a452fd12d77fa9926a98c07d3f5384aac3ab2c49ce5a1e0fe",
+    "spatial_pairs_hann_envelopes.png": "520c281bb4040b4d5b5f327c7a3c11bcea8a9b6121774e05e182e96af27fba17",
+    "spatial_pairs_hann_sparse_bscan.png": "5f776154c418c436e6cd8a9dad657a7d2df606e8f25fcc5922d6a586261f0899",
+    "spatial_pairs_hann_station_gray.png": "b3012215ac9247878351a85feef002304fc1fdce7b98ca8640cb2ea395fbba70",
+    "posthoc_off_nadir_geometry_and_arrival.png": "d833c7cc81a7641a8f70c65b69142a84e1811db0c056a6970c47c2fc1376b696"
+  },
+  "analysis_sha256": "43a14a95e549a4050b655b3bfe5e240d1fc63c4a590ba1ead3bb39d92edf26a5",
+  "independent_audit_sha256": "038254f03241b91f6d3e5ac59d861a4862e91b2c3814fb725130fe72287a56f8",
+  "posthoc_sha256": "cd69d6e4b5bec0cb8bddaa811b4e7663f2eea6277652453839ca088f1b9bd117",
+  "new_solves": 0,
+  "limits": "Packaging/identity validation only; independent numerical audit is separately recorded. No new general regression or physical validation."
+}

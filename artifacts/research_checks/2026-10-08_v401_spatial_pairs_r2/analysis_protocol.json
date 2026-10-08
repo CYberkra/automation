@@ -1,0 +1,15 @@
+{
+  "status": "DECLARED_BEFORE_NEW_SPATIAL_RESULTS",
+  "source": "Original v5 low-loss pair, 198.6m reused plus 190/180/146.4m new pairs",
+  "frequency_Hz": {"start": 20000000, "stop": 170000000, "step": 300000, "count": 501},
+  "windows": ["hann", "blackman"],
+  "reference_spatial_scale_m": 0.025,
+  "processing": "Actual source and Yee time offsets; complex H1-H0; no tail taper, AGC, background removal, amplitude/phase/delay fit or per-column normalization",
+  "gates": "Frozen local primary peak +-12ns and +-60ns at new sites; existing anchor basal gate and +-60ns; additionally common 180-450ns for unguided primary-range peaks",
+  "metrics": ["H0_over_delta_L2", "H1_vs_delta_complex_correlation", "delta_vs_local_primary_complex_correlation", "H1_vs_local_primary_complex_correlation", "delta_peak_ns_in_frozen_gate", "H1_peak_ns_in_frozen_gate", "delta_peak_ns_in_common_180_450", "peak_on_gate_edge", "actual_minus_template_peak_ns", "actual_anchor_relative_time_change_minus_model_time_change_ns"],
+  "correlation": "abs(vdot(a,b))/(norm(a)*norm(b)); descriptive phase-shape agreement, not energy fraction or fitted field calibration",
+  "arrival_template": "Same low-loss complex Fresnel/phase95 bistatic local-plane primary; includes neither spreading, full slope/angle spectrum, nonlocal return, internal multiples, nor full discrete-interface theory",
+  "figures": "Shared absolute grayscale signed H1/H0/delta; four configuration columns labelled unequal station separation; additionally physical x-grid sparse B-scan with every uncomputed 0.2m trace masked, no interpolation; per-station envelopes and model peak markers",
+  "physical_pass_threshold": null,
+  "limits": "No blind event detector, finite3D or field certification. Low-loss counterfactual is not production material. Spatial stations change local thickness/slope and relative domain-boundary distances together. Four sites do not establish full-line convergence."
+}
