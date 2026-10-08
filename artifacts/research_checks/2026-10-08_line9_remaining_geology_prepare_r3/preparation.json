@@ -1,0 +1,191 @@
+{
+  "status": "PREPARED_APPROVED_GEOLOGICAL_CONTRASTS_NOT_RUN",
+  "approval_basis": "User persistent objective: 研究明白; autonomous research and SSH simulation authorization.",
+  "parent_manifest_sha256": "13beb7aa1a1a08575d1db040ac7b7a2a54d27bc4d4050569ea21e1b15f8ae30c",
+  "parent_H0_native_sha256": "007d70fd28aa6469d260992386a78afcb7aba5101c05ba981747c47a652baa74",
+  "groups": [
+    {
+      "id": "no_interbed",
+      "input": "no_interbed\\cases\\full2d_c0008\\profile.in",
+      "input_sha256": "390e18d77d68159ac40a705642f69b6331e8a0b3ac57d5c526ecc634c490a3d0",
+      "geometry": "no_interbed\\geometries\\full2d_compact.h5",
+      "geometry_sha256": "508c83850eda2f5e92086b9640a93548e02fcffd85bba4f430ef936a5d34e994",
+      "material": "no_interbed\\geometries\\line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "native_shape": [
+        4400,
+        1600,
+        1
+      ],
+      "domain_m": [
+        110,
+        40,
+        0.025
+      ],
+      "tx_m": [
+        78.6,
+        35.0,
+        0.0
+      ],
+      "rx_m": [
+        79.9,
+        35.0,
+        0.0
+      ],
+      "description": "上覆砂岩夹层→泥岩",
+      "changed_voxel_count": 270303,
+      "added_lower_m": 0
+    },
+    {
+      "id": "homogeneous_cover",
+      "input": "homogeneous_cover\\cases\\full2d_c0008\\profile.in",
+      "input_sha256": "390e18d77d68159ac40a705642f69b6331e8a0b3ac57d5c526ecc634c490a3d0",
+      "geometry": "homogeneous_cover\\geometries\\full2d_compact.h5",
+      "geometry_sha256": "418b10069ea6fc388320efe064d7cdf62160e86c646f0f3f7b95cb30bd326970",
+      "material": "homogeneous_cover\\geometries\\line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "native_shape": [
+        4400,
+        1600,
+        1
+      ],
+      "domain_m": [
+        110,
+        40,
+        0.025
+      ],
+      "tx_m": [
+        78.6,
+        35.0,
+        0.0
+      ],
+      "rx_m": [
+        79.9,
+        35.0,
+        0.0
+      ],
+      "description": "保留地表，地下全为覆盖层",
+      "changed_voxel_count": 3162185,
+      "added_lower_m": 0
+    },
+    {
+      "id": "free_space",
+      "input": "free_space\\cases\\full2d_c0008\\profile.in",
+      "input_sha256": "390e18d77d68159ac40a705642f69b6331e8a0b3ac57d5c526ecc634c490a3d0",
+      "geometry": "free_space\\geometries\\full2d_compact.h5",
+      "geometry_sha256": "976fa12db0128b48cdb7a26006121cc9684f8ddf830ab85c1e51698d0dd5cd94",
+      "material": "free_space\\geometries\\line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "native_shape": [
+        4400,
+        1600,
+        1
+      ],
+      "domain_m": [
+        110,
+        40,
+        0.025
+      ],
+      "tx_m": [
+        78.6,
+        35.0,
+        0.0
+      ],
+      "rx_m": [
+        79.9,
+        35.0,
+        0.0
+      ],
+      "description": "全空气：仅直耦/数值响应",
+      "changed_voxel_count": 4361505,
+      "added_lower_m": 0
+    },
+    {
+      "id": "flat_layers",
+      "input": "flat_layers\\cases\\full2d_c0008\\profile.in",
+      "input_sha256": "390e18d77d68159ac40a705642f69b6331e8a0b3ac57d5c526ecc634c490a3d0",
+      "geometry": "flat_layers\\geometries\\full2d_compact.h5",
+      "geometry_sha256": "6a1debc9995be6274c796ac057bab8712084bb897daceb2f956697e1543c2604",
+      "material": "flat_layers\\geometries\\line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "native_shape": [
+        4400,
+        1600,
+        1
+      ],
+      "domain_m": [
+        110,
+        40,
+        0.025
+      ],
+      "tx_m": [
+        78.6,
+        35.0,
+        0.0
+      ],
+      "rx_m": [
+        79.9,
+        35.0,
+        0.0
+      ],
+      "description": "各层横向拉平，取原中点体素列",
+      "changed_voxel_count": 668434,
+      "added_lower_m": 0
+    },
+    {
+      "id": "bottom40",
+      "input": "bottom40\\cases\\full2d_c0008\\profile.in",
+      "input_sha256": "782d2ecea613239e4c514e8754267fc4229b6a3e08310587c92f4fd2f71aed3a",
+      "geometry": "bottom40\\geometries\\full2d_compact.h5",
+      "geometry_sha256": "aa4f5d624b01c8b759ffb78783e48cb417374ade90bfb84f57241e5e3dc5a1a3",
+      "material": "bottom40\\geometries\\line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "native_shape": [
+        4400,
+        3200,
+        1
+      ],
+      "domain_m": [
+        110,
+        80,
+        0.025
+      ],
+      "tx_m": [
+        78.6,
+        75.0,
+        0.0
+      ],
+      "rx_m": [
+        79.9,
+        75.0,
+        0.0
+      ],
+      "description": "只移远底边40m，原地质不变",
+      "changed_voxel_count": 0,
+      "added_lower_m": 40
+    }
+  ],
+  "case_labels": [
+    "原H0：保留上覆砂岩夹层",
+    "上覆砂岩夹层→泥岩",
+    "保留地表，地下全为覆盖层",
+    "全空气：仅直耦/数值响应",
+    "各层横向拉平，取原中点体素列",
+    "只移远底边40m，原地质不变"
+  ],
+  "reference_is_prior_H0": true,
+  "invariants": "2.5cm,800ns,HORIPML80cells,FP64,relative source/rx/current/Yee timing/material database. First4cases110x40m change declared geological voxels; bottom40 adds40m lower material and translates original interior/source/rx40m up. No snapshots.",
+  "factors": "Remove upper sandstone interbed; remove all subsurface contrast while preserving surface; remove ground entirely; flatten layer stack using midpoint column3170; independently extend bottom40m.",
+  "predefined_gates_ns": {
+    "bottom": [
+      332.31137724550894,
+      356.31137724550894
+    ],
+    "upper": [
+      217.54091816367264,
+      267.32268795741845
+    ]
+  },
+  "snapshot_count": 0,
+  "limits": "Causal responses to declared material/geometry contrasts, including changed PML material continuation and interactions; not pure isolated reflections or measured clean truth. Flat case changes whole-domain geological shape, not only slope at source."
+}

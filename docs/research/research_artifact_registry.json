@@ -1,4 +1,21 @@
 {
+ "line9_interbed_attribution_2026_10_08": {
+  "report": "docs/research/2026-10-08_line9_interbed_attribution.md",
+  "status": "NINE_FP64_CONTROLS_COMPLETE_UPPER_INTERBED_LATERAL_GEOMETRY_SUPPORTED_SINGLE_STATION",
+  "solver_completed": 9,
+  "results": [
+   "artifacts/research_checks/2026-10-08_line9_boundary_results_r1",
+   "artifacts/research_checks/2026-10-08_line9_geology_results_r1"
+  ],
+  "scripts": [
+   "scripts/line9_boundary_controls.py",
+   "scripts/line9_remaining_geology_controls.py",
+   "scripts/analyze_line9_boundary_controls.py",
+   "scripts/audit_line9_control_delivery.py"
+  ],
+  "whole_line_resolved": false,
+  "historical_native_changed": false
+ },
  "line9_basal_pair_execution_2026_10_08": {
   "report": "docs/research/2026-10-08_line9_basal_pair_execution.md",
   "script": "scripts/line9_basal_pair.py",

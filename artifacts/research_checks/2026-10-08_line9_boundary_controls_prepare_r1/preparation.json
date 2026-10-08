@@ -1,0 +1,147 @@
+{
+  "status": "PREPARED_APPROVED_BOUNDARY_CONTROLS_NOT_RUN",
+  "approval_basis": "User persistent objective: 研究明白; existing autonomous research and SSH simulation authorization.",
+  "parent_manifest_sha256": "13beb7aa1a1a08575d1db040ac7b7a2a54d27bc4d4050569ea21e1b15f8ae30c",
+  "parent_H0_native_sha256": "007d70fd28aa6469d260992386a78afcb7aba5101c05ba981747c47a652baa74",
+  "groups": [
+    {
+      "id": "base",
+      "input": "base\\cases\\full2d_c0008\\profile.in",
+      "input_sha256": "390e18d77d68159ac40a705642f69b6331e8a0b3ac57d5c526ecc634c490a3d0",
+      "geometry": "base\\geometries\\full2d_compact.h5",
+      "geometry_sha256": "481f34f9c561bdf0837c63d8b9f78905db05afe0e910667a5a23a7b94e8ef290",
+      "material": "base\\geometries\\line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "padding_x_m": 0,
+      "top_extension_m": 0,
+      "native_shape": [
+        4400,
+        1600,
+        1
+      ],
+      "domain_m": [
+        110,
+        40,
+        0.025
+      ],
+      "tx_m": [
+        78.6,
+        35.0,
+        0.0
+      ],
+      "rx_m": [
+        79.9,
+        35.0,
+        0.0
+      ]
+    },
+    {
+      "id": "top40",
+      "input": "top40\\cases\\full2d_c0008\\profile.in",
+      "input_sha256": "e1c65db50c870e2164daa7b6f1984be62fe973fa7e517c26e7c8540b9e00eb95",
+      "geometry": "top40\\geometries\\full2d_compact.h5",
+      "geometry_sha256": "3553eea8e9af8de54e01041af8ef07da4e59978580efb82836774d17cf2d67f7",
+      "material": "top40\\geometries\\line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "padding_x_m": 0,
+      "top_extension_m": 40,
+      "native_shape": [
+        4400,
+        3200,
+        1
+      ],
+      "domain_m": [
+        110,
+        80,
+        0.025
+      ],
+      "tx_m": [
+        78.6,
+        35.0,
+        0.0
+      ],
+      "rx_m": [
+        79.9,
+        35.0,
+        0.0
+      ]
+    },
+    {
+      "id": "sides40",
+      "input": "sides40\\cases\\full2d_c0008\\profile.in",
+      "input_sha256": "48a306d202e90966f48193fbd185d27b36780836a7272b9dcb5c5d96fa751f76",
+      "geometry": "sides40\\geometries\\full2d_compact.h5",
+      "geometry_sha256": "c0a03e2fb33bab55507012f07344122b5351fa306c1f32b6de66c0622e807b7d",
+      "material": "sides40\\geometries\\line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "padding_x_m": 40,
+      "top_extension_m": 0,
+      "native_shape": [
+        7600,
+        1600,
+        1
+      ],
+      "domain_m": [
+        190,
+        40,
+        0.025
+      ],
+      "tx_m": [
+        118.6,
+        35.0,
+        0.0
+      ],
+      "rx_m": [
+        119.9,
+        35.0,
+        0.0
+      ]
+    },
+    {
+      "id": "joint40",
+      "input": "joint40\\cases\\full2d_c0008\\profile.in",
+      "input_sha256": "e74e83c6f8120e1eaa4602093d1486efddbe442343538e3411ce7eb7735b5537",
+      "geometry": "joint40\\geometries\\full2d_compact.h5",
+      "geometry_sha256": "d373e4b64e8e9b882c5e453f8f978d701257fcbb520997f44d5f6eeaac9180ff",
+      "material": "joint40\\geometries\\line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "padding_x_m": 40,
+      "top_extension_m": 40,
+      "native_shape": [
+        7600,
+        3200,
+        1
+      ],
+      "domain_m": [
+        190,
+        80,
+        0.025
+      ],
+      "tx_m": [
+        118.6,
+        35.0,
+        0.0
+      ],
+      "rx_m": [
+        119.9,
+        35.0,
+        0.0
+      ]
+    }
+  ],
+  "invariants": "Exact original interior voxel map, 2.5cm native grid, dt/800ns,40A impulse,Yee timing,material database,Tx/Rx relative to ground,FP64,HORIPML80cells; snapshots omitted in all4cases.",
+  "factors": "Top extension: only add40m free space; side extension: add40m both sides by constant edge-column geological continuation, translate source/rx40m; joint tests interaction.",
+  "processing": "Exact501tones20-170MHz/0.3MHz,source-spatial/time normalization,no tail taper,Hann+Blackman,complex comparison; no AGC.",
+  "predefined_gates_ns": {
+    "bottom": [
+      332.31137724550894,
+      356.31137724550894
+    ],
+    "upper": [
+      217.54091816367264,
+      267.32268795741845
+    ]
+  },
+  "snapshot_count": 0,
+  "limits": "One selected H0 station; side extension changes exterior continuation and boundary distance together. Top is an air-only distance control. Not whole-line or real-data validation."
+}

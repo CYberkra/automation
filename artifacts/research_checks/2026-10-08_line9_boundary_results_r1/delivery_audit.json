@@ -1,0 +1,47 @@
+{
+  "status": "PASS_NATIVE_EVENTS_AND_INDEPENDENT_TRANSFORM_METRICS_NOT_WHOLE_LINE_VALIDATION",
+  "audit_script_sha256": "1a255ea0b061e3cc106d29247d0c1c42ef8b80e860367f7d3c13c83e39f3c46f",
+  "contract_sha256": "0261cd20802510f8036e91b3577afdcaa061ddde85ed8d897cf200039dc64d0d",
+  "verification_sha256": "767875bfbba1c768b2c6e0920a4733463b514ae9f90d490492d048ced4964256",
+  "solver_started": 4,
+  "solver_completed": 4,
+  "checks": {
+    "hann": {
+      "inverse_relative_L2": 1.4483215778314734e-13
+    },
+    "blackman": {
+      "inverse_relative_L2": 1.4786865667825414e-13
+    }
+  },
+  "completed_models": [
+    {
+      "id": "base",
+      "elapsed_s": 77.73399999999674,
+      "peak_owned_RSS_GiB": 2.0345497131347656,
+      "native_sha256": "007d70fd28aa6469d260992386a78afcb7aba5101c05ba981747c47a652baa74"
+    },
+    {
+      "id": "top40",
+      "elapsed_s": 152.34400000001187,
+      "peak_owned_RSS_GiB": 3.7706298828125,
+      "native_sha256": "5273f2d91fe75cd3cb2fb4ed03b27732a902e77797d0bba426e94bff7197bb3d"
+    },
+    {
+      "id": "sides40",
+      "elapsed_s": 137.09400000001187,
+      "peak_owned_RSS_GiB": 3.3171424865722656,
+      "native_sha256": "96cba534aebed237af58cc11fbc4fde5648a7e1280b55b9fd4ae39c57794ee64"
+    },
+    {
+      "id": "joint40",
+      "elapsed_s": 252.875,
+      "peak_owned_RSS_GiB": 6.287406921386719,
+      "native_sha256": "be097d14fd2a1d4c882bcdb12f8502dc120fcf9e923a46abcb0cf4a1051c4b8a"
+    }
+  ],
+  "plot_sha256": {
+    "boundary_controls_envelopes.png": "c367e91cfb6c49823a6df6f8158a59c73ef1c03d08591fc6ea3836570a88b866",
+    "boundary_controls_grayscale.png": "11392deebf26b4b4abf39bbbc2e3fa4b14ca8104c016983581d9f47cf11b62fd",
+    "local_layer_stack_proxy.png": "23c65b38d9040c1b1d5c23289d53d1023e0b79d896879310ccdb983ad0b53138"
+  }
+}

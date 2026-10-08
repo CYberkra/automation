@@ -1,0 +1,195 @@
+{
+  "script_sha256": "a6fd3346be1132b7f7994f03483c4ada741c0dff305caa7827071ce4024fabd3",
+  "calls_solver": false,
+  "contract_sha256": "0261cd20802510f8036e91b3577afdcaa061ddde85ed8d897cf200039dc64d0d",
+  "verification_sha256": "767875bfbba1c768b2c6e0920a4733463b514ae9f90d490492d048ced4964256",
+  "reference_is_prior_H0": false,
+  "observer_repeat_native_relative_L2": 0.0,
+  "observer_repeat_bitwise_equal": true,
+  "frequency_MHz": [
+    20,
+    170
+  ],
+  "step_MHz": 0.3,
+  "tones": 501,
+  "tail_taper": false,
+  "AGC": false,
+  "source_spatial_scale_m": 0.025,
+  "native_dtype": "float64",
+  "independent_DFT_relative_L2": [
+    1.1753882583673662e-12,
+    1.8349814287085883e-12,
+    1.0779457902559562e-12,
+    1.330045909759302e-12
+  ],
+  "independent_inverse_relative_L2": {
+    "hann": 5.4492883003545906e-14,
+    "blackman": 5.2258826458380844e-14
+  },
+  "metrics": {
+    "hann": {
+      "bottom": {
+        "base": {
+          "L2_over_base": 1.0,
+          "change_L2_over_base": 0.0,
+          "complex_correlation_with_base": 1.0,
+          "envelope_peak_ns": 335.9946773120426
+        },
+        "top40": {
+          "L2_over_base": 1.000034901164619,
+          "change_L2_over_base": 0.0006981913974202061,
+          "complex_correlation_with_base": 0.9999997569858663,
+          "envelope_peak_ns": 335.9946773120426
+        },
+        "sides40": {
+          "L2_over_base": 0.9998960711276879,
+          "change_L2_over_base": 0.003020168277218393,
+          "complex_correlation_with_base": 0.9999954534805573,
+          "envelope_peak_ns": 335.9946773120426
+        },
+        "joint40": {
+          "L2_over_base": 0.9998955964891699,
+          "change_L2_over_base": 0.0030245663557102306,
+          "complex_correlation_with_base": 0.9999954422400722,
+          "envelope_peak_ns": 335.9946773120426
+        },
+        "factor_interaction_L2_over_base": 0.0007117044089546993
+      },
+      "upper": {
+        "base": {
+          "L2_over_base": 1.0,
+          "change_L2_over_base": 0.0,
+          "complex_correlation_with_base": 1.0,
+          "envelope_peak_ns": 229.54091816367264
+        },
+        "top40": {
+          "L2_over_base": 1.000001147088997,
+          "change_L2_over_base": 2.6682209108657174e-05,
+          "complex_correlation_with_base": 0.9999999996447351,
+          "envelope_peak_ns": 229.54091816367264
+        },
+        "sides40": {
+          "L2_over_base": 0.9992559857172562,
+          "change_L2_over_base": 0.0060584556831659985,
+          "complex_correlation_with_base": 0.9999819144213168,
+          "envelope_peak_ns": 229.54091816367264
+        },
+        "joint40": {
+          "L2_over_base": 0.9992559992134484,
+          "change_L2_over_base": 0.00605823450878467,
+          "complex_correlation_with_base": 0.9999819157504541,
+          "envelope_peak_ns": 229.54091816367264
+        },
+        "factor_interaction_L2_over_base": 2.7923609001426637e-05
+      }
+    },
+    "blackman": {
+      "bottom": {
+        "base": {
+          "L2_over_base": 1.0,
+          "change_L2_over_base": 0.0,
+          "complex_correlation_with_base": 0.9999999999999998,
+          "envelope_peak_ns": 335.9946773120426
+        },
+        "top40": {
+          "L2_over_base": 0.9999845632997875,
+          "change_L2_over_base": 0.0007668431321541931,
+          "complex_correlation_with_base": 0.9999997061100777,
+          "envelope_peak_ns": 335.9946773120426
+        },
+        "sides40": {
+          "L2_over_base": 1.0001128944565743,
+          "change_L2_over_base": 0.00294896401516544,
+          "complex_correlation_with_base": 0.9999956587893989,
+          "envelope_peak_ns": 335.9946773120426
+        },
+        "joint40": {
+          "L2_over_base": 1.0001126292899594,
+          "change_L2_over_base": 0.002948663692415041,
+          "complex_correlation_with_base": 0.9999956597388264,
+          "envelope_peak_ns": 335.9946773120426
+        },
+        "factor_interaction_L2_over_base": 0.0007690623323082994
+      },
+      "upper": {
+        "base": {
+          "L2_over_base": 1.0,
+          "change_L2_over_base": 0.0,
+          "complex_correlation_with_base": 1.0,
+          "envelope_peak_ns": 229.54091816367264
+        },
+        "top40": {
+          "L2_over_base": 0.9999937428784544,
+          "change_L2_over_base": 4.410011508132779e-05,
+          "complex_correlation_with_base": 0.99999999905046,
+          "envelope_peak_ns": 229.54091816367264
+        },
+        "sides40": {
+          "L2_over_base": 0.9982056451019262,
+          "change_L2_over_base": 0.0067870594302736715,
+          "complex_correlation_with_base": 0.9999787286586823,
+          "envelope_peak_ns": 229.54091816367264
+        },
+        "joint40": {
+          "L2_over_base": 0.998205649760474,
+          "change_L2_over_base": 0.006787045991216446,
+          "complex_correlation_with_base": 0.9999787287607171,
+          "envelope_peak_ns": 229.54091816367264
+        },
+        "factor_interaction_L2_over_base": 4.429519730061305e-05
+      }
+    }
+  },
+  "native_sha256": [
+    "007d70fd28aa6469d260992386a78afcb7aba5101c05ba981747c47a652baa74",
+    "5273f2d91fe75cd3cb2fb4ed03b27732a902e77797d0bba426e94bff7197bb3d",
+    "96cba534aebed237af58cc11fbc4fde5648a7e1280b55b9fd4ae39c57794ee64",
+    "be097d14fd2a1d4c882bcdb12f8502dc120fcf9e923a46abcb0cf4a1051c4b8a"
+  ],
+  "numerical_sha256": "d05562cc0337b7b0964540da378261c04799b469156639178620f8e0b029349b",
+  "limits": "One selected H0 station; side extension changes exterior continuation and boundary distance together. Top is an air-only distance control. Not whole-line or real-data validation.",
+  "gates_ns": {
+    "bottom": [
+      332.31137724550894,
+      356.31137724550894
+    ],
+    "upper": [
+      217.54091816367264,
+      267.32268795741845
+    ]
+  },
+  "hardware": {
+    "gpu": "NVIDIA GeForce RTX 4090 Laptop GPU",
+    "gpu_uuid": "GPU-71eb4696-9c70-4549-bbef-ec8dc276a4a8",
+    "driver_version": "610.88",
+    "total_VRAM_bytes": 17171480576,
+    "free_VRAM_bytes": 15944646656,
+    "available_RAM_bytes": 52150083584
+  },
+  "local_H0_layer_stack_proxy": {
+    "independent_admittance_relative_L2": 2.543414677831467e-16,
+    "shallow_correlation": 0.99224542114617,
+    "deep_correlation": 0.47950527410184784,
+    "deep_predicted_over_actual_L2": 0.007466843668937546,
+    "deep_multiple_over_actual_L2": 0.0031258393237367714,
+    "media": [
+      0,
+      1,
+      2,
+      3,
+      2
+    ],
+    "thickness_m": [
+      10.274999999999999,
+      7.275,
+      1.1750000000000007,
+      2.2249999999999996,
+      0.0
+    ],
+    "coefficient": [
+      -380.89761578823214,
+      -695.0037080926617
+    ],
+    "limitation": "Local1D plane-wave proxy includes all layer multiples; shallow fit coefficient only. Omits2D spreading/angular spectrum/topography/boundaries; failure is not exclusion of all geological mechanisms."
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "script_sha256": "a6fd3346be1132b7f7994f03483c4ada741c0dff305caa7827071ce4024fabd3",
+  "calls_solver": false,
+  "contract_sha256": "017f2d8dd2c6abb58d3de1154985af0498ad426d31d236ee29a5d695777de62b",
+  "verification_sha256": "332cdbe0e4f2ce2e192328a6ab9fcdf5fff870fd1f1fe315d5be8178139809bf",
+  "reference_is_prior_H0": true,
+  "observer_repeat_native_relative_L2": null,
+  "observer_repeat_bitwise_equal": null,
+  "frequency_MHz": [
+    20,
+    170
+  ],
+  "step_MHz": 0.3,
+  "tones": 501,
+  "tail_taper": false,
+  "AGC": false,
+  "source_spatial_scale_m": 0.025,
+  "native_dtype": "float64",
+  "independent_DFT_relative_L2": [
+    1.1753882583673662e-12,
+    1.1827045669375576e-12,
+    1.1861570606837406e-12,
+    1.6625760347700456e-12,
+    1.1155664919014951e-12,
+    1.1918662015236112e-12
+  ],
+  "independent_inverse_relative_L2": {
+    "hann": 5.4701870294589415e-14,
+    "blackman": 5.249485407113772e-14
+  },
+  "metrics": {
+    "hann": {
+      "bottom": {
+        "base": {
+          "L2_over_base": 1.0,
+          "change_L2_over_base": 0.0,
+          "complex_correlation_with_base": 1.0,
+          "envelope_peak_ns": 335.9946773120426
+        },
+        "no_interbed": {
+          "L2_over_base": 0.06388718360015866,
+          "change_L2_over_base": 0.961425840419353,
+          "complex_correlation_with_base": 0.6244606620320826,
+          "envelope_peak_ns": 332.667997338656
+        },
+        "homogeneous_cover": {
+          "L2_over_base": 0.016063890005258787,
+          "change_L2_over_base": 0.9958673301557603,
+          "complex_correlation_with_base": 0.532566148725205,
+          "envelope_peak_ns": 340.98469727212245
+        },
+        "free_space": {
+          "L2_over_base": 0.016092248274293185,
+          "change_L2_over_base": 0.9973227435198287,
+          "complex_correlation_with_base": 0.1894903663615013,
+          "envelope_peak_ns": 334.3313373253493
+        },
+        "flat_layers": {
+          "L2_over_base": 0.01697518097337936,
+          "change_L2_over_base": 0.9950833911877098,
+          "complex_correlation_with_base": 0.29932221971449474,
+          "envelope_peak_ns": 335.1630073186959
+        },
+        "bottom40": {
+          "L2_over_base": 0.9999847719214257,
+          "change_L2_over_base": 0.00030861386325457466,
+          "complex_correlation_with_base": 0.9999999524963159,
+          "envelope_peak_ns": 335.9946773120426
+        }
+      },
+      "upper": {
+        "base": {
+          "L2_over_base": 1.0,
+          "change_L2_over_base": 0.0,
+          "complex_correlation_with_base": 1.0,
+          "envelope_peak_ns": 229.54091816367264
+        },
+        "no_interbed": {
+          "L2_over_base": 0.8181104463359542,
+          "change_L2_over_base": 0.5637699953474232,
+          "complex_correlation_with_base": 0.8259776149169894,
+          "envelope_peak_ns": 228.709248170326
+        },
+        "homogeneous_cover": {
+          "L2_over_base": 0.019018410372318006,
+          "change_L2_over_base": 0.996530401484889,
+          "complex_correlation_with_base": 0.30976333172931675,
+          "envelope_peak_ns": 217.8975382568197
+        },
+        "free_space": {
+          "L2_over_base": 0.005655902325553564,
+          "change_L2_over_base": 0.999941561918294,
+          "complex_correlation_with_base": 0.013185709043433625,
+          "envelope_peak_ns": 221.22421823020628
+        },
+        "flat_layers": {
+          "L2_over_base": 0.9357824233833699,
+          "change_L2_over_base": 0.6224586383314007,
+          "complex_correlation_with_base": 0.9410290763980901,
+          "envelope_peak_ns": 229.54091816367264
+        },
+        "bottom40": {
+          "L2_over_base": 0.9999995118821308,
+          "change_L2_over_base": 9.776073432905375e-06,
+          "complex_correlation_with_base": 0.9999999999523408,
+          "envelope_peak_ns": 229.54091816367264
+        }
+      }
+    },
+    "blackman": {
+      "bottom": {
+        "base": {
+          "L2_over_base": 1.0,
+          "change_L2_over_base": 0.0,
+          "complex_correlation_with_base": 0.9999999999999998,
+          "envelope_peak_ns": 335.9946773120426
+        },
+        "no_interbed": {
+          "L2_over_base": 0.06648411078778634,
+          "change_L2_over_base": 0.9497999767190983,
+          "complex_correlation_with_base": 0.7834841796214552,
+          "envelope_peak_ns": 332.667997338656
+        },
+        "homogeneous_cover": {
+          "L2_over_base": 0.00960924195775614,
+          "change_L2_over_base": 0.9977977451555935,
+          "complex_correlation_with_base": 0.771370678716663,
+          "envelope_peak_ns": 340.15302727877577
+        },
+        "free_space": {
+          "L2_over_base": 0.00664490726362564,
+          "change_L2_over_base": 0.9989041416001064,
+          "complex_correlation_with_base": 0.17667477161480372,
+          "envelope_peak_ns": 334.3313373253493
+        },
+        "flat_layers": {
+          "L2_over_base": 0.007071056128892497,
+          "change_L2_over_base": 0.9977791152713396,
+          "complex_correlation_with_base": 0.35062102783228916,
+          "envelope_peak_ns": 335.1630073186959
+        },
+        "bottom40": {
+          "L2_over_base": 1.0000062545489101,
+          "change_L2_over_base": 0.0003423919947333834,
+          "complex_correlation_with_base": 0.9999999414039976,
+          "envelope_peak_ns": 335.9946773120426
+        }
+      },
+      "upper": {
+        "base": {
+          "L2_over_base": 1.0,
+          "change_L2_over_base": 0.0,
+          "complex_correlation_with_base": 1.0,
+          "envelope_peak_ns": 229.54091816367264
+        },
+        "no_interbed": {
+          "L2_over_base": 0.8149176174825071,
+          "change_L2_over_base": 0.5665035950229516,
+          "complex_correlation_with_base": 0.8241108917639557,
+          "envelope_peak_ns": 228.709248170326
+        },
+        "homogeneous_cover": {
+          "L2_over_base": 0.01981514053643365,
+          "change_L2_over_base": 0.9987766788636061,
+          "complex_correlation_with_base": 0.14713718305909548,
+          "envelope_peak_ns": 217.8975382568197
+        },
+        "free_space": {
+          "L2_over_base": 0.002264088559236762,
+          "change_L2_over_base": 1.0000327893048213,
+          "complex_correlation_with_base": 0.01459299181303035,
+          "envelope_peak_ns": 221.22421823020628
+        },
+        "flat_layers": {
+          "L2_over_base": 0.9361204639601615,
+          "change_L2_over_base": 0.6194716282503541,
+          "complex_correlation_with_base": 0.9460214561650131,
+          "envelope_peak_ns": 229.54091816367264
+        },
+        "bottom40": {
+          "L2_over_base": 1.0000022064260252,
+          "change_L2_over_base": 1.610659146671043e-05,
+          "complex_correlation_with_base": 0.9999999998732017,
+          "envelope_peak_ns": 229.54091816367264
+        }
+      }
+    }
+  },
+  "native_sha256": [
+    "007d70fd28aa6469d260992386a78afcb7aba5101c05ba981747c47a652baa74",
+    "2a8f532a87e41943404f55dd40d9e9da8f17b85b904ccb4b30ccea230f816dda",
+    "1b1e9f1a7a61f69821410c61aaee7084f775f4f7b475114b79e02ae4c481e123",
+    "7d5349d8fccdd59bdeebf9986e3923d67ecf773534d799f0678d0b084ec2ae36",
+    "34ee9cc304dd4bc2cce9145d4421c4870ae4d4658b0fda31bff1117a1ac896b8",
+    "5f53488162c85bacad140a3a00f64664cf5a91fbcebf9873335028361aace4eb"
+  ],
+  "numerical_sha256": "c3d872acf941a9c990062de1cb7705a39b76bce9b26a98f4d3caccd9d34adb04",
+  "limits": "Causal responses to declared material/geometry contrasts, including changed PML material continuation and interactions; not pure isolated reflections or measured clean truth. Flat case changes whole-domain geological shape, not only slope at source.",
+  "gates_ns": {
+    "bottom": [
+      332.31137724550894,
+      356.31137724550894
+    ],
+    "upper": [
+      217.54091816367264,
+      267.32268795741845
+    ]
+  },
+  "hardware": {
+    "gpu": "NVIDIA GeForce RTX 4090 Laptop GPU",
+    "gpu_uuid": "GPU-71eb4696-9c70-4549-bbef-ec8dc276a4a8",
+    "driver_version": "610.88",
+    "total_VRAM_bytes": 17171480576,
+    "free_VRAM_bytes": 15944646656,
+    "available_RAM_bytes": 52063305728
+  },
+  "local_H0_layer_stack_proxy": {
+    "independent_admittance_relative_L2": 2.543414677831467e-16,
+    "shallow_correlation": 0.99224542114617,
+    "deep_correlation": 0.47950527410184784,
+    "deep_predicted_over_actual_L2": 0.007466843668937546,
+    "deep_multiple_over_actual_L2": 0.0031258393237367714,
+    "media": [
+      0,
+      1,
+      2,
+      3,
+      2
+    ],
+    "thickness_m": [
+      10.274999999999999,
+      7.275,
+      1.1750000000000007,
+      2.2249999999999996,
+      0.0
+    ],
+    "coefficient": [
+      -380.89761578823214,
+      -695.0037080926617
+    ],
+    "limitation": "Local1D plane-wave proxy includes all layer multiples; shallow fit coefficient only. Omits2D spreading/angular spectrum/topography/boundaries; failure is not exclusion of all geological mechanisms."
+  }
+}
