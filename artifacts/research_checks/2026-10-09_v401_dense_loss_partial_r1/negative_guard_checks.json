@@ -1,0 +1,20 @@
+{
+  "status": "PASS_THREE_NEGATIVE_GUARDS_NO_SOLVER",
+  "cases": [
+    {
+      "case": "wrong_native_tx",
+      "status": "REJECTED_AS_REQUIRED"
+    },
+    {
+      "case": "changed_high_DC",
+      "status": "REJECTED_AS_REQUIRED"
+    },
+    {
+      "case": "bulk_gate_closed",
+      "status": "REJECTED_AS_REQUIRED"
+    }
+  ],
+  "auditor_sha256": "fa463d2b623cdc79e2ea42878b2ab21c87fde25a8ced0b5bc888ea3ad05a396e",
+  "generator_sha256": "a915b0dfead5af9f14d890c2ba33696b443b101084a6681dc298db7acb46aa31",
+  "limits": "Input scope and closed-freeze rejection only; no full solver or physics test."
+}

@@ -1,0 +1,68 @@
+{
+  "status": "PARTIAL_NOT_FULL_LINE",
+  "script_sha256": "2f28fe4c7cd6cebc8684116a47858b401b2639d3908130cb7bea6116eef9873c",
+  "analysis_sha256": "e883e424dfbe66115882a91364ce59e5f6016bc294af8c6ac444dc08e2bcc985",
+  "independent_audit_sha256": "5c7beae3a67dc9ec73ad7bf50b909c1f0b6ce851062ff6c2e68a93939bcfd69c",
+  "numerical_sha256": "3706cf769d51d0e5a5d081a56dd5d15c1d86fbdf3fd6bab742352cd686614d2f",
+  "view_gate_ns": [
+    336.46972721224216,
+    374.6081170991351
+  ],
+  "metrics": {
+    "hann": [
+      {
+        "chainage_m": 190.0,
+        "common_gate_ns": [
+          345.6180971390552,
+          374.6081170991351
+        ],
+        "variants": {
+          "high": {
+            "H0_norm": 0.03767887160604208,
+            "delta_norm": 0.030316715538461526,
+            "H1_norm": 0.04934817404465059,
+            "H0_over_delta": 1.242841479916929,
+            "H1_vs_delta_correlation": 0.6470393084770638
+          },
+          "low": {
+            "H0_norm": 0.03679246997460425,
+            "delta_norm": 21.950171228604596,
+            "H1_norm": 21.954358496135278,
+            "H0_over_delta": 0.0016761814562365582,
+            "H1_vs_delta_correlation": 0.9999986143071511
+          }
+        },
+        "low_over_high_delta_norm": 724.0286699513127,
+        "low_over_high_H0_norm": 0.9764748360644726
+      }
+    ],
+    "blackman": [
+      {
+        "chainage_m": 190.0,
+        "common_gate_ns": [
+          345.6180971390552,
+          374.6081170991351
+        ],
+        "variants": {
+          "high": {
+            "H0_norm": 0.01779032304566222,
+            "delta_norm": 0.03152836632789645,
+            "H1_norm": 0.03694037818838826,
+            "H0_over_delta": 0.5642640300687339,
+            "H1_vs_delta_correlation": 0.8778137217467012
+          },
+          "low": {
+            "H0_norm": 0.016603491590412005,
+            "delta_norm": 23.545090379241117,
+            "H1_norm": 23.54808692412323,
+            "H0_over_delta": 0.0007051785031605027,
+            "H1_vs_delta_correlation": 0.9999997594943797
+          }
+        },
+        "low_over_high_delta_norm": 746.7906879275349,
+        "low_over_high_H0_norm": 0.9332878075230007
+      }
+    ]
+  },
+  "limits": "Same predeclared union gate within each high/low pair. Absolute H0 change distinguished from delta growth; no claim H0 is noise,phase-matched clean,continuous H0 or unique mechanism."
+}
