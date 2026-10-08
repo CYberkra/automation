@@ -1,0 +1,108 @@
+{
+  "status": "PASS_POSITIVE_DEBYE_SPAN_LOSS_BOUND_NOT_SITE_MEASUREMENT",
+  "script_sha256": "dd8688db2399cbd1ae9154492fa351c79d18a0ce46adb692e39e691754eadeab",
+  "design_sha256": "956b76adbd1fe242c7d84b9fcc81394d986bac4c62f981753156b26df1b6bea0",
+  "endpoint_MHz": [
+    20,
+    170
+  ],
+  "centre_MHz": 95,
+  "real_endpoint_drop": 3.0,
+  "centre_epsilon_real": 12.0,
+  "cubic_coefficients_descending": [
+    0.006419249483297148,
+    -0.35807971500463426,
+    0.08783947916969481,
+    -1
+  ],
+  "positive_tau_squared_ns2": [
+    55.58642386214161
+  ],
+  "minimizing_tau_ns": 7.455630346398728,
+  "minimum_polarization_epsilon_imag95": 1.2411779573868666,
+  "independent_scalar_minimum": 1.2411779573868669,
+  "mixture_checks": 200,
+  "minimum_mixture_slack": 10.552772990112974,
+  "cases": [
+    {
+      "label": "fixed_tau",
+      "tau_ns": 8.0,
+      "epsilon_infinity": 11.739510249300162,
+      "delta_epsilon": 6.200368247790598,
+      "sigma_DC_S_m": 0.003,
+      "epsilon_real95": 12.0,
+      "epsilon_imag_polarization95": 1.2438960844437534,
+      "epsilon_imag_DC95": 0.5676348500375477,
+      "sigma_polarization95_S_m": 0.006574099974806723,
+      "sigma_effective95_S_m": 0.009574099974806722,
+      "two_way_7m_field_absorption_dB": -63.12821903873135
+    },
+    {
+      "label": "fixed_tau",
+      "tau_ns": 8.0,
+      "epsilon_infinity": 11.739510249300162,
+      "delta_epsilon": 6.200368247790598,
+      "sigma_DC_S_m": 0.0003,
+      "epsilon_real95": 12.0,
+      "epsilon_imag_polarization95": 1.2438960844437534,
+      "epsilon_imag_DC95": 0.05676348500375476,
+      "sigma_polarization95_S_m": 0.006574099974806723,
+      "sigma_effective95_S_m": 0.006874099974806724,
+      "two_way_7m_field_absorption_dB": -45.387176242819805
+    },
+    {
+      "label": "fixed_tau",
+      "tau_ns": 8.0,
+      "epsilon_infinity": 11.739510249300162,
+      "delta_epsilon": 6.200368247790598,
+      "sigma_DC_S_m": 0,
+      "epsilon_real95": 12.0,
+      "epsilon_imag_polarization95": 1.2438960844437534,
+      "epsilon_imag_DC95": 0.0,
+      "sigma_polarization95_S_m": 0.006574099974806723,
+      "sigma_effective95_S_m": 0.006574099974806723,
+      "two_way_7m_field_absorption_dB": -43.4117827577229
+    },
+    {
+      "label": "minimum_positive_Debye",
+      "tau_ns": 7.455630346398728,
+      "epsilon_infinity": 11.721101477750283,
+      "delta_epsilon": 5.802494378823304,
+      "sigma_DC_S_m": 0.003,
+      "epsilon_real95": 12.0,
+      "epsilon_imag_polarization95": 1.2411779573868666,
+      "epsilon_imag_DC95": 0.5676348500375477,
+      "sigma_polarization95_S_m": 0.006559734434759066,
+      "sigma_effective95_S_m": 0.009559734434759066,
+      "two_way_7m_field_absorption_dB": -63.03402718884812
+    },
+    {
+      "label": "minimum_positive_Debye",
+      "tau_ns": 7.455630346398728,
+      "epsilon_infinity": 11.721101477750283,
+      "delta_epsilon": 5.802494378823304,
+      "sigma_DC_S_m": 0.0003,
+      "epsilon_real95": 12.0,
+      "epsilon_imag_polarization95": 1.2411779573868666,
+      "epsilon_imag_DC95": 0.05676348500375476,
+      "sigma_polarization95_S_m": 0.006559734434759066,
+      "sigma_effective95_S_m": 0.0068597344347590666,
+      "two_way_7m_field_absorption_dB": -45.29260110501289
+    },
+    {
+      "label": "minimum_positive_Debye",
+      "tau_ns": 7.455630346398728,
+      "epsilon_infinity": 11.721101477750283,
+      "delta_epsilon": 5.802494378823304,
+      "sigma_DC_S_m": 0,
+      "epsilon_real95": 12.0,
+      "epsilon_imag_polarization95": 1.2411779573868666,
+      "epsilon_imag_DC95": 0.0,
+      "sigma_polarization95_S_m": 0.006559734434759066,
+      "sigma_effective95_S_m": 0.006559734434759066,
+      "two_way_7m_field_absorption_dB": -43.31717250493504
+    }
+  ],
+  "proof": "For each positive Debye pole, loss95=drop20to170*r(tau); all drops are nonnegative. Therefore sum(loss95)>=r_min*sum(drop)=r_min*3. r diverges at tau->0 and tau->infinity; its derivative numerator is the stated cubic in tau^2, which has exactly one positive root. Constant epsilon_infinity cancels from drop and loss; sigmaDC>=0 only adds loss. A positive single pole with epsilon_infinity>=1 attains this lower bound at epsilon_real95=12.",
+  "limits": "Assumes a sum of ordinary Debye poles with positive strengths/times, nonnegative DC and mu_r=1. Not a bound on arbitrary causal materials, field detectability or discrete FDTD error. 7m is this controlled station, not whole-line thickness."
+}

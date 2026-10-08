@@ -1,0 +1,55 @@
+{
+  "status": "PASS_INDEPENDENT_NONFLAT_NATIVE_VOXELS_MATERIALS_DFT_INVERSE",
+  "script_sha256": "b5fbd2f481dd7c7ccc49b9bccd3c5c037470dc8155cc4908d694452448d4bbcc",
+  "analysis_sha256": "4c4f3e6e9c570be0024bdad2e8b6d2dd2d087eac1e89fa4b17289f6f6a065e07",
+  "contract_sha256": "09f1ad819bc1858d995f8d71794a091257eb076739bb6de46049a16ad6fdbbb3",
+  "independent_DFT_relative_L2": [
+    1.0546343128953987e-13,
+    1.0545997475268274e-13,
+    1.0542855545495516e-13,
+    1.0545096410422517e-13,
+    4.661373463866395e-11,
+    9.059345865214208e-12
+  ],
+  "bottom_connected_voxels_changed": 5606675,
+  "direct_inverse_metrics": {
+    "hann": {
+      "basal": {
+        "baseline_H0_over_delta": 3.3554429186525483,
+        "changed_H0_over_delta": 0.29550040497516833,
+        "changed_delta_over_baseline_delta": 7.344795855623845,
+        "changed_H0_over_baseline_H0": 0.6468267237483962,
+        "changed_H1_vs_delta_correlation": 0.9680357518857924,
+        "baseline_H1_vs_delta_correlation": 0.48257368511352633
+      },
+      "deep": {
+        "baseline_H0_over_delta": 3.891739978491605,
+        "changed_H0_over_delta": 0.38966280418204385,
+        "changed_delta_over_baseline_delta": 7.344914059276633,
+        "changed_H0_over_baseline_H0": 0.7354139342893987,
+        "changed_H1_vs_delta_correlation": 0.9424119430341349,
+        "baseline_H1_vs_delta_correlation": 0.4156887065051812
+      }
+    },
+    "blackman": {
+      "basal": {
+        "baseline_H0_over_delta": 3.035748524287291,
+        "changed_H0_over_delta": 0.2566023744947653,
+        "changed_delta_over_baseline_delta": 7.399677373100653,
+        "changed_H0_over_baseline_H0": 0.6254716980809847,
+        "changed_H1_vs_delta_correlation": 0.9794084111873865,
+        "baseline_H1_vs_delta_correlation": 0.6279203041439385
+      },
+      "deep": {
+        "baseline_H0_over_delta": 3.2574413591060147,
+        "changed_H0_over_delta": 0.2862517738498872,
+        "changed_delta_over_baseline_delta": 7.4148697628236055,
+        "changed_H0_over_baseline_H0": 0.651591046003254,
+        "changed_H1_vs_delta_correlation": 0.9729604490646757,
+        "baseline_H1_vs_delta_correlation": 0.602427925274862
+      }
+    }
+  },
+  "physical_change_only": "mudstone sigmaDC .003 -> .0003 S/m",
+  "limits": "One nonflat station, no field calibration, entire-line or 3D certification."
+}

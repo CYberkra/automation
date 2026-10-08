@@ -1,0 +1,83 @@
+{
+  "status": "COMPLETED_NONFLAT_SINGLE_STATION_DC_SENSITIVITY_NOT_SITE_CALIBRATION",
+  "script_sha256": "3e20f7447bd7a2705e245201ec40c5e0b471417b8b12e06ba634e1003a91938b",
+  "contract_sha256": "09f1ad819bc1858d995f8d71794a091257eb076739bb6de46049a16ad6fdbbb3",
+  "verification_sha256": "c4f23466f8e0db34846c592ae39c3c0e9ecb0b6febf532ed826eaa02dde485a8",
+  "numerical_sha256": "dc8cfd03dd317676c2bf4521eb75d41de3cdcb913fe11d9277f3661511bc062b",
+  "native": [
+    {
+      "id": "baseline_H0",
+      "native_sha256": "e8e90acc5d39440a19af71bf48006e7a436777604c54b7dd4bce1206bacae5eb",
+      "independent_DFT_relative_L2": 1.0547416091172281e-13
+    },
+    {
+      "id": "baseline_H1",
+      "native_sha256": "d7b6f2104717a73467612daf36501dcdeb95ab689239f23ce1a6bfc8a3e84cef",
+      "independent_DFT_relative_L2": 1.0546790104895523e-13
+    },
+    {
+      "id": "low_H0",
+      "native_sha256": "5ab2a44865f6002707cca4994bc9ec8cc1dbf9107dad0175bdef92fe3a197109",
+      "independent_DFT_relative_L2": 1.0543132619642085e-13
+    },
+    {
+      "id": "low_H1",
+      "native_sha256": "adf5c7bbd51a9d678c673af000cc6fb114e4855da1c1e1201f1fa84a5901ba7d",
+      "independent_DFT_relative_L2": 1.0546289874013094e-13
+    }
+  ],
+  "metrics": {
+    "hann": {
+      "basal": {
+        "baseline_H0_over_delta": 3.3554429186690973,
+        "changed_H0_over_delta": 0.29550040498029767,
+        "changed_delta_over_baseline_delta": 7.34479585565417,
+        "changed_H0_over_baseline_H0": 0.6468267237591044,
+        "changed_H1_vs_delta_correlation": 0.9680357518840493,
+        "baseline_H1_vs_delta_correlation": 0.4825736851038901
+      },
+      "deep": {
+        "baseline_H0_over_delta": 3.8917399785165525,
+        "changed_H0_over_delta": 0.3896628041852549,
+        "changed_delta_over_baseline_delta": 7.344914059307054,
+        "changed_H0_over_baseline_H0": 0.7354139342937906,
+        "changed_H1_vs_delta_correlation": 0.9424119430322861,
+        "baseline_H1_vs_delta_correlation": 0.4156887064928166
+      }
+    },
+    "blackman": {
+      "basal": {
+        "baseline_H0_over_delta": 3.03574852429537,
+        "changed_H0_over_delta": 0.25660237449711826,
+        "changed_delta_over_baseline_delta": 7.399677373132935,
+        "changed_H0_over_baseline_H0": 0.625471698087784,
+        "changed_H1_vs_delta_correlation": 0.9794084111863198,
+        "baseline_H1_vs_delta_correlation": 0.6279203041374101
+      },
+      "deep": {
+        "baseline_H0_over_delta": 3.257441359116745,
+        "changed_H0_over_delta": 0.2862517738499524,
+        "changed_delta_over_baseline_delta": 7.414869762859696,
+        "changed_H0_over_baseline_H0": 0.6515910460044274,
+        "changed_H1_vs_delta_correlation": 0.9729604490639363,
+        "baseline_H1_vs_delta_correlation": 0.6024279252671504
+      }
+    }
+  },
+  "gate_ns": {
+    "basal": [
+      359.7564870259481,
+      383.7564870259481
+    ],
+    "deep": [
+      300.0,
+      450.0
+    ]
+  },
+  "new_solves": 3,
+  "reused_H0": 1,
+  "AGC": false,
+  "fit": false,
+  "production_materials_changed": false,
+  "limits": "Single nonflat v5 station; not whole-line, finite-3D or field certification. Low sigma is counterfactual, never a selected/calibrated production material."
+}

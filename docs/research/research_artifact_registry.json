@@ -1,4 +1,37 @@
 {
+ "line9_v401_nonflat_material_2026_10_08": {
+  "report": "docs/research/2026-10-08_mudstone_loss_followup.md",
+  "results": "artifacts/research_checks/2026-10-08_v401_nonflat_material_r1",
+  "scripts": [
+   "scripts/line9_v401_nonflat_material.py",
+   "scripts/analyze_line9_v401_nonflat_material.py",
+   "scripts/audit_line9_v401_nonflat_material.py"
+  ],
+  "status": "THREE_NEW_FP64_ONE_REUSED_NONFLAT_DC_CONTROL_BOTTOM_7P34X_NOT_FIELD_CALIBRATION",
+  "solver_version": "4.0.1",
+  "solver_started": 3,
+  "solver_completed": 3,
+  "reused_H0": 1,
+  "whole_line_resolved": false,
+  "field_validated": false,
+  "production_materials_changed": false
+ },
+ "mudstone_positive_debye_loss_bound_2026_10_08": {
+  "report": "docs/research/2026-10-08_mudstone_loss_followup.md",
+  "results": "artifacts/research_checks/2026-10-08_mudstone_loss_bound_r1",
+  "sources": "docs/research/2026-10-08_mudstone_loss_sources.json",
+  "scripts": [
+   "scripts/review_mudstone_loss_bound.py",
+   "scripts/audit_mudstone_loss_bound.py",
+   "scripts/audit_mudstone_material_v401.py"
+  ],
+  "status": "POSITIVE_DEBYE_REAL_SPAN_LOSS_BOUND_PROVED_INDEPENDENT_STURM_AND_SCALAR_AUDIT",
+  "minimum_polarization_epsilon_imag95": 1.2411779573868666,
+  "scope": "Positive ordinary Debye sums, real20to170MHz drop3, real95MHz12; not arbitrary causal materials",
+  "calls_solver": false,
+  "field_validated": false,
+  "production_materials_changed": false
+ },
  "line9_v401_version_controls_2026_10_08": {
   "report": "docs/research/2026-10-08_gprmax_v401_upgrade_and_mesh.md",
   "results": "artifacts/research_checks/2026-10-08_v401_version_controls_r1",

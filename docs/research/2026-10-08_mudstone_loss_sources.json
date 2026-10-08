@@ -1,0 +1,63 @@
+{
+  "schema": "material-source-reading-ledger/1",
+  "date": "2026-10-08",
+  "scope": "Recheck DC-versus-polarization loss semantics and joint-spectrum support; no site fitting or production parameter replacement",
+  "sources": [
+    {
+      "id": "romhild2019_rechecked",
+      "title": "Anisotropic complex electrical conductivity of black shale and mudstone from the Moffat Shale Group (Ireland)",
+      "doi": "10.1002/nsg.12073",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/nsg.12073",
+      "reading_scope": "Publisher online material/conditioning, frequency limits, Table2 intact LA/OL sigma0 rows and anisotropy discussion; not full-paper reproduction",
+      "sample_state": "Intact ordinary mudstone, NaCl-saturated oriented plugs; black shale and crushed rows excluded",
+      "intact_mudstone_sigma0_S_m": [0.000815, 0.00173, 0.000490, 0.00883, 0.00171, 0.00834, 0.00194],
+      "adopted": "Confirms the original 3mS/m choice used a DC-scale parameter rather than total MHz dielectric loss",
+      "limits": "No20-170MHz dielectric spectrum; diagnostic0.3mS/m lies below these seven samples and is not a literature-calibrated site default"
+    },
+    {
+      "id": "wagner2013_rechecked",
+      "title": "Dielectric relaxation behavior of Callovo-Oxfordian clay rock: A hydraulic-mechanical-electromagnetic coupling approach",
+      "doi": "10.1002/jgrb.50343",
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/jgrb.50343",
+      "pdf_url": "https://d-nb.info/113155387X/34",
+      "pdf_sha256": "149888ddd6e38c669c1b27455d6dd4f213353b215d4b3923c7e695243ba619e1",
+      "reading_scope": "Publisher Eq33, section3.5/4 and Table4; cached PDF printed4737-4738 relevant text and parameter units rechecked; not full-paper reproduction",
+      "sample_state": "French COx clay rock with varied controlled water saturation, not site red mudstone",
+      "band_Hz": [1000000, 10000000000],
+      "adopted": "Apparent DC parameter is not the complete dielectric loss; fractional relaxation processes must be retained when interpreting it",
+      "limits": "Did not reconstruct a full numeric spectrum from incompletely specified GDR exponents or convert it to ordinary Debye; no parameter transplant or site-loss claim"
+    },
+    {
+      "id": "josh_clennell2015",
+      "title": "Broadband electrical properties of clays and shales: Comparative investigations of remolded and preserved samples",
+      "doi": "10.1190/GEO2013-0458.1",
+      "url": "https://doi.org/10.1190/GEO2013-0458.1",
+      "retrieved_primary_paper_copy": "https://pdfs.semanticscholar.org/be0c/cba00e76bc4d368212b232d7bc4834c4627c.pdf",
+      "pdf_sha256": "531d04a62a21e1f741e97d65e559734dc4e17b5d12a4108aeaab067fd4e7bf2a",
+      "cache_ignored": "artifacts/research_sources/2026-10-08_mudstone_loss_followup_r1/josh_clennell2015.pdf",
+      "reading_scope": "Original paper D129-D132 dielectric-loss definitions, measurement fixtures and conditioning; D138-D141 preserved/remolded comparisons and Fig13/caption; not all15pages or experiment reproduction",
+      "preserved_core_Fig13_frequency_Hz": [10000000, 100000000],
+      "cuttings_image_log_frequency_Hz": [10000000, 3000000000],
+      "adopted": "Separate ohmic/polarization loss and sample states; maintain orientation and specimen provenance for jointly fitting complex spectra",
+      "limits": "Preserved-core plot does not extend to170MHz; paste is not intact rock; no digitized curve or fitted site material is claimed"
+    },
+    {
+      "id": "fam1998_access_recheck",
+      "doi": "10.1139/t98-014",
+      "url": "https://cdnsciencepub.com/doi/10.1139/t98-014",
+      "reading_scope": "Publisher fulltext access again failed; author-uploaded abstract/search excerpts only",
+      "adopted": "No new numeric parameters, fit or fulltext claim"
+    },
+    {
+      "id": "loewer2017_auxiliary",
+      "title": "Ultra-broad-band electrical spectroscopy of soils and sediments-a combined permittivity and conductivity model",
+      "doi": "10.1093/gji/ggx242",
+      "url": "https://academic.oup.com/gji/article/210/3/1360/3861100",
+      "reading_scope": "Primary paper Eq11 and related CPCM/DC definitions in indexed author-PDF excerpts, publisher entry checked; auxiliary excerpts, not full-paper reading",
+      "adopted": "Definition support only, no soil parameters adopted as mudstone"
+    }
+  ],
+  "conclusion": "Current spectrum is an explicit research combination, not a joint fit to one specimen/state. Actual gprMax4.0.1 API adds the specified DC and Debye terms once each. Positive-Debye real-span loss bound is newly derived mathematics, not a literature-measured site property.",
+  "field_material_spectrum_obtained": false,
+  "production_materials_changed": false
+}

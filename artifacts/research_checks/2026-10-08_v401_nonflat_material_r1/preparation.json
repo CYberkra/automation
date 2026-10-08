@@ -1,0 +1,231 @@
+{
+  "status": "PREPARED_APPROVED_NOT_RUN",
+  "approval_basis": "User continues authorized autonomous research after two-host V4.0.1 setup; three bounded nonflat DC-loss controls, reusing completed H0.",
+  "groups": [
+    {
+      "id": "baseline_H1",
+      "input": "baseline_H1/cases/full2d_r0098/profile.in",
+      "input_sha256": "b36ad56cfb331593f7aa80377f9694aa069fb50d5c6da74387f1898080de5d0d",
+      "geometry": "baseline_H1/geometries/full2d_compact.h5",
+      "geometry_sha256": "f948ae805077ea74612aa7e4bd46252a23ea0f7c973841657e5a4cc911a4868c",
+      "material": "baseline_H1/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        177.95000000000002,
+        39.375,
+        0.0
+      ],
+      "rx_m": [
+        179.25,
+        39.425000000000004,
+        0.0
+      ],
+      "expected_samples": 20352,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 1200.0,
+      "source_type": "ricker",
+      "source_frequency_Hz": 100000000.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 40.0,
+      "source_band_min_over_max": 0.1044680664254774
+    },
+    {
+      "id": "low_H0",
+      "input": "low_H0/cases/full2d_r0098/profile.in",
+      "input_sha256": "2f8582fa8ac833cbe0b2a6b93e04a2a422094cddb762cbdc4a59b444fff41720",
+      "geometry": "low_H0/geometries/full2d_compact.h5",
+      "geometry_sha256": "c1e308ff73119f2c366d42efcf3526646d5fe8e76c6a692a7113a5b1148985a6",
+      "material": "low_H0/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "91acff1d63bbe7483d218a116423446a896ca14ace50f06579f8c438654a7717",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        177.95000000000002,
+        39.375,
+        0.0
+      ],
+      "rx_m": [
+        179.25,
+        39.425000000000004,
+        0.0
+      ],
+      "expected_samples": 20352,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 1200.0,
+      "source_type": "ricker",
+      "source_frequency_Hz": 100000000.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 40.0,
+      "source_band_min_over_max": 0.1044680664254774
+    },
+    {
+      "id": "low_H1",
+      "input": "low_H1/cases/full2d_r0098/profile.in",
+      "input_sha256": "236bf75b0b4ae18f03f4c9de816cf2aed40aecd100979e3f7de85ccdd193fc35",
+      "geometry": "low_H1/geometries/full2d_compact.h5",
+      "geometry_sha256": "f948ae805077ea74612aa7e4bd46252a23ea0f7c973841657e5a4cc911a4868c",
+      "material": "low_H1/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "91acff1d63bbe7483d218a116423446a896ca14ace50f06579f8c438654a7717",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        177.95000000000002,
+        39.375,
+        0.0
+      ],
+      "rx_m": [
+        179.25,
+        39.425000000000004,
+        0.0
+      ],
+      "expected_samples": 20352,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 1200.0,
+      "source_type": "ricker",
+      "source_frequency_Hz": 100000000.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 40.0,
+      "source_band_min_over_max": 0.1044680664254774
+    }
+  ],
+  "parent_manifest_sha256": "d430fa9f98955bf6c6577e3042c4cd6f824912c5dce5f95143f74cebb20a216c",
+  "reference_impulse_H0_sha256": "ecd0efb0dd92f86a0bf66bca88b72e697630801fb4d315a2b931b5222ae72dcd",
+  "script_sha256": "c258fe2f6e4e9c0330307867183f7331bfe40086ff4c5e42bfe12bf596bb0954",
+  "flat_column_index": 7144,
+  "flat_interfaces_y_m": [
+    17.1,
+    24.1,
+    31.4
+  ],
+  "geometry_diagnostic": {
+    "midpoint_agl_m": 8.000000000000004,
+    "surface_y_m": 31.400000000000002,
+    "boundaries": [
+      {
+        "y_m": 31.400000000000002,
+        "depth_m": 0.0,
+        "above": 0,
+        "below": 1,
+        "time95_ns": 53.54612898655299,
+        "vertical_absorption95_db": -0.0
+      },
+      {
+        "y_m": 24.1,
+        "depth_m": 7.300000000000001,
+        "above": 1,
+        "below": 2,
+        "time95_ns": 215.2765849032508,
+        "vertical_absorption95_db": -11.811035589603401
+      },
+      {
+        "y_m": 17.1,
+        "depth_m": 14.3,
+        "above": 2,
+        "below": 3,
+        "time95_ns": 377.4814114026756,
+        "vertical_absorption95_db": -74.93925462833475
+      }
+    ],
+    "surface": {
+      "y_m": 31.400000000000002,
+      "depth_m": 0.0,
+      "above": 0,
+      "below": 1,
+      "time95_ns": 53.54612898655299,
+      "vertical_absorption95_db": -0.0
+    },
+    "cover_base": {
+      "y_m": 24.1,
+      "depth_m": 7.300000000000001,
+      "above": 1,
+      "below": 2,
+      "time95_ns": 215.2765849032508,
+      "vertical_absorption95_db": -11.811035589603401
+    },
+    "first_sand": {
+      "y_m": 17.1,
+      "depth_m": 14.3,
+      "above": 2,
+      "below": 3,
+      "time95_ns": 377.4814114026756,
+      "vertical_absorption95_db": -74.93925462833475
+    },
+    "basal_sand": {
+      "y_m": 17.1,
+      "depth_m": 14.3,
+      "above": 2,
+      "below": 3,
+      "time95_ns": 377.4814114026756,
+      "vertical_absorption95_db": -74.93925462833475
+    }
+  },
+  "dt_s": 5.896635841874211e-11,
+  "expected_samples": 20352,
+  "basal_gate_ns": [
+    359.7564870259481,
+    383.7564870259481
+  ],
+  "deep_gate_ns": [
+    300.0,
+    450.0
+  ],
+  "early_gate_ns": [
+    0.0,
+    120.0
+  ],
+  "snapshot_count": 0,
+  "invariants": "210x42.5m,2.5cm,1200ns,FP64,source/rx positions and40A amplitude,complete material spectra and interface averaging,HORIPML80cells. Nonflat retains exact originalH0 voxels; flatH1 repeats midpoint column,flatH0 changes only bottom sandstone to mud.",
+  "processing": "Exact501tones20-170MHz/.3MHz,actual-source/Yee-time/spatial normalization,Hann+Blackman,noAGC/tail taper/time alignment/amplitude or phase fit.",
+  "limits": "Single nonflat v5 station; not whole-line, finite-3D or field certification. Low sigma is counterfactual, never a selected/calibrated production material.",
+  "generator_sha256": "82d02979f06126314aae7e76e3474d403d9bdfcafe88f33ff36f23d2b170a41d",
+  "pair_manifest_sha256": "2e2f78767290f72921ce584a5af88f3fe212c1e40ce329e8806d0fdbf3edf45c",
+  "reused_H0": {
+    "native_sha256": "e8e90acc5d39440a19af71bf48006e7a436777604c54b7dd4bce1206bacae5eb",
+    "verification_sha256": "a8c13891daef1f1b98e43d5bae1c18a3c3d43ece76a5d15e6892bf7a9b564abe",
+    "contract_sha256": "acde6b83986e1e6e9f3e9c8a42ccfab61b1e325b89cdc7ced1aca3778e82e1bf",
+    "group": {
+      "id": "nonflat_ricker_H0",
+      "input": "E:\\line9_basal_pair_20261008_r1\\v401_controls_r1\\execution\\prepared\\nonflat_ricker_H0\\cases\\full2d_r0098\\profile.in",
+      "input_sha256": "0f0c233d70be1738935805b81ed37cdf3e89fa4a8adccf6d6d40560283122d17",
+      "geometry": "nonflat_ricker_H0/geometries/full2d_compact.h5",
+      "geometry_sha256": "c1e308ff73119f2c366d42efcf3526646d5fe8e76c6a692a7113a5b1148985a6",
+      "material": "nonflat_ricker_H0/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        177.95000000000002,
+        39.375,
+        0.0
+      ],
+      "rx_m": [
+        179.25,
+        39.425000000000004,
+        0.0
+      ],
+      "expected_samples": 20352,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 1200.0,
+      "source_type": "ricker",
+      "source_frequency_Hz": 100000000.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 40.0,
+      "source_band_min_over_max": 0.1044680664254774
+    }
+  },
+  "diagnostic": "Only mudstone DC conductivity differs between baseline and low pairs; same original nonflat geometry, poles, source, heights, domain and numerical parameters."
+}
