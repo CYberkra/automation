@@ -1,0 +1,30 @@
+{
+  "status": "PASS_FROZEN_JSON_OFFICIAL_V401_SPECTRUM_COMPONENTS",
+  "script_sha256": "ea7d8b5444ac8de1f8a6d8f644ff5bba7dc0dacc8b62e0482995af191918dd33",
+  "materials_py_sha256": "75f22bc9c9b7187723223ade373914a53959a67e6a0041890ea09640f6fa0a7e",
+  "version": "4.0.1",
+  "tones": 501,
+  "rows": [
+    {
+      "material_sha256": "f764195e2bc38046c9d6ac7f4f6c8d93a13e1484ed6ea2848c9950132be89777",
+      "sigma_DC_S_m": 0.003,
+      "official_relative_L2": 1.8134358720560993e-18,
+      "epsilon_real95": 12.0,
+      "polarization_loss95": 0.12438960844437535,
+      "DC_loss95": 0.5676348496528926,
+      "total_epsilon_loss95": 0.6920244580972679,
+      "effective_sigma95_S_m": 0.0036574099979261635
+    },
+    {
+      "material_sha256": "fd87d9736294ffe6ae94e9a589a5b2cbebb4b935b15ba3c60ab736c6775543f5",
+      "sigma_DC_S_m": 0.0003,
+      "official_relative_L2": 1.1183555902786313e-18,
+      "epsilon_real95": 12.0,
+      "polarization_loss95": 0.12438960844437535,
+      "DC_loss95": 0.05676348496528925,
+      "total_epsilon_loss95": 0.1811530934096646,
+      "effective_sigma95_S_m": 0.0009574099979261632
+    }
+  ],
+  "scope": "Checks actual formula includes exactly the specified DC plus Debye terms. Does not certify independent physical origin or site representativeness of their chosen values."
+}

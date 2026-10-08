@@ -1,0 +1,151 @@
+{
+  "status": "PASS_INDEPENDENT_FACTORIAL_NATIVE_MATERIAL_VOXEL_DFT_INVERSE",
+  "script_sha256": "c206d5ab149be9fa36a2a8b3efa02004d85aac7ee69cbf4e5a4b19620dfcb111",
+  "input_audit": {
+    "status": "PASS_INDEPENDENT_FACTORIAL_INPUT_MATERIAL_VOXEL_AUDIT",
+    "script_sha256": "b9feab5a4733cce7a6f4797984bf6c7307f15419182171e3753d25001433c4ac",
+    "manifest_sha256": "7bf8e5cd96cfad96596eaa2e75f710d8503b654f76dc2641f37b0c4382ac3068",
+    "new_groups": [
+      {
+        "id": "span03_dc003_H0",
+        "epsilon_real_20_95_170": [
+          12.282327718336363,
+          12.0,
+          11.982327718336363
+        ],
+        "epsilon_imag_polarization_20_95_170": [
+          0.31001406545398047,
+          0.12438960844437535,
+          0.07157995102956284
+        ],
+        "sigma_DC_S_m": 0.003,
+        "epsilon_infinity": 11.973951024930017,
+        "delta_epsilon": 0.6200368247790599,
+        "tau_s": 8e-09
+      },
+      {
+        "id": "span03_dc003_H1",
+        "epsilon_real_20_95_170": [
+          12.282327718336363,
+          12.0,
+          11.982327718336363
+        ],
+        "epsilon_imag_polarization_20_95_170": [
+          0.31001406545398047,
+          0.12438960844437535,
+          0.07157995102956284
+        ],
+        "sigma_DC_S_m": 0.003,
+        "epsilon_infinity": 11.973951024930017,
+        "delta_epsilon": 0.6200368247790599,
+        "tau_s": 8e-09
+      },
+      {
+        "id": "span03_dc0003_H0",
+        "epsilon_real_20_95_170": [
+          12.282327718336363,
+          12.0,
+          11.982327718336363
+        ],
+        "epsilon_imag_polarization_20_95_170": [
+          0.31001406545398047,
+          0.12438960844437535,
+          0.07157995102956284
+        ],
+        "sigma_DC_S_m": 0.0003,
+        "epsilon_infinity": 11.973951024930017,
+        "delta_epsilon": 0.6200368247790599,
+        "tau_s": 8e-09
+      },
+      {
+        "id": "span03_dc0003_H1",
+        "epsilon_real_20_95_170": [
+          12.282327718336363,
+          12.0,
+          11.982327718336363
+        ],
+        "epsilon_imag_polarization_20_95_170": [
+          0.31001406545398047,
+          0.12438960844437535,
+          0.07157995102956284
+        ],
+        "sigma_DC_S_m": 0.0003,
+        "epsilon_infinity": 11.973951024930017,
+        "delta_epsilon": 0.6200368247790599,
+        "tau_s": 8e-09
+      }
+    ],
+    "reused_native_count": 4,
+    "bottom_connected_voxels": 5606675,
+    "limits": "Mechanism diagnostic, not site confidence interval or fitted material. H0 is geological response, delta only defined bottom replacement. One station; no whole-line, 3D or field validation. Formal materials unchanged."
+  },
+  "analysis_sha256": "72e13cb502c576c5ba155573bda805c010310999e72b918053aafdd77ccd9126",
+  "contract_sha256": "f32d4f242cd51b68a4c4ce618c3d4da5e3465c354ea07bd36002152e7e32ac36",
+  "independent_DFT_relative_L2": [
+    1.0546343128953987e-13,
+    1.0545997475268274e-13,
+    4.661373463866395e-11,
+    1.0542855545495516e-13,
+    1.0545096410422517e-13,
+    9.059345865214208e-12,
+    1.0544445544644248e-13,
+    1.0539721058102169e-13,
+    4.548995823336337e-12,
+    1.0546745794482816e-13,
+    1.0574091443041666e-13,
+    4.311799915975137e-12
+  ],
+  "direct_inverse_checks": {
+    "hann": {
+      "basal": {
+        "max_absolute_metric_error": 2.3176198737928644e-09,
+        "effects": {
+          "DC_reduction_at_span3": 7.344795855623845,
+          "DC_reduction_at_span03": 8.0186396798557,
+          "span_reduction_at_DC003": 77.3467675850352,
+          "span_reduction_at_DC0003": 84.4428996880895,
+          "both_reductions_over_original": 620.2158596659398,
+          "multiplicative_interaction": 1.0917443911958284
+        }
+      },
+      "deep": {
+        "max_absolute_metric_error": 2.4208475224440917e-09,
+        "effects": {
+          "DC_reduction_at_span3": 7.3449140592766335,
+          "DC_reduction_at_span03": 8.0673313811539,
+          "span_reduction_at_DC003": 80.44065161573518,
+          "span_reduction_at_DC0003": 88.3524828014121,
+          "both_reductions_over_original": 648.9413931000887,
+          "multiplicative_interaction": 1.0983561299760687
+        }
+      }
+    },
+    "blackman": {
+      "basal": {
+        "max_absolute_metric_error": 2.3654820324736647e-09,
+        "effects": {
+          "DC_reduction_at_span3": 7.399677373100651,
+          "DC_reduction_at_span03": 8.005780755696946,
+          "span_reduction_at_DC003": 78.48251301447073,
+          "span_reduction_at_DC0003": 84.91097120450613,
+          "both_reductions_over_original": 628.313792349985,
+          "multiplicative_interaction": 1.0819094336193096
+        }
+      },
+      "deep": {
+        "max_absolute_metric_error": 2.8093154469388537e-09,
+        "effects": {
+          "DC_reduction_at_span3": 7.414869762823606,
+          "DC_reduction_at_span03": 8.062760136183659,
+          "span_reduction_at_DC003": 82.79100181890738,
+          "span_reduction_at_DC0003": 90.02504567875239,
+          "both_reductions_over_original": 667.5239891001951,
+          "multiplicative_interaction": 1.0873771750663
+        }
+      }
+    }
+  },
+  "new_native": 4,
+  "reused_native": 4,
+  "limits": "Audits provenance and numerical processing; not FDTD error-floor certification or field material validation."
+}

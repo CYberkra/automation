@@ -1,4 +1,28 @@
 {
+ "line9_v401_polarization_dc_factorial_2026_10_08": {
+  "report": "docs/research/2026-10-08_mudstone_polarization_dc_factorial.md",
+  "results": "artifacts/research_checks/2026-10-08_v401_polarization_dc_r1",
+  "scripts": [
+   "scripts/line9_v401_polarization_controls.py",
+   "scripts/analyze_line9_polarization_controls.py",
+   "scripts/audit_line9_polarization_inputs.py",
+   "scripts/audit_line9_polarization_results.py",
+   "scripts/predict_line9_polarization_controls.py",
+   "scripts/audit_line9_polarization_prediction.py"
+  ],
+  "status": "FOUR_NEW_FP64_FOUR_REUSED_POLARIZATION_DC_FACTORIAL_INDEPENDENT_AUDIT_PASS",
+  "solver_version": "4.0.1",
+  "solver_started": 4,
+  "solver_completed": 4,
+  "reused_native": 4,
+  "Hann_basal_delta_gain_DC_only": 7.34479585565417,
+  "Hann_basal_delta_gain_span_only": 77.3467675853197,
+  "Hann_basal_delta_gain_both": 620.2158596682574,
+  "whole_line_resolved": false,
+  "field_validated": false,
+  "production_materials_changed": false,
+  "next": "New frozen low-loss side/bottom boundary controls, then distinct-thickness stations"
+ },
  "line9_v401_nonflat_material_2026_10_08": {
   "report": "docs/research/2026-10-08_mudstone_loss_followup.md",
   "results": "artifacts/research_checks/2026-10-08_v401_nonflat_material_r1",
