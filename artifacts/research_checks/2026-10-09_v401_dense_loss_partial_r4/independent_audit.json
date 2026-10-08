@@ -1,0 +1,89 @@
+{
+  "status": "PASS_INDEPENDENT_DENSE_NATIVE_DFT_INVERSE_MASKS",
+  "auditor_sha256": "a72e6ef5dcf7ed46c36b272f281f46b24265714667ebe657fc14b74dd1f5396f",
+  "analysis_sha256": "b6715ea50c736144aa0e7aa0e34527b253315744f6b83daa2fa98b526cc8919e",
+  "input_audit": "PASS_DENSE_INPUT_VOXEL_MATERIAL_REUSE_PREBATCH_IDENTITY",
+  "manifest_sha256": "a5da3b5eacce651ff737a9cbb7a798632e3052c8edeabacecd6b45895afe05cb",
+  "contract_sha256": "189c816e3c7d2eee6bfbb35d8bf07c4ca88711224baf7e0307c478704dfab239",
+  "completed_new": 16,
+  "reused": 2,
+  "independent_DFT_relative_L2": [
+    1.0494540344052886e-13,
+    1.0494483453353424e-13,
+    1.0544003960251362e-13,
+    1.0532841224213507e-13,
+    1.0517488077107785e-13,
+    1.051008354501574e-13,
+    1.0541021468994992e-13,
+    1.0540440837386871e-13,
+    1.0516063352193526e-13,
+    1.050946690256195e-13,
+    1.0545789388921266e-13,
+    1.0533176560167768e-13,
+    1.0536146335163688e-13,
+    1.051379652161295e-13,
+    1.056695104998888e-13,
+    1.0532461714841973e-13,
+    1.0495158431288147e-13,
+    1.0514110840679113e-13
+  ],
+  "checks": {
+    "hann": {
+      "anchor_scalar_checks": 14,
+      "max_scaled_metric_error": 1.494980075343108e-11
+    },
+    "blackman": {
+      "anchor_scalar_checks": 14,
+      "max_scaled_metric_error": 3.2331272948134976e-12
+    }
+  },
+  "availability": {
+    "high": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "low": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "limits": "Identity/arithmetic/missing-column checks only; not complete FDTD error bound,continuous H0,unique propagation mechanism or site validation."
+}

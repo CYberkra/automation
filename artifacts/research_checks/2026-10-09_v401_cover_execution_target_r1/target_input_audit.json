@@ -1,0 +1,44 @@
+{
+  "status": "PASS_INDEPENDENT_PREPARED_COVER_CONTROLS_NO_EXECUTION_CONTRACT",
+  "auditor_sha256": "c80145cec11f1115191c2945ea3ae7170b7a49220a2396ba5ae870930d22d8f7",
+  "manifest_sha256": "e3e4b8297c325fb4816e2d2a6a1c7505d713983acb829415a18417003e6955b2",
+  "groups": [
+    {
+      "id": "base_snapshot_H0",
+      "changed_voxels": 0,
+      "snapshot_count": 250,
+      "input_sha256": "34381ab600c309db4e48c9482d1c2472c990c35c8d5532102d7252388e4ec9ce",
+      "geometry_sha256": "c1e308ff73119f2c366d42efcf3526646d5fe8e76c6a692a7113a5b1148985a6"
+    },
+    {
+      "id": "flat_snapshot_H0",
+      "changed_voxels": 1924082,
+      "snapshot_count": 250,
+      "input_sha256": "f84302c8c32b194f6371ab59da13b909a236b1b914aac1bf2d84f0104d751aad",
+      "geometry_sha256": "33160fe45a7299fa3ba2c637dab3fcfd1e12807f0e5cc9baf3c7fcfcc860f1d7"
+    },
+    {
+      "id": "far_cover_removed_H0",
+      "changed_voxels": 400863,
+      "snapshot_count": 0,
+      "input_sha256": "92c93313bc5a47cc4378672c16a8005b8f17f52b3b17075d5c80972df4dd2d4a",
+      "geometry_sha256": "6b56ac1b77f9c0c9f2d66fdabcb6b166d45c5a44caa4826edf8928c7444001d1"
+    },
+    {
+      "id": "near_cover_removed_H0",
+      "changed_voxels": 391687,
+      "snapshot_count": 0,
+      "input_sha256": "64a392e39dbf5a2505a82c2882327ed5486c24d956983125aeba21ea011f4ffe",
+      "geometry_sha256": "da3a11a9e7cad725862408b05b6f7229faa99f726cbba634cf4bbd1a1081adb8"
+    }
+  ],
+  "calls_solver": false,
+  "calls_CUDA": false,
+  "calls_training": false,
+  "input_ready": true,
+  "execution_ready": false,
+  "pending": "Wait for current46attempt run terminal and audit; then freeze a fresh target-specific runtime/resource/identity/heartbeat contract. No new permission needed under standing authorization.",
+  "snapshot_payload_bytes_each": 1323000000,
+  "snapshot_device_estimate_bytes": 7765450944,
+  "limits": "Parser/voxel checks, not constructed-solver import or physics. Actual baseline observer invariance and all snapshot fields require completed outputs. Regional edits add edges and change lower continuation; only regional dependence may be claimed."
+}

@@ -1,0 +1,21 @@
+{
+  "status": "PASS_DEPLOYED_INPUTS_CPU_CHECKS_AND_ACTUAL_PREDECESSOR_GUARD_NO_SOLVE",
+  "remote_root": "E:\\line9_basal_pair_20261008_r1\\v401_cover_wavefield_r2",
+  "payload_zip_sha256": "b9e1ae2c3e2cce29e60dfdeaebd89195237c9a3b70830be868a7737b91f3d92f",
+  "payload_bytes": 334609,
+  "verified_payload_files": 32,
+  "prepared_manifest_sha256": "e3e4b8297c325fb4816e2d2a6a1c7505d713983acb829415a18417003e6955b2",
+  "local_cpu_checks_repository_path": "artifacts/research_checks/2026-10-09_v401_cover_execution_cpu_r3/checks.json",
+  "local_cpu_checks_sha256": "7737963b2c929c5118ec20697666bae37837444e17a45733f2566b178bd4e6f5",
+  "local_remote_actual_memory_selection_and_check_code_byte_identical": true,
+  "execution_contract_frozen": false,
+  "started_new_solves": 0,
+  "rendering_and_completed_output_audits_pending": true,
+  "earlier_deployment_failure": {
+    "remote_root": "E:\\line9_basal_pair_20261008_r1\\v401_cover_wavefield_r1",
+    "stage": "CPU checker import before any new execution contract",
+    "cause": "unittest.mock imported asyncio then Windows application-control policy blocked _overlapped DLL",
+    "remedy": "Scoped context-manager fixture replacement in checker only; no policy/runtime/kernel modification; fresh isolatedr2 deployment"
+  },
+  "limits": "17checks on each host are CPU fixtures/native memory-function tests,not actualGPU allocation,FDTD,snapshot receiver invariance or mechanism validation. New solver must wait for old46completion certificate and fresh resource/runtime contract."
+}

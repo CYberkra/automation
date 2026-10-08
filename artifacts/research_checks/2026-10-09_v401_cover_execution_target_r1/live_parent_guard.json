@@ -1,0 +1,26 @@
+{
+  "status": "PASS_ACTUAL_RUNNING_PREDECESSOR_REJECTED_NO_NEW_EXECUTION",
+  "probe_sha256": "9262cbfbfb44d37f1c673da683357501f88ecfe616b7ea4b29b1d4b07cc50b82",
+  "runner_sha256": "d6bfe5f2a378b9e1e04198b101337684522977476ae9cd428979e83f5f587073",
+  "parent_contract_sha256": "189c816e3c7d2eee6bfbb35d8bf07c4ca88711224baf7e0307c478704dfab239",
+  "completed_new": 19,
+  "observed_last_event": {
+    "status": "STARTED",
+    "group": "high_x18775_H1",
+    "command": [
+      "E:\\automation_djh\\artifacts\\local_checks\\gprmax_v401_gpu_env\\Scripts\\python.exe",
+      "E:\\line9_basal_pair_20261008_r1\\v401_dense_loss_5m_r1\\repo\\scripts\\gprmax_cached_cuda_entry.py",
+      "E:\\line9_basal_pair_20261008_r1\\v401_dense_loss_5m_r1\\execution\\prepared\\high_x18775_H1\\cases\\high_x18775_H1\\profile.in",
+      "-gpu",
+      "0",
+      "-gpu_precision",
+      "double",
+      "--hide-progress-bars"
+    ],
+    "available_RAM_bytes": 51792289792,
+    "free_VRAM_bytes": 15946743808
+  },
+  "calls_solver": false,
+  "new_execution_directory_exists": false,
+  "limits": "Actual predecessor terminal gate only. Does not claim the parent has completed or a new GPU configuration has run."
+}
