@@ -1,0 +1,145 @@
+{
+  "status": "PASS_EXACT_INPUT_VERSION_COMPARISON_NOT_FIELD_VALIDATION",
+  "script_sha256": "6c3bc020c5ff0cdd2a3f317d15b98d88d5cec846f8102ce15e58c78eae77362d",
+  "old_contract_sha256": "c12116168874c1f98c31a1b9199eb25d86f36e1ea8f48085cb5ea2e91e1752c2",
+  "new_contract_sha256": "acde6b83986e1e6e9f3e9c8a42ccfab61b1e325b89cdc7ced1aca3778e82e1bf",
+  "old_verification_sha256": "c4d12a1a540be606c0ea6e434b510399537a7e923afffba407fe4be53eabf467",
+  "new_verification_sha256": "a8c13891daef1f1b98e43d5bae1c18a3c3d43ece76a5d15e6892bf7a9b564abe",
+  "scientific_identities": [
+    {
+      "id": "nonflat_ricker_H0",
+      "input_sha256": "0f0c233d70be1738935805b81ed37cdf3e89fa4a8adccf6d6d40560283122d17",
+      "geometry_sha256": "c1e308ff73119f2c366d42efcf3526646d5fe8e76c6a692a7113a5b1148985a6",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e"
+    },
+    {
+      "id": "flat_ricker_H0",
+      "input_sha256": "5b958c65c167fd07c8e752859b916990c20e3ad1255fecf7ec095ed0ee5fe399",
+      "geometry_sha256": "112e72f095d447971dedbb71ff4a81fdbd7df272715a8ddf4cfb40b5d08f6c5d",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e"
+    },
+    {
+      "id": "flat_ricker_H1",
+      "input_sha256": "dd0eecf01be1292f99d107f057d7c4f924f03455c355a697675912a342dd5eba",
+      "geometry_sha256": "9d15ceb1f6b93499b08e0cd2061862d7751001b10769b7473d2e02e38869bd85",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e"
+    }
+  ],
+  "native": [
+    {
+      "id": "nonflat_ricker_H0",
+      "array_equal": false,
+      "relative_L2": 1.0940506498406947e-11,
+      "native_sha256": [
+        "94ea166414ca2923498ab27f10694dd4ddb7daa6d1d5d52080622926fe39be37",
+        "e8e90acc5d39440a19af71bf48006e7a436777604c54b7dd4bce1206bacae5eb"
+      ]
+    },
+    {
+      "id": "flat_ricker_H0",
+      "array_equal": true,
+      "relative_L2": 0.0,
+      "native_sha256": [
+        "f02b7470d90ed40d76af8fbd3c38ad1e5a6859b9971893deadb201509fc79fa2",
+        "972aa5a4d17aae61eb519951bb4bfc2adc57ef9ae176b70be648a21064e97143"
+      ]
+    },
+    {
+      "id": "flat_ricker_H1",
+      "array_equal": true,
+      "relative_L2": 0.0,
+      "native_sha256": [
+        "4459aafcb3b716dfa131e7b306cf879b7c43771912b5020be30e72de4b19550b",
+        "ec5d991548eb8dc60325d4a72dac83558c937ebfeb3fd795996219eb1e7b755d"
+      ]
+    }
+  ],
+  "independent_DFT_relative_L2": [
+    [
+      1.0549616038615735e-13,
+      1.0553251621320105e-13,
+      1.0554335942256019e-13
+    ],
+    [
+      1.0547416091172281e-13,
+      1.0553251621320105e-13,
+      1.0554335942256019e-13
+    ]
+  ],
+  "metrics": {
+    "hann": {
+      "relative_version_changes": {
+        "basal": {
+          "nonflat_ricker_H0": 4.678192250972063e-12,
+          "flat_ricker_H0": 0.0,
+          "flat_ricker_H1": 0.0,
+          "flat_delta": 0.0
+        },
+        "deep": {
+          "nonflat_ricker_H0": 9.798137087580046e-12,
+          "flat_ricker_H0": 0.0,
+          "flat_ricker_H1": 0.0,
+          "flat_delta": 0.0
+        },
+        "early": {
+          "nonflat_ricker_H0": 1.5450767533467576e-16,
+          "flat_ricker_H0": 0.0,
+          "flat_ricker_H1": 0.0,
+          "flat_delta": 0.0
+        }
+      },
+      "independent_inverse_relative_L2": 1.2788829584554884e-14
+    },
+    "blackman": {
+      "relative_version_changes": {
+        "basal": {
+          "nonflat_ricker_H0": 4.219049835187607e-12,
+          "flat_ricker_H0": 0.0,
+          "flat_ricker_H1": 0.0,
+          "flat_delta": 0.0
+        },
+        "deep": {
+          "nonflat_ricker_H0": 1.1315405741308031e-11,
+          "flat_ricker_H0": 0.0,
+          "flat_ricker_H1": 0.0,
+          "flat_delta": 0.0
+        },
+        "early": {
+          "nonflat_ricker_H0": 1.6507148865840745e-16,
+          "flat_ricker_H0": 0.0,
+          "flat_ricker_H1": 0.0,
+          "flat_delta": 0.0
+        }
+      },
+      "independent_inverse_relative_L2": 1.3723765521463412e-14
+    }
+  },
+  "flat_delta_version_ratio": {
+    "frequency_MHz": [
+      20.0,
+      44.9,
+      95.0,
+      145.1,
+      170.0
+    ],
+    "amplitude": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "phase_deg": [
+      -0.0,
+      0.0,
+      -0.0,
+      0.0,
+      -0.0
+    ]
+  },
+  "numerical_sha256": "93f15d9839b54369209e31275af4804d12294339e51c1886d20b5195151e416d",
+  "AGC": false,
+  "tail_taper": false,
+  "phase_amplitude_time_fit": false,
+  "limits": "Three selected station configurations only; no whole-line, finite-3D antenna, field/material or mesh-convergence validation."
+}

@@ -1,0 +1,48 @@
+{
+  "status": "PASS_INDEPENDENT_SINGLE_FACTOR_NATIVE_DFT_AND_INVERSE",
+  "script_sha256": "89f8738bb2d1faa97873826b2245fd7429fb76b19663b102cb022b8f8ce6950b",
+  "analysis_sha256": "00509cc23c492274b0ee064f07a0b472a058bb4fca94ea406644701b4f31ffc1",
+  "physical_change_only": "mudstone sigmaDC .003 -> .0003 S/m",
+  "full_501_real_permittivity_unchanged": true,
+  "native_identities": [
+    {
+      "id": "planar_H0",
+      "native_sha256": "be575129736610c9849a6282e57404191815ac630bc10f42192d6ee04222963c"
+    },
+    {
+      "id": "planar_H1",
+      "native_sha256": "55df1b507994b8ffb8531427d59931c5f76b446db3e562070b51747e70cd6149"
+    },
+    {
+      "id": "planar_H0",
+      "native_sha256": "459dcc08629e73e16b754c09e9052a35c25710e857ac7e0f38ca4d09e27a824b"
+    },
+    {
+      "id": "planar_H1",
+      "native_sha256": "22e5ef386fa741ab5051579d4188a0b7e75908c987ca69a3d20f2ef6678388fb"
+    }
+  ],
+  "independent_DFT_relative_L2": [
+    1.0553557901037653e-13,
+    1.05545246889974e-13
+  ],
+  "direct_inverse_metrics": {
+    "hann": {
+      "baseline_H0_over_delta": 4.291658521353417,
+      "changed_H0_over_delta": 0.3664199755383512,
+      "changed_delta_over_baseline_delta": 7.305909942536948,
+      "changed_H0_over_baseline_H0": 0.6237754772682979,
+      "changed_H1_vs_delta_correlation": 0.9854765817219082,
+      "baseline_H1_vs_delta_correlation": 0.8732290414144575
+    },
+    "blackman": {
+      "baseline_H0_over_delta": 4.090480483234777,
+      "changed_H0_over_delta": 0.3341615603987237,
+      "changed_delta_over_baseline_delta": 7.370140728012636,
+      "changed_H0_over_baseline_H0": 0.6020851917335825,
+      "changed_H1_vs_delta_correlation": 0.9940843271919724,
+      "baseline_H1_vs_delta_correlation": 0.9278478584497226
+    }
+  },
+  "limits": "Planar material sensitivity only; not site calibration, full-line or 3D certification."
+}

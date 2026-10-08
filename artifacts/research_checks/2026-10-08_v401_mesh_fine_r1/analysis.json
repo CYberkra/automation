@@ -1,0 +1,85 @@
+{
+  "status": "COMPLETED_FINE_PLANAR_MESH_DIAGNOSTIC",
+  "script_sha256": "50d29e7a05f61d7e75bc2078b6d4062cfd8d5e92aeec02dc6ed0889e625f052d",
+  "coarse_spacing_m": 0.025,
+  "width_m": 80,
+  "spacing_m": 0.0125,
+  "contract_sha256": "cce0df5318ea0199ddc902548544d0a386364ea2dc894ed60d336c66c62621ca",
+  "verification_sha256": "898af765fa0638f69ce2a61870a9afd2a4b1600774803043e6214272d52a0d3d",
+  "reference_numerical_sha256": "93f15d9839b54369209e31275af4804d12294339e51c1886d20b5195151e416d",
+  "continuum_numerical_sha256": "f3a9dac16cc1c2e2051c658ddf599ff2f71a8e90f847f0334ddb48c875c6fd3e",
+  "numerical_sha256": "589331b3df1155427208846878612295cd7b92f68182ca1819a28402fd7f97f1",
+  "preceding_coarse_numerical_sha256": "b5851a55c7c060e64a2a75af60071ae3774df65f8132e9ad06492bacaab53e26",
+  "native": [
+    {
+      "id": "planar_H0",
+      "sha256": "d72a62f4a3cd847f0453c9da1ec9ffb6bc6309b9f5f2e439d715468d131d460c",
+      "dtype": "float64",
+      "source_actual_spatial_scale_m": 0.0125,
+      "common_reference_scale_m": 0.025,
+      "independent_DFT_relative_L2": 1.8456000888659277e-13
+    },
+    {
+      "id": "planar_H1",
+      "sha256": "4378b90b9be3be94d82859278f852e05b5f15d5ece87fb0a40461b29ce1b64ae",
+      "dtype": "float64",
+      "source_actual_spatial_scale_m": 0.0125,
+      "common_reference_scale_m": 0.025,
+      "independent_DFT_relative_L2": 1.8457002125684102e-13
+    }
+  ],
+  "metrics": {
+    "hann": {
+      "basal_delta_change_vs_wide": 0.20261671394584824,
+      "basal_H0_change_vs_wide": 0.15018609240251857,
+      "unfitted_delta_error_over_fdtd": 0.06789143524341121,
+      "independent_inverse_relative_L2": 1.8616399568578653e-14
+    },
+    "blackman": {
+      "basal_delta_change_vs_wide": 0.19524740420043568,
+      "basal_H0_change_vs_wide": 0.1564189121744399,
+      "unfitted_delta_error_over_fdtd": 0.06506897507000123,
+      "independent_inverse_relative_L2": 1.7994670105274162e-14
+    }
+  },
+  "full_band_delta_change_vs_wide": 0.113696453911756,
+  "declared_domain_gate": {
+    "basal_delta_relative_L2_max": 0.005,
+    "basal_H0_relative_L2_max": 0.005,
+    "full_band_delta_relative_L2_max": 0.01,
+    "windows": [
+      "hann",
+      "blackman"
+    ],
+    "no_fit": true
+  },
+  "frequency_comparison": {
+    "frequency_MHz": [
+      20.0,
+      44.9,
+      95.0,
+      145.1,
+      170.0
+    ],
+    "delta_over_continuum_amplitude": [
+      0.9996677600930663,
+      0.9980955793302188,
+      0.991063544698669,
+      0.978848057535734,
+      0.9709155194044922
+    ],
+    "delta_over_continuum_phase_deg": [
+      -0.03373007126560504,
+      -0.3453849870215698,
+      -3.1565020653433233,
+      -11.170934158730606,
+      -17.947186243881106
+    ]
+  },
+  "actual_source_spatial_scale_m": 0.0125,
+  "common_reference_scale_m": 0.025,
+  "AGC": false,
+  "tail_taper": false,
+  "fit": false,
+  "limits": "Planar selected-station numerical evidence only; finite-grid improvement is not full convergence, nonflat/whole-line or field validation."
+}

@@ -1,0 +1,35 @@
+{
+  "status": "PASS_INDEPENDENT_NATIVE_DFT_AND_DIRECT_INVERSE",
+  "audit_script_sha256": "cc46636798f5d452040caac2a88271d72490b78fc77386e6feba2e1998c75486",
+  "analysis_sha256": "cc54fa6ae86616f744e840a680bde99d6b1914509f0f67c528f46ad0dc0567e9",
+  "contract_sha256": "cce0df5318ea0199ddc902548544d0a386364ea2dc894ed60d336c66c62621ca",
+  "identities": [
+    {
+      "id": "planar_H0",
+      "native_sha256": "d72a62f4a3cd847f0453c9da1ec9ffb6bc6309b9f5f2e439d715468d131d460c"
+    },
+    {
+      "id": "planar_H1",
+      "native_sha256": "4378b90b9be3be94d82859278f852e05b5f15d5ece87fb0a40461b29ce1b64ae"
+    }
+  ],
+  "independent_DFT_relative_L2": [
+    1.8455254484335325e-13,
+    1.8457549085276568e-13
+  ],
+  "direct_inverse_metrics": {
+    "hann": {
+      "H0_change_vs_wide": 0.15018609239352226,
+      "delta_change_vs_wide": 0.20261671395135478,
+      "H0_over_delta": 4.25237795694369,
+      "H0_vs_delta_phase_deg": -59.481596028484844
+    },
+    "blackman": {
+      "H0_change_vs_wide": 0.15641891216336543,
+      "delta_change_vs_wide": 0.19524740420611542,
+      "H0_over_delta": 4.0705340319987995,
+      "H0_vs_delta_phase_deg": -65.03707223339232
+    }
+  },
+  "limits": "Audits data/processing and stated numerical comparisons; not field calibration or full numerical/physical certification."
+}

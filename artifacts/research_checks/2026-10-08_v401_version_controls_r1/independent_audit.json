@@ -1,0 +1,44 @@
+{
+  "status": "PASS_INDEPENDENT_NATIVE_DFT_AND_DIRECT_INVERSE",
+  "audit_script_sha256": "cc46636798f5d452040caac2a88271d72490b78fc77386e6feba2e1998c75486",
+  "analysis_sha256": "8de00e7831cd1cb10075a1823bdeb797066fdb99d663d21bbd0ed13b488ef25d",
+  "contract_sha256": "acde6b83986e1e6e9f3e9c8a42ccfab61b1e325b89cdc7ced1aca3778e82e1bf",
+  "identities": [
+    {
+      "id": "nonflat_ricker_H0",
+      "native_sha256": "e8e90acc5d39440a19af71bf48006e7a436777604c54b7dd4bce1206bacae5eb"
+    },
+    {
+      "id": "flat_ricker_H0",
+      "native_sha256": "972aa5a4d17aae61eb519951bb4bfc2adc57ef9ae176b70be648a21064e97143"
+    },
+    {
+      "id": "flat_ricker_H1",
+      "native_sha256": "ec5d991548eb8dc60325d4a72dac83558c937ebfeb3fd795996219eb1e7b755d"
+    }
+  ],
+  "independent_DFT_relative_L2": [
+    1.0546343128953987e-13,
+    1.0552583402370571e-13,
+    1.0553713531084624e-13
+  ],
+  "direct_inverse_metrics": {
+    "hann": {
+      "version_relative_changes": [
+        1.7089843438769958e-12,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "blackman": {
+      "version_relative_changes": [
+        2.129043406999311e-12,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "limits": "Audits data/processing and stated numerical comparisons; not field calibration or full numerical/physical certification."
+}

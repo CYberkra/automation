@@ -1,0 +1,140 @@
+{
+  "status": "UNFITTED_PLANAR_OVERLAP_DIAGNOSTIC_NOT_NONFLAT_PATH_CERTIFICATION",
+  "script_sha256": "3c714191743443f3c84b323a67986046fc7d95cf040dca1b5f1389709a1781dc",
+  "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+  "prepared_manifest_sha256": "d430fa9f98955bf6c6577e3042c4cd6f824912c5dce5f95143f74cebb20a216c",
+  "continuum_sha256": "f3a9dac16cc1c2e2051c658ddf599ff2f71a8e90f847f0334ddb48c875c6fd3e",
+  "wide_sha256": "93f15d9839b54369209e31275af4804d12294339e51c1886d20b5195151e416d",
+  "fine_sha256": "589331b3df1155427208846878612295cd7b92f68182ca1819a28402fd7f97f1",
+  "paths_m": [
+    [
+      1.300961183125752,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      16.000000000000007,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      16.000000000000007,
+      14.600000000000001,
+      0.0,
+      0.0
+    ],
+    [
+      16.000000000000007,
+      29.200000000000003,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      16.000000000000007,
+      14.600000000000001,
+      14.0,
+      0.0
+    ]
+  ],
+  "metrics": {
+    "210m_2.5cm": {
+      "hann": {
+        "H0_continuum_unfitted_error": 0.20072533035841056,
+        "H0_propagation_prediction_unfitted_error": 0.013084831099443932,
+        "cover_twice_vs_H0_correlation": 0.9703714473834838,
+        "predicted_other_terms_over_H0": 0.24271625392204352,
+        "H0_over_bottom_delta": 4.291658521230587,
+        "H0_vs_bottom_inner_phase_deg": -58.17579991755977,
+        "bottom_prediction_unfitted_error": 0.004602803351847994
+      },
+      "blackman": {
+        "H0_continuum_unfitted_error": 0.20917372362093192,
+        "H0_propagation_prediction_unfitted_error": 0.013920916183297377,
+        "cover_twice_vs_H0_correlation": 0.9945699025453761,
+        "predicted_other_terms_over_H0": 0.10498016346000913,
+        "H0_over_bottom_delta": 4.090480483164333,
+        "H0_vs_bottom_inner_phase_deg": -63.79124159493378,
+        "bottom_prediction_unfitted_error": 0.004607793986661763
+      },
+      "bottom_phase_prediction": {
+        "frequency_MHz": [
+          20.0,
+          44.9,
+          95.0,
+          145.1,
+          170.0
+        ],
+        "observed_phase_deg": [
+          -0.13507130834943182,
+          -1.3829297787026238,
+          -12.654479809275507,
+          -44.91239275810546,
+          -72.29163372087878
+        ],
+        "predicted_phase_deg": [
+          -0.13871744472470918,
+          -1.392176305514438,
+          -12.655360341547555,
+          -44.91005797954017,
+          -72.29997229646736
+        ],
+        "full_band_phase_residual_max_deg": 0.32993002504454716
+      }
+    },
+    "80m_1.25cm": {
+      "hann": {
+        "H0_continuum_unfitted_error": 0.050406457720006424,
+        "H0_propagation_prediction_unfitted_error": 0.003266045469265564,
+        "cover_twice_vs_H0_correlation": 0.9712815123951525,
+        "predicted_other_terms_over_H0": 0.2381547626998006,
+        "H0_over_bottom_delta": 4.252377956934214,
+        "H0_vs_bottom_inner_phase_deg": -59.48159602780028,
+        "bottom_prediction_unfitted_error": 0.0011504139970757751
+      },
+      "blackman": {
+        "H0_continuum_unfitted_error": 0.05211808996304716,
+        "H0_propagation_prediction_unfitted_error": 0.0034591900462540752,
+        "cover_twice_vs_H0_correlation": 0.9947730765120514,
+        "predicted_other_terms_over_H0": 0.10237014706434484,
+        "H0_over_bottom_delta": 4.070534031989271,
+        "H0_vs_bottom_inner_phase_deg": -65.03707223271853,
+        "bottom_prediction_unfitted_error": 0.0011477196387795954
+      },
+      "bottom_phase_prediction": {
+        "frequency_MHz": [
+          20.0,
+          44.9,
+          95.0,
+          145.1,
+          170.0
+        ],
+        "observed_phase_deg": [
+          -0.03373007126560504,
+          -0.3453849870215698,
+          -3.1565020653433233,
+          -11.170934158730606,
+          -17.947186243881106
+        ],
+        "predicted_phase_deg": [
+          -0.0346758297560008,
+          -0.34786482756214077,
+          -3.1564347580432495,
+          -11.165825062153456,
+          -17.938319848164713
+        ],
+        "full_band_phase_residual_max_deg": 0.08265611947260997
+      }
+    }
+  },
+  "fit": false,
+  "production_correction": false,
+  "limits": "Continuum Debye spectra in normal bulk Yee relation; not exact discrete interfaces/angular spectrum. Third/higher cover sum remains unmodified. Norm ratios are not energy fractions; flat model only, not a unique path attribution of nonflat H0 or an instruction to delete real reflections."
+}

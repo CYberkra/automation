@@ -1,4 +1,91 @@
 {
+ "line9_v401_version_controls_2026_10_08": {
+  "report": "docs/research/2026-10-08_gprmax_v401_upgrade_and_mesh.md",
+  "results": "artifacts/research_checks/2026-10-08_v401_version_controls_r1",
+  "scripts": [
+   "scripts/configure_gprmax_v401.py",
+   "scripts/line9_v401_version_controls.py",
+   "scripts/analyze_line9_v401_version_controls.py",
+   "scripts/audit_line9_v401_delivery.py",
+   "scripts/run_gprmax_v401.cmd"
+  ],
+  "status": "EXACT_INPUT_VERSION_COMPARISON_TWO_HOST_SETUP_COMPLETE_NOT_FIELD_VALIDATION",
+  "solver_started": 3,
+  "solver_completed": 3,
+  "whole_line_resolved": false,
+  "field_validated": false,
+  "production_data_changed": false,
+  "solver_version": "4.0.1",
+  "native_precision": "float64",
+  "host_smokes_completed": 2,
+  "preserved_local_smoke_compile_failures": 1
+ },
+ "line9_v401_mesh_coarse_2026_10_08": {
+  "report": "docs/research/2026-10-08_gprmax_v401_upgrade_and_mesh.md",
+  "results": "artifacts/research_checks/2026-10-08_v401_mesh_coarse_r1",
+  "scripts": [
+   "scripts/line9_v401_planar_mesh.py",
+   "scripts/analyze_line9_v401_planar_mesh.py",
+   "scripts/audit_line9_v401_delivery.py"
+  ],
+  "status": "PASS_PREDECLARED_NARROW_PLANAR_DOMAIN_GATE",
+  "solver_started": 2,
+  "solver_completed": 2,
+  "whole_line_resolved": false,
+  "field_validated": false,
+  "production_data_changed": false,
+  "solver_version": "4.0.1",
+  "native_precision": "float64"
+ },
+ "line9_v401_mesh_fine_2026_10_08": {
+  "report": "docs/research/2026-10-08_gprmax_v401_upgrade_and_mesh.md",
+  "results": "artifacts/research_checks/2026-10-08_v401_mesh_fine_r1",
+  "scripts": [
+   "scripts/line9_v401_planar_mesh.py",
+   "scripts/analyze_line9_v401_planar_mesh.py",
+   "scripts/audit_line9_v401_delivery.py"
+  ],
+  "status": "ACTUAL_FINE_FP64_PAIR_COMPLETE_PHASE_ERROR_REDUCTION_CONFIRMED",
+  "solver_started": 2,
+  "solver_completed": 2,
+  "whole_line_resolved": false,
+  "field_validated": false,
+  "production_data_changed": false,
+  "solver_version": "4.0.1",
+  "native_precision": "float64"
+ },
+ "line9_v401_planar_overlap_2026_10_08": {
+  "report": "docs/research/2026-10-08_gprmax_v401_upgrade_and_mesh.md",
+  "results": "artifacts/research_checks/2026-10-08_v401_planar_overlap_r1",
+  "scripts": [
+   "scripts/diagnose_line9_v401_planar_overlap.py",
+   "scripts/audit_line9_v401_overlap_prediction.py"
+  ],
+  "status": "UNFITTED_GRID_PROPAGATION_AND_OVERLAP_PREDICTION_INDEPENDENTLY_AUDITED",
+  "solver_started": 0,
+  "solver_completed": 0,
+  "whole_line_resolved": false,
+  "field_validated": false,
+  "production_data_changed": false
+ },
+ "line9_v401_conductivity_2026_10_08": {
+  "report": "docs/research/2026-10-08_gprmax_v401_upgrade_and_mesh.md",
+  "results": "artifacts/research_checks/2026-10-08_v401_conductivity_r1",
+  "scripts": [
+   "scripts/line9_v401_conductivity_control.py",
+   "scripts/audit_line9_v401_conductivity.py"
+  ],
+  "status": "SINGLE_FACTOR_MUDSTONE_DC_CONTROL_BOTTOM_RESPONSE_7P3X_NOT_SITE_CALIBRATION",
+  "solver_started": 2,
+  "solver_completed": 2,
+  "whole_line_resolved": false,
+  "field_validated": false,
+  "production_data_changed": false,
+  "solver_version": "4.0.1",
+  "native_precision": "float64",
+  "production_materials_changed": false,
+  "physical_change": "diagnostic mudstone sigmaDC .003 -> .0003 S/m only"
+ },
  "line9_v5_source_flat_2026_10_08": {
   "report": "docs/research/2026-10-08_line9_v5_source_flat_controls.md",
   "results": "artifacts/research_checks/2026-10-08_line9_v5_source_flat_results_r1",

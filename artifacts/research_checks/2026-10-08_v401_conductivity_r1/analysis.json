@@ -1,0 +1,33 @@
+{
+  "status": "COMPLETED_SINGLE_FACTOR_CONDUCTIVITY_SENSITIVITY_NOT_FIELD_CALIBRATION",
+  "script_sha256": "93b5c5425da1b479bdd8271596c26b6488a0e4979fd40a3b305c5c9b5a3a9bd5",
+  "contract_sha256": "507160a5bf62528f1bdd251165d5eae16363182f4ed778970077c2f78ff00bd7",
+  "verification_sha256": "4e9094a36ebb0b587288c5dee2faec50d3d69edbc5fe019f21c50e4b1b297f2e",
+  "numerical_sha256": "0bc75d0102eb69b00a8e287b696eebcbc0297c5d81ee9a65411a823788cd7a74",
+  "baseline_numerical_sha256": "b5851a55c7c060e64a2a75af60071ae3774df65f8132e9ad06492bacaab53e26",
+  "metrics": {
+    "hann": {
+      "baseline_H0_over_delta": 4.291658521325102,
+      "changed_H0_over_delta": 0.3664199755319571,
+      "changed_delta_over_baseline_delta": 7.305909942612048,
+      "changed_H0_over_baseline_H0": 0.6237754772679402,
+      "changed_H1_vs_delta_correlation": 0.9854765817221758,
+      "baseline_H1_vs_delta_correlation": 0.8732290414172087
+    },
+    "blackman": {
+      "baseline_H0_over_delta": 4.090480483213701,
+      "changed_H0_over_delta": 0.3341615603902724,
+      "changed_delta_over_baseline_delta": 7.370140728107917,
+      "changed_H0_over_baseline_H0": 0.602085191729241,
+      "changed_H1_vs_delta_correlation": 0.9940843271926689,
+      "baseline_H1_vs_delta_correlation": 0.9278478584546493
+    }
+  },
+  "independent_DFT_relative_L2": [
+    1.0554649758984209e-13,
+    1.0555422350173603e-13
+  ],
+  "limits": "Same station configuration columns, not a new spatial scan; no AGC, amplitude/phase fit or field validation.",
+  "AGC": false,
+  "fit": false
+}

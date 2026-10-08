@@ -1,0 +1,43 @@
+{
+  "status": "PASS_INDEPENDENT_ROOTS_AND_INVERSE",
+  "audit_script_sha256": "03a22805c0b73599dfa0133da147e4503336213efe02941fd19bd1daf28167f2",
+  "analysis_sha256": "c4db97fc404f34633b3b66999be1e9d4782a36053651a42c8201bc3ebdfb47bd",
+  "max_sine_equation_residual": 2.7769124835677133e-17,
+  "metrics": {
+    "210m_2.5cm": {
+      "hann": {
+        "H0_prediction_error": 0.013084831099912302,
+        "bottom_prediction_error": 0.004602803351845821
+      },
+      "blackman": {
+        "H0_prediction_error": 0.013920916183514096,
+        "bottom_prediction_error": 0.0046077939866593105
+      },
+      "predicted_bottom_phase_deg": [
+        -0.1387174447246583,
+        -1.3921763055137102,
+        -12.65536034154735,
+        -44.91005797954125,
+        -72.2999722964669
+      ]
+    },
+    "80m_1.25cm": {
+      "hann": {
+        "H0_prediction_error": 0.0032660454730370453,
+        "bottom_prediction_error": 0.0011504139970736872
+      },
+      "blackman": {
+        "H0_prediction_error": 0.0034591900502887575,
+        "bottom_prediction_error": 0.001147719638777604
+      },
+      "predicted_bottom_phase_deg": [
+        -0.034675829755771805,
+        -0.34786482756178455,
+        -3.156434758042506,
+        -11.165825062148654,
+        -17.93831984816329
+      ]
+    }
+  },
+  "limits": "Audits the normal-propagation approximation; not exact discrete Debye/angle/interface theory or field evidence."
+}
