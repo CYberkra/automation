@@ -1,0 +1,363 @@
+{
+  "script_sha256": "3c6aed6f24441df0d27fdd2f452baba3da93a4f65f14b74f507ce058fa6eeb11",
+  "contract_sha256": "5dab26e39413d8621925d35e42c40dc41507d88b92716f78c491d9d4a2bc9552",
+  "verification_sha256": "37024d532cd9e73dae869215f463edc876ec36aec73cce842831a1c339ef2601",
+  "numerical_sha256": "60e828b2e5ab13850d3f5d1db3b540e820048b69327b7c62bbc55c63fec77269",
+  "columns": [
+    "c0008_H1",
+    "c0008_H0",
+    "ricker_800",
+    "impulse_1600",
+    "ricker_1600",
+    "c0058_H1",
+    "c0058_H0",
+    "c0058_far",
+    "c0108_H1",
+    "c0108_H0",
+    "c0108_far"
+  ],
+  "native_sha256": [
+    "7f56a97855ccfebfdc32e237e16238764ae6efd4bdde1138ebd4730eeee98bda",
+    "007d70fd28aa6469d260992386a78afcb7aba5101c05ba981747c47a652baa74",
+    "69ebb7a18615226ed33339eccad7fa7396312ce261ebec9718c1d0b011acb889",
+    "e498fa6c75c8ce12cde75809234ede5874b92d74e0e47e4c1a2aa7864066a0cc",
+    "42a3f3d0c3f6045197c28035cf49a7cc1209c627ed75ca5359c00d19efa8514f",
+    "d4c5a790edac98263f2122720be5da6e7444d6f8dca8b709e53f875560a1e7a4",
+    "3515017fb3c0298191133a46fc7968862975917214f2c62ef2efefc995963b95",
+    "d7fa4bf5aa025f353610c9ba0b8ad723679d468b8d74f03044648e112986b769",
+    "f2522a019e75decd60cfa390dfb015c9e7a21abddf5bbd3ffcbcae99b65c9888",
+    "d45c73fad2f3677d8ee4b0534ceec4db66b38ec51abe1429337fda2efbe823a2",
+    "b39e49b3b28d7cf0e143fd21f45b1878f16f599085f9195ec8d8d7e9d001d707"
+  ],
+  "frequency_MHz": [
+    20,
+    170
+  ],
+  "step_MHz": 0.3,
+  "tones": 501,
+  "AGC": false,
+  "tail_taper": false,
+  "independent_DFT_relative_L2": [
+    1.2564807832871465e-12,
+    1.262356281666903e-12,
+    1.312535035288086e-13,
+    3.12415551942152e-12,
+    1.3131811753083283e-13,
+    1.3255477260522059e-12,
+    1.325555866763454e-12,
+    1.3253688870551293e-12,
+    1.8708499096949043e-12,
+    1.8699626450431264e-12,
+    1.867267661011943e-12
+  ],
+  "independent_inverse_relative_L2": {
+    "hann": 3.044853463733598e-14,
+    "blackman": 3.5317983988697994e-14
+  },
+  "source_band_min_over_max": [
+    0.9999999999999979,
+    0.9999999999999979,
+    0.10446806642546506,
+    0.9999999999999977,
+    0.10446806642546501,
+    0.9999999999999979,
+    0.9999999999999979,
+    0.9999999999999979,
+    0.9999999999999979,
+    0.9999999999999979,
+    0.9999999999999979
+  ],
+  "native_prefix_checks": {
+    "c0008_H0_vs_impulse_1600": {
+      "bitwise_equal": true,
+      "relative_L2": 0.0
+    },
+    "ricker_800_vs_ricker_1600": {
+      "bitwise_equal": true,
+      "relative_L2": 0.0
+    }
+  },
+  "native_convolution_checks": {
+    "ricker_800": {
+      "full_native_relative_L2": 1.0395070305157242e-14,
+      "late_250_450ns_relative_L2": 2.788087365699209e-12,
+      "normalization": "Discrete convolution of native impulse40A sequence with native Ricker source, divided by40; no delay or coefficient fitting."
+    },
+    "ricker_1600": {
+      "full_native_relative_L2": 9.367787191540877e-15,
+      "late_250_450ns_relative_L2": 2.1108534429074796e-12,
+      "normalization": "Discrete convolution of native impulse40A sequence with native Ricker source, divided by40; no delay or coefficient fitting."
+    }
+  },
+  "metrics": {
+    "hann": {
+      "source_window": {
+        "basal": {
+          "gate_ns": [
+            332.31137724550894,
+            356.31137724550894
+          ],
+          "models": {
+            "ricker_800": {
+              "change_L2_over_impulse800": 0.00010731741220806972,
+              "L2_over_impulse800": 0.9999992072302647,
+              "complex_correlation": 0.9999999944738114,
+              "envelope_peak_ns": 335.9946773120426
+            },
+            "impulse_1600": {
+              "change_L2_over_impulse800": 0.0001064373162507623,
+              "L2_over_impulse800": 0.9999992151931125,
+              "complex_correlation": 0.9999999945639084,
+              "envelope_peak_ns": 335.9946773120426
+            },
+            "ricker_1600": {
+              "change_L2_over_impulse800": 0.00010731737133112448,
+              "L2_over_impulse800": 0.9999992071743373,
+              "complex_correlation": 0.9999999944738158,
+              "envelope_peak_ns": 335.9946773120426
+            },
+            "factor_interaction_over_impulse800": 0.00010643735712468272
+          }
+        },
+        "underground": {
+          "gate_ns": [
+            200,
+            410
+          ],
+          "models": {
+            "ricker_800": {
+              "change_L2_over_impulse800": 2.3887862634110984e-05,
+              "L2_over_impulse800": 0.9999999808986282,
+              "complex_correlation": 0.9999999997146868,
+              "envelope_peak_ns": 229.54091816367264
+            },
+            "impulse_1600": {
+              "change_L2_over_impulse800": 2.369511926743982e-05,
+              "L2_over_impulse800": 0.9999999810715933,
+              "complex_correlation": 0.9999999997192723,
+              "envelope_peak_ns": 229.54091816367264
+            },
+            "ricker_1600": {
+              "change_L2_over_impulse800": 2.388784889381373e-05,
+              "L2_over_impulse800": 0.9999999808985166,
+              "complex_correlation": 0.9999999997146873,
+              "envelope_peak_ns": 229.54091816367264
+            },
+            "factor_interaction_over_impulse800": 2.3695133005536902e-05
+          }
+        },
+        "late": {
+          "gate_ns": [
+            600,
+            800
+          ],
+          "models": {
+            "ricker_800": {
+              "change_L2_over_impulse800": 1.00000114535934,
+              "L2_over_impulse800": 8.427250192531724e-05,
+              "complex_correlation": 0.044988754031381965,
+              "envelope_peak_ns": 615.4357950765136
+            },
+            "impulse_1600": {
+              "change_L2_over_impulse800": 1.0000006670002806,
+              "L2_over_impulse800": 8.431261796620765e-05,
+              "complex_correlation": 0.037527361407676416,
+              "envelope_peak_ns": 615.4357950765136
+            },
+            "ricker_1600": {
+              "change_L2_over_impulse800": 1.000000645234245,
+              "L2_over_impulse800": 8.428664099248426e-05,
+              "complex_correlation": 0.037486154696603775,
+              "envelope_peak_ns": 615.4357950765136
+            },
+            "factor_interaction_over_impulse800": 1.0000011671253644
+          }
+        }
+      },
+      "stations": {
+        "c0008": {
+          "profile_midpoint_m": 179.25,
+          "midpoint_AGL_m": 10.274999999999999,
+          "gate_ns": [
+            332.31137724550894,
+            356.31137724550894
+          ],
+          "total_template_correlation": 0.2749379968005525,
+          "difference_template_correlation": 0.9615561447714444,
+          "H0_over_difference_L2": 3.700729462535286,
+          "difference_over_total_L2": 0.3194003806344657,
+          "H0_difference_phase_deg": 172.07957255306124,
+          "difference_peak_ns": 342.64803725881575
+        },
+        "c0058": {
+          "profile_midpoint_m": 169.25,
+          "midpoint_AGL_m": 10.774999999999999,
+          "gate_ns": [
+            313.1829673985363,
+            337.1829673985363
+          ],
+          "total_template_correlation": 0.8995946247067089,
+          "difference_template_correlation": 0.9060719645071635,
+          "H0_over_difference_L2": 0.05658549946455039,
+          "difference_over_total_L2": 0.9908918051362666,
+          "H0_difference_phase_deg": -54.49134158330754,
+          "difference_peak_ns": 324.3512974051896,
+          "far_remaining_L2_over_H0": 13.822988277866212,
+          "far_change_L2_over_H0": 13.471169274152267
+        },
+        "c0108": {
+          "profile_midpoint_m": 159.25,
+          "midpoint_AGL_m": 11.424999999999997,
+          "gate_ns": [
+            294.8862275449101,
+            318.8862275449101
+          ],
+          "total_template_correlation": 0.5823097047725798,
+          "difference_template_correlation": 0.6369656394512302,
+          "H0_over_difference_L2": 0.23339376508771204,
+          "difference_over_total_L2": 0.9656944965881542,
+          "H0_difference_phase_deg": 44.228801878170515,
+          "difference_peak_ns": 295.2428476380572,
+          "far_remaining_L2_over_H0": 1.0587736984219354,
+          "far_change_L2_over_H0": 0.2549412987187305
+        }
+      }
+    },
+    "blackman": {
+      "source_window": {
+        "basal": {
+          "gate_ns": [
+            332.31137724550894,
+            356.31137724550894
+          ],
+          "models": {
+            "ricker_800": {
+              "change_L2_over_impulse800": 4.435496615332839e-05,
+              "L2_over_impulse800": 0.9999995779801608,
+              "complex_correlation": 0.9999999990486241,
+              "envelope_peak_ns": 335.9946773120426
+            },
+            "impulse_1600": {
+              "change_L2_over_impulse800": 4.399078009827205e-05,
+              "L2_over_impulse800": 0.9999995827081187,
+              "complex_correlation": 0.9999999990641556,
+              "envelope_peak_ns": 335.9946773120426
+            },
+            "ricker_1600": {
+              "change_L2_over_impulse800": 4.435494927360463e-05,
+              "L2_over_impulse800": 0.9999995779569327,
+              "complex_correlation": 0.9999999990486247,
+              "envelope_peak_ns": 335.9946773120426
+            },
+            "factor_interaction_over_impulse800": 4.399079697682392e-05
+          }
+        },
+        "underground": {
+          "gate_ns": [
+            200,
+            410
+          ],
+          "models": {
+            "ricker_800": {
+              "change_L2_over_impulse800": 9.593131405766039e-06,
+              "L2_over_impulse800": 0.999999997793247,
+              "complex_correlation": 0.9999999999539861,
+              "envelope_peak_ns": 229.54091816367264
+            },
+            "impulse_1600": {
+              "change_L2_over_impulse800": 9.515645306458362e-06,
+              "L2_over_impulse800": 0.9999999978113415,
+              "complex_correlation": 0.9999999999547263,
+              "envelope_peak_ns": 229.54091816367264
+            },
+            "ricker_1600": {
+              "change_L2_over_impulse800": 9.593125888312823e-06,
+              "L2_over_impulse800": 0.9999999977932272,
+              "complex_correlation": 0.9999999999539858,
+              "envelope_peak_ns": 229.54091816367264
+            },
+            "factor_interaction_over_impulse800": 9.51565082302745e-06
+          }
+        },
+        "late": {
+          "gate_ns": [
+            600,
+            800
+          ],
+          "models": {
+            "ricker_800": {
+              "change_L2_over_impulse800": 1.0000003058237315,
+              "L2_over_impulse800": 5.3348656523949156e-05,
+              "complex_correlation": 0.023666544738625894,
+              "envelope_peak_ns": 641.2175648702595
+            },
+            "impulse_1600": {
+              "change_L2_over_impulse800": 0.9999996642925366,
+              "L2_over_impulse800": 5.3376430815475246e-05,
+              "complex_correlation": 0.0131151808360535,
+              "envelope_peak_ns": 641.2175648702595
+            },
+            "ricker_1600": {
+              "change_L2_over_impulse800": 0.9999996567092037,
+              "L2_over_impulse800": 5.336943951901243e-05,
+              "complex_correlation": 0.013186102334999731,
+              "envelope_peak_ns": 641.2175648702595
+            },
+            "factor_interaction_over_impulse800": 1.0000003134070605
+          }
+        }
+      },
+      "stations": {
+        "c0008": {
+          "profile_midpoint_m": 179.25,
+          "midpoint_AGL_m": 10.274999999999999,
+          "gate_ns": [
+            332.31137724550894,
+            356.31137724550894
+          ],
+          "total_template_correlation": 0.45263183265250084,
+          "difference_template_correlation": 0.9757420623302865,
+          "H0_over_difference_L2": 3.6276408920006187,
+          "difference_over_total_L2": 0.339991358231111,
+          "H0_difference_phase_deg": 173.04439111170447,
+          "difference_peak_ns": 342.64803725881575
+        },
+        "c0058": {
+          "profile_midpoint_m": 169.25,
+          "midpoint_AGL_m": 10.774999999999999,
+          "gate_ns": [
+            313.1829673985363,
+            337.1829673985363
+          ],
+          "total_template_correlation": 0.9403083435190956,
+          "difference_template_correlation": 0.9468515829176549,
+          "H0_over_difference_L2": 0.04151997784171374,
+          "difference_over_total_L2": 0.9924370604128012,
+          "H0_difference_phase_deg": -61.3641313747095,
+          "difference_peak_ns": 325.1829673985363,
+          "far_remaining_L2_over_H0": 18.000422189406436,
+          "far_change_L2_over_H0": 17.709146547234226
+        },
+        "c0108": {
+          "profile_midpoint_m": 159.25,
+          "midpoint_AGL_m": 11.424999999999997,
+          "gate_ns": [
+            294.8862275449101,
+            318.8862275449101
+          ],
+          "total_template_correlation": 0.6492233570949811,
+          "difference_template_correlation": 0.7293345449824482,
+          "H0_over_difference_L2": 0.22453245124783774,
+          "difference_over_total_L2": 0.9904337550553205,
+          "H0_difference_phase_deg": 120.85474147203136,
+          "difference_peak_ns": 295.2428476380572,
+          "far_remaining_L2_over_H0": 1.0025847394486989,
+          "far_change_L2_over_H0": 0.20163786205218864
+        }
+      }
+    }
+  },
+  "limits": "Three informed horizontal stations do not certify entire line or finite3D/antenna/field performance. FarROI deletion adds edges and changes interactions; its role varies with station, including near-underfoot atc0108. No production removal of true geological reflections.",
+  "existing_Bscan_cache_sha256": "4c43bc2f8417f00deaee49b628686106d9aa0edd80497f0ae85ad7395a5653c5",
+  "existing_Bscan_review_sha256": "2d312b79ea795a59cd5b9d3276da0fa21330b41dc317ca19e3aaca8e3047fb1b"
+}

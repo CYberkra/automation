@@ -1,0 +1,43 @@
+{
+  "status": "PASS_TWO_NATIVE_CASES_AND_RENDER_RECEIPT_NOT_UNIQUE_PATH_OR_FULL_LINE_CERTIFICATION",
+  "script_sha256": "c8e515d3f895874a53f04788046971d7cc4421132e4331820f2223f97966290f",
+  "contract_sha256": "d725771b445e2c20f78982d0a8e3568dc9f4881f11c994473e3bd5439ef7a606",
+  "verification_sha256": "4ff5f24a7aab61dd923a162d2c8593f010e64e656a1789446d6e1a70ffbf7153",
+  "native_sha256": [
+    "69ebb7a18615226ed33339eccad7fa7396312ce261ebec9718c1d0b011acb889",
+    "8560f2e62bfebca77a6cf131b74d7e04bb385e58d94bb09af89df3538158a04e"
+  ],
+  "solver_started": 2,
+  "solver_completed": 2,
+  "snapshot_count_each": 799,
+  "H0_byte_identical_to_no_observer_Ricker": true,
+  "independent_DFT_relative_L2": [
+    1.0991091937371625e-13,
+    1.0994552538298448e-13
+  ],
+  "independent_inverse_relative_L2": {
+    "hann": 2.0284209373479196e-14,
+    "blackman": 1.9533193636909592e-14
+  },
+  "metrics": {
+    "hann": {
+      "far_remaining_L2_over_H0": 0.06498024994577643,
+      "difference_L2_over_H0": 0.9678631449067625,
+      "far_ricker_change_over_prior_impulse": 0.0016517825910958082,
+      "far_ricker_prior_correlation": 0.9999987209075901,
+      "difference_peak_ns": 336.8263473053892
+    },
+    "blackman": {
+      "far_remaining_L2_over_H0": 0.08119186459181156,
+      "difference_L2_over_H0": 0.9464065285745001,
+      "far_ricker_change_over_prior_impulse": 0.000546262588235993,
+      "far_ricker_prior_correlation": 0.9999998575718867,
+      "difference_peak_ns": 336.8263473053892
+    }
+  },
+  "numerical_sha256": "a62276af39bd99bccb08c7654dc29e56adcf874ce70b503947abd7cece54852f",
+  "reference_impulse_far_native_sha256": "0a11f57e163d9d0c8bbbe01e35baf6ccb0bce9feaeb7166b4f5c8b66698cb3f5",
+  "render_script_sha256": "8d8680955aa61c16c1c7c23b8e0e4dc3967c85fccb4b2cb37971ac6a9b97dd68",
+  "render_receipt_sha256": "483f64d43eb7ff523be6cca15514cc7b4eb4e5eeb79fee28369617dbbea670e6",
+  "limits": "Native Ricker movie is pulse-weighted, not a501-tone SFCW movie. Spatial0.1m and time17native steps(~1ns) are visualization sampling, not FDTD coarsening. Window40-85m/10-37m excludes exterior wavefield. ROI deletion adds edges/changes interactions; no claim of one isolated diffraction or full-line/3D/field certification."
+}

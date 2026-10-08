@@ -1,4 +1,39 @@
 {
+ "line9_dense_interbed_wavefield_2026_10_08": {
+  "report": "docs/research/2026-10-08_line9_dense_interbed_wavefield_plan.md",
+  "results": "artifacts/research_checks/2026-10-08_line9_interbed_wavefield_results_r2",
+  "preparation": "artifacts/research_checks/2026-10-08_line9_interbed_wavefield_prepare_r1",
+  "scripts": [
+   "scripts/line9_interbed_wavefield.py",
+   "scripts/render_line9_interbed_wavefield.py",
+   "scripts/analyze_line9_interbed_wavefield_delivery.py",
+   "scripts/audit_line9_wavefield_delivery.py"
+  ],
+  "status": "TWO_FP64_COMPLETE_DENSE_NATIVE_RICKER_MOVIE_AND_EXACT_SFCW_AUDITED_ROI_EDGE_PATH_ORDER_UNRESOLVED",
+  "solver_completed": 2,
+  "total_six_component_snapshots": 1598,
+  "rendered_frames": 167,
+  "full_snapshot_storage": "E:/line9_basal_pair_20261008_r1/interbed_wavefield_r1/prepared",
+  "whole_line_resolved": false,
+  "field_validated": false
+ },
+ "line9_source_station_controls_2026_10_08": {
+  "report": "docs/research/2026-10-08_line9_source_window_and_stations.md",
+  "results": "artifacts/research_checks/2026-10-08_line9_source_station_results_r1",
+  "preparation": "artifacts/research_checks/2026-10-08_line9_source_station_prepare_r1",
+  "scripts": [
+   "scripts/line9_source_station_controls.py",
+   "scripts/analyze_line9_source_station_controls.py",
+   "scripts/audit_line9_source_station_delivery.py"
+  ],
+  "status": "NINE_FP64_COMPLETE_SOURCE_WINDOW_MAIN_GATE_STABLE_STATION_DEPENDENT_INTERBED_AND_BOTTOM_RESPONSE",
+  "solver_completed": 9,
+  "historical_pair_reused": true,
+  "native_dtype": "float64",
+  "late_window_impulse_truncation_sensitive": true,
+  "whole_line_resolved": false,
+  "field_validated": false
+ },
  "line9_localized_height_controls_2026_10_08": {
   "report": "docs/research/2026-10-08_line9_localized_height_controls.md",
   "results": "artifacts/research_checks/2026-10-08_line9_localized_height_results_r1",

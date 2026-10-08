@@ -1,0 +1,634 @@
+{
+  "status": "PREPARED_APPROVED_NOT_RUN",
+  "approval_basis": "User persistent objective 研究明白 plus autonomous SSH simulation authorization.",
+  "parent_manifest_sha256": "13beb7aa1a1a08575d1db040ac7b7a2a54d27bc4d4050569ea21e1b15f8ae30c",
+  "parent_H0_native_sha256": "007d70fd28aa6469d260992386a78afcb7aba5101c05ba981747c47a652baa74",
+  "groups": [
+    {
+      "id": "ricker_800",
+      "station": "c0008",
+      "variant": "H0",
+      "input": "ricker_800/cases/full2d_c0008/profile.in",
+      "input_sha256": "16e8e38951384b0b5e109cae473ed887b67edc3eca5760904ef7280d06cde30e",
+      "geometry": "ricker_800/geometries/full2d_compact.h5",
+      "geometry_sha256": "ad3517b243ba67386622da7e1de57cb3d7046243eb0d8fb197c8fb2b558e979b",
+      "material": "ricker_800/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "native_shape": [
+        4400,
+        1600,
+        1
+      ],
+      "domain_m": [
+        110,
+        40,
+        0.025
+      ],
+      "tx_m": [
+        78.6,
+        35.0,
+        0.0
+      ],
+      "rx_m": [
+        79.9,
+        35.0,
+        0.0
+      ],
+      "time_window_ns": 800,
+      "expected_samples": 13569,
+      "source_type": "ricker",
+      "source_frequency_Hz": 100000000.0,
+      "source_amplitude_A": 40.0,
+      "source_band_min_over_max": 0.1044680664254774
+    },
+    {
+      "id": "impulse_1600",
+      "station": "c0008",
+      "variant": "H0",
+      "input": "impulse_1600/cases/full2d_c0008/profile.in",
+      "input_sha256": "175c08ba0ce6aac9fd1253476013e0837b910f654cab27f837476e840f07df8e",
+      "geometry": "impulse_1600/geometries/full2d_compact.h5",
+      "geometry_sha256": "ad3517b243ba67386622da7e1de57cb3d7046243eb0d8fb197c8fb2b558e979b",
+      "material": "impulse_1600/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "native_shape": [
+        4400,
+        1600,
+        1
+      ],
+      "domain_m": [
+        110,
+        40,
+        0.025
+      ],
+      "tx_m": [
+        78.6,
+        35.0,
+        0.0
+      ],
+      "rx_m": [
+        79.9,
+        35.0,
+        0.0
+      ],
+      "time_window_ns": 1600,
+      "expected_samples": 27136,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "source_amplitude_A": 40.0,
+      "source_band_min_over_max": 0.9999999999999994
+    },
+    {
+      "id": "ricker_1600",
+      "station": "c0008",
+      "variant": "H0",
+      "input": "ricker_1600/cases/full2d_c0008/profile.in",
+      "input_sha256": "6d30b252b5dc893a44434d2a7bd7241e88742e065198e1153082b2e314f6ed1b",
+      "geometry": "ricker_1600/geometries/full2d_compact.h5",
+      "geometry_sha256": "ad3517b243ba67386622da7e1de57cb3d7046243eb0d8fb197c8fb2b558e979b",
+      "material": "ricker_1600/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "native_shape": [
+        4400,
+        1600,
+        1
+      ],
+      "domain_m": [
+        110,
+        40,
+        0.025
+      ],
+      "tx_m": [
+        78.6,
+        35.0,
+        0.0
+      ],
+      "rx_m": [
+        79.9,
+        35.0,
+        0.0
+      ],
+      "time_window_ns": 1600,
+      "expected_samples": 27136,
+      "source_type": "ricker",
+      "source_frequency_Hz": 100000000.0,
+      "source_amplitude_A": 40.0,
+      "source_band_min_over_max": 0.1044680664254774
+    },
+    {
+      "id": "c0058_H1",
+      "station": "c0058",
+      "variant": "H1",
+      "input": "c0058_H1/cases/full2d_c0058/profile.in",
+      "input_sha256": "6af99c572a816e45c0372f41e27326b4577025afa8f69ff8584e3b39bf52cdaf",
+      "geometry": "c0058_H1/geometries/full2d_compact.h5",
+      "geometry_sha256": "a3e9368f763ed4d37f00505d1217d1e0fbdf054aacd480fb1e2db9ea40e323a8",
+      "material": "c0058_H1/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "native_shape": [
+        4400,
+        1600,
+        1
+      ],
+      "domain_m": [
+        110,
+        40,
+        0.025
+      ],
+      "tx_m": [
+        68.6,
+        35.0,
+        0.0
+      ],
+      "rx_m": [
+        69.9,
+        35.0,
+        0.0
+      ],
+      "time_window_ns": 800,
+      "expected_samples": 13569,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "source_amplitude_A": 40.0,
+      "source_band_min_over_max": 0.9999999999999994
+    },
+    {
+      "id": "c0058_H0",
+      "station": "c0058",
+      "variant": "H0",
+      "input": "c0058_H0/cases/full2d_c0058/profile.in",
+      "input_sha256": "94275c00730be33e68c39df6de277df33401232c900e24a9ddb3c4552722cc45",
+      "geometry": "c0058_H0/geometries/full2d_compact.h5",
+      "geometry_sha256": "ad3517b243ba67386622da7e1de57cb3d7046243eb0d8fb197c8fb2b558e979b",
+      "material": "c0058_H0/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "native_shape": [
+        4400,
+        1600,
+        1
+      ],
+      "domain_m": [
+        110,
+        40,
+        0.025
+      ],
+      "tx_m": [
+        68.6,
+        35.0,
+        0.0
+      ],
+      "rx_m": [
+        69.9,
+        35.0,
+        0.0
+      ],
+      "time_window_ns": 800,
+      "expected_samples": 13569,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "source_amplitude_A": 40.0,
+      "source_band_min_over_max": 0.9999999999999994
+    },
+    {
+      "id": "c0058_far",
+      "station": "c0058",
+      "variant": "far",
+      "input": "c0058_far/cases/full2d_c0058/profile.in",
+      "input_sha256": "7c37ea5e6750aee3402e624b19a75482a319f3ef9d934b1661bd7820adcc0e1d",
+      "geometry": "c0058_far/geometries/full2d_compact.h5",
+      "geometry_sha256": "6919bc77d9e97cc3f2c9185e01673d3ae4b2a34ae50d81754a918c002cdd3a3a",
+      "material": "c0058_far/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "native_shape": [
+        4400,
+        1600,
+        1
+      ],
+      "domain_m": [
+        110,
+        40,
+        0.025
+      ],
+      "tx_m": [
+        68.6,
+        35.0,
+        0.0
+      ],
+      "rx_m": [
+        69.9,
+        35.0,
+        0.0
+      ],
+      "time_window_ns": 800,
+      "expected_samples": 13569,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "source_amplitude_A": 40.0,
+      "source_band_min_over_max": 0.9999999999999994
+    },
+    {
+      "id": "c0108_H1",
+      "station": "c0108",
+      "variant": "H1",
+      "input": "c0108_H1/cases/full2d_c0108/profile.in",
+      "input_sha256": "022e974fc736e09bbfa2e7b16906c6824e717a7dd4a0bd2bda9f6f648d448b55",
+      "geometry": "c0108_H1/geometries/full2d_compact.h5",
+      "geometry_sha256": "a3e9368f763ed4d37f00505d1217d1e0fbdf054aacd480fb1e2db9ea40e323a8",
+      "material": "c0108_H1/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "native_shape": [
+        4400,
+        1600,
+        1
+      ],
+      "domain_m": [
+        110,
+        40,
+        0.025
+      ],
+      "tx_m": [
+        58.6,
+        35.0,
+        0.0
+      ],
+      "rx_m": [
+        59.9,
+        35.0,
+        0.0
+      ],
+      "time_window_ns": 800,
+      "expected_samples": 13569,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "source_amplitude_A": 40.0,
+      "source_band_min_over_max": 0.9999999999999994
+    },
+    {
+      "id": "c0108_H0",
+      "station": "c0108",
+      "variant": "H0",
+      "input": "c0108_H0/cases/full2d_c0108/profile.in",
+      "input_sha256": "db8dd19cd11241f31d21b4d8c8d48c40b10286e6ed3166d2dd1777856b15a069",
+      "geometry": "c0108_H0/geometries/full2d_compact.h5",
+      "geometry_sha256": "ad3517b243ba67386622da7e1de57cb3d7046243eb0d8fb197c8fb2b558e979b",
+      "material": "c0108_H0/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "native_shape": [
+        4400,
+        1600,
+        1
+      ],
+      "domain_m": [
+        110,
+        40,
+        0.025
+      ],
+      "tx_m": [
+        58.6,
+        35.0,
+        0.0
+      ],
+      "rx_m": [
+        59.9,
+        35.0,
+        0.0
+      ],
+      "time_window_ns": 800,
+      "expected_samples": 13569,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "source_amplitude_A": 40.0,
+      "source_band_min_over_max": 0.9999999999999994
+    },
+    {
+      "id": "c0108_far",
+      "station": "c0108",
+      "variant": "far",
+      "input": "c0108_far/cases/full2d_c0108/profile.in",
+      "input_sha256": "d4235b244312fe8ae2a6fce910bad841d5c56b2d8f8cc6288029967af567efc1",
+      "geometry": "c0108_far/geometries/full2d_compact.h5",
+      "geometry_sha256": "6919bc77d9e97cc3f2c9185e01673d3ae4b2a34ae50d81754a918c002cdd3a3a",
+      "material": "c0108_far/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "native_shape": [
+        4400,
+        1600,
+        1
+      ],
+      "domain_m": [
+        110,
+        40,
+        0.025
+      ],
+      "tx_m": [
+        58.6,
+        35.0,
+        0.0
+      ],
+      "rx_m": [
+        59.9,
+        35.0,
+        0.0
+      ],
+      "time_window_ns": 800,
+      "expected_samples": 13569,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "source_amplitude_A": 40.0,
+      "source_band_min_over_max": 0.9999999999999994
+    }
+  ],
+  "stations": {
+    "c0008": {
+      "tx_m": [
+        78.6,
+        35,
+        0
+      ],
+      "rx_m": [
+        79.9,
+        35,
+        0
+      ],
+      "profile_midpoint_m": 179.25,
+      "model_midpoint_m": 159.25,
+      "geometry": {
+        "midpoint_agl_m": 10.274999999999999,
+        "surface_y_m": 24.725,
+        "boundaries": [
+          {
+            "y_m": 24.725,
+            "depth_m": 0.0,
+            "above": 0,
+            "below": 1,
+            "time95_ns": 68.68444357285816,
+            "vertical_absorption95_db": -0.0
+          },
+          {
+            "y_m": 17.45,
+            "depth_m": 7.275,
+            "above": 1,
+            "below": 2,
+            "time95_ns": 229.87465946728918,
+            "vertical_absorption95_db": -11.770586837584212
+          },
+          {
+            "y_m": 16.275000000000002,
+            "depth_m": 8.450000000000001,
+            "above": 2,
+            "below": 3,
+            "time95_ns": 257.1027357649007,
+            "vertical_absorption95_db": -22.367109319085547
+          },
+          {
+            "y_m": 14.05,
+            "depth_m": 10.675,
+            "above": 3,
+            "below": 2,
+            "time95_ns": 301.67309593626965,
+            "vertical_absorption95_db": -32.813885035218235
+          },
+          {
+            "y_m": 12.05,
+            "depth_m": 12.675,
+            "above": 2,
+            "below": 3,
+            "time95_ns": 348.0195951768748,
+            "vertical_absorption95_db": -50.85051904628433
+          }
+        ],
+        "surface": {
+          "y_m": 24.725,
+          "depth_m": 0.0,
+          "above": 0,
+          "below": 1,
+          "time95_ns": 68.68444357285816,
+          "vertical_absorption95_db": -0.0
+        },
+        "cover_base": {
+          "y_m": 17.45,
+          "depth_m": 7.275,
+          "above": 1,
+          "below": 2,
+          "time95_ns": 229.87465946728918,
+          "vertical_absorption95_db": -11.770586837584212
+        },
+        "first_sand": {
+          "y_m": 16.275000000000002,
+          "depth_m": 8.450000000000001,
+          "above": 2,
+          "below": 3,
+          "time95_ns": 257.1027357649007,
+          "vertical_absorption95_db": -22.367109319085547
+        },
+        "basal_sand": {
+          "y_m": 12.05,
+          "depth_m": 12.675,
+          "above": 2,
+          "below": 3,
+          "time95_ns": 348.0195951768748,
+          "vertical_absorption95_db": -50.85051904628433
+        }
+      },
+      "basal_template_peak_ns": 344.31137724550894,
+      "basal_gate_ns": [
+        332.31137724550894,
+        356.31137724550894
+      ],
+      "original_native_sha256": "4eecd9339747849ea98206ba8fb055b76bdbba975a2def673dc060f1a472a5d0"
+    },
+    "c0058": {
+      "tx_m": [
+        68.6,
+        35,
+        0
+      ],
+      "rx_m": [
+        69.9,
+        35,
+        0
+      ],
+      "profile_midpoint_m": 169.25,
+      "model_midpoint_m": 149.25,
+      "geometry": {
+        "midpoint_agl_m": 10.774999999999999,
+        "surface_y_m": 24.225,
+        "boundaries": [
+          {
+            "y_m": 24.225,
+            "depth_m": 0.0,
+            "above": 0,
+            "below": 1,
+            "time95_ns": 72.01373801235226,
+            "vertical_absorption95_db": -0.0
+          },
+          {
+            "y_m": 16.900000000000002,
+            "depth_m": 7.325,
+            "above": 1,
+            "below": 2,
+            "time95_ns": 234.31382289577323,
+            "vertical_absorption95_db": -11.85148434162259
+          },
+          {
+            "y_m": 16.625,
+            "depth_m": 7.6000000000000005,
+            "above": 2,
+            "below": 3,
+            "time95_ns": 240.6863921378093,
+            "vertical_absorption95_db": -14.331521518144179
+          },
+          {
+            "y_m": 14.725000000000001,
+            "depth_m": 9.5,
+            "above": 3,
+            "below": 2,
+            "time95_ns": 278.746629857409,
+            "vertical_absorption95_db": -23.252363702706923
+          },
+          {
+            "y_m": 12.575000000000001,
+            "depth_m": 11.65,
+            "above": 2,
+            "below": 3,
+            "time95_ns": 328.5692258270054,
+            "vertical_absorption95_db": -42.64174526460298
+          }
+        ],
+        "surface": {
+          "y_m": 24.225,
+          "depth_m": 0.0,
+          "above": 0,
+          "below": 1,
+          "time95_ns": 72.01373801235226,
+          "vertical_absorption95_db": -0.0
+        },
+        "cover_base": {
+          "y_m": 16.900000000000002,
+          "depth_m": 7.325,
+          "above": 1,
+          "below": 2,
+          "time95_ns": 234.31382289577323,
+          "vertical_absorption95_db": -11.85148434162259
+        },
+        "first_sand": {
+          "y_m": 16.625,
+          "depth_m": 7.6000000000000005,
+          "above": 2,
+          "below": 3,
+          "time95_ns": 240.6863921378093,
+          "vertical_absorption95_db": -14.331521518144179
+        },
+        "basal_sand": {
+          "y_m": 12.575000000000001,
+          "depth_m": 11.65,
+          "above": 2,
+          "below": 3,
+          "time95_ns": 328.5692258270054,
+          "vertical_absorption95_db": -42.64174526460298
+        }
+      },
+      "basal_template_peak_ns": 325.1829673985363,
+      "basal_gate_ns": [
+        313.1829673985363,
+        337.1829673985363
+      ],
+      "original_native_sha256": "89243a063d8ad13734729c2dcf61b4622004d005aa974a003928f0564318ba2e"
+    },
+    "c0108": {
+      "tx_m": [
+        58.6,
+        35,
+        0
+      ],
+      "rx_m": [
+        59.9,
+        35,
+        0
+      ],
+      "profile_midpoint_m": 159.25,
+      "model_midpoint_m": 139.25,
+      "geometry": {
+        "midpoint_agl_m": 11.424999999999997,
+        "surface_y_m": 23.575000000000003,
+        "boundaries": [
+          {
+            "y_m": 23.575000000000003,
+            "depth_m": 0.0,
+            "above": 0,
+            "below": 1,
+            "time95_ns": 76.34264912135193,
+            "vertical_absorption95_db": -0.0
+          },
+          {
+            "y_m": 16.325,
+            "depth_m": 7.25,
+            "above": 1,
+            "below": 3,
+            "time95_ns": 236.98315458373366,
+            "vertical_absorption95_db": -11.73013808556502
+          },
+          {
+            "y_m": 15.4,
+            "depth_m": 8.175,
+            "above": 3,
+            "below": 2,
+            "time95_ns": 255.51261570455614,
+            "vertical_absorption95_db": -16.073179675417933
+          },
+          {
+            "y_m": 13.075000000000001,
+            "depth_m": 10.5,
+            "above": 2,
+            "below": 3,
+            "time95_ns": 309.3907053024558,
+            "vertical_absorption95_db": -37.040766713282274
+          }
+        ],
+        "surface": {
+          "y_m": 23.575000000000003,
+          "depth_m": 0.0,
+          "above": 0,
+          "below": 1,
+          "time95_ns": 76.34264912135193,
+          "vertical_absorption95_db": -0.0
+        },
+        "cover_base": {
+          "y_m": 16.325,
+          "depth_m": 7.25,
+          "above": 1,
+          "below": 3,
+          "time95_ns": 236.98315458373366,
+          "vertical_absorption95_db": -11.73013808556502
+        },
+        "first_sand": {
+          "y_m": 16.325,
+          "depth_m": 7.25,
+          "above": 1,
+          "below": 3,
+          "time95_ns": 236.98315458373366,
+          "vertical_absorption95_db": -11.73013808556502
+        },
+        "basal_sand": {
+          "y_m": 13.075000000000001,
+          "depth_m": 10.5,
+          "above": 2,
+          "below": 3,
+          "time95_ns": 309.3907053024558,
+          "vertical_absorption95_db": -37.040766713282274
+        }
+      },
+      "basal_template_peak_ns": 306.8862275449101,
+      "basal_gate_ns": [
+        294.8862275449101,
+        318.8862275449101
+      ],
+      "original_native_sha256": "1e7989bbad8823928b1b3da41fad3baeb3edda4843be478b787fc27d23f56148"
+    }
+  },
+  "variables": "At c0008/H0,complete2x2impulse/Ricker100MHz versus800/1600ns; reuse prior impulse800. At c0058/c0108,matchedH1,H0,farROI45-60m removal.",
+  "invariants": "110x40m,2.5cm,FP64,HORIPML80cells,material database/interface averaging,Tx-Rx1.3m at y35m; no snapshots; exact501tones20-170MHz/.3MHz and actual-source normalization,Hann+Blackman,no tail taper,AGC,alignment or fitted phase.",
+  "gates": "Each station basal model-template peak+-12ns frozen before solve; source/window c0008 reuses332.311-356.311ns.",
+  "snapshot_count": 0,
+  "limits": "Three informed horizontal stations do not certify entire line or finite3D/antenna/field performance. FarROI deletion adds edges and changes interactions; its role varies with station, including near-underfoot atc0108. No production removal of true geological reflections."
+}

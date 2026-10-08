@@ -1,0 +1,41 @@
+{
+  "status": "PASS_EVENTS_NATIVE_SOURCE_HASHES_MOVIE_RECEIPTS_AND_INDEPENDENT_INVERSE",
+  "audit_script_sha256": "b82c3468e6b5d0cc72676c891d2a44be54bf142f498a10a0365882f2f2e89a10",
+  "independent_inverse_relative_L2": {
+    "hann": 1.868657209108467e-14,
+    "blackman": 2.2119259738356584e-14
+  },
+  "solver_started": 2,
+  "solver_completed": 2,
+  "native_sha256": [
+    "69ebb7a18615226ed33339eccad7fa7396312ce261ebec9718c1d0b011acb889",
+    "8560f2e62bfebca77a6cf131b74d7e04bb385e58d94bb09af89df3538158a04e"
+  ],
+  "total_six_component_snapshots": 1598,
+  "rendered_frames": 167,
+  "full_snapshot_payload_audit": "All six fields were checked for dtype/shape/finiteness and hashed on solver host. Local audit independently checks receipt identities, not a second download of9.3GB.",
+  "completed_models": [
+    {
+      "id": "H0",
+      "elapsed_s": 85.375,
+      "peak_owned_RSS_GiB": 10.384735107421875
+    },
+    {
+      "id": "far_removed",
+      "elapsed_s": 85.92199999999139,
+      "peak_owned_RSS_GiB": 9.93655014038086
+    }
+  ],
+  "public_media_sha256": {
+    "interbed_wavefield.gif": "6879a8bddcb19932627f07f143f21f86b91293b5d80ff231e6434f45e3b6350b",
+    "wavefield_01683.png": "f43b96e6474c1f4290de1d249ced2efe2590fca6e685d9016f327097b0e63e6f",
+    "wavefield_02550.png": "68cf6550a76f9735850efd6377c70418ffa6fc378b4bce2fc2525d4778bd591f",
+    "wavefield_03417.png": "c16410bca7883714f0381f935f096514ed2f33ab4fdb455e4ca04dd07480211f",
+    "wavefield_04233.png": "cb385d17a4bbd3be8c63a00b2b677045ce4f9f18d3cbd67cc3e08ba7bbce90e9",
+    "wavefield_05100.png": "800a5c062b68c299359fdeaace77036e096ae380830c641f0babdb572dd8c78a",
+    "wavefield_05916.png": "26162d59a2898ee947058f033437e49282a664d4faf5ef6df2ba4f368610df7e",
+    "wavefield_06783.png": "c385438a1df5dc99b48114c55bb78aa70293e5c5e0b6534735b532ae9d335baf",
+    "wavefield_07650.png": "223d1010dc9a170cb5d3fa7ec2cf3617cc539ecde46926236595a5b82e1b1dc6",
+    "wavefield_pair_sfcw_gray.png": "beddd9b570741f5a6fc89d526b02f5bc2e5ac80b1da0e88e5f91f431358320b0"
+  }
+}
