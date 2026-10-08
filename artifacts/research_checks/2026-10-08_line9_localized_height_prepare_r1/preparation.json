@@ -1,0 +1,157 @@
+{
+  "status": "PREPARED_APPROVED_LOCALIZED_AND_HEIGHT_CONTROLS_NOT_RUN",
+  "approval_basis": "User objective 研究明白 and explicit SSH simulation/autonomous research authorization.",
+  "parent_manifest_sha256": "13beb7aa1a1a08575d1db040ac7b7a2a54d27bc4d4050569ea21e1b15f8ae30c",
+  "parent_H0_native_sha256": "007d70fd28aa6469d260992386a78afcb7aba5101c05ba981747c47a652baa74",
+  "groups": [
+    {
+      "id": "far_interbed_removed",
+      "input": "far_interbed_removed/cases/full2d_c0008/profile.in",
+      "input_sha256": "f90e2d004cbd60ecc211a2a57de072bee5f82b47bd08726cb29f2300a6399236",
+      "geometry": "far_interbed_removed/geometries/full2d_compact.h5",
+      "geometry_sha256": "6919bc77d9e97cc3f2c9185e01673d3ae4b2a34ae50d81754a918c002cdd3a3a",
+      "material": "far_interbed_removed/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "native_shape": [
+        4400,
+        1600,
+        1
+      ],
+      "domain_m": [
+        110,
+        40,
+        0.025
+      ],
+      "tx_m": [
+        78.6,
+        35.0,
+        0.0
+      ],
+      "rx_m": [
+        79.9,
+        35.0,
+        0.0
+      ],
+      "description": "高航高H0：仅x45–60m夹层→泥岩",
+      "midpoint_agl_m": 10.274999999999999,
+      "changed_voxels_vs_H0": 7914
+    },
+    {
+      "id": "near_interbed_removed",
+      "input": "near_interbed_removed/cases/full2d_c0008/profile.in",
+      "input_sha256": "f90e2d004cbd60ecc211a2a57de072bee5f82b47bd08726cb29f2300a6399236",
+      "geometry": "near_interbed_removed/geometries/full2d_compact.h5",
+      "geometry_sha256": "edc2a349dede429bd41e5aef4d1cd6a65bd88973780110f92cae27cbbaa8e280",
+      "material": "near_interbed_removed/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "native_shape": [
+        4400,
+        1600,
+        1
+      ],
+      "domain_m": [
+        110,
+        40,
+        0.025
+      ],
+      "tx_m": [
+        78.6,
+        35.0,
+        0.0
+      ],
+      "rx_m": [
+        79.9,
+        35.0,
+        0.0
+      ],
+      "description": "高航高H0：仅x65–90m夹层→泥岩",
+      "midpoint_agl_m": 10.274999999999999,
+      "changed_voxels_vs_H0": 86815
+    },
+    {
+      "id": "low_H1",
+      "input": "low_H1/cases/full2d_c0008/profile.in",
+      "input_sha256": "dc2a1bcca5c3337656353e0304711201ea59b1dba4c6cbe9efba83b5bb3bc78b",
+      "geometry": "low_H1/geometries/full2d_compact.h5",
+      "geometry_sha256": "25f4bbce1721639b508bd1493f248f2084c13b79621ed1941df8493a2991933b",
+      "material": "low_H1/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "native_shape": [
+        4400,
+        1600,
+        1
+      ],
+      "domain_m": [
+        110,
+        40,
+        0.025
+      ],
+      "tx_m": [
+        78.6,
+        25.725,
+        0.0
+      ],
+      "rx_m": [
+        79.9,
+        25.725,
+        0.0
+      ],
+      "description": "AGL1m：完整原地质H1",
+      "midpoint_agl_m": 1.0,
+      "changed_voxels_vs_H0": 2341672
+    },
+    {
+      "id": "low_H0",
+      "input": "low_H0/cases/full2d_c0008/profile.in",
+      "input_sha256": "dc2a1bcca5c3337656353e0304711201ea59b1dba4c6cbe9efba83b5bb3bc78b",
+      "geometry": "low_H0/geometries/full2d_compact.h5",
+      "geometry_sha256": "ad3517b243ba67386622da7e1de57cb3d7046243eb0d8fb197c8fb2b558e979b",
+      "material": "low_H0/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "native_shape": [
+        4400,
+        1600,
+        1
+      ],
+      "domain_m": [
+        110,
+        40,
+        0.025
+      ],
+      "tx_m": [
+        78.6,
+        25.725,
+        0.0
+      ],
+      "rx_m": [
+        79.9,
+        25.725,
+        0.0
+      ],
+      "description": "AGL1m：仅去底砂H0",
+      "midpoint_agl_m": 1.0,
+      "changed_voxels_vs_H0": 0
+    }
+  ],
+  "reference_is_prior_H0": true,
+  "case_labels": [
+    "高航高原H0",
+    "高航高H0：仅x45–60m夹层→泥岩",
+    "高航高H0：仅x65–90m夹层→泥岩",
+    "AGL1m：完整原地质H1",
+    "AGL1m：仅去底砂H0"
+  ],
+  "snapshot_count": 0,
+  "invariants": "110x40m,2.5cm,800ns,FP64,HORIPML80cells,40A impulse,material database,relative horizontal Tx/Rx; no snapshots. Local edits affect sandstoneID3 only. Low pair same geometry/domain as original high pair, only y35->25.725m.",
+  "predefined_gates_ns": {
+    "high_basal": [
+      332.31137724550894,
+      356.31137724550894
+    ],
+    "low_basal_air_shift_proxy": [
+      270.433,
+      294.433
+    ]
+  },
+  "limits": "Far/near removals introduce ROI edges and alter interactions; they locate sensitivity regions, not isolated pinchout reflection. Low gate fixed before solve by approximate air delay; evaluate full complex traces and model-derived template as well, no adaptive production correction."
+}

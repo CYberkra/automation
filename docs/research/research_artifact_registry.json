@@ -1,4 +1,20 @@
 {
+ "line9_localized_height_controls_2026_10_08": {
+  "report": "docs/research/2026-10-08_line9_localized_height_controls.md",
+  "results": "artifacts/research_checks/2026-10-08_line9_localized_height_results_r1",
+  "preparation": "artifacts/research_checks/2026-10-08_line9_localized_height_prepare_r1",
+  "scripts": [
+   "scripts/line9_localized_height_controls.py",
+   "scripts/analyze_line9_localized_height.py",
+   "scripts/audit_line9_localized_delivery.py"
+  ],
+  "status": "FOUR_FP64_CONTROLS_COMPLETE_FAR_INTERBED_REGION_AND_SAME_DOMAIN_HEIGHT_EFFECT_SUPPORTED_SINGLE_STATION",
+  "solver_completed": 4,
+  "historical_high_pair_reused": true,
+  "native_dtype": "float64",
+  "whole_line_resolved": false,
+  "field_validated": false
+ },
  "line9_interbed_attribution_2026_10_08": {
   "report": "docs/research/2026-10-08_line9_interbed_attribution.md",
   "status": "NINE_FP64_CONTROLS_COMPLETE_UPPER_INTERBED_LATERAL_GEOMETRY_SUPPORTED_SINGLE_STATION",

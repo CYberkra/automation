@@ -1,0 +1,295 @@
+{
+  "script_sha256": "98cf1815da1ea496b19c6c1601304ce273f7e5025556d2ac9783620ca1ed7e96",
+  "contract_sha256": "64c4f6ed211a19d602772190cbeaf168a7610f27a6c2dd60e9d773dcae2de731",
+  "verification_sha256": "30c5a431f25e0051dec9e34444ee05f4e36f77a213ebc4a0a0202dfc05059657",
+  "columns": [
+    "high_H1",
+    "high_H0",
+    "far_interbed_removed",
+    "near_interbed_removed",
+    "low_H1",
+    "low_H0"
+  ],
+  "native_sha256": [
+    "7f56a97855ccfebfdc32e237e16238764ae6efd4bdde1138ebd4730eeee98bda",
+    "007d70fd28aa6469d260992386a78afcb7aba5101c05ba981747c47a652baa74",
+    "0a11f57e163d9d0c8bbbe01e35baf6ccb0bce9feaeb7166b4f5c8b66698cb3f5",
+    "2230bf2b5c88e351bee6465ef6ebc09277c604bb9be06f5b0eb2507789fc0d65",
+    "ca6dcf693c1d95fdd6f0bdefd88b1de4ab95860b677e962ffb52c9e4c7a6ba23",
+    "782cec7f0b8624f32dbcfe1a06415e947c07a6203d435c3097f36eb26e798ad4"
+  ],
+  "numerical_sha256": "a51f07512ab54e3d36b2d7fa6919ba2826fc4fedaa13a3b74f490ff0edc49275",
+  "independent_DFT_relative_L2": [
+    8.948199957244557e-13,
+    8.818597339669269e-13,
+    8.848929622725903e-13,
+    8.809240210940715e-13,
+    1.4398205225457306e-13,
+    1.4279584851422073e-13
+  ],
+  "independent_inverse_relative_L2": {
+    "hann": 4.732444999929875e-14,
+    "blackman": 4.739162166343956e-14
+  },
+  "frequency_MHz": [
+    20,
+    170
+  ],
+  "step_MHz": 0.3,
+  "tones": 501,
+  "tail_taper": false,
+  "AGC": false,
+  "geometries": {
+    "high": {
+      "midpoint_agl_m": 10.274999999999999,
+      "surface_y_m": 24.725,
+      "boundaries": [
+        {
+          "y_m": 24.725,
+          "depth_m": 0.0,
+          "above": 0,
+          "below": 1,
+          "time95_ns": 68.68444357285816,
+          "vertical_absorption95_db": -0.0
+        },
+        {
+          "y_m": 17.45,
+          "depth_m": 7.275,
+          "above": 1,
+          "below": 2,
+          "time95_ns": 229.87465946728918,
+          "vertical_absorption95_db": -11.770586837584212
+        },
+        {
+          "y_m": 16.275000000000002,
+          "depth_m": 8.450000000000001,
+          "above": 2,
+          "below": 3,
+          "time95_ns": 257.1027357649007,
+          "vertical_absorption95_db": -22.367109319085547
+        },
+        {
+          "y_m": 14.05,
+          "depth_m": 10.675,
+          "above": 3,
+          "below": 2,
+          "time95_ns": 301.67309593626965,
+          "vertical_absorption95_db": -32.813885035218235
+        },
+        {
+          "y_m": 12.05,
+          "depth_m": 12.675,
+          "above": 2,
+          "below": 3,
+          "time95_ns": 348.0195951768748,
+          "vertical_absorption95_db": -50.85051904628433
+        }
+      ],
+      "surface": {
+        "y_m": 24.725,
+        "depth_m": 0.0,
+        "above": 0,
+        "below": 1,
+        "time95_ns": 68.68444357285816,
+        "vertical_absorption95_db": -0.0
+      },
+      "cover_base": {
+        "y_m": 17.45,
+        "depth_m": 7.275,
+        "above": 1,
+        "below": 2,
+        "time95_ns": 229.87465946728918,
+        "vertical_absorption95_db": -11.770586837584212
+      },
+      "first_sand": {
+        "y_m": 16.275000000000002,
+        "depth_m": 8.450000000000001,
+        "above": 2,
+        "below": 3,
+        "time95_ns": 257.1027357649007,
+        "vertical_absorption95_db": -22.367109319085547
+      },
+      "basal_sand": {
+        "y_m": 12.05,
+        "depth_m": 12.675,
+        "above": 2,
+        "below": 3,
+        "time95_ns": 348.0195951768748,
+        "vertical_absorption95_db": -50.85051904628433
+      }
+    },
+    "low": {
+      "midpoint_agl_m": 1.0,
+      "surface_y_m": 24.725,
+      "boundaries": [
+        {
+          "y_m": 24.725,
+          "depth_m": 0.0,
+          "above": 0,
+          "below": 1,
+          "time95_ns": 7.956744823698394,
+          "vertical_absorption95_db": -0.0
+        },
+        {
+          "y_m": 17.45,
+          "depth_m": 7.275,
+          "above": 1,
+          "below": 2,
+          "time95_ns": 168.32556837497503,
+          "vertical_absorption95_db": -11.770586837584212
+        },
+        {
+          "y_m": 16.275000000000002,
+          "depth_m": 8.450000000000001,
+          "above": 2,
+          "below": 3,
+          "time95_ns": 195.5148214836525,
+          "vertical_absorption95_db": -22.367109319085547
+        },
+        {
+          "y_m": 14.05,
+          "depth_m": 10.675,
+          "above": 3,
+          "below": 2,
+          "time95_ns": 240.022467656185,
+          "vertical_absorption95_db": -32.813885035218235
+        },
+        {
+          "y_m": 12.05,
+          "depth_m": 12.675,
+          "above": 2,
+          "below": 3,
+          "time95_ns": 286.3341973894427,
+          "vertical_absorption95_db": -50.85051904628433
+        }
+      ],
+      "surface": {
+        "y_m": 24.725,
+        "depth_m": 0.0,
+        "above": 0,
+        "below": 1,
+        "time95_ns": 7.956744823698394,
+        "vertical_absorption95_db": -0.0
+      },
+      "cover_base": {
+        "y_m": 17.45,
+        "depth_m": 7.275,
+        "above": 1,
+        "below": 2,
+        "time95_ns": 168.32556837497503,
+        "vertical_absorption95_db": -11.770586837584212
+      },
+      "first_sand": {
+        "y_m": 16.275000000000002,
+        "depth_m": 8.450000000000001,
+        "above": 2,
+        "below": 3,
+        "time95_ns": 195.5148214836525,
+        "vertical_absorption95_db": -22.367109319085547
+      },
+      "basal_sand": {
+        "y_m": 12.05,
+        "depth_m": 12.675,
+        "above": 2,
+        "below": 3,
+        "time95_ns": 286.3341973894427,
+        "vertical_absorption95_db": -50.85051904628433
+      }
+    }
+  },
+  "metrics": {
+    "hann": {
+      "localized": {
+        "far_interbed_removed": {
+          "remaining_L2_over_high_H0": 0.06496755160587198,
+          "change_L2_over_high_H0": 0.967862377745018,
+          "correlation_with_high_H0": 0.5198211395723698
+        },
+        "near_interbed_removed": {
+          "remaining_L2_over_high_H0": 1.005035627693185,
+          "change_L2_over_high_H0": 0.013733215017148049,
+          "correlation_with_high_H0": 0.9999189379516511
+        }
+      },
+      "high": {
+        "template_center_ns": 344.31137724550894,
+        "gate_ns": [
+          332.31137724550894,
+          356.31137724550894
+        ],
+        "difference_peak_ns": 342.64803725881575,
+        "total_template_correlation": 0.2749379968005525,
+        "difference_template_correlation": 0.9615561447714444,
+        "H0_over_difference_L2": 3.700729462535286,
+        "difference_over_total_L2": 0.3194003806344657,
+        "H0_difference_inner_product_phase_deg": 172.07957255306124
+      },
+      "low": {
+        "template_center_ns": 282.7677977378576,
+        "gate_ns": [
+          270.7677977378576,
+          294.7677977378576
+        ],
+        "difference_peak_ns": 282.7677977378576,
+        "total_template_correlation": 0.9859555743123071,
+        "difference_template_correlation": 0.9905001448867218,
+        "H0_over_difference_L2": 0.08956009447100456,
+        "difference_over_total_L2": 1.0020618900218043,
+        "H0_difference_inner_product_phase_deg": 127.2598537032314
+      },
+      "low_H0_same_air_shift_proxy_gate": {
+        "gate_ns": [
+          270.433,
+          294.433
+        ]
+      }
+    },
+    "blackman": {
+      "localized": {
+        "far_interbed_removed": {
+          "remaining_L2_over_high_H0": 0.0811932615820799,
+          "change_L2_over_high_H0": 0.9464061292082322,
+          "correlation_with_high_H0": 0.7028617941637058
+        },
+        "near_interbed_removed": {
+          "remaining_L2_over_high_H0": 1.0048870591046544,
+          "change_L2_over_high_H0": 0.013357353075005587,
+          "correlation_with_high_H0": 0.9999295012847433
+        }
+      },
+      "high": {
+        "template_center_ns": 344.31137724550894,
+        "gate_ns": [
+          332.31137724550894,
+          356.31137724550894
+        ],
+        "difference_peak_ns": 342.64803725881575,
+        "total_template_correlation": 0.45263183265250084,
+        "difference_template_correlation": 0.9757420623302865,
+        "H0_over_difference_L2": 3.6276408920006187,
+        "difference_over_total_L2": 0.339991358231111,
+        "H0_difference_inner_product_phase_deg": 173.04439111170447
+      },
+      "low": {
+        "template_center_ns": 282.7677977378576,
+        "gate_ns": [
+          270.7677977378576,
+          294.7677977378576
+        ],
+        "difference_peak_ns": 282.7677977378576,
+        "total_template_correlation": 0.9933806497519431,
+        "difference_template_correlation": 0.9942314395377408,
+        "H0_over_difference_L2": 0.03818536666130265,
+        "difference_over_total_L2": 1.0052783076612748,
+        "H0_difference_inner_product_phase_deg": 122.1667354390547
+      },
+      "low_H0_same_air_shift_proxy_gate": {
+        "gate_ns": [
+          270.433,
+          294.433
+        ]
+      }
+    }
+  },
+  "limits": "Far/near removals introduce ROI edges and alter interactions; they locate sensitivity regions, not isolated pinchout reflection. Low gate fixed before solve by approximate air delay; evaluate full complex traces and model-derived template as well, no adaptive production correction."
+}
