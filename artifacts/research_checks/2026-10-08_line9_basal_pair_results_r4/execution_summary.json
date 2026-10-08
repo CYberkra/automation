@@ -1,0 +1,74 @@
+{
+  "status": "PASS_NATIVE_IDENTITY_AND_INDEPENDENT_ARRAY_CHECKS_NOT_FULL_PHYSICAL_VALIDATION",
+  "audit_script_sha256": "3c58713c1cde393ec366d3538bd3b7ea84590de058ec32f47b0aadfcb48a6659",
+  "analysis_script_sha256": "ee540dcf1a25935e5daeb536c10cb18cb8229eeb706eb48f4f6f169c624d1e04",
+  "original_contract_sha256": "8ea9118f43c60bc8ba5c78a4934b78446cc8174b51af9eaa1cc9c74f317abfc0",
+  "recovery_contract_sha256": "ba2857169e7b1af735786a0a6226d1a48fbb11d46ef3db25b165475bfb6fed18",
+  "paired_verification_contract_sha256": "f30be51909bd066f29fa458b854764b26bad5c0193cb3ad527d6d93959e12ede",
+  "native_verification_sha256": "12cbc2be359e2e38f15592e985baeaaa28d70eba0f6daa9eb928bff842a668da",
+  "solver_attempts_started": 3,
+  "completed_unique_models": 2,
+  "interrupted_attempts_preserved": 1,
+  "completed_solver_elapsed_s": [
+    91.5,
+    82.81299999999464
+  ],
+  "peak_owned_RSS_GiB": [
+    6.955837249755859,
+    6.954925537109375
+  ],
+  "hardware": {
+    "gpu": "NVIDIA GeForce RTX 4090 Laptop GPU",
+    "gpu_uuid": "GPU-71eb4696-9c70-4549-bbef-ec8dc276a4a8",
+    "driver_version": "610.88",
+    "total_VRAM_bytes": 17171480576,
+    "free_VRAM_bytes": 15944646656,
+    "available_RAM_bytes": 52072820736
+  },
+  "original_session_lease_s": 120,
+  "recovery_session_lease_s": 600,
+  "native_dtype": "float64",
+  "native_samples_per_trace": 13569,
+  "dt_s": 5.896635841874211e-11,
+  "snapshots_per_model": 256,
+  "snapshot_components": [
+    "Ex",
+    "Ey",
+    "Ez",
+    "Hx",
+    "Hy",
+    "Hz"
+  ],
+  "checks": {
+    "hann": {
+      "independent_direct_inverse_relative_L2": 5.44689212539768e-14,
+      "complex_recomposition_relative_L2": 1.648713862185125e-21
+    },
+    "blackman": {
+      "independent_direct_inverse_relative_L2": 5.2243608049534255e-14,
+      "complex_recomposition_relative_L2": 1.7305514928675875e-21
+    }
+  },
+  "raw_native_sha256": [
+    "7f56a97855ccfebfdc32e237e16238764ae6efd4bdde1138ebd4730eeee98bda",
+    "007d70fd28aa6469d260992386a78afcb7aba5101c05ba981747c47a652baa74"
+  ],
+  "artifact_sha256": {
+    "existing_bscan_station_marked.png": "667cc7247081bc1d6f8d722d838d1d5a40e4e55152662032f16109e5a77b8fae",
+    "paired_complex_envelopes.png": "ee77bd05daf22b217202b7fd2fc27e9272a8fc461d510bea448b13a43fd4a77a",
+    "single_station_grayscale.png": "973aa3a3043deaa33d40e4e7b44c0d718c01059c97e9dfa8012977d2227c4919"
+  },
+  "wavefield_artifact_sha256": {
+    "wavefield_120ns.png": "1c414f21a4901c44cd44a95533f02f9ec77c20be6d9e4245c21f58c094910c98",
+    "wavefield_200ns.png": "d946e72a2508863a15108587abae0f24cb5059d111646d9a2150788a1a011947",
+    "wavefield_280ns.png": "c7ca444c6e534a8d9d4c889847b19c445ac5431cafb08e14afc69e097519aecc",
+    "wavefield_350ns.png": "43396f7b485034307257a5270bd404b85b92ccc7dace6330f50de97256c6f0cf",
+    "wavefield_450ns.png": "1e5f2cd94b3a14edd793ef8cd9cbdd4400d52a6e7fc172d8e1bc0e3d965f0afe",
+    "wavefield_650ns.png": "5f268c9a587e37796b148750bd6ce419984daa140419cebdabf667b8935c6ebf",
+    "wavefield_790ns.png": "c42fd418e58c8a00f0d459a1affb83e0c4f587d774baadf886bee0746e3234cb",
+    "wavefield_analysis.json": "81fa34b94cc2f98aba7799134cb18ae09e5613e1804ddecec63ba8de6ec9903d",
+    "wavefield_pair.gif": "2c92cf272fb4fdc06aa089e27613828117696e56599d0b5f5cd718d135901caf"
+  },
+  "private_raw_location": "ROG E:/line9_basal_pair_20261008_r1; full snapshots retained there, not uploaded to Git",
+  "limitations": "Single selected station, material contrast includes lower PML continuation; no independent PML amplitude ablation, no full-line or measured-data validation."
+}

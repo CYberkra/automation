@@ -1,0 +1,147 @@
+{
+  "calls_solver": false,
+  "calls_training": false,
+  "script_sha256": "ee540dcf1a25935e5daeb536c10cb18cb8229eeb706eb48f4f6f169c624d1e04",
+  "verification_sha256": "12cbc2be359e2e38f15592e985baeaaa28d70eba0f6daa9eb928bff842a668da",
+  "native_sha256": [
+    "7f56a97855ccfebfdc32e237e16238764ae6efd4bdde1138ebd4730eeee98bda",
+    "007d70fd28aa6469d260992386a78afcb7aba5101c05ba981747c47a652baa74",
+    "4eecd9339747849ea98206ba8fb055b76bdbba975a2def673dc060f1a472a5d0"
+  ],
+  "dt_s": 5.896635841874211e-11,
+  "frequency_MHz": [
+    20,
+    170
+  ],
+  "step_MHz": 0.3,
+  "tones": 501,
+  "spatial_normalisation_m": 0.025,
+  "tail_taper": false,
+  "AGC": false,
+  "per_trace_normalisation": false,
+  "station_chainage_m": 179.25,
+  "midpoint_AGL_m": 10.274999999999999,
+  "independent_DFT_relative_L2": [
+    1.1773513962293172e-12,
+    1.1753882583673662e-12,
+    1.1240705635202574e-12
+  ],
+  "official_inverse_relative_L2": {
+    "hann": 0.0,
+    "blackman": 0.0
+  },
+  "independent_inverse_relative_L2": {
+    "hann": 2.013426769294646e-14,
+    "blackman": 1.940725020480631e-14
+  },
+  "limitations": "One informed selected station; lower-material contrast includes propagation, multiples and changed PML continuation. H1-H0 is not pure single reflection or field clean truth. FP64-FP32 includes build/rounding/snapshot configuration differences; no universal precision floor.",
+  "windows": {
+    "hann": {
+      "cover_base": {
+        "primary_peak_ns": 229.54091816367264,
+        "gate_ns": [
+          217.54091816367264,
+          241.54091816367264
+        ],
+        "difference_over_H1_L2": 8.775738450314762e-06,
+        "precision_difference_over_H1_L2": 0.00019499973816918136,
+        "H0_over_material_difference_L2": 113950.47320286765,
+        "H0_difference_inner_product_phase_deg": 5.3081380455157365,
+        "precision_difference_over_material_difference_L2": 22.22032245755766,
+        "H1_H0_complex_correlation": 0.9999999999615954,
+        "H1_primary_complex_correlation": 0.9926690122856643,
+        "difference_primary_complex_correlation": 0.04679193963362262,
+        "difference_primary_fit_relative_L2": 0.9989046573048519,
+        "difference_peak_ns": 217.8975382568197
+      },
+      "first_sand": {
+        "primary_peak_ns": 255.32268795741848,
+        "gate_ns": [
+          243.32268795741848,
+          267.32268795741845
+        ],
+        "difference_over_H1_L2": 2.2433374228463356e-05,
+        "precision_difference_over_H1_L2": 0.0002749201370825959,
+        "H0_over_material_difference_L2": 44576.454613883005,
+        "H0_difference_inner_product_phase_deg": -137.1392251900025,
+        "precision_difference_over_material_difference_L2": 12.254961482066241,
+        "H1_H0_complex_correlation": 0.9999999997484492,
+        "H1_primary_complex_correlation": 0.9860779862836461,
+        "difference_primary_complex_correlation": 0.02668380262470404,
+        "difference_primary_fit_relative_L2": 0.9996439239436639,
+        "difference_peak_ns": 266.96606786427145
+      },
+      "basal_sand": {
+        "primary_peak_ns": 344.31137724550894,
+        "gate_ns": [
+          332.31137724550894,
+          356.31137724550894
+        ],
+        "difference_over_H1_L2": 0.3194003806344657,
+        "precision_difference_over_H1_L2": 0.0017806293275927421,
+        "H0_over_material_difference_L2": 3.700729462535286,
+        "H0_difference_inner_product_phase_deg": 172.07957255306124,
+        "precision_difference_over_material_difference_L2": 0.005574912979300937,
+        "H1_H0_complex_correlation": 0.9713045328350144,
+        "H1_primary_complex_correlation": 0.2749379968005525,
+        "difference_primary_complex_correlation": 0.9615561447714444,
+        "difference_primary_fit_relative_L2": 0.2746084129306261,
+        "difference_peak_ns": 342.64803725881575
+      }
+    },
+    "blackman": {
+      "cover_base": {
+        "primary_peak_ns": 229.54091816367264,
+        "gate_ns": [
+          217.54091816367264,
+          241.54091816367264
+        ],
+        "difference_over_H1_L2": 9.245142497935649e-06,
+        "precision_difference_over_H1_L2": 0.00019476686661314537,
+        "H0_over_material_difference_L2": 108165.08552174528,
+        "H0_difference_inner_product_phase_deg": -156.3557673966242,
+        "precision_difference_over_material_difference_L2": 21.066940467022,
+        "H1_H0_complex_correlation": 0.9999999999588448,
+        "H1_primary_complex_correlation": 0.9936375101579094,
+        "difference_primary_complex_correlation": 0.17805033540082768,
+        "difference_primary_fit_relative_L2": 0.9840213808976167,
+        "difference_peak_ns": 217.8975382568197
+      },
+      "first_sand": {
+        "primary_peak_ns": 255.32268795741848,
+        "gate_ns": [
+          243.32268795741848,
+          267.32268795741845
+        ],
+        "difference_over_H1_L2": 8.716761404855883e-06,
+        "precision_difference_over_H1_L2": 0.00025052853154256655,
+        "H0_over_material_difference_L2": 114721.51033222684,
+        "H0_difference_inner_product_phase_deg": -97.35789547630011,
+        "precision_difference_over_material_difference_L2": 28.741010555021454,
+        "H1_H0_complex_correlation": 0.9999999999620434,
+        "H1_primary_complex_correlation": 0.9906166454598457,
+        "difference_primary_complex_correlation": 0.024431386991798237,
+        "difference_primary_fit_relative_L2": 0.9997015091164247,
+        "difference_peak_ns": 266.96606786427145
+      },
+      "basal_sand": {
+        "primary_peak_ns": 344.31137724550894,
+        "gate_ns": [
+          332.31137724550894,
+          356.31137724550894
+        ],
+        "difference_over_H1_L2": 0.339991358231111,
+        "precision_difference_over_H1_L2": 0.002012828541871047,
+        "H0_over_material_difference_L2": 3.6276408920006187,
+        "H0_difference_inner_product_phase_deg": 173.04439111170447,
+        "precision_difference_over_material_difference_L2": 0.005920234421084361,
+        "H1_H0_complex_correlation": 0.9757249439656864,
+        "H1_primary_complex_correlation": 0.45263183265250084,
+        "difference_primary_complex_correlation": 0.9757420623302865,
+        "difference_primary_fit_relative_L2": 0.21892333772222375,
+        "difference_peak_ns": 342.64803725881575
+      }
+    }
+  },
+  "private_numerical_sha256": "8f9a60ef7b62db0e7602b5401819f012e36669a2910780ea7eda636928044c39"
+}
