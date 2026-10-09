@@ -1,0 +1,21 @@
+{
+  "status": "PASS_CPU_JOIN_RECEIPT_GUARDS",
+  "checks": [
+    "Fixture join accepts45unique receipts and exactly the actual consumed missing low18675",
+    "Retry of completed or consumed group rejected",
+    "Nonterminal continuation rejected",
+    "False46completion rejected",
+    "Duplicate completion cannot hide missing coverage",
+    "Consumed incomplete trace cannot be silently retried",
+    "Certificate/native receipt mismatch rejected",
+    "Duplicate native certificate row rejected",
+    "Incomplete certificate rejected"
+  ],
+  "fixture": true,
+  "calls_solver": false,
+  "calls_CUDA": false,
+  "checker_sha256": "113a5afd820ef9cd41b45faaabaff22fd259b96ddc3d60025e32605b9354f992",
+  "join_checker_sha256": "342f6f5560ddfcaa70ebb7a683ceaa5d9c8f1dba1f83bae3817bca40cc2e0ae7",
+  "source_execution_sha256": "a629780f59b2cb2dc8b4143249021eba833abdd0d14e91196a2480281247d15f",
+  "limits": "Receipt fixtures only; actual17completion,combined45native and independent SFCW remain required."
+}

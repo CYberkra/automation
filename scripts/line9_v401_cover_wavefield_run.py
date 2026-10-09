@@ -29,6 +29,9 @@ def save(path, value):
 
 def completed_parent(path, check_live=True):
     """Require actual 46 receipts and matching native audit, not a status file alone."""
+    if path.name == 'combined_certificate.json':
+        from line9_v401_dense_join import verify_combined
+        return verify_combined(path, check_live)
     c = read(path)
     assert c['max_runs'] == len(c['groups']) == 46 and c['no_retry']
     events = [json.loads(s) for s in (path.parent / 'execution.jsonl').read_text('utf-8').splitlines()]
@@ -78,7 +81,10 @@ def audit(path, completed=False):
     m = c['study_manifest']
     assert c['max_runs'] == 4 and c['no_retry'] and [g['id'] for g in c['groups']] == IDS
     assert c['solver_entrypoint'] == 'gprmax_snapshot_cuda_entry.py'
-    assert c['parent_completion']['completed_groups'] == 46
+    previous = c['parent_completion']
+    assert previous['completed_groups'] == 46 or (
+        previous['completed_groups'] == 45 and previous.get('consumed_incomplete') == ['low_x18675_H1']
+        and previous['status'] == 'PASS_TERMINAL_COMBINED45_NATIVE_AND_SFCW_ONE_DECLARED_MISSING')
     assert sha(Path(c['package']) / 'manifest.json') == c['package_manifest_sha256']
     assert c['min_free_VRAM_GiB'] * 2**30 >= m['estimated_peak_device_bytes']
     assert c['max_lease_age_s'] == 600
@@ -141,11 +147,16 @@ def freeze(package, out, parent):
     assert inputs['input_ready'] and not inputs['execution_ready']
     m = read(package / 'manifest.json')
     previous = completed_parent(parent)
-    parent_contract = read(parent)
-    assert m['parent_manifest_sha256'] in parent_contract['file_identities'].values(), 'Wrong predecessor manifest'
-    parent_verification = read(parent.parent / 'completed_verification.json')
-    baseline_receipt = next(r for r in parent_verification['groups'] if r['id'] == 'high_x19000_H0')
-    assert baseline_receipt['native_sha256'] == m['baseline']['native_sha256'], 'Wrong baseline native'
+    combined = parent.name == 'combined_certificate.json'
+    if combined:
+        assert m['parent_manifest_sha256'] == previous['manifest_sha256'], 'Wrong combined predecessor manifest'
+        assert previous['baseline_native_sha256'] == m['baseline']['native_sha256'], 'Wrong combined baseline native'
+    else:
+        parent_contract = read(parent)
+        assert m['parent_manifest_sha256'] in parent_contract['file_identities'].values(), 'Wrong predecessor manifest'
+        parent_verification = read(parent.parent / 'completed_verification.json')
+        baseline_receipt = next(r for r in parent_verification['groups'] if r['id'] == 'high_x19000_H0')
+        assert baseline_receipt['native_sha256'] == m['baseline']['native_sha256'], 'Wrong baseline native'
     assert m['start_requires_current_46_attempt_batch_terminal_and_audited']
     nvcc, cl = shutil.which('nvcc'), shutil.which('cl')
     assert nvcc and cl, 'CUDA/MSVC environment required'
@@ -158,9 +169,13 @@ def freeze(package, out, parent):
     scripts = ['line9_v401_cover_wavefield_run.py', 'audit_line9_v401_cover_wavefield_inputs.py',
                'line9_v401_version_controls.py', 'hs4_station_grid_controls.py', 'hs_capsule_identity.py',
                'gprmax_cached_cuda_entry.py', 'gprmax_snapshot_cuda_entry.py']
+    if combined:
+        scripts += ['line9_v401_dense_join.py', 'line9_v401_dense_continuation.py']
     native = Path(gprMax.__file__).parent
     files = {str(p.resolve()): sha(p) for p in package.rglob('*') if p.is_file()}
-    for p in [parent, parent.parent / 'completed_verification.json', parent.parent / 'execution.jsonl']:
+    parent_files = ([parent] + [parent.parent / name for name in read(parent)['files']]
+                    + [parent.parent / 'analysis.json', parent.parent / 'sfcw_independent_audit.json']) if combined else [parent, parent.parent / 'completed_verification.json', parent.parent / 'execution.jsonl']
+    for p in parent_files:
         files[str(p.resolve())] = sha(p)
     contract = dict(status='FROZEN_APPROVED', expected_version='4.0.1', python=str(Path(sys.executable).resolve()),
         approval_basis=m['approval_basis'], package=str(package), package_manifest_sha256=sha(package / 'manifest.json'),
@@ -172,7 +187,7 @@ def freeze(package, out, parent):
         min_available_RAM_GiB=reserve_ram, min_free_VRAM_GiB=device_bytes / 2**30,
         max_owned_RSS_GiB=28, min_system_available_during_run_GiB=.5,
         max_group_wall_s=1800, max_batch_wall_s=9000, max_lease_age_s=600,
-        gpu_lock=str((ROOT / 'artifacts/local_checks/hs4_gpu_exclusive.lock').resolve()),
+        gpu_lock=previous.get('gpu_lock', str((ROOT / 'artifacts/local_checks/hs4_gpu_exclusive.lock').resolve())),
         cancel_file=str(out / 'USER_STOP'), lease_file=str(out / 'session_heartbeat'),
         solver_entrypoint='gprmax_snapshot_cuda_entry.py', additional_solver_args=[],
         hardware_at_freeze=hardware, conservative_device_estimate_bytes=device_bytes,

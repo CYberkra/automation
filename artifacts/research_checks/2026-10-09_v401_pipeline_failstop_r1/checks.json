@@ -1,0 +1,13 @@
+{
+  "status": "PASS_PIPELINE_PREFLIGHT_FAILSTOP_NO_SSH",
+  "checks": [
+    "changed_source:failed/cancelled before any SSH/subprocess",
+    "cancelled:failed/cancelled before any SSH/subprocess"
+  ],
+  "fixture": true,
+  "calls_solver": false,
+  "calls_SSH": false,
+  "pipeline_sha256": "6ad4259cb2b835a6f264c7ee7e5c9e3fd8cfa6106b31d5bf9e9444fc0044fa0f",
+  "checker_sha256": "145256b1bf020fb80ea061655e708ae734c96bb4268913f4f0b7632d73cace95",
+  "limits": "Only source-mismatch and pre-existing cancellation preflight;full future pipeline not yet executed."
+}

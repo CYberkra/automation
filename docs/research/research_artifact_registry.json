@@ -1,4 +1,23 @@
 {
+  "line9_bounded_continuation_wavefield_pipeline_2026_10_09": {
+    "report": "docs/research/2026-10-09_bounded_continuation_and_wavefield_pipeline.md",
+    "startup": "artifacts/research_checks/2026-10-09_v401_dense_continuation_launch_r1",
+    "continuation_cpu": "artifacts/research_checks/2026-10-09_v401_dense_continuation_checks_r1",
+    "join_cpu": "artifacts/research_checks/2026-10-09_v401_dense_join_checks_r4",
+    "cover_cpu": "artifacts/research_checks/2026-10-09_v401_cover_execution_cpu_r5",
+    "status": "RUNNING17_NATIVE4_VERIFIED_AT_SNAPSHOT_PIPELINE_ARMED_FOUR_WAVEFIELD_NOT_YET_STARTED",
+    "contract_sha256": "4ec101e8ab09e80cdbf23220e1bd730c1ae0e8703f858084d38083f82665bff8",
+    "pipeline_config_sha256": "f80365befc25b47f0a7d01776dc35a162e501f5823efa82092f2e4bfcf05c754",
+    "planned_new_attempts": 17,
+    "completed_native_verified_at_snapshot": 4,
+    "old_completed_reused": 28,
+    "consumed_missing": [
+      "low_x18675_H1"
+    ],
+    "future_wavefield_new_attempts": 4,
+    "physical_path_certified": false,
+    "goal_complete": false
+  },
   "line9_two_anchor_interference_direct_dimension_and_lease_stop_2026_10_09": {
     "report": "docs/research/2026-10-09_two_anchor_interference_and_direct_dimension.md",
     "paired_source": "artifacts/research_checks/2026-10-09_v401_dense_loss_partial_r5",

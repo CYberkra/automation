@@ -1,0 +1,42 @@
+{
+  "status": "ARMED_BOUNDED_PIPELINE_NOT_FULLY_EXECUTED",
+  "pipeline_config_sha256": "f80365befc25b47f0a7d01776dc35a162e501f5823efa82092f2e4bfcf05c754",
+  "source_identities": {
+    "scripts/render_line9_v401_cover_wavefield.py": "4563f766fbddd462986331dfeab3dc736aa3ad0decd4a2817126cb619e8d0a09",
+    "scripts/line9_v401_dense_continuation.py": "69bf58bcba6076100e226916cd2bfffb214fb340b9bbb6903b001ead8c6f09b4",
+    "scripts/check_line9_v401_cover_wavefield_execution.py": "20304fb0800f4b17cbedbfa05a23556f057caf7e064e8756902833240336cafa",
+    "scripts/line9_v401_version_controls.py": "89ddbee3f09c4eefcf54a2cf04e2d75a106c63dd8e94ef7ff944aa8858748e48",
+    "scripts/gprmax_cached_cuda_entry.py": "f069b6f099f3bcf4ebcc79f1ea2543b0743c7c5501ab050563ca454bc2758b5a",
+    "scripts/line9_v401_dense_join.py": "342f6f5560ddfcaa70ebb7a683ceaa5d9c8f1dba1f83bae3817bca40cc2e0ae7",
+    "scripts/run_line9_bounded_continuation_pipeline.py": "6ad4259cb2b835a6f264c7ee7e5c9e3fd8cfa6106b31d5bf9e9444fc0044fa0f",
+    "scripts/gprmax_snapshot_cuda_entry.py": "94dafdf0048859267933a7841e6345694a33b86f8dc35039e3389033fbf65a35",
+    "scripts/run_line9_ssh_lease_controller.py": "613893a5fc982142f0b5a8d9c761f56b449b358941cc793328d18e7d88e747bb",
+    "scripts/analyze_line9_v401_cover_wavefield.py": "f8922ddb5b2222467782fd4ae269413a0b7c3c94c4e5bd85e327acc28475894c",
+    "scripts/audit_line9_dense_loss_inputs.py": "fa463d2b623cdc79e2ea42878b2ab21c87fde25a8ced0b5bc888ea3ad05a396e",
+    "scripts/audit_line9_v401_delivery.py": "cc46636798f5d452040caac2a88271d72490b78fc77386e6feba2e1998c75486",
+    "scripts/hs4_station_grid_controls.py": "8f829684b148655b78471fe616911547b476a273cb92530c4ab0687bdcd13990",
+    "scripts/line9_v401_cover_wavefield_run.py": "9f295e317d7942247205140bf53789bf1fb5288de8bf3abf087da32b266ba610",
+    "scripts/analyze_line9_dense_loss_line.py": "4bb1f9430714fe9621df6729f11123845af5f0f088e8bca7ceb870a0c8eafc71",
+    "scripts/audit_line9_dense_common_gates.py": "5d59dda18dad854b6baf12911b5732fb9799c6fbdebb6111b7f1dcf0f1728849",
+    "scripts/compare_line9_dense_common_gates.py": "2f28fe4c7cd6cebc8684116a47858b401b2639d3908130cb7bea6116eef9873c",
+    "scripts/check_line9_dense_join.py": "113a5afd820ef9cd41b45faaabaff22fd259b96ddc3d60025e32605b9354f992",
+    "scripts/audit_line9_dense_loss_results.py": "a72e6ef5dcf7ed46c36b272f281f46b24265714667ebe657fc14b74dd1f5396f",
+    "scripts/audit_line9_v401_cover_analysis.py": "7c53d564f47177f98fad686060cbcb22803243a0b1401e02bfa9b9944ef76e28",
+    "scripts/analyze_line9_v401_version_controls.py": "6c3bc020c5ff0cdd2a3f317d15b98d88d5cec846f8102ce15e58c78eae77362d",
+    "scripts/audit_line9_v401_cover_wavefield_inputs.py": "c80145cec11f1115191c2945ea3ae7170b7a49220a2396ba5ae870930d22d8f7",
+    "scripts/hs_capsule_identity.py": "e2a698c20217411b253d39b06c5db43aabd0a7e892a2bb618c75fc1e2c2b2d6b"
+  },
+  "wave_payload_sha256": "8040342253a45a2a3927c82ccc21d58db941867668ba1a0fd6456ca26a950e9d",
+  "local_controller_max_s": 7200,
+  "pipeline_max_s": 10800,
+  "lease_age_max_s": 600,
+  "completed_native_verified_at_snapshot": 4,
+  "expected_continuation": 17,
+  "future_wave_controls": 4,
+  "automatic_Git_scope": [
+    "D:\\自动处理\\artifacts\\research_checks\\2026-10-09_v401_dense_loss_partial_r7",
+    "D:\\自动处理\\artifacts\\research_checks\\2026-10-09_v401_cover_wavefield_results_r1",
+    "docs/research/2026-10-09_bounded_pipeline_completed.md"
+  ],
+  "limits": "Actual controller renewal and first4native checked; later combined and wavefield stages not yet executed. No3D/field/path validation."
+}
