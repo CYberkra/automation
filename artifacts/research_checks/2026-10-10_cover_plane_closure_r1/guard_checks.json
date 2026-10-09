@@ -1,0 +1,27 @@
+{
+  "status": "PASS_ELEVEN_REHASHED_COVER_OBSERVER_REJECTIONS",
+  "positive": {
+    "status": "PASS_IMMUTABLE1231_RX_AND_THREE_UNIFORM_COVER_PLANES",
+    "manifest_sha256": "578d623196e4b535c0d81f02dc6b96627045333a86f08aa3dcb537bbc6f1159b",
+    "geometry_sha256": "c1e308ff73119f2c366d42efcf3526646d5fe8e76c6a692a7113a5b1148985a6",
+    "original_points_unchanged": 287,
+    "new_points": 123,
+    "raw_receivers": 1231,
+    "new_solver_runs": 0
+  },
+  "rejected": [
+    "source_changed_rehashed",
+    "new_Hx_wrong_neighbor",
+    "new_Hy_wrong_neighbor",
+    "old_receiver_changed",
+    "retry_enabled",
+    "wrong_time_collocation",
+    "new_plane_in_air",
+    "geometry_changed_rehashed",
+    "main_receiver_changed",
+    "duplicate_receiver_name",
+    "SFCW_grid_changed"
+  ],
+  "script_sha256": "d05023182b7cd0c149438422293923af98391b2eded705b8884c541818c188cb",
+  "new_solver_runs": 0
+}

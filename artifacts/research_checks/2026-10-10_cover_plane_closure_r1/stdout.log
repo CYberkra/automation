@@ -1,0 +1,1328 @@
+
+=== Electromagnetic modelling software based on the Finite-Difference Time-Domain (FDTD) method 
+
+    www.gprmax.org   __  __
+     __ _ _ __  _ __|  \/  | __ ___  __
+    / _` | '_ \| '__| |\/| |/ _` \ \/ /
+   | (_| | |_) | |  | |  | | (_| |>  <
+    \__, | .__/|_|  |_|  |_|\__,_/_/\_\\
+    |___/|_|
+                     v4.0.1 (Caol Ila)
+
+ Copyright (C) 2015-2026: The University of Edinburgh, United Kingdom
+
+ gprMax is free software: you can redistribute it and/or modify it under the
+  terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+ gprMax is distributed in the hope that it will be useful, but WITHOUT ANY
+  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+  A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ You should have received a copy of the GNU General Public License along with
+  gprMax.  If not, see www.gnu.org/licenses.
+
+LAPTOP-83GRKUNE | unknown unknown | unknown x unknown (16 cores, 32 cores with Hyper-Threading) | 63.2 GiB | Windows 11 (64-bit)
+|--->OpenMP: 16 threads
+|--->CUDA:
+     |--->Device 0: NVIDIA GeForce RTX 4090 Laptop GPU | 16.0 GiB
+Constants/variables used/available for Python scripting: {c: 299792458.0, current_model_run: 1, e0: 8.8541878188e-12, inputfile: E:\line9_basal_pair_20261008_r1\v401_cover_planes_r2\execution\prepared\native_cover_planes_H0\cases\native_cover_planes_H0\profile.in, m0: 1.25663706127e-06, number_model_runs: 1, z0: 376.7303134118051}
+
+Model title: high_x19000_H0; dense paired-loss diagnostic; no snapshots
+Spatial discretisation: 0.025 x 0.025 x 0.025m
+Requested domain mode: TM
+Dispersive material averaging: enabled
+Domain size: 210 x 42.5 x 0.025m (8400 x 1700 x 1 = 1.428e+07 cells)
+Mode: 2D TMz
+Time step (at CFL limit): 5.89664e-11 secs
+Time window: 1.2e-06 secs (20352 iterations)
+Simulation will use 2 OpenMP threads
+PML thickness: x0=80, y0=80, z0=0, xmax=80, ymax=80, zmax=0
+Waveform pulse of type ricker with maximum amplitude scaling 40, frequency 1e+08Hz created.
+Hertzian dipole with polarity z at 169.35m, 38.95m, 0m, using waveform pulse created.
+Receiver at 170.65m, 39.025m, 0m with output component(s) Ez created.
+Receiver at 154m, 30.425m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 154m, 30.4m, 0m with output component(s) Hx created.
+Receiver at 153.975m, 30.425m, 0m with output component(s) Hy created.
+Receiver at 154m, 29.925m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 154m, 29.9m, 0m with output component(s) Hx created.
+Receiver at 153.975m, 29.925m, 0m with output component(s) Hy created.
+Receiver at 154m, 27.75m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 154m, 27.725m, 0m with output component(s) Hx created.
+Receiver at 153.975m, 27.75m, 0m with output component(s) Hy created.
+Receiver at 154m, 25.6m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 154m, 25.575m, 0m with output component(s) Hx created.
+Receiver at 153.975m, 25.6m, 0m with output component(s) Hy created.
+Receiver at 154m, 25.1m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 154m, 25.075m, 0m with output component(s) Hx created.
+Receiver at 153.975m, 25.1m, 0m with output component(s) Hy created.
+Receiver at 154m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 154m, 34m, 0m with output component(s) Hx created.
+Receiver at 153.975m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 154m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 154m, 38m, 0m with output component(s) Hx created.
+Receiver at 153.975m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 154.5m, 30.45m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 154.5m, 30.425m, 0m with output component(s) Hx created.
+Receiver at 154.475m, 30.45m, 0m with output component(s) Hy created.
+Receiver at 154.5m, 29.95m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 154.5m, 29.925m, 0m with output component(s) Hx created.
+Receiver at 154.475m, 29.95m, 0m with output component(s) Hy created.
+Receiver at 154.5m, 27.75m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 154.5m, 27.725m, 0m with output component(s) Hx created.
+Receiver at 154.475m, 27.75m, 0m with output component(s) Hy created.
+Receiver at 154.5m, 25.55m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 154.5m, 25.525m, 0m with output component(s) Hx created.
+Receiver at 154.475m, 25.55m, 0m with output component(s) Hy created.
+Receiver at 154.5m, 25.05m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 154.5m, 25.025m, 0m with output component(s) Hx created.
+Receiver at 154.475m, 25.05m, 0m with output component(s) Hy created.
+Receiver at 154.5m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 154.5m, 34m, 0m with output component(s) Hx created.
+Receiver at 154.475m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 154.5m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 154.5m, 38m, 0m with output component(s) Hx created.
+Receiver at 154.475m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 155m, 30.475m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 155m, 30.45m, 0m with output component(s) Hx created.
+Receiver at 154.975m, 30.475m, 0m with output component(s) Hy created.
+Receiver at 155m, 29.975m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 155m, 29.95m, 0m with output component(s) Hx created.
+Receiver at 154.975m, 29.975m, 0m with output component(s) Hy created.
+Receiver at 155m, 27.75m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 155m, 27.725m, 0m with output component(s) Hx created.
+Receiver at 154.975m, 27.75m, 0m with output component(s) Hy created.
+Receiver at 155m, 25.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 155m, 25.5m, 0m with output component(s) Hx created.
+Receiver at 154.975m, 25.525m, 0m with output component(s) Hy created.
+Receiver at 155m, 25.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 155m, 25m, 0m with output component(s) Hx created.
+Receiver at 154.975m, 25.025m, 0m with output component(s) Hy created.
+Receiver at 155m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 155m, 34m, 0m with output component(s) Hx created.
+Receiver at 154.975m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 155m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 155m, 38m, 0m with output component(s) Hx created.
+Receiver at 154.975m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 155.5m, 30.5m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 155.5m, 30.475m, 0m with output component(s) Hx created.
+Receiver at 155.475m, 30.5m, 0m with output component(s) Hy created.
+Receiver at 155.5m, 30m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 155.5m, 29.975m, 0m with output component(s) Hx created.
+Receiver at 155.475m, 30m, 0m with output component(s) Hy created.
+Receiver at 155.5m, 27.75m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 155.5m, 27.725m, 0m with output component(s) Hx created.
+Receiver at 155.475m, 27.75m, 0m with output component(s) Hy created.
+Receiver at 155.5m, 25.5m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 155.5m, 25.475m, 0m with output component(s) Hx created.
+Receiver at 155.475m, 25.5m, 0m with output component(s) Hy created.
+Receiver at 155.5m, 25m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 155.5m, 24.975m, 0m with output component(s) Hx created.
+Receiver at 155.475m, 25m, 0m with output component(s) Hy created.
+Receiver at 155.5m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 155.5m, 34m, 0m with output component(s) Hx created.
+Receiver at 155.475m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 155.5m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 155.5m, 38m, 0m with output component(s) Hx created.
+Receiver at 155.475m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 156m, 30.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 156m, 30.5m, 0m with output component(s) Hx created.
+Receiver at 155.975m, 30.525m, 0m with output component(s) Hy created.
+Receiver at 156m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 156m, 30m, 0m with output component(s) Hx created.
+Receiver at 155.975m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 156m, 27.75m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 156m, 27.725m, 0m with output component(s) Hx created.
+Receiver at 155.975m, 27.75m, 0m with output component(s) Hy created.
+Receiver at 156m, 25.475m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 156m, 25.45m, 0m with output component(s) Hx created.
+Receiver at 155.975m, 25.475m, 0m with output component(s) Hy created.
+Receiver at 156m, 24.975m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 156m, 24.95m, 0m with output component(s) Hx created.
+Receiver at 155.975m, 24.975m, 0m with output component(s) Hy created.
+Receiver at 156m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 156m, 34m, 0m with output component(s) Hx created.
+Receiver at 155.975m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 156m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 156m, 38m, 0m with output component(s) Hx created.
+Receiver at 155.975m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 156.5m, 30.55m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 156.5m, 30.525m, 0m with output component(s) Hx created.
+Receiver at 156.475m, 30.55m, 0m with output component(s) Hy created.
+Receiver at 156.5m, 30.05m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 156.5m, 30.025m, 0m with output component(s) Hx created.
+Receiver at 156.475m, 30.05m, 0m with output component(s) Hy created.
+Receiver at 156.5m, 27.75m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 156.5m, 27.725m, 0m with output component(s) Hx created.
+Receiver at 156.475m, 27.75m, 0m with output component(s) Hy created.
+Receiver at 156.5m, 25.45m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 156.5m, 25.425m, 0m with output component(s) Hx created.
+Receiver at 156.475m, 25.45m, 0m with output component(s) Hy created.
+Receiver at 156.5m, 24.95m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 156.5m, 24.925m, 0m with output component(s) Hx created.
+Receiver at 156.475m, 24.95m, 0m with output component(s) Hy created.
+Receiver at 156.5m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 156.5m, 34m, 0m with output component(s) Hx created.
+Receiver at 156.475m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 156.5m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 156.5m, 38m, 0m with output component(s) Hx created.
+Receiver at 156.475m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 157m, 30.575m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 157m, 30.55m, 0m with output component(s) Hx created.
+Receiver at 156.975m, 30.575m, 0m with output component(s) Hy created.
+Receiver at 157m, 30.075m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 157m, 30.05m, 0m with output component(s) Hx created.
+Receiver at 156.975m, 30.075m, 0m with output component(s) Hy created.
+Receiver at 157m, 27.75m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 157m, 27.725m, 0m with output component(s) Hx created.
+Receiver at 156.975m, 27.75m, 0m with output component(s) Hy created.
+Receiver at 157m, 25.425m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 157m, 25.4m, 0m with output component(s) Hx created.
+Receiver at 156.975m, 25.425m, 0m with output component(s) Hy created.
+Receiver at 157m, 24.925m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 157m, 24.9m, 0m with output component(s) Hx created.
+Receiver at 156.975m, 24.925m, 0m with output component(s) Hy created.
+Receiver at 157m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 157m, 34m, 0m with output component(s) Hx created.
+Receiver at 156.975m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 157m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 157m, 38m, 0m with output component(s) Hx created.
+Receiver at 156.975m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 157.5m, 30.6m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 157.5m, 30.575m, 0m with output component(s) Hx created.
+Receiver at 157.475m, 30.6m, 0m with output component(s) Hy created.
+Receiver at 157.5m, 30.1m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 157.5m, 30.075m, 0m with output component(s) Hx created.
+Receiver at 157.475m, 30.1m, 0m with output component(s) Hy created.
+Receiver at 157.5m, 27.75m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 157.5m, 27.725m, 0m with output component(s) Hx created.
+Receiver at 157.475m, 27.75m, 0m with output component(s) Hy created.
+Receiver at 157.5m, 25.4m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 157.5m, 25.375m, 0m with output component(s) Hx created.
+Receiver at 157.475m, 25.4m, 0m with output component(s) Hy created.
+Receiver at 157.5m, 24.9m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 157.5m, 24.875m, 0m with output component(s) Hx created.
+Receiver at 157.475m, 24.9m, 0m with output component(s) Hy created.
+Receiver at 157.5m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 157.5m, 34m, 0m with output component(s) Hx created.
+Receiver at 157.475m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 157.5m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 157.5m, 38m, 0m with output component(s) Hx created.
+Receiver at 157.475m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 158m, 30.625m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 158m, 30.6m, 0m with output component(s) Hx created.
+Receiver at 157.975m, 30.625m, 0m with output component(s) Hy created.
+Receiver at 158m, 30.125m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 158m, 30.1m, 0m with output component(s) Hx created.
+Receiver at 157.975m, 30.125m, 0m with output component(s) Hy created.
+Receiver at 158m, 27.75m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 158m, 27.725m, 0m with output component(s) Hx created.
+Receiver at 157.975m, 27.75m, 0m with output component(s) Hy created.
+Receiver at 158m, 25.35m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 158m, 25.325m, 0m with output component(s) Hx created.
+Receiver at 157.975m, 25.35m, 0m with output component(s) Hy created.
+Receiver at 158m, 24.85m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 158m, 24.825m, 0m with output component(s) Hx created.
+Receiver at 157.975m, 24.85m, 0m with output component(s) Hy created.
+Receiver at 158m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 158m, 34m, 0m with output component(s) Hx created.
+Receiver at 157.975m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 158m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 158m, 38m, 0m with output component(s) Hx created.
+Receiver at 157.975m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 158.5m, 30.65m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 158.5m, 30.625m, 0m with output component(s) Hx created.
+Receiver at 158.475m, 30.65m, 0m with output component(s) Hy created.
+Receiver at 158.5m, 30.15m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 158.5m, 30.125m, 0m with output component(s) Hx created.
+Receiver at 158.475m, 30.15m, 0m with output component(s) Hy created.
+Receiver at 158.5m, 27.75m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 158.5m, 27.725m, 0m with output component(s) Hx created.
+Receiver at 158.475m, 27.75m, 0m with output component(s) Hy created.
+Receiver at 158.5m, 25.325m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 158.5m, 25.3m, 0m with output component(s) Hx created.
+Receiver at 158.475m, 25.325m, 0m with output component(s) Hy created.
+Receiver at 158.5m, 24.825m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 158.5m, 24.8m, 0m with output component(s) Hx created.
+Receiver at 158.475m, 24.825m, 0m with output component(s) Hy created.
+Receiver at 158.5m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 158.5m, 34m, 0m with output component(s) Hx created.
+Receiver at 158.475m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 158.5m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 158.5m, 38m, 0m with output component(s) Hx created.
+Receiver at 158.475m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 159m, 30.675m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 159m, 30.65m, 0m with output component(s) Hx created.
+Receiver at 158.975m, 30.675m, 0m with output component(s) Hy created.
+Receiver at 159m, 30.175m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 159m, 30.15m, 0m with output component(s) Hx created.
+Receiver at 158.975m, 30.175m, 0m with output component(s) Hy created.
+Receiver at 159m, 27.75m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 159m, 27.725m, 0m with output component(s) Hx created.
+Receiver at 158.975m, 27.75m, 0m with output component(s) Hy created.
+Receiver at 159m, 25.3m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 159m, 25.275m, 0m with output component(s) Hx created.
+Receiver at 158.975m, 25.3m, 0m with output component(s) Hy created.
+Receiver at 159m, 24.8m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 159m, 24.775m, 0m with output component(s) Hx created.
+Receiver at 158.975m, 24.8m, 0m with output component(s) Hy created.
+Receiver at 159m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 159m, 34m, 0m with output component(s) Hx created.
+Receiver at 158.975m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 159m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 159m, 38m, 0m with output component(s) Hx created.
+Receiver at 158.975m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 159.5m, 30.7m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 159.5m, 30.675m, 0m with output component(s) Hx created.
+Receiver at 159.475m, 30.7m, 0m with output component(s) Hy created.
+Receiver at 159.5m, 30.2m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 159.5m, 30.175m, 0m with output component(s) Hx created.
+Receiver at 159.475m, 30.2m, 0m with output component(s) Hy created.
+Receiver at 159.5m, 27.75m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 159.5m, 27.725m, 0m with output component(s) Hx created.
+Receiver at 159.475m, 27.75m, 0m with output component(s) Hy created.
+Receiver at 159.5m, 25.275m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 159.5m, 25.25m, 0m with output component(s) Hx created.
+Receiver at 159.475m, 25.275m, 0m with output component(s) Hy created.
+Receiver at 159.5m, 24.775m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 159.5m, 24.75m, 0m with output component(s) Hx created.
+Receiver at 159.475m, 24.775m, 0m with output component(s) Hy created.
+Receiver at 159.5m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 159.5m, 34m, 0m with output component(s) Hx created.
+Receiver at 159.475m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 159.5m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 159.5m, 38m, 0m with output component(s) Hx created.
+Receiver at 159.475m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 160m, 30.725m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 160m, 30.7m, 0m with output component(s) Hx created.
+Receiver at 159.975m, 30.725m, 0m with output component(s) Hy created.
+Receiver at 160m, 30.225m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 160m, 30.2m, 0m with output component(s) Hx created.
+Receiver at 159.975m, 30.225m, 0m with output component(s) Hy created.
+Receiver at 160m, 27.75m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 160m, 27.725m, 0m with output component(s) Hx created.
+Receiver at 159.975m, 27.75m, 0m with output component(s) Hy created.
+Receiver at 160m, 25.25m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 160m, 25.225m, 0m with output component(s) Hx created.
+Receiver at 159.975m, 25.25m, 0m with output component(s) Hy created.
+Receiver at 160m, 24.75m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 160m, 24.725m, 0m with output component(s) Hx created.
+Receiver at 159.975m, 24.75m, 0m with output component(s) Hy created.
+Receiver at 160m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 160m, 34m, 0m with output component(s) Hx created.
+Receiver at 159.975m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 160m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 160m, 38m, 0m with output component(s) Hx created.
+Receiver at 159.975m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 160.5m, 30.75m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 160.5m, 30.725m, 0m with output component(s) Hx created.
+Receiver at 160.475m, 30.75m, 0m with output component(s) Hy created.
+Receiver at 160.5m, 30.25m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 160.5m, 30.225m, 0m with output component(s) Hx created.
+Receiver at 160.475m, 30.25m, 0m with output component(s) Hy created.
+Receiver at 160.5m, 27.75m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 160.5m, 27.725m, 0m with output component(s) Hx created.
+Receiver at 160.475m, 27.75m, 0m with output component(s) Hy created.
+Receiver at 160.5m, 25.225m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 160.5m, 25.2m, 0m with output component(s) Hx created.
+Receiver at 160.475m, 25.225m, 0m with output component(s) Hy created.
+Receiver at 160.5m, 24.725m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 160.5m, 24.7m, 0m with output component(s) Hx created.
+Receiver at 160.475m, 24.725m, 0m with output component(s) Hy created.
+Receiver at 160.5m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 160.5m, 34m, 0m with output component(s) Hx created.
+Receiver at 160.475m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 160.5m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 160.5m, 38m, 0m with output component(s) Hx created.
+Receiver at 160.475m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 161m, 30.775m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 161m, 30.75m, 0m with output component(s) Hx created.
+Receiver at 160.975m, 30.775m, 0m with output component(s) Hy created.
+Receiver at 161m, 30.275m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 161m, 30.25m, 0m with output component(s) Hx created.
+Receiver at 160.975m, 30.275m, 0m with output component(s) Hy created.
+Receiver at 161m, 27.75m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 161m, 27.725m, 0m with output component(s) Hx created.
+Receiver at 160.975m, 27.75m, 0m with output component(s) Hy created.
+Receiver at 161m, 25.2m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 161m, 25.175m, 0m with output component(s) Hx created.
+Receiver at 160.975m, 25.2m, 0m with output component(s) Hy created.
+Receiver at 161m, 24.7m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 161m, 24.675m, 0m with output component(s) Hx created.
+Receiver at 160.975m, 24.7m, 0m with output component(s) Hy created.
+Receiver at 161m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 161m, 34m, 0m with output component(s) Hx created.
+Receiver at 160.975m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 161m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 161m, 38m, 0m with output component(s) Hx created.
+Receiver at 160.975m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 161.5m, 30.8m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 161.5m, 30.775m, 0m with output component(s) Hx created.
+Receiver at 161.475m, 30.8m, 0m with output component(s) Hy created.
+Receiver at 161.5m, 30.3m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 161.5m, 30.275m, 0m with output component(s) Hx created.
+Receiver at 161.475m, 30.3m, 0m with output component(s) Hy created.
+Receiver at 161.5m, 27.725m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 161.5m, 27.7m, 0m with output component(s) Hx created.
+Receiver at 161.475m, 27.725m, 0m with output component(s) Hy created.
+Receiver at 161.5m, 25.15m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 161.5m, 25.125m, 0m with output component(s) Hx created.
+Receiver at 161.475m, 25.15m, 0m with output component(s) Hy created.
+Receiver at 161.5m, 24.65m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 161.5m, 24.625m, 0m with output component(s) Hx created.
+Receiver at 161.475m, 24.65m, 0m with output component(s) Hy created.
+Receiver at 161.5m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 161.5m, 34m, 0m with output component(s) Hx created.
+Receiver at 161.475m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 161.5m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 161.5m, 38m, 0m with output component(s) Hx created.
+Receiver at 161.475m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 162m, 30.825m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 162m, 30.8m, 0m with output component(s) Hx created.
+Receiver at 161.975m, 30.825m, 0m with output component(s) Hy created.
+Receiver at 162m, 30.325m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 162m, 30.3m, 0m with output component(s) Hx created.
+Receiver at 161.975m, 30.325m, 0m with output component(s) Hy created.
+Receiver at 162m, 27.725m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 162m, 27.7m, 0m with output component(s) Hx created.
+Receiver at 161.975m, 27.725m, 0m with output component(s) Hy created.
+Receiver at 162m, 25.125m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 162m, 25.1m, 0m with output component(s) Hx created.
+Receiver at 161.975m, 25.125m, 0m with output component(s) Hy created.
+Receiver at 162m, 24.625m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 162m, 24.6m, 0m with output component(s) Hx created.
+Receiver at 161.975m, 24.625m, 0m with output component(s) Hy created.
+Receiver at 162m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 162m, 34m, 0m with output component(s) Hx created.
+Receiver at 161.975m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 162m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 162m, 38m, 0m with output component(s) Hx created.
+Receiver at 161.975m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 162.5m, 30.85m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 162.5m, 30.825m, 0m with output component(s) Hx created.
+Receiver at 162.475m, 30.85m, 0m with output component(s) Hy created.
+Receiver at 162.5m, 30.35m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 162.5m, 30.325m, 0m with output component(s) Hx created.
+Receiver at 162.475m, 30.35m, 0m with output component(s) Hy created.
+Receiver at 162.5m, 27.725m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 162.5m, 27.7m, 0m with output component(s) Hx created.
+Receiver at 162.475m, 27.725m, 0m with output component(s) Hy created.
+Receiver at 162.5m, 25.1m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 162.5m, 25.075m, 0m with output component(s) Hx created.
+Receiver at 162.475m, 25.1m, 0m with output component(s) Hy created.
+Receiver at 162.5m, 24.6m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 162.5m, 24.575m, 0m with output component(s) Hx created.
+Receiver at 162.475m, 24.6m, 0m with output component(s) Hy created.
+Receiver at 162.5m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 162.5m, 34m, 0m with output component(s) Hx created.
+Receiver at 162.475m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 162.5m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 162.5m, 38m, 0m with output component(s) Hx created.
+Receiver at 162.475m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 163m, 30.875m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 163m, 30.85m, 0m with output component(s) Hx created.
+Receiver at 162.975m, 30.875m, 0m with output component(s) Hy created.
+Receiver at 163m, 30.375m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 163m, 30.35m, 0m with output component(s) Hx created.
+Receiver at 162.975m, 30.375m, 0m with output component(s) Hy created.
+Receiver at 163m, 27.725m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 163m, 27.7m, 0m with output component(s) Hx created.
+Receiver at 162.975m, 27.725m, 0m with output component(s) Hy created.
+Receiver at 163m, 25.075m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 163m, 25.05m, 0m with output component(s) Hx created.
+Receiver at 162.975m, 25.075m, 0m with output component(s) Hy created.
+Receiver at 163m, 24.575m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 163m, 24.55m, 0m with output component(s) Hx created.
+Receiver at 162.975m, 24.575m, 0m with output component(s) Hy created.
+Receiver at 163m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 163m, 34m, 0m with output component(s) Hx created.
+Receiver at 162.975m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 163m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 163m, 38m, 0m with output component(s) Hx created.
+Receiver at 162.975m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 163.5m, 30.925m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 163.5m, 30.9m, 0m with output component(s) Hx created.
+Receiver at 163.475m, 30.925m, 0m with output component(s) Hy created.
+Receiver at 163.5m, 30.425m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 163.5m, 30.4m, 0m with output component(s) Hx created.
+Receiver at 163.475m, 30.425m, 0m with output component(s) Hy created.
+Receiver at 163.5m, 27.75m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 163.5m, 27.725m, 0m with output component(s) Hx created.
+Receiver at 163.475m, 27.75m, 0m with output component(s) Hy created.
+Receiver at 163.5m, 25.05m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 163.5m, 25.025m, 0m with output component(s) Hx created.
+Receiver at 163.475m, 25.05m, 0m with output component(s) Hy created.
+Receiver at 163.5m, 24.55m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 163.5m, 24.525m, 0m with output component(s) Hx created.
+Receiver at 163.475m, 24.55m, 0m with output component(s) Hy created.
+Receiver at 163.5m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 163.5m, 34m, 0m with output component(s) Hx created.
+Receiver at 163.475m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 163.5m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 163.5m, 38m, 0m with output component(s) Hx created.
+Receiver at 163.475m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 164m, 30.95m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 164m, 30.925m, 0m with output component(s) Hx created.
+Receiver at 163.975m, 30.95m, 0m with output component(s) Hy created.
+Receiver at 164m, 30.45m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 164m, 30.425m, 0m with output component(s) Hx created.
+Receiver at 163.975m, 30.45m, 0m with output component(s) Hy created.
+Receiver at 164m, 27.75m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 164m, 27.725m, 0m with output component(s) Hx created.
+Receiver at 163.975m, 27.75m, 0m with output component(s) Hy created.
+Receiver at 164m, 25.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 164m, 25m, 0m with output component(s) Hx created.
+Receiver at 163.975m, 25.025m, 0m with output component(s) Hy created.
+Receiver at 164m, 24.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 164m, 24.5m, 0m with output component(s) Hx created.
+Receiver at 163.975m, 24.525m, 0m with output component(s) Hy created.
+Receiver at 164m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 164m, 34m, 0m with output component(s) Hx created.
+Receiver at 163.975m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 164m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 164m, 38m, 0m with output component(s) Hx created.
+Receiver at 163.975m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 164.5m, 30.975m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 164.5m, 30.95m, 0m with output component(s) Hx created.
+Receiver at 164.475m, 30.975m, 0m with output component(s) Hy created.
+Receiver at 164.5m, 30.475m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 164.5m, 30.45m, 0m with output component(s) Hx created.
+Receiver at 164.475m, 30.475m, 0m with output component(s) Hy created.
+Receiver at 164.5m, 27.75m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 164.5m, 27.725m, 0m with output component(s) Hx created.
+Receiver at 164.475m, 27.75m, 0m with output component(s) Hy created.
+Receiver at 164.5m, 25m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 164.5m, 24.975m, 0m with output component(s) Hx created.
+Receiver at 164.475m, 25m, 0m with output component(s) Hy created.
+Receiver at 164.5m, 24.5m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 164.5m, 24.475m, 0m with output component(s) Hx created.
+Receiver at 164.475m, 24.5m, 0m with output component(s) Hy created.
+Receiver at 164.5m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 164.5m, 34m, 0m with output component(s) Hx created.
+Receiver at 164.475m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 164.5m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 164.5m, 38m, 0m with output component(s) Hx created.
+Receiver at 164.475m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 165m, 31m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 165m, 30.975m, 0m with output component(s) Hx created.
+Receiver at 164.975m, 31m, 0m with output component(s) Hy created.
+Receiver at 165m, 30.5m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 165m, 30.475m, 0m with output component(s) Hx created.
+Receiver at 164.975m, 30.5m, 0m with output component(s) Hy created.
+Receiver at 165m, 27.725m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 165m, 27.7m, 0m with output component(s) Hx created.
+Receiver at 164.975m, 27.725m, 0m with output component(s) Hy created.
+Receiver at 165m, 24.95m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 165m, 24.925m, 0m with output component(s) Hx created.
+Receiver at 164.975m, 24.95m, 0m with output component(s) Hy created.
+Receiver at 165m, 24.45m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 165m, 24.425m, 0m with output component(s) Hx created.
+Receiver at 164.975m, 24.45m, 0m with output component(s) Hy created.
+Receiver at 165m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 165m, 34m, 0m with output component(s) Hx created.
+Receiver at 164.975m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 165m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 165m, 38m, 0m with output component(s) Hx created.
+Receiver at 164.975m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 165.5m, 31.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 165.5m, 31m, 0m with output component(s) Hx created.
+Receiver at 165.475m, 31.025m, 0m with output component(s) Hy created.
+Receiver at 165.5m, 30.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 165.5m, 30.5m, 0m with output component(s) Hx created.
+Receiver at 165.475m, 30.525m, 0m with output component(s) Hy created.
+Receiver at 165.5m, 27.725m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 165.5m, 27.7m, 0m with output component(s) Hx created.
+Receiver at 165.475m, 27.725m, 0m with output component(s) Hy created.
+Receiver at 165.5m, 24.925m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 165.5m, 24.9m, 0m with output component(s) Hx created.
+Receiver at 165.475m, 24.925m, 0m with output component(s) Hy created.
+Receiver at 165.5m, 24.425m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 165.5m, 24.4m, 0m with output component(s) Hx created.
+Receiver at 165.475m, 24.425m, 0m with output component(s) Hy created.
+Receiver at 165.5m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 165.5m, 34m, 0m with output component(s) Hx created.
+Receiver at 165.475m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 165.5m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 165.5m, 38m, 0m with output component(s) Hx created.
+Receiver at 165.475m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 166m, 31.05m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 166m, 31.025m, 0m with output component(s) Hx created.
+Receiver at 165.975m, 31.05m, 0m with output component(s) Hy created.
+Receiver at 166m, 30.55m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 166m, 30.525m, 0m with output component(s) Hx created.
+Receiver at 165.975m, 30.55m, 0m with output component(s) Hy created.
+Receiver at 166m, 27.725m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 166m, 27.7m, 0m with output component(s) Hx created.
+Receiver at 165.975m, 27.725m, 0m with output component(s) Hy created.
+Receiver at 166m, 24.9m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 166m, 24.875m, 0m with output component(s) Hx created.
+Receiver at 165.975m, 24.9m, 0m with output component(s) Hy created.
+Receiver at 166m, 24.4m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 166m, 24.375m, 0m with output component(s) Hx created.
+Receiver at 165.975m, 24.4m, 0m with output component(s) Hy created.
+Receiver at 166m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 166m, 34m, 0m with output component(s) Hx created.
+Receiver at 165.975m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 166m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 166m, 38m, 0m with output component(s) Hx created.
+Receiver at 165.975m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 166.5m, 31.075m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 166.5m, 31.05m, 0m with output component(s) Hx created.
+Receiver at 166.475m, 31.075m, 0m with output component(s) Hy created.
+Receiver at 166.5m, 30.575m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 166.5m, 30.55m, 0m with output component(s) Hx created.
+Receiver at 166.475m, 30.575m, 0m with output component(s) Hy created.
+Receiver at 166.5m, 27.725m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 166.5m, 27.7m, 0m with output component(s) Hx created.
+Receiver at 166.475m, 27.725m, 0m with output component(s) Hy created.
+Receiver at 166.5m, 24.875m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 166.5m, 24.85m, 0m with output component(s) Hx created.
+Receiver at 166.475m, 24.875m, 0m with output component(s) Hy created.
+Receiver at 166.5m, 24.375m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 166.5m, 24.35m, 0m with output component(s) Hx created.
+Receiver at 166.475m, 24.375m, 0m with output component(s) Hy created.
+Receiver at 166.5m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 166.5m, 34m, 0m with output component(s) Hx created.
+Receiver at 166.475m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 166.5m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 166.5m, 38m, 0m with output component(s) Hx created.
+Receiver at 166.475m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 167m, 31.1m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 167m, 31.075m, 0m with output component(s) Hx created.
+Receiver at 166.975m, 31.1m, 0m with output component(s) Hy created.
+Receiver at 167m, 30.6m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 167m, 30.575m, 0m with output component(s) Hx created.
+Receiver at 166.975m, 30.6m, 0m with output component(s) Hy created.
+Receiver at 167m, 27.725m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 167m, 27.7m, 0m with output component(s) Hx created.
+Receiver at 166.975m, 27.725m, 0m with output component(s) Hy created.
+Receiver at 167m, 24.85m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 167m, 24.825m, 0m with output component(s) Hx created.
+Receiver at 166.975m, 24.85m, 0m with output component(s) Hy created.
+Receiver at 167m, 24.35m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 167m, 24.325m, 0m with output component(s) Hx created.
+Receiver at 166.975m, 24.35m, 0m with output component(s) Hy created.
+Receiver at 167m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 167m, 34m, 0m with output component(s) Hx created.
+Receiver at 166.975m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 167m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 167m, 38m, 0m with output component(s) Hx created.
+Receiver at 166.975m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 167.5m, 31.125m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 167.5m, 31.1m, 0m with output component(s) Hx created.
+Receiver at 167.475m, 31.125m, 0m with output component(s) Hy created.
+Receiver at 167.5m, 30.625m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 167.5m, 30.6m, 0m with output component(s) Hx created.
+Receiver at 167.475m, 30.625m, 0m with output component(s) Hy created.
+Receiver at 167.5m, 27.725m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 167.5m, 27.7m, 0m with output component(s) Hx created.
+Receiver at 167.475m, 27.725m, 0m with output component(s) Hy created.
+Receiver at 167.5m, 24.825m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 167.5m, 24.8m, 0m with output component(s) Hx created.
+Receiver at 167.475m, 24.825m, 0m with output component(s) Hy created.
+Receiver at 167.5m, 24.325m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 167.5m, 24.3m, 0m with output component(s) Hx created.
+Receiver at 167.475m, 24.325m, 0m with output component(s) Hy created.
+Receiver at 167.5m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 167.5m, 34m, 0m with output component(s) Hx created.
+Receiver at 167.475m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 167.5m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 167.5m, 38m, 0m with output component(s) Hx created.
+Receiver at 167.475m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 168m, 31.15m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 168m, 31.125m, 0m with output component(s) Hx created.
+Receiver at 167.975m, 31.15m, 0m with output component(s) Hy created.
+Receiver at 168m, 30.65m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 168m, 30.625m, 0m with output component(s) Hx created.
+Receiver at 167.975m, 30.65m, 0m with output component(s) Hy created.
+Receiver at 168m, 27.7m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 168m, 27.675m, 0m with output component(s) Hx created.
+Receiver at 167.975m, 27.7m, 0m with output component(s) Hy created.
+Receiver at 168m, 24.775m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 168m, 24.75m, 0m with output component(s) Hx created.
+Receiver at 167.975m, 24.775m, 0m with output component(s) Hy created.
+Receiver at 168m, 24.275m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 168m, 24.25m, 0m with output component(s) Hx created.
+Receiver at 167.975m, 24.275m, 0m with output component(s) Hy created.
+Receiver at 168m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 168m, 34m, 0m with output component(s) Hx created.
+Receiver at 167.975m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 168m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 168m, 38m, 0m with output component(s) Hx created.
+Receiver at 167.975m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 168.5m, 31.175m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 168.5m, 31.15m, 0m with output component(s) Hx created.
+Receiver at 168.475m, 31.175m, 0m with output component(s) Hy created.
+Receiver at 168.5m, 30.675m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 168.5m, 30.65m, 0m with output component(s) Hx created.
+Receiver at 168.475m, 30.675m, 0m with output component(s) Hy created.
+Receiver at 168.5m, 27.7m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 168.5m, 27.675m, 0m with output component(s) Hx created.
+Receiver at 168.475m, 27.7m, 0m with output component(s) Hy created.
+Receiver at 168.5m, 24.75m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 168.5m, 24.725m, 0m with output component(s) Hx created.
+Receiver at 168.475m, 24.75m, 0m with output component(s) Hy created.
+Receiver at 168.5m, 24.25m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 168.5m, 24.225m, 0m with output component(s) Hx created.
+Receiver at 168.475m, 24.25m, 0m with output component(s) Hy created.
+Receiver at 168.5m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 168.5m, 34m, 0m with output component(s) Hx created.
+Receiver at 168.475m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 168.5m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 168.5m, 38m, 0m with output component(s) Hx created.
+Receiver at 168.475m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 169m, 31.2m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 169m, 31.175m, 0m with output component(s) Hx created.
+Receiver at 168.975m, 31.2m, 0m with output component(s) Hy created.
+Receiver at 169m, 30.7m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 169m, 30.675m, 0m with output component(s) Hx created.
+Receiver at 168.975m, 30.7m, 0m with output component(s) Hy created.
+Receiver at 169m, 27.7m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 169m, 27.675m, 0m with output component(s) Hx created.
+Receiver at 168.975m, 27.7m, 0m with output component(s) Hy created.
+Receiver at 169m, 24.725m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 169m, 24.7m, 0m with output component(s) Hx created.
+Receiver at 168.975m, 24.725m, 0m with output component(s) Hy created.
+Receiver at 169m, 24.225m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 169m, 24.2m, 0m with output component(s) Hx created.
+Receiver at 168.975m, 24.225m, 0m with output component(s) Hy created.
+Receiver at 169m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 169m, 34m, 0m with output component(s) Hx created.
+Receiver at 168.975m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 169m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 169m, 38m, 0m with output component(s) Hx created.
+Receiver at 168.975m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 169.5m, 31.225m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 169.5m, 31.2m, 0m with output component(s) Hx created.
+Receiver at 169.475m, 31.225m, 0m with output component(s) Hy created.
+Receiver at 169.5m, 30.725m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 169.5m, 30.7m, 0m with output component(s) Hx created.
+Receiver at 169.475m, 30.725m, 0m with output component(s) Hy created.
+Receiver at 169.5m, 27.7m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 169.5m, 27.675m, 0m with output component(s) Hx created.
+Receiver at 169.475m, 27.7m, 0m with output component(s) Hy created.
+Receiver at 169.5m, 24.7m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 169.5m, 24.675m, 0m with output component(s) Hx created.
+Receiver at 169.475m, 24.7m, 0m with output component(s) Hy created.
+Receiver at 169.5m, 24.2m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 169.5m, 24.175m, 0m with output component(s) Hx created.
+Receiver at 169.475m, 24.2m, 0m with output component(s) Hy created.
+Receiver at 169.5m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 169.5m, 34m, 0m with output component(s) Hx created.
+Receiver at 169.475m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 169.5m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 169.5m, 38m, 0m with output component(s) Hx created.
+Receiver at 169.475m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 170m, 31.25m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 170m, 31.225m, 0m with output component(s) Hx created.
+Receiver at 169.975m, 31.25m, 0m with output component(s) Hy created.
+Receiver at 170m, 30.75m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 170m, 30.725m, 0m with output component(s) Hx created.
+Receiver at 169.975m, 30.75m, 0m with output component(s) Hy created.
+Receiver at 170m, 27.7m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 170m, 27.675m, 0m with output component(s) Hx created.
+Receiver at 169.975m, 27.7m, 0m with output component(s) Hy created.
+Receiver at 170m, 24.675m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 170m, 24.65m, 0m with output component(s) Hx created.
+Receiver at 169.975m, 24.675m, 0m with output component(s) Hy created.
+Receiver at 170m, 24.175m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 170m, 24.15m, 0m with output component(s) Hx created.
+Receiver at 169.975m, 24.175m, 0m with output component(s) Hy created.
+Receiver at 170m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 170m, 34m, 0m with output component(s) Hx created.
+Receiver at 169.975m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 170m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 170m, 38m, 0m with output component(s) Hx created.
+Receiver at 169.975m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 170.5m, 31.275m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 170.5m, 31.25m, 0m with output component(s) Hx created.
+Receiver at 170.475m, 31.275m, 0m with output component(s) Hy created.
+Receiver at 170.5m, 30.775m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 170.5m, 30.75m, 0m with output component(s) Hx created.
+Receiver at 170.475m, 30.775m, 0m with output component(s) Hy created.
+Receiver at 170.5m, 27.7m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 170.5m, 27.675m, 0m with output component(s) Hx created.
+Receiver at 170.475m, 27.7m, 0m with output component(s) Hy created.
+Receiver at 170.5m, 24.65m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 170.5m, 24.625m, 0m with output component(s) Hx created.
+Receiver at 170.475m, 24.65m, 0m with output component(s) Hy created.
+Receiver at 170.5m, 24.15m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 170.5m, 24.125m, 0m with output component(s) Hx created.
+Receiver at 170.475m, 24.15m, 0m with output component(s) Hy created.
+Receiver at 170.5m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 170.5m, 34m, 0m with output component(s) Hx created.
+Receiver at 170.475m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 170.5m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 170.5m, 38m, 0m with output component(s) Hx created.
+Receiver at 170.475m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 171m, 31.3m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 171m, 31.275m, 0m with output component(s) Hx created.
+Receiver at 170.975m, 31.3m, 0m with output component(s) Hy created.
+Receiver at 171m, 30.8m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 171m, 30.775m, 0m with output component(s) Hx created.
+Receiver at 170.975m, 30.8m, 0m with output component(s) Hy created.
+Receiver at 171m, 27.7m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 171m, 27.675m, 0m with output component(s) Hx created.
+Receiver at 170.975m, 27.7m, 0m with output component(s) Hy created.
+Receiver at 171m, 24.625m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 171m, 24.6m, 0m with output component(s) Hx created.
+Receiver at 170.975m, 24.625m, 0m with output component(s) Hy created.
+Receiver at 171m, 24.125m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 171m, 24.1m, 0m with output component(s) Hx created.
+Receiver at 170.975m, 24.125m, 0m with output component(s) Hy created.
+Receiver at 171m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 171m, 34m, 0m with output component(s) Hx created.
+Receiver at 170.975m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 171m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 171m, 38m, 0m with output component(s) Hx created.
+Receiver at 170.975m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 171.5m, 31.325m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 171.5m, 31.3m, 0m with output component(s) Hx created.
+Receiver at 171.475m, 31.325m, 0m with output component(s) Hy created.
+Receiver at 171.5m, 30.825m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 171.5m, 30.8m, 0m with output component(s) Hx created.
+Receiver at 171.475m, 30.825m, 0m with output component(s) Hy created.
+Receiver at 171.5m, 27.7m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 171.5m, 27.675m, 0m with output component(s) Hx created.
+Receiver at 171.475m, 27.7m, 0m with output component(s) Hy created.
+Receiver at 171.5m, 24.575m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 171.5m, 24.55m, 0m with output component(s) Hx created.
+Receiver at 171.475m, 24.575m, 0m with output component(s) Hy created.
+Receiver at 171.5m, 24.075m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 171.5m, 24.05m, 0m with output component(s) Hx created.
+Receiver at 171.475m, 24.075m, 0m with output component(s) Hy created.
+Receiver at 171.5m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 171.5m, 34m, 0m with output component(s) Hx created.
+Receiver at 171.475m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 171.5m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 171.5m, 38m, 0m with output component(s) Hx created.
+Receiver at 171.475m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 172m, 31.35m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 172m, 31.325m, 0m with output component(s) Hx created.
+Receiver at 171.975m, 31.35m, 0m with output component(s) Hy created.
+Receiver at 172m, 30.85m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 172m, 30.825m, 0m with output component(s) Hx created.
+Receiver at 171.975m, 30.85m, 0m with output component(s) Hy created.
+Receiver at 172m, 27.7m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 172m, 27.675m, 0m with output component(s) Hx created.
+Receiver at 171.975m, 27.7m, 0m with output component(s) Hy created.
+Receiver at 172m, 24.55m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 172m, 24.525m, 0m with output component(s) Hx created.
+Receiver at 171.975m, 24.55m, 0m with output component(s) Hy created.
+Receiver at 172m, 24.05m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 172m, 24.025m, 0m with output component(s) Hx created.
+Receiver at 171.975m, 24.05m, 0m with output component(s) Hy created.
+Receiver at 172m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 172m, 34m, 0m with output component(s) Hx created.
+Receiver at 171.975m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 172m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 172m, 38m, 0m with output component(s) Hx created.
+Receiver at 171.975m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 172.5m, 31.375m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 172.5m, 31.35m, 0m with output component(s) Hx created.
+Receiver at 172.475m, 31.375m, 0m with output component(s) Hy created.
+Receiver at 172.5m, 30.875m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 172.5m, 30.85m, 0m with output component(s) Hx created.
+Receiver at 172.475m, 30.875m, 0m with output component(s) Hy created.
+Receiver at 172.5m, 27.7m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 172.5m, 27.675m, 0m with output component(s) Hx created.
+Receiver at 172.475m, 27.7m, 0m with output component(s) Hy created.
+Receiver at 172.5m, 24.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 172.5m, 24.5m, 0m with output component(s) Hx created.
+Receiver at 172.475m, 24.525m, 0m with output component(s) Hy created.
+Receiver at 172.5m, 24.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 172.5m, 24m, 0m with output component(s) Hx created.
+Receiver at 172.475m, 24.025m, 0m with output component(s) Hy created.
+Receiver at 172.5m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 172.5m, 34m, 0m with output component(s) Hx created.
+Receiver at 172.475m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 172.5m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 172.5m, 38m, 0m with output component(s) Hx created.
+Receiver at 172.475m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 173m, 31.4m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 173m, 31.375m, 0m with output component(s) Hx created.
+Receiver at 172.975m, 31.4m, 0m with output component(s) Hy created.
+Receiver at 173m, 30.9m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 173m, 30.875m, 0m with output component(s) Hx created.
+Receiver at 172.975m, 30.9m, 0m with output component(s) Hy created.
+Receiver at 173m, 27.7m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 173m, 27.675m, 0m with output component(s) Hx created.
+Receiver at 172.975m, 27.7m, 0m with output component(s) Hy created.
+Receiver at 173m, 24.5m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 173m, 24.475m, 0m with output component(s) Hx created.
+Receiver at 172.975m, 24.5m, 0m with output component(s) Hy created.
+Receiver at 173m, 24m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 173m, 23.975m, 0m with output component(s) Hx created.
+Receiver at 172.975m, 24m, 0m with output component(s) Hy created.
+Receiver at 173m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 173m, 34m, 0m with output component(s) Hx created.
+Receiver at 172.975m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 173m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 173m, 38m, 0m with output component(s) Hx created.
+Receiver at 172.975m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 173.5m, 31.425m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 173.5m, 31.4m, 0m with output component(s) Hx created.
+Receiver at 173.475m, 31.425m, 0m with output component(s) Hy created.
+Receiver at 173.5m, 30.925m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 173.5m, 30.9m, 0m with output component(s) Hx created.
+Receiver at 173.475m, 30.925m, 0m with output component(s) Hy created.
+Receiver at 173.5m, 27.7m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 173.5m, 27.675m, 0m with output component(s) Hx created.
+Receiver at 173.475m, 27.7m, 0m with output component(s) Hy created.
+Receiver at 173.5m, 24.475m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 173.5m, 24.45m, 0m with output component(s) Hx created.
+Receiver at 173.475m, 24.475m, 0m with output component(s) Hy created.
+Receiver at 173.5m, 23.975m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 173.5m, 23.95m, 0m with output component(s) Hx created.
+Receiver at 173.475m, 23.975m, 0m with output component(s) Hy created.
+Receiver at 173.5m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 173.5m, 34m, 0m with output component(s) Hx created.
+Receiver at 173.475m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 173.5m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 173.5m, 38m, 0m with output component(s) Hx created.
+Receiver at 173.475m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 174m, 31.45m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 174m, 31.425m, 0m with output component(s) Hx created.
+Receiver at 173.975m, 31.45m, 0m with output component(s) Hy created.
+Receiver at 174m, 30.95m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 174m, 30.925m, 0m with output component(s) Hx created.
+Receiver at 173.975m, 30.95m, 0m with output component(s) Hy created.
+Receiver at 174m, 27.7m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 174m, 27.675m, 0m with output component(s) Hx created.
+Receiver at 173.975m, 27.7m, 0m with output component(s) Hy created.
+Receiver at 174m, 24.45m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 174m, 24.425m, 0m with output component(s) Hx created.
+Receiver at 173.975m, 24.45m, 0m with output component(s) Hy created.
+Receiver at 174m, 23.95m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 174m, 23.925m, 0m with output component(s) Hx created.
+Receiver at 173.975m, 23.95m, 0m with output component(s) Hy created.
+Receiver at 174m, 34.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 174m, 34m, 0m with output component(s) Hx created.
+Receiver at 173.975m, 34.025m, 0m with output component(s) Hy created.
+Receiver at 174m, 38.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 174m, 38m, 0m with output component(s) Hx created.
+Receiver at 173.975m, 38.025m, 0m with output component(s) Hy created.
+Receiver at 154m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 154m, 27m, 0m with output component(s) Hx created.
+Receiver at 153.975m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 154.5m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 154.5m, 27m, 0m with output component(s) Hx created.
+Receiver at 154.475m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 155m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 155m, 27m, 0m with output component(s) Hx created.
+Receiver at 154.975m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 155.5m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 155.5m, 27m, 0m with output component(s) Hx created.
+Receiver at 155.475m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 156m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 156m, 27m, 0m with output component(s) Hx created.
+Receiver at 155.975m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 156.5m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 156.5m, 27m, 0m with output component(s) Hx created.
+Receiver at 156.475m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 157m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 157m, 27m, 0m with output component(s) Hx created.
+Receiver at 156.975m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 157.5m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 157.5m, 27m, 0m with output component(s) Hx created.
+Receiver at 157.475m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 158m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 158m, 27m, 0m with output component(s) Hx created.
+Receiver at 157.975m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 158.5m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 158.5m, 27m, 0m with output component(s) Hx created.
+Receiver at 158.475m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 159m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 159m, 27m, 0m with output component(s) Hx created.
+Receiver at 158.975m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 159.5m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 159.5m, 27m, 0m with output component(s) Hx created.
+Receiver at 159.475m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 160m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 160m, 27m, 0m with output component(s) Hx created.
+Receiver at 159.975m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 160.5m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 160.5m, 27m, 0m with output component(s) Hx created.
+Receiver at 160.475m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 161m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 161m, 27m, 0m with output component(s) Hx created.
+Receiver at 160.975m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 161.5m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 161.5m, 27m, 0m with output component(s) Hx created.
+Receiver at 161.475m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 162m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 162m, 27m, 0m with output component(s) Hx created.
+Receiver at 161.975m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 162.5m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 162.5m, 27m, 0m with output component(s) Hx created.
+Receiver at 162.475m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 163m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 163m, 27m, 0m with output component(s) Hx created.
+Receiver at 162.975m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 163.5m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 163.5m, 27m, 0m with output component(s) Hx created.
+Receiver at 163.475m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 164m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 164m, 27m, 0m with output component(s) Hx created.
+Receiver at 163.975m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 164.5m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 164.5m, 27m, 0m with output component(s) Hx created.
+Receiver at 164.475m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 165m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 165m, 27m, 0m with output component(s) Hx created.
+Receiver at 164.975m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 165.5m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 165.5m, 27m, 0m with output component(s) Hx created.
+Receiver at 165.475m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 166m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 166m, 27m, 0m with output component(s) Hx created.
+Receiver at 165.975m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 166.5m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 166.5m, 27m, 0m with output component(s) Hx created.
+Receiver at 166.475m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 167m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 167m, 27m, 0m with output component(s) Hx created.
+Receiver at 166.975m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 167.5m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 167.5m, 27m, 0m with output component(s) Hx created.
+Receiver at 167.475m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 168m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 168m, 27m, 0m with output component(s) Hx created.
+Receiver at 167.975m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 168.5m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 168.5m, 27m, 0m with output component(s) Hx created.
+Receiver at 168.475m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 169m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 169m, 27m, 0m with output component(s) Hx created.
+Receiver at 168.975m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 169.5m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 169.5m, 27m, 0m with output component(s) Hx created.
+Receiver at 169.475m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 170m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 170m, 27m, 0m with output component(s) Hx created.
+Receiver at 169.975m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 170.5m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 170.5m, 27m, 0m with output component(s) Hx created.
+Receiver at 170.475m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 171m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 171m, 27m, 0m with output component(s) Hx created.
+Receiver at 170.975m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 171.5m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 171.5m, 27m, 0m with output component(s) Hx created.
+Receiver at 171.475m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 172m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 172m, 27m, 0m with output component(s) Hx created.
+Receiver at 171.975m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 172.5m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 172.5m, 27m, 0m with output component(s) Hx created.
+Receiver at 172.475m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 173m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 173m, 27m, 0m with output component(s) Hx created.
+Receiver at 172.975m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 173.5m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 173.5m, 27m, 0m with output component(s) Hx created.
+Receiver at 173.475m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 174m, 27.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 174m, 27m, 0m with output component(s) Hx created.
+Receiver at 173.975m, 27.025m, 0m with output component(s) Hy created.
+Receiver at 154m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 154m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 153.975m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 154.5m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 154.5m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 154.475m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 155m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 155m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 154.975m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 155.5m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 155.5m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 155.475m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 156m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 156m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 155.975m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 156.5m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 156.5m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 156.475m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 157m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 157m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 156.975m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 157.5m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 157.5m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 157.475m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 158m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 158m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 157.975m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 158.5m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 158.5m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 158.475m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 159m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 159m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 158.975m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 159.5m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 159.5m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 159.475m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 160m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 160m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 159.975m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 160.5m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 160.5m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 160.475m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 161m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 161m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 160.975m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 161.5m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 161.5m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 161.475m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 162m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 162m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 161.975m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 162.5m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 162.5m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 162.475m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 163m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 163m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 162.975m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 163.5m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 163.5m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 163.475m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 164m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 164m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 163.975m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 164.5m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 164.5m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 164.475m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 165m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 165m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 164.975m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 165.5m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 165.5m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 165.475m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 166m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 166m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 165.975m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 166.5m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 166.5m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 166.475m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 167m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 167m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 166.975m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 167.5m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 167.5m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 167.475m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 168m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 168m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 167.975m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 168.5m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 168.5m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 168.475m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 169m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 169m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 168.975m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 169.5m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 169.5m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 169.475m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 170m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 170m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 169.975m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 170.5m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 170.5m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 170.475m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 171m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 171m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 170.975m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 171.5m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 171.5m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 171.475m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 172m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 172m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 171.975m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 172.5m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 172.5m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 172.475m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 173m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 173m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 172.975m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 173.5m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 173.5m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 173.475m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 174m, 28.525m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 174m, 28.5m, 0m with output component(s) Hx created.
+Receiver at 173.975m, 28.525m, 0m with output component(s) Hy created.
+Receiver at 154m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 154m, 30m, 0m with output component(s) Hx created.
+Receiver at 153.975m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 154.5m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 154.5m, 30m, 0m with output component(s) Hx created.
+Receiver at 154.475m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 155m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 155m, 30m, 0m with output component(s) Hx created.
+Receiver at 154.975m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 155.5m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 155.5m, 30m, 0m with output component(s) Hx created.
+Receiver at 155.475m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 156m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 156m, 30m, 0m with output component(s) Hx created.
+Receiver at 155.975m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 156.5m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 156.5m, 30m, 0m with output component(s) Hx created.
+Receiver at 156.475m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 157m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 157m, 30m, 0m with output component(s) Hx created.
+Receiver at 156.975m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 157.5m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 157.5m, 30m, 0m with output component(s) Hx created.
+Receiver at 157.475m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 158m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 158m, 30m, 0m with output component(s) Hx created.
+Receiver at 157.975m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 158.5m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 158.5m, 30m, 0m with output component(s) Hx created.
+Receiver at 158.475m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 159m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 159m, 30m, 0m with output component(s) Hx created.
+Receiver at 158.975m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 159.5m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 159.5m, 30m, 0m with output component(s) Hx created.
+Receiver at 159.475m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 160m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 160m, 30m, 0m with output component(s) Hx created.
+Receiver at 159.975m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 160.5m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 160.5m, 30m, 0m with output component(s) Hx created.
+Receiver at 160.475m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 161m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 161m, 30m, 0m with output component(s) Hx created.
+Receiver at 160.975m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 161.5m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 161.5m, 30m, 0m with output component(s) Hx created.
+Receiver at 161.475m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 162m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 162m, 30m, 0m with output component(s) Hx created.
+Receiver at 161.975m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 162.5m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 162.5m, 30m, 0m with output component(s) Hx created.
+Receiver at 162.475m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 163m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 163m, 30m, 0m with output component(s) Hx created.
+Receiver at 162.975m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 163.5m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 163.5m, 30m, 0m with output component(s) Hx created.
+Receiver at 163.475m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 164m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 164m, 30m, 0m with output component(s) Hx created.
+Receiver at 163.975m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 164.5m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 164.5m, 30m, 0m with output component(s) Hx created.
+Receiver at 164.475m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 165m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 165m, 30m, 0m with output component(s) Hx created.
+Receiver at 164.975m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 165.5m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 165.5m, 30m, 0m with output component(s) Hx created.
+Receiver at 165.475m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 166m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 166m, 30m, 0m with output component(s) Hx created.
+Receiver at 165.975m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 166.5m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 166.5m, 30m, 0m with output component(s) Hx created.
+Receiver at 166.475m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 167m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 167m, 30m, 0m with output component(s) Hx created.
+Receiver at 166.975m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 167.5m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 167.5m, 30m, 0m with output component(s) Hx created.
+Receiver at 167.475m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 168m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 168m, 30m, 0m with output component(s) Hx created.
+Receiver at 167.975m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 168.5m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 168.5m, 30m, 0m with output component(s) Hx created.
+Receiver at 168.475m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 169m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 169m, 30m, 0m with output component(s) Hx created.
+Receiver at 168.975m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 169.5m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 169.5m, 30m, 0m with output component(s) Hx created.
+Receiver at 169.475m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 170m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 170m, 30m, 0m with output component(s) Hx created.
+Receiver at 169.975m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 170.5m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 170.5m, 30m, 0m with output component(s) Hx created.
+Receiver at 170.475m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 171m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 171m, 30m, 0m with output component(s) Hx created.
+Receiver at 170.975m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 171.5m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 171.5m, 30m, 0m with output component(s) Hx created.
+Receiver at 171.475m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 172m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 172m, 30m, 0m with output component(s) Hx created.
+Receiver at 171.975m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 172.5m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 172.5m, 30m, 0m with output component(s) Hx created.
+Receiver at 172.475m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 173m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 173m, 30m, 0m with output component(s) Hx created.
+Receiver at 172.975m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 173.5m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 173.5m, 30m, 0m with output component(s) Hx created.
+Receiver at 173.475m, 30.025m, 0m with output component(s) Hy created.
+Receiver at 174m, 30.025m, 0m with output component(s) Ez, Hx, Hy created.
+Receiver at 174m, 30m, 0m with output component(s) Hx created.
+Receiver at 173.975m, 30.025m, 0m with output component(s) Hy created.
+PML formulation set to HORIPML
+Geometry objects from file (voxels only) ..\..\geometries\full2d_compact.h5 inserted at 0m, 0m, 0m, with material database line9_research_materials_v1_smoothed. Interface averaging is enabled.
+
+--- Model 1/1, input file: E:\line9_basal_pair_20261008_r1\v401_cover_planes_r2\execution\prepared\native_cover_planes_H0\cases\native_cover_planes_H0\profile.in 
+
+
+Memory required (estimated): ~4.4 GB [main_grid] + ~65.0 MB overhead = 4.5 GB
+
+PML boundaries [main_grid]: {formulation: HORIPML, order: 1, thickness (cells): x0: 80, y0: 80, z0: 0, xmax: 80, ymax: 80, zmax: 0}
+
+
+Materials [main_grid]:
+    |                                                    |                                       |         | sigma   | Delta   | tau        | omega | delta | gamma |      | sigma*  | Dielectric 
+ ID | Name                                               | Type                                  | eps_r   | [S/m]   | eps_r   | [s]        | [Hz]  | [Hz]  | [Hz]  | mu_r | [Ohm/m] | smoothable 
+----+----------------------------------------------------+---------------------------------------+---------+---------+---------+------------+-------+-------+-------+------+---------+------------
+  0 | pec                                                | builtin                               | 1       | inf     |         |            |       |       |       | 1    | 0       | False      
+  1 | pmc                                                | builtin                               | 1       | 0       |         |            |       |       |       | 1    | inf     | False      
+  2 | free_space                                         | builtin                               | 1       | 0       |         |            |       |       |       | 1    | 0       | True       
+  3 | air{line9_research_materials_v1_smoothed}          | imported                              | 1       | 0       |         |            |       |       |       | 1    | 0       | True       
+  4 | cover{line9_research_materials_v1_smoothed}        | debye,                                | 11      | 0.001   | 0.5     | 6.4567e-09 |       |       |       | 1    | 0       | True       
+    |                                                    | imported                              |         |         |         |            |       |       |       |      |         |            
+  5 | mudstone{line9_research_materials_v1_smoothed}     | debye,                                | 11.7395 | 0.003   | 6.20037 | 8e-09      |       |       |       | 1    | 0       | True       
+    |                                                    | imported                              |         |         |         |            |       |       |       |      |         |            
+  6 | sandstone{line9_research_materials_v1_smoothed}    | debye,                                | 8.83755 | 0.001   | 2.57543 | 6.4567e-09 |       |       |       | 1    | 0       | True       
+    |                                                    | imported                              |         |         |         |            |       |       |       |      |         |            
+  7 | cover{line9_research_materials_v1_smoothed}+cover{ | dielectric-smoothed, inclusive, debye | 11.3698 | 0.002   | 0.25    | 6.4567e-09 |       |       |       | 1    | 0       | True       
+    |                                                    |                                       |         |         | 3.10018 | 8e-09      |       |       |       |      |         |            
+  8 | air{line9_research_materials_v1_smoothed}+air{line | dielectric-smoothed, inclusive, debye | 6       | 0.0005  | 0.25    | 6.4567e-09 |       |       |       | 1    | 0       | True       
+  9 | air{line9_research_materials_v1_smoothed}+cover{li | dielectric-smoothed, inclusive, debye | 8.5     | 0.00075 | 0.375   | 6.4567e-09 |       |       |       | 1    | 0       | True       
+ 10 | air{line9_research_materials_v1_smoothed}+air{line | dielectric-smoothed, inclusive, debye | 3.5     | 0.00025 | 0.125   | 6.4567e-09 |       |       |       | 1    | 0       | True       
+ 11 | cover{line9_research_materials_v1_smoothed}+mudsto | dielectric-smoothed, inclusive, debye | 11.5546 | 0.0025  | 0.125   | 6.4567e-09 |       |       |       | 1    | 0       | True       
+    |                                                    |                                       |         |         | 4.65028 | 8e-09      |       |       |       |      |         |            
+ 12 | cover{line9_research_materials_v1_smoothed}+cover{ | dielectric-smoothed, inclusive, debye | 11.1849 | 0.0015  | 0.375   | 6.4567e-09 |       |       |       | 1    | 0       | True       
+    |                                                    |                                       |         |         | 1.55009 | 8e-09      |       |       |       |      |         |            
+ 13 | Hmag_air{line9_research_materials_v1_smoothed}+air | dielectric-smoothed                   | 6       | 0.0005  |         |            |       |       |       | 1    | 0       | True       
+ 14 | Hmag_cover{line9_research_materials_v1_smoothed}+c | dielectric-smoothed                   | 11.3698 | 0.002   |         |            |       |       |       | 1    | 0       | True       
+
+Spatial-resolution analysis [main_grid]: minimum 12.3 cells per phase wavelength in 'mudstone{line9_research_materials_v1_smoothed}', at 2.82942e+08 Hz.
+[main_grid] continuum phase velocity 8.73534e+07 m/s, wavelength 0.308733 m at that limiting frequency.
+[main_grid] minimum 1/e amplitude attenuation length: 74.1 cells in 'mudstone{line9_research_materials_v1_smoothed}' at 2.82942e+08 Hz. Attenuation resolution is separate from phase-wavelength sampling.
+Lossless numerical dispersion estimate [main_grid]: grid-axis phase-velocity error -0.05% in 'free_space' at 2.82942e+08 Hz. Propagation axis: x. This is a homogeneous bulk estimate, not an interface or stability guarantee.
+Numerical dispersion analysis [main_grid]: lossy, dispersive or anisotropic materials: numerical phase-error estimate unavailable.
+Output directory: E:\line9_basal_pair_20261008_r1\v401_cover_planes_r2\execution\prepared\native_cover_planes_H0\cases\native_cover_planes_H0
+
+
+
+
+Model 1/1 solving on LAPTOP-83GRKUNE with CUDA backend using Device 0: NVIDIA GeForce RTX 4090 Laptop GPU
+
+Written output file: profile.h5
+
+Memory used (estimated): ~5.2 GB host + ~6.1 GB device
+Time taken: 3 minutes and 35.5526 seconds
+
+=== Simulation completed in 3 minutes and 45.9506 seconds ======================
+
