@@ -1,4 +1,22 @@
 {
+  "line9_native_snapshot_direction_2026_10_10": {
+    "report": "docs/research/2026-10-10_native_wavefield_direction.md",
+    "public": "artifacts/research_checks/2026-10-10_snapshot_direction_r1",
+    "scripts": [
+      "scripts/analyze_line9_snapshot_directions.py",
+      "scripts/audit_plot_line9_snapshot_directions.py",
+      "scripts/check_line9_snapshot_directions.py"
+    ],
+    "status": "EXPLORATORY_NATIVE_NONLOCAL_UPRIGHT_DIRECTION_SUPPORTED_NO_UNIQUE_PATH",
+    "calls_solver": false,
+    "calls_training": false,
+    "reused_local_native_snapshots": 250,
+    "independent_direction_estimates": 27,
+    "analytic_controls": 13,
+    "unique_path_or_bounce_certified": false,
+    "field_parameters_certified": false,
+    "next_native_probes_started": false
+  },
   "line9_cover_interface_18750_replication_2026_10_09": {
     "report": "docs/research/2026-10-09_cover_interface_18750_replication.md",
     "public": "artifacts/research_checks/2026-10-09_cover_interface_18750_results_r1",

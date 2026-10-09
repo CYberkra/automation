@@ -1,0 +1,21 @@
+{
+  "status": "PASS_ANALYTIC_DIRECTION_CONTROLS",
+  "count": 13,
+  "checks": [
+    "Maxwell_progressive_wave_0_degrees",
+    "Maxwell_progressive_wave_45_degrees",
+    "Maxwell_progressive_wave_90_degrees",
+    "Maxwell_progressive_wave_180_degrees",
+    "Maxwell_progressive_wave_270_degrees",
+    "standing_wave_bright_field_zero_cycle_mean_nonzero_instantaneous_flux",
+    "linear_time_polynomial_forward_linear",
+    "linear_time_polynomial_backward_linear",
+    "linear_time_polynomial_quadratic",
+    "quadratic_time_polynomial_exact",
+    "reject_invalid_alignment_-0.01_forward_linear",
+    "reject_invalid_alignment_1_quadratic",
+    "reject_invalid_alignment_0.01_unknown"
+  ],
+  "limits": "Analytic controls verify arithmetic and sign conventions only, not snapshot physical accuracy.",
+  "script_sha256": "3b386a958adf24356ff04e321a947c366bcae5d8dcbdf5765c10ad282deecc19"
+}
