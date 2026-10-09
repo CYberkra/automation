@@ -1,0 +1,31 @@
+{
+  "status": "PASS_LOCAL_NATIVE_BITWISE_DFT_AND_DIRECT_INVERSE",
+  "script_sha256": "9a3c88f2686a48d4b81402372e1f8bbedaf1d85dc00538ab243e3fd25d98299d",
+  "contract_sha256": "73b285960717fc6eee66bde92da97e22b211610ff3afcdcdfbf942fd5dea821b",
+  "verification_sha256": "346b85a7ba64d9e1731d0bd513cfdffd6ba3c10ccdff0b98a5b907be506663e9",
+  "old_native_sha256": "87075c0bbc8ea419b0d0d49047c0c59712ed8180c94cf0885030e2b39caff331",
+  "new_native_sha256": "87075c0bbc8ea419b0d0d49047c0c59712ed8180c94cf0885030e2b39caff331",
+  "observer_native_and_spectrum_bitwise_equal": true,
+  "source_previous_analysis_sha256": "2854ac6e4f8b585d5893f17976e0e18c1a98fa3fa3e429e9dcb6c93895f57481",
+  "metrics": {
+    "hann": {
+      "H1_H0_delta_peaks_ns": [
+        330.1729873586161,
+        330.1729873586161,
+        356.78642714570856
+      ],
+      "independent_inverse_relative_L2": 1.6810547166558897e-10,
+      "observer_spectrum_bitwise_equal": true
+    },
+    "blackman": {
+      "H1_H0_delta_peaks_ns": [
+        328.5096473719228,
+        328.5096473719228,
+        356.78642714570856
+      ],
+      "independent_inverse_relative_L2": 1.78375094003956e-10,
+      "observer_spectrum_bitwise_equal": true
+    }
+  },
+  "limits": "One station native-observer passivity and CPU arithmetic only; no unique path attribution or full spatial scan."
+}
