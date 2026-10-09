@@ -1,0 +1,25 @@
+{
+  "status": "PASS_OBSERVER_LATE_WINDOW_VISUAL_ACCEPTANCE",
+  "script_sha256": "bb5049017121f3b861b4a242a8ec169743837adec7fafd99c247f414b637f1b2",
+  "analysis_sha256": "1982690994c16dfeec53dbf28c39619a0f7998b24da9ded56e3d11bedb4472df",
+  "figure_sha256": "2aca807442b3c85485409638b729a413476a142af85dfee6f58b9c359719dbbb",
+  "window_ns": [
+    300,
+    450
+  ],
+  "peaks": {
+    "hann": {
+      "late_envelope_peak_ns": 330.1729873586161,
+      "late_envelope_peak_amplitude": 0.05185020689852413,
+      "signed_grayscale_limit": 0.05026175796591708
+    },
+    "blackman": {
+      "late_envelope_peak_ns": 328.5096473719228,
+      "late_envelope_peak_amplitude": 0.049794238946185156,
+      "signed_grayscale_limit": 0.04753873994369271
+    }
+  },
+  "gain": false,
+  "per_trace_normalization": false,
+  "time_or_amplitude_fit": false
+}

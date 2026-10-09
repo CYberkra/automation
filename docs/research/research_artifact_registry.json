@@ -1,4 +1,28 @@
 {
+  "line9_native_probe_observer_2026_10_10": {
+    "report": "docs/research/2026-10-10_native_probe_observer_results.md",
+    "public": "artifacts/research_checks/2026-10-10_native_probes_results_r3",
+    "status": "PASS_IMMUTABLE_NATIVE_OBSERVER_COVER_REPEATED_RETURNS_NONLOCAL_LINK_SUPPORTED",
+    "calls_solver": true,
+    "calls_training": false,
+    "new_solver_runs": 1,
+    "elapsed_s": 226.579,
+    "native_precision": "float64",
+    "logical_points": 287,
+    "raw_receivers": 862,
+    "native_source_main_receiver_bitwise_equal": true,
+    "SFCW_complex_equal": true,
+    "independent_field_comparisons": 1435,
+    "independent_gate_directions": 1148,
+    "surface_correlations": 41,
+    "analytic_controls": 11,
+    "max_surface_waveform_cosine": 0.925670889130818,
+    "unique_path_or_bounce_certified": false,
+    "field_parameters_certified": false,
+    "finite3D_started": false,
+    "old_stopped_batches_resumed": false,
+    "contract_sha256": "8b538b98c839ccc0b74af7a00dc89b5e372fec48ce1439a9418dd0fc11612820"
+  },
   "line9_native_snapshot_direction_2026_10_10": {
     "report": "docs/research/2026-10-10_native_wavefield_direction.md",
     "public": "artifacts/research_checks/2026-10-10_snapshot_direction_r1",

@@ -1,0 +1,18 @@
+{
+  "status": "PASS_NATIVE_COLLOCATION_ANALYTIC_CONTROLS",
+  "count": 11,
+  "checks": [
+    "progressive_linear_wave_0",
+    "progressive_linear_wave_45",
+    "progressive_linear_wave_90",
+    "progressive_linear_wave_180",
+    "progressive_linear_wave_270",
+    "affine_spacetime_exact_and_last_sample_discarded",
+    "standing_wave_instantaneous_sign_does_not_count_echoes",
+    "reject_unequal_length",
+    "reject_nonfinite",
+    "reject_one_sample",
+    "reject_not_1d"
+  ],
+  "limits": "Arithmetic/sign controls only, not FDTD or physical path certification."
+}

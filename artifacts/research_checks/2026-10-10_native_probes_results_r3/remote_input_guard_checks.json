@@ -1,0 +1,21 @@
+{
+  "status": "PASS_SIX_REHASHED_PROBE_PACKAGE_REJECTIONS",
+  "positive": {
+    "status": "PASS_ONE_OBSERVER862_RX_STENCILS_AND_UNCHANGED_SOURCE_GEOMETRY_MATERIAL",
+    "manifest_sha256": "c736d027d21a39b87f4f033c579e762fd9286afba0efd7ac8ac859bb46bbbd8d",
+    "baseline_native_sha256": "87075c0bbc8ea419b0d0d49047c0c59712ed8180c94cf0885030e2b39caff331",
+    "collocated_points": 287,
+    "raw_receivers": 862,
+    "new_solver_runs": 0
+  },
+  "rejected": [
+    "source_changed_rehashed",
+    "Hx_wrong_neighbor",
+    "Hy_wrong_neighbor",
+    "main_rx_changed",
+    "retry_enabled",
+    "wrong_time_collocation"
+  ],
+  "script_sha256": "0da10b33c8c33cb34d7be6bec290494488e33f0273303d8e0f42804480564993",
+  "new_solver_runs": 0
+}
