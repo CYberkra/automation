@@ -1,0 +1,67 @@
+{
+  "status": "PASS_EXPLORATORY_INTERFACE_DIFFERENCES_INDEPENDENT_DFT_AND_INVERSE",
+  "script_sha256": "68ce4a79bc367e84ebf223789060988acbc8f894c8551064572dbf4f670f0ab5",
+  "analysis_sha256": "e01e180f127defb47b042c76e8ccf65e0bf03eee28e4fe3661aaa151113658dd",
+  "independent_audit_sha256": "8e34a10fff52128539d920b7f142c2a44873ed7308f114512861b6f7f9f5d83c",
+  "numerical_sha256": "b7988cf0e597fb5b4c40ba5cd0b0c0d9f0d2d882f347425bc011cb8fe867ecc5",
+  "independent_difference_DFT_relative_L2": 1.6113894020048317e-12,
+  "metrics": {
+    "hann": {
+      "main_fixed": {
+        "peak_ns": [
+          316.03459747172326,
+          338.4896872920825
+        ],
+        "peak_change_ns": 22.455089820359262,
+        "complex_L2_ratio": 0.8707361132024847,
+        "direct_inverse_relative_L2": 5.457018475249503e-12
+      },
+      "first_replication": {
+        "peak_ns": [
+          190.45242847638056,
+          201.2641383898869
+        ],
+        "peak_change_ns": 10.811709913506348,
+        "complex_L2_ratio": 0.905642471127876,
+        "direct_inverse_relative_L2": 1.6596424169471307e-12
+      }
+    },
+    "blackman": {
+      "main_fixed": {
+        "peak_ns": [
+          316.03459747172326,
+          338.4896872920825
+        ],
+        "peak_change_ns": 22.455089820359262,
+        "complex_L2_ratio": 0.8971763184272642,
+        "direct_inverse_relative_L2": 5.8232890563440764e-12
+      },
+      "first_replication": {
+        "peak_ns": [
+          190.45242847638056,
+          201.2641383898869
+        ],
+        "peak_change_ns": 10.811709913506348,
+        "complex_L2_ratio": 0.9054200161983742,
+        "direct_inverse_relative_L2": 1.661509467438537e-12
+      }
+    }
+  },
+  "residual_definition": [
+    "original_H0_minus_no_cover_contrast_H0",
+    "cover_bottom_down050_H0_minus_same_no_cover_contrast_H0"
+  ],
+  "gates_ns": {
+    "main_fixed": [
+      300,
+      450
+    ],
+    "first_replication": [
+      120,
+      250
+    ]
+  },
+  "first_gate_status": "Predeclared replication of190m exploratory120to250ns window; not an acceptance threshold",
+  "solver_runs": 0,
+  "limits": "Shared background differences contain material propagation and scattering interactions. Peak changes do not prove unique bounce count; no alignment, scaling or independent field/3D validation."
+}

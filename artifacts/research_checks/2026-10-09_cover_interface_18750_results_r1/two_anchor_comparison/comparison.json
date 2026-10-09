@@ -1,0 +1,64 @@
+{
+  "status": "PASS_TWO_ANCHOR_SPARSE_COMMON_SCALE_NO_INTERPOLATION",
+  "script_sha256": "72f46a7cb1f00293fa1eb6324be537702676bb93a351eacf3210de1efddafc6b",
+  "sources": [
+    {
+      "chainage_m": 187.5,
+      "analysis_sha256": "e01e180f127defb47b042c76e8ccf65e0bf03eee28e4fe3661aaa151113658dd",
+      "audit_sha256": "8e34a10fff52128539d920b7f142c2a44873ed7308f114512861b6f7f9f5d83c",
+      "difference_diagnostic_sha256": "89bb313f15c29e21f5b3e9a5f26290068ba3ddefcc55b21e1e09b0c26e1001e8",
+      "numerical_sha256": "b7988cf0e597fb5b4c40ba5cd0b0c0d9f0d2d882f347425bc011cb8fe867ecc5",
+      "contract_sha256": "a9b2cbcc2a676072486f920e66be77596957fc32f2b2da80ec2e2d6a21a120e2"
+    },
+    {
+      "chainage_m": 190.0,
+      "analysis_sha256": "b8594ed8c1bc86553535661b10976db11dac50d1c8990e96795521b83b6df9f2",
+      "audit_sha256": "557fba874f0da7969cc5984f6def1c76157399e9a91aa57147be4211e47f60ad",
+      "difference_diagnostic_sha256": "03b21ba70bfd86ed03ea0cbd88c260c7ddb8058856ad0a1ce490e61c571966bb",
+      "numerical_sha256": "c76bbc41c85b0aae06393ef86a2551266c78f85a8af76740ee7e915891b36291",
+      "contract_sha256": "56fa99da0d8c6b24c51f0b0ba631fd827f8f5c22185f1e3d5b5da1744c4c5904"
+    }
+  ],
+  "display": {
+    "hann": {
+      "total_common_limit": 0.059864667608335004,
+      "difference_common_limit": 0.05350191566423761,
+      "computed_chainage_m": [
+        187.5,
+        190
+      ],
+      "missing_chainage_m": [
+        187.75,
+        188.0,
+        188.25,
+        188.5,
+        188.75,
+        189.0,
+        189.25,
+        189.5,
+        189.75
+      ]
+    },
+    "blackman": {
+      "total_common_limit": 0.056498663980033996,
+      "difference_common_limit": 0.05274459223497274,
+      "computed_chainage_m": [
+        187.5,
+        190
+      ],
+      "missing_chainage_m": [
+        187.75,
+        188.0,
+        188.25,
+        188.5,
+        188.75,
+        189.0,
+        189.25,
+        189.5,
+        189.75
+      ]
+    }
+  },
+  "solver_runs": 0,
+  "limits": "Two simulated anchor positions, not complete line/3D/field validation. Common-background differences include interactions."
+}

@@ -1,0 +1,227 @@
+{
+  "status": "PREPARED_TWO18750_INTERFACE_REPLICATION_CONTROLS",
+  "groups": [
+    {
+      "id": "no_cover_contrast_H0",
+      "input": "no_cover_contrast_H0/cases/no_cover_contrast_H0/profile.in",
+      "input_sha256": "314d793766cad09f559f1514be675d2be2700ad242be34c7f91e5d828f0a0279",
+      "geometry": "no_cover_contrast_H0/geometries/full2d_compact.h5",
+      "geometry_sha256": "19b22d4f07f21852a7e77470802ca9f414ba1fd6514dc2ebaa837a0140bdef35",
+      "material": "no_cover_contrast_H0/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        166.85,
+        38.825,
+        0.0
+      ],
+      "rx_m": [
+        168.15,
+        38.900000000000006,
+        0.0
+      ],
+      "expected_samples": 20352,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 1200.0,
+      "source_type": "ricker",
+      "source_frequency_Hz": 100000000.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 40.0,
+      "source_band_min_over_max": 0.1044680664254774,
+      "variant": "high",
+      "role": "H0",
+      "chainage_m": 187.5,
+      "input_tx_m": [
+        166.85,
+        38.825,
+        0.0125
+      ],
+      "input_rx_m": [
+        168.15,
+        38.900000000000006,
+        0.0125
+      ],
+      "peak_ns": 352.6280771789754,
+      "basal_gate_ns": [
+        340.6280771789754,
+        364.6280771789754
+      ],
+      "wide_gate_ns": [
+        292.6280771789754,
+        412.6280771789754
+      ],
+      "factor": "no_cover_contrast_H0",
+      "changed_voxels": 7649220
+    },
+    {
+      "id": "cover_bottom_down050_H0",
+      "input": "cover_bottom_down050_H0/cases/cover_bottom_down050_H0/profile.in",
+      "input_sha256": "314d793766cad09f559f1514be675d2be2700ad242be34c7f91e5d828f0a0279",
+      "geometry": "cover_bottom_down050_H0/geometries/full2d_compact.h5",
+      "geometry_sha256": "1c5d488225dc7bc4e37d33afdee6dd18c786859f6122def2fc49b0405cb72814",
+      "material": "cover_bottom_down050_H0/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        166.85,
+        38.825,
+        0.0
+      ],
+      "rx_m": [
+        168.15,
+        38.900000000000006,
+        0.0
+      ],
+      "expected_samples": 20352,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 1200.0,
+      "source_type": "ricker",
+      "source_frequency_Hz": 100000000.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 40.0,
+      "source_band_min_over_max": 0.1044680664254774,
+      "variant": "high",
+      "role": "H0",
+      "chainage_m": 187.5,
+      "input_tx_m": [
+        166.85,
+        38.825,
+        0.0125
+      ],
+      "input_rx_m": [
+        168.15,
+        38.900000000000006,
+        0.0125
+      ],
+      "peak_ns": 352.6280771789754,
+      "basal_gate_ns": [
+        340.6280771789754,
+        364.6280771789754
+      ],
+      "wide_gate_ns": [
+        292.6280771789754,
+        412.6280771789754
+      ],
+      "factor": "cover_bottom_down050_H0",
+      "changed_voxels": 168000
+    }
+  ],
+  "original_group": {
+    "id": "high_x18750_H0",
+    "input": "high_x18750_H0/cases/high_x18750_H0/profile.in",
+    "input_sha256": "314d793766cad09f559f1514be675d2be2700ad242be34c7f91e5d828f0a0279",
+    "geometry": "high_x18750_H0/geometries/full2d_compact.h5",
+    "geometry_sha256": "c1e308ff73119f2c366d42efcf3526646d5fe8e76c6a692a7113a5b1148985a6",
+    "material": "high_x18750_H0/geometries/line9_research_materials_v1_smoothed.json",
+    "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+    "native_shape": [
+      8400,
+      1700,
+      1
+    ],
+    "tx_m": [
+      166.85,
+      38.825,
+      0.0
+    ],
+    "rx_m": [
+      168.15,
+      38.900000000000006,
+      0.0
+    ],
+    "expected_samples": 20352,
+    "dt_s": 5.896635841874211e-11,
+    "time_window_ns": 1200.0,
+    "source_type": "ricker",
+    "source_frequency_Hz": 100000000.0,
+    "domain_height_m": 42.5,
+    "source_amplitude_A": 40.0,
+    "source_band_min_over_max": 0.1044680664254774,
+    "variant": "high",
+    "role": "H0",
+    "chainage_m": 187.5,
+    "input_tx_m": [
+      166.85,
+      38.825,
+      0.0125
+    ],
+    "input_rx_m": [
+      168.15,
+      38.900000000000006,
+      0.0125
+    ],
+    "peak_ns": 352.6280771789754,
+    "basal_gate_ns": [
+      340.6280771789754,
+      364.6280771789754
+    ],
+    "wide_gate_ns": [
+      292.6280771789754,
+      412.6280771789754
+    ]
+  },
+  "no_retry": true,
+  "dt_s": 5.896635841874211e-11,
+  "generator_sha256": "7608001b929e622df998fcfcf8b69d1e96420f43cc06f54351f354b9d1053fad",
+  "approval_basis": "User继续 after190m result: next planned187.5m two new interface-control A-scans; no stopped line resumption or retry.",
+  "gates_ns": {
+    "early": [
+      0,
+      120
+    ],
+    "wide": [
+      300,
+      450
+    ],
+    "original_peak": [
+      306.5296074517631,
+      330.5296074517631
+    ],
+    "basal": [
+      340.6280771789754,
+      364.6280771789754
+    ],
+    "late": [
+      450,
+      1100
+    ]
+  },
+  "baseline_peak_reference": {
+    "hann_peak_ns": 318.5296074517631,
+    "native_sha256": "7aed2c9fbbdbf979b6ea21581bf613a373f38851e7f97b82a90c2c31e67cd679",
+    "direct_DFT_relative_L2": 1.0507089534477592e-13
+  },
+  "first_difference_replication_gate_ns": [
+    120,
+    250
+  ],
+  "limits": "Two187.5m controls replicate interface dependence; same global geometries as190m. Replacement changes bulk propagation/bottom PML medium; differences are not pure echoes or clean labels; no full line,3D or field validation.",
+  "baseline_sha256": {
+    "geometry.h5": "c1e308ff73119f2c366d42efcf3526646d5fe8e76c6a692a7113a5b1148985a6",
+    "materials.json": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+    "native_H0.h5": "7aed2c9fbbdbf979b6ea21581bf613a373f38851e7f97b82a90c2c31e67cd679",
+    "profile.in": "314d793766cad09f559f1514be675d2be2700ad242be34c7f91e5d828f0a0279"
+  },
+  "parent_sha256": {
+    "analysis.json": "2854ac6e4f8b585d5893f17976e0e18c1a98fa3fa3e429e9dcb6c93895f57481",
+    "execution.jsonl": "a629780f59b2cb2dc8b4143249021eba833abdd0d14e91196a2480281247d15f",
+    "execution_contract.json": "189c816e3c7d2eee6bfbb35d8bf07c4ca88711224baf7e0307c478704dfab239",
+    "independent_audit.json": "310fc0865c25a56e68f94a0e074b71f81591ef6fc7a996a11db4671fafcb8168",
+    "stopped_certificate.json": "13ad4ce0ea7d48f7d1bf25db4836a5c164b7ea7c387df6ecc85430c7091c059c",
+    "stopped_export_audit.json": "25baca3a63fa8e492ba48960caf87a552189b81c637081c6137457752d7c1d3a"
+  },
+  "dependency190_sha256": {
+    "analysis.json": "b8594ed8c1bc86553535661b10976db11dac50d1c8990e96795521b83b6df9f2",
+    "completed_verification.json": "0ab100439f8118fcccbda85f584f5ffdd1b24871b56c00f4b9e31068759f62b5",
+    "execution_contract.json": "56fa99da0d8c6b24c51f0b0ba631fd827f8f5c22185f1e3d5b5da1744c4c5904",
+    "independent_audit.json": "557fba874f0da7969cc5984f6def1c76157399e9a91aa57147be4211e47f60ad"
+  }
+}

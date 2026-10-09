@@ -1,0 +1,213 @@
+{
+  "status": "PASS_INDEPENDENT_THREE_NATIVE_DFT_DIRECT_INVERSE_AND_DECLARED_DELAY",
+  "audit_script_sha256": "b89ab3485f1be58a48b59710c5a3f734a9755e59c1fa09a598a23958b4f03d07",
+  "analysis_sha256": "e01e180f127defb47b042c76e8ccf65e0bf03eee28e4fe3661aaa151113658dd",
+  "contract_sha256": "a9b2cbcc2a676072486f920e66be77596957fc32f2b2da80ec2e2d6a21a120e2",
+  "native_sha256": [
+    "7aed2c9fbbdbf979b6ea21581bf613a373f38851e7f97b82a90c2c31e67cd679",
+    "05e0b81dc7ec6ccdee0e63c6ff66ef576b574d1688fff3060fc35e480877f090",
+    "3f7a916a02b8dabac2a25d322593a9d27c80262fa0bebbf364c375521c94b9aa"
+  ],
+  "independent_DFT_relative_L2": [
+    1.0506873948794193e-13,
+    1.0494933715641019e-13,
+    1.0506916837959046e-13
+  ],
+  "direct_inverse_metrics": {
+    "hann": {
+      "no_cover_contrast_H0": {
+        "early": {
+          "new_over_original_complex_L2": 0.9999999983851042,
+          "relative_complex_change_L2": 6.651542312773746e-07,
+          "peak_ns": [
+            4.1583499667332005,
+            4.1583499667332005
+          ],
+          "new_over_old_at_original_peak": 0.999999991209468
+        },
+        "wide": {
+          "new_over_original_complex_L2": 0.3879092771875934,
+          "relative_complex_change_L2": 0.906196130589268,
+          "peak_ns": [
+            318.5296074517631,
+            301.0645375914837
+          ],
+          "new_over_old_at_original_peak": 0.1544817569726003
+        },
+        "original_peak": {
+          "new_over_original_complex_L2": 0.2370699877671498,
+          "relative_complex_change_L2": 0.9681089542283271,
+          "peak_ns": [
+            318.5296074517631,
+            321.02461743180305
+          ],
+          "new_over_old_at_original_peak": 0.15448175697245506
+        },
+        "basal": {
+          "new_over_original_complex_L2": 0.978052358124193,
+          "relative_complex_change_L2": 0.1621713564815176,
+          "peak_ns": [
+            341.81636726546907,
+            340.98469727212245
+          ],
+          "new_over_old_at_original_peak": 0.9743219605711065
+        },
+        "late": {
+          "new_over_original_complex_L2": 0.9993091638281183,
+          "relative_complex_change_L2": 0.04539677930831905,
+          "peak_ns": [
+            454.0918163672655,
+            454.0918163672655
+          ],
+          "new_over_old_at_original_peak": 0.9938562564157011
+        }
+      },
+      "cover_bottom_down050_H0": {
+        "early": {
+          "new_over_original_complex_L2": 0.9999999961853361,
+          "relative_complex_change_L2": 6.68468618284412e-07,
+          "peak_ns": [
+            4.1583499667332005,
+            4.1583499667332005
+          ],
+          "new_over_old_at_original_peak": 0.9999999726955975
+        },
+        "wide": {
+          "new_over_original_complex_L2": 0.8756700185688513,
+          "relative_complex_change_L2": 1.2784878029654427,
+          "peak_ns": [
+            318.5296074517631,
+            335.9946773120426
+          ],
+          "new_over_old_at_original_peak": 0.17459458062603964
+        },
+        "original_peak": {
+          "new_over_original_complex_L2": 0.3320474198591113,
+          "relative_complex_change_L2": 1.123147620855307,
+          "peak_ns": [
+            318.5296074517631,
+            314.37125748502996
+          ],
+          "new_over_old_at_original_peak": 0.17459458062623637
+        },
+        "basal": {
+          "new_over_original_complex_L2": 2.5234083079641922,
+          "relative_complex_change_L2": 2.27249714125338,
+          "peak_ns": [
+            341.81636726546907,
+            340.98469727212245
+          ],
+          "new_over_old_at_original_peak": 3.5889774159543113
+        },
+        "late": {
+          "new_over_original_complex_L2": 1.0031466764245156,
+          "relative_complex_change_L2": 0.05185613231389883,
+          "peak_ns": [
+            454.0918163672655,
+            454.0918163672655
+          ],
+          "new_over_old_at_original_peak": 1.036713339298294
+        }
+      }
+    },
+    "blackman": {
+      "no_cover_contrast_H0": {
+        "early": {
+          "new_over_original_complex_L2": 0.9999999991989067,
+          "relative_complex_change_L2": 2.6161634002262795e-07,
+          "peak_ns": [
+            4.1583499667332005,
+            4.1583499667332005
+          ],
+          "new_over_old_at_original_peak": 0.999999996273032
+        },
+        "wide": {
+          "new_over_original_complex_L2": 0.2000628612205395,
+          "relative_complex_change_L2": 0.9668956983518727,
+          "peak_ns": [
+            317.6979374584165,
+            301.0645375914837
+          ],
+          "new_over_old_at_original_peak": 0.07968095522346545
+        },
+        "original_peak": {
+          "new_over_original_complex_L2": 0.11329735813447156,
+          "relative_complex_change_L2": 0.984475364088923,
+          "peak_ns": [
+            317.6979374584165,
+            321.02461743180305
+          ],
+          "new_over_old_at_original_peak": 0.07968095522337602
+        },
+        "basal": {
+          "new_over_original_complex_L2": 0.8911844334296758,
+          "relative_complex_change_L2": 0.27746928618205063,
+          "peak_ns": [
+            341.81636726546907,
+            340.98469727212245
+          ],
+          "new_over_old_at_original_peak": 1.0201460922739447
+        },
+        "late": {
+          "new_over_original_complex_L2": 0.9920995231907406,
+          "relative_complex_change_L2": 0.09265974249761792,
+          "peak_ns": [
+            454.0918163672655,
+            454.0918163672655
+          ],
+          "new_over_old_at_original_peak": 0.9670402632563252
+        }
+      },
+      "cover_bottom_down050_H0": {
+        "early": {
+          "new_over_original_complex_L2": 0.9999999983670623,
+          "relative_complex_change_L2": 2.6359269805235435e-07,
+          "peak_ns": [
+            4.1583499667332005,
+            4.1583499667332005
+          ],
+          "new_over_old_at_original_peak": 0.9999999884005538
+        },
+        "wide": {
+          "new_over_original_complex_L2": 0.8867127712347525,
+          "relative_complex_change_L2": 1.3655567658656256,
+          "peak_ns": [
+            317.6979374584165,
+            336.8263473053892
+          ],
+          "new_over_old_at_original_peak": 0.17223155659926861
+        },
+        "original_peak": {
+          "new_over_original_complex_L2": 0.31243384535715363,
+          "relative_complex_change_L2": 1.1307557727192927,
+          "peak_ns": [
+            317.6979374584165,
+            330.1729873586161
+          ],
+          "new_over_old_at_original_peak": 0.17223155659933795
+        },
+        "basal": {
+          "new_over_original_complex_L2": 4.646001667817024,
+          "relative_complex_change_L2": 4.398727496560998,
+          "peak_ns": [
+            341.81636726546907,
+            340.98469727212245
+          ],
+          "new_over_old_at_original_peak": 7.167569863828066
+        },
+        "late": {
+          "new_over_original_complex_L2": 1.0056822787255395,
+          "relative_complex_change_L2": 0.089505019844555,
+          "peak_ns": [
+            454.0918163672655,
+            454.0918163672655
+          ],
+          "new_over_old_at_original_peak": 1.0640055224099905
+        }
+      }
+    }
+  },
+  "source_bitwise_equal": true,
+  "analytical_nominal_one_roundtrip_at95MHz_ns": 11.048260667110398,
+  "limits": "Arithmetic and identity checks; global replacement modifies bulk propagation, and local vertical group delay cannot independently certify nonlocal bounce count or field validity."
+}
