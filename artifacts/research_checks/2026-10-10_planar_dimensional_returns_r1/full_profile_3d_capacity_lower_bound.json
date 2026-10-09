@@ -1,0 +1,87 @@
+{
+  "status": "FULL_PROFILE3D_FIELD_ARRAY_LOWER_BOUND_ONLY_NO_EXECUTION",
+  "script_sha256": "53b3e39f7e842cb4996305ba048a6f9098b57edab8ab5e1726d27f2d44862739",
+  "installed_gprMax": "4.0.1",
+  "allocation_source_identities": {
+    "grid/cuda_grid.py": "813d1562ff42012ca95dfaa242cf2f02a4e27e3bc10a48526cd98d04c5f82d85",
+    "grid/fdtd_grid.py": "271107857fc66354dc7ba067593359ffb88e4cb79e2ee6870a75d418e90a0a87",
+    "config.py": "60db44f5c31d80fc6848f608d5830339096024d2a97f5665722b27588264f5e1"
+  },
+  "rows": [
+    {
+      "spacing_m": 0.025,
+      "domain_m": [
+        210.0,
+        42.5,
+        10.0
+      ],
+      "cells_xyz": [
+        8400,
+        1700,
+        400
+      ],
+      "field_nodes_per_component": 5730330501,
+      "six_fields_only_bytes": 275055864048,
+      "six_fields_only_GiB": 256.1657354682684,
+      "fits_16GiB_even_before_ID_Debye_PML": false,
+      "mesh_source_receiver_geometry_equivalent_to_current": true
+    },
+    {
+      "spacing_m": 0.025,
+      "domain_m": [
+        210.0,
+        42.5,
+        20.0
+      ],
+      "cells_xyz": [
+        8400,
+        1700,
+        800
+      ],
+      "field_nodes_per_component": 11446370901,
+      "six_fields_only_bytes": 549425803248,
+      "six_fields_only_GiB": 511.6926536411047,
+      "fits_16GiB_even_before_ID_Debye_PML": false,
+      "mesh_source_receiver_geometry_equivalent_to_current": true
+    },
+    {
+      "spacing_m": 0.05,
+      "domain_m": [
+        210.0,
+        42.5,
+        10.0
+      ],
+      "cells_xyz": [
+        4200,
+        850,
+        200
+      ],
+      "field_nodes_per_component": 718585251,
+      "six_fields_only_bytes": 34492092048,
+      "six_fields_only_GiB": 32.12326397001743,
+      "fits_16GiB_even_before_ID_Debye_PML": false,
+      "mesh_source_receiver_geometry_equivalent_to_current": false
+    },
+    {
+      "spacing_m": 0.05,
+      "domain_m": [
+        210.0,
+        42.5,
+        20.0
+      ],
+      "cells_xyz": [
+        4200,
+        850,
+        400
+      ],
+      "field_nodes_per_component": 1433595451,
+      "six_fields_only_bytes": 68812581648,
+      "six_fields_only_GiB": 64.08671070635319,
+      "fits_16GiB_even_before_ID_Debye_PML": false,
+      "mesh_source_receiver_geometry_equivalent_to_current": false
+    }
+  ],
+  "precision": "float64",
+  "calls_solver": false,
+  "limits": "Lower bound from installed six component field allocations. IDs, dispersion, PML, histories and compilation increase capacity further. 5cm changes grid and Rx y alignment; not approved equivalent replacement. No cheap cropped3D claimed equivalent."
+}

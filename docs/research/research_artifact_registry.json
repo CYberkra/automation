@@ -1,4 +1,32 @@
 {
+  "line9_surface_and_planar_3d_returns_2026_10_10": {
+    "report": "docs/research/2026-10-10_surface_returns_and_planar_3d_reference.md",
+    "public": "artifacts/research_checks/2026-10-10_planar_dimensional_returns_r1",
+    "surface_public": "artifacts/research_checks/2026-10-10_surface_rereflection_r1",
+    "status": "PASS_NATIVE205_EVENTS_AND_ADAPTIVE_PLANAR9_CASES",
+    "calls_solver": false,
+    "calls_training": false,
+    "new_solver_runs": 0,
+    "native_events": 205,
+    "signed_windows_checked": 164,
+    "analytic_controls": 16,
+    "adaptive_case_count": 9,
+    "full_501_frequency_planar_reference": true,
+    "thickness_hypotheses_m": [
+      5.6,
+      6.575,
+      7.3
+    ],
+    "source_dimensions": [
+      "2D_TE_line",
+      "3D_vector_horizontal_point"
+    ],
+    "actual_nonflat3D_started": false,
+    "unique_path_certified": false,
+    "field_parameters_certified": false,
+    "old_stopped_batches_resumed": false,
+    "independent_audit_sha256": "5a3efee58c75d0686a4ffe7af5a63971704092f048d501452e10b2978e04a483"
+  },
   "line9_native_probe_observer_2026_10_10": {
     "report": "docs/research/2026-10-10_native_probe_observer_results.md",
     "public": "artifacts/research_checks/2026-10-10_native_probes_results_r3",

@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-10",
+  "status": "PRIMARY_METHOD_READING_CPU_REFERENCE_ONLY",
+  "sources": [
+    {
+      "url": "https://engineering.purdue.edu/wcchew/ece604f20/Lecture%20Notes/Lect35.pdf",
+      "scope": "Section 35.1 and opening of 35.2; follow-up body fetch timed out, not full lecture",
+      "adopted": "Weyl/Sommerfeld point-source angular spectrum and layered TE/TM decomposition",
+      "equations": [
+        "35.1.12",
+        "35.1.15"
+      ],
+      "project_derivation": "Converted time-harmonic sign; horizontal angular projection and component recurrence independently checked"
+    },
+    {
+      "url": "https://empymod.emsig.xyz/en/stable/api/empymod.model.dipole.html",
+      "scope": "Dipole API source/receiver/ab/frequency and output-unit documentation",
+      "adopted": "Alternative CPU full-field layered point-dipole implementation path only; not executed"
+    },
+    {
+      "url": "https://empymod.emsig.xyz/en/stable/manual/info.html",
+      "scope": "Complex constitutive hooks, transform tradeoffs and high-frequency air-permittivity caveat",
+      "adopted": "Retain full complex constitutive spectrum and air displacement term; not an empymod reproduction"
+    }
+  ],
+  "empymod_installed": false,
+  "empymod_executed": false,
+  "new_gprmax_runs": 0,
+  "field_calibration": false,
+  "limitations": "Reference is infinite planar full-vector point source, not actual nonflat finite 3D or antenna ports"
+}
