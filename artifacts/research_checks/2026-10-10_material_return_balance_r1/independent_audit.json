@@ -1,0 +1,73 @@
+{
+  "status": "PASS_MATERIAL_BALANCE_12_ADAPTIVE_AND_16_NATIVE_NORM_ROWS",
+  "script_sha256": "da6aa0ad14d7df4277cf502436c1591d956e90b804a3b943ccf3b001393b071f",
+  "analysis_sha256": "99f1de0f05f12168709b7f9ba5e1571665e1db2fd01358bbb0e761addc2e872c",
+  "constitutive501_max_relative_error": 3.971867090972978e-16,
+  "adaptive_cases": [
+    {
+      "case": "span3_dc003",
+      "frequency_Hz": 20000000.0,
+      "maximum_component_relative_error": 2.564361444323507e-12
+    },
+    {
+      "case": "span3_dc003",
+      "frequency_Hz": 95000000.0,
+      "maximum_component_relative_error": 2.270530511233268e-10
+    },
+    {
+      "case": "span3_dc003",
+      "frequency_Hz": 170000000.0,
+      "maximum_component_relative_error": 6.745644790355238e-10
+    },
+    {
+      "case": "span3_dc0003",
+      "frequency_Hz": 20000000.0,
+      "maximum_component_relative_error": 4.159995083695281e-12
+    },
+    {
+      "case": "span3_dc0003",
+      "frequency_Hz": 95000000.0,
+      "maximum_component_relative_error": 3.2861211860860694e-10
+    },
+    {
+      "case": "span3_dc0003",
+      "frequency_Hz": 170000000.0,
+      "maximum_component_relative_error": 1.6388852063895203e-09
+    },
+    {
+      "case": "span03_dc003",
+      "frequency_Hz": 20000000.0,
+      "maximum_component_relative_error": 2.7539627871272836e-11
+    },
+    {
+      "case": "span03_dc003",
+      "frequency_Hz": 95000000.0,
+      "maximum_component_relative_error": 1.4796807624838924e-09
+    },
+    {
+      "case": "span03_dc003",
+      "frequency_Hz": 170000000.0,
+      "maximum_component_relative_error": 7.449052196278992e-10
+    },
+    {
+      "case": "span03_dc0003",
+      "frequency_Hz": 20000000.0,
+      "maximum_component_relative_error": 1.1273247936666253e-10
+    },
+    {
+      "case": "span03_dc0003",
+      "frequency_Hz": 95000000.0,
+      "maximum_component_relative_error": 1.2790341032603317e-09
+    },
+    {
+      "case": "span03_dc0003",
+      "frequency_Hz": 170000000.0,
+      "maximum_component_relative_error": 7.3091755988037554e-09
+    }
+  ],
+  "adaptive_max_component_error": 7.3091755988037554e-09,
+  "planar_relative_metric_max_error": 1.687419038911063e-15,
+  "native_norm_balance_rows": 16,
+  "native_direct_sum_max_relative_error": 5.176525639362497e-11,
+  "limits": "Checks constitutive arithmetic and planar/reference balance, not site truth or nonflat path identity"
+}
