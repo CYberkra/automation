@@ -1,0 +1,308 @@
+{
+  "status": "PASS_USER_STOPPED_NATIVE_PARTIAL_NO_RETRY",
+  "original_contract_sha256": "189c816e3c7d2eee6bfbb35d8bf07c4ca88711224baf7e0307c478704dfab239",
+  "continuation_contract_sha256": "4ec101e8ab09e80cdbf23220e1bd730c1ae0e8703f858084d38083f82665bff8",
+  "original_completed": 28,
+  "continuation_completed": 9,
+  "completed_new": 37,
+  "reused": 2,
+  "native_total": 39,
+  "consumed_incomplete": [
+    "low_x18675_H1",
+    "low_x18550_H1"
+  ],
+  "never_started": [
+    "high_x18550_H1",
+    "low_x18525_H1",
+    "high_x18525_H1",
+    "low_x18500_H0",
+    "high_x18500_H0",
+    "low_x18500_H1",
+    "high_x18500_H1"
+  ],
+  "owned_solver_processes": 0,
+  "terminal_event": {
+    "status": "FAILED",
+    "error": "USER_CANCEL_REQUESTED"
+  },
+  "original_terminal_event": {
+    "status": "FAILED",
+    "error": "SESSION_LEASE_EXPIRED"
+  },
+  "continuation_preflight": {
+    "status": "PASS_NATIVE_IDENTITY_NOT_PHYSICAL_CERTIFICATION",
+    "completed": false,
+    "contract_sha256": "4ec101e8ab09e80cdbf23220e1bd730c1ae0e8703f858084d38083f82665bff8",
+    "version": "4.0.1",
+    "groups": [
+      {
+        "id": "high_x18675_H1",
+        "input_sha256": "18b7845023745e03a297d020728b9afcfb1663d494407770dbe66074d0b704b3"
+      },
+      {
+        "id": "low_x18650_H1",
+        "input_sha256": "a4b670cfb1936d8ab541a7303f1a3fba8069ec9884ad70b1370cf7f4482e3734"
+      },
+      {
+        "id": "high_x18650_H1",
+        "input_sha256": "b14df55e26e0ea2e952d814e5985353ee8ebe41413dac2596f0ae38b7c8ba691"
+      },
+      {
+        "id": "low_x18625_H1",
+        "input_sha256": "22a56ea26a078101e99b2ec66d4b8055ed6e29e2f353820d82caa179fbee5e2a"
+      },
+      {
+        "id": "high_x18625_H1",
+        "input_sha256": "b6f0133986874cedc52c9a6054d04245bb2dc2dc8370920101068c04b8af1404"
+      },
+      {
+        "id": "low_x18600_H1",
+        "input_sha256": "02716cf4c49ff372867f9f2f9702449016281a793dbb89ec9332fb556e5bf28c"
+      },
+      {
+        "id": "high_x18600_H1",
+        "input_sha256": "3f15895a3e1abe6536fe159e7c5ed98c1d9d163ce7ef5c34ed1fbbc16c91ab1e"
+      },
+      {
+        "id": "low_x18575_H1",
+        "input_sha256": "824ea5e6e49a6a80cdcf15d763368247bff913f2d9288680bd2de42de72401a1"
+      },
+      {
+        "id": "high_x18575_H1",
+        "input_sha256": "17084d556eb0782976a45c1dc754774b5015212901d51f818b90088a1e7005b4"
+      },
+      {
+        "id": "low_x18550_H1",
+        "input_sha256": "a7b4d2503c6f92429f6defc6c985e63acf3d58f0e3c1d52655bf073bf7ca612f"
+      },
+      {
+        "id": "high_x18550_H1",
+        "input_sha256": "44c26dab9df1d4244fc0a8c585156b36dcf47046054418b4e671da55eabbe41d"
+      },
+      {
+        "id": "low_x18525_H1",
+        "input_sha256": "4c56ccd2426f9336ef4916a922361b56233a9403a9e56749b7baf8cd381c7be3"
+      },
+      {
+        "id": "high_x18525_H1",
+        "input_sha256": "ca83c62f642fc689fe23cc2de6dc1618de3a2a5fb04e3c004b1711d459ec82aa"
+      },
+      {
+        "id": "low_x18500_H0",
+        "input_sha256": "dc11b6f86e9ba1c662a3788c62f11473c9aa751d9c6b95d029829a7a7f8b6532"
+      },
+      {
+        "id": "high_x18500_H0",
+        "input_sha256": "795cd546f372b2c96a11b88d6676b6b56d9a8b80c13c7f14c14e5d4c912c0d82"
+      },
+      {
+        "id": "low_x18500_H1",
+        "input_sha256": "cc599bcd97e9e9d2d72fd3ff28d2df664561aaaf31902dffca8635063b89ace6"
+      },
+      {
+        "id": "high_x18500_H1",
+        "input_sha256": "b9b7e047d32a2a2942c7cdc34829707786635c83f8d151887b1ab57250d402a3"
+      }
+    ]
+  },
+  "groups": [
+    {
+      "id": "high_x19000_H0",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_loss_5m_r1\\execution\\prepared\\high_x19000_H0\\cases\\high_x19000_H0\\profile.h5",
+      "native_sha256": "87075c0bbc8ea419b0d0d49047c0c59712ed8180c94cf0885030e2b39caff331"
+    },
+    {
+      "id": "high_x19000_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_loss_5m_r1\\execution\\prepared\\high_x19000_H1\\cases\\high_x19000_H1\\profile.h5",
+      "native_sha256": "243234a2c637239bac951b88056979b34d7f89ca8b7c75480d8eb1612f915f03"
+    },
+    {
+      "id": "low_x18975_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_loss_5m_r1\\execution\\prepared\\low_x18975_H1\\cases\\low_x18975_H1\\profile.h5",
+      "native_sha256": "fe552268aea09b422d23a43f7383509c58e5402d0930c1d52a1e3b392895eedd"
+    },
+    {
+      "id": "high_x18975_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_loss_5m_r1\\execution\\prepared\\high_x18975_H1\\cases\\high_x18975_H1\\profile.h5",
+      "native_sha256": "3ba4d28c255140dd937d6fe10e287363374223f129df55a95214f8361eebaee8"
+    },
+    {
+      "id": "low_x18950_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_loss_5m_r1\\execution\\prepared\\low_x18950_H1\\cases\\low_x18950_H1\\profile.h5",
+      "native_sha256": "eed452e7f98f80e5f14008870189f1b0696c962358fb64b9c0fae91f1c2feb7e"
+    },
+    {
+      "id": "high_x18950_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_loss_5m_r1\\execution\\prepared\\high_x18950_H1\\cases\\high_x18950_H1\\profile.h5",
+      "native_sha256": "c378a1f49df360b97f5b9f62ab16416b353ff12f4fa4542f3729a42586a69f16"
+    },
+    {
+      "id": "low_x18925_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_loss_5m_r1\\execution\\prepared\\low_x18925_H1\\cases\\low_x18925_H1\\profile.h5",
+      "native_sha256": "51b8948e19f2a3fcfe2363122d5ce9640fcd59d224951c810d8bbfdc64972e54"
+    },
+    {
+      "id": "high_x18925_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_loss_5m_r1\\execution\\prepared\\high_x18925_H1\\cases\\high_x18925_H1\\profile.h5",
+      "native_sha256": "3d9dbdfea9ffde406cbb746e214c1cbc5e6651208b88d3f5731988f975f2c4c3"
+    },
+    {
+      "id": "low_x18900_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_loss_5m_r1\\execution\\prepared\\low_x18900_H1\\cases\\low_x18900_H1\\profile.h5",
+      "native_sha256": "2c9bf2684a3cff44384ce842e1ad12ee77cc685352ec9724733f60bf77bd3ee6"
+    },
+    {
+      "id": "high_x18900_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_loss_5m_r1\\execution\\prepared\\high_x18900_H1\\cases\\high_x18900_H1\\profile.h5",
+      "native_sha256": "8c23e4b9014683db649c1772cb82af71881ff9485eb1642aff4042c54a597839"
+    },
+    {
+      "id": "low_x18875_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_loss_5m_r1\\execution\\prepared\\low_x18875_H1\\cases\\low_x18875_H1\\profile.h5",
+      "native_sha256": "4c462c1553fe486915f3357f63df7755415f668d090ad8ee7b4d3c3fcf726f6f"
+    },
+    {
+      "id": "high_x18875_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_loss_5m_r1\\execution\\prepared\\high_x18875_H1\\cases\\high_x18875_H1\\profile.h5",
+      "native_sha256": "c290f0094cc6718aea2f211f41baf99874c6b14b48334863e0f3b5e10230c214"
+    },
+    {
+      "id": "low_x18850_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_loss_5m_r1\\execution\\prepared\\low_x18850_H1\\cases\\low_x18850_H1\\profile.h5",
+      "native_sha256": "5ccc7d2e2a57e031119a4947ec77eefbc6248bdf303809c5aa4d0dab82982576"
+    },
+    {
+      "id": "high_x18850_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_loss_5m_r1\\execution\\prepared\\high_x18850_H1\\cases\\high_x18850_H1\\profile.h5",
+      "native_sha256": "e643888b6c3c999785c1d8e0bad9e18461baceeef4a9df6e7673a7286b8dc998"
+    },
+    {
+      "id": "low_x18825_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_loss_5m_r1\\execution\\prepared\\low_x18825_H1\\cases\\low_x18825_H1\\profile.h5",
+      "native_sha256": "8daa695b953ea3fd65a54df5ce9566f83842c06f4e872d2194f093d1c67c2a1d"
+    },
+    {
+      "id": "high_x18825_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_loss_5m_r1\\execution\\prepared\\high_x18825_H1\\cases\\high_x18825_H1\\profile.h5",
+      "native_sha256": "89420999aa0ce52648a539bef1bb02e736ec351e1a006ef5a21813beda0e4959"
+    },
+    {
+      "id": "low_x18800_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_loss_5m_r1\\execution\\prepared\\low_x18800_H1\\cases\\low_x18800_H1\\profile.h5",
+      "native_sha256": "146947f0517ccac7551a2b2d3a4a685486f0afc5bc237c51da92e682a6951842"
+    },
+    {
+      "id": "high_x18800_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_loss_5m_r1\\execution\\prepared\\high_x18800_H1\\cases\\high_x18800_H1\\profile.h5",
+      "native_sha256": "c80cf18487cf4ad5fcf219e44f3570760a1c5fbad5b5ffef82ebc6329d68ff1b"
+    },
+    {
+      "id": "low_x18775_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_loss_5m_r1\\execution\\prepared\\low_x18775_H1\\cases\\low_x18775_H1\\profile.h5",
+      "native_sha256": "d24562e839f0c60309ded1930cb3d5f4aeeed1cec03cccca24e234f7041c3624"
+    },
+    {
+      "id": "high_x18775_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_loss_5m_r1\\execution\\prepared\\high_x18775_H1\\cases\\high_x18775_H1\\profile.h5",
+      "native_sha256": "91423251e4a78e6a59409bf188036dd87e6ab91ad5ab992d0d419e9d43a2e29c"
+    },
+    {
+      "id": "low_x18750_H0",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_loss_5m_r1\\execution\\prepared\\low_x18750_H0\\cases\\low_x18750_H0\\profile.h5",
+      "native_sha256": "268a385647cce203957ac5b1f0686641883bcf61b4b21c3132ddcf7e840bb63d"
+    },
+    {
+      "id": "high_x18750_H0",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_loss_5m_r1\\execution\\prepared\\high_x18750_H0\\cases\\high_x18750_H0\\profile.h5",
+      "native_sha256": "7aed2c9fbbdbf979b6ea21581bf613a373f38851e7f97b82a90c2c31e67cd679"
+    },
+    {
+      "id": "low_x18750_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_loss_5m_r1\\execution\\prepared\\low_x18750_H1\\cases\\low_x18750_H1\\profile.h5",
+      "native_sha256": "c8865101fac982f8e2ec8c2a19ce1ea04010d7d2c5d613fb4c9339b70c22d89f"
+    },
+    {
+      "id": "high_x18750_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_loss_5m_r1\\execution\\prepared\\high_x18750_H1\\cases\\high_x18750_H1\\profile.h5",
+      "native_sha256": "435269505c7257d7ba2b3dd4cc25a42ec33a80cdf47d6e333f322bd78a941d48"
+    },
+    {
+      "id": "low_x18725_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_loss_5m_r1\\execution\\prepared\\low_x18725_H1\\cases\\low_x18725_H1\\profile.h5",
+      "native_sha256": "1c130ed3f7935b1733517de75abe7e2297b48da9529928e65f25b928397e87d6"
+    },
+    {
+      "id": "high_x18725_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_loss_5m_r1\\execution\\prepared\\high_x18725_H1\\cases\\high_x18725_H1\\profile.h5",
+      "native_sha256": "f5da473103ebd0ab3dfc81c7e0daa3a845b880ebfa72681ebfc4529d55b1cdf2"
+    },
+    {
+      "id": "low_x18700_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_loss_5m_r1\\execution\\prepared\\low_x18700_H1\\cases\\low_x18700_H1\\profile.h5",
+      "native_sha256": "d0457ade80cddc7817ca2b0a332c4a614d4ad72f7cc3668c92cbb1cbec62db6c"
+    },
+    {
+      "id": "high_x18700_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_loss_5m_r1\\execution\\prepared\\high_x18700_H1\\cases\\high_x18700_H1\\profile.h5",
+      "native_sha256": "40b1b177503c869f052bb4462f6749be117053151592132435cf56fd897604b1"
+    },
+    {
+      "id": "high_x18675_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_continuation_r1\\execution\\prepared\\high_x18675_H1\\cases\\high_x18675_H1\\profile.h5",
+      "native_sha256": "53feba3889f7210299b3121a4039c4b9edb20ba69b84c2ec0777377e254c00ff"
+    },
+    {
+      "id": "low_x18650_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_continuation_r1\\execution\\prepared\\low_x18650_H1\\cases\\low_x18650_H1\\profile.h5",
+      "native_sha256": "bf06d17ec032542a9017a84cbdf5188704bacd6c33f637b4e1a9a0a48f963b16"
+    },
+    {
+      "id": "high_x18650_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_continuation_r1\\execution\\prepared\\high_x18650_H1\\cases\\high_x18650_H1\\profile.h5",
+      "native_sha256": "ba1f2eb1f28e31ad70184258b9fde472d5f6ae95e7a92f575c3c06e054f372b9"
+    },
+    {
+      "id": "low_x18625_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_continuation_r1\\execution\\prepared\\low_x18625_H1\\cases\\low_x18625_H1\\profile.h5",
+      "native_sha256": "7e18d009ce3af3b1460648406d140debcbf7761a594b377c3984b0a996adcc51"
+    },
+    {
+      "id": "high_x18625_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_continuation_r1\\execution\\prepared\\high_x18625_H1\\cases\\high_x18625_H1\\profile.h5",
+      "native_sha256": "3387edcdef72aa1a435e7f454cfbfcdf23a02b90f666c4e2ef642329c16ea614"
+    },
+    {
+      "id": "low_x18600_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_continuation_r1\\execution\\prepared\\low_x18600_H1\\cases\\low_x18600_H1\\profile.h5",
+      "native_sha256": "0a15db6d3132283483f79e128ed73807e66df1986f2a0fe7461e1f12d4e0647d"
+    },
+    {
+      "id": "high_x18600_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_continuation_r1\\execution\\prepared\\high_x18600_H1\\cases\\high_x18600_H1\\profile.h5",
+      "native_sha256": "ba0da65ab91ec0a4a54fc27fb02030440a110afc8cc54fbe802dfb04a50d3c56"
+    },
+    {
+      "id": "low_x18575_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_continuation_r1\\execution\\prepared\\low_x18575_H1\\cases\\low_x18575_H1\\profile.h5",
+      "native_sha256": "7229753710c3772dd7d5c646071c5aa0e28b0e109f651fd673ac2ef95e2c210e"
+    },
+    {
+      "id": "high_x18575_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_continuation_r1\\execution\\prepared\\high_x18575_H1\\cases\\high_x18575_H1\\profile.h5",
+      "native_sha256": "23c9f06336088d4f9e02cc056ac6f16b5a1501961bb1904ae6f030423f0568d3"
+    }
+  ],
+  "reused_groups": [
+    {
+      "id": "low_x19000_H0",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_loss_5m_r1\\package\\reused\\low_x19000_H0.h5",
+      "native_sha256": "57b9c072b713b98f345aaf838118a81edc4d84a457ad12e0c38dcb847d73ef8e"
+    },
+    {
+      "id": "low_x19000_H1",
+      "native_path": "E:\\line9_basal_pair_20261008_r1\\v401_dense_loss_5m_r1\\package\\reused\\low_x19000_H1.h5",
+      "native_sha256": "5449438e5f2c73c885c6a89ae8b9ea5973ba94772225d29f5270cd2e7b236f71"
+    }
+  ],
+  "limits": "Completed native files only. User stop, not full batch completion. No wavefield/physical-path/site validation."
+}

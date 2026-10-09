@@ -39,7 +39,7 @@ def main(a):
         bgcommon=max(float(np.nanmax(abs(bg[v].real))) if np.isfinite(bg[v]).any() else 0 for v in ['high','low'])
         fig,axes=plt.subplots(3,2,figsize=(14,10),layout='constrained')
         for j,v in enumerate(['high','low']):
-            for row,data,lim,label in [(0,lines[v],common,'H1：高低损耗共同物理灰度'),(1,lines[v],None,'H1：该配方单独放大，色标不同'),(2,bg[v],bgcommon,'H0：三个锚点，同一物理灰度，非噪声真值')]:
+            for row,data,lim,label in [(0,lines[v],common,'H1：高低损耗共同物理灰度'),(1,lines[v],None,'H1：该配方单独放大，色标不同'),(2,bg[v],bgcommon,'H0：仅已计算锚点，同一物理灰度，非噪声真值')]:
                 if lim is None:lim=float(np.nanmax(abs(data.real))) if np.isfinite(data).any() else common
                 if not lim:lim=1.
                 im=axes[row,j].imshow(np.ma.masked_invalid(data.real),cmap=cmap,vmin=-lim,vmax=lim,aspect='auto',interpolation='nearest',extent=[190.125,184.875,t[keep][-1]*1e9,t[keep][0]*1e9])

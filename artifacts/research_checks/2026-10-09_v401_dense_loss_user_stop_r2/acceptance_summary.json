@@ -1,0 +1,158 @@
+{
+  "status": "PASS_COMPLETED_PARTIAL_ONLY_CAUSE_OPEN",
+  "native_total": 39,
+  "completed_new": 37,
+  "reused": 2,
+  "all_previous30_native_hashes_unchanged": true,
+  "available_H1": {
+    "high": 18,
+    "low": 17
+  },
+  "paired_anchors_m": [
+    190,
+    187.5
+  ],
+  "peak_residuals": {
+    "hann": {
+      "high": {
+        "stations": 18,
+        "minimum_ns": -7.485029940119716,
+        "maximum_ns": 5.821689953426471,
+        "new_completed_below187_m": [
+          {
+            "chainage_m": 186.75,
+            "H1_peak_ns": 353.45974717232207,
+            "local_template_peak_ns": 351.79640718562877,
+            "residual_ns": 1.6633399866933019
+          },
+          {
+            "chainage_m": 186.5,
+            "H1_peak_ns": 354.2914171656687,
+            "local_template_peak_ns": 350.9647371922821,
+            "residual_ns": 3.3266799733866037
+          },
+          {
+            "chainage_m": 186.25,
+            "H1_peak_ns": 345.1430472388556,
+            "local_template_peak_ns": 350.13306719893546,
+            "residual_ns": -4.990019960079849
+          },
+          {
+            "chainage_m": 186.0,
+            "H1_peak_ns": 345.97471723220224,
+            "local_template_peak_ns": 350.13306719893546,
+            "residual_ns": -4.158349966733226
+          },
+          {
+            "chainage_m": 185.75,
+            "H1_peak_ns": 345.97471723220224,
+            "local_template_peak_ns": 349.30139720558884,
+            "residual_ns": -3.3266799733866037
+          }
+        ]
+      },
+      "low": {
+        "stations": 17,
+        "minimum_ns": -1.6633399866933019,
+        "maximum_ns": -0.8316699933466225,
+        "new_completed_below187_m": [
+          {
+            "chainage_m": 186.5,
+            "H1_peak_ns": 355.1230871590153,
+            "local_template_peak_ns": 355.95475715236194,
+            "residual_ns": -0.8316699933466225
+          },
+          {
+            "chainage_m": 186.25,
+            "H1_peak_ns": 354.2914171656687,
+            "local_template_peak_ns": 355.1230871590153,
+            "residual_ns": -0.8316699933466225
+          },
+          {
+            "chainage_m": 186.0,
+            "H1_peak_ns": 354.2914171656687,
+            "local_template_peak_ns": 355.1230871590153,
+            "residual_ns": -0.8316699933466225
+          },
+          {
+            "chainage_m": 185.75,
+            "H1_peak_ns": 353.45974717232207,
+            "local_template_peak_ns": 354.2914171656687,
+            "residual_ns": -0.8316699933466225
+          }
+        ]
+      }
+    },
+    "blackman": {
+      "high": {
+        "stations": 18,
+        "minimum_ns": -6.653359946773094,
+        "maximum_ns": 5.821689953426471,
+        "new_completed_below187_m": [
+          {
+            "chainage_m": 186.75,
+            "H1_peak_ns": 353.45974717232207,
+            "local_template_peak_ns": 351.79640718562877,
+            "residual_ns": 1.6633399866933019
+          },
+          {
+            "chainage_m": 186.5,
+            "H1_peak_ns": 353.45974717232207,
+            "local_template_peak_ns": 350.9647371922821,
+            "residual_ns": 2.495009980039981
+          },
+          {
+            "chainage_m": 186.25,
+            "H1_peak_ns": 345.1430472388556,
+            "local_template_peak_ns": 350.13306719893546,
+            "residual_ns": -4.990019960079849
+          },
+          {
+            "chainage_m": 186.0,
+            "H1_peak_ns": 345.97471723220224,
+            "local_template_peak_ns": 350.13306719893546,
+            "residual_ns": -4.158349966733226
+          },
+          {
+            "chainage_m": 185.75,
+            "H1_peak_ns": 345.97471723220224,
+            "local_template_peak_ns": 349.30139720558884,
+            "residual_ns": -3.3266799733866037
+          }
+        ]
+      },
+      "low": {
+        "stations": 17,
+        "minimum_ns": -1.6633399866933019,
+        "maximum_ns": -0.8316699933466225,
+        "new_completed_below187_m": [
+          {
+            "chainage_m": 186.5,
+            "H1_peak_ns": 355.1230871590153,
+            "local_template_peak_ns": 355.95475715236194,
+            "residual_ns": -0.8316699933466225
+          },
+          {
+            "chainage_m": 186.25,
+            "H1_peak_ns": 354.2914171656687,
+            "local_template_peak_ns": 355.1230871590153,
+            "residual_ns": -0.8316699933466225
+          },
+          {
+            "chainage_m": 186.0,
+            "H1_peak_ns": 354.2914171656687,
+            "local_template_peak_ns": 355.1230871590153,
+            "residual_ns": -0.8316699933466225
+          },
+          {
+            "chainage_m": 185.75,
+            "H1_peak_ns": 353.45974717232207,
+            "local_template_peak_ns": 354.2914171656687,
+            "residual_ns": -0.8316699933466225
+          }
+        ]
+      }
+    }
+  },
+  "limitations": "Peak in predeclared local basal gate, not necessarily the globally strongest packet. Materials are uncalibrated compound-spectrum diagnostic hypotheses. No new wavefield/3D/field validation."
+}

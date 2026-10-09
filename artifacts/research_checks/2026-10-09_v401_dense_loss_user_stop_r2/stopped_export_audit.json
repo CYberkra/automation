@@ -1,0 +1,29 @@
+{
+  "status": "PASS_TRANSPORT_RECEIPTS_PARTIAL_INVENTORY_NO_RETRY",
+  "auditor_sha256": "d14d6792c3b7b398b7bf2cc0daa8df1c270c4bb29d94f6400f0d48fc556047ac",
+  "collector_sha256": "5f3069a9d4a8a7391b15faf8d889870dc7a446aa2e3a6bc44d3ccd8ed1ea55bd",
+  "archive_sha256": "33e3a0b95f3cd41d72d80347cca607648ec89eee1901d672a83ff9bde09568b2",
+  "certificate_sha256": "13ad4ce0ea7d48f7d1bf25db4836a5c164b7ea7c387df6ecc85430c7091c059c",
+  "completed_new": 37,
+  "continuation_completed": 9,
+  "reused": 2,
+  "native_total": 39,
+  "consumed_incomplete": [
+    "low_x18675_H1",
+    "low_x18550_H1"
+  ],
+  "never_started": [
+    "high_x18550_H1",
+    "low_x18525_H1",
+    "high_x18525_H1",
+    "low_x18500_H0",
+    "high_x18500_H0",
+    "low_x18500_H1",
+    "high_x18500_H1"
+  ],
+  "fixtures": {
+    "valid_cases": 3,
+    "rejection_cases": 5
+  },
+  "limits": "Local immutable metadata and transport audit. Native waveform/DFT is audited separately; no physical attribution."
+}

@@ -52,7 +52,7 @@ def main(a):
             common=max(float(np.nanmax(abs(lines[v][k].real))) if np.isfinite(lines[v][k]).any() else 0. for v in VARIANTS)
             fig,axes=plt.subplots(3,2,figsize=(15,13),layout='constrained')
             for j,variant in enumerate(VARIANTS):
-                for row,data,title,lim in [(0,lines[variant],'H1原始总场：两种损耗共同物理灰度',common),(1,lines[variant],'H1原始总场：该配方单独放大，不能跨图比较强弱',None),(2,deltas[variant],'H1−H0底砂差场：仅三个配对锚点，未算处留白',None)]:
+                for row,data,title,lim in [(0,lines[variant],'H1原始总场：两种损耗共同物理灰度',common),(1,lines[variant],'H1原始总场：该配方单独放大，不能跨图比较强弱',None),(2,deltas[variant],'H1−H0底砂差场：仅已计算配对锚点，其余留白',None)]:
                     block=data[k].real
                     if lim is None:lim=float(np.nanmax(abs(block))) if np.isfinite(block).any() else common
                     if lim==0:lim=1.
