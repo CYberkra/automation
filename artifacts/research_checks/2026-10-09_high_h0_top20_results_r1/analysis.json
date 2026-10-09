@@ -1,0 +1,150 @@
+{
+  "status": "PASS_ONE_TOP20_H0_NATIVE_EXACT501_AND_INVERSE",
+  "script_sha256": "6f067029e7b055fefca0fdad7727100f64abccd8cee36c4b74475437147232bb",
+  "contract_sha256": "213d8f77d48267feff111cfc9e238899e478673853623a1dbf2e25ece2e2f63e",
+  "verification_sha256": "6f9225e5707ac69fb78831818b3d59a9332bb049795c8b42bfb427f2d2a3e068",
+  "numerical_sha256": "a1a9c55a804fbce3770283ced18df9c81ffa7084799a253bea40279970aa7785",
+  "native_sha256": [
+    "87075c0bbc8ea419b0d0d49047c0c59712ed8180c94cf0885030e2b39caff331",
+    "efb5e4929a23489a47f7249f1340697e2a279a33d1299a5954b897d96203526f"
+  ],
+  "source_bitwise_equal": true,
+  "time_sample_offsets": [
+    {
+      "source_offset": 2.9483179209371056e-11,
+      "receiver_offset": 0.0
+    },
+    {
+      "source_offset": 2.9483179209371056e-11,
+      "receiver_offset": 0.0
+    }
+  ],
+  "direct_DFT_relative_L2": [
+    1.0495311111187061e-13,
+    1.0498681297278783e-13
+  ],
+  "native_metrics": {
+    "early": {
+      "bitwise_equal": false,
+      "relative_L2": 4.161260222061312e-08,
+      "difference_maxabs_V_m": 7.412938930428936e-05,
+      "original_maxabs_V_m": 3735.4305689438693
+    },
+    "return_packet": {
+      "bitwise_equal": false,
+      "relative_L2": 0.03640477732762073,
+      "difference_maxabs_V_m": 0.003177240723146165,
+      "original_maxabs_V_m": 0.05703061418306147
+    },
+    "late": {
+      "bitwise_equal": false,
+      "relative_L2": 0.004579685745721911,
+      "difference_maxabs_V_m": 1.6510905203907236e-05,
+      "original_maxabs_V_m": 0.0031500338554978995
+    }
+  },
+  "frequency_relative_complex_L2": 9.151690202168945e-07,
+  "metrics": {
+    "hann": {
+      "gates": {
+        "early": {
+          "relative_complex_L2": 4.842845771044512e-11,
+          "peak_ns": [
+            4.1583499667332005,
+            4.1583499667332005
+          ],
+          "complex_correlation_abs": 1.0,
+          "correlation_phase_deg": -2.143724525426292e-10,
+          "maxabs_change": 1.0231434630162843e-07,
+          "original_maxabs": 3641.044337899386
+        },
+        "wide": {
+          "relative_complex_L2": 0.0019713891343459394,
+          "peak_ns": [
+            330.1729873586161,
+            330.1729873586161
+          ],
+          "complex_correlation_abs": 0.9999980602873183,
+          "correlation_phase_deg": 0.0017140816054857168,
+          "maxabs_change": 0.0001169827277924585,
+          "original_maxabs": 0.05185020689852414
+        },
+        "basal": {
+          "relative_complex_L2": 5.274727021569577e-05,
+          "peak_ns": [
+            367.59813705921493,
+            367.59813705921493
+          ],
+          "complex_correlation_abs": 0.9999999998168596,
+          "correlation_phase_deg": 0.0011177671441704358,
+          "maxabs_change": 5.019743532286096e-07,
+          "original_maxabs": 0.009128169781536825
+        },
+        "late": {
+          "relative_complex_L2": 0.00026739380155204316,
+          "peak_ns": [
+            454.0918163672655,
+            454.0918163672655
+          ],
+          "complex_correlation_abs": 0.9999999644448724,
+          "correlation_phase_deg": -0.00035898405641467704,
+          "maxabs_change": 2.4482934534792637e-06,
+          "original_maxabs": 0.003981120501843162
+        }
+      },
+      "independent_inverse_relative_L2": 1.3387893573088424e-14
+    },
+    "blackman": {
+      "gates": {
+        "early": {
+          "relative_complex_L2": 3.053121322854832e-11,
+          "peak_ns": [
+            4.1583499667332005,
+            4.1583499667332005
+          ],
+          "complex_correlation_abs": 1.0,
+          "correlation_phase_deg": -3.102240771996805e-10,
+          "maxabs_change": 7.82027392807472e-08,
+          "original_maxabs": 3651.8578163437537
+        },
+        "wide": {
+          "relative_complex_L2": 0.0021826364324119382,
+          "peak_ns": [
+            328.5096473719228,
+            328.5096473719228
+          ],
+          "complex_correlation_abs": 0.9999976203322634,
+          "correlation_phase_deg": 0.0014088183795304202,
+          "maxabs_change": 0.0001170124389839663,
+          "original_maxabs": 0.04979423894618516
+        },
+        "basal": {
+          "relative_complex_L2": 4.619484224245893e-05,
+          "peak_ns": [
+            367.59813705921493,
+            367.59813705921493
+          ],
+          "complex_correlation_abs": 0.9999999997050313,
+          "correlation_phase_deg": 0.0008899259043503194,
+          "maxabs_change": 2.0427260041517285e-07,
+          "original_maxabs": 0.005122071536190208
+        },
+        "late": {
+          "relative_complex_L2": 0.0005698113660269189,
+          "peak_ns": [
+            474.88356620093145,
+            474.88356620093145
+          ],
+          "complex_correlation_abs": 0.9999998390690773,
+          "correlation_phase_deg": 0.0015193364234340598,
+          "maxabs_change": 2.464972831274125e-06,
+          "original_maxabs": 0.002132954672018621
+        }
+      },
+      "independent_inverse_relative_L2": 1.4293236702301056e-14
+    }
+  },
+  "solver_runs": 1,
+  "physical_path_certified": false,
+  "limits": "One H0 boundary-position sensitivity only; no matched new H1/basal difference, full boundary convergence or field calibration."
+}

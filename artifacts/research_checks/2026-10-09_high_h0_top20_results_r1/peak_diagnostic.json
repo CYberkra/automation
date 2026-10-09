@@ -1,0 +1,26 @@
+{
+  "status": "PASS_ORIGINAL_PEAK_COMPLEX_DIAGNOSTIC",
+  "script_sha256": "d2fb794abed50abfd7a409ff7a778869eae5498eeb0e34b68ccadd42b45c0c5f",
+  "analysis_sha256": "78ef7f1d75b8be7fbaa420b43ec232e82bae091aa216e35b874e309cfe71ae2f",
+  "independent_audit_sha256": "87a6697d68999f974a7ed9ecb43be67ddb30a579b3832579d5e10c142194583c",
+  "numerical_sha256": "a1a9c55a804fbce3770283ced18df9c81ffa7084799a253bea40279970aa7785",
+  "metrics": {
+    "hann": {
+      "original_peak_ns": 330.1729873586161,
+      "original_peak_amplitude": 0.05185020689693051,
+      "top20_amplitude_at_original_peak": 0.05185085803337924,
+      "amplitude_change_percent": 0.0012558029903741996,
+      "phase_change_at_original_peak_deg": -0.0005173358602218294,
+      "relative_complex_change_at_original_peak": 1.5467121455889728e-05
+    },
+    "blackman": {
+      "original_peak_ns": 328.5096473719228,
+      "original_peak_amplitude": 0.04979423894618594,
+      "top20_amplitude_at_original_peak": 0.0497941882932436,
+      "amplitude_change_percent": -0.00010172450349843487,
+      "phase_change_at_original_peak_deg": -0.0004722436219231585,
+      "relative_complex_change_at_original_peak": 8.304738365730772e-06
+    }
+  },
+  "limits": "Peak-relative numerical diagnostic, no alignment/amplitude fit, energy attribution, sub-sample resolution or new acceptance threshold."
+}

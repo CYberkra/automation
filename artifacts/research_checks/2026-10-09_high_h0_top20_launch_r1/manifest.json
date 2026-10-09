@@ -1,0 +1,95 @@
+{
+  "status": "PREPARED_APPROVED_ONE_TOP20_H0",
+  "groups": [
+    {
+      "id": "top20_H0",
+      "input": "top20_H0/cases/top20_H0/profile.in",
+      "input_sha256": "ca0844e3b7be32e121a9b55740d5fb55267b5ba48b5da332f68b20d238dbe26e",
+      "geometry": "top20_H0/geometries/full2d_compact.h5",
+      "geometry_sha256": "dd6c3ec4e363766dd7988c1053b811c960b074a3e786d1542fdcb8414dfe6d92",
+      "material": "top20_H0/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "native_shape": [
+        8400,
+        2500,
+        1
+      ],
+      "tx_m": [
+        169.35,
+        38.95,
+        0.0
+      ],
+      "rx_m": [
+        170.65,
+        39.025000000000006,
+        0.0
+      ],
+      "expected_samples": 20352,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 1200.0,
+      "source_type": "ricker",
+      "source_frequency_Hz": 100000000.0,
+      "domain_height_m": 62.5,
+      "source_amplitude_A": 40.0,
+      "source_band_min_over_max": 0.1044680664254774,
+      "variant": "high",
+      "role": "H0",
+      "chainage_m": 190.0,
+      "input_tx_m": [
+        169.35,
+        38.95,
+        0.0125
+      ],
+      "input_rx_m": [
+        170.65,
+        39.025000000000006,
+        0.0125
+      ],
+      "peak_ns": 357.6180971390552,
+      "basal_gate_ns": [
+        345.6180971390552,
+        369.6180971390552
+      ],
+      "wide_gate_ns": [
+        297.6180971390552,
+        417.6180971390552
+      ],
+      "factor": "top20"
+    }
+  ],
+  "dt_s": 5.896635841874211e-11,
+  "no_retry": true,
+  "baseline_sha256": {
+    "geometry.h5": "c1e308ff73119f2c366d42efcf3526646d5fe8e76c6a692a7113a5b1148985a6",
+    "materials.json": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+    "native_H0.h5": "87075c0bbc8ea419b0d0d49047c0c59712ed8180c94cf0885030e2b39caff331",
+    "profile.in": "ad8cc2587cb15bcca41e0b1abbd421e41e01f464d9eea232434327f217d48ec8"
+  },
+  "parent_sha256": {
+    "analysis.json": "3f42882d9074b139a243889c13204edb94a718b73363ba1c170dfe558277a150",
+    "completed_verification.json": "346b85a7ba64d9e1731d0bd513cfdffd6ba3c10ccdff0b98a5b907be506663e9",
+    "execution_contract.json": "73b285960717fc6eee66bde92da97e22b211610ff3afcdcdfbf942fd5dea821b",
+    "observer_profile.in": "d010daad0d39abca616a77465515e1a4f95b3899147a25221794834c48598450"
+  },
+  "generator_sha256": "59637ef19e54a71501bdce0f336e8cec9551190f927a136e4d0095c7f7655e6c",
+  "approval_basis": "User: 做吧, execute only190m high-loss H0 top-air+20m A-scan control; no new snapshots, H1, right-control, line continuation or retries.",
+  "gates_ns": {
+    "early": [
+      0,
+      120
+    ],
+    "wide": [
+      300,
+      450
+    ],
+    "basal": [
+      345.6180971390552,
+      369.6180971390552
+    ],
+    "late": [
+      450,
+      1100
+    ]
+  },
+  "limits": "One H0 boundary-position sensitivity only; no matched new H1/basal difference, full boundary convergence or field calibration."
+}

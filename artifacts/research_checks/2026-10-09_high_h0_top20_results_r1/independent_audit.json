@@ -1,0 +1,79 @@
+{
+  "status": "PASS_INDEPENDENT_ONE_TOP20_NATIVE_DFT_DIRECT_INVERSE_METRICS",
+  "audit_script_sha256": "35bc7f1c1a0df7b232a1b551411de2c57eb1b8a2e592f17486707cc22b5cd014",
+  "analysis_sha256": "78ef7f1d75b8be7fbaa420b43ec232e82bae091aa216e35b874e309cfe71ae2f",
+  "contract_sha256": "213d8f77d48267feff111cfc9e238899e478673853623a1dbf2e25ece2e2f63e",
+  "native_sha256": [
+    "87075c0bbc8ea419b0d0d49047c0c59712ed8180c94cf0885030e2b39caff331",
+    "efb5e4929a23489a47f7249f1340697e2a279a33d1299a5954b897d96203526f"
+  ],
+  "independent_DFT_relative_L2": [
+    1.0494540344052886e-13,
+    1.0498825275689901e-13
+  ],
+  "direct_inverse_metrics": {
+    "hann": {
+      "early": {
+        "relative_complex_L2": 4.8428422420088186e-11,
+        "peak_ns": [
+          4.1583499667332005,
+          4.1583499667332005
+        ]
+      },
+      "wide": {
+        "relative_complex_L2": 0.0019713891359985415,
+        "peak_ns": [
+          330.1729873586161,
+          330.1729873586161
+        ]
+      },
+      "basal": {
+        "relative_complex_L2": 5.274727400820627e-05,
+        "peak_ns": [
+          367.59813705921493,
+          367.59813705921493
+        ]
+      },
+      "late": {
+        "relative_complex_L2": 0.0002673937783035051,
+        "peak_ns": [
+          454.0918163672655,
+          454.0918163672655
+        ]
+      }
+    },
+    "blackman": {
+      "early": {
+        "relative_complex_L2": 3.053114164767138e-11,
+        "peak_ns": [
+          4.1583499667332005,
+          4.1583499667332005
+        ]
+      },
+      "wide": {
+        "relative_complex_L2": 0.002182636435898376,
+        "peak_ns": [
+          328.5096473719228,
+          328.5096473719228
+        ]
+      },
+      "basal": {
+        "relative_complex_L2": 4.619484121235835e-05,
+        "peak_ns": [
+          367.59813705921493,
+          367.59813705921493
+        ]
+      },
+      "late": {
+        "relative_complex_L2": 0.000569811325191303,
+        "peak_ns": [
+          474.88356620093145,
+          474.88356620093145
+        ]
+      }
+    }
+  },
+  "frequency_relative_complex_L2": 9.151690201745072e-07,
+  "source_bitwise_equal": true,
+  "limits": "Numerical processing agreement only. One top extension does not certify all PML or uniquely attribute cover paths."
+}
