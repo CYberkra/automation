@@ -1,0 +1,674 @@
+{
+  "status": "PASS_EXISTING_DATA_REVIEW_CAUSAL_PATH_OPEN",
+  "script_sha256": "c36c2897ca292b0caa94264fdd9fd35bfb89cf78d55d108120532637dc55c76f",
+  "source_analysis_sha256": "2854ac6e4f8b585d5893f17976e0e18c1a98fa3fa3e429e9dcb6c93895f57481",
+  "source_audit_sha256": "310fc0865c25a56e68f94a0e074b71f81591ef6fc7a996a11db4671fafcb8168",
+  "numerical_sha256": "cb4793c867542f021c12055c5558aee51ee710b2ae3fb6cebf0e6c0c10e4b48b",
+  "native_sha256": {
+    "high_x19000_H0": "87075c0bbc8ea419b0d0d49047c0c59712ed8180c94cf0885030e2b39caff331",
+    "high_x19000_H1": "243234a2c637239bac951b88056979b34d7f89ca8b7c75480d8eb1612f915f03",
+    "low_x19000_H0": "57b9c072b713b98f345aaf838118a81edc4d84a457ad12e0c38dcb847d73ef8e",
+    "low_x19000_H1": "5449438e5f2c73c885c6a89ae8b9ea5973ba94772225d29f5270cd2e7b236f71",
+    "high_x18750_H0": "7aed2c9fbbdbf979b6ea21581bf613a373f38851e7f97b82a90c2c31e67cd679",
+    "high_x18750_H1": "435269505c7257d7ba2b3dd4cc25a42ec33a80cdf47d6e333f322bd78a941d48",
+    "low_x18750_H0": "268a385647cce203957ac5b1f0686641883bcf61b4b21c3132ddcf7e840bb63d",
+    "low_x18750_H1": "c8865101fac982f8e2ec8c2a19ce1ea04010d7d2c5d613fb4c9339b70c22d89f"
+  },
+  "independent_native_DFT_relative_L2": {
+    "high_x19000_H0": 1.0494540344052886e-13,
+    "high_x19000_H1": 1.0494483453353424e-13,
+    "low_x19000_H0": 1.0495158431288147e-13,
+    "low_x19000_H1": 1.0514110840679113e-13,
+    "high_x18750_H0": 1.0506873948794193e-13,
+    "high_x18750_H1": 1.0505754022756278e-13,
+    "low_x18750_H0": 1.0505346087724989e-13,
+    "low_x18750_H1": 1.0537161462591174e-13
+  },
+  "independent_direct_inverse_relative_L2": {
+    "hann": {
+      "high_x19000_H0": 1.7028118983948305e-10,
+      "high_x19000_H1": 1.684571731506994e-10,
+      "low_x19000_H0": 3.3892387039063985e-10,
+      "low_x19000_H1": 3.7715357321884344e-12,
+      "high_x18750_H0": 1.6146863234822866e-10,
+      "high_x18750_H1": 1.6034585174769787e-10,
+      "low_x18750_H0": 3.6763861675999686e-10,
+      "low_x18750_H1": 3.805269808382935e-12
+    },
+    "blackman": {
+      "high_x19000_H0": 1.807930343746241e-10,
+      "high_x19000_H1": 1.786591039771582e-10,
+      "low_x19000_H0": 4.648327060916113e-10,
+      "low_x19000_H1": 3.656950656818067e-12,
+      "high_x18750_H0": 1.754685609939804e-10,
+      "high_x18750_H1": 1.7505862828713522e-10,
+      "low_x18750_H0": 5.90746748998859e-10,
+      "low_x18750_H1": 3.680835665357438e-12
+    }
+  },
+  "windows": {
+    "hann": {
+      "anchors": [
+        {
+          "chainage_m": 190.0,
+          "wide_gate_ns": [
+            300,
+            450
+          ],
+          "basal_union_gate_ns": [
+            345.6180971390552,
+            374.6081170991351
+          ],
+          "wide": {
+            "high": {
+              "H1_peak_ns": 330.1729873586161,
+              "H0_peak_ns": 330.1729873586161,
+              "delta_peak_ns": 356.78642714570856,
+              "H1_norm": 0.21650553088773797,
+              "H0_norm": 0.2140781225185281,
+              "delta_norm": 0.03046583017170943,
+              "H1_H0_complex_correlation": 0.9900508365000779,
+              "H0_peak_amplitude": 0.05185020689852414,
+              "H1_peak_amplitude": 0.05168598317986936
+            },
+            "low": {
+              "H1_peak_ns": 361.7764471057884,
+              "H0_peak_ns": 324.3512974051896,
+              "delta_peak_ns": 361.7764471057884,
+              "H1_norm": 21.982027810797817,
+              "H0_norm": 0.1077750554334325,
+              "delta_norm": 21.97742123009522,
+              "H1_H0_complex_correlation": 0.04533890027969497,
+              "H0_peak_amplitude": 0.019868912191613256,
+              "H1_peak_amplitude": 6.269915857637324
+            },
+            "low_over_high_H0_norm": 0.5034379700527538,
+            "low_over_high_delta_norm": 721.3793652176088
+          },
+          "basal": {
+            "high": {
+              "H1_peak_ns": 360.11310711909516,
+              "H0_peak_ns": 367.59813705921493,
+              "delta_peak_ns": 356.78642714570856,
+              "H1_norm": 0.04934817404490596,
+              "H0_norm": 0.03767887160637147,
+              "delta_norm": 0.030316715538375814,
+              "H1_H0_complex_correlation": 0.7897113490550693,
+              "H0_peak_amplitude": 0.009128169781536825,
+              "H1_peak_amplitude": 0.015120397176864793
+            },
+            "low": {
+              "H1_peak_ns": 361.7764471057884,
+              "H0_peak_ns": 360.9447771124418,
+              "delta_peak_ns": 361.7764471057884,
+              "H1_norm": 21.95435849613456,
+              "H0_norm": 0.036792469975142225,
+              "delta_norm": 21.950171228604614,
+              "H1_H0_complex_correlation": 0.1166040061904004,
+              "H0_peak_amplitude": 0.00854528798079057,
+              "H1_peak_amplitude": 6.269915857637324
+            },
+            "low_over_high_H0_norm": 0.9764748360702141,
+            "low_over_high_delta_norm": 724.0286699533603
+          }
+        },
+        {
+          "chainage_m": 187.5,
+          "wide_gate_ns": [
+            300,
+            450
+          ],
+          "basal_union_gate_ns": [
+            340.6280771789754,
+            369.6180971390552
+          ],
+          "wide": {
+            "high": {
+              "H1_peak_ns": 318.5296074517631,
+              "H0_peak_ns": 318.5296074517631,
+              "delta_peak_ns": 351.79640718562877,
+              "H1_norm": 0.2271248415794179,
+              "H0_norm": 0.22623841096673805,
+              "delta_norm": 0.030870389952860185,
+              "H1_H0_complex_correlation": 0.9907356683649112,
+              "H0_peak_amplitude": 0.06194803577691232,
+              "H1_peak_amplitude": 0.06190417648352019
+            },
+            "low": {
+              "H1_peak_ns": 356.78642714570856,
+              "H0_peak_ns": 313.5395874916833,
+              "delta_peak_ns": 356.78642714570856,
+              "H1_norm": 23.088865555487054,
+              "H0_norm": 0.09932543902682354,
+              "delta_norm": 23.095914612796903,
+              "H1_H0_complex_correlation": 0.06911259738560308,
+              "H0_peak_amplitude": 0.019973114617402823,
+              "H1_peak_amplitude": 6.581530613072876
+            },
+            "low_over_high_H0_norm": 0.439029953412405,
+            "low_over_high_delta_norm": 748.157527263663
+          },
+          "basal": {
+            "high": {
+              "H1_peak_ns": 353.45974717232207,
+              "H0_peak_ns": 341.81636726546907,
+              "delta_peak_ns": 351.79640718562877,
+              "H1_norm": 0.04660773475426777,
+              "H0_norm": 0.04248771000145389,
+              "delta_norm": 0.03069046073778115,
+              "H1_H0_complex_correlation": 0.7668323160917471,
+              "H0_peak_amplitude": 0.010644180678492184,
+              "H1_peak_amplitude": 0.012108222434174832
+            },
+            "low": {
+              "H1_peak_ns": 356.78642714570856,
+              "H0_peak_ns": 340.98469727212245,
+              "delta_peak_ns": 356.78642714570856,
+              "H1_norm": 23.036776657973473,
+              "H0_norm": 0.042093720688777904,
+              "delta_norm": 23.04414428124397,
+              "H1_H0_complex_correlation": 0.17460074193824854,
+              "H0_peak_amplitude": 0.010506664190519826,
+              "H1_peak_amplitude": 6.581530613072876
+            },
+            "low_over_high_H0_norm": 0.9907269816927647,
+            "low_over_high_delta_norm": 750.8569023493261
+          }
+        }
+      ],
+      "wide_total_peak_tracks": {
+        "high": [
+          {
+            "chainage_m": 190.0,
+            "wide_peak_ns": 330.1729873586161,
+            "local_template_peak_ns": 357.6180971390552
+          },
+          {
+            "chainage_m": 189.75,
+            "wide_peak_ns": 323.519627411843,
+            "local_template_peak_ns": 357.6180971390552
+          },
+          {
+            "chainage_m": 189.5,
+            "wide_peak_ns": 323.519627411843,
+            "local_template_peak_ns": 356.78642714570856
+          },
+          {
+            "chainage_m": 189.25,
+            "wide_peak_ns": 324.3512974051896,
+            "local_template_peak_ns": 356.78642714570856
+          },
+          {
+            "chainage_m": 189.0,
+            "wide_peak_ns": 324.3512974051896,
+            "local_template_peak_ns": 355.95475715236194
+          },
+          {
+            "chainage_m": 188.75,
+            "wide_peak_ns": 324.3512974051896,
+            "local_template_peak_ns": 355.1230871590153
+          },
+          {
+            "chainage_m": 188.5,
+            "wide_peak_ns": 318.5296074517631,
+            "local_template_peak_ns": 355.1230871590153
+          },
+          {
+            "chainage_m": 188.25,
+            "wide_peak_ns": 318.5296074517631,
+            "local_template_peak_ns": 354.2914171656687
+          },
+          {
+            "chainage_m": 188.0,
+            "wide_peak_ns": 318.5296074517631,
+            "local_template_peak_ns": 354.2914171656687
+          },
+          {
+            "chainage_m": 187.75,
+            "wide_peak_ns": 318.5296074517631,
+            "local_template_peak_ns": 353.45974717232207
+          },
+          {
+            "chainage_m": 187.5,
+            "wide_peak_ns": 318.5296074517631,
+            "local_template_peak_ns": 352.6280771789754
+          },
+          {
+            "chainage_m": 187.25,
+            "wide_peak_ns": 312.70791749833666,
+            "local_template_peak_ns": 352.6280771789754
+          },
+          {
+            "chainage_m": 187.0,
+            "wide_peak_ns": 312.70791749833666,
+            "local_template_peak_ns": 351.79640718562877
+          },
+          {
+            "chainage_m": 186.75,
+            "wide_peak_ns": 312.70791749833666,
+            "local_template_peak_ns": 351.79640718562877
+          },
+          {
+            "chainage_m": 186.5,
+            "wide_peak_ns": 312.70791749833666,
+            "local_template_peak_ns": 350.9647371922821
+          },
+          {
+            "chainage_m": 186.25,
+            "wide_peak_ns": 312.70791749833666,
+            "local_template_peak_ns": 350.13306719893546
+          },
+          {
+            "chainage_m": 186.0,
+            "wide_peak_ns": 306.8862275449101,
+            "local_template_peak_ns": 350.13306719893546
+          },
+          {
+            "chainage_m": 185.75,
+            "wide_peak_ns": 306.8862275449101,
+            "local_template_peak_ns": 349.30139720558884
+          }
+        ],
+        "low": [
+          {
+            "chainage_m": 190.0,
+            "wide_peak_ns": 361.7764471057884,
+            "local_template_peak_ns": 362.6081170991351
+          },
+          {
+            "chainage_m": 189.75,
+            "wide_peak_ns": 361.7764471057884,
+            "local_template_peak_ns": 362.6081170991351
+          },
+          {
+            "chainage_m": 189.5,
+            "wide_peak_ns": 360.9447771124418,
+            "local_template_peak_ns": 361.7764471057884
+          },
+          {
+            "chainage_m": 189.25,
+            "wide_peak_ns": 360.9447771124418,
+            "local_template_peak_ns": 361.7764471057884
+          },
+          {
+            "chainage_m": 189.0,
+            "wide_peak_ns": 360.11310711909516,
+            "local_template_peak_ns": 360.9447771124418
+          },
+          {
+            "chainage_m": 188.75,
+            "wide_peak_ns": 359.2814371257485,
+            "local_template_peak_ns": 360.11310711909516
+          },
+          {
+            "chainage_m": 188.5,
+            "wide_peak_ns": 359.2814371257485,
+            "local_template_peak_ns": 360.11310711909516
+          },
+          {
+            "chainage_m": 188.25,
+            "wide_peak_ns": 358.44976713240186,
+            "local_template_peak_ns": 359.2814371257485
+          },
+          {
+            "chainage_m": 188.0,
+            "wide_peak_ns": 357.6180971390552,
+            "local_template_peak_ns": 359.2814371257485
+          },
+          {
+            "chainage_m": 187.75,
+            "wide_peak_ns": 357.6180971390552,
+            "local_template_peak_ns": 358.44976713240186
+          },
+          {
+            "chainage_m": 187.5,
+            "wide_peak_ns": 356.78642714570856,
+            "local_template_peak_ns": 357.6180971390552
+          },
+          {
+            "chainage_m": 187.25,
+            "wide_peak_ns": 356.78642714570856,
+            "local_template_peak_ns": 357.6180971390552
+          },
+          {
+            "chainage_m": 187.0,
+            "wide_peak_ns": 355.95475715236194,
+            "local_template_peak_ns": 356.78642714570856
+          },
+          {
+            "chainage_m": 186.5,
+            "wide_peak_ns": 355.1230871590153,
+            "local_template_peak_ns": 355.95475715236194
+          },
+          {
+            "chainage_m": 186.25,
+            "wide_peak_ns": 354.2914171656687,
+            "local_template_peak_ns": 355.1230871590153
+          },
+          {
+            "chainage_m": 186.0,
+            "wide_peak_ns": 354.2914171656687,
+            "local_template_peak_ns": 355.1230871590153
+          },
+          {
+            "chainage_m": 185.75,
+            "wide_peak_ns": 353.45974717232207,
+            "local_template_peak_ns": 354.2914171656687
+          }
+        ]
+      }
+    },
+    "blackman": {
+      "anchors": [
+        {
+          "chainage_m": 190.0,
+          "wide_gate_ns": [
+            300,
+            450
+          ],
+          "basal_union_gate_ns": [
+            345.6180971390552,
+            374.6081170991351
+          ],
+          "wide": {
+            "high": {
+              "H1_peak_ns": 328.5096473719228,
+              "H0_peak_ns": 328.5096473719228,
+              "delta_peak_ns": 356.78642714570856,
+              "H1_norm": 0.20781873904876974,
+              "H0_norm": 0.20527426869953308,
+              "delta_norm": 0.031617984098154035,
+              "H1_H0_complex_correlation": 0.9883594856731335,
+              "H0_peak_amplitude": 0.04979423894618516,
+              "H1_peak_amplitude": 0.04974489890204355
+            },
+            "low": {
+              "H1_peak_ns": 361.7764471057884,
+              "H0_peak_ns": 325.1829673985363,
+              "delta_peak_ns": 361.7764471057884,
+              "H1_norm": 23.58651928475522,
+              "H0_norm": 0.0800298318457057,
+              "delta_norm": 23.583257013452403,
+              "H1_H0_complex_correlation": 0.04246122669132726,
+              "H0_peak_amplitude": 0.017689758814498677,
+              "H1_peak_amplitude": 6.285352034944465
+            },
+            "low_over_high_H0_norm": 0.3898678210021933,
+            "low_over_high_delta_norm": 745.8811080504425
+          },
+          "basal": {
+            "high": {
+              "H1_peak_ns": 359.2814371257485,
+              "H0_peak_ns": 367.59813705921493,
+              "delta_peak_ns": 356.78642714570856,
+              "H1_norm": 0.03694037818797551,
+              "H0_norm": 0.01779032304532701,
+              "delta_norm": 0.03152836632766082,
+              "H1_H0_complex_correlation": 0.5285579697193495,
+              "H0_peak_amplitude": 0.005122071536190208,
+              "H1_peak_amplitude": 0.011287398253033615
+            },
+            "low": {
+              "H1_peak_ns": 361.7764471057884,
+              "H0_peak_ns": 360.9447771124418,
+              "delta_peak_ns": 361.7764471057884,
+              "H1_norm": 23.548086924122696,
+              "H0_norm": 0.01660349159032169,
+              "delta_norm": 23.545090379241184,
+              "H1_H0_complex_correlation": 0.18085692924314012,
+              "H0_peak_amplitude": 0.004336620876929659,
+              "H1_peak_amplitude": 6.285352034944465
+            },
+            "low_over_high_H0_norm": 0.9332878075355092,
+            "low_over_high_delta_norm": 746.7906879331183
+          }
+        },
+        {
+          "chainage_m": 187.5,
+          "wide_gate_ns": [
+            300,
+            450
+          ],
+          "basal_union_gate_ns": [
+            340.6280771789754,
+            369.6180971390552
+          ],
+          "wide": {
+            "high": {
+              "H1_peak_ns": 317.6979374584165,
+              "H0_peak_ns": 317.6979374584165,
+              "delta_peak_ns": 351.79640718562877,
+              "H1_norm": 0.21302346085966634,
+              "H0_norm": 0.21199517194139658,
+              "delta_norm": 0.0320357033233297,
+              "H1_H0_complex_correlation": 0.9886491717935285,
+              "H0_peak_amplitude": 0.057559836972018656,
+              "H1_peak_amplitude": 0.057539812581090755
+            },
+            "low": {
+              "H1_peak_ns": 356.78642714570856,
+              "H0_peak_ns": 314.37125748502996,
+              "delta_peak_ns": 356.78642714570856,
+              "H1_norm": 24.77711957067853,
+              "H0_norm": 0.06305870611741882,
+              "delta_norm": 24.783434699599653,
+              "H1_H0_complex_correlation": 0.09948563601379548,
+              "H0_peak_amplitude": 0.01442584338330912,
+              "H1_peak_amplitude": 6.5973252242570934
+            },
+            "low_over_high_H0_norm": 0.2974535011337457,
+            "low_over_high_delta_norm": 773.6191851156066
+          },
+          "basal": {
+            "high": {
+              "H1_peak_ns": 353.45974717232207,
+              "H0_peak_ns": 341.81636726546907,
+              "delta_peak_ns": 351.79640718562877,
+              "H1_norm": 0.030413959979393886,
+              "H0_norm": 0.022870525368578618,
+              "delta_norm": 0.03190379096129503,
+              "H1_H0_complex_correlation": 0.31106932279433136,
+              "H0_peak_amplitude": 0.0054814106030714104,
+              "H1_peak_amplitude": 0.00828651920328247
+            },
+            "low": {
+              "H1_peak_ns": 356.78642714570856,
+              "H0_peak_ns": 340.98469727212245,
+              "delta_peak_ns": 356.78642714570856,
+              "H1_norm": 24.710824185364118,
+              "H0_norm": 0.02099886772716268,
+              "delta_norm": 24.717416303231737,
+              "H1_H0_complex_correlation": 0.31535314892343014,
+              "H0_peak_amplitude": 0.005353285649421122,
+              "H1_peak_amplitude": 6.5973252242570934
+            },
+            "low_over_high_H0_norm": 0.9181628925766886,
+            "low_over_high_delta_norm": 774.7485661882112
+          }
+        }
+      ],
+      "wide_total_peak_tracks": {
+        "high": [
+          {
+            "chainage_m": 190.0,
+            "wide_peak_ns": 328.5096473719228,
+            "local_template_peak_ns": 357.6180971390552
+          },
+          {
+            "chainage_m": 189.75,
+            "wide_peak_ns": 324.3512974051896,
+            "local_template_peak_ns": 357.6180971390552
+          },
+          {
+            "chainage_m": 189.5,
+            "wide_peak_ns": 324.3512974051896,
+            "local_template_peak_ns": 356.78642714570856
+          },
+          {
+            "chainage_m": 189.25,
+            "wide_peak_ns": 324.3512974051896,
+            "local_template_peak_ns": 356.78642714570856
+          },
+          {
+            "chainage_m": 189.0,
+            "wide_peak_ns": 324.3512974051896,
+            "local_template_peak_ns": 355.95475715236194
+          },
+          {
+            "chainage_m": 188.75,
+            "wide_peak_ns": 324.3512974051896,
+            "local_template_peak_ns": 355.1230871590153
+          },
+          {
+            "chainage_m": 188.5,
+            "wide_peak_ns": 321.8562874251497,
+            "local_template_peak_ns": 355.1230871590153
+          },
+          {
+            "chainage_m": 188.25,
+            "wide_peak_ns": 319.36127744510975,
+            "local_template_peak_ns": 354.2914171656687
+          },
+          {
+            "chainage_m": 188.0,
+            "wide_peak_ns": 318.5296074517631,
+            "local_template_peak_ns": 354.2914171656687
+          },
+          {
+            "chainage_m": 187.75,
+            "wide_peak_ns": 318.5296074517631,
+            "local_template_peak_ns": 353.45974717232207
+          },
+          {
+            "chainage_m": 187.5,
+            "wide_peak_ns": 317.6979374584165,
+            "local_template_peak_ns": 352.6280771789754
+          },
+          {
+            "chainage_m": 187.25,
+            "wide_peak_ns": 314.37125748502996,
+            "local_template_peak_ns": 352.6280771789754
+          },
+          {
+            "chainage_m": 187.0,
+            "wide_peak_ns": 312.70791749833666,
+            "local_template_peak_ns": 351.79640718562877
+          },
+          {
+            "chainage_m": 186.75,
+            "wide_peak_ns": 312.70791749833666,
+            "local_template_peak_ns": 351.79640718562877
+          },
+          {
+            "chainage_m": 186.5,
+            "wide_peak_ns": 311.87624750499003,
+            "local_template_peak_ns": 350.9647371922821
+          },
+          {
+            "chainage_m": 186.25,
+            "wide_peak_ns": 311.87624750499003,
+            "local_template_peak_ns": 350.13306719893546
+          },
+          {
+            "chainage_m": 186.0,
+            "wide_peak_ns": 307.7178975382568,
+            "local_template_peak_ns": 350.13306719893546
+          },
+          {
+            "chainage_m": 185.75,
+            "wide_peak_ns": 306.8862275449101,
+            "local_template_peak_ns": 349.30139720558884
+          }
+        ],
+        "low": [
+          {
+            "chainage_m": 190.0,
+            "wide_peak_ns": 361.7764471057884,
+            "local_template_peak_ns": 362.6081170991351
+          },
+          {
+            "chainage_m": 189.75,
+            "wide_peak_ns": 361.7764471057884,
+            "local_template_peak_ns": 362.6081170991351
+          },
+          {
+            "chainage_m": 189.5,
+            "wide_peak_ns": 360.9447771124418,
+            "local_template_peak_ns": 361.7764471057884
+          },
+          {
+            "chainage_m": 189.25,
+            "wide_peak_ns": 360.9447771124418,
+            "local_template_peak_ns": 361.7764471057884
+          },
+          {
+            "chainage_m": 189.0,
+            "wide_peak_ns": 360.11310711909516,
+            "local_template_peak_ns": 360.9447771124418
+          },
+          {
+            "chainage_m": 188.75,
+            "wide_peak_ns": 359.2814371257485,
+            "local_template_peak_ns": 360.11310711909516
+          },
+          {
+            "chainage_m": 188.5,
+            "wide_peak_ns": 359.2814371257485,
+            "local_template_peak_ns": 360.11310711909516
+          },
+          {
+            "chainage_m": 188.25,
+            "wide_peak_ns": 358.44976713240186,
+            "local_template_peak_ns": 359.2814371257485
+          },
+          {
+            "chainage_m": 188.0,
+            "wide_peak_ns": 357.6180971390552,
+            "local_template_peak_ns": 359.2814371257485
+          },
+          {
+            "chainage_m": 187.75,
+            "wide_peak_ns": 357.6180971390552,
+            "local_template_peak_ns": 358.44976713240186
+          },
+          {
+            "chainage_m": 187.5,
+            "wide_peak_ns": 356.78642714570856,
+            "local_template_peak_ns": 357.6180971390552
+          },
+          {
+            "chainage_m": 187.25,
+            "wide_peak_ns": 356.78642714570856,
+            "local_template_peak_ns": 357.6180971390552
+          },
+          {
+            "chainage_m": 187.0,
+            "wide_peak_ns": 355.95475715236194,
+            "local_template_peak_ns": 356.78642714570856
+          },
+          {
+            "chainage_m": 186.5,
+            "wide_peak_ns": 355.1230871590153,
+            "local_template_peak_ns": 355.95475715236194
+          },
+          {
+            "chainage_m": 186.25,
+            "wide_peak_ns": 354.2914171656687,
+            "local_template_peak_ns": 355.1230871590153
+          },
+          {
+            "chainage_m": 186.0,
+            "wide_peak_ns": 354.2914171656687,
+            "local_template_peak_ns": 355.1230871590153
+          },
+          {
+            "chainage_m": 185.75,
+            "wide_peak_ns": 353.45974717232207,
+            "local_template_peak_ns": 354.2914171656687
+          }
+        ]
+      }
+    }
+  },
+  "limits": "CPU reanalysis only. Same pre-existing windows, no fit or simulation. H0 not noise; removing basal contrast does not isolate a pure primary. Correlation is descriptive, not causal-path certification."
+}
