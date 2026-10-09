@@ -1,0 +1,53 @@
+{
+  "status": "PASS_AIR_ANGULAR_TRANSPORT_PERIODIC_CONTROLS",
+  "count": 16,
+  "checks": {
+    "up_mode_-20": {
+      "propagation_relative_L2": 3.430763610419888e-15,
+      "opposite_leakage": 3.815551455599976e-16
+    },
+    "down_mode_-20": {
+      "propagation_relative_L2": 3.432517660456297e-15,
+      "opposite_leakage": 3.815551455599976e-16
+    },
+    "up_mode_-7": {
+      "propagation_relative_L2": 1.35447671322834e-15,
+      "opposite_leakage": 1.4256589138779582e-16
+    },
+    "down_mode_-7": {
+      "propagation_relative_L2": 1.3722251961532396e-15,
+      "opposite_leakage": 1.4256589138779582e-16
+    },
+    "up_mode_0": {
+      "propagation_relative_L2": 3.985468392074455e-17,
+      "opposite_leakage": 4.483651941083788e-17
+    },
+    "down_mode_0": {
+      "propagation_relative_L2": 3.985468392074468e-17,
+      "opposite_leakage": 4.483651941083788e-17
+    },
+    "up_mode_7": {
+      "propagation_relative_L2": 1.3441585512036536e-15,
+      "opposite_leakage": 1.4263111925900888e-16
+    },
+    "down_mode_7": {
+      "propagation_relative_L2": 1.3537795852708711e-15,
+      "opposite_leakage": 1.4263111925900888e-16
+    },
+    "up_mode_20": {
+      "propagation_relative_L2": 3.4229108030347732e-15,
+      "opposite_leakage": 3.8295031738513173e-16
+    },
+    "down_mode_20": {
+      "propagation_relative_L2": 3.4215870098692173e-15,
+      "opposite_leakage": 3.8295031738513173e-16
+    },
+    "counterpropagating_superposition": 4.7058972522502304e-14,
+    "zero": true,
+    "excluded_sector_zero": true,
+    "negative_height": true,
+    "lightline": true,
+    "zero_spacing": true
+  },
+  "limits": "Periodic plane controls do not certify finite aperture, FDTD or unique ray identity"
+}

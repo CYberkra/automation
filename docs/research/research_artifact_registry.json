@@ -1,4 +1,33 @@
 {
+  "line9_air_plane_transport_2026_10_10": {
+    "report": "docs/research/2026-10-10_air_plane_transport_and_cover_ambiguity.md",
+    "public": "artifacts/research_checks/2026-10-10_air_smooth_closure_r3",
+    "hard_failure_public": "artifacts/research_checks/2026-10-10_air_plane_closure_r1",
+    "save_failure_public": "artifacts/research_checks/2026-10-10_air_smooth_closure_r2",
+    "status": "PASS_RAW_PLANES_AND_EXPLICIT_SPATIAL_TEMPORAL_TRANSPORT_SUMS",
+    "calls_solver": false,
+    "calls_training": false,
+    "new_solver_runs": 0,
+    "hard_and_smooth_periodic_controls": 31,
+    "native_field_groups": 656,
+    "native_late_events": 164,
+    "explicit_primary_profiles": 8,
+    "explicit_primary_metric_rows": 16,
+    "primary_late_up_transport_relative_L2_Hann_Blackman": [
+      0.09119972883623326,
+      0.09361612462898075
+    ],
+    "primary_late_up_complex_cosine_Hann_Blackman": [
+      0.9966881263577615,
+      0.9966602146171004
+    ],
+    "full_space_or_unique_cover_path_certified": false,
+    "formal_SFCW_changed": false,
+    "next_cover_plane_observer_state": "GEOMETRY_VERIFIED_PROPOSAL_NOT_PREPARED_FROZEN_OR_RUN",
+    "next_cover_observer_planned_new_solves": 1,
+    "old_stopped_batches_resumed": false,
+    "independent_audit_sha256": "95e3b4d82e17074e06d4e2578ba2d3c8bd97f2364b37c35f6794fa6a2f4bc788"
+  },
   "line9_material_return_balance_2026_10_10": {
     "report": "docs/research/2026-10-10_material_return_balance.md",
     "public": "artifacts/research_checks/2026-10-10_material_return_balance_r1",

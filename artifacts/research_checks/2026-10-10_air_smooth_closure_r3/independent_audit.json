@@ -1,0 +1,136 @@
+{
+  "status": "PASS_RAW_PLANES_AND_EXPLICIT_SPATIAL_TEMPORAL_TRANSPORT_SUMS",
+  "script_sha256": "5a973e25ca21c66fa42a13733dcedc387147166072afa5c9326b67399b36a752",
+  "smooth_analysis_sha256": "6f1c7a23dbca48096cf188d2e821ededc59b14dde8106cb459ca9ab49d5921bc",
+  "hard_analysis_sha256": "4171ab15961aedab765c07a37d6c5dafb7a527c3868dff3ecee85b4f4ca860f3",
+  "native_three_tone_field_groups": 656,
+  "native_three_tone_max_relative_L2": 4.6246059442227834e-15,
+  "native_late_events": 164,
+  "native_event_max_relative_error": 3.0508316708512665e-16,
+  "native_direction_sign_counts": {
+    "cover_lower": {
+      "positive_vertical_windows": 0,
+      "positive_horizontal_windows": 27,
+      "total": 41
+    },
+    "cover_middle": {
+      "positive_vertical_windows": 37,
+      "positive_horizontal_windows": 21,
+      "total": 41
+    },
+    "cover_upper": {
+      "positive_vertical_windows": 40,
+      "positive_horizontal_windows": 10,
+      "total": 41
+    },
+    "air_surface": {
+      "positive_vertical_windows": 38,
+      "positive_horizontal_windows": 41,
+      "total": 41
+    }
+  },
+  "explicit_primary_profiles": 8,
+  "explicit_profile_max_relative_L2": 6.680523431508173e-11,
+  "explicit_primary_metric_rows": 16,
+  "explicit_metric_max_scaled_error": 1.2358308820736852e-12,
+  "hard_cut_timegate_checks": [
+    {
+      "variant": "full",
+      "window": "hann",
+      "total_transport_relative_error": 0.5978752902185127,
+      "up_only_vs_total_relative_error": 1.01994634655843,
+      "up_to_up_transport_relative_error": 1.5541198006650492,
+      "up_to_up_complex_cosine": 0.49559882372243846,
+      "up_to_total_complex_cosine": 0.16265419032882733,
+      "upper_down_over_up_norm": 5.726541415415791,
+      "predicted_down_over_up_norm": 3.127776010729804,
+      "sector_over_raw_relative_change": 60.16076492225852
+    },
+    {
+      "variant": "full",
+      "window": "blackman",
+      "total_transport_relative_error": 0.59961396643817,
+      "up_only_vs_total_relative_error": 1.0170268712470563,
+      "up_to_up_transport_relative_error": 1.5745392480896676,
+      "up_to_up_complex_cosine": 0.5324067219567037,
+      "up_to_total_complex_cosine": 0.2281377383637379,
+      "upper_down_over_up_norm": 5.737776770321643,
+      "predicted_down_over_up_norm": 3.0149557787474195,
+      "sector_over_raw_relative_change": 67.77128082621967
+    },
+    {
+      "variant": "native_190_450",
+      "window": "hann",
+      "total_transport_relative_error": 0.20529340548398978,
+      "up_only_vs_total_relative_error": 0.20929427297005668,
+      "up_to_up_transport_relative_error": 0.21603426516023067,
+      "up_to_up_complex_cosine": 0.9809991023850194,
+      "up_to_total_complex_cosine": 0.9820021614333051,
+      "upper_down_over_up_norm": 0.03120957254609636,
+      "predicted_down_over_up_norm": 0.035647511274202105,
+      "sector_over_raw_relative_change": 0.3104334456727874
+    },
+    {
+      "variant": "native_190_450",
+      "window": "blackman",
+      "total_transport_relative_error": 0.1958655488994385,
+      "up_only_vs_total_relative_error": 0.20397365415155444,
+      "up_to_up_transport_relative_error": 0.20921376307880574,
+      "up_to_up_complex_cosine": 0.9821299748962135,
+      "up_to_total_complex_cosine": 0.9828983937865607,
+      "upper_down_over_up_norm": 0.03037223720986117,
+      "predicted_down_over_up_norm": 0.03252222499076617,
+      "sector_over_raw_relative_change": 0.3148358656861121
+    },
+    {
+      "variant": "native_220_420",
+      "window": "hann",
+      "total_transport_relative_error": 0.20612201484666065,
+      "up_only_vs_total_relative_error": 0.2100782941718953,
+      "up_to_up_transport_relative_error": 0.21370005514743246,
+      "up_to_up_complex_cosine": 0.9803184878553605,
+      "up_to_total_complex_cosine": 0.9807979158132137,
+      "upper_down_over_up_norm": 0.02932196000624554,
+      "predicted_down_over_up_norm": 0.03583967871880697,
+      "sector_over_raw_relative_change": 0.31128389633982095
+    },
+    {
+      "variant": "native_220_420",
+      "window": "blackman",
+      "total_transport_relative_error": 0.19833324443709183,
+      "up_only_vs_total_relative_error": 0.20612154835015675,
+      "up_to_up_transport_relative_error": 0.2069675391682007,
+      "up_to_up_complex_cosine": 0.9813395591462586,
+      "up_to_total_complex_cosine": 0.9813346107471677,
+      "upper_down_over_up_norm": 0.028241786301573795,
+      "predicted_down_over_up_norm": 0.03270547311135164,
+      "sector_over_raw_relative_change": 0.3164020600014522
+    },
+    {
+      "variant": "native_240_410",
+      "window": "hann",
+      "total_transport_relative_error": 0.22282190377250402,
+      "up_only_vs_total_relative_error": 0.22655003472818946,
+      "up_to_up_transport_relative_error": 0.22354733272119107,
+      "up_to_up_complex_cosine": 0.9785183895081899,
+      "up_to_total_complex_cosine": 0.9775315389944037,
+      "upper_down_over_up_norm": 0.03232902471754073,
+      "predicted_down_over_up_norm": 0.03589900674184631,
+      "sector_over_raw_relative_change": 0.3165096648549658
+    },
+    {
+      "variant": "native_240_410",
+      "window": "blackman",
+      "total_transport_relative_error": 0.2207794847674492,
+      "up_only_vs_total_relative_error": 0.22782784833397296,
+      "up_to_up_transport_relative_error": 0.22268826053420793,
+      "up_to_up_complex_cosine": 0.9783065146400288,
+      "up_to_total_complex_cosine": 0.9769573912754899,
+      "upper_down_over_up_norm": 0.031683469237726365,
+      "predicted_down_over_up_norm": 0.032766166746420494,
+      "sector_over_raw_relative_change": 0.32242245967825883
+    }
+  ],
+  "homogeneous_air_between_planes_verified": true,
+  "limits": "Arithmetic/native aperture/air transport reference only; no exact full-space/ray/bounce/energy/site certification"
+}

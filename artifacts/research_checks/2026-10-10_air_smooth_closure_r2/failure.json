@@ -1,0 +1,9 @@
+{
+  "status": "CPU_ANALYSIS_SAVE_FAILED_NO_SOLVER_ATTEMPT",
+  "exception": "FileNotFoundError",
+  "stage": "np.savez: parent directory for private profiles.npz did not exist",
+  "new_gprmax_runs": 0,
+  "published_analysis_or_plots": false,
+  "original_script_preserved_ignored": "artifacts/local_checks/2026-10-10_air_smooth_closure_r2_failure/analysis_script_draft.py",
+  "correction": "Create private output parent before saving; independently rerun CPU only in fresh r3 directories"
+}
