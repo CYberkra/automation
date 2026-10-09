@@ -1,4 +1,24 @@
 {
+  "line9_high_h0_right40_2026_10_09": {
+    "report": "docs/research/2026-10-09_high_h0_right40_boundary_result.md",
+    "public": "artifacts/research_checks/2026-10-09_high_h0_right40_results_r1",
+    "startup": "artifacts/research_checks/2026-10-09_high_h0_right40_launch_r1",
+    "snapshot_probes": "artifacts/research_checks/2026-10-09_wavefield_probes_r1",
+    "status": "PASS_ONE_RIGHT40_AND_CPU_PROBES_MAIN_PEAK_RETAINED",
+    "solver_runs": 1,
+    "elapsed_s": 260.0320000000065,
+    "contract_sha256": "0f17c9727d07e32bb07e49f09094961411de000c37153cd2ac0db4f870b939ae",
+    "wide_SFCW_relative_complex_L2": {
+      "hann": 0.016217949547500148,
+      "blackman": 0.01652232730439808
+    },
+    "source_bitwise_equal": true,
+    "physical_path_certified": false,
+    "all_boundaries_certified": false,
+    "additional_snapshot_solver_runs": 0,
+    "cover_controls_started": false,
+    "goal_complete": false
+  },
   "line9_high_h0_top20_2026_10_09": {
     "report": "docs/research/2026-10-09_high_h0_top20_boundary_result.md",
     "public": "artifacts/research_checks/2026-10-09_high_h0_top20_results_r1",

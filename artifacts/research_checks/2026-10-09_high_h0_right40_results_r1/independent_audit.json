@@ -1,0 +1,79 @@
+{
+  "status": "PASS_INDEPENDENT_ONE_RIGHT40_NATIVE_DFT_DIRECT_INVERSE_METRICS",
+  "audit_script_sha256": "1dac5316d2ed00b4a2f66506f34ad0c9c4d88f683dcc2417dcdc1d67e6c1a610",
+  "analysis_sha256": "5757a1e28cadcf2acf0139929c4967b901e27b2f9152e29869920b32c8bbd152",
+  "contract_sha256": "0f17c9727d07e32bb07e49f09094961411de000c37153cd2ac0db4f870b939ae",
+  "native_sha256": [
+    "87075c0bbc8ea419b0d0d49047c0c59712ed8180c94cf0885030e2b39caff331",
+    "6d4fffa90cd5aaff1fe8a6aa082d0745f924746cac9ba974b7b2f6176dc0e2a1"
+  ],
+  "independent_DFT_relative_L2": [
+    1.0494540344052886e-13,
+    1.049638662362619e-13
+  ],
+  "direct_inverse_metrics": {
+    "hann": {
+      "early": {
+        "relative_complex_L2": 8.421664197636642e-10,
+        "peak_ns": [
+          4.1583499667332005,
+          4.1583499667332005
+        ]
+      },
+      "wide": {
+        "relative_complex_L2": 0.016217949548481343,
+        "peak_ns": [
+          330.1729873586161,
+          330.1729873586161
+        ]
+      },
+      "basal": {
+        "relative_complex_L2": 0.001239899557015194,
+        "peak_ns": [
+          367.59813705921493,
+          367.59813705921493
+        ]
+      },
+      "late": {
+        "relative_complex_L2": 0.0026271192143069288,
+        "peak_ns": [
+          454.0918163672655,
+          454.0918163672655
+        ]
+      }
+    },
+    "blackman": {
+      "early": {
+        "relative_complex_L2": 3.4008878621321606e-10,
+        "peak_ns": [
+          4.1583499667332005,
+          4.1583499667332005
+        ]
+      },
+      "wide": {
+        "relative_complex_L2": 0.016522327305500628,
+        "peak_ns": [
+          328.5096473719228,
+          328.5096473719228
+        ]
+      },
+      "basal": {
+        "relative_complex_L2": 0.0010694012370404253,
+        "peak_ns": [
+          367.59813705921493,
+          367.59813705921493
+        ]
+      },
+      "late": {
+        "relative_complex_L2": 0.004949094320488941,
+        "peak_ns": [
+          474.88356620093145,
+          474.88356620093145
+        ]
+      }
+    }
+  },
+  "frequency_relative_complex_L2": 1.3148941612481043e-05,
+  "source_bitwise_equal": true,
+  "limits": "Numerical processing agreement only. One right extension does not certify all PML or uniquely attribute cover paths; exterior geology is also extended."
+}

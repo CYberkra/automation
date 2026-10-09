@@ -1,0 +1,87 @@
+{
+  "status": "PASS14_INDEPENDENT_NATIVE_FRAMES_BITWISE_PROBES",
+  "audit_script_sha256": "c48e9d35b1e6f82cec31eac0ee5fa7465d8f680bc5afc0cf2fd6ff21fdaf627f",
+  "extraction_sha256": "82ccb9fbaa52958452caa4475137ddb56acf0b8e6759a78db717ed8c62cb9ef2",
+  "probes_sha256": "9bdf44b2546d768d98bfa18288e5cec8e8d70936283ebae7a6452da83ebefca8",
+  "contract_sha256": "73b285960717fc6eee66bde92da97e22b211610ff3afcdcdfbf942fd5dea821b",
+  "verification_sha256": "346b85a7ba64d9e1731d0bd513cfdffd6ba3c10ccdff0b98a5b907be506663e9",
+  "remote_verified_frames": 250,
+  "locally_independently_read_frames": 14,
+  "selected": [
+    {
+      "iteration": 3400,
+      "sha256": "194970f7f54febda1a23764ad3b81f750cae0ec29579ea97c63fb67aa515c3fd"
+    },
+    {
+      "iteration": 4216,
+      "sha256": "4baffed07d3e04785c8ac4f588140701a764d864ab5d2231d870a214967411b7"
+    },
+    {
+      "iteration": 4760,
+      "sha256": "905799f4c9d952c1892643bcc2c6c25c31c35b4f3fb35fc2565cb609ebc39ddc"
+    },
+    {
+      "iteration": 5100,
+      "sha256": "6aef3934ee9b5bbf821114c91c83a2d9d281bd3c3fbd02cbed9d64f1b4457f10"
+    },
+    {
+      "iteration": 5372,
+      "sha256": "36d77d6901e6a9453a045756c0dc541c1a08ade7f895786f7ebc55e0fad78251"
+    },
+    {
+      "iteration": 5508,
+      "sha256": "f0a446c3847183ead9ef91c12bbc3231ee86bc28270daeef7cc2949e53fe4088"
+    },
+    {
+      "iteration": 5644,
+      "sha256": "b4b9aec0366178ac5c7a5386af676e5e0b47d426cd5fb6241130ce643d002cd9"
+    },
+    {
+      "iteration": 5780,
+      "sha256": "e9ccdda27a149babe146b565a111f32497e3300aa9f7a41365f400a08544ceec"
+    },
+    {
+      "iteration": 5916,
+      "sha256": "dcb85e11bea1cf6408a2c098df793f7d3587d0745f895395703d39863283ffcc"
+    },
+    {
+      "iteration": 6052,
+      "sha256": "d3349d8b492fdb1310ed8fe9257f3bb9933d6642aae15df58d329692aaa2d754"
+    },
+    {
+      "iteration": 6120,
+      "sha256": "52685e5c6227f1739c000a92d940138b820e793e2eb7d0287ef580e455aab19f"
+    },
+    {
+      "iteration": 6188,
+      "sha256": "f0a63fbd7c7cf7c8a14ef51fb930211c7dbe4c5dfdf8c25825aedd04e4a69773"
+    },
+    {
+      "iteration": 6324,
+      "sha256": "fd339398500099ff25bdc5caa6e9db8c909ef90b57047c04d8e3e7aa17a5488a"
+    },
+    {
+      "iteration": 6800,
+      "sha256": "734fd2e6ab8114ef82a8965820125c9207f49823bdbcfc0484a46ca738eb7b59"
+    }
+  ],
+  "solver_runs": 0,
+  "probe_shape": [
+    250,
+    5,
+    350
+  ],
+  "max_y_rounding_m": 0.05000000000000071,
+  "display": {
+    "native_log": {
+      "linthresh": 0.0001,
+      "vmin": -4000,
+      "vmax": 4000
+    },
+    "late_linear": {
+      "vmin": -0.05,
+      "vmax": 0.05
+    }
+  },
+  "limits": "Fourteen frames independently reread locally; other 236 source hashes checked remotely. Scalar total Ez and coarse sampling do not identify unique path, reflection count or power fractions."
+}

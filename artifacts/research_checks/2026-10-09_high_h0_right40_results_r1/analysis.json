@@ -1,0 +1,150 @@
+{
+  "status": "PASS_ONE_RIGHT40_H0_NATIVE_EXACT501_AND_INVERSE",
+  "script_sha256": "8a2bbdf6f7a61021654e4444dd2384c8b6644a4223426c04ea46002cb8fc8940",
+  "contract_sha256": "0f17c9727d07e32bb07e49f09094961411de000c37153cd2ac0db4f870b939ae",
+  "verification_sha256": "27e809ce8d94110ef285389abfd978f7873d2fd0d4f03c7aa161fb0da06c080d",
+  "numerical_sha256": "897cab273f95643a40980418f5ba1589f06bf6f3241da7684701d4ebfbda78b4",
+  "native_sha256": [
+    "87075c0bbc8ea419b0d0d49047c0c59712ed8180c94cf0885030e2b39caff331",
+    "6d4fffa90cd5aaff1fe8a6aa082d0745f924746cac9ba974b7b2f6176dc0e2a1"
+  ],
+  "source_bitwise_equal": true,
+  "time_sample_offsets": [
+    {
+      "source_offset": 2.9483179209371056e-11,
+      "receiver_offset": 0.0
+    },
+    {
+      "source_offset": 2.9483179209371056e-11,
+      "receiver_offset": 0.0
+    }
+  ],
+  "direct_DFT_relative_L2": [
+    1.0495311111187061e-13,
+    1.0496215046339922e-13
+  ],
+  "native_metrics": {
+    "early": {
+      "bitwise_equal": true,
+      "relative_L2": 0.0,
+      "difference_maxabs_V_m": 0.0,
+      "original_maxabs_V_m": 3735.4305689438693
+    },
+    "return_packet": {
+      "bitwise_equal": false,
+      "relative_L2": 0.5005092400124516,
+      "difference_maxabs_V_m": 0.04304470771316524,
+      "original_maxabs_V_m": 0.05703061418306147
+    },
+    "late": {
+      "bitwise_equal": false,
+      "relative_L2": 0.0038711690842755937,
+      "difference_maxabs_V_m": 2.8439390319655615e-05,
+      "original_maxabs_V_m": 0.0031500338554978995
+    }
+  },
+  "frequency_relative_complex_L2": 1.3148941612526186e-05,
+  "metrics": {
+    "hann": {
+      "gates": {
+        "early": {
+          "relative_complex_L2": 8.421664052905946e-10,
+          "peak_ns": [
+            4.1583499667332005,
+            4.1583499667332005
+          ],
+          "complex_correlation_abs": 1.0,
+          "correlation_phase_deg": 3.6802241157368555e-10,
+          "maxabs_change": 1.9664365933324774e-06,
+          "original_maxabs": 3641.044337899386
+        },
+        "wide": {
+          "relative_complex_L2": 0.016217949547500148,
+          "peak_ns": [
+            330.1729873586161,
+            330.1729873586161
+          ],
+          "complex_correlation_abs": 0.9998687512686442,
+          "correlation_phase_deg": -0.04153098383403017,
+          "maxabs_change": 0.0009083083307449238,
+          "original_maxabs": 0.05185020689852414
+        },
+        "basal": {
+          "relative_complex_L2": 0.0012398995638681386,
+          "peak_ns": [
+            367.59813705921493,
+            367.59813705921493
+          ],
+          "complex_correlation_abs": 0.9999998485877377,
+          "correlation_phase_deg": -0.05723464694438734,
+          "maxabs_change": 1.2625229966434818e-05,
+          "original_maxabs": 0.009128169781536825
+        },
+        "late": {
+          "relative_complex_L2": 0.002627119219933601,
+          "peak_ns": [
+            454.0918163672655,
+            454.0918163672655
+          ],
+          "complex_correlation_abs": 0.9999966327813943,
+          "correlation_phase_deg": 0.012775902941839782,
+          "maxabs_change": 1.9270137461909385e-05,
+          "original_maxabs": 0.003981120501843162
+        }
+      },
+      "independent_inverse_relative_L2": 1.3383350058907835e-14
+    },
+    "blackman": {
+      "gates": {
+        "early": {
+          "relative_complex_L2": 3.400888072570383e-10,
+          "peak_ns": [
+            4.1583499667332005,
+            4.1583499667332005
+          ],
+          "complex_correlation_abs": 1.0,
+          "correlation_phase_deg": 1.8711547791195235e-10,
+          "maxabs_change": 8.334360389479008e-07,
+          "original_maxabs": 3651.8578163437537
+        },
+        "wide": {
+          "relative_complex_L2": 0.01652232730439808,
+          "peak_ns": [
+            328.5096473719228,
+            328.5096473719228
+          ],
+          "complex_correlation_abs": 0.9998635842997478,
+          "correlation_phase_deg": -0.014666254216293941,
+          "maxabs_change": 0.0008500232921888652,
+          "original_maxabs": 0.04979423894618516
+        },
+        "basal": {
+          "relative_complex_L2": 0.001069401231193845,
+          "peak_ns": [
+            367.59813705921493,
+            367.59813705921493
+          ],
+          "complex_correlation_abs": 0.9999997945615542,
+          "correlation_phase_deg": -0.04395104509171708,
+          "maxabs_change": 5.0436271348965054e-06,
+          "original_maxabs": 0.005122071536190208
+        },
+        "late": {
+          "relative_complex_L2": 0.00494909433166986,
+          "peak_ns": [
+            474.88356620093145,
+            474.88356620093145
+          ],
+          "complex_correlation_abs": 0.9999877618541719,
+          "correlation_phase_deg": 5.921383324463111e-05,
+          "maxabs_change": 1.809440677671326e-05,
+          "original_maxabs": 0.002132954672018621
+        }
+      },
+      "independent_inverse_relative_L2": 1.4295107767757e-14
+    }
+  },
+  "solver_runs": 1,
+  "physical_path_certified": false,
+  "limits": "One H0 finite right-extension sensitivity, including added exterior geology; not a PML-only reflection coefficient; no matched new H1/basal difference, full boundary convergence or field calibration."
+}

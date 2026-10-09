@@ -1,0 +1,95 @@
+{
+  "status": "PREPARED_APPROVED_ONE_RIGHT40_H0",
+  "groups": [
+    {
+      "id": "right40_H0",
+      "input": "right40_H0/cases/right40_H0/profile.in",
+      "input_sha256": "44033a6490d5ab92897a7767912483d9cd6a75e0abe0613f6a1b7563abf1fbcf",
+      "geometry": "right40_H0/geometries/full2d_compact.h5",
+      "geometry_sha256": "3885fd282c638f2467698ae4e422763e40db13c9e9932ac1e68099f99806db6d",
+      "material": "right40_H0/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "native_shape": [
+        10000,
+        1700,
+        1
+      ],
+      "tx_m": [
+        169.35,
+        38.95,
+        0.0
+      ],
+      "rx_m": [
+        170.65,
+        39.025000000000006,
+        0.0
+      ],
+      "expected_samples": 20352,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 1200.0,
+      "source_type": "ricker",
+      "source_frequency_Hz": 100000000.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 40.0,
+      "source_band_min_over_max": 0.1044680664254774,
+      "variant": "high",
+      "role": "H0",
+      "chainage_m": 190.0,
+      "input_tx_m": [
+        169.35,
+        38.95,
+        0.0125
+      ],
+      "input_rx_m": [
+        170.65,
+        39.025000000000006,
+        0.0125
+      ],
+      "peak_ns": 357.6180971390552,
+      "basal_gate_ns": [
+        345.6180971390552,
+        369.6180971390552
+      ],
+      "wide_gate_ns": [
+        297.6180971390552,
+        417.6180971390552
+      ],
+      "factor": "right40"
+    }
+  ],
+  "dt_s": 5.896635841874211e-11,
+  "no_retry": true,
+  "baseline_sha256": {
+    "geometry.h5": "c1e308ff73119f2c366d42efcf3526646d5fe8e76c6a692a7113a5b1148985a6",
+    "materials.json": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+    "native_H0.h5": "87075c0bbc8ea419b0d0d49047c0c59712ed8180c94cf0885030e2b39caff331",
+    "profile.in": "ad8cc2587cb15bcca41e0b1abbd421e41e01f464d9eea232434327f217d48ec8"
+  },
+  "parent_sha256": {
+    "analysis.json": "3f42882d9074b139a243889c13204edb94a718b73363ba1c170dfe558277a150",
+    "completed_verification.json": "346b85a7ba64d9e1731d0bd513cfdffd6ba3c10ccdff0b98a5b907be506663e9",
+    "execution_contract.json": "73b285960717fc6eee66bde92da97e22b211610ff3afcdcdfbf942fd5dea821b",
+    "observer_profile.in": "d010daad0d39abca616a77465515e1a4f95b3899147a25221794834c48598450"
+  },
+  "generator_sha256": "5141a809252f7b48950fdf0c2a2c1e0e5fbc9633c35572121c74c325c9cae1e0",
+  "approval_basis": "User active goal: 持续推进直到研究明白; next one190m high-loss H0 right-edge+40m A-scan control; prior stopped line/four-case pipeline not resumed; no new snapshots, H1 or retries.",
+  "gates_ns": {
+    "early": [
+      0,
+      120
+    ],
+    "wide": [
+      300,
+      450
+    ],
+    "basal": [
+      345.6180971390552,
+      369.6180971390552
+    ],
+    "late": [
+      450,
+      1100
+    ]
+  },
+  "limits": "One H0 finite right-extension sensitivity, including added exterior geology; not a PML-only reflection coefficient; no matched new H1/basal difference, full boundary convergence or field calibration."
+}
