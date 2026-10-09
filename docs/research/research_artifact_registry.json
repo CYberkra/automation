@@ -1,4 +1,30 @@
 {
+  "line9_cover_interface_controls_2026_10_09": {
+    "report": "docs/research/2026-10-09_cover_interface_control_results.md",
+    "public": "artifacts/research_checks/2026-10-09_cover_interface_results_r1",
+    "startup": "artifacts/research_checks/2026-10-09_cover_interface_launch_r1",
+    "status": "PASS_TWO_CONTROLS_COVER_INTERFACE_DEPENDENCE_AND_ROUNDTRIP_COMPATIBLE",
+    "solver_runs": 2,
+    "elapsed_s": 409.35900000002584,
+    "contract_sha256": "56fa99da0d8c6b24c51f0b0ba631fd827f8f5c22185f1e3d5b5da1744c4c5904",
+    "source_bitwise_equal": true,
+    "early_native_bitwise_equal": true,
+    "interface_difference_peak_shift_ns": {
+      "hann": {
+        "main_fixed": 22.455089820359262,
+        "first_exploratory": 10.81170991350632
+      },
+      "blackman": {
+        "main_fixed": 22.455089820359262,
+        "first_exploratory": 10.81170991350632
+      }
+    },
+    "posthoc_first_gate": true,
+    "unique_bounce_or_path_certified": false,
+    "field_parameters_certified": false,
+    "next_anchor_started": false,
+    "goal_complete": false
+  },
   "line9_high_h0_right40_2026_10_09": {
     "report": "docs/research/2026-10-09_high_h0_right40_boundary_result.md",
     "public": "artifacts/research_checks/2026-10-09_high_h0_right40_results_r1",

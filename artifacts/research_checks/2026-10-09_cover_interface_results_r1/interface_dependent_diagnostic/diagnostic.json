@@ -1,0 +1,67 @@
+{
+  "status": "PASS_EXPLORATORY_INTERFACE_DIFFERENCES_INDEPENDENT_DFT_AND_INVERSE",
+  "script_sha256": "3fe11c4c47ca954f1f020efc0225301f2b3eed9457145038b78290e472caae54",
+  "analysis_sha256": "b8594ed8c1bc86553535661b10976db11dac50d1c8990e96795521b83b6df9f2",
+  "independent_audit_sha256": "557fba874f0da7969cc5984f6def1c76157399e9a91aa57147be4211e47f60ad",
+  "numerical_sha256": "c76bbc41c85b0aae06393ef86a2551266c78f85a8af76740ee7e915891b36291",
+  "independent_difference_DFT_relative_L2": 1.6534343389888363e-12,
+  "metrics": {
+    "hann": {
+      "main_fixed": {
+        "peak_ns": [
+          327.6779773785762,
+          350.13306719893546
+        ],
+        "peak_change_ns": 22.455089820359262,
+        "complex_L2_ratio": 0.8025464792183021,
+        "direct_inverse_relative_L2": 5.673552457163912e-12
+      },
+      "first_exploratory": {
+        "peak_ns": [
+          196.27411842980706,
+          207.08582834331338
+        ],
+        "peak_change_ns": 10.81170991350632,
+        "complex_L2_ratio": 0.9057914310160416,
+        "direct_inverse_relative_L2": 1.7167236892290572e-12
+      }
+    },
+    "blackman": {
+      "main_fixed": {
+        "peak_ns": [
+          327.6779773785762,
+          350.13306719893546
+        ],
+        "peak_change_ns": 22.455089820359262,
+        "complex_L2_ratio": 0.8059390387669398,
+        "direct_inverse_relative_L2": 5.888816823417136e-12
+      },
+      "first_exploratory": {
+        "peak_ns": [
+          196.27411842980706,
+          207.08582834331338
+        ],
+        "peak_change_ns": 10.81170991350632,
+        "complex_L2_ratio": 0.9055873764595213,
+        "direct_inverse_relative_L2": 1.7216862027928325e-12
+      }
+    }
+  },
+  "residual_definition": [
+    "original_H0_minus_no_cover_contrast_H0",
+    "cover_bottom_down050_H0_minus_same_no_cover_contrast_H0"
+  ],
+  "gates_ns": {
+    "main_fixed": [
+      300,
+      450
+    ],
+    "first_exploratory": [
+      120,
+      250
+    ]
+  },
+  "first_gate_status": "Post-hoc exploratory window; not a frozen acceptance criterion",
+  "solver_runs": 0,
+  "limits": "Shared background differences contain material propagation and scattering interactions. Peak changes do not prove unique bounce count; no alignment, scaling or independent field/3D validation."
+}
