@@ -1,0 +1,356 @@
+{
+  "status": "TWO_ANCHOR_PAIRED_INTERFERENCE_DIAGNOSTIC_NOT_H0_PATH_IDENTIFICATION",
+  "script_sha256": "546b1eb98e50c5724c6d8dd0c7e8b093e7015c8d93b90e86efdac4b9d091fbdc",
+  "analysis_sha256": "0fd26f1974b95b171d7509b378192fe7aa7c2d14d665c2e5b0203110837f5c12",
+  "independent_source_audit_sha256": "0fa56e72c618a0ed1c0524d93630c31ca7dcb6cc9737a60057c5ebf343ddc44f",
+  "numerical_sha256": "b8d6ebe5665415ea177cf1b1fbadc7b4cb3efb68ddc79ae6f1d7de800e5c8654",
+  "manifest_sha256": "a5da3b5eacce651ff737a9cbb7a798632e3052c8edeabacecd6b45895afe05cb",
+  "anchors_m": [
+    190.0,
+    187.5
+  ],
+  "metrics": {
+    "hann": [
+      {
+        "chainage_m": 190.0,
+        "variant": "high",
+        "window": "basal_union",
+        "gate_ns": [
+          345.6180971390552,
+          374.6081170991351
+        ],
+        "H0_norm": 0.03767887160637147,
+        "delta_norm": 0.030316715538375814,
+        "H1_norm": 0.04934817404490596,
+        "H0_over_delta": 1.2428414799313077,
+        "H0_delta_inner_product_real": 4.822083750105354e-05,
+        "H0_delta_inner_product_imag": 3.6674232611958044e-05,
+        "H0_vs_delta_inner_phase_deg": 37.25470940572887,
+        "complex_coherence_magnitude": 0.05303562587483758,
+        "cross_term_over_incoherent_squared_norm": 0.041235526761634944,
+        "squared_norm_identity_relative_error": 1.2243364846710125e-16,
+        "H1_peak_ns": 360.11310711909516,
+        "delta_peak_ns": 356.78642714570856
+      },
+      {
+        "chainage_m": 190.0,
+        "variant": "high",
+        "window": "fixed_wide",
+        "gate_ns": [
+          300.0,
+          450.0
+        ],
+        "H0_norm": 0.2140781225185281,
+        "delta_norm": 0.03046583017170943,
+        "H1_norm": 0.21650553088773797,
+        "H0_over_delta": 7.026827147396135,
+        "H0_delta_inner_product_real": 5.85177779359469e-05,
+        "H0_delta_inner_product_imag": 1.514290489129551e-05,
+        "H0_vs_delta_inner_phase_deg": 14.508423141843892,
+        "complex_coherence_magnitude": 0.009267816960334092,
+        "cross_term_over_incoherent_squared_norm": 0.0025030269404507756,
+        "squared_norm_identity_relative_error": 4.625964312618351e-17,
+        "H1_peak_ns": 330.1729873586161,
+        "delta_peak_ns": 356.78642714570856
+      },
+      {
+        "chainage_m": 190.0,
+        "variant": "low",
+        "window": "basal_union",
+        "gate_ns": [
+          345.6180971390552,
+          374.6081170991351
+        ],
+        "H0_norm": 0.036792469975142225,
+        "delta_norm": 21.950171228604614,
+        "H1_norm": 21.95435849613456,
+        "H0_over_delta": 0.0016761814562610657,
+        "H0_delta_inner_product_real": 0.09124316294353457,
+        "H0_delta_inner_product_imag": 0.01723672182712016,
+        "H0_vs_delta_inner_phase_deg": 10.697664036384907,
+        "complex_coherence_magnitude": 0.11497878476994793,
+        "cross_term_over_incoherent_squared_norm": 0.00037875055883495885,
+        "squared_norm_identity_relative_error": 8.868077015787837e-17,
+        "H1_peak_ns": 361.7764471057884,
+        "delta_peak_ns": 361.7764471057884
+      },
+      {
+        "chainage_m": 190.0,
+        "variant": "low",
+        "window": "fixed_wide",
+        "gate_ns": [
+          300.0,
+          450.0
+        ],
+        "H0_norm": 0.1077750554334325,
+        "delta_norm": 21.97742123009522,
+        "H1_norm": 21.982027810797817,
+        "H0_over_delta": 0.004903899065548627,
+        "H0_delta_inner_product_real": 0.09544364353742478,
+        "H0_delta_inner_product_imag": 0.008712518773490375,
+        "H0_vs_delta_inner_phase_deg": 5.215757362236951,
+        "complex_coherence_magnitude": 0.04046261814657847,
+        "cross_term_over_incoherent_squared_norm": 0.0003951965071429382,
+        "squared_norm_identity_relative_error": 4.715827271469961e-17,
+        "H1_peak_ns": 361.7764471057884,
+        "delta_peak_ns": 361.7764471057884
+      },
+      {
+        "chainage_m": 187.5,
+        "variant": "high",
+        "window": "basal_union",
+        "gate_ns": [
+          340.6280771789754,
+          369.6180971390552
+        ],
+        "H0_norm": 0.04248771000145389,
+        "delta_norm": 0.03069046073778115,
+        "H1_norm": 0.04660773475426777,
+        "H0_over_delta": 1.3843946614053229,
+        "H0_delta_inner_product_real": -0.00028741447127037607,
+        "H0_delta_inner_product_imag": -4.718297413957962e-05,
+        "H0_vs_delta_inner_phase_deg": -170.67727716127536,
+        "complex_coherence_magnitude": 0.22336569667515518,
+        "cross_term_over_incoherent_squared_norm": -0.20924861667135689,
+        "squared_norm_identity_relative_error": 9.982154269810559e-17,
+        "H1_peak_ns": 353.45974717232207,
+        "delta_peak_ns": 351.79640718562877
+      },
+      {
+        "chainage_m": 187.5,
+        "variant": "high",
+        "window": "fixed_wide",
+        "gate_ns": [
+          300.0,
+          450.0
+        ],
+        "H0_norm": 0.22623841096673805,
+        "delta_norm": 0.030870389952860185,
+        "H1_norm": 0.2271248415794179,
+        "H0_over_delta": 7.328654134664624,
+        "H0_delta_inner_product_real": -0.0002755529550603261,
+        "H0_delta_inner_product_imag": -7.539259430729574e-05,
+        "H0_vs_delta_inner_phase_deg": -164.69809720708196,
+        "complex_coherence_magnitude": 0.04090463068478698,
+        "cross_term_over_incoherent_squared_norm": -0.010570382429272083,
+        "squared_norm_identity_relative_error": 3.3838170503683983e-16,
+        "H1_peak_ns": 318.5296074517631,
+        "delta_peak_ns": 351.79640718562877
+      },
+      {
+        "chainage_m": 187.5,
+        "variant": "low",
+        "window": "basal_union",
+        "gate_ns": [
+          340.6280771789754,
+          369.6180971390552
+        ],
+        "H0_norm": 0.042093720688777904,
+        "delta_norm": 23.04414428124397,
+        "H1_norm": 23.036776657973473,
+        "H0_over_delta": 0.0018266558382486226,
+        "H0_delta_inner_product_real": -0.17063937337959012,
+        "H0_delta_inner_product_imag": -0.012246489846386294,
+        "H0_vs_delta_inner_phase_deg": -175.89502011920314,
+        "complex_coherence_magnitude": 0.17636683966428163,
+        "cross_term_over_incoherent_squared_norm": -0.000642667921417821,
+        "squared_norm_identity_relative_error": 6.778160001618029e-17,
+        "H1_peak_ns": 356.78642714570856,
+        "delta_peak_ns": 356.78642714570856
+      },
+      {
+        "chainage_m": 187.5,
+        "variant": "low",
+        "window": "fixed_wide",
+        "gate_ns": [
+          300.0,
+          450.0
+        ],
+        "H0_norm": 0.09932543902682354,
+        "delta_norm": 23.095914612796903,
+        "H1_norm": 23.088865555487054,
+        "H0_over_delta": 0.004300563138200626,
+        "H0_delta_inner_product_real": -0.16771235254341466,
+        "H0_delta_inner_product_imag": -0.01433867811859077,
+        "H0_vs_delta_inner_phase_deg": -175.11334280073024,
+        "complex_coherence_magnitude": 0.07337546371723352,
+        "cross_term_over_incoherent_squared_norm": -0.0006288060100065762,
+        "squared_norm_identity_relative_error": 9.288378376394843e-17,
+        "H1_peak_ns": 356.78642714570856,
+        "delta_peak_ns": 356.78642714570856
+      }
+    ],
+    "blackman": [
+      {
+        "chainage_m": 190.0,
+        "variant": "high",
+        "window": "basal_union",
+        "gate_ns": [
+          345.6180971390552,
+          374.6081170991351
+        ],
+        "H0_norm": 0.01779032304532701,
+        "delta_norm": 0.03152836632766082,
+        "H1_norm": 0.03694037818797551,
+        "H0_over_delta": 0.564264030062319,
+        "H0_delta_inner_product_real": 2.702903166119358e-05,
+        "H0_delta_inner_product_imag": 5.146537562655198e-05,
+        "H0_vs_delta_inner_phase_deg": 62.29205402633844,
+        "complex_coherence_magnitude": 0.10363944535340454,
+        "cross_term_over_incoherent_squared_norm": 0.041248899212989285,
+        "squared_norm_identity_relative_error": 3.9726252881233996e-17,
+        "H1_peak_ns": 359.2814371257485,
+        "delta_peak_ns": 356.78642714570856
+      },
+      {
+        "chainage_m": 190.0,
+        "variant": "high",
+        "window": "fixed_wide",
+        "gate_ns": [
+          300.0,
+          450.0
+        ],
+        "H0_norm": 0.20527426869953308,
+        "delta_norm": 0.031617984098154035,
+        "H1_norm": 0.20781873904876974,
+        "H0_over_delta": 6.4923262679329925,
+        "H0_delta_inner_product_real": 2.570299563070349e-05,
+        "H0_delta_inner_product_imag": 4.929758501885882e-05,
+        "H0_vs_delta_inner_phase_deg": 62.46316300039842,
+        "complex_coherence_magnitude": 0.008565909802389176,
+        "cross_term_over_incoherent_squared_norm": 0.0011916852432848248,
+        "squared_norm_identity_relative_error": 4.0636906885005153e-16,
+        "H1_peak_ns": 328.5096473719228,
+        "delta_peak_ns": 356.78642714570856
+      },
+      {
+        "chainage_m": 190.0,
+        "variant": "low",
+        "window": "basal_union",
+        "gate_ns": [
+          345.6180971390552,
+          374.6081170991351
+        ],
+        "H0_norm": 0.01660349159032169,
+        "delta_norm": 23.545090379241184,
+        "H1_norm": 23.548086924122696,
+        "H0_over_delta": 0.0007051785031566649,
+        "H0_delta_inner_product_real": 0.07042057173479176,
+        "H0_delta_inner_product_imag": 0.001469854008211317,
+        "H0_vs_delta_inner_phase_deg": 1.1957330413064182,
+        "complex_coherence_magnitude": 0.1801749210643882,
+        "cross_term_over_incoherent_squared_norm": 0.0002540555008315314,
+        "squared_norm_identity_relative_error": 3.2790389643937933e-16,
+        "H1_peak_ns": 361.7764471057884,
+        "delta_peak_ns": 361.7764471057884
+      },
+      {
+        "chainage_m": 190.0,
+        "variant": "low",
+        "window": "fixed_wide",
+        "gate_ns": [
+          300.0,
+          450.0
+        ],
+        "H0_norm": 0.0800298318457057,
+        "delta_norm": 23.583257013452403,
+        "H1_norm": 23.58651928475522,
+        "H0_over_delta": 0.0033935020849772757,
+        "H0_delta_inner_product_real": 0.07373791679623298,
+        "H0_delta_inner_product_imag": 0.0011457461683909984,
+        "H0_vs_delta_inner_phase_deg": 0.8901951724048376,
+        "complex_coherence_magnitude": 0.03907397511593439,
+        "cross_term_over_incoherent_squared_norm": 0.0002651601709703954,
+        "squared_norm_identity_relative_error": 6.134601851471395e-16,
+        "H1_peak_ns": 361.7764471057884,
+        "delta_peak_ns": 361.7764471057884
+      },
+      {
+        "chainage_m": 187.5,
+        "variant": "high",
+        "window": "basal_union",
+        "gate_ns": [
+          340.6280771789754,
+          369.6180971390552
+        ],
+        "H0_norm": 0.022870525368578618,
+        "delta_norm": 0.03190379096129503,
+        "H1_norm": 0.030413959979393886,
+        "H0_over_delta": 0.7168591781561204,
+        "H0_delta_inner_product_real": -0.00030795192335431786,
+        "H0_delta_inner_product_imag": -2.336848647637329e-05,
+        "H0_vs_delta_inner_phase_deg": -175.66050923954495,
+        "complex_coherence_magnitude": 0.423263973164616,
+        "cross_term_over_incoherent_squared_norm": -0.3997006471595329,
+        "squared_norm_identity_relative_error": 0.0,
+        "H1_peak_ns": 353.45974717232207,
+        "delta_peak_ns": 351.79640718562877
+      },
+      {
+        "chainage_m": 187.5,
+        "variant": "high",
+        "window": "fixed_wide",
+        "gate_ns": [
+          300.0,
+          450.0
+        ],
+        "H0_norm": 0.21199517194139658,
+        "delta_norm": 0.0320357033233297,
+        "H1_norm": 0.21302346085966634,
+        "H0_over_delta": 6.6174658256063035,
+        "H0_delta_inner_product_real": -0.0002946221686264456,
+        "H0_delta_inner_product_imag": -3.228764584409979e-05,
+        "H0_vs_delta_inner_phase_deg": -173.74591250874803,
+        "complex_coherence_magnitude": 0.0436412904594557,
+        "cross_term_over_incoherent_squared_norm": -0.01281851006977304,
+        "squared_norm_identity_relative_error": 2.341431607122245e-16,
+        "H1_peak_ns": 317.6979374584165,
+        "delta_peak_ns": 351.79640718562877
+      },
+      {
+        "chainage_m": 187.5,
+        "variant": "low",
+        "window": "basal_union",
+        "gate_ns": [
+          340.6280771789754,
+          369.6180971390552
+        ],
+        "H0_norm": 0.02099886772716268,
+        "delta_norm": 24.717416303231737,
+        "H1_norm": 24.710824185364118,
+        "H0_over_delta": 0.0008495575536516386,
+        "H0_delta_inner_product_real": -0.16313886986780818,
+        "H0_delta_inner_product_imag": -0.017501542177373115,
+        "H0_vs_delta_inner_phase_deg": -173.8767265547068,
+        "complex_coherence_magnitude": 0.3161137420034301,
+        "cross_term_over_incoherent_squared_norm": -0.000534048853626515,
+        "squared_norm_identity_relative_error": 1.390904151683026e-16,
+        "H1_peak_ns": 356.78642714570856,
+        "delta_peak_ns": 356.78642714570856
+      },
+      {
+        "chainage_m": 187.5,
+        "variant": "low",
+        "window": "fixed_wide",
+        "gate_ns": [
+          300.0,
+          450.0
+        ],
+        "H0_norm": 0.06305870611741882,
+        "delta_norm": 24.783434699599653,
+        "H1_norm": 24.77711957067853,
+        "H0_over_delta": 0.002544389302038004,
+        "H0_delta_inner_product_real": -0.15847884501821574,
+        "H0_delta_inner_product_imag": -0.01702530777152303,
+        "H0_vs_delta_inner_phase_deg": -173.86825821920854,
+        "complex_coherence_magnitude": 0.10198974715799318,
+        "cross_term_over_incoherent_squared_norm": -0.0005160306440867563,
+        "squared_norm_identity_relative_error": 1.1501797365901176e-16,
+        "H1_peak_ns": 356.78642714570856,
+        "delta_peak_ns": 356.78642714570856
+      }
+    ]
+  },
+  "calls_solver": false,
+  "limits": "Stored complex-array identity within fixed declared gates,not unique multiple/PML/path attribution. Phase alone does not measure interference when coherence is small; report actual cross term. Not a certified evaluation direction cosine; FDTD error bound remains unresolved. H0 retains cover interfaces. Low mud is not field calibrated. No3D/field/training certification."
+}

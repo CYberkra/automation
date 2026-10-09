@@ -1,0 +1,171 @@
+{
+  "status": "PASS_DIRECT_INVERSE_AND_EXPLICIT_COMPLEX_INTERFERENCE_SUMS",
+  "auditor_sha256": "f30c8b366088dcc09728144498cfe7776b9f0c19b4410afe9eaa14b76f20c887",
+  "analysis_sha256": "02018d77bd77e39f8ed882cab75e1b68ada663d2e6c02d8111c46925d36c7d9d",
+  "source_native_DFT_audit_sha256": "0fa56e72c618a0ed1c0524d93630c31ca7dcb6cc9737a60057c5ebf343ddc44f",
+  "scalar_checks": 192,
+  "max_scaled_error": 1.6707754624256665e-10,
+  "phase_method_agreement": [
+    {
+      "window": "hann",
+      "chainage_m": 190.0,
+      "variant": "high",
+      "gate": "basal_union",
+      "observed_phase_difference_deg": 6.981813527318083e-08,
+      "CPU_inverse_agreement_phase_envelope_deg": 3.454411171422065e-07,
+      "inverse_H0_difference_norm": 1.12179169398735e-11,
+      "inverse_delta_difference_norm": 6.656208514022662e-13
+    },
+    {
+      "window": "hann",
+      "chainage_m": 190.0,
+      "variant": "high",
+      "gate": "fixed_wide",
+      "observed_phase_difference_deg": 1.115271430762732e-07,
+      "CPU_inverse_agreement_phase_envelope_deg": 1.4202164020840225e-06,
+      "inverse_H0_difference_norm": 3.784232846690608e-11,
+      "inverse_delta_difference_norm": 1.6031442685775706e-12
+    },
+    {
+      "window": "hann",
+      "chainage_m": 190.0,
+      "variant": "low",
+      "gate": "basal_union",
+      "observed_phase_difference_deg": 1.775804214787513e-08,
+      "CPU_inverse_agreement_phase_envelope_deg": 1.5072521181886065e-07,
+      "inverse_H0_difference_norm": 1.1124470208390681e-11,
+      "inverse_delta_difference_norm": 7.77954527242183e-13
+    },
+    {
+      "window": "hann",
+      "chainage_m": 190.0,
+      "variant": "low",
+      "gate": "fixed_wide",
+      "observed_phase_difference_deg": 1.8121512290747432e-08,
+      "CPU_inverse_agreement_phase_envelope_deg": 4.974811817177185e-07,
+      "inverse_H0_difference_norm": 3.781956909202027e-11,
+      "inverse_delta_difference_norm": 1.6777053750088285e-12
+    },
+    {
+      "window": "hann",
+      "chainage_m": 187.5,
+      "variant": "high",
+      "gate": "basal_union",
+      "observed_phase_difference_deg": 2.407887222943828e-09,
+      "CPU_inverse_agreement_phase_envelope_deg": 8.919773694799464e-08,
+      "inverse_H0_difference_norm": 1.4082087042002916e-11,
+      "inverse_delta_difference_norm": 4.977675918113713e-13
+    },
+    {
+      "window": "hann",
+      "chainage_m": 187.5,
+      "variant": "high",
+      "gate": "fixed_wide",
+      "observed_phase_difference_deg": 3.1436400149686965e-09,
+      "CPU_inverse_agreement_phase_envelope_deg": 3.0607595660450014e-07,
+      "inverse_H0_difference_norm": 3.7869376283330895e-11,
+      "inverse_delta_difference_norm": 1.5679420275178706e-12
+    },
+    {
+      "window": "hann",
+      "chainage_m": 187.5,
+      "variant": "low",
+      "gate": "basal_union",
+      "observed_phase_difference_deg": 1.0878693501581438e-08,
+      "CPU_inverse_agreement_phase_envelope_deg": 1.077397458273537e-07,
+      "inverse_H0_difference_norm": 1.395547726679236e-11,
+      "inverse_delta_difference_norm": 7.53501686130413e-13
+    },
+    {
+      "window": "hann",
+      "chainage_m": 187.5,
+      "variant": "low",
+      "gate": "fixed_wide",
+      "observed_phase_difference_deg": 1.0869058542084531e-08,
+      "CPU_inverse_agreement_phase_envelope_deg": 2.970479218451109e-07,
+      "inverse_H0_difference_norm": 3.774409600981914e-11,
+      "inverse_delta_difference_norm": 1.6725567628403301e-12
+    },
+    {
+      "window": "blackman",
+      "chainage_m": 190.0,
+      "variant": "high",
+      "gate": "basal_union",
+      "observed_phase_difference_deg": 2.9320887051653696e-08,
+      "CPU_inverse_agreement_phase_envelope_deg": 3.4702466891813674e-07,
+      "inverse_H0_difference_norm": 1.078364747010272e-11,
+      "inverse_delta_difference_norm": 6.774377187740171e-13
+    },
+    {
+      "window": "blackman",
+      "chainage_m": 190.0,
+      "variant": "high",
+      "gate": "fixed_wide",
+      "observed_phase_difference_deg": 3.6579848483597743e-08,
+      "CPU_inverse_agreement_phase_envelope_deg": 1.5885884894888756e-06,
+      "inverse_H0_difference_norm": 3.85816545232435e-11,
+      "inverse_delta_difference_norm": 1.555978044583146e-12
+    },
+    {
+      "window": "blackman",
+      "chainage_m": 190.0,
+      "variant": "low",
+      "gate": "basal_union",
+      "observed_phase_difference_deg": 2.3040313434918858e-08,
+      "CPU_inverse_agreement_phase_envelope_deg": 2.0912561923049403e-07,
+      "inverse_H0_difference_norm": 1.0917085356173831e-11,
+      "inverse_delta_difference_norm": 7.56545074126089e-13
+    },
+    {
+      "window": "blackman",
+      "chainage_m": 190.0,
+      "variant": "low",
+      "gate": "fixed_wide",
+      "observed_phase_difference_deg": 1.5924957574853235e-08,
+      "CPU_inverse_agreement_phase_envelope_deg": 7.099234557686171e-07,
+      "inverse_H0_difference_norm": 3.871352041426164e-11,
+      "inverse_delta_difference_norm": 1.6934104761919412e-12
+    },
+    {
+      "window": "blackman",
+      "chainage_m": 187.5,
+      "variant": "high",
+      "gate": "basal_union",
+      "observed_phase_difference_deg": 1.941288019224885e-09,
+      "CPU_inverse_agreement_phase_envelope_deg": 8.545576635832823e-08,
+      "inverse_H0_difference_norm": 1.400630402753945e-11,
+      "inverse_delta_difference_norm": 5.997283132477049e-13
+    },
+    {
+      "window": "blackman",
+      "chainage_m": 187.5,
+      "variant": "high",
+      "gate": "fixed_wide",
+      "observed_phase_difference_deg": 1.4663044112239731e-09,
+      "CPU_inverse_agreement_phase_envelope_deg": 3.0367695763007213e-07,
+      "inverse_H0_difference_norm": 3.875023737461717e-11,
+      "inverse_delta_difference_norm": 1.5435413821695844e-12
+    },
+    {
+      "window": "blackman",
+      "chainage_m": 187.5,
+      "variant": "low",
+      "gate": "basal_union",
+      "observed_phase_difference_deg": 5.793367563455831e-09,
+      "CPU_inverse_agreement_phase_envelope_deg": 1.2032308279040156e-07,
+      "inverse_H0_difference_norm": 1.3937851377972186e-11,
+      "inverse_delta_difference_norm": 7.468265727603818e-13
+    },
+    {
+      "window": "blackman",
+      "chainage_m": 187.5,
+      "variant": "low",
+      "gate": "fixed_wide",
+      "observed_phase_difference_deg": 6.212701464392012e-09,
+      "CPU_inverse_agreement_phase_envelope_deg": 3.450614161415193e-07,
+      "inverse_H0_difference_norm": 3.8706924350720815e-11,
+      "inverse_delta_difference_norm": 1.724510548217473e-12
+    }
+  ],
+  "limits": "Reuses hash-bound independently raw-DFT-audited spectra; independently checks inverse/sums/windows. Phase envelope uses actual FFT/direct-sum array discrepancy plus dot-rounding envelope,not a FDTD error certificate or evaluation direction bound. No newnative3D/field or path isolation."
+}

@@ -1,0 +1,214 @@
+{
+  "status": "CPU_FREE_SPACE_DIMENSIONALITY_DIAGNOSTIC_NOT_3D_GEOLOGY_OR_ANTENNA_VALIDATION",
+  "script_sha256": "94469cd8edaa6c6b4fa841ccb650bf37b6ab315b8887ab3e3669d78b36bc1596",
+  "analysis_sha256": "b6715ea50c736144aa0e7aa0e34527b253315744f6b83daa2fa98b526cc8919e",
+  "independent_source_audit_sha256": "6aaaf63b04f4541637d0266dc86b8ff2498451990153484defd2538d52eb6dc4",
+  "response_sha256": "403224d3d17fd0ad63e8a1fe3384b859500ea1465094266ef50859df3c4afb94",
+  "numerical_sha256": "307f1f211bed87a8c0fd6ae4ec3b10e1b96c95d9b288bc49ff9c0b17b5153867",
+  "native": {
+    "high_x19000_H0": "87075c0bbc8ea419b0d0d49047c0c59712ed8180c94cf0885030e2b39caff331",
+    "low_x19000_H0": "57b9c072b713b98f345aaf838118a81edc4d84a457ad12e0c38dcb847d73ef8e"
+  },
+  "source_tx_m": [
+    169.35000000000002,
+    38.95,
+    0.0
+  ],
+  "receiver_m": [
+    170.65,
+    39.025000000000006,
+    0.0
+  ],
+  "air_distance_m": 1.302161664310525,
+  "air_travel_time_ns": 4.3435437735746,
+  "response_columns": [
+    "native_high_H0",
+    "native_low_H0",
+    "analytic_2D_line_reference",
+    "analytic_3D_point_dipole"
+  ],
+  "line_integral_orders": [
+    256,
+    512
+  ],
+  "line_integral_contour_angle_rad": -0.7853981633974483,
+  "line_integral_tail_exponent": 40.0,
+  "integrated_3D_vs_Hankel_relative_L2": [
+    2.9964016970707937e-14,
+    9.765663107621964e-14
+  ],
+  "own_early_gate_ns": [
+    0.0,
+    20.0
+  ],
+  "metrics": {
+    "hann": {
+      "early": {
+        "gate_ns": [
+          0.0,
+          20.0
+        ],
+        "norm_over_own_early": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "peak_ns": [
+          4.1583499667332005,
+          4.1583499667332005,
+          4.1583499667332005,
+          3.32667997338656
+        ]
+      },
+      "wide": {
+        "gate_ns": [
+          300.0,
+          450.0
+        ],
+        "norm_over_own_early": [
+          1.7787577045690352e-05,
+          8.954941680885695e-06,
+          6.268212793577923e-06,
+          8.683604320237408e-06
+        ],
+        "peak_ns": [
+          330.1729873586161,
+          324.3512974051896,
+          301.0645375914837,
+          305.22288755821694
+        ]
+      },
+      "inherited_basal": {
+        "gate_ns": [
+          345.6180971390552,
+          374.6081170991351
+        ],
+        "norm_over_own_early": [
+          3.130706789690765e-06,
+          3.057056399536135e-06,
+          2.7301842434194455e-06,
+          3.7841858800576564e-06
+        ],
+        "peak_ns": [
+          367.59813705921493,
+          360.9447771124418,
+          347.63805721889554,
+          351.79640718562877
+        ]
+      },
+      "late": {
+        "gate_ns": [
+          450.0,
+          1100.0
+        ],
+        "norm_over_own_early": [
+          2.71131317136981e-06,
+          2.72112402497795e-06,
+          2.346378444536393e-06,
+          3.3254856670138714e-06
+        ],
+        "peak_ns": [
+          454.0918163672655,
+          454.0918163672655,
+          454.0918163672655,
+          451.59680638722557
+        ]
+      }
+    },
+    "blackman": {
+      "early": {
+        "gate_ns": [
+          0.0,
+          20.0
+        ],
+        "norm_over_own_early": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "peak_ns": [
+          4.1583499667332005,
+          4.1583499667332005,
+          4.1583499667332005,
+          3.32667997338656
+        ]
+      },
+      "wide": {
+        "gate_ns": [
+          300.0,
+          450.0
+        ],
+        "norm_over_own_early": [
+          1.621427852418202e-05,
+          6.321425440234317e-06,
+          2.5483684003451123e-06,
+          3.558901820302404e-06
+        ],
+        "peak_ns": [
+          328.5096473719228,
+          325.1829673985363,
+          301.0645375914837,
+          305.22288755821694
+        ]
+      },
+      "inherited_basal": {
+        "gate_ns": [
+          345.6180971390552,
+          374.6081170991351
+        ],
+        "norm_over_own_early": [
+          1.4052285009687733e-06,
+          1.3114826273548888e-06,
+          1.110208508617264e-06,
+          1.551237968731914e-06
+        ],
+        "peak_ns": [
+          367.59813705921493,
+          360.9447771124418,
+          347.63805721889554,
+          351.79640718562877
+        ]
+      },
+      "late": {
+        "gate_ns": [
+          450.0,
+          1100.0
+        ],
+        "norm_over_own_early": [
+          1.291964759954644e-06,
+          1.290479336484174e-06,
+          9.551214454676763e-07,
+          1.3645857504772518e-06
+        ],
+        "peak_ns": [
+          474.88356620093145,
+          474.88356620093145,
+          454.0918163672655,
+          451.59680638722557
+        ]
+      }
+    }
+  },
+  "native_H0_vs_2D_direct_unfitted_early_relative_L2": {
+    "hann": [
+      0.00032107124096221755,
+      0.0003210726066458618
+    ],
+    "blackman": [
+      0.0002218518588655237,
+      0.00022185185447550632
+    ]
+  },
+  "calls_solver": false,
+  "calls_CUDA": false,
+  "production_data_changed": false,
+  "primary_sources": [
+    "https://docs.gprmax.com/en/latest/input_hash_cmds.html#hertzian-dipole",
+    "https://docs.gprmax.com/en/latest/comparisons_analytical.html#hertzian-dipole-in-free-space",
+    "https://raw.githubusercontent.com/gprMax/gprMax/master/testing/analytical_solutions.py"
+  ],
+  "reading": "Official source semantics and analytical-comparison Hertzian sections; official analytical_solutions.py Hertzian function,not other validation cases. General3D frequency formula derived from its complete time-domain radiation/induction/electrostatic form; line integral cross-check independent of native solver.",
+  "limits": "Infinite2D line versus infinitesimal3D point source distributions differ. Absolute2D/3D ratio has no instrument meaning. Shape normalization is CPU diagnostic only,not amplitude fitting,production normalization or field calibration.3D has no ground,layers,antenna/cables/ports. Native H0 includes real cover reflections. Finite-band tails and complex interference remain; mathematical checks are not3D FDTD convergence or unique late-event attribution."
+}

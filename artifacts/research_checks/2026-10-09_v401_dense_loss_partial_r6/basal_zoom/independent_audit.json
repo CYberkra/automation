@@ -1,0 +1,17 @@
+{
+  "status": "PASS_RAW_NATIVE_DFT_PADDED_IFFT_COMMON_GATES",
+  "auditor_sha256": "5d59dda18dad854b6baf12911b5732fb9799c6fbdebb6111b7f1dcf0f1728849",
+  "comparison_sha256": "dc0ba99b7db1faa0dd23897bebf99d8bf4daeefe7ac5792c5c23a915406aaab5",
+  "analysis_sha256": "1f69dd339198e18652b28203c907fdef5dd82538db025b6b47fce963d756fd36",
+  "checks": {
+    "hann": {
+      "scalar_checks": 24,
+      "max_scaled_error": 2.936873610263241e-11
+    },
+    "blackman": {
+      "scalar_checks": 24,
+      "max_scaled_error": 5.629652299887766e-11
+    }
+  },
+  "limits": "Independent arithmetic/source audit,not physical error budget or validation of the local template."
+}

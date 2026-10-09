@@ -1,0 +1,118 @@
+{
+  "status": "PARTIAL_NOT_FULL_LINE",
+  "script_sha256": "2f28fe4c7cd6cebc8684116a47858b401b2639d3908130cb7bea6116eef9873c",
+  "analysis_sha256": "1f69dd339198e18652b28203c907fdef5dd82538db025b6b47fce963d756fd36",
+  "independent_audit_sha256": "37eb5cc8b1ed20ca41679a6ef468393671057258d1f91b6e17b725ac73f6e2a6",
+  "numerical_sha256": "df0ac58beb3318553859aa9e26668b5239c528bedcee5d43d502670ffa5e8c18",
+  "view_gate_ns": [
+    336.46972721224216,
+    374.6081170991351
+  ],
+  "metrics": {
+    "hann": [
+      {
+        "chainage_m": 190.0,
+        "common_gate_ns": [
+          345.6180971390552,
+          374.6081170991351
+        ],
+        "variants": {
+          "high": {
+            "H0_norm": 0.03767887160604208,
+            "delta_norm": 0.030316715538461526,
+            "H1_norm": 0.04934817404465059,
+            "H0_over_delta": 1.242841479916929,
+            "H1_vs_delta_correlation": 0.6470393084770638
+          },
+          "low": {
+            "H0_norm": 0.03679246997461112,
+            "delta_norm": 21.95017122860456,
+            "H1_norm": 21.954358496135274,
+            "H0_over_delta": 0.001676181456236874,
+            "H1_vs_delta_correlation": 0.9999986143071512
+          }
+        },
+        "low_over_high_delta_norm": 724.0286699513116,
+        "low_over_high_H0_norm": 0.9764748360646549
+      },
+      {
+        "chainage_m": 187.5,
+        "common_gate_ns": [
+          340.6280771789754,
+          369.6180971390552
+        ],
+        "variants": {
+          "high": {
+            "H0_norm": 0.042487710002801986,
+            "delta_norm": 0.030690460737772398,
+            "H1_norm": 0.04660773475545382,
+            "H0_over_delta": 1.3843946614496432,
+            "H1_vs_delta_correlation": 0.45874059532724903
+          },
+          "low": {
+            "H0_norm": 0.04209372069027162,
+            "delta_norm": 23.044144281244144,
+            "H1_norm": 23.036776657971647,
+            "H0_over_delta": 0.0018266558383134284,
+            "H1_vs_delta_correlation": 0.9999983825228316
+          }
+        },
+        "low_over_high_delta_norm": 750.856902349546,
+        "low_over_high_H0_norm": 0.9907269816964862
+      }
+    ],
+    "blackman": [
+      {
+        "chainage_m": 190.0,
+        "common_gate_ns": [
+          345.6180971390552,
+          374.6081170991351
+        ],
+        "variants": {
+          "high": {
+            "H0_norm": 0.01779032304566222,
+            "delta_norm": 0.03152836632789645,
+            "H1_norm": 0.03694037818838826,
+            "H0_over_delta": 0.5642640300687339,
+            "H1_vs_delta_correlation": 0.8778137217467012
+          },
+          "low": {
+            "H0_norm": 0.01660349159042081,
+            "delta_norm": 23.54509037924108,
+            "H1_norm": 23.548086924123208,
+            "H0_over_delta": 0.0007051785031608779,
+            "H1_vs_delta_correlation": 0.9999997594943795
+          }
+        },
+        "low_over_high_delta_norm": 746.7906879275338,
+        "low_over_high_H0_norm": 0.9332878075234956
+      },
+      {
+        "chainage_m": 187.5,
+        "common_gate_ns": [
+          340.6280771789754,
+          369.6180971390552
+        ],
+        "variants": {
+          "high": {
+            "H0_norm": 0.022870525370713844,
+            "delta_norm": 0.03190379096117093,
+            "H1_norm": 0.030413959980587713,
+            "H0_over_delta": 0.7168591782258359,
+            "H1_vs_delta_correlation": 0.7320100762106578
+          },
+          "low": {
+            "H0_norm": 0.02099886772935776,
+            "delta_norm": 24.717416303231754,
+            "H1_norm": 24.7108241853627,
+            "H0_over_delta": 0.0008495575537404449,
+            "H1_vs_delta_correlation": 0.9999996750139867
+          }
+        },
+        "low_over_high_delta_norm": 774.7485661912254,
+        "low_over_high_H0_norm": 0.9181628925869461
+      }
+    ]
+  },
+  "limits": "Same predeclared union gate within each high/low pair. Absolute H0 change distinguished from delta growth; no claim H0 is noise,phase-matched clean,continuous H0 or unique mechanism."
+}

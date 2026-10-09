@@ -1,0 +1,20 @@
+{
+  "status": "PASS_INDEPENDENT_DYADIC_SCALAR_GREEN_NATIVE_DFT_AND_DIRECT_INVERSE",
+  "auditor_sha256": "7b4209995c5b3c03ef2d375d593d46f0c96cfe643026ad7890224e6f771738c8",
+  "analysis_sha256": "e110548dc05a90ff8f321d1d2059c9dc914d5380cef8685d27f7e9b73343d0c4",
+  "transverse_dyadic_vs_radiation_expression_relative_L2": 4.430286752248379e-16,
+  "adaptive_scalar3D_integral_vs_line_Green_relative_errors": [
+    1.1084476950633869e-16,
+    8.468209508715484e-17,
+    5.417895369070506e-16
+  ],
+  "native_DFT_relative_L2": [
+    1.0494540344052886e-13,
+    1.0495158431288147e-13
+  ],
+  "direct_inverse_scalar_checks": 68,
+  "max_scaled_metric_error": 2.434088934371529e-16,
+  "calls_solver": false,
+  "calls_CUDA": false,
+  "limits": "Mathematical/source/data consistency checks only. No3Dnative geology or antenna/port response. Does not attribute actual late H0 solely to direct wave or validate field calibration."
+}
