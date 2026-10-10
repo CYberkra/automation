@@ -1,4 +1,22 @@
 {
+  "line9_paper_mudstone_preparation_2026_10_10": {
+    "status": "USER_APPROVED_MATERIAL_APPLIED_INPUT_PREPARED_NO_FDTD",
+    "report": "docs/research/2026-10-10_paper_mudstone_adoption.md",
+    "design": "configs/research/mudstone_design_v0_2.json",
+    "material_database": "configs/research/line9_materials_v0_2.json",
+    "public": "artifacts/research_checks/2026-10-10_paper_mudstone_preparation_r1",
+    "private_package": "artifacts/local_checks/2026-10-10_line9_paper_mudstone_package_r1",
+    "selected_mudstone": {"model": "constant", "epsilon_r": 18, "sigma_S_m": 0.006, "mu_r": 1, "magnetic_loss": 0, "debye_poles": 0},
+    "official_material_catalogue_entries": 4,
+    "official_input_object_count": 13,
+    "geometry_datasets_identical": true,
+    "geometry_metadata_changed": "MaterialDatabase binding only",
+    "unchanged_materials": ["air", "cover", "sandstone"],
+    "calls_solver": false,
+    "calls_training": false,
+    "execution_authorized": false,
+    "notes": "Current future material selection; old v0.1 inputs/results/runners remain historical. New arrival windows and explicit solver-batch permission required. Not site calibration."
+  },
   "line9_official_impulse_execution_2026_10_10": {
     "status": "TWO_IMPULSE_SOLVES_COMPLETE_TIME_WINDOW_CONVERGENCE_OPEN",
     "report": "docs/research/2026-10-10_official_impulse_execution.md",

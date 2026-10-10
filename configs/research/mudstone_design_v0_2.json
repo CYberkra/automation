@@ -1,0 +1,54 @@
+{
+  "schema": "research-material-design/1",
+  "id": "mudstone_wang2026_constant18_sigma6mS_v0_2",
+  "date": "2026-10-10",
+  "status": "USER_APPROVED_CURRENT_SIMULATION_MATERIAL_NOT_SITE_CALIBRATION",
+  "authorization": "用户：泥岩优先改了，我觉得就直接应用为论文的怎么样？电导率你再看看要不要敲定",
+  "report": "docs/research/2026-10-10_paper_mudstone_adoption.md",
+  "supersedes_for_future_preparation": "configs/research/mudstone_design_v0_1.json",
+  "material_database": "configs/research/line9_materials_v0_2.json",
+  "calls_solver": false,
+  "calls_training": false,
+  "execution_authorized": false,
+  "site_materials_fitted": false,
+  "band_hz": {"min": 20000000, "max": 170000000, "center": 95000000, "step": 300000, "count": 501},
+  "materials": {
+    "mudstone": {
+      "model": "constant",
+      "epsilon_infinity": 18.0,
+      "sigma_DC_S_m": 0.006,
+      "mu_r": 1.0,
+      "sigma_magnetic": 0.0,
+      "debye": [],
+      "averagable": true,
+      "geological_role": "Mudstone; uniform isotropic research assignment",
+      "provenance": "Wang et al. 2026, DOI10.1109/MGRS.2026.3702334, Table1, PDFpage9 (printedpage10): mudstone epsilon18 and conductivity0.006S/m; no Debye poles given",
+      "conductivity_decision": "Adopt the complete paper constitutive law, including6mS/m. Do not retain the previous Debye pole. Conductivity is fixed for this simulation version, not measured at the site."
+    }
+  },
+  "sources": [
+    {
+      "id": "wang2026_table1",
+      "doi": "10.1109/MGRS.2026.3702334",
+      "url": "https://doi.org/10.1109/MGRS.2026.3702334",
+      "pdf_sha256": "1aaa254b56e27b236e4702be5d86bc282ee75b57bcb946d7161f164861b950d0",
+      "reading_scope": "User-provided full paper, numerical experiments/Table1 and limitations; source implementation not obtained"
+    },
+    {
+      "id": "romhild2019_conductivity_order_only",
+      "doi": "10.1002/nsg.12073",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/nsg.12073",
+      "reading_scope": "Table2 ordinary intact LA/OL mudstones and conditioning/measurement methods rechecked",
+      "intact_mudstone_sigma0_range_S_m": [0.00049, 0.00883],
+      "limits": "NaCl-saturated oriented specimens; low-frequency SIP, not20-170MHz site spectra. Order-of-magnitude support only."
+    }
+  ],
+  "preserved": ["air", "cover", "sandstone", "voxel geometry", "source and receiver", "official impulse", "official direct SFCW", "grid and PML", "record duration", "historical frozen inputs and outputs"],
+  "limits": [
+    "Non-dispersive here means constant dielectric real part with finite ohmic loss; effective complex permittivity remains18-j*sigma/(omega*epsilon0).",
+    "Old materials/results remain historical; do not attach new material metadata to old raw output.",
+    "Changingepsilon and losses changes arrival times and reflection coefficients. Old target windows must be recalculated before future acceptance, without fitting peaks.",
+    "At170MHz mudstone wavelength is about0.416m, about16.6cells at0.025m: initial resolution check only, not convergence.",
+    "No new solver batch, new observations or processing changes are authorized by this material-selection instruction."
+  ]
+}

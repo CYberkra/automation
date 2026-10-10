@@ -1,0 +1,99 @@
+{
+  "status": "MATERIAL_APPLIED_INPUT_PREPARED_NO_FDTD",
+  "solver_version": "4.0.1",
+  "new_solves": 0,
+  "execution_authorized": false,
+  "material_design": "configs\\research\\mudstone_design_v0_2.json",
+  "material_database": "configs\\research\\line9_materials_v0_2.json",
+  "material_design_sha256": "a1f9636ecc7a7e3e8578fccd46da4bff307678ed2fdcddcce611ce848d3e0614",
+  "material_database_sha256": "e23fca3d22e77b18b81fe62b77773bc9121c3c17c5825cfe0e59298a00fbd87e",
+  "private_package": "artifacts\\local_checks\\2026-10-10_line9_paper_mudstone_package_r1",
+  "prepared_input": "cases\\paper_mudstone_x19000_H1\\profile.in",
+  "input_sha256": "921f559c2ca03f596ceb464fe7e160ec61ba2000007245e6abff9f385daeced2",
+  "geometry_sha256": "085d17be1cfc592930903241bc62d59ec2bc3b7933192735ff8880db61fee07c",
+  "baseline_sha256": {
+    "artifacts\\local_checks\\2026-10-10_line9_official_impulse_package_r1\\high_x19000_H1\\geometries\\line9_research_materials_v1_smoothed.json": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+    "artifacts\\local_checks\\2026-10-10_line9_official_impulse_package_r1\\high_x19000_H1\\geometries\\full2d_compact.h5": "f948ae805077ea74612aa7e4bd46252a23ea0f7c973841657e5a4cc911a4868c",
+    "artifacts\\local_checks\\2026-10-10_line9_official_impulse_package_r1\\high_x19000_H1\\cases\\high_x19000_H1\\profile.in": "421a2d3e05f3bdd16da96fc9430826cc0387b7d2c990ee6f2a18163a63688a17",
+    "configs\\research\\mudstone_design_v0_1.json": "956b76adbd1fe242c7d84b9fcc81394d986bac4c62f981753156b26df1b6bea0"
+  },
+  "unchanged_material_entries": [
+    "material_000_air",
+    "material_001_cover",
+    "material_003_sandstone"
+  ],
+  "geometry_bytes_identical": false,
+  "input_changed_lines": [
+    [
+      "#title: high_x19000_H1; dense paired-loss diagnostic; no snapshots",
+      "#title: paper_mudstone_x19000_H1; user-approved Wang2026 mudstone; preparation only"
+    ],
+    [
+      "#geometry_objects_read: 0 0 0 ../../geometries/full2d_compact.h5 line9_research_materials_v1_smoothed y",
+      "#geometry_objects_read: 0 0 0 ../../geometries/full2d_compact.h5 line9_materials_v0_2 y"
+    ]
+  ],
+  "official_material_catalogue_entries": 4,
+  "official_input_object_count": 13,
+  "frequency_tones": 501,
+  "loss_formula_independent_max_relative_error": 4.2106395685030625e-16,
+  "min_mudstone_wavelength_m": 0.4155929039889546,
+  "min_cells_per_mudstone_wavelength": 16.62371615955818,
+  "mudstone_resistivity_ohm_m": 166.66666666666666,
+  "constitutive_budget": [
+    {
+      "frequency_MHz": 20.0,
+      "old_epsilon_real": 14.823277183363622,
+      "new_epsilon_real": 18.0,
+      "old_effective_sigma_S_m": 0.006449371673507362,
+      "new_effective_sigma_S_m": 0.006,
+      "old_field_loss_dB_per_m": 2.691525507907234,
+      "new_field_loss_dB_per_m": 2.288831547702661,
+      "old_7p1m_roundtrip_absorption_dB": 38.219662212282714,
+      "new_7p1m_roundtrip_absorption_dB": 32.50140797737779
+    },
+    {
+      "frequency_MHz": 95.0,
+      "old_epsilon_real": 12.0,
+      "new_epsilon_real": 18.0,
+      "old_effective_sigma_S_m": 0.009574099979261633,
+      "new_effective_sigma_S_m": 0.006,
+      "old_field_loss_dB_per_m": 4.509158501814428,
+      "new_field_loss_dB_per_m": 2.312673107628838,
+      "old_7p1m_roundtrip_absorption_dB": 64.03005072576488,
+      "new_7p1m_roundtrip_absorption_dB": 32.8399581283295
+    },
+    {
+      "frequency_MHz": 100.0,
+      "old_epsilon_real": 11.975569186397227,
+      "new_epsilon_real": 18.0,
+      "old_effective_sigma_S_m": 0.009601139355787264,
+      "new_effective_sigma_S_m": 0.006,
+      "old_field_loss_dB_per_m": 4.527628843764556,
+      "new_field_loss_dB_per_m": 2.3127849128480085,
+      "old_7p1m_roundtrip_absorption_dB": 64.2923295814567,
+      "new_7p1m_roundtrip_absorption_dB": 32.84154576244172
+    },
+    {
+      "frequency_MHz": 170.0,
+      "old_epsilon_real": 11.823277183363624,
+      "new_epsilon_real": 18.0,
+      "old_effective_sigma_S_m": 0.009769692105557361,
+      "new_effective_sigma_S_m": 0.006,
+      "old_field_loss_dB_per_m": 4.644228674590518,
+      "new_field_loss_dB_per_m": 2.3134625342819146,
+      "old_7p1m_roundtrip_absorption_dB": 65.94804717918535,
+      "new_7p1m_roundtrip_absorption_dB": 32.85116798680319
+    }
+  ],
+  "limits": "Preparation and analytic budget only; no solver/environment/processing changes. Higher epsilon requires new target-time windows in a future authorized contract. Old1200ns tail and nonflat mesh convergence remain unresolved.",
+  "geometry_datasets_identical": true,
+  "geometry_voxels_sha256": "3404303f9b2f0baf3186c233f135cccc5d0a46b5928944cff6d249e050ab6ffb",
+  "geometry_metadata_changed": {
+    "MaterialDatabase": {
+      "old": "line9_research_materials_v1_smoothed",
+      "new": "line9_materials_v0_2"
+    }
+  },
+  "official_geometry_database_binding_checked": true
+}
