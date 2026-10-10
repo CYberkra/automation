@@ -1,0 +1,118 @@
+{
+  "authorization": "User 2026-10-10: 本地仿真研究一轮，空气传播省算研究",
+  "scope": "Four additional time-window diagnostics; other case inputs unchanged",
+  "solver": "official gprMax 4.0.1 serial CPU double, OMP_NUM_THREADS=4",
+  "waveform": "official impulse 1 1 impulse; source start 0",
+  "pml_physical_thickness_m": 1,
+  "surface_bounds_m": [
+    [
+      1.4,
+      1.4,
+      1.4
+    ],
+    [
+      2.6,
+      2.6,
+      2.6
+    ]
+  ],
+  "observation_distances_m": [
+    4,
+    8
+  ],
+  "time_window_s": 4.8e-07,
+  "sfcw": {
+    "method": "official direct",
+    "start_hz": 20000000.0,
+    "stop_hz": 170000000.0,
+    "step_hz": 300000.0,
+    "count": 501,
+    "tail_taper_fraction": 0,
+    "reconstruction_window": "gaussian",
+    "gaussian_sigma": 0.2,
+    "time_shift_s": 0,
+    "fitted_amplitude_or_delay": false
+  },
+  "comparison": "Same-mesh direct Yee Ez vs physical-position KSIR Ez; same-mesh full vs compact KSIR",
+  "caveats": [
+    "No underground scattering or incident-surface injection tested",
+    "2D Line9 incompatible with official 3D-only KSIR",
+    "Closed surface must enclose all scattering in homogeneous lossless exterior",
+    "Impulse is broadband; evaluate only specified band and check mesh sensitivity"
+  ],
+  "cases": [
+    {
+      "id": "full_d10_t480",
+      "input": "artifacts\\research_checks\\2026-10-10_air_domain_ksir_r1\\full_d10_t480\\model.in",
+      "input_sha256": "46b7732052cdd264c15c76a90d24fa32414f311b1aa16daa4609f2fd87f6ae6c",
+      "dl_m": 0.1,
+      "cells": 192000,
+      "domain_m": [
+        12,
+        4,
+        4
+      ],
+      "native_Ez_position_m": [
+        2,
+        2,
+        2.05
+      ],
+      "original_input_sha256": "765747ba95e3d89378ea0a5d05006f558aaccc74594309a83e94890c923bf025"
+    },
+    {
+      "id": "compact_d10_t480",
+      "input": "artifacts\\research_checks\\2026-10-10_air_domain_ksir_r1\\compact_d10_t480\\model.in",
+      "input_sha256": "75a1a68988a8c13b4cb103ecc2b94c0c7545129cb2329ad0bc776e065ba1628c",
+      "dl_m": 0.1,
+      "cells": 64000,
+      "domain_m": [
+        4,
+        4,
+        4
+      ],
+      "native_Ez_position_m": [
+        2,
+        2,
+        2.05
+      ],
+      "original_input_sha256": "02bed447c3cddbae8b2c37aecf79e637ca2a59c3fbdf5315477cbfa4c00feff2"
+    },
+    {
+      "id": "full_d05_t480",
+      "input": "artifacts\\research_checks\\2026-10-10_air_domain_ksir_r1\\full_d05_t480\\model.in",
+      "input_sha256": "3af8a27c3c3c79854f646f9be48749a095d3dacf0cfeeb8453996370dd5dd3a1",
+      "dl_m": 0.05,
+      "cells": 1536000,
+      "domain_m": [
+        12,
+        4,
+        4
+      ],
+      "native_Ez_position_m": [
+        2,
+        2,
+        2.025
+      ],
+      "original_input_sha256": "a619e3d631e3b4db4d136d9eff5df31b053dfc642d83724bde865e20e970bcbc"
+    },
+    {
+      "id": "compact_d05_t480",
+      "input": "artifacts\\research_checks\\2026-10-10_air_domain_ksir_r1\\compact_d05_t480\\model.in",
+      "input_sha256": "ff1fb23ae9c07ff7e1a3050c3f7a10eca60ad24ab5771cda07425920facd58b4",
+      "dl_m": 0.05,
+      "cells": 512000,
+      "domain_m": [
+        4,
+        4,
+        4
+      ],
+      "native_Ez_position_m": [
+        2,
+        2,
+        2.025
+      ],
+      "original_input_sha256": "541f622bf03eace9daffb10db4970ecd7290fd369cf43628bb68520456c0fcf0"
+    }
+  ],
+  "reason": "120ns terminal decay failed and fine-grid response did not converge; retain failures"
+}

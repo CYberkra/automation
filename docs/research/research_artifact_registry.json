@@ -1,4 +1,18 @@
 {
+  "air_domain_ksir_local_study_2026_10_10": {
+    "status": "EIGHT_NATIVE_AIR_SOLVES_COMPLETE_PRODUCTION_APPLICABILITY_UNRESOLVED",
+    "report": "docs/research/2026-10-10_air_domain_reduction_study.md",
+    "public": "artifacts/research_checks/2026-10-10_air_domain_ksir_r1",
+    "script": "scripts/study_air_domain_ksir.py",
+    "solver": "official_gprMax_4.0.1_cpu_double",
+    "completed_new": 8,
+    "source": "official_builtin_impulse",
+    "processing": "official_direct_501_exact_tones_no_tail_taper_no_time_shift",
+    "diagnostic_only": true,
+    "changed_formal_line9": false,
+    "paper_incident_surface_reproduced": false,
+    "notes": "Uniform-air exterior reconstruction only; 2D/closed-surface/exterior/incident-and-return coupling limits and undecayed tails remain. No new mudstone line or training."
+  },
   "line9_paper_mudstone_preparation_2026_10_10": {
     "status": "USER_APPROVED_MATERIAL_APPLIED_INPUT_PREPARED_NO_FDTD",
     "report": "docs/research/2026-10-10_paper_mudstone_adoption.md",
