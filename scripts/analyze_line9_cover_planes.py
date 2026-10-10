@@ -1,17 +1,33 @@
 """Native invariant, exact-tone SFCW and conditional lossy cover-plane closure."""
 import argparse,json
+from dataclasses import replace
 from pathlib import Path
 import h5py
 import numpy as np
 from scipy.signal.windows import tukey
+from gprMax.toolboxes.SFCW import processing as sf
 from hs_capsule_identity import sha256 as sha
 from analyze_line9_native_probes import collocate
-from analyze_line9_v401_version_controls import FREQ,inverse,response
+from analyze_line9_v401_version_controls import FREQ,response
 from line9_cover_angular_transport import transport,cover_permittivity
 
 
 def read(p):return json.loads(Path(p).read_text('utf-8'))
 def save(p,v):Path(p).write_text(json.dumps(v,ensure_ascii=False,indent=2,allow_nan=False)+'\n',encoding='utf-8')
+
+
+def field_response(source, fields, dt):
+    """Collocated E/H columns are at n*dt; retain the saved source time origin.
+
+    Columns retain their respective Ez (V/m) or Hx (A/m) units. Their common
+    0.025 m current-moment reference is the existing diagnostic convention.
+    """
+    receiver=sf.SampledSignal(path='derived/collocated_Ez_Hx',
+        samples=fields.reshape(-1,fields.shape[-1]).T,dt=dt,time_offset=0.)
+    result=sf.direct_frequency_response(source,receiver,FREQ,tail_taper_fraction=0.)
+    if not result.source_valid.all():
+        raise ValueError('All 501 source tones must be valid')
+    return replace(result,response=result.response/.025)
 
 
 def metrics(v):
@@ -51,6 +67,8 @@ def main(a):
               'pairs':[[0,1],[1,2],[0,2]],'core_x_m':[160,168],'source_reference_m':.025,'native_variants':variants,
               'native_window_alpha':.25,'gates_sfcw_ns':{'early':[50,220],'late':[220,330],'wide':[50,400]},
               'epsilon_formula':'11+0.5/(1+i*2*pi*f*6.4567e-9)-i*0.001/(2*pi*f*epsilon0)',
+              'sfcw_processing':'official load_source/direct_frequency_response/reconstruct_time_response; preserve TimeSampleOffset; complex_bandpass (plots use its real part, not official real_bandpass)',
+              'official_processing_sha256':sha(sf.__file__),
               'field_projection':'TM Ez/Hx, exp(+i omega t), outgoing complex ky; smooth air-radiating q sector',
               'limits':'Finite20m aperture, .5m sampling aliases non-air-radiating cover modes; exterior is nonflat. No unique ray/bounce count or energy fraction; gated native sensitivity is not formal SFCW; no fitted delay/amplitude/phase, no site or finite3D certification.'}
     a.out.mkdir(parents=True);save(a.out/'contract.json',contract)
@@ -72,33 +90,34 @@ def main(a):
             e,hx,hy=collocate(rr[0]['Ez'],rr[0]['Hx'],rr[1]['Hx'],rr[0]['Hy'],rr[2]['Hy']);ee.append(e);hh.append(hx);yy.append(hy)
         rx=h['rxs/rx1/Ez'][:]
     assert channels==1436
-    e=np.array(ee);hx=np.array(hh);hy=np.array(yy);t=np.arange(e.shape[1])*dt;st_src=np.arange(len(source))*dt
+    source_signal=sf.load_source(a.source/'profile.h5')
+    np.testing.assert_array_equal(source_signal.samples,source)
+    e=np.array(ee);hx=np.array(hh);hy=np.array(yy);t=np.arange(e.shape[1])*dt
     fields=np.stack([v[i*41:(i+1)*41] for i in range(3) for v in [e,hx]])
     full={};x=np.arange(154,174.01,.5);core=(x>=160)&(x<=168)
     for name,bounds in variants:
         win=np.ones(len(t))
         if bounds:
             win[:]=0;ix=np.flatnonzero((t*1e9>=bounds[0])&(t*1e9<=bounds[1]));win[ix]=tukey(len(ix),.25)
-        z=np.empty((501,6,41),complex)
-        for start in range(0,501,16):
-            f=FREQ[start:start+16,None];ss=dt*(np.exp(-2j*np.pi*f*st_src)@source)
-            z[start:start+16]=(np.exp(-2j*np.pi*f*t)@(fields*win).reshape(246,-1).T).reshape(len(f),6,41)*dt/ss[:,None,None]/.025
-        full[name]=z
+        frequency_response=field_response(source_signal,fields*win,dt)
+        full[name]=frequency_response.response.reshape(501,6,41)
     zrx,err=response(a.source/'profile.h5',.025);zold,old_err=response(a.reference,.025);assert np.array_equal(zrx,zold)
     rows=[];profiles={};inverse_errors={}
     for name,spectra in full.items():
         for pair in contract['pairs']:
             for cfg in (configs if name=='full' else [primary]):
                 z=project_pair(spectra,pair,cfg)
-                for window,w in [('hann',np.hanning(501)),('blackman',np.blackman(501))]:
-                    w=w/w.mean();v,st=inverse(z.reshape(501,-1),w);v=v.reshape(4008,41,7)
+                for window in ['hann','blackman']:
+                    tr=sf.reconstruct_time_response(replace(frequency_response,response=z.reshape(501,-1)),window=window,zero_pad_factor=8)
+                    v=tr.complex_bandpass.reshape(4008,41,7);st=tr.time
                     row={'variant':name,'pair':pair,**cfg,'window':window,'gates':{}}
                     for gate,bounds in contract['gates_sfcw_ns'].items():
                         mask=(st*1e9>=bounds[0])&(st*1e9<=bounds[1]);row['gates'][gate]=metrics(v[mask][:,core])
                     rows.append(row)
                     if cfg==primary:profiles[name+'_'+str(pair[0])+str(pair[1])+'_'+window]=v
-    for window,w in [('hann',np.hanning(501)),('blackman',np.blackman(501))]:
-        w=w/w.mean();v,st=inverse(zrx[:,None],w);pick=np.arange(7,4008,101)
+    for window in ['hann','blackman']:
+        tr=sf.reconstruct_time_response(replace(frequency_response,response=zrx[:,None]),window=window,zero_pad_factor=8)
+        v=tr.complex_bandpass;st=tr.time;w=tr.weights;pick=np.arange(7,4008,101)
         direct=np.exp(2j*np.pi*st[pick,None]*FREQ)@(zrx*w)/501
         inverse_errors[window]=float(np.linalg.norm(v[pick,0]-direct)/np.linalg.norm(direct));assert inverse_errors[window]<1e-9
         profiles['main_'+window]=v[:,0]
@@ -109,7 +128,8 @@ def main(a):
             'arrays_sha256':sha(a.arrays),'previous_receiver_channels_bitwise_equal':1436,'source_bitwise_equal':True,
             'main_SFCW_bitwise_equal':True,'main_DFT_errors':[err,old_err],'inverse_errors':inverse_errors,
             'metrics':rows,'cover_epsilon_selected':[[float(f),float(z.real),float(z.imag)] for f,z in zip(FREQ[[0,250,500]],cover_permittivity(FREQ[[0,250,500]]))],
-            'new_solver_runs':1,'limits':contract['limits']}
+            'source_time_offset_s':source_signal.time_offset,
+            'new_solver_runs':0,'reused_observer_solver_runs':1,'limits':contract['limits']}
     save(a.out/'analysis.json',result);plot(a.out,t,x,e,hx,st,profiles,rows)
     print(json.dumps({'status':result['status'],'primary_full_late':[r for r in rows if r['variant']=='full' and r['window']=='hann' and all(r[k]==v for k,v in primary.items())]},ensure_ascii=False))
 

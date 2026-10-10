@@ -1,0 +1,95 @@
+{
+  "status": "PASS_RAW369_FIELDS_PREVIOUS1436_CHANNELS_EXPLICIT_COVER_SUMS",
+  "analysis_sha256": "1a0218ca306050133c9ae6a58079a15918cffa38244a9ffa6d24c8799031d7d1",
+  "auditor_sha256": "887d24caedde24f55ae265451c842d2bf131ad394c6bcbe1446ba589308c7410",
+  "native_collocated_fields": 369,
+  "previous_bitwise_channels": 1436,
+  "five_tone_field_groups": 984,
+  "explicit_spatial_temporal_profiles": [
+    {
+      "variant": "full",
+      "pair": [
+        0,
+        1
+      ],
+      "window": "hann",
+      "relative_error": 1.495813786078227e-11,
+      "time_samples": 47
+    },
+    {
+      "variant": "full",
+      "pair": [
+        0,
+        1
+      ],
+      "window": "blackman",
+      "relative_error": 1.7577577259802457e-11,
+      "time_samples": 47
+    },
+    {
+      "variant": "full",
+      "pair": [
+        1,
+        2
+      ],
+      "window": "hann",
+      "relative_error": 3.627233246141962e-12,
+      "time_samples": 47
+    },
+    {
+      "variant": "full",
+      "pair": [
+        1,
+        2
+      ],
+      "window": "blackman",
+      "relative_error": 4.508252897741143e-12,
+      "time_samples": 47
+    },
+    {
+      "variant": "full",
+      "pair": [
+        0,
+        2
+      ],
+      "window": "hann",
+      "relative_error": 3.5314288607187176e-12,
+      "time_samples": 47
+    },
+    {
+      "variant": "full",
+      "pair": [
+        0,
+        2
+      ],
+      "window": "blackman",
+      "relative_error": 4.349564914516539e-12,
+      "time_samples": 47
+    },
+    {
+      "variant": "native_220_380",
+      "pair": [
+        0,
+        2
+      ],
+      "window": "hann",
+      "relative_error": 7.462240844698251e-14,
+      "time_samples": 47
+    },
+    {
+      "variant": "native_220_380",
+      "pair": [
+        0,
+        2
+      ],
+      "window": "blackman",
+      "relative_error": 7.689554096658117e-14,
+      "time_samples": 47
+    }
+  ],
+  "primary_gate_metric_rows": 72,
+  "source_time_offset_s": 2.9483179209371056e-11,
+  "source_bitwise_equal": true,
+  "new_solver_runs": 0,
+  "limits": "Independent formula and finite-array computations; not all-q sampling/physical/site/bounce certification."
+}

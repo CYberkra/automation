@@ -1,0 +1,47 @@
+{
+  "status": "SUPPLEMENTAL_RAW_LATE_SHARED_SCALE_AND_SECTOR_AUDIT",
+  "script_sha256": "03572681ce09cf2965d2d1e13441df5ec9e44d5e9bb2b2ff3880aa1625bd6342",
+  "analysis_sha256": "1a0218ca306050133c9ae6a58079a15918cffa38244a9ffa6d24c8799031d7d1",
+  "raw_late_shared_limits": {
+    "Ez_V_m": 0.75,
+    "Sy_W_m2": 0.005
+  },
+  "clipping": [
+    {
+      "y_m": 27.025,
+      "field": "Ez",
+      "clipped_fraction": 0.024323875891820144
+    },
+    {
+      "y_m": 27.025,
+      "field": "Sy",
+      "clipped_fraction": 0.024036281179138322
+    },
+    {
+      "y_m": 28.525,
+      "field": "Ez",
+      "clipped_fraction": 0.005021846136828715
+    },
+    {
+      "y_m": 28.525,
+      "field": "Sy",
+      "clipped_fraction": 0.004889110115590952
+    },
+    {
+      "y_m": 30.025,
+      "field": "Ez",
+      "clipped_fraction": 0.0
+    },
+    {
+      "y_m": 30.025,
+      "field": "Sy",
+      "clipped_fraction": 0.0
+    }
+  ],
+  "sfcw_common_limit": 0.1686617196723324,
+  "figures": {
+    "native_cover_late_shared_scale.png": "44a8a5631bf26bf29c5063f1144bc69c82f86dc0f07aaa629e50a65eee190c25",
+    "cover_sector_excludes_late_gray.png": "c38e58486d164190461d46f9a3f510cd1c6c271936b57b39ef4d64c04a8af211"
+  },
+  "new_solver_runs": 0
+}

@@ -1,0 +1,298 @@
+{
+  "status": "POST_OBSERVER_CONDITIONAL_COVER_ANALYSIS_FROZEN",
+  "manifest_sha256": "578d623196e4b535c0d81f02dc6b96627045333a86f08aa3dcb537bbc6f1159b",
+  "raw_sha256": "a601791ce1cd85585d9f5cad24fd026ccdd03baa3e55cf1b0ff7f281cec3ac26",
+  "reference_sha256": "46288bae706a5534940baf3b87748c0f68eea02ffc6e1ba6ae1ae17c6efbe68e",
+  "execution_contract_sha256": "2e5801077ab0b703e73f67d470bfbbcf34e3a2534c2cff921cbc77ab212ad142",
+  "source_files_sha256": {
+    "analyze_line9_cover_planes.py": "4618b1d7d326a8ea093157bb44f578ad5bd980054e841d1beda3f23747041a86",
+    "line9_cover_angular_transport.py": "1421dde4d3a48b9c4e57a78fe6f1d407a3c88c1b76a54f1f489bd97004fbe940",
+    "line9_air_smooth_transport.py": "f12f6f162461051515c02f7bb149ab60388762e60c16a2a305acfb3c2253d191",
+    "analyze_line9_native_probes.py": "25ea32ea1999597eb19f065225ee902ad491e24d79b3f5f3f53f85a1bd8452fe",
+    "analyze_line9_v401_version_controls.py": "6c3bc020c5ff0cdd2a3f317d15b98d88d5cec846f8102ce15e58c78eae77362d"
+  },
+  "primary": {
+    "padding": 512,
+    "alpha": 0.25,
+    "sector": 0.9,
+    "rolloff": 0.25
+  },
+  "sensitivity": [
+    {
+      "padding": 256,
+      "alpha": 0,
+      "sector": 0.8,
+      "rolloff": 0.25
+    },
+    {
+      "padding": 256,
+      "alpha": 0,
+      "sector": 0.9,
+      "rolloff": 0.25
+    },
+    {
+      "padding": 256,
+      "alpha": 0,
+      "sector": 0.95,
+      "rolloff": 0.25
+    },
+    {
+      "padding": 256,
+      "alpha": 0.25,
+      "sector": 0.8,
+      "rolloff": 0.25
+    },
+    {
+      "padding": 256,
+      "alpha": 0.25,
+      "sector": 0.9,
+      "rolloff": 0.25
+    },
+    {
+      "padding": 256,
+      "alpha": 0.25,
+      "sector": 0.95,
+      "rolloff": 0.25
+    },
+    {
+      "padding": 256,
+      "alpha": 0.5,
+      "sector": 0.8,
+      "rolloff": 0.25
+    },
+    {
+      "padding": 256,
+      "alpha": 0.5,
+      "sector": 0.9,
+      "rolloff": 0.25
+    },
+    {
+      "padding": 256,
+      "alpha": 0.5,
+      "sector": 0.95,
+      "rolloff": 0.25
+    },
+    {
+      "padding": 512,
+      "alpha": 0,
+      "sector": 0.8,
+      "rolloff": 0.25
+    },
+    {
+      "padding": 512,
+      "alpha": 0,
+      "sector": 0.9,
+      "rolloff": 0.25
+    },
+    {
+      "padding": 512,
+      "alpha": 0,
+      "sector": 0.95,
+      "rolloff": 0.25
+    },
+    {
+      "padding": 512,
+      "alpha": 0.25,
+      "sector": 0.8,
+      "rolloff": 0.25
+    },
+    {
+      "padding": 512,
+      "alpha": 0.25,
+      "sector": 0.9,
+      "rolloff": 0.25
+    },
+    {
+      "padding": 512,
+      "alpha": 0.25,
+      "sector": 0.95,
+      "rolloff": 0.25
+    },
+    {
+      "padding": 512,
+      "alpha": 0.5,
+      "sector": 0.8,
+      "rolloff": 0.25
+    },
+    {
+      "padding": 512,
+      "alpha": 0.5,
+      "sector": 0.9,
+      "rolloff": 0.25
+    },
+    {
+      "padding": 512,
+      "alpha": 0.5,
+      "sector": 0.95,
+      "rolloff": 0.25
+    },
+    {
+      "padding": 1024,
+      "alpha": 0,
+      "sector": 0.8,
+      "rolloff": 0.25
+    },
+    {
+      "padding": 1024,
+      "alpha": 0,
+      "sector": 0.9,
+      "rolloff": 0.25
+    },
+    {
+      "padding": 1024,
+      "alpha": 0,
+      "sector": 0.95,
+      "rolloff": 0.25
+    },
+    {
+      "padding": 1024,
+      "alpha": 0.25,
+      "sector": 0.8,
+      "rolloff": 0.25
+    },
+    {
+      "padding": 1024,
+      "alpha": 0.25,
+      "sector": 0.9,
+      "rolloff": 0.25
+    },
+    {
+      "padding": 1024,
+      "alpha": 0.25,
+      "sector": 0.95,
+      "rolloff": 0.25
+    },
+    {
+      "padding": 1024,
+      "alpha": 0.5,
+      "sector": 0.8,
+      "rolloff": 0.25
+    },
+    {
+      "padding": 1024,
+      "alpha": 0.5,
+      "sector": 0.9,
+      "rolloff": 0.25
+    },
+    {
+      "padding": 1024,
+      "alpha": 0.5,
+      "sector": 0.95,
+      "rolloff": 0.25
+    }
+  ],
+  "plane_y_m": [
+    27.025,
+    28.525,
+    30.025
+  ],
+  "x_m": [
+    154.0,
+    154.5,
+    155.0,
+    155.5,
+    156.0,
+    156.5,
+    157.0,
+    157.5,
+    158.0,
+    158.5,
+    159.0,
+    159.5,
+    160.0,
+    160.5,
+    161.0,
+    161.5,
+    162.0,
+    162.5,
+    163.0,
+    163.5,
+    164.0,
+    164.5,
+    165.0,
+    165.5,
+    166.0,
+    166.5,
+    167.0,
+    167.5,
+    168.0,
+    168.5,
+    169.0,
+    169.5,
+    170.0,
+    170.5,
+    171.0,
+    171.5,
+    172.0,
+    172.5,
+    173.0,
+    173.5,
+    174.0
+  ],
+  "pairs": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      0,
+      2
+    ]
+  ],
+  "core_x_m": [
+    160,
+    168
+  ],
+  "source_reference_m": 0.025,
+  "native_variants": [
+    [
+      "full",
+      null
+    ],
+    [
+      "native_40_230",
+      [
+        40,
+        230
+      ]
+    ],
+    [
+      "native_180_400",
+      [
+        180,
+        400
+      ]
+    ],
+    [
+      "native_220_380",
+      [
+        220,
+        380
+      ]
+    ]
+  ],
+  "native_window_alpha": 0.25,
+  "gates_sfcw_ns": {
+    "early": [
+      50,
+      220
+    ],
+    "late": [
+      220,
+      330
+    ],
+    "wide": [
+      50,
+      400
+    ]
+  },
+  "epsilon_formula": "11+0.5/(1+i*2*pi*f*6.4567e-9)-i*0.001/(2*pi*f*epsilon0)",
+  "sfcw_processing": "official load_source/direct_frequency_response/reconstruct_time_response; preserve TimeSampleOffset; complex_bandpass (plots use its real part, not official real_bandpass)",
+  "official_processing_sha256": "adad556f09140956f0ee19d3038430e06a9ae8be6a826dcad723096d99624a3b",
+  "field_projection": "TM Ez/Hx, exp(+i omega t), outgoing complex ky; smooth air-radiating q sector",
+  "limits": "Finite20m aperture, .5m sampling aliases non-air-radiating cover modes; exterior is nonflat. No unique ray/bounce count or energy fraction; gated native sensitivity is not formal SFCW; no fitted delay/amplitude/phase, no site or finite3D certification."
+}

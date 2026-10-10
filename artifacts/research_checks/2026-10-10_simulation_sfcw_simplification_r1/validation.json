@@ -1,0 +1,121 @@
+{
+  "status": "PASS_CPU_OFFICIAL_SFCW_CLEANUP",
+  "new_solver_runs": 0,
+  "gprmax_version": "4.0.1",
+  "source_time_offset_s": 2.9483179209371056e-11,
+  "dt_s": 5.896635841874211e-11,
+  "omitted_phase_deg_at_20_170MHz": [
+    0.2122788903074716,
+    1.8043705676135087
+  ],
+  "unchanged_native_arrays": {
+    "time_s": true,
+    "Ez": true,
+    "Hx": true,
+    "Hy": true,
+    "source": true,
+    "rx": true
+  },
+  "unchanged_main_profiles": {
+    "main_hann": true,
+    "main_blackman": true
+  },
+  "corrected_spectra_phase_relation_errors": {
+    "full": 6.480585776622115e-13,
+    "native_40_230": 6.939780765780893e-13,
+    "native_180_400": 1.675392317858776e-12,
+    "native_220_380": 1.9955691394160973e-12
+  },
+  "official_CLI_checks": {
+    "frequency_equal": true,
+    "time_equal": true,
+    "complex_bandpass_over_length_relative_error": 5.188608416684608e-16,
+    "real_bandpass_over_2_length_relative_error": 5.442736517211085e-16,
+    "all_source_tones_valid": true,
+    "receiver_tail_relative_db": -131.91674075343946
+  },
+  "metric_rows_compared": 6,
+  "all_configuration_rows_compared": 180,
+  "max_absolute_change_over_all_gate_metrics": 0.5897393324414111,
+  "primary_rows": [
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "window": "hann",
+      "old_late_up_relative_error": 0.36090585639556194,
+      "new_late_up_relative_error": 0.360768859523335,
+      "new_early_down_relative_error": 0.016493675582093092,
+      "new_late_sector_change": 0.9544091046916935
+    },
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "window": "blackman",
+      "old_late_up_relative_error": 0.20796351245898367,
+      "new_late_up_relative_error": 0.20786591098266874,
+      "new_early_down_relative_error": 0.015080600185070295,
+      "new_late_sector_change": 0.970197917561518
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "window": "hann",
+      "old_late_up_relative_error": 0.3493642665598704,
+      "new_late_up_relative_error": 0.3491177186522069,
+      "new_early_down_relative_error": 0.021273843624452483,
+      "new_late_sector_change": 0.9220032779925904
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "window": "blackman",
+      "old_late_up_relative_error": 0.20020031154502693,
+      "new_late_up_relative_error": 0.20006144949476776,
+      "new_early_down_relative_error": 0.015082197943468715,
+      "new_late_sector_change": 0.9304545672110305
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "window": "hann",
+      "old_late_up_relative_error": 0.574800807099406,
+      "new_late_up_relative_error": 0.5744582181670972,
+      "new_early_down_relative_error": 0.041091298461920264,
+      "new_late_sector_change": 0.9220032779925904
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "window": "blackman",
+      "old_late_up_relative_error": 0.3131366821540947,
+      "new_late_up_relative_error": 0.31296516422499315,
+      "new_early_down_relative_error": 0.029852998031870633,
+      "new_late_sector_change": 0.9304545672110305
+    }
+  ],
+  "regression_tests_passed": 3,
+  "identities": {
+    "artifacts\\local_checks\\2026-10-10_cover_plane_results_r1\\arrays_r1.npz": "8f22ad1d4775ddbf9750ef37b7bff95facc84cb406805f1b23e7d78ae7743b5d",
+    "artifacts\\local_checks\\2026-10-10_cover_plane_results_r2\\arrays_r2.npz": "7ef5dbc961e024efb064e6c8251c9d3f3f1b224e5522abec170700ecc1b54408",
+    "artifacts\\local_checks\\2026-10-10_cover_plane_results_r1\\source\\profile.h5": "a601791ce1cd85585d9f5cad24fd026ccdd03baa3e55cf1b0ff7f281cec3ac26",
+    "artifacts\\local_checks\\2026-10-10_cover_plane_results_r2\\official_main_hann.h5": "16d857e71f02bdf778afaa2e6e1c3cbe7cd57b7e610d5ab4a4b775809fb260a2",
+    "artifacts\\research_checks\\2026-10-10_cover_plane_closure_r1\\analysis.json": "6c431f170c4f749b3531cebbcdce8e3b2e147265342a7e6df0223fb454cde468",
+    "artifacts\\research_checks\\2026-10-10_cover_plane_closure_r2\\analysis.json": "1a0218ca306050133c9ae6a58079a15918cffa38244a9ffa6d24c8799031d7d1",
+    "artifacts\\research_checks\\2026-10-10_simulation_sfcw_simplification_r1\\validate.py": "a487822587565e64ed2de0f9be1a2c5c48a84393c952a8825c811ebbe17d1da8",
+    "scripts\\check_line9_cover_sfcw.py": "36db8513d84da709b9787a9aaa4861d5aeaecf0da14663c956f4affd885659cd"
+  },
+  "official_processing_sha256": "adad556f09140956f0ee19d3038430e06a9ae8be6a826dcad723096d99624a3b",
+  "limits": "Array/official-library agreement only; no field calibration, full-dimensional geology or unique path certification."
+}

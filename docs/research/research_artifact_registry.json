@@ -1,4 +1,19 @@
 {
+  "simulation_sfcw_cleanup_2026_10_10": {
+    "status": "CPU_CLEANUP_COMPLETE_SIM2REAL_UNRESOLVED",
+    "report": "docs/research/2026-10-10_simulation_sfcw_simplification.md",
+    "verification": "artifacts/research_checks/2026-10-10_simulation_sfcw_simplification_r1/validation.json",
+    "corrected_cover_analysis": "artifacts/research_checks/2026-10-10_cover_plane_closure_r2",
+    "superseded_cover_analysis": "artifacts/research_checks/2026-10-10_cover_plane_closure_r1",
+    "original_cover_source_commit": "3d86a7f",
+    "new_solver_runs": 0,
+    "raw_data_changed": false,
+    "main_profiles_bitwise_unchanged": true,
+    "official_CLI_complex_relative_error": 5.188608416684608e-16,
+    "regression_tests_passed": 3,
+    "dense_cover_is_default_next_step": false,
+    "new_physics_or_solver_requires_explicit_approval": true
+  },
   "line9_cover_plane_closure_2026_10_10": {
     "report": "docs/research/2026-10-10_cover_plane_closure_and_sampling_limit.md",
     "public": "artifacts/research_checks/2026-10-10_cover_plane_closure_r1",

@@ -25,6 +25,8 @@ def main(a):
     checked=0;previous=0
     with h5py.File(a.raw) as raw,h5py.File(a.reference) as old:
         src=raw['srcs/src1/excitation/samples'][:];assert src.tobytes()==old['srcs/src1/excitation/samples'][:].tobytes()
+        source_offset=float(raw['srcs/src1/excitation'].attrs['TimeSampleOffset'])
+        assert source_offset==.5*dt
         for name,r in old['rxs'].items():
             for field in r:assert raw['rxs/'+name+'/'+field][:].tobytes()==r[field][:].tobytes();previous+=1
         for i,p in enumerate(m['probes'][287:]):
@@ -34,7 +36,7 @@ def main(a):
             for key,v in zip(['Ez','Hx','Hy'],expected):np.testing.assert_allclose(data[key][i],v,rtol=1e-14,atol=1e-16);checked+=1
     assert previous==1436 and checked==369
     native=np.stack([data[key][i*41:(i+1)*41] for i in range(3) for key in ['Ez','Hx']])
-    pick=np.array([0,83,250,417,500]);freq=f[pick];ss=dt*(np.exp(-2j*np.pi*freq[:,None]*(np.arange(len(src))*dt))@src)
+    pick=np.array([0,83,250,417,500]);freq=f[pick];ss=dt*(np.exp(-2j*np.pi*freq[:,None]*(source_offset+np.arange(len(src))*dt))@src)
     for name,bounds in c['native_variants']:
         win=np.ones(len(t))
         if bounds:
@@ -82,7 +84,7 @@ def main(a):
     v={'status':'PASS_RAW369_FIELDS_PREVIOUS1436_CHANNELS_EXPLICIT_COVER_SUMS','analysis_sha256':sha(a.analysis/'analysis.json'),
        'auditor_sha256':sha(__file__),'native_collocated_fields':checked,'previous_bitwise_channels':previous,
        'five_tone_field_groups':4*6*41,'explicit_spatial_temporal_profiles':profile_checks,'primary_gate_metric_rows':metric_count,
-       'source_bitwise_equal':True,'new_solver_runs':0,'limits':'Independent formula and finite-array computations; not all-q sampling/physical/site/bounce certification.'}
+       'source_time_offset_s':source_offset,'source_bitwise_equal':True,'new_solver_runs':0,'limits':'Independent formula and finite-array computations; not all-q sampling/physical/site/bounce certification.'}
     assert not a.out.exists();a.out.write_text(json.dumps(v,indent=2)+'\n',encoding='utf-8');print(json.dumps(v))
 
 if __name__=='__main__':
