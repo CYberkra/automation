@@ -1,0 +1,296 @@
+{
+  "contract": {
+    "authorization": "User explicit reply: 批准这项诊断及配套实现; pure air/flat ground first, ROG if needed",
+    "scope": "2D TMz diagnostic only; production model, materials, source and SFCW unchanged",
+    "solver": "official gprMax 4.0.1 CPU double, 4 threads",
+    "width_m": 40,
+    "mesh_m": 0.05,
+    "pml_m": 2,
+    "plane_y_m": 4,
+    "return_plane_y_m": 5,
+    "physical_source_logical_m": [
+      20.0,
+      11,
+      0
+    ],
+    "original_rx_logical_m": [
+      21.3,
+      11,
+      0
+    ],
+    "source_to_ground_height_m": 8,
+    "ground_y_m": 3,
+    "cover": {
+      "er": 11,
+      "se": 0.001,
+      "mr": 1,
+      "sm": 0,
+      "delta_er": 0.5,
+      "tau_s": 6.4567e-09
+    },
+    "source": "Reference official impulse 1 1 impulse, start 0; no Ricker or fitted scaling",
+    "electric_replay": "I_z[n+1/2] = dx * reference Hx[n+1] at plane y+dy/2",
+    "magnetic_replay": "M_x[n] = dx*dz * reference Ez[n] at plane y",
+    "source_aperture": "All x=2.05..width-2.05 inclusive; sources strictly outside PML",
+    "normalization": "Original full-air impulse is the common source reference, never an individual virtual source",
+    "return_method": "Upgoing angular-spectrum propagation above replay plane; retain evanescent modes and complex phase",
+    "sfcw": {
+      "method": "official direct",
+      "start_hz": 20000000.0,
+      "step_hz": 300000.0,
+      "count": 501,
+      "tail_taper_fraction": 0,
+      "fitted_amplitude_or_delay": false
+    },
+    "acceptance": "Report complete-band/low-band errors, above-plane leakage, aperture/time sensitivity and full overhead; no preset production pass claim",
+    "limitations": [
+      "Finite aperture is not a closed TF/SF boundary",
+      "Flat half-space is not actual terrain or a deep-interface test",
+      "Native broadband impulse includes unresolved out-of-band modes; inspect warnings",
+      "Return propagation assumes upgoing field in homogeneous air"
+    ],
+    "script_sha256": "1a69441bbf01ce5d00b4d42e1521ed095977a541bb2ddbcdeac3996817fd798b",
+    "cases": [
+      {
+        "id": "full_air",
+        "height_m": 16,
+        "cover": false,
+        "replay": false,
+        "iterations": 4241
+      },
+      {
+        "id": "compact_air",
+        "height_m": 8,
+        "cover": false,
+        "replay": true,
+        "iterations": 4240
+      },
+      {
+        "id": "full_cover",
+        "height_m": 16,
+        "cover": true,
+        "replay": false,
+        "iterations": 4240
+      },
+      {
+        "id": "compact_cover",
+        "height_m": 8,
+        "cover": true,
+        "replay": true,
+        "iterations": 4240
+      }
+    ]
+  },
+  "runs": [
+    {
+      "case": "full_air",
+      "width_m": 40,
+      "command": [
+        "D:\\自动处理\\artifacts\\local_checks\\gprmax_v401_gpu_env\\Scripts\\python.exe",
+        "D:\\自动处理\\scripts\\study_air_equivalent_plane.py",
+        "worker",
+        "--width",
+        "40",
+        "--case",
+        "full_air"
+      ],
+      "contract_sha256": "130ce22ff8049bb24f17b225d0916720f0fbc11fd9ed6f0c43b66c86d90f63b2",
+      "script_sha256": "2fbf33eafe9fa1d69c410ba0d300ff910b3f14475f0cd1116d47b80f1afbb598",
+      "solver_version": "4.0.1",
+      "started_utc": "2026-10-10T10:11:10.434515+00:00",
+      "native_source_module_sha256": "f1cab86c61365a0b855d6e797d4c0b410efef4d8fe83f290252654fd4a1181a7",
+      "reference_sha256": null,
+      "exit_code": 0,
+      "wall_seconds": 57.20555699999932,
+      "finished_utc": "2026-10-10T10:12:07.640680+00:00",
+      "log_sha256": "e925c0c0561e97997e746d20b125304cbbd672b81537ca27f4285abdb072ddc6",
+      "output_sha256": "91fd40afef55cdd5ff1a40ee00bd67fadb551c8141dc22d718ee26c3246e64d0",
+      "output_bytes": 128308080,
+      "native_solve_seconds": 51.4529,
+      "reuse": {
+        "original_attempt": "artifacts\\local_checks\\2026-10-10_air_equivalent_plane_r2\\w40\\full_air",
+        "reason": "Metadata reader corrected ID to native Name; full-air physics recipe unchanged",
+        "old_script_sha256": "2fbf33eafe9fa1d69c410ba0d300ff910b3f14475f0cd1116d47b80f1afbb598",
+        "new_script_sha256": "1a69441bbf01ce5d00b4d42e1521ed095977a541bb2ddbcdeac3996817fd798b",
+        "output_sha256": "91fd40afef55cdd5ff1a40ee00bd67fadb551c8141dc22d718ee26c3246e64d0"
+      }
+    },
+    {
+      "case": "compact_air",
+      "width_m": 40,
+      "command": [
+        "D:\\自动处理\\artifacts\\local_checks\\gprmax_v401_gpu_env\\Scripts\\python.exe",
+        "D:\\自动处理\\scripts\\study_air_equivalent_plane.py",
+        "worker",
+        "--width",
+        "40",
+        "--case",
+        "compact_air"
+      ],
+      "contract_sha256": "f62468388516d5a490f2eb7bf99c58d9f44165cab28d173c9c3ffd653aba0d60",
+      "script_sha256": "1a69441bbf01ce5d00b4d42e1521ed095977a541bb2ddbcdeac3996817fd798b",
+      "solver_version": "4.0.1",
+      "started_utc": "2026-10-10T10:13:51.758981+00:00",
+      "native_source_module_sha256": "f1cab86c61365a0b855d6e797d4c0b410efef4d8fe83f290252654fd4a1181a7",
+      "reference_sha256": "91fd40afef55cdd5ff1a40ee00bd67fadb551c8141dc22d718ee26c3246e64d0",
+      "exit_code": 0,
+      "wall_seconds": 100.84852279999905,
+      "finished_utc": "2026-10-10T10:15:32.773269+00:00",
+      "log_sha256": "957dee28263bbb12ac9e06858a693ada36c9010b8d0444a02fed219b34a10f0a",
+      "output_sha256": "c47f1202e14f83b81a38e7027a597cf8a3d4315572de264aae8b932abffeaf0e",
+      "output_bytes": 127079073,
+      "native_solve_seconds": 43.3563
+    },
+    {
+      "case": "full_cover",
+      "width_m": 40,
+      "command": [
+        "D:\\自动处理\\artifacts\\local_checks\\gprmax_v401_gpu_env\\Scripts\\python.exe",
+        "D:\\自动处理\\scripts\\study_air_equivalent_plane.py",
+        "worker",
+        "--width",
+        "40",
+        "--case",
+        "full_cover"
+      ],
+      "contract_sha256": "f62468388516d5a490f2eb7bf99c58d9f44165cab28d173c9c3ffd653aba0d60",
+      "script_sha256": "1a69441bbf01ce5d00b4d42e1521ed095977a541bb2ddbcdeac3996817fd798b",
+      "solver_version": "4.0.1",
+      "started_utc": "2026-10-10T10:16:29.231868+00:00",
+      "native_source_module_sha256": "f1cab86c61365a0b855d6e797d4c0b410efef4d8fe83f290252654fd4a1181a7",
+      "reference_sha256": null,
+      "exit_code": 0,
+      "wall_seconds": 43.279721700000664,
+      "finished_utc": "2026-10-10T10:17:12.512455+00:00",
+      "log_sha256": "551e83e4231e781e6339518a321874976487187d733b3ddb6f5a739f78e3191a",
+      "output_sha256": "65114bac331c869308bb77e7d09050afc21b1e1043c58ba82809c02a34e5bf05",
+      "output_bytes": 77715280,
+      "native_solve_seconds": 38.4358
+    },
+    {
+      "case": "compact_cover",
+      "width_m": 40,
+      "command": [
+        "D:\\自动处理\\artifacts\\local_checks\\gprmax_v401_gpu_env\\Scripts\\python.exe",
+        "D:\\自动处理\\scripts\\study_air_equivalent_plane.py",
+        "worker",
+        "--width",
+        "40",
+        "--case",
+        "compact_cover"
+      ],
+      "contract_sha256": "f62468388516d5a490f2eb7bf99c58d9f44165cab28d173c9c3ffd653aba0d60",
+      "script_sha256": "1a69441bbf01ce5d00b4d42e1521ed095977a541bb2ddbcdeac3996817fd798b",
+      "solver_version": "4.0.1",
+      "started_utc": "2026-10-10T10:17:29.639562+00:00",
+      "native_source_module_sha256": "f1cab86c61365a0b855d6e797d4c0b410efef4d8fe83f290252654fd4a1181a7",
+      "reference_sha256": "91fd40afef55cdd5ff1a40ee00bd67fadb551c8141dc22d718ee26c3246e64d0",
+      "exit_code": 0,
+      "wall_seconds": 98.9509151000002,
+      "finished_utc": "2026-10-10T10:19:08.742400+00:00",
+      "log_sha256": "21248241a4155a82804819a9ce77022bf3d089c32250fe4c5fbd07de8c789392",
+      "output_sha256": "ae7fd245924747597e193589eb4ec5dc23ece412528cce4eb75c28786e51f734",
+      "output_bytes": 127079073,
+      "native_solve_seconds": 42.9239
+    }
+  ],
+  "audits": [
+    {
+      "case": "full_air_below",
+      "explicit_dtft_relative_error": 3.734620275078274e-12,
+      "tail_relative_db": -37.1721582858911
+    },
+    {
+      "case": "full_air_near_ground",
+      "explicit_dtft_relative_error": 3.6055436236445128e-12,
+      "tail_relative_db": -35.92154499954875
+    },
+    {
+      "case": "full_air_return",
+      "explicit_dtft_relative_error": 2.846310099012443e-12,
+      "tail_relative_db": -34.67255722019547
+    },
+    {
+      "case": "compact_air_below",
+      "explicit_dtft_relative_error": 3.7851340573960395e-12,
+      "tail_relative_db": -37.21541305290848
+    },
+    {
+      "case": "compact_air_near_ground",
+      "explicit_dtft_relative_error": 3.5825964483350697e-12,
+      "tail_relative_db": -35.97717735785092
+    },
+    {
+      "case": "compact_air_return",
+      "explicit_dtft_relative_error": 1.2078690969274986e-11,
+      "tail_relative_db": -22.654966016881808
+    },
+    {
+      "case": "full_cover_below",
+      "explicit_dtft_relative_error": 4.489126811005971e-12,
+      "tail_relative_db": -73.22580908324392
+    },
+    {
+      "case": "full_cover_near_ground",
+      "explicit_dtft_relative_error": 3.996453941171635e-12,
+      "tail_relative_db": -39.20970584356754
+    },
+    {
+      "case": "full_cover_return",
+      "explicit_dtft_relative_error": 4.11507500982916e-12,
+      "tail_relative_db": -36.016498266228744
+    },
+    {
+      "case": "compact_cover_below",
+      "explicit_dtft_relative_error": 4.492201886733646e-12,
+      "tail_relative_db": -72.80224344367484
+    },
+    {
+      "case": "compact_cover_near_ground",
+      "explicit_dtft_relative_error": 3.9767597723116864e-12,
+      "tail_relative_db": -41.862177864253105
+    },
+    {
+      "case": "compact_cover_return",
+      "explicit_dtft_relative_error": 4.355033040777914e-12,
+      "tail_relative_db": -39.26775387851097
+    }
+  ],
+  "metrics": {
+    "air_below": {
+      "fullband_relative_l2": 0.007587619557845721,
+      "low20_40_relative_l2": 0.013334339450284687
+    },
+    "cover_below": {
+      "fullband_relative_l2": 0.0010903946148585536,
+      "low20_40_relative_l2": 0.0034691021203809456
+    },
+    "air_near_ground": {
+      "fullband_relative_l2": 0.00624330074598917,
+      "low20_40_relative_l2": 0.010989670891698371
+    },
+    "cover_near_ground": {
+      "fullband_relative_l2": 0.01025514859157485,
+      "low20_40_relative_l2": 0.03863079376370007
+    },
+    "return_plane_scattered": {
+      "fullband_relative_l2": 0.09792442534665867,
+      "low20_40_relative_l2": 0.17536707352809977
+    },
+    "above_plane_air_leakage_relative_to_below": 0.005126531233740862,
+    "original_rx_return_scattered": {
+      "fullband_relative_l2": 0.3461404058288118,
+      "low20_40_relative_l2": 0.46091900539617675,
+      "full_plane_transport_control_relative_l2": 0.3595544968480745
+    },
+    "total_original_rx": {
+      "fullband_relative_l2": 0.05561174378020042
+    }
+  },
+  "no_production_acceptance": true,
+  "raw_outputs_location": "artifacts\\local_checks\\2026-10-10_air_equivalent_plane_r3\\w40",
+  "spatial_spectra_local_only": {
+    "path": "D:\\自动处理\\artifacts\\research_checks\\2026-10-10_air_equivalent_plane_r3\\w40\\spectra.npz",
+    "sha256": "000ddb2bb3d605ca6b7f38907cc3eadfbdfe7f8ef7fc6340d37af266c58f7838"
+  }
+}

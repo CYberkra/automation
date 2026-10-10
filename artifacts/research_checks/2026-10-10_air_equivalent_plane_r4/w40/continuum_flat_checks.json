@@ -1,0 +1,26 @@
+{
+  "rows": [
+    {
+      "path": "full_native_500ns_scattered",
+      "relative_l2_to_continuum": 0.2857107113715309,
+      "low20_40_relative_l2_to_continuum": 0.46861989647399754
+    },
+    {
+      "path": "full_plane_EH_return",
+      "relative_l2_to_continuum": 0.18631091471563108,
+      "low20_40_relative_l2_to_continuum": 0.26597929010018106
+    },
+    {
+      "path": "compact_plane_EH_return",
+      "relative_l2_to_continuum": 0.12125779775458678,
+      "low20_40_relative_l2_to_continuum": 0.09540643785203956
+    }
+  ],
+  "quadrature400_vs800_relative_l2": 2.806026605379165e-13,
+  "assumptions": [
+    "Continuum infinite flat half-space",
+    "Ideal 2D z line current",
+    "No Yee dispersion/material-voxel placement/PML/finite-record truncation"
+  ],
+  "meaning": "An independent asymptotic reference, not proof of a unique numerical error cause"
+}

@@ -1,0 +1,48 @@
+[
+  {
+    "case": "full_air",
+    "width_m": 40,
+    "command": [
+      "D:\\自动处理\\artifacts\\local_checks\\gprmax_v401_gpu_env\\Scripts\\python.exe",
+      "D:\\自动处理\\scripts\\study_air_equivalent_plane.py",
+      "worker",
+      "--width",
+      "40",
+      "--case",
+      "full_air"
+    ],
+    "contract_sha256": "56a73ecfc305aca0730f996245ad048afc67e66353593945d70a0632cb99b418",
+    "script_sha256": "6a76806188acf963d61fdfe30e3346fb999b5c2aed1c7291a7a981d99309f89b",
+    "solver_version": "4.0.1",
+    "started_utc": "2026-10-10T10:10:12.594815+00:00",
+    "native_source_module_sha256": "f1cab86c61365a0b855d6e797d4c0b410efef4d8fe83f290252654fd4a1181a7",
+    "reference_sha256": null,
+    "exit_code": 1,
+    "wall_seconds": 2.989156699999512,
+    "finished_utc": "2026-10-10T10:10:15.584946+00:00",
+    "log_sha256": "748c69e6bb21eb3dba6e659b3d0f26fbc31625563805364ada7849448dd766e0"
+  },
+  {
+    "case": "compact_air",
+    "width_m": 40,
+    "command": [
+      "D:\\自动处理\\artifacts\\local_checks\\gprmax_v401_gpu_env\\Scripts\\python.exe",
+      "D:\\自动处理\\scripts\\study_air_equivalent_plane.py",
+      "worker",
+      "--width",
+      "40",
+      "--case",
+      "compact_air"
+    ],
+    "contract_sha256": "130ce22ff8049bb24f17b225d0916720f0fbc11fd9ed6f0c43b66c86d90f63b2",
+    "script_sha256": "2fbf33eafe9fa1d69c410ba0d300ff910b3f14475f0cd1116d47b80f1afbb598",
+    "solver_version": "4.0.1",
+    "started_utc": "2026-10-10T10:12:55.344161+00:00",
+    "native_source_module_sha256": "f1cab86c61365a0b855d6e797d4c0b410efef4d8fe83f290252654fd4a1181a7",
+    "reference_sha256": "91fd40afef55cdd5ff1a40ee00bd67fadb551c8141dc22d718ee26c3246e64d0",
+    "exit_code": 1,
+    "wall_seconds": 2.948970699999336,
+    "finished_utc": "2026-10-10T10:12:58.454993+00:00",
+    "log_sha256": "0e234a3af399c258ba46c00ab871288d22cd5f4df4e3b6565c3a2fbcedce0b9d"
+  }
+]

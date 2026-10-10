@@ -1,4 +1,26 @@
 {
+  "air_equivalent_plane_diagnostic_2026_10_10": {
+    "status": "EIGHT_NATIVE_SOLVES_COMPLETE_RETURN_REFERENCE_SPEEDUP_UNRESOLVED",
+    "authorization": "User explicitly approved distributed electric magnetic source diagnostic and implementation",
+    "report": "docs/research/2026-10-10_air_equivalent_plane_study.md",
+    "public": "artifacts/research_checks/2026-10-10_air_equivalent_plane_r4/w40",
+    "retained_comparison": "artifacts/research_checks/2026-10-10_air_equivalent_plane_r3/w40",
+    "script": "scripts/study_air_equivalent_plane.py",
+    "solver": "official_gprMax_4.0.1_cpu_double",
+    "completed_new": 8,
+    "source_history_max_error_r4": 0.0,
+    "sfcw": "official_direct_20_170_MHz_0.3_MHz_501_tones_original_impulse_reference",
+    "native_moving_Bscan": false,
+    "changed_formal_line9": false,
+    "production_adoption": false,
+    "new_mudstone_simulated": false,
+    "remote_solver_started": false,
+    "current_return_scattered_l2_error": 0.24849661067888903,
+    "endpoint_contamination": "Existing-record late peak tracks crop end; do not transfer this attribution to Line9 330ns",
+    "figure": "artifacts/research_checks/2026-10-10_air_equivalent_plane_r4/w40/delivery_summary.png",
+    "endpoint_figure": "artifacts/research_checks/2026-10-10_air_equivalent_plane_r4/w40/record_end_comparison.png",
+    "notes": "Native source timing and replay verified; complete-air finite record itself not certified. No current CPU speedup. New reference source or actual terrain requires specific approval."
+  },
   "air_domain_ksir_local_study_2026_10_10": {
     "status": "EIGHT_NATIVE_AIR_SOLVES_COMPLETE_PRODUCTION_APPLICABILITY_UNRESOLVED",
     "report": "docs/research/2026-10-10_air_domain_reduction_study.md",

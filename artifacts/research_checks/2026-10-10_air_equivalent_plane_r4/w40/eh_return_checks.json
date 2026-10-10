@@ -1,0 +1,72 @@
+{
+  "rows": [
+    {
+      "plane": "full",
+      "space_pad": 4,
+      "time_pad": 4,
+      "period_decay": 8,
+      "fullband_relative_l2": 0.1481628617701442,
+      "low20_40_relative_l2": 0.18496098722108445,
+      "time_early80ns_relative_l2": 0.1122168494940498,
+      "time_full_relative_l2": 0.4676257716252714
+    },
+    {
+      "plane": "compact",
+      "space_pad": 4,
+      "time_pad": 4,
+      "period_decay": 8,
+      "fullband_relative_l2": 0.308568780188565,
+      "low20_40_relative_l2": 0.4670110870214859,
+      "time_early80ns_relative_l2": 0.22419236556666766,
+      "time_full_relative_l2": 0.9443430828946221
+    },
+    {
+      "plane": "full",
+      "space_pad": 8,
+      "time_pad": 8,
+      "period_decay": 12,
+      "fullband_relative_l2": 0.11257752141049539,
+      "low20_40_relative_l2": 0.19095382552002862,
+      "time_early80ns_relative_l2": 0.11221907295393192,
+      "time_full_relative_l2": 0.46270435215231703
+    },
+    {
+      "plane": "compact",
+      "space_pad": 8,
+      "time_pad": 8,
+      "period_decay": 12,
+      "fullband_relative_l2": 0.24849656119814903,
+      "low20_40_relative_l2": 0.42182079616929125,
+      "time_early80ns_relative_l2": 0.22418946094332887,
+      "time_full_relative_l2": 0.938847495202093
+    },
+    {
+      "plane": "full",
+      "space_pad": 16,
+      "time_pad": 16,
+      "period_decay": 16,
+      "fullband_relative_l2": 0.11257754714441305,
+      "low20_40_relative_l2": 0.1909538665714252,
+      "time_early80ns_relative_l2": 0.11221908973549892,
+      "time_full_relative_l2": 0.46270431045103905
+    },
+    {
+      "plane": "compact",
+      "space_pad": 16,
+      "time_pad": 16,
+      "period_decay": 16,
+      "fullband_relative_l2": 0.24849661067888903,
+      "low20_40_relative_l2": 0.4218208806497501,
+      "time_early80ns_relative_l2": 0.22418948249424214,
+      "time_full_relative_l2": 0.9388475162294451
+    }
+  ],
+  "analysis_wall_s": 429.88709090000157,
+  "description": "Exact-staggered E/H outgoing separation and causal discrete propagation; internal Laplace weight undone before official direct",
+  "incomplete": [
+    "Actual terrain/deep interface",
+    "Aperture convergence beyond current domain",
+    "Time-window convergence",
+    "Production speedup"
+  ]
+}

@@ -1,0 +1,312 @@
+"""Approved 2D equivalent-current air/flat-ground diagnostic, official 4.0.1.
+
+The replay plane is a project implementation using official soft-source APIs.
+It is not an official complete air-domain-reduction tool or a Line9 replacement.
+Each frozen case runs once; raw outputs and source histories stay in local_checks.
+"""
+import argparse
+import hashlib
+import json
+import os
+import shutil
+from pathlib import Path
+import subprocess
+import sys
+import time
+from datetime import datetime, timezone
+
+ROOT = Path(__file__).resolve().parents[1]
+PUBLIC = ROOT / 'artifacts/research_checks/2026-10-10_air_equivalent_plane_r4'
+PRIVATE = ROOT / 'artifacts/local_checks/2026-10-10_air_equivalent_plane_r4'
+
+
+def sha(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def save(path, data):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+
+def prepare(width=40):
+    target = PUBLIC / f'w{width}' / 'contract.json'
+    if target.exists():
+        raise RuntimeError('Refusing to overwrite frozen contract')
+    cases = []
+    for name in ['full_air', 'compact_air', 'full_cover', 'compact_cover']:
+        cases.append(dict(id=name, height_m=8 if name.startswith('compact') else 16,
+                          cover=name.endswith('cover'), replay=name.startswith('compact'),
+                          iterations=4242 if name == 'full_air' else 4241))
+    save(target, dict(
+        authorization='User explicit reply: 批准这项诊断及配套实现; pure air/flat ground first, ROG if needed',
+        scope='2D TMz diagnostic only; production model, materials, source and SFCW unchanged',
+        solver='official gprMax 4.0.1 CPU double, 4 threads', width_m=width,
+        mesh_m=.05, pml_m=2, plane_y_m=4, return_plane_y_m=5,
+        physical_source_logical_m=[width/2, 11, 0],
+        original_rx_logical_m=[width/2+1.3, 11, 0], source_to_ground_height_m=8,
+        ground_y_m=3, cover=dict(er=11, se=.001, mr=1, sm=0, delta_er=.5, tau_s=6.4567e-9),
+        source='Reference official impulse 1 1 impulse, start 0; no Ricker or fitted scaling',
+        electric_replay='I_z[n+1/2] = dx * reference Hx[n+1] at plane y+dy/2',
+        magnetic_replay='M_x[n] = dx*dz * reference Ez[n] at plane y',
+        source_aperture='All x=2.05..width-2.05 inclusive; sources strictly outside PML',
+        normalization='Original full-air impulse is the common source reference, never an individual virtual source',
+        return_method='Upgoing angular-spectrum propagation above replay plane; retain evanescent modes and complex phase',
+        sfcw=dict(method='official direct', start_hz=20e6, step_hz=.3e6, count=501,
+                  tail_taper_fraction=0, fitted_amplitude_or_delay=False),
+        acceptance='Report complete-band/low-band errors, above-plane leakage, aperture/time sensitivity and full overhead; no preset production pass claim',
+        limitations=['Finite aperture is not a closed TF/SF boundary',
+                     'Flat half-space is not actual terrain or a deep-interface test',
+                     'Native broadband impulse includes unresolved out-of-band modes; inspect warnings',
+                     'Return propagation assumes upgoing field in homogeneous air'],
+        script_sha256=sha(__file__), cases=cases))
+    save(PUBLIC/f'w{width}'/'implementation.json',dict(
+        replay_api='official Waveform(user_func), exact integer/half-step sample lookup',
+        callback_sha256=sha(ROOT/'scripts/air_replay_lattice.py'),
+        reason='Separate source-preparation overhead and acquire return Hx; unchanged source samples and 4240-step comparison'))
+    shutil.copyfile(__file__, PUBLIC/f'w{width}'/'model_builder_snapshot.txt')
+    print(f'Frozen {width}m diagnostic contract; no solver launched')
+
+
+def load_contract(width):
+    p = PUBLIC / f'w{width}' / 'contract.json'
+    return p, json.loads(p.read_text(encoding='utf-8'))
+
+
+def build_scene(contract, case):
+    import gprMax
+    import h5py
+    import numpy as np
+    w = contract['width_m']; dl = contract['mesh_m']
+    s = gprMax.Scene()
+    s.add(gprMax.DomainMode(mode='TM'))
+    s.add(gprMax.Domain(p1=(w, case['height_m'], float('inf'))))
+    s.add(gprMax.Discretisation(p1=(dl, dl, dl)))
+    s.add(gprMax.OMPThreads(n=4))
+    s.add(gprMax.TimeWindow(iterations=case['iterations']))
+    pc = round(contract['pml_m']/dl)
+    s.add(gprMax.PMLProps(x0=pc, y0=pc, z0=0, xmax=pc, ymax=pc, zmax=0))
+    if case['cover']:
+        mat = contract['cover']
+        s.add(gprMax.Material(er=mat['er'], se=mat['se'], mr=mat['mr'], sm=mat['sm'], id='cover'))
+        s.add(gprMax.AddDebyeDispersion(poles=1, er_delta=[mat['delta_er']], tau=[mat['tau_s']], material_ids=['cover']))
+        s.add(gprMax.Box(p1=(0, 0, 0), p2=(w, contract['ground_y_m'], dl), material_id='cover'))
+    if not case['replay']:
+        s.add(gprMax.Waveform(wave_type='impulse', amp=1., freq=1., id='impulse'))
+        s.add(gprMax.HertzianDipole(p1=tuple(contract['physical_source_logical_m']), polarisation='z', waveform_id='impulse'))
+        s.add(gprMax.Rx(p1=tuple(contract['original_rx_logical_m']), id='original', outputs=['Ez']))
+    xs = np.arange(round(2.05/dl), round((w-2.05)/dl)+1)*dl
+    if case['replay']:
+        ref = PRIVATE / f'w{w}' / 'full_air' / 'model.h5'
+        with h5py.File(ref) as f:
+            dt = float(f.attrs['dt']); n = case['iterations']
+            from air_replay_lattice import lattice_waveform
+            for i, x in enumerate(xs):
+                group = f[f'rxs/rx{i+2}']  # original receiver is first
+                assert str(group.attrs['Name']) == f'inc{i}'
+                e = group['Ez'][:n]
+                hx = group['Hx'][1:n+1]
+                assert hx.size == n  # Never append an invented zero last sample
+                s.add(gprMax.Waveform(wave_type='user', id=f'J{i}', user_func=lattice_waveform(dl*hx,dt,.5*dt)))
+                s.add(gprMax.Waveform(wave_type='user', id=f'M{i}', user_func=lattice_waveform(dl*dl*e,dt,0.)))
+                s.add(gprMax.HertzianDipole(p1=(float(x), 4, 0), polarisation='z', waveform_id=f'J{i}'))
+                s.add(gprMax.MagneticDipole(p1=(float(x), 4, 0), polarisation='x', waveform_id=f'M{i}'))
+    elif case['id'] == 'full_air':
+        for i, x in enumerate(xs):
+            s.add(gprMax.Rx(p1=(float(x), 4, 0), id=f'inc{i}', outputs=['Ez', 'Hx']))
+    # A spatial profile from one stationary source is not a moving B-scan.
+    for y, label in [(2.5, 'below'), (3.5, 'near_ground'), (5, 'return')]:
+        for i, x in enumerate(xs):
+            s.add(gprMax.Rx(p1=(float(x), y, 0), id=f'{label}{i}', outputs=['Ez','Hx'] if label=='return' else ['Ez']))
+    return s
+
+
+def worker(width, name):
+    import gprMax
+    _, c = load_contract(width)
+    case = next(x for x in c['cases'] if x['id'] == name)
+    scene = build_scene(c, case)
+    # All waveform spectra come from the approved native impulse. The explicit
+    # research override retains diagnostics for unresolved out-of-band energy.
+    gprMax.run(scenes=[scene], outputfile=str(PRIVATE/f'w{width}'/name/'model.h5'),
+               cpu_precision='double', hide_progress_bars=True,
+               allow_underresolved=True)
+
+
+def run_case(width, name):
+    import gprMax
+    assert gprMax.__version__ == '4.0.1'
+    cp, c = load_contract(width)
+    assert c['script_sha256'] == sha(__file__), 'Script differs from frozen recipe'
+    implementation=json.loads((cp.parent/'implementation.json').read_text(encoding='utf-8'))
+    assert implementation['callback_sha256']==sha(ROOT/'scripts/air_replay_lattice.py')
+    case = next(x for x in c['cases'] if x['id'] == name)
+    dest = PRIVATE/f'w{width}'/name
+    if dest.exists():
+        raise RuntimeError('Refusing to overwrite or repeat a prior attempt')
+    ref = PRIVATE/f'w{width}'/'full_air'/'model.h5'
+    if case['replay']:
+        rec = json.loads(ref.with_name('execution.json').read_text(encoding='utf-8'))
+        assert rec['exit_code'] == 0 and rec['output_sha256'] == sha(ref)
+    dest.mkdir(parents=True)
+    env = dict(os.environ, OMP_NUM_THREADS='4', MPLBACKEND='Agg')
+    command = [sys.executable, str(Path(__file__).resolve()), 'worker', '--width', str(width), '--case', name]
+    rec = dict(case=name, width_m=width, command=command, contract_sha256=sha(cp),
+               script_sha256=sha(__file__), solver_version=gprMax.__version__,
+               started_utc=datetime.now(timezone.utc).isoformat(),
+               native_source_module_sha256=sha(Path(gprMax.__file__).parent/'sources.py'),
+               reference_sha256=sha(ref) if case['replay'] else None)
+    rec['implementation_sha256']=sha(cp.parent/'implementation.json')
+    save(dest/'execution.json', rec)
+    start = time.perf_counter()
+    with (dest/'solver.log').open('w', encoding='utf-8') as f:
+        p = subprocess.run(command, stdout=f, stderr=subprocess.STDOUT, cwd=ROOT,
+                           env=env, timeout=1200)
+    rec.update(exit_code=p.returncode, wall_seconds=time.perf_counter()-start,
+               finished_utc=datetime.now(timezone.utc).isoformat(),
+               log_sha256=sha(dest/'solver.log'))
+    out = dest/'model.h5'
+    if out.exists():
+        rec.update(output_sha256=sha(out), output_bytes=out.stat().st_size)
+    save(dest/'execution.json', rec)
+    print(json.dumps(rec, ensure_ascii=False))
+    if p.returncode:
+        raise RuntimeError(f'{name} failed; see {dest}/solver.log')
+
+
+def analyse(width):
+    import h5py
+    import numpy as np
+    import matplotlib
+    matplotlib.use('Agg')
+    import matplotlib.pyplot as plt
+    from gprMax.toolboxes.SFCW import processing as sf
+    _, c = load_contract(width)
+    dl = c['mesh_m']; n = 4240
+    xs = np.arange(round(2.05/dl), round((width-2.05)/dl)+1)*dl
+    frq = 20e6+.3e6*np.arange(501)
+    base = PRIVATE/f'w{width}'
+    source = sf.load_source(base/'full_air'/'model.h5')
+    assert source.samples.dtype == np.float64
+    assert source.samples[0] == 1 and np.count_nonzero(source.samples) == 1
+    raw = {}; spec = {}; records = []; audits = []
+    for case in c['cases']:
+        name = case['id']; dest = base/name
+        rec = json.loads((dest/'execution.json').read_text(encoding='utf-8'))
+        fn = dest/'model.h5'
+        assert rec['exit_code'] == 0 and sha(fn) == rec['output_sha256']
+        with h5py.File(fn) as f:
+            assert str(f.attrs['gprMax']) == '4.0.1'
+            assert int(f.attrs['Iterations']) == case['iterations']
+            dt = float(f.attrs['dt'])
+            assert dt == source.dt
+            groups = {str(g.attrs['Name']): g for g in f['rxs'].values()}
+            for label in ['below', 'near_ground', 'return']:
+                data = np.column_stack([groups[f'{label}{i}']['Ez'][:n] for i in range(len(xs))])
+                assert data.dtype == np.float64 and np.isfinite(data).all()
+                key = name+'_'+label
+                raw[key] = data
+                sig = sf.SampledSignal(path=key, samples=data, dt=dt, time_offset=0,
+                                       quantity='Ez', units='V/m', filename=str(fn))
+                response = sf.direct_frequency_response(source, sig, frq)
+                spec[key] = response.response
+                indices = np.array([0, 1, 100, 250, 400, 500])
+                cols = [len(xs)//2, len(xs)//2+26]
+                manual = (np.exp(-2j*np.pi*frq[indices,None]*sig.times) @ data[:,cols]*dt)
+                manual /= (np.exp(-2j*np.pi*frq[indices,None]*source.times) @ source.samples*dt)[:,None]
+                err = np.linalg.norm(manual-response.response[np.ix_(indices,cols)])/np.linalg.norm(manual)
+                assert err < 1e-10
+                audits.append(dict(case=key, explicit_dtft_relative_error=float(err),
+                                   tail_relative_db=float(response.receiver_tail_relative_db)))
+            if not case['replay']:
+                sig = sf.load_receiver(fn, receiver_path='rxs/rx1', component='Ez')
+                sig = sf.SampledSignal(path=sig.path, samples=sig.samples[:n], dt=sig.dt,
+                                       time_offset=sig.time_offset, quantity=sig.quantity, units=sig.units)
+                raw[name+'_original'] = sig.samples
+                spec[name+'_original'] = sf.direct_frequency_response(source, sig, frq).response
+        records.append(rec)
+    core = (xs>=width/2-5)&(xs<=width/2+5)
+    def metric(a,b):
+        den = np.linalg.norm(b)
+        return float(np.linalg.norm(a-b)/den) if den else None
+    metrics = {}
+    for label in ['below', 'near_ground']:
+        for mat in ['air','cover']:
+            a = spec[f'compact_{mat}_{label}'][:,core]
+            b = spec[f'full_{mat}_{label}'][:,core]
+            metrics[f'{mat}_{label}'] = dict(fullband_relative_l2=metric(a,b),
+                                           low20_40_relative_l2=metric(a[frq<=40e6],b[frq<=40e6]))
+    full_sc = spec['full_cover_return']-spec['full_air_return']
+    compact_sc = spec['compact_cover_return']-spec['compact_air_return']
+    metrics['return_plane_scattered'] = dict(fullband_relative_l2=metric(compact_sc[:,core],full_sc[:,core]),
+                                             low20_40_relative_l2=metric(compact_sc[frq<=40e6][:,core],full_sc[frq<=40e6][:,core]))
+    metrics['above_plane_air_leakage_relative_to_below'] = float(np.linalg.norm(spec['compact_air_return'][:,core])/
+                                                               np.linalg.norm(spec['full_air_below'][:,core]))
+    # Discrete Helmholtz propagation in uniform air. No hard angle clipping or
+    # evanescent deletion; finite aperture and down-going PML waves remain risks.
+    q = 2*np.pi*np.fft.fftfreq(len(xs), d=dl)
+    omega = 2*np.pi*frq
+    wt = 2*np.sin(omega*dt/2)/dt
+    qt = 2*np.sin(q*dl/2)/dl
+    root = np.sqrt((wt[:,None]/299792458.)**2-qt[None,:]**2+0j)
+    ky = 2/dl*np.arcsin(dl*root/2)
+    ky = ky.real-1j*np.abs(ky.imag)
+    distance = c['original_rx_logical_m'][1]-c['return_plane_y_m']
+    propagated = np.fft.ifft(np.fft.fft(compact_sc,axis=1)*np.exp(-1j*ky*distance),axis=1)
+    propagated_full = np.fft.ifft(np.fft.fft(full_sc,axis=1)*np.exp(-1j*ky*distance),axis=1)
+    ix = int(np.argmin(abs(xs-c['original_rx_logical_m'][0])))
+    truth = spec['full_cover_original']-spec['full_air_original']
+    predicted = propagated[:,ix]
+    predicted_full = propagated_full[:,ix]
+    metrics['original_rx_return_scattered'] = dict(fullband_relative_l2=metric(predicted,truth),
+                                                  low20_40_relative_l2=metric(predicted[frq<=40e6],truth[frq<=40e6]),
+                                                  full_plane_transport_control_relative_l2=metric(predicted_full,truth))
+    metrics['total_original_rx'] = dict(fullband_relative_l2=metric(predicted+spec['full_air_original'],spec['full_cover_original']))
+    report = dict(contract=c, runs=records, audits=audits, metrics=metrics,
+                  no_production_acceptance=True, raw_outputs_location=str(base.relative_to(ROOT)))
+    save(PUBLIC/f'w{width}'/'results.json',report)
+    spec['predicted_original_scattered'] = predicted
+    spec['predicted_original_scattered_full_plane_control'] = predicted_full
+    np.savez_compressed(PUBLIC/f'w{width}'/'spectra.npz',frequency_hz=frq,x_m=xs,**spec)
+    # Archive exact raw receiver histories at representative stations only.
+    selected = [int(np.argmin(abs(xs-(width/2+offset)))) for offset in [-5,0,1.3,5]]
+    np.savez_compressed(PUBLIC/f'w{width}'/'native_probe_samples.npz',dt_s=dt,x_m=xs[selected],
+                        **{k:(v[:,selected] if v.ndim==2 else v) for k,v in raw.items()})
+    plt.rcParams['font.sans-serif']=['Microsoft YaHei','SimHei','DejaVu Sans']
+    plt.rcParams['axes.unicode_minus']=False
+    fig, ax = plt.subplots(2,2,figsize=(15,9),constrained_layout=True)
+    center = int(np.argmin(abs(xs-width/2)))
+    times = np.arange(n)*dt*1e9
+    for mat, axis in zip(['air','cover'],ax[0]):
+        axis.plot(times,raw[f'full_{mat}_below'][:,center],label='完整空气域：直接场')
+        axis.plot(times,raw[f'compact_{mat}_below'][:,center],'--',label='缩小空气域：等效源重放')
+        axis.set(title='纯空气入射对照' if mat=='air' else '粉质粘土平地：地表下方总场',xlabel='从原始发射起算的时间（ns）',ylabel='Ez（V/m）')
+        axis.legend();axis.grid(alpha=.2)
+    for values,label in [(truth,'完整域：原位置直接接收的地表反射'),(predicted,'缩域：重建至原位置'),(predicted_full,'完整域采样面回传控制')]:
+        ax[1,0].plot(frq/1e6,abs(values),label=label)
+    ax[1,0].set(title='原接收位置：配对地表反射复谱幅度',xlabel='频率（MHz）',ylabel='|Ez / 原始冲激源|（V/m/A）')
+    ax[1,0].legend();ax[1,0].grid(alpha=.2)
+    scale=max(abs(truth).max(),1e-300)
+    valid=abs(truth)>scale*1e-6
+    ax[1,1].plot(frq[valid]/1e6,np.angle(predicted[valid]*truth[valid].conj(),deg=True))
+    ax[1,1].set(title='缩域回传相对直接地表反射的相位差',xlabel='频率（MHz）',ylabel='相位差（度）')
+    ax[1,1].grid(alpha=.2)
+    fig.suptitle(f'{width}米宽二维诊断：原始官方冲激、8米离地、单站位；不是移动测线B-scan\n平地粉质粘土半空间；尚未验证深层界面和实际地形',fontsize=14)
+    fig.savefig(PUBLIC/f'w{width}'/'comparison.png',dpi=150)
+    print(json.dumps(metrics,ensure_ascii=False,indent=2))
+
+
+def main():
+    p=argparse.ArgumentParser(description=__doc__)
+    p.add_argument('action',choices=['prepare','run','worker','analyse'])
+    p.add_argument('--width',type=int,choices=[40,80,160],default=40)
+    p.add_argument('--case',choices=['full_air','compact_air','full_cover','compact_cover'])
+    a=p.parse_args()
+    if a.action=='prepare': prepare(a.width)
+    elif a.action=='analyse': analyse(a.width)
+    elif a.action=='worker': worker(a.width,a.case)
+    else: run_case(a.width,a.case)
+
+
+if __name__=='__main__':
+    main()

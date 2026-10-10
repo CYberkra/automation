@@ -208,6 +208,11 @@ Thumbs.db
 /artifacts/research_checks/2026-10-06_slope_fine2m_sfcw_r1/*.png
 /artifacts/research_checks/2026-10-06_slope_fine2m_sfcw_r1/*.npz
 
+# Full spatial spectra for equivalent-plane diagnostics are regenerable (~47 MiB
+# per revision); selected native traces, phase checks, metrics and figures track.
+/artifacts/research_checks/2026-10-10_air_equivalent_plane_r3/w*/spectra.npz
+/artifacts/research_checks/2026-10-10_air_equivalent_plane_r4/w*/spectra.npz
+
 # Deterministically generated synthetic fixtures stay local; archive check summaries.
 /artifacts/research_checks/2026-10-06_line9_domain_acceleration_r1/contract_regression_*/fixture.*
 /artifacts/research_checks/2026-10-06_line9_domain_acceleration_r1/contract_regression_*/execution_contract.json

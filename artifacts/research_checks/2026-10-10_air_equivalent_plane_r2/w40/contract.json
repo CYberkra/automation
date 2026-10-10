@@ -1,0 +1,82 @@
+{
+  "authorization": "User explicit reply: 批准这项诊断及配套实现; pure air/flat ground first, ROG if needed",
+  "scope": "2D TMz diagnostic only; production model, materials, source and SFCW unchanged",
+  "solver": "official gprMax 4.0.1 CPU double, 4 threads",
+  "width_m": 40,
+  "mesh_m": 0.05,
+  "pml_m": 2,
+  "plane_y_m": 4,
+  "return_plane_y_m": 5,
+  "physical_source_logical_m": [
+    20.0,
+    11,
+    0
+  ],
+  "original_rx_logical_m": [
+    21.3,
+    11,
+    0
+  ],
+  "source_to_ground_height_m": 8,
+  "ground_y_m": 3,
+  "cover": {
+    "er": 11,
+    "se": 0.001,
+    "mr": 1,
+    "sm": 0,
+    "delta_er": 0.5,
+    "tau_s": 6.4567e-09
+  },
+  "source": "Reference official impulse 1 1 impulse, start 0; no Ricker or fitted scaling",
+  "electric_replay": "I_z[n+1/2] = dx * reference Hx[n+1] at plane y+dy/2",
+  "magnetic_replay": "M_x[n] = dx*dz * reference Ez[n] at plane y",
+  "source_aperture": "All x=2.05..width-2.05 inclusive; sources strictly outside PML",
+  "normalization": "Original full-air impulse is the common source reference, never an individual virtual source",
+  "return_method": "Upgoing angular-spectrum propagation above replay plane; retain evanescent modes and complex phase",
+  "sfcw": {
+    "method": "official direct",
+    "start_hz": 20000000.0,
+    "step_hz": 300000.0,
+    "count": 501,
+    "tail_taper_fraction": 0,
+    "fitted_amplitude_or_delay": false
+  },
+  "acceptance": "Report complete-band/low-band errors, above-plane leakage, aperture/time sensitivity and full overhead; no preset production pass claim",
+  "limitations": [
+    "Finite aperture is not a closed TF/SF boundary",
+    "Flat half-space is not actual terrain or a deep-interface test",
+    "Native broadband impulse includes unresolved out-of-band modes; inspect warnings",
+    "Return propagation assumes upgoing field in homogeneous air"
+  ],
+  "script_sha256": "2fbf33eafe9fa1d69c410ba0d300ff910b3f14475f0cd1116d47b80f1afbb598",
+  "cases": [
+    {
+      "id": "full_air",
+      "height_m": 16,
+      "cover": false,
+      "replay": false,
+      "iterations": 4241
+    },
+    {
+      "id": "compact_air",
+      "height_m": 8,
+      "cover": false,
+      "replay": true,
+      "iterations": 4240
+    },
+    {
+      "id": "full_cover",
+      "height_m": 16,
+      "cover": true,
+      "replay": false,
+      "iterations": 4240
+    },
+    {
+      "id": "compact_cover",
+      "height_m": 8,
+      "cover": true,
+      "replay": true,
+      "iterations": 4240
+    }
+  ]
+}
