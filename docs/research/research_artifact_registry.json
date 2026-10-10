@@ -1,4 +1,19 @@
 {
+  "line9_official_impulse_source_2026_10_10": {
+    "status": "SOURCE_PREPARED_AND_CPU_VERIFIED_NOT_SIMULATED",
+    "report": "docs/research/2026-10-10_official_impulse_source_preparation.md",
+    "source_design": "configs/research/line9_source_v0_2.json",
+    "public": "artifacts/research_checks/2026-10-10_line9_official_impulse_r1",
+    "prepared_inputs": 2,
+    "source_type": "impulse",
+    "source_amplitude_A": 1,
+    "source_start_s": 0,
+    "SFCW_method": "direct",
+    "regression_tests_passed": 5,
+    "source_design_sha256": "d1a6046381f9dd676818efa4533c2e012f25f12db5fa0551bcda1c84f1ae4e31",
+    "new_solver_runs": 0,
+    "impulse_receiver_output_available": false
+  },
   "simulation_sfcw_cleanup_2026_10_10": {
     "status": "CPU_CLEANUP_COMPLETE_SIM2REAL_UNRESOLVED",
     "report": "docs/research/2026-10-10_simulation_sfcw_simplification.md",

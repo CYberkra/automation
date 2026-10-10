@@ -1,0 +1,33 @@
+{
+  "schema": "line9-source-design/2",
+  "date": "2026-10-10",
+  "status": "USER_APPROVED_OFFICIAL_IMPULSE_SOURCE_CHANGE",
+  "authorization": "用户：改为官方的；承接将激励改为官方内置 impulse 的说明",
+  "solver_version": "4.0.1",
+  "official_reference": "https://docs.gprmax.com/en/latest/inc_SFCW.html#preparing-the-model",
+  "official_example": "gprMax/toolboxes/SFCW/examples/cylinder_sfcw_2D.in",
+  "waveform_command": "#waveform: impulse 1 1 impulse",
+  "waveform_id": "impulse",
+  "waveform_type": "impulse",
+  "amplitude_A": 1,
+  "frequency_syntax_slot": 1,
+  "centre_frequency_Hz": null,
+  "source_start_s": 0,
+  "source_geometry_and_polarisation": "Preserve the original z Hertzian dipole position and element length",
+  "source_samples_required": "One nonzero sample at source index zero; all subsequent samples zero; electric-source origin dt/2 retained",
+  "sfcw": {
+    "method": "direct",
+    "frequency_start_Hz": 20000000,
+    "frequency_stop_Hz": 170000000,
+    "frequency_step_Hz": 300000,
+    "tones": 501,
+    "windows": ["hann", "blackman"],
+    "zero_pad_factor": 8,
+    "tail_taper_fraction": 0,
+    "time_shift_s": 0,
+    "field_reference_length_m": 0.025
+  },
+  "preparation_example_group_ids": ["high_x19000_H0", "high_x19000_H1"],
+  "execution_authorized": false,
+  "limits": "Source preparation only. No solver batch, homodyne addition, material/geometry/antenna change or restart authorized by this source-change instruction. Unit source amplitude is not calibrated instrument power."
+}

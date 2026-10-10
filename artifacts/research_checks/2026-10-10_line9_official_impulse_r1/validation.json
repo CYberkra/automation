@@ -1,0 +1,76 @@
+{
+  "status": "PASS_SOURCE_ONLY_PREPARATION_OFFICIAL_PARSE_AND5_CPU_TESTS",
+  "new_solver_runs": 0,
+  "gprmax_version": "4.0.1",
+  "prepared_inputs": [
+    {
+      "id": "high_x19000_H0",
+      "changed_line_numbers_1based": [
+        10,
+        11
+      ],
+      "input_sha256": "6fc9e22622cb8d7d168053ddfa6b41e9870d88a2dd0368beb544bb74463f69af",
+      "parent_input_sha256": "ad8cc2587cb15bcca41e0b1abbd421e41e01f464d9eea232434327f217d48ec8",
+      "geometry_sha256_unchanged": "c1e308ff73119f2c366d42efcf3526646d5fe8e76c6a692a7113a5b1148985a6",
+      "material_sha256_unchanged": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "official_waveform": {
+        "wave_type": "impulse",
+        "amp": 1.0,
+        "freq": 1.0,
+        "id": "impulse"
+      },
+      "official_dipole": {
+        "polarisation": "z",
+        "p1": [
+          169.35,
+          38.95,
+          0.0125
+        ],
+        "waveform_id": "impulse",
+        "start": null,
+        "stop": null
+      }
+    },
+    {
+      "id": "high_x19000_H1",
+      "changed_line_numbers_1based": [
+        10,
+        11
+      ],
+      "input_sha256": "421a2d3e05f3bdd16da96fc9430826cc0387b7d2c990ee6f2a18163a63688a17",
+      "parent_input_sha256": "6821bc5a2426ca8a756906e35425c210ced8da4d1352a23f49ea8f95c8ffbc93",
+      "geometry_sha256_unchanged": "f948ae805077ea74612aa7e4bd46252a23ea0f7c973841657e5a4cc911a4868c",
+      "material_sha256_unchanged": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "official_waveform": {
+        "wave_type": "impulse",
+        "amp": 1.0,
+        "freq": 1.0,
+        "id": "impulse"
+      },
+      "official_dipole": {
+        "polarisation": "z",
+        "p1": [
+          169.35,
+          38.95,
+          0.0125
+        ],
+        "waveform_id": "impulse",
+        "start": null,
+        "stop": null
+      }
+    }
+  ],
+  "regression_tests_passed": 5,
+  "actual_legacy_Ricker_source_audit_passed": true,
+  "legacy_raw_sha256": "a601791ce1cd85585d9f5cad24fd026ccdd03baa3e55cf1b0ff7f281cec3ac26",
+  "source_design_sha256": "d1a6046381f9dd676818efa4533c2e012f25f12db5fa0551bcda1c84f1ae4e31",
+  "preparation_manifest_sha256": "ca3deb2a4e67f4cb7cf3f69b1074538f3197c2ed6e357422b039b6337d2f9447",
+  "generator_sha256": "9c02b0649c04d7dee29b81213188de3134fb50992df58a7bc8121c77bd637e9b",
+  "native_auditor_sha256": "58b003598b2f69410e115af814466afcde018efe6ee1d15b12e275077b007d8c",
+  "verification_script_sha256": "09eeb730089a9de2eedd1edf7ec8f0250e238e6419cb1657474f59ee873aef96",
+  "official_example_sha256": "967478c7116fa5f165f33ebaeafe2a268e9efb6b2aa9050849b2d8ccef176715",
+  "official_waveforms_sha256": "ca79340903a25bd370d6149ff23b985c73ccb7b754fd73c8e70cc7b292ec9bcc",
+  "execution_contract_created": false,
+  "impulse_receiver_output_available": false,
+  "limits": "Input/CPU validation only; no FDTD response or physics/field validation."
+}

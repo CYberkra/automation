@@ -21,6 +21,21 @@ def save(p, value):
     p.write_text(json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False)+'\n', encoding='utf-8')
 
 
+def audit_source(excitation, group, dt):
+    """Check the source declared by this batch; legacy batches remain Ricker."""
+    attrs=excitation.attrs
+    kind=group.get('source_type','ricker')
+    assert kind in ('ricker','impulse')
+    assert attrs['WaveformType']==kind
+    assert attrs['WaveformFrequency']==group.get('source_frequency_Hz',100e6)
+    assert attrs['WaveformAmplitude']==group.get('source_amplitude_A',40.)
+    if kind=='impulse':
+        samples=excitation['samples'][:]
+        np.testing.assert_array_equal(np.flatnonzero(samples),[0])
+        assert samples[0]==group['source_amplitude_A']
+        assert attrs['SourceStartTime']==0 and attrs['TimeSampleOffset']==.5*dt
+
+
 def audit(path, completed=False):
     c = json.loads(path.read_text('utf-8'))
     assert gprMax.__version__ == c['expected_version']
@@ -46,8 +61,7 @@ def audit(path, completed=False):
                 assert x.dtype == s.dtype == np.float64
                 assert x.shape == s.shape == (g['expected_samples'],)
                 assert np.isfinite(x).all() and np.isfinite(s).all() and np.any(x)
-                assert h['srcs/src1/excitation'].attrs['WaveformType'] == 'ricker'
-                assert h['srcs/src1/excitation'].attrs['WaveformFrequency'] == 100e6
+                audit_source(h['srcs/src1/excitation'],g,float(h.attrs['dt']))
                 for key, position in [('srcs/src1', g['tx_m']), ('rxs/rx1', g['rx_m'])]:
                     np.testing.assert_allclose(h[key].attrs['Position'], position, atol=1e-12, rtol=0)
             row.update(native_sha256=sha(raw), native_path=str(raw), dtype=str(x.dtype),

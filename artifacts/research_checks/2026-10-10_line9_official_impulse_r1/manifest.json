@@ -1,0 +1,155 @@
+{
+  "status": "PREPARED_OFFICIAL_IMPULSE_SOURCE_NOT_RUN",
+  "approval_basis": "用户：改为官方的；承接将激励改为官方内置 impulse 的说明",
+  "execution_authorized": false,
+  "source_design_sha256": "d1a6046381f9dd676818efa4533c2e012f25f12db5fa0551bcda1c84f1ae4e31",
+  "generator_sha256": "9c02b0649c04d7dee29b81213188de3134fb50992df58a7bc8121c77bd637e9b",
+  "parent_manifest_sha256": "a5da3b5eacce651ff737a9cbb7a798632e3052c8edeabacecd6b45895afe05cb",
+  "groups": [
+    {
+      "id": "high_x19000_H0",
+      "input": "high_x19000_H0/cases/high_x19000_H0/profile.in",
+      "input_sha256": "6fc9e22622cb8d7d168053ddfa6b41e9870d88a2dd0368beb544bb74463f69af",
+      "geometry": "high_x19000_H0/geometries/full2d_compact.h5",
+      "geometry_sha256": "c1e308ff73119f2c366d42efcf3526646d5fe8e76c6a692a7113a5b1148985a6",
+      "material": "high_x19000_H0/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        169.35,
+        38.95,
+        0.0
+      ],
+      "rx_m": [
+        170.65,
+        39.025000000000006,
+        0.0
+      ],
+      "expected_samples": 20352,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 1200.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H0",
+      "chainage_m": 190.0,
+      "input_tx_m": [
+        169.35,
+        38.95,
+        0.0125
+      ],
+      "input_rx_m": [
+        170.65,
+        39.025000000000006,
+        0.0125
+      ],
+      "peak_ns": 357.6180971390552,
+      "basal_gate_ns": [
+        345.6180971390552,
+        369.6180971390552
+      ],
+      "wide_gate_ns": [
+        297.6180971390552,
+        417.6180971390552
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true
+    },
+    {
+      "id": "high_x19000_H1",
+      "input": "high_x19000_H1/cases/high_x19000_H1/profile.in",
+      "input_sha256": "421a2d3e05f3bdd16da96fc9430826cc0387b7d2c990ee6f2a18163a63688a17",
+      "geometry": "high_x19000_H1/geometries/full2d_compact.h5",
+      "geometry_sha256": "f948ae805077ea74612aa7e4bd46252a23ea0f7c973841657e5a4cc911a4868c",
+      "material": "high_x19000_H1/geometries/line9_research_materials_v1_smoothed.json",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        169.35,
+        38.95,
+        0.0
+      ],
+      "rx_m": [
+        170.65,
+        39.025000000000006,
+        0.0
+      ],
+      "expected_samples": 20352,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 1200.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "chainage_m": 190.0,
+      "input_tx_m": [
+        169.35,
+        38.95,
+        0.0125
+      ],
+      "input_rx_m": [
+        170.65,
+        39.025000000000006,
+        0.0125
+      ],
+      "peak_ns": 357.6180971390552,
+      "basal_gate_ns": [
+        345.6180971390552,
+        369.6180971390552
+      ],
+      "wide_gate_ns": [
+        297.6180971390552,
+        417.6180971390552
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true
+    }
+  ],
+  "no_retry": true,
+  "dt_s": 5.896635841874211e-11,
+  "SFCW": {
+    "method": "direct",
+    "frequency_start_Hz": 20000000,
+    "frequency_stop_Hz": 170000000,
+    "frequency_step_Hz": 300000,
+    "tones": 501,
+    "windows": [
+      "hann",
+      "blackman"
+    ],
+    "zero_pad_factor": 8,
+    "tail_taper_fraction": 0,
+    "time_shift_s": 0,
+    "field_reference_length_m": 0.025
+  },
+  "source_only_checks": [
+    {
+      "id": "high_x19000_H0",
+      "only_waveform_and_source_ID_changed": true,
+      "geometry_sha256_unchanged": true,
+      "material_sha256_unchanged": true,
+      "official_parser_object_count": 13
+    },
+    {
+      "id": "high_x19000_H1",
+      "only_waveform_and_source_ID_changed": true,
+      "geometry_sha256_unchanged": true,
+      "material_sha256_unchanged": true,
+      "official_parser_object_count": 13
+    }
+  ],
+  "limits": "Source preparation only. No solver batch, homodyne addition, material/geometry/antenna change or restart authorized by this source-change instruction. Unit source amplitude is not calibrated instrument power.",
+  "reused_solver_outputs": []
+}

@@ -1,0 +1,13 @@
+#title: high_x19000_H0; dense paired-loss diagnostic; no snapshots
+#domain_mode: TM
+#domain: 210 42.5 inf
+#dx_dy_dz: 0.025 0.025 0.025
+#time_window: 1.2e-06
+#omp_threads: 2
+#pml_cells: 80 80 0 80 80 0
+#pml_formulation: HORIPML
+#dispersive_averaging: y
+#waveform: impulse 1 1 impulse
+#hertzian_dipole: z 169.35 38.95 0.0125 impulse
+#rx: 170.65 39.025 0.0125 high_x19000_H0_rx1 Ez
+#geometry_objects_read: 0 0 0 ../../geometries/full2d_compact.h5 line9_research_materials_v1_smoothed y
