@@ -4,14 +4,15 @@
 
 ## 执行边界
 
-用户已授权全流程清理，随后明确要求“改为官方的”：新输入采用官方内置 impulse，准备和 CPU 检查已完成，见[源替换记录](docs/research/2026-10-10_official_impulse_source_preparation.md)。材料、几何、采集配置、处理路线或新求解批次仍须先列具体方案、官方依据和影响，再取得显性许可；旧自主授权与历史“下一步”不构成新许可。详见 [AGENTS.md](AGENTS.md)。
+用户已授权全流程清理、官方 impulse 源替换，并明确要求“重新用新的去开始正演”。190m H0/H1 两项已在ROG以4.0.1 FP64完成；[结果与中文图](docs/research/2026-10-10_official_impulse_execution.md)。该授权限定于两项同站位验证，未启动整线或新增时窗对照。材料、几何、采集配置、处理路线或新求解批次仍须先列具体方案、官方依据和影响，再取得显性许可；旧自主授权与历史“下一步”不构成新许可。详见 [AGENTS.md](AGENTS.md)。
 
 ## 当前结论与缺口
 
 - 已有 4.0.1 原生 FP64 对照支持强晚波与覆盖层反射/重复返回有关；顶部和右边界扩域没有消除目标强峰。有限二维机制证据不等于唯一传播路径或现场验证。
 - 降低材料损耗能显著增强底砂差场，但属于反事实诊断，不能因此把低损耗值定为现场材料。
 - 既有结果的代表站约 8 m 离地、100 MHz Ricker / 40 A。新190m H0/H1输入已换为官方单位 impulse；z向理想二维线源、沿测线1.3m收发保持。设备已确认横向左右排列；实际天线、复电性、设备导出链仍有缺口。不得把模型响应叫端口 S21。
-- 当前源约定：[line9_source_v0_2](configs/research/line9_source_v0_2.json)，`#waveform: impulse 1 1 impulse`，起始时间0。SFCW继续官方推荐direct；尚无新激励求解结果，未新增homodyne。
+- 当前源约定：[line9_source_v0_2](configs/research/line9_source_v0_2.json)，`#waveform: impulse 1 1 impulse`，起始时间0。SFCW继续官方推荐direct；新激励两项原生输出与501点处理已验收，未新增homodyne。
+- 官方impulse与旧Ricker的源归一化重点窗几乎一致：330ns强总场及357ns底砂差场峰保留。因果卷积误差约1e−14；换源没有解决强波。冲激末尾约−40.7dB，时窗尚未达到官方−60dB建议；下一步应先提议时窗收敛对照并取得许可。
 - 最新覆盖层诊断曾漏读源半时间步；新处理改用官方接口，旧 R1 不覆盖，数值更正与验收见[流程审查](docs/research/2026-10-10_simulation_sfcw_simplification.md)。主 Rx 原处理已正确读取该偏移。
 
 ## 保留的最小流程

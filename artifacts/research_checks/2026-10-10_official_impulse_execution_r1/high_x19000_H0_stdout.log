@@ -1,0 +1,94 @@
+
+=== Electromagnetic modelling software based on the Finite-Difference Time-Domain (FDTD) method 
+
+    www.gprmax.org   __  __
+     __ _ _ __  _ __|  \/  | __ ___  __
+    / _` | '_ \| '__| |\/| |/ _` \ \/ /
+   | (_| | |_) | |  | |  | | (_| |>  <
+    \__, | .__/|_|  |_|  |_|\__,_/_/\_\\
+    |___/|_|
+                     v4.0.1 (Caol Ila)
+
+ Copyright (C) 2015-2026: The University of Edinburgh, United Kingdom
+
+ gprMax is free software: you can redistribute it and/or modify it under the
+  terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+ gprMax is distributed in the hope that it will be useful, but WITHOUT ANY
+  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+  A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ You should have received a copy of the GNU General Public License along with
+  gprMax.  If not, see www.gnu.org/licenses.
+
+LAPTOP-83GRKUNE | unknown unknown | unknown x unknown (16 cores, 32 cores with Hyper-Threading) | 63.2 GiB | Windows 11 (64-bit)
+|--->OpenMP: 16 threads
+|--->CUDA:
+     |--->Device 0: NVIDIA GeForce RTX 4090 Laptop GPU | 16.0 GiB
+Constants/variables used/available for Python scripting: {c: 299792458.0, current_model_run: 1, e0: 8.8541878188e-12, inputfile: E:\line9_official_impulse_20261010_r1\execution\prepared\high_x19000_H0\cases\high_x19000_H0\profile.in, m0: 1.25663706127e-06, number_model_runs: 1, z0: 376.7303134118051}
+
+Model title: high_x19000_H0; dense paired-loss diagnostic; no snapshots
+Spatial discretisation: 0.025 x 0.025 x 0.025m
+Requested domain mode: TM
+Dispersive material averaging: enabled
+Domain size: 210 x 42.5 x 0.025m (8400 x 1700 x 1 = 1.428e+07 cells)
+Mode: 2D TMz
+Time step (at CFL limit): 5.89664e-11 secs
+Time window: 1.2e-06 secs (20352 iterations)
+Simulation will use 2 OpenMP threads
+PML thickness: x0=80, y0=80, z0=0, xmax=80, ymax=80, zmax=0
+Waveform impulse of type impulse with maximum amplitude scaling 1, frequency 1Hz created.
+Hertzian dipole with polarity z at 169.35m, 38.95m, 0m, using waveform impulse created.
+Receiver at 170.65m, 39.025m, 0m with output component(s) Ez created.
+PML formulation set to HORIPML
+Geometry objects from file (voxels only) ..\..\geometries\full2d_compact.h5 inserted at 0m, 0m, 0m, with material database line9_research_materials_v1_smoothed. Interface averaging is enabled.
+
+--- Model 1/1, input file: E:\line9_official_impulse_20261010_r1\execution\prepared\high_x19000_H0\cases\high_x19000_H0\profile.in 
+
+
+Memory required (estimated): ~4.4 GB [main_grid] + ~65.0 MB overhead = 4.5 GB
+
+PML boundaries [main_grid]: {formulation: HORIPML, order: 1, thickness (cells): x0: 80, y0: 80, z0: 0, xmax: 80, ymax: 80, zmax: 0}
+
+
+Materials [main_grid]:
+    |                                                    |                                       |         | sigma   | Delta   | tau        | omega | delta | gamma |      | sigma*  | Dielectric 
+ ID | Name                                               | Type                                  | eps_r   | [S/m]   | eps_r   | [s]        | [Hz]  | [Hz]  | [Hz]  | mu_r | [Ohm/m] | smoothable 
+----+----------------------------------------------------+---------------------------------------+---------+---------+---------+------------+-------+-------+-------+------+---------+------------
+  0 | pec                                                | builtin                               | 1       | inf     |         |            |       |       |       | 1    | 0       | False      
+  1 | pmc                                                | builtin                               | 1       | 0       |         |            |       |       |       | 1    | inf     | False      
+  2 | free_space                                         | builtin                               | 1       | 0       |         |            |       |       |       | 1    | 0       | True       
+  3 | air{line9_research_materials_v1_smoothed}          | imported                              | 1       | 0       |         |            |       |       |       | 1    | 0       | True       
+  4 | cover{line9_research_materials_v1_smoothed}        | debye,                                | 11      | 0.001   | 0.5     | 6.4567e-09 |       |       |       | 1    | 0       | True       
+    |                                                    | imported                              |         |         |         |            |       |       |       |      |         |            
+  5 | mudstone{line9_research_materials_v1_smoothed}     | debye,                                | 11.7395 | 0.003   | 6.20037 | 8e-09      |       |       |       | 1    | 0       | True       
+    |                                                    | imported                              |         |         |         |            |       |       |       |      |         |            
+  6 | sandstone{line9_research_materials_v1_smoothed}    | debye,                                | 8.83755 | 0.001   | 2.57543 | 6.4567e-09 |       |       |       | 1    | 0       | True       
+    |                                                    | imported                              |         |         |         |            |       |       |       |      |         |            
+  7 | cover{line9_research_materials_v1_smoothed}+cover{ | dielectric-smoothed, inclusive, debye | 11.3698 | 0.002   | 0.25    | 6.4567e-09 |       |       |       | 1    | 0       | True       
+    |                                                    |                                       |         |         | 3.10018 | 8e-09      |       |       |       |      |         |            
+  8 | air{line9_research_materials_v1_smoothed}+air{line | dielectric-smoothed, inclusive, debye | 6       | 0.0005  | 0.25    | 6.4567e-09 |       |       |       | 1    | 0       | True       
+  9 | air{line9_research_materials_v1_smoothed}+cover{li | dielectric-smoothed, inclusive, debye | 8.5     | 0.00075 | 0.375   | 6.4567e-09 |       |       |       | 1    | 0       | True       
+ 10 | air{line9_research_materials_v1_smoothed}+air{line | dielectric-smoothed, inclusive, debye | 3.5     | 0.00025 | 0.125   | 6.4567e-09 |       |       |       | 1    | 0       | True       
+ 11 | cover{line9_research_materials_v1_smoothed}+mudsto | dielectric-smoothed, inclusive, debye | 11.5546 | 0.0025  | 0.125   | 6.4567e-09 |       |       |       | 1    | 0       | True       
+    |                                                    |                                       |         |         | 4.65028 | 8e-09      |       |       |       |      |         |            
+ 12 | cover{line9_research_materials_v1_smoothed}+cover{ | dielectric-smoothed, inclusive, debye | 11.1849 | 0.0015  | 0.375   | 6.4567e-09 |       |       |       | 1    | 0       | True       
+    |                                                    |                                       |         |         | 1.55009 | 8e-09      |       |       |       |      |         |            
+ 13 | Hmag_air{line9_research_materials_v1_smoothed}+air | dielectric-smoothed                   | 6       | 0.0005  |         |            |       |       |       | 1    | 0       | True       
+ 14 | Hmag_cover{line9_research_materials_v1_smoothed}+c | dielectric-smoothed                   | 11.3698 | 0.002   |         |            |       |       |       | 1    | 0       | True       
+
+Numerical dispersion analysis [main_grid] not carried out as impulse waveform used.
+Output directory: E:\line9_official_impulse_20261010_r1\execution\prepared\high_x19000_H0\cases\high_x19000_H0
+
+
+
+
+Model 1/1 solving on LAPTOP-83GRKUNE with CUDA backend using Device 0: NVIDIA GeForce RTX 4090 Laptop GPU
+
+Written output file: profile.h5
+
+Memory used (estimated): ~4.0 GB host + ~4.9 GB device
+Time taken: 3 minutes and 35.3221 seconds
+
+=== Simulation completed in 3 minutes and 38.4111 seconds ======================
+

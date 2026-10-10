@@ -1,0 +1,232 @@
+{
+  "status": "PASS_NATIVE_OFFICIAL_SFCW_AND_CAUSAL_CONVOLUTION_NOT_FIELD_VALIDATION",
+  "script_sha256": "fd35b817c4c926f7dd89a9cc97d59182f334d2404a62889c6a09867577935ea7",
+  "execution_contract_sha256": "c461341efbe19be06b2654aa11b599c219eb9639bdb17cd40032475ab8ebe98f",
+  "completed_verification_sha256": "eaaf9d2e209038687c0b55cf2c8a25340bb16e9dcb6a63aec88346cf278c8a9f",
+  "old_snapshot_manifest_sha256": "c2140a296b3ff5c6a05da5722c23e6b160c7ba34d6f0dc7a51a7d36c180f938d",
+  "rows": [
+    {
+      "id": "high_x19000_H0",
+      "impulse_native_sha256": "47336ecfe402600590601abffd2da1388c11ca8870b821ef45870847f034c396",
+      "ricker_native_sha256": "87075c0bbc8ea419b0d0d49047c0c59712ed8180c94cf0885030e2b39caff331",
+      "geometry_sha256": "c1e308ff73119f2c366d42efcf3526646d5fe8e76c6a692a7113a5b1148985a6",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "causal_convolution_relative_L2": 9.637666595776392e-15,
+      "causal_convolution_peak_relative_error": 5.995642702439665e-15,
+      "independent_DFT_relative_L2": [
+        1.0495311111187061e-13,
+        1.4518150466901795e-12
+      ],
+      "receiver_final_5pct_peak_relative_db": [
+        -131.91674075343946,
+        -40.76615853164556
+      ],
+      "final_5pct_below_official_minus60dB": [
+        true,
+        false
+      ],
+      "known_convolution_crop_identity_relative_error": 1.4455512613047181e-12,
+      "full_501tone_relative_source_change": 0.0019934348834714957
+    },
+    {
+      "id": "high_x19000_H1",
+      "impulse_native_sha256": "7f7fb0076a8038c02bdc6959cf7652cfbfb25b48755219cf2b22851cc094b1f5",
+      "ricker_native_sha256": "243234a2c637239bac951b88056979b34d7f89ca8b7c75480d8eb1612f915f03",
+      "geometry_sha256": "f948ae805077ea74612aa7e4bd46252a23ea0f7c973841657e5a4cc911a4868c",
+      "material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "causal_convolution_relative_L2": 9.886206976232788e-15,
+      "causal_convolution_peak_relative_error": 6.23912057868087e-15,
+      "independent_DFT_relative_L2": [
+        1.0494328022191062e-13,
+        1.471661155248421e-12
+      ],
+      "receiver_final_5pct_peak_relative_db": [
+        -131.9533608274238,
+        -40.64717024858887
+      ],
+      "final_5pct_below_official_minus60dB": [
+        true,
+        false
+      ],
+      "known_convolution_crop_identity_relative_error": 1.465704337125479e-12,
+      "full_501tone_relative_source_change": 0.0019038462317223245
+    }
+  ],
+  "metrics": {
+    "hann": {
+      "early": {
+        "bounds_ns": [
+          0,
+          120
+        ],
+        "configurations": {
+          "H0": {
+            "relative_complex_change": 2.888693458748861e-10,
+            "old_peak_ns": 4.1583499667332005,
+            "new_peak_ns": 4.1583499667332005,
+            "new_over_old_peak": 0.9999999999887098
+          },
+          "H1": {
+            "relative_complex_change": 2.7590588181278263e-10,
+            "old_peak_ns": 4.1583499667332005,
+            "new_peak_ns": 4.1583499667332005,
+            "new_over_old_peak": 0.999999999989442
+          },
+          "H1_minus_H0": {
+            "relative_complex_change": 0.04900031667454346,
+            "old_peak_ns": 115.60212907518297,
+            "new_peak_ns": 115.60212907518297,
+            "new_over_old_peak": 1.0408763368973606
+          }
+        }
+      },
+      "deep": {
+        "bounds_ns": [
+          300,
+          450
+        ],
+        "configurations": {
+          "H0": {
+            "relative_complex_change": 5.5358526930210505e-05,
+            "old_peak_ns": 330.1729873586161,
+            "new_peak_ns": 330.1729873586161,
+            "new_over_old_peak": 1.0000168717172524
+          },
+          "H1": {
+            "relative_complex_change": 5.227942057363797e-05,
+            "old_peak_ns": 330.1729873586161,
+            "new_peak_ns": 330.1729873586161,
+            "new_over_old_peak": 1.000016138052222
+          },
+          "H1_minus_H0": {
+            "relative_complex_change": 1.751486949464599e-05,
+            "old_peak_ns": 356.78642714570856,
+            "new_peak_ns": 356.78642714570856,
+            "new_over_old_peak": 0.9999975819817022
+          }
+        }
+      },
+      "basal": {
+        "bounds_ns": [
+          345.6180971390552,
+          369.6180971390552
+        ],
+        "configurations": {
+          "H0": {
+            "relative_complex_change": 0.00011504090635088824,
+            "old_peak_ns": 367.59813705921493,
+            "new_peak_ns": 367.59813705921493,
+            "new_over_old_peak": 0.9999903802758418
+          },
+          "H1": {
+            "relative_complex_change": 8.242899375731338e-05,
+            "old_peak_ns": 360.11310711909516,
+            "new_peak_ns": 360.11310711909516,
+            "new_over_old_peak": 1.000000181229782
+          },
+          "H1_minus_H0": {
+            "relative_complex_change": 6.229391903297683e-06,
+            "old_peak_ns": 356.78642714570856,
+            "new_peak_ns": 356.78642714570856,
+            "new_over_old_peak": 0.9999975819817022
+          }
+        }
+      }
+    },
+    "blackman": {
+      "early": {
+        "bounds_ns": [
+          0,
+          120
+        ],
+        "configurations": {
+          "H0": {
+            "relative_complex_change": 1.1760985773623108e-10,
+            "old_peak_ns": 4.1583499667332005,
+            "new_peak_ns": 4.1583499667332005,
+            "new_over_old_peak": 0.9999999999951845
+          },
+          "H1": {
+            "relative_complex_change": 1.1233191838092246e-10,
+            "old_peak_ns": 4.1583499667332005,
+            "new_peak_ns": 4.1583499667332005,
+            "new_over_old_peak": 0.9999999999954962
+          },
+          "H1_minus_H0": {
+            "relative_complex_change": 0.04914135388623622,
+            "old_peak_ns": 115.60212907518297,
+            "new_peak_ns": 115.60212907518297,
+            "new_over_old_peak": 1.041036824924114
+          }
+        }
+      },
+      "deep": {
+        "bounds_ns": [
+          300,
+          450
+        ],
+        "configurations": {
+          "H0": {
+            "relative_complex_change": 2.4733385742360734e-05,
+            "old_peak_ns": 328.5096473719228,
+            "new_peak_ns": 328.5096473719228,
+            "new_over_old_peak": 1.000004576852111
+          },
+          "H1": {
+            "relative_complex_change": 2.3333308206333717e-05,
+            "old_peak_ns": 328.5096473719228,
+            "new_peak_ns": 328.5096473719228,
+            "new_over_old_peak": 1.000004357462425
+          },
+          "H1_minus_H0": {
+            "relative_complex_change": 7.2301441350959055e-06,
+            "old_peak_ns": 356.78642714570856,
+            "new_peak_ns": 356.78642714570856,
+            "new_over_old_peak": 0.9999990213832061
+          }
+        }
+      },
+      "basal": {
+        "bounds_ns": [
+          345.6180971390552,
+          369.6180971390552
+        ],
+        "configurations": {
+          "H0": {
+            "relative_complex_change": 0.0001041538814412664,
+            "old_peak_ns": 367.59813705921493,
+            "new_peak_ns": 367.59813705921493,
+            "new_over_old_peak": 0.9999864302148175
+          },
+          "H1": {
+            "relative_complex_change": 4.6550170665193484e-05,
+            "old_peak_ns": 359.2814371257485,
+            "new_peak_ns": 359.2814371257485,
+            "new_over_old_peak": 1.0000056459979707
+          },
+          "H1_minus_H0": {
+            "relative_complex_change": 2.567567187140676e-06,
+            "old_peak_ns": 356.78642714570856,
+            "new_peak_ns": 356.78642714570856,
+            "new_over_old_peak": 0.9999990213832061
+          }
+        }
+      }
+    }
+  },
+  "numerical_sha256": "0b8e951ba7b66bc1c8c29701618ceb3b213dc47023173e187edc4556eaf27bee",
+  "method": "official_direct",
+  "frequency_Hz": [
+    20000000.0,
+    170000000.0
+  ],
+  "frequency_step_Hz": 300000,
+  "tones": 501,
+  "normalization": "actual source spectrum and 0.025 m current moment",
+  "display": "Re(complex_bandpass); official real_bandpass is twice this and saved separately",
+  "tail_taper": false,
+  "time_shift": false,
+  "AGC": false,
+  "fit": false,
+  "limits": "Two configurations at one station only, not a spatial scan. Impulse end-of-record tail is not fully decayed by the official -60 dB advisory; crop algebra only explains the known finite convolution, not unknown arrivals after 1200 ns. No unique-path, mesh-convergence, finite-3D antenna, field permittivity or field-performance certification."
+}
