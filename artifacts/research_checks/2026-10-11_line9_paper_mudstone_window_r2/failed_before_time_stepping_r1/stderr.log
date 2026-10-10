@@ -1,0 +1,35 @@
+Traceback (most recent call last):
+  File "E:\djh\line9_paper_mudstone_20261011_r1\scripts\gprmax_cached_cuda_entry.py", line 47, in <module>
+    runpy.run_module('gprMax',run_name='__main__')
+  File "<frozen runpy>", line 229, in run_module
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\djh\artifacts\local_checks\gprmax_v401_gpu_env\Lib\site-packages\gprMax\__main__.py", line 23, in <module>
+    gprMax.gprMax.cli()
+  File "E:\djh\artifacts\local_checks\gprmax_v401_gpu_env\Lib\site-packages\gprMax\gprMax.py", line 372, in cli
+    results = run_main(args)
+              ^^^^^^^^^^^^^^
+  File "E:\djh\artifacts\local_checks\gprmax_v401_gpu_env\Lib\site-packages\gprMax\gprMax.py", line 427, in run_main
+    results = context.run()
+              ^^^^^^^^^^^^^
+  File "E:\djh\artifacts\local_checks\gprmax_v401_gpu_env\Lib\site-packages\gprMax\contexts.py", line 106, in run
+    self._run_model(i)
+  File "E:\djh\artifacts\local_checks\gprmax_v401_gpu_env\Lib\site-packages\gprMax\contexts.py", line 134, in _run_model
+    scene.create_internal_objects(self.model)
+  File "E:\djh\artifacts\local_checks\gprmax_v401_gpu_env\Lib\site-packages\gprMax\scene.py", line 371, in create_internal_objects
+    self.process_geometry_objects(self.geometry_objects, model.G)
+  File "E:\djh\artifacts\local_checks\gprmax_v401_gpu_env\Lib\site-packages\gprMax\scene.py", line 228, in process_geometry_objects
+    self.build_grid_objects(objects_to_be_built, grid)
+  File "E:\djh\artifacts\local_checks\gprmax_v401_gpu_env\Lib\site-packages\gprMax\scene.py", line 122, in build_grid_objects
+    grid_user_object.build(grid)
+  File "E:\djh\artifacts\local_checks\gprmax_v401_gpu_env\Lib\site-packages\gprMax\user_objects\cmds_geometry\geometry_objects_read.py", line 145, in build
+    material_id_map, material_description = self._build_database_material_map(
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\djh\artifacts\local_checks\gprmax_v401_gpu_env\Lib\site-packages\gprMax\user_objects\cmds_geometry\geometry_objects_read.py", line 267, in _build_database_material_map
+    load_material_spec(database, key, search_directory=search_directory) for key in keys
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\djh\artifacts\local_checks\gprmax_v401_gpu_env\Lib\site-packages\gprMax\material_database.py", line 391, in load_material_spec
+    path, official = resolve_database_path(database, search_directory)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\djh\artifacts\local_checks\gprmax_v401_gpu_env\Lib\site-packages\gprMax\material_database.py", line 182, in resolve_database_path
+    raise FileNotFoundError(
+FileNotFoundError: Material database 'line9_materials_v0_2' was not found at '..\..\geometries\line9_materials_v0_2.json'. Official databases are: antenna, bioem, fundamental, gpr

@@ -1,0 +1,295 @@
+{
+  "status": "COMPLETED_TWO_CASE_MATERIAL_AND_RECORD_LENGTH_COMPARISON_NOT_FIELD_VALIDATION",
+  "script_sha256": "73707c45a851cd7ade219b157726eee7e173344a70672029d77eae6b89e0aa2d",
+  "official_processing_sha256": "adad556f09140956f0ee19d3038430e06a9ae8be6a826dcad723096d99624a3b",
+  "contract_sha256": "052cb64fabd5637c02de202b40c5654310607a7fae4644724aaaa83a14f7fcbb",
+  "verification_sha256": "9a48f50e9837c8e69d3477452b42ce4628e29a3e6e3f87f6475573bdc0b81db1",
+  "numerical_sha256": "2817017026b6a94db98c9bb748112cb105815854028c81ff1453d0f86fe20564",
+  "configuration_order": [
+    "旧泥岩1200ns",
+    "论文泥岩前1200ns",
+    "论文泥岩完整2400ns"
+  ],
+  "rows": [
+    {
+      "id": "high_x19000_H0",
+      "native_sha256": "6ea7ab43971ebb638fbdf4ca565bc75a3436682584af99f4d0ef6dde376628d8",
+      "old_native_sha256": "47336ecfe402600590601abffd2da1388c11ca8870b821ef45870847f034c396",
+      "samples": 40703,
+      "dtype": "float64",
+      "independent_DFT_relative_L2": [
+        1.4518150466901795e-12,
+        1.4079951379966762e-12,
+        3.1398976376482538e-12
+      ],
+      "receiver_final_5pct_peak_relative_db": [
+        -40.76615853164556,
+        -41.005052696109665,
+        -62.14636735521245
+      ],
+      "appended_tail_DTFT_additivity_relative_L2": 1.205448790627208e-09,
+      "full_vs_crop_complex_spectrum_change": 0.002313332017359894
+    },
+    {
+      "id": "high_x19000_H1",
+      "native_sha256": "220157dcc4a40389d70213117b777a3ae66aabff7c6a0c44e2943afd5ad4d948",
+      "old_native_sha256": "7f7fb0076a8038c02bdc6959cf7652cfbfb25b48755219cf2b22851cc094b1f5",
+      "samples": 40703,
+      "dtype": "float64",
+      "independent_DFT_relative_L2": [
+        1.471661155248421e-12,
+        1.457898601877181e-12,
+        3.209372437804187e-12
+      ],
+      "receiver_final_5pct_peak_relative_db": [
+        -40.64717024858887,
+        -40.72409196404958,
+        -62.26277535914691
+      ],
+      "appended_tail_DTFT_additivity_relative_L2": 1.346951934170771e-09,
+      "full_vs_crop_complex_spectrum_change": 0.002108977012015804
+    }
+  ],
+  "metrics": {
+    "hann": {
+      "early": {
+        "bounds_ns": [
+          0,
+          120
+        ],
+        "configurations": {
+          "H0": {
+            "old_peak_ns": 4.1583499667332005,
+            "new_crop_peak_ns": 4.1583499667332005,
+            "new_full_peak_ns": 4.1583499667332005,
+            "material_change_at_equal1200ns": 9.8588602834094e-07,
+            "full_vs_crop_complex_change": 4.96390632781972e-10,
+            "new_crop_over_old_peak": 0.9999999683420351,
+            "new_full_over_crop_peak": 1.000000000029199
+          },
+          "H1": {
+            "old_peak_ns": 4.1583499667332005,
+            "new_crop_peak_ns": 4.1583499667332005,
+            "new_full_peak_ns": 4.1583499667332005,
+            "material_change_at_equal1200ns": 9.866610489726388e-07,
+            "full_vs_crop_complex_change": 4.6355719442371223e-10,
+            "new_crop_over_old_peak": 0.9999999681851608,
+            "new_full_over_crop_peak": 1.0000000000274099
+          },
+          "H1_minus_H0": {
+            "old_peak_ns": 115.60212907518297,
+            "new_crop_peak_ns": 115.60212907518297,
+            "new_full_peak_ns": 115.60212907518297,
+            "material_change_at_equal1200ns": 4.649006661382567,
+            "full_vs_crop_complex_change": 0.028385009459702078,
+            "new_crop_over_old_peak": 4.885810260162565,
+            "new_full_over_crop_peak": 1.015922872296021
+          },
+          "new_full_H0_over_delta_L2": 848085345.849723,
+          "new_full_delta_over_total_L2": 1.1791266114112183e-09
+        }
+      },
+      "deep_broad": {
+        "bounds_ns": [
+          250,
+          550
+        ],
+        "configurations": {
+          "H0": {
+            "old_peak_ns": 330.1729873586161,
+            "new_crop_peak_ns": 327.6779773785762,
+            "new_full_peak_ns": 327.6779773785762,
+            "material_change_at_equal1200ns": 6.556139681748605,
+            "full_vs_crop_complex_change": 1.4182458671060916e-05,
+            "new_crop_over_old_peak": 8.728197066773246,
+            "new_full_over_crop_peak": 1.0000008379936982
+          },
+          "H1": {
+            "old_peak_ns": 330.1729873586161,
+            "new_crop_peak_ns": 399.2015968063872,
+            "new_full_peak_ns": 399.2015968063872,
+            "material_change_at_equal1200ns": 11.39688334524229,
+            "full_vs_crop_complex_change": 7.309704551360628e-06,
+            "new_crop_over_old_peak": 12.815602311401332,
+            "new_full_over_crop_peak": 1.0000000838128646
+          },
+          "H1_minus_H0": {
+            "old_peak_ns": 356.78642714570856,
+            "new_crop_peak_ns": 399.2015968063872,
+            "new_full_peak_ns": 399.2015968063872,
+            "material_change_at_equal1200ns": 76.49654899547352,
+            "full_vs_crop_complex_change": 9.368655148644535e-07,
+            "new_crop_over_old_peak": 74.16450385353764,
+            "new_full_over_crop_peak": 0.9999999882192199
+          },
+          "new_full_H0_over_delta_L2": 0.6921674277846053,
+          "new_full_delta_over_total_L2": 0.8229936716156232
+        }
+      },
+      "historical_deep": {
+        "bounds_ns": [
+          300,
+          450
+        ],
+        "configurations": {
+          "H0": {
+            "old_peak_ns": 330.1729873586161,
+            "new_crop_peak_ns": 327.6779773785762,
+            "new_full_peak_ns": 327.6779773785762,
+            "material_change_at_equal1200ns": 7.6153721662293785,
+            "full_vs_crop_complex_change": 8.468503074286724e-06,
+            "new_crop_over_old_peak": 8.728197066773246,
+            "new_full_over_crop_peak": 1.0000008379936982
+          },
+          "H1": {
+            "old_peak_ns": 330.1729873586161,
+            "new_crop_peak_ns": 399.2015968063872,
+            "new_full_peak_ns": 399.2015968063872,
+            "material_change_at_equal1200ns": 13.238174899460581,
+            "full_vs_crop_complex_change": 4.364732762622291e-06,
+            "new_crop_over_old_peak": 12.815602311401332,
+            "new_full_over_crop_peak": 1.0000000838128646
+          },
+          "H1_minus_H0": {
+            "old_peak_ns": 356.78642714570856,
+            "new_crop_peak_ns": 399.2015968063872,
+            "new_full_peak_ns": 399.2015968063872,
+            "material_change_at_equal1200ns": 77.3930454526125,
+            "full_vs_crop_complex_change": 5.482952354190042e-07,
+            "new_crop_over_old_peak": 74.16450385353764,
+            "new_full_over_crop_peak": 0.9999999882192199
+          },
+          "new_full_H0_over_delta_L2": 0.6903489013635946,
+          "new_full_delta_over_total_L2": 0.8237011760408955
+        }
+      }
+    },
+    "blackman": {
+      "early": {
+        "bounds_ns": [
+          0,
+          120
+        ],
+        "configurations": {
+          "H0": {
+            "old_peak_ns": 4.1583499667332005,
+            "new_crop_peak_ns": 4.1583499667332005,
+            "new_full_peak_ns": 4.1583499667332005,
+            "material_change_at_equal1200ns": 3.894937567137883e-07,
+            "full_vs_crop_complex_change": 2.0208884045168192e-10,
+            "new_crop_over_old_peak": 0.9999999865475249,
+            "new_full_over_crop_peak": 1.000000000012497
+          },
+          "H1": {
+            "old_peak_ns": 4.1583499667332005,
+            "new_crop_peak_ns": 4.1583499667332005,
+            "new_full_peak_ns": 4.1583499667332005,
+            "material_change_at_equal1200ns": 3.898103685345511e-07,
+            "full_vs_crop_complex_change": 1.887203583464283e-10,
+            "new_crop_over_old_peak": 0.9999999864806262,
+            "new_full_over_crop_peak": 1.0000000000117368
+          },
+          "H1_minus_H0": {
+            "old_peak_ns": 115.60212907518297,
+            "new_crop_peak_ns": 115.60212907518297,
+            "new_full_peak_ns": 115.60212907518297,
+            "material_change_at_equal1200ns": 4.651496663212068,
+            "full_vs_crop_complex_change": 0.02844746284960517,
+            "new_crop_over_old_peak": 4.890793543778032,
+            "new_full_over_crop_peak": 1.0159654447606732
+          },
+          "new_full_H0_over_delta_L2": 2087444004.7686422,
+          "new_full_delta_over_total_L2": 4.790547663704103e-10
+        }
+      },
+      "deep_broad": {
+        "bounds_ns": [
+          250,
+          550
+        ],
+        "configurations": {
+          "H0": {
+            "old_peak_ns": 328.5096473719228,
+            "new_crop_peak_ns": 327.6779773785762,
+            "new_full_peak_ns": 327.6779773785762,
+            "material_change_at_equal1200ns": 8.07706278083702,
+            "full_vs_crop_complex_change": 5.654397732552136e-06,
+            "new_crop_over_old_peak": 9.227922689901684,
+            "new_full_over_crop_peak": 1.0000003584433386
+          },
+          "H1": {
+            "old_peak_ns": 328.5096473719228,
+            "new_crop_peak_ns": 399.2015968063872,
+            "new_full_peak_ns": 399.2015968063872,
+            "material_change_at_equal1200ns": 13.963849787360376,
+            "full_vs_crop_complex_change": 2.915130770427886e-06,
+            "new_crop_over_old_peak": 13.442586501474686,
+            "new_full_over_crop_peak": 1.0000000284773967
+          },
+          "H1_minus_H0": {
+            "old_peak_ns": 356.78642714570856,
+            "new_crop_peak_ns": 399.2015968063872,
+            "new_full_peak_ns": 399.2015968063872,
+            "material_change_at_equal1200ns": 79.13166147586102,
+            "full_vs_crop_complex_change": 3.7354720793117115e-07,
+            "new_crop_over_old_peak": 77.16217714258184,
+            "new_full_over_crop_peak": 0.9999999957181495
+          },
+          "new_full_H0_over_delta_L2": 0.692232702312434,
+          "new_full_delta_over_total_L2": 0.8231485476805036
+        }
+      },
+      "historical_deep": {
+        "bounds_ns": [
+          300,
+          450
+        ],
+        "configurations": {
+          "H0": {
+            "old_peak_ns": 328.5096473719228,
+            "new_crop_peak_ns": 327.6779773785762,
+            "new_full_peak_ns": 327.6779773785762,
+            "material_change_at_equal1200ns": 8.552495193305765,
+            "full_vs_crop_complex_change": 3.367420284100673e-06,
+            "new_crop_over_old_peak": 9.227922689901684,
+            "new_full_over_crop_peak": 1.0000003584433386
+          },
+          "H1": {
+            "old_peak_ns": 328.5096473719228,
+            "new_crop_peak_ns": 399.2015968063872,
+            "new_full_peak_ns": 399.2015968063872,
+            "material_change_at_equal1200ns": 14.82601095874836,
+            "full_vs_crop_complex_change": 1.7392435015947424e-06,
+            "new_crop_over_old_peak": 13.442586501474686,
+            "new_full_over_crop_peak": 1.0000000284773967
+          },
+          "H1_minus_H0": {
+            "old_peak_ns": 356.78642714570856,
+            "new_crop_peak_ns": 399.2015968063872,
+            "new_full_peak_ns": 399.2015968063872,
+            "material_change_at_equal1200ns": 80.1185283088307,
+            "full_vs_crop_complex_change": 2.186325751596609e-07,
+            "new_crop_over_old_peak": 77.16217714258184,
+            "new_full_over_crop_peak": 0.9999999957181495
+          },
+          "new_full_H0_over_delta_L2": 0.692277254881944,
+          "new_full_delta_over_total_L2": 0.8231333083066431
+        }
+      }
+    }
+  },
+  "method": "official_direct",
+  "tones": 501,
+  "band_Hz": [
+    20000000.0,
+    170000000.0
+  ],
+  "step_Hz": 300000.0,
+  "source_reference": "actual saved impulse samples; physical half-time-step retained; /0.025m current moment, not port S21",
+  "tail_taper": false,
+  "time_shift": false,
+  "AGC": false,
+  "fit": false,
+  "vertical_delay_guide_ns": 399.42928947079633,
+  "limits": "Two configurations at one station; no spatial B-scan or unique path truth. Only mudstone constitutive law and record length change. H0/H1 contrast is connected bottom sandstone, not all-layer clean truth. Air reduction shelved. No extra observers/snapshots, fit, taper, AGC or new method. Crop1200 uses same2400 run, not a separate1200 solve. Full2400 compared only to1200; further convergence not certified."
+}

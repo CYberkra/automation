@@ -1,0 +1,54 @@
+{
+  "status": "PASS_TWO_NATIVE_AND_OFFICIAL_CLI_DELIVERY_NOT_FIELD_VALIDATION",
+  "audit_script_sha256": "d1e139e938b0d397984b7732006dffd7409ab8579287189e4e5c3085f04f8a5f",
+  "retrieved_file_count": 20,
+  "raw_precision": "float64",
+  "official_CLI_complex_profile_relative_L2": 5.574546130342189e-16,
+  "summary": {
+    "hann": {
+      "old_peak_abs": [
+        0.051851081700554406,
+        0.051686817290965054,
+        0.008995885566533433
+      ],
+      "new_peak_abs": [
+        0.4525668384556397,
+        0.6623977506605183,
+        0.6671753819053059
+      ],
+      "delta_peak_gain": 74.16450297982193,
+      "delta_peak_gain_dB": 37.403921812135174,
+      "H0_peak_gain": 8.728204380947384,
+      "old_delta_over_H0_peak": 0.17349465568501818,
+      "new_delta_over_H0_peak": 1.4742029800106575,
+      "delta_relative_to_H0_improvement": 8.497108883210169,
+      "delta_relative_to_H0_improvement_dB": 18.585423668049124
+    },
+    "blackman": {
+      "old_peak_abs": [
+        0.049794466847052805,
+        0.04974511566357135,
+        0.008699571141114588
+      ],
+      "new_peak_abs": [
+        0.45949965515400715,
+        0.6687030393763423,
+        0.6712778465808653
+      ],
+      "delta_peak_gain": 77.16217681218494,
+      "delta_peak_gain_dB": 37.74808941940194,
+      "H0_peak_gain": 9.2279259975891,
+      "old_delta_over_H0_peak": 0.17470959510091616,
+      "new_delta_over_H0_peak": 1.4608886841403135,
+      "delta_relative_to_H0_improvement": 8.361811400778942,
+      "delta_relative_to_H0_improvement_dB": 18.44600735774715
+    }
+  },
+  "archive_sha256": "cd83c53c5d7deb358417e6996dd0055056ae8964a39a2ce4bc84ad5556addc38",
+  "numerical_sha256": "2817017026b6a94db98c9bb748112cb105815854028c81ff1453d0f86fe20564",
+  "completed_FDTD_runs": 2,
+  "failed_before_time_stepping": 1,
+  "moving_Bscan": false,
+  "no_new_solves_in_audit": true,
+  "limitations": "Delta and H0 compare known model contrasts, not SNR or field calibration; no moving-line or spatial convergence certification."
+}

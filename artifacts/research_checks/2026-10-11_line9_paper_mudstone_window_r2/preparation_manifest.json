@@ -1,0 +1,181 @@
+{
+  "status": "PREPARED_APPROVED_PAPER_MUDSTONE_2400NS",
+  "approval_basis": "2026-10-11 用户明确批准：只改泥岩，190m同站位H0/H1两项，2400ns与前1200ns比较；其余条件及官方impulse/direct保持。",
+  "execution_authorized": true,
+  "source_design_sha256": "d1a6046381f9dd676818efa4533c2e012f25f12db5fa0551bcda1c84f1ae4e31",
+  "generator_sha256": "fb112e325333d8ac6901427eda6d3e57891ef8abd3faa2ee436e26a7ce3d09c8",
+  "parent_manifest_sha256": "ca3deb2a4e67f4cb7cf3f69b1074538f3197c2ed6e357422b039b6337d2f9447",
+  "groups": [
+    {
+      "id": "high_x19000_H0",
+      "input": "high_x19000_H0/cases/high_x19000_H0/profile.in",
+      "input_sha256": "2fb1208f61cb7b8afa7d571b1658640773b6dadf28ff36a00000f3b30986760d",
+      "geometry": "high_x19000_H0/geometries/full2d_compact.h5",
+      "geometry_sha256": "1fc79f2389a55a39744e6bab8f3e8b3a693bc31852d6f01e47ae3e4c34d198a9",
+      "material": "high_x19000_H0/geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        169.35,
+        38.95,
+        0.0
+      ],
+      "rx_m": [
+        170.65,
+        39.025000000000006,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H0",
+      "chainage_m": 190.0,
+      "input_tx_m": [
+        169.35,
+        38.95,
+        0.0125
+      ],
+      "input_rx_m": [
+        170.65,
+        39.025000000000006,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "comparison_crop_samples": 20352,
+      "parent_input_sha256": "6fc9e22622cb8d7d168053ddfa6b41e9870d88a2dd0368beb544bb74463f69af",
+      "parent_geometry_sha256": "c1e308ff73119f2c366d42efcf3526646d5fe8e76c6a692a7113a5b1148985a6",
+      "parent_material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e"
+    },
+    {
+      "id": "high_x19000_H1",
+      "input": "high_x19000_H1/cases/high_x19000_H1/profile.in",
+      "input_sha256": "c1253c130d2045695ecbdb984bde2b05e2f6b034b394c1eb1e630b4e77c41258",
+      "geometry": "high_x19000_H1/geometries/full2d_compact.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "high_x19000_H1/geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        169.35,
+        38.95,
+        0.0
+      ],
+      "rx_m": [
+        170.65,
+        39.025000000000006,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "chainage_m": 190.0,
+      "input_tx_m": [
+        169.35,
+        38.95,
+        0.0125
+      ],
+      "input_rx_m": [
+        170.65,
+        39.025000000000006,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "comparison_crop_samples": 20352,
+      "parent_input_sha256": "421a2d3e05f3bdd16da96fc9430826cc0387b7d2c990ee6f2a18163a63688a17",
+      "parent_geometry_sha256": "f948ae805077ea74612aa7e4bd46252a23ea0f7c973841657e5a4cc911a4868c",
+      "parent_material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e"
+    }
+  ],
+  "no_retry": true,
+  "dt_s": 5.896635841874211e-11,
+  "SFCW": {
+    "method": "direct",
+    "frequency_start_Hz": 20000000,
+    "frequency_stop_Hz": 170000000,
+    "frequency_step_Hz": 300000,
+    "tones": 501,
+    "windows": [
+      "hann",
+      "blackman"
+    ],
+    "zero_pad_factor": 8,
+    "tail_taper_fraction": 0,
+    "time_shift_s": 0,
+    "field_reference_length_m": 0.025
+  },
+  "limits": "Two configurations at one station; no spatial B-scan or unique path truth. Only mudstone constitutive law and record length change. H0/H1 contrast is connected bottom sandstone, not all-layer clean truth. Air reduction shelved. No extra observers/snapshots, fit, taper, AGC or new method.",
+  "reused_solver_outputs": [],
+  "material_database_sha256": "e23fca3d22e77b18b81fe62b77773bc9121c3c17c5825cfe0e59298a00fbd87e",
+  "preparation_checks": [
+    {
+      "id": "high_x19000_H0",
+      "unchanged_voxels": true,
+      "unchanged_other_materials": true,
+      "changed_input_lines": [
+        [
+          "#time_window: 1.2e-06",
+          "#time_window: 2.4e-06"
+        ],
+        [
+          "#geometry_objects_read: 0 0 0 ../../geometries/full2d_compact.h5 line9_research_materials_v1_smoothed y",
+          "#geometry_objects_read: 0 0 0 ../../geometries/full2d_compact.h5 line9_materials_v0_2 y"
+        ]
+      ]
+    },
+    {
+      "id": "high_x19000_H1",
+      "unchanged_voxels": true,
+      "unchanged_other_materials": true,
+      "changed_input_lines": [
+        [
+          "#time_window: 1.2e-06",
+          "#time_window: 2.4e-06"
+        ],
+        [
+          "#geometry_objects_read: 0 0 0 ../../geometries/full2d_compact.h5 line9_research_materials_v1_smoothed y",
+          "#geometry_objects_read: 0 0 0 ../../geometries/full2d_compact.h5 line9_materials_v0_2 y"
+        ]
+      ]
+    }
+  ],
+  "predeclared_analysis_windows_ns": {
+    "early": [
+      0,
+      120
+    ],
+    "deep_broad": [
+      250,
+      550
+    ],
+    "historical_deep": [
+      300,
+      450
+    ]
+  },
+  "vertical_95MHz_group_delay_guide_ns": 399.42928947079633,
+  "vertical_thickness_m": {
+    "1": 6.575,
+    "2": 7.1000000000000005
+  }
+}
