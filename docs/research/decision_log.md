@@ -1,3 +1,46 @@
+## 2026-10-11 AGENTS.md 指令清晰化重构（用户批准“全部含 P7”）
+
+用户要求检查 AGENTS.md 指令是否清晰、不矛盾、不重叠，随后明确批准执行最小修改集 P1–P7：①显性许可节新增“批准包含范围”条款（批准一个批次即包含其准备、执行、验收、图件/文档交付及该单元的 git 提交推送；仅新任务/新批次、新材料/几何/源/处理方法、整线扩展等仍需新许可）；②新增唯一优先级条款（显性许可 > 常驻规则 > 带日期事件记录，可变状态一律以 START_HERE.md 为准）；③更正 gate 过期描述（`configs/research/gprmax_v4_execution_gate.json` 为各批次历史留痕，旧文“当前为 false”与该文件实际内容矛盾，执行许可以对话显性指令和对应批次新冻结契约为准）；④移除过期环境/版本记录（旧文所写 `gprmax_v4_gpu_env2` 与 V4.0.0 已不符，最近批次实际使用 gprMax 4.0.1 与 `gprmax_v401_gpu_env`，环境事实改指向 START_HERE.md 与最新执行报告）；⑤CodeBuddy 协议补存续澄清（已批准任务范围内的草稿委派视为该任务一部分，产出仍须 kimi 验收）；⑥旧“最新”标题不再使用；⑦规则去重、带日期事件记录下沉至本文件。以下为从 AGENTS.md 移除的内容原文（路径均为仓库根相对，未丢信息）：
+
+### 原“2026-10-10 最新约束”节事件记录（规则部分仍保留在 AGENTS.md）
+
+- 2026-10-10 用户“改为官方的”已明确批准将新输入从 Ricker 改为官方内置 `impulse`，采用官方示例 `#waveform: impulse 1 1 impulse`，源起始时间0；现行源约定见 `configs/research/line9_source_v0_2.json`。既有冻结 Ricker 输入/结果保持历史。SFCW 继续官方推荐的 direct；新增 homodyne、0.125m 观察加密及新求解批次仍须显性批准。
+- 2026-10-10 用户随后明确要求“重新用新的去开始正演”：已批准190m站位官方 impulse H0/H1 两项，保持几何/材料/航高/网格与既有 direct SFCW 不变；允许为该批冻结契约、运行、验收与交付图件。此授权不扩展为整线、homodyne或其他物理配置修改。源准备包中的 `execution_authorized=false` 保留其历史含义，新执行契约另存。
+- 首次记录该约束时，仅获准写入 AGENTS.md。后续用户明确要求审视、删除及简化“整个仿真及SFCW处理流程”，本轮据此清理入口并修复已有 CPU 处理；不据此切换激励、材料、采集几何或启动新求解。
+
+### 原“2026-09-25 审查修复与本机接续”节
+
+- 用户已授权自主修复、验证后合并并继续研究。审查修复及评价增补见 `docs/research/2026-09-25_direction_diagnostic_update.md`。常规 Git 更新只做与修改相关的必要检查，不重复整套克隆/环境重建。
+- 评价仍沿用 v0.2；附加 `configs/research/direction_diagnostic_contract_v0.1.json`。`direction_error_bound` 未声明或输出不足以区分零时，余弦缺失并给原因；D/A/H 保留。不能用任意 eps 常数代替 SVD/FDTD 误差预算。
+- 当时纯数组回归为 182 项（原 136 + 方向诊断 21 + 误差预算证书 20 + 恢复应用 5），Windows 监督器另有 10 项 CPU 检查。历史证据按其源码提交核验，不用当前源码哈希覆盖旧记录。
+- YFINE 已完成；待执行 gate 已关闭，旧契约保留为 `last_completed_execution_contract`。自主 GPU 研究授权保留，新批次须重新冻结具体契约，不重跑已消耗 attempt。当时记录“当前电脑的 V4/CUDA 环境尚未核验”，已被后续环境重建与多批次执行取代。
+
+### 原“最新接续与用户决定（2026-09-24）”节事件/过期记录
+
+- 旧文：“使用用户提供的 gprMax V4.0.0。用户明确要求仿真前先敲定方案；执行记录 `configs/research/gprmax_v4_execution_gate.json` 当前为 false，不能从‘继续研究’推断放行，含求解的官方示例/测试/benchmark亦同。”——更正：该 gate 文件后来实际内容已为 `approved_to_simulate: true` 等批次记录，“当前为 false”早已过期；“仿真前先敲定方案”要求由 AGENTS.md 显性许可条款继承。
+- 旧环境记录（已过期，仅供追溯）：本地 V4 实际根为 `E:\gprMax-v.4.0.0\gprMax-v.4.0.0`；旧名为 gprmax 的环境是 V3.1.6/Python3.10，V4 源码要求 3.11–3.13。2026-10-05 组织 WDAC/Smart App Control 策略按哈希封禁了旧 uv Python 3.12.15 与旧 venv 的 virtual_waveguide.pyd（详见 `docs/research/2026-10-05_local_uav_free_space_fine_4090_findings.md`）；曾以 conda Python 3.12.14（`artifacts/local_checks/py312conda`）重建运行时并以同源重编 virtual_waveguide.pyd。GPU 求解包装器须用带 `E:\msvc2022bt` vcvars64 + `C:\cuda133` 的 cmd（如 `scripts/run_uav_local_benchmark_4090.cmd`）。现行版本与运行时以 START_HERE.md 及最新执行报告为准。
+- 当时默认纯数组验证为 136 项；历史 64 项及曾经的 cycle05 待办保留为历史事实。
+
+### 原“项目目标与当前阶段”节过期状态句
+
+- 旧文（2026-09-23 时点的状态，已被后续 GPU 仿真与多批次执行取代）：“当前为研究与初始化阶段，尚无可交付处理模型、正式训练集、经过验证的处理算子库或性能结论。本轮没有启动 gprMax 正演、模型训练或远程计算。”
+
+### 原“持续研究与方法依据”节历轮续研记录
+
+- 2026-09-24 `docs/research/2026-09-24_structure_and_chain_rigor.md` 及 `docs/research/2026-09-24_initial_experiment_plan.md` 已落盘；当时 10 项代数/评价检查通过，仅属数组机制证据，没有正演/训练。27 个候选和分批运行数仍是建议。
+- 2026-09-24 第二次续研：`docs/research/2026-09-24_cycle02_materials_and_source.md`、`docs/research/2026-09-24_cycle02_pilot_reference_contract.md`。`configs/research/p1_case_contract_v0.1.json` 是未执行的二维无损脉冲机制提案，不是设备 SFCW 输入或已验证模型。公开黏土数据只做了 S2P 格式/频率审计，未反演为材料，不能当项目场地真值。
+- 2026-09-24 第三次续研：`docs/research/2026-09-24_cycle03_operator_contract.md`、`docs/research/2026-09-24_cycle03_traditional_baselines.md`。27 项目录已有最小数组实现，18 项操作检查与 5 个预声明参考状态示例通过；不是正式处理库、自动参考分类器或物理验证。候选可用性依赖输入，SVD 截断间隙与数值秩底限不是地质标准。局部均值外部参照尚未并入目录，谱规则仅为提案；自动选秩不等于辨认地层/杂波。下一步先明确评价及配置标签，再决定选择器。
+- 评价与标签 v0.2 采用记录：用户明确先确定评价和标签；采用 `docs/research/2026-09-24_evaluation_and_labels_v0.2.md` 及 `configs/research/evaluation_label_contract_v0.2.json`。指标/缺失/集合与偏序逻辑已固定，当时 26 项数组检查通过；物理阈值仍为 null，不能生成完整正式最优标签。逐个保护弱事件，不只优化全图误差；差分参考不等于共同层保真；增益缺少补偿真值时只给风险诊断。没有默认加权总分，也没有强制唯一配置类别。
+
+### 原“版本管理与跨电脑接续”节历史句
+
+- 第五次续研交接是历史记录；损伤阶梯与 D 的参考误差包络已完成首版，见 `docs/research/2026-09-24_damage_pilot_findings.md`。
+- 旧文“`python scripts/verify_workspace.py` 复跑当前八组共182项数组检查”中的项数为 2026-09-25 时点记录，最新项数以 START_HERE.md 为准。
+
+### 原“多 agent 协作协议”节试活记录
+
+- 试活记录：2026-09-26 参考池清单草稿（glm-5.3-flash），kimi 脚本核验 50/50 条一致后入库。
+
 ## 2026-10-11 用户批准六项精细波场，全部完成
 
 用户具体批准170/190m各H0/H1四项2.5cm局部快照/31完整时序点及Yee邻点，另170m两项20cm全域；现行物理与官方SFCW不变，先验收首项、失败停止不重试、求解3小时上限，配套分析/图件/验收/推送。六项一次完成，共8122帧，累计39分29秒，源/主Rx逐字节等于基线，快照与邻点差0。136清单文件和46关键帧本机独审通过。工作带证据支持覆盖层两轮上下返回及侧偏传播；厚度变薄的48/96ns到时趋势、后续/首次幅度1.9%/2.8%与无拟合平层估算一致。底砂相关带约399→356ns仍可见；170m232ns强带不支持右侧PML主导。近8.465GHz原生末尾和快照格点纹理不能冒充工作带散射，尚未唯一定位高频机制或全面认证收敛。R2修正190m诊断门窗误取首次旁瓣，未改原生/SFCW/动画；32PNG、10GIF和可点击报告交付，90.6GiB原快照及大原生局部动画留ROG。六项授权已完成，不自动扩批、改天线/材料或启用空气等效。见[报告](2026-10-11_fine_wavefield_results.md)。
