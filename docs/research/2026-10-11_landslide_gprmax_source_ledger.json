@@ -1,0 +1,682 @@
+{
+  "schema_version": 1,
+  "research_started": "2026-10-11",
+  "completed_date": "2026-10-12",
+  "timezone": "Asia/Shanghai",
+  "task": "Landslide studies explicitly using gprMax; model parameters and accessible datasets",
+  "authorization": "User literature-research request; preparation, public-source retrieval, report, audit and git only",
+  "new_solver_runs": 0,
+  "formal_model_changes": false,
+  "search_scope": [
+    "English/Chinese landslide, slip surface, slope, thaw-slumping with gprMax/FDTD",
+    "Primary publishers and author-provided article text",
+    "GitHub, Figshare, Mendeley and public repository searches"
+  ],
+  "negative_search_claim": "No complete openly downloadable landslide gprMax input-plus-native-result package verified in this search; not a proof of absence",
+  "cache_root": "artifacts/research_sources/2026-10-11_landslide_gprmax_review",
+  "report": "docs/research/2026-10-11_landslide_gprmax_models_and_datasets.md",
+  "sources": [
+    {
+      "id": "LGM01",
+      "title": "Deep learning–based inverse analysis of GPR data for landslide hazards",
+      "doi": "10.3389/feart.2023.1340484",
+      "published": "2024-01-22",
+      "url": "https://www.frontiersin.org/journals/earth-science/articles/10.3389/feart.2023.1340484/full",
+      "pdf_url": "https://www.frontiersin.org/journals/earth-science/articles/10.3389/feart.2023.1340484/pdf",
+      "classification": "explicit_gprMax_landslide_related_defects",
+      "reading_scope": "Official 16-page PDF, modeling/simulation/dataset sections 2–4 and availability; not numerical reproduction",
+      "evidence_locations": [
+        "2.1.1 pp3–4, Figure1, Table1",
+        "3.2.1 p8",
+        "3.3 pp11–12",
+        "Availability p15"
+      ],
+      "parameters": {
+        "general_framework": {
+          "soil_rock_layer_m": 3,
+          "rock_diameter_cm": [
+            4,
+            50
+          ],
+          "grid_m": 0.005,
+          "source": "Ricker point source",
+          "tx_rx_offset_m": 0.3,
+          "materials_er_sigma_S_per_m": {
+            "air": [
+              1,
+              0
+            ],
+            "soil": [
+              25,
+              0.001
+            ],
+            "water": [
+              81,
+              1e-05
+            ],
+            "stone": [
+              7,
+              0.001
+            ]
+          }
+        },
+        "specific_cavity_case": {
+          "domain_m": [
+            2,
+            1
+          ],
+          "grid_m": [
+            0.002,
+            0.002
+          ],
+          "pml_cells": 10,
+          "record_ns": 20,
+          "source": "Ricker",
+          "center_MHz": 800,
+          "tx_m": [
+            0.02,
+            0.95
+          ],
+          "rx_m": [
+            0.1,
+            0.95
+          ],
+          "offset_m_derived": 0.08,
+          "trace_step_m": 0.01,
+          "stated_time_step_ns": 0.01,
+          "materials_er_sigma_S_per_m": {
+            "background_soil": [
+              9,
+              1e-06
+            ],
+            "air": [
+              1,
+              0
+            ],
+            "stone": [
+              7,
+              0.001
+            ]
+          }
+        }
+      },
+      "dataset": {
+        "cavity_models": 700,
+        "loose_zone_models": 300,
+        "fracture_models": 300,
+        "total_models": 1300,
+        "labels": "model-image / processed-radar-image pairs",
+        "prior_processing": [
+          "direct-wave removal",
+          "time gain",
+          "contrast enhancement"
+        ],
+        "public_download_verified": false,
+        "availability": "Authors state raw supporting data will be available; no public download identified",
+        "contact_from_article": "Yulong Qin, 22S033067@stu.hit.edu.cn",
+        "contact_sent": false
+      },
+      "limits": [
+        "Local high-frequency defect models do not validate 20–170MHz high-AGL deep-interface response",
+        "General and specific-cavity setups differ and must not be merged",
+        "Stated 0.01ns may be export interval or typo; exceeds 2D vacuum CFL bound for 2mm if interpreted as solver step",
+        "Relative permeability unit in article is inconsistent",
+        "No verified source height, solver version or native dataset obtained"
+      ]
+    },
+    {
+      "id": "LGM02",
+      "title": "GPR data interpretation in the landslides and subgrade slope surveys",
+      "doi": "10.1051/matecconf/201926503003",
+      "published_year": 2019,
+      "url": "https://www.matec-conferences.org/articles/matecconf/abs/2019/14/matecconf_gccets2018_03003/matecconf_gccets2018_03003.html",
+      "pdf_url": "https://www.matec-conferences.org/articles/matecconf/pdf/2019/14/matecconf_gccets2018_03003.pdf",
+      "author_article_text_url": "https://www.researchgate.net/publication/330735628_GPR_data_interpretation_in_the_landslides_and_subgrade_slope_surveys",
+      "classification": "explicit_gprMax_landslide_slope_and_layered_cracks",
+      "reading_scope": "Original article chapter text sections2–4 and primary-publisher indexed excerpts; publisher PDF403, no downloaded full PDF",
+      "parameters": {
+        "layer_thickness_m": [
+          4,
+          5,
+          5
+        ],
+        "layer_velocity_m_per_ns": [
+          0.1,
+          0.15,
+          0.1
+        ],
+        "derived_er_approx": [
+          9,
+          4,
+          9
+        ],
+        "derivation_assumptions": "Low-loss nonmagnetic nondispersive v=c/sqrt(er), c approximated as0.3m/ns; conductivity not derivable",
+        "field_instrument_only": {
+          "frequencies_MHz": [
+            50,
+            100
+          ],
+          "antenna_lengths_m": [
+            3,
+            1.5
+          ],
+          "record_ns": 512,
+          "instrument": "LOZA-N"
+        }
+      },
+      "dataset": {
+        "public_download_verified": false,
+        "availability": "No input, raw data or matching repository found in this search"
+      },
+      "limits": [
+        "Field instrument parameters must not be relabelled as solver parameters",
+        "No verified grid/PML/source height/source waveform/version/conductivity table",
+        "Slope-following field acquisition is not several-metres-AGL UAV",
+        "Mechanisms are not unique attribution of our current strong returns"
+      ]
+    },
+    {
+      "id": "LGM03",
+      "title": "Characterization and Evaluation of Thaw-Slumping Using GPR Attributes in the Qinghai–Tibet Plateau",
+      "doi": "10.3390/rs15092273",
+      "published": "2023-04-25",
+      "url": "https://www.mdpi.com/2072-4292/15/9/2273",
+      "pdf_url": "https://mdpi-res.com/d_attachment/remotesensing/remotesensing-15-02273/article_deploy/remotesensing-15-02273.pdf",
+      "supplement_url": "https://www.mdpi.com/article/10.3390/rs15092273/s1",
+      "classification": "explicit_gprMax_thaw_slumping",
+      "reading_scope": "Official 29-page PDF modeling2.5, model results, Tables4–6 and availability",
+      "evidence_locations": [
+        "2.5.1 Table4/5 p10",
+        "Table6 p15",
+        "Data availability p27"
+      ],
+      "parameters": {
+        "grid_m": 0.01,
+        "source": "Ricker",
+        "center_MHz": 200,
+        "offset_m": 0.04,
+        "traces": 170,
+        "record_ns": 200,
+        "domain_text_as_printed_m": "7 × 77",
+        "domain_ambiguity_unresolved": true,
+        "materials_er_sigma_depthcolumn": {
+          "fully_melted_clay": [
+            4.5,
+            0.00027,
+            0
+          ],
+          "ice_water_mixed_clay": [
+            10,
+            0.03,
+            1.5
+          ],
+          "ice_bearing_frozen_clay": [
+            8,
+            0.001,
+            2.5
+          ],
+          "low_ice_mudstone": [
+            5,
+            0.00015,
+            4
+          ],
+          "unthawed_frozen_ground": [
+            6,
+            0.0003,
+            2.4
+          ],
+          "silt": [
+            16,
+            0.035,
+            0
+          ]
+        },
+        "water_content_percent": [
+          7,
+          10,
+          13,
+          16,
+          19,
+          22
+        ],
+        "water_content_series_er": [
+          6,
+          8,
+          10,
+          12,
+          14,
+          16
+        ]
+      },
+      "dataset": {
+        "public_download_verified": false,
+        "availability": "Authors explicitly state no permission to share data",
+        "supplement_description": "FigureS1: original collected grayscale images of Line1–10, not numeric gprMax inputs/results"
+      },
+      "limits": [
+        "Frozen/water-bearing materials are not site-measured ambient silty clay/mudstone",
+        "Depth column is not automatically each layer thickness",
+        "Domain7×77 confirmed visually; must not silently correct",
+        "Ground-coupled field system, not verified UAV/SFCW configuration"
+      ]
+    },
+    {
+      "id": "B01",
+      "title": "A realistic 2D multi-offset, multi-frequency synthetic GPR data set as a benchmark for testing new algorithms",
+      "doi": "10.1038/s41597-024-04300-1",
+      "published": "2025-02-06",
+      "url": "https://www.nature.com/articles/s41597-024-04300-1",
+      "author_archive_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11802766/",
+      "classification": "open_gprMax_sedimentary_benchmark_NOT_landslide",
+      "reading_scope": "Full article Methods, Data Records, Technical Validation, Usage Notes, Code Availability; actual file-level retrieval/read-only audit",
+      "parameters": {
+        "solver_version": "3.1.7",
+        "geological_volume_m": [
+          16,
+          10,
+          7
+        ],
+        "slice_y_m": [
+          2,
+          4,
+          6,
+          8
+        ],
+        "center_MHz": [
+          50,
+          100,
+          200
+        ],
+        "grids_m": [
+          0.05,
+          0.025,
+          0.0125
+        ],
+        "record_ns": 500,
+        "shots": 161,
+        "receivers_per_shot": 161,
+        "spatial_step_m": 0.1,
+        "source": "Ricker ideal dipole, near surface"
+      },
+      "dataset": {
+        "doi": "10.6084/m9.figshare.26508976.v1",
+        "url": "https://figshare.com/articles/dataset/Multi-Offset_Synthetic_GPR_Data/26508976/1",
+        "api_url": "https://api.figshare.com/v2/articles/26508976/versions/1",
+        "license": "CC BY 4.0",
+        "catalogue_files": 33,
+        "catalogue_bytes": 1337163267,
+        "representative_files_retrieved": 4,
+        "representative_bytes": 57440484,
+        "github": "https://github.com/Giacomo-Roncoroni/MO-GPR_data",
+        "github_commit": "4c06eff81f8089f56014ed8cd4e7e42ff787524e",
+        "github_tree_file_count": 7,
+        "mendeley_url": "https://data.mendeley.com/datasets/by3yh79hx4/2",
+        "mendeley_doi": "10.17632/by3yh79hx4.2",
+        "mendeley_volume_downloaded": false
+      },
+      "limits": [
+        "Not landslide; not high-AGL UAV; not official impulse/direct SFCW data",
+        "Old3.1.7/FP32 and legacy geometry binding require controlled v4 migration before use",
+        "SEGY exported timing differs from native solver time step",
+        "Geometry vertical extent differs from example input domain; import behavior unverified"
+      ]
+    },
+    {
+      "id": "P01",
+      "title": "Forward Modeling and Detection of the Potential Slip in Artificial Slope by GPR",
+      "doi": "10.1007/978-981-19-3983-9_19",
+      "authors_from_crossref": [
+        "Zhenjun Zhang",
+        "Luo Ye",
+        "Gao Lv"
+      ],
+      "published_crossref": "2022-08-09",
+      "url": "https://link.springer.com/chapter/10.1007/978-981-19-3983-9_19",
+      "classification": "potential_match_gprMax_NOT_confirmed",
+      "reading_scope": "Crossref metadata and abstract lead; primary full text unavailable",
+      "public_inputs_verified": false
+    },
+    {
+      "id": "P02",
+      "title": "Electromagnetic echo characteristics of soil–rock mixtures based on gprMax forward analysis",
+      "doi": "10.1088/2631-8695/ae1a38",
+      "url": "https://iopscience.iop.org/article/10.1088/2631-8695/ae1a38",
+      "published": "2025-11-10",
+      "classification": "explicit_gprMax_adjacent_soil_rock_mix_NOT_verified_landslide",
+      "reading_scope": "Crossref metadata/abstract and author-text excerpts; publisher captcha, no verified full paper",
+      "public_inputs_verified": false
+    },
+    {
+      "id": "A01",
+      "title": "Deep-Penetrating Uncrewed Aerial Vehicle-Based Ground-Penetrating Radar for Landslide Surveys: A framework for high-resolution migration imaging and bedrock interface extraction",
+      "doi": "10.1109/MGRS.2026.3702334",
+      "url": "https://doi.org/10.1109/MGRS.2026.3702334",
+      "classification": "UAV_landslide_OBFG_FDTD_NOT_confirmed_gprMax",
+      "reading_scope": "User-owned local PDF pp4,8–9,18,20 rechecked; solver in method is OBFG FDTD, gprMax only in references",
+      "parameters": {
+        "domain_m": [
+          100,
+          20
+        ],
+        "center_MHz": 100,
+        "record_ns": 400,
+        "agl_m": 5,
+        "source": "Ricker"
+      },
+      "code_ocean_url": "https://codeocean.com/capsule/5192589/tree",
+      "capsule_download_verified": false,
+      "private_pdf_uploaded": false
+    },
+    {
+      "id": "OFFICIAL",
+      "url": "https://docs.gprmax.com/en/latest/migration_v3_v4.html",
+      "classification": "official_v3_v4_migration",
+      "reading_scope": "Geometry/material database conversion and output migration sections",
+      "conversion_executed": false
+    }
+  ],
+  "local_source_files": [
+    {
+      "path": "artifacts/research_sources/2026-10-11_landslide_gprmax_review/qin2024.pdf",
+      "source_id": "LGM01",
+      "kind": "official_full_pdf",
+      "bytes": 4154110,
+      "sha256": "5e5f99932c4e4d6ce56fc00fdf52c11dccee2a01198025ce50e6177bc804350d"
+    },
+    {
+      "path": "artifacts/research_sources/2026-10-11_landslide_gprmax_review/thaw2023.pdf",
+      "source_id": "LGM03",
+      "kind": "official_full_pdf",
+      "bytes": 15052604,
+      "sha256": "afec9780c9e6115edfc8802e0df2232054081fa15d3d66df94ffca9f1df8fde0"
+    },
+    {
+      "path": "artifacts/research_sources/2026-10-11_landslide_gprmax_review/pupatenko2019_exa.txt",
+      "source_id": "LGM02",
+      "kind": "primary_indexed_excerpts_NOT_pdf",
+      "bytes": 11451,
+      "sha256": "1aeb4bed3eaec46f6ed22af1cbfda59c8438de1337f9e300dd3d855c1cb15718"
+    },
+    {
+      "path": "artifacts/research_sources/2026-10-11_landslide_gprmax_review/pupatenko2019_parameters_exa.txt",
+      "source_id": "LGM02",
+      "kind": "focused_indexed_excerpts_NOT_fulltext",
+      "bytes": 7269,
+      "sha256": "1502d3e00512ee927c962ec48d70141bf00765d45ed7e44f4796d3da3dfa87c1"
+    },
+    {
+      "path": "artifacts/research_sources/2026-10-11_landslide_gprmax_review/roncoroni2025.txt",
+      "source_id": "B01",
+      "kind": "primary_full_article_text_via_reader",
+      "bytes": 89825,
+      "sha256": "a17fdbb4f6160d8f1649fa38043d54c2bd46cbff9a976af86d66a396ffdefa98"
+    },
+    {
+      "path": "artifacts/research_sources/2026-10-11_landslide_gprmax_review/figshare26508976_v1.json",
+      "source_id": "B01",
+      "kind": "official_dataset_catalogue",
+      "bytes": 17517,
+      "sha256": "af5f2962bfb03b584b5f3af4bbfc9f29a9f13a72bd5da3e1f8a170aac29fcb31"
+    },
+    {
+      "path": "artifacts/research_sources/2026-10-11_landslide_gprmax_review/zhang2022_crossref.json",
+      "source_id": "P01",
+      "kind": "metadata",
+      "bytes": 11588,
+      "sha256": "d9741482173a80caf747ab869d3b5e9ded3d41b2aea97bddce4f7c59773d005a"
+    },
+    {
+      "path": "artifacts/research_sources/2026-10-11_landslide_gprmax_review/feng2025_crossref.json",
+      "source_id": "P02",
+      "kind": "metadata_and_abstract",
+      "bytes": 18108,
+      "sha256": "d3fb51b71418483cb2c50661eaa89de139f48480e459fc8feb2066b4e539a984"
+    },
+    {
+      "path": "artifacts/research_sources/2026-10-11_landslide_gprmax_review/herten_author_example/00_segy_validation.ipynb",
+      "source_id": "B01",
+      "kind": "author_git_file_commit_pinned",
+      "bytes": 3135566,
+      "sha256": "a160ae82f9dfbd605a5835e30c1ae32fa256a62e30e1e763d6ef3c2824df4419",
+      "git_commit": "4c06eff81f8089f56014ed8cd4e7e42ff787524e"
+    },
+    {
+      "path": "artifacts/research_sources/2026-10-11_landslide_gprmax_review/herten_author_example/env.yml",
+      "source_id": "B01",
+      "kind": "author_git_file_commit_pinned",
+      "bytes": 3711,
+      "sha256": "b1342822f36cc8e58b8b0f63fcb63dc646f45e9dda6f4ee10ee85062a72fb4c2",
+      "git_commit": "4c06eff81f8089f56014ed8cd4e7e42ff787524e"
+    },
+    {
+      "path": "artifacts/research_sources/2026-10-11_landslide_gprmax_review/herten_author_example/README.md",
+      "source_id": "B01",
+      "kind": "author_git_file_commit_pinned",
+      "bytes": 4703,
+      "sha256": "552e005a420d3d195ce2b54c47a16fb905ff32686b3cbf921540b44a03188b5e",
+      "git_commit": "4c06eff81f8089f56014ed8cd4e7e42ff787524e"
+    },
+    {
+      "path": "artifacts/research_sources/2026-10-11_landslide_gprmax_review/herten_author_example/source_script/2-D_model/2D_model_50MHz_50mm_line2m.h5",
+      "source_id": "B01",
+      "kind": "author_git_file_commit_pinned",
+      "bytes": 462848,
+      "sha256": "8f7fd3f8b103d5d8727df14507b208377af6a85dcaa742f53a6050e7f03933cb",
+      "git_commit": "4c06eff81f8089f56014ed8cd4e7e42ff787524e"
+    },
+    {
+      "path": "artifacts/research_sources/2026-10-11_landslide_gprmax_review/herten_author_example/source_script/2-D_model/3D_Full_model_res_25mm.med",
+      "source_id": "B01",
+      "kind": "author_git_file_commit_pinned",
+      "bytes": 16010,
+      "sha256": "91a4921164510d619ab1d50564e0154bb263ea0dc1511fa92ac81174e1a99e22",
+      "git_commit": "4c06eff81f8089f56014ed8cd4e7e42ff787524e"
+    },
+    {
+      "path": "artifacts/research_sources/2026-10-11_landslide_gprmax_review/herten_author_example/source_script/run_50MHz_FullModel_ln2_.in",
+      "source_id": "B01",
+      "kind": "author_git_file_commit_pinned",
+      "bytes": 406,
+      "sha256": "3e0ea89271e0ac7a8cdbd96b7a537bd0c26d6d9cdfb07b2867d1846a643dc512",
+      "git_commit": "4c06eff81f8089f56014ed8cd4e7e42ff787524e"
+    }
+  ],
+  "rejected_as_fulltext": [
+    "pupatenko2019.txt: HTTP403 access response, not article",
+    "feng2025.txt: captcha, not article",
+    "roncoroni2025.html: access response not used as full text"
+  ],
+  "figshare_sample_verified": [
+    {
+      "name": "run_50MHz_wave.out",
+      "bytes": 5412384,
+      "md5": "272e932da6655c856517032d7defff6f",
+      "matches_catalogue_md5": true,
+      "sha256": "ca92eea63e950b8a623a0900e8f32ee15d38df708fd551217b294e2cf5c8280f",
+      "url": "https://ndownloader.figshare.com/files/48222844",
+      "path": "artifacts/research_sources/2026-10-11_landslide_gprmax_review/herten_figshare_sample/run_50MHz_wave.out"
+    },
+    {
+      "name": "50MHz_line0.sgy",
+      "bytes": 50290340,
+      "md5": "cfa63fcf86b9ed03bb0c5b8d9e3062b3",
+      "matches_catalogue_md5": true,
+      "sha256": "8e7a66da32f7ae2e24106fd032088b4c6f67abaae6be65db335ff369a4bb03f1",
+      "url": "https://ndownloader.figshare.com/files/48222895",
+      "path": "artifacts/research_sources/2026-10-11_landslide_gprmax_review/herten_figshare_sample/50MHz_line0.sgy"
+    },
+    {
+      "name": "line0_eps_25mm.sgy",
+      "bytes": 868880,
+      "md5": "ede8df8d4e050209a1da4b7da75382fc",
+      "matches_catalogue_md5": true,
+      "sha256": "4833e3eb8b20795c0f60bf25a1d652baedc53254cbb1407a176792145538a235",
+      "url": "https://ndownloader.figshare.com/files/48222865",
+      "path": "artifacts/research_sources/2026-10-11_landslide_gprmax_review/herten_figshare_sample/line0_eps_25mm.sgy"
+    },
+    {
+      "name": "line0_sigm_25mm.sgy",
+      "bytes": 868880,
+      "md5": "18bf91d48553c8c9d258e228a407272e",
+      "matches_catalogue_md5": true,
+      "sha256": "f1db3613b22eacbf5d7be003eba3ff023af4e6c60a6c20af1c91af79be1498b6",
+      "url": "https://ndownloader.figshare.com/files/48222880",
+      "path": "artifacts/research_sources/2026-10-11_landslide_gprmax_review/herten_figshare_sample/line0_sigm_25mm.sgy"
+    }
+  ],
+  "file_audits": {
+    "50MHz_line0.sgy": {
+      "trace_count": 25921,
+      "samples_per_trace_binary_header": 425,
+      "format_code": 1,
+      "format": "IBM float32",
+      "trace_ns_values": [
+        425
+      ],
+      "trace_dt_values": [
+        1179
+      ],
+      "binary_dt_value": 1000
+    },
+    "line0_eps_25mm.sgy": {
+      "trace_count": 640,
+      "samples_per_trace_binary_header": 278,
+      "format_code": 1,
+      "format": "IBM float32",
+      "trace_ns_values": [
+        278
+      ],
+      "trace_dt_values": [
+        1179
+      ],
+      "binary_dt_value": 1000
+    },
+    "line0_sigm_25mm.sgy": {
+      "trace_count": 640,
+      "samples_per_trace_binary_header": 278,
+      "format_code": 1,
+      "format": "IBM float32",
+      "trace_ns_values": [
+        278
+      ],
+      "trace_dt_values": [
+        1179
+      ],
+      "binary_dt_value": 1000
+    },
+    "run_50MHz_wave.out": {
+      "attrs": {
+        "Iterations": 1273,
+        "Title": "3D run across Herten Model",
+        "dt": 1.179327168374842e-10,
+        "dx_dy_dz": [
+          0.05,
+          0.05,
+          0.05
+        ],
+        "gprMax": "3.1.7",
+        "nrx": 161,
+        "nsrc": 1,
+        "nx_ny_nz": [
+          360,
+          1,
+          156
+        ],
+        "rxsteps": [
+          0,
+          0,
+          0
+        ],
+        "srcsteps": [
+          2,
+          0,
+          0
+        ]
+      },
+      "receiver_datasets": 966,
+      "first_receiver": [
+        {
+          "name": "rxs/rx1/Ex",
+          "shape": [
+            1273
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "rxs/rx1/Ey",
+          "shape": [
+            1273
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "rxs/rx1/Ez",
+          "shape": [
+            1273
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "rxs/rx1/Hx",
+          "shape": [
+            1273
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "rxs/rx1/Hy",
+          "shape": [
+            1273
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "rxs/rx1/Hz",
+          "shape": [
+            1273
+          ],
+          "dtype": "float32"
+        }
+      ],
+      "all_receiver_dtypes": [
+        "float32"
+      ]
+    },
+    "2D_model_50MHz_50mm_line2m.h5": {
+      "shape": [
+        360,
+        1,
+        160
+      ],
+      "dtype": "int64",
+      "grid_m": [
+        0.05,
+        0.05,
+        0.05
+      ],
+      "unique_material_indices": 221,
+      "indices_min_max": [
+        0,
+        264
+      ]
+    },
+    "3D_Full_model_res_25mm.med": {
+      "material_count": 288,
+      "nonair_er_range": [
+        10.3318,
+        26.1076
+      ],
+      "nonair_sigma_S_per_m_range": [
+        0.00175549,
+        0.01264431
+      ],
+      "Debye_commands": false
+    }
+  },
+  "derived_checks": {
+    "qin_2D_vacuum_CFL_ns": 0.004717308673499368,
+    "herten_export_interval_ns_from_author_notebook": 1.179,
+    "herten_export_sample_span_ns": 499.896,
+    "herten_export_filter_implementation_verified": false
+  }
+}
