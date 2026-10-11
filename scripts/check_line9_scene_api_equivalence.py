@@ -60,7 +60,7 @@ def build_twin_scene():
 
 def read_ez(path):
     with h5py.File(path) as h:
-        x = h['rxs/twin_rx/Ez'][:]
+        x = h['rxs/rx1/Ez'][:]
         dt = float(h.attrs['dt'])
         it = int(h.attrs['Iterations'])
     return x, dt, it
@@ -77,7 +77,7 @@ def main():
     import gprMax
 
     # --- twin check: identical small model through both chains ---
-    tw = (ITERATIONS - 0.5) * DT  # guarantees ceil(tw/dt) == ITERATIONS
+    tw = float((ITERATIONS - 1.5) * DT)  # .in chain does ceil(tw/dt)+1; this gives ITERATIONS
     in_path = a.out / 'twin.in'
     in_path.write_text(TWIN_IN.format(time_window=repr(tw)), encoding='utf-8')
     gprMax.run(inputfile=str(in_path), cpu_precision='double', hide_progress_bars=True)
