@@ -2,6 +2,7 @@
   "schema": "current-model-pointer/1",
   "updated": "2026-10-11",
   "purpose": "现行模型唯一入口。找最新版本的模型文件一律先看本文件；历史版本文件不覆盖，本文件只改指针。",
+  "what_this_file_is_not": "本文件不是 gprMax 模型本身，只是索引。gprMax 实际读取的模型 = 每个算例的 profile.in 文本输入 + 几何体素 H5（如 full2d_compact.h5）；它们由 current_definition 中的生成器脚本从材料/源参数生成，已执行批次profile.in 冻结在 ROG 各批目录 execution/prepared/cases/<case>/profile.in。",
   "update_rule": "任何获批的模型/材料/源/几何/采集修改，必须在同一工作单元内更新本文件，记录被取代版本；更新本文件不等于批准任何新求解。",
   "current_definition": {
     "materials": "configs/research/line9_materials_v0_2.json",
@@ -39,5 +40,6 @@
     {"id": "line9_paper_mudstone_20261011_r2", "content": "论文泥岩 190m H0/H1、2400ns 对照", "rog_path": "E:\\djh\\line9_paper_mudstone_20261011_r2", "report": "docs/research/2026-10-11_paper_mudstone_window_execution.md"},
     {"id": "line9_official_impulse_20261010_r1", "content": "官方 impulse 首批 190m H0/H1", "rog_path": "E:\\djh\\line9_official_impulse_20261010_r1", "report": "docs/research/2026-10-10_official_impulse_execution.md"}
   ],
-  "rog_access": "ROG 连接参数（主机/密钥/known_hosts）见本机 artifacts/local_checks 各批 connection.json，属本机文件不入库；批次根目录 E:\\djh。"
+  "rog_access": "ROG 连接参数（主机/密钥/known_hosts）见本机 artifacts/local_checks 各批 connection.json，属本机文件不入库；批次根目录 E:\\djh。",
+  "actual_gprmax_model_example": "最新批 gprMax 输入实体示例：E:\\djh\\line9_fine_wavefield_20261011_r1\\execution\\prepared\\cases\\fine_x170_H1_local\\profile.in（配合同批 geometries/full2d_compact.h5）；本地可由生成器脚本从上述参数源重建。"
 }
