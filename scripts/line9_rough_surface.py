@@ -61,7 +61,8 @@ def prepare(a):
                            material=str(mat.relative_to(a.out)).replace('\\', '/'),
                            tx_m=[float(d[2]), float(d[3]), 0.], rx_m=[float(r[1]), float(r[2]), 0.],
                            native_shape=[8400, 1700, 1],
-                           expected_samples=int(np.ceil(2.4e-6 / DT)) + 1))
+                           expected_samples=int(np.ceil(2.4e-6 / DT)) + 1,
+                           source_type='impulse', source_frequency_Hz=1., source_amplitude_A=1.))
         for key in ['input', 'geometry', 'material']:
             groups[-1][key + '_sha256'] = native.sha(a.out / groups[-1][key])
         checks.append(dict(id=cid, changed_surface_voxels=diff,
