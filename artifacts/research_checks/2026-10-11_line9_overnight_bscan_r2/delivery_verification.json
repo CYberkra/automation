@@ -1,0 +1,58 @@
+{
+  "status": "PASS_COMPLETED_BATCH_AND_NUMERICAL_DELIVERY_WITH_TAIL_ADVISORY",
+  "script_sha256": "57c584b57c0823a0147b334aec41a16c3df7f1106b10d5564dfd82cf71460801",
+  "completed_new_runs": 42,
+  "reused_runs": 2,
+  "H1_stations": 41,
+  "matched_anchors": 3,
+  "sum_case_wall_s": 15183.624999999767,
+  "batch_start_unix_s": 1791652405.4380383,
+  "peak_owned_RSS_GiB": 3.1558914184570312,
+  "native_identity_precision": "float64",
+  "all_42_input_invariants_match_parent": true,
+  "archive_sha256": "0e0af69ac4a0e1c90db7986925bf6be5068f65b0fa5bb6936d36b19306df6361",
+  "retrieved_files_checked": 215,
+  "official_CLI_complex_profile_relative_L2": 5.124768952440434e-16,
+  "max_independent_DFT_relative_L2": 5.214847217025647e-12,
+  "tail_relative_db_range": [
+    -65.14096040029395,
+    -57.24625160233742
+  ],
+  "native_records_above_minus60_db": 12,
+  "H1_records_above_minus60_db": 11,
+  "summaries": {
+    "hann": {
+      "anchor_delta_peak_ns": [
+        399.2015968063872,
+        380.07318695941456,
+        355.95475715236194
+      ],
+      "strongest_peak_time_increases": [
+        {
+          "from_profile_x_m": 173.5,
+          "to_profile_x_m": 173.0,
+          "from_peak_ns": 250.33266799733866,
+          "to_peak_ns": 363.4397870924817
+        }
+      ],
+      "strongest_peak_not_a_certified_basal_picker": true
+    },
+    "blackman": {
+      "anchor_delta_peak_ns": [
+        399.2015968063872,
+        380.07318695941456,
+        355.95475715236194
+      ],
+      "strongest_peak_time_increases": [
+        {
+          "from_profile_x_m": 173.5,
+          "to_profile_x_m": 173.0,
+          "from_peak_ns": 250.33266799733866,
+          "to_peak_ns": 363.4397870924817
+        }
+      ],
+      "strongest_peak_not_a_certified_basal_picker": true
+    }
+  },
+  "limits": "Tail advisory not satisfied at every station. Strongest wide-window peak can swap between returns; do not label all maxima basal. Three anchor contrasts are not a full-line clean reference. Spatial/mesh/time convergence and field calibration not certified."
+}

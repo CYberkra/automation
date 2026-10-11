@@ -1,0 +1,3402 @@
+{
+  "status": "PREPARED_APPROVED_OVERNIGHT_LINE",
+  "approval_basis": "2026-10-11 用户明确批准上述批次，跑完验收并推送：190→170m，41道H1、0.5m间距，复用190m H0/H1，新增40项H1及180/170m两项H0；先1m骨架后半米补齐；保持现行材料/210×42.5m域/2.5cm/2400ns/约8m离地/4.0.1原生FP64/官方impulse/direct501/Hann及Blackman；总时限6小时。",
+  "execution_authorized": true,
+  "groups": [
+    {
+      "id": "line_x18000_H1",
+      "input": "cases/line_x18000_H1/profile.in",
+      "input_sha256": "bf4f7eef99bb469f9d52bcb1280f4bc638bca49a5a41e594e787baf818f2f399",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        159.35,
+        38.45,
+        0.0
+      ],
+      "rx_m": [
+        160.65,
+        38.525000000000006,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        159.35,
+        38.45,
+        0.0125
+      ],
+      "input_rx_m": [
+        160.65,
+        38.525000000000006,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 180.0,
+      "distance_from_220m_m": 40.0,
+      "phase": "anchor_pairs",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x18000_H0",
+      "input": "cases/line_x18000_H0/profile.in",
+      "input_sha256": "4e118c3c80cb3bd50ffff9b14e0b763e1547032da53cb7023bfb38fdb0141b4a",
+      "geometry": "geometries/H0.h5",
+      "geometry_sha256": "1fc79f2389a55a39744e6bab8f3e8b3a693bc31852d6f01e47ae3e4c34d198a9",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        159.35,
+        38.45,
+        0.0
+      ],
+      "rx_m": [
+        160.65,
+        38.525000000000006,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H0",
+      "input_tx_m": [
+        159.35,
+        38.45,
+        0.0125
+      ],
+      "input_rx_m": [
+        160.65,
+        38.525000000000006,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 180.0,
+      "distance_from_220m_m": 40.0,
+      "phase": "anchor_pairs",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x17000_H1",
+      "input": "cases/line_x17000_H1/profile.in",
+      "input_sha256": "018351ca3f0b253f1af31c0f9cd9633cc165d9e0e8ee170f4c0efb8e7a802759",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        149.35,
+        37.95,
+        0.0
+      ],
+      "rx_m": [
+        150.65,
+        38.0,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        149.35,
+        37.95,
+        0.0125
+      ],
+      "input_rx_m": [
+        150.65,
+        38.0,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 170.0,
+      "distance_from_220m_m": 50.0,
+      "phase": "anchor_pairs",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x17000_H0",
+      "input": "cases/line_x17000_H0/profile.in",
+      "input_sha256": "c586063f8b99a24d145536f5760d124a6ce7ed4232c8f5ac978462a9f9501511",
+      "geometry": "geometries/H0.h5",
+      "geometry_sha256": "1fc79f2389a55a39744e6bab8f3e8b3a693bc31852d6f01e47ae3e4c34d198a9",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        149.35,
+        37.95,
+        0.0
+      ],
+      "rx_m": [
+        150.65,
+        38.0,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H0",
+      "input_tx_m": [
+        149.35,
+        37.95,
+        0.0125
+      ],
+      "input_rx_m": [
+        150.65,
+        38.0,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 170.0,
+      "distance_from_220m_m": 50.0,
+      "phase": "anchor_pairs",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x18900_H1",
+      "input": "cases/line_x18900_H1/profile.in",
+      "input_sha256": "835453adc658db66272f114ae4853b99e6fb54cb9ef73e1fdad39c0c3b70fcaf",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        168.35,
+        38.900000000000006,
+        0.0
+      ],
+      "rx_m": [
+        169.65,
+        38.975,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        168.35,
+        38.900000000000006,
+        0.0125
+      ],
+      "input_rx_m": [
+        169.65,
+        38.975,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 189.0,
+      "distance_from_220m_m": 31.0,
+      "phase": "integer_skeleton",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x18800_H1",
+      "input": "cases/line_x18800_H1/profile.in",
+      "input_sha256": "a17e86eff447ff22d7c510a2716732e117af829c6e0708787a58804b4f68ecb1",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        167.35,
+        38.85,
+        0.0
+      ],
+      "rx_m": [
+        168.65,
+        38.925,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        167.35,
+        38.85,
+        0.0125
+      ],
+      "input_rx_m": [
+        168.65,
+        38.925,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 188.0,
+      "distance_from_220m_m": 32.0,
+      "phase": "integer_skeleton",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x18700_H1",
+      "input": "cases/line_x18700_H1/profile.in",
+      "input_sha256": "e0a29da989c9047d2b1ecce326ef2d62e5d92d575682275fab2446ef33cbc0d5",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        166.35,
+        38.8,
+        0.0
+      ],
+      "rx_m": [
+        167.65,
+        38.875,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        166.35,
+        38.8,
+        0.0125
+      ],
+      "input_rx_m": [
+        167.65,
+        38.875,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 187.0,
+      "distance_from_220m_m": 33.0,
+      "phase": "integer_skeleton",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x18600_H1",
+      "input": "cases/line_x18600_H1/profile.in",
+      "input_sha256": "acc331e8a86c407b12938e9721f07e4c6bd6295fcc7fc570e0001d3199fe4cf9",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        165.35,
+        38.75,
+        0.0
+      ],
+      "rx_m": [
+        166.65,
+        38.825,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        165.35,
+        38.75,
+        0.0125
+      ],
+      "input_rx_m": [
+        166.65,
+        38.825,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 186.0,
+      "distance_from_220m_m": 34.0,
+      "phase": "integer_skeleton",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x18500_H1",
+      "input": "cases/line_x18500_H1/profile.in",
+      "input_sha256": "4853fd18920dcc021f48b045c01aea328f3be88e0ec76a459c558b16f206b280",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        164.35,
+        38.7,
+        0.0
+      ],
+      "rx_m": [
+        165.65,
+        38.775000000000006,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        164.35,
+        38.7,
+        0.0125
+      ],
+      "input_rx_m": [
+        165.65,
+        38.775000000000006,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 185.0,
+      "distance_from_220m_m": 35.0,
+      "phase": "integer_skeleton",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x18400_H1",
+      "input": "cases/line_x18400_H1/profile.in",
+      "input_sha256": "37c5b4d38d69c47ddd3b70edb3bc0a93954160affa0201761b07959254961e88",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        163.35,
+        38.650000000000006,
+        0.0
+      ],
+      "rx_m": [
+        164.65,
+        38.725,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        163.35,
+        38.650000000000006,
+        0.0125
+      ],
+      "input_rx_m": [
+        164.65,
+        38.725,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 184.0,
+      "distance_from_220m_m": 36.0,
+      "phase": "integer_skeleton",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x18300_H1",
+      "input": "cases/line_x18300_H1/profile.in",
+      "input_sha256": "863f9bad5fe95e9240515dc02c1cf471dfa993c7bf7f3309f768755e7722d204",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        162.35,
+        38.6,
+        0.0
+      ],
+      "rx_m": [
+        163.65,
+        38.675,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        162.35,
+        38.6,
+        0.0125
+      ],
+      "input_rx_m": [
+        163.65,
+        38.675,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 183.0,
+      "distance_from_220m_m": 37.0,
+      "phase": "integer_skeleton",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x18200_H1",
+      "input": "cases/line_x18200_H1/profile.in",
+      "input_sha256": "9a36cb6bce5165e4fa2c0bdf1a38cc102d4605360a9328139ac12728d0711492",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        161.35,
+        38.55,
+        0.0
+      ],
+      "rx_m": [
+        162.65,
+        38.625,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        161.35,
+        38.55,
+        0.0125
+      ],
+      "input_rx_m": [
+        162.65,
+        38.625,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 182.0,
+      "distance_from_220m_m": 38.0,
+      "phase": "integer_skeleton",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x18100_H1",
+      "input": "cases/line_x18100_H1/profile.in",
+      "input_sha256": "64c32cc4bbd5c4a74b902a8032c60f97504ae3b53d588a24712ad9dcd1ec41e9",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        160.35,
+        38.5,
+        0.0
+      ],
+      "rx_m": [
+        161.65,
+        38.575,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        160.35,
+        38.5,
+        0.0125
+      ],
+      "input_rx_m": [
+        161.65,
+        38.575,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 181.0,
+      "distance_from_220m_m": 39.0,
+      "phase": "integer_skeleton",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x17900_H1",
+      "input": "cases/line_x17900_H1/profile.in",
+      "input_sha256": "eb3b29871742b7c136df09876e32527cb60f3bc7b251bf5db8e708ddb4b3606e",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        158.35,
+        38.400000000000006,
+        0.0
+      ],
+      "rx_m": [
+        159.65,
+        38.475,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        158.35,
+        38.400000000000006,
+        0.0125
+      ],
+      "input_rx_m": [
+        159.65,
+        38.475,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 179.0,
+      "distance_from_220m_m": 41.0,
+      "phase": "integer_skeleton",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x17800_H1",
+      "input": "cases/line_x17800_H1/profile.in",
+      "input_sha256": "11e446158ad257f213ab16b95ad87609acbd5df612ac0943002fec98181dee17",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        157.35,
+        38.35,
+        0.0
+      ],
+      "rx_m": [
+        158.65,
+        38.425,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        157.35,
+        38.35,
+        0.0125
+      ],
+      "input_rx_m": [
+        158.65,
+        38.425,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 178.0,
+      "distance_from_220m_m": 42.0,
+      "phase": "integer_skeleton",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x17700_H1",
+      "input": "cases/line_x17700_H1/profile.in",
+      "input_sha256": "b231a2fb8a23a2be4887ac95e812bb8ff8e9f6f7b8f830b66e9ddbfe9c2a0b8a",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        156.35,
+        38.3,
+        0.0
+      ],
+      "rx_m": [
+        157.65,
+        38.375,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        156.35,
+        38.3,
+        0.0125
+      ],
+      "input_rx_m": [
+        157.65,
+        38.375,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 177.0,
+      "distance_from_220m_m": 43.0,
+      "phase": "integer_skeleton",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x17600_H1",
+      "input": "cases/line_x17600_H1/profile.in",
+      "input_sha256": "3331440a6c4db62cd3be1619a76b4b87790b7a1e4bcfaf570da5aae3f7ed9711",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        155.35,
+        38.25,
+        0.0
+      ],
+      "rx_m": [
+        156.65,
+        38.325,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        155.35,
+        38.25,
+        0.0125
+      ],
+      "input_rx_m": [
+        156.65,
+        38.325,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 176.0,
+      "distance_from_220m_m": 44.0,
+      "phase": "integer_skeleton",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x17500_H1",
+      "input": "cases/line_x17500_H1/profile.in",
+      "input_sha256": "c4ba41beca3c8e9884e75cadf22c6e9582b034c12b0af16a0e563fb385bbe2b2",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        154.35,
+        38.2,
+        0.0
+      ],
+      "rx_m": [
+        155.65,
+        38.25,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        154.35,
+        38.2,
+        0.0125
+      ],
+      "input_rx_m": [
+        155.65,
+        38.25,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 175.0,
+      "distance_from_220m_m": 45.0,
+      "phase": "integer_skeleton",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x17400_H1",
+      "input": "cases/line_x17400_H1/profile.in",
+      "input_sha256": "4bf0ea2510fe4babf8ede764d9e848b05ff66074677e89660a6b471ae167c3dd",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        153.35,
+        38.150000000000006,
+        0.0
+      ],
+      "rx_m": [
+        154.65,
+        38.2,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        153.35,
+        38.150000000000006,
+        0.0125
+      ],
+      "input_rx_m": [
+        154.65,
+        38.2,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 174.0,
+      "distance_from_220m_m": 46.0,
+      "phase": "integer_skeleton",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x17300_H1",
+      "input": "cases/line_x17300_H1/profile.in",
+      "input_sha256": "fd9e129dab4f39c6cd1219c4951f18953c1e06d19b18e1e685181cb95c1a6553",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        152.35,
+        38.1,
+        0.0
+      ],
+      "rx_m": [
+        153.65,
+        38.150000000000006,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        152.35,
+        38.1,
+        0.0125
+      ],
+      "input_rx_m": [
+        153.65,
+        38.150000000000006,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 173.0,
+      "distance_from_220m_m": 47.0,
+      "phase": "integer_skeleton",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x17200_H1",
+      "input": "cases/line_x17200_H1/profile.in",
+      "input_sha256": "3fe35bf6752e3baf1f03b9bf3b90ffba11d5198561628a28c89a421758a8ef10",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        151.35,
+        38.05,
+        0.0
+      ],
+      "rx_m": [
+        152.65,
+        38.1,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        151.35,
+        38.05,
+        0.0125
+      ],
+      "input_rx_m": [
+        152.65,
+        38.1,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 172.0,
+      "distance_from_220m_m": 48.0,
+      "phase": "integer_skeleton",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x17100_H1",
+      "input": "cases/line_x17100_H1/profile.in",
+      "input_sha256": "e2dbe0d3d53d3a4bc351498ce5657dae27e153a9f01e231e5ab6c42197ada4c1",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        150.35,
+        38.0,
+        0.0
+      ],
+      "rx_m": [
+        151.65,
+        38.05,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        150.35,
+        38.0,
+        0.0125
+      ],
+      "input_rx_m": [
+        151.65,
+        38.05,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 171.0,
+      "distance_from_220m_m": 49.0,
+      "phase": "integer_skeleton",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x18950_H1",
+      "input": "cases/line_x18950_H1/profile.in",
+      "input_sha256": "bc4311b2375a15413b986c46b956541b540efe71b811f114631a66f2916d2de9",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        168.85,
+        38.925,
+        0.0
+      ],
+      "rx_m": [
+        170.15,
+        39.0,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        168.85,
+        38.925,
+        0.0125
+      ],
+      "input_rx_m": [
+        170.15,
+        39.0,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 189.5,
+      "distance_from_220m_m": 30.5,
+      "phase": "half_metre_infill",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x18850_H1",
+      "input": "cases/line_x18850_H1/profile.in",
+      "input_sha256": "caeab9d0c662b33e6ea66e230ae53c577fa47e437a0e7bc2f9f2099f04ed8d74",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        167.85,
+        38.875,
+        0.0
+      ],
+      "rx_m": [
+        169.15,
+        38.95,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        167.85,
+        38.875,
+        0.0125
+      ],
+      "input_rx_m": [
+        169.15,
+        38.95,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 188.5,
+      "distance_from_220m_m": 31.5,
+      "phase": "half_metre_infill",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x18750_H1",
+      "input": "cases/line_x18750_H1/profile.in",
+      "input_sha256": "b22e5c58d3d33b4748d8495ce3d97ed2cf6901ebe8cf70edeb67c05abda2d407",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        166.85,
+        38.825,
+        0.0
+      ],
+      "rx_m": [
+        168.15,
+        38.900000000000006,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        166.85,
+        38.825,
+        0.0125
+      ],
+      "input_rx_m": [
+        168.15,
+        38.900000000000006,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 187.5,
+      "distance_from_220m_m": 32.5,
+      "phase": "half_metre_infill",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x18650_H1",
+      "input": "cases/line_x18650_H1/profile.in",
+      "input_sha256": "c56d2f7fcaeb0bb0fabc84295397eb9ccf7b4dc599d8830be7c0db18bf7d6bbe",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        165.85,
+        38.775000000000006,
+        0.0
+      ],
+      "rx_m": [
+        167.15,
+        38.85,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        165.85,
+        38.775000000000006,
+        0.0125
+      ],
+      "input_rx_m": [
+        167.15,
+        38.85,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 186.5,
+      "distance_from_220m_m": 33.5,
+      "phase": "half_metre_infill",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x18550_H1",
+      "input": "cases/line_x18550_H1/profile.in",
+      "input_sha256": "49ddedc23976e0503cc69192c7aa97cc78fba884ca0b2b5bd3d1c11fdd1a0801",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        164.85,
+        38.725,
+        0.0
+      ],
+      "rx_m": [
+        166.15,
+        38.8,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        164.85,
+        38.725,
+        0.0125
+      ],
+      "input_rx_m": [
+        166.15,
+        38.8,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 185.5,
+      "distance_from_220m_m": 34.5,
+      "phase": "half_metre_infill",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x18450_H1",
+      "input": "cases/line_x18450_H1/profile.in",
+      "input_sha256": "d51c15d065bc3fe2bbb11a8a4ce345fe6e90d7072d0e304165ce4e5645e837b0",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        163.85,
+        38.675,
+        0.0
+      ],
+      "rx_m": [
+        165.15,
+        38.75,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        163.85,
+        38.675,
+        0.0125
+      ],
+      "input_rx_m": [
+        165.15,
+        38.75,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 184.5,
+      "distance_from_220m_m": 35.5,
+      "phase": "half_metre_infill",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x18350_H1",
+      "input": "cases/line_x18350_H1/profile.in",
+      "input_sha256": "9fa2bccf006108493a46d63974898efb1d3773a0504061e09d1662a0f9f22cc6",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        162.85,
+        38.625,
+        0.0
+      ],
+      "rx_m": [
+        164.15,
+        38.7,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        162.85,
+        38.625,
+        0.0125
+      ],
+      "input_rx_m": [
+        164.15,
+        38.7,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 183.5,
+      "distance_from_220m_m": 36.5,
+      "phase": "half_metre_infill",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x18250_H1",
+      "input": "cases/line_x18250_H1/profile.in",
+      "input_sha256": "dbedfbce11d8f5372f207e8e0887bcb9233e584c7ce4f61e719694f2b58111f7",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        161.85,
+        38.575,
+        0.0
+      ],
+      "rx_m": [
+        163.15,
+        38.650000000000006,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        161.85,
+        38.575,
+        0.0125
+      ],
+      "input_rx_m": [
+        163.15,
+        38.650000000000006,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 182.5,
+      "distance_from_220m_m": 37.5,
+      "phase": "half_metre_infill",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x18150_H1",
+      "input": "cases/line_x18150_H1/profile.in",
+      "input_sha256": "fd2603e664816b3c7c017a3f853bbc0323eb180f4fb9cdcf72518d00604cd7eb",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        160.85,
+        38.525000000000006,
+        0.0
+      ],
+      "rx_m": [
+        162.15,
+        38.6,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        160.85,
+        38.525000000000006,
+        0.0125
+      ],
+      "input_rx_m": [
+        162.15,
+        38.6,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 181.5,
+      "distance_from_220m_m": 38.5,
+      "phase": "half_metre_infill",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x18050_H1",
+      "input": "cases/line_x18050_H1/profile.in",
+      "input_sha256": "a31915c02f9dbcff00354c8604be02da8800811948cda6002ef8bdc11efbf432",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        159.85,
+        38.475,
+        0.0
+      ],
+      "rx_m": [
+        161.15,
+        38.55,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        159.85,
+        38.475,
+        0.0125
+      ],
+      "input_rx_m": [
+        161.15,
+        38.55,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 180.5,
+      "distance_from_220m_m": 39.5,
+      "phase": "half_metre_infill",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x17950_H1",
+      "input": "cases/line_x17950_H1/profile.in",
+      "input_sha256": "07f775e97550fad9778a4ac01ab594d598ded80a69f623312ca583791b915b97",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        158.85,
+        38.425,
+        0.0
+      ],
+      "rx_m": [
+        160.15,
+        38.5,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        158.85,
+        38.425,
+        0.0125
+      ],
+      "input_rx_m": [
+        160.15,
+        38.5,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 179.5,
+      "distance_from_220m_m": 40.5,
+      "phase": "half_metre_infill",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x17850_H1",
+      "input": "cases/line_x17850_H1/profile.in",
+      "input_sha256": "c5776525821182b313eab0fbebabfea45ecd8cd1d2e6146586dfe744b040de95",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        157.85,
+        38.375,
+        0.0
+      ],
+      "rx_m": [
+        159.15,
+        38.45,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        157.85,
+        38.375,
+        0.0125
+      ],
+      "input_rx_m": [
+        159.15,
+        38.45,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 178.5,
+      "distance_from_220m_m": 41.5,
+      "phase": "half_metre_infill",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x17750_H1",
+      "input": "cases/line_x17750_H1/profile.in",
+      "input_sha256": "97bb05777eb32043355e6af3048868f2e7f111514a4ae3dc703236dbe00b82e6",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        156.85,
+        38.325,
+        0.0
+      ],
+      "rx_m": [
+        158.15,
+        38.400000000000006,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        156.85,
+        38.325,
+        0.0125
+      ],
+      "input_rx_m": [
+        158.15,
+        38.400000000000006,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 177.5,
+      "distance_from_220m_m": 42.5,
+      "phase": "half_metre_infill",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x17650_H1",
+      "input": "cases/line_x17650_H1/profile.in",
+      "input_sha256": "10ced281a2e8b3bb106db94ebcd84374f28932d60a75e7db68e6d111a8805b2d",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        155.85,
+        38.275000000000006,
+        0.0
+      ],
+      "rx_m": [
+        157.15,
+        38.35,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        155.85,
+        38.275000000000006,
+        0.0125
+      ],
+      "input_rx_m": [
+        157.15,
+        38.35,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 176.5,
+      "distance_from_220m_m": 43.5,
+      "phase": "half_metre_infill",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x17550_H1",
+      "input": "cases/line_x17550_H1/profile.in",
+      "input_sha256": "52633e86b4bb33edf236cc2e9f2fc1193bfb9fa79653d9c9b7da91d91183cd20",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        154.85,
+        38.225,
+        0.0
+      ],
+      "rx_m": [
+        156.15,
+        38.3,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        154.85,
+        38.225,
+        0.0125
+      ],
+      "input_rx_m": [
+        156.15,
+        38.3,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 175.5,
+      "distance_from_220m_m": 44.5,
+      "phase": "half_metre_infill",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x17450_H1",
+      "input": "cases/line_x17450_H1/profile.in",
+      "input_sha256": "149021677c0145f0f539f622d870df51760ce82520dd675cb30a11fd78bf85ff",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        153.85,
+        38.175,
+        0.0
+      ],
+      "rx_m": [
+        155.15,
+        38.225,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        153.85,
+        38.175,
+        0.0125
+      ],
+      "input_rx_m": [
+        155.15,
+        38.225,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 174.5,
+      "distance_from_220m_m": 45.5,
+      "phase": "half_metre_infill",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x17350_H1",
+      "input": "cases/line_x17350_H1/profile.in",
+      "input_sha256": "18698354974e567a67ee094d32ed8261feb2e1444fcfb1e5d5e7c9c674dbd64e",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        152.85,
+        38.125,
+        0.0
+      ],
+      "rx_m": [
+        154.15,
+        38.175,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        152.85,
+        38.125,
+        0.0125
+      ],
+      "input_rx_m": [
+        154.15,
+        38.175,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 173.5,
+      "distance_from_220m_m": 46.5,
+      "phase": "half_metre_infill",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x17250_H1",
+      "input": "cases/line_x17250_H1/profile.in",
+      "input_sha256": "5f7f3f71721b46236b53e3a6dc43b942d013b7314c34ca9a168eab3585596f85",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        151.85,
+        38.075,
+        0.0
+      ],
+      "rx_m": [
+        153.15,
+        38.125,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        151.85,
+        38.075,
+        0.0125
+      ],
+      "input_rx_m": [
+        153.15,
+        38.125,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 172.5,
+      "distance_from_220m_m": 47.5,
+      "phase": "half_metre_infill",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x17150_H1",
+      "input": "cases/line_x17150_H1/profile.in",
+      "input_sha256": "247ecec784647b228fbd6c9c96de1e50148a7caaee849c05d02d51d758b8cd8e",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        150.85,
+        38.025000000000006,
+        0.0
+      ],
+      "rx_m": [
+        152.15,
+        38.075,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        150.85,
+        38.025000000000006,
+        0.0125
+      ],
+      "input_rx_m": [
+        152.15,
+        38.075,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 171.5,
+      "distance_from_220m_m": 48.5,
+      "phase": "half_metre_infill",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    },
+    {
+      "id": "line_x17050_H1",
+      "input": "cases/line_x17050_H1/profile.in",
+      "input_sha256": "14ab060c917ef1bac935fbb1c2fdbde3aff41be475faa71acbf92a58403a97e8",
+      "geometry": "geometries/H1.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        149.85,
+        37.975,
+        0.0
+      ],
+      "rx_m": [
+        151.15,
+        38.025000000000006,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "input_tx_m": [
+        149.85,
+        37.975,
+        0.0125
+      ],
+      "input_rx_m": [
+        151.15,
+        38.025000000000006,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "profile_x_m": 170.5,
+      "distance_from_220m_m": 49.5,
+      "phase": "half_metre_infill",
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ]
+    }
+  ],
+  "reused_solver_outputs": [
+    {
+      "id": "high_x19000_H0",
+      "input": "E:\\djh\\line9_paper_mudstone_20261011_r2\\execution\\prepared\\high_x19000_H0\\cases\\high_x19000_H0\\profile.in",
+      "input_sha256": "2fb1208f61cb7b8afa7d571b1658640773b6dadf28ff36a00000f3b30986760d",
+      "geometry": "high_x19000_H0/geometries/full2d_compact.h5",
+      "geometry_sha256": "1fc79f2389a55a39744e6bab8f3e8b3a693bc31852d6f01e47ae3e4c34d198a9",
+      "material": "high_x19000_H0/geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        169.35,
+        38.95,
+        0.0
+      ],
+      "rx_m": [
+        170.65,
+        39.025000000000006,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H0",
+      "chainage_m": 190.0,
+      "input_tx_m": [
+        169.35,
+        38.95,
+        0.0125
+      ],
+      "input_rx_m": [
+        170.65,
+        39.025000000000006,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "comparison_crop_samples": 20352,
+      "parent_input_sha256": "6fc9e22622cb8d7d168053ddfa6b41e9870d88a2dd0368beb544bb74463f69af",
+      "parent_geometry_sha256": "c1e308ff73119f2c366d42efcf3526646d5fe8e76c6a692a7113a5b1148985a6",
+      "parent_material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "native_path": "D:\\自动处理\\artifacts\\local_checks\\2026-10-11_line9_paper_mudstone_results_r2\\high_x19000_H0.h5",
+      "native_sha256": "6ea7ab43971ebb638fbdf4ca565bc75a3436682584af99f4d0ef6dde376628d8",
+      "parent_contract_sha256": "052cb64fabd5637c02de202b40c5654310607a7fae4644724aaaa83a14f7fcbb"
+    },
+    {
+      "id": "high_x19000_H1",
+      "input": "E:\\djh\\line9_paper_mudstone_20261011_r2\\execution\\prepared\\high_x19000_H1\\cases\\high_x19000_H1\\profile.in",
+      "input_sha256": "c1253c130d2045695ecbdb984bde2b05e2f6b034b394c1eb1e630b4e77c41258",
+      "geometry": "high_x19000_H1/geometries/full2d_compact.h5",
+      "geometry_sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "material": "high_x19000_H1/geometries/line9_materials_v0_2.json",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "tx_m": [
+        169.35,
+        38.95,
+        0.0
+      ],
+      "rx_m": [
+        170.65,
+        39.025000000000006,
+        0.0
+      ],
+      "expected_samples": 40703,
+      "dt_s": 5.896635841874211e-11,
+      "time_window_ns": 2400.0,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "domain_height_m": 42.5,
+      "source_amplitude_A": 1.0,
+      "variant": "high",
+      "role": "H1",
+      "chainage_m": 190.0,
+      "input_tx_m": [
+        169.35,
+        38.95,
+        0.0125
+      ],
+      "input_rx_m": [
+        170.65,
+        39.025000000000006,
+        0.0125
+      ],
+      "source_start_s": 0.0,
+      "source_frequency_slot_unused": true,
+      "comparison_crop_samples": 20352,
+      "parent_input_sha256": "421a2d3e05f3bdd16da96fc9430826cc0387b7d2c990ee6f2a18163a63688a17",
+      "parent_geometry_sha256": "f948ae805077ea74612aa7e4bd46252a23ea0f7c973841657e5a4cc911a4868c",
+      "parent_material_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e",
+      "native_path": "D:\\自动处理\\artifacts\\local_checks\\2026-10-11_line9_paper_mudstone_results_r2\\high_x19000_H1.h5",
+      "native_sha256": "220157dcc4a40389d70213117b777a3ae66aabff7c6a0c44e2943afd5ad4d948",
+      "parent_contract_sha256": "052cb64fabd5637c02de202b40c5654310607a7fae4644724aaaa83a14f7fcbb"
+    }
+  ],
+  "parent_manifest_sha256": "7542e54a2cca0014a42038aeed6fcdfca51cdb9abec8f52683b91241d51e65ac",
+  "generator_sha256": "e3912d92dcbd13b07001295eb3bd9157b118ed937ad0be54a99767cf354f6821",
+  "dt_s": 5.896635841874211e-11,
+  "SFCW": {
+    "method": "direct",
+    "frequency_start_Hz": 20000000,
+    "frequency_stop_Hz": 170000000,
+    "frequency_step_Hz": 300000,
+    "tones": 501,
+    "windows": [
+      "hann",
+      "blackman"
+    ],
+    "zero_pad_factor": 8,
+    "tail_taper_fraction": 0,
+    "time_shift_s": 0,
+    "field_reference_length_m": 0.025
+  },
+  "stations": [
+    {
+      "profile_x_m": 190.0,
+      "distance_from_220m_m": 30.0,
+      "input_tx_m": [
+        169.35,
+        38.95,
+        0.0125
+      ],
+      "input_rx_m": [
+        170.65,
+        39.025000000000006,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 1.4749999999999943,
+      "guide_ns": {
+        "surface": 53.28686420790482,
+        "cover_base": 198.5714919809953,
+        "basal_sandstone": 399.42928947079633
+      },
+      "interfaces_y_m": {
+        "1": 31.0,
+        "2": 24.425,
+        "3": 17.325
+      }
+    },
+    {
+      "profile_x_m": 189.5,
+      "distance_from_220m_m": 30.5,
+      "input_tx_m": [
+        168.85,
+        38.925,
+        0.0125
+      ],
+      "input_rx_m": [
+        170.15,
+        39.0,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 1.5,
+      "guide_ns": {
+        "surface": 53.28686420790477,
+        "cover_base": 197.46666591427973,
+        "basal_sandstone": 398.32446340408086
+      },
+      "interfaces_y_m": {
+        "1": 30.975,
+        "2": 24.450000000000003,
+        "3": 17.35
+      }
+    },
+    {
+      "profile_x_m": 189.0,
+      "distance_from_220m_m": 31.0,
+      "input_tx_m": [
+        168.35,
+        38.900000000000006,
+        0.0125
+      ],
+      "input_rx_m": [
+        169.65,
+        38.975,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 1.5249999999999986,
+      "guide_ns": {
+        "surface": 53.28686420790477,
+        "cover_base": 196.36183984756423,
+        "basal_sandstone": 397.9268831031745
+      },
+      "interfaces_y_m": {
+        "1": 30.950000000000003,
+        "2": 24.475,
+        "3": 17.35
+      }
+    },
+    {
+      "profile_x_m": 188.5,
+      "distance_from_220m_m": 31.5,
+      "input_tx_m": [
+        167.85,
+        38.875,
+        0.0125
+      ],
+      "input_rx_m": [
+        169.15,
+        38.95,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 1.5499999999999972,
+      "guide_ns": {
+        "surface": 53.28686420790479,
+        "cover_base": 195.25701378084872,
+        "basal_sandstone": 396.82205703645894
+      },
+      "interfaces_y_m": {
+        "1": 30.925,
+        "2": 24.5,
+        "3": 17.375
+      }
+    },
+    {
+      "profile_x_m": 188.0,
+      "distance_from_220m_m": 32.0,
+      "input_tx_m": [
+        167.35,
+        38.85,
+        0.0125
+      ],
+      "input_rx_m": [
+        168.65,
+        38.925,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 1.5750000000000028,
+      "guide_ns": {
+        "surface": 53.28686420790479,
+        "cover_base": 194.1521877141332,
+        "basal_sandstone": 395.7172309697434
+      },
+      "interfaces_y_m": {
+        "1": 30.900000000000002,
+        "2": 24.525000000000002,
+        "3": 17.400000000000002
+      }
+    },
+    {
+      "profile_x_m": 187.5,
+      "distance_from_220m_m": 32.5,
+      "input_tx_m": [
+        166.85,
+        38.825,
+        0.0125
+      ],
+      "input_rx_m": [
+        168.15,
+        38.900000000000006,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 1.5999999999999943,
+      "guide_ns": {
+        "surface": 53.28686420790482,
+        "cover_base": 192.49494861405995,
+        "basal_sandstone": 394.7672376354793
+      },
+      "interfaces_y_m": {
+        "1": 30.875,
+        "2": 24.575000000000003,
+        "3": 17.425
+      }
+    },
+    {
+      "profile_x_m": 187.0,
+      "distance_from_220m_m": 33.0,
+      "input_tx_m": [
+        166.35,
+        38.8,
+        0.0125
+      ],
+      "input_rx_m": [
+        167.65,
+        38.875,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 1.625,
+      "guide_ns": {
+        "surface": 53.28686420790477,
+        "cover_base": 191.39012254734436,
+        "basal_sandstone": 393.6624115687638
+      },
+      "interfaces_y_m": {
+        "1": 30.85,
+        "2": 24.6,
+        "3": 17.45
+      }
+    },
+    {
+      "profile_x_m": 186.5,
+      "distance_from_220m_m": 33.5,
+      "input_tx_m": [
+        165.85,
+        38.775000000000006,
+        0.0125
+      ],
+      "input_rx_m": [
+        167.15,
+        38.85,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 1.6499999999999986,
+      "guide_ns": {
+        "surface": 53.28686420790477,
+        "cover_base": 190.28529648062886,
+        "basal_sandstone": 392.55758550204825
+      },
+      "interfaces_y_m": {
+        "1": 30.825000000000003,
+        "2": 24.625,
+        "3": 17.475
+      }
+    },
+    {
+      "profile_x_m": 186.0,
+      "distance_from_220m_m": 34.0,
+      "input_tx_m": [
+        165.35,
+        38.75,
+        0.0125
+      ],
+      "input_rx_m": [
+        166.65,
+        38.825,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 1.6749999999999972,
+      "guide_ns": {
+        "surface": 53.28686420790479,
+        "cover_base": 189.18047041391335,
+        "basal_sandstone": 392.1600052011419
+      },
+      "interfaces_y_m": {
+        "1": 30.8,
+        "2": 24.650000000000002,
+        "3": 17.475
+      }
+    },
+    {
+      "profile_x_m": 185.5,
+      "distance_from_220m_m": 34.5,
+      "input_tx_m": [
+        164.85,
+        38.725,
+        0.0125
+      ],
+      "input_rx_m": [
+        166.15,
+        38.8,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 1.7000000000000028,
+      "guide_ns": {
+        "surface": 53.28686420790479,
+        "cover_base": 188.07564434719785,
+        "basal_sandstone": 391.05517913442645
+      },
+      "interfaces_y_m": {
+        "1": 30.775000000000002,
+        "2": 24.675,
+        "3": 17.5
+      }
+    },
+    {
+      "profile_x_m": 185.0,
+      "distance_from_220m_m": 35.0,
+      "input_tx_m": [
+        164.35,
+        38.7,
+        0.0125
+      ],
+      "input_rx_m": [
+        165.65,
+        38.775000000000006,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 1.7249999999999943,
+      "guide_ns": {
+        "surface": 53.28686420790482,
+        "cover_base": 186.97081828048238,
+        "basal_sandstone": 389.9503530677109
+      },
+      "interfaces_y_m": {
+        "1": 30.75,
+        "2": 24.700000000000003,
+        "3": 17.525000000000002
+      }
+    },
+    {
+      "profile_x_m": 184.5,
+      "distance_from_220m_m": 35.5,
+      "input_tx_m": [
+        163.85,
+        38.675,
+        0.0125
+      ],
+      "input_rx_m": [
+        165.15,
+        38.75,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 1.75,
+      "guide_ns": {
+        "surface": 53.28686420790477,
+        "cover_base": 185.31357918040905,
+        "basal_sandstone": 389.00035973344677
+      },
+      "interfaces_y_m": {
+        "1": 30.725,
+        "2": 24.75,
+        "3": 17.55
+      }
+    },
+    {
+      "profile_x_m": 184.0,
+      "distance_from_220m_m": 36.0,
+      "input_tx_m": [
+        163.35,
+        38.650000000000006,
+        0.0125
+      ],
+      "input_rx_m": [
+        164.65,
+        38.725,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 1.7749999999999986,
+      "guide_ns": {
+        "surface": 53.28686420790477,
+        "cover_base": 184.20875311369355,
+        "basal_sandstone": 387.89553366673124
+      },
+      "interfaces_y_m": {
+        "1": 30.700000000000003,
+        "2": 24.775000000000002,
+        "3": 17.575
+      }
+    },
+    {
+      "profile_x_m": 183.5,
+      "distance_from_220m_m": 36.5,
+      "input_tx_m": [
+        162.85,
+        38.625,
+        0.0125
+      ],
+      "input_rx_m": [
+        164.15,
+        38.7,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 1.7999999999999972,
+      "guide_ns": {
+        "surface": 53.28686420790479,
+        "cover_base": 183.10392704697801,
+        "basal_sandstone": 386.7907076000157
+      },
+      "interfaces_y_m": {
+        "1": 30.675,
+        "2": 24.8,
+        "3": 17.6
+      }
+    },
+    {
+      "profile_x_m": 183.0,
+      "distance_from_220m_m": 37.0,
+      "input_tx_m": [
+        162.35,
+        38.6,
+        0.0125
+      ],
+      "input_rx_m": [
+        163.65,
+        38.675,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 1.8250000000000028,
+      "guide_ns": {
+        "surface": 53.453646255503884,
+        "cover_base": 181.61346999450384,
+        "basal_sandstone": 386.0074963133507
+      },
+      "interfaces_y_m": {
+        "1": 30.625,
+        "2": 24.825000000000003,
+        "3": 17.6
+      }
+    },
+    {
+      "profile_x_m": 182.5,
+      "distance_from_220m_m": 37.5,
+      "input_tx_m": [
+        161.85,
+        38.575,
+        0.0125
+      ],
+      "input_rx_m": [
+        163.15,
+        38.650000000000006,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 1.8499999999999943,
+      "guide_ns": {
+        "surface": 53.453646255503884,
+        "cover_base": 180.50864392778828,
+        "basal_sandstone": 384.9026702466352
+      },
+      "interfaces_y_m": {
+        "1": 30.6,
+        "2": 24.85,
+        "3": 17.625
+      }
+    },
+    {
+      "profile_x_m": 182.0,
+      "distance_from_220m_m": 38.0,
+      "input_tx_m": [
+        161.35,
+        38.55,
+        0.0125
+      ],
+      "input_rx_m": [
+        162.65,
+        38.625,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 1.875,
+      "guide_ns": {
+        "surface": 53.45364625550384,
+        "cover_base": 179.40381786107275,
+        "basal_sandstone": 383.79784417991965
+      },
+      "interfaces_y_m": {
+        "1": 30.575000000000003,
+        "2": 24.875,
+        "3": 17.650000000000002
+      }
+    },
+    {
+      "profile_x_m": 181.5,
+      "distance_from_220m_m": 38.5,
+      "input_tx_m": [
+        160.85,
+        38.525000000000006,
+        0.0125
+      ],
+      "input_rx_m": [
+        162.15,
+        38.6,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 1.8999999999999986,
+      "guide_ns": {
+        "surface": 53.453646255503855,
+        "cover_base": 178.29899179435728,
+        "basal_sandstone": 382.6930181132042
+      },
+      "interfaces_y_m": {
+        "1": 30.55,
+        "2": 24.900000000000002,
+        "3": 17.675
+      }
+    },
+    {
+      "profile_x_m": 181.0,
+      "distance_from_220m_m": 39.0,
+      "input_tx_m": [
+        160.35,
+        38.5,
+        0.0125
+      ],
+      "input_rx_m": [
+        161.65,
+        38.575,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 1.9249999999999972,
+      "guide_ns": {
+        "surface": 53.453646255503855,
+        "cover_base": 176.64175269428398,
+        "basal_sandstone": 381.74302477894
+      },
+      "interfaces_y_m": {
+        "1": 30.525000000000002,
+        "2": 24.950000000000003,
+        "3": 17.7
+      }
+    },
+    {
+      "profile_x_m": 180.5,
+      "distance_from_220m_m": 39.5,
+      "input_tx_m": [
+        159.85,
+        38.475,
+        0.0125
+      ],
+      "input_rx_m": [
+        161.15,
+        38.55,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 1.9500000000000028,
+      "guide_ns": {
+        "surface": 53.453646255503884,
+        "cover_base": 175.53692662756853,
+        "basal_sandstone": 380.63819871222455
+      },
+      "interfaces_y_m": {
+        "1": 30.5,
+        "2": 24.975,
+        "3": 17.725
+      }
+    },
+    {
+      "profile_x_m": 180.0,
+      "distance_from_220m_m": 40.0,
+      "input_tx_m": [
+        159.35,
+        38.45,
+        0.0125
+      ],
+      "input_rx_m": [
+        160.65,
+        38.525000000000006,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 1.9749999999999943,
+      "guide_ns": {
+        "surface": 53.453646255503884,
+        "cover_base": 174.43210056085297,
+        "basal_sandstone": 380.24061841131817
+      },
+      "interfaces_y_m": {
+        "1": 30.475,
+        "2": 25.0,
+        "3": 17.725
+      }
+    },
+    {
+      "profile_x_m": 179.5,
+      "distance_from_220m_m": 40.5,
+      "input_tx_m": [
+        158.85,
+        38.425,
+        0.0125
+      ],
+      "input_rx_m": [
+        160.15,
+        38.5,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 2.0,
+      "guide_ns": {
+        "surface": 53.45364625550384,
+        "cover_base": 173.32727449413744,
+        "basal_sandstone": 379.1357923446027
+      },
+      "interfaces_y_m": {
+        "1": 30.450000000000003,
+        "2": 25.025000000000002,
+        "3": 17.75
+      }
+    },
+    {
+      "profile_x_m": 179.0,
+      "distance_from_220m_m": 41.0,
+      "input_tx_m": [
+        158.35,
+        38.400000000000006,
+        0.0125
+      ],
+      "input_rx_m": [
+        159.65,
+        38.475,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 2.0249999999999986,
+      "guide_ns": {
+        "surface": 53.453646255503855,
+        "cover_base": 172.2224484274219,
+        "basal_sandstone": 378.0309662778871
+      },
+      "interfaces_y_m": {
+        "1": 30.425,
+        "2": 25.05,
+        "3": 17.775000000000002
+      }
+    },
+    {
+      "profile_x_m": 178.5,
+      "distance_from_220m_m": 41.5,
+      "input_tx_m": [
+        157.85,
+        38.375,
+        0.0125
+      ],
+      "input_rx_m": [
+        159.15,
+        38.45,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 2.049999999999997,
+      "guide_ns": {
+        "surface": 53.453646255503855,
+        "cover_base": 171.1176223607064,
+        "basal_sandstone": 376.9261402111716
+      },
+      "interfaces_y_m": {
+        "1": 30.400000000000002,
+        "2": 25.075000000000003,
+        "3": 17.8
+      }
+    },
+    {
+      "profile_x_m": 178.0,
+      "distance_from_220m_m": 42.0,
+      "input_tx_m": [
+        157.35,
+        38.35,
+        0.0125
+      ],
+      "input_rx_m": [
+        158.65,
+        38.425,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 2.075000000000003,
+      "guide_ns": {
+        "surface": 53.453646255503884,
+        "cover_base": 170.0127962939909,
+        "basal_sandstone": 375.8213141444561
+      },
+      "interfaces_y_m": {
+        "1": 30.375,
+        "2": 25.1,
+        "3": 17.825
+      }
+    },
+    {
+      "profile_x_m": 177.5,
+      "distance_from_220m_m": 42.5,
+      "input_tx_m": [
+        156.85,
+        38.325,
+        0.0125
+      ],
+      "input_rx_m": [
+        158.15,
+        38.400000000000006,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 2.0999999999999943,
+      "guide_ns": {
+        "surface": 53.453646255503884,
+        "cover_base": 168.35555719391763,
+        "basal_sandstone": 374.87132081019206
+      },
+      "interfaces_y_m": {
+        "1": 30.35,
+        "2": 25.150000000000002,
+        "3": 17.85
+      }
+    },
+    {
+      "profile_x_m": 177.0,
+      "distance_from_220m_m": 43.0,
+      "input_tx_m": [
+        156.35,
+        38.3,
+        0.0125
+      ],
+      "input_rx_m": [
+        157.65,
+        38.375,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 2.125,
+      "guide_ns": {
+        "surface": 53.45364625550384,
+        "cover_base": 167.25073112720207,
+        "basal_sandstone": 374.4737405092856
+      },
+      "interfaces_y_m": {
+        "1": 30.325000000000003,
+        "2": 25.175,
+        "3": 17.85
+      }
+    },
+    {
+      "profile_x_m": 176.5,
+      "distance_from_220m_m": 43.5,
+      "input_tx_m": [
+        155.85,
+        38.275000000000006,
+        0.0125
+      ],
+      "input_rx_m": [
+        157.15,
+        38.35,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 2.1499999999999986,
+      "guide_ns": {
+        "surface": 53.453646255503855,
+        "cover_base": 166.14590506048657,
+        "basal_sandstone": 373.3689144425701
+      },
+      "interfaces_y_m": {
+        "1": 30.3,
+        "2": 25.200000000000003,
+        "3": 17.875
+      }
+    },
+    {
+      "profile_x_m": 176.0,
+      "distance_from_220m_m": 44.0,
+      "input_tx_m": [
+        155.35,
+        38.25,
+        0.0125
+      ],
+      "input_rx_m": [
+        156.65,
+        38.325,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 2.174999999999997,
+      "guide_ns": {
+        "surface": 53.453646255503855,
+        "cover_base": 165.04107899377107,
+        "basal_sandstone": 372.2640883758546
+      },
+      "interfaces_y_m": {
+        "1": 30.275000000000002,
+        "2": 25.225,
+        "3": 17.900000000000002
+      }
+    },
+    {
+      "profile_x_m": 175.5,
+      "distance_from_220m_m": 44.5,
+      "input_tx_m": [
+        154.85,
+        38.225,
+        0.0125
+      ],
+      "input_rx_m": [
+        156.15,
+        38.3,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 2.200000000000003,
+      "guide_ns": {
+        "surface": 53.453646255503884,
+        "cover_base": 163.93625292705556,
+        "basal_sandstone": 371.1592623091391
+      },
+      "interfaces_y_m": {
+        "1": 30.25,
+        "2": 25.25,
+        "3": 17.925
+      }
+    },
+    {
+      "profile_x_m": 175.0,
+      "distance_from_220m_m": 45.0,
+      "input_tx_m": [
+        154.35,
+        38.2,
+        0.0125
+      ],
+      "input_rx_m": [
+        155.65,
+        38.25,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 2.25,
+      "guide_ns": {
+        "surface": 53.37025523170433,
+        "cover_base": 162.74803583654048,
+        "basal_sandstone": 369.971045218624
+      },
+      "interfaces_y_m": {
+        "1": 30.225,
+        "2": 25.275000000000002,
+        "3": 17.95
+      }
+    },
+    {
+      "profile_x_m": 174.5,
+      "distance_from_220m_m": 45.5,
+      "input_tx_m": [
+        153.85,
+        38.175,
+        0.0125
+      ],
+      "input_rx_m": [
+        155.15,
+        38.225,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 2.2749999999999986,
+      "guide_ns": {
+        "surface": 53.37025523170433,
+        "cover_base": 161.643209769825,
+        "basal_sandstone": 368.8662191519085
+      },
+      "interfaces_y_m": {
+        "1": 30.200000000000003,
+        "2": 25.3,
+        "3": 17.975
+      }
+    },
+    {
+      "profile_x_m": 174.0,
+      "distance_from_220m_m": 46.0,
+      "input_tx_m": [
+        153.35,
+        38.150000000000006,
+        0.0125
+      ],
+      "input_rx_m": [
+        154.65,
+        38.2,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 2.299999999999997,
+      "guide_ns": {
+        "surface": 53.370255231704355,
+        "cover_base": 159.9859706697517,
+        "basal_sandstone": 368.6234715834535
+      },
+      "interfaces_y_m": {
+        "1": 30.175,
+        "2": 25.35,
+        "3": 17.975
+      }
+    },
+    {
+      "profile_x_m": 173.5,
+      "distance_from_220m_m": 46.5,
+      "input_tx_m": [
+        152.85,
+        38.125,
+        0.0125
+      ],
+      "input_rx_m": [
+        154.15,
+        38.175,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 2.325000000000003,
+      "guide_ns": {
+        "surface": 53.370255231704306,
+        "cover_base": 158.88114460303618,
+        "basal_sandstone": 367.518645516738
+      },
+      "interfaces_y_m": {
+        "1": 30.150000000000002,
+        "2": 25.375,
+        "3": 18.0
+      }
+    },
+    {
+      "profile_x_m": 173.0,
+      "distance_from_220m_m": 47.0,
+      "input_tx_m": [
+        152.35,
+        38.1,
+        0.0125
+      ],
+      "input_rx_m": [
+        153.65,
+        38.150000000000006,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 2.3499999999999943,
+      "guide_ns": {
+        "surface": 53.37025523170433,
+        "cover_base": 157.77631853632067,
+        "basal_sandstone": 365.70657368421337
+      },
+      "interfaces_y_m": {
+        "1": 30.125,
+        "2": 25.400000000000002,
+        "3": 18.05
+      }
+    },
+    {
+      "profile_x_m": 172.5,
+      "distance_from_220m_m": 47.5,
+      "input_tx_m": [
+        151.85,
+        38.075,
+        0.0125
+      ],
+      "input_rx_m": [
+        153.15,
+        38.125,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 2.375,
+      "guide_ns": {
+        "surface": 53.37025523170433,
+        "cover_base": 156.67149246960514,
+        "basal_sandstone": 364.60174761749784
+      },
+      "interfaces_y_m": {
+        "1": 30.1,
+        "2": 25.425,
+        "3": 18.075
+      }
+    },
+    {
+      "profile_x_m": 172.0,
+      "distance_from_220m_m": 48.0,
+      "input_tx_m": [
+        151.35,
+        38.05,
+        0.0125
+      ],
+      "input_rx_m": [
+        152.65,
+        38.1,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 2.3999999999999986,
+      "guide_ns": {
+        "surface": 53.37025523170433,
+        "cover_base": 155.5666664028896,
+        "basal_sandstone": 363.49692155078225
+      },
+      "interfaces_y_m": {
+        "1": 30.075000000000003,
+        "2": 25.450000000000003,
+        "3": 18.1
+      }
+    },
+    {
+      "profile_x_m": 171.5,
+      "distance_from_220m_m": 48.5,
+      "input_tx_m": [
+        150.85,
+        38.025000000000006,
+        0.0125
+      ],
+      "input_rx_m": [
+        152.15,
+        38.075,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 2.424999999999997,
+      "guide_ns": {
+        "surface": 53.370255231704355,
+        "cover_base": 154.46184033617413,
+        "basal_sandstone": 362.39209548406683
+      },
+      "interfaces_y_m": {
+        "1": 30.05,
+        "2": 25.475,
+        "3": 18.125
+      }
+    },
+    {
+      "profile_x_m": 171.0,
+      "distance_from_220m_m": 49.0,
+      "input_tx_m": [
+        150.35,
+        38.0,
+        0.0125
+      ],
+      "input_rx_m": [
+        151.65,
+        38.05,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 2.450000000000003,
+      "guide_ns": {
+        "surface": 53.370255231704306,
+        "cover_base": 153.35701426945857,
+        "basal_sandstone": 360.58002365154215
+      },
+      "interfaces_y_m": {
+        "1": 30.025000000000002,
+        "2": 25.5,
+        "3": 18.175
+      }
+    },
+    {
+      "profile_x_m": 170.5,
+      "distance_from_220m_m": 49.5,
+      "input_tx_m": [
+        149.85,
+        37.975,
+        0.0125
+      ],
+      "input_rx_m": [
+        151.15,
+        38.025000000000006,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 2.4749999999999943,
+      "guide_ns": {
+        "surface": 53.37025523170433,
+        "cover_base": 151.69977516938533,
+        "basal_sandstone": 359.630030317278
+      },
+      "interfaces_y_m": {
+        "1": 30.0,
+        "2": 25.55,
+        "3": 18.2
+      }
+    },
+    {
+      "profile_x_m": 170.0,
+      "distance_from_220m_m": 50.0,
+      "input_tx_m": [
+        149.35,
+        37.95,
+        0.0125
+      ],
+      "input_rx_m": [
+        150.65,
+        38.0,
+        0.0125
+      ],
+      "top_PML_min_clearance_m": 2.5,
+      "guide_ns": {
+        "surface": 53.37025523170433,
+        "cover_base": 150.5949491026698,
+        "basal_sandstone": 358.5252042505625
+      },
+      "interfaces_y_m": {
+        "1": 29.975,
+        "2": 25.575000000000003,
+        "3": 18.225
+      }
+    }
+  ],
+  "no_retry": true,
+  "predeclared_analysis_windows_ns": {
+    "early": [
+      0,
+      120
+    ],
+    "deep_broad": [
+      250,
+      550
+    ],
+    "historical_deep": [
+      300,
+      450
+    ]
+  },
+  "limits": "41 H1 stations and 3 matched H0 anchors only; anchor differences shown separately, no interpolated H0 or synthetic full-line delta. Vertical guides are prospective local estimates, not ray-tracing truth. No AGC, fit, new methods, snapshots, extra observers, material, mesh, PML or domain changes. No field validation or spatial convergence claim."
+}

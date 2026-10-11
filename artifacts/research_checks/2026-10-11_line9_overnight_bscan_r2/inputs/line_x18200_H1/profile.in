@@ -1,0 +1,13 @@
+#title: line_x18200_H1; approved overnight spatial line; no snapshots
+#domain_mode: TM
+#domain: 210 42.5 inf
+#dx_dy_dz: 0.025 0.025 0.025
+#time_window: 2.4e-06
+#omp_threads: 2
+#pml_cells: 80 80 0 80 80 0
+#pml_formulation: HORIPML
+#dispersive_averaging: y
+#waveform: impulse 1 1 impulse
+#hertzian_dipole: z 161.35 38.55 0.0125 impulse
+#rx: 162.65 38.625 0.0125 line_x18200_H1_rx1 Ez
+#geometry_objects_read: 0 0 0 ../../geometries/H1.h5 line9_materials_v0_2 y

@@ -1,0 +1,1004 @@
+{
+  "status": "COMPLETE_41_STATION_LINE",
+  "script_sha256": "b3c08059e0cde279f4c9713b950ce321a4aa314be6b2f8f8d0bcd10826f624e1",
+  "official_processing_sha256": "adad556f09140956f0ee19d3038430e06a9ae8be6a826dcad723096d99624a3b",
+  "contract_sha256": "ed9791f14cbf60b11c046671e96eda661a719f98dfb58d88c511dc2d5e4bc0bd",
+  "retrieved_files_checked": 215,
+  "completed_new_runs": 42,
+  "reused_runs": 2,
+  "H1_station_count": 41,
+  "matched_anchor_count": 3,
+  "native_audits": [
+    {
+      "id": "line_x18000_H1",
+      "profile_x_m": 180.0,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "a89c3b39c93c912ef635fac457d094e536ddb1510c31df2fa29c1326cc9fa816",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 501,
+      "relative_L2": 3.70429224096002e-12,
+      "receiver_final_5pct_peak_relative_db": -61.47982478504154
+    },
+    {
+      "id": "line_x18000_H0",
+      "profile_x_m": 180.0,
+      "role": "H0",
+      "reused": false,
+      "native_sha256": "5cb0f2cc77008f6bab008c4f2e2cf7b17e2ee90f3c48fde52cc2afdd10bf3442",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 501,
+      "relative_L2": 3.64323958386862e-12,
+      "receiver_final_5pct_peak_relative_db": -61.47196638033786
+    },
+    {
+      "id": "line_x17000_H1",
+      "profile_x_m": 170.0,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "b05d53c862ba7d4898b15faf5cdbbae4a358c7bcdccce4d84d841d9c5f793b8c",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 501,
+      "relative_L2": 4.384582256048671e-12,
+      "receiver_final_5pct_peak_relative_db": -57.24625160233742
+    },
+    {
+      "id": "line_x17000_H0",
+      "profile_x_m": 170.0,
+      "role": "H0",
+      "reused": false,
+      "native_sha256": "705c5081e61d12b5af8d4693f01a992c59025a4122cbc4e01e57b0b5307ff04f",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 501,
+      "relative_L2": 4.329279784222488e-12,
+      "receiver_final_5pct_peak_relative_db": -57.28153166791685
+    },
+    {
+      "id": "line_x18900_H1",
+      "profile_x_m": 189.0,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "f0a0090718e674ddceb2b9f717a869b484a946a7282c73b35913c790f9174785",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 3.39808456071967e-12,
+      "receiver_final_5pct_peak_relative_db": -63.08228543382888
+    },
+    {
+      "id": "line_x18800_H1",
+      "profile_x_m": 188.0,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "a65a297f62a871f2b7b9acc97277b5740b72c52f358819ba867c1a100d0ef3d2",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 3.011926359147396e-12,
+      "receiver_final_5pct_peak_relative_db": -62.17663399959449
+    },
+    {
+      "id": "line_x18700_H1",
+      "profile_x_m": 187.0,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "8a14f3b999dc91d5470d8bed610c19199126b33de79ead303037936dba9542d2",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 3.6628578821593835e-12,
+      "receiver_final_5pct_peak_relative_db": -61.22796088456866
+    },
+    {
+      "id": "line_x18600_H1",
+      "profile_x_m": 186.0,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "0b0dfc5c0ecaf937a9656882625c13f246c64c666bcfa4b1cf5d04c8c695cec4",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 3.976938786700192e-12,
+      "receiver_final_5pct_peak_relative_db": -61.744317994825934
+    },
+    {
+      "id": "line_x18500_H1",
+      "profile_x_m": 185.0,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "ed4a4813827964cdb0a434b0c88bee9f6b8b5ea3bcac34614e22101a1e427790",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 4.012667365389846e-12,
+      "receiver_final_5pct_peak_relative_db": -61.74879489462187
+    },
+    {
+      "id": "line_x18400_H1",
+      "profile_x_m": 184.0,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "2d7a16e46ac2391b056ad129f4ac2b377dcc24b7eed7d286266900fc881cd348",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 3.752778772422472e-12,
+      "receiver_final_5pct_peak_relative_db": -61.34155477424571
+    },
+    {
+      "id": "line_x18300_H1",
+      "profile_x_m": 183.0,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "6af31c50b23738feb781c96cb13d5572e4700aff7a135cbded75f0549e37e893",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 4.002693285925133e-12,
+      "receiver_final_5pct_peak_relative_db": -61.3239239268175
+    },
+    {
+      "id": "line_x18200_H1",
+      "profile_x_m": 182.0,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "87392e040701de12b7907beb083cf2b8142fe4513fcfa3211265b0f17acf8ab9",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 4.29185955849956e-12,
+      "receiver_final_5pct_peak_relative_db": -60.70413291086521
+    },
+    {
+      "id": "line_x18100_H1",
+      "profile_x_m": 181.0,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "43307985166b046011f662cefef888182da87b977702dd0aa721d0ea2b00db80",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 4.186369976432522e-12,
+      "receiver_final_5pct_peak_relative_db": -60.828673001358965
+    },
+    {
+      "id": "line_x17900_H1",
+      "profile_x_m": 179.0,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "399901e2395d4c198b37ce8dc3cdf9c080bf8fb4a1210f970ebbcb1cac471b43",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 4.486935596390454e-12,
+      "receiver_final_5pct_peak_relative_db": -62.66268177835241
+    },
+    {
+      "id": "line_x17800_H1",
+      "profile_x_m": 178.0,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "96984fcbb90eab7f9643f587820e645e81442d5bf09a5bd6761579f15ea6241d",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 3.917816854875988e-12,
+      "receiver_final_5pct_peak_relative_db": -63.35270165750696
+    },
+    {
+      "id": "line_x17700_H1",
+      "profile_x_m": 177.0,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "2c38374315cd5d2a5aebf769b55ea3f4e82c38a11ec48ab2bf8a1d8d6c9bf228",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 4.299284002601935e-12,
+      "receiver_final_5pct_peak_relative_db": -64.62467832522988
+    },
+    {
+      "id": "line_x17600_H1",
+      "profile_x_m": 176.0,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "ade3e3d05de5404908e3794342c82497aca40b9e6001bde0c0beab10779d2e23",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 4.250225108403968e-12,
+      "receiver_final_5pct_peak_relative_db": -64.46210607183853
+    },
+    {
+      "id": "line_x17500_H1",
+      "profile_x_m": 175.0,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "48deb0dfcf7d8eec6573c1b98319010afaad132e2188f616de37c906c386e02c",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 5.2128105547101e-12,
+      "receiver_final_5pct_peak_relative_db": -57.67387969204553
+    },
+    {
+      "id": "line_x17400_H1",
+      "profile_x_m": 174.0,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "3590407ae6c0f293b197bd044476e0dd09b850ecb96595290d072f42636f42b5",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 4.7883151749022566e-12,
+      "receiver_final_5pct_peak_relative_db": -57.637993407846075
+    },
+    {
+      "id": "line_x17300_H1",
+      "profile_x_m": 173.0,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "51f7b2523eb5eef20c88b592d370233ecff34dcdb4cb73fd92a33ead5e7e79c2",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 4.986135719323619e-12,
+      "receiver_final_5pct_peak_relative_db": -57.57028467041276
+    },
+    {
+      "id": "line_x17200_H1",
+      "profile_x_m": 172.0,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "b2752cd1832133080deb468f9268a5e0bc5730971e71d0f87d1623113d6c0f70",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 5.019904132409122e-12,
+      "receiver_final_5pct_peak_relative_db": -57.45278304662484
+    },
+    {
+      "id": "line_x17100_H1",
+      "profile_x_m": 171.0,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "19591c1944b3158443ab8bcd0f702bc2fb2ebc7a45719904e4bb4e1109f3e085",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 5.075081938288451e-12,
+      "receiver_final_5pct_peak_relative_db": -57.300390435241944
+    },
+    {
+      "id": "line_x18950_H1",
+      "profile_x_m": 189.5,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "6ca49e064e851bb242f6afbffe6148a4162abd7c6c19c304d011e0daa401ef4e",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 3.6370909529178493e-12,
+      "receiver_final_5pct_peak_relative_db": -62.43856644423126
+    },
+    {
+      "id": "line_x18850_H1",
+      "profile_x_m": 188.5,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "b7c85c7cbe4c4a4ebb3323e37416663043a2001944018a3e88b1441cffc1db63",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 3.1266251457946634e-12,
+      "receiver_final_5pct_peak_relative_db": -63.02335204554539
+    },
+    {
+      "id": "line_x18750_H1",
+      "profile_x_m": 187.5,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "056008706cb59d02fa67888288353421346c4619079bb651bba9928a56320e0b",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 3.193598893786158e-12,
+      "receiver_final_5pct_peak_relative_db": -61.67847001257997
+    },
+    {
+      "id": "line_x18650_H1",
+      "profile_x_m": 186.5,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "ca81bc7564e6f1105e1cf3af92b3586ad5a69dbebeb3783ad3c7574ad6c715ee",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 3.736488734287753e-12,
+      "receiver_final_5pct_peak_relative_db": -61.336094277237656
+    },
+    {
+      "id": "line_x18550_H1",
+      "profile_x_m": 185.5,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "50644cf8039aaebd2aa14b7d9345793ea7a32aebc75426ffb0a3cf761a7477e1",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 4.174593938230392e-12,
+      "receiver_final_5pct_peak_relative_db": -62.03719367093211
+    },
+    {
+      "id": "line_x18450_H1",
+      "profile_x_m": 184.5,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "044b0bf51b4e8dd5d49224f113d7d3df73d9b5cd3a4435dfd6f386dcfe78a1db",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 3.905424518691345e-12,
+      "receiver_final_5pct_peak_relative_db": -61.74318849356414
+    },
+    {
+      "id": "line_x18350_H1",
+      "profile_x_m": 183.5,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "32390fa88693c1bf8b9007e8fb52f1412a5b2d6c34cd5592549e085f903159a0",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 3.837829726735375e-12,
+      "receiver_final_5pct_peak_relative_db": -61.23169093521702
+    },
+    {
+      "id": "line_x18250_H1",
+      "profile_x_m": 182.5,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "80555306673ba79b8948ce9bb35a0477b3fc6598e5cd871d8c32fb94dd8e3243",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 4.216846621041828e-12,
+      "receiver_final_5pct_peak_relative_db": -61.098553552466996
+    },
+    {
+      "id": "line_x18150_H1",
+      "profile_x_m": 181.5,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "c852ac1cc8768988c538e2e7ffcba467d0a4a3adb5600e2167c2a6c1cf160020",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 4.200212323477716e-12,
+      "receiver_final_5pct_peak_relative_db": -60.62687821348448
+    },
+    {
+      "id": "line_x18050_H1",
+      "profile_x_m": 180.5,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "2b84091f9a30fc54563b060d61bdcc2581163ddb4549ce1bf6e53cd2c77bc99e",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 4.366296840676696e-12,
+      "receiver_final_5pct_peak_relative_db": -61.15871935203665
+    },
+    {
+      "id": "line_x17950_H1",
+      "profile_x_m": 179.5,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "4789505f8437fd08ea0906739899ac6b7187e733598c249ff4cdbcefe0273e72",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 4.305325900972874e-12,
+      "receiver_final_5pct_peak_relative_db": -62.068049536960515
+    },
+    {
+      "id": "line_x17850_H1",
+      "profile_x_m": 178.5,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "2843bbe546633e30511a3cccbc67f95829fb7055f696d76004bbd72506cf2447",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 4.152161669627991e-12,
+      "receiver_final_5pct_peak_relative_db": -62.94059470294287
+    },
+    {
+      "id": "line_x17750_H1",
+      "profile_x_m": 177.5,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "992285805bc33aa274aa965e46b40f531b1d019912257a50710c2576bfbd1c02",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 4.245122268199538e-12,
+      "receiver_final_5pct_peak_relative_db": -64.0827726564029
+    },
+    {
+      "id": "line_x17650_H1",
+      "profile_x_m": 176.5,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "45382f0d08cabdcb63801a691cfa8a56d9cc108e617bb92f752b716ea8dd53b7",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 4.246194847576284e-12,
+      "receiver_final_5pct_peak_relative_db": -65.14096040029395
+    },
+    {
+      "id": "line_x17550_H1",
+      "profile_x_m": 175.5,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "06e42b7a6dd6580388cd8438d90863346f1310bd662b47e5e8e07d166d1fe104",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 4.296568012633615e-12,
+      "receiver_final_5pct_peak_relative_db": -63.51500377634764
+    },
+    {
+      "id": "line_x17450_H1",
+      "profile_x_m": 174.5,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "715db126dd51daf512521d9d3cae2483409d1f5895e99b48921574164c2de44c",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 5.074186611265303e-12,
+      "receiver_final_5pct_peak_relative_db": -57.82246344744906
+    },
+    {
+      "id": "line_x17350_H1",
+      "profile_x_m": 173.5,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "ffec277c5560fc439bd7af9c54a9cbdd6cfcbf5532d6164c4d8d095962b7dd1b",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 4.676668981041001e-12,
+      "receiver_final_5pct_peak_relative_db": -57.667690171047525
+    },
+    {
+      "id": "line_x17250_H1",
+      "profile_x_m": 172.5,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "25249e28656f916fea2fbe65c3c9efccf075964d6255626d1aa430353b607ebe",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 5.09342315657797e-12,
+      "receiver_final_5pct_peak_relative_db": -57.56671500416768
+    },
+    {
+      "id": "line_x17150_H1",
+      "profile_x_m": 171.5,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "60153f621bf6b17c4d16f761c7acea3c8df8ef04a75fcb211c07137811c157c4",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 5.049658140592018e-12,
+      "receiver_final_5pct_peak_relative_db": -57.487798698417684
+    },
+    {
+      "id": "line_x17050_H1",
+      "profile_x_m": 170.5,
+      "role": "H1",
+      "reused": false,
+      "native_sha256": "092d054f52a56e3f230b449571b223a7622ece4e279a9011f3ea6b18e1bce209",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 18,
+      "relative_L2": 5.214847217025647e-12,
+      "receiver_final_5pct_peak_relative_db": -57.29682975104892
+    },
+    {
+      "id": "high_x19000_H0",
+      "profile_x_m": 190.0,
+      "role": "H0",
+      "reused": true,
+      "native_sha256": "6ea7ab43971ebb638fbdf4ca565bc75a3436682584af99f4d0ef6dde376628d8",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 501,
+      "relative_L2": 3.1398976376482538e-12,
+      "receiver_final_5pct_peak_relative_db": -62.14636735521245
+    },
+    {
+      "id": "high_x19000_H1",
+      "profile_x_m": 190.0,
+      "role": "H1",
+      "reused": true,
+      "native_sha256": "220157dcc4a40389d70213117b777a3ae66aabff7c6a0c44e2943afd5ad4d948",
+      "native_dtype": "float64",
+      "independent_DFT_tones": 501,
+      "relative_L2": 3.209372437804187e-12,
+      "receiver_final_5pct_peak_relative_db": -62.26277535914691
+    }
+  ],
+  "metrics": {
+    "hann": {
+      "predeclared_deep_window_ns": [
+        250,
+        550
+      ],
+      "H1_peaks": [
+        {
+          "profile_x_m": 190.0,
+          "deep_peak_abs": 0.6623977506605183,
+          "deep_peak_ns": 399.2015968063872
+        },
+        {
+          "profile_x_m": 189.5,
+          "deep_peak_abs": 0.6740614747139262,
+          "deep_peak_ns": 398.3699268130406
+        },
+        {
+          "profile_x_m": 189.0,
+          "deep_peak_abs": 0.6793385384804518,
+          "deep_peak_ns": 397.5382568196939
+        },
+        {
+          "profile_x_m": 188.5,
+          "deep_peak_abs": 0.6833052381804233,
+          "deep_peak_ns": 396.7065868263473
+        },
+        {
+          "profile_x_m": 188.0,
+          "deep_peak_abs": 0.6847581545687703,
+          "deep_peak_ns": 395.87491683300067
+        },
+        {
+          "profile_x_m": 187.5,
+          "deep_peak_abs": 0.6807101082445075,
+          "deep_peak_ns": 395.043246839654
+        },
+        {
+          "profile_x_m": 187.0,
+          "deep_peak_abs": 0.6886163922109836,
+          "deep_peak_ns": 393.37990685296074
+        },
+        {
+          "profile_x_m": 186.5,
+          "deep_peak_abs": 0.7036834504893629,
+          "deep_peak_ns": 392.5482368596141
+        },
+        {
+          "profile_x_m": 186.0,
+          "deep_peak_abs": 0.707332694078278,
+          "deep_peak_ns": 391.7165668662675
+        },
+        {
+          "profile_x_m": 185.5,
+          "deep_peak_abs": 0.7094696954617105,
+          "deep_peak_ns": 390.8848968729208
+        },
+        {
+          "profile_x_m": 185.0,
+          "deep_peak_abs": 0.7105817918197274,
+          "deep_peak_ns": 390.0532268795742
+        },
+        {
+          "profile_x_m": 184.5,
+          "deep_peak_abs": 0.7105832541776774,
+          "deep_peak_ns": 389.2215568862276
+        },
+        {
+          "profile_x_m": 184.0,
+          "deep_peak_abs": 0.7174515932034298,
+          "deep_peak_ns": 387.5582168995343
+        },
+        {
+          "profile_x_m": 183.5,
+          "deep_peak_abs": 0.7272175366190285,
+          "deep_peak_ns": 386.72654690618765
+        },
+        {
+          "profile_x_m": 183.0,
+          "deep_peak_abs": 0.7377216593931673,
+          "deep_peak_ns": 385.89487691284097
+        },
+        {
+          "profile_x_m": 182.5,
+          "deep_peak_abs": 0.7474960354239351,
+          "deep_peak_ns": 385.06320691949435
+        },
+        {
+          "profile_x_m": 182.0,
+          "deep_peak_abs": 0.740791730699587,
+          "deep_peak_ns": 384.23153692614767
+        },
+        {
+          "profile_x_m": 181.5,
+          "deep_peak_abs": 0.7323188616589782,
+          "deep_peak_ns": 383.39986693280105
+        },
+        {
+          "profile_x_m": 181.0,
+          "deep_peak_abs": 0.7296581950106841,
+          "deep_peak_ns": 381.73652694610774
+        },
+        {
+          "profile_x_m": 180.5,
+          "deep_peak_abs": 0.7266112089425087,
+          "deep_peak_ns": 380.9048569527611
+        },
+        {
+          "profile_x_m": 180.0,
+          "deep_peak_abs": 0.7361358554143982,
+          "deep_peak_ns": 380.07318695941456
+        },
+        {
+          "profile_x_m": 179.5,
+          "deep_peak_abs": 0.7647577138608996,
+          "deep_peak_ns": 379.2415169660679
+        },
+        {
+          "profile_x_m": 179.0,
+          "deep_peak_abs": 0.8005007122379024,
+          "deep_peak_ns": 378.40984697272125
+        },
+        {
+          "profile_x_m": 178.5,
+          "deep_peak_abs": 0.8436973376638416,
+          "deep_peak_ns": 377.5781769793746
+        },
+        {
+          "profile_x_m": 178.0,
+          "deep_peak_abs": 0.8894441520968818,
+          "deep_peak_ns": 375.91483699268133
+        },
+        {
+          "profile_x_m": 177.5,
+          "deep_peak_abs": 0.931840894251382,
+          "deep_peak_ns": 375.08316699933465
+        },
+        {
+          "profile_x_m": 177.0,
+          "deep_peak_abs": 0.9612650134989951,
+          "deep_peak_ns": 374.251497005988
+        },
+        {
+          "profile_x_m": 176.5,
+          "deep_peak_abs": 0.9636992005699593,
+          "deep_peak_ns": 373.4198270126414
+        },
+        {
+          "profile_x_m": 176.0,
+          "deep_peak_abs": 0.9435735313519402,
+          "deep_peak_ns": 371.7564870259481
+        },
+        {
+          "profile_x_m": 175.5,
+          "deep_peak_abs": 0.9114844094254684,
+          "deep_peak_ns": 370.9248170326014
+        },
+        {
+          "profile_x_m": 175.0,
+          "deep_peak_abs": 0.877545966919098,
+          "deep_peak_ns": 369.2614770459082
+        },
+        {
+          "profile_x_m": 174.5,
+          "deep_peak_abs": 0.8699545385908837,
+          "deep_peak_ns": 254.49101796407186
+        },
+        {
+          "profile_x_m": 174.0,
+          "deep_peak_abs": 0.8693002817408222,
+          "deep_peak_ns": 251.99600798403196
+        },
+        {
+          "profile_x_m": 173.5,
+          "deep_peak_abs": 0.8986339641264496,
+          "deep_peak_ns": 250.33266799733866
+        },
+        {
+          "profile_x_m": 173.0,
+          "deep_peak_abs": 0.8492984193016979,
+          "deep_peak_ns": 363.4397870924817
+        },
+        {
+          "profile_x_m": 172.5,
+          "deep_peak_abs": 0.8827458718837189,
+          "deep_peak_ns": 362.6081170991351
+        },
+        {
+          "profile_x_m": 172.0,
+          "deep_peak_abs": 0.9216989050619989,
+          "deep_peak_ns": 361.7764471057884
+        },
+        {
+          "profile_x_m": 171.5,
+          "deep_peak_abs": 0.910269635056682,
+          "deep_peak_ns": 360.11310711909516
+        },
+        {
+          "profile_x_m": 171.0,
+          "deep_peak_abs": 0.869774176154379,
+          "deep_peak_ns": 358.44976713240186
+        },
+        {
+          "profile_x_m": 170.5,
+          "deep_peak_abs": 0.8543083372499765,
+          "deep_peak_ns": 356.78642714570856
+        },
+        {
+          "profile_x_m": 170.0,
+          "deep_peak_abs": 0.9057696307524669,
+          "deep_peak_ns": 355.95475715236194
+        }
+      ],
+      "matched_anchors": [
+        {
+          "profile_x_m": 190.0,
+          "delta_peak_abs": 0.6671753819053059,
+          "delta_peak_ns": 399.2015968063872,
+          "H0_peak_abs": 0.4525668384556397,
+          "delta_over_H0_peak": 1.4742029800106575,
+          "vertical_95MHz_guide_ns": 399.42928947079633
+        },
+        {
+          "profile_x_m": 180.0,
+          "delta_peak_abs": 0.7334424351690758,
+          "delta_peak_ns": 380.07318695941456,
+          "H0_peak_abs": 0.6967775213118095,
+          "delta_over_H0_peak": 1.0526206898699,
+          "vertical_95MHz_guide_ns": 380.24061841131817
+        },
+        {
+          "profile_x_m": 170.0,
+          "delta_peak_abs": 0.8993351956445803,
+          "delta_peak_ns": 355.95475715236194,
+          "H0_peak_abs": 0.045710174328881345,
+          "delta_over_H0_peak": 19.674726881895694,
+          "vertical_95MHz_guide_ns": 358.5252042505625
+        }
+      ]
+    },
+    "blackman": {
+      "predeclared_deep_window_ns": [
+        250,
+        550
+      ],
+      "H1_peaks": [
+        {
+          "profile_x_m": 190.0,
+          "deep_peak_abs": 0.6687030393763423,
+          "deep_peak_ns": 399.2015968063872
+        },
+        {
+          "profile_x_m": 189.5,
+          "deep_peak_abs": 0.6773781967830698,
+          "deep_peak_ns": 398.3699268130406
+        },
+        {
+          "profile_x_m": 189.0,
+          "deep_peak_abs": 0.6813948214113813,
+          "deep_peak_ns": 397.5382568196939
+        },
+        {
+          "profile_x_m": 188.5,
+          "deep_peak_abs": 0.6863710583890661,
+          "deep_peak_ns": 396.7065868263473
+        },
+        {
+          "profile_x_m": 188.0,
+          "deep_peak_abs": 0.6888315740901939,
+          "deep_peak_ns": 395.87491683300067
+        },
+        {
+          "profile_x_m": 187.5,
+          "deep_peak_abs": 0.6869256731718728,
+          "deep_peak_ns": 395.043246839654
+        },
+        {
+          "profile_x_m": 187.0,
+          "deep_peak_abs": 0.6952382343891804,
+          "deep_peak_ns": 393.37990685296074
+        },
+        {
+          "profile_x_m": 186.5,
+          "deep_peak_abs": 0.7071162796412883,
+          "deep_peak_ns": 392.5482368596141
+        },
+        {
+          "profile_x_m": 186.0,
+          "deep_peak_abs": 0.7100600455615657,
+          "deep_peak_ns": 391.7165668662675
+        },
+        {
+          "profile_x_m": 185.5,
+          "deep_peak_abs": 0.7113572325143729,
+          "deep_peak_ns": 390.8848968729208
+        },
+        {
+          "profile_x_m": 185.0,
+          "deep_peak_abs": 0.7151191027524635,
+          "deep_peak_ns": 390.0532268795742
+        },
+        {
+          "profile_x_m": 184.5,
+          "deep_peak_abs": 0.7166782715361218,
+          "deep_peak_ns": 389.2215568862276
+        },
+        {
+          "profile_x_m": 184.0,
+          "deep_peak_abs": 0.7231997308254563,
+          "deep_peak_ns": 387.5582168995343
+        },
+        {
+          "profile_x_m": 183.5,
+          "deep_peak_abs": 0.7321653009174287,
+          "deep_peak_ns": 386.72654690618765
+        },
+        {
+          "profile_x_m": 183.0,
+          "deep_peak_abs": 0.7422917720621208,
+          "deep_peak_ns": 385.89487691284097
+        },
+        {
+          "profile_x_m": 182.5,
+          "deep_peak_abs": 0.7510640340816179,
+          "deep_peak_ns": 385.06320691949435
+        },
+        {
+          "profile_x_m": 182.0,
+          "deep_peak_abs": 0.7457617306337848,
+          "deep_peak_ns": 384.23153692614767
+        },
+        {
+          "profile_x_m": 181.5,
+          "deep_peak_abs": 0.7382826764244569,
+          "deep_peak_ns": 382.5681969394544
+        },
+        {
+          "profile_x_m": 181.0,
+          "deep_peak_abs": 0.7343047177666112,
+          "deep_peak_ns": 381.73652694610774
+        },
+        {
+          "profile_x_m": 180.5,
+          "deep_peak_abs": 0.7280783977302882,
+          "deep_peak_ns": 380.9048569527611
+        },
+        {
+          "profile_x_m": 180.0,
+          "deep_peak_abs": 0.7370544407359412,
+          "deep_peak_ns": 380.07318695941456
+        },
+        {
+          "profile_x_m": 179.5,
+          "deep_peak_abs": 0.7658493253034309,
+          "deep_peak_ns": 379.2415169660679
+        },
+        {
+          "profile_x_m": 179.0,
+          "deep_peak_abs": 0.8050175616061969,
+          "deep_peak_ns": 378.40984697272125
+        },
+        {
+          "profile_x_m": 178.5,
+          "deep_peak_abs": 0.8520028995621104,
+          "deep_peak_ns": 377.5781769793746
+        },
+        {
+          "profile_x_m": 178.0,
+          "deep_peak_abs": 0.897432202168958,
+          "deep_peak_ns": 375.91483699268133
+        },
+        {
+          "profile_x_m": 177.5,
+          "deep_peak_abs": 0.9364053720092007,
+          "deep_peak_ns": 375.08316699933465
+        },
+        {
+          "profile_x_m": 177.0,
+          "deep_peak_abs": 0.9627403063578279,
+          "deep_peak_ns": 374.251497005988
+        },
+        {
+          "profile_x_m": 176.5,
+          "deep_peak_abs": 0.9666235829502844,
+          "deep_peak_ns": 373.4198270126414
+        },
+        {
+          "profile_x_m": 176.0,
+          "deep_peak_abs": 0.9497859564690947,
+          "deep_peak_ns": 371.7564870259481
+        },
+        {
+          "profile_x_m": 175.5,
+          "deep_peak_abs": 0.9201668506650545,
+          "deep_peak_ns": 370.9248170326014
+        },
+        {
+          "profile_x_m": 175.0,
+          "deep_peak_abs": 0.8828412652182955,
+          "deep_peak_ns": 369.2614770459082
+        },
+        {
+          "profile_x_m": 174.5,
+          "deep_peak_abs": 0.8652478350706057,
+          "deep_peak_ns": 254.49101796407186
+        },
+        {
+          "profile_x_m": 174.0,
+          "deep_peak_abs": 0.8834638793078775,
+          "deep_peak_ns": 251.99600798403196
+        },
+        {
+          "profile_x_m": 173.5,
+          "deep_peak_abs": 0.9001497050528582,
+          "deep_peak_ns": 250.33266799733866
+        },
+        {
+          "profile_x_m": 173.0,
+          "deep_peak_abs": 0.8506045299712824,
+          "deep_peak_ns": 363.4397870924817
+        },
+        {
+          "profile_x_m": 172.5,
+          "deep_peak_abs": 0.8884885313575508,
+          "deep_peak_ns": 362.6081170991351
+        },
+        {
+          "profile_x_m": 172.0,
+          "deep_peak_abs": 0.9332524221798317,
+          "deep_peak_ns": 361.7764471057884
+        },
+        {
+          "profile_x_m": 171.5,
+          "deep_peak_abs": 0.9205672176314398,
+          "deep_peak_ns": 360.11310711909516
+        },
+        {
+          "profile_x_m": 171.0,
+          "deep_peak_abs": 0.8770887124844693,
+          "deep_peak_ns": 358.44976713240186
+        },
+        {
+          "profile_x_m": 170.5,
+          "deep_peak_abs": 0.8612122558439518,
+          "deep_peak_ns": 356.78642714570856
+        },
+        {
+          "profile_x_m": 170.0,
+          "deep_peak_abs": 0.912720731157398,
+          "deep_peak_ns": 355.95475715236194
+        }
+      ],
+      "matched_anchors": [
+        {
+          "profile_x_m": 190.0,
+          "delta_peak_abs": 0.6712778465808653,
+          "delta_peak_ns": 399.2015968063872,
+          "H0_peak_abs": 0.45949965515400715,
+          "delta_over_H0_peak": 1.4608886841403135,
+          "vertical_95MHz_guide_ns": 399.42928947079633
+        },
+        {
+          "profile_x_m": 180.0,
+          "delta_peak_abs": 0.7364881439191041,
+          "delta_peak_ns": 380.07318695941456,
+          "H0_peak_abs": 0.7048285120516227,
+          "delta_over_H0_peak": 1.0449182053877564,
+          "vertical_95MHz_guide_ns": 380.24061841131817
+        },
+        {
+          "profile_x_m": 170.0,
+          "delta_peak_abs": 0.91039817040419,
+          "delta_peak_ns": 355.95475715236194,
+          "H0_peak_abs": 0.019548424480409655,
+          "delta_over_H0_peak": 46.57143450698753,
+          "vertical_95MHz_guide_ns": 358.5252042505625
+        }
+      ]
+    }
+  },
+  "inverse_relative_L2": {
+    "hann": 1.278212483044294e-14,
+    "blackman": 1.3709207578719589e-14
+  },
+  "official_CLI_complex_profile_relative_L2": 5.124768952440434e-16,
+  "numerical_sha256": "9847fb43c2cdf3385f225b612d141f805efa400341b8000de9037fa2d888198d",
+  "anchor_display_window_ns": [
+    120,
+    550
+  ],
+  "method": "official_direct",
+  "SFCW": {
+    "method": "direct",
+    "frequency_start_Hz": 20000000,
+    "frequency_stop_Hz": 170000000,
+    "frequency_step_Hz": 300000,
+    "tones": 501,
+    "windows": [
+      "hann",
+      "blackman"
+    ],
+    "zero_pad_factor": 8,
+    "tail_taper_fraction": 0,
+    "time_shift_s": 0,
+    "field_reference_length_m": 0.025
+  },
+  "limits": "41 H1 stations and 3 matched H0 anchors only; anchor differences shown separately, no interpolated H0 or synthetic full-line delta. Vertical guides are prospective local estimates, not ray-tracing truth. No AGC, fit, new methods, snapshots, extra observers, material, mesh, PML or domain changes. No field validation or spatial convergence claim."
+}

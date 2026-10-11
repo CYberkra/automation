@@ -1,4 +1,33 @@
 {
+  "line9_overnight_bscan_2026_10_11": {
+    "status": "42_NEW_SOLVES_COMPLETE_41_H1_STATIONS_3_MATCHED_ANCHORS_WITH_TAIL_ADVISORY",
+    "report": "docs/research/2026-10-11_overnight_bscan_execution.md",
+    "public": "artifacts/research_checks/2026-10-11_line9_overnight_bscan_r2",
+    "completed_new_solves": 42,
+    "reused_solves": 2,
+    "H1_stations": 41,
+    "matched_H0_H1_anchors": 3,
+    "profile_x_m_start_stop": [
+      190,
+      170
+    ],
+    "station_step_m": 0.5,
+    "record_ns": 2400,
+    "source": "official_builtin_impulse",
+    "SFCW": "official_direct_20_170MHz_0.3MHz_501_tones",
+    "sum_case_wall_s": 15183.624999999767,
+    "contract_sha256": "ed9791f14cbf60b11c046671e96eda661a719f98dfb58d88c511dc2d5e4bc0bd",
+    "hann_anchor_delta_peak_ns": [
+      399.2015968063872,
+      380.07318695941456,
+      355.95475715236194
+    ],
+    "H1_tail_advisory_unmet_count": 11,
+    "ROG_owned_exited": true,
+    "air_equivalent_shelved": true,
+    "full391_line_authorized": false,
+    "new_solves_authorized_after_completion": false
+  },
  "line9_paper_mudstone_window_execution_2026_10_11": {
    "status": "TWO_NATIVE_FP64_CASES_COMPLETE_MATERIAL_RESPONSE_IMPROVED_NOT_FULL_LINE_OR_FIELD_VALIDATION",
    "report": "docs/research/2026-10-11_paper_mudstone_window_execution.md",
