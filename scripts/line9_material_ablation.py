@@ -14,9 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 VARIANTS = ROOT / 'configs/research/line9_material_ablation_v0_1.json'
 DL = 0.025
 DT = DL / (299792458. * np.sqrt(2))
-APPROVAL = ('2026-10-11 用户显性批准：候选1-3 材料消融批一起执行（砂岩论文常数、覆盖层论文土、'
-            '覆盖层 εr=18.4 归因证伪），现行模型 AGL 5m，x190 站位 H0/H1 成对共 8 解，'
-            '2400ns、官方 impulse、direct SFCW 不变；未来再换色散模型。')
+APPROVAL = json.loads(VARIANTS.read_text('utf-8'))['approval_basis']
 
 
 def build_database(v0_2, variant):
