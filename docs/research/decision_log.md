@@ -1,3 +1,9 @@
+## 2026-10-11 航高默认 8 m → 5 m 及一揽子批准（用户显性批准）
+
+用户在 Wang2026/v4 功能对照研究（`docs/research/2026-10-11_wang2026_gprmax_v4_feature_review.md`）建议清单上逐项决定：①批准 Python API 建模迁移（S3）；②HSG 局部细化将来需要时采用（S4）；③空气层解析化搁置（S2）；④地表起伏敏感性批批准执行（S5）；⑤整线多站位并行按官方 `--taskfarm` 路径（S6，整线扩展前接入）；⑥航高默认改 5 m 且不跑验证批；⑦材料候选 1–3（砂岩常数 εr9/σ0.001、覆盖层论文土 εr12/σ0.003、覆盖层 εr=18.4 归因证伪）作为消融批现在一起执行，未来再换色散模型；⑧要求链路全面按 gprMax 官方做法规范化，必要产物统一收进 `model_current/`。
+
+航高变更执行：新增 `scripts/prepare_line9_agl5.py`（从冻结几何表面重算天线 y = 表面 + 5 m，断言旧 AGL=8.0 m 且新坐标在网格点上，仅允许 #title/#hertzian_dipole/#rx 三行变化），产出 `artifacts/local_checks/2026-10-11_agl5_prepare_r1/`（tx (169.35, 35.95)、rx (170.65, 36.025)，PML 余量 1.5→4.5 m）。`model_current/` 旧 8 m 内容整体归档至 `model_archive/2026-10-11_agl8m/`，新版为标准 x190 H0/H1 纯采集算例 + 几何/材料/源/采集契约 + manifest.json 哈希清单。新契约 `configs/research/line9_antenna_position_v0_1.json`。本单元未启动任何求解。
+
 ## 2026-10-11 ROG `E:\djh` line9 目录清理（用户显性批准）
 
 用户反映 ROG `E:\djh` 下多个 line9 目录管理麻烦，要求只保留一个，并显性批准两项处置：①删除 4 个目录 + 4 个转移 zip；②`line9_fine_wavefield_20261011_r1` 只删快照、保留批次契约/结果/图件。

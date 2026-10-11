@@ -1,0 +1,45 @@
+{
+  "schema": "model-current-manifest/1",
+  "date": "2026-10-11",
+  "version": "AGL 5 m",
+  "provenance": {
+    "profile_in": "artifacts/local_checks/2026-10-11_agl5_prepare_r1 (scripts/prepare_line9_agl5.py)",
+    "geometries": "line9_fine_wavefield_20261011_r1 package r1（与 8m 版逐字节相同）",
+    "source": "configs/research/line9_source_v0_2.json",
+    "acquisition": "configs/research/line9_acquisition_design_v0_1.json"
+  },
+  "files": {
+    "README.md": {
+      "sha256": "5931856d72aa8811119d1a4492fcd3e5a8eef3094b9ed7fe34dba8a1a8dab5f7",
+      "bytes": 1952
+    },
+    "acquisition.json": {
+      "sha256": "fb7ce6aa9dbf565b362218aa58fde9be36a6f5452c9b027200bf440ffa4d8641",
+      "bytes": 1525
+    },
+    "source.json": {
+      "sha256": "d1a6046381f9dd676818efa4533c2e012f25f12db5fa0551bcda1c84f1ae4e31",
+      "bytes": 1539
+    },
+    "cases/x190_H0/profile.in": {
+      "sha256": "eeba7bd57c9b47f9ee0221ca68c1c5b28d34d73c06328d193e5a27f7744bf257",
+      "bytes": 525
+    },
+    "cases/x190_H1/profile.in": {
+      "sha256": "72dc8e85f35de2497f9b0d12cbceb48b686ef7536c0df45a4286e7f1692db63f",
+      "bytes": 525
+    },
+    "geometries/H0.h5": {
+      "sha256": "1fc79f2389a55a39744e6bab8f3e8b3a693bc31852d6f01e47ae3e4c34d198a9",
+      "bytes": 134871
+    },
+    "geometries/H1.h5": {
+      "sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "bytes": 163227
+    },
+    "geometries/line9_materials_v0_2.json": {
+      "sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "bytes": 3871
+    }
+  }
+}
