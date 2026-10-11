@@ -1,0 +1,147 @@
+{
+  "cases": {
+    "H0": {
+      "rough": {
+        "direct_surface": {
+          "t_ns": 32.814778460029984,
+          "amp": 160.2280704058949
+        },
+        "multiple": {
+          "t_ns": 171.38572074407392,
+          "amp": 17.871180891340916
+        },
+        "deep": {
+          "t_ns": 516.5747829273903,
+          "amp": 4.161472620111526
+        }
+      },
+      "smooth": {
+        "direct_surface": {
+          "t_ns": 33.75824019472986,
+          "amp": 174.62543463386206
+        },
+        "multiple": {
+          "t_ns": 277.17136774729727,
+          "amp": 17.131867937370675
+        },
+        "deep": {
+          "t_ns": 466.2175128377845,
+          "amp": 5.116938420679307
+        }
+      }
+    },
+    "H1": {
+      "rough": {
+        "direct_surface": {
+          "t_ns": 32.814778460029984,
+          "amp": 160.22816626973534
+        },
+        "multiple": {
+          "t_ns": 171.38572074407392,
+          "amp": 17.871172623774633
+        },
+        "deep": {
+          "t_ns": 516.5747829273903,
+          "amp": 4.179829294351344
+        }
+      },
+      "smooth": {
+        "direct_surface": {
+          "t_ns": 33.75824019472986,
+          "amp": 174.62495182387408
+        },
+        "multiple": {
+          "t_ns": 277.17136774729727,
+          "amp": 17.38102602870054
+        },
+        "deep": {
+          "t_ns": 466.2175128377845,
+          "amp": 5.1548065345307945
+        }
+      }
+    }
+  },
+  "sensitivity": {
+    "H0": {
+      "direct_surface": {
+        "delta_rms": 15.228037067236405,
+        "rel_delta_rms": 0.72640329403842,
+        "delta_env_rms": 14.17788581306213,
+        "peak_time_shift_ns": -0.9434617346998735
+      },
+      "multiple": {
+        "delta_rms": 2.1207901716915614,
+        "rel_delta_rms": 0.4190095259880978,
+        "delta_env_rms": 1.779299741187105,
+        "peak_time_shift_ns": -105.78564700322335
+      },
+      "deep": {
+        "delta_rms": 0.8184823679979563,
+        "rel_delta_rms": 0.5835350362817773,
+        "delta_env_rms": 0.4744766965362123,
+        "peak_time_shift_ns": 50.35727008960578
+      }
+    },
+    "H1": {
+      "direct_surface": {
+        "delta_rms": 15.228037067236405,
+        "rel_delta_rms": 0.72640329403842,
+        "delta_env_rms": 14.177892582340597,
+        "peak_time_shift_ns": -0.9434617346998735
+      },
+      "multiple": {
+        "delta_rms": 2.1238077687356482,
+        "rel_delta_rms": 0.41697299158227963,
+        "delta_env_rms": 1.7779727067090787,
+        "peak_time_shift_ns": -105.78564700322335
+      },
+      "deep": {
+        "delta_rms": 0.8207345639035757,
+        "rel_delta_rms": 0.5831852024372056,
+        "delta_env_rms": 0.4739316770699931,
+        "peak_time_shift_ns": 50.35727008960578
+      }
+    }
+  },
+  "bands": {
+    "direct_surface": [
+      2e-08,
+      1.2e-07
+    ],
+    "multiple": [
+      1.5e-07,
+      4.5e-07
+    ],
+    "deep": [
+      4.5e-07,
+      9e-07
+    ]
+  },
+  "smooth_reference": "line9_material_ablation_20261011_r1 abl_base_x190 pair",
+  "differential_rms": {
+    "rough": {
+      "direct_surface": 0.0,
+      "multiple": 0.17346195655799526,
+      "deep": 0.012271554174486568
+    },
+    "smooth": {
+      "direct_surface": 0.0,
+      "multiple": 0.173739940738634,
+      "deep": 0.012057953783397657
+    }
+  },
+  "differential_change": {
+    "direct_surface": {
+      "rel": null,
+      "note": "smooth differential RMS is exactly zero in this band"
+    },
+    "multiple": {
+      "rel": -0.0016000015854553623,
+      "note": null
+    },
+    "deep": {
+      "rel": 0.017714480825346393,
+      "note": null
+    }
+  }
+}

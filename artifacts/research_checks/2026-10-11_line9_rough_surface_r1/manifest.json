@@ -1,0 +1,117 @@
+{
+  "status": "PREPARED_APPROVED_ROUGH_SURFACE_AGL5",
+  "approval_basis": "2026-10-11 用户显性批准：地表起伏敏感性试验（建议 S5）。官方 #fractal_box:+#add_surface_roughness: 只适用于平直 box 面，无法贴合 line9 真实起伏地形，故以同族分形算法（谱合成 fBm，H=0.5，种子 20261011，RMS 目标 0.1m，截断 ±0.2m）直接微扰导入体素地表；几何导入路径仍为官方 #geometry_objects_read:。x190 站位 H0/H1 粗糙对，对照为同批消融基线（5m 平滑）。",
+  "execution_authorized": true,
+  "generator_sha256": "6de58a28f86892daa839984b9d2cfe2f574d51adce3f6f04a2922ea108a7812e",
+  "dt_s": 5.89663584187421e-11,
+  "groups": [
+    {
+      "id": "rough_x190_H0",
+      "role": "H0",
+      "variant": "rough",
+      "profile_x_m": 190.0,
+      "input": "rough_x190_H0/cases/rough_x190_H0/profile.in",
+      "geometry": "rough_x190_H0/geometries/H0_rough.h5",
+      "material": "rough_x190_H0/geometries/line9_materials_v0_2.json",
+      "tx_m": [
+        169.35,
+        35.95,
+        0.0
+      ],
+      "rx_m": [
+        170.65,
+        36.025,
+        0.0
+      ],
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "expected_samples": 40703,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "source_amplitude_A": 1.0,
+      "input_sha256": "1699a1d834af451e0f97c41cd88ec9e36129da9a9c5e3432659f8ff6f560d496",
+      "geometry_sha256": "e35f11839a2b7dbe1b74793d3ef1b7bfdaa1561266822e222334f764cfff30a4",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d"
+    },
+    {
+      "id": "rough_x190_H1",
+      "role": "H1",
+      "variant": "rough",
+      "profile_x_m": 190.0,
+      "input": "rough_x190_H1/cases/rough_x190_H1/profile.in",
+      "geometry": "rough_x190_H1/geometries/H1_rough.h5",
+      "material": "rough_x190_H1/geometries/line9_materials_v0_2.json",
+      "tx_m": [
+        169.35,
+        35.95,
+        0.0
+      ],
+      "rx_m": [
+        170.65,
+        36.025,
+        0.0
+      ],
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "expected_samples": 40703,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "source_amplitude_A": 1.0,
+      "input_sha256": "346794f3be2654ea581f8ac695404179636c137d1d863f4bca26d016fb0e7632",
+      "geometry_sha256": "69cb921beb1e78e5e24dd1d7e33a55cf1afd810862c6348862ca33309541d6cd",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d"
+    }
+  ],
+  "preparation_checks": [
+    {
+      "id": "rough_x190_H0",
+      "changed_surface_voxels": 28191,
+      "rough_stats": {
+        "shifts_min_cells": -8,
+        "shifts_max_cells": 7,
+        "shifts_rms_m": 0.054021318513657934,
+        "changed_voxels": 28191,
+        "seed": 20261011,
+        "rms_target_m": 0.1,
+        "max_shift_cells": 8
+      }
+    },
+    {
+      "id": "rough_x190_H1",
+      "changed_surface_voxels": 28191,
+      "rough_stats": {
+        "shifts_min_cells": -8,
+        "shifts_max_cells": 7,
+        "shifts_rms_m": 0.054021318513657934,
+        "changed_voxels": 28191,
+        "seed": 20261011,
+        "rms_target_m": 0.1,
+        "max_shift_cells": 8
+      }
+    }
+  ],
+  "no_retry": true,
+  "reference_smooth": "line9_material_ablation_20261011_r1 的 abl_base_x190_H0/H1（同模型同航高平滑对照）",
+  "SFCW": {
+    "method": "direct",
+    "frequency_start_Hz": 20000000.0,
+    "frequency_stop_Hz": 170000000.0,
+    "frequency_step_Hz": 300000.0,
+    "tones": 501,
+    "windows": [
+      "hann",
+      "blackman"
+    ],
+    "zero_pad_factor": 8,
+    "tail_taper_fraction": 0,
+    "time_shift_s": 0,
+    "field_reference_length_m": 0.025
+  },
+  "limits": "Sensitivity pair only; fractal parameters are a test choice, not a site claim. Same-station smooth reference comes from the ablation batch, not re-run here."
+}
