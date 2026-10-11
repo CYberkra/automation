@@ -137,11 +137,15 @@ def ring_rx_lines(center, plane, radius, step_deg=15, prefix='pr'):
 
 def ntff_lines(feed, arm_span, axis):
     fx, fy, fz = feed
-    lo = [fx-0.4, fy-0.4, fz-0.4]
-    hi = [fx+0.4, fy+0.4, fz+0.4]
+    # The NTFF surface must lie in a single material: it must clear the flared arm
+    # ends (half-width HALFW), not just the feed point (KSIR straddle error in r3 attempt 1).
+    lo = [fx-(HALFW+0.4), fy-(HALFW+0.4), fz-0.4]
+    hi = [fx+(HALFW+0.4), fy+(HALFW+0.4), fz+0.4]
     i = 1 if axis == 'y' else 0
-    lo[i] = round((feed[i]-arm_span-0.1)/DL)*DL
-    hi[i] = round((feed[i]+arm_span+0.1)/DL)*DL
+    lo[i] = feed[i]-arm_span-0.1
+    hi[i] = feed[i]+arm_span+0.1
+    lo = [round(v/DL)*DL for v in lo]
+    hi = [round(v/DL)*DL for v in hi]
     tones = ' '.join(f'{f:.12g}' for f in TONES_HZ)
     return [f'#ntff_surface: {fmt(lo)} {fmt(hi)} stage_a_surface',
             f'#ntff_frequency: stage_a_surface stage_a_pattern {tones} rectangular',
