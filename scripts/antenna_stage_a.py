@@ -83,7 +83,7 @@ def make_geometry(path, shape, cover_top_m=None):
     return dict(sha256=sha(path), cover_top_m=cover_top_m)
 
 
-def bowtie_lines(feed, axis, source_waveform, passive_id=None):
+def bowtie_lines(feed, axis, source_waveform, passive_id=None, window_s=WINDOW_S):
     """Two triangular PEC arms along `axis` ('x' or 'y') in the horizontal plane z=feed[2]."""
     fx, fy, fz = feed
     lines = []
@@ -98,7 +98,7 @@ def bowtie_lines(feed, axis, source_waveform, passive_id=None):
     for apex, c1, c2 in [(apex_p, c1p, c2p), (apex_m, c1m, c2m)]:
         lines.append(f'#triangle: {fmt(apex)} {fmt(c1)} {fmt(c2)} {DL:.12g} pec')
     if passive_id is None:
-        lines.append(f'#voltage_source: {axis} {fmt(feed)} {FEED_R_OHM:.12g} {source_waveform} 0 {WINDOW_S:.12g} feed nyquist')
+        lines.append(f'#voltage_source: {axis} {fmt(feed)} {FEED_R_OHM:.12g} {source_waveform} 0 {window_s:.12g} feed nyquist')
     else:
         comp = 'E'+axis
         lines.append(f'#rx: {fmt(feed)} {passive_id} {comp}')
