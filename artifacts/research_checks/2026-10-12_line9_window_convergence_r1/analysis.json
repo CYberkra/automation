@@ -1,0 +1,54 @@
+{
+  "status": "COMPLETE_WINDOW_CONVERGENCE_3STATIONS",
+  "script_sha256": "a189c78ee1717fc899fcbe28a14588df69418ecd874daf0161cf20eb50545391",
+  "official_processing_sha256": "adad556f09140956f0ee19d3038430e06a9ae8be6a826dcad723096d99624a3b",
+  "window_contract_sha256": "bcf1ca2b3e096377d901be7350f6f46e605a124837e76f0c47be7386d7378928",
+  "crop_samples": 40703,
+  "full_samples": 81404,
+  "stations": [
+    {
+      "profile_x_m": 170.0,
+      "window_raw_sha256": "e15acf447d97966efaa86581d5d22207c411a06787fd1f5bd24d81f1764265ff",
+      "night_raw_sha256": "b05d53c862ba7d4898b15faf5cdbbae4a358c7bcdccce4d84d841d9c5f793b8c",
+      "window_tail_final_5pct_db": -72.1042534657446,
+      "crop_vs_full_relative_L2": 0.0014695913025780307,
+      "crop_vs_full_bands": {
+        "20_60": 0.0022966491286733524,
+        "60_120": 0.0014951143140889908,
+        "120_170": 0.0011947111960796263
+      },
+      "crop_vs_full_max_tone_relative": 0.00548176295847343,
+      "night_vs_crop_relative_L2": 0.0
+    },
+    {
+      "profile_x_m": 170.5,
+      "window_raw_sha256": "2b68f5309dca40e5ceef27a728f5cb8701de157e68c1c7950e58805a9e9dc283",
+      "night_raw_sha256": "092d054f52a56e3f230b449571b223a7622ece4e279a9011f3ea6b18e1bce209",
+      "window_tail_final_5pct_db": -71.65097884391801,
+      "crop_vs_full_relative_L2": 0.0008698232702763637,
+      "crop_vs_full_bands": {
+        "20_60": 0.0013535439977658541,
+        "60_120": 0.0008849093783646515,
+        "120_170": 0.0007095391974375181
+      },
+      "crop_vs_full_max_tone_relative": 0.0025783322464536956,
+      "night_vs_crop_relative_L2": 0.0
+    },
+    {
+      "profile_x_m": 171.0,
+      "window_raw_sha256": "cdf50f08548d96b607097428cc9e418ec034f818c71841f96fd12163865a6b41",
+      "night_raw_sha256": "19591c1944b3158443ab8bcd0f702bc2fb2ebc7a45719904e4bb4e1109f3e085",
+      "window_tail_final_5pct_db": -71.81554100425475,
+      "crop_vs_full_relative_L2": 0.0008884898007073754,
+      "crop_vs_full_bands": {
+        "20_60": 0.0013836686453299774,
+        "60_120": 0.0009031345073504447,
+        "120_170": 0.0007248878919113509
+      },
+      "crop_vs_full_max_tone_relative": 0.0031364649178470773,
+      "night_vs_crop_relative_L2": 0.0
+    }
+  ],
+  "method": "official_direct crop-vs-full; q_night hash-checked against overnight delivery analysis",
+  "limits": "3 worst-tail stations only; not a line-wide convergence certificate."
+}
