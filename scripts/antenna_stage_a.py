@@ -160,11 +160,14 @@ def case_text(case_id, shape, feed, axis, geometry_file, extra_lines, ntff=False
              '#pml_formulation: HORIPML',
              '#dispersive_averaging: y',
              '#waveform: impulse 1 1 impulse',
+             # geometry read must precede every in-file geometry command: a later
+             # #geometry_objects_read overwrites the PEC antenna cells (verified 2026-10-12,
+             # owlast/owfirst rasterization test: 0 vs 62 pec cells).
+             f'#geometry_objects_read: 0 0 0 ../../geometries/{geometry_file} {DB_ID} n',
              *bowtie_lines(feed, axis, 'impulse'),
-             *extra_lines,
-             f'#geometry_objects_read: 0 0 0 ../../geometries/{geometry_file} {DB_ID} n', '']
+             *extra_lines, '']
     if ntff:
-        lines[-2:-2] = ntff_lines(feed, ARM+DL, axis)
+        lines[-1:-1] = ntff_lines(feed, ARM+DL, axis)
     return '\n'.join(lines)
 
 

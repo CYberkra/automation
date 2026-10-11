@@ -143,8 +143,9 @@ def prepare(a):
             feeds[label] = (round(i*DL, 10), round(cy, 10), round(z, 10))
         extra = bowtie_lines(feeds['rx'], 'y', None, passive_id='rxgap')
         lines = case_text(cid, geo, f'{cid}.h5')
-        lines += bowtie_lines(feeds['tx'], 'y', 'impulse', window_s=WINDOW_S) + extra
+        # geometry read first: it would overwrite the PEC antenna cells if placed later
         lines.append(f'#geometry_objects_read: 0 0 0 ../../geometries/{cid}.h5 {DB_ID} n')
+        lines += bowtie_lines(feeds['tx'], 'y', 'impulse', window_s=WINDOW_S) + extra
         lines.append('')
         case = a.out/'cases'/cid
         case.mkdir()
