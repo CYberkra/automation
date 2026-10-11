@@ -171,7 +171,8 @@ def build(a):
                      input=str(card.relative_to(a.out)).replace('\\', '/'),
                      geometry=str(geo.relative_to(a.out)).replace('\\', '/'),
                      material=str(db_path.relative_to(a.out)).replace('\\', '/'),
-                     tx_m=[SRC_X, ANT_Y, dl / 2], rx_m=[RX_X, ANT_Y, dl / 2],
+                     # official TM mode records the invariant-axis position as 0.0
+                     tx_m=[SRC_X, ANT_Y, 0.], rx_m=[RX_X, ANT_Y, 0.],
                      native_shape=[nx, ny, 1], spacing_m=[dl, dl, dl], dt_s=float(dt),
                      expected_samples=int(np.ceil(TIME_WINDOW / dt)) + 1,
                      pml_cells=pml,
