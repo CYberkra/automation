@@ -169,7 +169,7 @@ def run(path):
                 if extra != []:
                     raise ValueError('Unsupported additional solver arguments')
                 entry=c.get('solver_entrypoint','gprmax_cached_cuda_entry.py')
-                if entry not in ('gprmax_cached_cuda_entry.py','gprmax_snapshot_cuda_entry.py'):
+                if entry not in ('gprmax_cached_cuda_entry.py','gprmax_snapshot_cuda_entry.py','gprmax_fine_snapshot_entry.py'):
                     raise ValueError('Unsupported solver entrypoint')
                 command=[sys.executable,str(ROOT/'scripts'/entry),str(p),'-gpu','0','-gpu_precision','double','--hide-progress-bars',*extra]
                 env=os.environ.copy(); env['HS4_CUDA_CACHE_LOG']=str(p.parent/'cuda_cache.jsonl')

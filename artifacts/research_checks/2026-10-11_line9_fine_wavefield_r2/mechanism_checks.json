@@ -1,0 +1,149 @@
+{
+  "status": "READ_ONLY_LAYER_REPEAT_AND_LATE_CONTRIBUTION_CHECKS",
+  "materials_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+  "source_script_sha256": "7536e17cc039a94ba08a9cee6c8d54bbdf2cf6337c5754d7199ec968a7d8fcfb",
+  "reference_frequency_Hz": 95000000.0,
+  "cover_group_index": 3.312185222017746,
+  "cover_attenuation_Np_m": 0.0931366934295991,
+  "mud_attenuation_Np_m": 0.2662563313099673,
+  "cover_internal_surface_reflection_abs": 0.5372972868160023,
+  "cover_mud_reflection_abs": 0.12249658882744917,
+  "paired_station_checks": [
+    {
+      "profile_x_m": 190.0,
+      "local_vertical_cover_thickness_m": 6.574999999999999,
+      "H0_first_cover_peak": {
+        "time_ns": 196.27411842980706,
+        "amplitude": 23.88794615098287
+      },
+      "H0_upper_peak": {
+        "time_ns": 327.6779773785762,
+        "amplitude": 0.4525668384556398
+      },
+      "observed_amplitude_ratio": 0.018945406004987116,
+      "observed_amplitude_ratio_db": -34.44992166490706,
+      "normal_incidence_extra_roundtrip_ratio": 0.019339157640333133,
+      "normal_incidence_ratio_db": -34.27124892990243,
+      "local_vertical_mud_thickness_m": 7.100000000000001,
+      "mud_double_pass_propagation_loss_db": -32.83995815056128,
+      "observed_basal_delta_to_first_cover_ratio": 0.02792937399006647,
+      "normal_incidence_basal_to_first_cover_ratio": 0.031396423530108485
+    },
+    {
+      "profile_x_m": 170.0,
+      "local_vertical_cover_thickness_m": 4.399999999999999,
+      "H0_first_cover_peak": {
+        "time_ns": 148.03725881570193,
+        "amplitude": 36.76841651905161
+      },
+      "H0_upper_peak": {
+        "time_ns": 232.03592814371257,
+        "amplitude": 1.017626216170747
+      },
+      "observed_amplitude_ratio": 0.02767663969546968,
+      "observed_amplitude_ratio_db": -31.15773280042135,
+      "normal_incidence_extra_roundtrip_ratio": 0.028999440891199792,
+      "normal_incidence_ratio_db": -30.75220750423292,
+      "local_vertical_mud_thickness_m": 7.350000000000001,
+      "mud_double_pass_propagation_loss_db": -33.99629470515851,
+      "observed_basal_delta_to_first_cover_ratio": 0.024459448646055718,
+      "normal_incidence_basal_to_first_cover_ratio": 0.02748295022162328
+    }
+  ],
+  "thickness_trend": {
+    "thickness_change_m": 2.1750000000000007,
+    "predicted_first_peak_advance_ns": 48.05993390193024,
+    "predicted_extra_roundtrip_peak_advance_ns": 96.11986780386049,
+    "observed_first_peak_advance_ns": 48.23685961410513,
+    "observed_upper_peak_advance_ns": 95.64204923486363
+  },
+  "right_boundary": {
+    "profile_x_m": 170,
+    "right_PML_inner_x_m": 208,
+    "vacuum_geometric_roundtrip_lower_bound_ns": 386.9343863742614,
+    "limits": "Geometric bound is physical, not a numerical precursor certificate. Finite-band inverse has noncausal sidelobes. Truncation is diagnostic only, no formal processing change.",
+    "crop_contribution_checks": [
+      {
+        "diagnostic_keep_before_ns": 260,
+        "upper_window_ns": [
+          220,
+          245
+        ],
+        "complex_relative_L2": 0.3728667606594497,
+        "peak_time_ns": 232.03592814371257,
+        "peak_abs": 1.063464643451125
+      },
+      {
+        "diagnostic_keep_before_ns": 300,
+        "upper_window_ns": [
+          220,
+          245
+        ],
+        "complex_relative_L2": 0.025317026430772757,
+        "peak_time_ns": 232.86759813705922,
+        "peak_abs": 1.0102930277830484
+      },
+      {
+        "diagnostic_keep_before_ns": 340,
+        "upper_window_ns": [
+          220,
+          245
+        ],
+        "complex_relative_L2": 0.006691062439546018,
+        "peak_time_ns": 232.03592814371257,
+        "peak_abs": 1.0172958823872311
+      },
+      {
+        "diagnostic_keep_before_ns": 360,
+        "upper_window_ns": [
+          220,
+          245
+        ],
+        "complex_relative_L2": 0.0006365582667788853,
+        "peak_time_ns": 232.03592814371257,
+        "peak_abs": 1.017430786339712
+      },
+      {
+        "diagnostic_keep_before_ns": 380,
+        "upper_window_ns": [
+          220,
+          245
+        ],
+        "complex_relative_L2": 0.0009740093736185931,
+        "peak_time_ns": 232.03592814371257,
+        "peak_abs": 1.0180779066651806
+      },
+      {
+        "diagnostic_keep_before_ns": 600,
+        "upper_window_ns": [
+          220,
+          245
+        ],
+        "complex_relative_L2": 2.8061876250252744e-05,
+        "peak_time_ns": 232.03592814371257,
+        "peak_abs": 1.0176138061982236
+      },
+      {
+        "diagnostic_keep_before_ns": 1800,
+        "upper_window_ns": [
+          220,
+          245
+        ],
+        "complex_relative_L2": 3.04714426310511e-07,
+        "peak_time_ns": 232.03592814371257,
+        "peak_abs": 1.0176263505819694
+      },
+      {
+        "diagnostic_keep_before_ns": 2280,
+        "upper_window_ns": [
+          220,
+          245
+        ],
+        "complex_relative_L2": 2.1501264970675788e-07,
+        "peak_time_ns": 232.03592814371257,
+        "peak_abs": 1.0176262949702233
+      }
+    ]
+  },
+  "limits": "Local vertical, normal-incidence planar approximation: neglects lateral geometry, angle, spreading and frequency weighting. Agreement in trend/order is supporting evidence, not fitted ray closure. Formal source, records, SFCW windows and models unchanged."
+}

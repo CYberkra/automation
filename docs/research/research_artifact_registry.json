@@ -1,4 +1,32 @@
 {
+  "line9_fine_wavefield_2026_10_11": {
+    "status": "SIX_NATIVE_FP64_CASES_COMPLETE_COVER_REPEAT_SUPPORTED_BOUNDARY_AND_FIELD_VALIDATION_LIMITED",
+    "report": "docs/research/2026-10-11_fine_wavefield_results.md",
+    "public": "artifacts/research_checks/2026-10-11_line9_fine_wavefield_r2",
+    "solver_runs": 6,
+    "snapshot_frames": 8122,
+    "raw_snapshot_payload_GiB": 90.56313335895538,
+    "solver_sum_wall_s": 2369.468,
+    "peak_owned_RSS_GiB": 36.96157455444336,
+    "contract_sha256": "6d7716e19759a2a0e044461762d9e3712b3ae930fef203a2fa598d636312ac0f",
+    "main_source_receiver_bitwise_equal": true,
+    "snapshot_probe_max_error": 0,
+    "retrieved_native_files": 94,
+    "retrieved_public_source_files": 42,
+    "local_reaudited_key_frames": 46,
+    "public_png": 32,
+    "public_gif": 10,
+    "H0_upper_return_ns_190_170": [
+      327.6779773785762,
+      232.03592814371257
+    ],
+    "late_tail_peak_Hz": 8465246908.927556,
+    "raw_tail_is_not_band_convergence": true,
+    "model_SFCW_unchanged": true,
+    "R2_plot_only_revision": true,
+    "new_solves_authorized_after_completion": false,
+    "air_equivalent_shelved": true
+  },
   "line9_overnight_bscan_2026_10_11": {
     "status": "42_NEW_SOLVES_COMPLETE_41_H1_STATIONS_3_MATCHED_ANCHORS_WITH_TAIL_ADVISORY",
     "report": "docs/research/2026-10-11_overnight_bscan_execution.md",

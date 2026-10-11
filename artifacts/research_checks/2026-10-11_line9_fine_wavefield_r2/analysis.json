@@ -1,0 +1,207 @@
+{
+  "status": "SIX_NATIVE_FP64_OBSERVER_CASES_ANALYZED",
+  "solver_runs": 6,
+  "script_sha256": "b9cf7be7a7646bb94868cbf91a6332319ef668af88800d93d4e7164d3a48446f",
+  "official_processing_sha256": "adad556f09140956f0ee19d3038430e06a9ae8be6a826dcad723096d99624a3b",
+  "contract_sha256": "6d7716e19759a2a0e044461762d9e3712b3ae930fef203a2fa598d636312ac0f",
+  "completed_certificate_sha256": "32d720a01d4a2e11b041be21a7dcf0d861de2cf32498e3aed70c0339d802fe39",
+  "groups": [
+    {
+      "id": "fine_x170_H1_local",
+      "native_sha256": "bc0dbbe36d153bdb1b0568d639adb799e3d12a1d81e81d53189777a9b8ef15e9",
+      "verified_snapshots": 833,
+      "source_receiver_bitwise_equal": true,
+      "snapshot_probe_max_error": 0.0,
+      "full_2400ns_dt_s": 5.896635841874211e-11,
+      "official_receiver_tail_db": -57.24625160233742,
+      "late_diagnostic_spectrum": {
+        "diagnostic_window_ns": [
+          1800,
+          2400
+        ],
+        "diagnostic_window": "Hann, not a formal SFCW tail taper",
+        "peak_Hz": 8465246908.927556,
+        "nyquist_Hz": 8479411200.015328,
+        "fraction_20_170_MHz": 2.5168508620605432e-20,
+        "fraction_above_1GHz": 0.999999999991645
+      },
+      "independent_checks": {
+        "Ez_independent_DFT_relative_L2": 2.9200723093608563e-12,
+        "Ez_hann_independent_inverse_relative_L2": 2.651619157354432e-14,
+        "Ez_blackman_independent_inverse_relative_L2": 2.4627226659981376e-14,
+        "Hx_independent_DFT_relative_L2": 7.132734953096674e-13,
+        "Hx_hann_independent_inverse_relative_L2": 1.1933866029383272e-12,
+        "Hx_blackman_independent_inverse_relative_L2": 9.561344984214218e-13,
+        "Hy_independent_DFT_relative_L2": 2.5320092660017095e-13,
+        "Hy_hann_independent_inverse_relative_L2": 1.7780491007655596e-14,
+        "Hy_blackman_independent_inverse_relative_L2": 1.7584890853008653e-14
+      },
+      "private_arrays_sha256": "ca896b8627d97dcc152d11c7d9e198744fbd80561bf9b87e957003665f7ffea5"
+    },
+    {
+      "id": "fine_x170_H0_local",
+      "native_sha256": "ed58e566cf452a9217292aa82036779aec5e2501e57090f4ed3fefcbe9ad4b5d",
+      "verified_snapshots": 833,
+      "source_receiver_bitwise_equal": true,
+      "snapshot_probe_max_error": 0.0,
+      "full_2400ns_dt_s": 5.896635841874211e-11,
+      "official_receiver_tail_db": -57.28153166791685,
+      "late_diagnostic_spectrum": {
+        "diagnostic_window_ns": [
+          1800,
+          2400
+        ],
+        "diagnostic_window": "Hann, not a formal SFCW tail taper",
+        "peak_Hz": 8465246908.927556,
+        "nyquist_Hz": 8479411200.015328,
+        "fraction_20_170_MHz": 1.260574436205098e-20,
+        "fraction_above_1GHz": 0.9999999999965015
+      },
+      "independent_checks": {
+        "Ez_independent_DFT_relative_L2": 2.855771192998378e-12,
+        "Ez_hann_independent_inverse_relative_L2": 2.654053131503194e-14,
+        "Ez_blackman_independent_inverse_relative_L2": 2.4629545596177816e-14,
+        "Hx_independent_DFT_relative_L2": 7.161551178008329e-13,
+        "Hx_hann_independent_inverse_relative_L2": 1.1956211419440637e-12,
+        "Hx_blackman_independent_inverse_relative_L2": 9.572688503180897e-13,
+        "Hy_independent_DFT_relative_L2": 2.5246965165032355e-13,
+        "Hy_hann_independent_inverse_relative_L2": 1.7705705587908057e-14,
+        "Hy_blackman_independent_inverse_relative_L2": 1.7530907066600885e-14
+      },
+      "private_arrays_sha256": "5638d36d5428d99bfcb1d26efc72f44ace218628fc5ca8762d5602ca37b5a908"
+    },
+    {
+      "id": "fine_x190_H1_local",
+      "native_sha256": "6c6202f5b1a4e7407cb0b2660626640299dca669c872a294596853479d4953b1",
+      "verified_snapshots": 833,
+      "source_receiver_bitwise_equal": true,
+      "snapshot_probe_max_error": 0.0,
+      "full_2400ns_dt_s": 5.896635841874211e-11,
+      "official_receiver_tail_db": -62.26277535914691,
+      "late_diagnostic_spectrum": {
+        "diagnostic_window_ns": [
+          1800,
+          2400
+        ],
+        "diagnostic_window": "Hann, not a formal SFCW tail taper",
+        "peak_Hz": 8465246908.927556,
+        "nyquist_Hz": 8479411200.015328,
+        "fraction_20_170_MHz": 6.03759128856943e-20,
+        "fraction_above_1GHz": 0.9999999999778655
+      },
+      "independent_checks": {
+        "Ez_independent_DFT_relative_L2": 2.0186180971018805e-12,
+        "Ez_hann_independent_inverse_relative_L2": 2.7196261491495727e-14,
+        "Ez_blackman_independent_inverse_relative_L2": 2.525980630545632e-14,
+        "Hx_independent_DFT_relative_L2": 8.355699862506274e-13,
+        "Hx_hann_independent_inverse_relative_L2": 8.337338458456787e-13,
+        "Hx_blackman_independent_inverse_relative_L2": 6.92450927039402e-13,
+        "Hy_independent_DFT_relative_L2": 2.586728105029227e-13,
+        "Hy_hann_independent_inverse_relative_L2": 1.78349807831334e-14,
+        "Hy_blackman_independent_inverse_relative_L2": 1.7488465841001375e-14
+      },
+      "private_arrays_sha256": "a610e8fb25e6a587710e32eb258083ddb3fcba7009d29793966810c094f939dc"
+    },
+    {
+      "id": "fine_x190_H0_local",
+      "native_sha256": "a56235f261a50c5b94a140af58e9c2bb287928b1f6be83d950f6a95bc135677d",
+      "verified_snapshots": 833,
+      "source_receiver_bitwise_equal": true,
+      "snapshot_probe_max_error": 0.0,
+      "full_2400ns_dt_s": 5.896635841874211e-11,
+      "official_receiver_tail_db": -62.14636735521245,
+      "late_diagnostic_spectrum": {
+        "diagnostic_window_ns": [
+          1800,
+          2400
+        ],
+        "diagnostic_window": "Hann, not a formal SFCW tail taper",
+        "peak_Hz": 8465246908.927556,
+        "nyquist_Hz": 8479411200.015328,
+        "fraction_20_170_MHz": 3.1302141756512906e-20,
+        "fraction_above_1GHz": 0.9999999999907585
+      },
+      "independent_checks": {
+        "Ez_independent_DFT_relative_L2": 2.0018259562240557e-12,
+        "Ez_hann_independent_inverse_relative_L2": 2.7205652183558377e-14,
+        "Ez_blackman_independent_inverse_relative_L2": 2.521359444142052e-14,
+        "Hx_independent_DFT_relative_L2": 8.381127193104994e-13,
+        "Hx_hann_independent_inverse_relative_L2": 8.346998992503734e-13,
+        "Hx_blackman_independent_inverse_relative_L2": 6.928436554152667e-13,
+        "Hy_independent_DFT_relative_L2": 2.5825069511464514e-13,
+        "Hy_hann_independent_inverse_relative_L2": 1.7834461954566868e-14,
+        "Hy_blackman_independent_inverse_relative_L2": 1.7500479978926313e-14
+      },
+      "private_arrays_sha256": "807570b8dab70a7fbdd9e4938d424d6587d225a798339706b8c2197177778f5b"
+    },
+    {
+      "id": "fine_x170_H1_global",
+      "native_sha256": "d1beee897ba6b7f3613a827b85504cbd197c291370b34ca031d88295df34d835",
+      "verified_snapshots": 2395,
+      "source_receiver_bitwise_equal": true,
+      "snapshot_probe_max_error": 0.0,
+      "full_2400ns_dt_s": 5.896635841874211e-11,
+      "official_receiver_tail_db": -57.24625160233742,
+      "late_diagnostic_spectrum": {
+        "diagnostic_window_ns": [
+          1800,
+          2400
+        ],
+        "diagnostic_window": "Hann, not a formal SFCW tail taper",
+        "peak_Hz": 8465246908.927556,
+        "nyquist_Hz": 8479411200.015328,
+        "fraction_20_170_MHz": 2.5168508620605432e-20,
+        "fraction_above_1GHz": 0.999999999991645
+      },
+      "independent_checks": {},
+      "private_arrays_sha256": "12f5f64812eb7d37426328fb612f28ca37bc5f1f93c3e756fe34d4040e2f7e19"
+    },
+    {
+      "id": "fine_x170_H0_global",
+      "native_sha256": "2313dba5df1da075fc2eef87a66325f5d8ef6bb28752175bd7378f5abc36617b",
+      "verified_snapshots": 2395,
+      "source_receiver_bitwise_equal": true,
+      "snapshot_probe_max_error": 0.0,
+      "full_2400ns_dt_s": 5.896635841874211e-11,
+      "official_receiver_tail_db": -57.28153166791685,
+      "late_diagnostic_spectrum": {
+        "diagnostic_window_ns": [
+          1800,
+          2400
+        ],
+        "diagnostic_window": "Hann, not a formal SFCW tail taper",
+        "peak_Hz": 8465246908.927556,
+        "nyquist_Hz": 8479411200.015328,
+        "fraction_20_170_MHz": 1.260574436205098e-20,
+        "fraction_above_1GHz": 0.9999999999965015
+      },
+      "independent_checks": {},
+      "private_arrays_sha256": "144eabba7d291ec6fae30514dc8cdc5d8de62092a669138cbe0df418c7a65a7f"
+    }
+  ],
+  "limits": "Observer-only 6 cases, not new spatial line. Snapshot temporal sampling does not certify broadband impulse bandwidth. Complete native probes are used for exact501-tone checks. Total E cross H is net flux, not unique rays/bounce energies or dispersive energy closure. No 3D, mesh/time-length convergence or field calibration.",
+  "frequency_band_Hz": [
+    20000000.0,
+    170000000.0
+  ],
+  "tones": 501,
+  "plot_revision": {
+    "status": "R2_DIAGNOSTIC_GATE_AND_VISIBLE_AXIS_CORRECTION",
+    "script_sha256": "bfc51fa26f8585bfed65dd42cae02f03a66685ea34ebbc12a3f411d5bfba8784",
+    "upper_gates_ns": {
+      "170.0": [
+        220,
+        270
+      ],
+      "190.0": [
+        300,
+        350
+      ]
+    },
+    "reason": "190m broad 220–350ns gate selected the first-return sidelobe at222ns. Parent matched event is327.678ns. Main display axis now uses only displayed samples.",
+    "native_and_private_arrays_unchanged": true,
+    "formal_SFCW_unchanged": true,
+    "new_solver_runs": 0,
+    "movie_render_script_sha256": "b9cf7be7a7646bb94868cbf91a6332319ef668af88800d93d4e7164d3a48446f"
+  }
+}

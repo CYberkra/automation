@@ -1,0 +1,150 @@
+{
+  "status": "PASS_INDEPENDENT_NATIVE_PROBE_KEY_FRAME_AND_BAND_DELIVERY",
+  "solver_runs": 6,
+  "contract_sha256": "6d7716e19759a2a0e044461762d9e3712b3ae930fef203a2fa598d636312ac0f",
+  "groups": [
+    {
+      "id": "fine_x170_H1_local",
+      "native_sha256": "bc0dbbe36d153bdb1b0568d639adb799e3d12a1d81e81d53189777a9b8ef15e9",
+      "retrieved_key_frames": 8,
+      "main_independent_DFT_relative_L2": 4.429374696452066e-12,
+      "all_snapshots_remote_audited": 833,
+      "original_main_bitwise_equal": true
+    },
+    {
+      "id": "fine_x170_H0_local",
+      "native_sha256": "ed58e566cf452a9217292aa82036779aec5e2501e57090f4ed3fefcbe9ad4b5d",
+      "retrieved_key_frames": 8,
+      "main_independent_DFT_relative_L2": 4.372880337568602e-12,
+      "all_snapshots_remote_audited": 833,
+      "original_main_bitwise_equal": true
+    },
+    {
+      "id": "fine_x190_H1_local",
+      "native_sha256": "6c6202f5b1a4e7407cb0b2660626640299dca669c872a294596853479d4953b1",
+      "retrieved_key_frames": 8,
+      "main_independent_DFT_relative_L2": 3.3318241969070705e-12,
+      "all_snapshots_remote_audited": 833,
+      "original_main_bitwise_equal": true
+    },
+    {
+      "id": "fine_x190_H0_local",
+      "native_sha256": "a56235f261a50c5b94a140af58e9c2bb287928b1f6be83d950f6a95bc135677d",
+      "retrieved_key_frames": 8,
+      "main_independent_DFT_relative_L2": 3.2800174618724108e-12,
+      "all_snapshots_remote_audited": 833,
+      "original_main_bitwise_equal": true
+    },
+    {
+      "id": "fine_x170_H1_global",
+      "native_sha256": "d1beee897ba6b7f3613a827b85504cbd197c291370b34ca031d88295df34d835",
+      "retrieved_key_frames": 7,
+      "main_independent_DFT_relative_L2": 4.429374696452066e-12,
+      "all_snapshots_remote_audited": 2395,
+      "original_main_bitwise_equal": true
+    },
+    {
+      "id": "fine_x170_H0_global",
+      "native_sha256": "2313dba5df1da075fc2eef87a66325f5d8ef6bb28752175bd7378f5abc36617b",
+      "retrieved_key_frames": 7,
+      "main_independent_DFT_relative_L2": 4.372880337568602e-12,
+      "all_snapshots_remote_audited": 2395,
+      "original_main_bitwise_equal": true
+    }
+  ],
+  "R2_events_match_original_parent": true,
+  "movies": [
+    {
+      "file": "x170_global_global_early.gif",
+      "frames": 120,
+      "pixel_size": [
+        3190,
+        352
+      ],
+      "sha256": "20ce382a96e85d8065f76bafbde7638c2b0c7c3a5e1e35cdd3583ae09385dd2b"
+    },
+    {
+      "file": "x170_global_global_early_preview.gif",
+      "frames": 60,
+      "pixel_size": [
+        1595,
+        211
+      ],
+      "sha256": "dce1253034a7e719c07795652ec652c910ac2e12890c1f8bcd9c1fce96a0d3b1"
+    },
+    {
+      "file": "x170_global_global_late.gif",
+      "frames": 106,
+      "pixel_size": [
+        3190,
+        352
+      ],
+      "sha256": "6c318c06c19276dd584ba9bda55fdef004fb463e89f460cdf1f04122ead596ab"
+    },
+    {
+      "file": "x170_global_global_late_preview.gif",
+      "frames": 53,
+      "pixel_size": [
+        1595,
+        211
+      ],
+      "sha256": "b74920fdfd0e3c2069cf14a948d0550c0b1464223e0d5b1d44065d7e23569785"
+    },
+    {
+      "file": "x170_local_basal_preview.gif",
+      "frames": 94,
+      "pixel_size": [
+        813,
+        452
+      ],
+      "sha256": "be16260158bc0ca6c8cfcd5cb438c06490fffbb92c2c9ebdaae6f2c39ee354bf"
+    },
+    {
+      "file": "x170_local_first_preview.gif",
+      "frames": 95,
+      "pixel_size": [
+        813,
+        452
+      ],
+      "sha256": "d10a8e5e00a26fc55cd6b3fa78abc9809332b0dd3de1816727debf76b8de79b0"
+    },
+    {
+      "file": "x170_local_return_preview.gif",
+      "frames": 113,
+      "pixel_size": [
+        813,
+        452
+      ],
+      "sha256": "33885be5a36b72bd1051cc12853b5cc5bee206334ee57ffb8b809eef435e9bd0"
+    },
+    {
+      "file": "x190_local_basal_preview.gif",
+      "frames": 94,
+      "pixel_size": [
+        813,
+        452
+      ],
+      "sha256": "96bb036a364fe381ab5269247ef41292ae7b76e7b0ad7b2d05e138cfb2468cbe"
+    },
+    {
+      "file": "x190_local_first_preview.gif",
+      "frames": 95,
+      "pixel_size": [
+        813,
+        452
+      ],
+      "sha256": "3dcc74f408c1da0dedd1d79cb2690cfa2c144c7750b9d6fa1a28f81911e0a0eb"
+    },
+    {
+      "file": "x190_local_return_preview.gif",
+      "frames": 113,
+      "pixel_size": [
+        813,
+        452
+      ],
+      "sha256": "a6a36d9ad04cf266eb7f11d27e59d56d39b6cd40771842786ca8c6a42682a522"
+    }
+  ],
+  "source_script_sha256": "7348e6004aaeff4b67b2d9f0b4c243d9ed8d54f5c18eb416fc967062c12d49ca",
+  "limits": "Numerical delivery audit; not mesh/PML convergence, independent ray decomposition or field validation."
+}
