@@ -14,6 +14,7 @@
 
 ## 求解环境与现行配置
 
+- **现行模型唯一入口**：`configs/research/current_model.json`。找最新版本的模型/材料/源/几何/采集文件，一律先看该文件。任何获批的模型、材料、源、几何或采集修改，必须在同一工作单元内更新该文件并记录被取代版本；历史版本文件不覆盖，该文件只改指针。
 - 当前求解器版本、可用运行时与 GPU 包装方式以 [START_HERE.md](START_HERE.md) 及最新执行报告为准；环境事故与变迁记录见 [decision_log.md](docs/research/decision_log.md) 及对应日期报告。
 - 现行源约定见 `configs/research/line9_source_v0_2.json`（官方内置 impulse）；现行材料数据库、设计与各批次冻结契约见 `configs/research/` 下最新版本，状态以 START_HERE.md 为准。
 

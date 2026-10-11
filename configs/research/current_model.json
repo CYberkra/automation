@@ -1,0 +1,43 @@
+{
+  "schema": "current-model-pointer/1",
+  "updated": "2026-10-11",
+  "purpose": "现行模型唯一入口。找最新版本的模型文件一律先看本文件；历史版本文件不覆盖，本文件只改指针。",
+  "update_rule": "任何获批的模型/材料/源/几何/采集修改，必须在同一工作单元内更新本文件，记录被取代版本；更新本文件不等于批准任何新求解。",
+  "current_definition": {
+    "materials": "configs/research/line9_materials_v0_2.json",
+    "source": "configs/research/line9_source_v0_2.json",
+    "acquisition_extent": "configs/research/line9_acquisition_design_v0_1.json",
+    "geometry_builder": "scripts/prepare_line9_material_model.py",
+    "source_input_builder": "scripts/prepare_line9_official_impulse.py"
+  },
+  "current_physical_setup": {
+    "dimensionality": "2D TMz",
+    "domain_m": "210 x 42.5",
+    "grid_m": 0.025,
+    "pml": "HORIPML 80 cells, geometry continues through PML",
+    "antenna_height_agl_m": 8,
+    "tx_rx_separation_m": 1.3,
+    "time_window_ns": 2400,
+    "solver": "gprMax 4.0.1, CUDA native float64",
+    "sfcw": "official impulse, direct, 20-170 MHz, 0.3 MHz step, 501 tones, Hann/Blackman, zeropad 8, no tail window, no time shift",
+    "layer_stack": "air -> cover (silty clay, Debye) -> mudstone (Wang2026 constants er18/s0.006) -> sandstone (Debye)"
+  },
+  "superseded_notes": [
+    "configs/research/line9_model_plan_v0_1.json 的 15m 航高、Ricker 源、1200ns 时窗已被后续显性批准取代；其余规划内容仍有效。",
+    "泥岩 v0_1（Debye）被 mudstone_design_v0_2.json / line9_materials_v0_2.json 取代；旧结果对应旧材料，不改标。"
+  ],
+  "latest_frozen_batch": {
+    "id": "line9_fine_wavefield_20261011_r1",
+    "date": "2026-10-11",
+    "content": "六项精细波场（170/190m 各 H0/H1 局部快照 + 170m 两项全域快照），8122 帧",
+    "rog_path": "E:\\djh\\line9_fine_wavefield_20261011_r1",
+    "repo_evidence": "artifacts/research_checks/2026-10-11_line9_fine_wavefield_r2/",
+    "report": "docs/research/2026-10-11_fine_wavefield_results.md"
+  },
+  "recent_batches": [
+    {"id": "line9_overnight_20261011_r1", "content": "190->170m 41 道短测线", "rog_path": "E:\\djh\\line9_overnight_20261011_r1", "report": "docs/research/2026-10-11_overnight_bscan_execution.md"},
+    {"id": "line9_paper_mudstone_20261011_r2", "content": "论文泥岩 190m H0/H1、2400ns 对照", "rog_path": "E:\\djh\\line9_paper_mudstone_20261011_r2", "report": "docs/research/2026-10-11_paper_mudstone_window_execution.md"},
+    {"id": "line9_official_impulse_20261010_r1", "content": "官方 impulse 首批 190m H0/H1", "rog_path": "E:\\djh\\line9_official_impulse_20261010_r1", "report": "docs/research/2026-10-10_official_impulse_execution.md"}
+  ],
+  "rog_access": "ROG 连接参数（主机/密钥/known_hosts）见本机 artifacts/local_checks 各批 connection.json，属本机文件不入库；批次根目录 E:\\djh。"
+}
