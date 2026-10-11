@@ -1,3 +1,11 @@
+## 2026-10-11 ROG `E:\djh` line9 目录清理（用户显性批准）
+
+用户反映 ROG `E:\djh` 下多个 line9 目录管理麻烦，要求只保留一个，并显性批准两项处置：①删除 4 个目录 + 4 个转移 zip；②`line9_fine_wavefield_20261011_r1` 只删快照、保留批次契约/结果/图件。
+
+执行前只读盘点：`E:\djh` 下 line9 相关共 5 目录 + 4 zip。其中 `line9_agl8_20261006`（10-06 旧工作副本，5957 文件 / 455 MB，含 agl8 系列包、sfcw_batch_out*、dist 三包）本地原本完全没有、仓库文档与 git 历史无 agl8 记录，删除前已全量取回本机 `artifacts/local_checks/2026-10-11_rog_agl8_retrieval/`（git 忽略，只存本机），逐文件 SHA-256 核验 5957/5957 一致。
+
+实际删除：`line9_agl8_20261006`、`line9_overnight_20261011_r1`、`line9_paper_mudstone_20261011_r1`、`line9_paper_mudstone_20261011_r2`、4 个根 zip，及 fine_wavefield 六案例的 `profile_snaps/`（约 90.6 GiB）。E 盘空闲 1217.4 → 1308.5 GB，释放 91.1 GB。删除后 `E:\djh` 下 line9 目录只剩 `line9_fine_wavefield_20261011_r1`（约 4.7 GB，各案例保留 profile.in / profile.h5 结果 / 验证 JSON / 日志，快照删除后只能靠约 40 分钟 GPU 重跑重建）。同单元已更新 `configs/research/current_model.json` 的失效 rog_path 指针。本单元不启动任何新求解。
+
 ## 2026-10-11 用户要求建立“现行模型唯一入口”规则（常驻规则）
 
 用户反映难以直接找到研究最新版本的模型文件，要求制定规则。执行：新增 `configs/research/current_model.json` 作为现行模型唯一入口（指向当前材料/源/采集/几何生成器/物理配置/最新冻结批次及 ROG 路径，含被取代项说明）；AGENTS.md“求解环境与现行配置”节新增常驻规则——找最新模型一律先看该文件，任何获批的模型/材料/源/几何/采集修改必须同单元更新该文件并记录被取代版本，历史文件不覆盖；START_HERE.md“历史与接续”节加入口链接。连接主机细节不入库（指向本机 connection.json）。本单元不启动任何新求解。

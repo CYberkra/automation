@@ -32,13 +32,15 @@
     "date": "2026-10-11",
     "content": "六项精细波场（170/190m 各 H0/H1 局部快照 + 170m 两项全域快照），8122 帧",
     "rog_path": "E:\\djh\\line9_fine_wavefield_20261011_r1",
+    "rog_path_note": "2026-10-11 用户显性批准只删快照：各案例 profile_snaps/（约 90.6 GiB）已删除，目录现约 4.7 GB，契约/结果 profile.h5/验证/图件保留。快照删除后只能靠约 40 分钟 GPU 重跑重建。",
     "repo_evidence": "artifacts/research_checks/2026-10-11_line9_fine_wavefield_r2/",
     "report": "docs/research/2026-10-11_fine_wavefield_results.md"
   },
   "recent_batches": [
-    {"id": "line9_overnight_20261011_r1", "content": "190->170m 41 道短测线", "rog_path": "E:\\djh\\line9_overnight_20261011_r1", "report": "docs/research/2026-10-11_overnight_bscan_execution.md"},
-    {"id": "line9_paper_mudstone_20261011_r2", "content": "论文泥岩 190m H0/H1、2400ns 对照", "rog_path": "E:\\djh\\line9_paper_mudstone_20261011_r2", "report": "docs/research/2026-10-11_paper_mudstone_window_execution.md"},
-    {"id": "line9_official_impulse_20261010_r1", "content": "官方 impulse 首批 190m H0/H1", "rog_path": "E:\\djh\\line9_official_impulse_20261010_r1", "report": "docs/research/2026-10-10_official_impulse_execution.md"}
+    {"id": "line9_overnight_20261011_r1", "content": "190->170m 41 道短测线", "rog_path": "已清理（2026-10-11 用户批准），证据见 repo_evidence", "repo_evidence": "artifacts/research_checks/2026-10-11_line9_overnight_bscan_r2/", "report": "docs/research/2026-10-11_overnight_bscan_execution.md"},
+    {"id": "line9_paper_mudstone_20261011_r2", "content": "论文泥岩 190m H0/H1、2400ns 对照", "rog_path": "已清理（2026-10-11 用户批准），证据见 repo_evidence", "repo_evidence": "artifacts/research_checks/2026-10-11_line9_paper_mudstone_window_r2/", "report": "docs/research/2026-10-11_paper_mudstone_window_execution.md"},
+    {"id": "line9_official_impulse_20261010_r1", "content": "官方 impulse 首批 190m H0/H1", "rog_path": "已不在 ROG（早先清理）", "report": "docs/research/2026-10-10_official_impulse_execution.md"},
+    {"id": "line9_agl8_20261006", "content": "10-06 旧工作副本（agl8 系列包与 SFCW 批输出）", "rog_path": "已清理（2026-10-11 用户批准），全量 5957 文件经 SHA-256 核验取回本机", "local_evidence": "artifacts/local_checks/2026-10-11_rog_agl8_retrieval/（git 忽略，只存本机）"}
   ],
   "rog_access": "ROG 连接参数（主机/密钥/known_hosts）见本机 artifacts/local_checks 各批 connection.json，属本机文件不入库；批次根目录 E:\\djh。",
   "actual_gprmax_model_example": "最新批 gprMax 输入实体示例：E:\\djh\\line9_fine_wavefield_20261011_r1\\execution\\prepared\\cases\\fine_x170_H1_local\\profile.in（配合同批 geometries/full2d_compact.h5）；本地可由生成器脚本从上述参数源重建。"
