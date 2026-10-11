@@ -19,7 +19,7 @@ APPROVAL = json.loads(VARIANTS.read_text('utf-8'))['approval_basis']
 
 def build_database(v0_2, variant):
     db = copy.deepcopy(v0_2)
-    if variant['change'] is None:
+    if 'target' not in variant:
         return db
     key = variant['target']
     entry = db['materials'][key]
@@ -70,7 +70,7 @@ def prepare(a):
                 h.attrs['MaterialDatabase'] = db['database']['id']
             d = next(s.split() for s in lines if s.startswith('#hertzian_dipole:'))
             r = next(s.split() for s in lines if s.startswith('#rx: '))
-            if variant['change'] is not None:
+            if 'target' in variant:
                 others = [k for k in db['materials'] if k != variant['target']]
                 others_equal = all(db['materials'][k] == v0_2['materials'][k] for k in others)
                 target_changed = db['materials'][variant['target']]['base'] == variant['replacement']['base']
