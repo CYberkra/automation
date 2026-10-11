@@ -22,12 +22,12 @@
       "bytes": 1539
     },
     "cases/x190_H0/profile.in": {
-      "sha256": "eeba7bd57c9b47f9ee0221ca68c1c5b28d34d73c06328d193e5a27f7744bf257",
-      "bytes": 525
+      "sha256": "ad7c59a91a51d0bd7511133da5b8b49355152c5875c68a738f089f66676b951c",
+      "bytes": 513
     },
     "cases/x190_H1/profile.in": {
-      "sha256": "72dc8e85f35de2497f9b0d12cbceb48b686ef7536c0df45a4286e7f1692db63f",
-      "bytes": 525
+      "sha256": "a21cef30162ea7c4e01e97de39b71de86cc97d0594382e42abe0dbed896b8304",
+      "bytes": 513
     },
     "geometries/H0.h5": {
       "sha256": "1fc79f2389a55a39744e6bab8f3e8b3a693bc31852d6f01e47ae3e4c34d198a9",
@@ -41,5 +41,6 @@
       "sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
       "bytes": 3871
     }
-  }
+  },
+  "geometry_reference_fix": "2026-10-11: profile.in 几何引用从父批次遗留名 full2d_compact.h5 修正为 H0.h5/H1.h5；已验证体素数组与 paper_mudstone 批次逐字节一致（SHA-256 数据签名 0b60adf6/3404303f）"
 }

@@ -1,0 +1,46 @@
+{
+  "schema": "line9-material-ablation/1",
+  "date": "2026-10-11",
+  "status": "APPROVED_ABLATION_NOT_SITE_CALIBRATION",
+  "approval_basis": "2026-10-11 用户显性批准：候选1-3（砂岩论文常数、覆盖层论文土、覆盖层 εr=18.4 归因证伪）作为消融批一起执行；未来再换色散模型；5m 航高下基线同批重跑作对照",
+  "baseline_material_database": "configs/research/line9_materials_v0_2.json",
+  "design": "单变量消融：每个变体只改一个层的本构定义，几何体素/源/天线/时窗/网格与现行模型（model_current/，AGL 5m）完全一致；基线同批重跑，8m 历史结果不作本批对照真值（空气路径不同）。站位 x190，H0/H1 成对，共 4 配置 × 2 = 8 个求解。",
+  "variants": {
+    "base": {
+      "change": null,
+      "rationale": "现行 v0_2 材料在 5m 航高的基线对照"
+    },
+    "c1_sandstone_paper": {
+      "target": "material_003_sandstone",
+      "replacement": {
+        "model": "constant",
+        "base": {"relative_permittivity": 9.0, "electric_conductivity_s_per_m": 0.001, "relative_permeability": 1.0, "magnetic_conductivity_s_per_m": 0.0},
+        "poles": []
+      },
+      "rationale": "Wang2026 Table1 砂岩常数 εr9/σ0.001，替代现行 Debye（ε∞8.8375/Δε2.5754/τ6.4567ns）",
+      "evidence": "Wang2026 DOI10.1109/MGRS.2026.3702334 Table1 PDF page9"
+    },
+    "c2_cover_paper_soil": {
+      "target": "material_001_cover",
+      "replacement": {
+        "model": "constant",
+        "base": {"relative_permittivity": 12.0, "electric_conductivity_s_per_m": 0.003, "relative_permeability": 1.0, "magnetic_conductivity_s_per_m": 0.0},
+        "poles": []
+      },
+      "rationale": "Wang2026 Table1 土层常数 εr12/σ0.003，替代现行覆盖层 Debye（ε∞11/Δε0.5/τ6.4567ns/σ0.001）",
+      "evidence": "Wang2026 DOI10.1109/MGRS.2026.3702334 Table1 PDF page9"
+    },
+    "c3_cover_er184": {
+      "target": "material_001_cover",
+      "replacement": {
+        "model": "constant",
+        "base": {"relative_permittivity": 18.4, "electric_conductivity_s_per_m": 0.001, "relative_permeability": 1.0, "magnetic_conductivity_s_per_m": 0.0},
+        "poles": []
+      },
+      "rationale": "归因证伪：若 232/328ns 强带为覆盖层内多次返回，则覆盖层 εr 11→18.4（v 0.104→0.070 m/ns）应使强带到时按比例后移约 1.49 倍；σ 保持基线 0.001 以隔离介电变量。εr=18.4 对应 Wang2026 实测区 RTM 速度 0.07 m/ns",
+      "evidence": "Wang2026 正文 field case 1（v=0.07 m/ns, εr≈18.4）+ docs/research/2026-10-11_fine_wavefield_results.md 多次波归因"
+    }
+  },
+  "limits": "常数材料是消融探针，不是场地标定；论文常数在 20-170MHz 的适用性本身是被检验对象。覆盖层 σ=0.003（c2）改变损耗，与 c3 不可互换解释。",
+  "calls_solver": false
+}
