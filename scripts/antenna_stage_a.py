@@ -47,6 +47,7 @@ STEPS = int(math.ceil(WINDOW_S/DT))+1
 PML = 60
 ARM = 1.65          # each arm length beyond the 2*DL feed gap -> total 3.35 m
 HALFW = 0.95        # end half-width -> 2*atan(0.95/1.65) = 59.9 deg flare
+STRIP = 0.15        # feed-strip length per arm (guarantees feed-edge connectivity)
 TONES_HZ = [20e6, 95e6, 170e6]
 FEED_R_OHM = 50.0
 
@@ -84,19 +85,34 @@ def make_geometry(path, shape, cover_top_m=None):
 
 
 def bowtie_lines(feed, axis, source_waveform, passive_id=None, window_s=WINDOW_S):
-    """Two triangular PEC arms along `axis` ('x' or 'y') in the horizontal plane z=feed[2]."""
+    """Two triangular PEC arms along `axis` ('x' or 'y') in the horizontal plane z=feed[2].
+
+    Feed connectivity: a point-apex #triangle rasterizes to zero cells within ~2 cells of
+    the apex (confirmed 2026-10-12 with feedcell.vtkhdf), which left the feed edge floating
+    in the r1 batches. Each arm therefore gets a rectangular feed strip (width 2*DL, the
+    approved 5 cm-class feed width; STRIP long, well past the sliver gap) that overlaps the
+    triangle and touches the voltage-source edge endpoints.
+    """
     fx, fy, fz = feed
     lines = []
     if axis == 'y':
         apex_p, apex_m = (fx, fy+DL, fz), (fx, fy-DL, fz)
         c1p, c2p = (fx-HALFW, fy+DL+ARM, fz), (fx+HALFW, fy+DL+ARM, fz)
         c1m, c2m = (fx-HALFW, fy-DL-ARM, fz), (fx+HALFW, fy-DL-ARM, fz)
+        # source y-edge spans [fy, fy+DL]; arm+ must touch node fy+DL, arm- node fy.
+        # Triangles rasterize into z-layer [fz, fz+DL]; strips must use the same layer.
+        strips = [(fx-DL, fy+DL, fz, fx+DL, fy+DL+STRIP, fz+DL),
+                  (fx-DL, fy-STRIP, fz, fx+DL, fy, fz+DL)]
     else:
         apex_p, apex_m = (fx+DL, fy, fz), (fx-DL, fy, fz)
         c1p, c2p = (fx+DL+ARM, fy-HALFW, fz), (fx+DL+ARM, fy+HALFW, fz)
         c1m, c2m = (fx-DL-ARM, fy-HALFW, fz), (fx-DL-ARM, fy+HALFW, fz)
+        strips = [(fx+DL, fy-DL, fz, fx+DL+STRIP, fy+DL, fz+DL),
+                  (fx-STRIP, fy-DL, fz, fx, fy+DL, fz+DL)]
     for apex, c1, c2 in [(apex_p, c1p, c2p), (apex_m, c1m, c2m)]:
         lines.append(f'#triangle: {fmt(apex)} {fmt(c1)} {fmt(c2)} {DL:.12g} pec')
+    for x1, y1, z1, x2, y2, z2 in strips:
+        lines.append(f'#box: {fmt((x1, y1, z1))} {fmt((x2, y2, z2))} pec')
     if passive_id is None:
         lines.append(f'#voltage_source: {axis} {fmt(feed)} {FEED_R_OHM:.12g} {source_waveform} 0 {window_s:.12g} feed nyquist')
     else:

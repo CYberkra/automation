@@ -200,7 +200,7 @@ def audit(path, completed=False):
                 np.testing.assert_array_equal(h.attrs['dx_dy_dz'], g['spacing_m'])
                 assert abs(float(h.attrs['dt'])/g['dt_s']-1) < 1e-13
                 assert h.attrs['Iterations'] == g['expected_samples']
-                v = h['rxs/rxgap/Ey'][:]
+                v = h['rxs/rx1/Ey'][:]
                 assert v.dtype == np.float64 and v.shape == (g['expected_samples'],)
                 assert np.isfinite(v).all() and np.any(v)
                 exc = h['srcs/src1/excitation']
