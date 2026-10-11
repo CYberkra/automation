@@ -1,0 +1,29 @@
+{
+  "schema": "profile-acquisition-selection/1",
+  "date": "2026-10-06",
+  "status": "USER_CONFIRMED_EXTENT_AND_DIRECTION_NOT_EXECUTION_CONTRACT",
+  "authorization_original": "横坐标25-220作为我们的Bscan测线区域，220作为起始点，向25出发",
+  "profile_geometry_report": "docs/research/2026-10-06_line9_pdf_geometry_rebuild.md",
+  "coordinate_reference": "Distance along the source 9-9prime PDF section; metres, not longitude or CSV trace index",
+  "source_profile_range_m": [0, 350],
+  "acquisition_profile_range_m": [25, 220],
+  "start_profile_x_m": 220,
+  "end_profile_x_m": 25,
+  "length_m": 195,
+  "acquisition_distance_formula": "s_m = 220 - profile_x_m",
+  "inverse_formula": "profile_x_m = 220 - s_m",
+  "bscan_column_order": "Increasing acquisition distance s: left starts at profile X220; right ends at X25",
+  "geometry_storage_order": "Keep original increasing profile X; reorder acquisition columns only",
+  "sampling": {
+    "station_spacing_m": null,
+    "station_count": null,
+    "station_reference_point": null,
+    "antenna_height_m_for_this_batch": null,
+    "solver_domain_extent_m": null,
+    "include_endpoints": true
+  },
+  "role": "Line9 site adaptation; not independent blind validation or general development geometry",
+  "calls_solver": false,
+  "calls_training": false,
+  "note": "The acquisition extent is not the domain extent. Retain exterior geology/air and verify boundary distance in a separate execution contract. Existing field CSV travel direction is not inferred."
+}

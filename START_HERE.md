@@ -66,6 +66,7 @@
 
 ## 历史与接续
 
+- **现行模型固定文件夹**：[model_current/](model_current/)——当前最新 gprMax 模型实体（profile.in + 几何 H5 + 材料/源/采集契约），可直接运行；旧版本归档在 [model_archive/](model_archive/)。
 - **现行模型唯一入口**：[current_model.json](configs/research/current_model.json)——找最新版本的模型/材料/源/几何/采集文件先看这里。
 - [本次整理前完整入口（原字节存档）](START_HERE_history_20261010.md)：其中运行状态和下一步均为历史，不直接执行。
 - [持久决策](docs/research/decision_log.md)、[产物索引](docs/research/research_artifact_registry.json)、[跨机说明](docs/WORKFLOW.md)。

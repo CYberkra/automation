@@ -5,6 +5,7 @@
   "what_this_file_is_not": "本文件不是 gprMax 模型本身，只是索引。gprMax 实际读取的模型 = 每个算例的 profile.in 文本输入 + 几何体素 H5（如 full2d_compact.h5）；它们由 current_definition 中的生成器脚本从材料/源参数生成，已执行批次profile.in 冻结在 ROG 各批目录 execution/prepared/cases/<case>/profile.in。",
   "update_rule": "任何获批的模型/材料/源/几何/采集修改，必须在同一工作单元内更新本文件，记录被取代版本；更新本文件不等于批准任何新求解。",
   "current_definition": {
+    "model_files": "model_current/（固定文件夹：profile.in + 几何 H5 + 材料/源/采集契约，可直接运行；旧版本归档于 model_archive/）",
     "materials": "configs/research/line9_materials_v0_2.json",
     "source": "configs/research/line9_source_v0_2.json",
     "acquisition_extent": "configs/research/line9_acquisition_design_v0_1.json",

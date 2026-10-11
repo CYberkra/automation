@@ -1,0 +1,99 @@
+{
+  "schema": "gprMax-material-database",
+  "schema_version": 1,
+  "database": {
+    "id": "line9_materials_v0_2",
+    "name": "Line9 user-selected paper mudstone version0.2",
+    "version": "0.2.0",
+    "description": "Mudstone uses Wang2026Table1 constants; other entries identical to frozen190m H1; not site calibration"
+  },
+  "materials": {
+    "material_000_air": {
+      "name": "air",
+      "model": "constant",
+      "base": {
+        "relative_permittivity": 1.0,
+        "electric_conductivity_s_per_m": 0.0,
+        "relative_permeability": 1.0,
+        "magnetic_conductivity_s_per_m": 0.0
+      },
+      "metadata": {
+        "original_id": "air",
+        "source": "Reviewed geological PDF contacts; electrical properties are research assumptions",
+        "source_pdf_sha256": "08633d87b79e02b2ca83c203c92e32f03a0e2a8e18020eb3724f5c54d0c3deed",
+        "geological_role": "air"
+      }
+    },
+    "material_001_cover": {
+      "name": "cover",
+      "model": "debye",
+      "base": {
+        "relative_permittivity": 11.0,
+        "electric_conductivity_s_per_m": 0.001,
+        "relative_permeability": 1.0,
+        "magnetic_conductivity_s_per_m": 0.0
+      },
+      "metadata": {
+        "original_id": "cover",
+        "source": "Reviewed geological PDF contacts; electrical properties are research assumptions",
+        "source_pdf_sha256": "08633d87b79e02b2ca83c203c92e32f03a0e2a8e18020eb3724f5c54d0c3deed",
+        "geological_role": "silty clay",
+        "parameter_design_sha256": "ac2dcd0f08221f8128460ccd76197f30945da796baaf302f0832c2f75cd5f770",
+        "parameter_status": "FIXED_RESEARCH_NOT_SITE_CALIBRATION"
+      },
+      "poles": [
+        {
+          "relative_permittivity_difference": 0.5,
+          "relaxation_time_s": 6.4567e-09
+        }
+      ],
+      "averagable": true
+    },
+    "material_002_mudstone": {
+      "name": "mudstone",
+      "model": "constant",
+      "base": {
+        "relative_permittivity": 18.0,
+        "electric_conductivity_s_per_m": 0.006,
+        "relative_permeability": 1.0,
+        "magnetic_conductivity_s_per_m": 0.0
+      },
+      "metadata": {
+        "original_id": "mudstone",
+        "source": "Reviewed geological PDF contacts; electrical properties are research assumptions",
+        "source_pdf_sha256": "08633d87b79e02b2ca83c203c92e32f03a0e2a8e18020eb3724f5c54d0c3deed",
+        "geological_role": "mudstone",
+        "parameter_status": "USER_APPROVED_PAPER_CONSTANTS_NOT_SITE_CALIBRATION",
+        "parameter_design_sha256": "a1f9636ecc7a7e3e8578fccd46da4bff307678ed2fdcddcce611ce848d3e0614",
+        "electrical_source": "Wang2026 DOI10.1109/MGRS.2026.3702334 Table1 PDFpage9",
+        "superseded_material_database_sha256": "128fd48459f632c714fc066ee787cff30081c8af7553d3b9f4006b952f79249e"
+      },
+      "averagable": true
+    },
+    "material_003_sandstone": {
+      "name": "sandstone",
+      "model": "debye",
+      "base": {
+        "relative_permittivity": 8.837547784813761,
+        "electric_conductivity_s_per_m": 0.001,
+        "relative_permeability": 1.0,
+        "magnetic_conductivity_s_per_m": 0.0
+      },
+      "metadata": {
+        "original_id": "sandstone",
+        "source": "Reviewed geological PDF contacts; electrical properties are research assumptions",
+        "source_pdf_sha256": "08633d87b79e02b2ca83c203c92e32f03a0e2a8e18020eb3724f5c54d0c3deed",
+        "geological_role": "sandstone",
+        "parameter_design_sha256": "ac2dcd0f08221f8128460ccd76197f30945da796baaf302f0832c2f75cd5f770",
+        "parameter_status": "FIXED_RESEARCH_NOT_SITE_CALIBRATION"
+      },
+      "poles": [
+        {
+          "relative_permittivity_difference": 2.575432653759346,
+          "relaxation_time_s": 6.4567e-09
+        }
+      ],
+      "averagable": true
+    }
+  }
+}
