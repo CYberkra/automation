@@ -1,0 +1,469 @@
+{
+  "status": "PREPARED_APPROVED_STAIRCASE_ABLATION",
+  "approval_basis": "2026-10-11 用户显性批准（“批准，开跑”）：纯阶梯误差隔离消融 v0.2。均匀覆盖层半空间（生产 Debye cover 逐字复制）、40x18m 域、900ns、平/5度坡/fBm 微起伏三种地表、2.5/1.25/0.625cm 三网格共 9 解，H0-only，无滑体无分层；0.625cm 解为代理光滑参考。目的：分离地表体素化误差与真实起伏物理效应及非阶梯网格效应，服务真实地形导入的网格决策。",
+  "execution_authorized": true,
+  "dt_s": 5.89663584187421e-11,
+  "groups": [
+    {
+      "id": "stair_flat_d25",
+      "surface": "flat",
+      "grid": "d25",
+      "input": "cases/stair_flat_d25/profile.in",
+      "geometry": "geometries/flat_d25.h5",
+      "material": "geometries/staircase_ablation_materials_v0_1.json",
+      "tx_m": [
+        19.35,
+        13.0,
+        0.0125
+      ],
+      "rx_m": [
+        20.65,
+        13.0,
+        0.0125
+      ],
+      "native_shape": [
+        1600,
+        720,
+        1
+      ],
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ],
+      "dt_s": 5.89663584187421e-11,
+      "expected_samples": 15264,
+      "pml_cells": 80,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "source_amplitude_A": 1.0,
+      "input_sha256": "93dd58398d0b59c543f8b1c901c104d5c6a17ce2d72a34f0b806462387841f1c",
+      "geometry_sha256": "1654fd90a80e87185abcc8510ac2b9adcf91d8114f1b874e0f7b8c75c1ab4c68",
+      "material_sha256": "3e352a761d3ce27307e5490b0ce4256d3de8ec8c51fabff237fbbfabf2cab20f"
+    },
+    {
+      "id": "stair_flat_d125",
+      "surface": "flat",
+      "grid": "d125",
+      "input": "cases/stair_flat_d125/profile.in",
+      "geometry": "geometries/flat_d125.h5",
+      "material": "geometries/staircase_ablation_materials_v0_1.json",
+      "tx_m": [
+        19.35,
+        13.0,
+        0.00625
+      ],
+      "rx_m": [
+        20.65,
+        13.0,
+        0.00625
+      ],
+      "native_shape": [
+        3200,
+        1440,
+        1
+      ],
+      "spacing_m": [
+        0.0125,
+        0.0125,
+        0.0125
+      ],
+      "dt_s": 2.948317920937105e-11,
+      "expected_samples": 30527,
+      "pml_cells": 160,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "source_amplitude_A": 1.0,
+      "input_sha256": "6c87c4a969e09eca13a130c72dc6048c51381f9c760ef08098cc3c7e7d7ba15a",
+      "geometry_sha256": "4f0d1164397ad4efcc7df53329537e0397ec678a67d4f57979c20bc9d0ba903a",
+      "material_sha256": "3e352a761d3ce27307e5490b0ce4256d3de8ec8c51fabff237fbbfabf2cab20f"
+    },
+    {
+      "id": "stair_flat_d625",
+      "surface": "flat",
+      "grid": "d625",
+      "input": "cases/stair_flat_d625/profile.in",
+      "geometry": "geometries/flat_d625.h5",
+      "material": "geometries/staircase_ablation_materials_v0_1.json",
+      "tx_m": [
+        19.35,
+        13.0,
+        0.003125
+      ],
+      "rx_m": [
+        20.65,
+        13.0,
+        0.003125
+      ],
+      "native_shape": [
+        6400,
+        2880,
+        1
+      ],
+      "spacing_m": [
+        0.00625,
+        0.00625,
+        0.00625
+      ],
+      "dt_s": 1.4741589604685525e-11,
+      "expected_samples": 61053,
+      "pml_cells": 320,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "source_amplitude_A": 1.0,
+      "input_sha256": "ec9a75be074a16fd44c93bcb1487b46c3f45cdef1bcbb527e9fb94bf616203e6",
+      "geometry_sha256": "b11937ee3831a80847d0ced2cd5c7a139a87b63f60986c81185ce56139e779ad",
+      "material_sha256": "3e352a761d3ce27307e5490b0ce4256d3de8ec8c51fabff237fbbfabf2cab20f"
+    },
+    {
+      "id": "stair_slope_d25",
+      "surface": "slope",
+      "grid": "d25",
+      "input": "cases/stair_slope_d25/profile.in",
+      "geometry": "geometries/slope_d25.h5",
+      "material": "geometries/staircase_ablation_materials_v0_1.json",
+      "tx_m": [
+        19.35,
+        13.0,
+        0.0125
+      ],
+      "rx_m": [
+        20.65,
+        13.0,
+        0.0125
+      ],
+      "native_shape": [
+        1600,
+        720,
+        1
+      ],
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ],
+      "dt_s": 5.89663584187421e-11,
+      "expected_samples": 15264,
+      "pml_cells": 80,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "source_amplitude_A": 1.0,
+      "input_sha256": "971b97a29db92cdc6aa2726d42345a51ba66490bf24a1cfa06d73b7a91f63b09",
+      "geometry_sha256": "060213b83f2e90324cc4b9f8ead3dcdfdb4b2a6e29b6660c5434d53ecccf8d95",
+      "material_sha256": "3e352a761d3ce27307e5490b0ce4256d3de8ec8c51fabff237fbbfabf2cab20f"
+    },
+    {
+      "id": "stair_slope_d125",
+      "surface": "slope",
+      "grid": "d125",
+      "input": "cases/stair_slope_d125/profile.in",
+      "geometry": "geometries/slope_d125.h5",
+      "material": "geometries/staircase_ablation_materials_v0_1.json",
+      "tx_m": [
+        19.35,
+        13.0,
+        0.00625
+      ],
+      "rx_m": [
+        20.65,
+        13.0,
+        0.00625
+      ],
+      "native_shape": [
+        3200,
+        1440,
+        1
+      ],
+      "spacing_m": [
+        0.0125,
+        0.0125,
+        0.0125
+      ],
+      "dt_s": 2.948317920937105e-11,
+      "expected_samples": 30527,
+      "pml_cells": 160,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "source_amplitude_A": 1.0,
+      "input_sha256": "fe1be1a5aaaf0cc54cb025e0a75ddd70dd0acf46610b500ee420f1cc2a131898",
+      "geometry_sha256": "54ad89dfa81207ddb7ea954630cf169aee2e26af8ac0850811de25a8f7d821fa",
+      "material_sha256": "3e352a761d3ce27307e5490b0ce4256d3de8ec8c51fabff237fbbfabf2cab20f"
+    },
+    {
+      "id": "stair_slope_d625",
+      "surface": "slope",
+      "grid": "d625",
+      "input": "cases/stair_slope_d625/profile.in",
+      "geometry": "geometries/slope_d625.h5",
+      "material": "geometries/staircase_ablation_materials_v0_1.json",
+      "tx_m": [
+        19.35,
+        13.0,
+        0.003125
+      ],
+      "rx_m": [
+        20.65,
+        13.0,
+        0.003125
+      ],
+      "native_shape": [
+        6400,
+        2880,
+        1
+      ],
+      "spacing_m": [
+        0.00625,
+        0.00625,
+        0.00625
+      ],
+      "dt_s": 1.4741589604685525e-11,
+      "expected_samples": 61053,
+      "pml_cells": 320,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "source_amplitude_A": 1.0,
+      "input_sha256": "08ca285e1cfba119e7392c5d82c38536a5cf1eeaa4bb46e7fb8e34313820cf2f",
+      "geometry_sha256": "465af4990ffc41253b5de2cc1ae3d69919f5f2f4d509fd2ef64e50df14b11a16",
+      "material_sha256": "3e352a761d3ce27307e5490b0ce4256d3de8ec8c51fabff237fbbfabf2cab20f"
+    },
+    {
+      "id": "stair_rough_d25",
+      "surface": "rough",
+      "grid": "d25",
+      "input": "cases/stair_rough_d25/profile.in",
+      "geometry": "geometries/rough_d25.h5",
+      "material": "geometries/staircase_ablation_materials_v0_1.json",
+      "tx_m": [
+        19.35,
+        13.0,
+        0.0125
+      ],
+      "rx_m": [
+        20.65,
+        13.0,
+        0.0125
+      ],
+      "native_shape": [
+        1600,
+        720,
+        1
+      ],
+      "spacing_m": [
+        0.025,
+        0.025,
+        0.025
+      ],
+      "dt_s": 5.89663584187421e-11,
+      "expected_samples": 15264,
+      "pml_cells": 80,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "source_amplitude_A": 1.0,
+      "input_sha256": "e0663dc24fb979ad3d43fb5e874e1871d523963b7f80a970ebabcff867773c03",
+      "geometry_sha256": "d39d0775cf4abcd64b5525e4dc724fc3f2496f1468e757ab56738a1a00e002ae",
+      "material_sha256": "3e352a761d3ce27307e5490b0ce4256d3de8ec8c51fabff237fbbfabf2cab20f"
+    },
+    {
+      "id": "stair_rough_d125",
+      "surface": "rough",
+      "grid": "d125",
+      "input": "cases/stair_rough_d125/profile.in",
+      "geometry": "geometries/rough_d125.h5",
+      "material": "geometries/staircase_ablation_materials_v0_1.json",
+      "tx_m": [
+        19.35,
+        13.0,
+        0.00625
+      ],
+      "rx_m": [
+        20.65,
+        13.0,
+        0.00625
+      ],
+      "native_shape": [
+        3200,
+        1440,
+        1
+      ],
+      "spacing_m": [
+        0.0125,
+        0.0125,
+        0.0125
+      ],
+      "dt_s": 2.948317920937105e-11,
+      "expected_samples": 30527,
+      "pml_cells": 160,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "source_amplitude_A": 1.0,
+      "input_sha256": "ca07f00a1182cf14b6c8621274eee4159c14334a1af4d17d500e92f48e756ae0",
+      "geometry_sha256": "437c7145b03aedf926c6340351b793c5377563bcc3ef24f0e84d4e4c957c36ce",
+      "material_sha256": "3e352a761d3ce27307e5490b0ce4256d3de8ec8c51fabff237fbbfabf2cab20f"
+    },
+    {
+      "id": "stair_rough_d625",
+      "surface": "rough",
+      "grid": "d625",
+      "input": "cases/stair_rough_d625/profile.in",
+      "geometry": "geometries/rough_d625.h5",
+      "material": "geometries/staircase_ablation_materials_v0_1.json",
+      "tx_m": [
+        19.35,
+        13.0,
+        0.003125
+      ],
+      "rx_m": [
+        20.65,
+        13.0,
+        0.003125
+      ],
+      "native_shape": [
+        6400,
+        2880,
+        1
+      ],
+      "spacing_m": [
+        0.00625,
+        0.00625,
+        0.00625
+      ],
+      "dt_s": 1.4741589604685525e-11,
+      "expected_samples": 61053,
+      "pml_cells": 320,
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "source_amplitude_A": 1.0,
+      "input_sha256": "8e166c118d785de505630260d86588b6a4b476ec5b9d24d6f24161f0fafb238a",
+      "geometry_sha256": "125e24ea79511398cf4645e57e4a6ea76b659a0853d021a192ca20c549a3d452",
+      "material_sha256": "3e352a761d3ce27307e5490b0ce4256d3de8ec8c51fabff237fbbfabf2cab20f"
+    }
+  ],
+  "surface_stats": {
+    "stair_flat_d25": {
+      "surface": "flat",
+      "dl_m": 0.025,
+      "nx": 1600,
+      "ny": 720,
+      "surface_min_m": 8.0,
+      "surface_max_m": 8.0,
+      "surface_std_m": 0.0
+    },
+    "stair_flat_d125": {
+      "surface": "flat",
+      "dl_m": 0.0125,
+      "nx": 3200,
+      "ny": 1440,
+      "surface_min_m": 8.0,
+      "surface_max_m": 8.0,
+      "surface_std_m": 0.0
+    },
+    "stair_flat_d625": {
+      "surface": "flat",
+      "dl_m": 0.00625,
+      "nx": 6400,
+      "ny": 2880,
+      "surface_min_m": 8.0,
+      "surface_max_m": 8.0,
+      "surface_std_m": 0.0
+    },
+    "stair_slope_d25": {
+      "surface": "slope",
+      "dl_m": 0.025,
+      "nx": 1600,
+      "ny": 720,
+      "surface_min_m": 6.25,
+      "surface_max_m": 9.75,
+      "surface_std_m": 1.0102896397815826
+    },
+    "stair_slope_d125": {
+      "surface": "slope",
+      "dl_m": 0.0125,
+      "nx": 3200,
+      "ny": 1440,
+      "surface_min_m": 6.25,
+      "surface_max_m": 9.75,
+      "surface_std_m": 1.0102597225620993
+    },
+    "stair_slope_d625": {
+      "surface": "slope",
+      "dl_m": 0.00625,
+      "nx": 6400,
+      "ny": 2880,
+      "surface_min_m": 6.25,
+      "surface_max_m": 9.75,
+      "surface_std_m": 1.010233961144645
+    },
+    "stair_rough_d25": {
+      "surface": "rough",
+      "dl_m": 0.025,
+      "nx": 1600,
+      "ny": 720,
+      "surface_min_m": 7.800000000000001,
+      "surface_max_m": 8.175,
+      "surface_std_m": 0.09959488129848523
+    },
+    "stair_rough_d125": {
+      "surface": "rough",
+      "dl_m": 0.0125,
+      "nx": 3200,
+      "ny": 1440,
+      "surface_min_m": 7.800000000000001,
+      "surface_max_m": 8.1875,
+      "surface_std_m": 0.09959820372405613
+    },
+    "stair_rough_d625": {
+      "surface": "rough",
+      "dl_m": 0.00625,
+      "nx": 6400,
+      "ny": 2880,
+      "surface_min_m": 7.800000000000001,
+      "surface_max_m": 8.1875,
+      "surface_std_m": 0.09965004519276374
+    }
+  },
+  "no_retry": true,
+  "design": {
+    "domain_m": [
+      40.0,
+      18.0
+    ],
+    "surface_mean_m": 8.0,
+    "antenna_y_m": 13.0,
+    "src_x_m": 19.35,
+    "rx_x_m": 20.65,
+    "time_window_s": 9e-07,
+    "pml_physical_m": 2.0,
+    "slope_deg": 5.0,
+    "fbm": {
+      "seed": 20261011,
+      "hurst": 0.5,
+      "rms_target_m": 0.1,
+      "clip_m": 0.2,
+      "fine_grid_m": 0.00625,
+      "note": "same statistical family as S5 batch; new realisation at 40 m length"
+    },
+    "quantisation_rule": "k = round(y_s(x_centre)/dl); cells below are cover"
+  },
+  "SFCW": {
+    "method": "direct",
+    "frequency_start_Hz": 20000000.0,
+    "frequency_stop_Hz": 170000000.0,
+    "frequency_step_Hz": 300000.0,
+    "tones": 501,
+    "windows": [
+      "hann",
+      "blackman"
+    ],
+    "zero_pad_factor": 8,
+    "tail_taper_fraction": 0,
+    "time_shift_s": 0
+  },
+  "analysis_prereg": {
+    "primary": "E_s(d) = RMS_501tones|S_{s,d}(f) - S_{s,d625}(f)| / RMS_501tones|S_{s,d625}(f)|, s in {flat,slope,rough}, d in {d25,d125}; complex direct DFT per tone",
+    "convergence": "ratio E(d25)/E(d125) per surface",
+    "staircase_attribution": "excess of E_slope and E_rough over E_flat (flat carries dispersion/source/PML grid effects only)",
+    "secondary": "band rel_delta_rms on Hann envelope, [20,120] and [150,450] ns, plus peak-time shifts",
+    "anchors": "S5 physical roughness effect 0.42-0.73 in-band; thresholds stay null, magnitudes only"
+  },
+  "limits": "Ablation only: homogeneous cover half-space, no layering, no landslide body; 0.625 cm is a proxy smooth reference, not analytic truth; deep band [450,900] ns not evaluated; cross-grid comparison valid, absolute waveforms not comparable to production batches (domain/window/material truncation); not a site claim."
+}

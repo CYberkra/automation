@@ -1097,3 +1097,10 @@ Hann底砂差场峰增强74.165倍，H1总场与差场深部最大峰约399.202n
 ## 2026-10-11：Scene API 与 .in 链等价验证通过
 
 S3 已批准验证范围，无长求解。twin 小模型（2×2m TM、2.5cm 网格、HORIPML、官方 impulse、2000 步 FP64）分别以 .in 哈希命令链与 Scene API 链各跑一次，Ez 迹逐位相等（max_abs_diff=0.0）；真实 x190 H0 几何经 API geometry_only 构建通过（GeometryObjectsRead 对真实 H5+JSON 材料库，14 种混合材料表正常解析）。调试中确认两项链语义差异并已按官方行为对齐：.in 的 `#time_window:` 迭代数为 ceil(tw/dt)+1（API 的 `TimeWindow(iterations=)` 为精确值）；输出 H5 的 Rx 组名为 rx1 等序号而非 Rx id。结论：API 建模链与现行 .in 链在已验证范围内数值等价，后续新模型可用 API 构建；等价性仅限该 twin 配置与几何导入路径，不代表其他激励/材料/三维配置已验证。证据 `artifacts/research_checks/2026-10-11_scene_api_equivalence_r1/equivalence.json`，脚本 `scripts/check_line9_scene_api_equivalence.py`（24bd061）。下一：taskfarm 多站位并行接入（整线扩展前）。
+
+
+## 2026-10-11：纯阶梯误差隔离消融批 9/9 完成，2.5 cm 网格阶梯误差约百分之一量级
+
+用户批准极简消融设计 v0.2（只保留空气—覆盖层界面）后执行：平/5°坡/fBm 微起伏 × 2.5/1.25/0.625 cm 共 9 解，均匀 Debye 覆盖层（生产参数逐字复制），40×18 m、900 ns、官方 impulse、AGL 5 m，0.625 cm 为代理光滑参考。9/9 一次完成（累计 2991.4 s），契约 814b6dab；批末验收发现 tx_m/rx_m 的 z 记录约定错误（官方 TM 不变轴记 0.0，冻结值误取 .in 文本 dl/2），求解完成后修正契约并重审通过（修正后哈希 e16956e8，输入/几何/材料未动，已披露；生成脚本同步修复 355039e）。
+
+结果：纯阶梯案例（5° 斜坡）在 2.5 cm 生产网格的带内复数 RMS 误差 1.51%，1.25 cm 降至 0.34%（收敛比 4.46≈二阶）；fBm 起伏面 0.28%。阶梯可归因量在 1.25 cm 已淹没于平面对照残差（≤1.6%，含全部非阶梯网格效应；d125 对照非单调未归因，已记录）。带限重建时域包络差异 ≤0.82%、峰移 0.0 ns。结论：阶梯误差比 S5 物理起伏效应（42–73%）低约两个量级，2.5 cm 网格导入真实地形从阶梯角度够用，无需为此上 HSG；论文的阶梯问题在其 RTM 成像环节，若将来上偏移成像须重新评估。注意：首版跨网格 hilbert 包络插值指标出现 38–43% 伪差异，以 501 音调带限重建口径为准。证据 `artifacts/research_checks/2026-10-11_line9_staircase_r1/`，报告见[阶梯消融批结果](2026-10-11_staircase_ablation_results.md)。下一：taskfarm 多站位并行接入。
