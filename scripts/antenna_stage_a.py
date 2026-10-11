@@ -253,8 +253,9 @@ def audit(path, completed=False):
                     assert exc.attrs['WaveformType'] == 'impulse'
                     samples = exc['samples'][:]
                     np.testing.assert_array_equal(np.flatnonzero(samples), [0])
+                rx_count = len(rxs)
             extras = sorted(p.name for p in raw.parent.iterdir() if p.name != raw.name and p.suffix not in ('.in', '.log', '.jsonl'))
-            row.update(native_sha256=sha(raw), rx_count=len(rxs), extra_outputs=extras)
+            row.update(native_sha256=sha(raw), rx_count=rx_count, extra_outputs=extras)
         rows.append(row)
     return dict(status='PASS_NATIVE_IDENTITY_NOT_PHYSICAL_CERTIFICATION', completed=completed,
                 contract_sha256=sha(path), version=c['expected_version'], groups=rows)

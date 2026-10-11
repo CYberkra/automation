@@ -9,9 +9,9 @@ Design (bounded):
 - 3 anchor stations profile_x 170/180/190 m (170 anchors the window
   convergence set; 170-190 spans the slope segment studied earlier).
 - Per station a local 3D crop of the H1 (with-landslide) geometry:
-  x +/-6 m along track, y 6.5 m cross-track extrusion (cross-track invariant
+  x +/-6 m along track, y 6.0 m cross-track extrusion (cross-track invariant
   terrain: documented approximation, same spirit as earlier local3D work),
-  z = local relief + 12.5 m ground (incl. 1.5 m PML) + 7.25 m air
+  z = local relief + 11.5 m ground (incl. 1.5 m PML) + 7.25 m air
   (5 m AGL antenna + 0.75 m clearance + 1.5 m PML).
 - Antennas: Stage A unfocused bowtie approximation, arms along y (broadside),
   Tx/Rx baseline 1.3 m along x, each 5 m above its own local surface.
@@ -49,8 +49,8 @@ WINDOW_S = 9e-7
 STEPS = int(math.ceil(WINDOW_S/DT))+1
 STATIONS = [170.0, 180.0, 190.0]
 X_HALF_M = 6.0
-Y_SPAN_M = 6.5
-GROUND_DEPTH_M = 12.5      # includes 1.5 m bottom PML
+Y_SPAN_M = 6.0
+GROUND_DEPTH_M = 11.5      # includes 1.5 m bottom PML
 AIR_TOP_M = 7.25           # 5 m AGL + 0.75 m clearance + 1.5 m top PML
 BASELINE_M = 1.3
 AGL_M = 5.0
@@ -168,7 +168,7 @@ def prepare(a):
                     window_s=WINDOW_S, stations_m=STATIONS, baseline_m=BASELINE_M, agl_m=AGL_M,
                     antenna_model='unfocused_centre_fed_bowtie_approximation (stage A design)',
                     parent_geometry_sha256=sha(PARENT_GEO), material_db_sha256=sha(db),
-                    cross_track_approximation='terrain extruded constant across y over 6.5 m',
+                    cross_track_approximation='terrain extruded constant across y over 6.0 m',
                     generator_sha256=sha(Path(__file__)),
                     limits='3 anchor stations only; not a full 41-trace line. Cross-track invariant '
                            'terrain. Bowtie = stage A unfocused approximation. FP64 GPU. '
