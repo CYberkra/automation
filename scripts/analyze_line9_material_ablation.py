@@ -82,7 +82,8 @@ def main(a):
     (a.out / 'ablation_analysis.json').write_text(
         json.dumps(out, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     np.savez_compressed(a.out / 'ablation_traces.npz',
-                        **{cid: np.vstack(traces[cid]) for cid in traces})
+                        **{f'{cid}__{name}': arr for cid, arrays in traces.items()
+                           for name, arr in zip(['t', 'x', 'env', 'response'], arrays)})
     print(json.dumps(dict(cases=len(out['cases']), c3_test=out['c3_shift_test'])))
 
 

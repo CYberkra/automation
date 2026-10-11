@@ -1,0 +1,577 @@
+{
+  "status": "COMBINED_AUDITED_VIEW",
+  "expected_version": "4.0.1",
+  "approval_basis": "2026-10-11 用户显性批准：候选1-3（砂岩论文常数、覆盖层论文土、覆盖层 εr=18.4 归因证伪）作为消融批一起执行；未来再换色散模型；5m 航高下基线同批重跑作对照 | 2026-10-11 continuation of the approved 8-group material ablation after SESSION_LEASE_EXPIRED: 6 never-started groups unchanged; abl_base_x190_H1 resumed once (consumed attempt wrote zero output bytes; no result selection possible; base H0/H1 pair is the approved reference). No other change.",
+  "study_manifest": {
+    "status": "PREPARED_APPROVED_MATERIAL_ABLATION_AGL5",
+    "approval_basis": "2026-10-11 用户显性批准：候选1-3（砂岩论文常数、覆盖层论文土、覆盖层 εr=18.4 归因证伪）作为消融批一起执行；未来再换色散模型；5m 航高下基线同批重跑作对照",
+    "execution_authorized": true,
+    "generator_sha256": "7c1d5b970205435eaaf86792fad190d823185b9b34f0af1cb92bc130df7af659",
+    "variant_spec_sha256": "0da87f27fe891537c778e028b1e9d921a00bc5ce8d5ddb1913d2ce4608d18226",
+    "dt_s": 5.89663584187421e-11,
+    "groups": [
+      {
+        "id": "abl_base_x190_H0",
+        "role": "H0",
+        "variant": "base",
+        "profile_x_m": 190.0,
+        "input": "abl_base_x190_H0/cases/abl_base_x190_H0/profile.in",
+        "geometry": "abl_base_x190_H0/geometries/H0.h5",
+        "material": "abl_base_x190_H0/geometries/line9_materials_v0_2.json",
+        "tx_m": [
+          169.35,
+          35.95,
+          0.0
+        ],
+        "rx_m": [
+          170.65,
+          36.025,
+          0.0
+        ],
+        "native_shape": [
+          8400,
+          1700,
+          1
+        ],
+        "expected_samples": 40703,
+        "input_sha256": "ba1d5fec0270b4050bf89d873c4ac18fe0cc2bc2f9aabd32ba0bf1f9da82e320",
+        "geometry_sha256": "bdc212522ffc6a79184cb18a7e9aea9258612e29a976739358f3caa0ea2bbc0c",
+        "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d"
+      },
+      {
+        "id": "abl_base_x190_H1",
+        "role": "H1",
+        "variant": "base",
+        "profile_x_m": 190.0,
+        "input": "abl_base_x190_H1/cases/abl_base_x190_H1/profile.in",
+        "geometry": "abl_base_x190_H1/geometries/H1.h5",
+        "material": "abl_base_x190_H1/geometries/line9_materials_v0_2.json",
+        "tx_m": [
+          169.35,
+          35.95,
+          0.0
+        ],
+        "rx_m": [
+          170.65,
+          36.025,
+          0.0
+        ],
+        "native_shape": [
+          8400,
+          1700,
+          1
+        ],
+        "expected_samples": 40703,
+        "input_sha256": "efb886e69b0e08eb27d4d9fdc26b0d5db22963ad676df1bf5cad0b3799f920ae",
+        "geometry_sha256": "b11940fd456779495e93f6d2c88ddfd646c5afd435171f6320944215433536c7",
+        "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d"
+      },
+      {
+        "id": "abl_c1_sandstone_paper_x190_H0",
+        "role": "H0",
+        "variant": "c1_sandstone_paper",
+        "profile_x_m": 190.0,
+        "input": "abl_c1_sandstone_paper_x190_H0/cases/abl_c1_sandstone_paper_x190_H0/profile.in",
+        "geometry": "abl_c1_sandstone_paper_x190_H0/geometries/H0.h5",
+        "material": "abl_c1_sandstone_paper_x190_H0/geometries/line9_materials_v0_2.json",
+        "tx_m": [
+          169.35,
+          35.95,
+          0.0
+        ],
+        "rx_m": [
+          170.65,
+          36.025,
+          0.0
+        ],
+        "native_shape": [
+          8400,
+          1700,
+          1
+        ],
+        "expected_samples": 40703,
+        "input_sha256": "ca9e840ffb82755cf6402b703418c882c08857920db86433199059cfe7b1b001",
+        "geometry_sha256": "bdc212522ffc6a79184cb18a7e9aea9258612e29a976739358f3caa0ea2bbc0c",
+        "material_sha256": "244a59acca6a3b41b905fe3b55ce4d56b0e33442decb60a6838ab59c25d9354e"
+      },
+      {
+        "id": "abl_c1_sandstone_paper_x190_H1",
+        "role": "H1",
+        "variant": "c1_sandstone_paper",
+        "profile_x_m": 190.0,
+        "input": "abl_c1_sandstone_paper_x190_H1/cases/abl_c1_sandstone_paper_x190_H1/profile.in",
+        "geometry": "abl_c1_sandstone_paper_x190_H1/geometries/H1.h5",
+        "material": "abl_c1_sandstone_paper_x190_H1/geometries/line9_materials_v0_2.json",
+        "tx_m": [
+          169.35,
+          35.95,
+          0.0
+        ],
+        "rx_m": [
+          170.65,
+          36.025,
+          0.0
+        ],
+        "native_shape": [
+          8400,
+          1700,
+          1
+        ],
+        "expected_samples": 40703,
+        "input_sha256": "5fb1befbe2220a26c0c0246b34eb62126ac6356bc51917aedbdece13afbb4a75",
+        "geometry_sha256": "b11940fd456779495e93f6d2c88ddfd646c5afd435171f6320944215433536c7",
+        "material_sha256": "244a59acca6a3b41b905fe3b55ce4d56b0e33442decb60a6838ab59c25d9354e"
+      },
+      {
+        "id": "abl_c2_cover_paper_soil_x190_H0",
+        "role": "H0",
+        "variant": "c2_cover_paper_soil",
+        "profile_x_m": 190.0,
+        "input": "abl_c2_cover_paper_soil_x190_H0/cases/abl_c2_cover_paper_soil_x190_H0/profile.in",
+        "geometry": "abl_c2_cover_paper_soil_x190_H0/geometries/H0.h5",
+        "material": "abl_c2_cover_paper_soil_x190_H0/geometries/line9_materials_v0_2.json",
+        "tx_m": [
+          169.35,
+          35.95,
+          0.0
+        ],
+        "rx_m": [
+          170.65,
+          36.025,
+          0.0
+        ],
+        "native_shape": [
+          8400,
+          1700,
+          1
+        ],
+        "expected_samples": 40703,
+        "input_sha256": "33bc4b165fcf8e02d9af8365ad6f8ddf449ffb414712a963dd41aaf41b404b4d",
+        "geometry_sha256": "bdc212522ffc6a79184cb18a7e9aea9258612e29a976739358f3caa0ea2bbc0c",
+        "material_sha256": "c0960a12c1985ef8f95351cf90ba5e4286315492143d7214c532dc5329b20ac3"
+      },
+      {
+        "id": "abl_c2_cover_paper_soil_x190_H1",
+        "role": "H1",
+        "variant": "c2_cover_paper_soil",
+        "profile_x_m": 190.0,
+        "input": "abl_c2_cover_paper_soil_x190_H1/cases/abl_c2_cover_paper_soil_x190_H1/profile.in",
+        "geometry": "abl_c2_cover_paper_soil_x190_H1/geometries/H1.h5",
+        "material": "abl_c2_cover_paper_soil_x190_H1/geometries/line9_materials_v0_2.json",
+        "tx_m": [
+          169.35,
+          35.95,
+          0.0
+        ],
+        "rx_m": [
+          170.65,
+          36.025,
+          0.0
+        ],
+        "native_shape": [
+          8400,
+          1700,
+          1
+        ],
+        "expected_samples": 40703,
+        "input_sha256": "272cce169af1e29a71c3735882fc7fce4961e97b4bd8976498ccffe4646eb875",
+        "geometry_sha256": "b11940fd456779495e93f6d2c88ddfd646c5afd435171f6320944215433536c7",
+        "material_sha256": "c0960a12c1985ef8f95351cf90ba5e4286315492143d7214c532dc5329b20ac3"
+      },
+      {
+        "id": "abl_c3_cover_er184_x190_H0",
+        "role": "H0",
+        "variant": "c3_cover_er184",
+        "profile_x_m": 190.0,
+        "input": "abl_c3_cover_er184_x190_H0/cases/abl_c3_cover_er184_x190_H0/profile.in",
+        "geometry": "abl_c3_cover_er184_x190_H0/geometries/H0.h5",
+        "material": "abl_c3_cover_er184_x190_H0/geometries/line9_materials_v0_2.json",
+        "tx_m": [
+          169.35,
+          35.95,
+          0.0
+        ],
+        "rx_m": [
+          170.65,
+          36.025,
+          0.0
+        ],
+        "native_shape": [
+          8400,
+          1700,
+          1
+        ],
+        "expected_samples": 40703,
+        "input_sha256": "3dd59da035b5db37c15003f888f7e09534d6b2fbe08fe2c0656bfc12e3c3daed",
+        "geometry_sha256": "bdc212522ffc6a79184cb18a7e9aea9258612e29a976739358f3caa0ea2bbc0c",
+        "material_sha256": "6b4ddfc63ca3e5686caaba130fd03d66ae8a22dc7d1770fd16a402f127e4e0a6"
+      },
+      {
+        "id": "abl_c3_cover_er184_x190_H1",
+        "role": "H1",
+        "variant": "c3_cover_er184",
+        "profile_x_m": 190.0,
+        "input": "abl_c3_cover_er184_x190_H1/cases/abl_c3_cover_er184_x190_H1/profile.in",
+        "geometry": "abl_c3_cover_er184_x190_H1/geometries/H1.h5",
+        "material": "abl_c3_cover_er184_x190_H1/geometries/line9_materials_v0_2.json",
+        "tx_m": [
+          169.35,
+          35.95,
+          0.0
+        ],
+        "rx_m": [
+          170.65,
+          36.025,
+          0.0
+        ],
+        "native_shape": [
+          8400,
+          1700,
+          1
+        ],
+        "expected_samples": 40703,
+        "input_sha256": "ffb8cbc817163aa0adb0d3c1842185a6cd0a89083f4a77e6bacd7e2cea8c2375",
+        "geometry_sha256": "b11940fd456779495e93f6d2c88ddfd646c5afd435171f6320944215433536c7",
+        "material_sha256": "6b4ddfc63ca3e5686caaba130fd03d66ae8a22dc7d1770fd16a402f127e4e0a6"
+      }
+    ],
+    "preparation_checks": [
+      {
+        "id": "abl_base_x190_H0",
+        "variant": "base",
+        "role": "H0",
+        "other_materials_byte_equal": true,
+        "target_material_replaced": null,
+        "geometry_sha256": "bdc212522ffc6a79184cb18a7e9aea9258612e29a976739358f3caa0ea2bbc0c"
+      },
+      {
+        "id": "abl_base_x190_H1",
+        "variant": "base",
+        "role": "H1",
+        "other_materials_byte_equal": true,
+        "target_material_replaced": null,
+        "geometry_sha256": "b11940fd456779495e93f6d2c88ddfd646c5afd435171f6320944215433536c7"
+      },
+      {
+        "id": "abl_c1_sandstone_paper_x190_H0",
+        "variant": "c1_sandstone_paper",
+        "role": "H0",
+        "other_materials_byte_equal": true,
+        "target_material_replaced": true,
+        "geometry_sha256": "bdc212522ffc6a79184cb18a7e9aea9258612e29a976739358f3caa0ea2bbc0c"
+      },
+      {
+        "id": "abl_c1_sandstone_paper_x190_H1",
+        "variant": "c1_sandstone_paper",
+        "role": "H1",
+        "other_materials_byte_equal": true,
+        "target_material_replaced": true,
+        "geometry_sha256": "b11940fd456779495e93f6d2c88ddfd646c5afd435171f6320944215433536c7"
+      },
+      {
+        "id": "abl_c2_cover_paper_soil_x190_H0",
+        "variant": "c2_cover_paper_soil",
+        "role": "H0",
+        "other_materials_byte_equal": true,
+        "target_material_replaced": true,
+        "geometry_sha256": "bdc212522ffc6a79184cb18a7e9aea9258612e29a976739358f3caa0ea2bbc0c"
+      },
+      {
+        "id": "abl_c2_cover_paper_soil_x190_H1",
+        "variant": "c2_cover_paper_soil",
+        "role": "H1",
+        "other_materials_byte_equal": true,
+        "target_material_replaced": true,
+        "geometry_sha256": "b11940fd456779495e93f6d2c88ddfd646c5afd435171f6320944215433536c7"
+      },
+      {
+        "id": "abl_c3_cover_er184_x190_H0",
+        "variant": "c3_cover_er184",
+        "role": "H0",
+        "other_materials_byte_equal": true,
+        "target_material_replaced": true,
+        "geometry_sha256": "bdc212522ffc6a79184cb18a7e9aea9258612e29a976739358f3caa0ea2bbc0c"
+      },
+      {
+        "id": "abl_c3_cover_er184_x190_H1",
+        "variant": "c3_cover_er184",
+        "role": "H1",
+        "other_materials_byte_equal": true,
+        "target_material_replaced": true,
+        "geometry_sha256": "b11940fd456779495e93f6d2c88ddfd646c5afd435171f6320944215433536c7"
+      }
+    ],
+    "no_retry": true,
+    "SFCW": {
+      "method": "direct",
+      "frequency_start_Hz": 20000000.0,
+      "frequency_stop_Hz": 170000000.0,
+      "frequency_step_Hz": 300000.0,
+      "tones": 501,
+      "windows": [
+        "hann",
+        "blackman"
+      ],
+      "zero_pad_factor": 8,
+      "tail_taper_fraction": 0,
+      "time_shift_s": 0,
+      "field_reference_length_m": 0.025
+    },
+    "limits": "Single-station ablation probes, not site calibration. Constant materials replace dispersive ones as probes only. H0/H1 contrast is connected bottom sandstone. 8 m historical results are not the reference for this batch (different air path)."
+  },
+  "groups": [
+    {
+      "id": "abl_base_x190_H0",
+      "role": "H0",
+      "variant": "base",
+      "profile_x_m": 190.0,
+      "input": "abl_base_x190_H0/cases/abl_base_x190_H0/profile.in",
+      "geometry": "abl_base_x190_H0/geometries/H0.h5",
+      "material": "abl_base_x190_H0/geometries/line9_materials_v0_2.json",
+      "tx_m": [
+        169.35,
+        35.95,
+        0.0
+      ],
+      "rx_m": [
+        170.65,
+        36.025,
+        0.0
+      ],
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "expected_samples": 40703,
+      "input_sha256": "ba1d5fec0270b4050bf89d873c4ac18fe0cc2bc2f9aabd32ba0bf1f9da82e320",
+      "geometry_sha256": "bdc212522ffc6a79184cb18a7e9aea9258612e29a976739358f3caa0ea2bbc0c",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "source_amplitude_A": 1.0
+    },
+    {
+      "id": "abl_base_x190_H1",
+      "role": "H1",
+      "variant": "base",
+      "profile_x_m": 190.0,
+      "input": "abl_base_x190_H1/cases/abl_base_x190_H1/profile.in",
+      "geometry": "abl_base_x190_H1/geometries/H1.h5",
+      "material": "abl_base_x190_H1/geometries/line9_materials_v0_2.json",
+      "tx_m": [
+        169.35,
+        35.95,
+        0.0
+      ],
+      "rx_m": [
+        170.65,
+        36.025,
+        0.0
+      ],
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "expected_samples": 40703,
+      "input_sha256": "efb886e69b0e08eb27d4d9fdc26b0d5db22963ad676df1bf5cad0b3799f920ae",
+      "geometry_sha256": "b11940fd456779495e93f6d2c88ddfd646c5afd435171f6320944215433536c7",
+      "material_sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "source_amplitude_A": 1.0
+    },
+    {
+      "id": "abl_c1_sandstone_paper_x190_H0",
+      "role": "H0",
+      "variant": "c1_sandstone_paper",
+      "profile_x_m": 190.0,
+      "input": "abl_c1_sandstone_paper_x190_H0/cases/abl_c1_sandstone_paper_x190_H0/profile.in",
+      "geometry": "abl_c1_sandstone_paper_x190_H0/geometries/H0.h5",
+      "material": "abl_c1_sandstone_paper_x190_H0/geometries/line9_materials_v0_2.json",
+      "tx_m": [
+        169.35,
+        35.95,
+        0.0
+      ],
+      "rx_m": [
+        170.65,
+        36.025,
+        0.0
+      ],
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "expected_samples": 40703,
+      "input_sha256": "ca9e840ffb82755cf6402b703418c882c08857920db86433199059cfe7b1b001",
+      "geometry_sha256": "bdc212522ffc6a79184cb18a7e9aea9258612e29a976739358f3caa0ea2bbc0c",
+      "material_sha256": "244a59acca6a3b41b905fe3b55ce4d56b0e33442decb60a6838ab59c25d9354e",
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "source_amplitude_A": 1.0
+    },
+    {
+      "id": "abl_c1_sandstone_paper_x190_H1",
+      "role": "H1",
+      "variant": "c1_sandstone_paper",
+      "profile_x_m": 190.0,
+      "input": "abl_c1_sandstone_paper_x190_H1/cases/abl_c1_sandstone_paper_x190_H1/profile.in",
+      "geometry": "abl_c1_sandstone_paper_x190_H1/geometries/H1.h5",
+      "material": "abl_c1_sandstone_paper_x190_H1/geometries/line9_materials_v0_2.json",
+      "tx_m": [
+        169.35,
+        35.95,
+        0.0
+      ],
+      "rx_m": [
+        170.65,
+        36.025,
+        0.0
+      ],
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "expected_samples": 40703,
+      "input_sha256": "5fb1befbe2220a26c0c0246b34eb62126ac6356bc51917aedbdece13afbb4a75",
+      "geometry_sha256": "b11940fd456779495e93f6d2c88ddfd646c5afd435171f6320944215433536c7",
+      "material_sha256": "244a59acca6a3b41b905fe3b55ce4d56b0e33442decb60a6838ab59c25d9354e",
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "source_amplitude_A": 1.0
+    },
+    {
+      "id": "abl_c2_cover_paper_soil_x190_H0",
+      "role": "H0",
+      "variant": "c2_cover_paper_soil",
+      "profile_x_m": 190.0,
+      "input": "abl_c2_cover_paper_soil_x190_H0/cases/abl_c2_cover_paper_soil_x190_H0/profile.in",
+      "geometry": "abl_c2_cover_paper_soil_x190_H0/geometries/H0.h5",
+      "material": "abl_c2_cover_paper_soil_x190_H0/geometries/line9_materials_v0_2.json",
+      "tx_m": [
+        169.35,
+        35.95,
+        0.0
+      ],
+      "rx_m": [
+        170.65,
+        36.025,
+        0.0
+      ],
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "expected_samples": 40703,
+      "input_sha256": "33bc4b165fcf8e02d9af8365ad6f8ddf449ffb414712a963dd41aaf41b404b4d",
+      "geometry_sha256": "bdc212522ffc6a79184cb18a7e9aea9258612e29a976739358f3caa0ea2bbc0c",
+      "material_sha256": "c0960a12c1985ef8f95351cf90ba5e4286315492143d7214c532dc5329b20ac3",
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "source_amplitude_A": 1.0
+    },
+    {
+      "id": "abl_c2_cover_paper_soil_x190_H1",
+      "role": "H1",
+      "variant": "c2_cover_paper_soil",
+      "profile_x_m": 190.0,
+      "input": "abl_c2_cover_paper_soil_x190_H1/cases/abl_c2_cover_paper_soil_x190_H1/profile.in",
+      "geometry": "abl_c2_cover_paper_soil_x190_H1/geometries/H1.h5",
+      "material": "abl_c2_cover_paper_soil_x190_H1/geometries/line9_materials_v0_2.json",
+      "tx_m": [
+        169.35,
+        35.95,
+        0.0
+      ],
+      "rx_m": [
+        170.65,
+        36.025,
+        0.0
+      ],
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "expected_samples": 40703,
+      "input_sha256": "272cce169af1e29a71c3735882fc7fce4961e97b4bd8976498ccffe4646eb875",
+      "geometry_sha256": "b11940fd456779495e93f6d2c88ddfd646c5afd435171f6320944215433536c7",
+      "material_sha256": "c0960a12c1985ef8f95351cf90ba5e4286315492143d7214c532dc5329b20ac3",
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "source_amplitude_A": 1.0
+    },
+    {
+      "id": "abl_c3_cover_er184_x190_H0",
+      "role": "H0",
+      "variant": "c3_cover_er184",
+      "profile_x_m": 190.0,
+      "input": "abl_c3_cover_er184_x190_H0/cases/abl_c3_cover_er184_x190_H0/profile.in",
+      "geometry": "abl_c3_cover_er184_x190_H0/geometries/H0.h5",
+      "material": "abl_c3_cover_er184_x190_H0/geometries/line9_materials_v0_2.json",
+      "tx_m": [
+        169.35,
+        35.95,
+        0.0
+      ],
+      "rx_m": [
+        170.65,
+        36.025,
+        0.0
+      ],
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "expected_samples": 40703,
+      "input_sha256": "3dd59da035b5db37c15003f888f7e09534d6b2fbe08fe2c0656bfc12e3c3daed",
+      "geometry_sha256": "bdc212522ffc6a79184cb18a7e9aea9258612e29a976739358f3caa0ea2bbc0c",
+      "material_sha256": "6b4ddfc63ca3e5686caaba130fd03d66ae8a22dc7d1770fd16a402f127e4e0a6",
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "source_amplitude_A": 1.0
+    },
+    {
+      "id": "abl_c3_cover_er184_x190_H1",
+      "role": "H1",
+      "variant": "c3_cover_er184",
+      "profile_x_m": 190.0,
+      "input": "abl_c3_cover_er184_x190_H1/cases/abl_c3_cover_er184_x190_H1/profile.in",
+      "geometry": "abl_c3_cover_er184_x190_H1/geometries/H1.h5",
+      "material": "abl_c3_cover_er184_x190_H1/geometries/line9_materials_v0_2.json",
+      "tx_m": [
+        169.35,
+        35.95,
+        0.0
+      ],
+      "rx_m": [
+        170.65,
+        36.025,
+        0.0
+      ],
+      "native_shape": [
+        8400,
+        1700,
+        1
+      ],
+      "expected_samples": 40703,
+      "input_sha256": "ffb8cbc817163aa0adb0d3c1842185a6cd0a89083f4a77e6bacd7e2cea8c2375",
+      "geometry_sha256": "b11940fd456779495e93f6d2c88ddfd646c5afd435171f6320944215433536c7",
+      "material_sha256": "6b4ddfc63ca3e5686caaba130fd03d66ae8a22dc7d1770fd16a402f127e4e0a6",
+      "source_type": "impulse",
+      "source_frequency_Hz": 1.0,
+      "source_amplitude_A": 1.0
+    }
+  ],
+  "max_runs": 8,
+  "no_retry": true,
+  "parent_contract_sha256": "3d174683a37b7a726ce06b7fbed830297d2ed724961f24aa4e81bb5f788d5ad2",
+  "continuation_contract_sha256": "8c13bd10bf81cfda903bc3ba16227155f71016805ff34a2062c31ac06f525c04",
+  "limits": "Single-station ablation probes, not site calibration. Constant materials replace dispersive ones as probes only. H0/H1 contrast is connected bottom sandstone. 8 m historical results are not the reference for this batch (different air path)."
+}

@@ -23,9 +23,9 @@ ORDER = ['base', 'c1_sandstone_paper', 'c2_cover_paper_soil', 'c3_cover_er184']
 def load(npz_path):
     z = np.load(npz_path)
     out = {}
-    for cid in z.files:
-        t, x, env, resp = z[cid]
-        out[cid] = dict(t=t, x=x, env=env, resp=resp)
+    for key in z.files:
+        cid, name = key.rsplit('__', 1)
+        out.setdefault(cid, {})[name] = z[key]
     return out
 
 
@@ -96,7 +96,7 @@ def fig_freq(cases, out):
     fig, ax = plt.subplots(figsize=(11, 4))
     for v in ORDER:
         d = cases[f'abl_{v}_x190_H1']
-        ax.plot(freq, 20 * np.log10(np.abs(d['resp']) / np.max(np.abs(d['resp']))), lw=.8,
+        ax.plot(freq, 20 * np.log10(np.abs(d['response']) / np.max(np.abs(d['response']))), lw=.8,
                 label=VARIANT_LABEL[v])
     ax.set_xlabel('频率 (MHz)')
     ax.set_ylabel('归一化 |H(f)| (dB)')
