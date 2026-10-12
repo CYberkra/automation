@@ -30,9 +30,14 @@ def run(root):
     import psutil
 
     contract = json.loads((root / "contract.json").read_text(encoding="utf-8"))
-    assert contract["authorization"] in ("严格原包CPU单精度试跑", "批准1100ns单道对照", "做下一步")
+    assert contract["authorization"] in ("严格原包CPU单精度试跑", "批准1100ns单道对照", "做下一步", "开始")
     if contract["authorization"] == "做下一步":
         assert contract["task_id"] == "v31_pml80_vs120_at1100ns"
+    extended120 = contract["authorization"] == "开始"
+    if extended120:
+        assert contract["task_id"] == "v31_window1100_vs1600_atpml120"
+        assert contract["record_ns"] == 1600
+        assert contract["max_new_solver_runs"] == 1 and contract["no_retry"] is True
     assert gprMax.__version__ == "4.0.1"
     assert sha(root / "original.zip") == contract["archive_sha256"]
     attempt = root / "attempt.json"
@@ -51,21 +56,23 @@ def run(root):
     for name, expected in contract["original_file_sha256"].items():
         assert sha(package / name) == expected, name
     expected_files = dict(contract["original_file_sha256"])
-    if contract["authorization"] in ("批准1100ns单道对照", "做下一步"):
-        assert contract["record_ns"] == 1100
+    if contract["authorization"] in ("批准1100ns单道对照", "做下一步", "开始"):
+        if not extended120:
+            assert contract["record_ns"] == 1100
         config_path = package / "config/pilot_ascan.json"
         original = config_path.read_bytes()
         token = b'"time_window_ns": 800.0'
         assert original.count(token) == 1
-        changed = original.replace(token, b'"time_window_ns": 1100.0', 1)
-        if contract["authorization"] == "做下一步":
+        replacement = f'"time_window_ns": {float(contract["record_ns"]):.1f}'.encode("ascii")
+        changed = original.replace(token, replacement, 1)
+        if contract["authorization"] == "做下一步" or extended120:
             assert contract["pml_cells_by_face"] == [120, 120, 0, 120, 120, 0]
             pml_token = b'"cells_by_face": [\n      80,\n      80,\n      0,\n      80,\n      80,\n      0\n    ]'
             assert changed.count(pml_token) == 1
             changed = changed.replace(pml_token, pml_token.replace(b'80', b'120'), 1)
         before, after = json.loads(original), json.loads(changed)
         after["time_window_ns"] = before["time_window_ns"]
-        if contract["authorization"] == "做下一步":
+        if contract["authorization"] == "做下一步" or extended120:
             assert after["pml"]["cells_by_face"] == contract["pml_cells_by_face"]
             after["pml"]["cells_by_face"] = before["pml"]["cells_by_face"]
         assert before == after, "Unapproved configuration change"

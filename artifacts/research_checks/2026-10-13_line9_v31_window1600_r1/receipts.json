@@ -1,0 +1,64 @@
+[
+  {
+    "stage": "01_build",
+    "command": [
+      "E:\\djh\\artifacts\\local_checks\\py312embed\\python.exe",
+      "01_build_geometry.py"
+    ],
+    "exit_code": 0,
+    "wall_seconds": 2.0160000000032596,
+    "peak_rss_bytes": 9433088,
+    "log_sha256": "6c081b7c555de2e967cad1824faca06a7f7acb5212799c1881acd870bdc8fd7b"
+  },
+  {
+    "stage": "02_preflight",
+    "command": [
+      "E:\\djh\\artifacts\\local_checks\\py312embed\\python.exe",
+      "02_run_ascan.py"
+    ],
+    "exit_code": 0,
+    "wall_seconds": 2.0159999999996217,
+    "peak_rss_bytes": 9457664,
+    "log_sha256": "642d81965b43aeb9d163c1fc87a239f7c643335752fa348eb0958f214cefecf4"
+  },
+  {
+    "stage": "03_solve_cpu_single",
+    "command": [
+      "E:\\djh\\artifacts\\local_checks\\py312embed\\python.exe",
+      "02_run_ascan.py",
+      "--solve"
+    ],
+    "exit_code": 0,
+    "wall_seconds": 375.1090000000004,
+    "peak_rss_bytes": 612704256,
+    "log_sha256": "44df6016e5caa0408488fe9963d870bd306ef76bc33fc595cb6638a5f51cb7e4"
+  },
+  {
+    "stage": "04_sfcw_inspect",
+    "command": [
+      "E:\\djh\\artifacts\\local_checks\\py312embed\\python.exe",
+      "03_run_sfcw.py",
+      "--raw",
+      "E:\\djh\\line9_v31_window1600_cpu_20261013_r1\\package\\results\\line9_pilot_impulse.h5",
+      "--inspect"
+    ],
+    "exit_code": 0,
+    "wall_seconds": 2.014999999999418,
+    "peak_rss_bytes": 9699328,
+    "log_sha256": "423bf4d45cf99329373fbedc3981c841c041f320e99b72eb23af1203c028fbca"
+  },
+  {
+    "stage": "05_sfcw_process",
+    "command": [
+      "E:\\djh\\artifacts\\local_checks\\py312embed\\python.exe",
+      "03_run_sfcw.py",
+      "--raw",
+      "E:\\djh\\line9_v31_window1600_cpu_20261013_r1\\package\\results\\line9_pilot_impulse.h5",
+      "--process"
+    ],
+    "exit_code": 0,
+    "wall_seconds": 2.0159999999996217,
+    "peak_rss_bytes": 9711616,
+    "log_sha256": "684ff2b701c161563646ebd3f4f8f2ffcc3c18c2545dd0258e9e7d9feb84e896"
+  }
+]

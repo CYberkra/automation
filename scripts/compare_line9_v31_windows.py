@@ -26,7 +26,7 @@ def relative(a, ref):
     return float(np.linalg.norm(a) / np.linalg.norm(ref))
 
 
-def read(root):
+def read(root, sample_count_erratum=None):
     contract = json.loads((root / "contract.json").read_text(encoding="utf-8"))
     completion = json.loads((root / "completion.json").read_text(encoding="utf-8"))
     assert completion["version"] == "4.0.1"
@@ -38,7 +38,7 @@ def read(root):
         assert sha(root / "logs" / (row["stage"] + ".txt")) == row["log_sha256"]
     assert sha(root / "original.zip") == contract["archive_sha256"]
     expected = dict(contract["original_file_sha256"])
-    if contract["record_ns"] == 1100:
+    if contract["record_ns"] in (1100, 1600):
         expected["config/pilot_ascan.json"] = contract["modified_pilot_sha256"]
     for name, digest in expected.items():
         assert sha(root / "package" / name) == digest, name
@@ -49,8 +49,17 @@ def read(root):
     with h5py.File(raw, "r") as h:
         native = h["rxs/rx1/Ez"][:]
         assert native.dtype == np.dtype("float32") and np.isfinite(native).all()
-        assert len(native) == int(h.attrs["Iterations"]) == contract["expected_native_samples"]
         dt = float(h.attrs["dt"])
+        expected_samples = contract["expected_native_samples"]
+        if sample_count_erratum is not None:
+            erratum = json.loads(sample_count_erratum.read_bytes())
+            assert sha(root / "contract.json") == erratum["frozen_contract_sha256"]
+            assert expected_samples == erratum["original_expected_native_samples"]
+            # Official TimeWindow(time=...) uses ceil(time/dt) + 1.
+            derived = int(np.ceil(contract["record_ns"] * 1e-9 / dt)) + 1
+            assert derived == erratum["corrected_expected_native_samples"]
+            expected_samples = derived
+        assert len(native) == int(h.attrs["Iterations"]) == expected_samples
         position = {name: h[name].attrs["Position"].tolist() for name in ("srcs/src1", "rxs/rx1")}
     with h5py.File(processed, "r") as h:
         assert h.attrs["Method"] == "direct" and h.attrs["TailTaperFraction"] == 0

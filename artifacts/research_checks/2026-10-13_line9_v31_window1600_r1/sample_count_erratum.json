@@ -1,0 +1,12 @@
+{
+  "task_id": "v31_window1100_vs1600_atpml120",
+  "frozen_contract_sha256": "eb0326caa21fc74258c196147ef2e52a4e0267a67135af077bd500eac3d26d0a",
+  "original_expected_native_samples": 28563,
+  "corrected_expected_native_samples": 28564,
+  "official_rule": "TimeWindow(time=...) sets model.iterations=int(np.ceil(time/model.dt))+1",
+  "official_source": "gprMax/user_objects/cmds_singleuse.py:505",
+  "official_source_sha256": "8afdead8bb25540da377f03f8e3c8a25b5470ff014619baeb63c337a7c78845e",
+  "reason": "Pre-run expected sample count omitted the final +1; actual solver and all inputs unchanged",
+  "frozen_contract_preserved": true,
+  "solver_rerun": false
+}

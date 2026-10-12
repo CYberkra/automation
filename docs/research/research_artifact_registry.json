@@ -1,4 +1,40 @@
 {
+ "line9_v31_window1600_2026_10_13": {
+  "status": "CONTROLLED_PAIR_VERIFIED_NOT_ASYMPTOTIC_OR_PML_CONVERGENCE",
+  "report": "docs/research/2026-10-13_line9_v31_window1600_comparison.md",
+  "public": "artifacts/research_checks/2026-10-13_line9_v31_window1600_r1",
+  "authorization": "开始",
+  "authorization_context": "fixed PML120,1100 to1600ns; one ROG CPU-single solve",
+  "new_solver_runs": 1,
+  "record_ns": [
+   1100,
+   1600
+  ],
+  "PML_cells": 120,
+  "native_dtype": "float32",
+  "native_samples": [
+   19638,
+   28564
+  ],
+  "native_tail_db": [
+   -54.79575592643115,
+   -50.357725789648526
+  ],
+  "complex_spectrum_relative_L2": 0.003020956638493752,
+  "underground_150_400ns_relative_L2": 0.0009693513772957553,
+  "reference_window_relative_L2": [
+   0.00045883311080606654,
+   0.0008572457003286818,
+   0.0012274105574815316,
+   0.0019284667605481642
+  ],
+  "receiver_prefix_bitwise_equal": true,
+  "sample_count_erratum": "artifacts/research_checks/2026-10-13_line9_v31_window1600_r1/sample_count_erratum.json",
+  "asymptotic_window_convergence_certified": false,
+  "PML_convergence_certified": false,
+  "current_model_SFCW_modified": false,
+  "new_solves_authorized_after_completion": false
+ },
   "line9_v31_pml120_2026_10_12": {
     "status": "CONTROLLED_PML_CONFIGURATION_SENSITIVITY_VERIFIED_NOT_FULL_CONVERGENCE",
     "report": "docs/research/2026-10-12_line9_v31_pml120_comparison.md",
