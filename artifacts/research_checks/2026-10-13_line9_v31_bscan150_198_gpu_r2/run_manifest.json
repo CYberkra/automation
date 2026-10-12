@@ -1,0 +1,114 @@
+{
+  "status": "COMPLETED_GPU_BSCAN_FILES_AND_MERGES_VERIFIED_TAIL_SCREEN_NOT_PASSED",
+  "run_root_id": "line9_v31_bscan150_198_gpu_20261013_r2",
+  "provenance_note": {
+    "remote_root": "E:/djh/line9_v31_bscan150_198_gpu_20261013_r2",
+    "completion_json_has_task_id": false,
+    "resolved_contract_task_id": "line9_v31_bscan_150_198_gpu_20261013_r1",
+    "discrepancy": "The staged candidate/resolved contract retained an _r1 suffix, while the actual successful remote root is _r2. The original contracts are preserved unchanged. The 81 receipts, all individual HDF5 hashes, merged/SFCW hashes, and completed root bind this report to the successful _r2 run."
+  },
+  "input": {
+    "original_v31_package_sha256": "ede5d676bb97964eb19c1a4c4b4b8b99d4f41ebc45bd36e9756da6b893d5c056",
+    "mother_geometry_sha256": "9f5fb50cbaf16bcf208eb530f850e49777a6a495d4d4e978a2d3b162aa2b9f6b",
+    "model_family": "V3.1 PDF-reconstructed 2D TMz candidate; not current_model pointer",
+    "geometry_and_material_changes": "none; moving trace geometry within the prebuilt V3.1 candidate only"
+  },
+  "solver": {
+    "gprMax": "4.0.1",
+    "device": "NVIDIA GeForce RTX 4090 Laptop GPU",
+    "device_index": 0,
+    "precision": "single",
+    "native_dtype": "float32"
+  },
+  "configuration": {
+    "traces": 81,
+    "station_first_m": 150.0,
+    "station_last_m": 198.0,
+    "station_step_m": 0.5999999999999943,
+    "planned_97_at_0p5m_reduced_to_81_at_0p6m": "yes, preserving both endpoints",
+    "record_time_ns": 1100,
+    "native_samples": 19638,
+    "dt_s": 5.6018040497805006e-11,
+    "last_native_sample_ns": 1100.0262612553968,
+    "grid_m": [
+      0.025,
+      0.025,
+      0.025
+    ],
+    "model_domain_m": [
+      50.0,
+      50.0
+    ],
+    "agl_m": 5.0,
+    "pml_cells_by_face": [
+      120,
+      120,
+      0,
+      120,
+      120,
+      0
+    ],
+    "source": "gprMax4.0.1 built-in unit impulse; ideal HertzianDipole z",
+    "receiver": "Ez"
+  },
+  "runtime": {
+    "batch_wall_seconds": 1963.297000000006,
+    "solver_wall_seconds": 1960.0920000000042,
+    "mean_trace_wall_seconds": 24.198666666666718,
+    "traces_passed": 81,
+    "traces_failed": 0,
+    "within_7_hour_limit": true
+  },
+  "official_direct_sfcw": {
+    "file": "package\\results\\line9_v31_bscan_sfcw.h5",
+    "sha256": "a94e46e09ccc5bf390bd94b395d82aaa841b5aa6abde91233564ee50034ea45b",
+    "method": "direct",
+    "frequency_hz": [
+      20000000,
+      170000000
+    ],
+    "steps": 501,
+    "window": "gaussian",
+    "zero_pad": 4,
+    "tail_taper": 0,
+    "time_shift_s": 0,
+    "response_shape": [
+      501,
+      81
+    ],
+    "frequency_step_hz": 300000.0,
+    "time_response_shape": [
+      2004,
+      81
+    ],
+    "period_ns_from_frequency_step": 3333.3333333333335,
+    "note": "The 1.1 us FDTD record is shorter than the 3.333 us periodic SFCW reconstruction. Samples outside the recorded FDTD response are assumed zero by the official toolbox; late SFCW times are not additional simulated propagation time."
+  },
+  "tail_screen": {
+    "method": "per trace: peak absolute Ez in the last ceil(0.05*N)=982 samples divided by full-record peak, then 20*log10",
+    "official_suggested_threshold_db": -60.0,
+    "trace_count_above_threshold": 81,
+    "minimum_db": -55.9076807193385,
+    "median_db": -44.59472412324072,
+    "p90_db": -43.19196086001206,
+    "maximum_db": -42.973725757169284,
+    "passes_suggested_screen": false,
+    "official_sfcw_cli_reported_receiver_tail_db": -43.5,
+    "official_sfcw_cli_log_sha256": "1e1acf26cf6a025081018882518b33fca3ff162ff2172eb937c4cf065944c430",
+    "interpretation": "This is a tail-screen warning, not proof of simulation failure or a PML diagnosis."
+  },
+  "hashes": {
+    "merged_h5_sha256": "311ea121f8dc8f8d95051e25433b4b829e4d0d1e0ff9bbc8c7c347b46ce7e87c",
+    "sfcw_h5_sha256": "a94e46e09ccc5bf390bd94b395d82aaa841b5aa6abde91233564ee50034ea45b",
+    "raw_trace_count": 81,
+    "raw_trace_total_bytes": 8423352,
+    "source_history_sha256_unique": "ae7d4fab0197f99bd3de8ca33d71d54d87568470d3ceab7a699121127098b611",
+    "figure_sha256": {
+      "line9_v31_native_impulse_bscan.png": "37ac7bbf3c7d524f593374696c894e105c2b14cc5745ae8aa72bc178294af599",
+      "line9_v31_official_direct_sfcw_bscan.png": "f4fcdc7f877d0c350c8b08c49b24be4c8c7c45eabbe8d1601d7a986bb110f275",
+      "line9_v31_native_impulse_bscan_windowed.png": "313e13bff07d011d90c07705b003402618b28a8d4aa769be65573a1ed88894b3",
+      "line9_v31_official_direct_sfcw_bscan_windowed.png": "bf6dc89c829fd98af1ddb9913ca48629dfff63d06ea44e712d92ddda4d1cd4a5"
+    }
+  },
+  "boundary": "This is a V3.1 2D candidate simulation and numerical SFCW product. It is not field validation or proof of geological interface detection."
+}

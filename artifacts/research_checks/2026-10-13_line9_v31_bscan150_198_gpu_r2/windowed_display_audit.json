@@ -1,0 +1,72 @@
+{
+  "display_only": true,
+  "no_signal_processing": true,
+  "native": {
+    "path": "D:\\自动处理\\artifacts\\local_checks\\2026-10-13_line9_v31_bscan150_198_d05_r1\\figures\\line9_v31_native_impulse_bscan_windowed.png",
+    "windows_ns": [
+      [
+        0,
+        100
+      ],
+      [
+        100,
+        1100
+      ]
+    ],
+    "quantile": 0.995,
+    "x_range_m": [
+      150.0,
+      198.0
+    ],
+    "window_limits": [
+      {
+        "window_ns": [
+          0,
+          100
+        ],
+        "symmetric_clip": 111.49121856689453
+      },
+      {
+        "window_ns": [
+          100,
+          1100
+        ],
+        "symmetric_clip": 7.4479193687438965
+      }
+    ]
+  },
+  "official_direct_sfcw": {
+    "path": "D:\\自动处理\\artifacts\\local_checks\\2026-10-13_line9_v31_bscan150_198_d05_r1\\figures\\line9_v31_official_direct_sfcw_bscan_windowed.png",
+    "windows_ns": [
+      [
+        0,
+        100
+      ],
+      [
+        100,
+        1100
+      ]
+    ],
+    "quantile": 0.995,
+    "x_range_m": [
+      150.0,
+      198.0
+    ],
+    "window_limits": [
+      {
+        "window_ns": [
+          0,
+          100
+        ],
+        "symmetric_clip": 175.20231115324407
+      },
+      {
+        "window_ns": [
+          100,
+          1100
+        ],
+        "symmetric_clip": 0.34404821011723496
+      }
+    ]
+  }
+}

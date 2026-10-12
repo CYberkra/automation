@@ -1,0 +1,54 @@
+{
+  "model_family": "V3.1 PDF-reconstructed 2D TMz candidate",
+  "trace_count": 81,
+  "station_step_m": 0.5999999999999943,
+  "record_ns": 1100,
+  "pml_cells_by_face": [
+    120,
+    120,
+    0,
+    120,
+    120,
+    0
+  ],
+  "native_dtype": "float32",
+  "native_dt_s": 5.6018040497805006e-11,
+  "native_time_offset_s": 0.0,
+  "display": "signed linear field, one symmetric global display scale per panel, no trace normalisation, gain, filtering, or background subtraction",
+  "official_sfcw": {
+    "method": "direct",
+    "f_start_hz": 20000000,
+    "f_stop_hz": 170000000,
+    "steps": 501,
+    "window": "gaussian",
+    "zero_pad": 4,
+    "tail_taper": 0,
+    "time_shift_s": 0
+  },
+  "figures": {
+    "native_impulse": {
+      "path": "artifacts\\local_checks\\2026-10-13_line9_v31_bscan150_198_d05_r1\\figures\\line9_v31_native_impulse_bscan.png",
+      "shape_time_trace": [
+        19638,
+        81
+      ],
+      "clip_symmetric_at_abs_q995": 38.18904495239258,
+      "x_first_m": 150.0,
+      "x_last_m": 198.0,
+      "t_first_ns": 0.0,
+      "t_last_ns": 1100.0262612553968
+    },
+    "official_direct_sfcw": {
+      "path": "artifacts\\local_checks\\2026-10-13_line9_v31_bscan150_198_d05_r1\\figures\\line9_v31_official_direct_sfcw_bscan.png",
+      "shape_time_trace": [
+        2004,
+        81
+      ],
+      "clip_symmetric_at_abs_q995": 37.569408152670704,
+      "x_first_m": 150.0,
+      "x_last_m": 198.0,
+      "t_first_ns": 0.0,
+      "t_last_ns": 3331.66999334664
+    }
+  }
+}

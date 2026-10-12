@@ -1,4 +1,32 @@
-{
+ {
+ "line9_v31_bscan150_198_gpu_2026_10_13": {
+  "status": "COMPLETED_GPU_BSCAN_FILES_VERIFIED_TAIL_SCREEN_NOT_PASSED_OR_FIELD_VALIDATION",
+  "report": "docs/research/2026-10-13_line9_v31_bscan150_198_gpu.md",
+  "public": "artifacts/research_checks/2026-10-13_line9_v31_bscan150_198_gpu_r2",
+  "local_data_bundle": "artifacts/local_checks/2026-10-13_line9_v31_bscan150_198_d05_r1/deliverable/line9_v31_bscan_150-198m_81traces_1100ns_PML120.zip",
+  "local_data_bundle_sha256": "b7156bcbcf9c2c0dd4d2ebba603f1424414e1e7283766b8b309da9ac8d484234",
+  "authorization": "ROG GPU run and reduce trace count to fit 7 hours",
+  "run_root": "E:/djh/line9_v31_bscan150_198_gpu_20261013_r2",
+  "solver": "gprMax 4.0.1 CUDA GPU 0 single; RTX 4090 Laptop GPU",
+  "new_solver_runs": 81,
+  "traces": 81,
+  "station_m": [150.0, 198.0],
+  "station_step_m": 0.6,
+  "record_ns": 1100,
+  "PML_cells_by_face": [120, 120, 0, 120, 120, 0],
+  "native_dtype": "float32",
+  "runtime_seconds": 1963.297,
+  "native_shape": [19638, 81],
+  "sfcw_shape": [501, 81],
+  "sfcw_time_response_shape": [2004, 81],
+  "tail_db_min_median_max": [-55.9076807193385, -44.59472412324072, -42.973725757169284],
+  "official_cli_receiver_tail_db": -43.5,
+  "tail_traces_above_official_minus60db_screen": 81,
+  "asymptotic_or_pml_convergence_certified": false,
+  "geological_interface_identification": false,
+  "current_model_modified": false,
+  "provenance_reconciliation": "Resolved contract retained _r1 suffix while completed remote root was _r2; see provenance_reconciliation.json"
+ },
  "line9_v31_window1600_2026_10_13": {
   "status": "CONTROLLED_PAIR_VERIFIED_NOT_ASYMPTOTIC_OR_PML_CONVERGENCE",
   "report": "docs/research/2026-10-13_line9_v31_window1600_comparison.md",
