@@ -1,8 +1,8 @@
 """Run the approved Line9 V3.1 scripts once on CPU/single.
 
 The supplied archive stays outside Git. This runner adds receipts and bounded
-process supervision. The separately approved 1100 ns task changes only the
-copied time-window token; solver calls and SFCW settings remain original.
+process supervision. Approved time-window/PML tasks change only their copied
+configuration tokens; solver calls and SFCW settings remain original.
 """
 from pathlib import Path
 import argparse
@@ -30,7 +30,9 @@ def run(root):
     import psutil
 
     contract = json.loads((root / "contract.json").read_text(encoding="utf-8"))
-    assert contract["authorization"] in ("严格原包CPU单精度试跑", "批准1100ns单道对照")
+    assert contract["authorization"] in ("严格原包CPU单精度试跑", "批准1100ns单道对照", "做下一步")
+    if contract["authorization"] == "做下一步":
+        assert contract["task_id"] == "v31_pml80_vs120_at1100ns"
     assert gprMax.__version__ == "4.0.1"
     assert sha(root / "original.zip") == contract["archive_sha256"]
     attempt = root / "attempt.json"
@@ -49,16 +51,24 @@ def run(root):
     for name, expected in contract["original_file_sha256"].items():
         assert sha(package / name) == expected, name
     expected_files = dict(contract["original_file_sha256"])
-    if contract["authorization"] == "批准1100ns单道对照":
+    if contract["authorization"] in ("批准1100ns单道对照", "做下一步"):
         assert contract["record_ns"] == 1100
         config_path = package / "config/pilot_ascan.json"
         original = config_path.read_bytes()
         token = b'"time_window_ns": 800.0'
         assert original.count(token) == 1
         changed = original.replace(token, b'"time_window_ns": 1100.0', 1)
+        if contract["authorization"] == "做下一步":
+            assert contract["pml_cells_by_face"] == [120, 120, 0, 120, 120, 0]
+            pml_token = b'"cells_by_face": [\n      80,\n      80,\n      0,\n      80,\n      80,\n      0\n    ]'
+            assert changed.count(pml_token) == 1
+            changed = changed.replace(pml_token, pml_token.replace(b'80', b'120'), 1)
         before, after = json.loads(original), json.loads(changed)
         after["time_window_ns"] = before["time_window_ns"]
-        assert before == after, "Only the approved time window may change"
+        if contract["authorization"] == "做下一步":
+            assert after["pml"]["cells_by_face"] == contract["pml_cells_by_face"]
+            after["pml"]["cells_by_face"] = before["pml"]["cells_by_face"]
+        assert before == after, "Unapproved configuration change"
         assert hashlib.sha256(changed).hexdigest() == contract["modified_pilot_sha256"]
         config_path.write_bytes(changed)
         expected_files["config/pilot_ascan.json"] = contract["modified_pilot_sha256"]

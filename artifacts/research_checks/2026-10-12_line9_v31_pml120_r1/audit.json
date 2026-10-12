@@ -1,0 +1,247 @@
+{
+  "status": "CONTROLLED_PML_CONFIGURATION_SENSITIVITY_VERIFIED_NOT_FULL_CONVERGENCE",
+  "authorization": "做下一步",
+  "authorization_context": "User accepted the immediately preceding specific proposal:1100ns fixed,80 vs120-cell PML; one new ROG CPU-single solve",
+  "new_solver_runs": 1,
+  "record_ns": 1100,
+  "native_dtype": "float32",
+  "native_samples": 19638,
+  "dt_s": 5.6018040497805006e-11,
+  "geometry": {
+    "line9_350m_voxels.h5": {
+      "arrays_attributes_equal": true,
+      "bytes_equal": true
+    },
+    "line9_pilot_geometry.h5": {
+      "arrays_attributes_equal": true,
+      "bytes_equal": true
+    }
+  },
+  "full_source_history_bitwise_equal": true,
+  "unchanged_physical_configuration_except_PML": true,
+  "PML_cells_by_face": [
+    [
+      80,
+      80,
+      0,
+      80,
+      80,
+      0
+    ],
+    [
+      120,
+      120,
+      0,
+      120,
+      120,
+      0
+    ]
+  ],
+  "domain_m": [
+    50,
+    50
+  ],
+  "PML_entrance_shift_m": 1,
+  "native_tail_db": [
+    -46.34848138200492,
+    -54.79575592643115
+  ],
+  "official_minus60db_screen_met": [
+    false,
+    false
+  ],
+  "first_observed_bitwise_native_difference_ns": 57.92265387473038,
+  "first_bitwise_difference_is_not_a_physical_arrival": true,
+  "native_trace_relative_L2": 0.02438226420017905,
+  "complex_spectrum_relative_L2": 0.0022287613785853823,
+  "frequency_intervals": [
+    {
+      "start_MHz": 20,
+      "stop_MHz": 40,
+      "complex_response_relative_L2": 0.004603641366089952
+    },
+    {
+      "start_MHz": 40,
+      "stop_MHz": 95,
+      "complex_response_relative_L2": 0.0025624694439454715
+    },
+    {
+      "start_MHz": 95,
+      "stop_MHz": 170,
+      "complex_response_relative_L2": 0.0018957896728364738
+    }
+  ],
+  "max_abs_magnitude_change_db": 0.04322076791907794,
+  "max_abs_wrapped_phase_change_deg": 0.27620047744540965,
+  "phase_change_abs_percentile_deg": [
+    0.0877205251702673,
+    0.2205735736211571,
+    0.27620047744540965
+  ],
+  "native_difference_spectrum_closure_relative_L2": 1.1956058950201286e-10,
+  "intervals": [
+    {
+      "label": "直达与地表参考区",
+      "start_ns": 0,
+      "stop_ns": 100,
+      "complex_envelope_relative_L2": 1.4217027225352041e-06,
+      "native_trace_relative_L2": 6.048317743538866e-07,
+      "peak_envelope_difference_db_to_common_peak": -121.08365736404895
+    },
+    {
+      "label": "地下界面参考区",
+      "start_ns": 150,
+      "stop_ns": 400,
+      "complex_envelope_relative_L2": 0.008489575962409372,
+      "native_trace_relative_L2": 0.0131939133457554,
+      "peak_envelope_difference_db_to_common_peak": -90.999410005097
+    },
+    {
+      "label": "晚期区",
+      "start_ns": 400,
+      "stop_ns": 800,
+      "complex_envelope_relative_L2": 0.003379538693302927,
+      "native_trace_relative_L2": 0.17950331124675878,
+      "peak_envelope_difference_db_to_common_peak": -117.07636084793803
+    },
+    {
+      "label": "记录末段",
+      "start_ns": 800,
+      "stop_ns": 1100,
+      "complex_envelope_relative_L2": 0.7440310168143188,
+      "native_trace_relative_L2": 0.7620527826330085,
+      "peak_envelope_difference_db_to_common_peak": -52.77016037581496
+    }
+  ],
+  "references": [
+    {
+      "label": "地表",
+      "elevation_m": 442.9618655456696,
+      "vertical_two_way_ns": 33.3564095198152
+    },
+    {
+      "label": "覆盖层底",
+      "elevation_m": 435.85021790287357,
+      "vertical_two_way_ns": 197.7065752981703
+    },
+    {
+      "label": "上泥岩底",
+      "elevation_m": 433.6718273678227,
+      "vertical_two_way_ns": 259.36341868975694
+    },
+    {
+      "label": "下泥岩顶",
+      "elevation_m": 431.0890327479301,
+      "vertical_two_way_ns": 311.05507171778436
+    },
+    {
+      "label": "下泥岩底",
+      "elevation_m": 429.27238055647786,
+      "vertical_two_way_ns": 362.4733265546003
+    }
+  ],
+  "reference_windows": [
+    {
+      "label": "覆盖层底",
+      "center_ns": 197.7065752981703,
+      "half_width_ns": 15,
+      "complex_envelope_relative_L2": 0.00030377947245128226,
+      "complex_change_at_reference_relative": 0.0003001915325249375,
+      "window_peak_db_to_common_peak": [
+        -52.14067597310958,
+        -52.14093472123775
+      ]
+    },
+    {
+      "label": "上泥岩底",
+      "center_ns": 259.36341868975694,
+      "half_width_ns": 15,
+      "complex_envelope_relative_L2": 0.0005597165302616572,
+      "complex_change_at_reference_relative": 0.00044542211738629584,
+      "window_peak_db_to_common_peak": [
+        -56.25912223953338,
+        -56.26124523965789
+      ]
+    },
+    {
+      "label": "下泥岩顶",
+      "center_ns": 311.05507171778436,
+      "half_width_ns": 15,
+      "complex_envelope_relative_L2": 0.0025160256358989176,
+      "complex_change_at_reference_relative": 0.0009000096209736215,
+      "window_peak_db_to_common_peak": [
+        -58.6718277470066,
+        -58.67172198427967
+      ]
+    },
+    {
+      "label": "下泥岩底",
+      "center_ns": 362.4733265546003,
+      "half_width_ns": 15,
+      "complex_envelope_relative_L2": 0.005693222827472219,
+      "complex_change_at_reference_relative": 0.06369663033132626,
+      "window_peak_db_to_common_peak": [
+        -65.44080568535514,
+        -65.42789744813052
+      ]
+    }
+  ],
+  "reference_windows_are_not_isolated_interface_echoes": true,
+  "tail_FFT_diagnostic": [
+    {
+      "FFT_peak_Hz": 4182878446.6095033,
+      "FFT_bin_spacing_Hz": 3332970.8737924327,
+      "finite_record_spectral_energy_fraction_20_170MHz": 8.822928349186483e-06,
+      "air_cells_per_wavelength_at_peak": 2.866853166560471
+    },
+    {
+      "FFT_peak_Hz": 4182878446.6095033,
+      "FFT_bin_spacing_Hz": 3332970.8737924327,
+      "finite_record_spectral_energy_fraction_20_170MHz": 5.719557330608537e-07,
+      "air_cells_per_wavelength_at_peak": 2.866853166560471
+    }
+  ],
+  "tail_FFT_range_ns": [
+    800,
+    1100
+  ],
+  "tail_FFT_limitation": "finite rectangular segment; leakage and3.3MHz bins; not official source-normalised SFCW, reflection coefficient or physical validation",
+  "independent_DFT_relative_L2": [
+    5.718044971744968e-13,
+    5.294625464493486e-13
+  ],
+  "independent_inverse_relative_L2": [
+    7.933784382389168e-14,
+    7.932667030158509e-14
+  ],
+  "solver_wall_seconds": [
+    237.3279999999977,
+    261.29699999999866
+  ],
+  "raw_sha256": [
+    "b9b7d7e1098c0a53c99103fb36692ab3e4e00820f94c40a63631b9e6da896869",
+    "76bb5ad09a6230d27f281362ff43e70ca90ecfcc1a8a6ffe560443e8da4478c8"
+  ],
+  "processed_sha256": [
+    "f162eba02475926fa5402da5139622ff8427c0b88dc60dabfe9f3074115f16d7",
+    "368ed37148c805127d2523c7dde02a3ca0751ddf42153640113b73bdc90822a4"
+  ],
+  "completion_sha256": [
+    "5fb582bf374e80b029da56a5af4527c0d9677ff2472894e560d23ccbdd0e73f3",
+    "241b1240bd88592615afb3f6450bfa7ec4b9724fd1392c5d0d37306a50cfdd09"
+  ],
+  "analysis_script_sha256": "8ead2e28ca89fb50cec9f4b04f99ad9181e5f6fa20ee72ca0139c4793222f451",
+  "shared_audit_script_sha256": "1c44bf0d43c6acead3934f05c498e5f9cd9d974f41cdc0a6245d3751872a387e",
+  "executed_supervisor_sha256": "627e920f09bbac7a1a50e49891a3318515397d209d31ec4927e3f505d7f1f9ad",
+  "verified_package_file_counts": [
+    15,
+    15
+  ],
+  "inverse_period_ns": 3333.3333333333335,
+  "Bscan_available": false,
+  "matched_background_available": false,
+  "asymptotic_PML_convergence_certified": false,
+  "asymptotic_window_convergence_certified": false,
+  "individual_boundary_reflection_coefficient_identified": false,
+  "physical_detection_certified": false
+}

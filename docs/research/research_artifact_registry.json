@@ -1,4 +1,37 @@
 {
+  "line9_v31_pml120_2026_10_12": {
+    "status": "CONTROLLED_PML_CONFIGURATION_SENSITIVITY_VERIFIED_NOT_FULL_CONVERGENCE",
+    "report": "docs/research/2026-10-12_line9_v31_pml120_comparison.md",
+    "public": "artifacts/research_checks/2026-10-12_line9_v31_pml120_r1",
+    "authorization": "做下一步",
+    "authorization_context": "User accepted the immediately preceding specific proposal:1100ns fixed,80 vs120-cell PML; one new ROG CPU-single solve",
+    "run_date": "2026-10-12",
+    "archived_date": "2026-10-13",
+    "new_solver_runs": 1,
+    "record_ns": 1100,
+    "PML_cells": [
+      80,
+      120
+    ],
+    "native_dtype": "float32",
+    "native_tail_db": [
+      -46.34848138200492,
+      -54.79575592643115
+    ],
+    "complex_spectrum_relative_L2": 0.0022287613785853823,
+    "underground_150_400ns_relative_L2": 0.008489575962409372,
+    "reference_window_relative_L2": [
+      0.00030377947245128226,
+      0.0005597165302616572,
+      0.0025160256358989176,
+      0.005693222827472219
+    ],
+    "raw_tail_FFT_peak_Hz": 4182878446.6095033,
+    "asymptotic_PML_convergence_certified": false,
+    "asymptotic_window_convergence_certified": false,
+    "current_model_SFCW_modified": false,
+    "new_solves_authorized_after_completion": false
+  },
   "line9_v31_window1100_2026_10_12": {
     "status": "CONTROLLED_PAIR_VERIFIED_NOT_ASYMPTOTIC_OR_PML_CONVERGENCE",
     "report": "docs/research/2026-10-12_line9_v31_window1100_comparison.md",
