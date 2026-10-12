@@ -1,0 +1,233 @@
+{
+ "estimators": [
+  "xmean",
+  "xmedian",
+  "tavg80ns"
+ ],
+ "shift_2d_to_3d_ns": 20.01384571188912,
+ "note": "cross-trace backgrounds from only 3 stations; common-mode geology is removed by construction. dB normalised per trace AFTER suppression; compare protrusion over own floor.",
+ "stations": {
+  "x170": {
+   "3d_xmean": {
+    "cover_peak_db": -39.508000231705374,
+    "cover_peak_time_ns": 209.58083832335328,
+    "bottom_peak_db": -59.21600442688681,
+    "bottom_peak_time_ns": 334.3313373253493,
+    "floor_600_900_db": -61.2237609344202,
+    "bottom_protrusion_db": 2.0077565075333865,
+    "cover_protrusion_db": 21.715760702714825
+   },
+   "2d_xmean": {
+    "cover_peak_db": -32.14581456914116,
+    "cover_peak_time_ns": 233.69926813040587,
+    "bottom_peak_db": -32.21807994659938,
+    "bottom_peak_time_ns": 356.78642714570856,
+    "floor_600_900_db": -71.82242968005139,
+    "bottom_protrusion_db": 39.604349733452004,
+    "cover_protrusion_db": 39.67661511091023
+   },
+   "3d_xmedian": {
+    "cover_peak_db": -46.95878116351352,
+    "cover_peak_time_ns": 208.74916833000665,
+    "bottom_peak_db": -57.48990058780102,
+    "bottom_peak_time_ns": 332.667997338656,
+    "floor_600_900_db": -60.17678798450676,
+    "bottom_protrusion_db": 2.6868873967057425,
+    "cover_protrusion_db": 13.218006820993239
+   },
+   "2d_xmedian": {
+    "cover_peak_db": -32.718880422369125,
+    "cover_peak_time_ns": 233.69926813040587,
+    "bottom_peak_db": -32.191769912591624,
+    "bottom_peak_time_ns": 356.78642714570856,
+    "floor_600_900_db": -68.92715449058005,
+    "bottom_protrusion_db": 36.73538457798843,
+    "cover_protrusion_db": 36.208274068210926
+   },
+   "3d_tavg80": {
+    "cover_peak_db": -58.483731282532034,
+    "cover_peak_time_ns": 207.08582834331338,
+    "bottom_peak_db": -62.98064103053413,
+    "bottom_peak_time_ns": 328.5096473719228,
+    "floor_600_900_db": -65.17536446292557,
+    "bottom_protrusion_db": 2.1947234323914415,
+    "cover_protrusion_db": 6.691633180393538
+   },
+   "2d_tavg80": {
+    "cover_peak_db": -57.50511491142018,
+    "cover_peak_time_ns": 234.5309381237525,
+    "bottom_peak_db": -59.76661520538237,
+    "bottom_peak_time_ns": 357.6180971390552,
+    "floor_600_900_db": -63.72855767270816,
+    "bottom_protrusion_db": 3.961942467325791,
+    "cover_protrusion_db": 6.223442761287984
+   },
+   "3d_none": {
+    "cover_peak_db": -53.898832313373646,
+    "cover_peak_time_ns": 207.08582834331338,
+    "bottom_peak_db": -57.89100990213715,
+    "bottom_peak_time_ns": 328.5096473719228,
+    "floor_600_900_db": -59.99163130348748,
+    "bottom_protrusion_db": 2.100621401350331,
+    "cover_protrusion_db": 6.092798990113835
+   },
+   "2d_none": {
+    "cover_peak_db": -52.11068465360328,
+    "cover_peak_time_ns": 236.19427811044577,
+    "bottom_peak_db": -54.64911262688553,
+    "bottom_peak_time_ns": 357.6180971390552,
+    "floor_600_900_db": -57.346091876540434,
+    "bottom_protrusion_db": 2.696979249654902,
+    "cover_protrusion_db": 5.235407222937155
+   }
+  },
+  "x180": {
+   "3d_xmean": {
+    "cover_peak_db": -34.655637852842695,
+    "cover_peak_time_ns": 214.57085828343315,
+    "bottom_peak_db": -58.2700526262644,
+    "bottom_peak_time_ns": 359.2814371257485,
+    "floor_600_900_db": -61.237465645949854,
+    "bottom_protrusion_db": 2.967413019685452,
+    "cover_protrusion_db": 26.58182779310716
+   },
+   "2d_xmean": {
+    "cover_peak_db": -33.56672623285614,
+    "cover_peak_time_ns": 232.03592814371257,
+    "bottom_peak_db": -32.13376015662283,
+    "bottom_peak_time_ns": 380.07318695941456,
+    "floor_600_900_db": -75.99645410257925,
+    "bottom_protrusion_db": 43.86269394595642,
+    "cover_protrusion_db": 42.42972786972311
+   },
+   "3d_xmedian": {
+    "cover_peak_db": -28.516010477862118,
+    "cover_peak_time_ns": 218.72920825016632,
+    "bottom_peak_db": -47.4812281669713,
+    "bottom_peak_time_ns": 364.27145708582833,
+    "floor_600_900_db": -55.772211932020674,
+    "bottom_protrusion_db": 8.290983765049376,
+    "cover_protrusion_db": 27.256201454158557
+   },
+   "2d_xmedian": {
+    "cover_peak_db": -36.8429877373403,
+    "cover_peak_time_ns": 230.3725881570193,
+    "bottom_peak_db": -32.3448513879148,
+    "bottom_peak_time_ns": 379.2415169660679,
+    "floor_600_900_db": -77.75602699052489,
+    "bottom_protrusion_db": 45.411175602610086,
+    "cover_protrusion_db": 40.913039253184586
+   },
+   "3d_tavg80": {
+    "cover_peak_db": -60.293236554831395,
+    "cover_peak_time_ns": 205.42248835662008,
+    "bottom_peak_db": -64.40212302795825,
+    "bottom_peak_time_ns": 355.1230871590153,
+    "floor_600_900_db": -66.42072156962419,
+    "bottom_protrusion_db": 2.0185985416659378,
+    "cover_protrusion_db": 6.127485014792796
+   },
+   "2d_tavg80": {
+    "cover_peak_db": -58.57866850994568,
+    "cover_peak_time_ns": 224.55089820359282,
+    "bottom_peak_db": -60.535576949816544,
+    "bottom_peak_time_ns": 382.5681969394544,
+    "floor_600_900_db": -63.74044792459816,
+    "bottom_protrusion_db": 3.2048709747816133,
+    "cover_protrusion_db": 5.161779414652479
+   },
+   "3d_none": {
+    "cover_peak_db": -55.77873668008075,
+    "cover_peak_time_ns": 213.7391882900865,
+    "bottom_peak_db": -59.449185827854684,
+    "bottom_peak_time_ns": 353.45974717232207,
+    "floor_600_900_db": -61.223176190744105,
+    "bottom_protrusion_db": 1.7739903628894211,
+    "cover_protrusion_db": 5.444439510663358
+   },
+   "2d_none": {
+    "cover_peak_db": -52.50392705291734,
+    "cover_peak_time_ns": 224.55089820359282,
+    "bottom_peak_db": -55.2256899313829,
+    "bottom_peak_time_ns": 382.5681969394544,
+    "floor_600_900_db": -57.35759114046399,
+    "bottom_protrusion_db": 2.131901209081086,
+    "cover_protrusion_db": 4.8536640875466475
+   }
+  },
+  "x190": {
+   "3d_xmean": {
+    "cover_peak_db": -29.0600551563534,
+    "cover_peak_time_ns": 213.7391882900865,
+    "bottom_peak_db": -59.353785396123385,
+    "bottom_peak_time_ns": 384.23153692614767,
+    "floor_600_900_db": -61.209896605370815,
+    "bottom_protrusion_db": 1.8561112092474303,
+    "cover_protrusion_db": 32.149841449017416
+   },
+   "2d_xmean": {
+    "cover_peak_db": -35.526538954831175,
+    "cover_peak_time_ns": 224.55089820359282,
+    "bottom_peak_db": -31.019451019572543,
+    "bottom_peak_time_ns": 399.2015968063872,
+    "floor_600_900_db": -74.090751272656,
+    "bottom_protrusion_db": 43.07130025308345,
+    "cover_protrusion_db": 38.56421231782482
+   },
+   "3d_xmedian": {
+    "cover_peak_db": -10.102891673653872,
+    "cover_peak_time_ns": 213.7391882900865,
+    "bottom_peak_db": -47.37097011907618,
+    "bottom_peak_time_ns": 372.5881570192947,
+    "floor_600_900_db": -54.10037681715407,
+    "bottom_protrusion_db": 6.729406698077888,
+    "cover_protrusion_db": 43.9974851435002
+   },
+   "2d_xmedian": {
+    "cover_peak_db": -35.84226387890591,
+    "cover_peak_time_ns": 224.55089820359282,
+    "bottom_peak_db": -30.962274764977185,
+    "bottom_peak_time_ns": 399.2015968063872,
+    "floor_600_900_db": -75.86331912944452,
+    "bottom_protrusion_db": 44.90104436446734,
+    "cover_protrusion_db": 40.02105525053861
+   },
+   "3d_tavg80": {
+    "cover_peak_db": -52.32822139880946,
+    "cover_peak_time_ns": 213.7391882900865,
+    "bottom_peak_db": -64.72832700999612,
+    "bottom_peak_time_ns": 371.7564870259481,
+    "floor_600_900_db": -66.4174586195199,
+    "bottom_protrusion_db": 1.689131609523784,
+    "cover_protrusion_db": 14.089237220710444
+   },
+   "2d_tavg80": {
+    "cover_peak_db": -57.84583701159797,
+    "cover_peak_time_ns": 224.55089820359282,
+    "bottom_peak_db": -60.931440767302654,
+    "bottom_peak_time_ns": 400.8649367930805,
+    "floor_600_900_db": -63.74087081111007,
+    "bottom_protrusion_db": 2.809430043807417,
+    "cover_protrusion_db": 5.895033799512099
+   },
+   "3d_none": {
+    "cover_peak_db": -50.345504776151344,
+    "cover_peak_time_ns": 213.7391882900865,
+    "bottom_peak_db": -59.75367410944674,
+    "bottom_peak_time_ns": 371.7564870259481,
+    "floor_600_900_db": -61.22383200039323,
+    "bottom_protrusion_db": 1.4701578909464885,
+    "cover_protrusion_db": 10.878327224241886
+   },
+   "2d_none": {
+    "cover_peak_db": -52.14004735334604,
+    "cover_peak_time_ns": 224.55089820359282,
+    "bottom_peak_db": -55.591944898703574,
+    "bottom_peak_time_ns": 400.8649367930805,
+    "floor_600_900_db": -57.35762812643669,
+    "bottom_protrusion_db": 1.7656832277331134,
+    "cover_protrusion_db": 5.217580773090646
+   }
+  }
+ }
+}
