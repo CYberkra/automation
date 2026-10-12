@@ -1,0 +1,97 @@
+{
+  "status": "PASS_ORIGINAL_IDENTITY_AND_OFFICIAL_SFCW_NOT_PHYSICAL_CONVERGENCE",
+  "native_dtype": "float32",
+  "native_samples": 14283,
+  "dt_s": 5.6018040497805006e-11,
+  "tx_local_m": [
+    24.35,
+    37.925000000000004,
+    0.0
+  ],
+  "rx_local_m": [
+    25.650000000000002,
+    38.0,
+    0.0
+  ],
+  "references": [
+    {
+      "label": "地表",
+      "elevation_m": 442.9618655456696,
+      "vertical_two_way_ns": 33.3564095198152
+    },
+    {
+      "label": "覆盖层底",
+      "elevation_m": 435.85021790287357,
+      "vertical_two_way_ns": 197.7065752981703
+    },
+    {
+      "label": "上泥岩底",
+      "elevation_m": 433.6718273678227,
+      "vertical_two_way_ns": 259.36341868975694
+    },
+    {
+      "label": "下泥岩顶",
+      "elevation_m": 431.0890327479301,
+      "vertical_two_way_ns": 311.05507171778436
+    },
+    {
+      "label": "下泥岩底",
+      "elevation_m": 429.27238055647786,
+      "vertical_two_way_ns": 362.4733265546003
+    }
+  ],
+  "reference_assumption": "vertical two-way, low-loss speed c/sqrt(er), 5m AGL; ignores bistatic offset/slope and loss correction",
+  "source_time_offset_s": 2.8009020248902503e-11,
+  "receiver_time_offset_s": 0.0,
+  "independent_DFT_relative_L2": 4.918321693827722e-13,
+  "independent_inverse_relative_L2": 7.933187338161188e-14,
+  "tones": 501,
+  "inverse_samples": 2004,
+  "envelope_period_ns": 3333.3333333333335,
+  "native_last5percent_tail_db": -45.27624369597535,
+  "official_minus60db_screen_met": false,
+  "raw_sha256": "95ee7204a3281f536c38e26f5142de47392ddb5febfc059f9bf91f0caa5da53b",
+  "processed_sha256": "d027b9428fc74c00e8461852d21dc780264032f5068aae8eedf913d734881cab",
+  "remote_completion_sha256": "b20d912210a16a96d58c0c8360685e865011273505d44768b2699c97b2e1bf2a",
+  "archive_sha256": "ede5d676bb97964eb19c1a4c4b4b8b99d4f41ebc45bd36e9756da6b893d5c056",
+  "retrieved_verified_files": 15,
+  "matched_background_available": false,
+  "Bscan_available": false,
+  "window_boundary_precision_convergence_certified": false,
+  "timing_peaks_are_not_geological_labels": true,
+  "solver_wall_seconds": 172.29599999999846,
+  "reference_time_amplitudes_not_detection": [
+    {
+      "reference": "地表",
+      "vertical_approx_ns": 33.3564095198152,
+      "envelope_at_reference": 18.31111632733378,
+      "db_to_global_envelope_peak": -13.881395151902929
+    },
+    {
+      "reference": "覆盖层底",
+      "vertical_approx_ns": 197.7065752981703,
+      "envelope_at_reference": 0.19952141081704997,
+      "db_to_global_envelope_peak": -53.13590144377489
+    },
+    {
+      "reference": "上泥岩底",
+      "vertical_approx_ns": 259.36341868975694,
+      "envelope_at_reference": 0.13797880597619808,
+      "db_to_global_envelope_peak": -56.339443936990186
+    },
+    {
+      "reference": "下泥岩顶",
+      "vertical_approx_ns": 311.05507171778436,
+      "envelope_at_reference": 0.06779428250589693,
+      "db_to_global_envelope_peak": -62.51183020903947
+    },
+    {
+      "reference": "下泥岩底",
+      "vertical_approx_ns": 362.4733265546003,
+      "envelope_at_reference": 0.004467631550674802,
+      "db_to_global_envelope_peak": -86.13414459886066
+    }
+  ],
+  "processed_frequency_response_is_not_port_S21": true,
+  "independent_sum_tolerance": 1e-10
+}

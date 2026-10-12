@@ -1,0 +1,152 @@
+{
+  "status": "COMPLETE_ORIGINAL_CPU_FLOAT32_NOT_CONVERGENCE_CERTIFIED",
+  "version": "4.0.1",
+  "python": "E:\\djh\\artifacts\\local_checks\\py312embed\\python.exe",
+  "gprMax_path": "E:\\djh\\artifacts\\local_checks\\gprmax_v401_gpu_env\\Lib\\site-packages\\gprMax\\__init__.py",
+  "gprMax_init_sha256": "b6c2acba143b109d83d80a6a6ce5f36e564f490779503ddf9dc32ec7a43a9bb6",
+  "native_dtype": "float32",
+  "native_samples": 14283,
+  "tail_last5percent_db": -45.27624394272877,
+  "receipts": [
+    {
+      "stage": "01_build",
+      "command": [
+        "E:\\djh\\artifacts\\local_checks\\py312embed\\python.exe",
+        "01_build_geometry.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 2.0159999999996217,
+      "peak_rss_bytes": 9408512,
+      "log_sha256": "b0704e50b0bded776ecc4f8c46d63a1fed1ddcf24c710957760bd76301fae662"
+    },
+    {
+      "stage": "02_preflight",
+      "command": [
+        "E:\\djh\\artifacts\\local_checks\\py312embed\\python.exe",
+        "02_run_ascan.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 2.0159999999996217,
+      "peak_rss_bytes": 9383936,
+      "log_sha256": "25fa769027ab7539d6328626c8abc200b449b90628f0f6e13e27f788ab63ee34"
+    },
+    {
+      "stage": "03_solve_cpu_single",
+      "command": [
+        "E:\\djh\\artifacts\\local_checks\\py312embed\\python.exe",
+        "02_run_ascan.py",
+        "--solve"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 172.29599999999846,
+      "peak_rss_bytes": 602505216,
+      "log_sha256": "f58579835bdd77d4a71715617cb7af96e9db320650d55802626d0c3744039c97"
+    },
+    {
+      "stage": "04_sfcw_inspect",
+      "command": [
+        "E:\\djh\\artifacts\\local_checks\\py312embed\\python.exe",
+        "03_run_sfcw.py",
+        "--raw",
+        "E:\\djh\\line9_v31_original_cpu_20261012_r1\\package\\results\\line9_pilot_impulse.h5",
+        "--inspect"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 14.079000000001543,
+      "peak_rss_bytes": 162697216,
+      "log_sha256": "423bf4d45cf99329373fbedc3981c841c041f320e99b72eb23af1203c028fbca"
+    },
+    {
+      "stage": "05_sfcw_process",
+      "command": [
+        "E:\\djh\\artifacts\\local_checks\\py312embed\\python.exe",
+        "03_run_sfcw.py",
+        "--raw",
+        "E:\\djh\\line9_v31_original_cpu_20261012_r1\\package\\results\\line9_pilot_impulse.h5",
+        "--process"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 2.014999999999418,
+      "peak_rss_bytes": 9273344,
+      "log_sha256": "5a01ac42a712972097b8aebdcd4c492b90c54b763e8169c06055be784472ef97"
+    }
+  ],
+  "files": [
+    {
+      "path": "package\\01_build_geometry.py",
+      "bytes": 13029,
+      "sha256": "403c9714a09ebaef8dcf55c218345bf4423194988d53a12aaea67322da7e2900"
+    },
+    {
+      "path": "package\\02_run_ascan.py",
+      "bytes": 6479,
+      "sha256": "a36072a195b0fc5c517df4266c3f1c39fcbed301a844a0137442df956377863e"
+    },
+    {
+      "path": "package\\03_run_sfcw.py",
+      "bytes": 2164,
+      "sha256": "5d6d6f3086b44eb7cbb0035e46f656cf7f58f3cec20b83dd92ec14b28066c93e"
+    },
+    {
+      "path": "package\\config\\materials_Wang2026_baseline.json",
+      "bytes": 2150,
+      "sha256": "1464c8b884e216165f142158ad10285259da8802260e1cf61edd5459886b4e38"
+    },
+    {
+      "path": "package\\config\\pilot_ascan.json",
+      "bytes": 1368,
+      "sha256": "7db357d1a95e43b04fd9ff621dfdc11d49566012e41931c33a794d75f3d3b2cb"
+    },
+    {
+      "path": "package\\config\\selection_pdf_reconstructed.json",
+      "bytes": 2308,
+      "sha256": "28a7bd2b38a148079e183d96e6f54c1575ed1fc330a846693b2c38fab6ff2796"
+    },
+    {
+      "path": "package\\config\\sfcw_20_170MHz.json",
+      "bytes": 457,
+      "sha256": "cee8f85378cf66bb211de27c5b9b4e2b3f781f4ee9fb4f409fc437c73c9d2879"
+    },
+    {
+      "path": "package\\model\\contacts_m.json",
+      "bytes": 4231,
+      "sha256": "d3be5e505470e034af403cd86b1b11e5d891359cba27227151591ccd7dfd28c8"
+    },
+    {
+      "path": "package\\model\\line9_350m_voxels.h5",
+      "bytes": 316198,
+      "sha256": "9f5fb50cbaf16bcf208eb530f850e49777a6a495d4d4e978a2d3b162aa2b9f6b"
+    },
+    {
+      "path": "package\\model\\line9_pilot_geometry.h5",
+      "bytes": 51408,
+      "sha256": "882471a07ff268683fac0a5ec51ac51b1dcc1512f12ae866959ace89aac1bbdd"
+    },
+    {
+      "path": "package\\model\\line9_wang2026_constant_v2.json",
+      "bytes": 2522,
+      "sha256": "eb8f2ce1274aea902f1638e8319f512d8d566de5248aaf627deba07a5b882871"
+    },
+    {
+      "path": "package\\reference\\line9_vectors_extracted.json",
+      "bytes": 119081,
+      "sha256": "a6c70e3429907140cdd966fd16e6bc74e9c268c32a9cf12aa10b0f876f418a98"
+    },
+    {
+      "path": "package\\results\\line9_pilot_impulse.h5",
+      "bytes": 82572,
+      "sha256": "95ee7204a3281f536c38e26f5142de47392ddb5febfc059f9bf91f0caa5da53b"
+    },
+    {
+      "path": "package\\results\\line9_pilot_sfcw.h5",
+      "bytes": 150608,
+      "sha256": "d027b9428fc74c00e8461852d21dc780264032f5068aae8eedf913d734881cab"
+    },
+    {
+      "path": "package\\使用说明_V3.1.txt",
+      "bytes": 3766,
+      "sha256": "ff30afd75d81a348aff5ccb2750b65dffa7403f0441f2e981fb6a32a5b953ca1"
+    }
+  ],
+  "batch_wall_seconds": 192.43799999999828
+}
