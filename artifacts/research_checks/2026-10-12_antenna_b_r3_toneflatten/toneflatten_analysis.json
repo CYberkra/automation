@@ -1,0 +1,63 @@
+{
+ "weight": {
+  "primary": "w_s11: round-trip mismatch factor ratio from A1_free_y port S11, emulating the measured flat per-tone transmit power",
+  "ablation": "w_linkA2: 1/|A2 pair link| smoothed 15 MHz (removes channel physics too; near-zero effect, kept as evidence)",
+  "w_db_at_20MHz_linkA2": -9.164210908247682,
+  "w_s11_db_at_20MHz": 8.153565984625471,
+  "w_s11_db_at_170MHz": -0.13828537093388987
+ },
+ "reference": "real-data bottom-sand/direct about -40 dB (raw, user 2026-10-12)",
+ "stations": {
+  "x170": {
+   "raw_direct_db": 8.686661818707667e-12,
+   "cover_raw_db": -55.691604734655776,
+   "bottom_raw_db": -60.52085739818816,
+   "floor_raw_db": -67.61143043066954,
+   "bottom_over_floor_raw_db": 7.09057303248138,
+   "s11_direct_db": 8.686661818707667e-12,
+   "cover_s11_db": -55.04168766201302,
+   "bottom_s11_db": -59.719277815509635,
+   "floor_s11_db": -67.4641536196034,
+   "bottom_over_floor_s11_db": 7.744875804093759,
+   "linkA2_direct_db": 8.686661818707667e-12,
+   "cover_linkA2_db": -56.02456929431185,
+   "bottom_linkA2_db": -60.35933202180831,
+   "floor_linkA2_db": -66.7420541428423,
+   "bottom_over_floor_linkA2_db": 6.382722121034
+  },
+  "x180": {
+   "raw_direct_db": 8.686661818707667e-12,
+   "cover_raw_db": -57.59993302397057,
+   "bottom_raw_db": -62.15594063849168,
+   "floor_raw_db": -69.18065535444326,
+   "bottom_over_floor_raw_db": 7.024714715951582,
+   "s11_direct_db": 8.686661818707667e-12,
+   "cover_s11_db": -56.114332371918955,
+   "bottom_s11_db": -61.21459077874044,
+   "floor_s11_db": -68.8857439745614,
+   "bottom_over_floor_s11_db": 7.671153195820956,
+   "linkA2_direct_db": 8.686661818707667e-12,
+   "cover_linkA2_db": -56.62141516285734,
+   "bottom_linkA2_db": -61.207860669475885,
+   "floor_linkA2_db": -67.49976573959454,
+   "bottom_over_floor_linkA2_db": 6.291905070118652
+  },
+  "x190": {
+   "raw_direct_db": 8.686661818707667e-12,
+   "cover_raw_db": -51.11344289497466,
+   "bottom_raw_db": -62.64131405675965,
+   "floor_raw_db": -69.17729493844557,
+   "bottom_over_floor_raw_db": 6.535980881685923,
+   "s11_direct_db": 8.686661818707667e-12,
+   "cover_s11_db": -51.067266561251365,
+   "bottom_s11_db": -61.715542622857676,
+   "floor_s11_db": -68.88150644004234,
+   "bottom_over_floor_s11_db": 7.165963817184668,
+   "linkA2_direct_db": 8.686661818707667e-12,
+   "cover_linkA2_db": -50.82397811175823,
+   "bottom_linkA2_db": -61.64022426518061,
+   "floor_linkA2_db": -67.4968178741691,
+   "bottom_over_floor_linkA2_db": 5.856593608988483
+  }
+ }
+}
