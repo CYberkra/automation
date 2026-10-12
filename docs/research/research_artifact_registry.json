@@ -1,4 +1,28 @@
 {
+  "line9_v31_window1100_2026_10_12": {
+    "status": "CONTROLLED_PAIR_VERIFIED_NOT_ASYMPTOTIC_OR_PML_CONVERGENCE",
+    "report": "docs/research/2026-10-12_line9_v31_window1100_comparison.md",
+    "public": "D:/自动处理/artifacts/research_checks/2026-10-12_line9_v31_window1100_r2",
+    "authorization": "批准1100ns单道对照",
+    "new_solver_runs": 1,
+    "record_ns": [
+      800,
+      1100
+    ],
+    "native_dtype": "float32",
+    "receiver_prefix_bitwise_equal": true,
+    "native_tail_db": [
+      -45.27624369597535,
+      -46.34848138200492
+    ],
+    "complex_spectrum_relative_L2": 0.006071272810978119,
+    "underground_150_400ns_relative_L2": 0.0003973197113152678,
+    "asymptotic_window_convergence_certified": false,
+    "PML_convergence_certified": false,
+    "Bscan_available": false,
+    "current_model_SFCW_modified": false,
+    "new_solves_authorized_after_completion": false
+  },
   "line9_v31_original_cpu_trial_2026_10_12": {
     "status": "ONE_ORIGINAL_CPU_FLOAT32_SOLVE_COMPLETE_OFFICIAL_SFCW_VERIFIED_TAIL_SCREEN_UNMET",
     "report": "docs/research/2026-10-12_line9_v31_original_cpu_trial.md",

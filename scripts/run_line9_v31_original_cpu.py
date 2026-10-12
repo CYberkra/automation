@@ -1,7 +1,8 @@
-"""Run the approved, unchanged Line9 V3.1 scripts once on CPU/single.
+"""Run the approved Line9 V3.1 scripts once on CPU/single.
 
 The supplied archive stays outside Git. This runner adds receipts and bounded
-process supervision; it does not alter a model, solver call or SFCW setting.
+process supervision. The separately approved 1100 ns task changes only the
+copied time-window token; solver calls and SFCW settings remain original.
 """
 from pathlib import Path
 import argparse
@@ -29,7 +30,7 @@ def run(root):
     import psutil
 
     contract = json.loads((root / "contract.json").read_text(encoding="utf-8"))
-    assert contract["authorization"] == "严格原包CPU单精度试跑"
+    assert contract["authorization"] in ("严格原包CPU单精度试跑", "批准1100ns单道对照")
     assert gprMax.__version__ == "4.0.1"
     assert sha(root / "original.zip") == contract["archive_sha256"]
     attempt = root / "attempt.json"
@@ -47,6 +48,20 @@ def run(root):
             target.write_bytes(z.read(info))
     for name, expected in contract["original_file_sha256"].items():
         assert sha(package / name) == expected, name
+    expected_files = dict(contract["original_file_sha256"])
+    if contract["authorization"] == "批准1100ns单道对照":
+        assert contract["record_ns"] == 1100
+        config_path = package / "config/pilot_ascan.json"
+        original = config_path.read_bytes()
+        token = b'"time_window_ns": 800.0'
+        assert original.count(token) == 1
+        changed = original.replace(token, b'"time_window_ns": 1100.0', 1)
+        before, after = json.loads(original), json.loads(changed)
+        after["time_window_ns"] = before["time_window_ns"]
+        assert before == after, "Only the approved time window may change"
+        assert hashlib.sha256(changed).hexdigest() == contract["modified_pilot_sha256"]
+        config_path.write_bytes(changed)
+        expected_files["config/pilot_ascan.json"] = contract["modified_pilot_sha256"]
     logs = root / "logs"
     logs.mkdir()
     batch_start = time.monotonic()
@@ -120,11 +135,12 @@ def run(root):
             tail = float(np.max(np.abs(rx[-int(np.ceil(len(rx) * .05)):])) / np.max(np.abs(rx)))
         execute("04_sfcw_inspect", ["03_run_sfcw.py", "--raw", str(raw), "--inspect"])
         execute("05_sfcw_process", ["03_run_sfcw.py", "--raw", str(raw), "--process"])
-        for name, expected in contract["original_file_sha256"].items():
+        for name, expected in expected_files.items():
             assert sha(package / name) == expected, f"Original input changed: {name}"
         outputs = [{"path": str(p.relative_to(root)), "bytes": p.stat().st_size, "sha256": sha(p)}
                    for p in sorted(package.rglob("*")) if p.is_file() and "__pycache__" not in p.parts]
-        save(root / "completion.json", {"status": "COMPLETE_ORIGINAL_CPU_FLOAT32_NOT_CONVERGENCE_CERTIFIED",
+        save(root / "completion.json", {"status": "COMPLETE_CPU_FLOAT32_NOT_CONVERGENCE_CERTIFIED",
+                                       "authorization": contract["authorization"], "record_ns": contract["record_ns"],
                                        "version": gprMax.__version__, "python": sys.executable,
                                        "gprMax_path": gprMax.__file__, "gprMax_init_sha256": sha(Path(gprMax.__file__)),
                                        "native_dtype": "float32", "native_samples": len(rx),

@@ -1,0 +1,51 @@
+{
+  "authorization": "批准1100ns单道对照",
+  "date": "2026-10-12",
+  "archive_sha256": "ede5d676bb97964eb19c1a4c4b4b8b99d4f41ebc45bd36e9756da6b893d5c056",
+  "original_file_sha256": {
+    "01_build_geometry.py": "403c9714a09ebaef8dcf55c218345bf4423194988d53a12aaea67322da7e2900",
+    "02_run_ascan.py": "a36072a195b0fc5c517df4266c3f1c39fcbed301a844a0137442df956377863e",
+    "03_run_sfcw.py": "5d6d6f3086b44eb7cbb0035e46f656cf7f58f3cec20b83dd92ec14b28066c93e",
+    "使用说明_V3.1.txt": "ff30afd75d81a348aff5ccb2750b65dffa7403f0441f2e981fb6a32a5b953ca1",
+    "config/materials_Wang2026_baseline.json": "1464c8b884e216165f142158ad10285259da8802260e1cf61edd5459886b4e38",
+    "config/pilot_ascan.json": "7db357d1a95e43b04fd9ff621dfdc11d49566012e41931c33a794d75f3d3b2cb",
+    "config/selection_pdf_reconstructed.json": "28a7bd2b38a148079e183d96e6f54c1575ed1fc330a846693b2c38fab6ff2796",
+    "config/sfcw_20_170MHz.json": "cee8f85378cf66bb211de27c5b9b4e2b3f781f4ee9fb4f409fc437c73c9d2879",
+    "reference/line9_vectors_extracted.json": "a6c70e3429907140cdd966fd16e6bc74e9c268c32a9cf12aa10b0f876f418a98"
+  },
+  "physics_or_processing_changes": "FDTD record length only:800ns->1100ns; no other changes",
+  "gpu": null,
+  "cpu_precision": "single (unchanged official default)",
+  "max_new_solver_runs": 1,
+  "no_retry": true,
+  "max_batch_seconds": 3600,
+  "remote_root": "E:\\djh\\line9_v31_window1100_cpu_20261012_r1",
+  "remote_python": "E:\\djh\\artifacts\\local_checks\\py312embed\\python.exe",
+  "dt_s": 5.601804049780499e-11,
+  "expected_cells": [
+    2000,
+    2000,
+    1
+  ],
+  "expected_native_samples": 19638,
+  "record_ns": 1100,
+  "official_sfcw": {
+    "method": "direct",
+    "f_start_hz": 20000000,
+    "f_stop_hz": 170000000,
+    "steps": 501,
+    "window": "gaussian",
+    "zero_pad": 4
+  },
+  "runtime_run_callable_defaults_verified": true,
+  "current_model_untouched": true,
+  "limits": [
+    "One new1100ns solve;800ns reused",
+    "Geometry/materials/grid/PML/source/sensors/CPU-single/SFCW all unchanged",
+    "No auto continuation, PML120, H0 or full Bscan",
+    "Neither window convergence nor boundary/precision convergence presumed"
+  ],
+  "modified_pilot_sha256": "28081a3e59bee036f21356fb34a05a769769abca419f641a149073db0a31fb56",
+  "baseline_completion_sha256": "b20d912210a16a96d58c0c8360685e865011273505d44768b2699c97b2e1bf2a",
+  "baseline_raw_sha256": "95ee7204a3281f536c38e26f5142de47392ddb5febfc059f9bf91f0caa5da53b"
+}

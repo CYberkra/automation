@@ -1,0 +1,175 @@
+{
+  "status": "CONTROLLED_PAIR_VERIFIED_NOT_ASYMPTOTIC_OR_PML_CONVERGENCE",
+  "authorization": "批准1100ns单道对照",
+  "new_solver_runs": 1,
+  "dt_s": 5.6018040497805006e-11,
+  "native_samples": [
+    14283,
+    19638
+  ],
+  "native_dtype": "float32",
+  "receiver_prefix_bitwise_equal": true,
+  "source_prefix_bitwise_equal": true,
+  "prefix_max_absolute_difference": 0.0,
+  "geometry": {
+    "line9_350m_voxels.h5": {
+      "material_array_and_attributes_equal": true,
+      "bytes_equal": true
+    },
+    "line9_pilot_geometry.h5": {
+      "material_array_and_attributes_equal": true,
+      "bytes_equal": true
+    }
+  },
+  "only_physical_change": "800ns to1100ns FDTD record length",
+  "native_tail_last5percent_db": [
+    -45.27624369597535,
+    -46.34848138200492
+  ],
+  "official_minus60db_screen_met": [
+    false,
+    false
+  ],
+  "source_spectrum_relative_difference": 0.0,
+  "complex_spectrum_relative_L2": 0.006071272810978119,
+  "frequency_intervals": [
+    {
+      "start_MHz": 20,
+      "stop_MHz": 40,
+      "complex_response_relative_L2": 0.012523900161233725
+    },
+    {
+      "start_MHz": 40,
+      "stop_MHz": 95,
+      "complex_response_relative_L2": 0.006991561615614781
+    },
+    {
+      "start_MHz": 95,
+      "stop_MHz": 170,
+      "complex_response_relative_L2": 0.00516980913348641
+    }
+  ],
+  "extra_recorded_tail_explains_spectrum_delta_relative_residual": 5.39788527959448e-11,
+  "max_abs_magnitude_change_db": 0.1580583844788166,
+  "max_abs_wrapped_phase_change_deg": 1.0312003287950275,
+  "max_abs_magnitude_change_frequency_MHz": 35.0,
+  "max_abs_phase_change_frequency_MHz": 28.4,
+  "phase_change_abs_percentile_deg": [
+    0.19044343483065218,
+    0.5918408861062552,
+    1.0312003287950275
+  ],
+  "intervals": [
+    {
+      "label": "直达与地表参考区",
+      "start_ns": 0,
+      "stop_ns": 100,
+      "complex_envelope_relative_L2": 7.201722360387673e-07,
+      "peak_difference_db_to_common_global_peak": -130.28946669482173
+    },
+    {
+      "label": "地下界面参考区",
+      "start_ns": 150,
+      "stop_ns": 400,
+      "complex_envelope_relative_L2": 0.0003973197113152678,
+      "peak_difference_db_to_common_global_peak": -126.42802822149176
+    },
+    {
+      "label": "旧窗晚期区",
+      "start_ns": 400,
+      "stop_ns": 800,
+      "complex_envelope_relative_L2": 1.7196166380846694,
+      "peak_difference_db_to_common_global_peak": -49.34218916029728
+    },
+    {
+      "label": "延长记录区",
+      "start_ns": 800,
+      "stop_ns": 1100,
+      "complex_envelope_relative_L2": 1.2009315629166284,
+      "peak_difference_db_to_common_global_peak": -45.7356386773659
+    }
+  ],
+  "endpoint_checks": [
+    {
+      "center_ns": 800,
+      "half_width_ns": 15,
+      "peak_db_to_common_global_peak": [
+        -48.90415379746091,
+        -73.94378340935691
+      ]
+    },
+    {
+      "center_ns": 1100,
+      "half_width_ns": 15,
+      "peak_db_to_common_global_peak": [
+        -75.99938016871475,
+        -45.70872821630955
+      ]
+    }
+  ],
+  "references": [
+    {
+      "label": "地表",
+      "elevation_m": 442.9618655456696,
+      "vertical_two_way_ns": 33.3564095198152
+    },
+    {
+      "label": "覆盖层底",
+      "elevation_m": 435.85021790287357,
+      "vertical_two_way_ns": 197.7065752981703
+    },
+    {
+      "label": "上泥岩底",
+      "elevation_m": 433.6718273678227,
+      "vertical_two_way_ns": 259.36341868975694
+    },
+    {
+      "label": "下泥岩顶",
+      "elevation_m": 431.0890327479301,
+      "vertical_two_way_ns": 311.05507171778436
+    },
+    {
+      "label": "下泥岩底",
+      "elevation_m": 429.27238055647786,
+      "vertical_two_way_ns": 362.4733265546003
+    }
+  ],
+  "reference_limitation": "vertical low-loss approximate timing; not isolated interface echoes",
+  "independent_DFT_relative_L2": [
+    4.918321693827722e-13,
+    5.718044971744968e-13
+  ],
+  "independent_inverse_relative_L2": [
+    7.933187338161188e-14,
+    7.933784382389168e-14
+  ],
+  "solver_wall_seconds": [
+    172.29599999999846,
+    237.3279999999977
+  ],
+  "raw_sha256": [
+    "95ee7204a3281f536c38e26f5142de47392ddb5febfc059f9bf91f0caa5da53b",
+    "b9b7d7e1098c0a53c99103fb36692ab3e4e00820f94c40a63631b9e6da896869"
+  ],
+  "processed_sha256": [
+    "d027b9428fc74c00e8461852d21dc780264032f5068aae8eedf913d734881cab",
+    "f162eba02475926fa5402da5139622ff8427c0b88dc60dabfe9f3074115f16d7"
+  ],
+  "completion_sha256": [
+    "b20d912210a16a96d58c0c8360685e865011273505d44768b2699c97b2e1bf2a",
+    "5fb582bf374e80b029da56a5af4527c0d9677ff2472894e560d23ccbdd0e73f3"
+  ],
+  "analysis_script_sha256": "1c44bf0d43c6acead3934f05c498e5f9cd9d974f41cdc0a6245d3751872a387e",
+  "executed_supervisor_sha256": "cf092a117e1ea7f4dcb07179f2c22fcbde6c573d63c4cda7d8e2d0e8753012e1",
+  "verified_package_file_counts": [
+    15,
+    15
+  ],
+  "inverse_period_ns": 3333.3333333333335,
+  "Bscan_available": false,
+  "matched_background_available": false,
+  "asymptotic_window_convergence_certified": false,
+  "PML_convergence_certified": false,
+  "precision_convergence_certified": false,
+  "physical_detection_certified": false
+}
