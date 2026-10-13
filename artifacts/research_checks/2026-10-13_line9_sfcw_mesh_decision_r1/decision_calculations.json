@@ -1,0 +1,165 @@
+{
+  "status": "READ_ONLY_CALCULATIONS_AND_INPUT_HASHES_PASS_NO_NEW_SOLVER_RUNS",
+  "assumptions": "V3.1 constant materials, mu_r=1, low-loss wavelength approximation; theoretical fixed-domain fixed-time update cost only",
+  "frequency_hz": 170000000.0,
+  "epsilon_r_max": 18.0,
+  "lambda_low_loss_m": 0.41565741176545734,
+  "grid_candidates": [
+    {
+      "grid_m": 0.025,
+      "low_loss_cells_per_wavelength": 16.626296470618293,
+      "theoretical_update_work_speedup_2d": 1.0,
+      "theoretical_update_work_speedup_3d": 1.0,
+      "measured_performance": false
+    },
+    {
+      "grid_m": 0.0325,
+      "low_loss_cells_per_wavelength": 12.789458823552533,
+      "theoretical_update_work_speedup_2d": 2.197,
+      "theoretical_update_work_speedup_3d": 2.8561000000000005,
+      "measured_performance": false
+    },
+    {
+      "grid_m": 0.0375,
+      "low_loss_cells_per_wavelength": 11.084197647078863,
+      "theoretical_update_work_speedup_2d": 3.3749999999999987,
+      "theoretical_update_work_speedup_3d": 5.062499999999997,
+      "measured_performance": false
+    },
+    {
+      "grid_m": 0.04,
+      "low_loss_cells_per_wavelength": 10.391435294136434,
+      "theoretical_update_work_speedup_2d": 4.095999999999999,
+      "theoretical_update_work_speedup_3d": 6.553599999999998,
+      "measured_performance": false
+    },
+    {
+      "grid_m": 0.05,
+      "low_loss_cells_per_wavelength": 8.313148235309146,
+      "theoretical_update_work_speedup_2d": 8.0,
+      "theoretical_update_work_speedup_3d": 16.0,
+      "measured_performance": false
+    }
+  ],
+  "five_cm_ten_cell_upper_frequency_hz": 141323520.0002555,
+  "old_81trace_timing": {
+    "completion_sha256": "0adf80e7982e3d25d5e23a2b26efbba85099b2af73dd11e0534041dc16dd7f27",
+    "solver_seconds": 1960.0920000000042,
+    "batch_seconds": 1963.297000000006,
+    "post_batch_overhead_seconds": 3.2050000000017462,
+    "post_batch_overhead_fraction": 0.001632458053978454,
+    "note": "Includes merge, SFCW and other overhead; not a separately timed SFCW-only benchmark"
+  },
+  "source_code_references": [
+    {
+      "local_path": "artifacts/local_checks/2026-10-08_v401_review/v401/gprMax/toolboxes/SFCW/processing.py",
+      "sha256": "adad556f09140956f0ee19d3038430e06a9ae8be6a826dcad723096d99624a3b"
+    },
+    {
+      "local_path": "artifacts/local_checks/2026-10-08_v401_review/v401/gprMax/waveforms.py",
+      "sha256": "ca79340903a25bd370d6149ff23b985c73ccb7b754fd73c8e70cc7b292ec9bcc"
+    },
+    {
+      "local_path": "artifacts/local_checks/gprmax_v4_gpu_env/Lib/site-packages/gprMax/user_objects/cmds_geometry/geometry_objects_read.py",
+      "sha256": "9bba8d772aaaa9883691cd70dcd76e79c3710b1658b81fc81d9d8ecae72d9c3b"
+    }
+  ],
+  "thin_voxel_segment": {
+    "station_m": 150.0,
+    "geometry_sha256": "a8c3cb4b092ad837fa53358bfde320ebaccdcd5c86612fe51394c741f14a8cf6",
+    "grid_m": 0.025,
+    "column_x_index": 1000,
+    "intervals": [
+      {
+        "material_id": 3,
+        "start_y_index": 0,
+        "end_y_index_exclusive": 853,
+        "thickness_m": 21.325000000000003
+      },
+      {
+        "material_id": 2,
+        "start_y_index": 853,
+        "end_y_index_exclusive": 952,
+        "thickness_m": 2.475
+      },
+      {
+        "material_id": 3,
+        "start_y_index": 952,
+        "end_y_index_exclusive": 954,
+        "thickness_m": 0.05
+      },
+      {
+        "material_id": 1,
+        "start_y_index": 954,
+        "end_y_index_exclusive": 1211,
+        "thickness_m": 6.425000000000001
+      },
+      {
+        "material_id": 0,
+        "start_y_index": 1211,
+        "end_y_index_exclusive": 2000,
+        "thickness_m": 19.725
+      }
+    ],
+    "material_id_3": "sandstone",
+    "claim": "Geometry occupancy near approaching contacts; not field thickness or detection"
+  },
+  "existing_current_model_files": [
+    {
+      "path": "model_current/README.md",
+      "sha256": "5931856d72aa8811119d1a4492fcd3e5a8eef3094b9ed7fe34dba8a1a8dab5f7",
+      "bytes": 1952
+    },
+    {
+      "path": "model_current/acquisition.json",
+      "sha256": "fb7ce6aa9dbf565b362218aa58fde9be36a6f5452c9b027200bf440ffa4d8641",
+      "bytes": 1525
+    },
+    {
+      "path": "model_current/source.json",
+      "sha256": "d1a6046381f9dd676818efa4533c2e012f25f12db5fa0551bcda1c84f1ae4e31",
+      "bytes": 1539
+    },
+    {
+      "path": "model_current/cases/x190_H0/profile.in",
+      "sha256": "ad7c59a91a51d0bd7511133da5b8b49355152c5875c68a738f089f66676b951c",
+      "bytes": 513
+    },
+    {
+      "path": "model_current/cases/x190_H1/profile.in",
+      "sha256": "a21cef30162ea7c4e01e97de39b71de86cc97d0594382e42abe0dbed896b8304",
+      "bytes": 513
+    },
+    {
+      "path": "model_current/geometries/H0.h5",
+      "sha256": "1fc79f2389a55a39744e6bab8f3e8b3a693bc31852d6f01e47ae3e4c34d198a9",
+      "bytes": 134871
+    },
+    {
+      "path": "model_current/geometries/H1.h5",
+      "sha256": "5b9066ef8b8c906ba57b7db255af7ee01f5d73439a930a899585a9af87edaec6",
+      "bytes": 163227
+    },
+    {
+      "path": "model_current/geometries/line9_materials_v0_2.json",
+      "sha256": "fdf02830012ea2fe4dfe8820096491a2bafd0e8729e0abb5db63cfb85b98d43d",
+      "bytes": 3871
+    }
+  ],
+  "current_model_entity_change": false,
+  "new_solver_runs": 0,
+  "official_sources": [
+    {
+      "url": "https://docs.gprmax.com/en/latest/inc_SFCW.html",
+      "reading": "Information, FDTD impulse-convolution check, Preparing the model, Usage, Frequency and time-window validity"
+    },
+    {
+      "url": "https://docs.gprmax.com/en/latest/gprmodelling.html",
+      "reading": "CFL/2D in Basic concepts, Spatial discretization"
+    },
+    {
+      "url": "https://docs.gprmax.com/en/latest/input_api.html",
+      "reading": "GeometryObjectsRead, DispersiveAveraging, Waveform"
+    }
+  ]
+}

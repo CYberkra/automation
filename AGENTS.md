@@ -18,6 +18,7 @@
 - **现行模型唯一入口**：`configs/research/current_model.json`。找最新版本的模型/材料/源/几何/采集文件，一律先看该文件。任何获批的模型、材料、源、几何或采集修改，必须在同一工作单元内更新该文件并记录被取代版本；历史版本文件不覆盖，该文件只改指针。
 - 当前求解器版本、可用运行时与 GPU 包装方式以 [START_HERE.md](START_HERE.md) 及最新执行报告为准；环境事故与变迁记录见 [decision_log.md](docs/research/decision_log.md) 及对应日期报告。
 - 现行源约定见 `configs/research/line9_source_v0_2.json`（官方内置 impulse）；现行材料数据库、设计与各批次冻结契约见 `configs/research/` 下最新版本，状态以 START_HERE.md 为准。
+- **新建模型默认开启官方介电界面平滑**：体素导入显式设 `averaging="y"`，含色散界面时启用官方 `DispersiveAveraging(enabled=True)`。准备新模型时读取 [平滑默认约定](configs/research/line9_dielectric_averaging_default_v0_1.json)；完整 Yee 分量几何须核查实际系数，不能认为导入标志会覆盖它。历史冻结输入及获批关闭平滑的诊断对照不改写。此默认值不批准新求解或其他物理改动。
 
 ## 项目目标与首版范围
 

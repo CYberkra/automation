@@ -1,0 +1,34 @@
+{
+  "schema": "line9-dielectric-averaging-policy/1",
+  "date": "2026-10-13",
+  "status": "USER_APPROVED_FUTURE_DEFAULT",
+  "authorization": "以后介电平滑默认开启吧，目前看的确很有效果。",
+  "scope": "Future newly prepared UAV-GPR models, including new V3.1 candidate batches; existing frozen inputs and results retain their original settings",
+  "official_solver_version": "4.0.1",
+  "voxel_geometry_read_averaging": "y",
+  "volumetric_dielectric_object_averaging": "y",
+  "dispersive_interface_averaging_when_applicable": true,
+  "official_api": {
+    "voxel_import": "GeometryObjectsRead(..., averaging='y')",
+    "dispersive_interfaces": "DispersiveAveraging(enabled=True)"
+  },
+  "text_input": {
+    "voxel_import": "#geometry_objects_read: ... <database> y",
+    "dispersive_interfaces": "#dispersive_averaging: y"
+  },
+  "official_default_is_not_modified": "The official voxel-only import defaults to n; project preparation must explicitly request y",
+  "authoritative_component_geometry": "Complete /ID, /rigidE and /rigidH arrays override the import averaging flag. Inspect stored coefficients; do not silently rewrite the geometry",
+  "exceptions": "Historical reproductions and specifically authorized smoothing-off diagnostic controls retain n; do not globally replace control settings",
+  "verification": "Freeze the requested setting and inspect available build logs/coefficients; adding output objects still follows batch authorization rules",
+  "current_model_entity_change": false,
+  "current_model_note": "Both current x190 H0/H1 profile.in already explicitly enable voxel and dispersive averaging. Their inputs and manifest remain byte-identical",
+  "not_authorized_by_this_policy": [
+    "new solver runs",
+    "source or SFCW changes",
+    "frequency band or grid changes",
+    "domain or material changes",
+    "historical result relabeling"
+  ],
+  "evidence": "docs/research/2026-10-13_line9_v31_smoothing_domain_results.md",
+  "official_reference": "https://docs.gprmax.com/en/latest/input_api.html"
+}

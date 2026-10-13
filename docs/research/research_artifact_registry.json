@@ -1,4 +1,25 @@
  {
+ "line9_sfcw_mesh_decision_2026_10_13": {
+  "status": "RESEARCH_COMPLETE_DEFAULT_SMOOTHING_APPROVED_SOURCE_AND_MESH_UNCHANGED",
+  "report": "docs/research/2026-10-13_sfcw_mesh_decision.md",
+  "public": "artifacts/research_checks/2026-10-13_line9_sfcw_mesh_decision_r1",
+  "approved_policy": "configs/research/line9_dielectric_averaging_default_v0_1.json",
+  "recommendation": "Retain official SFCW; test moderate coarsening separately; optional official band-limited source remains unexecuted",
+  "new_solver_runs": 0,
+  "current_model_entity_change": false,
+  "historical_results_modified": false,
+  "old_input_manifest_files_verified": 8,
+  "numerical_wavelength_assumption": "V3.1 er18/mu1 low-loss approximation, 170MHz",
+  "lambda_m": 0.41565741176545734,
+  "theoretical_candidates_grid_m": [
+   0.0325,
+   0.0375,
+   0.04
+  ],
+  "grid_candidates_adopted": false,
+  "source_change_approved": false,
+  "theory_not_measured_performance": true
+ },
  "line9_v31_smoothing_domain_2026_10_13": {
   "status": "DELIVERED_FOR_USER_ANALYSIS_NO_CONFIGURATION_ADOPTED_OR_CONVERGENCE_CLAIM",
   "report": "docs/research/2026-10-13_line9_v31_smoothing_domain_results.md",
