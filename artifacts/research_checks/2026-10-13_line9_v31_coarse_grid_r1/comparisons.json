@@ -1,0 +1,544 @@
+{
+  "summary": [
+    {
+      "grid_m": 0.0325,
+      "all_three_stations_pass": false,
+      "max_spectrum_error": 0.022224848115092906,
+      "max_window_error": 0.2041378220813068,
+      "max_phase_rms_degrees": 0.8003814914452425,
+      "median_fdtd_speedup": 2.1725030065993596,
+      "median_build_solver_speedup": 1.8044442456158292,
+      "timing_scope": "Single-run current coarse cases vs reused earlier baseline; not repeated benchmark"
+    },
+    {
+      "grid_m": 0.0375,
+      "all_three_stations_pass": false,
+      "max_spectrum_error": 0.06851054143449384,
+      "max_window_error": 0.27971013723211585,
+      "max_phase_rms_degrees": 3.5125738363387735,
+      "median_fdtd_speedup": 3.4692240655864697,
+      "median_build_solver_speedup": 3.3594710346382146,
+      "timing_scope": "Single-run current coarse cases vs reused earlier baseline; not repeated benchmark"
+    }
+  ],
+  "cases": [
+    {
+      "case": "grid3.25cm_x150.0",
+      "station_m": 150.0,
+      "grid_m": 0.0325,
+      "complex_band_relative_l2": 0.022224848115092906,
+      "strong_bin_phase_rms_degrees": 0.8003814914452425,
+      "windows": [
+        {
+          "label": "common",
+          "lo_ns": 100,
+          "hi_ns": 400,
+          "complex_relative_l2": 0.13231632664548323,
+          "envelope_peak_relative_error": 0.018398352779499083,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "common",
+          "lo_ns": 400,
+          "hi_ns": 1000,
+          "complex_relative_l2": 0.041141625345643695,
+          "envelope_peak_relative_error": 0.004418831250612154,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "surface_vertical_reference",
+          "lo_ns": 18.689973615013336,
+          "hi_ns": 48.689973615013336,
+          "complex_relative_l2": 0.0783920324251024,
+          "envelope_peak_relative_error": 0.004210153125094207,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "1_to_3_vertical_reference",
+          "lo_ns": 167.1717134542461,
+          "hi_ns": 197.1717134542461,
+          "complex_relative_l2": 0.1633480360407304,
+          "envelope_peak_relative_error": 0.018398352779499083,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "3_to_2_vertical_reference",
+          "lo_ns": 168.17240573984057,
+          "hi_ns": 198.17240573984057,
+          "complex_relative_l2": 0.16433132144551893,
+          "envelope_peak_relative_error": 0.018398352779499083,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "2_to_3_vertical_reference",
+          "lo_ns": 238.22443954130495,
+          "hi_ns": 268.22443954130495,
+          "complex_relative_l2": 0.14704152117079974,
+          "envelope_peak_relative_error": 0.11867135956077735,
+          "envelope_peak_shift_ns": 0.0
+        }
+      ],
+      "passes_frozen_domain_screen": false,
+      "tail_db": -46.195491790771484,
+      "reference_tail_db": -45.241722106933594,
+      "new_official_fdtd_seconds": 9.8949,
+      "new_build_solver_seconds": 15.6472,
+      "fdtd_speedup": 2.1725030065993596,
+      "build_solver_speedup": 1.8044442456158292,
+      "tx_coordinate_delta_m": [
+        0.016250000000013642,
+        -0.014999999999986358
+      ],
+      "rx_coordinate_delta_m": [
+        0.016250000000013642,
+        -0.012499999999988631
+      ],
+      "actual_horizontal_separation_m": 1.3000000000000007,
+      "domain_m": [
+        50.0175,
+        50.0175
+      ],
+      "pml_physical_m": 3.0225,
+      "mixed_ez_edge_count": 134,
+      "min_center_sandstone_interval_m": 0.065
+    },
+    {
+      "case": "grid3.75cm_x150.0",
+      "station_m": 150.0,
+      "grid_m": 0.0375,
+      "complex_band_relative_l2": 0.06851054143449384,
+      "strong_bin_phase_rms_degrees": 3.5125738363387735,
+      "windows": [
+        {
+          "label": "common",
+          "lo_ns": 100,
+          "hi_ns": 400,
+          "complex_relative_l2": 0.14653481815188418,
+          "envelope_peak_relative_error": 0.004256773043280315,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "common",
+          "lo_ns": 400,
+          "hi_ns": 1000,
+          "complex_relative_l2": 0.12325949892299848,
+          "envelope_peak_relative_error": 0.00677483612254437,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "surface_vertical_reference",
+          "lo_ns": 18.689973615013336,
+          "hi_ns": 48.689973615013336,
+          "complex_relative_l2": 0.024251472279325663,
+          "envelope_peak_relative_error": 0.0145368069231806,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "1_to_3_vertical_reference",
+          "lo_ns": 167.1717134542461,
+          "hi_ns": 197.1717134542461,
+          "complex_relative_l2": 0.1415396552908323,
+          "envelope_peak_relative_error": 0.004256773043280315,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "3_to_2_vertical_reference",
+          "lo_ns": 168.17240573984057,
+          "hi_ns": 198.17240573984057,
+          "complex_relative_l2": 0.1434650140267477,
+          "envelope_peak_relative_error": 0.004256773043280315,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "2_to_3_vertical_reference",
+          "lo_ns": 238.22443954130495,
+          "hi_ns": 268.22443954130495,
+          "complex_relative_l2": 0.22334502387891336,
+          "envelope_peak_relative_error": 0.02906122099461006,
+          "envelope_peak_shift_ns": 6.653359946773094
+        }
+      ],
+      "passes_frozen_domain_screen": false,
+      "tail_db": -43.95762634277344,
+      "reference_tail_db": -45.241722106933594,
+      "new_official_fdtd_seconds": 6.1964,
+      "new_build_solver_seconds": 11.7722,
+      "fdtd_speedup": 3.4692240655864697,
+      "build_solver_speedup": 2.3984047161957833,
+      "tx_coordinate_delta_m": [
+        0.012500000000017053,
+        -0.012499999999988631
+      ],
+      "rx_coordinate_delta_m": [
+        -0.012500000000017053,
+        0.012500000000045475
+      ],
+      "actual_horizontal_separation_m": 1.2749999999999986,
+      "domain_m": [
+        50.025,
+        50.025
+      ],
+      "pml_physical_m": 3.0,
+      "mixed_ez_edge_count": 117,
+      "min_center_sandstone_interval_m": 0.075
+    },
+    {
+      "case": "grid3.25cm_x162.0",
+      "station_m": 162.0,
+      "grid_m": 0.0325,
+      "complex_band_relative_l2": 0.010077044857910578,
+      "strong_bin_phase_rms_degrees": 0.3996054550105329,
+      "windows": [
+        {
+          "label": "common",
+          "lo_ns": 100,
+          "hi_ns": 400,
+          "complex_relative_l2": 0.1257597813182943,
+          "envelope_peak_relative_error": 0.004857547686938579,
+          "envelope_peak_shift_ns": 1.6633399866932734
+        },
+        {
+          "label": "common",
+          "lo_ns": 400,
+          "hi_ns": 1000,
+          "complex_relative_l2": 0.01773253370747141,
+          "envelope_peak_relative_error": 0.002218565501092895,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "surface_vertical_reference",
+          "lo_ns": 18.439800543614737,
+          "hi_ns": 48.43980054361474,
+          "complex_relative_l2": 0.03614900501858734,
+          "envelope_peak_relative_error": 0.0007473017669538118,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "1_to_3_vertical_reference",
+          "lo_ns": 186.56503903862122,
+          "hi_ns": 216.56503903862122,
+          "complex_relative_l2": 0.09507509000111565,
+          "envelope_peak_relative_error": 0.064378572344713,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "3_to_2_vertical_reference",
+          "lo_ns": 212.08269232128052,
+          "hi_ns": 242.08269232128052,
+          "complex_relative_l2": 0.1433683212217358,
+          "envelope_peak_relative_error": 0.004857547686938579,
+          "envelope_peak_shift_ns": 1.6633399866932734
+        },
+        {
+          "label": "2_to_3_vertical_reference",
+          "lo_ns": 276.4739557145472,
+          "hi_ns": 306.4739557145472,
+          "complex_relative_l2": 0.2041378220813068,
+          "envelope_peak_relative_error": 0.09440704979571701,
+          "envelope_peak_shift_ns": 0.0
+        }
+      ],
+      "passes_frozen_domain_screen": false,
+      "tail_db": -43.902191162109375,
+      "reference_tail_db": -50.5644645690918,
+      "new_official_fdtd_seconds": 9.8954,
+      "new_build_solver_seconds": 15.5656,
+      "fdtd_speedup": 2.172736827212644,
+      "build_solver_speedup": 1.4366744616333453,
+      "tx_coordinate_delta_m": [
+        0.016250000000013642,
+        -0.0024999999999977263
+      ],
+      "rx_coordinate_delta_m": [
+        0.016250000000013642,
+        -0.012499999999988631
+      ],
+      "actual_horizontal_separation_m": 1.3000000000000007,
+      "domain_m": [
+        50.0175,
+        50.0175
+      ],
+      "pml_physical_m": 3.0225,
+      "mixed_ez_edge_count": 134,
+      "min_center_sandstone_interval_m": 1.2675
+    },
+    {
+      "case": "grid3.75cm_x162.0",
+      "station_m": 162.0,
+      "grid_m": 0.0375,
+      "complex_band_relative_l2": 0.06557100265590637,
+      "strong_bin_phase_rms_degrees": 3.174317975675182,
+      "windows": [
+        {
+          "label": "common",
+          "lo_ns": 100,
+          "hi_ns": 400,
+          "complex_relative_l2": 0.19514615706247193,
+          "envelope_peak_relative_error": 0.012439877867922222,
+          "envelope_peak_shift_ns": 1.6633399866932734
+        },
+        {
+          "label": "common",
+          "lo_ns": 400,
+          "hi_ns": 1000,
+          "complex_relative_l2": 0.07684972395288185,
+          "envelope_peak_relative_error": 0.010889922022191634,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "surface_vertical_reference",
+          "lo_ns": 18.439800543614737,
+          "hi_ns": 48.43980054361474,
+          "complex_relative_l2": 0.05948437823614797,
+          "envelope_peak_relative_error": 0.0030711557881278884,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "1_to_3_vertical_reference",
+          "lo_ns": 186.56503903862122,
+          "hi_ns": 216.56503903862122,
+          "complex_relative_l2": 0.14690116146029486,
+          "envelope_peak_relative_error": 0.10008667603782784,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "3_to_2_vertical_reference",
+          "lo_ns": 212.08269232128052,
+          "hi_ns": 242.08269232128052,
+          "complex_relative_l2": 0.22384550737635153,
+          "envelope_peak_relative_error": 0.012439877867922222,
+          "envelope_peak_shift_ns": 1.6633399866932734
+        },
+        {
+          "label": "2_to_3_vertical_reference",
+          "lo_ns": 276.4739557145472,
+          "hi_ns": 306.4739557145472,
+          "complex_relative_l2": 0.27971013723211585,
+          "envelope_peak_relative_error": 0.15114472515675392,
+          "envelope_peak_shift_ns": 0.0
+        }
+      ],
+      "passes_frozen_domain_screen": false,
+      "tail_db": -45.857635498046875,
+      "reference_tail_db": -50.5644645690918,
+      "new_official_fdtd_seconds": 6.2,
+      "new_build_solver_seconds": 6.6528,
+      "fdtd_speedup": 3.467758064516129,
+      "build_solver_speedup": 3.361396705146705,
+      "tx_coordinate_delta_m": [
+        0.012500000000017053,
+        -0.012499999999988631
+      ],
+      "rx_coordinate_delta_m": [
+        -0.012499999999988631,
+        -0.012499999999988631
+      ],
+      "actual_horizontal_separation_m": 1.2749999999999986,
+      "domain_m": [
+        50.025,
+        50.025
+      ],
+      "pml_physical_m": 3.0,
+      "mixed_ez_edge_count": 116,
+      "min_center_sandstone_interval_m": 1.2375
+    },
+    {
+      "case": "grid3.25cm_x174.0",
+      "station_m": 174.0,
+      "grid_m": 0.0325,
+      "complex_band_relative_l2": 0.010127728623780863,
+      "strong_bin_phase_rms_degrees": 0.37269531087631785,
+      "windows": [
+        {
+          "label": "common",
+          "lo_ns": 100,
+          "hi_ns": 400,
+          "complex_relative_l2": 0.09276294726227495,
+          "envelope_peak_relative_error": 0.03508488222772699,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "common",
+          "lo_ns": 400,
+          "hi_ns": 1000,
+          "complex_relative_l2": 0.015632586136413124,
+          "envelope_peak_relative_error": 0.0019593805789279717,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "surface_vertical_reference",
+          "lo_ns": 18.273018496015645,
+          "hi_ns": 48.273018496015645,
+          "complex_relative_l2": 0.0416786739550835,
+          "envelope_peak_relative_error": 0.0005245747522872879,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "1_to_2_vertical_reference",
+          "lo_ns": 188.70925683287786,
+          "hi_ns": 218.70925683287786,
+          "complex_relative_l2": 0.08095614500730855,
+          "envelope_peak_relative_error": 0.03508488222772699,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "2_to_3_vertical_reference",
+          "lo_ns": 208.52195326157485,
+          "hi_ns": 238.52195326157485,
+          "complex_relative_l2": 0.11874534561003283,
+          "envelope_peak_relative_error": 0.022928057735788876,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "3_to_2_vertical_reference",
+          "lo_ns": 249.5503369709486,
+          "hi_ns": 279.5503369709486,
+          "complex_relative_l2": 0.13338454944360792,
+          "envelope_peak_relative_error": 0.007189239449006513,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "2_to_3_vertical_reference",
+          "lo_ns": 308.28082995601704,
+          "hi_ns": 338.28082995601704,
+          "complex_relative_l2": 0.1464738511444116,
+          "envelope_peak_relative_error": 0.018537338577973905,
+          "envelope_peak_shift_ns": 0.0
+        }
+      ],
+      "passes_frozen_domain_screen": false,
+      "tail_db": -48.641090393066406,
+      "reference_tail_db": -48.14176559448242,
+      "new_official_fdtd_seconds": 9.898,
+      "new_build_solver_seconds": 10.441,
+      "fdtd_speedup": 2.171388159224086,
+      "build_solver_speedup": 2.1411359065223636,
+      "tx_coordinate_delta_m": [
+        0.016250000000013642,
+        -0.0049999999999954525
+      ],
+      "rx_coordinate_delta_m": [
+        0.016250000000013642,
+        -0.014999999999986358
+      ],
+      "actual_horizontal_separation_m": 1.3000000000000007,
+      "domain_m": [
+        50.0175,
+        50.0175
+      ],
+      "pml_physical_m": 3.0225,
+      "mixed_ez_edge_count": 132,
+      "min_center_sandstone_interval_m": 2.08
+    },
+    {
+      "case": "grid3.75cm_x174.0",
+      "station_m": 174.0,
+      "grid_m": 0.0375,
+      "complex_band_relative_l2": 0.06532363342440341,
+      "strong_bin_phase_rms_degrees": 3.1700463679219815,
+      "windows": [
+        {
+          "label": "common",
+          "lo_ns": 100,
+          "hi_ns": 400,
+          "complex_relative_l2": 0.16560033374739666,
+          "envelope_peak_relative_error": 0.052525432089279844,
+          "envelope_peak_shift_ns": 23.286759813705913
+        },
+        {
+          "label": "common",
+          "lo_ns": 400,
+          "hi_ns": 1000,
+          "complex_relative_l2": 0.08205194662558198,
+          "envelope_peak_relative_error": 0.0014983486634199128,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "surface_vertical_reference",
+          "lo_ns": 18.273018496015645,
+          "hi_ns": 48.273018496015645,
+          "complex_relative_l2": 0.05695761554331324,
+          "envelope_peak_relative_error": 0.002026486603218025,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "1_to_2_vertical_reference",
+          "lo_ns": 188.70925683287786,
+          "hi_ns": 218.70925683287786,
+          "complex_relative_l2": 0.17157674878075194,
+          "envelope_peak_relative_error": 0.06371882707783316,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "2_to_3_vertical_reference",
+          "lo_ns": 208.52195326157485,
+          "hi_ns": 238.52195326157485,
+          "complex_relative_l2": 0.20068594736327017,
+          "envelope_peak_relative_error": 0.03545726492890244,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "3_to_2_vertical_reference",
+          "lo_ns": 249.5503369709486,
+          "hi_ns": 279.5503369709486,
+          "complex_relative_l2": 0.2194752423740993,
+          "envelope_peak_relative_error": 0.03229213104799866,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "2_to_3_vertical_reference",
+          "lo_ns": 308.28082995601704,
+          "hi_ns": 338.28082995601704,
+          "complex_relative_l2": 0.23652462403917437,
+          "envelope_peak_relative_error": 0.01087407915546601,
+          "envelope_peak_shift_ns": 0.0
+        }
+      ],
+      "passes_frozen_domain_screen": false,
+      "tail_db": -46.99855422973633,
+      "reference_tail_db": -48.14176559448242,
+      "new_official_fdtd_seconds": 6.1848,
+      "new_build_solver_seconds": 6.6545,
+      "fdtd_speedup": 3.47503557107748,
+      "build_solver_speedup": 3.3594710346382146,
+      "tx_coordinate_delta_m": [
+        0.012500000000017053,
+        -0.012499999999988631
+      ],
+      "rx_coordinate_delta_m": [
+        -0.012499999999988631,
+        -0.012499999999988631
+      ],
+      "actual_horizontal_separation_m": 1.2749999999999986,
+      "domain_m": [
+        50.025,
+        50.025
+      ],
+      "pml_physical_m": 3.0,
+      "mixed_ez_edge_count": 114,
+      "min_center_sandstone_interval_m": 2.0625
+    }
+  ],
+  "thresholds": {
+    "complex_band_relative_l2_max": 0.005,
+    "strong_bin_phase_rms_degrees_max": 0.5,
+    "time_window_relative_l2_max": 0.01,
+    "event_peak_relative_error_max": 0.01,
+    "event_peak_shift_ns_max": 2.0,
+    "common_windows_ns": [
+      [
+        100,
+        400
+      ],
+      [
+        400,
+        1000
+      ]
+    ],
+    "event_halfwidth_ns": 15,
+    "note": "project-specific screening tolerances, not universal standards; requires all anchors and the 70m control; original 50m domain is not an absolute truth"
+  },
+  "reference_status": "finite-grid finite-domain baseline, tail screen unresolved",
+  "interpretation": "Practical replacement including declared coordinate/domain/PML/voxel quantization; not isolated bulk-grid dispersion",
+  "current_model_modified": false
+}

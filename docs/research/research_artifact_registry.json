@@ -1,4 +1,49 @@
  {
+ "line9_v31_coarse_grid_2026_10_13": {
+  "status": "COMPLETED_SIX_SOLVES_FILES_VERIFIED_BOTH_COARSE_REPLACEMENT_SCREENS_FAILED",
+  "report": "docs/research/2026-10-13_line9_v31_coarse_grid_results.md",
+  "plan": "docs/research/2026-10-13_line9_v31_coarse_grid_plan.md",
+  "public": "artifacts/research_checks/2026-10-13_line9_v31_coarse_grid_r1",
+  "authorization": "开始验证",
+  "run_root": "E:/djh/line9_v31_coarse_grid_20261013_r1",
+  "new_solver_runs": 6,
+  "reused_references": 3,
+  "stations_m": [
+   150,
+   162,
+   174
+  ],
+  "candidate_grid_m": [
+   0.0325,
+   0.0375
+  ],
+  "reference_grid_m": 0.025,
+  "native_dtype": "float32",
+  "record_ns": 1100,
+  "fdtd_seconds": 48.2695,
+  "build_solver_seconds": 66.7333,
+  "batch_wall_seconds": 78.8438630104065,
+  "max_window_error": [
+   0.2041378220813068,
+   0.27971013723211585
+  ],
+  "median_build_solver_speedup": [
+   1.8044442456158292,
+   3.3594710346382146
+  ],
+  "timing_repeated_benchmark": false,
+  "comparison_scope": "Practical coarsening including declared geometry/source/domain/PML quantization",
+  "current_model_modified": false,
+  "grid_adopted": false,
+  "solver_retries": 0,
+  "tail_screen_passed": false,
+  "local_data_bundle": "artifacts/local_checks/2026-10-13_line9_v31_coarse_grid_r1/delivery/line9_v31_coarse_grid_6solves_20261013.zip",
+  "local_data_bundle_sha256": "da728bb97bcae4f431093d59b8e9ffd760a85c8ee52449394ea52731106ae163",
+  "local_data_bundle_bytes": 3349970,
+  "package_manifest_entries": 135,
+  "analysis_replay_commands": 2,
+  "byte_identical_replayed_outputs": 9
+ },
  "line9_sfcw_mesh_decision_2026_10_13": {
   "status": "RESEARCH_COMPLETE_DEFAULT_SMOOTHING_APPROVED_SOURCE_AND_MESH_UNCHANGED",
   "report": "docs/research/2026-10-13_sfcw_mesh_decision.md",
