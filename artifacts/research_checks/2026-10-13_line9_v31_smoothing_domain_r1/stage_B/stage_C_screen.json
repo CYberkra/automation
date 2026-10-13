@@ -1,0 +1,20 @@
+{
+  "proceed": false,
+  "condition": "Run 30x45 only if all 40x45 cases and 70m reference checks pass the frozen screen",
+  "guard_pass": false,
+  "combined": {
+    "domain_m": [
+      40.0,
+      45.0
+    ],
+    "stations": 7,
+    "all_station_screens_pass": false,
+    "expanded_domain_guard_pass": false,
+    "accepted_candidate": false,
+    "max_complex_band_error": 0.003056925579388485,
+    "max_window_error": 0.0354359015477224,
+    "median_fdtd_speedup": 1.3062114896151087,
+    "median_whole_run_speedup": 1.3058815972343878
+  },
+  "contract_sha256": "b8938c0ffc35f658dffb43cd3a48f04dbfe897da81c4c734d8c85131fe18b14f"
+}

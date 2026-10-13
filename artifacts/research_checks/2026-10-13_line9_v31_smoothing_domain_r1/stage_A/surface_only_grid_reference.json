@@ -1,0 +1,16 @@
+{
+  "diagnostic_station_m": 158.4,
+  "definition": "R=(H_surface-H_air)/H_air; dimensionless surface scattering diagnostic",
+  "relative_l2_to_fine_smoothed_proxy": {
+    "d0.025_n": 0.05131324524811131,
+    "d0.025_y": 0.01414790006662344,
+    "d0.0125_n": 0.024368449042802567,
+    "d0.0125_y": 0.0
+  },
+  "fine_n_vs_y_relative_l2": 0.024368449042802567,
+  "coarse_n_to_fine_n_relative_l2": 0.028246225604326564,
+  "coarse_y_to_fine_n_relative_l2": 0.02755335414457275,
+  "coarse_y_closer_to_fine_y_than_coarse_n": true,
+  "error_reduction_factor": 3.626916009193851,
+  "warning": "Fine proxy shares numerical assumptions and is not an analytic truth. The n/y difference is not itself isolated nonphysical scattering."
+}

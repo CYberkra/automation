@@ -1,0 +1,648 @@
+{
+  "schema": "line9-v31-smoothing-domain/1",
+  "id": "line9_v31_domain_mid_20261013_r1",
+  "authorization": "User requested native dielectric smoothing followed by physics-preserving domain optimization",
+  "gprMax": "4.0.1",
+  "gpu": [
+    0
+  ],
+  "gpu_precision": "single",
+  "native_dtype": "float32",
+  "model_family": "V3.1 candidate, 2D TMz, constant original materials, 5m nominal AGL",
+  "record_ns": 1100.0,
+  "stability_factor": 0.95,
+  "source": "built-in unit impulse; ideal HertzianDipole z",
+  "official_sfcw": {
+    "method": "direct",
+    "f_start_hz": 20000000,
+    "f_stop_hz": 170000000,
+    "steps": 501,
+    "window": "gaussian",
+    "zero_pad": 4,
+    "tail_taper": 0,
+    "time_shift_s": 0
+  },
+  "private_input_sha256": {
+    "mother_geometry": "9f5fb50cbaf16bcf208eb530f850e49777a6a495d4d4e978a2d3b162aa2b9f6b",
+    "source_zip": "ede5d676bb97964eb19c1a4c4b4b8b99d4f41ebc45bd36e9756da6b893d5c056",
+    "selection": "28a7bd2b38a148079e183d96e6f54c1575ed1fc330a846693b2c38fab6ff2796",
+    "vectors": "a6c70e3429907140cdd966fd16e6bc74e9c268c32a9cf12aa10b0f876f418a98"
+  },
+  "material_database_sha256": "eb8f2ce1274aea902f1638e8319f512d8d566de5248aaf627deba07a5b882871",
+  "anchors_m": [
+    150.0,
+    158.4,
+    162.0,
+    174.0,
+    186.0,
+    190.2,
+    198.0
+  ],
+  "surface_diagnostic_station_m": 158.4,
+  "surface_4m_average_slopes": {
+    "150.0": 0.07011711118522612,
+    "158.4": 0.15575137831241648,
+    "162.0": 0.06387772936058411,
+    "174.0": 0.05113674734506901,
+    "186.0": 0.04165696303623179,
+    "190.2": 0.041656963036217576,
+    "198.0": 0.015026470240670164
+  },
+  "surface_diagnostic": "same continuous V3.1 surface, all subsurface material replaced by the original cover; fine-grid proxy is not analytic truth",
+  "cross_grid_diagnostic": "R=(H_surface-H_air)/H_air, computed from official complex responses; cancels grid-dependent 2D source scaling; not a replacement SFCW product",
+  "max_new_solves": 7,
+  "max_wall_seconds": 600,
+  "no_retry_after_case_failure": true,
+  "domain_screen": {
+    "complex_band_relative_l2_max": 0.005,
+    "strong_bin_phase_rms_degrees_max": 0.5,
+    "time_window_relative_l2_max": 0.01,
+    "event_peak_relative_error_max": 0.01,
+    "event_peak_shift_ns_max": 2.0,
+    "common_windows_ns": [
+      [
+        100,
+        400
+      ],
+      [
+        400,
+        1000
+      ]
+    ],
+    "event_halfwidth_ns": 15,
+    "note": "project-specific screening tolerances, not universal standards; requires all anchors and the 70m control; original 50m domain is not an absolute truth"
+  },
+  "stage_C_condition": "not applicable; original 30m stage was stopped",
+  "cases": [
+    {
+      "id": "mid45x45_x150.0",
+      "stage": "B",
+      "family": "reduced_domain",
+      "station_m": 150.0,
+      "geometry": "geometries/mid45x45_x150.0.h5",
+      "geometry_sha256": "70a9d99d52f42ab0859bfefea1d3898b67c4e7aa6b290e9053c66458beed7429",
+      "averaging": "y",
+      "grid_m": 0.025,
+      "domain_m": [
+        45.0,
+        45.0
+      ],
+      "tx_m": [
+        21.849999999999994,
+        35.375,
+        0.0
+      ],
+      "rx_m": [
+        23.150000000000006,
+        35.27499999999998,
+        0.0
+      ],
+      "tx_global_x_elevation_m": [
+        149.35,
+        445.375
+      ],
+      "rx_global_x_elevation_m": [
+        150.65,
+        445.275
+      ],
+      "origin_global_x_elevation_m": [
+        127.5,
+        410.0
+      ],
+      "pml_cells": [
+        120,
+        120,
+        0,
+        120,
+        120,
+        0
+      ],
+      "dt_s": 5.601804049780499e-11,
+      "expected_samples": 19638,
+      "geometry_only": false,
+      "surface_coefficient_export_bounds": [
+        [
+          20.5,
+          30.125,
+          0.0
+        ],
+        [
+          24.5,
+          30.725,
+          0.025
+        ]
+      ],
+      "baseline_trace_index": 1,
+      "vertical_reference_events": [
+        {
+          "label": "surface_vertical_reference",
+          "time_ns": 33.689973615013336
+        },
+        {
+          "label": "1_to_3_vertical_reference",
+          "time_ns": 182.1717134542461
+        },
+        {
+          "label": "3_to_2_vertical_reference",
+          "time_ns": 183.17240573984057
+        },
+        {
+          "label": "2_to_3_vertical_reference",
+          "time_ns": 253.22443954130495
+        }
+      ]
+    },
+    {
+      "id": "mid45x45_x158.4",
+      "stage": "B",
+      "family": "reduced_domain",
+      "station_m": 158.4,
+      "geometry": "geometries/mid45x45_x158.4.h5",
+      "geometry_sha256": "921a9808d86a2c2e5da0725aa81283369643531c6329d8090aa5124cc691153a",
+      "averaging": "y",
+      "grid_m": 0.025,
+      "domain_m": [
+        45.0,
+        45.0
+      ],
+      "tx_m": [
+        21.849999999999994,
+        36.19999999999999,
+        0.0
+      ],
+      "rx_m": [
+        23.150000000000006,
+        36.35000000000002,
+        0.0
+      ],
+      "tx_global_x_elevation_m": [
+        157.75,
+        446.2
+      ],
+      "rx_global_x_elevation_m": [
+        159.05,
+        446.35
+      ],
+      "origin_global_x_elevation_m": [
+        135.9,
+        410.0
+      ],
+      "pml_cells": [
+        120,
+        120,
+        0,
+        120,
+        120,
+        0
+      ],
+      "dt_s": 5.601804049780499e-11,
+      "expected_samples": 19638,
+      "geometry_only": false,
+      "surface_coefficient_export_bounds": [
+        [
+          20.5,
+          30.650000000000002,
+          0.0
+        ],
+        [
+          24.5,
+          31.6,
+          0.025
+        ]
+      ],
+      "baseline_trace_index": 15,
+      "vertical_reference_events": [
+        {
+          "label": "surface_vertical_reference",
+          "time_ns": 33.189627472216145
+        },
+        {
+          "label": "1_to_3_vertical_reference",
+          "time_ns": 201.31486596722263
+        },
+        {
+          "label": "3_to_2_vertical_reference",
+          "time_ns": 217.32594253673435
+        },
+        {
+          "label": "2_to_3_vertical_reference",
+          "time_ns": 283.83999483307537
+        }
+      ]
+    },
+    {
+      "id": "mid45x45_x162.0",
+      "stage": "B",
+      "family": "reduced_domain",
+      "station_m": 162.0,
+      "geometry": "geometries/mid45x45_x162.0.h5",
+      "geometry_sha256": "212c697fca5b6de087cd866646caa11480c020091380acb2522de817d612073a",
+      "averaging": "y",
+      "grid_m": 0.025,
+      "domain_m": [
+        45.0,
+        45.0
+      ],
+      "tx_m": [
+        21.849999999999994,
+        36.5,
+        0.0
+      ],
+      "rx_m": [
+        23.150000000000006,
+        36.57499999999999,
+        0.0
+      ],
+      "tx_global_x_elevation_m": [
+        161.35,
+        446.5
+      ],
+      "rx_global_x_elevation_m": [
+        162.65,
+        446.575
+      ],
+      "origin_global_x_elevation_m": [
+        139.5,
+        410.0
+      ],
+      "pml_cells": [
+        120,
+        120,
+        0,
+        120,
+        120,
+        0
+      ],
+      "dt_s": 5.601804049780499e-11,
+      "expected_samples": 19638,
+      "geometry_only": false,
+      "surface_coefficient_export_bounds": [
+        [
+          20.5,
+          31.25,
+          0.0
+        ],
+        [
+          24.5,
+          31.825000000000003,
+          0.025
+        ]
+      ],
+      "baseline_trace_index": 21,
+      "vertical_reference_events": [
+        {
+          "label": "surface_vertical_reference",
+          "time_ns": 33.43980054361474
+        },
+        {
+          "label": "1_to_3_vertical_reference",
+          "time_ns": 201.56503903862122
+        },
+        {
+          "label": "3_to_2_vertical_reference",
+          "time_ns": 227.08269232128052
+        },
+        {
+          "label": "2_to_3_vertical_reference",
+          "time_ns": 291.4739557145472
+        }
+      ]
+    },
+    {
+      "id": "mid45x45_x174.0",
+      "stage": "B",
+      "family": "reduced_domain",
+      "station_m": 174.0,
+      "geometry": "geometries/mid45x45_x174.0.h5",
+      "geometry_sha256": "897f0f4701274d5ed3b40a5ceddea4cea97a02e659fdeb653e5b9ff5bc540acc",
+      "averaging": "y",
+      "grid_m": 0.025,
+      "domain_m": [
+        45.0,
+        45.0
+      ],
+      "tx_m": [
+        21.849999999999994,
+        37.25,
+        0.0
+      ],
+      "rx_m": [
+        23.150000000000006,
+        37.32499999999999,
+        0.0
+      ],
+      "tx_global_x_elevation_m": [
+        173.35,
+        447.25
+      ],
+      "rx_global_x_elevation_m": [
+        174.65,
+        447.325
+      ],
+      "origin_global_x_elevation_m": [
+        151.5,
+        410.0
+      ],
+      "pml_cells": [
+        120,
+        120,
+        0,
+        120,
+        120,
+        0
+      ],
+      "dt_s": 5.601804049780499e-11,
+      "expected_samples": 19638,
+      "geometry_only": false,
+      "surface_coefficient_export_bounds": [
+        [
+          20.5,
+          32.0,
+          0.0
+        ],
+        [
+          24.5,
+          32.550000000000004,
+          0.025
+        ]
+      ],
+      "baseline_trace_index": 41,
+      "vertical_reference_events": [
+        {
+          "label": "surface_vertical_reference",
+          "time_ns": 33.273018496015645
+        },
+        {
+          "label": "1_to_2_vertical_reference",
+          "time_ns": 203.70925683287786
+        },
+        {
+          "label": "2_to_3_vertical_reference",
+          "time_ns": 223.52195326157485
+        },
+        {
+          "label": "3_to_2_vertical_reference",
+          "time_ns": 264.5503369709486
+        },
+        {
+          "label": "2_to_3_vertical_reference",
+          "time_ns": 323.28082995601704
+        }
+      ]
+    },
+    {
+      "id": "mid45x45_x186.0",
+      "stage": "B",
+      "family": "reduced_domain",
+      "station_m": 186.0,
+      "geometry": "geometries/mid45x45_x186.0.h5",
+      "geometry_sha256": "1bd19210521df2603bb0521358bcd6be3439c7bab403366a64d2c0e993963eae",
+      "averaging": "y",
+      "grid_m": 0.025,
+      "domain_m": [
+        45.0,
+        45.0
+      ],
+      "tx_m": [
+        21.849999999999994,
+        37.77499999999998,
+        0.0
+      ],
+      "rx_m": [
+        23.150000000000006,
+        37.82499999999999,
+        0.0
+      ],
+      "tx_global_x_elevation_m": [
+        185.35,
+        447.775
+      ],
+      "rx_global_x_elevation_m": [
+        186.65,
+        447.825
+      ],
+      "origin_global_x_elevation_m": [
+        163.5,
+        410.0
+      ],
+      "pml_cells": [
+        120,
+        120,
+        0,
+        120,
+        120,
+        0
+      ],
+      "dt_s": 5.601804049780499e-11,
+      "expected_samples": 19638,
+      "geometry_only": false,
+      "surface_coefficient_export_bounds": [
+        [
+          20.5,
+          32.550000000000004,
+          0.0
+        ],
+        [
+          24.5,
+          33.050000000000004,
+          0.025
+        ]
+      ],
+      "baseline_trace_index": 61,
+      "vertical_reference_events": [
+        {
+          "label": "surface_vertical_reference",
+          "time_ns": 33.35640951981518
+        },
+        {
+          "label": "1_to_2_vertical_reference",
+          "time_ns": 199.17064817296594
+        },
+        {
+          "label": "2_to_3_vertical_reference",
+          "time_ns": 250.8251781477831
+        },
+        {
+          "label": "3_to_2_vertical_reference",
+          "time_ns": 299.85910014191273
+        },
+        {
+          "label": "2_to_3_vertical_reference",
+          "time_ns": 352.9288227187818
+        }
+      ]
+    },
+    {
+      "id": "mid45x45_x190.2",
+      "stage": "B",
+      "family": "reduced_domain",
+      "station_m": 190.2,
+      "geometry": "geometries/mid45x45_x190.2.h5",
+      "geometry_sha256": "2bd6d7c37023d40049797b9ec2bc393cb73c46209228befd1d1f1c288ee63a56",
+      "averaging": "y",
+      "grid_m": 0.025,
+      "domain_m": [
+        45.0,
+        45.0
+      ],
+      "tx_m": [
+        21.849999999999994,
+        37.94999999999999,
+        0.0
+      ],
+      "rx_m": [
+        23.150000000000006,
+        38.0,
+        0.0
+      ],
+      "tx_global_x_elevation_m": [
+        189.54999999999998,
+        447.95
+      ],
+      "rx_global_x_elevation_m": [
+        190.85,
+        448.0
+      ],
+      "origin_global_x_elevation_m": [
+        167.7,
+        410.0
+      ],
+      "pml_cells": [
+        120,
+        120,
+        0,
+        120,
+        120,
+        0
+      ],
+      "dt_s": 5.601804049780499e-11,
+      "expected_samples": 19638,
+      "geometry_only": false,
+      "surface_coefficient_export_bounds": [
+        [
+          20.5,
+          32.725,
+          0.0
+        ],
+        [
+          24.5,
+          33.225,
+          0.025
+        ]
+      ],
+      "baseline_trace_index": 68,
+      "vertical_reference_events": [
+        {
+          "label": "surface_vertical_reference",
+          "time_ns": 33.3564095198152
+        },
+        {
+          "label": "1_to_2_vertical_reference",
+          "time_ns": 198.01514825203807
+        },
+        {
+          "label": "2_to_3_vertical_reference",
+          "time_ns": 259.5760264412039
+        },
+        {
+          "label": "3_to_2_vertical_reference",
+          "time_ns": 311.612025292117
+        },
+        {
+          "label": "2_to_3_vertical_reference",
+          "time_ns": 363.2665552669362
+        }
+      ]
+    },
+    {
+      "id": "mid45x45_x198.0",
+      "stage": "B",
+      "family": "reduced_domain",
+      "station_m": 198.0,
+      "geometry": "geometries/mid45x45_x198.0.h5",
+      "geometry_sha256": "f9f76b45e589f44a3b1b90dc09142cbe9343f22c3152a7cb0879b512a8f39eeb",
+      "averaging": "y",
+      "grid_m": 0.025,
+      "domain_m": [
+        45.0,
+        45.0
+      ],
+      "tx_m": [
+        21.849999999999994,
+        38.22500000000002,
+        0.0
+      ],
+      "rx_m": [
+        23.150000000000006,
+        38.19999999999999,
+        0.0
+      ],
+      "tx_global_x_elevation_m": [
+        197.35,
+        448.225
+      ],
+      "rx_global_x_elevation_m": [
+        198.65,
+        448.2
+      ],
+      "origin_global_x_elevation_m": [
+        175.5,
+        410.0
+      ],
+      "pml_cells": [
+        120,
+        120,
+        0,
+        120,
+        120,
+        0
+      ],
+      "dt_s": 5.601804049780499e-11,
+      "expected_samples": 19638,
+      "geometry_only": false,
+      "surface_coefficient_export_bounds": [
+        [
+          20.5,
+          33.0,
+          0.0
+        ],
+        [
+          24.5,
+          33.4,
+          0.025
+        ]
+      ],
+      "baseline_trace_index": 81,
+      "vertical_reference_events": [
+        {
+          "label": "surface_vertical_reference",
+          "time_ns": 33.43980054361474
+        },
+        {
+          "label": "1_to_2_vertical_reference",
+          "time_ns": 195.20978947351796
+        },
+        {
+          "label": "2_to_3_vertical_reference",
+          "time_ns": 274.4605751883067
+        },
+        {
+          "label": "3_to_2_vertical_reference",
+          "time_ns": 330.4993431815977
+        },
+        {
+          "label": "2_to_3_vertical_reference",
+          "time_ns": 379.32348795231724
+        }
+      ]
+    }
+  ],
+  "parent_contract_sha256": "b8938c0ffc35f658dffb43cd3a48f04dbfe897da81c4c734d8c85131fe18b14f",
+  "adaptive_extension": {
+    "reason": "40m width changed target-window responses; test the 45m intermediate width",
+    "original_study_solves": 37,
+    "total_study_solve_limit": 44,
+    "frozen_tolerances_changed": false,
+    "assessment": "Compare to full50 at all seven anchors and directly to wide70 at three anchors. Preserve the failed original guard result."
+  }
+}
