@@ -356,6 +356,25 @@ def audit_output(root, case):
                 source_sha256=hashlib.sha256(source.tobytes()).hexdigest())
 
 
+def process_sfcw(raw, output, log, spec):
+    """Run the official toolbox with the frozen study frequency definition."""
+    if output.exists():
+        raise FileExistsError(output)
+    assert spec['tail_taper'] == 0 and spec['time_shift_s'] == 0
+    cmd = [sys.executable, '-m', 'gprMax.toolboxes.SFCW', 'process', str(raw),
+           '--source', '/srcs/src1', '--receiver', '/rxs/rx1', '--component', 'Ez',
+           '--f-start', str(spec['f_start_hz']), '--f-stop', str(spec['f_stop_hz']),
+           '--steps', str(spec['steps']), '--method', spec['method'],
+           '--window', spec['window'], '--zero-pad', str(spec['zero_pad']), '--output', str(output)]
+    with log.open('w', encoding='utf-8') as f:
+        proc = subprocess.run(cmd, stdout=f, stderr=subprocess.STDOUT, timeout=120)
+    if proc.returncode:
+        raise RuntimeError(f'Official SFCW failed: {raw}')
+    with h5py.File(output) as h:
+        assert h['response'].shape == (spec['steps'],) and np.isfinite(h['response'][:]).all()
+        assert np.array_equal(h['frequency'][:], np.linspace(spec['f_start_hz'], spec['f_stop_hz'], spec['steps']))
+
+
 def run_stage(a):
     import gprMax
     import pycuda.driver as cuda
@@ -428,17 +447,7 @@ def run_stage(a):
             item.update(audit_output(root, case))
             raw = dest / "impulse.h5"
             sf_log = dest / "sfcw.log"
-            cmd = [sys.executable, "-m", "gprMax.toolboxes.SFCW", "process", str(raw),
-                   "--source", "/srcs/src1", "--receiver", "/rxs/rx1", "--component", "Ez",
-                   "--f-start", "20000000", "--f-stop", "170000000", "--steps", "501",
-                   "--method", "direct", "--window", "gaussian", "--zero-pad", "4", "--output", str(dest / "sfcw.h5")]
-            with sf_log.open("w", encoding="utf-8") as f:
-                proc = subprocess.run(cmd, stdout=f, stderr=subprocess.STDOUT, timeout=120)
-            if proc.returncode:
-                raise RuntimeError(f"Official SFCW failed: {case['id']}")
-            with h5py.File(dest / "sfcw.h5") as h:
-                assert h["response"].shape == (501,) and np.isfinite(h["response"][:]).all()
-                assert h["frequency"][0] == 20e6 and h["frequency"][-1] == 170e6
+            process_sfcw(raw, dest / 'sfcw.h5', sf_log, contract['official_sfcw'])
             item["sfcw_sha256"] = sha(dest / "sfcw.h5")
         item["files"] = [{"path": str(p.relative_to(root)).replace("\\", "/"), "sha256": sha(p), "bytes": p.stat().st_size}
                          for p in sorted(dest.glob("*")) if p.is_file() and p.name != "receipt.json"]
@@ -446,8 +455,23 @@ def run_stage(a):
         receipt.append(item)
         save(root / f"stage_{a.stage}_receipts.json", receipt)
         print(f"{a.stage}: {case['id']} PASS {item['wall_seconds']:.1f}s", flush=True)
-    save(root / f"stage_{a.stage}_complete.json", dict(status="COMPLETE", cases=len(receipt),
-                                                     receipts=receipt, elapsed_since_first_stage_s=time.time() - started))
+    reused = []
+    for ref in contract.get('reuse_references', []):
+        dest = root / 'references' / ref['id']
+        raw = dest / 'impulse.h5'
+        assert sha(raw) == ref['raw_sha256']
+        assert sha(dest / 'sfcw_20_170.h5') == ref['wide_sfcw_sha256']
+        process_sfcw(raw, dest / 'sfcw.h5', dest / 'sfcw.log', contract['official_sfcw'])
+        item = dict(case=ref['id'], status='PASS', new_fdtd=False,
+                    files=[dict(path=p.relative_to(root).as_posix(), sha256=sha(p), bytes=p.stat().st_size)
+                           for p in sorted(dest.glob('*')) if p.is_file() and p.name != 'receipt.json'])
+        save(dest / 'receipt.json', item)
+        reused.append(item)
+    completion = dict(status='COMPLETE', cases=len(receipt), receipts=receipt,
+                      elapsed_since_first_stage_s=time.time() - started)
+    if reused:
+        completion['reused_references'] = reused
+    save(root / f"stage_{a.stage}_complete.json", completion)
     save(root / "progress.json", dict(stage=a.stage, status="COMPLETE", completed=len(receipt), total=len(selected)))
 
 

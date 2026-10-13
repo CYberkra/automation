@@ -56,7 +56,9 @@ def prepare(args):
     assert cs['geometry_model_version'] == 'V3.1_VERTICAL_PDF_SCALE_FIXED'
     contacts = cs['contact_points_x_elevation_m']
     thirtieth = getattr(args, 'spacing_fraction', None) == '1/30'
-    spacings = [1.0 / 30.0] if thirtieth else [.0325, .0375]
+    band110 = getattr(args, 'band110_grid5cm', False)
+    assert not (thirtieth and band110)
+    spacings = [.05] if band110 else [1.0 / 30.0] if thirtieth else [.0325, .0375]
     db = inputs / 'geometries' / f'{DB}.json'
     assert sha(db) == prior['material_database_sha256']
     shutil.copy2(db, geodir / db.name)
@@ -143,6 +145,29 @@ def prepare(args):
             authorization='User explicitly requested 网格尝试1/30 m，即 3.333… cm。',
             grid_fraction_m=[1,30],max_new_solves=3,max_wall_seconds=600,
             quantization_policy='spacing=1.0/30.0 without decimal truncation; exact50m/90-cell3mPML/39-cell1.3m separation; x origin shifts -1/60m to preserve TX/RX x; bottom410m fixed; nearest y positive ties; no fitted correction')
+    if band110:
+        references = []
+        for station in contract['anchors_m']:
+            cid = f'full_x{station:.1f}_y'
+            dest = root / 'references' / cid
+            dest.mkdir(parents=True)
+            src = parent / 'cases' / cid
+            shutil.copy2(src / 'impulse.h5', dest / 'impulse.h5')
+            shutil.copy2(src / 'sfcw.h5', dest / 'sfcw_20_170.h5')
+            shutil.copy2(src / 'receipt.json', dest / 'original_receipt.json')
+            shutil.copy2(src / 'solver.log', dest / 'original_solver.log')
+            base = next(c for c in prior['cases'] if c['id'] == cid)
+            shutil.copy2(inputs / base['geometry'], geodir / Path(base['geometry']).name)
+            references.append(dict(id=cid, case=base, raw_sha256=sha(dest/'impulse.h5'),
+                                   wide_sfcw_sha256=sha(dest/'sfcw_20_170.h5')))
+        contract['official_sfcw'].update(f_stop_hz=110_000_000, steps=301)
+        contract.update(id='line9_v31_band110_grid5cm_20261013_r1',
+            authorization='User stopped 1/30m research and requested 20–110MHz + 5cm; existing2.5cm reused following user clarification',
+            max_new_solves=3, max_wall_seconds=600, reuse_references=references,
+            source_or_sfcw_changed=True,
+            comparison_scope='20–110MHz practical5cm replacement vs reused2.5cm; includes disclosed <=2.5cm vertical pose quantization, not isolated dispersion',
+            canceled_proposal='No1/30,1/60,1/120m 1600ns convergence solves started',
+            acceptance='Original project tolerances unchanged. Failure cannot isolate grid from pose; passing does not prove absolute convergence or20–170MHz equivalence')
     save(root/'contract.json',contract)
     shutil.copy2(Path(__file__).with_name('study_line9_v31_smoothing_domain.py'),root/'study.py')
     save(root/'preparation_audit.json',dict(status='PASS',case_count=len(cases),reference_checks=checks,
@@ -157,4 +182,5 @@ if __name__ == '__main__':
     p.add_argument('--parent',type=Path,required=True)
     p.add_argument('--parent-inputs',type=Path,required=True)
     p.add_argument('--spacing-fraction',choices=['1/30'],default=None)
+    p.add_argument('--band110-grid5cm',action='store_true')
     prepare(p.parse_args())

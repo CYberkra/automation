@@ -22,7 +22,7 @@ def relative(candidate, reference):
     return float(np.linalg.norm(candidate - reference) / den) if den > 0 else None
 
 
-def read_sf(path, index=None):
+def read_sf(path, index=None, frequency_spec=None):
     with h5py.File(path) as h:
         def take(name):
             x = h[name][:]
@@ -35,8 +35,9 @@ def read_sf(path, index=None):
         assert h["time_response"].attrs["ZeroPadFactor"] == 4
         assert h.attrs["TailTaperFraction"] == 0 and h["time_response"].attrs["TimeShift"] == 0
         assert np.all(h["source_valid"][:])
-    assert np.array_equal(out["f"], np.linspace(20e6, 170e6, 501))
-    assert out["env"].shape == (2004,) and out["H"].shape == (501,)
+    start, stop, count = frequency_spec or (20e6, 170e6, 501)
+    assert np.array_equal(out['f'], np.linspace(start, stop, count))
+    assert out['env'].shape == (4 * count,) and out['H'].shape == (count,)
     assert np.isfinite(out["env"]).all() and np.isfinite(out["H"]).all()
     return out
 
@@ -50,13 +51,15 @@ def independent_check(raw, sf):
         dt = float(ds.attrs["SampleInterval"])
         ry = np.arange(len(y)) * dt + float(ds.attrs["TimeSampleOffset"])
         sx = np.arange(len(x)) * float(excitation.attrs["SampleInterval"]) + float(excitation.attrs["TimeSampleOffset"])
-    idx = np.arange(0, 501, 50)
+    count = len(sf['f'])
+    idx = np.linspace(0, count - 1, 11, dtype=int)
     numerical = np.array([np.sum(y * np.exp(-2j * np.pi * f * ry)) /
                           np.sum(x * np.exp(-2j * np.pi * f * sx)) for f in sf["f"][idx]])
     dft_error = relative(numerical, sf["H"][idx])
-    tidx = np.unique(np.r_[np.arange(0, 2004, 67), 2003])
+    tidx = (np.unique(np.r_[np.arange(0, 2004, 67), 2003]) if count == 501
+            else np.linspace(0, len(sf['t']) - 1, 31, dtype=int))
     recon = np.array([np.sum(sf["H"] * sf["weights"] * np.exp(2j * np.pi *
-                     (sf["f"] - sf["f"][0]) * sf["t"][i] * 1e-9)) / 501 for i in tidx])
+                     (sf["f"] - sf["f"][0]) * sf["t"][i] * 1e-9)) / count for i in tidx])
     inverse_error = relative(recon, sf["env"][tidx])
     assert dft_error < 1e-10 and inverse_error < 1e-10
     return dict(independent_11_tone_DFT_relative_l2=dft_error,
@@ -146,7 +149,7 @@ def sparse(ax, values, stations, t, title, lim):
     ax.set(title=title, ylabel="时间（ns）", xlabel="测线里程（m）；空白＝未计算")
 
 
-def plot_sparse_compare(out, name, stations, reference, candidate, time, title):
+def plot_sparse_compare(out, name, stations, reference, candidate, time, title, reference_events=None):
     mask = (time >= 20) & (time < 450)
     time = time[mask]
     reference, candidate = reference[mask], candidate[mask]
@@ -155,6 +158,13 @@ def plot_sparse_compare(out, name, stations, reference, candidate, time, title):
     sparse(axes[0], reference, stations, time, "基准总场｜各站共同色标", lim)
     sparse(axes[1], candidate, stations, time, "候选总场｜与基准同一色标", lim)
     sparse(axes[2], candidate-reference, stations, time, "候选－基准｜同一色标；此差量不称噪声", lim)
+    if reference_events is not None:
+        points = [(s, ev['time_ns']) for s, events in reference_events.items() for ev in events
+                  if time[0] <= ev['time_ns'] <= time[-1]]
+        for ax in axes:
+            ax.scatter([x for x,y in points], [y for x,y in points], marker='_', color='#d88900',
+                       s=70, linewidths=1, label='基准体素垂向双程时参考；非唯一传播路径')
+            ax.legend(loc='upper right', fontsize=8)
     fig.suptitle(title+f"\n官方 direct SFCW real bandpass；±{lim:.4g} 共同显示色标；没有增益、归一化或背景抑制", fontsize=12)
     fig.savefig(out / name, dpi=170); plt.close(fig)
 

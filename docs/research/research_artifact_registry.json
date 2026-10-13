@@ -1,4 +1,36 @@
  {
+ "line9_v31_band110_grid5cm_2026_10_13": {
+  "status": "COMPLETED_THREE_NEW_THREE_REUSED_REPLACEMENT_SCREEN_FAILED",
+  "report": "docs/research/2026-10-13_line9_v31_band110_grid5cm_results.md",
+  "public": "artifacts/research_checks/2026-10-13_line9_v31_band110_grid5cm_r1",
+  "run_root": "E:/djh/line9_v31_band110_grid5cm_20261013_r1",
+  "authorization": "User stopped1/30m follow-up and requested20–110MHz +5cm, then clarified reuse2.5cm",
+  "new_solver_runs": 3,
+  "reused_references": 3,
+  "new_2p5cm_solves": 0,
+  "stations_m": [
+   150,
+   162,
+   174
+  ],
+  "grid_m": 0.05,
+  "frequency_hz": [
+   20000000,
+   110000000
+  ],
+  "frequency_steps": 301,
+  "record_ns": 1100,
+  "native_dtype": "float32",
+  "current_model_modified": false,
+  "grid_adopted": false,
+  "max_vertical_pose_delta_m": 0.025,
+  "comparison_scope": "Practical replacement, not isolated dispersion",
+  "max_window_error": 0.23916223852235677,
+  "local_bundle": "artifacts/local_checks/2026-10-13_line9_v31_band110_grid5cm_r1/delivery/line9_v31_band110_grid5cm_3new_3reused_20261013.zip",
+  "sha256": "08447188e75aed594ddcbe4e5ee9c54ab5489658afc2d50c266823d436d373ab",
+  "bytes": 4970043,
+  "manifest_entries": 86
+ },
  "line9_v31_grid_1over30_2026_10_13": {
   "status": "COMPLETED_THREE_SOLVES_FILES_VERIFIED_REPLACEMENT_SCREEN_FAILED",
   "report": "docs/research/2026-10-13_line9_v31_grid_1over30_results.md",

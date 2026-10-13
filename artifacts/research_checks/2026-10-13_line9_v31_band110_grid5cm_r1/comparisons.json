@@ -1,0 +1,310 @@
+{
+  "summary": {
+    "new_fdtd": 3,
+    "reused_fdtd": 3,
+    "all_three_pass": false,
+    "max_spectrum_relative_l2": 0.012251618088480817,
+    "max_window_relative_l2": 0.23916223852235677,
+    "max_phase_rms_degrees": 0.46906121972343906,
+    "median_build_solver_speedup": 10.86014087928103,
+    "total_fdtd_seconds": 5.2469,
+    "total_build_solver_seconds": 11.3095,
+    "batch_wall_seconds": 20.39916682243347,
+    "narrow_tones": 301,
+    "wide_tones": 501,
+    "sample_spacing_ns": 2.768549280177187,
+    "nominal_bandwidth_resolution_ratio": 1.6666666666666667,
+    "min_cells_per_wavelength_at110MHz": 12.847592727295956,
+    "timing_scope": "Single current run vs reused earlier GPU baselines; not repeated benchmark",
+    "current_model_modified": false,
+    "default_grid_modified": false,
+    "attribution": "Practical replacement includes vertical TX/RX quantization up to2.5cm. Finite2.5cm baseline is not analytic truth. Tail remains unresolved."
+  },
+  "cases": [
+    {
+      "case": "grid5cm_x150.0",
+      "station_m": 150.0,
+      "complex_band_relative_l2": 0.012251618088480817,
+      "strong_bin_phase_rms_degrees": 0.46906121972343906,
+      "windows": [
+        {
+          "label": "common",
+          "lo_ns": 100,
+          "hi_ns": 400,
+          "complex_relative_l2": 0.1314455452900521,
+          "envelope_peak_relative_error": 0.024661647233196415,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "common",
+          "lo_ns": 400,
+          "hi_ns": 1000,
+          "complex_relative_l2": 0.019402112964662065,
+          "envelope_peak_relative_error": 0.016109630563470034,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "surface_vertical_reference",
+          "lo_ns": 18.689973615013336,
+          "hi_ns": 48.689973615013336,
+          "complex_relative_l2": 0.04544288386926373,
+          "envelope_peak_relative_error": 0.0006526227611013402,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "1_to_3_vertical_reference",
+          "lo_ns": 167.1717134542461,
+          "hi_ns": 197.1717134542461,
+          "complex_relative_l2": 0.22269355179147876,
+          "envelope_peak_relative_error": 0.024661647233196415,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "3_to_2_vertical_reference",
+          "lo_ns": 168.17240573984057,
+          "hi_ns": 198.17240573984057,
+          "complex_relative_l2": 0.22269355179147876,
+          "envelope_peak_relative_error": 0.024661647233196415,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "2_to_3_vertical_reference",
+          "lo_ns": 238.22443954130495,
+          "hi_ns": 268.22443954130495,
+          "complex_relative_l2": 0.1825531007267998,
+          "envelope_peak_relative_error": 0.005901173897073786,
+          "envelope_peak_shift_ns": 19.37984496124031
+        }
+      ],
+      "passes_frozen_domain_screen": false,
+      "envelope_magnitude_windows": [
+        {
+          "lo_ns": 100,
+          "hi_ns": 400,
+          "magnitude_relative_l2": 0.07128084067195332
+        },
+        {
+          "lo_ns": 400,
+          "hi_ns": 1000,
+          "magnitude_relative_l2": 0.01769283070489478
+        }
+      ],
+      "shared_narrow_wide_spectrum_l2": 9.109149249414044e-15,
+      "tail_db": -42.69687271118164,
+      "reference_tail_db": -45.241722106933594,
+      "fdtd_seconds": 1.9209,
+      "build_solver_seconds": 7.3102,
+      "fdtd_speedup": 11.190952157842679,
+      "build_solver_speedup": 3.862343027550546,
+      "tx_coordinate_delta_m": [
+        0.0,
+        0.024999999999977263
+      ],
+      "rx_coordinate_delta_m": [
+        0.0,
+        0.025000000000034106
+      ],
+      "mixed_ez_edge_count": 86,
+      "min_center_sandstone_interval_m": 0.05
+    },
+    {
+      "case": "grid5cm_x162.0",
+      "station_m": 162.0,
+      "complex_band_relative_l2": 0.008486106802738348,
+      "strong_bin_phase_rms_degrees": 0.30026885420734967,
+      "windows": [
+        {
+          "label": "common",
+          "lo_ns": 100,
+          "hi_ns": 400,
+          "complex_relative_l2": 0.1353506371603121,
+          "envelope_peak_relative_error": 0.04403231303587174,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "common",
+          "lo_ns": 400,
+          "hi_ns": 1000,
+          "complex_relative_l2": 0.01809295170657114,
+          "envelope_peak_relative_error": 0.011665846939147073,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "surface_vertical_reference",
+          "lo_ns": 18.439800543614737,
+          "hi_ns": 48.43980054361474,
+          "complex_relative_l2": 0.03559492252608748,
+          "envelope_peak_relative_error": 0.006459121399326362,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "1_to_3_vertical_reference",
+          "lo_ns": 186.56503903862122,
+          "hi_ns": 216.56503903862122,
+          "complex_relative_l2": 0.13537133307363902,
+          "envelope_peak_relative_error": 0.013385316440598816,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "3_to_2_vertical_reference",
+          "lo_ns": 212.08269232128052,
+          "hi_ns": 242.08269232128052,
+          "complex_relative_l2": 0.18312696478076024,
+          "envelope_peak_relative_error": 0.04403231303587174,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "2_to_3_vertical_reference",
+          "lo_ns": 276.4739557145472,
+          "hi_ns": 306.4739557145472,
+          "complex_relative_l2": 0.22339442664919842,
+          "envelope_peak_relative_error": 0.13529960286799136,
+          "envelope_peak_shift_ns": 0.0
+        }
+      ],
+      "passes_frozen_domain_screen": false,
+      "envelope_magnitude_windows": [
+        {
+          "lo_ns": 100,
+          "hi_ns": 400,
+          "magnitude_relative_l2": 0.07288721114637153
+        },
+        {
+          "lo_ns": 400,
+          "hi_ns": 1000,
+          "magnitude_relative_l2": 0.012115304400355565
+        }
+      ],
+      "shared_narrow_wide_spectrum_l2": 9.16122727384553e-15,
+      "tail_db": -40.74547576904297,
+      "reference_tail_db": -50.5644645690918,
+      "fdtd_seconds": 1.6112,
+      "build_solver_seconds": 1.9408,
+      "fdtd_speedup": 13.344153426017876,
+      "build_solver_speedup": 11.522413437757626,
+      "tx_coordinate_delta_m": [
+        0.0,
+        0.0
+      ],
+      "rx_coordinate_delta_m": [
+        0.0,
+        0.025000000000034106
+      ],
+      "mixed_ez_edge_count": 86,
+      "min_center_sandstone_interval_m": 1.25
+    },
+    {
+      "case": "grid5cm_x174.0",
+      "station_m": 174.0,
+      "complex_band_relative_l2": 0.009601935667648272,
+      "strong_bin_phase_rms_degrees": 0.37093024585720724,
+      "windows": [
+        {
+          "label": "common",
+          "lo_ns": 100,
+          "hi_ns": 400,
+          "complex_relative_l2": 0.1450256115627962,
+          "envelope_peak_relative_error": 0.049966591645809744,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "common",
+          "lo_ns": 400,
+          "hi_ns": 1000,
+          "complex_relative_l2": 0.016829918336563495,
+          "envelope_peak_relative_error": 0.005822711900267841,
+          "envelope_peak_shift_ns": -8.305647840531549
+        },
+        {
+          "label": "surface_vertical_reference",
+          "lo_ns": 18.273018496015645,
+          "hi_ns": 48.273018496015645,
+          "complex_relative_l2": 0.0364871620052793,
+          "envelope_peak_relative_error": 0.006182238824076425,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "1_to_2_vertical_reference",
+          "lo_ns": 188.70925683287786,
+          "hi_ns": 218.70925683287786,
+          "complex_relative_l2": 0.21277785153418155,
+          "envelope_peak_relative_error": 0.049966591645809744,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "2_to_3_vertical_reference",
+          "lo_ns": 208.52195326157485,
+          "hi_ns": 238.52195326157485,
+          "complex_relative_l2": 0.23916223852235677,
+          "envelope_peak_relative_error": 0.021746739661058667,
+          "envelope_peak_shift_ns": -2.768549280177183
+        },
+        {
+          "label": "3_to_2_vertical_reference",
+          "lo_ns": 249.5503369709486,
+          "hi_ns": 279.5503369709486,
+          "complex_relative_l2": 0.18826206216297994,
+          "envelope_peak_relative_error": 0.018423151857238418,
+          "envelope_peak_shift_ns": 11.07419712070876
+        },
+        {
+          "label": "2_to_3_vertical_reference",
+          "lo_ns": 308.28082995601704,
+          "hi_ns": 338.28082995601704,
+          "complex_relative_l2": 0.16181695687912812,
+          "envelope_peak_relative_error": 0.0014706063326938024,
+          "envelope_peak_shift_ns": 0.0
+        }
+      ],
+      "passes_frozen_domain_screen": false,
+      "envelope_magnitude_windows": [
+        {
+          "lo_ns": 100,
+          "hi_ns": 400,
+          "magnitude_relative_l2": 0.07759107266675871
+        },
+        {
+          "lo_ns": 400,
+          "hi_ns": 1000,
+          "magnitude_relative_l2": 0.01510632846912119
+        }
+      ],
+      "shared_narrow_wide_spectrum_l2": 9.22849810218723e-15,
+      "tail_db": -42.5688591003418,
+      "reference_tail_db": -48.14176559448242,
+      "fdtd_seconds": 1.7148,
+      "build_solver_seconds": 2.0585,
+      "fdtd_speedup": 12.53347329134593,
+      "build_solver_speedup": 10.86014087928103,
+      "tx_coordinate_delta_m": [
+        0.0,
+        0.0
+      ],
+      "rx_coordinate_delta_m": [
+        0.0,
+        0.025000000000034106
+      ],
+      "mixed_ez_edge_count": 86,
+      "min_center_sandstone_interval_m": 2.1
+    }
+  ],
+  "thresholds": {
+    "complex_band_relative_l2_max": 0.005,
+    "strong_bin_phase_rms_degrees_max": 0.5,
+    "time_window_relative_l2_max": 0.01,
+    "event_peak_relative_error_max": 0.01,
+    "event_peak_shift_ns_max": 2.0,
+    "common_windows_ns": [
+      [
+        100,
+        400
+      ],
+      [
+        400,
+        1000
+      ]
+    ],
+    "event_halfwidth_ns": 15,
+    "note": "project-specific screening tolerances, not universal standards; requires all anchors and the 70m control; original 50m domain is not an absolute truth"
+  }
+}
