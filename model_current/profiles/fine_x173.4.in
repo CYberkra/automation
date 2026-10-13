@@ -1,0 +1,12 @@
+#title: fine_x173.4; matched-coordinate mesh comparison
+#domain_mode: TM
+#domain: 50 50 inf
+#dx_dy_dz: 0.025000000000000001 0.025000000000000001 0.025000000000000001
+#time_window: 1.1e-6
+#time_step_stability_factor: 0.95
+#pml_cells: 120 120 0 120 120 0
+#pml_formulation: HORIPML
+#geometry_objects_read: 0 0 0 ../geometries/fine_x173.4.h5 line9_wang2026_constant_v2 y
+#waveform: impulse 1 1 line9_impulse
+#hertzian_dipole: z 24.399999999999999 37.200000000000003 inf line9_impulse
+#rx: 25.699999999999999 37.300000000000004 inf line9_rx Ez

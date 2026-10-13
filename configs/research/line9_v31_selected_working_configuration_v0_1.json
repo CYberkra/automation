@@ -4,7 +4,10 @@
   "authorization": "工作频段敲定为20-110MHz，网格就目前较好的3.333cm。现在转向解决横向计算域问题，请你开始研究",
   "scope": "V3.1 2D candidate continuation; not retrospective relabeling of measured data or older Debye model",
   "grid_m": 0.03333333333333333,
-  "grid_fraction_m": [1, 30],
+  "grid_fraction_m": [
+    1,
+    30
+  ],
   "grid_selection_status": "USER_SELECTED; absolute convergence not certified",
   "official_sfcw": {
     "method": "direct",
@@ -20,7 +23,9 @@
   "dielectric_averaging": "y",
   "retained_parameters": {
     "gprMax": "4.0.1",
-    "gpu": [0],
+    "gpu": [
+      0
+    ],
     "gpu_precision": "single",
     "source": "built-in unit impulse, HertzianDipole z",
     "record_ns": 1100,
@@ -34,12 +39,19 @@
     "PML_formulation": "HORIPML",
     "PML_order": 1,
     "PML_physical_thickness_m": 3,
-    "PML_cells": [90, 90, 0, 90, 90, 0]
+    "PML_cells": [
+      90,
+      90,
+      0,
+      90,
+      90,
+      0
+    ]
   },
   "lateral_domain_width_m": 50,
   "lateral_domain_status": "USER_SELECTED_PROVISIONAL50M_FOR_CONTINUOUS_BSCAN; previous domain convergence not certified",
   "continuous_bscan_plan": "docs/research/2026-10-13_line9_continuous_bscan_plan.md",
-  "continuous_bscan_status": "150–180m51 traces requested; actual-coordinate decision pending; no new solver started",
+  "continuous_bscan_status": "EXECUTION_AUDIT_PASS_GRID_SCREEN_FAILED_NO_EXPANSION",
   "latest_lateral_domain_report": "docs/research/2026-10-13_line9_lateral_domain_results.md",
   "latest_existing_selected_grid_batch": "artifacts/research_checks/2026-10-13_line9_v31_grid_1over30_r1",
   "latest_band_reprocessing": "artifacts/research_checks/2026-10-13_line9_lateral_domain_research_r1",
@@ -48,5 +60,8 @@
     "grid": "2.5cm retained default;5cm rejected candidate",
     "does_not_change": "Frozen inputs/results and raw measured CSV provenance"
   },
-  "materialization_status": "50m provisional domain selected for next Bscan; exact paired-source coordinates pending; older frozen model_current not rewritten"
+  "materialization_status": "Approved matched entity inmodel_current; completed102; strict grid screen failed; previous entity archived",
+  "matched_pose_authorization": "用户批准严格同位置对照，两套各51道",
+  "active_batch": "line9_matched_bscan_20261013_r1",
+  "latest_continuous_bscan_report": "docs/research/2026-10-13_line9_matched_bscan_results.md"
 }

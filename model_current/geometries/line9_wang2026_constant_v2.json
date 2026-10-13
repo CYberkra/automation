@@ -1,0 +1,80 @@
+{
+  "schema": "gprMax-material-database",
+  "schema_version": 1,
+  "database": {
+    "id": "line9_wang2026_constant_v2",
+    "name": "Line9 four-medium reference",
+    "version": "2.0.0",
+    "description": "PDF-reconstructed geometry; literature EM properties, not site-calibrated"
+  },
+  "materials": {
+    "air": {
+      "name": "空气",
+      "model": "constant",
+      "base": {
+        "relative_permittivity": 1.0,
+        "electric_conductivity_s_per_m": 0.0,
+        "relative_permeability": 1.0,
+        "magnetic_conductivity_s_per_m": 0.0
+      },
+      "metadata": {
+        "source": "ideal nonmagnetic air model",
+        "doi": null,
+        "site_measured": false,
+        "constant_over_band_assumption": true,
+        "is_site_measured": false
+      }
+    },
+    "cover": {
+      "name": "粉质黏土（映射论文 Soil）",
+      "model": "constant",
+      "base": {
+        "relative_permittivity": 12.0,
+        "electric_conductivity_s_per_m": 0.003,
+        "relative_permeability": 1.0,
+        "magnetic_conductivity_s_per_m": 0.0
+      },
+      "metadata": {
+        "source": "Wang et al. (2026), Table 1, landslide numerical-model assumptions",
+        "doi": "10.1109/MGRS.2026.3702334",
+        "site_measured": false,
+        "constant_over_band_assumption": true,
+        "is_site_measured": false
+      }
+    },
+    "mudstone": {
+      "name": "泥岩",
+      "model": "constant",
+      "base": {
+        "relative_permittivity": 18.0,
+        "electric_conductivity_s_per_m": 0.006,
+        "relative_permeability": 1.0,
+        "magnetic_conductivity_s_per_m": 0.0
+      },
+      "metadata": {
+        "source": "Wang et al. (2026), Table 1, landslide numerical-model assumptions",
+        "doi": "10.1109/MGRS.2026.3702334",
+        "site_measured": false,
+        "constant_over_band_assumption": true,
+        "is_site_measured": false
+      }
+    },
+    "sandstone": {
+      "name": "砂岩",
+      "model": "constant",
+      "base": {
+        "relative_permittivity": 9.0,
+        "electric_conductivity_s_per_m": 0.001,
+        "relative_permeability": 1.0,
+        "magnetic_conductivity_s_per_m": 0.0
+      },
+      "metadata": {
+        "source": "Wang et al. (2026), Table 1, landslide numerical-model assumptions",
+        "doi": "10.1109/MGRS.2026.3702334",
+        "site_measured": false,
+        "constant_over_band_assumption": true,
+        "is_site_measured": false
+      }
+    }
+  }
+}

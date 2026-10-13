@@ -1,25 +1,15 @@
-# model_current —— 现行 gprMax 模型（固定文件夹）
+# 当前模型：V3.1连续测线严格同位置对照
 
-**这个文件夹永远放当前最新推进的 gprMax 模型，文件夹名和位置永远不变。**
-找最新模型：打开本文件夹即可，不用去别处找。
+用户已批准150–180m、51道×2网格，共102解。工作网格精确1/30m，2.5cm为对照。20–110MHz/301、50×50m、平滑y、1100ns、3mPML、GPU single、官方impulse/direct/Gaussian/补零4。
 
-## 当前版本：AGL 5 m（2026-10-11 起）
+`profile.in`代表150m粗网格；`profiles/`含两档全部102份输入；`geometries/`含对应体素与常数材料JSON；`acquisition.json`冻结实际坐标和全部参数；`source.json`说明源及SFCW。
 
-- `cases/x190_H0/profile.in`：无滑坡（H0）标准算例输入，天线 5 m 离地。
-- `cases/x190_H1/profile.in`：含滑坡（H1）标准算例输入，天线 5 m 离地。
-- `geometries/H0.h5` / `geometries/H1.h5`：两个场景的几何体素文件，profile.in 以相对路径 `../../geometries/` 直接引用，可原样运行。
-- `geometries/line9_materials_v0_2.json`：材料契约（覆盖层 Debye、泥岩 εr18/σ0.006、砂岩 Debye）。
-- `source.json`：源契约（官方 impulse，起始时间 0）。
-- `acquisition.json`：采集设计契约（测线范围 25–220 m 等）。
-- `manifest.json`：本文件夹全部文件的 SHA-256 与来源指针，验完整性看这里。
+102解已在ROG的E:/djh/line9_matched_bscan_20261013_r1完成，不重复启动。此目录是模型实体与哈希入口，不是完整运行胶囊。完整私有包的data目录另含input_manifest、执行回执、原始输出与已执行study.py；包内code/analyze_line9_continuous_bscan.py可只重放分析。run_study.py是冻结worker副本，会启动正演，不是验收入口。
 
-天线坐标由 `scripts/prepare_line9_agl5.py` 从几何表面重新计算（表面 + 5 m），
-位置契约见 `configs/research/line9_antenna_position_v0_1.json`。
+源高度采用两网格共同0.1m节点，最多改原高度5cm；域原点为站位−25.05m，实际收发里程为站位±0.65m。源格点0.1m不是计算网格。
 
-## 规则
+旧模型完整保存在model_archive/2026-10-13_before_matched_bscan/。新几何/源为已批准版本；旧结果保持历史，不改标。
 
-1. 模型有任何经批准的修改（材料/源/几何/采集/航高），**先**把本文件夹旧内容整体移到 `model_archive/<日期>_<说明>/`，**再**放入新内容。旧版本永不覆盖、永不删除。
-2. 本文件夹只放"模型定义"（输入），不放求解结果。每批求解的结果、图件和验收见 `configs/research/current_model.json` 指向的报告与证据目录。
-3. 修改同步义务：改动本文件夹的同一工作单元内，更新 `configs/research/current_model.json` 并在 `docs/research/decision_log.md` 登记。
+新V3.1体素H5只在本机及完整私有数据包中交付，不上传Git。纯克隆需取回本轮完整包的data/geometries目录，并逐项核对manifest哈希后才能运行。
 
-历史版本：AGL 8 m 版在 `model_archive/2026-10-11_agl8m/`；更早版本（15 m 航高、Ricker 源、泥岩 Debye v0_1）的取代关系见 `configs/research/current_model.json` 的 `superseded_notes`。
+结果：执行和变换核验通过，原网格筛查0/51通过；不能标记已收敛。见docs/research/2026-10-13_line9_matched_bscan_results.md。

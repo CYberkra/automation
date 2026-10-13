@@ -1,0 +1,6 @@
+{
+  "status": "ANALYSIS_ONLY_FAILED_NO_FDTD_RETRY",
+  "error": "TypeError: dict() got multiple values for keyword argument status",
+  "cause": "Operator diagnostics also contain status; separate operator_status from availability status",
+  "fix": "Preserve operator_status, set wrapper availability status; no inputs or numerical methods changed"
+}

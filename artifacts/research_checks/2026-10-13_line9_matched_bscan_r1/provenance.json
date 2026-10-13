@@ -1,0 +1,615 @@
+{
+  "status": "EXECUTION_AND_TRANSFORM_AUDIT_PASS_GRID_SCREEN_NOT_PASSED",
+  "start": {
+    "start_unix": 1791883710.873425,
+    "gpu": "NVIDIA GeForce RTX 4090 Laptop GPU",
+    "gprMax": "4.0.1",
+    "script_sha256": "f0890f17d73b9dc3b0449834e4ff6c313cd115f94c3c514e314d4452b2afb827",
+    "contract_sha256": "c072576c3a6ade46d78aea5f32905c0d147046dfa6d7c3a1851bdc10e690b73f"
+  },
+  "completed_cases": 102,
+  "batch_wall_seconds": 1872.8984580039978,
+  "new_fdtd": 102,
+  "retry_count": 0,
+  "receipt_files_verified": 816,
+  "input_manifest_sha256": "0eb6bec7735fcb65866cb59522b18fb00944bb2a3cf87f913963c616d26ce6ef",
+  "completion_sha256": "7aa83bab981686fa2b7fcd8940ebe555873cf24c51e072a157ef0c916221b1ff",
+  "retrieval": {
+    "path": "E:/djh/line9_matched_bscan_20261013_r1_retrieval.zip",
+    "sha256": "1de21a00dbed7e03a1c15824f089b8dc088a7c521508b39b342c9df33d89d528",
+    "bytes": 16132592
+  },
+  "prepare_script_sha256": "83038de77be2b3328844f99f027372363b02335cc5b94782cff11daf4db4714e",
+  "analysis_protocol": {
+    "analysis_script_sha256": "5d6180be56229daa1de6fcb528b2d4eb1d0772f38d20d73672bf57becf9dad1f",
+    "operator_script_sha256": "eb7b0f114c3e488d944a5158106545f4d86f445279872311a800f87b0e2612d4",
+    "parameters_source": "prepared/contract.json",
+    "metrics_source": "docs/research/2026-10-13_line9_continuous_bscan_plan.md",
+    "analysis_defined_before_complete_outputs": true,
+    "selected_method_by_plot": false
+  },
+  "analysis_wrapper_fix": {
+    "status": "ANALYSIS_WRAPPER_FIX_ONLY",
+    "frozen_protocol_file_sha256": "525fd84e0d8baa3de0c10e490f1889a9b597d28a0ea71423146aad5182f8b9db",
+    "actual_analysis_script_sha256": "24ca38d64f50ef365963d4bdc487cc425203d9ff9f01f53139ece69234f2900f",
+    "change": "Preserve duplicate operator status under operator_status; no method, metric, threshold, ROI or FDTD inputs changed",
+    "failed_attempt": "analysis_attempt1_failure/failure.json",
+    "fdtd_retry": false
+  },
+  "preparation_audit": {
+    "status": "PASS",
+    "paired_checks": [
+      {
+        "station_m": 150.0,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          35.4,
+          35.300000000000004
+        ],
+        "max_height_adjustment_m": 0.025000000000005684
+      },
+      {
+        "station_m": 150.6,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          35.300000000000004,
+          35.300000000000004
+        ],
+        "max_height_adjustment_m": 0.025000000000005684
+      },
+      {
+        "station_m": 151.2,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          35.300000000000004,
+          35.300000000000004
+        ],
+        "max_height_adjustment_m": 0.025000000000005684
+      },
+      {
+        "station_m": 151.8,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          35.300000000000004,
+          35.300000000000004
+        ],
+        "max_height_adjustment_m": 0.025000000000005684
+      },
+      {
+        "station_m": 152.4,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          35.300000000000004,
+          35.300000000000004
+        ],
+        "max_height_adjustment_m": 0.025000000000005684
+      },
+      {
+        "station_m": 153.0,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          35.300000000000004,
+          35.300000000000004
+        ],
+        "max_height_adjustment_m": 0.025000000000005684
+      },
+      {
+        "station_m": 153.6,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          35.300000000000004,
+          35.300000000000004
+        ],
+        "max_height_adjustment_m": 0.025000000000005684
+      },
+      {
+        "station_m": 154.2,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          35.300000000000004,
+          35.4
+        ],
+        "max_height_adjustment_m": 0.04999999999999716
+      },
+      {
+        "station_m": 154.8,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          35.300000000000004,
+          35.5
+        ],
+        "max_height_adjustment_m": 0.025000000000005684
+      },
+      {
+        "station_m": 155.4,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          35.300000000000004,
+          35.7
+        ],
+        "max_height_adjustment_m": 0.02499999999999858
+      },
+      {
+        "station_m": 156.0,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          35.5,
+          35.9
+        ],
+        "max_height_adjustment_m": 0.02499999999999858
+      },
+      {
+        "station_m": 156.6,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          35.7,
+          36.1
+        ],
+        "max_height_adjustment_m": 0.02499999999999858
+      },
+      {
+        "station_m": 157.2,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          35.9,
+          36.300000000000004
+        ],
+        "max_height_adjustment_m": 0.05000000000000426
+      },
+      {
+        "station_m": 157.8,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          36.0,
+          36.300000000000004
+        ],
+        "max_height_adjustment_m": 0.02499999999999858
+      },
+      {
+        "station_m": 158.4,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          36.2,
+          36.4
+        ],
+        "max_height_adjustment_m": 0.04999999999999716
+      },
+      {
+        "station_m": 159.0,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          36.300000000000004,
+          36.4
+        ],
+        "max_height_adjustment_m": 0.02499999999999858
+      },
+      {
+        "station_m": 159.6,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          36.4,
+          36.4
+        ],
+        "max_height_adjustment_m": 0.04999999999999716
+      },
+      {
+        "station_m": 160.2,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          36.4,
+          36.5
+        ],
+        "max_height_adjustment_m": 0.02499999999999858
+      },
+      {
+        "station_m": 160.8,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          36.4,
+          36.5
+        ],
+        "max_height_adjustment_m": 0.025000000000005684
+      },
+      {
+        "station_m": 161.4,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          36.5,
+          36.6
+        ],
+        "max_height_adjustment_m": 0.04999999999999716
+      },
+      {
+        "station_m": 162.0,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          36.5,
+          36.6
+        ],
+        "max_height_adjustment_m": 0.02499999999999858
+      },
+      {
+        "station_m": 162.6,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          36.5,
+          36.6
+        ],
+        "max_height_adjustment_m": 0.02499999999999858
+      },
+      {
+        "station_m": 163.2,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          36.6,
+          36.7
+        ],
+        "max_height_adjustment_m": 0.05000000000000426
+      },
+      {
+        "station_m": 163.8,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          36.6,
+          36.7
+        ],
+        "max_height_adjustment_m": 0.0
+      },
+      {
+        "station_m": 164.4,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          36.7,
+          36.7
+        ],
+        "max_height_adjustment_m": 0.05000000000000426
+      },
+      {
+        "station_m": 165.0,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          36.7,
+          36.800000000000004
+        ],
+        "max_height_adjustment_m": 0.025000000000005684
+      },
+      {
+        "station_m": 165.6,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          36.7,
+          36.800000000000004
+        ],
+        "max_height_adjustment_m": 0.02499999999999858
+      },
+      {
+        "station_m": 166.2,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          36.800000000000004,
+          36.9
+        ],
+        "max_height_adjustment_m": 0.04999999999999716
+      },
+      {
+        "station_m": 166.8,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          36.800000000000004,
+          36.9
+        ],
+        "max_height_adjustment_m": 0.02499999999999858
+      },
+      {
+        "station_m": 167.4,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          36.9,
+          36.9
+        ],
+        "max_height_adjustment_m": 0.04999999999999716
+      },
+      {
+        "station_m": 168.0,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          36.9,
+          37.0
+        ],
+        "max_height_adjustment_m": 0.04999999999999716
+      },
+      {
+        "station_m": 168.6,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          36.9,
+          37.0
+        ],
+        "max_height_adjustment_m": 0.025000000000005684
+      },
+      {
+        "station_m": 169.2,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          37.0,
+          37.1
+        ],
+        "max_height_adjustment_m": 0.04999999999999716
+      },
+      {
+        "station_m": 169.8,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          37.0,
+          37.1
+        ],
+        "max_height_adjustment_m": 0.02499999999999858
+      },
+      {
+        "station_m": 170.4,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          37.0,
+          37.1
+        ],
+        "max_height_adjustment_m": 0.02499999999999858
+      },
+      {
+        "station_m": 171.0,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          37.1,
+          37.2
+        ],
+        "max_height_adjustment_m": 0.05000000000000426
+      },
+      {
+        "station_m": 171.6,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          37.1,
+          37.2
+        ],
+        "max_height_adjustment_m": 0.0
+      },
+      {
+        "station_m": 172.2,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          37.2,
+          37.2
+        ],
+        "max_height_adjustment_m": 0.05000000000000426
+      },
+      {
+        "station_m": 172.8,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          37.2,
+          37.300000000000004
+        ],
+        "max_height_adjustment_m": 0.025000000000005684
+      },
+      {
+        "station_m": 173.4,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          37.2,
+          37.300000000000004
+        ],
+        "max_height_adjustment_m": 0.02499999999999858
+      },
+      {
+        "station_m": 174.0,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          37.300000000000004,
+          37.300000000000004
+        ],
+        "max_height_adjustment_m": 0.05000000000000426
+      },
+      {
+        "station_m": 174.6,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          37.300000000000004,
+          37.4
+        ],
+        "max_height_adjustment_m": 0.04999999999999716
+      },
+      {
+        "station_m": 175.2,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          37.300000000000004,
+          37.4
+        ],
+        "max_height_adjustment_m": 0.02499999999999858
+      },
+      {
+        "station_m": 175.8,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          37.4,
+          37.4
+        ],
+        "max_height_adjustment_m": 0.04999999999999716
+      },
+      {
+        "station_m": 176.4,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          37.4,
+          37.4
+        ],
+        "max_height_adjustment_m": 0.025000000000005684
+      },
+      {
+        "station_m": 177.0,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          37.4,
+          37.5
+        ],
+        "max_height_adjustment_m": 0.04999999999999716
+      },
+      {
+        "station_m": 177.6,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          37.4,
+          37.5
+        ],
+        "max_height_adjustment_m": 0.025000000000005684
+      },
+      {
+        "station_m": 178.2,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          37.5,
+          37.5
+        ],
+        "max_height_adjustment_m": 0.04999999999999716
+      },
+      {
+        "station_m": 178.8,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          37.5,
+          37.5
+        ],
+        "max_height_adjustment_m": 0.02499999999999858
+      },
+      {
+        "station_m": 179.4,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          37.5,
+          37.6
+        ],
+        "max_height_adjustment_m": 0.04999999999999716
+      },
+      {
+        "station_m": 180.0,
+        "same_actual_tx_rx": true,
+        "same_domain_edges": true,
+        "fine_retained_old_voxels_identical": true,
+        "common_y_m": [
+          37.5,
+          37.6
+        ],
+        "max_height_adjustment_m": 0.02499999999999858
+      }
+    ],
+    "case_count": 102
+  },
+  "regression": "182 deterministic array checks PASS; not FDTD or field validation",
+  "source_geometry_private": true,
+  "contract_inherited_inactive_fields": [
+    "surface_diagnostic_station_m",
+    "surface_4m_average_slopes",
+    "surface_diagnostic",
+    "cross_grid_diagnostic"
+  ],
+  "inactive_fields_note": "These inherited descriptions were not executed; all102 cases are original four-material total-field models. No pure-air or surface-only reference was run."
+}

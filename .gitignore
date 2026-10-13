@@ -216,3 +216,10 @@ Thumbs.db
 # Deterministically generated synthetic fixtures stay local; archive check summaries.
 /artifacts/research_checks/2026-10-06_line9_domain_acceleration_r1/contract_regression_*/fixture.*
 /artifacts/research_checks/2026-10-06_line9_domain_acceleration_r1/contract_regression_*/execution_contract.json
+
+# Matched Line9V3.1 private PDF-derived voxel inputs: deliver in local capsule.
+/model_current/geometries/coarse_x*.h5
+/model_current/geometries/fine_x*.h5
+
+# Matched B-scan private numeric matrix is delivered in the local capsule.
+/artifacts/research_checks/2026-10-13_line9_matched_bscan_r1/bscan_arrays.npz
