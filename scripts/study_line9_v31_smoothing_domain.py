@@ -428,7 +428,10 @@ def run_stage(a):
         if not recover:
             with log.open("w", encoding="utf-8") as f:
                 cmd = [sys.executable, str(Path(__file__).resolve()), "solve-case", "--root", str(root), "--case", case["id"]]
-                result = subprocess.run(cmd, stdout=f, stderr=subprocess.STDOUT, timeout=1800)
+                remaining = contract['max_wall_seconds'] - (time.time() - started)
+                if remaining <= 0:
+                    raise RuntimeError('Study wall limit reached before solver launch')
+                result = subprocess.run(cmd, stdout=f, stderr=subprocess.STDOUT, timeout=min(1800, remaining))
             save(dest / "solver_exit.json", dict(exit_code=result.returncode, wall_seconds=time.monotonic()-begun,
                                                  raw_sha256=sha(dest/"impulse.h5") if (dest/"impulse.h5").exists() else None))
             if result.returncode:

@@ -1,0 +1,231 @@
+{
+  "batch": {
+    "status": "STOPPED_AT_FROZEN_GATE",
+    "new_solves": 2,
+    "gate_pass": false,
+    "elapsed_seconds": 46.64100000000326,
+    "contract_sha256": "bc03f1f4ced7388ebb2837c99a4ba2ff6f60143c86f2d596ec6e95000ac15185",
+    "retries": 0
+  },
+  "cases": [
+    {
+      "station_m": 174.0,
+      "comparison": "70_vs90",
+      "complex_band_relative_l2": 7.785862493556877e-05,
+      "strong_bin_phase_rms_degrees": 0.0036479082305686784,
+      "windows": [
+        {
+          "label": "common",
+          "lo_ns": 100,
+          "hi_ns": 400,
+          "complex_relative_l2": 0.0054711373088061725,
+          "envelope_peak_relative_error": 0.00013876323538797308,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "common",
+          "lo_ns": 400,
+          "hi_ns": 1000,
+          "complex_relative_l2": 0.0005930731333905982,
+          "envelope_peak_relative_error": 0.0006025061429015821,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "surface_vertical_reference",
+          "lo_ns": 18.273018496015645,
+          "hi_ns": 48.273018496015645,
+          "complex_relative_l2": 1.5839622319414927e-07,
+          "envelope_peak_relative_error": 1.331704297946601e-07,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "1_to_2_vertical_reference",
+          "lo_ns": 188.70925683287786,
+          "hi_ns": 218.70925683287786,
+          "complex_relative_l2": 0.00350193761070835,
+          "envelope_peak_relative_error": 0.00013876323538797308,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "2_to_3_vertical_reference",
+          "lo_ns": 208.52195326157485,
+          "hi_ns": 238.52195326157485,
+          "complex_relative_l2": 0.010927639514981375,
+          "envelope_peak_relative_error": 0.0027365257073825866,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "3_to_2_vertical_reference",
+          "lo_ns": 249.5503369709486,
+          "hi_ns": 279.5503369709486,
+          "complex_relative_l2": 0.0035830673740061196,
+          "envelope_peak_relative_error": 0.0018945636579431602,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "2_to_3_vertical_reference",
+          "lo_ns": 308.28082995601704,
+          "hi_ns": 338.28082995601704,
+          "complex_relative_l2": 0.0006586457768798005,
+          "envelope_peak_relative_error": 0.00018125504570654094,
+          "envelope_peak_shift_ns": 0.0
+        }
+      ],
+      "passes_frozen_domain_screen": false,
+      "magnitude_100_400_relative_l2": 0.0029150535407725985
+    },
+    {
+      "station_m": 174.0,
+      "comparison": "50_vs90",
+      "complex_band_relative_l2": 9.010291283932506e-05,
+      "strong_bin_phase_rms_degrees": 0.004258434487343831,
+      "windows": [
+        {
+          "label": "common",
+          "lo_ns": 100,
+          "hi_ns": 400,
+          "complex_relative_l2": 0.010695942232278571,
+          "envelope_peak_relative_error": 0.0009927827653913868,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "common",
+          "lo_ns": 400,
+          "hi_ns": 1000,
+          "complex_relative_l2": 0.0005711690179394497,
+          "envelope_peak_relative_error": 0.0003346089525970708,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "surface_vertical_reference",
+          "lo_ns": 18.273018496015645,
+          "hi_ns": 48.273018496015645,
+          "complex_relative_l2": 6.44227451767781e-07,
+          "envelope_peak_relative_error": 3.680117377502512e-07,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "1_to_2_vertical_reference",
+          "lo_ns": 188.70925683287786,
+          "hi_ns": 218.70925683287786,
+          "complex_relative_l2": 0.003821323788079376,
+          "envelope_peak_relative_error": 0.0009927827653913868,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "2_to_3_vertical_reference",
+          "lo_ns": 208.52195326157485,
+          "hi_ns": 238.52195326157485,
+          "complex_relative_l2": 0.003253729518398927,
+          "envelope_peak_relative_error": 5.197378371557537e-05,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "3_to_2_vertical_reference",
+          "lo_ns": 249.5503369709486,
+          "hi_ns": 279.5503369709486,
+          "complex_relative_l2": 0.003606177494476723,
+          "envelope_peak_relative_error": 0.0018180813279657926,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "2_to_3_vertical_reference",
+          "lo_ns": 308.28082995601704,
+          "hi_ns": 338.28082995601704,
+          "complex_relative_l2": 0.0015967444382751536,
+          "envelope_peak_relative_error": 3.292265209786649e-05,
+          "envelope_peak_shift_ns": 0.0
+        }
+      ],
+      "passes_frozen_domain_screen": false,
+      "magnitude_100_400_relative_l2": 0.0069225430879555185
+    },
+    {
+      "station_m": 174.0,
+      "comparison": "50_vs70",
+      "complex_band_relative_l2": 0.0001529129018102262,
+      "strong_bin_phase_rms_degrees": 0.007189264130518058,
+      "windows": [
+        {
+          "label": "common",
+          "lo_ns": 100,
+          "hi_ns": 400,
+          "complex_relative_l2": 0.01192956389922065,
+          "envelope_peak_relative_error": 0.0011313890055804077,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "common",
+          "lo_ns": 400,
+          "hi_ns": 1000,
+          "complex_relative_l2": 0.0005206317410980357,
+          "envelope_peak_relative_error": 0.00026773587779360675,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "surface_vertical_reference",
+          "lo_ns": 18.273018496015645,
+          "hi_ns": 48.273018496015645,
+          "complex_relative_l2": 5.728001354131877e-07,
+          "envelope_peak_relative_error": 2.348413392638804e-07,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "1_to_2_vertical_reference",
+          "lo_ns": 188.70925683287786,
+          "hi_ns": 218.70925683287786,
+          "complex_relative_l2": 0.006606130707308961,
+          "envelope_peak_relative_error": 0.0011313890055804077,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "2_to_3_vertical_reference",
+          "lo_ns": 208.52195326157485,
+          "hi_ns": 238.52195326157485,
+          "complex_relative_l2": 0.01303934518314468,
+          "envelope_peak_relative_error": 0.002691918427646378,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "3_to_2_vertical_reference",
+          "lo_ns": 249.5503369709486,
+          "hi_ns": 279.5503369709486,
+          "complex_relative_l2": 0.00016222877756073053,
+          "envelope_peak_relative_error": 7.662750566495014e-05,
+          "envelope_peak_shift_ns": 0.0
+        },
+        {
+          "label": "2_to_3_vertical_reference",
+          "lo_ns": 308.28082995601704,
+          "hi_ns": 338.28082995601704,
+          "complex_relative_l2": 0.0017084475495536288,
+          "envelope_peak_relative_error": 0.00014835928447753943,
+          "envelope_peak_shift_ns": 0.0
+        }
+      ],
+      "passes_frozen_domain_screen": false,
+      "magnitude_100_400_relative_l2": 0.0072801166923229365
+    }
+  ],
+  "thresholds": {
+    "complex_band_relative_l2_max": 0.005,
+    "strong_bin_phase_rms_degrees_max": 0.5,
+    "time_window_relative_l2_max": 0.01,
+    "event_peak_relative_error_max": 0.01,
+    "event_peak_shift_ns_max": 2.0,
+    "common_windows_ns": [
+      [
+        100,
+        400
+      ],
+      [
+        400,
+        1000
+      ]
+    ],
+    "event_halfwidth_ns": 15,
+    "note": "project-specific screening tolerances, not universal standards; requires all anchors and the 70m control; original 50m domain is not an absolute truth"
+  },
+  "automatic_adoption": false,
+  "reference": "Finite90m/1100ns reference; absolute convergence not certified"
+}
