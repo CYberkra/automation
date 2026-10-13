@@ -1,0 +1,126 @@
+{
+  "cases": [
+    {
+      "station_m": 150.0,
+      "width_m": 40,
+      "origin_x_m": 129.98333333333332,
+      "left_inner_pml_x_m": 132.98333333333332,
+      "right_inner_pml_x_m": 166.98333333333332,
+      "left_air_mirror_time_ns": 113.52347045303483,
+      "right_air_mirror_time_ns": 113.30109535139816
+    },
+    {
+      "station_m": 150.0,
+      "width_m": 50,
+      "origin_x_m": 124.98333333333332,
+      "left_inner_pml_x_m": 127.98333333333332,
+      "right_inner_pml_x_m": 171.98333333333332,
+      "left_air_mirror_time_ns": 146.87976868159774,
+      "right_air_mirror_time_ns": 146.65739319244864
+    },
+    {
+      "station_m": 150.0,
+      "width_m": 70,
+      "origin_x_m": 114.98333333333332,
+      "left_inner_pml_x_m": 117.98333333333332,
+      "right_inner_pml_x_m": 181.98333333333332,
+      "left_air_mirror_time_ns": 213.5924694196838,
+      "right_air_mirror_time_ns": 213.370093627673
+    },
+    {
+      "station_m": 150.0,
+      "width_m": 90,
+      "origin_x_m": 104.98333333333332,
+      "left_inner_pml_x_m": 107.98333333333332,
+      "right_inner_pml_x_m": 191.98333333333332,
+      "left_air_mirror_time_ns": 280.3052264694085,
+      "right_air_mirror_time_ns": 280.08285056352224
+    },
+    {
+      "station_m": 162.0,
+      "width_m": 40,
+      "origin_x_m": 141.98333333333332,
+      "left_inner_pml_x_m": 144.98333333333332,
+      "right_inner_pml_x_m": 178.98333333333332,
+      "left_air_mirror_time_ns": 113.52319820111248,
+      "right_air_mirror_time_ns": 113.30082256512802
+    },
+    {
+      "station_m": 162.0,
+      "width_m": 50,
+      "origin_x_m": 136.98333333333332,
+      "left_inner_pml_x_m": 139.98333333333332,
+      "right_inner_pml_x_m": 183.98333333333332,
+      "left_air_mirror_time_ns": 146.8795582580083,
+      "right_air_mirror_time_ns": 146.6571824497951
+    },
+    {
+      "station_m": 162.0,
+      "width_m": 70,
+      "origin_x_m": 126.98333333333332,
+      "left_inner_pml_x_m": 129.98333333333332,
+      "right_inner_pml_x_m": 193.98333333333332,
+      "left_air_mirror_time_ns": 213.59232471909317,
+      "right_air_mirror_time_ns": 213.3699487762743
+    },
+    {
+      "station_m": 162.0,
+      "width_m": 90,
+      "origin_x_m": 116.98333333333332,
+      "left_inner_pml_x_m": 119.98333333333332,
+      "right_inner_pml_x_m": 203.98333333333332,
+      "left_air_mirror_time_ns": 280.3051162076325,
+      "right_air_mirror_time_ns": 280.08274021420226
+    },
+    {
+      "station_m": 174.0,
+      "width_m": 40,
+      "origin_x_m": 153.98333333333332,
+      "left_inner_pml_x_m": 156.98333333333332,
+      "right_inner_pml_x_m": 190.98333333333332,
+      "left_air_mirror_time_ns": 113.52319820111248,
+      "right_air_mirror_time_ns": 113.30082256512802
+    },
+    {
+      "station_m": 174.0,
+      "width_m": 50,
+      "origin_x_m": 148.98333333333332,
+      "left_inner_pml_x_m": 151.98333333333332,
+      "right_inner_pml_x_m": 195.98333333333332,
+      "left_air_mirror_time_ns": 146.8795582580083,
+      "right_air_mirror_time_ns": 146.6571824497951
+    },
+    {
+      "station_m": 174.0,
+      "width_m": 70,
+      "origin_x_m": 138.98333333333332,
+      "left_inner_pml_x_m": 141.98333333333332,
+      "right_inner_pml_x_m": 205.98333333333332,
+      "left_air_mirror_time_ns": 213.59232471909317,
+      "right_air_mirror_time_ns": 213.3699487762743
+    },
+    {
+      "station_m": 174.0,
+      "width_m": 90,
+      "origin_x_m": 128.98333333333332,
+      "left_inner_pml_x_m": 131.98333333333332,
+      "right_inner_pml_x_m": 215.98333333333332,
+      "left_air_mirror_time_ns": 280.3051162076325,
+      "right_air_mirror_time_ns": 280.0827402142023
+    }
+  ],
+  "centered_approximation_formula": "t=(W-6)/c; potential boundary interaction, not measured reflection",
+  "conservative_width_for_air_return_after400ns_m": 125.91698319999999,
+  "cells_per110MHz_wavelength_in_er18_at1over30": 19.271389090943934,
+  "proposed_new_fdtd": 6,
+  "proposed_widths_m": [
+    70,
+    90
+  ],
+  "proposed_stations_m": [
+    150,
+    162,
+    174
+  ],
+  "execution_authorized": false
+}

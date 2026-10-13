@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-13",
+  "sources": [
+    {
+      "url": "https://docs.gprmax.com/en/latest/gprmodelling.html",
+      "read_scope": "Spatial discretization; absorbing boundary conditions",
+      "role": "official gprMax guidance"
+    },
+    {
+      "url": "https://docs.gprmax.com/en/latest/input_hash_cmds.html#pml-cfs",
+      "read_scope": "PML thickness, formulations and CFS reference",
+      "role": "official supported options; none adopted"
+    },
+    {
+      "url": "https://docs.gprmax.com/en/latest/inc_SFCW.html",
+      "read_scope": "Input, direct processing and frequency/time-window validity",
+      "role": "official processing definition"
+    },
+    {
+      "url": "https://meep.readthedocs.io/en/latest/Perfectly_Matched_Layer/",
+      "read_scope": "Full text; breakdown and boundary-normal inhomogeneity",
+      "role": "adjacent FDTD theory; not proof of gprMax failure"
+    }
+  ]
+}

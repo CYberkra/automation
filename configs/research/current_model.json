@@ -1,6 +1,12 @@
 {
   "schema": "current-model-pointer/1",
   "updated": "2026-10-13",
+  "selected_working_configuration": {
+    "definition": "configs/research/line9_v31_selected_working_configuration_v0_1.json",
+    "status": "USER_SELECTED_20_110MHZ_EXACT_1OVER30M_LATERAL_DOMAIN_PENDING",
+    "scope": "最新推进的V3.1二维候选；后续批次按此选定频带/网格冻结。域宽尚未敲定，没有新增正演。",
+    "materialization_note": "以下current_definition/current_physical_setup仍是旧model_current实体的冻结快照，不代表新的V3.1参数已经写入旧几何。新实体待获批域对照时按归档规则准备；历史结果不改标。"
+  },
   "purpose": "现行模型唯一入口。找最新版本的模型文件一律先看本文件；历史版本文件不覆盖，本文件只改指针。",
   "what_this_file_is_not": "本文件不是 gprMax 模型本身，只是索引。gprMax 实际读取的模型 = 每个算例的 profile.in 文本输入 + 几何体素 H5（如 full2d_compact.h5）；它们由 current_definition 中的生成器脚本从材料/源参数生成，已执行批次profile.in 冻结在 ROG 各批目录 execution/prepared/cases/<case>/profile.in。",
   "update_rule": "任何获批的模型/材料/源/几何/采集修改，必须在同一工作单元内更新本文件，记录被取代版本；更新本文件不等于批准任何新求解。",

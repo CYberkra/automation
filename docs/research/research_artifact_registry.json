@@ -1,4 +1,29 @@
  {
+ "line9_lateral_domain_research_2026_10_13": {
+  "local_bundle": "artifacts/local_checks/2026-10-13_line9_lateral_domain_research_r1/delivery/line9_lateral_domain_existing20_20261013.zip",
+  "sha256": "02ddf420f1c21a60a64598c36f9a963fbdf922f61b9cd0bf94e62b4144b9af63",
+  "bytes": 5772963,
+  "manifest_entries": 127,
+  "new_fdtd": 0,
+  "reused_records": 20,
+  "replayed_outputs_byte_identical": 5,
+  "report": "docs/research/2026-10-13_line9_lateral_domain_research.md",
+  "status": "RESEARCH_COMPLETED_EXISTING20_REPROCESSED_NO_NEW_FDTD",
+  "public": "artifacts/research_checks/2026-10-13_line9_lateral_domain_research_r1",
+  "selected_configuration": "configs/research/line9_v31_selected_working_configuration_v0_1.json",
+  "working_grid_fraction_m": [
+   1,
+   30
+  ],
+  "working_band_hz": [
+   20000000,
+   110000000
+  ],
+  "domain_results_grid_m": 0.025,
+  "width40_vs50_max_window_error": 0.04100419078775723,
+  "width50_vs70_max_window_error": 0.014420928981189357,
+  "next_six_solves_authorized": false
+ },
  "line9_v31_band110_grid5cm_2026_10_13": {
   "status": "COMPLETED_THREE_NEW_THREE_REUSED_REPLACEMENT_SCREEN_FAILED",
   "report": "docs/research/2026-10-13_line9_v31_band110_grid5cm_results.md",
