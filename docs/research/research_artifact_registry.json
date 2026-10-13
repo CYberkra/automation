@@ -1,4 +1,56 @@
  {
+ "line9_v31_grid_1over30_2026_10_13": {
+  "status": "COMPLETED_THREE_SOLVES_FILES_VERIFIED_REPLACEMENT_SCREEN_FAILED",
+  "report": "docs/research/2026-10-13_line9_v31_grid_1over30_results.md",
+  "plan": "docs/research/2026-10-13_line9_v31_grid_1over30_plan.md",
+  "public": "artifacts/research_checks/2026-10-13_line9_v31_grid_1over30_r1",
+  "authorization": "网格尝试1/30 m，即 3.333… cm。",
+  "run_root": "E:/djh/line9_v31_grid_1over30_20261013_r1",
+  "grid_fraction_m": [
+   1,
+   30
+  ],
+  "grid_m": 0.03333333333333333,
+  "new_solver_runs": 3,
+  "reused_references": 3,
+  "stations_m": [
+   150,
+   162,
+   174
+  ],
+  "native_dtype": "float32",
+  "record_ns": 1100,
+  "domain_m": [
+   50,
+   50
+  ],
+  "pml_cells": [
+   90,
+   90,
+   0,
+   90,
+   90,
+   0
+  ],
+  "horizontal_tx_rx_separation_m": 1.3,
+  "horizontal_domain_shift_m": -0.016666666666666666,
+  "fdtd_seconds": 26.6723,
+  "build_solver_seconds": 33.3206,
+  "batch_wall_seconds": 39.330358266830444,
+  "max_window_error": 0.2115273590753176,
+  "median_build_solver_speedup": 2.370463052306779,
+  "timing_repeated_benchmark": false,
+  "current_model_modified": false,
+  "grid_adopted": false,
+  "solver_retries": 0,
+  "local_data_bundle": "artifacts/local_checks/2026-10-13_line9_v31_grid_1over30_r1/delivery/line9_v31_grid_1over30_3solves_20261013.zip",
+  "local_data_bundle_sha256": "5c1279a0d76350ab3e5e108f4667c6e4b925cf6256b5226e41cade4cc7dfd6a3",
+  "local_data_bundle_bytes": 2483970,
+  "package_manifest_entries": 102,
+  "analysis_replay_commands": 2,
+  "byte_identical_replayed_outputs": 8,
+  "legacy_comparison_and_five_figures_byte_identical": true
+ },
  "line9_v31_coarse_grid_2026_10_13": {
   "status": "COMPLETED_SIX_SOLVES_FILES_VERIFIED_BOTH_COARSE_REPLACEMENT_SCREENS_FAILED",
   "report": "docs/research/2026-10-13_line9_v31_coarse_grid_results.md",

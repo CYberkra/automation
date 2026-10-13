@@ -1,4 +1,4 @@
-"""Prepare the authorized six-case practical coarse-grid comparison; no solver here."""
+"""Prepare authorized practical coarse-grid comparisons; no solver here."""
 from __future__ import annotations
 
 import argparse
@@ -55,6 +55,8 @@ def prepare(args):
     assert cs['selection_sha256'] == sha(selpath)
     assert cs['geometry_model_version'] == 'V3.1_VERTICAL_PDF_SCALE_FIXED'
     contacts = cs['contact_points_x_elevation_m']
+    thirtieth = getattr(args, 'spacing_fraction', None) == '1/30'
+    spacings = [1.0 / 30.0] if thirtieth else [.0325, .0375]
     db = inputs / 'geometries' / f'{DB}.json'
     assert sha(db) == prior['material_database_sha256']
     shutil.copy2(db, geodir / db.name)
@@ -75,10 +77,13 @@ def prepare(args):
         checks.append(dict(station_m=station,regenerated_2p5cm_voxels_identical=True,
                            reference_case=base['id'],reference_raw_sha256=rec['raw_sha256'],
                            reference_sfcw_sha256=rec['sfcw_sha256']))
-        for spacing in [.0325, .0375]:
-            data, origin, width = raster(contacts, sel, station, spacing)
+        for spacing in spacings:
+            # An odd 39-cell TX/RX separation needs a half-cell origin shift
+            # to keep both absolute x positions on nodes in a 1500-cell domain.
+            raster_station = station - spacing/2 if thirtieth else station
+            data, origin, width = raster(contacts, sel, raster_station, spacing)
             case = copy.deepcopy(base)
-            cid = f'grid{spacing*100:g}cm_x{station:.1f}'
+            cid = f'grid1over30m_x{station:.1f}' if thirtieth else f'grid{spacing*100:g}cm_x{station:.1f}'
             out = geodir / f'{cid}.h5'
             write_geometry(out, data, attrs, spacing, origin)
             pml = math.ceil(3. / spacing - 1e-10)
@@ -103,6 +108,13 @@ def prepare(args):
                 assert min(snapped[0]-pml*spacing,width-pml*spacing-snapped[0]) >= 10
                 assert width-pml*spacing-snapped[1] >= 2
             case['actual_horizontal_separation_m'] = case['rx_m'][0]-case['tx_m'][0]
+            if thirtieth:
+                case['grid_fraction_m'] = [1, 30]
+                case['horizontal_domain_shift_m'] = origin-(station-25.)
+                assert data.shape == (1500,1500,1) and width == 50. and pml == 90
+                assert math.isclose(pml*spacing,3.,abs_tol=1e-14)
+                assert all(abs(case[f'{kind}_coordinate_delta_m'][0]) < 1e-10 for kind in ['tx','rx'])
+                assert math.isclose(case['actual_horizontal_separation_m'],1.3,abs_tol=1e-10)
             # Small coefficient export around the same physical surface neighborhood.
             bounds = base['surface_coefficient_export_bounds']
             oldorigin = np.asarray(base['origin_global_x_elevation_m'])
@@ -126,6 +138,11 @@ def prepare(args):
         quantization_policy='ceil domain to >=50m; domain centered at nominal station; bottom410m; nearest source points with positive ties; ceil PML to >=3m; no response-fitted correction',
         acceptance='Use original frozen domain_screen tolerances as project replacement screen; reference itself is not absolutely converged',
         current_model_modified=False,source_or_sfcw_changed=False)
+    if thirtieth:
+        contract.update(id='line9_v31_grid_1over30_20261013_r1',
+            authorization='User explicitly requested 网格尝试1/30 m，即 3.333… cm。',
+            grid_fraction_m=[1,30],max_new_solves=3,max_wall_seconds=600,
+            quantization_policy='spacing=1.0/30.0 without decimal truncation; exact50m/90-cell3mPML/39-cell1.3m separation; x origin shifts -1/60m to preserve TX/RX x; bottom410m fixed; nearest y positive ties; no fitted correction')
     save(root/'contract.json',contract)
     shutil.copy2(Path(__file__).with_name('study_line9_v31_smoothing_domain.py'),root/'study.py')
     save(root/'preparation_audit.json',dict(status='PASS',case_count=len(cases),reference_checks=checks,
@@ -139,4 +156,5 @@ if __name__ == '__main__':
     p.add_argument('--source-package',type=Path,required=True)
     p.add_argument('--parent',type=Path,required=True)
     p.add_argument('--parent-inputs',type=Path,required=True)
+    p.add_argument('--spacing-fraction',choices=['1/30'],default=None)
     prepare(p.parse_args())
