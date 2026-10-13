@@ -3,10 +3,11 @@
   "updated": "2026-10-13",
   "selected_working_configuration": {
     "definition": "configs/research/line9_v31_selected_working_configuration_v0_1.json",
-    "status": "USER_SELECTED_20_110MHZ_EXACT_1OVER30M_LATERAL_SCREEN_STOPPED_WIDTH_PENDING",
-    "scope": "最新推进的V3.1二维候选；已按批准完成174m70/90m两解，原门槛未过即停止，余四解未启动。域宽尚未采用。",
+    "status": "USER_SELECTED_20_110MHZ_EXACT_1OVER30M_PROVISIONAL50M_CONTINUOUS_BSCAN_COORDINATES_PENDING",
+    "scope": "用户转向150–180m连续51道可靠性验证，暂用50m域；两档网格的实际坐标规则正在具体确认，尚未启动新求解。此前174m域门槛结果不改标。",
+    "latest_plan": "docs/research/2026-10-13_line9_continuous_bscan_plan.md",
     "latest_report": "docs/research/2026-10-13_line9_lateral_domain_results.md",
-    "materialization_note": "以下current_definition/current_physical_setup仍是旧model_current实体的冻结快照；新域均为独立诊断候选，没有自动替换旧实体。最终域宽选定后按归档规则准备新实体；历史结果不改标。"
+    "materialization_note": "以下current_definition/current_physical_setup仍是旧model_current实体的冻结快照；用户已暂选50m，新连续测线实体待实际坐标规则确认后按归档规则准备；历史结果不改标。"
   },
   "purpose": "现行模型唯一入口。找最新版本的模型文件一律先看本文件；历史版本文件不覆盖，本文件只改指针。",
   "what_this_file_is_not": "本文件不是 gprMax 模型本身，只是索引。gprMax 实际读取的模型 = 每个算例的 profile.in 文本输入 + 几何体素 H5（如 full2d_compact.h5）；它们由 current_definition 中的生成器脚本从材料/源参数生成，已执行批次profile.in 冻结在 ROG 各批目录 execution/prepared/cases/<case>/profile.in。",

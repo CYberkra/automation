@@ -1,4 +1,38 @@
  {
+ "line9_continuous_bscan_planning_2026_10_13": {
+  "status": "INPUTS_AUDITED_AWAITING_SPECIFIC_COORDINATE_DECISION_NO_NEW_FDTD",
+  "calls_solver": false,
+  "new_fdtd": 0,
+  "original_fine_records_verified": 51,
+  "smoothed_fine_existing": 4,
+  "coarse_existing": 3,
+  "both_old_fine_y_on_coarse_nodes": 2,
+  "nominal_stations_m": [
+   150,
+   180
+  ],
+  "station_step_m": 0.6,
+  "trace_count": 51,
+  "proposed_strict_new_solves": 102,
+  "proposed_max_vertical_change_m": 0.05000000000000426,
+  "median_fine_build_solver_seconds": 22.362299999999998,
+  "median_coarse_build_solver_seconds": 9.4309,
+  "proposal_execution_authorized": false,
+  "source_inputs_modified": false,
+  "linear_solver_eta_minutes": 27.02422,
+  "report": "docs/research/2026-10-13_line9_continuous_bscan_plan.md",
+  "public": "artifacts/research_checks/2026-10-13_line9_continuous_bscan_planning_r1",
+  "script": "scripts/audit_line9_continuous_bscan_inputs.py",
+  "user_selected_width_m": 50,
+  "frequency_hz": [
+   20000000,
+   110000000
+  ],
+  "grid_fraction_m": [
+   1,
+   30
+  ]
+ },
  "line9_lateral_domain_batch_2026_10_13": {
   "local_bundle": "artifacts/local_checks/2026-10-13_line9_lateral_domain_r1/delivery/line9_lateral_domain_174m_2new_3reused_20261013.zip",
   "sha256": "c52364a7363434f82bcb3d0ebad7a864ec99a4dbd1f7e0bcb135eb255984bc92",

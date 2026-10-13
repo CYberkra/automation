@@ -1,0 +1,1451 @@
+{
+  "summary": {
+    "status": "AWAITING_ACTUAL_COORDINATE_DECISION_NO_SOLVER_STARTED",
+    "calls_solver": false,
+    "new_fdtd": 0,
+    "original_fine_records_verified": 51,
+    "smoothed_fine_existing": 4,
+    "coarse_existing": 3,
+    "both_old_fine_y_on_coarse_nodes": 2,
+    "nominal_stations_m": [
+      150,
+      180
+    ],
+    "station_step_m": 0.6,
+    "trace_count": 51,
+    "proposed_strict_new_solves": 102,
+    "proposed_max_vertical_change_m": 0.05000000000000426,
+    "median_fine_build_solver_seconds": 22.362299999999998,
+    "median_coarse_build_solver_seconds": 9.4309,
+    "proposal_execution_authorized": false,
+    "source_inputs_modified": false,
+    "linear_solver_eta_minutes": 27.02422
+  },
+  "stations": [
+    {
+      "station_m": 150.0,
+      "old_raw_sha256": "e486fd45fa92ed15fa878672f78053fd2fc19533fe7784513192bb15dfed3342",
+      "old_fine_y_m": [
+        35.375,
+        35.275
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        35.4,
+        35.300000000000004
+      ],
+      "proposed_y_change_m": [
+        0.02499999999999858,
+        0.025000000000005684
+      ],
+      "proposed_common_domain_x_origin_m": 124.95,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        149.35,
+        150.65
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 150.6,
+      "old_raw_sha256": "de2613bca9aaf2f53ec052f5906e128b4ed1cbe91b36ad3ee329300952f5c07c",
+      "old_fine_y_m": [
+        35.275,
+        35.275
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        35.300000000000004,
+        35.300000000000004
+      ],
+      "proposed_y_change_m": [
+        0.025000000000005684,
+        0.025000000000005684
+      ],
+      "proposed_common_domain_x_origin_m": 125.55,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        149.95,
+        151.25
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 151.2,
+      "old_raw_sha256": "01bd829e58c2cf0ed44788c88a532590e297aad4b6b5af5cea3188e6789149d6",
+      "old_fine_y_m": [
+        35.275,
+        35.275
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        35.300000000000004,
+        35.300000000000004
+      ],
+      "proposed_y_change_m": [
+        0.025000000000005684,
+        0.025000000000005684
+      ],
+      "proposed_common_domain_x_origin_m": 126.14999999999999,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        150.54999999999998,
+        151.85
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 151.8,
+      "old_raw_sha256": "dfb64a9005cf722d1dfab6421278c0062fd7b55f4a846118b2bf67036b5e1f9c",
+      "old_fine_y_m": [
+        35.275,
+        35.275
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        35.300000000000004,
+        35.300000000000004
+      ],
+      "proposed_y_change_m": [
+        0.025000000000005684,
+        0.025000000000005684
+      ],
+      "proposed_common_domain_x_origin_m": 126.75000000000001,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        151.15,
+        152.45000000000002
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 152.4,
+      "old_raw_sha256": "e17be3cfa0f31ec5aaf46a824b135c0b7119bc1d27114d62d62810896abc98f6",
+      "old_fine_y_m": [
+        35.275,
+        35.275
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        35.300000000000004,
+        35.300000000000004
+      ],
+      "proposed_y_change_m": [
+        0.025000000000005684,
+        0.025000000000005684
+      ],
+      "proposed_common_domain_x_origin_m": 127.35000000000001,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        151.75,
+        153.05
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 153.0,
+      "old_raw_sha256": "73efb0ce11f1ad68227f817f6d9518fc391fff05f9860ab800b929f7c22e7d9c",
+      "old_fine_y_m": [
+        35.275,
+        35.275
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        35.300000000000004,
+        35.300000000000004
+      ],
+      "proposed_y_change_m": [
+        0.025000000000005684,
+        0.025000000000005684
+      ],
+      "proposed_common_domain_x_origin_m": 127.95,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        152.35,
+        153.65
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 153.6,
+      "old_raw_sha256": "da490d135282ffe2ca3a8c994bfdb245754b866717cde71e72a38449dea46fd9",
+      "old_fine_y_m": [
+        35.275,
+        35.275
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        35.300000000000004,
+        35.300000000000004
+      ],
+      "proposed_y_change_m": [
+        0.025000000000005684,
+        0.025000000000005684
+      ],
+      "proposed_common_domain_x_origin_m": 128.54999999999998,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        152.95,
+        154.25
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 154.2,
+      "old_raw_sha256": "2400cb790960e7bf160ce4cda716b920d8e34b6f1f4453fec6aa60a94c4f8bb9",
+      "old_fine_y_m": [
+        35.275,
+        35.35
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        35.300000000000004,
+        35.4
+      ],
+      "proposed_y_change_m": [
+        0.025000000000005684,
+        0.04999999999999716
+      ],
+      "proposed_common_domain_x_origin_m": 129.14999999999998,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        153.54999999999998,
+        154.85
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 154.8,
+      "old_raw_sha256": "3144c6db7f8e5e37efc73d73febaae750b973eae25e693099962d6992f9b3591",
+      "old_fine_y_m": [
+        35.275,
+        35.525
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        35.300000000000004,
+        35.5
+      ],
+      "proposed_y_change_m": [
+        0.025000000000005684,
+        -0.02499999999999858
+      ],
+      "proposed_common_domain_x_origin_m": 129.75,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        154.15,
+        155.45000000000002
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 155.4,
+      "old_raw_sha256": "59e96d2161d905ecd897704b9a3375673e48417eb746358f9e60796c0201c487",
+      "old_fine_y_m": [
+        35.325,
+        35.7
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        35.300000000000004,
+        35.7
+      ],
+      "proposed_y_change_m": [
+        -0.02499999999999858,
+        0.0
+      ],
+      "proposed_common_domain_x_origin_m": 130.35,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        154.75,
+        156.05
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 156.0,
+      "old_raw_sha256": "e69df2b1e9825678e6f9fed2eeaa26a584b5a10756834659e92aea7c51c19ad2",
+      "old_fine_y_m": [
+        35.5,
+        35.875
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        35.5,
+        35.9
+      ],
+      "proposed_y_change_m": [
+        0.0,
+        0.02499999999999858
+      ],
+      "proposed_common_domain_x_origin_m": 130.95,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        155.35,
+        156.65
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 156.6,
+      "old_raw_sha256": "456a29bbbfb53382a89dcbff63ecd0f24e6eca1a679732f46c7f1cb3fc52bbb8",
+      "old_fine_y_m": [
+        35.675000000000004,
+        36.075
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        35.7,
+        36.1
+      ],
+      "proposed_y_change_m": [
+        0.02499999999999858,
+        0.02499999999999858
+      ],
+      "proposed_common_domain_x_origin_m": 131.54999999999998,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        155.95,
+        157.25
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 157.2,
+      "old_raw_sha256": "b0663af872e5b1f4a86cd24557efaf6ab232ff5722d59151d26ed405e294696e",
+      "old_fine_y_m": [
+        35.85,
+        36.25
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        35.9,
+        36.300000000000004
+      ],
+      "proposed_y_change_m": [
+        0.04999999999999716,
+        0.05000000000000426
+      ],
+      "proposed_common_domain_x_origin_m": 132.14999999999998,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        156.54999999999998,
+        157.85
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 157.8,
+      "old_raw_sha256": "30cc9c3e86b90f61b87f0361436abc1b90efaea06c1a03f4b0961a91ea3249c7",
+      "old_fine_y_m": [
+        36.025,
+        36.300000000000004
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        36.0,
+        36.300000000000004
+      ],
+      "proposed_y_change_m": [
+        -0.02499999999999858,
+        0.0
+      ],
+      "proposed_common_domain_x_origin_m": 132.75,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        157.15,
+        158.45000000000002
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 158.4,
+      "old_raw_sha256": "646372b7acfd7452e23e5b3c072b05df942854b0bf91a1a4d71835b3a83e0f53",
+      "old_fine_y_m": [
+        36.2,
+        36.35
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        36.2,
+        36.4
+      ],
+      "proposed_y_change_m": [
+        0.0,
+        0.04999999999999716
+      ],
+      "proposed_common_domain_x_origin_m": 133.35,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        157.75,
+        159.05
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 159.0,
+      "old_raw_sha256": "9b62fa8198f6c52b5bb540c928d0896ee251a0fad678efcdd06a4126bbb9ba48",
+      "old_fine_y_m": [
+        36.300000000000004,
+        36.375
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        36.300000000000004,
+        36.4
+      ],
+      "proposed_y_change_m": [
+        0.0,
+        0.02499999999999858
+      ],
+      "proposed_common_domain_x_origin_m": 133.95,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        158.35,
+        159.65
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 159.6,
+      "old_raw_sha256": "0b669f849cc98536a3489eaef857d8e348707d2cb8e1f5814e0113ad79627278",
+      "old_fine_y_m": [
+        36.35,
+        36.425000000000004
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        36.4,
+        36.4
+      ],
+      "proposed_y_change_m": [
+        0.04999999999999716,
+        -0.025000000000005684
+      ],
+      "proposed_common_domain_x_origin_m": 134.54999999999998,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        158.95,
+        160.25
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 160.2,
+      "old_raw_sha256": "0581ceb9142b92acdca096d9e815c149c374f909ea8fdd81aafb9b670134a9a1",
+      "old_fine_y_m": [
+        36.375,
+        36.475
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        36.4,
+        36.5
+      ],
+      "proposed_y_change_m": [
+        0.02499999999999858,
+        0.02499999999999858
+      ],
+      "proposed_common_domain_x_origin_m": 135.14999999999998,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        159.54999999999998,
+        160.85
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 160.8,
+      "old_raw_sha256": "412d40bda4d118db37872118e8672ccdf7911814cc7c1e33e9cf8b3163bb2942",
+      "old_fine_y_m": [
+        36.425000000000004,
+        36.5
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        36.4,
+        36.5
+      ],
+      "proposed_y_change_m": [
+        -0.025000000000005684,
+        0.0
+      ],
+      "proposed_common_domain_x_origin_m": 135.75,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        160.15,
+        161.45000000000002
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 161.4,
+      "old_raw_sha256": "c44baef4d764fe3e2b5255f6fc171681641bbf46fd02de2bb33b74128c81588d",
+      "old_fine_y_m": [
+        36.45,
+        36.550000000000004
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        36.5,
+        36.6
+      ],
+      "proposed_y_change_m": [
+        0.04999999999999716,
+        0.04999999999999716
+      ],
+      "proposed_common_domain_x_origin_m": 136.35,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        160.75,
+        162.05
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 162.0,
+      "old_raw_sha256": "408e139845d30dbcb510565351a55abc756b44a8f19874061b6a205acfdece82",
+      "old_fine_y_m": [
+        36.5,
+        36.575
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        36.5,
+        36.6
+      ],
+      "proposed_y_change_m": [
+        0.0,
+        0.02499999999999858
+      ],
+      "proposed_common_domain_x_origin_m": 136.95,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        161.35,
+        162.65
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 162.6,
+      "old_raw_sha256": "be50750b94bdbbaa26966202088a25d5daa2dbf828e52ee0e115bcc0a24ff87b",
+      "old_fine_y_m": [
+        36.525,
+        36.625
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        36.5,
+        36.6
+      ],
+      "proposed_y_change_m": [
+        -0.02499999999999858,
+        -0.02499999999999858
+      ],
+      "proposed_common_domain_x_origin_m": 137.54999999999998,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        161.95,
+        163.25
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 163.2,
+      "old_raw_sha256": "2ffec3c07574ad610cda508e38e32b56a1650ea1b0eae747750f3545b5948521",
+      "old_fine_y_m": [
+        36.575,
+        36.65
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        36.6,
+        36.7
+      ],
+      "proposed_y_change_m": [
+        0.02499999999999858,
+        0.05000000000000426
+      ],
+      "proposed_common_domain_x_origin_m": 138.14999999999998,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        162.54999999999998,
+        163.85
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 163.8,
+      "old_raw_sha256": "19e2e41a516085b4d3e80e24f0b34b8c462eb4d86355ed54173450fcaf7283da",
+      "old_fine_y_m": [
+        36.6,
+        36.7
+      ],
+      "both_old_y_on_coarse_nodes": true,
+      "proposed_common_y_m": [
+        36.6,
+        36.7
+      ],
+      "proposed_y_change_m": [
+        0.0,
+        0.0
+      ],
+      "proposed_common_domain_x_origin_m": 138.75,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        163.15,
+        164.45000000000002
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 164.4,
+      "old_raw_sha256": "ee430f574f8c99f7f43d47a7227282f88406784766a72441ce40caa2a95e2d87",
+      "old_fine_y_m": [
+        36.65,
+        36.725
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        36.7,
+        36.7
+      ],
+      "proposed_y_change_m": [
+        0.05000000000000426,
+        -0.02499999999999858
+      ],
+      "proposed_common_domain_x_origin_m": 139.35,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        163.75,
+        165.05
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 165.0,
+      "old_raw_sha256": "4c66f9b605c9808b123a51fab0539726504ece90d3c2051a7b969d9022f47d87",
+      "old_fine_y_m": [
+        36.675000000000004,
+        36.775
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        36.7,
+        36.800000000000004
+      ],
+      "proposed_y_change_m": [
+        0.02499999999999858,
+        0.025000000000005684
+      ],
+      "proposed_common_domain_x_origin_m": 139.95,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        164.35,
+        165.65
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 165.6,
+      "old_raw_sha256": "0f6b33daaeb39e53fd7c0fbd7d7042cc076dd8acf53d208583a8eed612859581",
+      "old_fine_y_m": [
+        36.725,
+        36.800000000000004
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        36.7,
+        36.800000000000004
+      ],
+      "proposed_y_change_m": [
+        -0.02499999999999858,
+        0.0
+      ],
+      "proposed_common_domain_x_origin_m": 140.54999999999998,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        164.95,
+        166.25
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 166.2,
+      "old_raw_sha256": "3a4323c640d95a4e0c3b46a1e28484cf9e81a8bc71545f9008f25a93bfdecc07",
+      "old_fine_y_m": [
+        36.775,
+        36.85
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        36.800000000000004,
+        36.9
+      ],
+      "proposed_y_change_m": [
+        0.025000000000005684,
+        0.04999999999999716
+      ],
+      "proposed_common_domain_x_origin_m": 141.14999999999998,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        165.54999999999998,
+        166.85
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 166.8,
+      "old_raw_sha256": "8b7c0522af753fd48e69a05905b3a7ae9430cc855a3e81a5909c384e4543460c",
+      "old_fine_y_m": [
+        36.800000000000004,
+        36.875
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        36.800000000000004,
+        36.9
+      ],
+      "proposed_y_change_m": [
+        0.0,
+        0.02499999999999858
+      ],
+      "proposed_common_domain_x_origin_m": 141.75,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        166.15,
+        167.45000000000002
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 167.4,
+      "old_raw_sha256": "0a5d251d4c7a41679633e25f7e923beee4842ae46eecf57f89c7834017447398",
+      "old_fine_y_m": [
+        36.85,
+        36.925000000000004
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        36.9,
+        36.9
+      ],
+      "proposed_y_change_m": [
+        0.04999999999999716,
+        -0.025000000000005684
+      ],
+      "proposed_common_domain_x_origin_m": 142.35,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        166.75,
+        168.05
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 168.0,
+      "old_raw_sha256": "9cb9afacc0d30c25319c3e0a1bcf9b0d6d0b7e5ffa9aa39b48520eec16b258d9",
+      "old_fine_y_m": [
+        36.875,
+        36.95
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        36.9,
+        37.0
+      ],
+      "proposed_y_change_m": [
+        0.02499999999999858,
+        0.04999999999999716
+      ],
+      "proposed_common_domain_x_origin_m": 142.95,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        167.35,
+        168.65
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 168.6,
+      "old_raw_sha256": "6718451b2927ff64d86b18c14b4ffdbe85acaac2a0055a0500ff27adf35f35c6",
+      "old_fine_y_m": [
+        36.925000000000004,
+        37.0
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        36.9,
+        37.0
+      ],
+      "proposed_y_change_m": [
+        -0.025000000000005684,
+        0.0
+      ],
+      "proposed_common_domain_x_origin_m": 143.54999999999998,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        167.95,
+        169.25
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 169.2,
+      "old_raw_sha256": "e7a8d8e8b48fd99675744717885381f1a8298e93b9b99995f758287e66c63a98",
+      "old_fine_y_m": [
+        36.95,
+        37.050000000000004
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        37.0,
+        37.1
+      ],
+      "proposed_y_change_m": [
+        0.04999999999999716,
+        0.04999999999999716
+      ],
+      "proposed_common_domain_x_origin_m": 144.14999999999998,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        168.54999999999998,
+        169.85
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 169.8,
+      "old_raw_sha256": "40baa5b795abd8a30c210837592700aca6d004943207694e432075094a7878cb",
+      "old_fine_y_m": [
+        37.0,
+        37.075
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        37.0,
+        37.1
+      ],
+      "proposed_y_change_m": [
+        0.0,
+        0.02499999999999858
+      ],
+      "proposed_common_domain_x_origin_m": 144.75,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        169.15,
+        170.45000000000002
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 170.4,
+      "old_raw_sha256": "5c091eb1025c4d350d30f3ae5dd6ee5e61f64ebea91902511bb0cba2e6ed571e",
+      "old_fine_y_m": [
+        37.025,
+        37.125
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        37.0,
+        37.1
+      ],
+      "proposed_y_change_m": [
+        -0.02499999999999858,
+        -0.02499999999999858
+      ],
+      "proposed_common_domain_x_origin_m": 145.35,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        169.75,
+        171.05
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 171.0,
+      "old_raw_sha256": "5ace98e6f220265a80a68afee7df8701d35cead93ff53fbb0f9ad82fefa8f31d",
+      "old_fine_y_m": [
+        37.075,
+        37.15
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        37.1,
+        37.2
+      ],
+      "proposed_y_change_m": [
+        0.02499999999999858,
+        0.05000000000000426
+      ],
+      "proposed_common_domain_x_origin_m": 145.95,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        170.35,
+        171.65
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 171.6,
+      "old_raw_sha256": "f0f492c94e16584cdec99cbf88852ac190a998ba14d77116c384323d38192585",
+      "old_fine_y_m": [
+        37.1,
+        37.2
+      ],
+      "both_old_y_on_coarse_nodes": true,
+      "proposed_common_y_m": [
+        37.1,
+        37.2
+      ],
+      "proposed_y_change_m": [
+        0.0,
+        0.0
+      ],
+      "proposed_common_domain_x_origin_m": 146.54999999999998,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        170.95,
+        172.25
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 172.2,
+      "old_raw_sha256": "b25b64c218ba5a1406aaad2ebdac10b6344fe936ca795deb5019e6e46344a48e",
+      "old_fine_y_m": [
+        37.15,
+        37.225
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        37.2,
+        37.2
+      ],
+      "proposed_y_change_m": [
+        0.05000000000000426,
+        -0.02499999999999858
+      ],
+      "proposed_common_domain_x_origin_m": 147.14999999999998,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        171.54999999999998,
+        172.85
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 172.8,
+      "old_raw_sha256": "0328d3e0810e9bd8078409cb86a34b316e1da7989f56ba6a6a840394cead6978",
+      "old_fine_y_m": [
+        37.175000000000004,
+        37.275
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        37.2,
+        37.300000000000004
+      ],
+      "proposed_y_change_m": [
+        0.02499999999999858,
+        0.025000000000005684
+      ],
+      "proposed_common_domain_x_origin_m": 147.75,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        172.15,
+        173.45000000000002
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 173.4,
+      "old_raw_sha256": "d6d054f2ea0d2fdd883a6d61605d5772dbc3fd5b6c42114ec5a5233860bf4121",
+      "old_fine_y_m": [
+        37.225,
+        37.300000000000004
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        37.2,
+        37.300000000000004
+      ],
+      "proposed_y_change_m": [
+        -0.02499999999999858,
+        0.0
+      ],
+      "proposed_common_domain_x_origin_m": 148.35,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        172.75,
+        174.05
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 174.0,
+      "old_raw_sha256": "da0c03ed3edef0f388e516d51a391c723fded1e58e03fe3bc04377aeb5d713e0",
+      "old_fine_y_m": [
+        37.25,
+        37.325
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        37.300000000000004,
+        37.300000000000004
+      ],
+      "proposed_y_change_m": [
+        0.05000000000000426,
+        -0.02499999999999858
+      ],
+      "proposed_common_domain_x_origin_m": 148.95,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        173.35,
+        174.65
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 174.6,
+      "old_raw_sha256": "3149a73026b199a6caf2d6d356ab5518e5c8be369742a7f7d78262f6f9adc10a",
+      "old_fine_y_m": [
+        37.300000000000004,
+        37.35
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        37.300000000000004,
+        37.4
+      ],
+      "proposed_y_change_m": [
+        0.0,
+        0.04999999999999716
+      ],
+      "proposed_common_domain_x_origin_m": 149.54999999999998,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        173.95,
+        175.25
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 175.2,
+      "old_raw_sha256": "5136f6ba61c9b7de2c0d97584c7dcf3ff38511df96e7941673f1a3b449807691",
+      "old_fine_y_m": [
+        37.325,
+        37.375
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        37.300000000000004,
+        37.4
+      ],
+      "proposed_y_change_m": [
+        -0.02499999999999858,
+        0.02499999999999858
+      ],
+      "proposed_common_domain_x_origin_m": 150.14999999999998,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        174.54999999999998,
+        175.85
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 175.8,
+      "old_raw_sha256": "f4d3052d7f3b66e679d5403686e89a753c919a7f1bb7103d7a297d183c4f55d7",
+      "old_fine_y_m": [
+        37.35,
+        37.4
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        37.4,
+        37.4
+      ],
+      "proposed_y_change_m": [
+        0.04999999999999716,
+        0.0
+      ],
+      "proposed_common_domain_x_origin_m": 150.75,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        175.15,
+        176.45000000000002
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 176.4,
+      "old_raw_sha256": "6a92cf6d6e16af7cb15a2b200d488caf2d62e71561a3d7b583d09377a524ca07",
+      "old_fine_y_m": [
+        37.375,
+        37.425000000000004
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        37.4,
+        37.4
+      ],
+      "proposed_y_change_m": [
+        0.02499999999999858,
+        -0.025000000000005684
+      ],
+      "proposed_common_domain_x_origin_m": 151.35,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        175.75,
+        177.05
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 177.0,
+      "old_raw_sha256": "4bf88456ae86a409cf50046ef18db59699f71c7711cc814b53cbce3d361564c3",
+      "old_fine_y_m": [
+        37.4,
+        37.45
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        37.4,
+        37.5
+      ],
+      "proposed_y_change_m": [
+        0.0,
+        0.04999999999999716
+      ],
+      "proposed_common_domain_x_origin_m": 151.95,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        176.35,
+        177.65
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 177.6,
+      "old_raw_sha256": "9719b5144207d2f15d46a9a785d770a8136305e8aff78b9bb298c5131a256f95",
+      "old_fine_y_m": [
+        37.425000000000004,
+        37.475
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        37.4,
+        37.5
+      ],
+      "proposed_y_change_m": [
+        -0.025000000000005684,
+        0.02499999999999858
+      ],
+      "proposed_common_domain_x_origin_m": 152.54999999999998,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        176.95,
+        178.25
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 178.2,
+      "old_raw_sha256": "eea733a7ca9dceb81ace4c2e922749b21924e060ece680f3f28b3fb0b4b05621",
+      "old_fine_y_m": [
+        37.45,
+        37.5
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        37.5,
+        37.5
+      ],
+      "proposed_y_change_m": [
+        0.04999999999999716,
+        0.0
+      ],
+      "proposed_common_domain_x_origin_m": 153.14999999999998,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        177.54999999999998,
+        178.85
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 178.8,
+      "old_raw_sha256": "c6124a71064d422f992d163c82f923dc9a92d64843b4b2a72ed3f80ad83656eb",
+      "old_fine_y_m": [
+        37.475,
+        37.525
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        37.5,
+        37.5
+      ],
+      "proposed_y_change_m": [
+        0.02499999999999858,
+        -0.02499999999999858
+      ],
+      "proposed_common_domain_x_origin_m": 153.75,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        178.15,
+        179.45000000000002
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 179.4,
+      "old_raw_sha256": "1f8fbf4bd30042e43f6bb35385f4a7fee5a0d154bb98ef6b13e07b44f5cb8297",
+      "old_fine_y_m": [
+        37.5,
+        37.550000000000004
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        37.5,
+        37.6
+      ],
+      "proposed_y_change_m": [
+        0.0,
+        0.04999999999999716
+      ],
+      "proposed_common_domain_x_origin_m": 154.35,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        178.75,
+        180.05
+      ],
+      "proposal_only_not_authorized": true
+    },
+    {
+      "station_m": 180.0,
+      "old_raw_sha256": "6ddcfc4ac33c48397ec4fb52bb763b7c95b2f560b5260ee4074bf7a01dd9064d",
+      "old_fine_y_m": [
+        37.525,
+        37.575
+      ],
+      "both_old_y_on_coarse_nodes": false,
+      "proposed_common_y_m": [
+        37.5,
+        37.6
+      ],
+      "proposed_y_change_m": [
+        -0.02499999999999858,
+        0.02499999999999858
+      ],
+      "proposed_common_domain_x_origin_m": 154.95,
+      "proposed_common_local_tx_rx_x_m": [
+        24.4,
+        25.7
+      ],
+      "proposed_actual_global_tx_rx_x_m": [
+        179.35,
+        180.65
+      ],
+      "proposal_only_not_authorized": true
+    }
+  ],
+  "fine_existing": [
+    {
+      "station_m": 150.0,
+      "raw_sha256": "92ff41bfcd6767f8b5da2de512e294a44b58ecc2a75a564b8c54dd6e52a777da",
+      "build_solver_seconds": 28.2345,
+      "strict_proposed_coordinates_match": false
+    },
+    {
+      "station_m": 158.4,
+      "raw_sha256": "eff10898620f8c69e616f68b47e43ec19a9942ada64a97d20b4f1ecead9383bc",
+      "build_solver_seconds": 22.3619,
+      "strict_proposed_coordinates_match": false
+    },
+    {
+      "station_m": 162.0,
+      "raw_sha256": "9635be3405ed3343948ca29f10c1c673a6da0bd1f9ea70865d816550aac7d592",
+      "build_solver_seconds": 22.3627,
+      "strict_proposed_coordinates_match": false
+    },
+    {
+      "station_m": 174.0,
+      "raw_sha256": "26f6605d3cffd14cd90804f57daba0e3cc9a9a5bb178f2516e2e7b94a3601f7f",
+      "build_solver_seconds": 22.3556,
+      "strict_proposed_coordinates_match": false
+    }
+  ],
+  "coarse_existing": [
+    {
+      "station_m": 150.0,
+      "raw_sha256": "9aed23b4e89dc4e727b67fb92de09bebdee054dd3bc3a9822dfb76a67e16acf7",
+      "build_solver_seconds": 14.4787,
+      "strict_proposed_coordinates_match": false
+    },
+    {
+      "station_m": 162.0,
+      "raw_sha256": "179ec4dbfc8e075a9c2679f1584c86759ed3657789d4914326f33443f794bffa",
+      "build_solver_seconds": 9.411,
+      "strict_proposed_coordinates_match": false
+    },
+    {
+      "station_m": 174.0,
+      "raw_sha256": "1defeb28ad19b38dfdd9c70084ec22d3a3a9ea04af788480e55bab474630a283",
+      "build_solver_seconds": 9.4309,
+      "strict_proposed_coordinates_match": false
+    }
+  ],
+  "source_contract_sha256": "5d4125232b4f7c0f2ba79f2270d792489f92e0e62f6e152c58577423f2301da0",
+  "audit_script_sha256": "3a5a651e0426cbcd1cac80360bb21ab84475833cf8ba16d40aff959ce9434eae"
+}
