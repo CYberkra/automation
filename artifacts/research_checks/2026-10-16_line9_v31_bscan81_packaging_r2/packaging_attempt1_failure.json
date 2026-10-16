@@ -1,0 +1,10 @@
+{
+  "error": "Staged candidate_contract.json did not match actual completion ledger",
+  "actual_difference": [
+    "remote_root r1 vs r2",
+    "process-only compiler setup metadata"
+  ],
+  "resolution": "Use retrieved_r2/candidate_contract.json, whose SHA256 matches historical completion",
+  "new_solves": 0,
+  "source_files_modified": false
+}
